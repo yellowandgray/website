@@ -177,7 +177,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                             </div>
                             <div class="form-group">
                                 <label for="email">Email Address</label> 
-                                <input type="email" class="form-control" name="email_id" id="email_id" placeholder="" required-i value="<?php echo $member['email']; ?>" readonly />
+                                <input type="email" class="form-control" name="email_id" id="email_id" placeholder="" required-i value="<?php echo $member['email_id']; ?>" />
                             </div>
                             <div class="form-group">
                                 <label for="address">Address</label> 

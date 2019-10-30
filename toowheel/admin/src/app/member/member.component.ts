@@ -28,6 +28,13 @@ export class MemberComponent implements OnInit {
     sortdata_fwtp: string = '';
     sortdata_fwta: string = '';
     sortdata_fwtb: string = '';
+    
+    tw_p_membercount = 0;
+    tw_a_membercount = 0;
+    tw_b_membercount = 0;
+    fw_p_membercount = 0;
+    fw_a_membercount = 0;
+    fw_b_membercount = 0;
   result = [];
   result_fw = [];
   image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
@@ -42,6 +49,17 @@ export class MemberComponent implements OnInit {
   .subscribe(
           (res)=>{
               this.result = res["result"]["data"];
+              this.result.forEach(val=> {
+           if(val.activated == 0 && val.activated_at == '0000-00-00') {
+                this.tw_p_membercount = this.tw_p_membercount + 1;
+           }
+           if(val.activated == 1) {
+                this.tw_a_membercount = this.tw_a_membercount + 1;
+           }
+           if(val.activated == 0 && val.activated_at != '0000-00-00') {
+                this.tw_b_membercount = this.tw_b_membercount + 1;
+           }
+         });
         },
         (error)=>{
             this._snackBar.open(error["statusText"], '', {
@@ -55,6 +73,17 @@ export class MemberComponent implements OnInit {
   .subscribe(
           (res)=>{
               this.result_fw = res["result"]["data"];
+              this.result_fw.forEach(val=> {
+           if(val.activated == 0 && val.activated_at == '0000-00-00') {
+                this.fw_p_membercount = this.fw_p_membercount + 1;
+           }
+           if(val.activated == 1) {
+                this.fw_a_membercount = this.fw_a_membercount + 1;
+           }
+           if(val.activated == 0 && val.activated_at != '0000-00-00') {
+                this.fw_b_membercount = this.fw_b_membercount + 1;
+           }
+         });
         },
         (error)=>{
             this._snackBar.open(error["statusText"], '', {

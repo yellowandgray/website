@@ -15,7 +15,7 @@
                             <mat-panel-title>
                                 Pending Member
                             </mat-panel-title>
-                            <p Class="count-mem">0</p>
+                            <p class="count-mem">{{tw_p_membercount}}</p>
                         </mat-expansion-panel-header>
                         <section class="section">
                             <br/>                     
@@ -74,7 +74,7 @@
                                     </button>
                                     <button mat-icon-button aria-label="label" (click)="openTshirt(data.member_id, 'result')">
                                         <mat-icon #tooltip="matTooltip" matTooltip="T-shirt">
-                                             <img *ngIf="data.t_shirt_status == 1" src="../../assets/t-shirt/t-black.png">
+                                            <img *ngIf="data.t_shirt_status == 1" src="../../assets/t-shirt/t-black.png">
                                             <img *ngIf="data.t_shirt_status == 2" src="../../assets/t-shirt/t-red.png">
                                             <img *ngIf="data.t_shirt_status == 3" src="../../assets/t-shirt/t-green.png">
                                         </mat-icon>
@@ -93,9 +93,7 @@
                             <mat-panel-title>
                                 Active Member
                             </mat-panel-title> 
-
-                            <p class="count-mem">{{result.length}}</p>
-
+                            <p class="count-mem">{{tw_a_membercount}}</p>
                         </mat-expansion-panel-header>
                         <section class="section">
                             <br/>                     
@@ -120,7 +118,7 @@
                                     <mat-form-field fxFlex="100%">
                                         <mat-label>Filter by T-shirt Status</mat-label>
                                         <mat-select [(ngModel)]="sortdata_twta" (selectionChange)="sortRecords('result', sortdata_twta)">
-                                           <mat-option value="pendind_a_z">Pending </mat-option>
+                                            <mat-option value="pendind_a_z">Pending </mat-option>
                                             <mat-option value="pendind_z_a">Delivered </mat-option>
                                             <mat-option value="shiped_a">Shipped </mat-option>
                                         </mat-select>
@@ -139,7 +137,7 @@
                                                                         </button>-->
                                     <button mat-icon-button aria-label="label" (click)="openPasswordDialog(data.member_id, 'result')">
                                         <mat-icon #tooltip="matTooltip" matTooltip="ChangePassword">vpn_key</mat-icon>
-                                     </button>
+                                    </button>
                                     <button mat-icon-button aria-label="label" (click)="confirmDialog(data.member_id,'block')" *ngIf="data.activated == 1">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
                                     </button>
@@ -176,7 +174,7 @@
                             <mat-panel-title>
                                 Blocked Member
                             </mat-panel-title>
-                            <p Class="count-mem">0</p>
+                            <p class="count-mem">{{tw_b_membercount}}</p>
                         </mat-expansion-panel-header>
                         <section class="section">
                             <br/>                     
@@ -201,7 +199,7 @@
                                     <mat-form-field fxFlex="100%">
                                         <mat-label>Filter by T-shirt Status</mat-label>
                                         <mat-select [(ngModel)]="sortdata_twtb" (selectionChange)="sortRecords('result', sortdata_twtb)">
-                                           <mat-option value="pendind_a_z">Pending </mat-option>
+                                            <mat-option value="pendind_a_z">Pending </mat-option>
                                             <mat-option value="pendind_z_a">Delivered </mat-option>
                                             <mat-option value="shiped_a">Shipped </mat-option>
                                         </mat-select>
@@ -212,7 +210,7 @@
                         <mat-list>
                             <ng-container *ngFor="let data of result | filterEventMember:searchTermTWP;">
                                 <mat-list-item class="list-container" *ngIf="data.activated == 0 && data.activated_at != '0000-00-00'">
-                                    <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 1)" *ngIf="data.activated == 0">
+                                           <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 1)" *ngIf="data.activated == 0">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Approve">done</mat-icon>
                                     </button>
                                     <!--                                    <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 0)" *ngIf="data.activated == 1">
@@ -235,7 +233,7 @@
                                     </button>
                                     <button mat-icon-button aria-label="label" (click)="openTshirt(data.member_id, 'result')">
                                         <mat-icon #tooltip="matTooltip" matTooltip="T-shirt">
-                                             <img *ngIf="data.t_shirt_status == 1" src="../../assets/t-shirt/t-black.png">
+                                            <img *ngIf="data.t_shirt_status == 1" src="../../assets/t-shirt/t-black.png">
                                             <img *ngIf="data.t_shirt_status == 2" src="../../assets/t-shirt/t-red.png">
                                             <img *ngIf="data.t_shirt_status == 3" src="../../assets/t-shirt/t-green.png">
                                         </mat-icon>
@@ -258,7 +256,7 @@
                             <mat-panel-title>
                                 Pending Member
                             </mat-panel-title>
-                            <p Class="count-mem">0</p>
+                            <p class="count-mem">{{fw_p_membercount}}</p>
                         </mat-expansion-panel-header>
                         <section class="section">
                             <br/>                     
@@ -283,8 +281,8 @@
                                             <mat-label>Filter by T-shirt Status</mat-label>
                                             <mat-select [(ngModel)]="sortdata_fwtp" (selectionChange)="sortRecords('result_fw', sortdata_fwtp)">
                                                 <mat-option value="pendind_a_z">Pending </mat-option>
-                                            <mat-option value="pendind_z_a">Delivered </mat-option>
-                                            <mat-option value="shiped_a">Shipped </mat-option>
+                                                <mat-option value="pendind_z_a">Delivered </mat-option>
+                                                <mat-option value="shiped_a">Shipped </mat-option>
                                             </mat-select>
                                         </mat-form-field>
                                     </div>
@@ -317,7 +315,7 @@
                                     </button>
                                     <button mat-icon-button aria-label="label" (click)="openTshirt(data.member_id, 'result_fw')">
                                         <mat-icon #tooltip="matTooltip" matTooltip="T-shirt">
-                                             <img *ngIf="data.t_shirt_status == 1" src="../../assets/t-shirt/t-black.png">
+                                            <img *ngIf="data.t_shirt_status == 1" src="../../assets/t-shirt/t-black.png">
                                             <img *ngIf="data.t_shirt_status == 2" src="../../assets/t-shirt/t-red.png">
                                             <img *ngIf="data.t_shirt_status == 3" src="../../assets/t-shirt/t-green.png">
                                         </mat-icon>
@@ -336,7 +334,7 @@
                             <mat-panel-title>
                                 Active Member
                             </mat-panel-title>
-                            <p Class="count-mem">0</p>
+                            <p class="count-mem">{{fw_a_membercount}}</p>
                         </mat-expansion-panel-header>
                         <section class="section">
                             <br/>                     
@@ -378,9 +376,9 @@
                                     <!--                                    <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 0)" *ngIf="data.activated == 1">
                                                                             <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
                                                                         </button>-->
-                                     <button mat-icon-button aria-label="label" (click)="openPasswordDialog(data.member_id, 'result_fw')">
+                                    <button mat-icon-button aria-label="label" (click)="openPasswordDialog(data.member_id, 'result_fw')">
                                         <mat-icon #tooltip="matTooltip" matTooltip="ChangePassword">vpn_key</mat-icon>
-                                        </button>
+                                    </button>
                                     <button mat-icon-button aria-label="label" (click)="confirmDialog(data.member_id,'block')" *ngIf="data.activated == 1">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
                                     </button>
@@ -417,7 +415,7 @@
                             <mat-panel-title>
                                 Blocked Member
                             </mat-panel-title>
-                            <p Class="count-mem">0</p>
+                            <p class="count-mem">{{fw_b_membercount}}</p>
                         </mat-expansion-panel-header>
                         <section class="section">
                             <br/>                     
@@ -454,7 +452,7 @@
                         <mat-list>
                             <ng-container *ngFor="let data of result_fw | filterEventMember:searchTermFWP;">
                                 <mat-list-item class="list-container" *ngIf="data.activated == 0  && data.activated_at != '0000-00-00'">
-                                    <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 1)" *ngIf="data.activated == 0">
+                                           <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 1)" *ngIf="data.activated == 0">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Approve">done</mat-icon>
                                     </button>
                                     <!--                                    <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 0)" *ngIf="data.activated == 1">
@@ -477,7 +475,7 @@
                                     </button>
                                     <button mat-icon-button aria-label="label" (click)="openTshirt(data.member_id, 'result_fw')">
                                         <mat-icon #tooltip="matTooltip" matTooltip="T-shirt">
-                                             <img *ngIf="data.t_shirt_status == 1" src="../../assets/t-shirt/t-black.png">
+                                            <img *ngIf="data.t_shirt_status == 1" src="../../assets/t-shirt/t-black.png">
                                             <img *ngIf="data.t_shirt_status == 2" src="../../assets/t-shirt/t-red.png">
                                             <img *ngIf="data.t_shirt_status == 3" src="../../assets/t-shirt/t-green.png">
                                         </mat-icon>
