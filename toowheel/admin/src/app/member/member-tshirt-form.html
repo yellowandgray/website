@@ -1,6 +1,8 @@
-<h2 mat-dialog-title>T-Shirt Delivery Status</h2>
-<mat-dialog-content class="mat-typography">
-    <div fxLayout="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start end">
+<div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+    <div fxFlex="50%">
+        <h2 mat-dialog-title>T-Shirt Delivery Status</h2>        
+    </div>
+    <div fxFlex="50%">
         <mat-form-field appearance="outline" fxFlex="100%">
             <mat-label>Status</mat-label>
             <mat-select [(ngModel)]="delivery_status" (selectionChange)="changeStatus(data.member_id, delivery_status)">
@@ -14,7 +16,11 @@
                     Delivered
                 </mat-option>
             </mat-select>
-        </mat-form-field>
+        </mat-form-field>        
+    </div>
+</div>
+<mat-dialog-content class="mat-typography">
+    <div fxLayout="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start end">
         <table mat-table class="member-table" *ngIf="data.activated_at != '0000-00-00'">
             <tr>
                 <th mat-header-cell>Activated on</th>

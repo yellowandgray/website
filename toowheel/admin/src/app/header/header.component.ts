@@ -16,54 +16,22 @@ export class HeaderComponent implements OnInit {
   sortdata: string = '';
   sortdata_fw: string = '';
   result = [];
-  constructor(private router:Router,public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
-
+  constructor(private router:Router,public dialog: MatDialog) { }
   ngOnInit() {
-    this.getUsers();
   }
-  
-    image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
-    getUsers(): void {
-    this.httpClient.get<any>('https://www.toowheel.com/beta/toowheel/api/v1/get_users')
-    .subscribe(
-            (res)=>{
-                this.result = res["result"]["data"];
-          },
-          (error)=>{
-              this._snackBar.open(error["statusText"], '', {
-        duration: 2000,
-      });
-          }
-        );
-    }
 
         logout() {
            this.router.navigateByUrl('/');
          }
 
     openPasswordDialog(id, res): void  {
-          var data = null;
-          if(id != 0) { 
-          this[res].forEach(val=> {
-               if(parseInt(val.member_id) === parseInt(id)) {
-                    data = val;
-                    return false;
-               }
-             });
-          }
         const dialogRef = this.dialog.open(UserPasswordChange, {
             minWidth: "30%",
-            maxWidth: "30%",
-            data: data
+            maxWidth: "30%"
         });
-
         dialogRef.afterClosed().subscribe(result => {
-            if(result !== false && result !== 'false') {
-               
-           }
         });
     }
-
 }
 
 @Component({
@@ -71,74 +39,44 @@ export class HeaderComponent implements OnInit {
   templateUrl: 'member-password.html',
 })
 export class UserPasswordChange {
-image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
-    usersForm: FormGroup;
+    userForm: FormGroup;
     loading = false;
-    users_id = 0;
-    file_name: string = 'Choose Profile Picture';
-    media_path: string='';
-    password:string='';
     constructor(
     public dialogRef: MatDialogRef<UserPasswordChange>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
-    this.usersForm = new FormGroup({
-        'name': new FormControl('', Validators.required),
-        'email': new FormControl('', [Validators.required, Validators.email]),
-        'gender': new FormControl('', Validators.required),
-        'contact': new FormControl(''),
-        'role': new FormControl('', Validators.required)
+    this.userForm = new FormGroup({
+        'old_password': new FormControl('', Validators.required),
+        'new_password': new FormControl('', [Validators.required, Validators.email]),
+        're_new_password': new FormControl('', Validators.required)
     });
-        if(this.data != null) { 
-            this.usersForm.patchValue({ 
-                name: this.data.name,
-                email: this.data.email,
-                gender: this.data.gender,
-                contact: this.data.contact,
-                role: this.data.role,
-                password:this.data.password,
-        })
-        this.users_id = this.data.users_id;
-        this.media_path=this.data.media_path;
     }
-}
-
     onSubmit() {
-        if (this.usersForm.invalid) {
+        if (this.userForm.invalid) {
+            return;
+        } 
+        if (this.userForm.value.new_password != this.userForm.value.re_new_password) {
+            this._snackBar.open('Retype new password mismatch', '', {
+              duration: 2000,
+            });
             return;
         } 
         this.loading = true;
         var formData = new FormData();
-        var url = '';
-    if(this.users_id != 0) {
-            formData.append('name', this.usersForm.value.name);
-            formData.append('media_path', this.media_path);
-            formData.append('email', this.usersForm.value.email);
-            formData.append('role', this.usersForm.value.role);
-            formData.append('gender', this.usersForm.value.gender);
-            formData.append('contact', this.usersForm.value.contact);
-        url = 'update_record/users/users_id = '+this.users_id;
-      } else {
-            formData.append('name', this.usersForm.value.name);
-            formData.append('file_name', this.media_path);
-            formData.append('email', this.usersForm.value.email);
-            formData.append('role', this.usersForm.value.role);
-            formData.append('gender', this.usersForm.value.gender);
-            formData.append('contact', this.usersForm.value.contact);
-        url = 'insert_users';
-      }
+            formData.append('old_password', this.userForm.value.name);
+            formData.append('new_password', this.media_path);
+            formData.append('user', sessionStorage.getItem("toowheel_users_id"));
       this.loading = true;
-      this.httpClient.post('https://www.toowheel.com/beta/toowheel/api/v1/'+url, formData).subscribe(
+      this.httpClient.post('https://www.toowheel.com/beta/toowheel/api/v1/change_password_user', formData).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
                     this.dialogRef.close(true);
-                }else{
+                }
             this._snackBar.open(res["result"]["message"], '', {
               duration: 2000,
             });
-            }
             },
             (error)=>{
                 this.loading = false;
@@ -148,7 +86,5 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
       }
     );
   }
-
-
 }
 

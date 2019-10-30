@@ -883,6 +883,32 @@ $app->post('/change_password', function() use ($app) {
     echoRespnse(201, $res);
 });
 
+$app->post('/change_password_user', function() use ($app) {
+    $data = $app->request->post();
+    $obj = new Common();
+    $res = array('error' => true, 'message' => 'Unable to change password');
+    $exist = $obj->selectRow('*', 'users', 'users_id = ' . $data['user']);
+    if (count($exist) > 0) {
+        $pass_matchs = $obj->decryptPassword($data['old_password'], $exist['password']);
+        if ($pass_matchs == true) {
+            $res['error'] = false;
+            $res['message'] = 'Password updated successfully';
+            $obj->updateRecordWithWhere(array('password' => $obj->encryptPassword($data['new_password'])), 'users', 'users_id=' . $data['user']);
+            $template = $obj->selectRow('*', 'templates', 'name=\'password_update_success\' AND type=\'email\' AND target=\'admin\'');
+            $exist['first_name'] = $exist['name'];
+            $exist['last_name'] = '';
+            $body = $obj->getReplacedString($template['body_web'], $exist);
+            $tpty = new Thirdparty();
+            $tpty->sendMail($exist['email'], $exist['name'], $body, $body, $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
+        } else {
+            $res['message'] = 'Current password mismatch';
+        }
+    } else {
+        $res['message'] = 'No user found';
+    }
+    echoRespnse(201, $res);
+});
+
 $app->post('/forgotpassword_user', function() use ($app) {
     $data = $app->request->post();
     $obj = new Common();
