@@ -1,4 +1,4 @@
-<h2 mat-dialog-title>ClubView</h2>
+<!--<h2 mat-dialog-title>ClubView</h2>
 <mat-dialog-content class="mat-typography">
     <form [formGroup]="clubForm">
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
@@ -28,10 +28,10 @@
     </div>
     <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">        
 
-        <!--                <div fxFlex="50%" class="dialog-picture">
+                        <div fxFlex="50%" class="dialog-picture">
                             <img mat-card-image src="{{image_url}}{{data['logo']}}" alt="Photo">
-                        </div>-->
-        <!--            <img class="dialog-picture" mat-card-image src="{{image_url}}{{data['logo']}}" alt="Photo" />-->
+                        </div>
+                    <img class="dialog-picture" mat-card-image src="{{image_url}}{{data['logo']}}" alt="Photo" />
         <div fxFlex="33%">
             <img class="dialog-picture" matTooltip="CoverImage"  mat-card-image src="{{image_url}}{{data['cover_image']}}" alt="Photo" />
         </div>
@@ -39,9 +39,9 @@
             <img class="dialog-picture"  matTooltip="Logo" mat-card-image src="{{image_url}}{{data['logo']}}" alt="Photo" />
         </div>
         <div fxFlex="33%">   
-<!--            <video width="320" height="240" controls muted>
+            <video width="320" height="240" controls muted>
                 <source src="{{image_url}}{{data['club_video']}}" type="video/mp4">            
-          </video>-->                 
+          </video>                 
             <video class="video-fluid" matTooltip="Video" style="width: 100%; height: 100% " layout-fill loop="loop"  autoplay="autoplay" preload="auto" controls muted>
 
                 <source src="{{image_url}}{{data['club_video']}}" type="video/mp4"/>
@@ -63,7 +63,7 @@
             </mat-form-field>
         </div>       
     </div>
-    <!--    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Rank</mat-label>
@@ -75,7 +75,7 @@
                 <input hidden #fileInputBanner type="file" id="file_banner" (change)="fileProgress($event, 'club_video_name', 'club_video')" />
                 <mat-icon matTooltip="Width: any, Height: any;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
             </div>
-        </div>-->
+        </div>
     <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
         <div fxFlex="50%">
             <mat-form-field appearance="outline" fxFlex="100%">
@@ -166,11 +166,11 @@
         </mat-form-field>
     </div>
     <div fxFlex="50%">
-        <!--        <mat-form-field appearance="outline" fxFlex="100%">
+                <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>No. of Members</mat-label>
                     <input matInput placeholder="" formControlName="no_of_member" />
                     <mat-error>Members is required</mat-error>
-                </mat-form-field>-->
+                </mat-form-field>
     </div>
 </div>
 <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
@@ -186,4 +186,118 @@
 
 </div>
 </form>
+</mat-dialog-content>-->
+<h2 mat-dialog-title>Club Details</h2>
+<mat-dialog-content class="mat-typography">    
+       <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.8%" fxLayoutAlign="start center">        
+
+        <!--                <div fxFlex="50%" class="dialog-picture">
+                            <img mat-card-image src="{{image_url}}{{data['logo']}}" alt="Photo">
+                        </div>-->
+        <!--            <img class="dialog-picture" mat-card-image src="{{image_url}}{{data['logo']}}" alt="Photo" />-->
+        <div fxFlex="33%">
+            <img class="dialog-picture1" matTooltip="CoverImage"  mat-card-image src="{{image_url}}{{data['cover_image']}}" alt="Photo" />
+        </div>
+        <div fxFlex="33%">
+            <img class="dialog-picture1"  matTooltip="Logo" mat-card-image src="{{image_url}}{{data['logo']}}" alt="Photo" />
+        </div>
+        <div fxFlex="33%">   
+<!--            <video width="320" height="240" controls muted>
+                <source src="{{image_url}}{{data['club_video']}}" type="video/mp4">            
+          </video>-->                 
+            <video class="video-fluid" matTooltip="Video" style="width: 100%; height: 100% " layout-fill loop="loop"  autoplay="autoplay" preload="auto" controls muted>
+
+                <source src="{{image_url}}{{data['club_video']}}" type="video/mp4"/>
+            </video>
+        </div>
+    </div>    
+    <br/> 
+    
+<!--     <mat-option [value]="row.category_id" *ngFor="let row of categories">
+                            {{row.name}}-->
+    
+    
+    <table mat-table class="member-table">
+        <h2>Club Information:</h2>
+        <tr>
+            <th mat-header-cell>Type</th>
+            <td mat-cell *ngIf="data.type == 'two_wheel'"> Two Wheeler </td>
+            <td mat-cell *ngIf="data.type == 'four_wheel'"> Four Wheeler </td>
+        </tr>
+        <tr>
+            <th mat-header-cell>Category</th>
+            <td mat-cell> {{data.category_id}} </td>
+        </tr>
+        <tr>
+            <th mat-header-cell>Club name</th>
+            <td mat-cell> {{data.name}} </td>
+        </tr>
+        <tr>
+            <th mat-header-cell>Rank</th>
+            <td mat-cell> {{data.rank}} </td>
+        </tr>
+        <tr>
+            <th mat-header-cell>Email</th>
+            <td mat-cell> {{data.email}} </td>
+        </tr>
+        <tr>
+            <th mat-header-cell>Phone</th>
+            <td mat-cell> {{data.mobile}} </td>
+        </tr>
+        <tr>
+            <th mat-header-cell>Facebook Link</th>
+            <td mat-cell>{{data.facebook_link}}</td>
+        </tr>
+        <tr>
+            <th mat-header-cell>Youtube Link</th>
+            <td mat-cell> {{data.youtube_link}} </td>
+        </tr>
+        <tr>
+            <th mat-header-cell>Twitter Link</th>
+            <td mat-cell> {{data.twitter_link}} </td>
+        </tr>
+        <tr>
+            <th mat-header-cell>Instagram Link</th>
+            <td mat-cell> {{data.instagram_link}} </td>
+        </tr>
+        <tr>
+            <th mat-header-cell>State</th>
+            <td mat-cell> {{data.state}} </td>
+        </tr>
+        <tr>
+            <th mat-header-cell>City</th>
+            <td mat-cell> {{data.city}} </td>
+        </tr>
+        <tr>
+            <th mat-header-cell> Zip Code </th>
+            <td mat-cell> {{data.zip}} </td>
+        </tr>
+        <tr >
+            <th mat-header-cell>Landmark</th>
+            <td mat-cell> {{data.landmark}} </td>
+        </tr>
+        <tr>
+            <th mat-header-cell>Club Leader Name (Full Name)</th>
+            <td mat-cell> {{data.club_leader_name}} </td>
+        </tr>
+        <tr>
+            <th mat-header-cell>Address</th>
+            <td mat-cell> {{data.address}} </td>
+        </tr>    
+       
+        <br/>
+        
+    </table>
+    <br/>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+    <div fxFlex="100%">
+        <mat-form-field class="full-width" fxFlex="100%">
+            <mat-label>About club</mat-label>
+            <textarea rows="6" matInput readonly placeholder="" formControlName="about"></textarea>     
+        </mat-form-field>
+    </div>
+</div>
+    <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
+        <button mat-button [mat-dialog-close]="false">Cancel</button>
+    </div>
 </mat-dialog-content>

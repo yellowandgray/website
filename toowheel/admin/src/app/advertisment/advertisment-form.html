@@ -1,7 +1,7 @@
 <h2 mat-dialog-title>Advertisement</h2>
 <mat-dialog-content class="mat-typography">
     <form [formGroup]="advertismentForm" (ngSubmit)="onSubmit()">
-        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="5%" fxLayoutAlign="start center">
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" class="full-width">
                     <mat-label>Title</mat-label>
@@ -10,9 +10,15 @@
                 </mat-form-field>
             </div>
             <div fxFlex="50%">
-                <button type="button" mat-raised-button (click)="fileInput.click()">{{file_name}}</button>
+                <button *ngIf="image == ''" type="button" mat-raised-button (click)="fileInput.click()">{{file_name}}</button>
                 <input hidden #fileInput type="file" id="file" (change)="fileProgress($event)" />
-                <mat-icon matTooltip="Banner - Width: 1583px; Height: Any; / Card - Width: 350px; Height: 510px;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
+                <mat-icon *ngIf="image == ''" matTooltip="Banner - Width: 1583px; Height: Any; / Card - Width: 350px; Height: 510px;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
+                 <div class="preview-image" *ngIf="image != ''">
+                <img class="dialog-picture" matTooltip="Cover Image" mat-card-image src="{{image_url}}{{image}}" alt="Photo" />
+                <button mat-icon-button aria-label="Close icon" (click)="removeMedia('image')">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </div>
             </div>
         </div>
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">

@@ -343,9 +343,9 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                     <br/>
                                     <h4>Login Information</h4>
                                     <div class="form-group">
-                                        <label for="email">Email Address</label> 
+                                        <label for="email">Email Address / Username</label> 
                                         <span class="red-i">*</span>
-                                        <input type="email" class="form-control" name="email" id="email" placeholder="" required-i onchange="removeValidation('email');" />
+                                        <input type="text" class="form-control" name="email" id="email" placeholder="" required-i onchange="removeValidation('email');" />
                                         <div id="email_error"></div>
                                     </div>
                                     <div class="form-group">

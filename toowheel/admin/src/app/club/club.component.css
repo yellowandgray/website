@@ -47,3 +47,7 @@ video {
     width: 20%;
     height: 20%;
 }
+
+img.dialog-picture1.mat-card-image {
+    width: 368px;
+}

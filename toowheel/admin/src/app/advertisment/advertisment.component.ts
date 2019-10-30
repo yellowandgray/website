@@ -99,9 +99,10 @@ searchTerm: string = '';
   templateUrl: 'advertisment-form.html',
 })
 export class AdvertismentForm {
+    image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
     advertismentForm: FormGroup;
     loading = false;
-    image: string;
+    image: string='';
     advertisment_id = 0;
     file_name: string = 'Select Picture';
     constructor(
@@ -121,6 +122,7 @@ export class AdvertismentForm {
            url: this.data.url
         });
         this.advertisment_id = this.data.advertisement_id;
+        this.image=this.data.image;
         }
     }
     fileProgress(fileInput: any) {
@@ -188,6 +190,13 @@ export class AdvertismentForm {
             }
             );
       }
+
+removeMedia(url) {
+      this[url] = '';
+      if(url === 'image') {
+          this.file_name= 'Select Picture';
+      }     
+  }
   
 }
 

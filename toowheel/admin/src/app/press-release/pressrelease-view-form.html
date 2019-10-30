@@ -3,7 +3,7 @@
     <form [formGroup]="pressreleaseForm">
         <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
             <div fxFlex="100">
-                <img src="{{image_url}}{{data.cover_image}}" alt="" style="width: 100%;" />
+                <img src="{{image_url}}{{cover_image_path}}" alt="" style="width: 100%;" />
             </div>
         </div>
         <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
@@ -11,21 +11,20 @@
                 <mat-card class="example-card news-view-card">
                     <mat-card-title>{{data.title}}</mat-card-title>
                     <br/>
-                    <span>{{data.media}} | {{data.author_name}} | {{data.news_date}}</span>
+                    <span>{{data.media_id}} | {{data.author_name}} | {{data.press_release_date}}</span>
                     <br/>
                     <br/>
                     <mat-card-content>
+                        <p>{{data.description}}</p>
+                        <img src="{{image_url}}{{banner_image_1_path}}" alt="" style="width: 100%;" />
+                        <br/>
+                        <br/>
                         <p>{{data.description_1}}</p>
-                        <img src="{{image_url}}{{data.banner_1}}" alt="" style="width: 100%;" />
+                        <img src="{{image_url}}{{banner_image_2_path}}" alt="" style="width: 100%;" />
                         <br/>
                         <br/>
-                        <p>{{data.description_2}}</p>
-                        <img src="{{image_url}}{{data.banner_2}}" alt="" style="width: 100%;" />
-                        <br/>
-                        <br/>
-                        <h2>Youtube Video</h2>
-                        <iframe [src]="getYoutubeLink(data.youtube_id)" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                        
+                        <h2 *ngIf="data.youtube_id != 'null'">Youtube Video</h2>
+                        <iframe *ngIf="data.youtube_id != 'null'" [src]="getYoutubeLink(data.youtube_id)" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </mat-card-content>
                 </mat-card>
             </div>

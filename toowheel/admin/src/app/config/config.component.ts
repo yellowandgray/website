@@ -107,10 +107,11 @@ export class ConfigComponent implements OnInit {
   selector: 'config-form',
   templateUrl: 'config-form.html',
 })
-export class ConfigForm {
+export class ConfigForm {    
+    image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
     configForm: FormGroup;
     loading = false;
-    value: string;
+    value: string='';
     field_type: string;
     name: string;
     file_name: string = 'Select Picture';
@@ -129,12 +130,19 @@ export class ConfigForm {
         this.field_type = this.data.field_type;
         this.config_id = this.data.config_id;
         this.ads = this.data.ads;
-        this.ads_card = this.data.ads_card;
+        this.ads_card = this.data.ads_card;  
+       
     }
   ngOnInit() {
       this.configForm = new FormGroup({
       'display_name': new FormControl('', Validators.required)
         });
+         if(this.data != null) {
+            this.configForm.patchValue({
+    
+                });
+            this.value = this.data.value;
+         }     
     }
     fileProgress(fileInput: any) {
         var fileData = <File>fileInput.target.files[0];
@@ -148,6 +156,7 @@ export class ConfigForm {
                 this.loading = false;
                 if(res["result"]["error"] === false) {
                     this.value = res["result"]["data"];
+                    console.log("check-->"+this.value)
                 }else{
 this._snackBar.open(res["result"]["message"], '', {
           duration: 2000,
@@ -161,7 +170,7 @@ this._snackBar.open(res["result"]["message"], '', {
         });
             });
     }
-    onSubmit() {
+    onSubmit() {          
           if (this.configForm.invalid) {
                 return;
           }
@@ -175,6 +184,7 @@ this._snackBar.open(res["result"]["message"], '', {
                 this.loading = false;
                 if(res["result"]["error"] === false) {
                     this.dialogRef.close(true);
+                     
                 }else{
 this._snackBar.open(res["result"]["message"], '', {
           duration: 2000,
@@ -189,5 +199,11 @@ this._snackBar.open(res["result"]["message"], '', {
             }
             );
       }
+   removeMedia(url) {
+      this[url] = '';
+      if(url === 'value') {
+          this.file_name= 'Select Picture';
+      }     
+   }
 
 }
