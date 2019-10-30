@@ -894,7 +894,7 @@ $app->post('/change_password_user', function() use ($app) {
             $res['error'] = false;
             $res['message'] = 'Password updated successfully';
             $obj->updateRecordWithWhere(array('password' => $obj->encryptPassword($data['new_password'])), 'users', 'users_id=' . $data['user']);
-            $template = $obj->selectRow('*', 'templates', 'name=\'password_update_success\' AND type=\'email\' AND target=\'admin\'');
+            $template = $obj->selectRow('*', 'templates', 'name=\'password_update_success\' AND type=\'email\' AND target=\'user\'');
             $exist['first_name'] = $exist['name'];
             $exist['last_name'] = '';
             $body = $obj->getReplacedString($template['body_web'], $exist);

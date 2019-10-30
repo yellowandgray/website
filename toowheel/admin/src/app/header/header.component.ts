@@ -48,7 +48,7 @@ export class UserPasswordChange {
     private httpClient: HttpClient) {
     this.userForm = new FormGroup({
         'old_password': new FormControl('', Validators.required),
-        'new_password': new FormControl('', [Validators.required, Validators.email]),
+        'new_password': new FormControl('', Validators.required),
         're_new_password': new FormControl('', Validators.required)
     });
     }
@@ -64,8 +64,8 @@ export class UserPasswordChange {
         } 
         this.loading = true;
         var formData = new FormData();
-            formData.append('old_password', this.userForm.value.name);
-            formData.append('new_password', this.media_path);
+            formData.append('old_password', this.userForm.value.old_password);
+            formData.append('new_password', this.userForm.value.new_password);
             formData.append('user', sessionStorage.getItem("toowheel_users_id"));
       this.loading = true;
       this.httpClient.post('https://www.toowheel.com/beta/toowheel/api/v1/change_password_user', formData).subscribe(
