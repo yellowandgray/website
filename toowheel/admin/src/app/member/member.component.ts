@@ -251,7 +251,7 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
             'referral_club_id': new FormControl(''),
             'marital_status': new FormControl('single'),
             'zip_code': new FormControl('', Validators.required),
-            'email': new FormControl('', [Validators.required, Validators.email]),
+            'email': new FormControl('', Validators.required),
             'password': new FormControl(''),
             'email_id': new FormControl(''),
         'club_id': new FormControl('',Validators.required)
@@ -278,7 +278,6 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
             'email': this.data.email,
             'email_id': this.data.email_id,
             'club_id': this.data.club_id
-            
         })
         this.member_id = this.data.member_id;
         this.image_path= this.data.profile_picture;
@@ -381,7 +380,8 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
           formData.append('marital_status', this.memberForm.value.marital_status);
           formData.append('zip_code', this.memberForm.value.zip_code);
           formData.append('email', this.memberForm.value.email);
-          if(this.passwordhide!='')
+          formData.append('email_id', this.memberForm.value.email_id);
+          if(this.passwordhide == '')
           {
           formData.append('password', this.memberForm.value.password);
           }
