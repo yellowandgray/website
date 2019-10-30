@@ -20,6 +20,14 @@ export class MemberComponent implements OnInit {
   sortdata_twm: string = '';
   sortdata_fwp: string = '';
   sortdata_fwm: string = '';
+
+    sortdata_twtp: string = '';
+    sortdata_twta: string = '';
+    sortdata_twtb: string = '';
+
+    sortdata_fwtp: string = '';
+    sortdata_fwta: string = '';
+    sortdata_fwtb: string = '';
   result = [];
   result_fw = [];
   image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
@@ -207,6 +215,15 @@ confirmDialog(id, action): void  {
             break;
             case 'created_z_a':
                 (this[arr]).sort((a,b) => b.created_at.localeCompare(a.created_at));
+            break;
+            case 'pendind_a_z':
+                (this[arr]).sort((a,b) => b.t_shirt_status.localeCompare(a.t_shirt_status));
+            break;
+            case 'pendind_z_a':
+                (this[arr]).sort((a,b) => b.t_shirt_status.localeCompare(a.t_shirt_status));
+            break;
+            case 'shiped_a':
+                (this[arr]).sort((a,b) => b.t_shirt_status.localeCompare(a.t_shirt_status));
             break;
             default:
             break;
