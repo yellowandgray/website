@@ -14,20 +14,24 @@ import * as moment from 'moment';
 export class MemberComponent implements OnInit {
   searchTermTWP: string = '';
   searchTermTWM: string = '';
+  searchTermTWB: string = '';
   searchTermFWP: string = '';
   searchTermFWM: string = '';
+  searchTermFWB: string = '';
   sortdata_twp: string = '';
   sortdata_twm: string = '';
+  sortdata_twb: string = '';
   sortdata_fwp: string = '';
   sortdata_fwm: string = '';
+  sortdata_fwb: string = '';
 
-    sortdata_twtp: string = '';
-    sortdata_twta: string = '';
-    sortdata_twtb: string = '';
+    searchtshirtTWP: string = '';
+    searchtshirtTWM: string = '';
+    searchtshirtTWB: string = '';
 
-    sortdata_fwtp: string = '';
-    sortdata_fwta: string = '';
-    sortdata_fwtb: string = '';
+    searchtshirtFWP: string = '';
+    searchtshirtFWM: string = '';
+    searchtshirtFWB: string = '';
     
     tw_p_membercount = 0;
     tw_a_membercount = 0;

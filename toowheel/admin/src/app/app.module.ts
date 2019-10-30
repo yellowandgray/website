@@ -36,6 +36,7 @@ import { filterEventClub } from './club/filter-event.pipe';
 import { ClubComponent, ClubForm, ClubDelete, ClubPhotosForm,PictureViewClub, ClubViewFrom } from './club/club.component';
 import { MemberComponent, MemberForm, MemberDelete, MemberViewForm, MemberTshirtForm,MemberPasswordChange } from './member/member.component';
 import { filterEventMember } from './member/filter-event.pipe';
+import { filterTshirtMember } from './member/filter-tshirt.pipe';
 import { HeaderComponent,UserPasswordChange } from './header/header.component';
 import { VendorComponent, VendorForm } from './vendor/vendor.component';
 import { filterEventNews } from './news/filter-event.pipe';
@@ -153,6 +154,7 @@ import { AssetComponent, AssetForm, AssetDelete } from './asset/asset.component'
     filterEvent,
     filterEventClub,
     filterEventMember,
+    filterTshirtMember,
     filterEventNews,
     filterEventPress,
     filterEventnewsletter,

@@ -39,17 +39,18 @@
                                 <div fxFlex="20%">
                                     <mat-form-field fxFlex="100%">
                                         <mat-label>Filter by T-shirt Status</mat-label>
-                                        <mat-select [(ngModel)]="sortdata_twtp" (selectionChange)="sortRecords('result', sortdata_twtp)">
-                                            <mat-option value="pendind_a_z">Pending </mat-option>
-                                            <mat-option value="pendind_z_a">Delivered </mat-option>
-                                            <mat-option value="shiped_a">Shipped </mat-option>
+                                        <mat-select [(ngModel)]="searchtshirtTWP">
+                                            <mat-option value="">All </mat-option>
+                                            <mat-option value="1">Pending </mat-option>
+                                            <mat-option value="2">Shipped </mat-option>
+                                            <mat-option value="3">Delivered </mat-option>
                                         </mat-select>
                                     </mat-form-field>
                                 </div>
                             </div>
                         </section>
                         <mat-list>
-                            <ng-container *ngFor="let data of result | filterEventMember:searchTermTWP;">
+                            <ng-container *ngFor="let data of result | filterEventMember:searchTermTWP| filterTshirtMember: searchtshirtTWP;">
                                 <mat-list-item class="list-container" *ngIf="data.activated == 0 && data.activated_at == '0000-00-00'">
                                     <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 1)" *ngIf="data.activated == 0">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Approve">done</mat-icon>
@@ -117,17 +118,18 @@
                                 <div fxFlex="20%">
                                     <mat-form-field fxFlex="100%">
                                         <mat-label>Filter by T-shirt Status</mat-label>
-                                        <mat-select [(ngModel)]="sortdata_twta" (selectionChange)="sortRecords('result', sortdata_twta)">
-                                            <mat-option value="pendind_a_z">Pending </mat-option>
-                                            <mat-option value="pendind_z_a">Delivered </mat-option>
-                                            <mat-option value="shiped_a">Shipped </mat-option>
+                                        <mat-select [(ngModel)]="searchtshirtTWM">
+                                            <mat-option value="">All </mat-option>
+                                            <mat-option value="1">Pending </mat-option>
+                                            <mat-option value="2">Shipped </mat-option>
+                                            <mat-option value="3">Delivered </mat-option>
                                         </mat-select>
                                     </mat-form-field>
                                 </div>
                             </div>
                         </section> 
                         <mat-list>
-                            <ng-container *ngFor="let data of result | filterEventMember:searchTermTWM;">
+                            <ng-container *ngFor="let data of result | filterEventMember:searchTermTWM| filterTshirtMember: searchtshirtTWM;">
                                 <mat-list-item class="list-container" *ngIf="data.activated == 1">
                                     <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 1)" *ngIf="data.activated == 0">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Approve">done</mat-icon>
@@ -181,13 +183,13 @@
                             <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
                                 <div class="searchdesign" fxFlex="50%">
                                     <mat-form-field [floatLabel]="'never'" fxFlex="100%">
-                                        <input matInput type="text" placeholder="Search by name" [(ngModel)]="searchTermTWP" />
+                                        <input matInput type="text" placeholder="Search by name" [(ngModel)]="searchTermTWB" />
                                     </mat-form-field>
                                 </div>
                                 <div fxFlex="20%">
                                     <mat-form-field fxFlex="100%">
                                         <mat-label>Sort by</mat-label>
-                                        <mat-select [(ngModel)]="sortdata_twp" (selectionChange)="sortRecords('result', sortdata_twp)">
+                                        <mat-select [(ngModel)]="sortdata_twb" (selectionChange)="sortRecords('result', sortdata_twb)">
                                             <mat-option value="title_a_z">Name A-Z</mat-option>
                                             <mat-option value="title_z_a">Name Z-A</mat-option>
                                             <mat-option value="created_a_z">Created Date ASC</mat-option>
@@ -199,16 +201,17 @@
                                     <mat-form-field fxFlex="100%">
                                         <mat-label>Filter by T-shirt Status</mat-label>
                                         <mat-select [(ngModel)]="sortdata_twtb" (selectionChange)="sortRecords('result', sortdata_twtb)">
-                                            <mat-option value="pendind_a_z">Pending </mat-option>
-                                            <mat-option value="pendind_z_a">Delivered </mat-option>
-                                            <mat-option value="shiped_a">Shipped </mat-option>
+                                            <mat-option value="">All </mat-option>
+                                            <mat-option value="1">Pending </mat-option>
+                                            <mat-option value="2">Shipped </mat-option>
+                                            <mat-option value="3">Delivered </mat-option>
                                         </mat-select>
                                     </mat-form-field>
                                 </div>
                             </div>
                         </section>                        
                         <mat-list>
-                            <ng-container *ngFor="let data of result | filterEventMember:searchTermTWP;">
+                            <ng-container *ngFor="let data of result | filterEventMember:searchTermTWB| filterTshirtMember: searchtshirtTWB;">
                                 <mat-list-item class="list-container" *ngIf="data.activated == 0 && data.activated_at != '0000-00-00'">
                                            <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 1)" *ngIf="data.activated == 0">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Approve">done</mat-icon>
@@ -279,10 +282,11 @@
                                     <div fxFlex="20%">
                                         <mat-form-field fxFlex="100%">
                                             <mat-label>Filter by T-shirt Status</mat-label>
-                                            <mat-select [(ngModel)]="sortdata_fwtp" (selectionChange)="sortRecords('result_fw', sortdata_fwtp)">
-                                                <mat-option value="pendind_a_z">Pending </mat-option>
-                                                <mat-option value="pendind_z_a">Delivered </mat-option>
-                                                <mat-option value="shiped_a">Shipped </mat-option>
+                                            <mat-select [(ngModel)]="searchtshirtFWP">
+                                                <mat-option value="">All </mat-option>
+                                                <mat-option value="1">Pending </mat-option>
+                                                <mat-option value="2">Shipped </mat-option>
+                                                <mat-option value="3">Delivered </mat-option>
                                             </mat-select>
                                         </mat-form-field>
                                     </div>
@@ -290,7 +294,7 @@
                             </div>
                         </section> 
                         <mat-list>
-                            <ng-container *ngFor="let data of result_fw | filterEventMember:searchTermFWP;">
+                            <ng-container *ngFor="let data of result_fw | filterEventMember:searchTermFWP| filterTshirtMember: searchtshirtFWP;">
                                 <mat-list-item class="list-container" *ngIf="data.activated == 0 && data.activated_at == '0000-00-00'">
                                     <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 1)" *ngIf="data.activated == 0">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Approve">done</mat-icon>
@@ -327,7 +331,7 @@
                                     <p matLine>{{data.email}}</p>
                                 </mat-list-item>
                             </ng-container>
-                        </mat-list>                        
+                        </mat-list>
                     </mat-expansion-panel>
                     <mat-expansion-panel>
                         <mat-expansion-panel-header>
@@ -358,17 +362,18 @@
                                 <div fxFlex="20%">
                                     <mat-form-field fxFlex="100%">
                                         <mat-label>Filter by T-shirt Status</mat-label>
-                                        <mat-select [(ngModel)]="sortdata_fwta" (selectionChange)="sortRecords('result_fw', sortdata_fwta)">
-                                            <mat-option value="pendind_a_z">Pending </mat-option>
-                                            <mat-option value="pendind_z_a">Delivered </mat-option>
-                                            <mat-option value="shiped_a">Shipped </mat-option>
+                                        <mat-select [(ngModel)]="searchtshirtFWM">
+                                            <mat-option value="">All </mat-option>
+                                            <mat-option value="1">Pending </mat-option>
+                                            <mat-option value="2">Shipped </mat-option>
+                                            <mat-option value="3">Delivered </mat-option>
                                         </mat-select>
                                     </mat-form-field>
                                 </div>
                             </div>
                         </section> 
                         <mat-list>
-                            <ng-container *ngFor="let data of result_fw | filterEventMember:searchTermFWM;">
+                            <ng-container *ngFor="let data of result_fw | filterEventMember:searchTermFWM| filterTshirtMember: searchtshirtFWM;">
                                 <mat-list-item class="list-container" *ngIf="data.activated == 1">
                                     <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 1)" *ngIf="data.activated == 0">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Approve">done</mat-icon>
@@ -440,17 +445,18 @@
                                 <div fxFlex="20%">
                                     <mat-form-field fxFlex="100%">
                                         <mat-label>Filter by T-shirt Status</mat-label>
-                                        <mat-select [(ngModel)]="sortdata_fwtb" (selectionChange)="sortRecords('result_fw', sortdata_fwtb)">
-                                            <mat-option value="pendind_a_z">Pending </mat-option>
-                                            <mat-option value="pendind_z_a">Delivered </mat-option>
-                                            <mat-option value="shiped_a">Shipped </mat-option>
+                                        <mat-select [(ngModel)]="searchtshirtFWB">
+                                            <mat-option value="">All </mat-option>
+                                            <mat-option value="1">Pending </mat-option>
+                                            <mat-option value="2">Shipped </mat-option>
+                                            <mat-option value="3">Delivered </mat-option>
                                         </mat-select>
                                     </mat-form-field>
                                 </div>
                             </div>
                         </section> 
                         <mat-list>
-                            <ng-container *ngFor="let data of result_fw | filterEventMember:searchTermFWP;">
+                            <ng-container *ngFor="let data of result_fw | filterEventMember:searchTermFWP| filterTshirtMember: searchtshirtFWB;">
                                 <mat-list-item class="list-container" *ngIf="data.activated == 0  && data.activated_at != '0000-00-00'">
                                            <button mat-icon-button aria-label="label" (click)="changeStatus(data.member_id, 1)" *ngIf="data.activated == 0">
                                         <mat-icon #tooltip="matTooltip" matTooltip="Approve">done</mat-icon>
