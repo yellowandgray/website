@@ -63,7 +63,7 @@
                                     </button>
                                     <button mat-icon-button aria-label="label" (click)="openTshirt(data.member_id, 'result')">
                                         <mat-icon #tooltip="matTooltip" matTooltip="T-shirt">
-                                            <img src="https://img.icons8.com/material/24/000000/teams.png">
+                                            <img *ngIf="t_shirt_status == 1" src="https://img.icons8.com/material/24/000000/teams.png" style="background-color: red">
                                         </mat-icon>
                                     </button>
                                     <img matListAvatar src="{{image_url}}{{data.profile_picture}}" *ngIf="data.profile_picture && data.profile_picture != ''" alt="..." (click)="confirmDialog(data, 'preview')" />
@@ -131,7 +131,9 @@
                                     </button>
                                     <button mat-icon-button aria-label="label" (click)="openTshirt(data.member_id, 'result')">
                                         <mat-icon #tooltip="matTooltip" matTooltip="T-shirt">
-                                            <img src="https://img.icons8.com/material/24/000000/teams.png">
+                                            <img *ngIf="data.t_shirt_status == 1" src="https://img.icons8.com/material/24/000000/teams.png">
+                                            <img *ngIf="data.t_shirt_status == 2" src="https://img.icons8.com/material/24/000000/teams.png">
+                                            <img *ngIf="data.t_shirt_status == 3" src="https://img.icons8.com/material/24/000000/teams.png">
                                         </mat-icon>
                                     </button>
                                     <img matListAvatar src="{{image_url}}{{data.profile_picture}}" *ngIf="data.profile_picture && data.profile_picture != ''" alt="..." (click)="confirmDialog(data, 'preview')" />
