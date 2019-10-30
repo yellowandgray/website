@@ -15,6 +15,7 @@
                             <mat-panel-title>
                                 Pending Member
                             </mat-panel-title>
+                            <p Class="count-mem">0</p>
                         </mat-expansion-panel-header>
                         <section class="section">
                             <br/>                     
@@ -32,6 +33,16 @@
                                             <mat-option value="title_z_a">Name Z-A</mat-option>
                                             <mat-option value="created_a_z">Created Date ASC</mat-option>
                                             <mat-option value="created_z_a">Created Date DESC</mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                                <div fxFlex="20%">
+                                    <mat-form-field fxFlex="100%">
+                                        <mat-label>Filter by T-shirt Status</mat-label>
+                                        <mat-select [(ngModel)]="sortdata_twp" (selectionChange)="sortRecords('result', sortdata_twp)">
+                                            <mat-option value="title_a_z">Pending </mat-option>
+                                            <mat-option value="title_z_a">Delivered </mat-option>
+                                            <mat-option value="created_a_z">Shipped </mat-option>
                                         </mat-select>
                                     </mat-form-field>
                                 </div>
@@ -63,7 +74,7 @@
                                     </button>
                                     <button mat-icon-button aria-label="label" (click)="openTshirt(data.member_id, 'result')">
                                         <mat-icon #tooltip="matTooltip" matTooltip="T-shirt">
-                                            <img src="https://img.icons8.com/material/24/000000/teams.png">
+                                            <img src="../../assets/t-shirt/t-black.png" alt=""/>
                                         </mat-icon>
                                     </button>
                                     <img matListAvatar src="{{image_url}}{{data.profile_picture}}" *ngIf="data.profile_picture && data.profile_picture != ''" alt="..." (click)="confirmDialog(data, 'preview')" />
@@ -79,7 +90,10 @@
                         <mat-expansion-panel-header>
                             <mat-panel-title>
                                 Active Member
-                            </mat-panel-title>
+                            </mat-panel-title> 
+
+                            <p class="count-mem">{{result.length}}</p>
+
                         </mat-expansion-panel-header>
                         <section class="section">
                             <br/>                     
@@ -97,6 +111,16 @@
                                             <mat-option value="title_z_a">Name Z-A</mat-option>
                                             <mat-option value="created_a_z">Created Date ASC</mat-option>
                                             <mat-option value="created_z_a">Created Date DESC</mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                                <div fxFlex="20%">
+                                    <mat-form-field fxFlex="100%">
+                                        <mat-label>Filter by T-shirt Status</mat-label>
+                                        <mat-select [(ngModel)]="sortdata_twp" (selectionChange)="sortRecords('result', sortdata_twp)">
+                                            <mat-option value="title_a_z">Pending </mat-option>
+                                            <mat-option value="title_z_a">Delivered </mat-option>
+                                            <mat-option value="created_a_z">Shipped </mat-option>
                                         </mat-select>
                                     </mat-form-field>
                                 </div>
@@ -128,7 +152,7 @@
                                     </button>
                                     <button mat-icon-button aria-label="label" (click)="openTshirt(data.member_id, 'result')">
                                         <mat-icon #tooltip="matTooltip" matTooltip="T-shirt">
-                                            <img src="https://img.icons8.com/material/24/000000/teams.png">
+                                            <img src="../../assets/t-shirt/t-green.png" alt=""/>
                                         </mat-icon>
                                     </button>
                                     <img matListAvatar src="{{image_url}}{{data.profile_picture}}" *ngIf="data.profile_picture && data.profile_picture != ''" alt="..." (click)="confirmDialog(data, 'preview')" />
@@ -145,6 +169,7 @@
                             <mat-panel-title>
                                 Blocked Member
                             </mat-panel-title>
+                            <p Class="count-mem">0</p>
                         </mat-expansion-panel-header>
                         <section class="section">
                             <br/>                     
@@ -162,6 +187,16 @@
                                             <mat-option value="title_z_a">Name Z-A</mat-option>
                                             <mat-option value="created_a_z">Created Date ASC</mat-option>
                                             <mat-option value="created_z_a">Created Date DESC</mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                                <div fxFlex="20%">
+                                    <mat-form-field fxFlex="100%">
+                                        <mat-label>Filter by T-shirt Status</mat-label>
+                                        <mat-select [(ngModel)]="sortdata_twp" (selectionChange)="sortRecords('result', sortdata_twp)">
+                                            <mat-option value="title_a_z">Pending </mat-option>
+                                            <mat-option value="title_z_a">Delivered </mat-option>
+                                            <mat-option value="created_a_z">Shipped </mat-option>
                                         </mat-select>
                                     </mat-form-field>
                                 </div>
@@ -193,7 +228,7 @@
                                     </button>
                                     <button mat-icon-button aria-label="label" (click)="openTshirt(data.member_id, 'result')">
                                         <mat-icon #tooltip="matTooltip" matTooltip="T-shirt">
-                                            <img src="https://img.icons8.com/material/24/000000/teams.png">
+                                            <img src="../../assets/t-shirt/t-red.png" alt=""/>
                                         </mat-icon>
                                     </button>
                                     <img matListAvatar src="{{image_url}}{{data.profile_picture}}" *ngIf="data.profile_picture && data.profile_picture != ''" alt="..." (click)="confirmDialog(data, 'preview')" />
@@ -214,6 +249,7 @@
                             <mat-panel-title>
                                 Pending Member
                             </mat-panel-title>
+                            <p Class="count-mem">0</p>
                         </mat-expansion-panel-header>
                         <section class="section">
                             <br/>                     
@@ -233,6 +269,16 @@
                                             <mat-option value="created_z_a">Created Date DESC</mat-option>
                                         </mat-select>
                                     </mat-form-field>
+                                    <div fxFlex="20%">
+                                        <mat-form-field fxFlex="100%">
+                                            <mat-label>Filter by T-shirt Status</mat-label>
+                                            <mat-select [(ngModel)]="sortdata_fwp" (selectionChange)="sortRecords('result_fw', sortdata_fwp)">
+                                                <mat-option value="title_a_z">Pending </mat-option>
+                                                <mat-option value="title_z_a">Delivered </mat-option>
+                                                <mat-option value="created_a_z">Shipped </mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
                                 </div>
                             </div>
                         </section> 
@@ -279,6 +325,7 @@
                             <mat-panel-title>
                                 Active Member
                             </mat-panel-title>
+                            <p Class="count-mem">0</p>
                         </mat-expansion-panel-header>
                         <section class="section">
                             <br/>                     
@@ -296,6 +343,16 @@
                                             <mat-option value="title_z_a">Name Z-A</mat-option>
                                             <mat-option value="created_a_z">Created Date ASC</mat-option>
                                             <mat-option value="created_z_a">Created Date DESC</mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                                <div fxFlex="20%">
+                                    <mat-form-field fxFlex="100%">
+                                        <mat-label>Filter by T-shirt Status</mat-label>
+                                        <mat-select [(ngModel)]="sortdata_fwp" (selectionChange)="sortRecords('result_fw', sortdata_fwp)">
+                                            <mat-option value="title_a_z">Pending </mat-option>
+                                            <mat-option value="title_z_a">Delivered </mat-option>
+                                            <mat-option value="created_a_z">Shipped </mat-option>
                                         </mat-select>
                                     </mat-form-field>
                                 </div>
@@ -344,6 +401,7 @@
                             <mat-panel-title>
                                 Blocked Member
                             </mat-panel-title>
+                            <p Class="count-mem">0</p>
                         </mat-expansion-panel-header>
                         <section class="section">
                             <br/>                     
@@ -361,6 +419,17 @@
                                             <mat-option value="title_z_a">Name Z-A</mat-option>
                                             <mat-option value="created_a_z">Created Date ASC</mat-option>
                                             <mat-option value="created_z_a">Created Date DESC</mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+
+                                </div>
+                                <div fxFlex="20%">
+                                    <mat-form-field fxFlex="100%">
+                                        <mat-label>Filter by T-shirt Status</mat-label>
+                                        <mat-select [(ngModel)]="sortdata_fwp" (selectionChange)="sortRecords('result_fw', sortdata_fwp)">
+                                            <mat-option value="title_a_z">Pending </mat-option>
+                                            <mat-option value="title_z_a">Delivered </mat-option>
+                                            <mat-option value="created_a_z">Shipped </mat-option>
                                         </mat-select>
                                     </mat-form-field>
                                 </div>

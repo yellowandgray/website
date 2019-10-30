@@ -340,13 +340,19 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                         <label for="referral_club_id">Club ID</label>
                                         <input placeholder="" id="referral_club_id" name="referral_club_id" type="text" class="form-control">
                                     </div>
-                                    <br/>
-                                    <h4>Login Information</h4>
                                     <div class="form-group">
-                                        <label for="email">Email Address / Username</label> 
+                                        <label for="email">Email Address</label> 
                                         <span class="red-i">*</span>
                                         <input type="text" class="form-control" name="email" id="email" placeholder="" required-i onchange="removeValidation('email');" />
                                         <div id="email_error"></div>
+                                    </div>
+                                    <br/>
+                                    <h4>Login Information</h4>
+                                    <div class="form-group">
+                                        <label for="username"> Username</label> 
+                                        <span class="red-i">*</span>
+                                        <input type="text" class="form-control" name="username" id="username" placeholder="" required-i onchange="removeValidation('username');" />
+                                        <div id="username_error"></div>
                                     </div>
                                     <div class="form-group">
                                         <label for="password">Password</label> 
