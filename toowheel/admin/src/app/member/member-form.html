@@ -245,11 +245,19 @@
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" class="full-width">
-                    <mat-label>Email Address / Username</mat-label>
-                    <input matInput type="email" required placeholder="" formControlName="email" />
+                    <mat-label>Username</mat-label>
+                    <input matInput type="text" required placeholder="" formControlName="email" />
                     <mat-error>Username is required</mat-error>
                 </mat-form-field>
             </div>
+             <div fxFlex="50%">
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Email Address</mat-label>
+                    <input matInput type="email" required placeholder="" formControlName="email_id" />
+                </mat-form-field>
+            </div>
+        </div>
+        <div *ngIf="passwordhide == ''" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">           
              <div fxFlex="50%">
                 <mat-form-field appearance="outline" class="full-width">
                     <mat-label>Password</mat-label>

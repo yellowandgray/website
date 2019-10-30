@@ -16,6 +16,7 @@ export class ClubComponent implements OnInit {
   searchTermFW: string = '';
   sortdata_tw: string = '';
   sortdata_fw: string = '';  
+  
   oneClick: Boolean = false;  
   result:any[];
   result_four_wheel:any[];

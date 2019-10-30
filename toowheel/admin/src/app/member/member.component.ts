@@ -102,6 +102,29 @@ export class MemberComponent implements OnInit {
        }
     });
 }
+ openPasswordDialog(id, res): void  {
+      var data = null;
+      if(id != 0) { 
+      this[res].forEach(val=> {
+           if(parseInt(val.member_id) === parseInt(id)) {
+                data = val;
+                return false;
+           }
+         });
+      }
+    const dialogRef = this.dialog.open(MemberPasswordChange, {
+        minWidth: "40%",
+        maxWidth: "40%",
+        data: data
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+        if(result !== false && result !== 'false') {
+            this.getMember();
+            this.getFourWheelMember();
+       }
+    });
+}
 confirmDialog(id, action): void  {
     var data = null;
       if(id != 0) { 
@@ -199,6 +222,7 @@ confirmDialog(id, action): void  {
 })
 export class MemberForm {
 image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
+    passwordhide: string = '';
     memberForm: FormGroup;
     loading = false;
     profile_image: string = "Profile Picture";
@@ -227,8 +251,9 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
             'referral_club_id': new FormControl(''),
             'marital_status': new FormControl('single'),
             'zip_code': new FormControl('', Validators.required),
-            'email': new FormControl('', [Validators.required, Validators.email]),
+            'email': new FormControl('', Validators.required),
             'password': new FormControl(''),
+            'email_id': new FormControl(''),
         'club_id': new FormControl('',Validators.required)
         });
         if(this.data != null) {
@@ -251,10 +276,12 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
             'zip_code': this.data.zip_code,
             'password': this.data.password,
             'email': this.data.email,
+            'email_id': this.data.email_id,
             'club_id': this.data.club_id
         })
         this.member_id = this.data.member_id;
         this.image_path= this.data.profile_picture;
+        this.passwordhide=this.data.password;
     }
     this.getClub();
     this.getState();
@@ -353,7 +380,11 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
           formData.append('marital_status', this.memberForm.value.marital_status);
           formData.append('zip_code', this.memberForm.value.zip_code);
           formData.append('email', this.memberForm.value.email);
+          formData.append('email_id', this.memberForm.value.email_id);
+          if(this.passwordhide == '')
+          {
           formData.append('password', this.memberForm.value.password);
+          }
           formData.append('club_id', this.memberForm.value.club_id);
           formData.append('payment_type', 'receipt');
           formData.append('paypal_response', '');
@@ -585,3 +616,61 @@ export class MemberTshirtForm {
         );
   }
 }  
+@Component({
+  selector: 'member-password',
+  templateUrl: 'member-password.html',
+})
+export class MemberPasswordChange {
+image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
+    passwordhide: string = '';
+    memberForm: FormGroup;
+    loading = false;
+    profile_image: string = "Profile Picture";
+    image_path: string = '';
+    member_id = 0;
+    clubs = [];
+    states = [];
+    constructor(
+    public dialogRef: MatDialogRef<MemberPasswordChange>,
+    @Inject(MAT_DIALOG_DATA) public data: any,private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {
+        this.memberForm = new FormGroup({
+            'password': new FormControl('')
+        });
+        if(this.data != null) {
+        this.image_path= this.data.profile_picture;
+        this.member_id=this.data.member_id;
+    }
+    }
+
+    onSubmit() {
+      if (this.memberForm.invalid) {
+            return;
+      }
+      this.loading = true;
+      var url = '';
+      var formData = new FormData();
+      formData.append('password', this.memberForm.value.password);
+      if(this.member_id != 0) {
+        url = 'update_record/member/member_id = '+this.member_id;
+      }
+      this.httpClient.post('https://www.toowheel.com/beta/toowheel/api/v1/'+url, formData).subscribe(
+          (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this.dialogRef.close(true);
+                }else{
+            this._snackBar.open(res["result"]["message"], '', {
+              duration: 2000,
+            });
+            }
+            },
+            (error)=>{
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+        });
+      }
+    );
+  }
+}
