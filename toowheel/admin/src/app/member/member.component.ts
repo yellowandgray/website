@@ -635,36 +635,12 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
     @Inject(MAT_DIALOG_DATA) public data: any,private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
         this.memberForm = new FormGroup({
-            'type': new FormControl('two_wheel'),
-            'first_name': new FormControl('', Validators.required),
-            'last_name': new FormControl('', Validators.required),
-            'gender': new FormControl('male'),
-            'age': new FormControl('20'),
-            'ic_passport': new FormControl(''),
-            'dob': new FormControl(),
-            'contact_number': new FormControl(''),
-            'license_category': new FormControl(''),
-            'address': new FormControl(''),
-            'country': new FormControl('Malaysia'),
-            'state': new FormControl('', Validators.required),
-            'referral_member_id': new FormControl(''),
-            'referral_club_id': new FormControl(''),
-            'marital_status': new FormControl('single'),
-            'zip_code': new FormControl(''),
-            'email': new FormControl('', Validators.required),
-            'password': new FormControl('', Validators.required),
-            'club_id': new FormControl('')
+            'password': new FormControl('')
         });
         if(this.data != null) {
-            this.memberForm.patchValue({             
-            'first_name': this.data.first_name,
-            'last_name': this.data.last_name,            
-           
-        })       
         this.image_path= this.data.profile_picture;
-        this.passwordhide='';
+        this.member_id=this.data.member_id;
     }
-   
     }
 
     onSubmit() {
@@ -674,44 +650,9 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
       this.loading = true;
       var url = '';
       var formData = new FormData();
-      formData.append('type', this.memberForm.value.type);
-          formData.append('first_name', this.memberForm.value.first_name);
-          formData.append('last_name', this.memberForm.value.last_name);
-          if(this.image_path && this.image_path != '') {
-          formData.append('profile_picture', this.image_path);
-          }else {
-              formData.append('profile_picture', '');
-          }
-          formData.append('gender', this.memberForm.value.gender);
-          formData.append('age', this.memberForm.value.age);
-          formData.append('ic_passport', this.memberForm.value.ic_passport);
-          formData.append('dob_date', moment(this.memberForm.value.dob).format('DD'));
-          formData.append('dob_month', moment(this.memberForm.value.dob).format('MM'));
-          formData.append('dob_year', moment(this.memberForm.value.dob).format('YYYY'));
-          formData.append('contact_number', this.memberForm.value.contact_number); 
-          formData.append('address', this.memberForm.value.address);
-          formData.append('country', 'Malaysia');
-          formData.append('state_id', this.memberForm.value.state);
-          formData.append('referral_member_id', this.memberForm.value.referral_member_id);
-          formData.append('referral_club_id', this.memberForm.value.referral_club_id);
-          formData.append('marital_status', this.memberForm.value.marital_status);
-          formData.append('zip_code', this.memberForm.value.zip_code);
-          formData.append('email', this.memberForm.value.email);
-          
-          formData.append('password', this.memberForm.value.password);
-        
-          formData.append('club_id', this.memberForm.value.club_id);
-          formData.append('payment_type', 'receipt');
-          formData.append('paypal_response', '');
-          formData.append('paypal_transaction_id', '');
-          formData.append('fund_transfer_file', '');
-          formData.append('activated', '1');
-          formData.append('activated_at', moment().format('YYYY-MM-DD'));
+      formData.append('password', this.memberForm.value.password);
       if(this.member_id != 0) {
         url = 'update_record/member/member_id = '+this.member_id;
-      } else {
-        formData.append('activated_by', sessionStorage.getItem("toowheel_users_id"));
-        url = 'insert_member';
       }
       this.httpClient.post('https://www.toowheel.com/beta/toowheel/api/v1/'+url, formData).subscribe(
           (res)=>{
@@ -732,5 +673,4 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
       }
     );
   }
-
 }
