@@ -302,6 +302,10 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                         <div id="contact_number_error"></div>
                                     </div>
                                     <div class="form-group">
+                                        <label for="email_id">Email Address</label> 
+                                        <input type="email" class="form-control" name="email_id" id="email_id" placeholder="" required-i />
+                                    </div>
+                                    <div class="form-group">
                                         <label for="address">Address</label> 
                                         <span class="red-i">*</span>
                                         <textarea class="form-control" placeholder="" name="address" id="address" type="text" rows="3" required-i onchange="removeValidation('address');"></textarea>
@@ -340,19 +344,13 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                         <label for="referral_club_id">Club ID</label>
                                         <input placeholder="" id="referral_club_id" name="referral_club_id" type="text" class="form-control">
                                     </div>
-                                    <div class="form-group">
-                                        <label for="email">Email Address</label> 
-                                        <span class="red-i">*</span>
-                                        <input type="text" class="form-control" name="email" id="email" placeholder="" required-i onchange="removeValidation('email');" />
-                                        <div id="email_error"></div>
-                                    </div>
                                     <br/>
                                     <h4>Login Information</h4>
                                     <div class="form-group">
-                                        <label for="username"> Username</label> 
+                                        <label for="email"> Username</label> 
                                         <span class="red-i">*</span>
-                                        <input type="text" class="form-control" name="username" id="username" placeholder="" required-i onchange="removeValidation('username');" />
-                                        <div id="username_error"></div>
+                                        <input type="text" class="form-control" name="email" id="email" placeholder="" required-i onchange="removeValidation('email');" />
+                                        <div id="email_error"></div>
                                     </div>
                                     <div class="form-group">
                                         <label for="password">Password</label> 

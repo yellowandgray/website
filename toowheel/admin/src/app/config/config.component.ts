@@ -111,10 +111,10 @@ export class ConfigComponent implements OnInit {
   sortRecords(arr, sort): void {
         switch(sort) {
             case 'title_a_z':
-                (this[arr]).sort((a,b) => a.name.localeCompare(b.name));
+                (this[arr]).sort((a,b) => a.display_name.localeCompare(b.display_name));
             break;
             case 'title_z_a':
-            (this[arr]).sort((a,b) => b.name.localeCompare(a.name));
+            (this[arr]).sort((a,b) => b.display_name.localeCompare(a.display_name));
             break;
             case 'created_a_z':
                 (this[arr]).sort((a,b) => a.created_at.localeCompare(b.created_at));

@@ -14,12 +14,31 @@ import * as moment from 'moment';
 export class MemberComponent implements OnInit {
   searchTermTWP: string = '';
   searchTermTWM: string = '';
+  searchTermTWB: string = '';
   searchTermFWP: string = '';
   searchTermFWM: string = '';
+  searchTermFWB: string = '';
   sortdata_twp: string = '';
   sortdata_twm: string = '';
+  sortdata_twb: string = '';
   sortdata_fwp: string = '';
   sortdata_fwm: string = '';
+  sortdata_fwb: string = '';
+
+    searchtshirtTWP: string = '';
+    searchtshirtTWM: string = '';
+    searchtshirtTWB: string = '';
+
+    searchtshirtFWP: string = '';
+    searchtshirtFWM: string = '';
+    searchtshirtFWB: string = '';
+    
+    tw_p_membercount = 0;
+    tw_a_membercount = 0;
+    tw_b_membercount = 0;
+    fw_p_membercount = 0;
+    fw_a_membercount = 0;
+    fw_b_membercount = 0;
   result = [];
   result_fw = [];
   image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
@@ -34,6 +53,17 @@ export class MemberComponent implements OnInit {
   .subscribe(
           (res)=>{
               this.result = res["result"]["data"];
+              this.result.forEach(val=> {
+           if(val.activated == 0 && val.activated_at == '0000-00-00') {
+                this.tw_p_membercount = this.tw_p_membercount + 1;
+           }
+           if(val.activated == 1) {
+                this.tw_a_membercount = this.tw_a_membercount + 1;
+           }
+           if(val.activated == 0 && val.activated_at != '0000-00-00') {
+                this.tw_b_membercount = this.tw_b_membercount + 1;
+           }
+         });
         },
         (error)=>{
             this._snackBar.open(error["statusText"], '', {
@@ -47,6 +77,17 @@ export class MemberComponent implements OnInit {
   .subscribe(
           (res)=>{
               this.result_fw = res["result"]["data"];
+              this.result_fw.forEach(val=> {
+           if(val.activated == 0 && val.activated_at == '0000-00-00') {
+                this.fw_p_membercount = this.fw_p_membercount + 1;
+           }
+           if(val.activated == 1) {
+                this.fw_a_membercount = this.fw_a_membercount + 1;
+           }
+           if(val.activated == 0 && val.activated_at != '0000-00-00') {
+                this.fw_b_membercount = this.fw_b_membercount + 1;
+           }
+         });
         },
         (error)=>{
             this._snackBar.open(error["statusText"], '', {
@@ -208,6 +249,15 @@ confirmDialog(id, action): void  {
             case 'created_z_a':
                 (this[arr]).sort((a,b) => b.created_at.localeCompare(a.created_at));
             break;
+            case 'pendind_a_z':
+                (this[arr]).sort((a,b) => b.t_shirt_status.localeCompare(a.t_shirt_status));
+            break;
+            case 'pendind_z_a':
+                (this[arr]).sort((a,b) => b.t_shirt_status.localeCompare(a.t_shirt_status));
+            break;
+            case 'shiped_a':
+                (this[arr]).sort((a,b) => b.t_shirt_status.localeCompare(a.t_shirt_status));
+            break;
             default:
             break;
         }
@@ -240,21 +290,21 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
             'last_name': new FormControl('', Validators.required),
             'gender': new FormControl('male'),
             'age': new FormControl('20'),
-            'ic_passport': new FormControl('', Validators.required),
-            'dob': new FormControl('', Validators.required),
-            'contact_number': new FormControl('', Validators.required),
+            'ic_passport': new FormControl(''),
+            'dob': new FormControl(''),
+            'contact_number': new FormControl(''),
             'license_category': new FormControl(''),
-            'address': new FormControl('', Validators.required),
+            'address': new FormControl(''),
             'country': new FormControl('Malaysia'),
             'state': new FormControl('', Validators.required),
             'referral_member_id': new FormControl(''),
             'referral_club_id': new FormControl(''),
             'marital_status': new FormControl('single'),
-            'zip_code': new FormControl('', Validators.required),
+            'zip_code': new FormControl(''),
             'email': new FormControl('', Validators.required),
-            'password': new FormControl(''),
+            'password': new FormControl('', Validators.required),
             'email_id': new FormControl(''),
-        'club_id': new FormControl('',Validators.required)
+        'club_id': new FormControl('')
         });
         if(this.data != null) {
             this.memberForm.patchValue({ 
