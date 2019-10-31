@@ -68,6 +68,70 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                 </div>
             </div>
         </section>
+        <section class="media-press-release">
+            <div class="container">
+                <div class="col-md-12">
+                    <div class="row news-01">
+                        <div class="col-md-6">
+                            <div class="news-01 height-one">
+                                <img src="img/events/004.jpg" alt="" class="img-responsive-01"/>
+                                <div class="news-01-cont">
+                                    <p class="clb-bg"><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 14) : $obj->charLimit($row['sponsor'], 14) ?></p>
+                                    <h2><?php echo $obj->charLimit($row['title'], 20); ?></h2>
+                                    <p>others  |  Mohan K Ramanujam  | Oct 09, 2019</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row" style="margin-bottom: 12px;">
+                                <div class="col-md-6 col-sm-6 col-xs-6">
+                                    <div class="news-01 height-two">
+                                        <img src="img/events/001.jpg" alt="" class="img-responsive-h"/>
+                                        <div class=" news-01-cont">
+                                            <p class="clb-bg"><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 14) : $obj->charLimit($row['sponsor'], 14) ?></p>
+                                            <h2><?php echo $obj->charLimit($row['title'], 20); ?></h2>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6">
+                                    <div class="news-01 height-two">
+                                        <img src="img/events/003.jpg" alt="" class="img-responsive-h"/>
+                                        <div class=" news-01-cont">
+                                            <p class="clb-bg"><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 14) : $obj->charLimit($row['sponsor'], 14) ?></p>
+                                            <h2><?php echo $obj->charLimit($row['title'], 20); ?></h2>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row"> 
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="news-01 height-two">
+                                        <img src="img/events/005.jpg" alt="" class="img-responsive-h"/>
+                                        <div class=" news-01-cont">
+                                            <p class="clb-bg"><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 14) : $obj->charLimit($row['sponsor'], 14) ?></p>
+                                            <h2><?php echo $obj->charLimit($row['title'], 20); ?></h2>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="news-01 height-two">
+                                        <img src="img/events/002.jpg" alt="" class="img-responsive-h"/>
+                                        <div class=" news-01-cont">
+                                            <p class="clb-bg"><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 14) : $obj->charLimit($row['sponsor'], 14) ?></p>
+                                            <h2><?php echo $obj->charLimit($row['title'], 20); ?></h2>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="media-press-release" onClick="document.location.href = 'press-release.php?type=<?php echo $type; ?>'">
             <div class="container">
                 <div class="col-md-12">

@@ -4093,3 +4093,51 @@ thead td {
     border-radius: 20px;
     border: 2px solid red;
 }
+.news-01-cont{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0;
+    background-color: transparent !important;
+    position: relative;
+    bottom: 104px;
+    border-bottom-right-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    height: 97px;
+    margin-bottom: -95px !important;
+    background-image: linear-gradient(transparent, #000000eb 113%);
+}
+.news-01-cont p {
+    color: #fff;
+    margin-bottom: 8px;
+    font-size: 10px;
+    height: 60px;
+    overflow: hidden;
+    text-align: left;
+}
+.news-01-cont h2 {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 6px;
+}
+.img-responsive-h {
+    width: 100%;
+    height: 210px;
+}
+.img-responsive-01 {
+    width: 100%;
+    height: 424px;
+}
+.news-01 img:hover{
+    transform: scale(1.1);
+    transition: all 0.2s linear;
+}
+.height-one{
+    height: 424px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.height-two{
+    height: 206px;
+    overflow: hidden;
+}
