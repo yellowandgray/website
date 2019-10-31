@@ -4055,12 +4055,16 @@ thead td {
 .back-btn{
     color: #fff;
     border: none;
-    background: #ed1c24;
+    background: #7f7f7f;
     padding: 3px 17px;
+    float: right;
 }
 .update-btn{
-    background: #363636;
+    background: #ed1c24;
     border: none;
     color: #fff;
     padding: 3px 17px;
+    text-align: center;
+    margin: 0px 45%;
+    width: 10%;
 }

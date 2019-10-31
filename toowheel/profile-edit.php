@@ -19,6 +19,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
         <div class="member-register-section">
             <div class="container">
                 <div class="col-md-12">
+                    <button class="back-btn" type="submit">Back</button>
                     <div class="registation-step">
                         <h4>Basic Information</h4>
                         <form id="basic_information" onsubmit="return updateMemberProfile(<?php echo $member['member_id']; ?>, '<?php echo $type; ?>');">
@@ -229,7 +230,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                 <div id="email_error"></div>
                             </div>
                             <br/>
-                            <button class="back-btn" type="submit">Back</button>
+
                             <button class="update-btn" type="submit">Update</button>
                         </form>
                     </div>
