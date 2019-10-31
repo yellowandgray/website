@@ -1030,11 +1030,12 @@ footer .copy p{
     cursor: pointer;
     box-sizing: border-box;
     overflow: hidden;
-    margin: 20px 0 10px 0;
+    margin: 7px 0 10px 0;
     background: #ed1c24 !important;
     padding: 8px 30px !important;
     border-style: none;
     border-radius: 5px;
+    position: absolute;
 }
 .button-03 a, .button-03 i{
     color: #fff  !important;
@@ -1315,4 +1316,12 @@ footer .copy p{
         cursor: pointer;
         top: 182px;
     }
+}
+.product-details h3 span{
+    padding: 0px 20px 0px 0px  !important;
+}
+.d-flex p{
+    font-size: 15px;
+    line-height: 1.8;
+    font-weight: 600;
 }
