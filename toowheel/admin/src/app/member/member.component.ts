@@ -49,11 +49,17 @@ export class MemberComponent implements OnInit {
       this.getFourWheelMember();
   }
   getMember(): void {
+    this.tw_p_membercount = 0;
+    this.tw_a_membercount = 0;
+    this.tw_b_membercount = 0;
   this.httpClient.get<any>('https://www.toowheel.com/beta/toowheel/api/v1/get_two_wheel_member')
   .subscribe(
           (res)=>{
+ 
+   
               this.result = res["result"]["data"];
               this.result.forEach(val=> {
+           
            if(val.activated == 0 && val.activated_at == '0000-00-00') {
                 this.tw_p_membercount = this.tw_p_membercount + 1;
            }
@@ -73,9 +79,14 @@ export class MemberComponent implements OnInit {
         );
   }
   getFourWheelMember(): void {
+    this.fw_p_membercount = 0;
+    this.fw_a_membercount = 0;
+    this.fw_b_membercount = 0;
+   
   this.httpClient.get<any>('https://www.toowheel.com/beta/toowheel/api/v1/get_four_wheel_member')
   .subscribe(
           (res)=>{
+ 
               this.result_fw = res["result"]["data"];
               this.result_fw.forEach(val=> {
            if(val.activated == 0 && val.activated_at == '0000-00-00') {

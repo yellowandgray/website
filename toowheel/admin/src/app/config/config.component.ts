@@ -20,6 +20,7 @@ export class ConfigComponent implements OnInit {
   searchTermFWH: string = '';
   sortdata_twh: string = '';
   sortdata_fwh: string = '';  
+  sortdata_fwc: string = ''; 
 
   result = [];
   result_home = [];
