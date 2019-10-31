@@ -19,4 +19,6 @@
 .list-container { 
     border-bottom: 1px solid #ccc;
 }
-
+.usernamespace{
+    padding-left:20px;
+}

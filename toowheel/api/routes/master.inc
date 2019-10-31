@@ -216,9 +216,6 @@ $app->post('/insert_member', function() use ($app) {
                 $tpy = new Thirdparty();
                 $data['membership_id'] = $member_id;
                 if ($data['activated'] == 1) {
-                    if ($admin_created == false) {
-                        $data['password'] = 'Your password';
-                    }
                     $data['link'] = LOGIN_PATH;
                     $template = $com->selectRow('*', 'templates', 'name=\'new_member_register_activated\' AND type=\'email\' AND target=\'user\'');
                 }
