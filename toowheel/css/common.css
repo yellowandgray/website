@@ -4053,11 +4053,23 @@ thead td {
     color: #000 !important;
 }
 .back-btn{
-    color: #fff;
+    background: #ed1c24;
     border: none;
-    background: #7f7f7f;
+    color: #fff;
     padding: 3px 17px;
-    float: right;
+    text-align: center;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    outline: none !important;
+}
+.back-btn:hover{
+    background: #fff;
+    border: none;
+    color: #ed1c24;
+    padding: 1px 17px;
+    text-align: center;
+    border-radius: 20px;
+    border: 2px solid red;
 }
 .update-btn{
     background: #ed1c24;
@@ -4067,4 +4079,17 @@ thead td {
     text-align: center;
     margin: 0px 45%;
     width: 10%;
+    border-radius: 20px;
+    outline: none !important;
+}
+.update-btn:hover{
+    background: #fff;
+    border: none;
+    color: #ed1c24;
+    padding: 1px 17px;
+    text-align: center;
+    margin: 0px 45%;
+    width: 10%;
+    border-radius: 20px;
+    border: 2px solid red;
 }
