@@ -670,9 +670,10 @@ export class MemberTshirtForm {
             }
         },
         (error)=>{
-            this._snackBar.open(error["statusText"], '', {
+            /*this._snackBar.open(error["statusText"], '', {
       duration: 2000,
-    });
+    });*/
+this.dialogRef.close(true);
         }
         );
   }

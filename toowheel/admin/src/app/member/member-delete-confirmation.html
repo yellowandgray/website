@@ -11,7 +11,8 @@
                 </mat-form-field>
             </div>
         </div>
-    <img class="payment-receipt-img" mat-card-image *ngIf="action == 'payment' && data.payment_type == 'receipt'" src="{{image_url}}{{data['fund_transfer_file']}}" alt="Photo" />
+    <img class="payment-receipt-img" mat-card-image *ngIf="action == 'payment' && data.payment_type == 'receipt' && data.fund_transfer_file!=''" src="{{image_url}}{{data['fund_transfer_file']}}" alt="Photo" />
+         <p *ngIf="action == 'payment' && data.fund_transfer_file ==''" >No Receipt Found</p>
          <img class="member-profile" mat-card-image *ngIf="action == 'preview'" src="{{image_url}}{{data['profile_picture']}}" alt="Photo" />
          <div *ngIf="action == 'payment' && data.payment_type == ''">No payment made</div>
          <div *ngIf="action == 'payment' && data.payment_type == 'paypal'">PayPal Order ID: {{data.paypal_transaction_id}}</div>
