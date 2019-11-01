@@ -178,7 +178,7 @@ import { EcommerceComponent, EcommerceCategory, EcommerceUnits, EcommerceProduct
     EcommerceCategory,
     EcommerceUnits,
     EcommerceProducts,
-    EcommerceCategoryDelete
+    EcommerceCategoryDelete,
     PictureViewGallery
 
   ],
@@ -217,7 +217,8 @@ import { EcommerceComponent, EcommerceCategory, EcommerceUnits, EcommerceProduct
     MatBadgeModule
   ],
   entryComponents: [ClubComponent, ClubForm, ClubDelete, ClubPhotosForm, CategoryComponent, CategoryForm, CategoryDelete, VendorComponent, VendorForm, MemberComponent, MemberForm, MemberDelete, MemberViewForm, MemberTshirtForm,MemberPasswordChange, NewsComponent, NewsForm, NewsGalleryForm, NewsDelete, AdvertismentComponent, AdvertismentForm, AdvertismentDelete, GalleryComponent, GalleryForm, ConfigComponent, ConfigForm, ClublandingComponent, LandingAboutForm, ClubgalleryComponent, ClubGalleryForm, ClubnewsComponent, ClubNewsForm, ClubeventComponent, ClubEventForm, ClubEventDelete, PressReleaseComponent, PressReleaseForm, PressreleaseDelete, GalleryDelete, AnnouncementComponent, AnnouncementForm,AnnouncementDelete, MediaComponent, MediaForm, MediaDelete, NewsletterComponent, NewsletterForm, NewsletterDelete, UsersComponent, UsersForm, UsersViewForm, UsersDeleteForm, PictureView,PictureViewNews,PictureViewPress,PictureViewClub, WorkshopComponent, WorkshopForm, WorkshopDelete,PictureViewWorkshop, WorkshopViewFrom, ClubViewFrom, NewsViewForm, ClubEventViewFrom, PressreleaseViewFrom, AssetComponent, AssetForm, AssetDelete,PictureViewUser,LoginComponent, ForgotPasswordForm,UserPasswordChange, EcommerceComponent, EcommerceCategory, EcommerceUnits, EcommerceProducts, EcommerceCategoryDelete, PictureViewGallery],
-  providers: [],
+  
+providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
