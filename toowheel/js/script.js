@@ -225,7 +225,7 @@ $("#smartwizard").on("leaveStep", function (e, anchorObject, stepNumber, stepDir
                 //$('#password_error').html('Enter password').addClass('error-msg');
                 $('#password').focus();
                 checkPasswordStrength();
-                $(window).scrollTop($('#password').position().top);
+                $(window).scrollTop($('#password').position().top);               
                 change = false;
             }
             /*if (validateEmail($.trim($('#email').val())) === false) {

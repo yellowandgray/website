@@ -25,12 +25,32 @@
             </mat-tab>
             <mat-tab label="Units">
                 <div class="add-btn-container">
-                    <button mat-raised-button color="primary" (click)="openUnits(0)"><mat-icon>add</mat-icon> Units</button>
+                    <button mat-raised-button color="primary" (click)="openUnits(0, 'result_unit')"><mat-icon>add</mat-icon> Units</button>
                 </div>
                 <mat-list>
                     <ng-container *ngFor="let data of result_unit">
                         <mat-list-item class="list-container">
-                            <button mat-icon-button aria-label="label">
+                            <button mat-icon-button aria-label="label" (click)="openUnits(data.unit_id, 'result_unit')">
+                                <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
+                            </button>
+                            <button mat-icon-button aria-label="label" (click)="confirmDeleteUnit(data.unit_id)">
+                                <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
+                            </button>
+                            <h3 class="truncate" matLine>{{data.type}}</h3>
+                            <h2 class="truncate" matLine>{{data.name}}</h2>
+                            <h2 class="truncate" matLine>{{data.value}}</h2>
+                        </mat-list-item>
+                    </ng-container>
+                </mat-list>
+            </mat-tab>
+            <mat-tab label="Products">
+                <div class="add-btn-container">
+                    <button mat-raised-button color="primary" (click)="openProducts(0, 'result_product')"><mat-icon>add</mat-icon> Products</button>
+                </div>
+                <ng-container *ngFor="let data of result_product">
+                    <mat-list>
+                        <mat-list-item class="list-container">
+                            <button mat-icon-button aria-label="label" (click)="openProducts(data.product_id, 'result_product')">
                                 <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
                             </button>
                             <button mat-icon-button aria-label="label">
@@ -38,58 +58,8 @@
                             </button>
                             <h3 class="truncate" matLine>{{data.name}}</h3>
                         </mat-list-item>
-                    </ng-container>
-                </mat-list>
-            </mat-tab>
-            <mat-tab label="Products">
-                <div class="add-btn-container">
-                    <button mat-raised-button color="primary" (click)="openProducts()"><mat-icon>add</mat-icon> Products</button>
-                </div>
-                <mat-list>
-                    <mat-list-item class="list-container">
-                        <button mat-icon-button aria-label="label">
-                            <mat-icon #tooltip="matTooltip" matTooltip="View">remove_red_eye</mat-icon>
-                        </button>
-                        <button mat-icon-button aria-label="label">
-                            <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
-                        </button>
-                        <button mat-icon-button aria-label="label">
-                            <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
-                        </button>
-                        <img matListAvatar src="../assets/1.jpg" alt="..." />
-                        <h3 class="truncate" matLine>T-shirt</h3>
-                    </mat-list-item>
-                </mat-list>
-                <mat-list>
-                    <mat-list-item class="list-container">
-                        <button mat-icon-button aria-label="label">
-                            <mat-icon #tooltip="matTooltip" matTooltip="View">remove_red_eye</mat-icon>
-                        </button>
-                        <button mat-icon-button aria-label="label">
-                            <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
-                        </button>
-                        <button mat-icon-button aria-label="label">
-                            <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
-                        </button>
-                        <img matListAvatar src="../assets/1.jpg" alt="..." />
-                        <h3 class="truncate" matLine>Shoe</h3>
-                    </mat-list-item>
-                </mat-list>
-                <mat-list>
-                    <mat-list-item class="list-container">
-                        <button mat-icon-button aria-label="label">
-                            <mat-icon #tooltip="matTooltip" matTooltip="View">remove_red_eye</mat-icon>
-                        </button>
-                        <button mat-icon-button aria-label="label">
-                            <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
-                        </button>
-                        <button mat-icon-button aria-label="label">
-                            <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
-                        </button>
-                        <img matListAvatar src="../assets/1.jpg" alt="..." />
-                        <h3 class="truncate" matLine>Helmet</h3>
-                    </mat-list-item>
-                </mat-list>
+                    </mat-list>
+                </ng-container>
             </mat-tab>
         </mat-tab-group>
     </mat-sidenav-content>

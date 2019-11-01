@@ -32,6 +32,7 @@ $press_release = $obj->selectAll('p.*, m.name AS media', 'press_release AS p LEF
                                     <br/>
                                 </div>
                             </div>
+                            <hr>
                         </div>
                     <?php } ?>
                 </div>

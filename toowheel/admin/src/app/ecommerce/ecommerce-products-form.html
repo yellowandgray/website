@@ -1,6 +1,6 @@
 <h2 mat-dialog-title>Ecommerce Products</h2>
 <mat-dialog-content class="mat-typography">
-    <form [formGroup]="ecommerceproductsForm">
+    <form [formGroup]="ecommerceproductsForm" (ngSubmit)="onSubmit()">
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
@@ -12,12 +12,12 @@
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Category</mat-label>
-                    <mat-select required formControlName="category_id" (selectionChange)="getClub()">
+                    <mat-select required formControlName="category">
                         <mat-option [value]="row.category_id" *ngFor="let row of categories">
                             {{row.name}}
-                    </mat-option>
-                </mat-select>
-                <mat-error>Club Category is required</mat-error>
+                        </mat-option>
+                    </mat-select>
+                    <mat-error>Club Category is required</mat-error>
                 </mat-form-field>
             </div>
         </div>
