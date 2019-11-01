@@ -956,7 +956,9 @@ button {
         flex: 1;
     }
     .release-cont-1 img{
-        border-radius: 0;
+        /*        border-radius: 0; */
+        width: 100%;
+        height: auto;
     }
     .release-cont-2{
         flex:1 0 100%;
@@ -2950,7 +2952,7 @@ body .calender-box{
     /* border-radius: 50%; */
     margin-right: 10px;
     border: 1px solid #00BCD4;
-    width: 99%;
+    /*width: 99%;*/
 }
 .twitter-share i{
     padding-right: 7px;
@@ -2980,7 +2982,7 @@ body .calender-box{
     /* border-radius: 50%; */
     margin-right: 10px;
     border: 1px solid #4267b2;
-    width: 99%;
+    /*width: 99%;*/
 }
 .facebook-share i{
     padding-right: 7px;
@@ -2993,6 +2995,7 @@ body .calender-box{
     top: -1px;
     background: #fff;
     border: 1px solid #00BCD4;
+    color: #00bcd4 !important;
 }
 
 .twitter-share:hover i {
@@ -3008,7 +3011,7 @@ body .calender-box{
     top: -1px;
     background: #fff;
     border: 1px solid #4267b2;
-
+    color: #4267b2 !important;
 }
 
 .middle > * {
@@ -3150,8 +3153,11 @@ body .calender-box{
 }
 
 .refer-point-num span {
+    /*    color: red;
+        float: right;*/
     color: red;
-    float: right;
+    position: relative;
+    top: 40%;
 }
 
 .password-popup {
@@ -4066,44 +4072,34 @@ thead td {
 }
 .back-btn{
     background: #ed1c24;
-    border: none;
+    border: 1px solid red;
     color: #fff;
-    padding: 3px 17px;
+    padding: 5px 17px;
     text-align: center;
     border-radius: 20px;
     margin-bottom: 20px;
     outline: none !important;
+    cursor: pointer;
 }
 .back-btn:hover{
     background: #fff;
-    border: none;
     color: #ed1c24;
-    padding: 1px 17px;
-    text-align: center;
-    border-radius: 20px;
-    border: 2px solid red;
+    border: 1px solid red;
 }
 .update-btn{
     background: #ed1c24;
-    border: none;
+    border: 1px solid red;
     color: #fff;
     padding: 3px 17px;
     text-align: center;
-    margin: 0px 45%;
-    width: 10%;
+    width: auto;
     border-radius: 20px;
     outline: none !important;
 }
 .update-btn:hover{
     background: #fff;
-    border: none;
     color: #ed1c24;
-    padding: 1px 17px;
-    text-align: center;
-    margin: 0px 45%;
-    width: 10%;
-    border-radius: 20px;
-    border: 2px solid red;
+    border: 1px solid red;
 }
 .news-01-cont{
     padding-left: 10px;
@@ -4156,21 +4152,22 @@ thead td {
 .head-news{
     padding: 25px 0px 10px 25px;
     position: relative;
-    top: -174px;
+    top: -214px;
     background-image: linear-gradient(180deg, #00000008 , #000000b5, #000000);
     margin-bottom: -182px;
+    height: 207px;
 }
 .head-news p {
     font-size: 12px;
     margin-bottom: 25px;
 }
 
-.head-news h2{
+.head-news h1{
     margin: 15px 0 0;
     padding: 0px 0 25px;
     font-family: 'Montserrat', sans-serif;
     color: #f1f1f1;
-    font-size: 37px;
+    font-size: 34px;
     font-weight: 600;
     flex: 1;
 }

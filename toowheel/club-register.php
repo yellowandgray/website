@@ -30,7 +30,9 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                 </select>
                             </div>
                             <div class="form-group">
-                                <select id="category_id" name="category_id" tabindex="3" required></select>
+                                <select id="category_id" name="category_id" tabindex="3" required>
+                                    <option>Category</option>
+                                </select>
                             </div>
                             <div class="custom-file">
                                 <label>Choose Cover Image: </label>

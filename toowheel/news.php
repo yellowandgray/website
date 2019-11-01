@@ -38,7 +38,7 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
                 <div class="row head-news">
                     <div class="side-news">
                         <span class="side-news-widget1"><span><?php echo $news['club_id'] != 0 ? $obj->charLimit($news['club'], 17) : $obj->charLimit($news['sponsor'], 14); ?></span></span>
-                        <h2><?php echo $news['title']; ?></h2>
+                        <h1><?php echo $obj->charLimit($news['title'],100); ?></h1>
                         <span><?php echo $news['media']; ?> | <?php echo $news['author_name']; ?> | <?php echo date('M d, Y', strtotime($news['news_date'])); ?></span>
                     </div>
                 </div>
@@ -50,7 +50,7 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
                                 <span class="facebook-share" data-js="facebook-share" style="float: right;"><i class="fa fa-facebook" aria-hidden="true"></i>  Kongsikan di Facebook</span>
                             </div>
                         </div>
-                        <strong><?php echo nl2br($news['moto_text']); ?></strong><br/><br/>
+                        <strong style="line-height: 50px;"><?php echo nl2br($news['moto_text']); ?></strong><br/><br/>
                         <?php if (isset($news['banner_1']) && $news['banner_1'] != '') { ?>
                             <img src="<?php echo BASE_URL . $news['banner_1']; ?>" alt="" style="width: 100%" /><br/><br/>
                         <?php } ?>
@@ -95,7 +95,7 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
                 </div>
 
 
-                <div class="row">
+                <div class="row" style="padding-top: 20px;">
                     <?php foreach ($similar_news as $row) { ?>
                         <div class="col-md-3">
                             <div class="events-upcoming">
