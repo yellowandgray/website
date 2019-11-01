@@ -2940,16 +2940,22 @@ body .calender-box{
 }
 
 
-.twitter-share {
+.twitter-share  {
     background: #00BCD6;
     color: rgb(255, 255, 255) !important;
     cursor: pointer;
     display: inline-block;
     padding: 1em 1.1em;
-    -webkit-border-radius: 6px;
-    border-radius: 50%;
+    /* -webkit-border-radius: 6px; */
+    /* border-radius: 50%; */
     margin-right: 10px;
     border: 1px solid #00BCD4;
+    width: 99%;
+}
+.twitter-share i{
+    padding-right: 7px;
+    border-right: 1px solid #fff;
+    margin-right: 3px;
 }
 
 .middle {
@@ -2970,10 +2976,16 @@ body .calender-box{
     cursor: pointer;
     display: inline-block;
     padding: 1em 1.4em;
-    -webkit-border-radius: 6px;
-    border-radius: 50%;
+    /* -webkit-border-radius: 6px; */
+    /* border-radius: 50%; */
     margin-right: 10px;
     border: 1px solid #4267b2;
+    width: 99%;
+}
+.facebook-share i{
+    padding-right: 7px;
+    border-right: 1px solid #fff;
+    margin-right: 3px;
 }
 
 .twitter-share:hover {
@@ -3452,7 +3464,7 @@ thead td {
 }
 
 .middle-2{
-    flex-basis: 10%;
+    flex-basis: 50%;
     padding: 10px;
 }
 
@@ -4141,6 +4153,55 @@ thead td {
     height: 206px;
     overflow: hidden;
 }
+.head-news{
+    padding: 25px 0px 10px 25px;
+    position: relative;
+    top: -174px;
+    background-image: linear-gradient(180deg, #00000008 , #000000b5, #000000);
+    margin-bottom: -182px;
+}
+.head-news p {
+    font-size: 12px;
+    margin-bottom: 25px;
+}
+
+.head-news h2{
+    margin: 15px 0 0;
+    padding: 0px 0 25px;
+    font-family: 'Montserrat', sans-serif;
+    color: #f1f1f1;
+    font-size: 37px;
+    font-weight: 600;
+    flex: 1;
+}
+
+.press-release p{
+    font-size: 14px !important;
+    line-height: 1.7rem !important;
+}
+
+.head-news .side-news .side-news-widget1 {
+    border-bottom: 30px solid #ff0000;
+    border-right: 15px solid transparent;
+    width: auto;
+    height: 0;
+    position: relative;
+    top: -29px;
+    padding: 0 15px;
+    text-align: center;
+    margin: 0;
+    font-weight: 500;
+    color: #fff;
+    left: -25px;
+}
+.pad-t-80{
+    padding: 80px 0px 0px 0px;
+}
+.height-two .news-01-cont h2 {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 6px;
 
 .coverage-table td.coverage-info-fixed {
     height: 0 !important;

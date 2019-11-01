@@ -669,6 +669,13 @@ $app->post('/update_record/:table/:where', function($table, $where) use ($app) {
     $data = $app->request->post();
     $com = new Common();
     if (isset($data['password'])) {
+        $tpy = new Thirdparty();
+        $user = $com->selectRow('*', $table, $where);
+        $user['password'] = $data['password'];
+        $user['link'] = LOGIN_PATH;
+        $template = $com->selectRow('*', 'templates', 'name=\'member_password_change_by_admin\' AND type=\'email\' AND target=\'user\'');
+        $body = $com->getReplacedString($template['body_web'], $user);
+        $tpy->sendMail($user['email_id'], $user['first_name'] . ' ' . $user['last_name'], $body, $body, $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
         $data['password'] = $com->encryptPassword($data['password']);
     }
     $record = $com->updateRecordWithWhere($data, $table, $where);
