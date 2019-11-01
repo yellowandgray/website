@@ -17,14 +17,21 @@ $type = $press_release['type'];
         <?php include 'menu.php'; ?>
         <div class="padding-top-108"></div>
         <div class="press-release">
-            <div class="container-fluid">
+            <div class="container-fluid container">
                 <div class="row">
                     <div class="news-banner text-center club-press">
                         <img src="<?php echo BASE_URL . $press_release['cover_image']; ?>" alt="" />
                     </div>
                 </div>
             </div>
-            <div class="container">
+            <div class="container events-main-content">
+                <div class="row head-news">
+                    <div class="side-news">
+                         <span class="side-news-widget1"><span><?php echo $press_release['author_name']; ?></span></span>
+                        <h2><?php echo $obj->charLimit($press_release['title'], 50); ?></h2>
+                        <span><?php echo $press_release['media']; ?> | <?php echo $press_release['author_name']; ?> | <?php echo date('M d, Y', strtotime($press_release['press_release_date'])); ?></span>
+                    </div>
+                </div>
                 <div class="row events-content">
                     <div class="col-md-8">
                         <div class="events-main-content">
@@ -70,6 +77,8 @@ $type = $press_release['type'];
                         <?php } ?>
                     </div>
                 </div>
+
+
                 <div class="row">
                     <?php foreach ($similar_press_release as $row) { ?>
                         <div class="col-md-3">
@@ -91,29 +100,30 @@ $type = $press_release['type'];
                 </div>
             </div>
         </div>
-        <?php include 'footer.php'; ?>
-        <script type="text/javascript">
-            var twitterShare = document.querySelector('[data-js="twitter-share"]');
+    </div>
+    <?php include 'footer.php'; ?>
+    <script type="text/javascript">
+        var twitterShare = document.querySelector('[data-js="twitter-share"]');
 
-            twitterShare.onclick = function (e) {
-                e.preventDefault();
-                var twitterWindow = window.open('https://twitter.com/share?url=' + document.URL, 'twitter-popup', 'height=350,width=600');
-                if (twitterWindow.focus) {
-                    twitterWindow.focus();
-                }
-                return false;
+        twitterShare.onclick = function (e) {
+            e.preventDefault();
+            var twitterWindow = window.open('https://twitter.com/share?url=' + document.URL, 'twitter-popup', 'height=350,width=600');
+            if (twitterWindow.focus) {
+                twitterWindow.focus();
             }
+            return false;
+        }
 
-            var facebookShare = document.querySelector('[data-js="facebook-share"]');
+        var facebookShare = document.querySelector('[data-js="facebook-share"]');
 
-            facebookShare.onclick = function (e) {
-                e.preventDefault();
-                var facebookWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + document.URL, 'facebook-popup', 'height=350,width=600');
-                if (facebookWindow.focus) {
-                    facebookWindow.focus();
-                }
-                return false;
+        facebookShare.onclick = function (e) {
+            e.preventDefault();
+            var facebookWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + document.URL, 'facebook-popup', 'height=350,width=600');
+            if (facebookWindow.focus) {
+                facebookWindow.focus();
             }
-        </script>
-    </body>
+            return false;
+        }
+    </script>
+</body>
 </html>
