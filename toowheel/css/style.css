@@ -2048,3 +2048,8 @@ div#html5-watermark {
     background-color: #12CC1A;
     border:#0FA015 1px solid;
 }
+
+.i-con a img {
+    width: 25px;
+    margin: 0 10px;
+}
