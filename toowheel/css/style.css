@@ -2053,3 +2053,8 @@ div#html5-watermark {
     width: 25px;
     margin: 0 10px;
 }
+
+.log-in form input[type="checkbox"] {
+    width: auto;
+    margin-left: 60px;
+}

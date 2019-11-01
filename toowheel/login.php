@@ -31,7 +31,8 @@ $obj = new Common();
                                 <h3>LOGIN ACCOUNT</h3>
                                 <form onsubmit="return loginMember();">
                                     <div class="input-container"><i class="fa fa-user-o icon" aria-hidden="true"></i><input type="text" name="email" id="email" placeholder="Email" /></div>
-                                    <div class="input-container"><i class="fa fa-ellipsis-h icon" aria-hidden="true"></i><input type="password" name="password" id="password" placeholder="Password" /></div>
+                                    <div class="input-container"><i class="fa fa-key" aria-hidden="true"></i><input type="password" name="password" id="password" placeholder="Password" /></div>
+                                    <input type="checkbox" onclick="myFunction()"> Show Password
                                     <center><button type="submit">LOGIN</button></center>
                                 </form> 
                                 <h5><a href="#" class="forgot-password">Forgot your Password</a></h5>
@@ -76,6 +77,16 @@ $obj = new Common();
                 // We multiply it by zoom and get our real height.
                 return window.innerHeight * zoomLevel;
             };
+        </script>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("password");
+                if (x.type === "password") {
+                    x.type = "text";
+                } else {
+                    x.type = "password";
+                }
+            }
         </script>
     </body>
 </html>
