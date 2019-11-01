@@ -139,11 +139,11 @@ $autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_relea
                             <div class="row">
                                 <?php foreach ($menu_events as $row) { ?>
                                     <div class="col-md-3 col-sm-6">
-                                        <div class="club-box">
+                                        <a href="events.php?type=<?php echo $type; ?>" class="club-box">
                                             <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="" />
-                                            <h3><?php echo $obj->charLimit($row['title'], 13); ?></h3>
-                                            <p>Location: <?php echo $obj->charLimit($row['location'], 20); ?></p>
-                                        </div>
+                                            <h3><?php echo $obj->charLimit($row['title'], 20); ?></h3>
+                                            <p><?php echo $obj->charLimit($row['location'], 20); ?></p>
+                                        </a>
                                     </div>
                                 <?php } ?>
                             </div>

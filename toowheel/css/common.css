@@ -956,7 +956,9 @@ button {
         flex: 1;
     }
     .release-cont-1 img{
-        border-radius: 0;
+        /*        border-radius: 0; */
+        width: 100%;
+        height: auto;
     }
     .release-cont-2{
         flex:1 0 100%;
@@ -3151,8 +3153,11 @@ body .calender-box{
 }
 
 .refer-point-num span {
+    /*    color: red;
+        float: right;*/
     color: red;
-    float: right;
+    position: relative;
+    top: 40%;
 }
 
 .password-popup {
@@ -4067,44 +4072,34 @@ thead td {
 }
 .back-btn{
     background: #ed1c24;
-    border: none;
+    border: 1px solid red;
     color: #fff;
-    padding: 3px 17px;
+    padding: 5px 17px;
     text-align: center;
     border-radius: 20px;
     margin-bottom: 20px;
     outline: none !important;
+    cursor: pointer;
 }
 .back-btn:hover{
     background: #fff;
-    border: none;
     color: #ed1c24;
-    padding: 1px 17px;
-    text-align: center;
-    border-radius: 20px;
-    border: 2px solid red;
+    border: 1px solid red;
 }
 .update-btn{
     background: #ed1c24;
-    border: none;
+    border: 1px solid red;
     color: #fff;
     padding: 3px 17px;
     text-align: center;
-    margin: 0px 45%;
-    width: 10%;
+    width: auto;
     border-radius: 20px;
     outline: none !important;
 }
 .update-btn:hover{
     background: #fff;
-    border: none;
     color: #ed1c24;
-    padding: 1px 17px;
-    text-align: center;
-    margin: 0px 45%;
-    width: 10%;
-    border-radius: 20px;
-    border: 2px solid red;
+    border: 1px solid red;
 }
 .news-01-cont{
     padding-left: 10px;

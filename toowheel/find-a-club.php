@@ -47,7 +47,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                         <label>Show:</label>
                         <select onchange="filterClub();" id="filter_limit">
                             <option value="">All</option>
-                            <option value="2">2</option>
+                            <option value="10">10</option>
                             <option value="25">25</option>
                             <option value="50">50</option>
                             <option value="100">100</option>

@@ -213,8 +213,9 @@ $member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN club AS 
                                 <h5>POINTS</h5>
                             </div>
                             <div class="col-md-6 refer-point-num">
-                                <h4>0</h4>
-                                <span>RM 0</span>
+<!--                                <h4>0</h4>-->
+                                <span>Coming Soon!</span>
+<!--                                <span>RM 0</span>-->
                             </div>
                         </div>  
                     </div>
@@ -225,7 +226,7 @@ $member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN club AS 
                                 <h5>REFERAL</h5>
                             </div>
                             <div class="col-md-6 refer-point-num">
-                                <h4>0</h4>
+                                <span>Coming Soon!</span>
                             </div>
                         </div>  
                     </div>
@@ -236,7 +237,7 @@ $member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN club AS 
                                 <h5>EVENTS ATTENDED</h5>
                             </div>
                             <div class="col-md-6 refer-point-num">
-                                <h4>0</h4>
+                                <span>Coming Soon!</span>
                             </div>
                         </div>  
                     </div>

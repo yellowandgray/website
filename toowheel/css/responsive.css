@@ -85,6 +85,9 @@
     .coverage-table {
         margin-top: 30px;
     }
+    .log-in form input[type="checkbox"] {
+        display: none !important;
+    }
 }
 
 @media screen and (max-width: 500px) {
