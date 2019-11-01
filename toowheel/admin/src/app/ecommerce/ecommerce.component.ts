@@ -98,8 +98,8 @@ export class EcommerceComponent implements OnInit {
            });
         }
         const dialogRef = this.dialog.open(EcommerceUnits, {
-            minWidth: "80%",
-            maxWidth: "80%",
+            minWidth: "40%",
+            maxWidth: "40%",
             data: data
         });
 
@@ -150,6 +150,24 @@ export class EcommerceComponent implements OnInit {
         }
      });
     }
+
+ confirmDeleteUnit(id): void  {
+        var data = null;
+        if(id != 0) { 
+        data = id;
+      }
+    const dialogRef = this.dialog.open(EcommerceUnitDelete, {
+        minWidth: "40%",
+        maxWidth: "40%",
+        data: data
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+        if(result !== false && result !== 'false') {
+       this.getEcommerceUnit();
+        }
+     });
+    } 
 
 }
 
@@ -230,11 +248,15 @@ export class EcommerceUnits {
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
         this.ecommerceunitsForm = new FormGroup({
+        'type': new FormControl('', Validators.required),
         'name': new FormControl('', Validators.required),
+        'value': new FormControl('', Validators.required),
       });
       if(this.data != null) { 
             this.ecommerceunitsForm.patchValue({ 
-                name: this.data.name
+                type: this.data.type,
+                name: this.data.name,
+                value: this.data.value
             })
             this.unit_id = this.data.unit_id;
         }else {
@@ -251,10 +273,14 @@ export class EcommerceUnits {
       var formData = new FormData();
       var url = '';
       if(this.unit_id != 0) {
+        formData.append('type', this.ecommerceunitsForm.value.type);
         formData.append('name', this.ecommerceunitsForm.value.name);
+        formData.append('value', this.ecommerceunitsForm.value.value);
         url = 'update_record/ecommerce_unit/unit_id = '+this.unit_id;
       } else {
-        formData.append('name', this.ecommerceunitsForm.value.name);        
+        formData.append('type', this.ecommerceunitsForm.value.type);  
+        formData.append('name', this.ecommerceunitsForm.value.name); 
+        formData.append('value', this.ecommerceunitsForm.value.value);       
         url = 'insert_ecommerce_unit';
       }
       this.loading = true;
@@ -277,6 +303,7 @@ export class EcommerceUnits {
                 }
             );
         }
+       
 }
 
 @Component({
@@ -372,7 +399,7 @@ export class EcommerceProducts {
   templateUrl: 'ecommerce-category-delete-form.html',
 })
 export class EcommerceCategoryDelete {
-    category_id = 0;
+    category_id = 0;  
     loading = false;
     constructor(
     public dialogRef: MatDialogRef<EcommerceCategoryDelete>,
@@ -380,7 +407,7 @@ export class EcommerceCategoryDelete {
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
         if(this.data != null) { 
-            this.category_id = this.data;
+            this.category_id = this.data;           
     }
   }
     confirmDelete() {
@@ -407,4 +434,59 @@ export class EcommerceCategoryDelete {
       }
     );
   }
+  
+
+
+}
+
+@Component({
+  selector: 'ecommerce-unit-delete-form',
+  templateUrl: 'ecommerce-unit-delete-form.html',
+})
+export class EcommerceUnitDelete {   
+    unit_id=0
+    loading = false;
+    constructor(
+    public dialogRef: MatDialogRef<EcommerceUnitDelete>,
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {
+        if(this.data != null) {             
+            this.unit_id = this.data;
+    }
+  }    
+ confirmDeleteUnit() {
+      if (this.unit_id == null || this.unit_id == 0) {
+            return;
+      }
+      this.loading = true;
+      this.httpClient.get('https://www.toowheel.com/beta/toowheel/api/v1/delete_record/ecommerce_unit/unit_id='+this.unit_id).subscribe(
+          (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this.dialogRef.close(true);
+                }else{
+        this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+            (error)=>{
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+        });
+      }
+    );
+  }
+
+
+   
+
+
+
+
+
+
+
 }

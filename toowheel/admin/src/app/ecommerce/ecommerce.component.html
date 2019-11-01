@@ -25,18 +25,20 @@
             </mat-tab>
             <mat-tab label="Units">
                 <div class="add-btn-container">
-                    <button mat-raised-button color="primary" (click)="openUnits(0)"><mat-icon>add</mat-icon> Units</button>
+                    <button mat-raised-button color="primary" (click)="openUnits(0, 'result_unit')"><mat-icon>add</mat-icon> Units</button>
                 </div>
                 <mat-list>
                     <ng-container *ngFor="let data of result_unit">
                         <mat-list-item class="list-container">
-                            <button mat-icon-button aria-label="label">
+                            <button mat-icon-button aria-label="label" (click)="openUnits(data.unit_id, 'result_unit')">
                                 <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
                             </button>
-                            <button mat-icon-button aria-label="label">
+                            <button mat-icon-button aria-label="label" (click)="confirmDeleteUnit(data.unit_id)">
                                 <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                             </button>
-                            <h3 class="truncate" matLine>{{data.name}}</h3>
+                            <h3 class="truncate" matLine>{{data.type}}</h3>
+                            <h2 class="truncate" matLine>{{data.name}}</h2>
+                            <h2 class="truncate" matLine>{{data.value}}</h2>
                         </mat-list-item>
                     </ng-container>
                 </mat-list>

@@ -304,7 +304,8 @@ $app->post('/insert_ecommerce_unit', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('name' => $data['name']), 'ecommerce_unit');
+    $array = array('name' => $data['name'], 'type' => $data['type'], 'value' => $data['value']);
+    $record = $com->insertRecord($array,'ecommerce_unit');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
