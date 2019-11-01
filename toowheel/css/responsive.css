@@ -176,7 +176,7 @@
         height: auto !important;
     }
     .events-main-content {
-        padding: 20px 0 !important;
+        /*padding: 20px 0 !important;*/
     }
     .club-gallery img {
         height: 120px !Important;
@@ -289,6 +289,7 @@
     .width-bg {
         display: none !important;
     }
+
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -336,6 +337,10 @@
     }
     .upcoming-events-bg .content-detail {
         width: 50% !important;
+    }
+    .head-news{
+        top: -217px !important;
+
     }
 }
 
@@ -922,6 +927,17 @@
 @media (min-width: 768px) and (max-width: 1199px) {
     #demo-2 input[type=search]:focus {
         width: 123px  !important;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 518px) {
+    .head-news {
+        top: -182px !important;
+        margin-bottom: -175px !important;
+    }
+    .head-news h2 {
+        font-size: 22px !important;
+
     }
 }
 

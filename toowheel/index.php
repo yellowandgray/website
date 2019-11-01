@@ -68,13 +68,13 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                 </div>
             </div>
         </section>
-        <section class="media-press-release">
+        <section class="media-press-release pad-t-80">
             <div class="container">
                 <div class="col-md-12">
                     <div class="row news-01">
                         <div class="col-md-6">
                             <div class="news-01 height-one">
-                                <img src="img/events/004.jpg" alt="" class="img-responsive-01"/>
+                                <img src="img/video/003.jpg" alt=""class="img-responsive-01">
                                 <div class="news-01-cont">
                                     <p class="clb-bg"><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 14) : $obj->charLimit($row['sponsor'], 14) ?></p>
                                     <h2><?php echo $obj->charLimit($row['title'], 20); ?></h2>
