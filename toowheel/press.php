@@ -17,7 +17,7 @@ $type = $press_release['type'];
         <?php include 'menu.php'; ?>
         <div class="padding-top-108"></div>
         <div class="press-release">
-            <div class="container-fluid">
+            <div class="container-fluid container">
                 <div class="row">
                     <div class="news-banner text-center club-press">
                         <img src="<?php echo BASE_URL . $press_release['cover_image']; ?>" alt="" />
