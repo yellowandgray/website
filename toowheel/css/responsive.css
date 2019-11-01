@@ -50,7 +50,7 @@
         padding-top: 120px !important;
     }
     .twitter-share {
-        margin-right: 0 !important;
+        /*margin-right: 0 !important;*/
     }
     .media-press-release {
         padding: 15% 0 0% 0 !important;
@@ -947,6 +947,20 @@
     .head-news h2 {
         font-size: 22px !important;
 
+    }
+}
+@media (min-width: 320px) and (max-width: 575px) {
+    .height-two {
+        height: 206px;
+        overflow: hidden;
+        margin-bottom: 10px;
+    }
+}
+@media (min-width: 320px) and (max-width: 474px) {
+    .events-main-content span {
+        font-size: 7px !important;
+        color: #fff;
+        font-weight: 500;
     }
 }
 

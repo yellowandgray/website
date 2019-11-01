@@ -45,11 +45,9 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
                 <div class="row events-content">
                     <div class="col-md-8">
                         <div class="middle">
-                            <div class="middle-2">
-                                <span class="twitter-share" data-js="twitter-share"><i class="fa fa-twitter" aria-hidden="true"></i> Tweet di Twitter</span>
-                            </div>
-                            <div class="middle-2">
-                                <span class="facebook-share" data-js="facebook-share"><i class="fa fa-facebook" aria-hidden="true"></i>  Kongsikan di Facebook</span>
+                            <div class="">
+                                <span class="twitter-share" data-js="twitter-share" style="float: left;"> <i class="fa fa-twitter" aria-hidden="true"></i> Tweet di Twitter</span>
+                                <span class="facebook-share" data-js="facebook-share" style="float: right;"><i class="fa fa-facebook" aria-hidden="true"></i>  Kongsikan di Facebook</span>
                             </div>
                         </div>
                         <strong><?php echo nl2br($news['moto_text']); ?></strong><br/><br/>
