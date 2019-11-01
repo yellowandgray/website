@@ -50,8 +50,9 @@
                 <mat-form-field appearance="outline" class="full-width">
                     <mat-label>Role</mat-label>
                     <mat-select formControlName="role">
+                        <mat-option [value]="'SuperAdmin'">Super Admin</mat-option>
                         <mat-option [value]="'Admin'">Admin</mat-option>
-                        <mat-option [value]="'General'">General</mat-option>
+                        <mat-option [value]="'Editor'">Editor</mat-option>                        
                     </mat-select>
                     <mat-error>Role is required</mat-error>
                 </mat-form-field>

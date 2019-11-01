@@ -42,10 +42,11 @@ formData.append('password', this.loginForm.value.password);
                          sessionStorage.setItem("toowheel_"+key, res["result"]["data"][key]);
          });
          var role = sessionStorage.getItem("toowheel_role");
-         if(role == 'Admin'){
-                      this.router.navigateByUrl('/dashboard');
-         }else{
-this.router.navigateByUrl('/config');             
+         if(role == 'Editor'){
+                      this.router.navigateByUrl('/news');
+         }
+        else{
+this.router.navigateByUrl('/dashboard');             
          }
                 }else{
             this._snackBar.open(res["result"]["message"], '', {

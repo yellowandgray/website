@@ -11,10 +11,14 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./gallery.component.css']
 })
 export class GalleryComponent implements OnInit {
-searchTermTW: string = '';
+  searchTermTW: string = '';
+  searchTermTWV: string = '';
   searchTermFW: string = '';
+  searchTermFWV: string = '';
   sortdata_tw: string = '';
+  sortdata_twv: string = '';
   sortdata_fw: string = '';
+  sortdata_fwv: string = '';
   result = [];  
   result_four_wheel = [];  
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
@@ -74,6 +78,24 @@ searchTermTW: string = '';
         }
     });
 }
+
+     confirmDialog(id, action): void  {
+    var data = null;
+      if(id != 0) { 
+        data = id;
+      }
+    const dialogRef = this.dialog.open(PictureViewGallery, {
+        minWidth: "40%",
+        maxWidth: "40%",
+        data: {
+            data: data,
+            action: action
+        }
+    });
+
+   dialogRef.afterClosed().subscribe(result => {
+    });
+}
     
 
     confirmDelete(id): void  {
@@ -126,6 +148,7 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
     loading = false;
     gallery_id = 0;
     media_path: string='';
+    media_type: string='';
     thumb_path: string;
     file_name: string = 'Select Picture';
     file_name_thumb: string = 'Select Thumb';
@@ -149,6 +172,7 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
         });
         this.gallery_id = this.data.gallery_id;
         this.media_path=this.data.media_path;
+        this.media_type=this.data.media_type
         }
     }
    
@@ -280,3 +304,28 @@ this._snackBar.open(res["result"]["message"], '', {
         );
   }
 }
+@Component({
+  selector: 'picture-view',
+  templateUrl: 'picture-view.html',
+})
+ 
+export class PictureViewGallery {
+    image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
+    action: string = '';
+    loading = false;
+    member_id = 0;
+    data: any;
+    constructor(
+    public dialogRef: MatDialogRef<PictureViewGallery>,
+    @Inject(MAT_DIALOG_DATA) public datapopup: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {
+        if(this.datapopup != null) { 
+            this.action = this.datapopup.action;
+            this.data = this.datapopup.data;
+            if(this.datapopup.action == 'delete') {
+                this.member_id = this.datapopup.data;
+            }
+    }
+}
+        }  

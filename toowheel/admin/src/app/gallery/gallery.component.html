@@ -39,6 +39,7 @@
                         </section> 
                          <mat-list>
                             <ng-container *ngFor="let data of result | filterEventgallery:searchTermTW;let i = index">
+                                <ng-container *ngIf="result[i]['media_type'] === 'image'">
                                 <mat-list-item class="list-container">
                                    <button mat-icon-button aria-label="label" (click)="openDialog(result[i]['gallery_id'], 'result')">
                                                 <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
@@ -51,6 +52,7 @@
                                     <h3 matLine>{{data.title}}</h3>
                                     <p matLine>{{data.description}}</p>                                   
                                 </mat-list-item>
+                                    </ng-container>
                             </ng-container>
                         </mat-list>
 <!--                        <ng-container *ngFor="let data of result | filterEventgallery:searchTermTW; let i = index">
@@ -164,6 +166,48 @@
                                 Videos
                             </mat-panel-title>                            
                         </mat-expansion-panel-header>
+                        <section class="section">
+                            <br/>                     
+                            <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+                                <div class="searchdesign" fxFlex="50%">
+                                    <mat-form-field [floatLabel]="'never'" fxFlex="100%">
+                                        <input matInput type="text" placeholder="Search by name" [(ngModel)]="searchTermTWV" />
+                                    </mat-form-field>
+                                </div>
+                                <div fxFlex="20%">
+                                    <mat-form-field fxFlex="100%">
+                                        <mat-label>Sort by</mat-label>
+                                        <mat-select [(ngModel)]="sortdata_twv" (selectionChange)="sortRecords('result', sortdata_twv)">
+                                            <mat-option value="title_a_z">Title A-Z</mat-option>
+                                            <mat-option value="title_z_a">Title Z-A</mat-option>
+                                            <mat-option value="created_a_z">Created Date ASC</mat-option>
+                                            <mat-option value="created_z_a">Created Date DESC</mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </section> 
+                         <mat-list>
+                            <ng-container *ngFor="let data of result | filterEventgallery:searchTermTWV;let i = index">
+                                <ng-container *ngIf="result[i]['media_type'] === 'video'">
+                                <mat-list-item class="list-container">
+                                   <button mat-icon-button aria-label="label" (click)="openDialog(result[i]['gallery_id'], 'result')">
+                                                <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
+                                            </button>
+                                            <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i]['gallery_id'])">
+                                                <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
+                                            </button>
+<!--                                    <img matListAvatar src="{{image_url}}{{data.media_path}}" *ngIf="data.media_path && data.profile_picture != ''" alt="..." (click)="confirmDialog(data, 'preview')" />-->
+<!--                                         <img matListAvatar src="{{image_url}}{{data.gender}}.jpg" *ngIf="!data.media_path || data.media_path == ''" alt="..." />-->
+                                        <video matListAvatar  controls *ngIf="result[i]['media_type'] === 'video'">
+                                             <source src="{{image_url}}{{result[i]['media_path']}}" type="video/mp4" />
+                                        </video>
+                                    <h3 matLine>{{data.title}}</h3>
+                                    <p matLine>{{data.description}}</p>                                   
+                                </mat-list-item>
+                                    </ng-container>
+                            </ng-container>
+                        </mat-list>
                     </mat-expansion-panel>
                 </mat-accordion>
             </mat-tab>
@@ -198,6 +242,7 @@
                         </section>
                         <mat-list>
                             <ng-container *ngFor="let data of result_four_wheel | filterEventgallery:searchTermFW; let i = index">
+                                <ng-container *ngIf="result_four_wheel[i]['media_type'] === 'image'">
                                 <mat-list-item class="list-container">
                                    <button mat-icon-button aria-label="label" (click)="openDialog(result_four_wheel[i]['gallery_id'], 'result_four_wheel')">
                                                 <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
@@ -210,6 +255,7 @@
                                     <h3 matLine>{{data.title}}</h3>
                                     <p matLine>{{data.description}}</p>                                   
                                 </mat-list-item>
+                                </ng-container>
                             </ng-container>
                         </mat-list>
 <!--                        <ng-container *ngFor="let data of result_four_wheel | filterEventgallery:searchTermFW; let i = index">
@@ -323,6 +369,46 @@
                                 Videos
                             </mat-panel-title>                            
                         </mat-expansion-panel-header>
+                        <section class="section">
+                            <br/>                     
+                            <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+                                <div class="searchdesign" fxFlex="50%">
+                                    <mat-form-field [floatLabel]="'never'" fxFlex="100%">
+                                        <input matInput type="text" placeholder="Search by name" [(ngModel)]="searchTermFWV" />
+                                    </mat-form-field>
+                                </div>
+                                <div fxFlex="20%">
+                                    <mat-form-field fxFlex="100%">
+                                        <mat-label>Sort by</mat-label>
+                                        <mat-select [(ngModel)]="sortdata_fwv" (selectionChange)="sortRecords('result_four_wheel', sortdata_fwv)">
+                                            <mat-option value="title_a_z">Title A-Z</mat-option>
+                                            <mat-option value="title_z_a">Title Z-A</mat-option>
+                                            <mat-option value="created_a_z">Created Date ASC</mat-option>
+                                            <mat-option value="created_z_a">Created Date DESC</mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </section>
+                        <mat-list>
+                            <ng-container *ngFor="let data of result_four_wheel | filterEventgallery:searchTermFWV; let i = index">
+                                <ng-container *ngIf="result_four_wheel[i]['media_type'] === 'video'">
+                                <mat-list-item class="list-container">
+                                   <button mat-icon-button aria-label="label" (click)="openDialog(result_four_wheel[i]['gallery_id'], 'result_four_wheel')">
+                                                <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
+                                            </button>
+                                            <button mat-icon-button aria-label="label" (click)="confirmDelete(result_four_wheel[i]['gallery_id'])">
+                                                <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
+                                            </button>
+                                    <video matListAvatar  controls *ngIf="result_four_wheel[i]['media_type'] === 'video'">
+                                             <source src="{{image_url}}{{result_four_wheel[i]['media_path']}}" type="video/mp4" />
+                                        </video>
+                                    <h3 matLine>{{data.title}}</h3>
+                                    <p matLine>{{data.description}}</p>                                   
+                                </mat-list-item>
+                                </ng-container>
+                            </ng-container>
+                        </mat-list>
                     </mat-expansion-panel>
                 </mat-accordion>
             </mat-tab>
