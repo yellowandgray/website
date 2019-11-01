@@ -77,7 +77,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                             <div class="news-01-cont">
                                 <div class="position-ad">
                                     <p class="clb-bg"><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 14) : $obj->charLimit($row['sponsor'], 14) ?></p>
-                                    <h2><?php echo $obj->charLimit($row['title'], 20); ?></h2>
+                                    <h2><?php echo $row['title']; ?></h2>
                                     <p><?php echo $row['media']; ?> | <?php echo $row['author_name']; ?> | <?php echo date('M d, Y', strtotime($row['news_date'])); ?></p>
 
                                 </div>
@@ -86,30 +86,30 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                     </div>
                     <div class="col-md-6">
                         <div class="row" style="margin-bottom: 12px;">
-                            <div class="col-md-12 col-sm-12 col-xs-6" style="padding: 0px 5px">
+                            <div class="col-md-6 col-sm-6 col-xs-6" style="padding: 0px 5px">
                                 <div class="news-img-02 news-01 height-two">
                                     <img src="img/events/001.jpg" alt="" class="img-responsive-h"/>
                                     <div class=" news-02-cont">
                                         <div class="position-ad-01">
                                             <p class="clb-bg"><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 14) : $obj->charLimit($row['sponsor'], 14) ?></p>
-                                            <h2><?php echo $obj->charLimit($row['title'], 20); ?></h2>
+                                            <h2><?php echo $row['title']; ?></h2>
 
                                         </div>
                                     </div>
                                 </div>
                             </div>
-<!--                            <div class="col-md-6 col-sm-6 col-xs-6" style="padding: 0px 5px">
+                            <div class="col-md-6 col-sm-6 col-xs-6" style="padding: 0px 5px">
                                 <div class="news-img-03 news-01 height-two">
                                     <img src="img/events/003.jpg" alt="" class="img-responsive-h"/>
                                     <div class=" news-02-cont">
                                         <div class="position-ad-01">
                                             <p class="clb-bg"><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 14) : $obj->charLimit($row['sponsor'], 14) ?></p>
-                                            <h2><?php echo $obj->charLimit($row['title'], 20); ?></h2>
+                                            <h2><?php echo $row['title']; ?></h2>
 
                                         </div>
                                     </div>
                                 </div>
-                            </div>-->
+                            </div>
                         </div>
                         <div class="row"> 
                             <div class="col-md-6 col-sm-6" style="padding: 0px 5px">
@@ -118,7 +118,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                                     <div class=" news-02-cont">
                                         <div class="position-ad-01">
                                             <p class="clb-bg"><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 14) : $obj->charLimit($row['sponsor'], 14) ?></p>
-                                            <h2><?php echo $obj->charLimit($row['title'], 20); ?></h2>
+                                            <h2><?php echo $row['title']; ?></h2>
 
                                         </div>
                                     </div>
@@ -130,7 +130,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                                     <div class=" news-02-cont">
                                         <div class="position-ad-01">
                                             <p class="clb-bg"><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 14) : $obj->charLimit($row['sponsor'], 14) ?></p>
-                                            <h2><?php echo $obj->charLimit($row['title'], 20); ?></h2>
+                                            <h2><?php echo $row['title']; ?></h2>
 
                                         </div>
                                     </div>
