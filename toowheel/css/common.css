@@ -3329,7 +3329,7 @@ table {
     color:#444;
 }
 td {
-    height: 35px;
+/*    height: 35px;*/
     text-align: center;
     vertical-align: middle;
     border-right: 1px solid rgb(220,220,255);
@@ -4140,4 +4140,23 @@ thead td {
 .height-two{
     height: 206px;
     overflow: hidden;
+}
+
+.coverage-table td.coverage-info-fixed {
+    height: 0 !important;
+    padding: 0 !important;
+}
+
+.coverage-table th {
+    height: 0 !important;
+    padding: 0 !important;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #000 !important;
+    margin-top: 10px;
+}
+
+.press-release-content .border-bottom .row {
+    margin-bottom: 10px;
 }

@@ -175,18 +175,20 @@ $member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN club AS 
                                             <table>
                                                 <tr>
                                                     <th>Name</th>
-                                                    <th>IC Number</th>
+                                                    <td> : </td>
+                                                    <td class="coverage-info-fixed"><?php echo $obj->charLimit($member['coverage_person_name'], 200); ?></td> 
+                                                    <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['coverage_person_name']; ?>" name="coverage_person_name" id="coverage_person_name" class="form-control" /></td>
+
                                                 </tr>
                                                 <tr>
-                                                    <td class="coverage-info-fixed"><?php echo $obj->charLimit($member['coverage_person_name'], 200); ?></td>
-                                                    <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['coverage_person_name']; ?>" name="coverage_person_name" id="coverage_person_name" class="form-control" /></td>
+                                                    <th>IC Number</th>
+                                                    <td> : </td>
                                                     <td class="coverage-info-fixed"><?php echo $obj->charLimit($member['coverage_person_ic'], 200); ?></td>
                                                     <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['coverage_person_ic']; ?>" name="coverage_person_ic" id="coverage_person_ic" class="form-control" /></td>
                                                 </tr>
                                                 <tr>
-                                                    <th colspan="2">Address</th>
-                                                </tr>
-                                                <tr>
+                                                    <th>Address</th>
+                                                    <td> : </td>
                                                     <td class="coverage-info-fixed" colspan="2"><?php echo $obj->charLimit($member['coverage_person_address'], 150); ?></td>
                                                     <td class="coverage-info-edit hidden" colspan="2"><textarea name="coverage_person_address" id="coverage_person_address" class="form-control"><?php echo $member['coverage_person_address']; ?></textarea></td>
                                                 </tr>

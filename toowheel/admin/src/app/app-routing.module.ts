@@ -25,6 +25,8 @@ import { NewsletterComponent } from './newsletter/newsletter.component';
 import { UsersComponent } from './users/users.component';
 import { WorkshopComponent } from './workshop/workshop.component';
 import { AssetComponent } from './asset/asset.component';
+import { ClubannouncementComponent } from './clubannouncement/clubannouncement.component';
+import { EcommerceComponent } from './ecommerce/ecommerce.component';
 
 
 const routes: Routes = [
@@ -52,7 +54,9 @@ const routes: Routes = [
     {path: 'press-release', component: PressReleaseComponent},
     {path: 'users', component: UsersComponent},
     {path: 'workshop', component: WorkshopComponent},
-    {path: 'asset', component: AssetComponent}
+    {path: 'asset', component: AssetComponent},
+    {path: 'clubannouncement', component: ClubannouncementComponent},
+    {path: 'ecommerce', component: EcommerceComponent}
 ];
 
 @NgModule({
