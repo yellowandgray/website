@@ -3341,7 +3341,7 @@ table {
     color:#444;
 }
 td {
-/*    height: 35px;*/
+    /*    height: 35px;*/
     text-align: center;
     vertical-align: middle;
     border-right: 1px solid rgb(220,220,255);
@@ -4202,7 +4202,7 @@ thead td {
     font-size: 16px;
     font-weight: 600;
     margin-top: 6px;
-
+}
 .coverage-table td.coverage-info-fixed {
     height: 0 !important;
     padding: 0 !important;
@@ -4213,11 +4213,17 @@ thead td {
     padding: 0 !important;
 }
 
-.border-bottom {
-    border-bottom: 1px solid #000 !important;
-    margin-top: 10px;
+.press-release-content .border-bottom {
+    border-bottom: none !important;
 }
 
-.press-release-content .border-bottom .row {
+/*.press-release-content .border-bottom .row {
     margin-bottom: 10px;
+}*/
+
+hr {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border: 0;
+    border-top: 1px solid #a5a5a5;
 }
