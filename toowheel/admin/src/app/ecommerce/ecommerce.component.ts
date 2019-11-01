@@ -111,11 +111,11 @@ export class EcommerceComponent implements OnInit {
     }
 
     openProducts(id, res): void  {
-            var data = null;
+            var data = null;         
         if(id != 0) { 
         this[res].forEach(val=> {
              if(parseInt(val.product_id) === parseInt(id)) {
-                  data = val;
+                  data = val;                  
                   return false;
              }
            });
@@ -165,6 +165,23 @@ export class EcommerceComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
         if(result !== false && result !== 'false') {
        this.getEcommerceUnit();
+        }
+     });
+    } 
+ confirmDeleteProducts(id): void  {
+        var data = null;
+        if(id != 0) { 
+        data = id;
+      }
+    const dialogRef = this.dialog.open(EcommerceProductsDelete, {
+        minWidth: "40%",
+        maxWidth: "40%",
+        data: data
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+        if(result !== false && result !== 'false') {
+       this.getEcommerceProduct();
         }
      });
     } 
@@ -481,12 +498,48 @@ export class EcommerceUnitDelete {
   }
 
 
-   
+}
 
-
-
-
-
+@Component({
+  selector: 'ecommerce-product-delete-form',
+  templateUrl: 'ecommerce-product-delete-form.html',
+})
+export class EcommerceProductsDelete {   
+    product_id=0
+    loading = false;
+    constructor(
+    public dialogRef: MatDialogRef<EcommerceProductsDelete>,
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {
+        if(this.data != null) {             
+            this.product_id = this.data;
+    }
+  }    
+ confirmDeleteProducts() {
+      if (this.product_id == null || this.product_id == 0) {
+            return;
+      }
+      this.loading = true;
+      this.httpClient.get('https://www.toowheel.com/beta/toowheel/api/v1/delete_record/ecommerce_product/product_id='+this.product_id).subscribe(
+          (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this.dialogRef.close(true);
+                }else{
+        this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+            (error)=>{
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+        });
+      }
+    );
+  }
 
 
 }

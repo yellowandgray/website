@@ -53,7 +53,7 @@
                             <button mat-icon-button aria-label="label" (click)="openProducts(data.product_id, 'result_product')">
                                 <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
                             </button>
-                            <button mat-icon-button aria-label="label">
+                            <button mat-icon-button aria-label="label" (click)="confirmDeleteProducts(data.product_id)">
                                 <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                             </button>
                             <h3 class="truncate" matLine>{{data.name}}</h3>
