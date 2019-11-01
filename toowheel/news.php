@@ -43,18 +43,18 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
                     </div>
                 </div>
                 <div class="row events-content">
-                    <div class="col-md-8">
-                        <div class="middle">
-                            <div class="">
-                                <span class="twitter-share" data-js="twitter-share" style="float: left;"> <i class="fa fa-twitter" aria-hidden="true"></i> Tweet di Twitter</span>
-                                <span class="facebook-share" data-js="facebook-share" style="float: right;"><i class="fa fa-facebook" aria-hidden="true"></i>  Kongsikan di Facebook</span>
+                    <div class="col-md-8" id="contentDiv">
+                        <div class="middle" style="">
+                            <div style="margin-bottom: 20px;">
+                                <span class="twitter-share" data-js="twitter-share" style="float: left;"> <i class="fa fa-twitter" aria-hidden="true"></i> Twitter</span>
+                                <span class="facebook-share" data-js="facebook-share" style="float: right;"><i class="fa fa-facebook" aria-hidden="true"></i>  Facebook</span>
                             </div>
                         </div>
-                        <strong style="line-height: 50px;"><?php echo nl2br($news['moto_text']); ?></strong><br/><br/>
+                        <strong><?php echo nl2br($news['moto_text']); ?></strong><br/><br/>
                         <?php if (isset($news['banner_1']) && $news['banner_1'] != '') { ?>
                             <img src="<?php echo BASE_URL . $news['banner_1']; ?>" alt="" style="width: 100%" /><br/><br/>
                         <?php } ?>
-                        <p><?php echo nl2br($news['description_1']); ?></p>
+                        <p id="tese"><?php echo nl2br($news['description_1']); ?></p>
                         <?php if (isset($news['banner_2']) && $news['banner_2'] != '') { ?>
                             <img src="<?php echo BASE_URL . $news['banner_2']; ?>" alt="" style="width: 100%" /><br/><br/>
                         <?php } ?>

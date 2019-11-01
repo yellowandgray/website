@@ -2947,7 +2947,7 @@ body .calender-box{
     color: rgb(255, 255, 255) !important;
     cursor: pointer;
     display: inline-block;
-    padding: 1em 1.1em;
+    padding: 0.5em 1.1em;
     /* -webkit-border-radius: 6px; */
     /* border-radius: 50%; */
     margin-right: 10px;
@@ -2977,7 +2977,7 @@ body .calender-box{
     color: rgb(255, 255, 255) !important;
     cursor: pointer;
     display: inline-block;
-    padding: 1em 1.4em;
+    padding: 0.5em 1.4em;
     /* -webkit-border-radius: 6px; */
     /* border-radius: 50%; */
     margin-right: 10px;
@@ -3027,7 +3027,7 @@ body .calender-box{
     height: 150px;
     /* border: 1px solid red; */
     margin: 10px 0;
-    box-shadow: 0 0 5px 0px red;
+    /*box-shadow: 0 0 5px 0px red;*/
 }
 
 .news-gallery h3 {
@@ -4172,7 +4172,7 @@ thead td {
     flex: 1;
 }
 
-.press-release p{
+.press-release p, #contentDiv div{
     font-size: 14px !important;
     line-height: 1.7rem !important;
 }

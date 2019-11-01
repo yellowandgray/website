@@ -27,13 +27,13 @@ $type = $press_release['type'];
             <div class="container events-main-content">
                 <div class="row head-news">
                     <div class="side-news">
-                         <span class="side-news-widget1"><span><?php echo $press_release['author_name']; ?></span></span>
+                        <span class="side-news-widget1"><span><?php echo $press_release['author_name']; ?></span></span>
                         <h1><?php echo $obj->charLimit($press_release['title'], 100); ?></h1>
                         <span><?php echo $press_release['media']; ?> | <?php echo $press_release['author_name']; ?> | <?php echo date('M d, Y', strtotime($press_release['press_release_date'])); ?></span>
                     </div>
                 </div>
                 <div class="row events-content">
-                    <div class="col-md-8">
+                    <div class="col-md-8" id="contentDiv">
                         <div class="events-main-content">
                             <div class="middle">
                                 <div class="middle">
@@ -46,17 +46,17 @@ $type = $press_release['type'];
                             <div class="middle">
                                 <div class="middle-1">
                                     <!--<h2><?php echo $press_release['title']; ?></h2>-->
-                                    <span><?php echo $press_release['media']; ?> | <?php echo $press_release['author_name']; ?> | <?php echo date('M d, Y', strtotime($press_release['press_release_date'])); ?></span>
+                                    <!--<span><?php echo $press_release['media']; ?> | <?php echo $press_release['author_name']; ?> | <?php echo date('M d, Y', strtotime($press_release['press_release_date'])); ?></span>-->
                                 </div>
                             </div>
-                            <p><?php echo nl2br($press_release['description_1']); ?></p>
                             <?php if (isset($press_release['banner_1']) && $press_release['banner_1'] != '') { ?>
                                 <img src="<?php echo BASE_URL . $press_release['banner_1']; ?>" alt="" style="width: 100%" /><br/><br/>
                             <?php } ?>
-                            <p><?php echo nl2br($press_release['description_2']); ?></p>
+                            <p><?php echo nl2br($press_release['description_1']); ?></p>
                             <?php if (isset($press_release['banner_2']) && $press_release['banner_2'] != '') { ?>
                                 <img src="<?php echo BASE_URL . $press_release['banner_2']; ?>" alt="" style="width: 100%" /><br/><br/>
                             <?php } ?>
+                            <p><?php echo nl2br($press_release['description_2']); ?></p>
                             <?php if (isset($press_release['youtube_id']) && $press_release['youtube_id'] != '' && $press_release['youtube_id'] != null && $press_release['youtube_id'] != 'null' && $press_release['youtube_id'] != 'undefined') { ?>
                                 <iframe src="http://www.youtube.com/embed/<?php echo $press_release['youtube_id']; ?>" style="width: 100%; height: auto;" frameborder="0" allowfullscreen></iframe><br/><br/>
                             <?php } ?>
