@@ -29,15 +29,17 @@ $type = $press_release['type'];
                     <div class="col-md-8">
                         <div class="events-main-content">
                             <div class="middle">
+                                <div class="middle">
+                                    <div class="">
+                                        <span class="twitter-share" data-js="twitter-share" style="float: left;"> <i class="fa fa-twitter" aria-hidden="true"></i> Tweet di Twitter</span>
+                                        <span class="facebook-share" data-js="facebook-share" style="float: right;"><i class="fa fa-facebook" aria-hidden="true"></i>  Kongsikan di Facebook</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="middle">
                                 <div class="middle-1">
                                     <h2><?php echo $press_release['title']; ?></h2>
                                     <span><?php echo $press_release['media']; ?> | <?php echo $press_release['author_name']; ?> | <?php echo date('M d, Y', strtotime($press_release['press_release_date'])); ?></span>
-                                </div>
-                                <div class="middle-2">
-                                    <span class="twitter-share" data-js="twitter-share"><i class="fa fa-twitter" aria-hidden="true"></i></span>
-                                </div>
-                                <div class="middle-2">
-                                    <span class="facebook-share" data-js="facebook-share"><i class="fa fa-facebook" aria-hidden="true"></i></span>
                                 </div>
                             </div>
                             <p><?php echo nl2br($press_release['description_1']); ?></p>

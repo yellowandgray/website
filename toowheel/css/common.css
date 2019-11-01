@@ -2950,7 +2950,7 @@ body .calender-box{
     /* border-radius: 50%; */
     margin-right: 10px;
     border: 1px solid #00BCD4;
-    width: 99%;
+    /*    width: 99%;*/
 }
 .twitter-share i{
     padding-right: 7px;
@@ -2980,7 +2980,7 @@ body .calender-box{
     /* border-radius: 50%; */
     margin-right: 10px;
     border: 1px solid #4267b2;
-    width: 99%;
+    /*width: 99%;*/
 }
 .facebook-share i{
     padding-right: 7px;
@@ -2993,6 +2993,7 @@ body .calender-box{
     top: -1px;
     background: #fff;
     border: 1px solid #00BCD4;
+    color: rgb(0, 188, 212) !important;
 }
 
 .twitter-share:hover i {
@@ -3008,7 +3009,7 @@ body .calender-box{
     top: -1px;
     background: #fff;
     border: 1px solid #4267b2;
-
+    color: #4267b2 !important;
 }
 
 .middle > * {
@@ -3341,7 +3342,7 @@ table {
     color:#444;
 }
 td {
-/*    height: 35px;*/
+    /*    height: 35px;*/
     text-align: center;
     vertical-align: middle;
     border-right: 1px solid rgb(220,220,255);
@@ -4118,7 +4119,7 @@ thead td {
     margin-bottom: -95px !important;
     background-image: linear-gradient(#ff00002e, #000000eb 111%);
 }
-.news-02-cont  {
+.news-02-cont   {
     padding-left: 10px;
     padding-right: 10px;
     margin: 0;
@@ -4129,7 +4130,7 @@ thead td {
     border-bottom-left-radius: 0px !important;
     height: 206px;
     margin-bottom: -95px !important;
-    background-image: linear-gradient(#ed1c2440, #000000eb 96%);
+    background-image: linear-gradient(#00000000, #000000eb 96%);
 }
 .news-01-cont p {
     color: #fff;
@@ -4266,4 +4267,12 @@ thead td {
 
 .press-release-content .border-bottom .row {
     margin-bottom: 10px;
+}
+.position-ad .clb-bg {
+    text-align: center !important;
+    background: rgba(158, 158, 158, 0.25098039215686274) !important;
+}
+.position-ad-01 .clb-bg {
+    text-align: center !important;
+    background: rgba(158, 158, 158, 0.25098039215686274) !important;
 }
