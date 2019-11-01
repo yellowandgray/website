@@ -79,6 +79,12 @@
     #club1 {
         top: 0 !important;
     }
+    .profile-picture-section {
+        flex: 0 0 100% !Important;
+    }
+    .coverage-table {
+        margin-top: 30px;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -206,6 +212,9 @@
         position: unset !important;
         width: 100% !important;
         padding-left: 0px !important;
+    }
+    .popup-box {
+        width: 100% !important;
     }
 }
 

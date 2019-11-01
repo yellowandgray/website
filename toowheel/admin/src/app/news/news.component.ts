@@ -224,7 +224,7 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
     }else {
         this.newsForm.patchValue({
                 date: new Date()
-            });
+        });
     }
       this.httpClient.get('https://www.toowheel.com/beta/toowheel/api/v1/get_medias').subscribe(
               (res)=>{

@@ -1,0 +1,28 @@
+<mat-sidenav-container fullscreen>
+    <mat-sidenav mode="side" opened cdkScrollable class="primary">
+        <app-sidenav></app-sidenav>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <app-header></app-header>
+        <div class="add-btn-container">
+            <button mat-raised-button color="primary"><mat-icon>add</mat-icon> Announcement</button>
+        </div>
+        <mat-list>
+            <mat-list-item class="list-container">
+                <button mat-icon-button aria-label="label">
+                    <mat-icon #tooltip="matTooltip" matTooltip="View">remove_red_eye</mat-icon>
+                </button>
+                <button mat-icon-button aria-label="label">
+                    <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
+                </button>
+                <button mat-icon-button aria-label="label">
+                    <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
+                </button>
+                <img matListAvatar src="../assets/1.jpg" alt="..." />
+                <h3 class="truncate" matLine>Title</h3>
+                <p class="truncate1" matLine>Location</p>
+                <p class="truncate2" matLine>Date</p>
+            </mat-list-item>
+        </mat-list>
+    </mat-sidenav-content>
+</mat-sidenav-container>
