@@ -47,7 +47,7 @@
                                             <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i]['gallery_id'])">
                                                 <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                                             </button>
-                                    <img matListAvatar src="{{image_url}}{{data.media_path}}" *ngIf="data.media_path && data.profile_picture != ''" alt="..." (click)="confirmDialog(data, 'preview')" />
+                                    <img matListAvatar src="{{image_url}}{{data.media_path}}" *ngIf="data.media_path && data.profile_picture != ''" alt="..." />
 <!--                                         <img matListAvatar src="{{image_url}}{{data.gender}}.jpg" *ngIf="!data.media_path || data.media_path == ''" alt="..." />-->
                                     <h3 matLine>{{data.title}}</h3>
                                     <p matLine>{{data.description}}</p>                                   
@@ -250,7 +250,7 @@
                                             <button mat-icon-button aria-label="label" (click)="confirmDelete(result_four_wheel[i]['gallery_id'])">
                                                 <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                                             </button>
-                                    <img matListAvatar src="{{image_url}}{{data.media_path}}" *ngIf="data.media_path && data.media_path != ''" alt="..." (click)="confirmDialog(data, 'preview')" />
+                                    <img matListAvatar src="{{image_url}}{{data.media_path}}" *ngIf="data.media_path && data.media_path != ''" alt="..." />
 <!--                                         <img matListAvatar src="{{image_url}}{{data.gender}}.jpg" *ngIf="!data.media_path || data.media_path == ''" alt="..." />-->
                                     <h3 matLine>{{data.title}}</h3>
                                     <p matLine>{{data.description}}</p>                                   
