@@ -4105,18 +4105,31 @@ thead td {
     border-radius: 20px;
     border: 2px solid red;
 }
-.news-01-cont{
+.news-01-cont.news-01-cont {
     padding-left: 10px;
     padding-right: 10px;
     margin: 0;
     background-color: transparent !important;
     position: relative;
-    bottom: 104px;
+    bottom: 432px;
     border-bottom-right-radius: 0px !important;
     border-bottom-left-radius: 0px !important;
-    height: 97px;
+    height: 424px;
     margin-bottom: -95px !important;
-    background-image: linear-gradient(transparent, #000000eb 113%);
+    background-image: linear-gradient(#ff00002e, #000000eb 111%);
+}
+.news-02-cont  {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0;
+    background-color: transparent !important;
+    position: relative;
+    bottom: 217px;
+    border-bottom-right-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    height: 206px;
+    margin-bottom: -95px !important;
+    background-image: linear-gradient(#ed1c2440, #000000eb 96%);
 }
 .news-01-cont p {
     color: #fff;
@@ -4126,9 +4139,17 @@ thead td {
     overflow: hidden;
     text-align: left;
 }
+.news-02-cont p {
+    color: #fff;
+    margin-bottom: 8px;
+    font-size: 10px;
+    height: 60px;
+    overflow: hidden;
+    text-align: left;
+}
 .news-01-cont h2 {
     color: #fff;
-    font-size: 23px;
+    font-size: 40px;
     font-weight: 600;
     margin-top: 6px;
 }
@@ -4140,7 +4161,23 @@ thead td {
     width: 100%;
     height: 424px;
 }
-.news-01 img:hover{
+.news-img-01:hover img{
+    transform: scale(1.1);
+    transition: all 0.2s linear;
+}
+.news-img-02:hover img{
+    transform: scale(1.1);
+    transition: all 0.2s linear;
+}
+.news-img-03:hover img{
+    transform: scale(1.1);
+    transition: all 0.2s linear;
+}
+.news-img-04:hover  img{
+    transform: scale(1.1);
+    transition: all 0.2s linear;
+}
+.news-img-05:hover  img{
     transform: scale(1.1);
     transition: all 0.2s linear;
 }
@@ -4197,9 +4234,17 @@ thead td {
 .pad-t-80{
     padding: 80px 0px 0px 0px;
 }
-.height-two .news-01-cont h2 {
+.height-two .news-02-cont h2 {
     color: #fff;
     font-size: 16px;
     font-weight: 600;
     margin-top: 6px;
+}
+.position-ad{
+    position: relative;
+    bottom: -273px;
+}
+.position-ad-01{
+    position: relative;
+    bottom: -139px;
 }

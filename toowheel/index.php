@@ -70,34 +70,27 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
         </section>
         <section class="media-press-release pad-t-80">
             <div class="container">
-                <div class="col-md-12">
-                    <div class="row news-01">
-                        <div class="col-md-6">
-                            <div class="news-01 height-one">
-                                <img src="img/video/003.jpg" alt=""class="img-responsive-01">
-                                <div class="news-01-cont">
+                <div class="row news-01" onClick="document.location.href = 'news.php?nid=<?php echo $row['news_id']; ?>'">
+                    <div class="col-md-6" style="padding: 0px 5px 0px 15px;">
+                        <div class="news-img-01 news-01 height-one">
+                            <img src="img/video/003.jpg" alt=""class="img-responsive-01">
+                            <div class="news-01-cont">
+                                <div class="position-ad">
                                     <p class="clb-bg"><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 14) : $obj->charLimit($row['sponsor'], 14) ?></p>
                                     <h2><?php echo $obj->charLimit($row['title'], 20); ?></h2>
-                                    <p>others  |  Mohan K Ramanujam  | Oct 09, 2019</p>
+                                    <p><?php echo $row['media']; ?> | <?php echo $row['author_name']; ?> | <?php echo date('M d, Y', strtotime($row['news_date'])); ?></p>
+
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="row" style="margin-bottom: 12px;">
-                                <div class="col-md-6 col-sm-6 col-xs-6">
-                                    <div class="news-01 height-two">
-                                        <img src="img/events/001.jpg" alt="" class="img-responsive-h"/>
-                                        <div class=" news-01-cont">
-                                            <p class="clb-bg"><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 14) : $obj->charLimit($row['sponsor'], 14) ?></p>
-                                            <h2><?php echo $obj->charLimit($row['title'], 20); ?></h2>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-sm-6 col-xs-6">
-                                    <div class="news-01 height-two">
-                                        <img src="img/events/003.jpg" alt="" class="img-responsive-h"/>
-                                        <div class=" news-01-cont">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row" style="margin-bottom: 12px;">
+                            <div class="col-md-6 col-sm-6 col-xs-6" style="padding: 0px 5px">
+                                <div class="news-img-02 news-01 height-two">
+                                    <img src="img/events/001.jpg" alt="" class="img-responsive-h"/>
+                                    <div class=" news-02-cont">
+                                        <div class="position-ad-01">
                                             <p class="clb-bg"><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 14) : $obj->charLimit($row['sponsor'], 14) ?></p>
                                             <h2><?php echo $obj->charLimit($row['title'], 20); ?></h2>
 
@@ -105,21 +98,37 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                                     </div>
                                 </div>
                             </div>
-                            <div class="row"> 
-                                <div class="col-md-6 col-sm-6">
-                                    <div class="news-01 height-two">
-                                        <img src="img/events/005.jpg" alt="" class="img-responsive-h"/>
-                                        <div class=" news-01-cont">
+                            <div class="col-md-6 col-sm-6 col-xs-6" style="padding: 0px 5px">
+                                <div class="news-img-03 news-01 height-two">
+                                    <img src="img/events/003.jpg" alt="" class="img-responsive-h"/>
+                                    <div class=" news-02-cont">
+                                        <div class="position-ad-01">
                                             <p class="clb-bg"><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 14) : $obj->charLimit($row['sponsor'], 14) ?></p>
                                             <h2><?php echo $obj->charLimit($row['title'], 20); ?></h2>
 
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-sm-6">
-                                    <div class="news-01 height-two">
-                                        <img src="img/events/002.jpg" alt="" class="img-responsive-h"/>
-                                        <div class=" news-01-cont">
+                            </div>
+                        </div>
+                        <div class="row"> 
+                            <div class="col-md-6 col-sm-6" style="padding: 0px 5px">
+                                <div class="news-img-04 news-01 height-two">
+                                    <img src="img/events/005.jpg" alt="" class="img-responsive-h"/>
+                                    <div class=" news-02-cont">
+                                        <div class="position-ad-01">
+                                            <p class="clb-bg"><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 14) : $obj->charLimit($row['sponsor'], 14) ?></p>
+                                            <h2><?php echo $obj->charLimit($row['title'], 20); ?></h2>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6" style="padding: 0px 5px">
+                                <div class="news-img-05 news-01 height-two">
+                                    <img src="img/events/002.jpg" alt="" class="img-responsive-h"/>
+                                    <div class=" news-02-cont">
+                                        <div class="position-ad-01">
                                             <p class="clb-bg"><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 14) : $obj->charLimit($row['sponsor'], 14) ?></p>
                                             <h2><?php echo $obj->charLimit($row['title'], 20); ?></h2>
 
