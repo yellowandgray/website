@@ -28,7 +28,7 @@ $type = $press_release['type'];
                 <div class="row head-news">
                     <div class="side-news">
                          <span class="side-news-widget1"><span><?php echo $press_release['author_name']; ?></span></span>
-                        <h2><?php echo $press_release['title']; ?></h2>
+                        <h2><?php echo $obj->charLimit($press_release['title'], 50); ?></h2>
                         <span><?php echo $press_release['media']; ?> | <?php echo $press_release['author_name']; ?> | <?php echo date('M d, Y', strtotime($press_release['press_release_date'])); ?></span>
                     </div>
                 </div>
