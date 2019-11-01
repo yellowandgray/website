@@ -223,9 +223,9 @@ $("#smartwizard").on("leaveStep", function (e, anchorObject, stepNumber, stepDir
             }
             if ($.trim($('#password').val()) === '' || $('#password').val().length < 8 || $('#password').val().match(number) == null || $('#password').val().match(alphabets) == null || $('#password').val().match(special_characters) == null) {
                 //$('#password_error').html('Enter password').addClass('error-msg');
-                $('#password').focus();                
-                $(window).scrollTop($('#password').position().top);
+                $('#password').focus();
                 checkPasswordStrength();
+                $(window).scrollTop($('#password').position().top);               
                 change = false;
             }
             /*if (validateEmail($.trim($('#email').val())) === false) {
