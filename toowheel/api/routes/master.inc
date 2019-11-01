@@ -312,6 +312,18 @@ $app->post('/insert_ecommerce_unit', function() use ($app) {
     echoRespnse(201, $res);
 });
 
+$app->post('/insert_ecommerce_product', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to insert');
+    $data = $app->request->post();
+    $com = new Common();
+    $record = $com->insertRecord(array('name' => $data['name'], 'category_id' => $data['category_id'], 'description' => $data['description']), 'ecommerce_product');
+    if ($record > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Record inserted successfully';
+    }
+    echoRespnse(201, $res);
+});
+
 $app->get('/get_landing_configs', function() {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
@@ -424,6 +436,18 @@ $app->get('/get_ecommerce_unit', function() {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
     $data = $com->selectAll('*', 'ecommerce_unit', 'unit_id > 0');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_ecommerce_product', function() {
+    $res = array('error' => true, 'message' => 'Unable to get records');
+    $com = new Common();
+    $data = $com->selectAll('*', 'ecommerce_product', 'product_id > 0');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';

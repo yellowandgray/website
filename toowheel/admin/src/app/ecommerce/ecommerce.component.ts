@@ -13,11 +13,13 @@ import { HttpClient } from '@angular/common/http';
 export class EcommerceComponent implements OnInit {
   result:any[];
   result_unit:any[];
+  result_product:any[];
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
 
   ngOnInit() {
     this.getEcommerceCategory();
     this.getEcommerceUnit();
+    this.getEcommerceProduct();
   }
 
     getEcommerceCategory(): void {
@@ -39,6 +41,20 @@ export class EcommerceComponent implements OnInit {
     .subscribe(
           (res)=>{
               this.result_unit = res["result"]["data"];
+        },
+        (error)=>{
+            this._snackBar.open(error["statusText"], '', {
+      duration: 2000,
+    });
+        }
+        );
+    }
+
+    getEcommerceProduct(): void {
+    this.httpClient.get<any>('https://www.toowheel.com/beta/toowheel/api/v1/get_ecommerce_product')
+    .subscribe(
+          (res)=>{
+              this.result_product = res["result"]["data"];
         },
         (error)=>{
             this._snackBar.open(error["statusText"], '', {
@@ -94,14 +110,25 @@ export class EcommerceComponent implements OnInit {
         });
     }
 
-    openProducts(): void  {
+    openProducts(id, res): void  {
+            var data = null;
+        if(id != 0) { 
+        this[res].forEach(val=> {
+             if(parseInt(val.product_id) === parseInt(id)) {
+                  data = val;
+                  return false;
+             }
+           });
+        }
         const dialogRef = this.dialog.open(EcommerceProducts, {
             minWidth: "80%",
             maxWidth: "80%"
         });
 
         dialogRef.afterClosed().subscribe(result => {
-          console.log(`Dialog result: ${result}`);
+         if(result !== false && result !== 'false') {
+            this.getEcommerceProduct();
+            }
         });
     }
 
@@ -269,29 +296,74 @@ export class EcommerceProducts {
         this.ecommerceproductsForm = new FormGroup({
         'name': new FormControl('', Validators.required),
         'description': new FormControl('', Validators.required),
-        'category_id': new FormControl('', Validators.required),
+        'category': new FormControl('', Validators.required),
       });
-    }
-    getCategory(): void {
-       this.loading = true;
-          this.httpClient.get('https://www.toowheel.com/beta/toowheel/api/v1/get_ecommerce_category').subscribe(
+      if(this.data != null) { 
+            this.ecommerceproductsForm.patchValue({ 
+                name: this.data.name,
+                description: this.data.description,
+                category: this.data.category_id
+            });
+            this.product_id = this.data.product_id;
+        }else {
+            this.ecommerceproductsForm.patchValue({
+                date: new Date()
+            });
+        }
+      this.httpClient.get('https://www.toowheel.com/beta/toowheel/api/v1/get_ecommerce_category').subscribe(
               (res)=>{
-                this.loading = false;
                 if(res["result"]["error"] === false) {
                     this.categories = res["result"]["data"];
                 }else{
-    this._snackBar.open(res["result"]["message"], '', {
+        this._snackBar.open(res["result"]["message"], '', {
           duration: 2000,
         });
                 }
             },
             (error)=>{
-                this.loading = false;
                 this._snackBar.open(error["statusText"], '', {
           duration: 2000,
             });
         });
     }
+
+    onSubmit() {
+      if (this.ecommerceproductsForm.invalid) {
+            return;
+      }
+      var formData = new FormData();
+      var url = '';
+      if(this.product_id != 0) {
+        formData.append('name', this.ecommerceproductsForm.value.name);
+        formData.append('category_id', this.ecommerceproductsForm.value.category);        
+        formData.append('description', this.ecommerceproductsForm.value.description);  
+        url = 'update_record/ecommerce_product/product_id = '+this.product_id;
+      } else {
+        formData.append('name', this.ecommerceproductsForm.value.name);        
+        formData.append('category_id', this.ecommerceproductsForm.value.category);        
+        formData.append('description', this.ecommerceproductsForm.value.description);        
+        url = 'insert_ecommerce_product';
+      }
+      this.loading = true;
+      this.httpClient.post('https://www.toowheel.com/beta/toowheel/api/v1/'+url, formData).subscribe(
+          (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this.dialogRef.close(true);
+                }else{
+                    this._snackBar.open(res["result"]["message"], '', {
+                    duration: 2000,
+                      });
+                    }
+                },
+                (error)=>{
+                    this.loading = false;
+                    this._snackBar.open(error["statusText"], '', {
+                    duration: 2000,
+                    });
+                }
+            );
+        }
 }
 
 
