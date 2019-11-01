@@ -73,7 +73,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                 <div class="row news-01" onClick="document.location.href = 'news.php?nid=<?php echo $row['news_id']; ?>'">
                     <div class="col-md-6" style="padding: 0px 5px 0px 15px;">
                         <div class="news-img-01 news-01 height-one">
-                            <img src="img/video/003.jpg" alt=""class="img-responsive-01">
+                            <img src="img/video/003.jpg" alt="" class="img-responsive-01">
                             <div class="news-01-cont">
                                 <div class="position-ad">
                                     <p class="clb-bg"><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 14) : $obj->charLimit($row['sponsor'], 14) ?></p>
