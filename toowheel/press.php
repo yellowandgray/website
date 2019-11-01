@@ -28,7 +28,7 @@ $type = $press_release['type'];
                 <div class="row head-news">
                     <div class="side-news">
                          <span class="side-news-widget1"><span><?php echo $press_release['author_name']; ?></span></span>
-                        <h2><?php echo $obj->charLimit($press_release['title'], 50); ?></h2>
+                        <h1><?php echo $obj->charLimit($press_release['title'], 100); ?></h1>
                         <span><?php echo $press_release['media']; ?> | <?php echo $press_release['author_name']; ?> | <?php echo date('M d, Y', strtotime($press_release['press_release_date'])); ?></span>
                     </div>
                 </div>
@@ -38,14 +38,14 @@ $type = $press_release['type'];
                             <div class="middle">
                                 <div class="middle">
                                     <div class="">
-                                        <span class="twitter-share" data-js="twitter-share" style="float: left;"> <i class="fa fa-twitter" aria-hidden="true"></i> Tweet di Twitter</span>
-                                        <span class="facebook-share" data-js="facebook-share" style="float: right;"><i class="fa fa-facebook" aria-hidden="true"></i>  Kongsikan di Facebook</span>
+                                        <span class="twitter-share" data-js="twitter-share" style="float: left;"> <i class="fa fa-twitter" aria-hidden="true"></i> Twitter</span>
+                                        <span class="facebook-share" data-js="facebook-share" style="float: right;"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="middle">
                                 <div class="middle-1">
-                                    <h2><?php echo $press_release['title']; ?></h2>
+                                    <!--<h2><?php echo $press_release['title']; ?></h2>-->
                                     <span><?php echo $press_release['media']; ?> | <?php echo $press_release['author_name']; ?> | <?php echo date('M d, Y', strtotime($press_release['press_release_date'])); ?></span>
                                 </div>
                             </div>
@@ -79,7 +79,7 @@ $type = $press_release['type'];
                 </div>
 
 
-                <div class="row">
+                <div class="row" style="padding-top: 20px;">
                     <?php foreach ($similar_press_release as $row) { ?>
                         <div class="col-md-3">
                             <div class="events-upcoming">
