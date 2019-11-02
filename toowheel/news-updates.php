@@ -13,8 +13,26 @@ $news = $obj->selectAll('n.*, m.name AS media, c.name AS club, ca.name AS catego
     <body>
         <?php include 'menu.php'; ?>
         <div class="padding-top-108"></div>
-        <div class="news-all">
+        <div class="news-all" style="padding-top: 40px;">
             <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="press-release-search">
+                            <input type="text" name="press_release_search" placeholder="Search by Name" />
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="press-release-sort">
+                            <select name="sort_by">
+                                <option>Sort by</option>
+                                <option>Name A-Z</option>
+                                <option>Name Z-A</option>
+                                <option>Created Date ASC</option>
+                                <option>Created Date DESC</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
                 <h3>NEWS & UPDATES</h3>
                 <div class="news-all-content">
                     <?php foreach ($news as $row) { ?>

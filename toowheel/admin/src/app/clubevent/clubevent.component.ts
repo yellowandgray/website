@@ -162,7 +162,8 @@ export class ClubEventForm {
       'category_id': new FormControl('', Validators.required),
       'club_id': new FormControl('', Validators.required),
       'title': new FormControl('', Validators.required),
-      'event_date': new FormControl('', Validators.required),
+      'event_from_date': new FormControl('', Validators.required),
+      'event_to_date': new FormControl('', Validators.required),
       'location': new FormControl('', Validators.required),
       'description': new FormControl('', Validators.required),
       'sponsor': new FormControl()
@@ -173,7 +174,8 @@ export class ClubEventForm {
            category_id: this.data.category_id,
            club_id: this.data.club_id,
            title: this.data.title,
-           event_date: this.data.event_date,
+           event_from_date: this.data.event_from_date,
+           event_to_date: this.data.event_to_date,
            location: this.data.location,
            description: this.data.description,
            sponsor: this.data.sponsor
@@ -271,7 +273,8 @@ formData.append('type', this.clubeventForm.value.type);
           formData.append('thumb_image', this.thumb_image_path);
           }
           formData.append('title', this.clubeventForm.value.title);
-          formData.append('event_date', moment(this.clubeventForm.value.event_date).format('YYYY-MM-DD'));
+          formData.append('event_from_date', moment(this.clubeventForm.value.event_from_date).format('YYYY-MM-DD'));
+          formData.append('event_to_date', moment(this.clubeventForm.value.event_to_date).format('YYYY-MM-DD'));
           formData.append('location', this.clubeventForm.value.location);
           formData.append('description', this.clubeventForm.value.description);
           formData.append('sponsor', this.clubeventForm.value.sponsor);
@@ -283,7 +286,8 @@ formData.append('type', this.clubeventForm.value.type);
           formData.append('cover_image', this.cover_image_path);
           formData.append('thumb_image', this.thumb_image_path);
           formData.append('title', this.clubeventForm.value.title);
-          formData.append('event_date', moment(this.clubeventForm.value.event_date).format('YYYY-MM-DD'));
+          formData.append('event_from_date', moment(this.clubeventForm.value.event_from_date).format('YYYY-MM-DD'));
+          formData.append('event_to_date', moment(this.clubeventForm.value.event_to_date).format('YYYY-MM-DD'));
           formData.append('location', this.clubeventForm.value.location);
           formData.append('description', this.clubeventForm.value.description);
           formData.append('sponsor', this.clubeventForm.value.sponsor);              

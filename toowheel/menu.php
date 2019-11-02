@@ -74,7 +74,7 @@ $autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_relea
                                             <h2><?php echo $obj->charLimit($row['title'], 35); ?></h2>
                                             <p><?php echo $obj->charLimit($row['moto_text'], 20); ?></p>
                                         </div>
-                                            <center class="news-discover"><a href="news.php?nid=<?php echo $row['news_id']; ?>">DISCOVER</a></center>
+                                        <center class="news-discover"><a href="news.php?nid=<?php echo $row['news_id']; ?>">DISCOVER</a></center>
                                     </div>
                                 </div>
                             <?php } ?>
@@ -207,7 +207,19 @@ $autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_relea
             </div>
             <div class="mobile-header-login">
 <!--                <i class="fa fa-search"></i>-->
-                <a href="login.php?type=<?php echo $type; ?>"><i class="fa fa-user"></i></a>
+                <?php
+                if (!isset($_SESSION["member_id"])) {
+                    ?>
+                    <a href="login.php?type=<?php echo $type; ?>">
+                        <i class="fa fa-sign-in"></i>
+                    </a>
+                <?php } else {
+                    ?>
+                    <a onclick="logoutUser();">
+                        <i class="fa fa-sign-out"></i>
+                    </a>
+                <?php }
+                ?>
 <!--                <a onclick="//document.getElementById('about-club').classList.add('club-about')"><i class="fa fa-user"></i></a>-->
             </div>
         </div>

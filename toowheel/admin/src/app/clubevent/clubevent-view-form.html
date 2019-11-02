@@ -1,7 +1,7 @@
 <h2 mat-dialog-title>Club Event</h2>
 <mat-dialog-content class="mat-typography">    
-       <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.8%" fxLayoutAlign="start center">        
-       <div fxFlex="50%">
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.8%" fxLayoutAlign="start center">        
+        <div fxFlex="50%">
             <img class="dialog-picture1" matTooltip="Event Image"  mat-card-image src="{{image_url}}{{cover_image_path}}" alt="Photo" />
         </div>
         <div fxFlex="50%">
@@ -9,10 +9,10 @@
         </div>       
     </div>    
     <br/>    
-<!--     <mat-option [value]="row.category_id" *ngFor="let row of categories">
-                            {{row.name}}-->
-    
-    
+    <!--     <mat-option [value]="row.category_id" *ngFor="let row of categories">
+                                {{row.name}}-->
+
+
     <table mat-table class="member-table">
         <h2>Club Event Information:</h2>
         <tr>
@@ -33,8 +33,12 @@
             <td mat-cell> {{data.title}} </td>
         </tr>
         <tr>
-            <th mat-header-cell>Event Date</th>
-            <td mat-cell> {{data.event_date}} </td>
+            <th mat-header-cell>Event From Date</th>
+            <td mat-cell> {{data.event_from_date}} </td>
+        </tr>
+        <tr>
+            <th mat-header-cell>Event To Date</th>
+            <td mat-cell> {{data.event_to_date}} </td>
         </tr>
         <tr>
             <th mat-header-cell>Location</th>
@@ -45,17 +49,17 @@
             <td mat-cell>{{data.sponsor}}</td>
         </tr>       
         <br/>
-        
+
     </table>
     <br/>
     <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
-    <div fxFlex="100%">
-        <mat-form-field class="full-width" fxFlex="100%">
-            <mat-label>Description</mat-label>
-            <textarea rows="6" matInput readonly placeholder="" formControlName="description"></textarea>     
-        </mat-form-field>
+        <div fxFlex="100%">
+            <mat-form-field class="full-width" fxFlex="100%">
+                <mat-label>Description</mat-label>
+                <textarea rows="6" matInput readonly placeholder="" formControlName="description"></textarea>     
+            </mat-form-field>
+        </div>
     </div>
-</div>
     <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
         <button mat-button [mat-dialog-close]="false">Cancel</button>
     </div>

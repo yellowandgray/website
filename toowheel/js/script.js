@@ -39,12 +39,21 @@ function attachFile(id) {
                     }
                     if (id == 'cover_image') {
                         cover_image = data.result.data;
+                        $("#preview_container").removeClass('hidden');
+                        $("#upload_container").addClass('hidden');
+                        $("#preview_container img").attr("src", BASE_IMAGE_URL + cover_image);
                     }
                     if (id == 'logo') {
                         logo = data.result.data;
+                        $("#preview_logo_container").removeClass('hidden');
+                        $("#upload_logo_container").addClass('hidden');
+                        $("#preview_logo_container img").attr("src", BASE_IMAGE_URL + logo);
                     }
                     if (id == 'club_video') {
                         club_video = data.result.data;
+                        $("#preview_video_container").removeClass('hidden');
+                        $("#upload_video_container").addClass('hidden');
+                        $("#preview_video_container img").attr("src", BASE_IMAGE_URL + club_video);
                     }
                 } else {
                     swal('Information', data.result.message, 'info');
@@ -66,6 +75,24 @@ function closeProfilePic() {
     $("#profile_image").val('');
     $("#preview_container").addClass('hidden');
     $("#upload_container").removeClass('hidden');
+}
+
+function closeCoverPic() {
+    $("#cover_image").val('');
+    $("#preview_container").addClass('hidden');
+    $("#upload_container").removeClass('hidden');
+}
+
+function closeLogoPic() {
+    $("#logo").val('');
+    $("#preview_logo_container").addClass('hidden');
+    $("#upload_logo_container").removeClass('hidden');
+}
+
+function closeVideoPic() {
+    $("#club_video").val('');
+    $("#preview_video_container").addClass('hidden');
+    $("#upload_video_container").removeClass('hidden');
 }
 
 function closeReceiptPic() {

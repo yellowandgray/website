@@ -35,21 +35,45 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                 </select>
                             </div>
                             <div class="custom-file">
-                                <label>Choose Cover Image: </label>
-                                <input id="cover_image" name="cover_image" type="file" class="custom-file-input" onchange="attachFile('cover_image');" />
+                                <div id="upload_container">
+                                    <label for="cover-image">Choose Cover Image: </label>
+                                    <input id="cover_image" name="cover_image" type="file" class="custom-file-input" onchange="attachFile('cover_image');" />
+                                </div>
                                 <!--                                <label class="custom-file-label" >Choose Cover Image...</label>-->
+                                <div class="image-preview hidden" id="preview_container">
+                                    <button type="button" onclick="closeCoverPic();" class="close-button-profile-img">
+                                        <i class="fa fa-close"></i>
+                                    </button>
+                                    <img src="" alt="image" />
+                                </div>
                             </div>
                             <br/>
                             <br/>
                             <div class="custom-file">
-                                <label>Choose Club Logo: </label>
-                                <input id="logo" name="logo" type="file" class="custom-file-input" onchange="attachFile('logo');" />
+                                <div id="upload_logo_container">
+                                    <label for="logo">Choose Club Logo: </label>
+                                    <input id="logo" name="logo" type="file" class="custom-file-input" onchange="attachFile('logo');" />
+                                </div>
+                                <div class="image-preview hidden" id="preview_logo_container">
+                                    <button type="button" onclick="closeLogoPic();" class="close-button-profile-img">
+                                        <i class="fa fa-close"></i>
+                                    </button>
+                                    <img src="" alt="image" />
+                                </div>
                             </div>
                             <br/>
                             <br/>
                             <div class="custom-file">
-                                <label>Choose Club Video: </label>
-                                <input id="club_video" name="club_video" type="file" class="custom-file-input" onchange="attachFile('club_video');" />
+                                <div id="upload_video_container">
+                                    <label for="club-video">Choose Club Video: </label>
+                                    <input id="club_video" name="club_video" type="file" class="custom-file-input" onchange="attachFile('club_video');" />
+                                </div>
+                                <div class="image-preview hidden" id="preview_video_container">
+                                    <button type="button" onclick="closeVideoPic();" class="close-button-profile-img">
+                                        <i class="fa fa-close"></i>
+                                    </button>
+                                    <img src="" alt="image" />
+                                </div>
                             </div>
                             <br/>
                             <br/>
