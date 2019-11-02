@@ -51,7 +51,7 @@
             </div>
               <div class="preview-video" *ngIf="media_path != '' && media_type=='video'">
                 <video class="dialog-picture" style="height: 100%; width: 90%" controls muted>
-                    <source src="{{image_url}}{{club_video}}" type="video/mp4">              
+                    <source src="{{image_url}}{{media_path}}" type="video/mp4">
                 </video>                              
                 <button mat-icon-button aria-label="Close icon" (click)="removeMedia('media_path')">
                     <mat-icon>close</mat-icon>
