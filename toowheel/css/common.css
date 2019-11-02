@@ -203,7 +203,7 @@
     background-color: #6f6f6f;
     border: none;
     border-radius: 18px 0px 0px 18px;
-    padding: 5px 0px 5px 20px;
+    padding: 5px 0px 5px 10px;
     outline: none;
 
 }
@@ -957,8 +957,8 @@ button {
     }
     .release-cont-1 img{
         /*        border-radius: 0; */
-        width: 100%;
-        height: auto;
+        width: 50%;
+        height: 175px;
     }
     .release-cont-2{
         flex:1 0 100%;
@@ -3516,8 +3516,8 @@ thead td {
 }
 
 .tabcontent .news .news-discover {
-    bottom: 0;
-    top: 0;
+    bottom: 167px;
+    /* top: 0; */
     margin: 0 auto;
     left: 0;
 }
@@ -3817,6 +3817,7 @@ thead td {
     padding: 12px;
     color: #fff;
     background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
 }

@@ -225,7 +225,7 @@ $("#smartwizard").on("leaveStep", function (e, anchorObject, stepNumber, stepDir
                 //$('#password_error').html('Enter password').addClass('error-msg');
                 $('#password').focus();
                 checkPasswordStrength();
-                $(window).scrollTop($('#password').position().top);               
+                $(window).scrollTop($('#password').position().top);
                 change = false;
             }
             /*if (validateEmail($.trim($('#email').val())) === false) {
@@ -391,44 +391,48 @@ function registerMember() {
 }
 
 function registerClub() {
-    $('.loader').addClass('is-active');
-    $.ajax({
-        type: "POST",
-        url: 'api/v1/insert_club',
-        data: {type: $('#type').val(), category_id: $('#category_id').val(), name: $('#name').val(), cover_image: cover_image, logo: logo, state: $('#state').val(), city: $('#city').val(), zip: $('#zip').val(), landmark: $('#landmark').val(), address: $('#address').val(), club_leader_name: $('#club_leader_name').val(), no_of_member: $('#no_of_member').val(), email: $('#email').val(), mobile: $('#mobile').val(), about: $('#about').val(), facebook_link: $('#facebook_link').val(), youtube_link: $('#youtube_link').val(), twitter_link: $('#twitter_link').val(), instagram_link: $('#instagram_link').val(), rank: 0, published: 0, source: 'web', club_video: club_video},
-        success: function (data) {
-            $('.loader').removeClass('is-active');
-            if (data.result.error === false) {
-                $('#type').val('');
-                $('#category_id').val('');
-                $('#name').val('');
-                cover_image = '';
-                logo = '';
-                $('#state').val('')
-                $('#city').val('');
-                $('#zip').val('')
-                $('#landmark').val('');
-                $('#address').val('');
-                $('#club_leader_name').val('');
-                $('#no_of_member').val('');
-                $('#email').val('');
-                $('#mobile').val('');
-                $('#about').val('');
-                $('#facebook_link').val('');
-                $('#youtube_link').val('');
-                $('#twitter_link').val('');
-                $('#instagram_link').val('');
-                club_video = '';
-                swal("Thank you!", " Our Team will get in touch with you soon.", "success");
-            } else {
-                swal("Oops!", data.result.message, "info");
+    if (validClub()) {
+        $('.loader').addClass('is-active');
+        $.ajax({
+            type: "POST",
+            url: 'api/v1/insert_club',
+            data: {type: $('#type').val(), category_id: $('#category_id').val(), name: $('#name').val(), cover_image: cover_image, logo: logo, state: $('#state').val(), city: $('#city').val(), zip: $('#zip').val(), landmark: $('#landmark').val(), address: $('#address').val(), club_leader_name: $('#club_leader_name').val(), email: $('#email').val(), email_id: $('#email_id').val(), mobile: $('#mobile').val(), about: $('#about').val(), facebook_link: $('#facebook_link').val(), youtube_link: $('#youtube_link').val(), twitter_link: $('#twitter_link').val(), instagram_link: $('#instagram_link').val(), rank: 0, published: 0, source: 'web', club_video: club_video, password: $('#password').val()},
+            success: function (data) {
+                $('.loader').removeClass('is-active');
+                if (data.result.error === false) {
+                    $('#type').val('');
+                    $('#category_id').val('');
+                    $('#name').val('');
+                    cover_image = '';
+                    logo = '';
+                    $('#state').val('')
+                    $('#city').val('');
+                    $('#zip').val('')
+                    $('#landmark').val('');
+                    $('#address').val('');
+                    $('#club_leader_name').val('');
+                    $('#email').val('');
+                    $('#email_id').val('');
+                    $('#mobile').val('');
+                    $('#about').val('');
+                    $('#facebook_link').val('');
+                    $('#youtube_link').val('');
+                    $('#twitter_link').val('');
+                    $('#instagram_link').val('');
+                    $('#password').val('');
+                    $('#confirm_password').val('');
+                    club_video = '';
+                    swal("Thank you!", " Our Team will get in touch with you soon.", "success");
+                } else {
+                    swal("Oops!", data.result.message, "info");
+                }
+            },
+            error: function (err) {
+                $('.loader').removeClass('is-active');
+                swal("Oops!", err.statusText, "error");
             }
-        },
-        error: function (err) {
-            $('.loader').removeClass('is-active');
-            swal("Oops!", err.statusText, "error");
-        }
-    });
+        });
+    }
     return false;
 }
 
@@ -440,7 +444,7 @@ function renderCategory(type) {
             url: 'api/v1/get_' + type + '_category',
             success: function (data) {
                 if (data.result.error === false) {
-                    var option = '<option value="">Category</option>';
+                    var option = '<option value="">Select Category</option>';
                     $.each(data.result.data, function (key, val) {
                         option = option + '<option value="' + val.category_id + '">' + val.name + '</option>';
                     });
@@ -452,7 +456,7 @@ function renderCategory(type) {
             }
         });
     } else {
-        $('#category_id').append('<option value="">Category</option>');
+        $('#category_id').append('<option value="">Select Category</option>');
     }
 }
 
@@ -722,10 +726,11 @@ function updateProfile(id, type) {
             data.coverage_kid3_name = $('#coverage_kid3_name').val();
             data.coverage_kid3_ic = $('#coverage_kid3_ic').val();
         }
-        if (typeof $('#coverage_person_name').val() !== 'undefined') {
-            data.coverage_person_name = $('#coverage_person_name').val();
-            data.coverage_person_ic = $('#coverage_person_ic').val();
-            data.coverage_person_address = $('#coverage_person_address').val();
+        if (typeof $('#coverage_father_name').val() !== 'undefined') {
+            data.coverage_father_name = $('#coverage_father_name').val();
+            data.coverage_father_ic = $('#coverage_father_ic').val();
+            data.coverage_mother_name = $('#coverage_mother_name').val();
+            data.coverage_mother_ic = $('#coverage_mother_ic').val();
         }
     }
     $('.loader').addClass('is-active');

@@ -40,10 +40,10 @@ $autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_relea
                         <h5>FOLLOW US</h5>
                         <ul class="nav__ul">
                             <li class="i-con">
-                                <a href="https://www.facebook.com/Toowheel-Malaysia-102602757819930" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-                                <a href="https://www.instagram.com/p/B2iG45lnGi-/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                <a href="https://twitter.com/@ToowheelM" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                <a href="https://www.youtube.com/channel/UCueyRbB52hjc0XUIqbkYxcg" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                                <a href="https://www.facebook.com/Toowheel-Malaysia-102602757819930" target="_blank"><img src="img/social-icons/fb.png" alt="fb"></a>
+                                <a href="https://www.instagram.com/p/B2iG45lnGi-/" target="_blank"><img src="img/social-icons/insta.png" alt="fb"></a>
+                                <a href="https://twitter.com/@ToowheelM" target="_blank"><img src="img/social-icons/twitter.png" alt="fb"></a>
+                                <a href="https://www.youtube.com/channel/UCueyRbB52hjc0XUIqbkYxcg" target="_blank"><img src="img/social-icons/yt.png" alt="fb"></a>
                             </li>
                         </ul>
                     </div>
@@ -71,15 +71,20 @@ $autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_relea
                                         <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="image" />
                                         <div class="discover-slider-content">
                                             <p class="clb-bg"><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 10) : $obj->charLimit($row['sponsor'], 10); ?></p>
-                                            <h2><?php echo $obj->charLimit($row['title'], 10); ?></h2>
-                                            <p><?php echo $obj->charLimit($row['moto_text'], 60); ?></p>
-                                            <center class="news-discover"><a href="news.php?nid=<?php echo $row['news_id']; ?>">DISCOVER</a></center>
+                                            <h2><?php echo $obj->charLimit($row['title'], 35); ?></h2>
+                                            <p><?php echo $obj->charLimit($row['moto_text'], 20); ?></p>
                                         </div>
+                                            <center class="news-discover"><a href="news.php?nid=<?php echo $row['news_id']; ?>">DISCOVER</a></center>
                                     </div>
                                 </div>
                             <?php } ?>
                         </div>
-                        <div class="find-club-btn"><a href="news-updates.php?type=<?php echo $type; ?>" class="menu-btn">See All Latest News</a></div>
+                        <div class="find-club-btn">
+                            <a href="news-updates.php?type=<?php echo $type; ?>" class="menu-btn">See All Latest News</a>
+                        </div>
+                        <br/>
+                        <br/>
+                        <br/>
                     </div>
                     <div id="Release" class="tabcontent">
                         <div class="row">
@@ -98,7 +103,12 @@ $autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_relea
                                 <?php } ?>
                             </div>
                         </div> 
-                        <div class="find-club-btn"><a href="press-release.php?type=<?php echo $type; ?>" class="menu-btn">All Press Release</a></div>
+                        <div class="find-club-btn">
+                            <a href="press-release.php?type=<?php echo $type; ?>" class="menu-btn">All Press Release</a>
+                        </div>
+                        <br/>
+                        <br/>
+                        <br/>
                     </div>
                     <div id="Member" class="tabcontent">
                         <h3>Member Registration</h3>
@@ -106,7 +116,9 @@ $autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_relea
                             <div class="row">
                                 <div class="col-md-12">
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                    <div class="find-club-btn"><a href="member-register.php" class="menu-btn">Click to Register</a></div>
+                                    <div class="find-club-btn">
+                                        <a href="member-register.php" class="menu-btn">Click to Register</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -130,8 +142,13 @@ $autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_relea
                                     </div>
                                 <?php } ?>
                             </div>
-                            <div class="find-club-btn"><a href="find-a-club.php?type=<?php echo $type; ?>" class="menu-btn">Read More</a></div>
+                            <div class="find-club-btn">
+                                <a href="find-a-club.php?type=<?php echo $type; ?>" class="menu-btn">Read More</a>
+                            </div>
                         </div>
+                        <br/>
+                        <br/>
+                        <br/>
                     </div>
                     <div id="Events" class="tabcontent">
                         <h3>Events</h3>
@@ -141,14 +158,17 @@ $autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_relea
                                     <div class="col-md-3 col-sm-6">
                                         <a href="events.php?type=<?php echo $type; ?>" class="club-box">
                                             <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="" />
-                                            <h3><?php echo $obj->charLimit($row['title'], 20); ?></h3>
-                                            <p><?php echo $obj->charLimit($row['location'], 20); ?></p>
+                                            <h3><?php echo $row['title']; ?></h3>
+                                            <p><?php echo $row['location']; ?></p>
                                         </a>
                                     </div>
                                 <?php } ?>
                             </div>
                             <div class="find-club-btn"><a href="events.php?type=<?php echo $type; ?>" class="menu-btn">Read More</a></div>
                         </div>
+                        <br/>
+                        <br/>
+                        <br/>
                     </div>
                     <div id="register-club" class="tabcontent">
                         <h3>Register My Club</h3>

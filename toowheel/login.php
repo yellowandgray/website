@@ -32,7 +32,7 @@ $obj = new Common();
                                 <form onsubmit="return loginMember();">
                                     <div class="input-container"><i class="fa fa-user-o icon" aria-hidden="true"></i><input type="text" name="email" id="email" placeholder="Email" /></div>
                                     <div class="input-container"><i class="fa fa-key" aria-hidden="true"></i><input type="password" name="password" id="password" placeholder="Password" /></div>
-                                    <input type="checkbox" onclick="myFunction()"> Show Password
+                                    <span style="font-size: 12px;color: #a5a5a5;"><input type="checkbox" onclick="myFunction()"> Show Password</span>
                                     <center><button type="submit">LOGIN</button></center>
                                 </form> 
                                 <h5><a href="#" class="forgot-password">Forgot your Password</a></h5>

@@ -538,3 +538,12 @@ button {
     padding: 0px 0 60px;
     height: auto !important;
 }
+
+.fooetr-5 .i-con {
+    padding: 10px 30px;
+}
+
+.i-con a img {
+    width: 25px;
+    margin: 0 10px;
+}
