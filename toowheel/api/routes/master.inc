@@ -65,6 +65,21 @@ $app->post('/insert_gallery', function() use ($app) {
     }
     echoRespnse(201, $res);
 });
+$app->post('/insert_clubgallery', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to insert');
+    $data = $app->request->post();
+    $com = new Common();
+    $array = array('media_type' => $data['media_type'], 'type' => $data['type'], 'title' => $data['title'], 'media_path' => $data['media_path'], 'description' => $data['description']);
+    if (isset($data['thumb_path'])) {
+        $array['thumb_path'] = $data['thumb_path'];
+    }
+    $record = $com->insertRecord($array, 'club_gallery');
+    if ($record > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Record inserted successfully';
+    }
+    echoRespnse(201, $res);
+});
 
 $app->post('/insert_news', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
@@ -605,6 +620,17 @@ $app->get('/get_gallery_four_wheel', function() {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
     $data = $com->selectAll('*', 'gallery', 'gallery_id > 0 AND type = \'four_wheel\'');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+$app->get('/get_clubgallery', function() {
+    $res = array('error' => true, 'message' => 'Unable to get records');
+    $com = new Common();
+    $data = $com->selectAll('*', 'club_gallery', 'club_gallery_id > 0');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';

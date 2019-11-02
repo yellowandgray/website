@@ -5,37 +5,92 @@
     <mat-sidenav-content>
         <app-header></app-header>
         <div class="add-btn-container">
-            <button mat-raised-button color="primary" (click)="openDialog()"><mat-icon>add</mat-icon> Gallery</button>
+            <button mat-raised-button color="primary" (click)="openDialog(0, 'null')"><mat-icon>add</mat-icon> Gallery</button>
         </div>
-        <mat-card class="detail-card">
-            <mat-card-header>
-                <mat-card-title>Race on 2018</mat-card-title>
-                <mat-card-subtitle>Image</mat-card-subtitle>
-            </mat-card-header>
-            <img mat-card-image src="assets/news1.jpg" alt="Photo of a Shiba Inu" />
-            <mat-card-actions>
-                <button mat-icon-button aria-label="label" (click)="openDialog()">
-                    <mat-icon>edit</mat-icon>
-                </button>
-                <button mat-icon-button aria-label="label">
-                    <mat-icon>delete</mat-icon>
-                </button>
-            </mat-card-actions>
-        </mat-card>
-        <mat-card class="detail-card">
-            <mat-card-header>
-                <mat-card-title>Race on 2017</mat-card-title>
-                <mat-card-subtitle>Image</mat-card-subtitle>
-            </mat-card-header>
-            <img mat-card-image src="assets/news2.jpg" alt="Photo of a Shiba Inu" />
-            <mat-card-actions>
-                <button mat-icon-button aria-label="label" (click)="openDialog()">
-                    <mat-icon>edit</mat-icon>
-                </button>
-                <button mat-icon-button aria-label="label">
-                    <mat-icon>delete</mat-icon>
-                </button>
-            </mat-card-actions>
-        </mat-card>
+        <mat-tab-group>
+            <mat-tab label="Images">          
+              
+                        <section class="section">
+                            <br/>                     
+                            <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+                                <div class="searchdesign" fxFlex="50%">
+                                    <mat-form-field [floatLabel]="'never'" fxFlex="100%">
+                                        <input matInput type="text" placeholder="Search by name" [(ngModel)]="searchTermTW" />
+                                    </mat-form-field>
+                                </div>
+                                <div fxFlex="20%">
+                                    <mat-form-field fxFlex="100%">
+                                        <mat-label>Sort by</mat-label>
+                                        <mat-select [(ngModel)]="sortdata_tw" (selectionChange)="sortRecords('result', sortdata_tw)">
+                                            <mat-option value="title_a_z">Title A-Z</mat-option>
+                                            <mat-option value="title_z_a">Title Z-A</mat-option>
+                                            <mat-option value="created_a_z">Created Date ASC</mat-option>
+                                            <mat-option value="created_z_a">Created Date DESC</mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </section> 
+                         <mat-list>
+                            <ng-container *ngFor="let data of result | filterEventclubgallery:searchTermTW;let i = index">
+                                <ng-container *ngIf="result[i]['media_type'] === 'image'">
+                                <mat-list-item class="list-container">
+                                   <button mat-icon-button aria-label="label" (click)="openDialog(result[i]['club_gallery_id'], 'result')">
+                                                <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
+                                            </button>
+                                            <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i]['club_gallery_id'])">
+                                                <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
+                                            </button>
+                                    <img matListAvatar src="{{image_url}}{{data.media_path}}" *ngIf="data.media_path && data.profile_picture != ''" alt="..." />
+<!--                                         <img matListAvatar src="{{image_url}}{{data.gender}}.jpg" *ngIf="!data.media_path || data.media_path == ''" alt="..." />-->
+                                    <h3 matLine>{{data.title}}</h3>
+                                    <p matLine>{{data.description}}</p>                                   
+                                </mat-list-item>
+                                    </ng-container>
+                            </ng-container>
+                        </mat-list>
+            </mat-tab>
+            <mat-tab label="Videos">               
+                        <section class="section">
+                            <br/>                     
+                            <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+                                <div class="searchdesign" fxFlex="50%">
+                                    <mat-form-field [floatLabel]="'never'" fxFlex="100%">
+                                        <input matInput type="text" placeholder="Search by name" [(ngModel)]="searchTermFW" />
+                                    </mat-form-field>
+                                </div>
+                                <div fxFlex="20%">
+                                    <mat-form-field fxFlex="100%">
+                                        <mat-label>Sort by</mat-label>
+                                        <mat-select [(ngModel)]="sortdata_fw" (selectionChange)="sortRecords('result', sortdata_fw)">
+                                            <mat-option value="title_a_z">Title A-Z</mat-option>
+                                            <mat-option value="title_z_a">Title Z-A</mat-option>
+                                            <mat-option value="created_a_z">Created Date ASC</mat-option>
+                                            <mat-option value="created_z_a">Created Date DESC</mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </section>
+                        <mat-list>
+                            <ng-container *ngFor="let data of result | filterEventclubgallery:searchTermFW; let i = index">
+                                <ng-container *ngIf="result[i]['media_type'] === 'video'">
+                                <mat-list-item class="list-container">
+                                   <button mat-icon-button aria-label="label" (click)="openDialog(result[i]['club_gallery_id'], 'result')">
+                                                <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
+                                            </button>
+                                            <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i]['club_gallery_id'])">
+                                                <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
+                                            </button>
+                                    <img matListAvatar src="{{image_url}}{{data.media_path}}" *ngIf="data.media_path && data.media_path != ''" alt="..." />
+<!--                                         <img matListAvatar src="{{image_url}}{{data.gender}}.jpg" *ngIf="!data.media_path || data.media_path == ''" alt="..." />-->
+                                    <h3 matLine>{{data.title}}</h3>
+                                    <p matLine>{{data.description}}</p>                                   
+                                </mat-list-item>
+                                </ng-container>
+                            </ng-container>
+                        </mat-list>
+            </mat-tab>
+        </mat-tab-group>
     </mat-sidenav-content>
 </mat-sidenav-container>
