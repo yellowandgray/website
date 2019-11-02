@@ -3516,8 +3516,8 @@ thead td {
 }
 
 .tabcontent .news .news-discover {
-    bottom: 0;
-    top: 0;
+    bottom: 167px;
+    /* top: 0; */
     margin: 0 auto;
     left: 0;
 }

@@ -256,7 +256,7 @@ body {
     margin: 0;
     background-color: #0006;
     position: relative;
-    bottom: 157px;
+    bottom: 142px;
     border-bottom-right-radius: 7px;
     border-bottom-left-radius: 7px;
     height: 157px;
@@ -279,13 +279,15 @@ body {
     font-size: 15px;
     font-weight: 600;
     margin-top: 6px;
+    overflow: hidden;
+    height: 50px;
 }
 
 .discover-slider-content p {
     color: #fff;
     margin-bottom: 8px;
     font-size: 10px;
-    height: 60px;
+    height: 45px;
     overflow: hidden;
     text-align: left;
 }
