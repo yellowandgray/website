@@ -19,7 +19,11 @@ $member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN club AS 
                 <div class="display-flex editing-icon">
                     <div class="flex-icon">
                         <!--<div><img src="img/my-account/edit.png" alt="" /></div>-->
-                        <div><a href="#" class="change-password"><img src="img/my-account/setting.png" alt="" /></a></div>
+                        <div>
+                            <a href="#" class="change-password">
+                                <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                            </a>
+                        </div>
                         <!--<div><img src="img/my-account/bell.png" alt="" /></div>-->
                     </div>
                 </div>
@@ -97,7 +101,7 @@ $member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN club AS 
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>Date of Birth</th>
+                                    <th>DOB</th>
                                     <td>:</td>
                                     <td class="member-basic-info-fixed"><?php echo $member['dob_date'] . '-' . str_pad($member['dob_month'], 2, "0", STR_PAD_LEFT) . '-' . $member['dob_year']; ?></td>
                                     <td class="member-basic-info-edit hidden">
@@ -105,21 +109,25 @@ $member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN club AS 
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>Email Address</th>
+                                    <th align="top">Email</th>
                                     <td>:</td>
                                     <td><?php echo strtoupper($member['email']); ?></td>
                                 </tr>
                                 <tr>
-                                    <th>Contact No</th>
+                                    <th>Contact</th>
                                     <td>:</td>
                                     <td><?php echo $member['contact_number']; ?></td>
                                 </tr>
                                 <tr>
-                                    <th>Address</th>
+                                    <th align="top">Address</th>
                                     <td>:</td>
-                                    <td class="member-basic-info-fixed"><?php echo $member['address']; ?></td>
+                                    <td class="member-basic-info-fixed">
+                                        <?php echo $member['address']; ?>
+                                    </td>
                                     <td class="member-basic-info-edit hidden">
-                                        <textarea name="address" id="address"><?php echo $member['address']; ?></textarea>
+                                        <textarea name="address" id="address">
+                                            <?php echo $member['address']; ?>
+                                        </textarea>
                                     </td>
                                 </tr>
                             </table>

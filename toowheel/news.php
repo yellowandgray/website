@@ -17,7 +17,7 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
     <body>
         <?php include 'menu.php'; ?>
         <div class="padding-top-108"></div>
-        <div class="press-release">
+        <div class="press-release" style="padding-top: 0px;">
             <!--pop-up-gallery-->
             <div class="fs-gal-view">
                 <h1></h1>
@@ -38,12 +38,16 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
                 <div class="row head-news">
                     <div class="side-news">
                         <span class="side-news-widget1"><span><?php echo $news['club_id'] != 0 ? $obj->charLimit($news['club'], 17) : $obj->charLimit($news['sponsor'], 14); ?></span></span>
-                        <h1><?php echo $obj->charLimit($news['title'],100); ?></h1>
-                        <span><?php echo $news['media']; ?> | <?php echo $news['author_name']; ?> | <?php echo date('M d, Y', strtotime($news['news_date'])); ?></span>
+                        <h1><?php echo $obj->charLimit($news['title'], 100); ?></h1>
                     </div>
                 </div>
                 <div class="row events-content">
                     <div class="col-md-8" id="contentDiv">
+                        <span class="news-details-span">
+                            <?php echo $news['media']; ?> | <?php echo $news['author_name']; ?> | <?php echo date('M d, Y', strtotime($news['news_date'])); ?>
+                        </span>
+                        <br/>
+                        <br/>
                         <div class="middle" style="">
                             <div style="margin-bottom: 20px;">
                                 <span class="twitter-share" data-js="twitter-share" style="float: left;"> <i class="fa fa-twitter" aria-hidden="true"></i> Twitter</span>

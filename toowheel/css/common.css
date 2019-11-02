@@ -957,8 +957,8 @@ button {
     }
     .release-cont-1 img{
         /*        border-radius: 0; */
-        width: 100%;
-        height: auto;
+        width: 50%;
+        height: 175px;
     }
     .release-cont-2{
         flex:1 0 100%;
@@ -3817,6 +3817,7 @@ thead td {
     padding: 12px;
     color: #fff;
     background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
 }

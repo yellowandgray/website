@@ -444,7 +444,7 @@ function renderCategory(type) {
             url: 'api/v1/get_' + type + '_category',
             success: function (data) {
                 if (data.result.error === false) {
-                    var option = '<option value="">Category</option>';
+                    var option = '<option value="">Select Category</option>';
                     $.each(data.result.data, function (key, val) {
                         option = option + '<option value="' + val.category_id + '">' + val.name + '</option>';
                     });
@@ -456,7 +456,7 @@ function renderCategory(type) {
             }
         });
     } else {
-        $('#category_id').append('<option value="">Category</option>');
+        $('#category_id').append('<option value="">Select Category</option>');
     }
 }
 
