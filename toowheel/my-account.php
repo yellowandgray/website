@@ -56,7 +56,6 @@ $member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN club AS 
                     <div class="col-md-6 ">
                         <i class="fa fa-times basic-info-edit-action-icon hidden" onclick="disableProfileEdit();" aria-hidden="true"></i>
                         <i class="fa fa-check basic-info-edit-action-icon hidden" onclick="updateProfile(<?php echo $member['member_id']; ?>, 'basic');" aria-hidden="true"></i>
-
                         <div class="profile-table">
                             <table>
                                 <tr>
@@ -174,23 +173,24 @@ $member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN club AS 
                                         <?php } else { ?>
                                             <table>
                                                 <tr>
-                                                    <th>Name</th>
-                                                    <td> : </td>
-                                                    <td class="coverage-info-fixed"><?php echo $obj->charLimit($member['coverage_person_name'], 200); ?></td> 
-                                                    <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['coverage_person_name']; ?>" name="coverage_person_name" id="coverage_person_name" class="form-control" /></td>
-
-                                                </tr>
-                                                <tr>
+                                                    <th>Father Name</th>
                                                     <th>IC Number</th>
-                                                    <td> : </td>
-                                                    <td class="coverage-info-fixed"><?php echo $obj->charLimit($member['coverage_person_ic'], 200); ?></td>
-                                                    <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['coverage_person_ic']; ?>" name="coverage_person_ic" id="coverage_person_ic" class="form-control" /></td>
                                                 </tr>
                                                 <tr>
-                                                    <th>Address</th>
-                                                    <td> : </td>
-                                                    <td class="coverage-info-fixed" colspan="2"><?php echo $obj->charLimit($member['coverage_person_address'], 150); ?></td>
-                                                    <td class="coverage-info-edit hidden" colspan="2"><textarea name="coverage_person_address" id="coverage_person_address" class="form-control"><?php echo $member['coverage_person_address']; ?></textarea></td>
+                                                    <td class="coverage-info-fixed"><?php echo $obj->charLimit($member['coverage_father_name'], 200); ?></td>
+                                                    <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['coverage_father_name']; ?>" name="coverage_father_name" id="coverage_father_name" class="form-control" /></td>
+                                                    <td class="coverage-info-fixed"><?php echo $obj->charLimit($member['coverage_father_ic'], 200); ?></td>
+                                                    <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['coverage_father_ic']; ?>" name="coverage_father_ic" id="coverage_father_ic" class="form-control" /></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Mother Name</th>
+                                                    <th>IC Number</th>
+                                                </tr>
+                                                <tr>
+                                                    <td class="coverage-info-fixed"><?php echo $obj->charLimit($member['coverage_mother_name'], 200); ?></td>
+                                                    <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['coverage_mother_name']; ?>" name="coverage_mother_name" id="coverage_mother_name" class="form-control" /></td>
+                                                    <td class="coverage-info-fixed"><?php echo $obj->charLimit($member['coverage_mother_ic'], 200); ?></td>
+                                                    <td class="coverage-info-edit hidden"><input type="text" value="<?php echo $member['coverage_mother_ic']; ?>" name="coverage_mother_ic" id="coverage_mother_ic" class="form-control" /></td>
                                                 </tr>
                                             </table>                                                
                                         <?php }
@@ -213,7 +213,7 @@ $member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN club AS 
                                 <h5>POINTS</h5>
                             </div>
                             <div class="col-md-6 refer-point-num">
-<!--                                <h4>0</h4>-->
+                                <!--                                <h4>0</h4>-->
                                 <span>Coming Soon!</span>
 <!--                                <span>RM 0</span>-->
                             </div>

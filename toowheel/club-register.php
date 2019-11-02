@@ -37,7 +37,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                             <div class="custom-file">
                                 <label>Choose Cover Image: </label>
                                 <input id="cover_image" name="cover_image" type="file" class="custom-file-input" onchange="attachFile('cover_image');" />
-<!--                                <label class="custom-file-label" >Choose Cover Image...</label>-->
+                                <!--                                <label class="custom-file-label" >Choose Cover Image...</label>-->
                             </div>
                             <br/>
                             <br/>
@@ -53,7 +53,6 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                             </div>
                             <br/>
                             <br/>
-                             
                             <div class="form-group">
                                 <input id="mobile" placeholder="Contact No." name="mobile" type="text" tabindex="9" required />
                             </div>
@@ -80,22 +79,22 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                 <input id="club_leader_name" placeholder="Club Leader name (Full Name)" name="club_leader_name" type="text" tabindex="16" required />
                             </div>
                             <div class="form-group">
-                                <input id="no_of_member" placeholder="No. of Members" name="no_of_member" type="text" tabindex="17" required />
+                                <input id="email_id" placeholder="Email id" name="email_id" type="email" tabindex="17" />
                             </div>
                             <div class="form-group">
                                 <textarea id="about" placeholder="About Club" name="about" type="text" tabindex="22" required></textarea>
                             </div>
                             <h4>Login Details:</h4>
                             <div class="form-group">
-                                <input id="email" placeholder="Email Address" name="email" type="email" tabindex="8" required />
+                                <input id="email" placeholder="Username" name="email" type="text" tabindex="8" required />
                             </div>
                             <div class="form-group">
-                                <input id="password" placeholder="Password" name="Password" type="Password" tabindex="8" required />
+                                <input id="password" placeholder="Password" name="password" type="password" tabindex="8" required />
                             </div>
                             <div class="form-group">
-                                <input id="confirm_password" placeholder="Confirm Password" name="confirm_password" type="Password" tabindex="8" required />
+                                <input id="confirm_password" placeholder="Confirm Password" name="confirm_password" type="password" tabindex="8" required />
                             </div>
-                             <h4>Social Media</h4>
+                            <h4>Social Media</h4>
                             <div class="form-row">
                                 <div class="col-md-6 mb-6">
                                     <div class="form-group">

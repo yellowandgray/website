@@ -20,6 +20,10 @@
             <th mat-header-cell> Gender </th>
             <td mat-cell> {{data.gender | titlecase}} </td>
         </tr>
+        <tr *ngIf="data.activated == 1">
+            <th mat-header-cell> Membership ID </th>
+            <td mat-cell> {{data.membership_id}} </td>
+        </tr>
         <tr>
             <th mat-header-cell> Age </th>
             <td mat-cell> {{data.age}} </td>
@@ -121,16 +125,20 @@
             <td mat-cell> {{data.coverage_kid2_ic}} </td>
         </tr>
         <tr *ngIf="data.marital_status == 'single'">
-            <th mat-header-cell> Name </th>
-            <td mat-cell> {{data.coverage_person_name}} </td>
+            <th mat-header-cell> Father Name </th>
+            <td mat-cell> {{data.coverage_father_name}} </td>
         </tr>
         <tr *ngIf="data.marital_status == 'single'">
             <th mat-header-cell> IC No. </th>
-            <td mat-cell> {{data.coverage_person_ic}} </td>
+            <td mat-cell> {{data.coverage_father_ic}} </td>
         </tr>
         <tr *ngIf="data.marital_status == 'single'">
-            <th mat-header-cell> Address </th>
-            <td mat-cell> {{data.coverage_person_address}} </td>
+            <th mat-header-cell> Mother Name </th>
+            <td mat-cell> {{data.coverage_mother_name}} </td>
+        </tr>
+        <tr *ngIf="data.marital_status == 'single'">
+            <th mat-header-cell> IC No. </th>
+            <td mat-cell> {{data.coverage_mother_ic}} </td>
         </tr>
         <br/>
         <h2>Login:</h2>
