@@ -225,7 +225,7 @@ $("#smartwizard").on("leaveStep", function (e, anchorObject, stepNumber, stepDir
                 //$('#password_error').html('Enter password').addClass('error-msg');
                 $('#password').focus();
                 checkPasswordStrength();
-                $(window).scrollTop($('#password').position().top);               
+                $(window).scrollTop($('#password').position().top);
                 change = false;
             }
             /*if (validateEmail($.trim($('#email').val())) === false) {
@@ -722,10 +722,11 @@ function updateProfile(id, type) {
             data.coverage_kid3_name = $('#coverage_kid3_name').val();
             data.coverage_kid3_ic = $('#coverage_kid3_ic').val();
         }
-        if (typeof $('#coverage_person_name').val() !== 'undefined') {
-            data.coverage_person_name = $('#coverage_person_name').val();
-            data.coverage_person_ic = $('#coverage_person_ic').val();
-            data.coverage_person_address = $('#coverage_person_address').val();
+        if (typeof $('#coverage_father_name').val() !== 'undefined') {
+            data.coverage_father_name = $('#coverage_father_name').val();
+            data.coverage_father_ic = $('#coverage_father_ic').val();
+            data.coverage_mother_name = $('#coverage_mother_name').val();
+            data.coverage_mother_ic = $('#coverage_mother_ic').val();
         }
     }
     $('.loader').addClass('is-active');
