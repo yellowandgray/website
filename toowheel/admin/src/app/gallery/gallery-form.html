@@ -42,21 +42,21 @@
             <div fxFlex="50%" fxLayoutAlign="center center">
                 <button *ngIf="media_path == ''" type="button" mat-raised-button (click)="fileInput.click()">{{file_name}}</button>
                 <input hidden #fileInput type="file" id="file" (change)="fileProgress($event, 'file_name', 'media_path')" />
-                <mat-icon *ngIf="media_path == ''" matTooltip="Width: Any; Height: Any;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
-                 <div class="preview-image" *ngIf="media_path != '' && media_type=='image'">
-                <img class="dialog-picture" matTooltip="Cover Image" mat-card-image src="{{image_url}}{{media_path}}" alt="Photo" />
-                <button mat-icon-button aria-label="Close icon" (click)="removeMedia('media_path')">
-                    <mat-icon>close</mat-icon>
-                </button>                
-            </div>
-              <div class="preview-video" *ngIf="media_path != '' && media_type=='video'">
-                <video class="dialog-picture" style="height: 100%; width: 90%" controls muted>
-                    <source src="{{image_url}}{{media_path}}" type="video/mp4">
-                </video>                              
-                <button mat-icon-button aria-label="Close icon" (click)="removeMedia('media_path')">
-                    <mat-icon>close</mat-icon>
-                </button>
-             </div>
+                       <mat-icon *ngIf="media_path == ''" matTooltip="Width: Any; Height: Any;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
+                <div class="preview-image" *ngIf="media_path != '' && media_type=='image'">
+                    <img class="dialog-picture" matTooltip="Cover Image" mat-card-image src="{{image_url}}{{media_path}}" alt="Photo" />
+                    <button mat-icon-button aria-label="Close icon" (click)="removeMedia('media_path')">
+                        <mat-icon>close</mat-icon>
+                    </button>
+                </div>
+                <div class="preview-video" *ngIf="media_path != '' && media_type=='video'">
+                    <video class="dialog-picture" style="height: 100%; width: 90%" controls muted>
+                        <source src="{{image_url}}{{media_path}}" type="video/mp4">
+                    </video>                              
+                    <button mat-icon-button aria-label="Close icon" (click)="removeMedia('media_path')">
+                        <mat-icon>close</mat-icon>
+                    </button>
+                </div>
             </div>
         </div>
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
