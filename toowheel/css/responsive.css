@@ -79,15 +79,12 @@
     #club1 {
         top: 0 !important;
     }
-    .profile-picture-section {
-        flex: 0 0 100% !Important;
-    }
     .coverage-table {
         margin-top: 30px;
     }
-    .log-in form input[type="checkbox"] {
+/*    .log-in form input[type="checkbox"] {
         display: none !important;
-    }
+    }*/
 }
 
 @media screen and (max-width: 500px) {
@@ -218,6 +215,9 @@
     }
     .popup-box {
         width: 100% !important;
+    }
+    .profile-picture-section {
+        flex: 0 0 100% !Important;
     }
 }
 
@@ -1001,3 +1001,11 @@
 }
 
 
+@media (min-width: 601px) and (max-width: 767px) {
+    /*    .member-profile-image img {
+            height: auto !important;
+        }*/
+    .member-profile-image i {
+        margin-left: 0 !important;
+    }
+}
