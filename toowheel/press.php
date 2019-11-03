@@ -29,11 +29,13 @@ $type = $press_release['type'];
                     <div class="side-news">
                         <span class="side-news-widget1"><span><?php echo $press_release['author_name']; ?></span></span>
                         <h1><?php echo $obj->charLimit($press_release['title'], 100); ?></h1>
-                        <span><?php echo $press_release['media']; ?> | <?php echo $press_release['author_name']; ?> | <?php echo date('M d, Y', strtotime($press_release['press_release_date'])); ?></span>
                     </div>
                 </div>
                 <div class="row events-content">
                     <div class="col-md-8" id="contentDiv">
+                        <span><?php echo $press_release['media']; ?> | <?php echo $press_release['author_name']; ?> | <?php echo date('M d, Y', strtotime($press_release['press_release_date'])); ?></span>
+                        <br/>
+                        <br/>
                         <div class="events-main-content">
                             <div class="middle">
                                 <div class="middle">

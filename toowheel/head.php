@@ -1,5 +1,5 @@
 <head>
-    <title>Toowheel</title>
+    <title>Toowheel - An automotive digital platform</title>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150934532-1"></script>
     <script>
@@ -12,7 +12,8 @@
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="Revenue Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+    <meta name="description" content="TOOWHEEL.com Toowheel is an automotive digital platform combining Website, Content Management System, Ecommerce and E-Wallet, That centralized all two wheel and four-wheel motorsports activities and event in Malaysia. With alliance to all registered motor club from various standard, we manage to attract all motorsport enthusiast to support and fully utilize Toowheel platform services." />
+    <meta name="keywords" content="Two Wheel Racing, Four Wheel Racing, Racing, Motor Sports, Motor Sports Activities, MALAYSIA SUPERBIKE CHAMPIONSHIP, Malaysia Autoshow, Member Registration, Club Registration, Online Shop" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="img/favicon.png" rel="shortcut icon"/>
     <!-- CSS -->

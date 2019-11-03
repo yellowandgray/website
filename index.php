@@ -17,10 +17,11 @@ $configs = $obj->getLandingDetails();
 
             gtag('config', 'UA-150934532-1');
         </script>
-        <title>Toowheel</title>
+        <title>Toowheel - An automotive digital platform</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="keywords" content="Revenue Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+        <meta name="description" content="TOOWHEEL.com Toowheel is an automotive digital platform combining Website, Content Management System, Ecommerce and E-Wallet, That centralized all two wheel and four-wheel motorsports activities and event in Malaysia. With alliance to all registered motor club from various standard, we manage to attract all motorsport enthusiast to support and fully utilize Toowheel platform services." />
+        <meta name="keywords" content="Two Wheel Racing, Four Wheel Racing, Racing, Motor Sports, Motor Sports Activities, MALAYSIA SUPERBIKE CHAMPIONSHIP, Malaysia Autoshow, Member Registration, Club Registration, Online Shop" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="img/favicon.png" rel="shortcut icon"/>
         <!-- CSS -->
@@ -223,9 +224,9 @@ $configs = $obj->getLandingDetails();
                                 <br/>
                                 <li class="i-con text-center">
                                     <a href="https://www.facebook.com/Toowheel-Malaysia-102602757819930" target="_blank"><img src="toowheel/img/social-icons/fb.png" alt="fb"></a>
-                                <a href="https://www.instagram.com/p/B2iG45lnGi-/" target="_blank"><img src="toowheel/img/social-icons/insta.png" alt="fb"></a>
-                                <a href="https://twitter.com/@ToowheelM" target="_blank"><img src="toowheel/img/social-icons/twitter.png" alt="fb"></a>
-                                <a href="https://www.youtube.com/channel/UCueyRbB52hjc0XUIqbkYxcg" target="_blank"><img src="toowheel/img/social-icons/yt.png" alt="fb"></a>
+                                    <a href="https://www.instagram.com/p/B2iG45lnGi-/" target="_blank"><img src="toowheel/img/social-icons/insta.png" alt="fb"></a>
+                                    <a href="https://twitter.com/@ToowheelM" target="_blank"><img src="toowheel/img/social-icons/twitter.png" alt="fb"></a>
+                                    <a href="https://www.youtube.com/channel/UCueyRbB52hjc0XUIqbkYxcg" target="_blank"><img src="toowheel/img/social-icons/yt.png" alt="fb"></a>
                                 </li>
                             </ul>
                         </li>
