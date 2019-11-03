@@ -74,7 +74,8 @@ export class PressReleaseComponent implements OnInit {
                 const dialogRef = this.dialog.open(PressreleaseViewFrom, {
                     minWidth: "80%",
                     maxWidth: "80%",
-                    data: data
+                    data: data,
+                    autoFocus: false
                 });
 
                 dialogRef.afterClosed().subscribe(result => {
