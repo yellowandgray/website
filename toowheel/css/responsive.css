@@ -232,6 +232,9 @@
     .member-profile-image img {
         margin: 0px 12% !important;
     }
+    .events-upcoming-content {
+        height: auto !important;
+    }
 }
 
 @media (min-width: 601px) and (max-width: 768px) {
@@ -263,6 +266,9 @@
     .fs-gal-close {
         top: 100px !important;
         right: 10% !important;
+    }
+    .button-8 {
+        width: 27% !important;
     }
 }
 

@@ -1099,6 +1099,7 @@ body {
 
 .events-upcoming-content {
     padding: 10px 12px;
+    height: 200px;
 }
 
 .events-upcoming-content h4 {

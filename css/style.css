@@ -352,11 +352,15 @@ p {
 .fooetr-5 .i-con {
     padding: 15px 30px;
 }
-.fooetr-5 .i-con i{
+.fooetr-5 .i-con a img {
+    width: 25px;
+    margin: 0 10px
+}
+/*.fooetr-5 .i-con i{
     font-size: 24px;
     padding-right: 19px;
     color: #6f6f6f;;
-}
+}*/
 button {
     cursor: pointer;
 }

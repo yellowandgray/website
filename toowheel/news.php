@@ -107,13 +107,13 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
                                 <div class="events-upcoming-content">
                                     <h4><?php echo $obj->charLimit($row['title'], 25); ?></h4>
                                     <p><?php echo $obj->charLimit($row['moto_text'], 120); ?></p>
-                                    <center>
-                                        <div class="button-8">
-                                            <div class="eff-8"></div>
-                                            <a href="news?nid=<?php echo $row['news_id']; ?>">Discover</a>
-                                        </div>
-                                    </center>
                                 </div>
+                                <center>
+                                    <div class="button-8">
+                                        <div class="eff-8"></div>
+                                        <a href="news?nid=<?php echo $row['news_id']; ?>">Discover</a>
+                                    </div>
+                                </center>
                             </div>
                         </div>
                     <?php } ?>
