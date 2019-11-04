@@ -56,8 +56,8 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                                 <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="alt" />
                                 <div class="discover-slider-content">
                                     <p class="clb-bg"><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 14) : $obj->charLimit($row['sponsor'], 14) ?></p>
-                                    <h2><?php echo $obj->charLimit($row['title'], 20); ?></h2>
-                                    <p><?php echo $obj->charLimit($row['moto_text'], 120); ?></p>
+                                    <h2><?php echo $row['title']; ?></h2>
+                                    <p><?php echo $obj->charLimit($row['moto_text'], 70); ?></p>
                                 </div>
                                 <div class="discover-btn">
                                     <a href="news?nid=<?php echo $row['news_id']; ?>" class="discover-btn-home">DISCOVER</a>
