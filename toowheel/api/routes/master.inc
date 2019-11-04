@@ -270,7 +270,7 @@ $app->post('/insert_users', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $exist = $com->selectRow('*', 'member', 'email = \'' . $data['email'] . '\'');
+    $exist = $com->selectRow('*', 'users', 'email = \'' . $data['email'] . '\'');
     if (count($exist) == 0) {
         $data['password'] = $com->randomStringGenerator(8);
         $data['link'] = LOGIN_ADMIN_PATH;
@@ -320,7 +320,7 @@ $app->post('/insert_ecommerce_unit', function() use ($app) {
     $data = $app->request->post();
     $com = new Common();
     $array = array('name' => $data['name'], 'type' => $data['type'], 'value' => $data['value']);
-    $record = $com->insertRecord($array,'ecommerce_unit');
+    $record = $com->insertRecord($array, 'ecommerce_unit');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
