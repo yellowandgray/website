@@ -52,7 +52,7 @@ if (isset($_GET['auth'])) {
                                     </div>
                                 <?php } ?>
                                 <br/>
-                                <h5><a href="index.php?type=two_wheel"><i class="fa fa-home" aria-hidden="true"></i> Go to Toowheel</a></h5>
+                                <h5><a href="index?type=two_wheel"><i class="fa fa-home" aria-hidden="true"></i> Go to Toowheel</a></h5>
                             </div>
                         </div>
                     </div>

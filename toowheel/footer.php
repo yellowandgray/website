@@ -7,15 +7,15 @@
             <div class="footer-section fooetr-2">
                 <ul class="footer__nav">
                     <li class="nav__item">
-                        <a href="index.php?type=two_wheel" class="footer-text">2 Wheel</a>
+                        <a href="index?type=two_wheel" class="footer-text">2 Wheel</a>
                         <br/>
-                        <a href="index.php?type=four_wheel" class="footer-text">4 Wheel</a>
+                        <a href="index?type=four_wheel" class="footer-text">4 Wheel</a>
                         <br/>
-                        <a href="news-updates.php?type=<?php echo $type; ?>" class="footer-text">NEWS & MEDIA</a>
+                        <a href="news-updates?type=<?php echo $type; ?>" class="footer-text">NEWS & MEDIA</a>
                         <br/>
-                        <a href="events.php?type=<?php echo $type; ?>" class="footer-text">UPCOMING EVENTS</a>
+                        <a href="events?type=<?php echo $type; ?>" class="footer-text">UPCOMING EVENTS</a>
                         <br/>
-                        <a href="press-release.php?type=<?php echo $type; ?>" class="footer-text">PRESS RELEASE</a>
+                        <a href="press-release?type=<?php echo $type; ?>" class="footer-text">PRESS RELEASE</a>
                     </li>
                 </ul>
             </div>
@@ -25,13 +25,13 @@
                         <h2 class="nav__title">MEMBERS</h2>
                         <ul class="nav__ul">
                             <li>
-                                <a href="login.php?type=<?php echo $type; ?>">Login</a>
+                                <a href="login?type=<?php echo $type; ?>">Login</a>
                             </li>
                             <li>
-                                <a href="member-register.php?type=<?php echo $type; ?>">Be A Member</a>
+                                <a href="member-register?type=<?php echo $type; ?>">Be A Member</a>
                             </li>
                             <li>
-                                <a href="member-benefits.php?type=<?php echo $type; ?>">Member Benefits</a>
+                                <a href="member-benefits?type=<?php echo $type; ?>">Member Benefits</a>
                             </li>
                         </ul>
                     </li>
@@ -41,10 +41,10 @@
                         <h2 class="nav__title">CLUB</h2>
                         <ul class="nav__ul">
                             <li>
-                                <a href="find-a-club.php?type=<?php echo $type; ?>">Find A Club</a>
+                                <a href="find-a-club?type=<?php echo $type; ?>">Find A Club</a>
                             </li>
                             <li>
-                                <a href="club-register.php?type=<?php echo $type; ?>">Register My Club</a>
+                                <a href="club-register?type=<?php echo $type; ?>">Register My Club</a>
                             </li>
                         </ul>
                     </li>
@@ -56,7 +56,7 @@
                         <h2 class="nav__title">TOOWHEEL</h2>
                         <ul class="nav__ul">
                             <li>
-                                <a href="about.php?type=<?php echo $type; ?>">About us</a>
+                                <a href="about?type=<?php echo $type; ?>">About us</a>
                             </li>
                             <li>
                                 <a href="#">Contact us</a>
@@ -212,13 +212,13 @@
                                         minChars: 1,
                                         onSelect: function (suggestion) {
                                             if (suggestion.data.category == 'News') {
-                                                window.location = 'news.php?nid=' + suggestion.data.id;
+                                                window.location = 'news?nid=' + suggestion.data.id;
                                             }
                                             if (suggestion.data.category == 'Club') {
-                                                window.location = 'club-page.php?cid=' + suggestion.data.id;
+                                                window.location = 'club-page?cid=' + suggestion.data.id;
                                             }
                                             if (suggestion.data.category == 'Press Release') {
-                                                window.location = 'press.php?pid=' + suggestion.data.id;
+                                                window.location = 'press?pid=' + suggestion.data.id;
                                             }
                                         },
                                         showNoSuggestionNotice: true,

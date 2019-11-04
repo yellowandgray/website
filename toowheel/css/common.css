@@ -4296,3 +4296,7 @@ hr {
     position: relative;
     bottom: -139px;
 }
+
+.past-events-section {
+    padding: 40px 0;
+}

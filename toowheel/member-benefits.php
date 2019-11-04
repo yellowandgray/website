@@ -31,7 +31,7 @@ $obj = new Common();
                             </ul>
                         </div>
                         <div class="mem-sign">
-                            <p><a href="member-register.php?type=<?php echo $type; ?>">SIGN UP</a></p>
+                            <p><a href="member-register?type=<?php echo $type; ?>">SIGN UP</a></p>
                         </div>
                     </div>
 

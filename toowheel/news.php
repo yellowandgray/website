@@ -91,7 +91,7 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
                                 <p><?php echo $row['moto_text']; ?></p>
                                 <div class="button-1">
                                     <div class="eff-1"></div>
-                                    <a href="news.php?nid=<?php echo $row['news_id']; ?>">Discover</a>
+                                    <a href="news?nid=<?php echo $row['news_id']; ?>">Discover</a>
                                 </div>
                             </div>
                         <?php } ?>
@@ -110,7 +110,7 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
                                     <center>
                                         <div class="button-8">
                                             <div class="eff-8"></div>
-                                            <a href="news.php?nid=<?php echo $row['news_id']; ?>">Discover</a>
+                                            <a href="news?nid=<?php echo $row['news_id']; ?>">Discover</a>
                                         </div>
                                     </center>
                                 </div>
@@ -138,7 +138,7 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
 
         facebookShare.onclick = function (e) {
             e.preventDefault();
-            var facebookWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + document.URL, 'facebook-popup', 'height=350,width=600');
+            var facebookWindow = window.open('https://www.facebook.com/sharer/sharer?u=' + document.URL, 'facebook-popup', 'height=350,width=600');
             if (facebookWindow.focus) {
                 facebookWindow.focus();
             }

@@ -38,7 +38,7 @@ $past_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
                                             </div>
                                             <div class="">
                                                 <p style="width: 100%">
-                                                    <span>From Date : </span> <?php echo date('M d, Y', strtotime($row['event_from_date'])); ?> | <span>To Date : <?php echo date('M d, Y', strtotime($row['event_to_date'])); ?></span></p>
+                                                    <span>From Date : </span> <?php echo date('M d, Y', strtotime($row['event_from_date'])); ?> | <span>To Date : </span><?php echo date('M d, Y', strtotime($row['event_to_date'])); ?></p>
                                             </div>
                                             <div class="">
                                                 <p style="width: 100%"><span>Location : </span> <?php echo $row['location']; ?></p>
@@ -71,6 +71,7 @@ $past_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
                                             <p><strong>Description</strong><br/> <?php echo $row['description']; ?></p>
                                         </div>
                                     </div>
+                                    <a href="past-events?type=<?php echo $type; ?>" class="press-download-button"> Read More</a>
                                     <hr>
                                 <?php } ?>
                             </div>

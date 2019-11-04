@@ -33,7 +33,7 @@ $type = $press_release['type'];
                 </div>
                 <div class="row events-content">
                     <div class="col-md-8" id="contentDiv">
-                        <span><?php echo $press_release['media']; ?> | <?php echo $press_release['author_name']; ?> | <?php echo date('M d, Y', strtotime($press_release['press_release_date'])); ?></span>
+                        <span style="color: #696969;"><?php echo $press_release['media']; ?> | <?php echo $press_release['author_name']; ?> | <?php echo date('M d, Y', strtotime($press_release['press_release_date'])); ?></span>
                         <br/>
                         <br/>
                         <div class="events-main-content">
@@ -73,7 +73,7 @@ $type = $press_release['type'];
                                 <p><?php echo $obj->charLimit($row['description_1'], 275); ?></p>
                                 <div class="button-1">
                                     <div class="eff-1"></div>
-                                    <a href="press.php?pid=<?php echo $row['press_release_id']; ?>">Discover</a>
+                                    <a href="press?pid=<?php echo $row['press_release_id']; ?>">Discover</a>
                                 </div>
                             </div>
                         <?php } ?>
@@ -92,7 +92,7 @@ $type = $press_release['type'];
                                     <center>
                                         <div class="button-8">
                                             <div class="eff-8"></div>
-                                            <a href="press.php?pid=<?php echo $row['press_release_id']; ?>">Discover</a>
+                                            <a href="press?pid=<?php echo $row['press_release_id']; ?>">Discover</a>
                                         </div>
                                     </center>
                                 </div>
@@ -120,7 +120,7 @@ $type = $press_release['type'];
 
         facebookShare.onclick = function (e) {
             e.preventDefault();
-            var facebookWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + document.URL, 'facebook-popup', 'height=350,width=600');
+            var facebookWindow = window.open('https://www.facebook.com/sharer/sharer?u=' + document.URL, 'facebook-popup', 'height=350,width=600');
             if (facebookWindow.focus) {
                 facebookWindow.focus();
             }

@@ -157,7 +157,7 @@ if ($type == 'four_wheel') {
                                                         <p class="clb-bg"><?php echo $obj->charLimit($row['club'], 10); ?></p>
                                                         <h2><?php echo $obj->charLimit($row['title'], 15); ?></h2>
                                                         <p><?php echo $obj->charLimit($row['description'], 35); ?></p>
-                                                        <center><a class="btn btn-primary" href="news.php?nid=<?php echo $row['news_id']; ?>">DISCOVER</a></center>
+                                                        <center><a class="btn btn-primary" href="news?nid=<?php echo $row['news_id']; ?>">DISCOVER</a></center>
                                                     </div>
                                                 </div>
                                             </div>

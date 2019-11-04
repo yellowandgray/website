@@ -45,7 +45,7 @@ $press_release = $obj->selectAll('p.*, m.name AS media', 'press_release AS p LEF
                                     <h4><?php echo $row['title']; ?></h4>
                                     <span><?php echo $row['media']; ?> | <?php echo $row['author_name']; ?> | <?php echo date('M d, Y', strtotime($row['press_release_date'])); ?></span>
                                     <p><?php echo nl2br($row['description_1']); ?></p>
-                                    <a href="press.php?pid=<?php echo $row['press_release_id']; ?>" class="press-download-button"> Read More</a>
+                                    <a href="press?pid=<?php echo $row['press_release_id']; ?>" class="press-download-button"> Read More</a>
                                     <br/>
                                     <br/>
                                 </div>
