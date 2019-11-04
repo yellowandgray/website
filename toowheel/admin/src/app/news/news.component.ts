@@ -171,6 +171,7 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
     loading = false;
     categories:any[];
     news_id = 0;
+    user_view_id = 0;
     clubs:any[];
     medias:any[];
     cover_image: string = 'Cover Image';
