@@ -45,7 +45,7 @@
                             <p><i class="fa fa-phone" aria-hidden="true"></i></p>
                             <p><a href="tel://1234567920">+91 8409 012345</a></p>
                             <p><i class="fa fa-envelope" aria-hidden="true"></i></p>
-                            <p><a href="mailto:info@yoursite.com">info@guardianhealthmanagement.com</a></p>
+                            <p><a href="mailto:info@yoursite.com">info@ghmindia.com</a></p>
                         </div>
                     </div>
 
