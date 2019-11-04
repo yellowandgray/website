@@ -53,7 +53,7 @@ export class NewsComponent implements OnInit {
     const dialogRef = this.dialog.open(NewsForm, {
         minWidth: "80%",
         maxWidth: "80%",
-         data: data
+        data: data
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -90,7 +90,8 @@ export class NewsComponent implements OnInit {
         const dialogRef = this.dialog.open(NewsViewForm, {
         minWidth: "80%",
         maxWidth: "80%",
-        data: data
+        data: data,
+        autoFocus: false
     });
 
         dialogRef.afterClosed().subscribe(result => {
@@ -170,6 +171,7 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
     loading = false;
     categories:any[];
     news_id = 0;
+    user_view_id = 0;
     clubs:any[];
     medias:any[];
     cover_image: string = 'Cover Image';

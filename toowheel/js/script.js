@@ -129,7 +129,7 @@ function loadClubs(type) {
                         if (val.rank != '' && val.rank != 0) {
                             rank = '<span>#' + val.rank + '</span>';
                         }
-                        div = div + '<div class="club-box pointer col-md-2 col-sm-6" onclick="selectClub(' + val.club_id + ', this);"data-name="' + val.name + '" data-state="' + val.state_id + '" data-category="' + val.category_id + '"><div class="rank-button">' + rank + '</div><img src="' + BASE_IMAGE_URL + val.logo + '" alt="" /><h3>' + val.name + '</h3><p>' + val.city + '</p><div class="club-btn"><div class="eff-9"></div><a href="club-page.php?cid=' + val.club_id + '" target="_blank">Read More</a></div></div>';
+                        div = div + '<div class="club-box pointer col-md-2 col-sm-6" onclick="selectClub(' + val.club_id + ', this);"data-name="' + val.name + '" data-state="' + val.state_id + '" data-category="' + val.category_id + '"><div class="rank-button">' + rank + '</div><img src="' + BASE_IMAGE_URL + val.logo + '" alt="" /><h3>' + val.name + '</h3><p>' + val.city + '</p><div class="club-btn"><div class="eff-9"></div><a href="club-page?cid=' + val.club_id + '" target="_blank">Read More</a></div></div>';
                     });
                     $('#club_list').append(div);
                 } else {
@@ -417,6 +417,24 @@ function registerMember() {
     });
 }
 
+function validClub() {
+    var change = true;
+    var number = /([0-9])/;
+    var alphabets = /([a-zA-Z])/;
+    var special_characters = /([~,!,@,#,$,%,^,&,*,-,_,+,=,?,>,<])/;
+    if ($.trim($('#password').val()) === '' || $('#password').val().length < 8 || $('#password').val().match(number) == null || $('#password').val().match(alphabets) == null || $('#password').val().match(special_characters) == null) {
+        $('#password_error').html('Enter new password').addClass('error-msg');
+        $('#password').focus();
+        change = false;
+    }
+    if ($.trim($('#confirm_password').val()) !== $.trim($('#password').val())) {
+        $('#confirm_password_error').html('New password mismatch').addClass('error-msg');
+        $('#confirm_password').focus();
+        change = false;
+    }
+    return change;
+}
+
 function registerClub() {
     if (validClub()) {
         $('.loader').addClass('is-active');
@@ -568,7 +586,7 @@ function loginMember() {
         success: function (data) {
             $('.loader').removeClass('is-active');
             if (data.result.error === false) {
-                window.location = 'my-account.php?type=two_wheel';
+                window.location = 'my-account?type=two_wheel';
             } else {
                 swal('Information', data.result.message, 'info');
             }
@@ -652,7 +670,7 @@ function changePassword(code) {
                 $('.loader').removeClass('is-active');
                 swal('Information', data.result.message, 'info');
                 setTimeout(function () {
-                    window.location = 'login.php?type=two_wheel';
+                    window.location = 'login?type=two_wheel';
                 }, 2000);
             },
             error: function (err) {
@@ -838,7 +856,7 @@ function logoutUser() {
         success: function (data) {
             $('.loader').removeClass('is-active');
             if (data.result.error === false) {
-                window.location = 'login.php?type=two_wheel';
+                window.location = 'login?type=two_wheel';
             } else {
                 swal('Information', data.result.message, 'info');
             }
@@ -898,7 +916,7 @@ function changeAvatar(id) {
 }
 
 function loadEditProfile(type) {
-    window.location = 'profile-edit.php?type=' + type;
+    window.location = 'profile-edit?type=' + type;
 }
 
 function validUpdateProfile() {
@@ -987,7 +1005,7 @@ function updateMemberProfile(mid, type) {
             success: function (data) {
                 $('.loader').removeClass('is-active');
                 if (data.result.error === false) {
-                    window.location = 'my-account.php?type=' + type;
+                    window.location = 'my-account?type=' + type;
                 } else {
                     swal('Information', data.result.message, 'info');
                 }

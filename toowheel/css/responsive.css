@@ -232,6 +232,12 @@
     .member-profile-image img {
         margin: 0px 12% !important;
     }
+    .events-upcoming-content {
+        height: auto !important;
+    }
+    .popup-box {
+        top: 4% !important;
+    }
 }
 
 @media (min-width: 601px) and (max-width: 768px) {
@@ -263,6 +269,9 @@
     .fs-gal-close {
         top: 100px !important;
         right: 10% !important;
+    }
+    .button-8 {
+        width: 27% !important;
     }
 }
 
@@ -974,7 +983,7 @@
 }
 @media (min-width: 320px) and (max-width: 474px) {
     .events-main-content span {
-        font-size: 10px !important;
+        font-size: 12px !important;
         color: #fff;
         font-weight: 500;
     }

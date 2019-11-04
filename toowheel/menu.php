@@ -31,11 +31,11 @@ $autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_relea
                         <button class="tablinks" onclick="openCity(event, 'About')" id="defaultOpen">About Us <i class="fa fa-caret-right" aria-hidden="true"></i></button>
                         <button class="tablinks" onclick="openCity(event, 'News')">Latest News <i class="fa fa-caret-right" aria-hidden="true"></i></button>
                         <button class="tablinks" onclick="openCity(event, 'Release')">Press Release <i class="fa fa-caret-right" aria-hidden="true"></i></button>
-                        <button class="tablinks"><a href="member-benefits.php?type=<?php echo $type; ?>">Be A Member <i class="fa fa-caret-right" aria-hidden="true"></i></a></button>
+                        <button class="tablinks"><a href="member-benefits?type=<?php echo $type; ?>">Be A Member <i class="fa fa-caret-right" aria-hidden="true"></i></a></button>
                         <button class="tablinks" onclick="openCity(event, 'Clubs')">Find a Club <i class="fa fa-caret-right" aria-hidden="true"></i></button>
                         <button class="tablinks" onclick="openCity(event, 'Events')">Events <i class="fa fa-caret-right" aria-hidden="true"></i></button>
-                        <button class="tablinks"><a href="club-register.php?type=<?php echo $type; ?>">Club Registration <i class="fa fa-caret-right" aria-hidden="true"></i></a></button>
-<!--                        <button class="tablinks"><a href="workshop-landing.php?type=<?php echo $type; ?>">Workshop <i class="fa fa-caret-right" aria-hidden="true"></i></a></button>-->
+                        <button class="tablinks"><a href="club-register?type=<?php echo $type; ?>">Club Registration <i class="fa fa-caret-right" aria-hidden="true"></i></a></button>
+<!--                        <button class="tablinks"><a href="workshop-landing?type=<?php echo $type; ?>">Workshop <i class="fa fa-caret-right" aria-hidden="true"></i></a></button>-->
                         <div class="line-g"></div>
                         <h5>FOLLOW US</h5>
                         <ul class="nav__ul">
@@ -57,7 +57,7 @@ $autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_relea
                                         <h1>About Us</h1>
                                         <p>Toowheel is an automotive digital platform combining Website, Content Management System, E-commerce and E-Wallet, That centralized all two wheel and four-wheel motorsports activities and event in Malaysia. With alliance to all registered motor club from various standard, we manage to attract all motorsport enthusiast to support and fully utilize Toowheel platform services. Toowheel operate as a digital platform and combine with physical services such as social community networking ,corporate event and organize multiple legal motorsport entity to cater from lower end to high end motorsports members. With this united platform, we targeted to have more than 30,000 member by end of this year and up to 2 million active members by 2020.</p>
                                         <br/>
-                                        <div class="news-discover"><a href="about.php?type=<?php echo $type; ?>">Read More</a></div>
+                                        <div class="news-discover"><a href="about?type=<?php echo $type; ?>">Read More</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -74,13 +74,13 @@ $autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_relea
                                             <h2><?php echo $obj->charLimit($row['title'], 35); ?></h2>
                                             <p><?php echo $obj->charLimit($row['moto_text'], 20); ?></p>
                                         </div>
-                                        <center class="news-discover"><a href="news.php?nid=<?php echo $row['news_id']; ?>">DISCOVER</a></center>
+                                        <center class="news-discover"><a href="news?nid=<?php echo $row['news_id']; ?>">DISCOVER</a></center>
                                     </div>
                                 </div>
                             <?php } ?>
                         </div>
                         <div class="find-club-btn">
-                            <a href="news-updates.php?type=<?php echo $type; ?>" class="menu-btn">See All Latest News</a>
+                            <a href="news-updates?type=<?php echo $type; ?>" class="menu-btn">See All Latest News</a>
                         </div>
                         <br/>
                         <br/>
@@ -93,18 +93,18 @@ $autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_relea
                                     <ul class="release">
                                         <li class="release-cont-1"><img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="image" /></li>
                                         <li class="release-cont-2">
-                                            <strong><?php echo $obj->charLimit($row['title'], 80); ?></strong>
+                                            <strong><?php echo $row['title']; ?></strong>
                                             <br/>
                                             <span><?php echo $row['media']; ?> | <?php echo $row['author_name']; ?> | <?php echo $row['press_release_date']; ?></span>
                                             <p><?php echo $obj->charLimit($row['description_1'], 120); ?>
                                         </li>
-                                        <li class="release-cont-3"><a href="press.php?pid=<?php echo $row['press_release_id']; ?>"><span>READ </span>MORE</a></li>
+                                        <li class="release-cont-3"><a href="press?pid=<?php echo $row['press_release_id']; ?>"><span>READ </span>MORE</a></li>
                                     </ul>
                                 <?php } ?>
                             </div>
                         </div> 
                         <div class="find-club-btn">
-                            <a href="press-release.php?type=<?php echo $type; ?>" class="menu-btn">All Press Release</a>
+                            <a href="press-release?type=<?php echo $type; ?>" class="menu-btn">All Press Release</a>
                         </div>
                         <br/>
                         <br/>
@@ -117,7 +117,7 @@ $autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_relea
                                 <div class="col-md-12">
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                                     <div class="find-club-btn">
-                                        <a href="member-register.php" class="menu-btn">Click to Register</a>
+                                        <a href="member-register" class="menu-btn">Click to Register</a>
                                     </div>
                                 </div>
                             </div>
@@ -143,7 +143,7 @@ $autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_relea
                                 <?php } ?>
                             </div>
                             <div class="find-club-btn">
-                                <a href="find-a-club.php?type=<?php echo $type; ?>" class="menu-btn">Read More</a>
+                                <a href="find-a-club?type=<?php echo $type; ?>" class="menu-btn">Read More</a>
                             </div>
                         </div>
                         <br/>
@@ -156,7 +156,7 @@ $autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_relea
                             <div class="row">
                                 <?php foreach ($menu_events as $row) { ?>
                                     <div class="col-md-3 col-sm-6">
-                                        <a href="events.php?type=<?php echo $type; ?>" class="club-box">
+                                        <a href="events?type=<?php echo $type; ?>" class="club-box">
                                             <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="" />
                                             <h3><?php echo $row['title']; ?></h3>
                                             <p><?php echo $row['location']; ?></p>
@@ -164,7 +164,7 @@ $autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_relea
                                     </div>
                                 <?php } ?>
                             </div>
-                            <div class="find-club-btn"><a href="events.php?type=<?php echo $type; ?>" class="menu-btn">Read More</a></div>
+                            <div class="find-club-btn"><a href="events?type=<?php echo $type; ?>" class="menu-btn">Read More</a></div>
                         </div>
                         <br/>
                         <br/>
@@ -173,11 +173,11 @@ $autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_relea
                     <div id="register-club" class="tabcontent">
                         <h3>Register My Club</h3>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                        <div class="find-club-btn"><a href="club-register.php">Read More</a></div>
+                        <div class="find-club-btn"><a href="club-register">Read More</a></div>
                     </div>
                 </div>
             </div>
-            <a href="index.php" class="logo"><img src='img/logo.png' alt=''></a>
+            <a href="../index" class="logo"><img src='img/logo.png' alt=''></a>
             <div class="header-login">
                 <a href="#" class="float-left margin-left-10" id="demo-2" style="position: relative;top: -2px;">
                     <span onfocusin="myFunction()" onfocusout="myFunction2()">
@@ -188,9 +188,9 @@ $autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_relea
                 <?php
                 if (!isset($_SESSION["member_id"])) {
                     ?>
-                    <a href="login.php?type=<?php echo $type; ?>" class="float-left margin-left-10">
+                    <a href="login?type=<?php echo $type; ?>" class="float-left margin-left-10">
                         <span>
-                            <i class="fa fa-sign-in search-bg"></i>
+                            <i class="fa fa-user search-bg"></i>
                             <p> Login</p>
                         </span>
                     </a>
@@ -210,8 +210,8 @@ $autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_relea
                 <?php
                 if (!isset($_SESSION["member_id"])) {
                     ?>
-                    <a href="login.php?type=<?php echo $type; ?>">
-                        <i class="fa fa-sign-in"></i>
+                    <a href="login?type=<?php echo $type; ?>">
+                        <i class="fa fa-user"></i>
                     </a>
                 <?php } else {
                     ?>

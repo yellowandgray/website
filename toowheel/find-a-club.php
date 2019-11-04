@@ -76,7 +76,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                             <img src="<?php echo BASE_URL . $row['logo']; ?>" alt="" />
                             <h3> <?php echo $row['name']; ?></h3>
                             <p> <?php echo $row['city']; ?></p>
-                            <a href="club-page.php?cid=<?php echo $row['club_id']; ?>" class="find-club-button">Read More</a>
+                            <a href="club-page?cid=<?php echo $row['club_id']; ?>" class="find-club-button">Read More</a>
                         </div>
                     <?php } ?>
                 </div>

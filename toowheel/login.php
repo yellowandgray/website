@@ -21,8 +21,8 @@ $obj = new Common();
                             <h5>NOT A TOOWHEEL MEMBER YET?</h5>
                             <h3>BE A MEMBER TODAY!</h3>
                             <h5>AND ENJOY EXCITING BENEFITS</h5>
-                            <p class="member-t"><a href="member-benefits.php?type=<?php echo $type; ?>">MEMBER BENEFITS</a></p>
-                            <p class="sing-t text-center"><a href="member-register.php?type=<?php echo $type; ?>" >Sign up</a></p>
+                            <p class="member-t"><a href="member-benefits?type=<?php echo $type; ?>">MEMBER BENEFITS</a></p>
+                            <p class="sing-t text-center"><a href="member-register?type=<?php echo $type; ?>" >Sign up</a></p>
                         </div>
                     </div>
                     <div class="login-sec-2 login">

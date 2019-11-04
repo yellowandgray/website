@@ -6,7 +6,7 @@ if (!isset($_GET['type'])) {
 $type = $_GET['type'];
 require_once 'api/include/common.php';
 $obj = new Common();
-$events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS e LEFT JOIN club AS c ON c.club_id = e.club_id LEFT JOIN category AS ca ON ca.category_id = e.category_id AND ca.category_id = c.category_id', 'e.event_id > 0 AND e.type = \'' . $type . '\' AND e.event_date >= \'' . date('Y-m-d') . '\' ORDER BY e.event_date DESC');
+$events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS e LEFT JOIN club AS c ON c.club_id = e.club_id LEFT JOIN category AS ca ON ca.category_id = e.category_id AND ca.category_id = c.category_id', 'e.event_id > 0 AND e.type = \'' . $type . '\' AND e.event_from_date >= \'' . date('Y-m-d') . '\' ORDER BY e.event_from_date DESC');
 $past_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS e LEFT JOIN club AS c ON c.club_id = e.club_id LEFT JOIN category AS ca ON ca.category_id = e.category_id AND ca.category_id = c.category_id', 'e.event_id > 0 AND e.type = \'' . $type . '\' AND e.event_to_date < \'' . date('Y-m-d') . '\' ORDER BY e.event_to_date ASC LIMIT 2');
 ?>
 <!DOCTYPE html>
@@ -38,7 +38,7 @@ $past_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
                                             </div>
                                             <div class="">
                                                 <p style="width: 100%">
-                                                    <span>From Date : </span> <?php echo date('M d, Y', strtotime($row['event_from_date'])); ?> | <span>To Date : <?php echo date('M d, Y', strtotime($row['event_to_date'])); ?></span></p>
+                                                    <span>From Date : </span> <?php echo date('M d, Y', strtotime($row['event_from_date'])); ?> | <span>To Date : </span><?php echo date('M d, Y', strtotime($row['event_to_date'])); ?></p>
                                             </div>
                                             <div class="">
                                                 <p style="width: 100%"><span>Location : </span> <?php echo $row['location']; ?></p>
@@ -63,7 +63,8 @@ $past_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
                                         <div class="col-md-6">
                                             <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="image" class="img-responsive"/>
                                             <p><span>Club/Sponsor:</span> <?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 20) : $obj->charLimit($row['sponsor'], 20); ?></p>
-                                            <p><span>Date:</span> <?php echo date('M d, Y', strtotime($row['event_date'])); ?></p>
+                                            <p><span>From Date:</span> <?php echo date('M d, Y', strtotime($row['event_from_date'])); ?></p>
+                                            <p><span>To Date:</span> <?php echo date('M d, Y', strtotime($row['event_to_date'])); ?></p>
                                             <p><span>Location:</span> <?php echo $row['location']; ?></p>
                                         </div>
                                         <div class="col-md-6">
@@ -73,6 +74,9 @@ $past_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
                                     </div>
                                     <hr>
                                 <?php } ?>
+                                <center>
+                                    <a href="past-events?type=<?php echo $type; ?>" class="events-btn"> Read More</a>
+                                </center>
                             </div>
                         <?php } ?>
                     </div>

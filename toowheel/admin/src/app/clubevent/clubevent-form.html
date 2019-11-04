@@ -1,7 +1,7 @@
 <h2 mat-dialog-title>Event</h2>
 <mat-dialog-content class="mat-typography">
     <form [formGroup]="clubeventForm" (ngSubmit)="onSubmit()">
-        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center" *ngIf="user_view_id == 0">
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Type</mat-label>
@@ -29,7 +29,7 @@
         </div>
     </div>
     <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-        <div fxFlex="50%">
+        <div fxFlex="50%" *ngIf="user_view_id == 0">
             <mat-form-field appearance="outline" fxFlex="100%">
                 <mat-label>Club Name</mat-label>
                 <mat-select required formControlName="club_id">
@@ -45,12 +45,12 @@
     <div fxFlex="45%">
         <button *ngIf="cover_image_path == ''" type="button" mat-raised-button required (click)="fileInput.click()">{{cover_image}}</button>
         <input hidden #fileInput type="file" id="file" (change)="fileProgress($event, 'cover_image', 'cover_image_path')" />
-        <mat-icon *ngIf="cover_image_path == ''" matTooltip="Width: 340px, Height: 255px;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
+               <mat-icon *ngIf="cover_image_path == ''" matTooltip="Width: 340px, Height: 255px;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
         <div class="preview-image" *ngIf="cover_image_path != ''">
-                <img class="dialog-picture" matTooltip="CoverImage" mat-card-image src="{{image_url}}{{cover_image_path}}" alt="Photo" />
-                <button mat-icon-button aria-label="Close icon" (click)="removeMedia('cover_image_path')">
-                    <mat-icon>close</mat-icon>
-                </button>
+            <img class="dialog-picture" matTooltip="CoverImage" mat-card-image src="{{image_url}}{{cover_image_path}}" alt="Photo" />
+            <button mat-icon-button aria-label="Close icon" (click)="removeMedia('cover_image_path')">
+                <mat-icon>close</mat-icon>
+            </button>
         </div>
     </div>
 </div>
@@ -93,17 +93,17 @@
     <div fxFlex="45%">
         <button *ngIf="thumb_image_path == ''" type="button" mat-raised-button required (click)="fileInputThumb.click()">{{thumb_image}}</button>
         <input hidden #fileInputThumb type="file" id="file_thumb" (change)="fileProgress($event, 'thumb_image', 'thumb_image_path')" />
-        <mat-icon *ngIf="thumb_image_path == ''" matTooltip="Width: 350px, Height: 220px;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
-         <div class="preview-image" *ngIf="thumb_image_path != ''">
-                <img class="dialog-picture" matTooltip="CoverImage" mat-card-image src="{{image_url}}{{thumb_image_path}}" alt="Photo" />
-                <button mat-icon-button aria-label="Close icon" (click)="removeMedia('thumb_image_path')">
-                    <mat-icon>close</mat-icon>
-                </button>
+               <mat-icon *ngIf="thumb_image_path == ''" matTooltip="Width: 350px, Height: 220px;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
+        <div class="preview-image" *ngIf="thumb_image_path != ''">
+            <img class="dialog-picture" matTooltip="CoverImage" mat-card-image src="{{image_url}}{{thumb_image_path}}" alt="Photo" />
+            <button mat-icon-button aria-label="Close icon" (click)="removeMedia('thumb_image_path')">
+                <mat-icon>close</mat-icon>
+            </button>
         </div>
     </div>
 </div>
 <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-    <div fxFlex="100%">
+    <div fxFlex="100%" *ngIf="user_view_id == 0">
         <mat-form-field appearance="outline" fxFlex="100%">
             <mat-label>Sponsor Name</mat-label>
             <input matInput placeholder="" formControlName="sponsor" />
@@ -112,11 +112,9 @@
 </div>
 <br/>
 <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-    <mat-form-field fxFlex="100%">
-        <mat-label>Description</mat-label>
-        <textarea rows="6" matInput placeholder="" required formControlName="description"></textarea>
-        <mat-error>Description is required</mat-error>
-    </mat-form-field>
+    <div fxFlex="100%">
+        <angular-editor id="editor" formControlName="description" [config]="editorConfig"></angular-editor>
+    </div>
 </div>
 <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
     <button mat-button [mat-dialog-close]="false">Cancel</button>

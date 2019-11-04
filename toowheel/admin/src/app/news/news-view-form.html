@@ -19,11 +19,11 @@
                     <br/>
                     <br/>
                     <mat-card-content>
-                        <p>{{data.description_1}}</p>
+                        <p [innerHTML]="data.description_1"></p>
                         <img src="{{image_url}}{{data.banner_1}}" alt="" style="width: 100%;" />
                         <br/>
                         <br/>
-                        <p>{{data.description_2}}</p>
+                        <p [innerHTML]="data.description_2"></p>
                         <img src="{{image_url}}{{data.banner_2}}" alt="" style="width: 100%;" />
                         <br/>
                         <br/>

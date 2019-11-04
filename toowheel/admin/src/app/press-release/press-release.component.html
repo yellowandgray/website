@@ -46,7 +46,7 @@
                             <img matListAvatar src="{{image_url}}{{data.cover_image}}" *ngIf="data.cover_image && data.cover_image != ''" alt="..." (click)="confirmDialog(data, 'preview')" />
                                  <!--                                         <img matListAvatar src="{{image_url}}{{data.gender}}.jpg" *ngIf="!data.cover_image || data.cover_image == ''" alt="..." />-->
                                  <h3 class="truncate" matLine>{{data.title}}</h3>
-                            <p class="truncate1" matLine>{{data.description_1}}</p>     
+                            <p class="truncate1" matLine [innerHTML]="data.description_1"></p>     
                             <p class="truncate2" matLine>{{data.press_release_date}}</p> 
                         </mat-list-item>
                     </ng-container>

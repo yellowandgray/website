@@ -11,7 +11,10 @@
                     <span class="yt"><img src="img/social-icons/yt.png"/></span>
                     <span class="twitter"><img src="img/social-icons/twitter.png"/></span>
                     <span class="insta"><img src="img/social-icons/insta.png"/></span>-->
-                    <div class="taggbox-container" style=" width:100%;height:100%;overflow: auto;"><script defer src="//web.taggbox.com/app/js/embed.min.js" type="text/javascript"></script><div class="taggbox-socialwall" data-wall-id="25637" view-url="https://taggbox.com/w/25637">  </div></div>
+                    <div class="taggbox-container" style=" width:100%;height:100%;overflow: auto;">
+                        <script defer src="//web.taggbox.com/app/js/embed.min.js" type="text/javascript"></script>
+                        <div class="taggbox-socialwall" data-wall-id="25637" view-url="https://taggbox.com/w/25637">  </div>
+                    </div>
                 </div>
             </div>
         </div>
