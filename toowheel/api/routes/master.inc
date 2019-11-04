@@ -42,10 +42,26 @@ $app->post('/insert_club', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('type' => $data['type'], 'category_id' => $data['category_id'], 'name' => $data['name'], 'cover_image' => $data['cover_image'], 'logo' => $data['logo'], 'state_id' => $data['state'], 'city' => $data['city'], 'zipcode' => $data['zip'], 'landmark' => $data['landmark'], 'address' => $data['address'], 'leader_name' => $data['club_leader_name'], 'no_of_member' => $data['no_of_member'], 'email' => $data['email'], 'phone' => $data['mobile'], 'about' => $data['about'], 'facebook_link' => $data['facebook_link'], 'youtube_link' => $data['youtube_link'], 'twitter_link' => $data['twitter_link'], 'instagram_link' => $data['instagram_link'], 'rank' => $data['rank'], 'club_video' => $data['club_video'], 'published' => $data['published'], 'source' => $data['source']), 'club');
-    if ($record > 0) {
-        $res['error'] = false;
-        $res['message'] = 'Record inserted successfully';
+    $exist = $com->selectRow('*', 'club', 'email = \'' . $data['email'] . '\'');
+    if (count($exist) == 0) {
+        $record = $com->insertRecord(array('type' => $data['type'], 'category_id' => $data['category_id'], 'name' => $data['name'], 'cover_image' => $data['cover_image'], 'logo' => $data['logo'], 'state_id' => $data['state'], 'city' => $data['city'], 'zipcode' => $data['zip'], 'landmark' => $data['landmark'], 'address' => $data['address'], 'leader_name' => $data['club_leader_name'], 'no_of_member' => $data['no_of_member'], 'email' => $data['email'], 'email_id' => $data['email_id'], 'phone' => $data['mobile'], 'about' => $data['about'], 'facebook_link' => $data['facebook_link'], 'youtube_link' => $data['youtube_link'], 'twitter_link' => $data['twitter_link'], 'instagram_link' => $data['instagram_link'], 'rank' => $data['rank'], 'club_video' => $data['club_video'], 'published' => $data['published'], 'source' => $data['source']), 'club');
+        if ($record > 0) {
+            $tpy = new Thirdparty();
+            if ($data['published'] == 0) {
+                $template = $com->selectRow('*', 'templates', 'name=\'club_register_pending\' AND type=\'email\' AND target=\'user\'');
+                $template_admin = $com->selectRow('*', 'templates', 'name=\'new_club_register\' AND type=\'email\' AND target=\'user\'');
+                $body_admin = $com->getReplacedString($template_admin['body_web'], $data);
+                $tpy->sendMail($template_admin['mail'], $template_admin['mail_name'], $body_admin, $body_admin, $template_admin['subject'], $data['email_id'], $data['club_leader_name'], '', '', $template_admin['cc'], $template_admin['cc_name']);
+            } else {
+                $template = $com->selectRow('*', 'templates', 'name=\'club_register_activated\' AND type=\'email\' AND target=\'user\'');
+            }
+            $body = $com->getReplacedString($template['body_web'], $data);
+            $tpy->sendMail($template['mail'], $template['mail_name'], $body, $body, $template['subject'], $data['email_id'], $data['club_leader_name'], '', '', $template['cc'], $template['cc_name']);
+            $res['error'] = false;
+            $res['message'] = 'Club registered successfully';
+        }
+    } else {
+        $res['message'] = 'User name already exist';
     }
     echoRespnse(201, $res);
 });
@@ -65,6 +81,7 @@ $app->post('/insert_gallery', function() use ($app) {
     }
     echoRespnse(201, $res);
 });
+
 $app->post('/insert_clubgallery', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
@@ -839,7 +856,6 @@ $app->post('/subscribe_news_letter', function() use ($app) {
     }
     echoRespnse(201, $res);
 });
-
 
 $app->get('/get_users', function() {
     $res = array('error' => true, 'message' => 'Unable to get records');
