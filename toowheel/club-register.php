@@ -40,7 +40,6 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                     <label for="cover-image">Choose Cover Image: </label>
                                     <input id="cover_image" name="cover_image" type="file" class="custom-file-input" onchange="attachFile('cover_image');" />
                                 </div>
-                                <!--                                <label class="custom-file-label" >Choose Cover Image...</label>-->
                                 <div class="image-preview hidden" id="preview_container">
                                     <button type="button" onclick="closeCoverPic();" class="close-button-profile-img">
                                         <i class="fa fa-close"></i>
@@ -104,7 +103,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                 <input id="club_leader_name" placeholder="Club Leader name (Full Name)" name="club_leader_name" type="text" tabindex="16" required />
                             </div>
                             <div class="form-group">
-                                <input id="email_id" placeholder="Email id" name="email_id" type="email" tabindex="17" />
+                                <input id="email_id" placeholder="Email id" name="email_id" type="email" tabindex="17" required />
                             </div>
                             <div class="form-group">
                                 <textarea id="about" placeholder="About Club" name="about" type="text" tabindex="22" required></textarea>
@@ -114,10 +113,12 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                 <input id="email" placeholder="Username" name="email" type="text" tabindex="8" required />
                             </div>
                             <div class="form-group">
-                                <input id="password" placeholder="Password" name="password" type="password" tabindex="8" required />
+                                <input id="password" placeholder="Password" name="password" type="password" tabindex="8" required onKeyUp="checkPasswordStrength();" />
+                                <div id="password_error"></div>
                             </div>
                             <div class="form-group">
                                 <input id="confirm_password" placeholder="Confirm Password" name="confirm_password" type="password" tabindex="8" required />
+                                <div id="confirm_password_error"></div>
                             </div>
                             <h4>Social Media</h4>
                             <div class="form-row">
