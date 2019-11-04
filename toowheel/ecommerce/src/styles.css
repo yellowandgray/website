@@ -19,3 +19,7 @@
 .primary .mat-list-item .mat-icon {
     padding-right: 5px!important;
 }
+
+.text-center {
+    text-align: center;
+}

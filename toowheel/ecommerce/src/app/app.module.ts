@@ -30,6 +30,7 @@ import { ProductsComponent } from './products/products.component';
 import { VendorManagementComponent } from './vendor-management/vendor-management.component';
 import { OrderComponent } from './order/order.component';
 import { CustomerComponent } from './customer/customer.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { CustomerComponent } from './customer/customer.component';
     ProductsComponent,
     VendorManagementComponent,
     OrderComponent,
-    CustomerComponent
+    CustomerComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +61,7 @@ import { CustomerComponent } from './customer/customer.component';
     MatInputModule,
     MatSelectModule,
     MatRadioModule,
-    MatDividerModule,  
+    MatDividerModule
   ],
     entryComponents: [ConfigComponent],
   providers: [],

@@ -15,7 +15,7 @@ $press_release = $obj->selectAll('p.*, m.name AS media', 'press_release AS p LEF
         <div class="padding-top-108"></div>
         <div class="press-release" style="padding-top: 40px;">
             <div class="container">
-                <div class="row">
+<!--                <div class="row">
                     <div class="col-md-8">
                         <div class="press-release-search">
                             <input type="text" name="press_release_search" placeholder="Search by Name" />
@@ -32,7 +32,7 @@ $press_release = $obj->selectAll('p.*, m.name AS media', 'press_release AS p LEF
                             </select>
                         </div>
                     </div>
-                </div>
+                </div>-->
                 <h3>PRESS RELEASE</h3>
                 <div class="press-release-content">
                     <?php foreach ($press_release as $row) { ?>

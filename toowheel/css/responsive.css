@@ -235,6 +235,9 @@
     .events-upcoming-content {
         height: auto !important;
     }
+    .popup-box {
+        top: 4% !important;
+    }
 }
 
 @media (min-width: 601px) and (max-width: 768px) {
