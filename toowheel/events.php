@@ -74,7 +74,9 @@ $past_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
                                     </div>
                                     <hr>
                                 <?php } ?>
-                                <a href="past-events?type=<?php echo $type; ?>" class="press-download-button"> Read More</a>
+                                <center>
+                                    <a href="past-events?type=<?php echo $type; ?>" class="events-btn"> Read More</a>
+                                </center>
                             </div>
                         <?php } ?>
                     </div>

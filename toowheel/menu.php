@@ -93,7 +93,7 @@ $autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_relea
                                     <ul class="release">
                                         <li class="release-cont-1"><img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="image" /></li>
                                         <li class="release-cont-2">
-                                            <strong><?php echo $obj->charLimit($row['title'], 80); ?></strong>
+                                            <strong><?php echo $row['title']; ?></strong>
                                             <br/>
                                             <span><?php echo $row['media']; ?> | <?php echo $row['author_name']; ?> | <?php echo $row['press_release_date']; ?></span>
                                             <p><?php echo $obj->charLimit($row['description_1'], 120); ?>
@@ -190,7 +190,7 @@ $autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_relea
                     ?>
                     <a href="login?type=<?php echo $type; ?>" class="float-left margin-left-10">
                         <span>
-                            <i class="fa fa-sign-in search-bg"></i>
+                            <i class="fa fa-user search-bg"></i>
                             <p> Login</p>
                         </span>
                     </a>
@@ -211,7 +211,7 @@ $autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_relea
                 if (!isset($_SESSION["member_id"])) {
                     ?>
                     <a href="login?type=<?php echo $type; ?>">
-                        <i class="fa fa-sign-in"></i>
+                        <i class="fa fa-user"></i>
                     </a>
                 <?php } else {
                     ?>

@@ -1,0 +1,25 @@
+.mat-toolbar.mat-accent {
+    background: #607d8b;
+    color: #fff;
+}
+
+.mat-sidenav {
+    min-width: 250px;
+    max-width: 250px;
+}
+
+.mat-drawer {
+    background: #ed1c24;
+}
+
+.primary .mat-list-item {
+    color: #fff!important;
+}
+
+.primary .mat-list-item .mat-icon {
+    padding-right: 5px!important;
+}
+
+.text-center {
+    text-align: center;
+}

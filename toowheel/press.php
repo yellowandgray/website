@@ -28,12 +28,12 @@ $type = $press_release['type'];
                 <div class="row head-news">
                     <div class="side-news">
                         <span class="side-news-widget1"><span><?php echo $press_release['author_name']; ?></span></span>
-                        <h1><?php echo $obj->charLimit($press_release['title'], 100); ?></h1>
+                        <h1><?php echo $press_release['title']; ?></h1>
                     </div>
                 </div>
                 <div class="row events-content">
                     <div class="col-md-8" id="contentDiv">
-                        <span style="color: #696969;"><?php echo $press_release['media']; ?> | <?php echo $press_release['author_name']; ?> | <?php echo date('M d, Y', strtotime($press_release['press_release_date'])); ?></span>
+                        <span style="color: #333;font-size: 12px;font-weight: 500;"><?php echo $press_release['media']; ?> | <?php echo $press_release['author_name']; ?> | <?php echo date('M d, Y', strtotime($press_release['press_release_date'])); ?></span>
                         <br/>
                         <br/>
                         <div class="events-main-content">
@@ -85,17 +85,18 @@ $type = $press_release['type'];
                     <?php foreach ($similar_press_release as $row) { ?>
                         <div class="col-md-3">
                             <div class="events-upcoming">
-                                <img src="<?php echo BASE_URL . $row['cover_image']; ?>" alt="" />
+                                <div class="press-cover-image-bg" style="background: url(<?php echo BASE_URL . $row['cover_image']; ?>)no-repeat;background-repeat: no-repeat;background-position: top; "></div>
+<!--                                <img src="" alt="" />-->
                                 <div class="events-upcoming-content">
-                                    <h4><?php echo $obj->charLimit($row['title'], 25); ?></h4>
+                                    <h4><?php echo $row['title']; ?></h4>
                                     <p><?php echo $obj->charLimit($row['description_1'], 120); ?></p>
-                                    <center>
-                                        <div class="button-8">
-                                            <div class="eff-8"></div>
-                                            <a href="press?pid=<?php echo $row['press_release_id']; ?>">Discover</a>
-                                        </div>
-                                    </center>
                                 </div>
+                                <center>
+                                    <div class="button-8">
+                                        <div class="eff-8"></div>
+                                        <a href="press?pid=<?php echo $row['press_release_id']; ?>">Discover</a>
+                                    </div>
+                                </center>
                             </div>
                         </div>
                     <?php } ?>
