@@ -54,10 +54,8 @@
     <br/>
     <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
         <div fxFlex="100%">
-            <mat-form-field class="full-width" fxFlex="100%">
-                <mat-label>Description</mat-label>
-                <textarea rows="6" matInput readonly placeholder=""></textarea>     
-            </mat-form-field>
+            <h2>Event Description</h2>
+            <p [innerHTML]="data.description"></p>
         </div>
     </div>
     <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">

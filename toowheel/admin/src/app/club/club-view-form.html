@@ -189,7 +189,7 @@
 </mat-dialog-content>-->
 <h2 mat-dialog-title>Club Details</h2>
 <mat-dialog-content class="mat-typography">    
-       <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.8%" fxLayoutAlign="start center">        
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.8%" fxLayoutAlign="start center">        
 
         <!--                <div fxFlex="50%" class="dialog-picture">
                             <img mat-card-image src="{{image_url}}{{data['logo']}}" alt="Photo">
@@ -202,9 +202,9 @@
             <img class="dialog-picture1"  matTooltip="Logo" mat-card-image src="{{image_url}}{{data['logo']}}" alt="Photo" />
         </div>
         <div fxFlex="33%">   
-<!--            <video width="320" height="240" controls muted>
-                <source src="{{image_url}}{{data['club_video']}}" type="video/mp4">            
-          </video>-->                 
+            <!--            <video width="320" height="240" controls muted>
+                            <source src="{{image_url}}{{data['club_video']}}" type="video/mp4">            
+                      </video>-->                 
             <video class="video-fluid" matTooltip="Video" style="width: 100%; height: 100% " layout-fill loop="loop"  autoplay="autoplay" preload="auto" controls muted>
 
                 <source src="{{image_url}}{{data['club_video']}}" type="video/mp4"/>
@@ -212,11 +212,11 @@
         </div>
     </div>    
     <br/> 
-    
-<!--     <mat-option [value]="row.category_id" *ngFor="let row of categories">
-                            {{row.name}}-->
-    
-    
+
+    <!--     <mat-option [value]="row.category_id" *ngFor="let row of categories">
+                                {{row.name}}-->
+
+
     <table mat-table class="member-table">
         <h2>Club Information:</h2>
         <tr>
@@ -284,19 +284,17 @@
             <th mat-header-cell>Address</th>
             <td mat-cell> {{data.address}} </td>
         </tr>    
-       
+
         <br/>
-        
+
     </table>
     <br/>
     <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
-    <div fxFlex="100%">
-        <mat-form-field class="full-width" fxFlex="100%">
-            <mat-label>About club</mat-label>
-            <textarea rows="6" matInput readonly placeholder="" formControlName="about"></textarea>     
-        </mat-form-field>
+        <div fxFlex="100%">
+            <h2>About Club</h2>
+            <p>{{data.about}}</p>
+        </div>
     </div>
-</div>
     <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
         <button mat-button [mat-dialog-close]="false">Cancel</button>
     </div>
