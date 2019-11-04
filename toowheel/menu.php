@@ -177,7 +177,7 @@ $autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_relea
                     </div>
                 </div>
             </div>
-            <a href="index" class="logo"><img src='img/logo.png' alt=''></a>
+            <a href="../index" class="logo"><img src='img/logo.png' alt=''></a>
             <div class="header-login">
                 <a href="#" class="float-left margin-left-10" id="demo-2" style="position: relative;top: -2px;">
                     <span onfocusin="myFunction()" onfocusout="myFunction2()">

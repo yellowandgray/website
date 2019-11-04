@@ -92,7 +92,8 @@ export class ClubeventComponent implements OnInit {
         const dialogRef = this.dialog.open(ClubEventViewFrom, {
             minWidth: "80%",
             maxWidth: "80%",
-            data: data
+            data: data,
+            autoFocus: false
         });
         dialogRef.afterClosed().subscribe(result => {
             
@@ -169,7 +170,7 @@ export class ClubEventForm {
       'sponsor': new FormControl()
         });
         if(this.data != null) {
-                this.clubeventForm.patchValue({
+           this.clubeventForm.patchValue({
            type: this.data.type,
            category_id: this.data.category_id,
            club_id: this.data.club_id,
