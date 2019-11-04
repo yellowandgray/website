@@ -1010,11 +1010,12 @@ footer .copy p{
     margin: 0 10%;
     width: 80%;
 }
-.product-img-box {
+.product-img-box{
     padding: 35px;
     /* border: 1px solid #e4e4e4; */
-    box-shadow: 2px -3px 5px 4px #e2e2e2;
-    background: rgba(0, 0, 0, 0.058823529411764705);
+    box-shadow: 4px -4px 19px 5px #e6e6e6;
+    background: rgb(255, 255, 255);
+    border-radius: 19px;
 }
 .product-2 .product-details h3{
     color: #000000 !important;
@@ -1035,7 +1036,8 @@ footer .copy p{
     padding: 8px 30px !important;
     border-style: none;
     border-radius: 5px;
-    position: absolute;
+    position: relative;
+    top: -8px;
 }
 .button-03 a, .button-03 i{
     color: #fff  !important;
@@ -1324,4 +1326,37 @@ footer .copy p{
     font-size: 15px;
     line-height: 1.8;
     font-weight: 600;
+}
+.add-price{
+
+    font-size: 15px;
+    color: #1880c0 !important;
+}
+.contact p{
+    text-align: center;
+}
+.contact p i {
+    padding: 14px;
+    background: #0098fd;
+    color: #fff;
+    border-radius: 50%;
+}
+.submit-btn{
+    position: relative;
+    margin: 0 auto;
+}
+.submit-btn input{
+    background-color: #0072bc !important;
+    padding: 10px 30px 10px 30px !important;
+    color: #fff;
+}
+.block-9 .bg-1 input{
+    border: none;
+    /* box-shadow: 0px 0px 0px 0px #a9a9a9; */
+    background-color: #f7f7f7 !important;
+}
+.block-9 .bg-1 textarea{
+    border: none;
+    /* box-shadow: 0px 0px 0px 0px #a9a9a9; */
+    background-color: #f7f7f7 !important
 }

@@ -56,11 +56,11 @@
                                     }
                                     ?>"><a href="technology.php" class="nav-link">Technology</a></li>
                                    
-                                    <li class="nav-item <?php
+<!--                                    <li class="nav-item <?php
                                     if ($page == 'testimonial') {
                                         echo 'active';
                                     }
-                                    ?>"><a href="#" class="nav-link">Testimonial</a></li>
+                                    ?>"><a href="#" class="nav-link">Testimonial</a></li>-->
                                     
                                     <li class="nav-item <?php
                                     if ($page == 'about') {

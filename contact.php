@@ -12,7 +12,7 @@
         <section>
             <?php include 'menu.php'; ?>
         </section>
-        <div class="hero-wrap hero-bread" style="background-image: url('images/bg_04.jpg'); background-size: cover;">
+        <div class="hero-wrap hero-bread" style="background-image: url('images/bg_06.jpg'); background-size: cover;">
 
             <div class="container">
                 <div class="row no-gutters slider-text align-items-center justify-content-center">
@@ -29,9 +29,9 @@
             <div class="container">
                 <div class="row d-flex mb-5 contact-info">
                     <div class="w-100"></div>
-                    <div class="col-md-4 d-flex">
-                        <div class="info bg-white p-4">
-                            <p><span>Address:</span> </p>
+                    <div class="col-md-6 d-flex">
+                        <div class="info bg-white p-4 contact">
+                            <p><i class="fa fa-home" aria-hidden="true"></i> </p>
                             <p>Guardian Health Management Pvt Ltd,<br>
                                 210-G, Evoma Business Centre,<br>
                                 #88, Borewell Road,<br>
@@ -39,44 +39,57 @@
                                 Bengaluru – 560 066</p>
                         </div>
                     </div>
-                  
-                    <div class="col-md-4 d-flex">
-                        <div class="info bg-white p-4">
-                             <p><span>Phone:</span> <a href="tel://1234567920">8409 012345</a></p>
-                            <p><span>Email:</span> </p>
+
+                    <div class="col-md-6 d-flex">
+                        <div class="info bg-white p-4 contact">
+                            <p><i class="fa fa-phone" aria-hidden="true"></i></p>
+                            <p><a href="tel://1234567920">+91 8409 012345</a></p>
+                            <p><i class="fa fa-envelope" aria-hidden="true"></i></p>
                             <p><a href="mailto:info@yoursite.com">info@guardianhealthmanagement.com</a></p>
                         </div>
                     </div>
-                    <div class="col-md-4 d-flex">
-                        <div class="info bg-white p-4">
-                            <p><span>Website</span> <a href="#">yoursite.com</a></p>
-                        </div>
+
+                </div>
+                <div class="row block-9 mb-5">
+                    <div class="col-md-12 d-flex">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.8769329986767!2d77.60381861484956!3d12.979722318211808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1662c8ac5555%3A0xf3ba9f317a0882d5!2sGuardian%20Health%20Management%20Pvt%20Limited!5e0!3m2!1sen!2sin!4v1572417203819!5m2!1sen!2sin" width="100%" height="250px" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                     </div>
                 </div>
-                <div class="row block-9">
-                    <div class="col-md-6 order-md-last d-flex">
+                <div class="row block-9 m">
+                    <div class="col-md-12 order-md-last d-flex">
                         <form action="#" class="bg-white p-5 contact-form">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Your Name">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Your Email">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Subject">
-                            </div>
-                            <div class="form-group">
-                                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group bg-1">
+                                        <input type="text" class="form-control" name="fname" placeholder="Your Name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group bg-1">
+                                        <input type="text" class="form-control" name="email" placeholder="Your Email">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group bg-1">
+                                        <input type="text" class="form-control" name="contact" placeholder="Your Phone">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group bg-1">
+                                        <input type="text" class="form-control" name="subject" placeholder="Subject">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group bg-1">
+                                        <textarea id="" cols="30" rows="5" name="message" class="form-control" placeholder="Message"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group submit-btn">
+                                    <input type="submit" value="Send Message" class="btn  py-3 px-5">
+                                </div>
                             </div>
                         </form>
 
-                    </div>
-
-                    <div class="col-md-6 d-flex">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.8769329986767!2d77.60381861484956!3d12.979722318211808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1662c8ac5555%3A0xf3ba9f317a0882d5!2sGuardian%20Health%20Management%20Pvt%20Limited!5e0!3m2!1sen!2sin!4v1572417203819!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                     </div>
                 </div>
             </div>
