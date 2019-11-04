@@ -6,7 +6,7 @@ if (!isset($_GET['type'])) {
 $type = $_GET['type'];
 require_once 'api/include/common.php';
 $obj = new Common();
-$events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS e LEFT JOIN club AS c ON c.club_id = e.club_id LEFT JOIN category AS ca ON ca.category_id = e.category_id AND ca.category_id = c.category_id', 'e.event_id > 0 AND e.type = \'' . $type . '\' AND e.event_date >= \'' . date('Y-m-d') . '\' ORDER BY e.event_date DESC');
+$events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS e LEFT JOIN club AS c ON c.club_id = e.club_id LEFT JOIN category AS ca ON ca.category_id = e.category_id AND ca.category_id = c.category_id', 'e.event_id > 0 AND e.type = \'' . $type . '\' AND e.event_from_date >= \'' . date('Y-m-d') . '\' ORDER BY e.event_from_date DESC');
 $past_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS e LEFT JOIN club AS c ON c.club_id = e.club_id LEFT JOIN category AS ca ON ca.category_id = e.category_id AND ca.category_id = c.category_id', 'e.event_id > 0 AND e.type = \'' . $type . '\' AND e.event_to_date < \'' . date('Y-m-d') . '\' ORDER BY e.event_to_date ASC LIMIT 2');
 ?>
 <!DOCTYPE html>
