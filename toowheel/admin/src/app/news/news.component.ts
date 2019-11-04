@@ -53,7 +53,7 @@ export class NewsComponent implements OnInit {
     const dialogRef = this.dialog.open(NewsForm, {
         minWidth: "80%",
         maxWidth: "80%",
-         data: data
+        data: data
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -90,7 +90,8 @@ export class NewsComponent implements OnInit {
         const dialogRef = this.dialog.open(NewsViewForm, {
         minWidth: "80%",
         maxWidth: "80%",
-        data: data
+        data: data,
+        autoFocus: false
     });
 
         dialogRef.afterClosed().subscribe(result => {

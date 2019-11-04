@@ -107,7 +107,8 @@ export class ClubComponent implements OnInit {
     const dialogRef = this.dialog.open(ClubViewFrom, {
         minWidth: "80%",
         maxWidth: "80%",
-        data: data
+        data: data,
+        autoFocus: false
     });
     dialogRef.afterClosed().subscribe(result => {
       if(result !== false && result !== 'false') {

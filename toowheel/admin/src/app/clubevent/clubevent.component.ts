@@ -4,6 +4,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { AngularEditorConfig } from '@kolkov/angular-editor';
 import * as moment from 'moment';
 
 @Component({
@@ -92,7 +93,8 @@ export class ClubeventComponent implements OnInit {
         const dialogRef = this.dialog.open(ClubEventViewFrom, {
             minWidth: "80%",
             maxWidth: "80%",
-            data: data
+            data: data,
+            autoFocus: false
         });
         dialogRef.afterClosed().subscribe(result => {
             
@@ -169,7 +171,7 @@ export class ClubEventForm {
       'sponsor': new FormControl()
         });
         if(this.data != null) {
-                this.clubeventForm.patchValue({
+           this.clubeventForm.patchValue({
            type: this.data.type,
            category_id: this.data.category_id,
            club_id: this.data.club_id,
@@ -312,6 +314,48 @@ formData.append('type', this.clubeventForm.value.type);
             }
             );
       }
+
+      
+    editorConfig: AngularEditorConfig = {
+        editable: true,
+          spellcheck: true,
+          height: '600px',
+          minHeight: '600px',
+          maxHeight: '600px',
+          width: 'auto',
+          minWidth: '0',
+          translate: 'yes',
+          enableToolbar: true,
+          showToolbar: true,
+          placeholder: 'Enter text here...',
+          defaultParagraphSeparator: '',
+          defaultFontName: '',
+          defaultFontSize: '',
+          fonts: [
+            {class: 'arial', name: 'Arial'},
+            {class: 'times-new-roman', name: 'Times New Roman'},
+            {class: 'calibri', name: 'Calibri'},
+            {class: 'comic-sans-ms', name: 'Comic Sans MS'}
+          ],
+          customClasses: [
+          {
+            name: 'quote',
+            class: 'quote',
+          },
+          {
+            name: 'redText',
+            class: 'redText'
+          },
+          {
+            name: 'titleText',
+            class: 'titleText',
+            tag: 'h1',
+          },
+        ],
+        uploadUrl: 'v1/image',
+        sanitize: true,
+        toolbarPosition: 'top',
+    };
 
  removeMedia(url) {
       this[url] = '';
