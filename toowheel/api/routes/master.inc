@@ -49,14 +49,14 @@ $app->post('/insert_club', function() use ($app) {
             $tpy = new Thirdparty();
             if ($data['published'] == 0) {
                 $template = $com->selectRow('*', 'templates', 'name=\'club_register_pending\' AND type=\'email\' AND target=\'user\'');
-                $template_admin = $com->selectRow('*', 'templates', 'name=\'new_club_register\' AND type=\'email\' AND target=\'user\'');
+                $template_admin = $com->selectRow('*', 'templates', 'name=\'new_club_register\' AND type=\'email\' AND target=\'admin\'');
                 $body_admin = $com->getReplacedString($template_admin['body_web'], $data);
                 $tpy->sendMail($template_admin['mail'], $template_admin['mail_name'], $body_admin, $body_admin, $template_admin['subject'], $data['email_id'], $data['club_leader_name'], '', '', $template_admin['cc'], $template_admin['cc_name']);
             } else {
                 $template = $com->selectRow('*', 'templates', 'name=\'club_register_activated\' AND type=\'email\' AND target=\'user\'');
             }
             $body = $com->getReplacedString($template['body_web'], $data);
-            $tpy->sendMail($template['mail'], $template['mail_name'], $body, $body, $template['subject'], $data['email_id'], $data['club_leader_name'], '', '', $template['cc'], $template['cc_name']);
+            $tpy->sendMail( $data['email_id'], $data['club_leader_name'], $body, $body, $template['subject'],$template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
             $res['error'] = false;
             $res['message'] = 'Club registered successfully';
         }
