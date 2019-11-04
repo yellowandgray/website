@@ -24,7 +24,8 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                 <input id="name" placeholder="Your club name" name="name" type="text" tabindex="1" required autofocus />
                             </div>
                             <div class="form-group">
-                                <select id="type" name="type" tabindex="2" required onchange="renderCategory(this.value);">                                                      <option>Select Type</option>
+                                <select id="type" name="type" tabindex="2" required onchange="renderCategory(this.value);">                                                      
+                                    <option>Select Type</option>
                                     <option value="two_wheel">2 Wheel</option>
                                     <option value="four_wheel">4 Wheel</option>
                                 </select>
