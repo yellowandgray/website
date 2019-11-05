@@ -381,7 +381,7 @@
 @media (max-width: 1368px) and (min-width: 1200px) {
     .discover-slider-content {
         top: -160px !important;
-        height: 160px !important;
+        height: 125px !important;
     }
     .discover-slider-content center .btn-primary {
         top: 0 !Important;
@@ -412,7 +412,8 @@
         .bg-1 .slick-slider {bottom: 195px !important;}*/
     .bg-1 {height: 768px !important;}
     #club1 {
-        position: unset !important;
+        position: relative !important;
+        top: -70px !important;
     }
 }
 
@@ -868,7 +869,10 @@
 
 @media (min-width: 1024px) and (max-width: 1440px) {
     .tabcontent .news .discover-slider-content {
-        top: -163px !important;
+        top: -133px !important;
+    }
+    .tabcontent .news .news-discover {
+        bottom: 150px !important;
     }
 }
 @media (min-width: 320px) and (max-width: 767px) {
@@ -934,9 +938,9 @@
 }
 
 @media screen and (min-width: 1200px) {
-    .club-logo img {
+/*    .club-logo img {
         height: 324px !important;
-    }
+    }*/
 }
 @media (min-width: 992px) and (max-width: 1199px) {
     .club-logo img {
@@ -983,7 +987,7 @@
 }
 @media (min-width: 320px) and (max-width: 474px) {
     .events-main-content span {
-        font-size: 12px !important;
+        font-size: 11px !important;
         color: #fff;
         font-weight: 500;
     }
@@ -1005,9 +1009,9 @@
 
 }
 @media (min-width: 320px) and (max-width: 518px) {
-    .head-news {
+/*    .head-news {
         height: 170px;
-    }
+    }*/
 }
 @media (min-width: 320px) and (max-width: 459px) {
     .head-news  {
@@ -1015,11 +1019,11 @@
         margin-bottom: -157px !important;
     }
     .head-news h1 {
-        font-size: 25px !important;
+        font-size: 15px !important;
     }
-    .head-news {
+/*    .head-news {
         height: 169px !important;
-    }
+    }*/
 }
 
 

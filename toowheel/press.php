@@ -25,23 +25,22 @@ $type = $press_release['type'];
                 </div>
             </div>
             <div class="container events-main-content">
-                <div class="row head-news">
+                <div class="row head-news press-release-span">
                     <div class="side-news">
                         <span class="side-news-widget1"><span><?php echo $press_release['author_name']; ?></span></span>
                         <h1><?php echo $press_release['title']; ?></h1>
+                        <span><?php echo $press_release['media']; ?> | <?php echo $press_release['author_name']; ?> | <?php echo date('M d, Y', strtotime($press_release['press_release_date'])); ?></span>
                     </div>
                 </div>
                 <div class="row events-content">
                     <div class="col-md-8" id="contentDiv">
-                        <span style="color: #333;font-size: 12px;font-weight: 500;"><?php echo $press_release['media']; ?> | <?php echo $press_release['author_name']; ?> | <?php echo date('M d, Y', strtotime($press_release['press_release_date'])); ?></span>
-                        <br/>
-                        <br/>
                         <div class="events-main-content">
                             <div class="middle">
                                 <div class="middle">
                                     <div class="">
                                         <span class="twitter-share" data-js="twitter-share" style="float: left;"> <i class="fa fa-twitter" aria-hidden="true"></i> Twitter</span>
-                                        <span class="facebook-share" data-js="facebook-share" style="float: right;"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</span>
+                                        <span class="facebook-share" data-js="facebook-share" style="float: left;"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</span>
+                                        <span class="pinterest-share" data-js="pinterest-share" style="float: right;"><i class="fa fa-pinterest-p" aria-hidden="true"></i></span>
                                     </div>
                                 </div>
                             </div>
@@ -68,7 +67,8 @@ $type = $press_release['type'];
                         <?php foreach ($releated_press_release as $row) { ?>
                             <div class="side-news">
                                 <span class="side-news-widget1"><span><?php echo $row['author_name']; ?></span></span>
-                                <img src="<?php echo BASE_URL . $row['cover_image']; ?>" alt="" />
+                                <div class="press-cover-image-bg" style="background: url(<?php echo BASE_URL . $row['cover_image']; ?>)no-repeat;background-repeat: no-repeat;background-position: top;background-size: cover; "></div>
+<!--                                <img src="<?php //echo BASE_URL . $row['cover_image']; ?>" alt="" />-->
                                 <h4><?php echo $row['title']; ?></h4>
                                 <p><?php echo $obj->charLimit($row['description_1'], 275); ?></p>
                                 <div class="button-1">
@@ -85,7 +85,7 @@ $type = $press_release['type'];
                     <?php foreach ($similar_press_release as $row) { ?>
                         <div class="col-md-3">
                             <div class="events-upcoming">
-                                <div class="press-cover-image-bg" style="background: url(<?php echo BASE_URL . $row['cover_image']; ?>)no-repeat;background-repeat: no-repeat;background-position: top; "></div>
+                                <div class="press-cover-image-bg" style="background: url(<?php echo BASE_URL . $row['cover_image']; ?>)no-repeat;background-repeat: no-repeat;background-position: top;background-size: cover; "></div>
 <!--                                <img src="" alt="" />-->
                                 <div class="events-upcoming-content">
                                     <h4><?php echo $row['title']; ?></h4>
@@ -115,7 +115,7 @@ $type = $press_release['type'];
                 twitterWindow.focus();
             }
             return false;
-        }
+        };
 
         var facebookShare = document.querySelector('[data-js="facebook-share"]');
 
@@ -126,7 +126,18 @@ $type = $press_release['type'];
                 facebookWindow.focus();
             }
             return false;
-        }
+        };
+        
+        var pinterestShare = document.querySelector('[data-js="pinterest-share"]');
+
+        pinterestShare.onclick = function (e) {
+            e.preventDefault();
+            var pinterestWindow = window.open('https://in.pinterest.com/pin/create/button/?url=' + document.URL, 'pinterest-popup', 'height=350,width=600');
+            if (pinterestWindow.focus) {
+                pinterestWindow.focus();
+            }
+            return false;
+        };
     </script>
 </body>
 </html>

@@ -264,7 +264,7 @@ body {
 }
 
 .clb-bg {
-    background: #ff0000;
+    background: rgba(255, 0, 0, 0.7);
     width: 50px;
     position: relative;
     top: 5px;
@@ -1031,9 +1031,9 @@ body {
     height: 360px !important;
 }
 
-.events-content span.news-details-span { 
-    font-size: 12px;
-    color: #333;
+.news-details-span { 
+    font-size: 13px;
+    color: #ececec;
     font-weight: 500;
 }
 
@@ -1074,6 +1074,7 @@ body {
 .side-news .side-news-widget1 span {
     position: relative;
     top: 25px;
+    color: #fff;
 }
 
 .side-news h4 {
@@ -1091,6 +1092,7 @@ body {
     background: #fff;
     box-shadow: 0 0 20px 10px #eee;
     margin-bottom: 30px;
+    padding-bottom: 10px;
 }
 
 .events-upcoming img {
@@ -1121,7 +1123,7 @@ body {
 
 .news-discover {
     width: 100px;
-    background: #ff0000c9;
+    background: rgba(255, 0, 0, 0.7);
     position: relative;
     bottom: 15px;
     border-radius: 15px;

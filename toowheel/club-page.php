@@ -23,25 +23,12 @@ if ($type == 'four_wheel') {
     <body>
         <?php include 'menu.php'; ?>
         <div class="club-pad-top-108"></div>
-        <!--pop-up-gallery-->
-
-        <section>
-            <!--            <div style="height: 50%;overflow: hidden;background: #00008c;">
-                        </div>-->
-            <img src="<?php echo BASE_URL . $club['cover_image']; ?>" alt="Club Cover Imge" class="club-cover-image" />
-        </section>
         <section>
             <div class="container sec-club-logo">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div id="about-club">
-                            <p onclick="document.getElementById('about-club').classList.remove('club-about')">
-                                <i class="fa fa-times" aria-hidden="true"></i>
-                            </P>
-                            <h1>About Club</h1>
-                            <p><?php echo $club['about']; ?></p>
-                        </div>
-                        <div class="row w-text">
+                        <img src="<?php echo BASE_URL . $club['cover_image']; ?>" alt="Club Cover Imge" class="club-cover-image" />
+                        <div class="row w-text club-cover-overlay">
                             <div class="w-text-con">
                                 <h2 class="text-center"><?php echo $club['name']; ?></h2>
                             </div>
@@ -74,6 +61,13 @@ if ($type == 'four_wheel') {
                                 <div class="row">
                                     <div class="col-md-5">
                                         <p><a onclick="document.getElementById('about-club').classList.add('club-about')" style="cursor: pointer;">About</a></p>
+                                        <div id="about-club">
+                                            <p onclick="document.getElementById('about-club').classList.remove('club-about')">
+                                                <i class="fa fa-times" aria-hidden="true"></i>
+                                            </P>
+                                            <h1>About Club</h1>
+                                            <p><?php echo $club['about']; ?></p>
+                                        </div>
                                     </div>
                                     <div class="col-md-7">
                                         <li class="w-icon">
@@ -107,8 +101,10 @@ if ($type == 'four_wheel') {
                 <img class="fs-gal-main" src="" alt="" />
             </div>
             <!--pop-up-gallery-->
-            <div class="container event-section">
-                <div class=""></div>
+
+        </section>
+        <div class="club-details event-section">
+            <div class="container ">
                 <div class="row">
                     <div class="col-lg-3 col-md-12">
                         <div class="row">
@@ -208,8 +204,7 @@ if ($type == 'four_wheel') {
                     </div>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
     <?php include 'footer.php' ?>
     <script>
         var Cal = function (divId) {

@@ -39,19 +39,18 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
                     <div class="side-news">
                         <span class="side-news-widget1"><span><?php echo $news['club_id'] != 0 ? $obj->charLimit($news['club'], 17) : $obj->charLimit($news['sponsor'], 14); ?></span></span>
                         <h1><?php echo $news['title']; ?></h1>
+                        <span class="news-details-span">
+                            <?php echo $news['media']; ?> | <?php echo $news['author_name']; ?> | <?php echo date('M d, Y', strtotime($news['news_date'])); ?>
+                        </span>
                     </div>
                 </div>
                 <div class="row events-content">
                     <div class="col-md-8" id="contentDiv">
-                        <span class="news-details-span">
-                            <?php echo $news['media']; ?> | <?php echo $news['author_name']; ?> | <?php echo date('M d, Y', strtotime($news['news_date'])); ?>
-                        </span>
-                        <br/>
-                        <br/>
                         <div class="middle" style="">
                             <div style="margin-bottom: 20px;">
                                 <span class="twitter-share" data-js="twitter-share" style="float: left;"> <i class="fa fa-twitter" aria-hidden="true"></i> Twitter</span>
-                                <span class="facebook-share" data-js="facebook-share" style="float: right;"><i class="fa fa-facebook" aria-hidden="true"></i>  Facebook</span>
+                                <span class="facebook-share" data-js="facebook-share" style="float: left;"><i class="fa fa-facebook" aria-hidden="true"></i>  Facebook</span>
+                                <span class="pinterest-share" data-js="pinterest-share" style="float: right;"><i class="fa fa-pinterest-p" aria-hidden="true"></i></span>
                             </div>
                         </div>
                         <strong><?php echo nl2br($news['moto_text']); ?></strong><br/><br/>
@@ -85,8 +84,11 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
                                                 </div>-->
                         <?php foreach ($releated_news as $row) { ?>
                             <div class="side-news">
-                                <span class="side-news-widget1"><span><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 30) : $obj->charLimit($row['sponsor'], 30); ?></span></span>
-                                <img src="<?php echo BASE_URL . $row['cover_image']; ?>" alt=" image" />
+                                <span class="side-news-widget1">
+                                    <span><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 30) : $obj->charLimit($row['sponsor'], 30); ?></span>
+                                </span>
+                                <div class="press-cover-image-bg" style="background: url(<?php echo BASE_URL . $row['cover_image']; ?>)no-repeat;background-repeat: no-repeat;background-position: top;background-size: cover; "></div>
+    <!--                                <img src="<?php //echo BASE_URL . $row['cover_image'];  ?>" alt=" image" />-->
                                 <h4><?php echo $row['title']; ?></h4>
                                 <p><?php echo $row['moto_text']; ?></p>
                                 <div class="button-1">
@@ -103,8 +105,8 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
                     <?php foreach ($similar_news as $row) { ?>
                         <div class="col-md-3">
                             <div class="events-upcoming">
-                                <div class="press-cover-image-bg" style="background: url(<?php echo BASE_URL . $row['cover_image']; ?>)no-repeat;background-repeat: no-repeat;background-position: top; "></div>
-<!--                                <img src="<?php //echo BASE_URL . $row['cover_image']; ?>" alt="" />-->
+                                <div class="press-cover-image-bg" style="background: url(<?php echo BASE_URL . $row['cover_image']; ?>)no-repeat;background-repeat: no-repeat;background-position: top;background-size: cover; "></div>
+    <!--                                <img src="<?php //echo BASE_URL . $row['cover_image'];   ?>" alt="" />-->
                                 <div class="events-upcoming-content">
                                     <h4><?php echo $row['title']; ?></h4>
                                     <p><?php echo $obj->charLimit($row['moto_text'], 120); ?></p>
@@ -123,6 +125,12 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
         </div>
     </div>
     <?php include 'footer.php'; ?>
+    <script src="js/sticky-sidebar-scroll.min.js" type="text/javascript"></script>
+<!--    <script type='text/javascript'>
+        $(document).ready(function () {
+            $.stickysidebarscroll("#sideslider", {offset: {top: 10, bottom: 200}});
+        });
+    </script>-->
     <script type="text/javascript">
         var twitterShare = document.querySelector('[data-js="twitter-share"]');
 
@@ -133,7 +141,7 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
                 twitterWindow.focus();
             }
             return false;
-        }
+        };
 
         var facebookShare = document.querySelector('[data-js="facebook-share"]');
 
@@ -144,7 +152,18 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
                 facebookWindow.focus();
             }
             return false;
-        }
+        };
+
+        var pinterestShare = document.querySelector('[data-js="pinterest-share"]');
+
+        pinterestShare.onclick = function (e) {
+            e.preventDefault();
+            var pinterestWindow = window.open('https://in.pinterest.com/pin/create/button/?url=' + document.URL, 'pinterest-popup', 'height=350,width=600');
+            if (pinterestWindow.focus) {
+                pinterestWindow.focus();
+            }
+            return false;
+        };
     </script>
     <script type="text/javascript">
         var modal = document.getElementById('pop-img');

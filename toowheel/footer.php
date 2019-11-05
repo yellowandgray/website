@@ -101,18 +101,45 @@
 <script src="js/fs-gal.js" type="text/javascript"></script>
 <script src="js/sweet-alert.min.js" type="text/javascript"></script>
 <script src="js/jquery.autocomplete.min.js" type="text/javascript"></script>
+<script type="text/javascript" async defer src="//assets.pinterest.com/js/pinit.js"></script>
+<script>
+                                    function showTextPassword() {
+                                        var x = document.getElementById("password");
+                                        if (x.type === "password") {
+                                            x.type = "text";
+                                        } else {
+                                            x.type = "password";
+                                        }
+                                    }
+                                    function showTextPassword1() {
+                                        var x = document.getElementById("cnfpassword");
+                                        if (x.type === "password") {
+                                            x.type = "text";
+                                        } else {
+                                            x.type = "password";
+                                        }
+                                    }
+                                    function showTextPassword2() {
+                                        var x = document.getElementById("confirm_password");
+                                        if (x.type === "password") {
+                                            x.type = "text";
+                                        } else {
+                                            x.type = "password";
+                                        }
+                                    }
+</script>
 <script type="text/javascript">
 
-                                    $(document).ready(function () {
-                                        $('#close-btn').click(function () {
-                                            $('#search-menu-overlay').fadeOut();
-                                            $('#search-menu-btn').show();
-                                        });
-                                        $('#search-menu-btn').click(function () {
-                                            $(this).hide();
-                                            $('#search-menu-overlay').fadeIn();
-                                        });
-                                    });
+    $(document).ready(function () {
+        $('#close-btn').click(function () {
+            $('#search-menu-overlay').fadeOut();
+            $('#search-menu-btn').show();
+        });
+        $('#search-menu-btn').click(function () {
+            $(this).hide();
+            $('#search-menu-overlay').fadeIn();
+        });
+    });
 </script>
 <script type="text/javascript">
     function openNav() {

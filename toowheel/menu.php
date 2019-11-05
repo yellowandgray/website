@@ -3,7 +3,7 @@ session_start();
 $menu_latest_news = $obj->selectAll('n.*, m.name AS media, c.name AS club, ca.name AS category', 'news AS n LEFT JOIN media AS m ON m.media_id = n.media_id LEFT JOIN club AS c ON c.club_id = n.club_id LEFT JOIN category AS ca ON ca.category_id = n.category_id AND ca.category_id = c.category_id', 'n.news_id > 0 AND n.type = \'' . $type . '\' ORDER BY n.news_id DESC LIMIT 8');
 $menu_press_release = $obj->selectAll('p.*, m.name AS media', 'press_release AS p LEFT JOIN media AS m ON m.media_id = p.media_id', 'p.type = \'' . $type . '\' ORDER BY p.press_release_id DESC LIMIT 3');
 $menu_findclub = $obj->selectAll('*', 'club', 'club_id > 0 AND type = \'' . $type . '\' AND published = 1 ORDER BY club_id DESC LIMIT 8');
-$menu_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS e LEFT JOIN club AS c ON c.club_id = e.club_id LEFT JOIN category AS ca ON ca.category_id = e.category_id AND ca.category_id = c.category_id', 'e.event_id > 0 AND e.type = \'' . $type . '\' ORDER BY e.event_id DESC LIMIT 8');
+$menu_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS e LEFT JOIN club AS c ON c.club_id = e.club_id LEFT JOIN category AS ca ON ca.category_id = e.category_id AND ca.category_id = c.category_id', 'e.event_id > 0 AND e.type = \'' . $type . '\' ORDER BY e.event_id DESC LIMIT 5');
 $autocomplete_club = $obj->selectAll('*', 'club', 'club_id > 0 AND type = \'' . $type . '\' ORDER BY name DESC');
 $autocomplete_news = $obj->selectAll('*', 'news', 'news_id > 0 AND type = \'' . $type . '\' ORDER BY title DESC');
 $autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_release_id > 0 AND type = \'' . $type . '\' ORDER BY title DESC');
@@ -71,8 +71,8 @@ $autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_relea
                                         <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="image" />
                                         <div class="discover-slider-content">
                                             <p class="clb-bg"><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 10) : $obj->charLimit($row['sponsor'], 10); ?></p>
-                                            <h2><?php echo $obj->charLimit($row['title'], 35); ?></h2>
-                                            <p><?php echo $obj->charLimit($row['moto_text'], 20); ?></p>
+                                            <h2><?php echo $row['title']; ?></h2>
+<!--                                            <p><?php //echo $obj->charLimit($row['moto_text'], 20); ?></p>-->
                                         </div>
                                         <center class="news-discover"><a href="news?nid=<?php echo $row['news_id']; ?>">DISCOVER</a></center>
                                     </div>
@@ -155,13 +155,23 @@ $autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_relea
                         <div class="find-club-menu event-menu-box">
                             <div class="row">
                                 <?php foreach ($menu_events as $row) { ?>
-                                    <div class="col-md-3 col-sm-6">
-                                        <a href="events?type=<?php echo $type; ?>" class="club-box">
+                                    <ul class="release">
+                                        <li class="release-cont-1">
                                             <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="" />
-                                            <h3><?php echo $row['title']; ?></h3>
-                                            <p><?php echo $row['location']; ?></p>
-                                        </a>
-                                    </div>
+                                        </li>
+                                        <li class="release-cont-2">
+                                            <strong><?php echo $row['title']; ?></strong>
+                                            <br/>
+                                            <span><?php echo $row['location']; ?></span>
+                                        </li>
+                                    </ul>
+                                    <!--                                    <div class="col-md-3 col-sm-6">
+                                                                            <a href="events?type=<?php //echo $type; ?>" class="club-box">
+                                                                                <img src="<?php //echo BASE_URL . $row['thumb_image']; ?>" alt="" />
+                                                                                <h3><?php //echo $row['title']; ?></h3>
+                                                                                <p><?php //echo $row['location']; ?></p>
+                                                                            </a>
+                                                                        </div>-->
                                 <?php } ?>
                             </div>
                             <div class="find-club-btn"><a href="events?type=<?php echo $type; ?>" class="menu-btn">Read More</a></div>

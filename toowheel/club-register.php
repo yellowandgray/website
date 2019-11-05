@@ -114,10 +114,12 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                             </div>
                             <div class="form-group">
                                 <input id="password" placeholder="Password" name="password" type="password" tabindex="8" required onKeyUp="checkPasswordStrength();" />
+                                <span class="input-group-addon eye-icon" onclick="showTextPassword()"><i class="fa fa-eye" aria-hidden="true"></i></span>
                                 <div id="password_error"></div>
                             </div>
                             <div class="form-group">
                                 <input id="confirm_password" placeholder="Confirm Password" name="confirm_password" type="password" tabindex="8" required />
+                                <span class="input-group-addon eye-icon" onclick="showTextPassword2()"><i class="fa fa-eye" aria-hidden="true"></i></span>
                                 <div id="confirm_password_error"></div>
                             </div>
                             <h4>Social Media</h4>
