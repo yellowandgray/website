@@ -102,129 +102,142 @@
 <script src="js/sweet-alert.min.js" type="text/javascript"></script>
 <script src="js/jquery.autocomplete.min.js" type="text/javascript"></script>
 <script type="text/javascript">
-                                    function openNav() {
-                                        document.getElementById("mySidenav").style.height = "100%";
-                                        document.getElementById("mySidenav").style.top = "110px";
-                                    }
-                                    function closeNav() {
-                                        document.getElementById("mySidenav").style.height = "0";
-                                        document.getElementById("mySidenav").style.top = "-800px";
-                                    }
+
                                     $(document).ready(function () {
-                                        $('#nav-icon3').click(function () {
-                                            $(this).toggleClass('open');
-                                            if ($(this).hasClass('open')) {
-                                                openNav();
-                                            } else {
-                                                closeNav();
-                                            }
+                                        $('#close-btn').click(function () {
+                                            $('#search-menu-overlay').fadeOut();
+                                            $('#search-menu-btn').show();
                                         });
-                                        $('body').click(function () {
-                                            if (!$('#nav-icon3').hasClass('open')) {
-                                                closeNav();
-                                            }
+                                        $('#search-menu-btn').click(function () {
+                                            $(this).hide();
+                                            $('#search-menu-overlay').fadeIn();
                                         });
-                                        // Step show event
-                                        $("#smartwizard").on("showStep", function (e, anchorObject, stepNumber, stepDirection, stepPosition) {
-                                            $('.sw-btn-next').removeClass('hidden');
-                                            $('.sw-btn-prev').removeClass('hidden');
-                                            if (stepNumber === 2) {
-                                                $('.sw-btn-next').addClass('hidden');
-                                            }
-                                            if (stepNumber === 0) {
-                                                $('#smartwizard').smartWizard("disabledSteps", 2);
-                                            }
-                                            if (stepNumber === 3) {
-                                                $('.sw-btn-next').addClass('hidden');
-                                                $('.sw-btn-prev').addClass('hidden');
-                                            }
-                                        });
+                                    });
+</script>
+<script type="text/javascript">
+    function openNav() {
+        document.getElementById("mySidenav").style.height = "100%";
+        document.getElementById("mySidenav").style.top = "110px";
+    }
+    function closeNav() {
+        document.getElementById("mySidenav").style.height = "0";
+        document.getElementById("mySidenav").style.top = "-800px";
+    }
+    $(document).ready(function () {
+        $('#nav-icon3').click(function () {
+            $(this).toggleClass('open');
+            if ($(this).hasClass('open')) {
+                openNav();
+            } else {
+                closeNav();
+            }
+        });
+        $('body').click(function () {
+            if (!$('#nav-icon3').hasClass('open')) {
+                closeNav();
+            }
+        });
+        // Step show event
+        $("#smartwizard").on("showStep", function (e, anchorObject, stepNumber, stepDirection, stepPosition) {
+            $('.sw-btn-next').removeClass('hidden');
+            $('.sw-btn-prev').removeClass('hidden');
+            if (stepNumber === 2) {
+                $('.sw-btn-next').addClass('hidden');
+            }
+            if (stepNumber === 0) {
+                $('#smartwizard').smartWizard("disabledSteps", 2);
+            }
+            if (stepNumber === 3) {
+                $('.sw-btn-next').addClass('hidden');
+                $('.sw-btn-prev').addClass('hidden');
+            }
+        });
 
-                                        // Toolbar extra buttons
-                                        var btnFinish = $('<button></button>').text('Finish')
-                                                .addClass('btn btn-info')
-                                                .on('click', function () {
-                                                    alert('Finish Clicked');
-                                                });
-                                        var btnCancel = $('<button></button>').text('Cancel')
-                                                .addClass('btn btn-danger')
-                                                .on('click', function () {
-                                                    $('#smartwizard').smartWizard("reset");
-                                                });
+        // Toolbar extra buttons
+        var btnFinish = $('<button></button>').text('Finish')
+                .addClass('btn btn-info')
+                .on('click', function () {
+                    alert('Finish Clicked');
+                });
+        var btnCancel = $('<button></button>').text('Cancel')
+                .addClass('btn btn-danger')
+                .on('click', function () {
+                    $('#smartwizard').smartWizard("reset");
+                });
 
-                                        // Please note enabling option "showStepURLhash" will make navigation conflict for multiple wizard in a page.
-                                        // so that option is disabling => showStepURLhash: false
+        // Please note enabling option "showStepURLhash" will make navigation conflict for multiple wizard in a page.
+        // so that option is disabling => showStepURLhash: false
 
-                                        // Smart Wizard 1
-                                        $('#smartwizard').smartWizard({
-                                            selected: 0,
-                                            theme: 'arrows',
-                                            transitionEffect: 'fade',
-                                            showStepURLhash: false,
-                                            anchorClickable: false,
-                                            enableAllAnchors: false,
-                                            useURLhash: false,
-                                            anchorSettings: {
-                                                enableAnchorOnDoneStep: false
-                                            },
-                                            toolbarSettings: {toolbarPosition: 'both',
-                                                toolbarExtraButtons: [btnFinish, btnCancel]
-                                            }
-                                        });
-                                        $('#smartwizard_container').removeClass('hidden');
-                                        $(".set > a").on("click", function () {
-                                            if ($(this).hasClass("active")) {
-                                                $(this).removeClass("active");
-                                                $(this)
-                                                        .siblings(".content")
-                                                        .slideUp(200);
-                                                $(".set > a i")
-                                                        .removeClass("fa-minus")
-                                                        .addClass("fa-plus");
-                                            } else {
-                                                $(".set > a i")
-                                                        .removeClass("fa-minus")
-                                                        .addClass("fa-plus");
-                                                $(this)
-                                                        .find("i")
-                                                        .removeClass("fa-plus")
-                                                        .addClass("fa-minus");
-                                                $(".set > a").removeClass("active");
-                                                $(this).addClass("active");
-                                                $(".content").slideUp(200);
-                                                $(this)
-                                                        .siblings(".content")
-                                                        .slideDown(200);
-                                            }
-                                        });
-                                    });
-                                    $.each(autocomplete_club, function (key, val) {
-                                        autocomplete_suggestion.push({value: val.name, data: {category: 'Club', id: val.club_id}});
-                                    });
-                                    $.each(autocomplete_news, function (key, val) {
-                                        autocomplete_suggestion.push({value: val.title, data: {category: 'News', id: val.news_id}});
-                                    });
-                                    $.each(autocomplete_press_release, function (key, val) {
-                                        autocomplete_suggestion.push({value: val.title, data: {category: 'Press Release', id: val.press_release_id}});
-                                    });
-                                    $('.head-search').devbridgeAutocomplete({
-                                        lookup: autocomplete_suggestion,
-                                        minChars: 1,
-                                        onSelect: function (suggestion) {
-                                            if (suggestion.data.category == 'News') {
-                                                window.location = 'news?nid=' + suggestion.data.id;
-                                            }
-                                            if (suggestion.data.category == 'Club') {
-                                                window.location = 'club-page?cid=' + suggestion.data.id;
-                                            }
-                                            if (suggestion.data.category == 'Press Release') {
-                                                window.location = 'press?pid=' + suggestion.data.id;
-                                            }
-                                        },
-                                        showNoSuggestionNotice: true,
-                                        noSuggestionNotice: 'Sorry, no matching results',
-                                        groupBy: 'category'
-                                    });
+        // Smart Wizard 1
+        $('#smartwizard').smartWizard({
+            selected: 0,
+            theme: 'arrows',
+            transitionEffect: 'fade',
+            showStepURLhash: false,
+            anchorClickable: false,
+            enableAllAnchors: false,
+            useURLhash: false,
+            anchorSettings: {
+                enableAnchorOnDoneStep: false
+            },
+            toolbarSettings: {toolbarPosition: 'both',
+                toolbarExtraButtons: [btnFinish, btnCancel]
+            }
+        });
+        $('#smartwizard_container').removeClass('hidden');
+        $(".set > a").on("click", function () {
+            if ($(this).hasClass("active")) {
+                $(this).removeClass("active");
+                $(this)
+                        .siblings(".content")
+                        .slideUp(200);
+                $(".set > a i")
+                        .removeClass("fa-minus")
+                        .addClass("fa-plus");
+            } else {
+                $(".set > a i")
+                        .removeClass("fa-minus")
+                        .addClass("fa-plus");
+                $(this)
+                        .find("i")
+                        .removeClass("fa-plus")
+                        .addClass("fa-minus");
+                $(".set > a").removeClass("active");
+                $(this).addClass("active");
+                $(".content").slideUp(200);
+                $(this)
+                        .siblings(".content")
+                        .slideDown(200);
+            }
+        });
+    });
+    $.each(autocomplete_club, function (key, val) {
+        autocomplete_suggestion.push({value: val.name, data: {category: 'Club', id: val.club_id}});
+    });
+    $.each(autocomplete_news, function (key, val) {
+        autocomplete_suggestion.push({value: val.title, data: {category: 'News', id: val.news_id}});
+    });
+    $.each(autocomplete_press_release, function (key, val) {
+        autocomplete_suggestion.push({value: val.title, data: {category: 'Press Release', id: val.press_release_id}});
+    });
+    $('.head-search').devbridgeAutocomplete({
+        lookup: autocomplete_suggestion,
+        minChars: 1,
+        onSelect: function (suggestion) {
+            if (suggestion.data.category == 'News') {
+                window.location = 'news?nid=' + suggestion.data.id;
+            }
+            if (suggestion.data.category == 'Club') {
+                window.location = 'club-page?cid=' + suggestion.data.id;
+            }
+            if (suggestion.data.category == 'Press Release') {
+                window.location = 'press?pid=' + suggestion.data.id;
+            }
+        },
+        showNoSuggestionNotice: true,
+        noSuggestionNotice: 'Sorry, no matching results',
+        groupBy: 'category'
+    });
 </script>
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v5.0"></script>

@@ -84,6 +84,7 @@ body {
 
 .header-login p, .header-login a {
     color: #fff;
+    font-size: 16px;
 }
 
 .header-login a:hover {
@@ -191,7 +192,7 @@ body {
 
 .bg-1 .container {
     position: absolute;
-    left: 14%;
+    left: 10%;
     z-index: 1;
     top: 10px;
 }
@@ -222,7 +223,7 @@ body {
     width: auto;
     height: auto;
     transform: skew(-20deg);
-    background: red;
+    background: rgba(255, 0, 0, 0.7);
     bottom: 0;
     text-decoration: none;
     padding: 0 20px;
@@ -234,11 +235,11 @@ body {
 
 .tag-box p {
     color: #fff;
-    padding: 10px 30px;
+    padding: 3px;
     margin-top: 0px;
     margin-bottom: 0;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 17px;
 }
 
 .discover-slider {
@@ -254,17 +255,17 @@ body {
     padding-left: 10px;
     padding-right: 10px;
     margin: 0;
-    background-color: #0006;
+    background-color: rgba(0, 0, 0, 0.8);
     position: relative;
     bottom: 142px;
     border-bottom-right-radius: 7px;
     border-bottom-left-radius: 7px;
-    height: 157px;
+    height: 142px;
 }
 
 .clb-bg {
     background: #ff0000;
-    width: 100px;
+    width: 50px;
     position: relative;
     top: 5px;
     padding: 4px;
@@ -272,6 +273,7 @@ body {
     margin: 0;
     font-weight: 700;
     height: 25px !important;
+    transform: skew(-20deg);
 }
 
 .discover-slider-content h2 {
@@ -890,7 +892,7 @@ body {
 }
 
 .press-release {
-/*    padding-top: 40px;*/
+    /*    padding-top: 40px;*/
     padding-bottom: 60px;
 }
 
@@ -1592,7 +1594,7 @@ body {
 
 /* According CSS */
 .my-account-section {
-/*    background: #808080;*/
+    /*    background: #808080;*/
     background: url(../img/my-account/my_account_bg.jpg);
     padding: 50px 0 100px;
 }
@@ -2064,6 +2066,11 @@ div#html5-watermark {
 .i-con a img {
     width: 25px;
     margin: 0 10px;
+    opacity: 0.7;
+}
+
+.i-con a img:hover {
+    opacity: 1;
 }
 
 .log-in form input[type="checkbox"] {
