@@ -57,7 +57,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                                 <div class="discover-slider-content">
                                     <p class="clb-bg"><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 14) : $obj->charLimit($row['sponsor'], 14) ?></p>
                                     <h2><?php echo $row['title']; ?></h2>
-                                    <p><?php echo $obj->charLimit($row['moto_text'], 70); ?></p>
+                                    <p><?php echo $obj->charLimit($row['moto_text'], 60); ?></p>
                                 </div>
                                 <div class="discover-btn">
                                     <a href="news?nid=<?php echo $row['news_id']; ?>" class="discover-btn-home">DISCOVER</a>
@@ -68,11 +68,11 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                 </div>
             </div>
         </section>
-<!--        <section class="media-press-release pad-t-80">
+        <section class="media-press-release pad-t-80">
             <div class="container">
-                <div class="row news-01" onClick="document.location.href = 'news?nid=<?php echo $row['news_id']; ?>'">
-                    <div class="col-md-6" style="padding: 0px 5px 0px 15px;">
-                        <div class="news-img-01 news-01 height-one">
+                <div class="row">
+                    <div class="col-md-6 padding-lr-5">
+                        <div class="news-img-01 news-01 height-one" onClick="document.location.href = 'news?nid=<?php echo $row['news_id']; ?>'">
                             <img src="img/video/003.jpg" alt="" class="img-responsive-01">
                             <div class="news-01-cont">
                                 <div class="position-ad">
@@ -86,8 +86,8 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                     </div>
                     <div class="col-md-6">
                         <div class="row" style="margin-bottom: 12px;">
-                            <div class="col-md-6 col-sm-6 col-xs-6" style="padding: 0px 5px">
-                                <div class="news-img-02 news-01 height-two">
+                            <div class="col-md-6 col-sm-6 col-xs-6 padding-lr-5">
+                                <div class="news-img-02 news-01 height-two" onClick="document.location.href = 'news?nid=<?php echo $row['news_id']; ?>'">
                                     <img src="img/events/001.jpg" alt="" class="img-responsive-h"/>
                                     <div class=" news-02-cont">
                                         <div class="position-ad-01">
@@ -98,8 +98,8 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-sm-6 col-xs-6" style="padding: 0px 5px">
-                                <div class="news-img-03 news-01 height-two">
+                            <div class="col-md-6 col-sm-6 col-xs-6 padding-lr-5">
+                                <div class="news-img-03 news-01 height-two" onClick="document.location.href = 'news?nid=<?php echo $row['news_id']; ?>'">
                                     <img src="img/events/003.jpg" alt="" class="img-responsive-h"/>
                                     <div class=" news-02-cont">
                                         <div class="position-ad-01">
@@ -112,8 +112,8 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                             </div>
                         </div>
                         <div class="row"> 
-                            <div class="col-md-6 col-sm-6" style="padding: 0px 5px">
-                                <div class="news-img-04 news-01 height-two">
+                            <div class="col-md-6 col-sm-6 padding-lr-5">
+                                <div class="news-img-04 news-01 height-two" onClick="document.location.href = 'news?nid=<?php echo $row['news_id']; ?>'">
                                     <img src="img/events/005.jpg" alt="" class="img-responsive-h"/>
                                     <div class=" news-02-cont">
                                         <div class="position-ad-01">
@@ -124,8 +124,8 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-sm-6" style="padding: 0px 5px">
-                                <div class="news-img-05 news-01 height-two">
+                            <div class="col-md-6 col-sm-6 padding-lr-5">
+                                <div class="news-img-05 news-01 height-two" onClick="document.location.href = 'news?nid=<?php echo $row['news_id']; ?>'">
                                     <img src="img/events/002.jpg" alt="" class="img-responsive-h"/>
                                     <div class=" news-02-cont">
                                         <div class="position-ad-01">
@@ -140,7 +140,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                     </div>
                 </div>
             </div>
-        </section>-->
+        </section>
         <section class="media-press-release" onClick="document.location.href = 'press-release?type=<?php echo $type; ?>'">
             <div class="container">
                 <div class="col-md-12">
@@ -304,7 +304,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                                 if (val.club && val.club !== null && val.club !== 'null') {
                                     name = val.club;
                                 }
-                                list = list + '<div class="discover-slider"><img src="' + BASE_URL + val.thumb_image + '" alt="alt" /><div class="discover-slider-content"><p class="clb-bg">' + charLimit(name, 10) + '</p><h2>' + charLimit(val.title, 20) + '</h2><p>' + charLimit(val.moto_text, 120) + '</p><center><a href="news?nid=' + val.news_id + '" class="btn btn-primary">DISCOVER</a></center></div></div>';
+                                list = list + '<div class="discover-slider"><img src="' + BASE_URL + val.thumb_image + '" alt="alt" /><div class="discover-slider-content"><p class="clb-bg">' + charLimit(name, 10) + '</p><h2>' + val.title + '</h2><p>' + charLimit(val.moto_text, 60) + '</p></div><div class="discover-btn"><a href="news?nid=' + val.news_id + '" class="discover-btn-home">DISCOVER</a></div></div>';
                             });
                             $('#club1 .slider').html(list);
                             $('.slider').slick({
