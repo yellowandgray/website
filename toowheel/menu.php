@@ -178,13 +178,25 @@ $autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_relea
                 </div>
             </div>
             <a href="../index" class="logo"><img src='img/logo.png' alt=''></a>
+
             <div class="header-login">
-                <a href="#" class="float-left margin-left-10" id="demo-2" style="position: relative;top: -2px;">
-                    <span onfocusin="myFunction()" onfocusout="myFunction2()">
-                        <input type="search" placeholder="Search" class="head-search" autocomplete="off" />
-                        <p id="myDiv">Search</p>
-                    </span> 
+                <a href="#" id="search-menu-btn" class="float-left margin-left-10">
+                    <i class="fa fa-search"></i>
+                    <p>Search</p>
                 </a>
+                <div id="search-menu-overlay" class="block">
+                    <div class="centered">
+                        <div id='search-menu-box'>
+                            <i id="close-btn" class="fa fa-times"></i>
+                            <form id='search-menu-form'>
+                                <input id='search-menu-text' name='q' placeholder='Search' type='search' class="head-search" autocomplete="off" />
+                                <button id='search-menu-button' type='submit'>                     
+                                    <span>Search</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
                 <?php
                 if (!isset($_SESSION["member_id"])) {
                     ?>
@@ -220,7 +232,6 @@ $autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_relea
                     </a>
                 <?php }
                 ?>
-<!--                <a onclick="//document.getElementById('about-club').classList.add('club-about')"><i class="fa fa-user"></i></a>-->
             </div>
         </div>
         <div class="row">
@@ -228,37 +239,6 @@ $autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_relea
                 <input type="search" placeholder="Search" class="head-search" />
             </div>
         </div>
-        <!--        <div class="row">
-                    <div id="about-club">
-                        <p onclick="document.getElementById('about-club').classList.remove('club-about')"><i class="fa fa-times" aria-hidden="true"></i></P>
-                        <h4>Coverage</h4>
-                        <div class="form-group">
-                            <label for="coverage_full_name">Full Name (Next of Kin)</label>
-                            <input placeholder="" id="coverage_full_name" name="coverage_full_name" type="text" class="form-control" />
-                        </div>
-                        <div class="form-group">
-                            <label for="coverage_contact_number">Contact Number</label>
-                            <input type="text" class="form-control" name="coverage_contact_number" id="coverage_contact_number" placeholder="" />
-                        </div>
-                        <div class="form-group">
-                            <label for="coverage_address">Address</label>
-                            <textarea class="form-control" placeholder="" name="coverage_address" id="coverage_address" type="text" rows="3"></textarea>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <p class="dont-show">Dont Show again</p>
-                            </div>
-                            <div class="col-md-3">
-                                <button class="dont-show-cancel">cancel</button>
-                            </div>
-                            <div class="col-md-3">
-                                <button class="dont-show-submit">Submit</button>
-                            </div>
-                        </div>
-        
-                    </div>
-        
-                </div>-->
     </div>
 </section>
 <script>
@@ -296,5 +276,4 @@ $autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_relea
         var x = document.getElementById("myDiv");
         x.style.display = "block";
     }
-
 </script>

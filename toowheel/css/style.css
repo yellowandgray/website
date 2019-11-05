@@ -84,6 +84,7 @@ body {
 
 .header-login p, .header-login a {
     color: #fff;
+    font-size: 16px;
 }
 
 .header-login a:hover {
@@ -191,7 +192,7 @@ body {
 
 .bg-1 .container {
     position: absolute;
-    left: 14%;
+    left: 10%;
     z-index: 1;
     top: 10px;
 }
@@ -890,7 +891,7 @@ body {
 }
 
 .press-release {
-/*    padding-top: 40px;*/
+    /*    padding-top: 40px;*/
     padding-bottom: 60px;
 }
 
@@ -1592,7 +1593,7 @@ body {
 
 /* According CSS */
 .my-account-section {
-/*    background: #808080;*/
+    /*    background: #808080;*/
     background: url(../img/my-account/my_account_bg.jpg);
     padding: 50px 0 100px;
 }
@@ -2064,6 +2065,11 @@ div#html5-watermark {
 .i-con a img {
     width: 25px;
     margin: 0 10px;
+    opacity: 0.7;
+}
+
+.i-con a img:hover {
+    opacity: 1;
 }
 
 .log-in form input[type="checkbox"] {

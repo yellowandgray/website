@@ -2783,14 +2783,14 @@ body .calender-box{
 /*#demo-2 input[type=search]:hover {
     background-color: #85858500;
 }*/
-#demo-2 input[type=search]:focus {
+/*#demo-2 input[type=search]:focus {
     width: 200px;
     padding-left: 30px;
     color: #000;
     background-color: #fff;
     cursor: auto;
     border-color: transparent;
-    /* top: 108px; */
+     top: 108px; 
     position: relative;
     border: 1px solid #F44336;
     right: 20%;
@@ -2802,9 +2802,9 @@ body .calender-box{
 }
 #demo-2 input::-webkit-input-placeholder {
     color: transparent;
-}
+}*/
 
-.header-login input {
+/*.header-login input {
     outline: none;
 }
 .header-login input[type=search] {
@@ -2815,9 +2815,9 @@ body .calender-box{
 }
 .header-login input::-webkit-search-cancel-button {
     display: none; 
-}
+}*/
 
-.header-login input[type=search] {
+/*.header-login input[type=search] {
     background: #85858500 url(../img/search.png) no-repeat 0px center;
     border: solid 1px #85858500;
     padding: 0px 15px 9px 0px;
@@ -2825,21 +2825,21 @@ body .calender-box{
     -webkit-border-radius: 10em;
     -moz-border-radius: 10em;
     border-radius: 10em;
-    /*    -webkit-transition: all .5s;
-        -moz-transition: all .5s;*/
-    /*    transition: all .35s;*/
-    /*position: absolute;*/
-    /*    right: 20%;
-        top: 24px;*/
-}
+        -webkit-transition: all .5s;
+        -moz-transition: all .5s;
+        transition: all .35s;
+    position: absolute;
+        right: 20%;
+        top: 24px;
+}*/
 
-.header #demo-2 p {
+/*.header #demo-2 p {
     position: relative;
     top: -6px;
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
     transition: all .5s;
-}
+}*/
 /*.header-login #demo-2 input[type=search]:focus {
     width: 200px;
     background-color: #fff;
@@ -4345,4 +4345,115 @@ hr {
 .press-cover-image-bg {
     width: 100%;
     height: 200px
+}
+
+#search-menu-btn{
+    color: #ed1c24;
+}
+
+#search-menu-btn:hover{
+    color: rgba(237, 28, 36, 0.7);
+    cursor: pointer;
+}
+
+#search-menu-btn i {
+    font-size: 25px;
+}
+
+#search-menu-overlay{
+    display:none;
+}
+.block {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom:0 ;
+    left: 0;
+    overflow: auto;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.9);
+    border: #a0a0a0 solid 1px;
+    margin: 0;
+}
+
+.block:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: 0;
+    /* Adjusts for spacing */
+    /* For visualization 
+    background: #808080; width: 5px;
+    */
+}
+
+.centered {
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+    padding: 10px 15px;
+    color: #FFF;
+    border: none;
+    background: transparent;
+}
+
+#search-menu-box {
+    position: relative;
+    width: 100%;
+    margin: 0;
+}
+
+#search-menu-form {
+    height: 4em;
+    border: 1px solid #999;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+#search-menu-text {
+    font-size: 14px;
+    color: #ddd;
+    border-width: 0;
+    background: transparent;
+}
+
+#search-menu-box input[type="search"] {
+    width: 90%;
+    padding: 15px 0;
+    color: #333;
+    outline: none;
+    font-size: 1.4em;
+}
+
+#search-menu-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 4.7em;
+    width: 100px;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    line-height: 42px;
+    border-width: 0;
+    background-color: #ed1c24;
+    -webkit-border-radius: 0 2px 2px 0;
+    -moz-border-radius: 0 2px 2px 0;
+    border-radius: 0 2px 2px 0;
+    cursor: pointer;
+}
+
+#close-btn{
+    position: fixed;
+    top: 1em;
+    right: 1em;
+    font-size: 25px;
+}
+#close-btn:hover{
+    color: #777;
+    cursor: pointer;
 }
