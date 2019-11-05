@@ -80,7 +80,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                                 <span class="input-group-text"><i class="fa fa-users" aria-hidden="true"></i></span>
                                             </div>
                                             <select class="form-control" id="gender" name="gender">                                            
-                                                <option value="0">Gendar</option>
+                                                <option value="0">Gender</option>
                                                 <option value="male">Male</option>
                                                 <option value="female">Female</option>
                                             </select>
