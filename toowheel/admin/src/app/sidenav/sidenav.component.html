@@ -13,8 +13,6 @@
 </mat-nav-list>
 <p class="last-login" *ngIf="data.last_login && data.last_login != '0000-00-00 00:00:00'">Last Login: {{data.last_login | date: 'dd-MM-yyyy hh:mm:ss'}}</p>
 <mat-nav-list>
-    
-    
     <a mat-list-item routerLinkActive="active-nav" *ngIf="data.role != 'Editor' " (click)="expendfun(1)">         
         <mat-icon>dashboard</mat-icon> Dashboard 
         <button style="margin-left: 70px;" mat-icon-button>
