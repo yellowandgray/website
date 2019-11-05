@@ -1,11 +1,11 @@
 <footer class="ftco-footer ftco-section">
-<!--    <div class="row">
-        <div class="mouse">
-            <a href="#" class="mouse-icon">
-                <div class="mouse-wheel"><span class="ion-ios-arrow-up"></span></div>
-            </a>
-        </div>
-    </div>-->
+    <!--    <div class="row">
+            <div class="mouse">
+                <a href="#" class="mouse-icon">
+                    <div class="mouse-wheel"><span class="ion-ios-arrow-up"></span></div>
+                </a>
+            </div>
+        </div>-->
     <div class="row footer-h">
         <div class="footer-1">
             <div class="ftco-footer-widget ftco-footer-widget-img mb-4">
@@ -58,7 +58,7 @@
                         <input type="text" name="fname" placeholder="Name">
                         <input type="email" name="email" placeholder="Email Address">
                     </div>
-                   <div class="footer-3">
+                    <div class="footer-3">
                         <div class="button-2">
                             <div class="eff-1"></div>
                             <a href="#">SUBMIT</a>
@@ -171,3 +171,34 @@
         }
     }
 </script>
+<!--login-->
+<script>
+// Get the modal
+    var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+<!--login-->
+<!--cart tab-->
+<script>
+    function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks-add");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+    document.getElementById("defaultOpen").click();
+</script>
+<!--cart tab-->

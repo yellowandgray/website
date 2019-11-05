@@ -6,7 +6,7 @@
 
         <!-- END nav -->
         <?php include 'enquiry.php'; ?>
-        <section id="home-section" class="hero" style="background-image:url(images/bg_green.jpg);background-size:cover">
+        <section id="home-section" class="hero" style="background-image:url(images/bg_green-02.jpg);background-size:cover">
             <!--            <div id="video-viewport">
                             <video width="1920" height="1280" autoplay muted loop>
                                 <source src="video/nature-01.mp4" type="video/mp4">
@@ -97,42 +97,42 @@
             </div>
         </section>
         <section class="ftco-category pad-20-80 res-feature">
-            <div class="col-md-12">
+              <div class="col-md-12">
 
-                <div class="row feature-l"> 
-                    <div class="col-md-2 col-sm-2 col-4">
-                        <div class="box-1">
-                            <a onclick="document.getElementById('featured').classList.add('featured-view')"><img src="images/feature/003.png" alt=""/></a>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-sm-2 col-4">
-                        <div class="box-1">
-                            <a onclick="document.getElementById('featured-1').classList.add('featured-view')"><img src="images/feature/002.png" alt=""/></a>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-sm-2 col-4">
-                        <div class="box-1">
-                            <a onclick="document.getElementById('featured-2').classList.add('featured-view')"><img src="images/feature/006.png" alt="" /></a>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-sm-2 col-4">
-                        <div class="box-1">
-                            <a onclick="document.getElementById('featured-3').classList.add('featured-view')"><img src="images/feature/001.png" alt=""/></a>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-sm-2 col-4">
-                        <div class="box-1">
-                            <a onclick="document.getElementById('featured-4').classList.add('featured-view')"><img src="images/feature/004.png" alt="" /></a>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-sm-2 col-4">
-                        <div class="box-1">
-                            <a onclick="document.getElementById('featured-5').classList.add('featured-view')"><img src="images/feature/005.png" alt=""/></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+                                        <div class="row feature-l"> 
+                                            <div class="col-md-2 col-sm-2 col-4">
+                                                <div class="box-1">
+                                                    <a onclick="document.getElementById('featured').classList.add('featured-view')"><img src="images/feature/003.png" alt=""/></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 col-4">
+                                                <div class="box-1">
+                                                    <a onclick="document.getElementById('featured-1').classList.add('featured-view')"><img src="images/feature/002.png" alt=""/></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 col-4">
+                                                <div class="box-1">
+                                                    <a onclick="document.getElementById('featured-2').classList.add('featured-view')"><img src="images/feature/006.png" alt="" /></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 col-4">
+                                                <div class="box-1">
+                                                    <a onclick="document.getElementById('featured-3').classList.add('featured-view')"><img src="images/feature/001.png" alt=""/></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 col-4">
+                                                <div class="box-1">
+                                                    <a onclick="document.getElementById('featured-4').classList.add('featured-view')"><img src="images/feature/004.png" alt="" /></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 col-4">
+                                                <div class="box-1">
+                                                    <a onclick="document.getElementById('featured-5').classList.add('featured-view')"><img src="images/feature/005.png" alt=""/></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                               
         </section>
         <section class=" ftco-category pad-80" id="featured">
             <div class="row">
@@ -385,7 +385,7 @@
         <section class="img" style="background-image: url(images/bg-acc.jpg); background-size: cover;">
             <div class="pad-80">
                 <div class="row acc">
-                    <div class="col-md-8 col-sm-12 heading-section ftco-animate deal-of-the-day ftco-animate" style="z-index: 2;">
+                    <div class="col-md-6 heading-section ftco-animate deal-of-the-day ftco-animate" style="z-index: 2;">
                         <h2 class="mb-4 text-center">Recognised / Tested By</h2>
                         <!--                        <div class="">
                                                     <ul class="acc-list accredition">
@@ -395,140 +395,77 @@
                                                         <img src="images/acc/005.png" alt="" /><li>Primary Industry in New Zealand</li>
                                                     </ul>
                                                 </div>-->
-                        <div class=" accredition">
+                        <div class="acc-list accredition">
                             <div class="row">
-                                <div class="col-md-12">
-                                    <div class="row">
-                                        <div class="col-md-6 col-sm-12">
-                                            <div class="report-logo">
-                                                <img src="images/acc/008.png" alt=""/>
-                                                <p>Fresche Application Testing</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-sm-12">
-                                            <div class="report-logo">
-                                                <img src="images/acc/005-01.png" alt="" class=""/>
-                                                <p>US EPA</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-4 col-sm-4 col-xs-6">
-
-                                            <div class="report-logo">
-                                                <img src="images/acc/002.png" alt=""/>
-                                                <p>Oeko-Tex</p>
-                                            </div>
-                                            <div class="report-logo">
-                                                <img src="images/acc/010.png" alt=""/>
-                                                <p>European BPR</p>
-                                            </div>
-                                            <div class="report-logo">
-                                                <img src="images/acc/004.png" alt=""/>
-                                                <p>SHRIRAM INSTITUTE FOR INDUSTRIAL RESEARCH</p>
-                                            </div>
-
-                                        </div>
-                                        <div class="col-md-4 col-sm-4 col-xs-6">
-                                            <div class="report-logo">
-                                                <img src="images/acc/007.png" alt=""/>
-                                                <p>AMS laboratory</p>
-                                            </div>
-                                            <div class="report-logo">
-                                                <img src="images/acc/003.png" alt=""/>
-                                                <p>HITECH Diagnostic Centre</p>
-                                            </div>
-                                            <div class="report-logo">
-                                                <img src="images/acc/006.png" alt="" class=""/>
-                                                <p>MEDICA Superspecialty Hospital</p>
-                                            </div>
-
-                                        </div>
-                                        <div class="col-md-4 col-sm-4 col-xs-6">
-                                            <div class="report-logo">
-                                                <img src="images/acc/010.png" alt="" />
-                                                <p>Primary Industry in New Zealand</p>
-                                            </div>
-                                            <div class="report-logo">
-                                                <img src="images/acc/001.png" alt=""/>
-                                                <p>BANGALORE TEST HOUSE</p>
-                                            </div>
-
-                                            <div class="report-logo">
-                                                <img src="images/acc/009.png" alt=""/>
-                                                <p>THE SOUTH INDIA TEXTILE RESEARCH ASSOCIATION</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!--                                    <ul class="rec-list">
-                                                                            <div class="hov-img">
-                                                                                <img src="images/acc/005.png" alt="" class="hov-img-1"/> <img src="images/acc/005-01.png" alt="" class="hov-img-2"/><li>US EPA</li>
-                                                                            </div> 
-                                                                            <img src="images/acc/002.png" alt=""/><li>Oeko-Tex</li>
-                                                                            <img src="images/acc/010.png" alt=""/><li>European BPR</li>
-                                                                            <img src="images/acc/010.png" alt="" /><li>Primary Industry in New Zealand</li>
-                                                                            <img src="images/acc/005.png" alt="" /><li>Primary Industry in New Zealand</li>
-                                                                            <img src="images/acc/007.png" alt=""/><li>AMS laboratory</li>
-                                                                            <img src="images/acc/008.png" alt=""/><li>Fresche Application Testing</li>
-                                                                        </ul>-->
+                                <div class="col-md-6">
+                                    <ul class="rec-list">
+                                        <div class="hov-img">
+                                            <img src="images/acc/005.png" alt="" class="hov-img-1"/> <img src="images/acc/005-01.png" alt="" class="hov-img-2"/><li>US EPA</li>
+                                        </div> 
+                                        <img src="images/acc/002.png" alt=""/><li>Oeko-Tex</li>
+                                        <img src="images/acc/010.png" alt=""/><li>European BPR</li>
+                                        <img src="images/acc/010.png" alt="" /><li>Primary Industry in New Zealand</li>
+                                        <!--<img src="images/acc/005.png" alt="" /><li>Primary Industry in New Zealand</li>-->
+                                        <img src="images/acc/007.png" alt=""/><li>AMS laboratory</li>
+                                        <img src="images/acc/008.png" alt=""/><li>Fresche Application Testing</li>
+                                    </ul>
                                 </div>
-                                <!--                                <div class="col-md-6">
-                                                                    <img src="images/acc/003.png" alt=""/><li>HITECH Diagnostic Centre</li>
-                                                                    <div class="hov-img">
-                                                                        <img src="images/acc/006-01.png" alt="" class="hov-img-1"/> <img src="images/acc/006.png" alt="" class="hov-img-2"/><li>MEDICA Superspecialty Hospital</li>
-                                                                    </div>
-                                                                    <img src="images/acc/004.png" alt=""/><li>SHRIRAM INSTITUTE FOR INDUSTRIAL RESEARCH</li>
-                                
-                                
-                                                                    <img src="images/acc/001.png" alt=""/><li>BANGALORE TEST HOUSE</li>
-                                                                    <img src="images/acc/009.png" alt=""/><li>THE SOUTH INDIA TEXTILE RESEARCH ASSOCIATION</li>
-                                                                                                        <div class="fs-gal-view">
-                                                                                                            <h1></h1>
-                                                                                                            <img class="fs-gal-prev fs-gal-nav" src="images/prev.svg" alt="Previous picture" title="Previous picture" />
-                                                                                                            <img class="fs-gal-next fs-gal-nav" src="images/next.svg" alt="Next picture" title="Next picture" />
-                                                                                                            <img class="fs-gal-close" src="images/close.svg" alt="Close gallery" title="Close gallery" />
-                                                                                                            <img class="fs-gal-main" src="" alt="" />
-                                                                                                        </div>
-                                                                                                        <div class="row report">
-                                                                                                            <div class="col-md-12">
-                                                                                                                <h3 class="text-center">Test Reports</h3>
-                                                                                                            </div>
-                                                                                                            <div class="col-md-4 col-sm-3 col-xs-3">
-                                                                                                                 <img class="fs-gal" src="images/report/001.jpg" alt=""  data-url="images/report/001.jpg"/>
-                                                                                                            </div>
-                                                                                                           <div class="col-md-4 col-sm-3 col-xs-3">
-                                                                                                              <img class="fs-gal" src="images/report/002.jpg" alt=""  data-url="images/report/002.jpg"/>
-                                                                                                            </div>
-                                                                                                           <div class="col-md-4 col-sm-3 col-xs-3">
-                                                                                                             <img class="fs-gal" src="images/report/003.jpg" alt=""  data-url="images/report/003.jpg"/>
-                                                                                                            </div>
-                                                                                                            <div class="col-md-4 col-sm-3 col-xs-3">
-                                                                                                               <img class="fs-gal" src="images/report/004.jpg" alt=""  data-url="images/report/004.jpg"/>
-                                                                                                            </div>
-                                                                                                            <div class="col-md-4 col-sm-3 col-xs-3 ">
-                                                                                                                <img class="fs-gal" src="images/report/005.jpg" alt=""  data-url="images/report/005.jpg"/>
-                                                                                                            </div>
-                                                                                                           <div class="col-md-4 col-sm-3 col-xs-3">
-                                                                                                                <img class="fs-gal" src="images/report/006.jpg" alt=""  data-url="images/report/006.jpg"/>
-                                                                                                            </div>
-                                                                                                           <div class="col-md-4 col-sm-3 col-xs-3">
-                                                                                                                <img class="fs-gal" src="images/report/007.jpg" alt=""  data-url="images/report/007.jpg"/>
-                                                                                                            </div>
-                                                                                                            <div class="col-md-4 col-sm-3 col-xs-3 ">
-                                                                                                               <img class="fs-gal" src="images/report/008.jpg" alt=""  data-url="images/report/008.jpg"/>
-                                                                                                            </div>
-                                                                                                           <div class="col-md-4 col-sm-3 col-xs-3">
-                                                                                                               <img class="fs-gal" src="images/report/009.jpg" alt=""  data-url="images/report/009.jpg"/>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                </div>-->
+                                <div class="col-md-6">
+                                    <img src="images/acc/003.png" alt=""/><li>HITECH Diagnostic Centre</li>
+                                    <div class="hov-img">
+                                        <img src="images/acc/006-01.png" alt="" class="hov-img-1"/> <img src="images/acc/006.png" alt="" class="hov-img-2"/><li>MEDICA Superspecialty Hospital</li>
+                                    </div>
+                                    <img src="images/acc/004.png" alt=""/><li>SHRIRAM INSTITUTE FOR INDUSTRIAL RESEARCH</li>
+
+
+                                    <img src="images/acc/001.png" alt=""/><li>BANGALORE TEST HOUSE</li>
+                                    <img src="images/acc/009.png" alt=""/><li>THE SOUTH INDIA TEXTILE RESEARCH ASSOCIATION</li>
+                                    <!--                                    <div class="fs-gal-view">
+                                                                            <h1></h1>
+                                                                            <img class="fs-gal-prev fs-gal-nav" src="images/prev.svg" alt="Previous picture" title="Previous picture" />
+                                                                            <img class="fs-gal-next fs-gal-nav" src="images/next.svg" alt="Next picture" title="Next picture" />
+                                                                            <img class="fs-gal-close" src="images/close.svg" alt="Close gallery" title="Close gallery" />
+                                                                            <img class="fs-gal-main" src="" alt="" />
+                                                                        </div>
+                                                                        <div class="row report">
+                                                                            <div class="col-md-12">
+                                                                                <h3 class="text-center">Test Reports</h3>
+                                                                            </div>
+                                                                            <div class="col-md-4 col-sm-3 col-xs-3">
+                                                                                 <img class="fs-gal" src="images/report/001.jpg" alt=""  data-url="images/report/001.jpg"/>
+                                                                            </div>
+                                                                           <div class="col-md-4 col-sm-3 col-xs-3">
+                                                                              <img class="fs-gal" src="images/report/002.jpg" alt=""  data-url="images/report/002.jpg"/>
+                                                                            </div>
+                                                                           <div class="col-md-4 col-sm-3 col-xs-3">
+                                                                             <img class="fs-gal" src="images/report/003.jpg" alt=""  data-url="images/report/003.jpg"/>
+                                                                            </div>
+                                                                            <div class="col-md-4 col-sm-3 col-xs-3">
+                                                                               <img class="fs-gal" src="images/report/004.jpg" alt=""  data-url="images/report/004.jpg"/>
+                                                                            </div>
+                                                                            <div class="col-md-4 col-sm-3 col-xs-3 ">
+                                                                                <img class="fs-gal" src="images/report/005.jpg" alt=""  data-url="images/report/005.jpg"/>
+                                                                            </div>
+                                                                           <div class="col-md-4 col-sm-3 col-xs-3">
+                                                                                <img class="fs-gal" src="images/report/006.jpg" alt=""  data-url="images/report/006.jpg"/>
+                                                                            </div>
+                                                                           <div class="col-md-4 col-sm-3 col-xs-3">
+                                                                                <img class="fs-gal" src="images/report/007.jpg" alt=""  data-url="images/report/007.jpg"/>
+                                                                            </div>
+                                                                            <div class="col-md-4 col-sm-3 col-xs-3 ">
+                                                                               <img class="fs-gal" src="images/report/008.jpg" alt=""  data-url="images/report/008.jpg"/>
+                                                                            </div>
+                                                                           <div class="col-md-4 col-sm-3 col-xs-3">
+                                                                               <img class="fs-gal" src="images/report/009.jpg" alt=""  data-url="images/report/009.jpg"/>
+                                                                            </div>
+                                                                        </div>-->
+                                </div>
                             </div>
 
                         </div>
 
                     </div>
-                    <div class="col-md-4 col-sm-12 heading-section ftco-animate deal-of-the-day ftco-animate">
+                    <div class="col-md-6 heading-section ftco-animate deal-of-the-day ftco-animate">
                         <h2 class="mb-4 text-center">Test Reports</h2>
                         <div class="row ftco-animate">
                             <div class="col-md-12">

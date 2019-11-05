@@ -28,7 +28,7 @@
             <div class="pad-lr-80">
                 <div class="row">
                     <div class="col-lg-8 product-details pl-md-5 ftco-animate">
-                        <h3>About Guardian health management</h3>
+                        <h3>About Guardian Health Management</h3>
                         <p>Guardian health management is a privately owned company and part of the Guardian Group. We are focused on health care related products and services that touch the lives of all.</p>
                         <p>Guardian Health represents Fresche Bio-Sciences, in India Bangladesh Nepal and Sri Lanka.</p>
                         <p>Fresche Bio-Sciences is a leading international company specializing in the research, development and distribution of next generation molecular compounds for microbial control. Our products offer a signiﬁcant value addition to consumers and in a range of applications; Textile, Health Care, Industrial and scientiﬁc to name a few. To know more about our products and services please do contact us.</p>

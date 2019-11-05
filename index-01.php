@@ -6,7 +6,7 @@
 
         <!-- END nav -->
         <?php include 'enquiry.php'; ?>
-        <section id="home-section" class="hero" style="background-image:url(images/bg_green.jpg);background-size:cover">
+        <section id="home-section" class="hero" style="background-image:url(images/bg_green-01.jpg);background-size:cover">
             <!--            <div id="video-viewport">
                             <video width="1920" height="1280" autoplay muted loop>
                                 <source src="video/nature-01.mp4" type="video/mp4">
@@ -25,28 +25,15 @@
 
 
                                         <h2 class="subheading mb-4">FRESCHE delivers high performance antibacterial, antifungal, mould and odour control on treated textile fibres and substrates.</h2>
-                                        <div class="row price">
-
-                                            <div class="col-md-8 pro-d col-sm-6 ">
-                                                <div class="row">
-                                                    <div class="col-md-6 col-sm-6">
-                                                        <img src="images/logo.png" alt=""/>
-                                                    </div>
-                                                </div>
-                                                <h3>Combo Pack</h3>
-                                                <p>Fresche EF 3851– 1 Litre</p>
-                                                <p>Bz 1 Binder – 1.5 Litre </p>
-                                                <p><span><i class="fa fa-inr" aria-hidden="true"></i></span><span>8000/-</span></p>
-                                                <!--                                                <div class="button-1">
-                                                                                                    <div class="eff-1"></div>
-                                                                                                    <a href="#"><img src="images/add.png" alt="" class="add-img"/>  Add To Cart</a>
-                                                                                                </div>-->
-
+                                        <div class="row pack">
+                                            <div class="col-md-6 col-sm-6 add-cart ">
+                                                <a href="product.php"><img src="images/combo.png" class="img-responsive"/></a>
+                                                <p>Fresche Combo Pack</p>
                                             </div>
-                                            <div class="col-md-4 col-sm-6 add-cart">
-                                                <img src="images/add-cart.png" alt="" class="img-responsive"/>
+                                            <div class="col-md-6 col-sm-6 add-cart">
+                                                <a href="product.php"><img src="images/mini.png" alt="" class="img-responsive"/></a>
+                                                <p>Fresche Mini Kit</p>
                                             </div>
-
                                         </div>
                                     </div>
                                     <div class="col-md-4 col-sm-12 pro-img">
@@ -96,7 +83,7 @@
                 </div>
             </div>
         </section>
-        <section class="ftco-category pad-20-80 res-feature">
+      <section class="ftco-category pad-20-80 res-feature">
             <div class="col-md-12">
 
                 <div class="row feature-l"> 

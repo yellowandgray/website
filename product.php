@@ -8,9 +8,9 @@
 
 
         <!-- END nav -->
-            <?php include 'enquiry.php'; ?>
+        <?php include 'enquiry.php'; ?>
         <section>
-<?php include 'menu.php'; ?>
+            <?php include 'menu.php'; ?>
         </section>
         <div class="hero-wrap hero-bread" style="background-image: url('images/bg_1.jpg'); background-size: cover;">
 
@@ -52,20 +52,41 @@
         <section class="ftco-section" style="background: #efefef;">
             <div class="pad-lr-80">
                 <div class="row product-2">
-                    <div class="col-lg-8 product-details pl-md-5 ftco-animate">
-                        <h3>BZ1 Binder</h3>
-                        <p>Fresche BZ1 is a non-formaldehyde containing polymeric resin used with the Fresche EF3851 antimicrobials to improve durability of anti microbial protection when applied to synthetics, cellulosics, and their blends.</p>
-                        <p>Fresche BZ1 is pad applied at a 1.0-2.0% level on the weight of bath volume with Fresche antimicrobials. The treated fabric can then be dried and cured with "normal" drying and curing/heat setting temperatures and dwell time consistent with the fabric construction.</p>
-                        <button class="button-03"><a href="#"><i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart ( <i class="fa fa-inr" aria-hidden="true"></i> 8000 )</a></button> 
-                        <p class="add-price">(It contains 1 KG Fresche EF 3851 and 1.5 KG of Bz 1 Binder)</p>
+                    <div class="col-lg-8  product-details pl-md-5 ftco-animate">
+                        <div class="row">
+                            <div class=" col-md-12 bz1-order-2">
+                                <h3>BZ1 Binder</h3>
+                                <p>Fresche BZ1 is a non-formaldehyde containing polymeric resin used with the Fresche EF3851 antimicrobials to improve durability of anti microbial protection when applied to synthetics, cellulosics, and their blends.</p>
+                                <p>Fresche BZ1 is pad applied at a 1.0-2.0% level on the weight of bath volume with Fresche antimicrobials. The treated fabric can then be dried and cured with "normal" drying and curing/heat setting temperatures and dwell time consistent with the fabric construction.</p>
+                               <!--<p class="add-price">(It contains 1 KG Fresche EF 3851 and 1.5 KG of Bz 1 Binder)</p>-->
+                            </div>
+                            <div class=" col-md-12  bz1-order ">
+                                <div class=" combo">
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-12 add-cart">
+                                            <img src="images/product001.png" alt="" class="img-responsive"/>
+                                        </div>
+                                        <div class="col-md-8 pro-d col-sm-12 ">
+                                            <h3>Combo Pack</h3>
+                                            <p>Fresche EF 3851– 1 Litre</p>
+                                            <p>Bz 1 Binder – 1.5 Litre </p>
+                                            <p><span><i class="fa fa-inr" aria-hidden="true"></i></span><span>8000/-</span></p>
+                                            <button class="button-03"><a href="#"><i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart ( <i class="fa fa-inr" aria-hidden="true"></i> 8000 )</a></button> 
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-lg-4 mb-5 ftco-animate">
+                    <div class="col-lg-4  mb-5 ftco-animate">
                         <div class="product-img-box">
-                       <!--<a href="images/product-0
-                       1.png" class="image-popup"><img src="images/product-01.png" class="img-fluid" alt="Colorlib Template"></a>-->
+                            <!--<a href="images/product-0
+                            1.png" class="image-popup"><img src="images/product-01.png" class="img-fluid" alt="Colorlib Template"></a>-->
                             <img src="images/product-03.png" class="product-img-responsive" alt="">
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -83,9 +104,9 @@
                         <p class="text-justify"><strong>Fresche :</strong>  Fresche is a new generation Si QAC antimicrobial which delivers high performance, broad-spectrum antibacterial, anti-fungal, mould and odour protection on surfaces and garments to which they are either applied or infused. </p>
                         <p class="text-justify">They are widely recognized as one of the world's most advanced non-volatile, surface-bonded antimicrobial, safe for people, plants, pets, and the environment.  </p>
                         <p class="text-justify">In addition to regular 1 Kg pack, Fresche is also available in the mini kit.</p>
-                        <p class="text-justify"><strong>Fresche Mini Kit :</strong>Fresche mini kit contains 2 sets of 5 ml Fresche EF3851 and 10 ml BZ1 Binder with a user manua</p>
-                        <p class="text-justify">Freshe Mini Kit sets can treat 1 Kg of Fabric or 300 to 400 Sq.feet area.<br/>Fresche Mini Kit costs Rs.250</p>
-                      
+                        <p class="text-justify"><strong>Fresche Mini Kit :</strong>Fresche mini kit contains 2 sets of 5 ml Fresche EF3851 and 10 ml BZ1 Binder with a user manual</p>
+                        <p class="text-justify">Freshe Mini Kit sets can treat 1 Kg of Fabric or Upto 250 Sq.feet area.<br/>Fresche Mini Kit costs Rs.250</p>
+
                     </div>
                 </div>
             </div>
@@ -206,6 +227,6 @@
         </section>
 
 
-<?php include 'footer.php'; ?>
+        <?php include 'footer.php'; ?>
     </body>
 </html>
