@@ -1382,5 +1382,27 @@ marquee {
     display: block;
     max-width: 500px;
     height: auto;
-    width: 100%;
+
+}
+.event-list-tap p{
+    margin-bottom: 0px;
+    float: left;
+    padding: 20px;
+    color: #fff;
+}
+.event-list-tap p{
+    margin-bottom: 0px;
+    float: left;
+    padding: 20px;
+    cursor: pointer;
+    border-right: 2px solid #fff;
+  
+}
+.event-list-tap p:hover{
+    color:#429ffc;
+  
+}
+.event-list-tap {
+    background: #333;
+    margin-top: 10px;
 }
