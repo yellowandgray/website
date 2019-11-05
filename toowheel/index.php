@@ -68,7 +68,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                 </div>
             </div>
         </section>
-        <section class="media-press-release pad-t-80">
+<!--        <section class="media-press-release pad-t-80">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 padding-lr-5">
@@ -140,7 +140,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                     </div>
                 </div>
             </div>
-        </section>
+        </section>-->
         <section class="media-press-release" onClick="document.location.href = 'press-release?type=<?php echo $type; ?>'">
             <div class="container">
                 <div class="col-md-12">
