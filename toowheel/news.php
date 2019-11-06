@@ -88,7 +88,7 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
                                     <span><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 30) : $obj->charLimit($row['sponsor'], 30); ?></span>
                                 </span>
                                 <div class="press-cover-image-bg" style="background: url(<?php echo BASE_URL . $row['cover_image']; ?>)no-repeat;background-repeat: no-repeat;background-position: top;background-size: cover; "></div>
-    <!--                                <img src="<?php //echo BASE_URL . $row['cover_image'];  ?>" alt=" image" />-->
+    <!--                                <img src="<?php //echo BASE_URL . $row['cover_image'];   ?>" alt=" image" />-->
                                 <h4><?php echo $row['title']; ?></h4>
                                 <p><?php echo $row['moto_text']; ?></p>
                                 <div class="button-1">
@@ -106,7 +106,7 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
                         <div class="col-md-3">
                             <div class="events-upcoming">
                                 <div class="press-cover-image-bg" style="background: url(<?php echo BASE_URL . $row['cover_image']; ?>)no-repeat;background-repeat: no-repeat;background-position: top;background-size: cover; "></div>
-    <!--                                <img src="<?php //echo BASE_URL . $row['cover_image'];   ?>" alt="" />-->
+    <!--                                <img src="<?php //echo BASE_URL . $row['cover_image'];    ?>" alt="" />-->
                                 <div class="events-upcoming-content">
                                     <h4><?php echo $row['title']; ?></h4>
                                     <p><?php echo $obj->charLimit($row['moto_text'], 75); ?></p>

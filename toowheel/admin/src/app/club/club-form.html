@@ -2,7 +2,7 @@
 <mat-dialog-content class="mat-typography">
     <form [formGroup]="clubForm" (ngSubmit)="onSubmit()">
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
-            <div fxFlex="50%">
+            <div fxFlex="33%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Type</mat-label>
                     <mat-select formControlName="type" (selectionChange)="getCategory()">
@@ -16,7 +16,7 @@
                     <mat-error>Club type is required</mat-error>
                 </mat-form-field>
             </div>
-            <div fxFlex="50%">
+            <div fxFlex="33%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Category</mat-label>
                     <mat-select formControlName="category_id">
@@ -25,6 +25,22 @@
                     </mat-option>
                 </mat-select>
                 <mat-error>Category is required</mat-error>
+            </mat-form-field>
+        </div>
+        <div fxFlex="33%">
+            <mat-form-field appearance="outline" fxFlex="100%">
+                <mat-label>Club name</mat-label>
+                <input matInput placeholder="" formControlName="name" />
+                <mat-error>Club name is required</mat-error>
+            </mat-form-field>
+        </div>
+    </div>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+        <div fxFlex="100%">
+            <mat-form-field class="full-width" fxFlex="100%">
+                <mat-label>About club</mat-label>
+                <textarea rows="6" matInput placeholder="" formControlName="about"></textarea>
+                <mat-error>About club is required</mat-error>
             </mat-form-field>
         </div>
     </div>
@@ -68,14 +84,21 @@
     </div>
     <br/>
     <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-        <div fxFlex="50%">
+        <div fxFlex="33%">
             <mat-form-field appearance="outline" fxFlex="100%">
-                <mat-label>Club name</mat-label>
-                <input matInput placeholder="" formControlName="name" />
-                <mat-error>Club name is required</mat-error>
+                <mat-label>Club Leader Name (Full Name)</mat-label>
+                <input matInput placeholder="" formControlName="club_leader_name" />
+                <mat-error>Club Leader Name is required</mat-error>
             </mat-form-field>
         </div>
-        <div fxFlex="50%">
+        <div fxFlex="33%">
+            <mat-form-field appearance="outline" fxFlex="100%">
+                <mat-label>Username</mat-label>
+                <input matInput placeholder="" formControlName="email" />
+                <mat-error>Username is required</mat-error>
+            </mat-form-field>
+        </div>
+        <div fxFlex="33%">
             <mat-form-field appearance="outline" fxFlex="100%">
                 <mat-label>Rank</mat-label>
                 <input matInput placeholder="" formControlName="rank" />
@@ -83,26 +106,12 @@
             </mat-form-field>
         </div>
     </div>
-    <!--    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
-            <div fxFlex="50%">
-                <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Rank</mat-label>
-                    <input matInput placeholder="" formControlName="rank" />
-                    <mat-error>Rank is required</mat-error>
-                </mat-form-field>
-            </div>
-            <div fxFlex="50%">
-                <button type="button" mat-raised-button (click)="fileInputBanner.click()">{{club_video_name}}</button>
-                <input hidden #fileInputBanner type="file" id="file_banner" (change)="fileProgress($event, 'club_video_name', 'club_video')" />
-                <mat-icon matTooltip="Width: any, Height: any;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
-            </div>
-        </div>-->
     <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
         <div fxFlex="50%">
             <mat-form-field appearance="outline" fxFlex="100%">
                 <mat-label>Email</mat-label>
-                <input matInput placeholder="" formControlName="email" />
-                 <mat-error>email is required</mat-error>
+                <input matInput placeholder="" formControlName="email_id" />
+                <mat-error>email is required</mat-error>
             </mat-form-field>
         </div>
         <div fxFlex="50%">
@@ -110,38 +119,6 @@
                 <mat-label>Phone</mat-label>
                 <input matInput placeholder="" formControlName="mobile" />
                 <mat-error>Phone is required</mat-error>
-            </mat-form-field>
-        </div>
-    </div>
-    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-        <div fxFlex="50%">
-            <mat-form-field appearance="outline" fxFlex="100%">
-                <mat-label>Facebook Link</mat-label>
-                <input matInput placeholder="" formControlName="facebook_link" />
-                <mat-error>Facebook Link is required</mat-error>
-            </mat-form-field>
-        </div>
-        <div fxFlex="50%">
-            <mat-form-field appearance="outline" fxFlex="100%">
-                <mat-label>Youtube Link</mat-label>
-                <input matInput placeholder="" formControlName="youtube_link" />
-                <mat-error>Youtube Link is required</mat-error>
-            </mat-form-field>
-        </div>
-    </div>
-    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-        <div fxFlex="50%">
-            <mat-form-field appearance="outline" fxFlex="100%">
-                <mat-label>Twitter Link</mat-label>
-                <input matInput placeholder="" formControlName="twitter_link" />
-                <mat-error>Twitter Link is required</mat-error>
-            </mat-form-field>
-        </div>
-        <div fxFlex="50%">
-            <mat-form-field appearance="outline" fxFlex="100%">
-                <mat-label>Instagram Link</mat-label>
-                <input matInput placeholder="" formControlName="instagram_link" />
-                <mat-error>Instagram Link is required</mat-error>
             </mat-form-field>
         </div>
     </div>
@@ -190,28 +167,35 @@
         </mat-form-field>
     </div>
 </div>
-<div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+<div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
     <div fxFlex="50%">
         <mat-form-field appearance="outline" fxFlex="100%">
-            <mat-label>Club Leader Name (Full Name)</mat-label>
-            <input matInput placeholder="" formControlName="club_leader_name" />
-            <mat-error>Club Leader Name is required</mat-error>
+            <mat-label>Facebook Link</mat-label>
+            <input matInput placeholder="" formControlName="facebook_link" />
+            <mat-error>Facebook Link is required</mat-error>
         </mat-form-field>
     </div>
     <div fxFlex="50%">
-        <!--        <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>No. of Members</mat-label>
-                    <input matInput placeholder="" formControlName="no_of_member" />
-                    <mat-error>Members is required</mat-error>
-                </mat-form-field>-->
+        <mat-form-field appearance="outline" fxFlex="100%">
+            <mat-label>Youtube Link</mat-label>
+            <input matInput placeholder="" formControlName="youtube_link" />
+            <mat-error>Youtube Link is required</mat-error>
+        </mat-form-field>
     </div>
 </div>
-<div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
-    <div fxFlex="100%">
-        <mat-form-field class="full-width" fxFlex="100%">
-            <mat-label>About club</mat-label>
-            <textarea rows="6" matInput placeholder="" formControlName="about"></textarea>
-            <mat-error>About club is required</mat-error>
+<div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+    <div fxFlex="50%">
+        <mat-form-field appearance="outline" fxFlex="100%">
+            <mat-label>Twitter Link</mat-label>
+            <input matInput placeholder="" formControlName="twitter_link" />
+            <mat-error>Twitter Link is required</mat-error>
+        </mat-form-field>
+    </div>
+    <div fxFlex="50%">
+        <mat-form-field appearance="outline" fxFlex="100%">
+            <mat-label>Instagram Link</mat-label>
+            <input matInput placeholder="" formControlName="instagram_link" />
+            <mat-error>Instagram Link is required</mat-error>
         </mat-form-field>
     </div>
 </div>

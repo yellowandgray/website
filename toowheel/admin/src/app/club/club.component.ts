@@ -219,8 +219,8 @@ export class ClubForm {
             'landmark': new FormControl('', ),
             'address': new FormControl('', Validators.required),
             'club_leader_name': new FormControl('', Validators.required),
-            'no_of_member': new FormControl(),
             'email': new FormControl('', Validators.required,),
+            'email_id': new FormControl('', Validators.required,),
             'mobile': new FormControl('',Validators.required),
             'about': new FormControl('', ),
             'facebook_link': new FormControl('', ),
@@ -240,8 +240,8 @@ export class ClubForm {
                 landmark: this.data.landmark,
                 address: this.data.address,
                 club_leader_name: this.data.leader_name,
-                no_of_member: this.data.no_of_member,
                 email: this.data.email,
+                email_id: this.data.email_id,
                 mobile: this.data.phone,
                 about: this.data.about,
                 facebook_link: this.data.facebook_link,
@@ -356,8 +356,8 @@ export class ClubForm {
           formData.append('landmark', this.clubForm.value.landmark);
           formData.append('address', this.clubForm.value.address);
           formData.append('leader_name', this.clubForm.value.club_leader_name);
-          formData.append('no_of_member', this.clubForm.value.no_of_member);
           formData.append('email', this.clubForm.value.email);
+          formData.append('email_id', this.clubForm.value.email_id);
           formData.append('phone', this.clubForm.value.mobile);
           formData.append('about', this.clubForm.value.about);
           formData.append('facebook_link', this.clubForm.value.facebook_link);
@@ -378,8 +378,8 @@ export class ClubForm {
           formData.append('landmark', this.clubForm.value.landmark);
           formData.append('address', this.clubForm.value.address);
           formData.append('club_leader_name', this.clubForm.value.club_leader_name);
-          formData.append('no_of_member', this.clubForm.value.no_of_member);
           formData.append('email', this.clubForm.value.email);
+          formData.append('email_id', this.clubForm.value.email_id);
           formData.append('mobile', this.clubForm.value.mobile);
           formData.append('about', this.clubForm.value.about);
           formData.append('facebook_link', this.clubForm.value.facebook_link);
@@ -627,7 +627,6 @@ export class ClubViewFrom {
             'landmark': new FormControl('', Validators.required),
             'address': new FormControl('', Validators.required),
             'club_leader_name': new FormControl('', Validators.required),
-            'no_of_member': new FormControl(),
             'email': new FormControl('', Validators.required),
             'mobile': new FormControl('', Validators.required),
             'about': new FormControl('', Validators.required),
@@ -648,7 +647,6 @@ export class ClubViewFrom {
                 landmark: this.data.landmark,
                 address: this.data.address,
                 club_leader_name: this.data.leader_name,
-                no_of_member: this.data.no_of_member,
                 email: this.data.email,
                 mobile: this.data.phone,
                 about: this.data.about,

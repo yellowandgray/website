@@ -47,7 +47,7 @@
                             </button>                                    
                             <img matListAvatar src="{{image_url}}{{data.cover_image}}" *ngIf="data.cover_image && data.cover_image != ''" alt="..." (click)="confirmDialog(data, 'preview')" />
                                  <h3 class="truncate" matLine>{{data.title}}</h3>                                        
-                            <p class="truncate2" matLine>{{data.news_date}}</p> 
+                            <p class="truncate2" matLine>{{data.news_date | date: 'dd-MM-yyyy'}}</p> 
                         </mat-list-item>
                     </ng-container>
                 </mat-list>
@@ -91,7 +91,7 @@
                             </button>                                    
                             <img matListAvatar src="{{image_url}}{{data.cover_image}}" *ngIf="data.cover_image && data.cover_image != ''" alt="..." (click)="confirmDialog(data, 'preview')" />
                                  <h3 class="truncate" matLine>{{data.title}}</h3>                                        
-                            <p class="truncate2" matLine>{{data.news_date}}</p> 
+                            <p class="truncate2" matLine>{{data.news_date | date: 'dd-MM-yyyy'}}</p> 
                         </mat-list-item>
                     </ng-container>
                 </mat-list>
