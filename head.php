@@ -16,9 +16,10 @@
         window.isMbscDemo = true;
     </script>
     <meta charset="utf-8">
-    <title>Project Next Door</title>
+    <title>Project Next Door - Provides you with interactive training and coaching</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Project Next Door | Book your Space">
+    <meta name="description" content="Is an established boutique consulting entity that pools together professionals from multiple industry verticals that have vital exposure in Global Multi National Corporations, Inter-Governmental Organizations and the start up scene. We have more than 100 years of collective industry experience.">
+    <meta name="keywords" content="Coaching, Training, immersive learning, creative space, empowering, experiential, engaging, interactive training, industry 4.0, simulations, brainstorming, mind mapping">
     <link rel="icon" href="img/favicon.png" type="image/gif">
     <!-- Begin loading animation -->
     <style>

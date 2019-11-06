@@ -206,17 +206,17 @@
                                             </div>
                                             <div class="form-group col-md-3">
                                                 <label for="email">&nbsp;</label>
-                                                <input type="email" class="form-control" id="email" placeholder="Email" required>
+                                                <input type="email" class="form-control" id="email" placeholder="Email" required >
                                             </div>
                                             <div class="form-group col-md-3">
                                                 <label for="mobile">&nbsp;</label>
-                                                <input type="text" class="form-control" id="mobile" placeholder="Mobile" required>
+                                                <input type="tel" class="form-control" pattern="^\d{4}-\d{3}-\d{4}$" id="mobile" placeholder="Mobile" required>
                                             </div>
                                             <div class="form-group col-md-3">
                                                 <label for="carm3">I'M INTERESTED TO</label>
                                                 <select id="carm3" class="select-session form-control" name="">
                                                     <option value="0">Please Select</option>
-                                                    <!--                                                <option value="Book_a_Coaching_and_Training_Session">Book a Coaching and Training Session</option>-->
+                                                    <!--<option value="Book_a_Coaching_and_Training_Session">Book a Coaching and Training Session</option>-->
                                                     <option value="Rent_a_Space">Rent a Space</option>
                                                     <option value="Others">Others</option>
                                                 </select>

@@ -81,6 +81,14 @@ function submitRecordDate() {
     }
 }
 
+function emailVaildation(id) {
+    var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+    if (!emailReg.test(id)) {
+        alert('Invalid Email Type');
+        return;
+    }
+}
+
 function validDateTime() {
     var msg = '';
     var error = false;
@@ -88,13 +96,10 @@ function validDateTime() {
     var name = $.trim($('#name').val());
     var email = $.trim($('#email').val());
     var mobile = $.trim($('#mobile').val());
-    $('.datepicker').each(function (key, ele) {
-        if ($.trim(ele.value) === '') {
-            msg = 'Select date in row ' + (key + 1);
-            error = true;
-            return false;
-        }
-    });
+    var interest = $.trim($('#carm3').val());
+//    var selected_date = $.trim($('#selected_date').val());
+//    var selected_from_time = $.trim($('#selected_from_time').val());
+//    var selected_to_time = $.trim($('#selected_to_time').val());
     $('.timepicker').each(function (key, ele) {
         if (key % 2 === 0) {
             row = row + 1;
@@ -109,10 +114,13 @@ function validDateTime() {
             return false;
         }
     });
-    if (error === true) {
-        swal("Alert", msg, "info");
-        return false;
-    }
+    $('.datepicker').each(function (key, ele) {
+        if ($.trim(ele.value) === '') {
+            msg = 'Select date in row ' + (key + 1);
+            error = true;
+            return false;
+        }
+    });
     if (name === '') {
         swal("Alert", 'Please enter your name', "info");
         return false;
@@ -125,6 +133,36 @@ function validDateTime() {
         swal("Alert", 'Please enter your mobile', "info");
         return false;
     }
+    if (interest === '0') {
+        swal("Alert", 'Please select your interested to', "info");
+        return false;
+    }
+    if (interest !== 'Others' && error === true) {
+        swal("Alert", msg, "info");
+        return false;
+    }
+//    if (interest !== 'Others') {
+//        
+//        $('.datepicker').each(function (key, ele) {
+//            if(ele.value == '') {
+//                
+//                return false;
+//            }
+//        });
+//
+//        if (selected_date === '') {
+//            swal("Alert", 'Please choose Date', "info");
+//            return false;
+//        }
+//        if (selected_from_time === '') {
+//            swal("Alert", 'Please choose From time', "info");
+//            return false;
+//        }
+//        if (selected_to_time === '') {
+//            swal("Alert", 'Please choose To time', "info");
+//            return false;
+//        }
+//    }
     return true;
 }
 
