@@ -31,161 +31,173 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                 <h4>Basic Information</h4>
                                 <form id="basic_information">
                                     <div class="form-row">
-                                        <div class="input-group col-md-4">
-                                            <!--                                            <label for="type">Type</label>
-                                                                                        <span class="red-i">*</span>-->
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text" id="basic-addon1">@<span class="red-i">*</span></span>
+                                        <div class="col-xl-4 col-sm-12 margin-b-20">
+                                            <div class="input-group">
+                                                <!--                                            <label for="type">Type</label>
+                                                                                            <span class="red-i">*</span>-->
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-motorcycle" aria-hidden="true"></i><span class="red-i">*</span></span>
+                                                </div>
+                                                <select class="form-control" name="type" id="type" onchange="loadClubs(this.value);">
+                                                    <option value="0">Type</option>
+                                                    <option value="four_wheel">4 Wheel</option>
+                                                    <option value="two_wheel">2 Wheel</option>
+                                                </select>
                                             </div>
-                                            <select class="form-control" name="type" id="type" onchange="loadClubs(this.value);">
-                                                <option value="0">Type</option>
-                                                <option value="four_wheel">4 Wheel</option>
-                                                <option value="two_wheel">2 Wheel</option>
-                                            </select>
                                             <div id="type_error"></div>
                                         </div>
-                                        <div class="input-group col-md-4">
-                                            <!--                                            <label for="first_name"></label>
-                                                                                        <span class="red-i">*</span>-->
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-user" aria-hidden="true"></i><span class="red-i">*</span></span>
+                                        <div class="col-xl-4 col-sm-12 margin-b-20">
+                                            <div class="input-group">
+                                                <!--                                            <label for="first_name"></label>
+                                                                                            <span class="red-i">*</span>-->
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-user" aria-hidden="true"></i><span class="red-i">*</span></span>
+                                                </div>
+                                                <input type="text" class="form-control" name="first_name" id="first_name" placeholder="First Name" required-i onchange="removeValidation('first_name');" />
                                             </div>
-                                            <input type="text" class="form-control" name="first_name" id="first_name" placeholder="First Name" required-i onchange="removeValidation('first_name');" />
                                             <div id="first_name_error"></div>
                                         </div>
-                                        <div class="input-group col-md-4">
-                                            <!--                                            <label for="last_name">Last Name</label>
-                                                                                        <span class="red-i">*</span>-->
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-user" aria-hidden="true"></i><span class="red-i">*</span></span>
+                                        <div class="col-xl-4 col-sm-12 margin-b-20">
+                                            <div class="input-group">
+                                                <!--                                            <label for="last_name">Last Name</label>
+                                                                                            <span class="red-i">*</span>-->
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-user" aria-hidden="true"></i><span class="red-i">*</span></span>
+                                                </div>
+                                                <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Last Name" required-i onchange="removeValidation('last_name');" />
                                             </div>
-                                            <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Last Name" required-i onchange="removeValidation('last_name');" />
                                             <div id="last_name_error"></div>
                                         </div>
                                     </div>
                                     <div class="form-row">
-                                        <div class="input-group col-md-4">
-                                            <div id="upload_container">
-                                                <label id="profile_image" class="custom-file-label" for="upload-profile">Upload Your Profile Picture</label>
-                                                <input type="file" class="custom-file-input" id="profile_image" onchange="attachFile('profile_image');" />
-                                            </div>
-                                            <div class="image-preview hidden" id="preview_container">
-                                                <button type="button" onclick="closeProfilePic();" class="close-button-profile-img"><i class="fa fa-close"></i></button>
-                                                <img src="" alt="image" />
+                                        <div class="col-xl-4 col-sm-12 margin-b-20">
+                                            <div class="form-group">
+                                                <div id="upload_container">
+                                                    <label class="font-size-12" for="upload-profile"><i class="fa fa-picture-o" aria-hidden="true"></i> Upload Your Profile Picture</label>
+                                                    <input type="file" class="form-control-file" id="profile_image" onchange="attachFile('profile_image');" />
+                                                </div>
+                                                <div class="image-preview hidden" id="preview_container">
+                                                    <button type="button" onclick="closeProfilePic();" class="close-button-profile-img"><i class="fa fa-close"></i></button>
+                                                    <img src="" alt="image" />
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="input-group col-md-4">
-                                            <!--                                            <label for="gender">Gender</label>-->
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text"><i class="fa fa-users" aria-hidden="true"></i></span>
+                                        <div class="col-xl-4 col-sm-12 margin-b-20">
+                                            <div class="input-group">
+                                                <!--                                            <label for="gender">Gender</label>-->
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="fa fa-user" aria-hidden="true"></i></span>
+                                                </div>
+                                                <select class="form-control" id="gender" name="gender">                                            
+                                                    <option value="0">Gender</option>
+                                                    <option value="male">Male</option>
+                                                    <option value="female">Female</option>
+                                                </select>
                                             </div>
-                                            <select class="form-control" id="gender" name="gender">                                            
-                                                <option value="0">Gender</option>
-                                                <option value="male">Male</option>
-                                                <option value="female">Female</option>
-                                            </select>
                                         </div>
-                                        <div class="input-group col-md-4">
-                                            <!--                                            <label for="age">Age</label>-->
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text">@</span>
+                                        <div class="col-xl-4 col-sm-12 margin-b-20">
+                                            <div class="input-group">
+                                                <!--                                            <label for="age">Age</label>-->
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="fa fa-user" aria-hidden="true"></i></span>
+                                                </div>
+                                                <select class="form-control" id="age" name="age">
+                                                    <option value="0">age</option>
+                                                    <option value="15">15</option>
+                                                    <option value="16">16</option>
+                                                    <option value="17">17</option>
+                                                    <option value="18" selected>18</option>
+                                                    <option value="19">19</option>
+                                                    <option value="20">20</option>
+                                                    <option value="21">21</option>
+                                                    <option value="22">22</option>
+                                                    <option value="23">23</option>
+                                                    <option value="24">24</option>
+                                                    <option value="25">25</option>
+                                                    <option value="26">26</option>
+                                                    <option value="27">27</option>
+                                                    <option value="28">28</option>
+                                                    <option value="29">29</option>
+                                                    <option value="30">30</option>
+                                                    <option value="31">31</option>
+                                                    <option value="32">32</option>
+                                                    <option value="33">33</option>
+                                                    <option value="34">34</option>
+                                                    <option value="35">35</option>
+                                                    <option value="36">36</option>
+                                                    <option value="37">37</option>
+                                                    <option value="38">38</option>
+                                                    <option value="39">39</option>
+                                                    <option value="40">40</option>
+                                                    <option value="41">41</option>
+                                                    <option value="42">42</option>
+                                                    <option value="43">43</option>
+                                                    <option value="44">44</option>
+                                                    <option value="45">45</option>
+                                                    <option value="46">46</option>
+                                                    <option value="47">47</option>
+                                                    <option value="48">48</option>
+                                                    <option value="49">49</option>
+                                                    <option value="50">50</option>
+                                                    <option value="51">51</option>
+                                                    <option value="52">52</option>
+                                                    <option value="53">53</option>
+                                                    <option value="54">54</option>
+                                                    <option value="55">55</option>
+                                                    <option value="56">56</option>
+                                                    <option value="57">57</option>
+                                                    <option value="58">58</option>
+                                                    <option value="59">59</option>
+                                                    <option value="60">60</option>
+                                                    <option value="61">61</option>
+                                                    <option value="62">62</option>
+                                                    <option value="63">63</option>
+                                                    <option value="64">64</option>
+                                                    <option value="65">65</option>
+                                                    <option value="66">66</option>
+                                                    <option value="67">67</option>
+                                                    <option value="68">68</option>
+                                                    <option value="69">69</option>
+                                                    <option value="70">70</option>
+                                                    <option value="71">71</option>
+                                                    <option value="72">72</option>
+                                                    <option value="73">73</option>
+                                                    <option value="74">74</option>
+                                                    <option value="75">75</option>
+                                                    <option value="76">76</option>
+                                                    <option value="77">77</option>
+                                                    <option value="78">78</option>
+                                                    <option value="79">79</option>
+                                                    <option value="80">80</option>
+                                                    <option value="81">81</option>
+                                                    <option value="82">82</option>
+                                                    <option value="83">83</option>
+                                                    <option value="84">84</option>
+                                                    <option value="85">85</option>
+                                                    <option value="86">86</option>
+                                                    <option value="87">87</option>
+                                                    <option value="88">88</option>
+                                                    <option value="89">89</option>
+                                                    <option value="90">90</option>
+                                                    <option value="91">91</option>
+                                                    <option value="92">92</option>
+                                                    <option value="93">93</option>
+                                                    <option value="94">94</option>
+                                                    <option value="95">95</option>
+                                                    <option value="96">96</option>
+                                                    <option value="97">97</option>
+                                                    <option value="98">98</option>
+                                                    <option value="99">99</option>
+                                                </select>
                                             </div>
-                                            <select class="form-control" id="age" name="age">
-                                                <option value="0">age</option>
-                                                <option value="15">15</option>
-                                                <option value="16">16</option>
-                                                <option value="17">17</option>
-                                                <option value="18" selected>18</option>
-                                                <option value="19">19</option>
-                                                <option value="20">20</option>
-                                                <option value="21">21</option>
-                                                <option value="22">22</option>
-                                                <option value="23">23</option>
-                                                <option value="24">24</option>
-                                                <option value="25">25</option>
-                                                <option value="26">26</option>
-                                                <option value="27">27</option>
-                                                <option value="28">28</option>
-                                                <option value="29">29</option>
-                                                <option value="30">30</option>
-                                                <option value="31">31</option>
-                                                <option value="32">32</option>
-                                                <option value="33">33</option>
-                                                <option value="34">34</option>
-                                                <option value="35">35</option>
-                                                <option value="36">36</option>
-                                                <option value="37">37</option>
-                                                <option value="38">38</option>
-                                                <option value="39">39</option>
-                                                <option value="40">40</option>
-                                                <option value="41">41</option>
-                                                <option value="42">42</option>
-                                                <option value="43">43</option>
-                                                <option value="44">44</option>
-                                                <option value="45">45</option>
-                                                <option value="46">46</option>
-                                                <option value="47">47</option>
-                                                <option value="48">48</option>
-                                                <option value="49">49</option>
-                                                <option value="50">50</option>
-                                                <option value="51">51</option>
-                                                <option value="52">52</option>
-                                                <option value="53">53</option>
-                                                <option value="54">54</option>
-                                                <option value="55">55</option>
-                                                <option value="56">56</option>
-                                                <option value="57">57</option>
-                                                <option value="58">58</option>
-                                                <option value="59">59</option>
-                                                <option value="60">60</option>
-                                                <option value="61">61</option>
-                                                <option value="62">62</option>
-                                                <option value="63">63</option>
-                                                <option value="64">64</option>
-                                                <option value="65">65</option>
-                                                <option value="66">66</option>
-                                                <option value="67">67</option>
-                                                <option value="68">68</option>
-                                                <option value="69">69</option>
-                                                <option value="70">70</option>
-                                                <option value="71">71</option>
-                                                <option value="72">72</option>
-                                                <option value="73">73</option>
-                                                <option value="74">74</option>
-                                                <option value="75">75</option>
-                                                <option value="76">76</option>
-                                                <option value="77">77</option>
-                                                <option value="78">78</option>
-                                                <option value="79">79</option>
-                                                <option value="80">80</option>
-                                                <option value="81">81</option>
-                                                <option value="82">82</option>
-                                                <option value="83">83</option>
-                                                <option value="84">84</option>
-                                                <option value="85">85</option>
-                                                <option value="86">86</option>
-                                                <option value="87">87</option>
-                                                <option value="88">88</option>
-                                                <option value="89">89</option>
-                                                <option value="90">90</option>
-                                                <option value="91">91</option>
-                                                <option value="92">92</option>
-                                                <option value="93">93</option>
-                                                <option value="94">94</option>
-                                                <option value="95">95</option>
-                                                <option value="96">96</option>
-                                                <option value="97">97</option>
-                                                <option value="98">98</option>
-                                                <option value="99">99</option>
-                                            </select>
                                         </div>
                                     </div>
                                     <div class="form-row">
-                                        <div class="col">
+                                        <div class="col-xl-6 col-sm-12 margin-b-20">
                                             <div class="input-group">
                                                 <!--<label for="age">Marital Status</label>-->
                                                 <div class="input-group-prepend">
-                                                    <span class="input-group-text">@</span>
+                                                    <span class="input-group-text"><i class="fa fa-users" aria-hidden="true"></i></span>
                                                 </div>
                                                 <select class="form-control" id="marital_status" name="marital_status">
                                                     <option value="0">Marital Status</option>
@@ -194,60 +206,62 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="col">
+                                        <div class="col-xl-6 col-sm-12 margin-b-20">
                                             <div class="input-group">
                                                 <!--                                                <label for="ic_passport">IC Number / Passport Number</label> 
                                                                                                 <span class="red-i">*</span>-->
                                                 <div class="input-group-prepend">
-                                                    <span class="input-group-text">@<span class="red-i">*</span></span>
+                                                    <span class="input-group-text"><i class="fa fa-id-card-o" aria-hidden="true"></i><span class="red-i">*</span></span>
                                                 </div>
                                                 <input type="text" class="form-control" name="ic_passport" id="ic_passport" placeholder="IC Number / Passport Number" required-i onchange="removeValidation('ic_passport');" />
-                                                <div id="ic_passport_error"></div>
                                             </div>
+                                            <div id="ic_passport_error"></div>
                                         </div>
                                     </div>
                                     <div class="form-row">
-                                        <div class="col-md-4 mb-3">
-                                            <label for="dob_date">Date of Birth</label> 
+                                        <div class="col-xl-4 col-sm-12 margin-b-20">
+                                            <label class="font-size-12" for="dob_date">Date of Birth</label> 
                                             <span class="red-i">*</span>
-                                            <select class="form-control" id="dob_date" name="dob_date" required-i onchange="removeValidation('dob_date');">
-                                                <option value="">Day</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                                <option value="6">6</option>
-                                                <option value="7">7</option>
-                                                <option value="8">8</option>
-                                                <option value="9">9</option>
-                                                <option value="10">10</option>
-                                                <option value="11">11</option>
-                                                <option value="12">12</option>
-                                                <option value="13">13</option>
-                                                <option value="14">14</option>
-                                                <option value="15">15</option>
-                                                <option value="16">16</option>
-                                                <option value="17">17</option>
-                                                <option value="18">18</option>
-                                                <option value="19">19</option>
-                                                <option value="20">20</option>
-                                                <option value="21">21</option>
-                                                <option value="22">22</option>
-                                                <option value="23">23</option>
-                                                <option value="24">24</option>
-                                                <option value="25">25</option>
-                                                <option value="26">26</option>
-                                                <option value="27">27</option>
-                                                <option value="28">28</option>
-                                                <option value="29">29</option>
-                                                <option value="30">30</option>
-                                                <option value="31">31</option>
-                                            </select>
+                                            <div class="input-group">
+                                                <select class="form-control" id="dob_date" name="dob_date" required-i onchange="removeValidation('dob_date');">
+                                                    <option value="">Day</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                    <option value="13">13</option>
+                                                    <option value="14">14</option>
+                                                    <option value="15">15</option>
+                                                    <option value="16">16</option>
+                                                    <option value="17">17</option>
+                                                    <option value="18">18</option>
+                                                    <option value="19">19</option>
+                                                    <option value="20">20</option>
+                                                    <option value="21">21</option>
+                                                    <option value="22">22</option>
+                                                    <option value="23">23</option>
+                                                    <option value="24">24</option>
+                                                    <option value="25">25</option>
+                                                    <option value="26">26</option>
+                                                    <option value="27">27</option>
+                                                    <option value="28">28</option>
+                                                    <option value="29">29</option>
+                                                    <option value="30">30</option>
+                                                    <option value="31">31</option>
+                                                </select>
+                                            </div>
                                             <div id="dob_date_error"></div>
                                         </div>
-                                        <div class="col-md-4 mb-3">
-                                            <label for="dob_month">&nbsp;</label>
+                                        <div class="col-xl-4 col-sm-12 margin-b-20">
+                                            <label class="d-none-600" for="dob_month">&nbsp;</label>
                                             <select class="form-control" id="dob_month" name="dob_month" required-i>
                                                 <option value="0">Month</option>
                                                 <option value="1">1</option>
@@ -265,8 +279,8 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                             </select>
                                             <div id="dob_month_error"></div>
                                         </div>
-                                        <div class="col-md-4 mb-3">
-                                            <label for="dob_year">&nbsp;</label>
+                                        <div class="col-xl-4 col-sm-12 margin-b-20">
+                                            <label class="d-none-600" for="dob_year">&nbsp;</label>
                                             <select class="form-control" id="dob_year" name="dob_year" required-i>
                                                 <option value="0">Year</option>
                                                 <option value="1947">1947</option>
@@ -331,7 +345,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                         </div>
                                     </div>
                                     <div class="form-row">
-                                        <div class="col">
+                                        <div class="col-xl-6 col-sm-12 margin-b-20">
                                             <div class="input-group">
                                                 <!--                                                <label for="contact_number">Contact Number</label> 
                                                                                                 <span class="red-i">*</span>-->
@@ -339,10 +353,10 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                                     <span class="input-group-text"><i class="fa fa-phone" aria-hidden="true"></i><span class="red-i">*</span></span>
                                                 </div>
                                                 <input type="text" class="form-control" name="contact_number" id="contact_number" placeholder="Contact Number" required-i onchange="removeValidation('contact_number');" />
-                                                <div id="contact_number_error"></div>
                                             </div>
+                                            <div id="contact_number_error"></div>
                                         </div>
-                                        <div class="col">
+                                        <div class="col-xl-6 col-sm-12 margin-b-20">
                                             <div class="input-group">
                                                 <!--                                                <label for="email_id">Email Address</label> -->
                                                 <div class="input-group-prepend">
@@ -353,103 +367,124 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="input-group">
-                                        <!--                                        <label for="address">Address</label> 
-                                                                                <span class="red-i">*</span>-->
-                                        <div class="input-group-prepend" style="display: flex;">
-                                            <span class="input-group-text"><i class="fa fa-map-marker" aria-hidden="true"></i><span class="red-i">*</span></span>
-                                        </div>
-                                        <textarea class="form-control" placeholder="Address" name="address" id="address" type="text" rows="3" required-i onchange="removeValidation('address');"></textarea>
-                                        <div id="address_error"></div>
-                                    </div>
-                                    <br/>
                                     <div class="form-row">
-                                        <div class="input-group col-md-4">
-                                            <!--                                            <label for="country">Country</label> 
+                                        <div class="col-xl-12 col-sm-12 margin-b-20">
+                                            <div class="input-group">
+                                                <!--                                        <label for="address">Address</label> 
                                                                                         <span class="red-i">*</span>-->
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text"><i class="fa fa-globe" aria-hidden="true"></i><span class="red-i">*</span></span>
+                                                <div class="input-group-prepend" style="display: flex;">
+                                                    <span class="input-group-text"><i class="fa fa-map-marker" aria-hidden="true"></i><span class="red-i">*</span></span>
+                                                </div>
+                                                <textarea class="form-control" placeholder="Address" name="address" id="address" type="text" rows="3" required-i onchange="removeValidation('address');"></textarea>
                                             </div>
-                                            <input placeholder="Country" name="country" id="country" type="text" class="form-control" required-i onchange="removeValidation('country');" value="Malaysia" readonly />
+                                            <div id="address_error"></div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-xl-4 col-sm-12 margin-b-20">
+                                            <div class="input-group">
+                                                <!--                                            <label for="country">Country</label> 
+                                                                                            <span class="red-i">*</span>-->
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <i class="fa fa-globe" aria-hidden="true"></i>
+                                                        <span class="red-i">*</span>
+                                                    </span>
+                                                </div>
+                                                <input placeholder="Country" name="country" id="country" type="text" class="form-control" required-i onchange="removeValidation('country');" value="Malaysia" readonly />
+                                            </div>
                                             <div id="country_error"></div>
                                         </div>
-                                        <div class="input-group col-md-4">
-                                            <!--                                            <label for="state_id">State</label> 
-                                                                                        <span class="red-i">*</span>-->
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text"><i class="fa fa-check" aria-hidden="true"></i><span class="red-i">*</span></span>
+                                        <div class="col-xl-4 col-sm-12 margin-b-20">
+                                            <div class="input-group">
+                                                <!--                                            <label for="state_id">State</label> 
+                                                                                            <span class="red-i">*</span>-->
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="fa fa-check" aria-hidden="true"></i><span class="red-i">*</span></span>
+                                                </div>
+                                                <select class="form-control" id="state_id" name="state_id" required-i onchange="removeValidation('state_id');">
+                                                    <option value="">State</option>
+                                                    <?php foreach ($states as $row) { ?>
+                                                        <option value="<?php echo $row['state_id']; ?>"><?php echo $row['name']; ?></option>
+                                                    <?php } ?>
+                                                </select>
                                             </div>
-                                            <select class="form-control" id="state_id" name="state_id" required-i onchange="removeValidation('state_id');">
-                                                <option value="">State</option>
-                                                <?php foreach ($states as $row) { ?>
-                                                    <option value="<?php echo $row['state_id']; ?>"><?php echo $row['name']; ?></option>
-                                                <?php } ?>
-                                            </select>
                                             <div id="state_id_error"></div>
                                         </div>
-                                        <div class="input-group col-md-4">
-                                            <!--                                            <label for="zip_code">Zip Code</label>
-                                                                                        <span class="red-i">*</span>-->
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text"><i class="fa fa-list-ol" aria-hidden="true"></i><span class="red-i">*</span></span>
+                                        <div class="col-xl-4 col-sm-12 margin-b-20">
+                                            <div class="input-group">
+                                                <!--                                            <label for="zip_code">Zip Code</label>
+                                                                                            <span class="red-i">*</span>-->
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="fa fa-list-ol" aria-hidden="true"></i><span class="red-i">*</span></span>
+                                                </div>
+                                                <input placeholder="Zip Code" name="zip_code" id="zip_code" type="text" required-i class="form-control" onchange="removeValidation('zip_code');">
                                             </div>
-                                            <input placeholder="Zip Code" name="zip_code" id="zip_code" type="text" required-i class="form-control" onchange="removeValidation('zip_code');">
                                             <div id="zip_code_error"></div>
                                         </div>
                                     </div>
                                     <br/>
                                     <h4>Referral</h4>
                                     <div class="form-row">
-                                        <div class="input-group col-md-6">
-                                            <!--                                            <label for="referral_member_id">Member ID</label>-->
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text"><i class="fa fa-id-card-o" aria-hidden="true"></i></span>
+                                        <div class="col-xl-6 col-sm-12 margin-b-20">
+                                            <div class="input-group">
+                                                <!--                                            <label for="referral_member_id">Member ID</label>-->
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="fa fa-id-card-o" aria-hidden="true"></i></span>
+                                                </div>
+                                                <input placeholder="Member ID" name="referral_member_id" id="referral_member_id" type="text" class="form-control">
                                             </div>
-                                            <input placeholder="Member ID" name="referral_member_id" id="referral_member_id" type="text" class="form-control">
                                         </div>
-                                        <div class="input-group col-md-6">
-                                            <!--                                            <label for="referral_club_id">Club ID</label>-->
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text"><i class="fa fa-id-badge" aria-hidden="true"></i></span>
+                                        <div class="col-xl-6 col-sm-12 margin-b-20">
+                                            <div class="input-group">
+                                                <!--                                            <label for="referral_club_id">Club ID</label>-->
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="fa fa-id-badge" aria-hidden="true"></i></span>
+                                                </div>
+                                                <input placeholder="Club ID" id="referral_club_id" name="referral_club_id" type="text" class="form-control">
                                             </div>
-                                            <input placeholder="Club ID" id="referral_club_id" name="referral_club_id" type="text" class="form-control">
                                         </div>
                                     </div>
                                     <br/>
                                     <h4>Login Information</h4>
                                     <div class="form-row">
-                                        <div class="input-group col-md-4">
-                                            <!--                                            <label for="email"> Username</label> 
-                                                                                        <span class="red-i">*</span>-->
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text">@</span>
+                                        <div class="col-xl-4 col-sm-12 margin-b-20">
+                                            <div class="input-group">
+                                                <!--                                            <label for="email"> Username</label> 
+                                                                                            <span class="red-i">*</span>-->
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">@</span>
+                                                </div>
+                                                <input type="text" class="form-control" name="email" id="email" placeholder="User Name" required-i onchange="removeValidation('email');" />
                                             </div>
-                                            <input type="text" class="form-control" name="email" id="email" placeholder="User Name" required-i onchange="removeValidation('email');" />
                                             <div id="email_error"></div>
                                         </div>
-                                        <div class="input-group col-md-4">
-                                            <!--                                            <label for="password">Password</label> 
-                                                                                        <span class="red-i">*</span>-->
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text"><i class="fa fa-key" aria-hidden="true"></i></span>
+                                        <div class="col-xl-4 col-sm-12 margin-b-20">
+                                            <div class="input-group">
+                                                <!--                                            <label for="password">Password</label> 
+                                                                                            <span class="red-i">*</span>-->
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="fa fa-key" aria-hidden="true"></i></span>
+                                                </div>
+                                                <input type="password" class="form-control" name="password" id="password" placeholder="Password" required-i onchange="removeValidation('password');" onKeyUp="checkPasswordStrength();" />
+                                                <span class="input-group-addon eye-icon" onclick="showTextPassword()"><i class="fa fa-eye" aria-hidden="true"></i></span>
                                             </div>
-                                            <input type="password" class="form-control" name="password" id="password" placeholder="Password" required-i onchange="removeValidation('password');" onKeyUp="checkPasswordStrength();" />
-                                            <span class="input-group-addon eye-icon" onclick="showTextPassword()"><i class="fa fa-eye" aria-hidden="true"></i></span>
                                             <div id="password_error"></div>
                                         </div>
-                                        <div class="input-group col-md-4">
-                                            <!--                                            <label for="cnfpassword">Confirm Password</label> 
-                                                                                        <span class="red-i">*</span>-->
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text"><i class="fa fa-key" aria-hidden="true"></i></span>
+                                        <div class="col-xl-4 col-sm-12 margin-b-20">
+                                            <div class="input-group">
+                                                <!--                                            <label for="cnfpassword">Confirm Password</label> 
+                                                                                            <span class="red-i">*</span>-->
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="fa fa-key" aria-hidden="true"></i></span>
+                                                </div>
+                                                <input type="password" class="form-control" name="cnfpassword" id="cnfpassword" placeholder="Confirm Password" required-i onchange="removeValidation('cnfpassword');" />
+                                                <span class="input-group-addon eye-icon" onclick="showTextPassword1()"><i class="fa fa-eye" aria-hidden="true"></i></span>
                                             </div>
-                                            <input type="password" class="form-control" name="cnfpassword" id="cnfpassword" placeholder="Confirm Password" required-i onchange="removeValidation('cnfpassword');" />
-                                            <span class="input-group-addon eye-icon" onclick="showTextPassword1()"><i class="fa fa-eye" aria-hidden="true"></i></span>
                                             <div id="cnfpassword_error"></div>
                                         </div>
                                     </div>
-                                    <br/>
-                                    <input type="checkbox" id="terms_agree" value="1" name="agree" onchange="removeValidation('terms_agree');" /> By clicking Next, you agree to our <a href="terms?type=<?php echo $type; ?>" target="_blank">Terms and Conditions.</a>
+                                    <span class="terms-text"><input type="checkbox" id="terms_agree" value="1" name="agree" onchange="removeValidation('terms_agree');" /> By clicking Next, you agree to our <a href="terms?type=<?php echo $type; ?>" target="_blank">Terms and Conditions.</a></span>
                                     <div id="terms_agree_error"></div>
                                 </form>
                             </div>

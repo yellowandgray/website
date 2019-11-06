@@ -144,7 +144,7 @@
 <script type="text/javascript">
     function openNav() {
         document.getElementById("mySidenav").style.height = "100%";
-        document.getElementById("mySidenav").style.top = "110px";
+        document.getElementById("mySidenav").style.top = "95px";
     }
     function closeNav() {
         document.getElementById("mySidenav").style.height = "0";

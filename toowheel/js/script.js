@@ -315,7 +315,7 @@ $("#smartwizard").on("leaveStep", function (e, anchorObject, stepNumber, stepDir
                 change = false;
             }
             if ($.trim($('#ic_passport').val()) === '') {
-                $('#ic_passport_error').html('Enter passport/IC number').addClass('error-msg');
+                $('#ic_passport_error').html('Enter IC Number/Passport Number').addClass('error-msg');
                 $('#ic_passport').focus();
                 $(window).scrollTop($('#ic_passport').position().top);
                 change = false;

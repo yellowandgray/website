@@ -37,10 +37,10 @@ $news = $obj->selectAll('n.*, m.name AS media, c.name AS club, ca.name AS catego
                 <div class="news-all-content">
                     <?php foreach ($news as $row) { ?>
                         <div class="row">
-                            <div class="col-md-2">
+                            <div class="col-md-3">
                                 <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="image" />
                             </div>
-                            <div class="col-md-10">
+                            <div class="col-md-9">
                                 <h4><?php echo $row['title']; ?></h4>
                                 <span><?php echo $row['media']; ?> | <?php echo $row['author_name']; ?> | <?php echo date('M d, Y', strtotime($row['news_date'])); ?></span>
                                 <p><?php echo $row['moto_text']; ?></p>

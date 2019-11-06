@@ -89,7 +89,7 @@ $type = $press_release['type'];
 <!--                                <img src="" alt="" />-->
                                 <div class="events-upcoming-content">
                                     <h4><?php echo $row['title']; ?></h4>
-                                    <p><?php echo $obj->charLimit($row['description_1'], 120); ?></p>
+                                    <p><?php echo $obj->charLimit($row['description_1'], 75); ?></p>
                                 </div>
                                 <center>
                                     <div class="button-8">

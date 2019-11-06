@@ -1339,6 +1339,11 @@ button {
 
 .registation-step h2 {
     color: red;
+    margin-bottom: 20px;
+}
+
+.registation-step h4 {
+    font-size: 1.1rem;
 }
 
 /*.nav-close {
@@ -1687,6 +1692,9 @@ button {
 
 .member-register-section {
     padding: 80px 0;
+    background: url(../img/member/member-bg.jpg)no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 
@@ -4544,7 +4552,7 @@ hr {
     right: 1em;
     font-size: 25px;
 }
-#close-btn:hover{
+#close-btn:hover {
     color: #777;
     cursor: pointer;
 }
@@ -4560,12 +4568,12 @@ hr {
     padding: 40px 30px;
 }
 
-.eye-icon {
-    float: right;
-    position: relative;
-    right: 25px;
+#basic_information .eye-icon {
+    position: absolute;
+    right: 5px;
     top: 8px;
-    cursor: pointer;
+    cursor: pointer;    
+    z-index: 2;
 }
 
 .event-menu-box ul.release li.release-cont-2 strong {
@@ -4575,6 +4583,8 @@ hr {
 .sw-main {
     width: 70%;
     margin: 0 auto !important;
+    background: #fff;
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
 }
 
 #basic_information .form-row {
@@ -4591,5 +4601,38 @@ hr {
 }
 
 #basic_information .form-control {
+    font-size: 12px;
+}
+
+#basic_information input[type="password"] {
+    z-index: 1;
+}
+
+.margin-b-20 {
+    margin-bottom: 10px;
+}
+
+.btn-secondary {
+    font-size: 12px;
+}
+
+/*#basic_information .input-group-text {
+    background: red;
+    color: #fff;
+}
+
+#basic_information .input-group-text i {
+    color: #fff;
+}*/
+
+.terms-text {
+    font-size: 13px; 
+}
+
+.font-size-12 {
+    font-size: 12px;
+}
+
+#upload_container input {
     font-size: 12px;
 }
