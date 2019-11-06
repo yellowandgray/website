@@ -265,7 +265,7 @@ body {
 
 .clb-bg {
     background: rgba(255, 0, 0, 0.7);
-    width: 50px;
+    width: 65px;
     position: relative;
     top: 5px;
     padding: 4px;
@@ -1326,7 +1326,7 @@ body {
 }
 
 .tab-pane #club_list {
-    margin: 0 25px !important;
+    margin: 0 auto !important;
 }
 
 .find-club-title {
