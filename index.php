@@ -12,17 +12,18 @@
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="d-block w-100" src="img/banner_bg.png" alt="First slide">
-                    <div class="container carousel-caption d-none d-md-block">
+                    <img class="d-block w-100" src="img/home-slider/banner-1.jpg" alt="First slide">
+                    <div class="container carousel-caption d-md-block">
                         <div class="row align-items-center justify-content-center">
                             <div class="col-lg-10">
                                 <div class="banner_text text-center">
                                     <div class="banner_text_iner">
         <!--                                <h5>Since <span>1990</span> </h5>-->
-                                        <h1> S & T TESTING SERVICES PTE LTD</h1>
+                                        <h1> SWITCH GEAR</h1>
                                         <h3>Switch Gear Installation and testing commissioning</h3>
                                         <a href="about" class="btn_1">learn more </a>
                                     </div>
@@ -32,14 +33,14 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="img/banner_bg.png" alt="Second slide">
-                    <div class="container carousel-caption d-none d-md-block">
+                    <img class="d-block w-100" src="img/home-slider/banner-2.jpg" alt="Second slide">
+                    <div class="container carousel-caption d-md-block">
                         <div class="row align-items-center justify-content-center">
                             <div class="col-lg-10">
                                 <div class="banner_text text-center">
                                     <div class="banner_text_iner">
         <!--                                <h5>Since <span>1990</span> </h5>-->
-                                        <h1> S & T TESTING SERVICES PTE LTD</h1>
+                                        <h1> TRANSFORMER</h1>
                                         <h3>Transformer installation and testing commissioning</h3>
                                         <a href="about" class="btn_1">learn more </a>
                                     </div>
@@ -49,14 +50,14 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="img/banner_bg.png" alt="Third slide">
-                    <div class="container carousel-caption d-none d-md-block">
+                    <img class="d-block w-100" src="img/home-slider/banner-3.jpg" alt="Third slide">
+                    <div class="container carousel-caption d-md-block">
                         <div class="row align-items-center justify-content-center">
                             <div class="col-lg-10">
                                 <div class="banner_text text-center">
                                     <div class="banner_text_iner">
         <!--                                <h5>Since <span>1990</span> </h5>-->
-                                        <h1> S & T TESTING SERVICES PTE LTD</h1>
+                                        <h1>CABLE</h1>
                                         <h3>HT cable termination and testing commissioning</h3>
                                         <a href="about" class="btn_1">learn more </a>
                                     </div>
@@ -66,14 +67,14 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="img/banner_bg.png" alt="Third slide">
-                    <div class="container carousel-caption d-none d-md-block">
+                    <img class="d-block w-100" src="img/home-slider/banner-4.jpg" alt="Third slide">
+                    <div class="container carousel-caption d-md-block">
                         <div class="row align-items-center justify-content-center">
                             <div class="col-lg-10">
                                 <div class="banner_text text-center">
                                     <div class="banner_text_iner">
         <!--                                <h5>Since <span>1990</span> </h5>-->
-                                        <h1> S & T TESTING SERVICES PTE LTD</h1>
+                                        <h1>FIRE SUPPRESSION SYSTEM</h1>
                                         <h3>Fire suppression system installation and inspection and testing</h3>
                                         <a href="about" class="btn_1">learn more </a>
                                     </div>
@@ -143,15 +144,8 @@
                             <img src="img/about_img_1.png" alt="">
                         </div>
                     </div>
-                    <div class="col-md-5 col-lg-5">
-                        <div class="about_text">
-                            <h2>About us</h2>
-                            <h4>WE ARE A ELECTRICAL SERVICE COMPANY THAT AIMS TO PROVIDE YOU WITH THE BEST SERVICE.</h4>
-                            <p>S&T Testing Services Pte Ltd is a well recognized Electrical Service Company having 20 years</p>
-                            <p>Singapore experienced Team. We provides exemplary service quality for Testing, Installation and Commissioning of Electrical Equipment's.</p>
-                            <p>By Choosing us, You no need to worry about the Completion of project, we will take care of that.</p>
-                            <a href="about" class="btn_2">read more</a>
-                        </div>
+                    <div class="col-md-6 col-lg-6">
+                        <?php include 'about-content.php'; ?>
                     </div>
                 </div>
             </div>

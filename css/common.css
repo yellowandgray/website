@@ -88,13 +88,13 @@
 .carousel-caption {
     position: absolute;
     right: 15%;
-    top: 10%;
+    top: 22%;
     left: 13%;
     z-index: 10;
     padding-top: 20px;
     padding-bottom: 20px;
     color: #fff;
-    text-align: center; 
+    text-align: center;
 }
 
 @media screen and (max-width: 991px) {

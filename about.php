@@ -34,15 +34,11 @@
                     <div class="col-lg-11 col-xl-6">
                         <div class="single_project_details_text">
                             <h4>Vision</h4>
-                            <p>To be the world's best Electrical service provider for Switchgears, Transformers and Cables</p>
+                            <p>Through our undisputed dedication to customer care and our commitment to bring value to our clients in all we do, we seek to become the most preferred electrical service provider in our marketplace.</p>
                         </div>
                         <div class="single_project_details_text">
                             <h4>Mission</h4>
-                            <ul class="unordered-list">
-                                <li>Give Intelligent solutions for Electrical systems</li>
-                                <li>Customer Satisfaction</li>
-                                <li>Believe in Practical Solutions</li>
-                            </ul>
+                            <p>We seek to save lives, prevent work place accidents, and increase the overall performance, reliability, and protection of the electrical power systems of our clients. We providing our customers with the very latest in safety knowledge, equipment upgrades, reliability testing, and technical experts in the industry.</p>
                         </div>
                     </div>
                 </div>
@@ -58,15 +54,8 @@
                             <img src="img/about_img_1.png" alt="">
                         </div>
                     </div>
-                    <div class="col-md-5 col-lg-5">
-                        <div class="about_text">
-                            <h2>About us</h2>
-                            <h4>WE ARE A ELECTRICAL SERVICE COMPANY THAT AIMS TO PROVIDE YOU WITH THE BEST SERVICE.</h4>
-                            <p>S&T Testing Services Pte Ltd is a well recognized Electrical Service Company having 20 years</p>
-                            <p>Singapore experienced Team. We provides exemplary service quality for Testing, Installation and Commissioning of Electrical Equipment's.</p>
-                            <p>By Choosing us, You no need to worry about the Completion of project, we will take care of that.</p>
-<!--                            <a href="#" class="btn_2">read more</a>-->
-                        </div>
+                    <div class="col-md-6 col-lg-6">
+                        <?php include 'about-content.php'; ?>
                     </div>
                 </div>
             </div>
@@ -91,91 +80,91 @@
                     <div class="col-lg-2 col-sm-6">
                         <div class="single_industries">
                             <img src="img/about-technology/001.png" alt="">
-<!--                            <div class="single_industries_text">
-                                <h3>Andrew Flentop</h3>
-                                <p>System Engineer</p>
-                                <div class="social_icon">
-                                    <a href="#"><i class="flaticon-facebook"></i></a>
-                                    <a href="#"><i class="flaticon-twitter"></i></a>
-                                    <a href="#"><i class="flaticon-skype"></i></a>
-                                    <a href="#"><i class="flaticon-instagram"></i></a>
-                                </div>
-                            </div>-->
+                            <!--                            <div class="single_industries_text">
+                                                            <h3>Andrew Flentop</h3>
+                                                            <p>System Engineer</p>
+                                                            <div class="social_icon">
+                                                                <a href="#"><i class="flaticon-facebook"></i></a>
+                                                                <a href="#"><i class="flaticon-twitter"></i></a>
+                                                                <a href="#"><i class="flaticon-skype"></i></a>
+                                                                <a href="#"><i class="flaticon-instagram"></i></a>
+                                                            </div>
+                                                        </div>-->
                         </div>
                     </div>
                     <div class="col-lg-2 col-sm-6">
                         <div class="single_industries">
                             <img src="img/about-technology/002.png" alt="">
-<!--                            <div class="single_industries_text">
-                                <h3>Andrew Flentop</h3>
-                                <p>System Engineer</p>
-                                <div class="social_icon">
-                                    <a href="#"><i class="flaticon-facebook"></i></a>
-                                    <a href="#"><i class="flaticon-twitter"></i></a>
-                                    <a href="#"><i class="flaticon-skype"></i></a>
-                                    <a href="#"><i class="flaticon-instagram"></i></a>
-                                </div>
-                            </div>-->
+                            <!--                            <div class="single_industries_text">
+                                                            <h3>Andrew Flentop</h3>
+                                                            <p>System Engineer</p>
+                                                            <div class="social_icon">
+                                                                <a href="#"><i class="flaticon-facebook"></i></a>
+                                                                <a href="#"><i class="flaticon-twitter"></i></a>
+                                                                <a href="#"><i class="flaticon-skype"></i></a>
+                                                                <a href="#"><i class="flaticon-instagram"></i></a>
+                                                            </div>
+                                                        </div>-->
                         </div>
                     </div>
                     <div class="col-lg-2 col-sm-6">
                         <div class="single_industries">
                             <img src="img/about-technology/003.png" alt="">
-<!--                            <div class="single_industries_text">
-                                <h3>Andrew Flentop</h3>
-                                <p>System Engineer</p>
-                                <div class="social_icon">
-                                    <a href="#"><i class="flaticon-facebook"></i></a>
-                                    <a href="#"><i class="flaticon-twitter"></i></a>
-                                    <a href="#"><i class="flaticon-skype"></i></a>
-                                    <a href="#"><i class="flaticon-instagram"></i></a>
-                                </div>
-                            </div>-->
+                            <!--                            <div class="single_industries_text">
+                                                            <h3>Andrew Flentop</h3>
+                                                            <p>System Engineer</p>
+                                                            <div class="social_icon">
+                                                                <a href="#"><i class="flaticon-facebook"></i></a>
+                                                                <a href="#"><i class="flaticon-twitter"></i></a>
+                                                                <a href="#"><i class="flaticon-skype"></i></a>
+                                                                <a href="#"><i class="flaticon-instagram"></i></a>
+                                                            </div>
+                                                        </div>-->
                         </div>
                     </div>
                     <div class="col-lg-2 col-sm-6">
                         <div class="single_industries">
                             <img src="img/about-technology/005.png" alt="">
-<!--                            <div class="single_industries_text">
-                                <h3>Andrew Flentop</h3>
-                                <p>System Engineer</p>
-                                <div class="social_icon">
-                                    <a href="#"><i class="flaticon-facebook"></i></a>
-                                    <a href="#"><i class="flaticon-twitter"></i></a>
-                                    <a href="#"><i class="flaticon-skype"></i></a>
-                                    <a href="#"><i class="flaticon-instagram"></i></a>
-                                </div>
-                            </div>-->
+                            <!--                            <div class="single_industries_text">
+                                                            <h3>Andrew Flentop</h3>
+                                                            <p>System Engineer</p>
+                                                            <div class="social_icon">
+                                                                <a href="#"><i class="flaticon-facebook"></i></a>
+                                                                <a href="#"><i class="flaticon-twitter"></i></a>
+                                                                <a href="#"><i class="flaticon-skype"></i></a>
+                                                                <a href="#"><i class="flaticon-instagram"></i></a>
+                                                            </div>
+                                                        </div>-->
                         </div>
                     </div>
                     <div class="col-lg-2 col-sm-6">
                         <div class="single_industries">
                             <img src="img/about-technology/004.png" alt="">
-<!--                            <div class="single_industries_text">
-                                <h3>Andrew Flentop</h3>
-                                <p>System Engineer</p>
-                                <div class="social_icon">
-                                    <a href="#"><i class="flaticon-facebook"></i></a>
-                                    <a href="#"><i class="flaticon-twitter"></i></a>
-                                    <a href="#"><i class="flaticon-skype"></i></a>
-                                    <a href="#"><i class="flaticon-instagram"></i></a>
-                                </div>
-                            </div>-->
+                            <!--                            <div class="single_industries_text">
+                                                            <h3>Andrew Flentop</h3>
+                                                            <p>System Engineer</p>
+                                                            <div class="social_icon">
+                                                                <a href="#"><i class="flaticon-facebook"></i></a>
+                                                                <a href="#"><i class="flaticon-twitter"></i></a>
+                                                                <a href="#"><i class="flaticon-skype"></i></a>
+                                                                <a href="#"><i class="flaticon-instagram"></i></a>
+                                                            </div>
+                                                        </div>-->
                         </div>
                     </div>
                     <div class="col-lg-2 col-sm-6">
                         <div class="single_industries">
                             <img src="img/about-technology/006.png" alt="">
-<!--                            <div class="single_industries_text">
-                                <h3>Andrew Flentop</h3>
-                                <p>System Engineer</p>
-                                <div class="social_icon">
-                                    <a href="#"><i class="flaticon-facebook"></i></a>
-                                    <a href="#"><i class="flaticon-twitter"></i></a>
-                                    <a href="#"><i class="flaticon-skype"></i></a>
-                                    <a href="#"><i class="flaticon-instagram"></i></a>
-                                </div>
-                            </div>-->
+                            <!--                            <div class="single_industries_text">
+                                                            <h3>Andrew Flentop</h3>
+                                                            <p>System Engineer</p>
+                                                            <div class="social_icon">
+                                                                <a href="#"><i class="flaticon-facebook"></i></a>
+                                                                <a href="#"><i class="flaticon-twitter"></i></a>
+                                                                <a href="#"><i class="flaticon-skype"></i></a>
+                                                                <a href="#"><i class="flaticon-instagram"></i></a>
+                                                            </div>
+                                                        </div>-->
                         </div>
                     </div>
                 </div>
