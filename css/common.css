@@ -1396,11 +1396,11 @@ marquee {
     padding: 20px;
     cursor: pointer;
     border-right: 2px solid #fff;
-  
+
 }
 .event-list-tap p:hover{
     color:#429ffc;
-  
+
 }
 .event-list-tap {
     background: #333;
