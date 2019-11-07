@@ -18,93 +18,115 @@
             <div class="container">
                 <div class="row no-gutters slider-text align-items-center justify-content-center">
                     <div class="col-md-9 ftco-animate text-center">
-                        <h1 class="mb-0 bread">About</h1>
-                        <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home-</a></span> <span class="mr-2"></span> <span>About</span></p>
+                        <h1 class="mb-0 bread">MY CART</h1>
+                        <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home-</a></span> <span class="mr-2"></span> <span>My Cart</span></p>
 
                     </div>
                 </div>
             </div>
         </div>
 
-        <section class="ftco-section">
+        <section class="ftco-section" style="background-color: #f1f3f6;padding: 0px 0 0 !important;">
             <div class="pad-lr-80">
-                <div class="row">
-                    <div class="col-lg-12 pl-md-5 ftco-animate pad-80">
-                        <div class="tab-add">
-                            <button class="tablinks-add" onclick="openCity(event, 'step-1')" id="defaultOpen">Cart</button>
-                            <button class="tablinks-add" onclick="openCity(event, 'step-2')">Shipping Address</button>
-                            <button class="tablinks-add" onclick="openCity(event, 'step-3')">Payment</button>
-                        </div>
-                        <div id="step-1" class="tabcontent">
-                            <table class="add-table">
-                                <tr>
-                                    <th>Product name</th>
-                                    <th>Price</th>
-                                    <th>Quantity</th>
-                                    <th>Total</th>
-                                </tr>
-                                <tr>
-                                    <td>Fresche Mini Kit</td>
-                                    <td><i class="fa fa-inr" aria-hidden="true"></i></i> 250</td>
-                                    <td>1</td>
-                                    <td><i class="fa fa-inr" aria-hidden="true"></i> 250</td>
-                                </tr>
-                            </table>
-                            <div class="add-next">
-                                <button>next</button>
+                <div class="container">
+                    <div class="row">
+                        
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-12 items">
+                                    <h3>My Cart</h3>
+                                    <hr>
+                                </div>
                             </div>
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="items-n">
+                                        <div class="row" style="padding: 10px;">
+                                            <div class="col-md-3 cart-img">
+                                                <img src="images/combo.png" alt=""/>
+                                                <div class="add-num">
+                                                    <input type="number" value="1">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <h5>Fresche Combo Pack</h5>
+                                                <p>Volume: <span>1l + 1.5l</span></p>
+                                                <p><i class="fa fa-inr" aria-hidden="true"></i></i> 8000.00</p>
+                                                <p class="cart-remove"><a href="#">Remove</a></p>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <p class="delivery">Delivery in 4 - 5 days</p>
+                                                <p class="replace">10 Days Replacement Policy</p>
 
-                        </div>
-
-                        <div id="step-2" class="tabcontent">
-                            <div class="shipping">
-                                <from>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
-                                            <input type="text" id="fname" name="firstname" placeholder="">
+                                            </div>
                                         </div>
-                                        <div class="col-md-6">
-                                            <label for="email"><i class="fa fa-envelope"></i> Email</label>
-                                            <input type="text" id="email" name="email" placeholder="">
+                                        <hr>
+                                        <div class="row" style="padding: 10px;">
+                                            <div class="col-md-3 cart-img">
+                                                <img src="images/mini.png" alt=""/>
+                                                <div class="add-num">
+                                                    <input type="number" value="1">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <h5>Fresche Mini Kit</h5>
+                                                <p>Volume: <span>2 sets of 5 ml </span></p>
+                                                <p><i class="fa fa-inr" aria-hidden="true"></i></i> 250.00</p>
+                                                <p class="cart-remove"><a href="#">Remove</a></p>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <p class="delivery">Delivery in 4 - 5 days</p>
+                                                <p class="replace">10 Days Replacement Policy</p>
+
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12 ">
+                                                <div class="add-next">
+                                                    <button><a href="checkout.php" style="color: #fff">PLACE ORDER</a></button>
+                                                </div> 
+                                            </div> 
                                         </div>
                                     </div>
 
+                                </div>
+                                <div class="col-md-4 ">
+                                    <div class="total-amount">
+                                        <p class="price-tetail">PRICE DETAILS</p>
+                                        <hr>
+                                        <div class="row price-cart">
+                                            <div class="col-md-6">
+                                                <p>Price(2 item)</p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p><i class="fa fa-inr" aria-hidden="true"></i></i> 8250.00</p>
+                                            </div>
+                                        </div>
+                                        <div class="row price-cart">
+                                            <div class="col-md-6">
+                                                <p>Delivery</p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>FREE</p>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <p class="total-p">Total Payable</p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p><i class="fa fa-inr" aria-hidden="true"></i></i> 8250.00</p>
+                                            </div>
 
-                                    <div>
-                                        <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
-                                        <input type="text" id="adr" name="address" placeholder="">
-                                    </div>
-                                    <div>
-                                        <label for="city"><i class="fa fa-institution"></i> City</label>
-                                        <input type="text" id="city" name="city" placeholder="">
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <label for="state"></label>
-                                            <input type="text" id="state" name="state" placeholder="State">
                                         </div>
-                                        <div class="col-md-6">
-                                            <label for="zip"></label>
-                                            <input type="text" id="zip" name="zip" placeholder="Pin">
-                                        </div>
+
                                     </div>
-<!--                                    <div class="row">
-                                        <input type="submit" value="Continue to checkout" class="btn">
-                                    </div>-->
-                                </from>
-                                <div class="add-next">
-                                    <button class="color-back">Back</button>
-                                    <button>next</button>
+                                    <p class="need">Need help? <a href="contact.php">Contact Us</a></p>
                                 </div>
                             </div>
 
 
-                        </div>
-
-                        <div id="step-3" class="tabcontent">
-                            <h3>Tokyo</h3>
-                            <p>Tokyo is the capital of Japan.</p>
                         </div>
                     </div>
                 </div>

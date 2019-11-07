@@ -6,7 +6,7 @@
 
         <!-- END nav -->
         <?php include 'enquiry.php'; ?>
-        <section id="home-section" class="hero" style="background-image:url(images/bg_green-06.jpg);background-size:cover">
+        <section id="home-section" class="hero" style="background-image:url(images/bg_green-05.jpg);background-size:cover">
             <!--            <div id="video-viewport">
                             <video width="1920" height="1280" autoplay muted loop>
                                 <source src="video/nature-01.mp4" type="video/mp4">
@@ -16,15 +16,22 @@
             <?php include 'menu.php'; ?>
             <div class="home-slider owl-carousel">
                 <div class="slider-item">
-                    <div class="container">
+                    <div style="padding: 10px 40px;">
                         <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
                             <div class="col-md-12 ftco-animate">
                                 <div class="row">
-                                    <div class="col-md-12 product-text col-sm-12">
-                                        <!--<h1 class="mb-2">PRODUCT</h1>-->
-                                        <h2 class="subheading mb-4" style="text-align: center;">According to Prof Gilbert, children's immune systems were more healthy and robust than they are today because of more relaxed attitudes to germs. He explains that more fermented foods which contain bacteria, enable children higher exposure to animals, plants and soil more often.</h2>
-                                    </div>
 
+                                    <div class="col-md-3 col-sm-12 pro-img">
+                                        <a href="product.php"><img src="images/combo.png" class="img-responsive"/></a>
+                                        <p>Fresche Combo Pack</p>
+                                    </div>
+                                    <div class="col-md-6 col-sm-12 product-text-1 ">
+                                        <h2 class=" mb-4">FRESCHE delivers high performance antibacterial, antifungal, mould and odour control on treated textile fibres and substrates.</h2>
+                                    </div>
+                                    <div class="col-md-3 col-sm-12 pro-img">
+                                        <a href="product.php"><img src="images/mini.png" alt="" class="img-responsive"/></a>
+                                        <p>Fresche Mini Kit</p>
+                                    </div>
                                 </div>
                                 <div class="row res-feature-1">
                                     <div class="col-md-12">
@@ -65,6 +72,7 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -358,77 +366,93 @@
         <section class="img" style="background-image: url(images/bg-acc.jpg); background-size: cover;">
             <div class="pad-80">
                 <div class="row acc">
-                    <div class="col-md-8 col-sm-12 heading-section ftco-animate deal-of-the-day ftco-animate" style="z-index: 1;">
+                    <div class="col-md-8 col-sm-12 heading-section ftco-animate deal-of-the-day ftco-animate" style="z-index: 2;">
                         <h2 class="mb-4 text-center">Recognised / Tested By</h2>
+                        <!--                        <div class="">
+                                                    <ul class="acc-list accredition">
+                                                        <img src="images/acc/005.png" alt=""/><li>US EPA</li>
+                                                        <img src="images/acc/005.png" alt=""/><li>Oeko-Tex</li>
+                                                        <img src="images/acc/005.png" alt=""/><li>European BPR</li>
+                                                        <img src="images/acc/005.png" alt="" /><li>Primary Industry in New Zealand</li>
+                                                    </ul>
+                                                </div>-->
                         <div class=" accredition">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <div class="row" style="padding:0 10px;">
-                                        <div class="col-md-6 col-sm-12 bg-l-blue">
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-12">
                                             <div class="report-logo">
                                                 <img src="images/acc/008.png" alt=""/>
                                                 <p>Fresche Application Testing</p>
                                             </div>
                                         </div>
-                                        <div class="col-md-6 col-sm-12 bg-l-blue">
+                                        <div class="col-md-6 col-sm-12">
                                             <div class="report-logo">
                                                 <img src="images/acc/005-01.png" alt="" class=""/>
                                                 <p>US EPA</p>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row" style="padding:0 10px;">
-                                      
-                                            <div class="col-md-4 col-sm-4 col-xs-6 bg-l-blue">
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-4 col-xs-6">
 
-                                                <div class="report-logo">
-                                                    <img src="images/acc/002.png" alt=""/>
-                                                    <p>Oeko-Tex</p>
-                                                </div>
-                                                <div class="report-logo">
-                                                    <img src="images/acc/010.png" alt=""/>
-                                                    <p>European BPR</p>
-                                                </div>
-                                                <div class="report-logo">
-                                                    <img src="images/acc/004.png" alt=""/>
-                                                    <p>SHRIRAM INSTITUTE FOR INDUSTRIAL RESEARCH</p>
-                                                </div>
-
+                                            <div class="report-logo">
+                                                <img src="images/acc/002.png" alt=""/>
+                                                <p>Oeko-Tex</p>
                                             </div>
-                                            <div class="col-md-4 col-sm-4 col-xs-6 bg-l-blue">
-                                                <div class="report-logo">
-                                                    <img src="images/acc/007.png" alt=""/>
-                                                    <p>AMS laboratory</p>
-                                                </div>
-                                                <div class="report-logo">
-                                                    <img src="images/acc/003.png" alt=""/>
-                                                    <p>HITECH Diagnostic Centre</p>
-                                                </div>
-                                                <div class="report-logo">
-                                                    <img src="images/acc/006.png" alt="" class=""/>
-                                                    <p>MEDICA Superspecialty Hospital</p>
-                                                </div>
-
+                                            <div class="report-logo">
+                                                <img src="images/acc/010.png" alt=""/>
+                                                <p>European BPR</p>
                                             </div>
-                                            <div class="col-md-4 col-sm-4 col-xs-6 bg-l-blue">
-                                                <div class="report-logo">
-                                                    <img src="images/acc/010.png" alt="" />
-                                                    <p>Primary Industry in New Zealand</p>
-                                                </div>
-                                                <div class="report-logo">
-                                                    <img src="images/acc/001.png" alt=""/>
-                                                    <p>BANGALORE TEST HOUSE</p>
-                                                </div>
-
-                                                <div class="report-logo">
-                                                    <img src="images/acc/009.png" alt=""/>
-                                                    <p>THE SOUTH INDIA TEXTILE RESEARCH ASSOCIATION</p>
-                                                </div>
+                                            <div class="report-logo">
+                                                <img src="images/acc/004.png" alt=""/>
+                                                <p>SHRIRAM INSTITUTE FOR INDUSTRIAL RESEARCH</p>
                                             </div>
 
-                                        
+                                        </div>
+                                        <div class="col-md-4 col-sm-4 col-xs-6">
+                                            <div class="report-logo">
+                                                <img src="images/acc/007.png" alt=""/>
+                                                <p>AMS laboratory</p>
+                                            </div>
+                                            <div class="report-logo">
+                                                <img src="images/acc/003.png" alt=""/>
+                                                <p>HITECH Diagnostic Centre</p>
+                                            </div>
+                                            <div class="report-logo">
+                                                <img src="images/acc/006.png" alt="" class=""/>
+                                                <p>MEDICA Superspecialty Hospital</p>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-4 col-sm-4 col-xs-6">
+                                            <div class="report-logo">
+                                                <img src="images/acc/010.png" alt="" />
+                                                <p>Primary Industry in New Zealand</p>
+                                            </div>
+                                            <div class="report-logo">
+                                                <img src="images/acc/001.png" alt=""/>
+                                                <p>BANGALORE TEST HOUSE</p>
+                                            </div>
+
+                                            <div class="report-logo">
+                                                <img src="images/acc/009.png" alt=""/>
+                                                <p>THE SOUTH INDIA TEXTILE RESEARCH ASSOCIATION</p>
+                                            </div>
+                                        </div>
                                     </div>
 
+                                    <!--                                    <ul class="rec-list">
+                                                                            <div class="hov-img">
+                                                                                <img src="images/acc/005.png" alt="" class="hov-img-1"/> <img src="images/acc/005-01.png" alt="" class="hov-img-2"/><li>US EPA</li>
+                                                                            </div> 
+                                                                            <img src="images/acc/002.png" alt=""/><li>Oeko-Tex</li>
+                                                                            <img src="images/acc/010.png" alt=""/><li>European BPR</li>
+                                                                            <img src="images/acc/010.png" alt="" /><li>Primary Industry in New Zealand</li>
+                                                                            <img src="images/acc/005.png" alt="" /><li>Primary Industry in New Zealand</li>
+                                                                            <img src="images/acc/007.png" alt=""/><li>AMS laboratory</li>
+                                                                            <img src="images/acc/008.png" alt=""/><li>Fresche Application Testing</li>
+                                                                        </ul>-->
                                 </div>
                                 <!--                                <div class="col-md-6">
                                                                     <img src="images/acc/003.png" alt=""/><li>HITECH Diagnostic Centre</li>
@@ -485,29 +509,22 @@
                         </div>
 
                     </div>
-                    <div class="col-md-4 col-sm-12 heading-section ftco-animate deal-of-the-day ftco-animate" style="z-index: 2;">
+                    <div class="col-md-4 col-sm-12 heading-section ftco-animate deal-of-the-day ftco-animate">
                         <h2 class="mb-4 text-center">Test Reports</h2>
-                        <div class="fs-gal-view">
-                            <h1></h1>
-                            <img class="fs-gal-prev fs-gal-nav" src="images/prev.svg" alt="Previous picture" title="Previous picture" />
-                            <img class="fs-gal-next fs-gal-nav" src="images/next.svg" alt="Next picture" title="Next picture" />
-                            <img class="fs-gal-close" src="images/close.svg" alt="Close gallery" title="Close gallery" />
-                            <img class="fs-gal-main" src="" alt="" />
-                        </div>
                         <div class="row ftco-animate">
                             <div class="col-md-12">
                                 <div class="carousel-testimony owl-carousel">
                                     <div class="item">
                                         <div class="testimony-wrap p-4 pb-5">
                                             <div class="text text-center certificate">
-                                                <img class="fs-gal" src="images/report/001.jpg" alt="" class="img-responsive" data-url="images/report/001.jpg"/>
+                                                <img class="fs-gal" src="images/report/001.jpg" alt="" class="img-responsive"/>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="testimony-wrap p-4 pb-5 ">
                                             <div class="text text-center certificate">
-                                                <img class="fs-gal" src="images/report/002.jpg" alt=""  class="img-responsive" data-url="images/report/009.jpg"/>
+                                                <img class="fs-gal" src="images/report/002.jpg" alt=""  class="img-responsive"/>
                                             </div> 
                                         </div>
                                     </div>
@@ -515,7 +532,7 @@
                                     <div class="item">
                                         <div class="testimony-wrap p-4 pb-5">
                                             <div class="text text-center certificate">
-                                                <img class="fs-gal" src="images/report/003.jpg" alt=""  class="img-responsive" data-url="images/report/009.jpg"/>
+                                                <img class="fs-gal" src="images/report/003.jpg" alt=""  class="img-responsive"/>
                                             </div> 
                                         </div>
                                     </div>
@@ -523,7 +540,7 @@
                                     <div class="item">
                                         <div class="testimony-wrap p-4 pb-5">
                                             <div class="text text-center certificate">
-                                                <img class="fs-gal" src="images/report/005.jpg" alt=""  class="img-responsive" data-url="images/report/005.jpg"/>
+                                                <img class="fs-gal" src="images/report/005.jpg" alt=""  class="img-responsive"/>
                                             </div>
                                         </div>
                                     </div>
@@ -531,49 +548,49 @@
                                     <div class="item">
                                         <div class="testimony-wrap p-4 pb-5">
                                             <div class="text text-center certificate">
-                                                <img class="fs-gal" src="images/report/006.jpg" alt=""  class="img-responsive" data-url="images/report/006.jpg"/>
+                                                <img class="fs-gal" src="images/report/006.jpg" alt=""  class="img-responsive"/>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="testimony-wrap p-4 pb-5">
                                             <div class="text text-center certificate">
-                                                <img class="fs-gal" src="images/report/007.jpg" alt=""  class="img-responsive" data-url="images/report/007.jpg"/>
+                                                <img class="fs-gal" src="images/report/007.jpg" alt=""  class="img-responsive"/>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="testimony-wrap p-4 pb-5">
                                             <div class="text text-center certificate">
-                                                <img class="fs-gal" src="images/report/009.jpg" alt=""  class="img-responsive" data-url="images/report/009.jpg"/>
+                                                <img class="fs-gal" src="images/report/009.jpg" alt=""  class="img-responsive"/>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="testimony-wrap p-4 pb-5">
                                             <div class="text text-center certificate">
-                                                <img class="fs-gal" src="images/report/008.jpg" alt=""  class="img-responsive" data-url="images/report/008.jpg"/>
+                                                <img class="fs-gal" src="images/report/008.jpg" alt=""  class="img-responsive"/>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="testimony-wrap p-4 pb-5">
                                             <div class="text text-center certificate">
-                                                <img class="fs-gal" src="images/report/004.jpg" alt=""  class="img-responsive" data-url="images/report/004.jpg"/>
+                                                <img class="fs-gal" src="images/report/004.jpg" alt=""  class="img-responsive"/>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="testimony-wrap p-4 pb-5">
                                             <div class="text text-center certificate">
-                                                <img class="fs-gal" src="images/report/010.jpg" alt=""  class="img-responsive" data-url="images/report/010.jpg"/>
+                                                <img class="fs-gal" src="images/report/010.jpg" alt=""  class="img-responsive"/>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="testimony-wrap p-4 pb-5">
                                             <div class="text text-center certificate">
-                                                <img class="fs-gal" src="images/report/011.jpg" alt=""  class="img-responsive" data-url="images/report/011.jpg"/>
+                                                <img class="fs-gal" src="images/report/011.jpg" alt=""  class="img-responsive"/>
                                             </div>
                                         </div>
                                     </div>
@@ -664,6 +681,26 @@
             </div>
         </section>
 
+
+
+<!--        <section class="ftco-section ftco-no-pt ftco-no-pb py-5 bg-light">
+            <div class="container py-4">
+                <div class="row d-flex justify-content-center py-5">
+                    <div class="col-md-6">
+                        <h2 style="font-size: 22px;" class="mb-0">Subcribe to our Newsletter</h2>
+                        <span>Get e-mail updates about our latest shops and special offers</span>
+                    </div>
+                    <div class="col-md-6 d-flex align-items-center">
+                        <form action="#" class="subscribe-form">
+                            <div class="form-group d-flex">
+                                <input type="text" class="form-control" placeholder="Enter email address">
+                                <input type="submit" value="Subscribe" class="submit px-3">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>-->
         <?php include 'footer.php'; ?>
     </body>
 </html>

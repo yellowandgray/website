@@ -6,7 +6,7 @@
 
         <!-- END nav -->
         <?php include 'enquiry.php'; ?>
-        <section id="home-section" class="hero" style="background-image:url(images/bg_green-06.jpg);background-size:cover">
+        <section id="home-section" class="hero" style="background-image:url(images/bg_green-03.jpg);background-size:cover">
             <!--            <div id="video-viewport">
                             <video width="1920" height="1280" autoplay muted loop>
                                 <source src="video/nature-01.mp4" type="video/mp4">
@@ -20,11 +20,38 @@
                         <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
                             <div class="col-md-12 ftco-animate">
                                 <div class="row">
-                                    <div class="col-md-12 product-text col-sm-12">
+                                    <div class="col-md-8 product-text col-sm-12">
                                         <!--<h1 class="mb-2">PRODUCT</h1>-->
-                                        <h2 class="subheading mb-4" style="text-align: center;">According to Prof Gilbert, children's immune systems were more healthy and robust than they are today because of more relaxed attitudes to germs. He explains that more fermented foods which contain bacteria, enable children higher exposure to animals, plants and soil more often.</h2>
-                                    </div>
 
+
+                                        <h2 class="subheading mb-4">FRESCHE delivers high performance antibacterial, antifungal, mould and odour control on treated textile fibres and substrates.</h2>
+                                        <div class="row price">
+
+                                            <div class="col-md-8 pro-d col-sm-6 ">
+                                                <div class="row">
+                                                    <div class="col-md-6 col-sm-6">
+                                                        <img src="images/logo.png" alt=""/>
+                                                    </div>
+                                                </div>
+                                                <h3>Combo Pack</h3>
+                                                <p>Fresche EF 3851– 1 Litre</p>
+                                                <p>Bz 1 Binder – 1.5 Litre </p>
+                                                <p><span><i class="fa fa-inr" aria-hidden="true"></i></span><span>8000/-</span></p>
+                                                <!--                                                <div class="button-1">
+                                                                                                    <div class="eff-1"></div>
+                                                                                                    <a href="#"><img src="images/add.png" alt="" class="add-img"/>  Add To Cart</a>
+                                                                                                </div>-->
+
+                                            </div>
+                                            <div class="col-md-4 col-sm-6 add-cart">
+                                                <img src="images/add-cart.png" alt="" class="img-responsive"/>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-12 pro-img">
+                                        <img src="images/product-01.png" alt=""/>
+                                    </div>
                                 </div>
                                 <div class="row res-feature-1">
                                     <div class="col-md-12">
@@ -360,73 +387,70 @@
                 <div class="row acc">
                     <div class="col-md-8 col-sm-12 heading-section ftco-animate deal-of-the-day ftco-animate" style="z-index: 1;">
                         <h2 class="mb-4 text-center">Recognised / Tested By</h2>
-                        <div class=" accredition">
+                      <div class=" accredition">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <div class="row" style="padding:0 10px;">
-                                        <div class="col-md-6 col-sm-12 bg-l-blue">
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-12">
                                             <div class="report-logo">
                                                 <img src="images/acc/008.png" alt=""/>
                                                 <p>Fresche Application Testing</p>
                                             </div>
                                         </div>
-                                        <div class="col-md-6 col-sm-12 bg-l-blue">
+                                        <div class="col-md-6 col-sm-12">
                                             <div class="report-logo">
                                                 <img src="images/acc/005-01.png" alt="" class=""/>
                                                 <p>US EPA</p>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row" style="padding:0 10px;">
-                                      
-                                            <div class="col-md-4 col-sm-4 col-xs-6 bg-l-blue">
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-4 col-xs-6">
 
-                                                <div class="report-logo">
-                                                    <img src="images/acc/002.png" alt=""/>
-                                                    <p>Oeko-Tex</p>
-                                                </div>
-                                                <div class="report-logo">
-                                                    <img src="images/acc/010.png" alt=""/>
-                                                    <p>European BPR</p>
-                                                </div>
-                                                <div class="report-logo">
-                                                    <img src="images/acc/004.png" alt=""/>
-                                                    <p>SHRIRAM INSTITUTE FOR INDUSTRIAL RESEARCH</p>
-                                                </div>
-
+                                            <div class="report-logo">
+                                                <img src="images/acc/002.png" alt=""/>
+                                                <p>Oeko-Tex</p>
                                             </div>
-                                            <div class="col-md-4 col-sm-4 col-xs-6 bg-l-blue">
-                                                <div class="report-logo">
-                                                    <img src="images/acc/007.png" alt=""/>
-                                                    <p>AMS laboratory</p>
-                                                </div>
-                                                <div class="report-logo">
-                                                    <img src="images/acc/003.png" alt=""/>
-                                                    <p>HITECH Diagnostic Centre</p>
-                                                </div>
-                                                <div class="report-logo">
-                                                    <img src="images/acc/006.png" alt="" class=""/>
-                                                    <p>MEDICA Superspecialty Hospital</p>
-                                                </div>
-
+                                            <div class="report-logo">
+                                                <img src="images/acc/010.png" alt=""/>
+                                                <p>European BPR</p>
                                             </div>
-                                            <div class="col-md-4 col-sm-4 col-xs-6 bg-l-blue">
-                                                <div class="report-logo">
-                                                    <img src="images/acc/010.png" alt="" />
-                                                    <p>Primary Industry in New Zealand</p>
-                                                </div>
-                                                <div class="report-logo">
-                                                    <img src="images/acc/001.png" alt=""/>
-                                                    <p>BANGALORE TEST HOUSE</p>
-                                                </div>
-
-                                                <div class="report-logo">
-                                                    <img src="images/acc/009.png" alt=""/>
-                                                    <p>THE SOUTH INDIA TEXTILE RESEARCH ASSOCIATION</p>
-                                                </div>
+                                            <div class="report-logo">
+                                                <img src="images/acc/004.png" alt=""/>
+                                                <p>SHRIRAM INSTITUTE FOR INDUSTRIAL RESEARCH</p>
                                             </div>
 
-                                        
+                                        </div>
+                                        <div class="col-md-4 col-sm-4 col-xs-6">
+                                            <div class="report-logo">
+                                                <img src="images/acc/007.png" alt=""/>
+                                                <p>AMS laboratory</p>
+                                            </div>
+                                            <div class="report-logo">
+                                                <img src="images/acc/003.png" alt=""/>
+                                                <p>HITECH Diagnostic Centre</p>
+                                            </div>
+                                            <div class="report-logo">
+                                                <img src="images/acc/006.png" alt="" class=""/>
+                                                <p>MEDICA Superspecialty Hospital</p>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-4 col-sm-4 col-xs-6">
+                                            <div class="report-logo">
+                                                <img src="images/acc/010.png" alt="" />
+                                                <p>Primary Industry in New Zealand</p>
+                                            </div>
+                                            <div class="report-logo">
+                                                <img src="images/acc/001.png" alt=""/>
+                                                <p>BANGALORE TEST HOUSE</p>
+                                            </div>
+
+                                            <div class="report-logo">
+                                                <img src="images/acc/009.png" alt=""/>
+                                                <p>THE SOUTH INDIA TEXTILE RESEARCH ASSOCIATION</p>
+                                            </div>
+                                        </div>
                                     </div>
 
                                 </div>

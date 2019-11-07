@@ -16,28 +16,21 @@
             <?php include 'menu.php'; ?>
             <div class="home-slider owl-carousel">
                 <div class="slider-item">
-                    <div class="container">
+                    <div style="padding: 10px 40px;">
                         <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
                             <div class="col-md-12 ftco-animate">
                                 <div class="row">
-                                    <div class="col-md-8 product-text col-sm-12">
-                                        <!--<h1 class="mb-2">PRODUCT</h1>-->
 
-
-                                        <h2 class="subheading mb-4">FRESCHE delivers high performance antibacterial, antifungal, mould and odour control on treated textile fibres and substrates.</h2>
-                                        <div class="row pack">
-                                            <div class="col-md-6 col-sm-6 add-cart ">
-                                                <a href="product.php"><img src="images/combo.png" class="img-responsive"/></a>
-                                                <p>Fresche Combo Pack</p>
-                                            </div>
-                                            <div class="col-md-6 col-sm-6 add-cart">
-                                                <a href="product.php"><img src="images/mini.png" alt="" class="img-responsive"/></a>
-                                                <p>Fresche Mini Kit</p>
-                                            </div>
-                                        </div>
+                                    <div class="col-md-3 col-sm-12 pro-img">
+                                        <a href="product.php"><img src="images/combo.png" class="img-responsive"/></a>
+                                        <p>Fresche Combo Pack</p>
                                     </div>
-                                    <div class="col-md-4 col-sm-12 pro-img">
-                                        <img src="images/product-01.png" alt=""/>
+                                    <div class="col-md-6 col-sm-12 product-text-1 ">
+                                        <h2 class=" mb-4">FRESCHE delivers high performance antibacterial, antifungal, mould and odour control on treated textile fibres and substrates.</h2>
+                                    </div>
+                                    <div class="col-md-3 col-sm-12 pro-img">
+                                        <a href="product.php"><img src="images/mini.png" alt="" class="img-responsive"/></a>
+                                        <p>Fresche Mini Kit</p>
                                     </div>
                                 </div>
                                 <div class="row res-feature-1">
@@ -79,11 +72,12 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
         </section>
-      <section class="ftco-category pad-20-80 res-feature">
+        <section class="ftco-category pad-20-80 res-feature">
             <div class="col-md-12">
 
                 <div class="row feature-l"> 

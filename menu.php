@@ -17,7 +17,7 @@
                                                 <i class="fa fa-youtube" aria-hidden="true"></i>
                                                 <a class="phone" href="tel:+917373387504"><i class="fa fa-phone-square" aria-hidden="true"></i><p>+91 8409 012345</p></a>
                                                 <a class="whatsapp" href="https://api.whatsapp.com/send?phone=+918409012345"><i class="fa fa-whatsapp" aria-hidden="true"></i><p>+91 8409 012345</p></a>
-                                                <a class="mail" href="mailto:info@ghm.com"><i class="fa fa-envelope" aria-hidden="true"></i><p>info@ghm.com</p></a>
+                                                <a class="mail" href="mailto:info@ghmindia.com"><i class="fa fa-envelope" aria-hidden="true"></i><p>info@ghmindia.com</p></a>
                                             </div>
                                         </div>
                                     </div>
@@ -73,9 +73,9 @@
                                         echo 'active';
                                     }
                                     ?>"><a href="contact.php" class="nav-link">Contact</a></li>
-                                    <li class="nav-item cta cta-colored"><a href="#" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
-                                    <!--<li class="nav-item cta cta-colored"><a onclick="document.getElementById('id01').style.display = 'block'" class="nav-link"><i class="fa fa-user" aria-hidden="true"></i></a></li>-->
-                                     <?php //include 'login.php'; ?>
+                                    <li class="nav-item cta cta-colored"><a href="cart.php" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
+                                    <li class="nav-item cta cta-colored"><a onclick="document.getElementById('id01').style.display = 'block'" class="nav-link"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+                                            <?php include 'login.php'; ?>
                                 </ul>
                             </div>
                         </div>

@@ -174,8 +174,13 @@ a{
     display: inline-block;
     color: #fff !important;
     /*font-family: 'Josefin Sans', sans-serif;*/
-    padding-right: 21%;
+    /*padding-right: 21%;*/
+    border-radius: 4px;
+    background: rgba(0, 113, 188, 0.39);
+    padding: 10px;
+    box-shadow: 0px 0px 7px 0px #fff;
 }
+
 .width-100{
     width: 100%;
     margin: 0 auto !important;
@@ -546,8 +551,10 @@ video {
 }
 
 .pro-img img{
-    width: 100% !important;
+    width: 70% !important;
+    margin: 0 15%;
 }
+
 .box-2 {
     /*border-right: 10px solid #eee;*/
     /*transform: skewX(-25deg);*/
@@ -1098,6 +1105,7 @@ footer .copy p{
 
 .product-text{
     padding-top: 50px;
+    margin: auto;
 }
 .cer-text .button-1:hover {
     border: 2px solid #0072bb;
@@ -1418,9 +1426,15 @@ button-addcart {
     padding: 16px;
 }
 
-span.psw {
-    float: right;
-    padding-top: 16px;
+span.psw{
+    padding-top: -3px;
+    font-size: 11px;
+    text-align: center;
+    position: relative;
+    left: 63%;
+    top: -7px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .modal {
@@ -1454,6 +1468,10 @@ span.psw {
     border-radius: 0.3rem;
     outline: 0;
     margin: auto;
+    width: 314px !important;
+}
+.modal-content-box input::placeholder {
+    color: #ccc;
 }
 
 .close {
@@ -1565,9 +1583,12 @@ span.psw {
     background: #ed1c24;
     color: #fff;
     border: none;
-    padding: 2px 25px;
-    border-radius: 20px;
+    padding: 10px 25px;
+    /* border-radius: 20px; */
     outline: none !important;
+    margin-right: 51px;
+    font-size: 12px;
+    font-weight: 600;
 }
 
 .add-next button:hover {
@@ -1588,8 +1609,10 @@ span.psw {
     color: #fff;
     border: none;
     padding: 2px 25px;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     outline: none !important;
+    width: 80%;
+    margin: 0 10%;
 }
 .color-back{
     color: #f9f9f9 !important;
@@ -1603,7 +1626,7 @@ span.psw {
     height: 100px;
     border-radius: 0px;
     /* box-shadow: 0px 0px 1px 0px #eee; */
-    border: 1px solid #eee;
+    /*border: 1px solid #eee;*/
 }
 
 
@@ -1613,7 +1636,7 @@ span.psw {
     z-index: 999;
 }
 .report-logo:hover  {
-    background:#9c9c9c;
+    background:#fff;
     transition: all 0.2s linear;
 }
 @media (max-width: 992px) and (min-width: 768px) {
@@ -1681,4 +1704,312 @@ span.psw {
 .pack p {
     color: #0071bc !important;
     text-align: center;
+}
+.new-acc{
+    font-size: 11px;
+    text-align: center;
+}
+.pro-img p  {
+    font-size: 16px;
+    color: #fff !important;
+    text-align: center;
+    font-weight: 600 !important;
+}
+.product-text-1{
+    font-weight: 600 !important;
+    font-size: 24px !important;
+    letter-spacing: 0px !important;
+    text-transform: initial !important;
+    display: inline-block;
+    color: #fff !important;
+    margin: auto;
+    background: #0072bbbf;
+    padding: 32px;
+    border-radius: 6px;
+    box-shadow: 0px 0px 11px 4px #fff;
+}
+.product-text-1 h2 {
+    font-size: 29px !important;
+    color: #fff !important;
+    font-weight: 600 !important;
+}
+
+.cart-img img{
+    width: 50%;
+    margin: 0 25%;
+}
+.cart-remove a{
+    color: #f90000;
+    padding-right: 46px;
+    font-weight: 600;
+}
+.items h3{
+    line-height: 1.5;
+    font-weight: 600;
+    color: #0071bc;
+    font-family: 'Montserrat', sans-serif;
+}
+.add-num input{
+    width: 50px;
+    /* margin: 0 25%; */
+    text-align: center;
+}
+.delivery{
+    font-size: 15px !important;
+    color: #75b102 !important;
+}
+.replace {
+    font-size: 11px;
+    color: #a9a8a8;
+    font-weight: 500;
+}
+.add-num{
+    text-align: center;
+    margin-top: 20px;
+}
+.add-next{
+    border: 1px solid #eee;
+    padding: 10px;
+    box-shadow: 0px -4px 6px 0px #eee;
+    background: #fff;
+}
+.total-amount{
+    padding: 10px;
+    box-shadow: 2px 2px 7px 0px #a7a7a7;
+    background-color: #fff;
+}
+.price-tetail {
+    font-size: 15px;
+    font-weight: 600;
+
+}
+.total-p{
+    color: #000 !important;
+    font-size: 18px;
+    font-weight: 600;
+}
+.need{
+    font-size: 13px;
+    font-weight: 600;
+    padding-top: 15px;
+}
+.items-n{  
+    background: #fff;
+
+}
+.bg-l-blue{
+    background: rgba(0, 0, 0, 0.66);
+}
+.check{
+    padding: 10px 10px 4px 10px;
+    margin-bottom: 10px;
+    background: #fff;
+    box-shadow: 1px 1px 1px 0px #bbbbbb;
+}
+.check h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #616161;
+}
+.check h4 span{
+    font-size: 16px;
+    font-weight: 600;
+    padding: 3px 10px;
+    background: #eee;
+    color: #0373bc;
+    margin-right: 20px;
+}
+.check-login{
+    padding: 10px 10px 4px 10px;
+    margin-bottom: 10px;
+    background: #0072bb;
+}
+.check-login h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+}
+.check-login h4 span{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 3px 10px;
+    background: #eee;
+    color: #0373bc;
+    margin-right: 20px;
+}
+.user-login input{
+    border: none;
+    border-bottom: 1px solid #aba8a8;
+    background: none;
+    padding: 10px 0px;
+    outline: none;
+}
+.user-login{
+    padding: 10px 0px 10px 30px;
+    width: 60%;
+}
+.user-login input::placeholder{
+    padding: 10px 10px;
+    font-size: 12px;
+}
+.flow-1 button{
+    width: 200px;
+    /*float: right;*/
+    padding: 5px;
+    background: #f73e45;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    margin-top: 20px;
+    font-size: 14px;
+    outline: none;
+}
+.login-final-submit button{
+    width: 200px;
+    /*float: right;*/
+    padding: 5px;
+    background: #f73e45;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    font-size: 14px;
+    margin-top: 20px;
+    outline: none;
+} 
+.login-final-submit{
+    text-align: center;
+
+} 
+.flow-1{
+    text-align: center;
+
+} 
+.user-address input{
+    border: 1px solid #e2e2e2;
+    background: none;
+    padding: 10px 0px;
+    outline: none;
+}
+.user-address input::placeholder{
+    padding: 10px 10px;
+    font-size: 12px;
+}
+.user-address{
+    padding: 10px 0px 10px 30px;
+    width: 60%;
+}
+.user-address textarea{
+    overflow: auto;
+    resize: vertical;
+    width: 100%;
+    height: 100px;
+    border: 1px solid #e2e2e2;
+    margin: 5px 0px;
+    outline: none;
+}
+.user-address textarea::placeholder{
+    padding: 10px 10px;
+    font-size: 12px;
+}
+.user-address select{
+    overflow: auto;
+    resize: vertical;
+    width: 100%;
+    height: 50px;
+    border: 1px solid #e2e2e2;
+    margin: 6px 0px;
+    outline: none;
+}
+.user-address select::placeholder{
+    padding: 10px 10px;
+    font-size: 12px;
+}
+.address-submit button{
+    width: 200px;
+    /*float: right;*/
+    padding: 5px;
+    background: #f73e45;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    margin-top: 20px;
+    font-size: 14px;
+    outline: none;
+}
+.address-submit{
+    text-align: center;
+    outline: none;
+}
+.flow-3 a{
+    position: relative;
+    top: -42px;
+    right: -352px;
+    font-size: 14px;
+    color: #0071bc;
+}
+.can {
+    background: none !important;
+    color: #0070bc !important;
+}
+.flow-4 h5{
+    font-size: 13px;
+    color: #424242;
+    font-weight: 600;
+}
+.flow-4 {
+    margin-top: 10px;
+}
+.flow-4 button {
+    background: none;
+    color: #0071bc;
+    border: 1px solid #cccbcb;
+    padding: 0px 16px;
+    position: relative;
+    top: -33px;
+    right: -85%;
+    font-size: 14px;
+}
+.address-flow-2 h5{
+    font-size: 13px;
+    color: #424242;
+    font-weight: 600;
+}
+.address-flow-2 p{
+    font-size: 13px;
+    color: #424242;
+
+}
+.address-flow-2 {
+    margin-top: 10px;
+}
+.address-flow-2 button {
+    background: none;
+    color: #0071bc;
+    border: 1px solid #cccbcb;
+    padding: 0px 16px;
+    position: relative;
+    top: -85px;
+    right: -85%;
+    font-size: 14px;
+}
+.price-cart p{
+    font-size: 13px;
+}
+.product-update h5{
+    font-size: 13px;
+    font-weight: 600;
+    color: #969696;
+    padding-top: 40px;
+}
+.product-update .cart-remove a {
+    color: #0072bb;
+    padding-right: 46px;
+    font-weight: 600;
+    font-size: 12px;
+}
+.checkout-money p{
+    font-size: 13px;
+    font-weight: 600;
+    color: #000000;
+    padding-top: 40px;
 }
