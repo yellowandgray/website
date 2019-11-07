@@ -172,8 +172,8 @@ import { MyclubComponent } from './myclub/myclub.component';
     filterEventclubgallery,
     PictureViewClubGallery,
     ClubGalleryForm, 
-    ClubGalleryDelete, MyclubComponent
-
+    ClubGalleryDelete, 
+    MyclubComponent
   ],
   imports: [
     BrowserModule,

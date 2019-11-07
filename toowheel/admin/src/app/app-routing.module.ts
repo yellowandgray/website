@@ -23,6 +23,7 @@ import { UsersComponent } from './users/users.component';
 import { WorkshopComponent } from './workshop/workshop.component';
 import { AssetComponent } from './asset/asset.component';
 import { ClubannouncementComponent } from './clubannouncement/clubannouncement.component';
+import { MyclubComponent } from './myclub/myclub.component';
 
 const routes: Routes = [
     {path: '', component: LoginComponent},
@@ -48,6 +49,7 @@ const routes: Routes = [
     {path: 'workshop', component: WorkshopComponent},
     {path: 'asset', component: AssetComponent},
     {path: 'clubannouncement', component: ClubannouncementComponent},
+    {path: 'myclub', component: MyclubComponent}
 ];
 
 @NgModule({
