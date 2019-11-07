@@ -87,7 +87,7 @@ export class ForgotPasswordForm {
     @Inject(MAT_DIALOG_DATA) public data: any,private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
         this.forgotpasswordForm = new FormGroup({
-            'email': new FormControl('', [Validators.required, Validators.email])
+            'email': new FormControl('', Validators.required)
         });
     }
     onSubmit() {

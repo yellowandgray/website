@@ -8,123 +8,60 @@
     </div>
     <div class="user-info" mat-list-item fxFlex="80">
         <h4>{{data.name}}</h4>
-        <p>{{data.role}}</p>
+        <p>{{data.role | titlecase}}</p>
     </div>
 </mat-nav-list>
 <p class="last-login" *ngIf="data.last_login && data.last_login != '0000-00-00 00:00:00'">Last Login: {{data.last_login | date: 'dd-MM-yyyy hh:mm:ss'}}</p>
 <mat-nav-list>
-    <a mat-list-item routerLinkActive="active-nav" *ngIf="data.role != 'Editor' " (click)="expendfun(1)">         
-        <mat-icon>dashboard</mat-icon> Dashboard 
-        <button style="margin-left: 70px;" mat-icon-button>
-          <mat-icon *ngIf="!isExpanded1">keyboard_arrow_up</mat-icon>
-          <mat-icon *ngIf="isExpanded1">keyboard_arrow_down</mat-icon>
-        </button>
+    <a mat-list-item routerLinkActive="active-nav" routerLink="/dashboard" *ngIf="data.role != 'Editor' && data.role != 'club'">
+        <mat-icon>dashboard</mat-icon> Toowheel Dashboard
     </a>
-    <a mat-list-item routerLinkActive="active-nav" routerLink="/dashboard" *ngIf="data.role != 'Editor' && isExpanded1">   
-        <mat-icon class="mat-l">dashboard</mat-icon> Toowheel Dashboard
+    <a mat-list-item routerLinkActive="active-nav"  *ngIf="data.role != 'Editor' && data.role != 'club'">
+        <mat-icon>poll</mat-icon> Analytics
     </a>
-    <a mat-list-item routerLinkActive="active-nav"  *ngIf="data.role != 'Editor' && isExpanded1">       
-        <mat-icon class="mat-l">poll</mat-icon> Analytics
+    <a mat-list-item routerLinkActive="active-nav" routerLink="/config" *ngIf="data.role != 'Editor' && data.role != 'club'">
+        <mat-icon>pages</mat-icon> Pages
     </a>
-    <a mat-list-item routerLinkActive="active-nav" *ngIf="data.role != 'Editor' " (click)="expendfun(3)">         
-        <mat-icon>settings_applications</mat-icon> Config 
-        <button style="margin-left: 99px;" mat-icon-button>
-          <mat-icon *ngIf="!isExpanded3">keyboard_arrow_up</mat-icon>
-          <mat-icon *ngIf="isExpanded3">keyboard_arrow_down</mat-icon>
-        </button>        
+    <a mat-list-item routerLinkActive="active-nav" routerLink="/advertisement" *ngIf="data.role != 'Editor' && data.role != 'club'">
+        <mat-icon>picture_in_picture</mat-icon> Advertisement
     </a>
-    <a mat-list-item routerLinkActive="active-nav" routerLink="/config" *ngIf="data.role != 'Editor' && isExpanded3">
-        <mat-icon class="mat-l">pages</mat-icon> Pages
-    </a>
-    <a mat-list-item routerLinkActive="active-nav" routerLink="/advertisement" *ngIf="data.role != 'Editor' && isExpanded3">
-        <mat-icon class="mat-l">picture_in_picture</mat-icon> Advertisement
-    </a>
-<!--    <a mat-list-item routerLinkActive="active-nav" routerLink="/config" *ngIf="data.role != 'Editor' ">
-        <mat-icon>settings_applications</mat-icon> Config
-    </a>-->
-    <a mat-list-item routerLinkActive="active-nav" routerLink="/category" *ngIf="data.role != 'Editor' ">
+    <a mat-list-item routerLinkActive="active-nav" routerLink="/category" *ngIf="data.role != 'Editor' && data.role != 'club'">
         <mat-icon>category</mat-icon> Category
     </a>
-    <a mat-list-item routerLinkActive="active-nav" routerLink="/media" *ngIf="data.role != 'Editor' ">
+    <a mat-list-item routerLinkActive="active-nav" routerLink="/media" *ngIf="data.role != 'Editor' && data.role != 'club'">
         <mat-icon>wallpaper</mat-icon> Media
     </a>
-    <a mat-list-item routerLinkActive="active-nav" routerLink="/club" *ngIf="data.role != 'Editor'">
+    <a mat-list-item routerLinkActive="active-nav" routerLink="/club" *ngIf="data.role != 'Editor' && data.role != 'club'">
         <mat-icon>store_mall_directory</mat-icon> Club
     </a>
-    <a mat-list-item routerLinkActive="active-nav" routerLink="/member" *ngIf="data.role != 'Editor' ">
+    <a mat-list-item routerLinkActive="active-nav" routerLink="/member" *ngIf="data.role != 'Editor' && data.role != 'club'">
         <mat-icon>person</mat-icon> Members
     </a>
-    <a mat-list-item routerLinkActive="active-nav" *ngIf="data.role != 'Editor' " (click)="expendfun(2)">         
-        <mat-icon>post_add</mat-icon> Article 
-        <button style="margin-left: 99px;" mat-icon-button>
-          <mat-icon *ngIf="!isExpanded2">keyboard_arrow_up</mat-icon>
-          <mat-icon *ngIf="isExpanded2">keyboard_arrow_down</mat-icon>
-        </button>        
-    </a>
-    <a mat-list-item routerLinkActive="active-nav" routerLink="/news"  *ngIf="isExpanded2">
-        <mat-icon class="mat-l">post_add</mat-icon> News
-    </a>
-    <a mat-list-item routerLinkActive="active-nav" routerLink="/clubevent" *ngIf="isExpanded2">
-        <mat-icon class="mat-l">event_note</mat-icon> Event
-    </a>
-    <a mat-list-item routerLinkActive="active-nav" routerLink="/press-release" *ngIf="isExpanded2">
-        <mat-icon class="mat-l">event_note</mat-icon> Press Release
-    </a>
-<!--    <a mat-list-item routerLinkActive="active-nav" routerLink="/news" && isExpanded2>
+    <a mat-list-item routerLinkActive="active-nav" routerLink="/news" *ngIf="data.role != 'club'">
         <mat-icon>post_add</mat-icon> News
     </a>
-    <a mat-list-item routerLinkActive="active-nav" routerLink="/clubevent" && isExpanded2>
+    <a mat-list-item routerLinkActive="active-nav" routerLink="/clubevent" *ngIf="data.role != 'club'">
         <mat-icon>event_note</mat-icon> Event
     </a>
-    <a mat-list-item routerLinkActive="active-nav" routerLink="/press-release" && isExpanded2>
+    <a mat-list-item routerLinkActive="active-nav" routerLink="/press-release" *ngIf="data.role != 'club'">
         <mat-icon>event_note</mat-icon> Press Release
-    </a>-->
-<!--    <a mat-list-item routerLinkActive="active-nav" routerLink="/advertisement" *ngIf="data.role != 'Editor' ">
-        <mat-icon>picture_in_picture</mat-icon> Advertisement
-    </a>-->
-    <a mat-list-item routerLinkActive="active-nav" routerLink="/gallery">
+    </a>
+    <a mat-list-item routerLinkActive="active-nav" routerLink="/gallery" *ngIf="data.role != 'club'">
         <mat-icon>perm_media</mat-icon> Gallery
     </a>
-    <a mat-list-item routerLinkActive="active-nav" routerLink="/newsletter" *ngIf="data.role != 'Editor' ">
+    <a mat-list-item routerLinkActive="active-nav" routerLink="/newsletter" *ngIf="data.role != 'Editor' && data.role != 'club'">
         <mat-icon>email</mat-icon> News Letter
     </a>
-    <a mat-list-item routerLinkActive="active-nav" routerLink="/users" *ngIf="data.role != 'Admin' && data.role != 'Editor' ">
-        <mat-icon>person_outline</mat-icon> Users
+    <a mat-list-item routerLinkActive="active-nav" routerLink="/users" *ngIf="data.role != 'Admin' && data.role != 'Editor' && data.role != 'club'">
+       <mat-icon>person_outline</mat-icon> Users
     </a>
-
-    <a mat-list-item routerLinkActive="active-nav" routerLink="/workshop" *ngIf="data.role != 'Editor' ">
+    <a mat-list-item routerLinkActive="active-nav" routerLink="/workshop" *ngIf="data.role != 'Editor' && data.role != 'club'">
         <mat-icon>home_work</mat-icon> Workshop
     </a>
-    <a mat-list-item routerLinkActive="active-nav" routerLink="/asset" *ngIf="data.role != 'Editor' ">
+    <a mat-list-item routerLinkActive="active-nav" routerLink="/asset" *ngIf="data.role != 'Editor' && data.role != 'club'">
         <mat-icon>web_asset</mat-icon> Asset
     </a>
-    <a mat-list-item routerLinkActive="active-nav" routerLink="/clubannouncement" *ngIf="data.role != 'Editor' ">
-        <mat-icon>hearing</mat-icon> Announcement
+    <a mat-list-item routerLinkActive="active-nav" routerLink="/asset" *ngIf="data.role == 'club'">
+        <mat-icon>web_asset</mat-icon> My club
     </a>
-    <a mat-list-item routerLinkActive="active-nav" routerLink="/ecommerce" *ngIf="data.role != 'Editor' ">
-        <mat-icon>import_contacts</mat-icon> Ecommerce
-    </a>
-    <a mat-list-item routerLinkActive="active-nav" routerLink="/clubgallery">
-            <mat-icon>perm_media</mat-icon> Gallery
-    </a>
-
-    <!--    <a mat-list-item routerLinkActive="active-nav" routerLink="/business">
-            <mat-icon>how_to_reg</mat-icon> T-Shirt
-        </a>
-        <a mat-list-item routerLink="/point"> 
-            <mat-icon>card_giftcard</mat-icon> Point
-        </a>
-        <a mat-list-item routerLinkActive="active-nav" routerLink="/clubdashboard">
-            <mat-icon>dashboard</mat-icon> Dashboard
-        </a>
-        <a mat-list-item routerLinkActive="active-nav" routerLink="/clublanding">
-            <mat-icon>landscape</mat-icon> Landing Page
-        </a>
-        <a mat-list-item routerLinkActive="active-nav" routerLink="/clubgallery">
-            <mat-icon>perm_media</mat-icon> Gallery
-        </a>
-        <a mat-list-item routerLinkActive="active-nav" routerLink="/clubnews">
-            <mat-icon>post_add</mat-icon> News
-        </a>
-    -->   
 </mat-nav-list>

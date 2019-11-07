@@ -5,12 +5,9 @@ import { CategoryComponent } from './category/category.component';
 import { MediaComponent } from './media/media.component';
 import { ClubComponent } from './club/club.component';
 import { MemberComponent } from './member/member.component';
-import { VendorComponent } from './vendor/vendor.component';
 import { NewsComponent } from './news/news.component';
-import { BusinessComponent } from './business/business.component';
 import { AdvertismentComponent } from './advertisment/advertisment.component';
 import { GalleryComponent } from './gallery/gallery.component';
-import { PointComponent } from './point/point.component';
 import { ConfigComponent } from './config/config.component';
 import { ClubdashboardComponent } from './clubdashboard/clubdashboard.component';
 import { ClublandingComponent } from './clublanding/clublanding.component';
@@ -26,8 +23,7 @@ import { UsersComponent } from './users/users.component';
 import { WorkshopComponent } from './workshop/workshop.component';
 import { AssetComponent } from './asset/asset.component';
 import { ClubannouncementComponent } from './clubannouncement/clubannouncement.component';
-import { EcommerceComponent } from './ecommerce/ecommerce.component';
-
+import { MyclubComponent } from './myclub/myclub.component';
 
 const routes: Routes = [
     {path: '', component: LoginComponent},
@@ -36,12 +32,9 @@ const routes: Routes = [
     {path: 'media', component: MediaComponent},
     {path: 'club', component: ClubComponent},
     {path: 'member', component: MemberComponent},
-    {path: 'vendor', component: VendorComponent},
     {path: 'news', component: NewsComponent},
-    {path: 'business', component: BusinessComponent},
     {path: 'advertisement', component: AdvertismentComponent},
     {path: 'gallery', component: GalleryComponent},
-    {path: 'point', component: PointComponent},
     {path: 'config', component: ConfigComponent},
     {path: 'clubdashboard', component: ClubdashboardComponent},
     {path: 'clublanding', component: ClublandingComponent},
@@ -56,7 +49,7 @@ const routes: Routes = [
     {path: 'workshop', component: WorkshopComponent},
     {path: 'asset', component: AssetComponent},
     {path: 'clubannouncement', component: ClubannouncementComponent},
-    {path: 'ecommerce', component: EcommerceComponent}
+    {path: 'myclub', component: MyclubComponent}
 ];
 
 @NgModule({

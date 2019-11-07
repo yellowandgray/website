@@ -44,7 +44,11 @@ $app->post('/insert_club', function() use ($app) {
     $com = new Common();
     $exist = $com->selectRow('*', 'club', 'email = \'' . $data['email'] . '\'');
     if (count($exist) == 0) {
-        $record = $com->insertRecord(array('type' => $data['type'], 'category_id' => $data['category_id'], 'name' => $data['name'], 'cover_image' => $data['cover_image'], 'logo' => $data['logo'], 'state_id' => $data['state'], 'city' => $data['city'], 'zipcode' => $data['zip'], 'landmark' => $data['landmark'], 'address' => $data['address'], 'leader_name' => $data['club_leader_name'], 'email' => $data['email'], 'email_id' => $data['email_id'], 'phone' => $data['mobile'], 'about' => $data['about'], 'facebook_link' => $data['facebook_link'], 'youtube_link' => $data['youtube_link'], 'twitter_link' => $data['twitter_link'], 'instagram_link' => $data['instagram_link'], 'rank' => $data['rank'], 'club_video' => $data['club_video'], 'published' => $data['published'], 'source' => $data['source']), 'club');
+        if ($data['published'] == 1) {
+            $data['password'] = $com->randomStringGenerator(8);
+        }
+        $data['link'] = LOGIN_ADMIN_PATH;
+        $record = $com->insertRecord(array('type' => $data['type'], 'category_id' => $data['category_id'], 'name' => $data['name'], 'cover_image' => $data['cover_image'], 'logo' => $data['logo'], 'state_id' => $data['state'], 'city' => $data['city'], 'zipcode' => $data['zip'], 'landmark' => $data['landmark'], 'address' => $data['address'], 'leader_name' => $data['club_leader_name'], 'email' => $data['email'], 'email_id' => $data['email_id'], 'phone' => $data['mobile'], 'about' => $data['about'], 'facebook_link' => $data['facebook_link'], 'youtube_link' => $data['youtube_link'], 'twitter_link' => $data['twitter_link'], 'instagram_link' => $data['instagram_link'], 'rank' => $data['rank'], 'club_video' => $data['club_video'], 'published' => $data['published'], 'source' => $data['source'], 'password' => $com->encryptPassword($data['password'])), 'club');
         if ($record > 0) {
             $tpy = new Thirdparty();
             if ($data['published'] == 0) {
@@ -56,7 +60,7 @@ $app->post('/insert_club', function() use ($app) {
                 $template = $com->selectRow('*', 'templates', 'name=\'club_register_activated\' AND type=\'email\' AND target=\'user\'');
             }
             $body = $com->getReplacedString($template['body_web'], $data);
-            $tpy->sendMail( $data['email_id'], $data['club_leader_name'], $body, $body, $template['subject'],$template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
+            $tpy->sendMail($data['email_id'], $data['club_leader_name'], $body, $body, $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
             $res['error'] = false;
             $res['message'] = 'Club registered successfully';
         }
@@ -233,7 +237,7 @@ $app->post('/insert_member', function() use ($app) {
         $record = $com->insertRecord(array('type' => $data['type'], 'first_name' => $data['first_name'], 'last_name' => $data['last_name'], 'profile_picture' => $data['profile_picture'], 'gender' => $data['gender'], 'age' => $data['age'], 'ic_passport' => $data['ic_passport'], 'dob_date' => $data['dob_date'], 'dob_month' => $data['dob_month'], 'dob_year' => $data['dob_year'], 'contact_number' => $data['contact_number'], 'address' => $data['address'], 'country' => $data['country'], 'state_id' => $data['state_id'], 'referral_member_id' => $data['referral_member_id'], 'referral_club_id' => $data['referral_club_id'], 'marital_status' => $data['marital_status'], 'zip_code' => $data['zip_code'], 'email' => $data['email'], 'email_id' => $data['email_id'], 'password' => $com->encryptPassword($data['password']), 'club_id' => $data['club_id'], 'payment_type' => $data['payment_type'], 'paypal_response' => $data['paypal_response'], 'activated' => $data['activated'], 'paypal_transaction_id' => $data['paypal_transaction_id'], 'fund_transfer_file' => $data['fund_transfer_file'], 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')), 'member');
         if ($record > 0) {
             $res['error'] = false;
-            $member_id = 'TW' . strtoupper(substr($data['gender'], 0, 1)) . strtoupper(substr($data['ic_passport'], 0, 3)) . strtoupper(substr($data['state'], 0, 2));
+            $member_id = 'TW' . strtoupper(substr($data['gender'], 0, 1)) . strtoupper(substr($data['ic_passport'], -7)) . strtoupper(substr($data['state'], 0, 2));
             $update_arr = array('membership_id' => $member_id);
             if (isset($data['activated_by'])) {
                 $update_arr['activated_by'] = $data['activated_by'];
@@ -659,7 +663,7 @@ $app->get('/get_clubgallery', function() {
 $app->get('/get_news', function() {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
-    $data = $com->selectAll('n.*, m.name AS media, c.name AS club, ca.name AS category', 'news AS n LEFT JOIN media AS m ON m.media_id = n.media_id LEFT JOIN club AS c ON c.club_id = n.club_id LEFT JOIN category AS ca ON ca.category_id = n.category_id AND ca.category_id = c.category_id', 'n.news_id > 0');
+    $data = $com->selectAll('n.*, m.name AS media, c.name AS club, ca.name AS category', 'news AS n LEFT JOIN media AS m ON m.media_id = n.media_id LEFT JOIN club AS c ON c.club_id = n.club_id LEFT JOIN category AS ca ON ca.category_id = n.category_id AND ca.category_id = c.category_id', 'n.news_id > 0 ORDER BY n.news_id DESC');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
@@ -671,7 +675,7 @@ $app->get('/get_news', function() {
 $app->get('/get_press_release', function() {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
-    $data = $com->selectAll('*', 'press_release', 'press_release_id > 0');
+    $data = $com->selectAll('*', 'press_release', 'press_release_id > 0 ORDER BY press_release_id DESC');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
@@ -825,18 +829,34 @@ $app->post('/loginadmin', function() use ($app) {
     $data = $app->request->post();
     $obj = new Common();
     $record = $obj->selectRow('*', 'users', 'email=\'' . $data['email'] . '\'');
-    if (count($record) > 0) {
-        $pass_matchs = $obj->decryptPassword($data['password'], $record['password']);
-        if ($pass_matchs == true) {
-            date_default_timezone_set("Asia/Kuala_Lumpur");
-            $obj->updateRecordWithWhere(array('last_login' => date('Y-m-d H:i:s')), 'users', 'users_id=' . $record['users_id']);
-            $res['error'] = false;
-            $res['message'] = 'Welcome ' . $record['name'];
-            $res['data'] = $record;
-        } else {
-            $res['message'] = 'Username or Password mismatch';
-        }
-    }
+    /* if (count($record) > 0) {
+      $pass_matchs = $obj->decryptPassword($data['password'], $record['password']);
+      if ($pass_matchs == true) {
+      date_default_timezone_set("Asia/Kuala_Lumpur");
+      $obj->updateRecordWithWhere(array('last_login' => date('Y-m-d H:i:s')), 'users', 'users_id=' . $record['users_id']);
+      $res['error'] = false;
+      $res['message'] = 'Welcome ' . $record['name'];
+      $res['data'] = $record;
+      } else {
+      $res['message'] = 'Username or Password mismatch';
+      }
+      } else {
+      $club = $obj->selectRow('*', 'club', 'email=\'' . $data['email'] . '\'');
+      if (count($club) > 0) {
+      $pass_matchs = $obj->decryptPassword($data['password'], $club['password']);
+      if ($pass_matchs == true) {
+      date_default_timezone_set("Asia/Kuala_Lumpur");
+      $obj->updateRecordWithWhere(array('last_login' => date('Y-m-d H:i:s')), 'club', 'club_id=' . $club['club_id']);
+      $club['role'] = 'club';
+      $club['media_path'] = $club['logo'];
+      $res['error'] = false;
+      $res['message'] = 'Welcome ' . $club['name'];
+      $res['data'] = $club;
+      } else {
+      $res['message'] = 'Username or Password mismatch';
+      }
+      }
+      } */
     echoRespnse(201, $res);
 });
 
@@ -958,6 +978,7 @@ $app->post('/reset_user_password', function() use ($app) {
     date_default_timezone_set("Asia/Kuala_Lumpur");
     $res = array('error' => true, 'message' => 'Unable to update your password');
     $user = $obj->selectRow('*', 'users', 'reset_code = \'' . $data['auth'] . '\'');
+    $club = $obj->selectRow('*', 'club', 'reset_code = \'' . $data['auth'] . '\'');
     if (count($user) > 0) {
         $update = $obj->updateRecordWithWhere(array('password' => $obj->encryptPassword($data['password'])), 'users', 'reset_code=\'' . $data['auth'] . '\'');
         if ($update > 0) {
@@ -969,6 +990,18 @@ $app->post('/reset_user_password', function() use ($app) {
             $body = $obj->getReplacedString($template['body_web'], $user);
             $tpty = new Thirdparty();
             $tpty->sendMail($user['email'], $user['name'], $body, $body, $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
+        }
+    } else if (count($club) > 0) {
+        $update = $obj->updateRecordWithWhere(array('password' => $obj->encryptPassword($data['password'])), 'club', 'reset_code=\'' . $data['auth'] . '\'');
+        if ($update > 0) {
+            $res['error'] = false;
+            $res['message'] = 'Password updated successfully';
+            $template = $obj->selectRow('*', 'templates', 'name=\'password_update_success\' AND type=\'email\' AND target=\'user\'');
+            $club['first_name'] = $club['leader_name'];
+            $club['last_name'] = '';
+            $body = $obj->getReplacedString($template['body_web'], $club);
+            $tpty = new Thirdparty();
+            $tpty->sendMail($club['email_id'], $club['leader_name'], $body, $body, $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
         }
     } else {
         $res['message'] = 'Authentication failed';
@@ -1005,24 +1038,46 @@ $app->post('/change_password_user', function() use ($app) {
     $data = $app->request->post();
     $obj = new Common();
     $res = array('error' => true, 'message' => 'Unable to change password');
-    $exist = $obj->selectRow('*', 'users', 'users_id = ' . $data['user']);
-    if (count($exist) > 0) {
-        $pass_matchs = $obj->decryptPassword($data['old_password'], $exist['password']);
-        if ($pass_matchs == true) {
-            $res['error'] = false;
-            $res['message'] = 'Password updated successfully';
-            $obj->updateRecordWithWhere(array('password' => $obj->encryptPassword($data['new_password'])), 'users', 'users_id=' . $data['user']);
-            $template = $obj->selectRow('*', 'templates', 'name=\'password_update_success\' AND type=\'email\' AND target=\'user\'');
-            $exist['first_name'] = $exist['name'];
-            $exist['last_name'] = '';
-            $body = $obj->getReplacedString($template['body_web'], $exist);
-            $tpty = new Thirdparty();
-            $tpty->sendMail($exist['email'], $exist['name'], $body, $body, $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
+    if (strtolower($data['role']) == 'club') {
+        $exist = $obj->selectRow('*', 'club', 'club_id = ' . $data['club']);
+        if (count($exist) > 0) {
+            $pass_matchs = $obj->decryptPassword($data['old_password'], $exist['password']);
+            if ($pass_matchs == true) {
+                $res['error'] = false;
+                $res['message'] = 'Password updated successfully';
+                $obj->updateRecordWithWhere(array('password' => $obj->encryptPassword($data['new_password'])), 'club', 'club_id=' . $data['club']);
+                $template = $obj->selectRow('*', 'templates', 'name=\'password_update_success\' AND type=\'email\' AND target=\'user\'');
+                $exist['first_name'] = $exist['leader_name'];
+                $exist['last_name'] = '';
+                $body = $obj->getReplacedString($template['body_web'], $exist);
+                $tpty = new Thirdparty();
+                $tpty->sendMail($exist['email_id'], $exist['leader_name'], $body, $body, $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
+            } else {
+                $res['message'] = 'Current password mismatch';
+            }
         } else {
-            $res['message'] = 'Current password mismatch';
+            $res['message'] = 'No user found';
         }
     } else {
-        $res['message'] = 'No user found';
+        $exist = $obj->selectRow('*', 'users', 'users_id = ' . $data['user']);
+        if (count($exist) > 0) {
+            $pass_matchs = $obj->decryptPassword($data['old_password'], $exist['password']);
+            if ($pass_matchs == true) {
+                $res['error'] = false;
+                $res['message'] = 'Password updated successfully';
+                $obj->updateRecordWithWhere(array('password' => $obj->encryptPassword($data['new_password'])), 'users', 'users_id=' . $data['user']);
+                $template = $obj->selectRow('*', 'templates', 'name=\'password_update_success\' AND type=\'email\' AND target=\'user\'');
+                $exist['first_name'] = $exist['name'];
+                $exist['last_name'] = '';
+                $body = $obj->getReplacedString($template['body_web'], $exist);
+                $tpty = new Thirdparty();
+                $tpty->sendMail($exist['email'], $exist['name'], $body, $body, $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
+            } else {
+                $res['message'] = 'Current password mismatch';
+            }
+        } else {
+            $res['message'] = 'No user found';
+        }
     }
     echoRespnse(201, $res);
 });
@@ -1047,6 +1102,25 @@ $app->post('/forgotpassword_user', function() use ($app) {
             $body = $obj->getReplacedString($template['body_web'], $user);
             $tpty = new Thirdparty();
             $tpty->sendMail($user['email'], $user['name'], $body, $body, $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
+        }
+    } else {
+        $club = $obj->selectRow('*', 'club', 'email = \'' . $data['email'] . '\'');
+        if (count($club) > 0) {
+            $res['error'] = false;
+            $expires = array('value' => 5); //$obj->selectRow('*', 'configs', 'name=\'reset_link_expires\'');
+            $code = uniqid();
+            $expired = date('Y-m-d H:i:s', strtotime(date('Y-m-d H:i:s') . ' + ' . $expires['value'] . ' minute'));
+            $update = $obj->updateRecordWithWhere(array('reset_code' => $code, 'reset_initiated_at' => date('Y-m-d H:i:s'), 'reset_expired_at' => $expired), 'club', 'club_id=\'' . $club['club_id'] . '\'');
+            if ($update > 0) {
+                $res['message'] = 'Reset link sent to your email ID';
+                $template = $obj->selectRow('*', 'templates', 'name=\'forgot_password_link_user\' AND type=\'email\' AND target=\'user\'');
+                $club['link'] = FILES_PATH . 'user_change_password.php?auth=' . $code;
+                $club['name'] = $club['leader_name'];
+                $club['reset_expired_at'] = date('d-m-Y H:i:s', strtotime($expired));
+                $body = $obj->getReplacedString($template['body_web'], $club);
+                $tpty = new Thirdparty();
+                $tpty->sendMail($club['email_id'], $club['name'], $body, $body, $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
+            }
         }
     }
     echoRespnse(201, $res);

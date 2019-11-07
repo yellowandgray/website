@@ -6,6 +6,9 @@ $user = array();
 if (isset($_GET['auth'])) {
     $code = $_GET['auth'];
     $user = $obj->selectRow('*', 'users', 'reset_code=\'' . $code . '\' AND reset_expired_at >= \'' . date('Y-m-d H:i:s') . '\'');
+    if (count($user) == 0) {
+        $user = $obj->selectRow('*', 'club', 'reset_code=\'' . $code . '\' AND reset_expired_at >= \'' . date('Y-m-d H:i:s') . '\'');
+    }
 }
 ?>
 <!DOCTYPE html>
