@@ -11,5 +11,5 @@ export class MyclubComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  data = {};  
 }

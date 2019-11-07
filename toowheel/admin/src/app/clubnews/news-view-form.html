@@ -1,0 +1,47 @@
+<h2 mat-dialog-title>News</h2>
+<mat-dialog-content class="mat-typography">
+    <form [formGroup]="newsForm">
+        <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <div fxFlex="100">
+                <img src="{{image_url}}{{data.cover_image}}" alt="" style="width: 100%;" />
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+            <div fxFlex="90">
+                <mat-card class="example-card news-view-card">
+                    <p>{{data.sponsor}}</p>
+                    <span>{{data.media}} | {{data.author_name}} | {{data.news_date}}</span>
+                    <br/>
+                    <br/>
+                    <mat-card-title>{{data.title}}</mat-card-title>
+                    <br/>
+                    <strong>{{data.moto_text}}</strong>
+                    <br/>
+                    <br/>
+                    <mat-card-content>
+                        <p [innerHTML]="data.description_1"></p>
+                        <img src="{{image_url}}{{data.banner_1}}" alt="" style="width: 100%;" />
+                        <br/>
+                        <br/>
+                        <p [innerHTML]="data.description_2"></p>
+                        <img src="{{image_url}}{{data.banner_2}}" alt="" style="width: 100%;" />
+                        <br/>
+                        <br/>
+                        <h2 *ngIf="data.youtube_id != ''">Youtube Video</h2>
+                        <iframe *ngIf="data.youtube_id != ''" [src]="getYoutubeLink(data.youtube_id)" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        
+                        <br/>
+                        <br/>
+                        <br/>
+                        <h2>Gallery</h2>
+                        <img class="news_gallery_image" *ngFor="let image of result" src="{{image_url}}{{image.media_path}}" alt="" />
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+        <br/>
+        <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
+            <button mat-button [mat-dialog-close]="false">Cancel</button>
+        </div>
+    </form>
+</mat-dialog-content>

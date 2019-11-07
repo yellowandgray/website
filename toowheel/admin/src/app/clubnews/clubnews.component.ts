@@ -1,10 +1,12 @@
 import { Component, OnInit, Inject } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
-
-export interface DialogData {
-  animal: string;
-  name: string;
-}
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { AngularEditorConfig } from '@kolkov/angular-editor';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-clubnews',
@@ -12,35 +14,28 @@ export interface DialogData {
   styleUrls: ['./clubnews.component.css']
 })
 export class ClubnewsComponent implements OnInit {
-
-  constructor(public dialog: MatDialog) { }
+  result = [];
+  constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
 
   ngOnInit() {
+      this.getNews();
   }
-  
-  openDialog(): void  {
-    const dialogRef = this.dialog.open(ClubNewsForm, {
-        minWidth: "80%",
-        maxWidth: "80%"
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
-}
-
-}
-
-@Component({
-  selector: 'club-news-form',
-  templateUrl: 'club-news-form.html',
-})
-export class ClubNewsForm {
-    constructor(
-    public dialogRef: MatDialogRef<ClubNewsForm>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
-
-  onNoClick(): void {
-    this.dialogRef.close();
-  }
+  image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
+  getNews(): void {
+     this.httpClient.get<any>('https://www.toowheel.com/beta/toowheel/api/v1/get_news_by_club/' + sessionStorage.getItem("toowheel_club_id"))
+     .subscribe(
+             (res)=>{
+                 if(res["result"]["error"] == false) {
+                 this.result = res["result"]["data"];
+                 }else {
+                     this.result = [];
+                 }
+           },
+           (error)=>{
+               this._snackBar.open(error["statusText"], '', {
+         duration: 2000,
+       });
+           }
+           );
+     }
 }
