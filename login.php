@@ -2,23 +2,30 @@
 
     <form class="modal-content-box animate" action="/action_page.php" method="post">
         <div class="imgcontainer">
-            <span onclick="document.getElementById('id01').style.display = 'none'" class="close" title="Close Modal">&times;</span>
+            <span onclick="closepop()" class="close" title="Close Modal">&times;</span>
             <img src="images/img_avatar2.png" alt="Avatar" class="avatar">
         </div>
 
-        <div class="container">
+        <div class="container" id="login">
             <input type="text" placeholder="Username" name="uname" required>
 
             <input type="password" placeholder="Password" name="psw" required>
             <span class="psw">Forgot <a href="#">password?</a></span>
             <div class="add-submit">
-                <button class="button-addcart" type="submit">Login</button>
+                <button class="button-addcart" type="submit">LOGIN</button>
             </div>
+            <p class="new-acc">If you don't have a account? <a onclick="loginpopup()">Sign up</a> </p>
         </div>
 
-        <div class="container">
-            <!--            <button type="button" onclick="document.getElementById('id01').style.display = 'none'" class="cancelbtn">Cancel</button>-->
-            <p class="new-acc">If you don't have a account? <a href="#">Sign up</a> </p>
+
+        <div class="container" id="signup" style="display: none">
+            <input type="text" placeholder="Enter Email/Phone Number" name="email" required>
+
+            <input type="text" placeholder="Enter OTP" name="otp" required>
+            <input type="text" placeholder="Set Passwort" name="psw" required>
+            <div class="add-submit">
+                <button class="button-addcart" type="submit">SIGNUP</button>
+            </div>
         </div>
     </form>
 </div>

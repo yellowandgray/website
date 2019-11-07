@@ -740,14 +740,14 @@ footer .copy p{
 
 }
 .certificate img {
-    width: 80%  !important;
+    width: 50%  !important;
     margin: 0 auto  !important;
 }
 .accredition {
     width: 100%;
     margin: 10px auto;
     /* background: #616161; */
-    box-shadow: 0px 0px 6px 4px #eee;
+    /*box-shadow: 0px 0px 6px 4px #eee;*/
     padding: 10px;
 }
 .price {
@@ -916,6 +916,7 @@ footer .copy p{
     .app-img{
         order: 1;
     }
+
 }
 @media (min-width:320px) and (max-width:547px) {
     .product {
@@ -961,6 +962,10 @@ footer .copy p{
     .about-sec p {
         font-size: 14px;
 
+    }
+    .certificate img {
+        width: 80% !important;
+        margin: 0 auto !important;
     }
 }
 @media (min-width:768px) and (max-width:991px) {
@@ -1472,6 +1477,11 @@ span.psw{
 }
 .modal-content-box input::placeholder {
     color: #ccc;
+    font-size: 14px;
+}
+.modal-content-box input {
+    border: none;
+    border-bottom: 1px solid #eee;
 }
 
 .close {
@@ -2012,4 +2022,9 @@ span.psw{
     font-weight: 600;
     color: #000000;
     padding-top: 40px;
+}
+.new-acc a{
+    cursor: pointer !important;
+    color: #0269ad !important;
+
 }

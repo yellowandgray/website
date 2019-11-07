@@ -364,69 +364,60 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="row" style="padding:0 10px;">
-                                        <div class="col-md-6 col-sm-12 bg-l-blue">
+                                        <div class="col-md-4 col-sm-4 col-xs-6">
                                             <div class="report-logo">
                                                 <img src="images/acc/008.png" alt=""/>
                                                 <p>Fresche Application Testing</p>
                                             </div>
+                                            <div class="report-logo">
+                                                <img src="images/acc/002.png" alt=""/>
+                                                <p>Oeko-Tex</p>
+                                            </div>
+                                            <!--                                            <div class="report-logo">
+                                                                                            <img src="images/acc/010.png" alt=""/>
+                                                                                            <p>European BPR</p>
+                                                                                        </div>-->
+                                            <div class="report-logo">
+                                                <img src="images/acc/004.png" alt=""/>
+                                                <p>SHRIRAM INSTITUTE FOR INDUSTRIAL RESEARCH</p>
+                                            </div>
+
                                         </div>
-                                        <div class="col-md-6 col-sm-12 bg-l-blue">
+                                        <div class="col-md-4 col-sm-4 col-xs-6 ">
+                                            <div class="report-logo">
+                                                <img src="images/acc/007.png" alt=""/>
+                                                <p>AMS laboratory</p>
+                                            </div>
+                                            <div class="report-logo">
+                                                <img src="images/acc/003.png" alt=""/>
+                                                <p>HITECH Diagnostic Centre</p>
+                                            </div>
+                                            <div class="report-logo">
+                                                <img src="images/acc/006.png" alt="" class=""/>
+                                                <p>MEDICA Superspecialty Hospital</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-4 col-xs-6">
                                             <div class="report-logo">
                                                 <img src="images/acc/005-01.png" alt="" class=""/>
                                                 <p>US EPA</p>
                                             </div>
+                                            <!--                                            <div class="report-logo">
+                                                                                            <img src="images/acc/010.png" alt="" />
+                                                                                            <p>Primary Industry in New Zealand</p>
+                                                                                        </div>-->
+                                            <div class="report-logo">
+                                                <img src="images/acc/001.png" alt=""/>
+                                                <p>BANGALORE TEST HOUSE</p>
+                                            </div>
+
+                                            <div class="report-logo">
+                                                <img src="images/acc/009.png" alt=""/>
+                                                <p>THE SOUTH INDIA TEXTILE RESEARCH ASSOCIATION</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="row" style="padding:0 10px;">
-                                      
-                                            <div class="col-md-4 col-sm-4 col-xs-6 bg-l-blue">
 
-                                                <div class="report-logo">
-                                                    <img src="images/acc/002.png" alt=""/>
-                                                    <p>Oeko-Tex</p>
-                                                </div>
-                                                <div class="report-logo">
-                                                    <img src="images/acc/010.png" alt=""/>
-                                                    <p>European BPR</p>
-                                                </div>
-                                                <div class="report-logo">
-                                                    <img src="images/acc/004.png" alt=""/>
-                                                    <p>SHRIRAM INSTITUTE FOR INDUSTRIAL RESEARCH</p>
-                                                </div>
 
-                                            </div>
-                                            <div class="col-md-4 col-sm-4 col-xs-6 bg-l-blue">
-                                                <div class="report-logo">
-                                                    <img src="images/acc/007.png" alt=""/>
-                                                    <p>AMS laboratory</p>
-                                                </div>
-                                                <div class="report-logo">
-                                                    <img src="images/acc/003.png" alt=""/>
-                                                    <p>HITECH Diagnostic Centre</p>
-                                                </div>
-                                                <div class="report-logo">
-                                                    <img src="images/acc/006.png" alt="" class=""/>
-                                                    <p>MEDICA Superspecialty Hospital</p>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-md-4 col-sm-4 col-xs-6 bg-l-blue">
-                                                <div class="report-logo">
-                                                    <img src="images/acc/010.png" alt="" />
-                                                    <p>Primary Industry in New Zealand</p>
-                                                </div>
-                                                <div class="report-logo">
-                                                    <img src="images/acc/001.png" alt=""/>
-                                                    <p>BANGALORE TEST HOUSE</p>
-                                                </div>
-
-                                                <div class="report-logo">
-                                                    <img src="images/acc/009.png" alt=""/>
-                                                    <p>THE SOUTH INDIA TEXTILE RESEARCH ASSOCIATION</p>
-                                                </div>
-                                            </div>
-
-                                        
                                     </div>
 
                                 </div>

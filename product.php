@@ -71,7 +71,7 @@
                                             <p>Fresche EF 3851– 1 Litre</p>
                                             <p>Bz 1 Binder – 1.5 Litre </p>
                                             <p><span><i class="fa fa-inr" aria-hidden="true"></i></span><span>8000/-</span></p>
-                                            <button class="button-03"><a href="#"><i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart ( <i class="fa fa-inr" aria-hidden="true"></i> 8000 )</a></button> 
+                                            <button class="button-03"><a href="cart.php"><i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart ( <i class="fa fa-inr" aria-hidden="true"></i> 8000 )</a></button> 
                                         </div>
 
                                     </div>
@@ -100,7 +100,7 @@
                         </div>
                     </div>
                     <div class="col-lg-8 product-details pl-md-5 ftco-animate">
-                        <h3><span>Fresche Mini Kit</span> <button class="button-03"><a href="#"><i class="fa fa-cart-plus" aria-hidden="true"></i>   Add To Cart ( <i class="fa fa-inr" aria-hidden="true"></i> 250 )</a></button></h3>
+                        <h3><span>Fresche Mini Kit</span> <button class="button-03"><a href="cart.php"><i class="fa fa-cart-plus" aria-hidden="true"></i>   Add To Cart ( <i class="fa fa-inr" aria-hidden="true"></i> 250 )</a></button></h3>
                         <p class="text-justify"><strong>Fresche :</strong>  Fresche is a new generation Si QAC antimicrobial which delivers high performance, broad-spectrum antibacterial, anti-fungal, mould and odour protection on surfaces and garments to which they are either applied or infused. </p>
                         <p class="text-justify">They are widely recognized as one of the world's most advanced non-volatile, surface-bonded antimicrobial, safe for people, plants, pets, and the environment.  </p>
                         <p class="text-justify">In addition to regular 1 Kg pack, Fresche is also available in the mini kit.</p>

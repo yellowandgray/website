@@ -172,14 +172,32 @@
     }
 </script>
 <!--login-->
-<script>
-// Get the modal
-    var modal = document.getElementById('id01');
+<script language="javascript">
+    function loginpopup() {
 
-// When the user clicks anywhere outside of the modal, close it
+        var x = document.getElementById("signup");
+        var y = document.getElementById("login");
+        if (x.style.display == "none") {
+            y.style.display = "none";
+            x.style.display = "block";
+        } else {
+            y.style.display = "block";
+            x.style.display = "none";
+        }
+    }
+    function closepop() {
+
+        document.getElementById('id01').style.display = 'none';
+        document.getElementById("signup").style.display = 'none';
+        document.getElementById("login").style.display = 'block';
+    }
+    
+    var modal = document.getElementById('id01');
     window.onclick = function (event) {
         if (event.target == modal) {
             modal.style.display = "none";
+            document.getElementById("signup").style.display = 'none';
+            document.getElementById("login").style.display = 'block';
         }
     }
 </script>
