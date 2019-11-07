@@ -51,7 +51,7 @@ import { ClubeventComponent, ClubEventForm, ClubEventDelete,PictureView, ClubEve
 import { filterEvent } from './clubevent/filter-event.pipe';
 import { ClubgalleryComponent, ClubGalleryForm, ClubGalleryDelete,PictureViewClubGallery } from './clubgallery/clubgallery.component';
 import { filterEventclubgallery } from './clubgallery/filter-event.pipe';
-import { ClubnewsComponent } from './clubnews/clubnews.component';
+import { ClubnewsComponent, ClubNewsForm, ClubNewsGalleryForm, ClubNewsDelete,PictureViewClubNews, ClubNewsViewForm } from './clubnews/clubnews.component';
 import { ClubdiscussionComponent } from './clubdiscussion/clubdiscussion.component';
 import { LoginComponent, ForgotPasswordForm } from './login/login.component';
 import {HttpClientModule} from '@angular/common/http';
@@ -115,6 +115,11 @@ import { MymemberComponent } from './mymember/mymember.component';
     ClubgalleryComponent,
     ClubGalleryForm,
     ClubnewsComponent,
+    ClubNewsForm, 
+    ClubNewsGalleryForm, 
+    ClubNewsDelete,
+    PictureViewClubNews, 
+    ClubNewsViewForm,
     NewsViewForm,
     ClubdiscussionComponent,
     LoginComponent,
@@ -209,7 +214,7 @@ import { MymemberComponent } from './mymember/mymember.component';
     MatSortModule,
     MatBadgeModule
   ],
-  entryComponents: [ClubComponent, ClubForm, ClubDelete, ClubPhotosForm, CategoryComponent, CategoryForm, CategoryDelete, MemberComponent, MemberForm, MemberDelete, MemberViewForm, MemberTshirtForm,MemberPasswordChange, NewsComponent, NewsForm, NewsGalleryForm, NewsDelete, AdvertismentComponent, AdvertismentForm, AdvertismentDelete, GalleryComponent, GalleryForm, ConfigComponent, ConfigForm, ClubgalleryComponent, ClubGalleryForm, ClubnewsComponent, ClubeventComponent, ClubEventForm, ClubEventDelete, PressReleaseComponent, PressReleaseForm, PressreleaseDelete, GalleryDelete, AnnouncementComponent, AnnouncementForm,AnnouncementDelete, MediaComponent, MediaForm, MediaDelete, NewsletterComponent, NewsletterForm, NewsletterDelete, UsersComponent, UsersForm, UsersViewForm, UsersDeleteForm, PictureView,PictureViewNews,PictureViewPress,PictureViewClub, WorkshopComponent, WorkshopForm, WorkshopDelete,PictureViewWorkshop, WorkshopViewFrom, ClubViewFrom, NewsViewForm, ClubEventViewFrom, PressreleaseViewFrom, AssetComponent, AssetForm, AssetDelete,PictureViewUser,LoginComponent, ForgotPasswordForm,UserPasswordChange, PictureViewGallery,PictureViewClubGallery,ClubGalleryForm,ClubGalleryDelete],
+  entryComponents: [ClubComponent, ClubForm, ClubDelete, ClubPhotosForm, CategoryComponent, CategoryForm, CategoryDelete, MemberComponent, MemberForm, MemberDelete, MemberViewForm, MemberTshirtForm,MemberPasswordChange, NewsComponent, NewsForm, NewsGalleryForm, NewsDelete, AdvertismentComponent, AdvertismentForm, AdvertismentDelete, GalleryComponent, GalleryForm, ConfigComponent, ConfigForm, ClubgalleryComponent, ClubGalleryForm, ClubnewsComponent, ClubNewsForm, ClubNewsGalleryForm, ClubNewsDelete,PictureViewClubNews, ClubNewsViewForm, ClubeventComponent, ClubEventForm, ClubEventDelete, PressReleaseComponent, PressReleaseForm, PressreleaseDelete, GalleryDelete, AnnouncementComponent, AnnouncementForm,AnnouncementDelete, MediaComponent, MediaForm, MediaDelete, NewsletterComponent, NewsletterForm, NewsletterDelete, UsersComponent, UsersForm, UsersViewForm, UsersDeleteForm, PictureView,PictureViewNews,PictureViewPress,PictureViewClub, WorkshopComponent, WorkshopForm, WorkshopDelete,PictureViewWorkshop, WorkshopViewFrom, ClubViewFrom, NewsViewForm, ClubEventViewFrom, PressreleaseViewFrom, AssetComponent, AssetForm, AssetDelete,PictureViewUser,LoginComponent, ForgotPasswordForm,UserPasswordChange, PictureViewGallery,PictureViewClubGallery,ClubGalleryForm,ClubGalleryDelete],
   providers: [],
   bootstrap: [AppComponent]
 })

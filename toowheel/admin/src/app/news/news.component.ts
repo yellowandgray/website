@@ -96,7 +96,6 @@ export class NewsComponent implements OnInit {
 
         dialogRef.afterClosed().subscribe(result => {
             if(result !== false && result !== 'false') {
-            this.getNews();
           }
         });           
     }
@@ -117,8 +116,6 @@ confirmDialog(id, action): void  {
 
    dialogRef.afterClosed().subscribe(result => {
        if(result !== false && result !== 'false') {
-      //this.getMember();
-      //this.getFourWheelMember();
        }
     });
 }
