@@ -67,6 +67,8 @@ export class UserPasswordChange {
             formData.append('old_password', this.userForm.value.old_password);
             formData.append('new_password', this.userForm.value.new_password);
             formData.append('user', sessionStorage.getItem("toowheel_users_id"));
+            formData.append('club', sessionStorage.getItem("toowheel_club_id"));
+            formData.append('role', sessionStorage.getItem("toowheel_role"));
       this.loading = true;
       this.httpClient.post('https://www.toowheel.com/beta/toowheel/api/v1/change_password_user', formData).subscribe(
           (res)=>{

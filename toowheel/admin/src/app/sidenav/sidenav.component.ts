@@ -16,17 +16,12 @@ export class SidenavComponent implements OnInit {
   ngOnInit() {
    
   }
-    expendfun(valueurl)
-   {       
-        if(this["isExpanded"+valueurl]==true)
-        {
+    expendfun(valueurl) {
+        if(this["isExpanded"+valueurl]==true) {
         this["isExpanded"+valueurl]=false
-        }
-        else
-        {
+        } else {
          this["isExpanded"+valueurl]=true
         }
-    
     }
   
 }
