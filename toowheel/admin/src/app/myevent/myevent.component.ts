@@ -14,14 +14,14 @@ import * as moment from 'moment';
   styleUrls: ['./myevent.component.css']
 })
 export class MyeventComponent implements OnInit {
-  result = [];  
+  result = [];
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
 
   ngOnInit() {
       this.getEvent();
   }
   image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
-  getMember(): void {
+  getEvent(): void {
      this.httpClient.get<any>('https://www.toowheel.com/beta/toowheel/api/v1/get_event_by_club/' + sessionStorage.getItem("toowheel_club_id"))
      .subscribe(
              (res)=>{

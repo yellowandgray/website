@@ -106,7 +106,7 @@ $app->post('/insert_news', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('type' => $data['type'], 'category_id' => $data['category_id'], 'club_id' => $data['club_id'], 'cover_image' => $data['cover_image'], 'title' => $data['title'], 'media_id' => $data['media_id'], 'author_name' => $data['author_name'], 'news_date' => $data['date'], 'thumb_image' => $data['thumb_image'], 'banner_1' => $data['banner_image_1'], 'banner_2' => $data['banner_image_2'], 'moto_text' => $data['moto_text'], 'description_1' => $data['description'], 'description_2' => $data['description_1'], 'youtube_id' => $data['youtube_id'], 'sponsor' => $data['sponsor']), 'news');
+    $record = $com->insertRecord(array('type' => $data['type'], 'category_id' => $data['category_id'], 'club_id' => $data['club_id'], 'cover_image' => $data['cover_image'], 'title' => $data['title'], 'media_id' => $data['media_id'], 'author_name' => $data['author_name'], 'news_date' => $data['date'], 'thumb_image' => $data['thumb_image'], 'banner_1' => $data['banner_image_1'], 'banner_2' => $data['banner_image_2'], 'banner_3' => $data['banner_image_3'], 'banner_4' => $data['banner_image_4'], 'moto_text' => $data['moto_text'], 'description_1' => $data['description'], 'description_2' => $data['description_1'], 'description_3' => $data['description_2'], 'description_4' => $data['description_3'], 'youtube_id' => $data['youtube_id'], 'sponsor' => $data['sponsor']), 'news');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
@@ -1165,5 +1165,52 @@ $app->post('/forgotpassword_user', function() use ($app) {
 $app->post('/logout_user', function() use ($app) {
     $res = array('error' => false, 'message' => 'No user found in this email id');
     session_destroy();
+    echoRespnse(201, $res);
+});
+
+$app->post('/special_news', function() use ($app) {
+    $data = $app->request->post();
+    $res = array('error' => true, 'message' => 'Unable to change password');
+    $obj = new Common();
+    if ($data['type'] == 'star') {
+        if ($data['isstar'] == 0) {
+            $update = $obj->updateRecordWithWhere(array('isstar' => 0), 'news', 'news_id = ' . $data['news_id']);
+            if ($update > 0) {
+                $res['error'] = false;
+                $res['message'] = 'Status updated successfully';
+            }
+        } else {
+            $exist = $obj->selectRow('COUNT(news_id) AS total', 'news', 'news_id = ' . $data['news_id'] . ' AND isstar = 1');
+            if ($exist['total'] == 0) {
+                $update = $obj->updateRecordWithWhere(array('isstar' => 1), 'news', 'news_id = ' . $data['news_id']);
+                if ($update > 0) {
+                    $res['error'] = false;
+                    $res['message'] = 'Status updated successfully';
+                }
+            } else {
+                $res['message'] = 'Star news already exist';
+            }
+        }
+    }
+    if ($data['type'] == 'flag') {
+        if ($data['isflag'] == 0) {
+            $update = $obj->updateRecordWithWhere(array('isflag' => 0), 'news', 'news_id = ' . $data['news_id']);
+            if ($update > 0) {
+                $res['error'] = false;
+                $res['message'] = 'Status updated successfully';
+            }
+        } else {
+            $exist = $obj->selectRow('COUNT(news_id) AS total', 'news', 'news_id = ' . $data['news_id'] . ' AND isflag = 1');
+            if ($exist['total'] < 4) {
+                $update = $obj->updateRecordWithWhere(array('isflag' => 1), 'news', 'news_id = ' . $data['news_id']);
+                if ($update > 0) {
+                    $res['error'] = false;
+                    $res['message'] = 'Status updated successfully';
+                }
+            } else {
+                $res['message'] = 'Already reached maximum count';
+            }
+        }
+    }
     echoRespnse(201, $res);
 });
