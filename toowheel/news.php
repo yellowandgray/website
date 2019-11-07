@@ -44,7 +44,7 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
                         </span>
                     </div>
                 </div>
-                <div class="row events-content">
+                <div class="row events-content" >
                     <div class="col-md-8" id="contentDiv">
                         <div class="middle" style="">
                             <div style="margin-bottom: 20px;">
@@ -79,26 +79,49 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
                         <?php } ?>
                     </div>
                     <div class="col-md-4">
-                        <div id="sideslider">
-                            <div class="sidecontent-search-section">
-                                <input placeholder='Search Here' type='search' class="head-search" autocomplete="off" />
-                                <i class="fa fa-search" aria-hidden="true"></i>
+                        <div>
+                            <div class="sidecontent-search-section search">
+                                <div class="search-1">
+                                    <i class="fa fa-search" aria-hidden="true"></i><input placeholder='Search Here' type='search' class="head-search" autocomplete="off" />
+                                </div>
+
                             </div>
                             <div class="section-title">
                                 <h3>LIKE FACEBOOK KAMI</h3>
                             </div>
-                            <div class="fb-page" data-href="https://www.facebook.com/Toowheel-Malaysia-102602757819930" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-                                <blockquote cite="https://www.facebook.com/Toowheel-Malaysia-102602757819930" class="fb-xfbml-parse-ignore">
-                                    <a href="https://www.facebook.com/Toowheel-Malaysia-102602757819930">Toowheel Malaysia</a></blockquote>
+                            <div class="fb-01">
+                                <div class="fb-page" data-href="https://www.facebook.com/Toowheel-Malaysia-102602757819930" data-tabs="timeline" data-width="" data-height="350px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                                    <blockquote cite="https://www.facebook.com/Toowheel-Malaysia-102602757819930" class="fb-xfbml-parse-ignore">
+                                        <a href="https://www.facebook.com/Toowheel-Malaysia-102602757819930">Toowheel Malaysia</a></blockquote>
+                                </div>
+                            </div>
+                            <div class="fb-02">
+                                <div class="fb-page" data-href="https://www.facebook.com/Toowheel-Malaysia-102602757819930" data-tabs="timeline" data-width="280px" data-height="350px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                                    <blockquote cite="https://www.facebook.com/Toowheel-Malaysia-102602757819930" class="fb-xfbml-parse-ignore">
+                                        <a href="https://www.facebook.com/Toowheel-Malaysia-102602757819930">Toowheel Malaysia</a></blockquote>
+                                </div>
+                            </div>
+                            <div class="fb-03">
+                                <div class="fb-page" data-href="https://www.facebook.com/Toowheel-Malaysia-102602757819930" data-tabs="timeline" data-width="210px" data-height="350px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                                    <blockquote cite="https://www.facebook.com/Toowheel-Malaysia-102602757819930" class="fb-xfbml-parse-ignore">
+                                        <a href="https://www.facebook.com/Toowheel-Malaysia-102602757819930">Toowheel Malaysia</a></blockquote>
+                                </div>
+                            </div>
+                            <div class="fb-04">
+                                <div class="fb-page" data-href="https://www.facebook.com/Toowheel-Malaysia-102602757819930" data-tabs="timeline" data-width="290px" data-height="350px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                                    <blockquote cite="https://www.facebook.com/Toowheel-Malaysia-102602757819930" class="fb-xfbml-parse-ignore">
+                                        <a href="https://www.facebook.com/Toowheel-Malaysia-102602757819930">Toowheel Malaysia</a></blockquote>
+                                </div>
                             </div>
                             <div id="fb-root"></div>
+
                             <?php foreach ($releated_news as $row) { ?>
                                 <div class="side-news">
                                     <span class="side-news-widget1">
                                         <span><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 30) : $obj->charLimit($row['sponsor'], 30); ?></span>
                                     </span>
                                     <div class="press-cover-image-bg" style="background: url(<?php echo BASE_URL . $row['cover_image']; ?>)no-repeat;background-repeat: no-repeat;background-position: top;background-size: cover; "></div>
-        <!--                                <img src="<?php //echo BASE_URL . $row['cover_image'];            ?>" alt=" image" />-->
+        <!--                                <img src="<?php //echo BASE_URL . $row['cover_image'];                  ?>" alt=" image" />-->
                                     <h4><?php echo $row['title']; ?></h4>
                                     <p><?php echo $obj->charLimit($row['moto_text'], 120); ?></p>
                                     <div class="button-1">
@@ -117,7 +140,7 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
                         <div class="col-md-3">
                             <div class="events-upcoming">
                                 <div class="press-cover-image-bg" style="background: url(<?php echo BASE_URL . $row['cover_image']; ?>)no-repeat;background-repeat: no-repeat;background-position: top;background-size: cover; "></div>
-    <!--                                <img src="<?php //echo BASE_URL . $row['cover_image'];             ?>" alt="" />-->
+    <!--                                <img src="<?php //echo BASE_URL . $row['cover_image'];                   ?>" alt="" />-->
                                 <div class="events-upcoming-content">
                                     <h4><?php echo $row['title']; ?></h4>
                                     <p><?php echo $obj->charLimit($row['moto_text'], 75); ?></p>

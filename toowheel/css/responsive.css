@@ -12,10 +12,11 @@
     }
     .fooetr-5 button {
         right: -105px !important;
+        top: -40px !important;
     }
     .fooetr-5 input {
         position: relative !important;
-        left: -30px !important;
+        left: -10px !important;
     }
     .logo {
         margin: 10px auto 5px auto !important;;
@@ -1215,5 +1216,59 @@
 @media screen and (min-width: 769px) {
     .photo-section img {
         margin-bottom: -118px !important;
+    }
+    .events-content{
+        height:1900px; overflow: hidden;
+    }
+    #contentDiv{
+        height:1850px; overflow: scroll;
+    }
+}
+.fb-01{
+    display: block;
+}
+.fb-02{
+    display: none;
+}
+.fb-03{
+    display: none;
+}
+.fb-04{
+    display: none;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .fb-02 {
+        display: block;
+    }
+    .fb-01{
+        display: none !important;
+    }
+    .fb-03{
+        display: none;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .fb-01{
+        display: none;
+    }
+    .fb-02{
+        display: none;
+    }
+    .fb-03{
+        display: block;
+    }
+}
+@media (min-width: 320px) and (max-width: 355px) {
+    .fb-01{
+        display: none;
+    }
+    .fb-02{
+        display: none;
+    }
+    .fb-03{
+        display: none;
+    }
+    .fb-04{
+        display: block;
     }
 }
