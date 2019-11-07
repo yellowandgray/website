@@ -1,1 +1,23 @@
-<p>mymember works!</p>
+<mat-sidenav-container fullscreen>
+    <mat-sidenav mode="side" opened cdkScrollable class="primary">
+        <app-sidenav></app-sidenav>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <app-header></app-header>
+        <mat-list *ngIf="result.length > 0">
+            <mat-list-item class="list-container" *ngFor="let data of result">
+                           <button mat-icon-button aria-label="label" (click)="openView(data.member_id, 'result')">
+                    <mat-icon #tooltip="matTooltip" matTooltip="View">remove_red_eye</mat-icon>
+                </button>
+                <img matListAvatar src="{{image_url}}{{data.profile_picture}}" *ngIf="data.profile_picture && data.profile_picture != ''" alt="..." (click)="confirmDialog(data, 'preview')" />
+                     <img matListAvatar src="{{image_url}}{{data.gender}}.jpg" *ngIf="!data.profile_picture || data.profile_picture == ''" alt="..." />
+                <h3 matLine>{{data.first_name}}</h3>
+                <p matLine>{{data.ic_passport}} - {{data.contact_number}}</p>
+                <p matLine>{{data.email}}</p>
+            </mat-list-item>
+        </mat-list>
+        <div *ngIf="result.length == 0" class="section">
+            No Member found
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

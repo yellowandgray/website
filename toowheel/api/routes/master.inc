@@ -529,6 +529,18 @@ $app->get('/get_four_wheel_member', function() {
     echoRespnse(201, $res);
 });
 
+$app->get('/get_member_by_club/:cid', function($cid) {
+    $res = array('error' => true, 'message' => 'Unable to get records');
+    $com = new Common();
+    $data = $com->selectAll('m.*, c.name AS club, s.name AS state, u.name AS activated_user, us.name AS blocked_user', 'member AS m LEFT JOIN club AS c ON c.club_id = m.club_id LEFT JOIN users AS u ON u.users_id = m.activated_by LEFT JOIN users AS us ON us.users_id = m.blocked_by LEFT JOIN state AS s ON s.state_id = m.state_id', 'm.member_id > 0 AND m.club_id = ' . $cid);
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
 $app->get('/get_states', function() {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
