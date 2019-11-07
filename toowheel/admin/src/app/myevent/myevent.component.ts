@@ -18,11 +18,11 @@ export class MyeventComponent implements OnInit {
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
 
   ngOnInit() {
-      this.getMember();
+      this.getEvent();
   }
   image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
   getMember(): void {
-     this.httpClient.get<any>('https://www.toowheel.com/beta/toowheel/api/v1/get_member_by_club/' + sessionStorage.getItem("toowheel_club_id"))
+     this.httpClient.get<any>('https://www.toowheel.com/beta/toowheel/api/v1/get_event_by_club/' + sessionStorage.getItem("toowheel_club_id"))
      .subscribe(
              (res)=>{
                  if(res["result"]["error"] == false) {

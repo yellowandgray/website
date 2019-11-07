@@ -748,6 +748,18 @@ $app->get('/get_event', function() {
     echoRespnse(201, $res);
 });
 
+$app->get('/get_event_by_club/:cid', function($cid) {
+    $res = array('error' => true, 'message' => 'Unable to get records');
+    $com = new Common();
+    $data = $com->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS e LEFT JOIN club AS c ON c.club_id = e.club_id LEFT JOIN category AS ca ON ca.category_id = e.category_id AND ca.category_id = c.category_id', 'e.event_id > 0 AND e.club_id = ' . $cid);
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
 $app->get('/delete_record/:table/:where', function($table, $where) {
     $res = array('error' => true, 'message' => 'Unable to delete');
     $com = new Common();
