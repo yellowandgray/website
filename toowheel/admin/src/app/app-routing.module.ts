@@ -23,6 +23,8 @@ import { AssetComponent } from './asset/asset.component';
 import { ClubannouncementComponent } from './clubannouncement/clubannouncement.component';
 import { MyclubComponent } from './myclub/myclub.component';
 import { ClubnewsComponent } from './clubnews/clubnews.component';
+import { MyeventComponent } from './myevent/myevent.component';
+import { MymemberComponent } from './mymember/mymember.component';
 
 const routes: Routes = [
     {path: '', component: LoginComponent},
@@ -38,16 +40,18 @@ const routes: Routes = [
     {path: 'clubdashboard', component: ClubdashboardComponent},
     {path: 'clubevent', component: ClubeventComponent},
     {path: 'clubdiscussion', component: ClubdiscussionComponent},
-    {path: 'clubgallery', component: ClubgalleryComponent},
     {path: 'announcement/:cid', component: AnnouncementComponent},
     {path: 'newsletter', component: NewsletterComponent},
     {path: 'press-release', component: PressReleaseComponent},
     {path: 'users', component: UsersComponent},
     {path: 'workshop', component: WorkshopComponent},
     {path: 'asset', component: AssetComponent},
-    {path: 'clubannouncement', component: ClubannouncementComponent},
     {path: 'myclub', component: MyclubComponent},
-    {path: 'mynews', component: ClubnewsComponent}
+    {path: 'mynews', component: ClubnewsComponent},
+    {path: 'myevent', component: MyeventComponent},
+    {path: 'nyannouncement', component: ClubannouncementComponent},
+    {path: 'mygallery', component: ClubgalleryComponent},
+    {path: 'mymember', component: MymemberComponent}
 ];
 
 @NgModule({

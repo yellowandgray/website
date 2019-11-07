@@ -72,6 +72,8 @@ import { WorkshopComponent, WorkshopForm, WorkshopDelete,PictureViewWorkshop, Wo
 import { AssetComponent, AssetForm, AssetDelete } from './asset/asset.component';
 import { ClubannouncementComponent } from './clubannouncement/clubannouncement.component';
 import { MyclubComponent } from './myclub/myclub.component';
+import { MyeventComponent } from './myevent/myevent.component';
+import { MymemberComponent } from './mymember/mymember.component';
 
 @NgModule({
   declarations: [
@@ -169,7 +171,9 @@ import { MyclubComponent } from './myclub/myclub.component';
     PictureViewClubGallery,
     ClubGalleryForm, 
     ClubGalleryDelete, 
-    MyclubComponent
+    MyclubComponent, 
+    MyeventComponent, 
+    MymemberComponent
   ],
   imports: [
     BrowserModule,
