@@ -16,13 +16,14 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
     <body>
         <?php include "menu.php"; ?>
         <div class="padding-top-108"></div>
-        <div class="member-register-section">
+        <div class="member-register-section profile-edit-section">
             <div class="container">
                 <div class="col-md-12">
-                    <span onclick="goBack()" class="back-btn"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i> Back</span>
-                    <br/>
-                    <br/>
+
                     <div class="registation-step">
+                        <span onclick="goBack()" class="back-btn"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i> Back</span>
+                        <br/>
+                        <br/>
                         <h4>Basic Information</h4>
                         <form id="basic_information" onsubmit="return updateMemberProfile(<?php echo $member['member_id']; ?>, '<?php echo $type; ?>');">
                             <div class="form-group">
@@ -248,9 +249,9 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
         <script src="js/bootbox.min.js"></script>
         <script src="js/popper.min.js"></script>
         <script>
-                                    function goBack() {
-                                        window.history.back();
-                                    }
+                                function goBack() {
+                                    window.history.back();
+                                }
         </script>
     </body>
 </html>

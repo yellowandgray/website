@@ -255,12 +255,12 @@ body {
     padding-left: 10px;
     padding-right: 10px;
     margin: 0;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.6);
     position: relative;
-    bottom: 142px;
+    bottom: 137px;
     border-bottom-right-radius: 7px;
     border-bottom-left-radius: 7px;
-    height: 142px;
+    height: 130px;
 }
 
 .clb-bg {

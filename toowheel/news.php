@@ -79,24 +79,35 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
                         <?php } ?>
                     </div>
                     <div class="col-md-4">
-                        <!--                        <div class="">
-                                                    <div class="fb-page" data-href="https://www.facebook.com/Toowheel-Malaysia-102602757819930/" data-tabs="timeline" data-width="" data-height="" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/Toowheel-Malaysia-102602757819930/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Toowheel-Malaysia-102602757819930/">Toowheel Malaysia</a></blockquote></div>
-                                                </div>-->
-                        <?php foreach ($releated_news as $row) { ?>
-                            <div class="side-news">
-                                <span class="side-news-widget1">
-                                    <span><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 30) : $obj->charLimit($row['sponsor'], 30); ?></span>
-                                </span>
-                                <div class="press-cover-image-bg" style="background: url(<?php echo BASE_URL . $row['cover_image']; ?>)no-repeat;background-repeat: no-repeat;background-position: top;background-size: cover; "></div>
-    <!--                                <img src="<?php //echo BASE_URL . $row['cover_image'];   ?>" alt=" image" />-->
-                                <h4><?php echo $row['title']; ?></h4>
-                                <p><?php echo $row['moto_text']; ?></p>
-                                <div class="button-1">
-                                    <div class="eff-1"></div>
-                                    <a href="news?nid=<?php echo $row['news_id']; ?>">Discover</a>
-                                </div>
+                        <div id="sideslider">
+                            <div class="sidecontent-search-section">
+                                <input placeholder='Search Here' type='search' class="head-search" autocomplete="off" />
+                                <i class="fa fa-search" aria-hidden="true"></i>
                             </div>
-                        <?php } ?>
+                            <div class="section-title">
+                                <h3>LIKE FACEBOOK KAMI</h3>
+                            </div>
+                            <div class="fb-page" data-href="https://www.facebook.com/Toowheel-Malaysia-102602757819930" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                                <blockquote cite="https://www.facebook.com/Toowheel-Malaysia-102602757819930" class="fb-xfbml-parse-ignore">
+                                    <a href="https://www.facebook.com/Toowheel-Malaysia-102602757819930">Toowheel Malaysia</a></blockquote>
+                            </div>
+                            <div id="fb-root"></div>
+                            <?php foreach ($releated_news as $row) { ?>
+                                <div class="side-news">
+                                    <span class="side-news-widget1">
+                                        <span><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 30) : $obj->charLimit($row['sponsor'], 30); ?></span>
+                                    </span>
+                                    <div class="press-cover-image-bg" style="background: url(<?php echo BASE_URL . $row['cover_image']; ?>)no-repeat;background-repeat: no-repeat;background-position: top;background-size: cover; "></div>
+        <!--                                <img src="<?php //echo BASE_URL . $row['cover_image'];            ?>" alt=" image" />-->
+                                    <h4><?php echo $row['title']; ?></h4>
+                                    <p><?php echo $obj->charLimit($row['moto_text'], 120); ?></p>
+                                    <div class="button-1">
+                                        <div class="eff-1"></div>
+                                        <a href="news?nid=<?php echo $row['news_id']; ?>">Discover</a>
+                                    </div>
+                                </div>
+                            <?php } ?>
+                        </div>
                     </div>
                 </div>
 
@@ -106,7 +117,7 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
                         <div class="col-md-3">
                             <div class="events-upcoming">
                                 <div class="press-cover-image-bg" style="background: url(<?php echo BASE_URL . $row['cover_image']; ?>)no-repeat;background-repeat: no-repeat;background-position: top;background-size: cover; "></div>
-    <!--                                <img src="<?php //echo BASE_URL . $row['cover_image'];    ?>" alt="" />-->
+    <!--                                <img src="<?php //echo BASE_URL . $row['cover_image'];             ?>" alt="" />-->
                                 <div class="events-upcoming-content">
                                     <h4><?php echo $row['title']; ?></h4>
                                     <p><?php echo $obj->charLimit($row['moto_text'], 75); ?></p>
@@ -123,55 +134,71 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
                 </div>
             </div>
         </div>
-    </div>
-    <?php include 'footer.php'; ?>
-    <script src="js/sticky-sidebar-scroll.min.js" type="text/javascript"></script>
-<!--    <script type='text/javascript'>
-        $(document).ready(function () {
-            $.stickysidebarscroll("#sideslider", {offset: {top: 10, bottom: 200}});
-        });
-    </script>-->
-    <script type="text/javascript">
-        var twitterShare = document.querySelector('[data-js="twitter-share"]');
+        <?php include 'footer.php'; ?>
 
-        twitterShare.onclick = function (e) {
-            e.preventDefault();
-            var twitterWindow = window.open('https://twitter.com/share?url=' + document.URL, 'twitter-popup', 'height=350,width=600');
-            if (twitterWindow.focus) {
-                twitterWindow.focus();
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v5.0"></script>
+        <script src="js/sticky-sidebar-scroll.min.js" type="text/javascript"></script>
+        <script type='text/javascript'>
+            $(document).ready(function () {
+                $.stickysidebarscroll("#sideslider", {offset: {top: 100, bottom: 200, width: 100}});
+            });
+            //        $(document).ready(function () {
+            //            $(window).scroll(function () {
+            //
+            //                if ($(window).scrollTop() > 500) {
+            //                    $('#sidebar').css('position', 'fixed');
+            //                    $('#sidebar').css('top', '0');
+            //                } else if ($(window).scrollTop() <= 500) {
+            //                    $('#sidebar').css('position', '');
+            //                    $('#sidebar').css('top', '');
+            //                }
+            //                if ($('#sidebar').offset().top + $("#sidebar").height() > $("#footer").offset().top) {
+            //                    $('#sidebar').css('top', -($("#sidebar").offset().top + $("#sidebar").height() - $("#footer").offset().top));
+            //                }
+            //            });
+            //        });
+        </script>
+        <script type="text/javascript">
+            var twitterShare = document.querySelector('[data-js="twitter-share"]');
+
+            twitterShare.onclick = function (e) {
+                e.preventDefault();
+                var twitterWindow = window.open('https://twitter.com/share?url=' + document.URL, 'twitter-popup', 'height=350,width=600');
+                if (twitterWindow.focus) {
+                    twitterWindow.focus();
+                }
+                return false;
+            };
+
+            var facebookShare = document.querySelector('[data-js="facebook-share"]');
+
+            facebookShare.onclick = function (e) {
+                e.preventDefault();
+                var facebookWindow = window.open('https://www.facebook.com/sharer/sharer?u=' + document.URL, 'facebook-popup', 'height=350,width=600');
+                if (facebookWindow.focus) {
+                    facebookWindow.focus();
+                }
+                return false;
+            };
+
+            var pinterestShare = document.querySelector('[data-js="pinterest-share"]');
+
+            pinterestShare.onclick = function (e) {
+                e.preventDefault();
+                var pinterestWindow = window.open('https://in.pinterest.com/pin/create/button/?url=' + document.URL, 'pinterest-popup', 'height=350,width=600');
+                if (pinterestWindow.focus) {
+                    pinterestWindow.focus();
+                }
+                return false;
+            };
+        </script>
+        <script type="text/javascript">
+            var modal = document.getElementById('pop-img');
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
             }
-            return false;
-        };
-
-        var facebookShare = document.querySelector('[data-js="facebook-share"]');
-
-        facebookShare.onclick = function (e) {
-            e.preventDefault();
-            var facebookWindow = window.open('https://www.facebook.com/sharer/sharer?u=' + document.URL, 'facebook-popup', 'height=350,width=600');
-            if (facebookWindow.focus) {
-                facebookWindow.focus();
-            }
-            return false;
-        };
-
-        var pinterestShare = document.querySelector('[data-js="pinterest-share"]');
-
-        pinterestShare.onclick = function (e) {
-            e.preventDefault();
-            var pinterestWindow = window.open('https://in.pinterest.com/pin/create/button/?url=' + document.URL, 'pinterest-popup', 'height=350,width=600');
-            if (pinterestWindow.focus) {
-                pinterestWindow.focus();
-            }
-            return false;
-        };
-    </script>
-    <script type="text/javascript">
-        var modal = document.getElementById('pop-img');
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
-</body>
+        </script>
+    </body>
 </html>

@@ -2668,7 +2668,7 @@ body .calender-box{
         position: relative;
         bottom: 37px;
         z-index: 1;
-/*        left: 20px;*/
+        /*        left: 20px;*/
     }
     .w-text {
         display: flex;
@@ -4661,4 +4661,57 @@ hr {
 
 #upload_container input {
     font-size: 12px;
+}
+
+.profile-edit-section  .registation-step {
+    background: #fff;
+    padding: 20px;
+    width: 70%;
+    margin: 0 auto;
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    border-radius: 5px;
+}
+
+#sideslider {
+    height: 2600px;
+    /*    border: 1px solid #aaa;
+        background: #aaa;
+        float: left;*/
+}
+
+.sidecontent-search-section {
+    display: flex;
+}
+
+.sidecontent-search-section input {
+    background: transparent;
+    outline: none;
+    border: 1px solid #333;
+    padding: 5px 10px;
+}
+
+.sidecontent-search-section a.btn-search-sidecontent {
+    background: red;
+    color: #fff;
+    padding: 5px 10px;
+    text-align: center;
+
+}
+
+.sidecontent-search-section a:hover {
+    text-decoration: none;
+}
+
+.sidecontent-search-section i {
+    padding: 10px;
+    background: #333;
+    color: #fff;
+}
+
+#sideslider .section-title h3 {
+    font-size: 16px;
+}
+
+#sideslider .fb_iframe_widget span {
+    height: 360px !important;
 }
