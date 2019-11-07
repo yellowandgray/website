@@ -136,6 +136,14 @@
             </button>
         </div>
     </div>
+    <div fxFlex="50%">
+        <angular-editor id="editor1" formControlName="description" [config]="editorConfig"></angular-editor>
+    </div>
+
+</div>
+<br/>
+<br/>
+<div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
     <div fxFlex="50%" fxLayoutAlign="center center">
         <button *ngIf="banner_image_2_path == ''" type="button" mat-raised-button (click)="fileInputBanner2.click()">{{banner_image_2}}</button>
         <input hidden #fileInputBanner2 type="file" id="file_banner_2" (change)="fileProgress($event, 'banner_image_2', 'banner_image_2_path')" />
@@ -147,20 +155,49 @@
             </button>
         </div>
     </div>
-</div>
-<br/>
-<div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-    <div fxFlex="100%">
-        <angular-editor id="editor1" formControlName="description" [config]="editorConfig"></angular-editor>
-    </div>
-</div>
-<br/>
-<br/>
-<div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-    <div fxFlex="100%">
+    <div fxFlex="50%">
         <angular-editor id="editor2" formControlName="description_1" [config]="editorConfig"></angular-editor>
     </div>
 </div>
+<br/>
+<br/>
+<div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+    <div fxFlex="50%" fxLayoutAlign="center center">
+        <button *ngIf="banner_image_1_path == ''" type="button" mat-raised-button (click)="fileInputBanner1.click()">{{banner_image_1}}</button>
+        <input hidden #fileInputBanner1 type="file" id="file_banner_1" (change)="fileProgress($event, 'banner_image_1', 'banner_image_1_path')" />
+               <mat-icon *ngIf="banner_image_1_path == ''" matTooltip="Width: 650px, Height: any;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
+        <div class="preview-image" *ngIf="banner_image_1_path != ''">
+            <img class="dialog-picture" matTooltip="DescriptionImage1" mat-card-image src="{{image_url}}{{banner_image_1_path}}" alt="Photo" />
+            <button mat-icon-button aria-label="Close icon" (click)="removeMedia('banner_image_1_path')">
+                <mat-icon>close</mat-icon>
+            </button>
+        </div>
+    </div>
+    <div fxFlex="50%">
+        <angular-editor id="editor1" formControlName="description" [config]="editorConfig"></angular-editor>
+    </div>
+
+</div>
+<br/>
+<br/>
+<div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+    <div fxFlex="50%" fxLayoutAlign="center center">
+        <button *ngIf="banner_image_2_path == ''" type="button" mat-raised-button (click)="fileInputBanner2.click()">{{banner_image_2}}</button>
+        <input hidden #fileInputBanner2 type="file" id="file_banner_2" (change)="fileProgress($event, 'banner_image_2', 'banner_image_2_path')" />
+               <mat-icon *ngIf="banner_image_2_path == ''" matTooltip="Width: 650px, Height: any;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
+        <div class="preview-image" *ngIf="banner_image_2_path != ''">
+            <img class="dialog-picture" matTooltip="DescriptionImage2" mat-card-image src="{{image_url}}{{banner_image_2_path}}" alt="Photo" />
+            <button mat-icon-button aria-label="Close icon" (click)="removeMedia('banner_image_2_path')">
+                <mat-icon>close</mat-icon>
+            </button>
+        </div>
+    </div>
+    <div fxFlex="50%">
+        <angular-editor id="editor2" formControlName="description_1" [config]="editorConfig"></angular-editor>
+    </div>
+</div>
+<br/>
+<br/>
 <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
     <button mat-button [mat-dialog-close]="false">Cancel</button>
     <button mat-button type="submit" [disabled]="loading">Save</button>
