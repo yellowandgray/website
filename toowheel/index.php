@@ -154,7 +154,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
         <section class="section-bg">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-xl-4 col-sm-12">
                         <div class="advertaisement-bg">
                             <a href="<?php echo $card_add_one['url']; ?>" target="_blank">
                                 <img src="<?php echo BASE_URL . $card_add_one['image']; ?>" alt="" style="width: 100%;" />
@@ -162,7 +162,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                             <div class="icon-bg"><i class="fa fa-play" aria-hidden="true"></i></div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-xl-4 col-sm-12">
                         <div class="advertaisement-bg">
                             <a href="<?php echo $card_add_two['url']; ?>" target="_blank">
                                 <img src="<?php echo BASE_URL . $card_add_two['image']; ?>" alt="" style="width: 100%;" />
@@ -170,7 +170,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                             <div class="icon-bg"><i class="fa fa-play" aria-hidden="true"></i></div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-xl-4 col-sm-12">
                         <div class="upcoming-events">
                             <h4>UPCOMING EVENTS</h4>
                         </div>
