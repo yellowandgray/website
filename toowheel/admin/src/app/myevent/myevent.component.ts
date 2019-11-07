@@ -9,20 +9,20 @@ import { AngularEditorConfig } from '@kolkov/angular-editor';
 import * as moment from 'moment';
 
 @Component({
-  selector: 'app-clubnews',
-  templateUrl: './clubnews.component.html',
-  styleUrls: ['./clubnews.component.css']
+  selector: 'app-myevent',
+  templateUrl: './myevent.component.html',
+  styleUrls: ['./myevent.component.css']
 })
-export class ClubnewsComponent implements OnInit {
-  result = [];
+export class MyeventComponent implements OnInit {
+  result = [];  
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
 
   ngOnInit() {
-      this.getNews();
+      this.getEvent();
   }
   image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
-  getNews(): void {
-     this.httpClient.get<any>('https://www.toowheel.com/beta/toowheel/api/v1/get_news_by_club/' + sessionStorage.getItem("toowheel_club_id"))
+  getMember(): void {
+     this.httpClient.get<any>('https://www.toowheel.com/beta/toowheel/api/v1/get_event_by_club/' + sessionStorage.getItem("toowheel_club_id"))
      .subscribe(
              (res)=>{
                  if(res["result"]["error"] == false) {
@@ -37,5 +37,5 @@ export class ClubnewsComponent implements OnInit {
        });
            }
            );
-     }
+     }  
 }

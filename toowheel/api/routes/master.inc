@@ -529,6 +529,18 @@ $app->get('/get_four_wheel_member', function() {
     echoRespnse(201, $res);
 });
 
+$app->get('/get_member_by_club/:cid', function($cid) {
+    $res = array('error' => true, 'message' => 'Unable to get records');
+    $com = new Common();
+    $data = $com->selectAll('m.*, c.name AS club, s.name AS state, u.name AS activated_user, us.name AS blocked_user', 'member AS m LEFT JOIN club AS c ON c.club_id = m.club_id LEFT JOIN users AS u ON u.users_id = m.activated_by LEFT JOIN users AS us ON us.users_id = m.blocked_by LEFT JOIN state AS s ON s.state_id = m.state_id', 'm.member_id > 0 AND m.club_id = ' . $cid);
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
 $app->get('/get_states', function() {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
@@ -700,6 +712,18 @@ $app->get('/get_news_by_category/:cid/:type', function($cid, $type) {
     echoRespnse(201, $res);
 });
 
+$app->get('/get_news_by_club/:cid', function($cid) {
+    $res = array('error' => true, 'message' => 'Unable to get records');
+    $com = new Common();
+    $data = $com->selectAll('n.*, m.name AS media, c.name AS club, ca.name AS category', 'news AS n LEFT JOIN media AS m ON m.media_id = n.media_id LEFT JOIN club AS c ON c.club_id = n.club_id LEFT JOIN category AS ca ON ca.category_id = n.category_id AND ca.category_id = c.category_id', 'n.news_id > 0 AND n.club_id = \'' . $cid . '\'');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
 $app->get('/get_announcement/:cid', function($cid) {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
@@ -716,6 +740,18 @@ $app->get('/get_event', function() {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
     $data = $com->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS e LEFT JOIN club AS c ON c.club_id = e.club_id LEFT JOIN category AS ca ON ca.category_id = e.category_id AND ca.category_id = c.category_id', 'e.event_id > 0');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_event_by_club/:cid', function($cid) {
+    $res = array('error' => true, 'message' => 'Unable to get records');
+    $com = new Common();
+    $data = $com->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS e LEFT JOIN club AS c ON c.club_id = e.club_id LEFT JOIN category AS ca ON ca.category_id = e.category_id AND ca.category_id = c.category_id', 'e.event_id > 0 AND e.club_id = ' . $cid);
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';

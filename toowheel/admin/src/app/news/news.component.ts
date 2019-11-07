@@ -18,7 +18,7 @@ export class NewsComponent implements OnInit {
   searchTermFW: string = '';
   sortdata_tw: string = '';
   sortdata_fw: string = '';
-  result = [];  
+  result = [];
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
     ngOnInit() {
          this.getNews();
