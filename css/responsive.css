@@ -38,9 +38,9 @@
     .landing-text {
         top: 0 !important;
     }
-/*    .footer {
-        top: 240% !important;
-    }*/
+    /*    .footer {
+            top: 240% !important;
+        }*/
 }
 
 
@@ -54,9 +54,9 @@
     .landing-text {
         top: -207px !important;
     }
-/*    .footer {
-        top: 179% !important;
-    }*/
+    /*    .footer {
+            top: 179% !important;
+        }*/
 }
 
 @media (max-width:1367px) and (min-width:1123px){
@@ -97,7 +97,7 @@
         color: #fff !important;
         padding: 5px 10px !important;
         position: relative !important;
-        right: -134px !important;
+        right: -175px !important;
         outline: none !important;
         top: -40px !important;
     }
@@ -206,6 +206,44 @@
         position: relative !important;
         left: 137px !important;
         margin-bottom: 40px !important;
+    }
+    .cross-btn {
+        padding: 0 5px !important;
+    }
+    .cross-btn span {
+        font-size: 12px !important;
+    }
+    .footer-text {
+        font-size: 13px !important;
+    }
+    /*    .fooetr-1 img {
+            width: 100% !Important;
+        }*/
+    .fooetr-5 input {
+        position: relative;
+        left: -1px;
+    }
+    .fooetr-5 .i-con {
+        padding: 10px 5px !important;
+    }
+    .fooetr-1 {
+        flex-basis: 50% !important;
+        text-align: center;
+    }
+    .fooetr-2 {
+        flex: 1 !important;
+    }
+    .fooetr-3 {
+        flex: 1 !important;
+    }
+    .fooetr-4 {
+        flex: 1 !important;
+    }
+    .fooetr-5 {
+        flex-basis: 70% !important;
+    }
+    fooetr-5 button {
+        right: -145px !important;
     }
 }
 @media (max-width:767px) and (min-width:500px){
@@ -417,9 +455,9 @@
 }
 
 @media (min-width: 900px) and (max-width: 991px) {
-/*    .footer {
-        top: 100px !Important;
-    }*/
+    /*    .footer {
+            top: 100px !Important;
+        }*/
 }
 
 @media (min-width: 992px) and (max-width: 1024px) {
@@ -429,7 +467,7 @@
 }
 
 @media (min-width: 1300px) and (max-width: 1400px) {
-/*    .footer {
-        top: 200px !Important;
-    }*/
+    /*    .footer {
+            top: 200px !Important;
+        }*/
 }

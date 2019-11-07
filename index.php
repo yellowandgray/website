@@ -1,5 +1,6 @@
 <?php
 require_once 'toowheel/api/include/common.php';
+$type = $_GET['type'];
 $obj = new Common();
 $configs = $obj->getLandingDetails();
 ?>
@@ -49,8 +50,36 @@ $configs = $obj->getLandingDetails();
                 <div class="row">
                     <a href="index" class="logo"><img src='img/logo.png' alt=''></a>
                     <div class="header-login">
-                        <a href="toowheel/login?type=two_wheel" class="mob-noon login-button"><i class="fa fa-user"></i> Login</a>
-                        <a href="toowheel/login?type=two_wheel" class="mob-block"><span class="login-button"><i class="fa fa-user"></i></span></a>
+                        <?php
+                        if (!isset($_SESSION["member_id"])) {
+                            ?>
+                            <a href="toowheel/login?type=<?php echo $type; ?>" class="mob-noon login-button">
+                                <i class="fa fa-user"></i> Login
+                            </a>
+                        <?php } else {
+                            ?>
+                            <a class="mob-noon login-button" onclick="logoutUser();">
+                                <i class="fa fa-sign-out"></i> Logout
+                            </a>
+                        <?php }
+                        ?>
+                        <?php
+                        if (!isset($_SESSION["member_id"])) {
+                            ?>
+                            <a href="toowheel/login?type=<?php echo $type; ?>" class="mob-block">
+                                <span class="login-button">
+                                    <i class="fa fa-user"></i>
+                                </span>
+                            </a>
+                        <?php } else {
+                            ?>
+                            <a class="mob-block" onclick="logoutUser();">
+                                <span class="login-button">
+                                    <i class="fa fa-sign-out"></i>
+                                </span>
+                            </a>
+                        <?php }
+                        ?>
                     </div>
                 </div>
                 <div class="row">
@@ -221,7 +250,6 @@ $configs = $obj->getLandingDetails();
                                         <button type="submit">submit</button>
                                     </form>
                                 </li>
-                                <br/>
                                 <li class="i-con text-center">
                                     <a href="https://www.facebook.com/Toowheel-Malaysia-102602757819930" target="_blank"><img src="toowheel/img/social-icons/fb.png" alt="fb"></a>
                                     <a href="https://www.instagram.com/p/B2iG45lnGi-/" target="_blank"><img src="toowheel/img/social-icons/insta.png" alt="fb"></a>
@@ -238,6 +266,7 @@ $configs = $obj->getLandingDetails();
         <script src="js/bootstrap.js" type="text/javascript"></script>
         <script src="js/jquery.scrollie.min.js" type="text/javascript"></script>
         <script src="toowheel/js/sweet-alert.min.js" type="text/javascript"></script>
+        <script src="toowheel/js/script.js" type="text/javascript"></script>
         <script type="text/javascript">
                                         function subscribeNewsLetter() {
                                             $('.loader').addClass('is-active');

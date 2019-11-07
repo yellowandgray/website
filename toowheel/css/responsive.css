@@ -291,11 +291,11 @@
         width: 67% !important;
     }
     .upcoming-events-bg .content-detail h6 {
-        font-size: 12px !important;
+        font-size: 22px !important;
     }
-    .content-detail i {
-        font-size: 12px !important;
-    }
+    /*    .content-detail i {
+            font-size: 12px !important;
+        }*/
     .discover-slider .discover-btn {
         width: 3% !important;
     }
@@ -333,6 +333,31 @@
     }
     .events-upcoming-content {
         height: 275px !important;
+    }
+    .logo {
+        position: relative;
+        left: 75px;
+    }
+    .home-upcoming {
+        height: auto !important;
+    }
+    .fooetr-1 {
+        flex-basis: 100% !important;
+    }
+    .fooetr-2 {
+        flex: 1 !important;
+    }
+    .fooetr-3 {
+        flex: 1 !important;
+    }
+    .fooetr-4 {
+        flex: 1 !important;
+    }
+    .fooetr-5 {
+        flex-basis: 100% !important;
+    }
+    .footer-text {
+        font-size: 18px !important;
     }
 }
 
@@ -392,6 +417,19 @@
     .width-bg {
         display: none !important;
     }
+    .home-upcoming {
+        height: auto !important;
+    }
+    .content-detail h6 {
+        font-size: 25px;
+    }
+    .content-detail i {
+        font-size: 20px !important;
+    }
+    .content-detail p {
+        padding-left: 30px !important;
+        font-size: 18px !important;
+    }
 
 }
 
@@ -436,7 +474,7 @@
 
 @media screen and (max-width: 1199px) {
     .upcoming-events h4 {
-        font-size: 14px !important;
+        font-size: 18px !important;
     }
     /*    .upcoming-events-bg .content-detail {
             width: 50% !important;
@@ -499,8 +537,8 @@
 }
 @media (min-width: 1843px) and (max-width: 2560px) {
     .discover-slider-content {
-        top: -154px !important; 
-        height: 154px !important;
+        top: -123px !important;
+        height: 115px !important;
     }
     .video-bg-banner .video-overlay {
         height: 100% !important;
@@ -511,6 +549,9 @@
     }
     .discover-btn {
         width: 2.8% !important;
+    }
+    .tabcontent .news .news-discover {
+        bottom: 142px !important; 
     }
 }
 
@@ -939,9 +980,10 @@
 @media (min-width: 1024px) and (max-width: 1440px) {
     .tabcontent .news .discover-slider-content {
         top: -133px !important;
+        height: 133px !important;
     }
     .tabcontent .news .news-discover {
-        bottom: 150px !important;
+        bottom: 155px !important;
     }
 }
 @media (min-width: 320px) and (max-width: 767px) {
@@ -978,6 +1020,16 @@
         position: relative;
         bottom: 53px !important;
     }
+    .w-text.club-cover-overlay {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        bottom: 160px !important;
+    }
+    .event-section.club-cover-overlay2 {
+        top: -130px !important;
+    }
     .w-text-1 {
         bottom: 110px !important;
     }
@@ -993,6 +1045,19 @@
         align-items: center;
         position: relative;
         bottom: 60px  !important;
+    }
+    .w-text.club-cover-overlay {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        bottom: 150px  !important;
+    }
+    .club-cover-overlay .w-text h2 {
+        padding-top: 50px !important;
+    }
+    .club-cover-overlay .w-text-con h5 {
+        padding-top: 50px !important;
     }
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -1028,7 +1093,7 @@
 }
 @media (min-width: 320px) and (max-width: 499px) {
     .club-logo img {
-        height: 80px !important;
+        height: auto !important;
     }
 }
 @media (min-width: 768px) and (max-width: 1199px) {
