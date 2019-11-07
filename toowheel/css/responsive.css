@@ -391,6 +391,7 @@
     #club-register {
         width: 95% !important;
     }
+
     /*    .slick-dots {
                 display: none;
         }*/
@@ -529,7 +530,7 @@
     }
     /*    .bg-1 .container {bottom: 210px !important;}
         .bg-1 .slick-slider {bottom: 195px !important;}*/
-    .bg-1 {height: 768px !important;}
+    .bg-1 {height: 666px !important;}
     #club1 {
         position: relative !important;
         top: -70px !important;
@@ -1008,6 +1009,10 @@
     .tabcontent .news .discover-slider-content {
         top: -146px !important;
     }
+    .photo-section {
+        padding: 100px 0 0 !important;
+
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1450px) {
@@ -1197,5 +1202,18 @@
     }
     .img-responsive-h {
         height: auto !important;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .bg-1 {height: 666px !important;}
+}
+@media screen and (min-width: 992px) {
+    .photo-section img {
+        margin-bottom: -148px !important;
+    }
+}
+@media screen and (min-width: 769px) {
+    .photo-section img {
+        margin-bottom: -118px !important;
     }
 }
