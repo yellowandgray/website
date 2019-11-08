@@ -353,7 +353,7 @@ export class MyEventDelete {
     loading = false;
     event_id = 0;
     constructor(
-    public dialogRef: MatDialogRef<ClubEventForm>,
+    public dialogRef: MatDialogRef<MyEventDelete>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {

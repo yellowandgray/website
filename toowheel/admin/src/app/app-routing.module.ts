@@ -49,7 +49,7 @@ const routes: Routes = [
     {path: 'myclub', component: MyclubComponent},
     {path: 'mynews', component: ClubnewsComponent},
     {path: 'myevent', component: MyeventComponent},
-    {path: 'nyannouncement', component: ClubannouncementComponent},
+    {path: 'myannouncement', component: ClubannouncementComponent},
     {path: 'mygallery', component: ClubgalleryComponent},
     {path: 'mymember', component: MymemberComponent}
 ];
