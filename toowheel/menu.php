@@ -203,7 +203,7 @@ $menu_member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN clu
             <div class="header-login">
                 <a href="#" id="search-menu-btn" class="float-left margin-left-10">
                     <i class="fa fa-search"></i>
-                    <p>Search</p>
+<!--                    <p>Search</p>-->
                 </a>
                 <div id="search-menu-overlay" class="block">
                     <div class="centered">
@@ -212,7 +212,7 @@ $menu_member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN clu
                             <form id='search-menu-form'>
                                 <input id='search-menu-text' name='q' placeholder='Search' type='search' class="head-search" autocomplete="off" />
                                 <button id='search-menu-button' type='submit'>                     
-<!--                                    <span>Search</span>-->
+                                    <span>Search</span>
                                 </button>
                             </form>
                         </div>
