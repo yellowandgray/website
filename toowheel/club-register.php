@@ -38,7 +38,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                             <div class="custom-file">
                                 <div id="upload_container">
                                     <label for="cover-image">Choose Cover Image: </label>
-                                    <input id="cover_image" name="cover_image" type="file" class="custom-file-input" onchange="attachFile('cover_image');" />
+                                    <input style="font-size: 16px" id="cover_image" name="cover_image" type="file" class="custom-file-input" accept="image/x-png,image/gif,image/jpeg" onchange="attachFile('cover_image');" />
                                 </div>
                                 <div class="image-preview hidden" id="preview_container">
                                     <button type="button" onclick="closeCoverPic();" class="close-button-profile-img">
@@ -52,7 +52,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                             <div class="custom-file">
                                 <div id="upload_logo_container">
                                     <label for="logo">Choose Club Logo: </label>
-                                    <input id="logo" name="logo" type="file" class="custom-file-input" onchange="attachFile('logo');" />
+                                    <input id="logo" name="logo" type="file" class="custom-file-input" accept="image/x-png,image/gif,image/jpeg" onchange="attachFile('logo');" />
                                 </div>
                                 <div class="image-preview hidden" id="preview_logo_container">
                                     <button type="button" onclick="closeLogoPic();" class="close-button-profile-img">
@@ -66,7 +66,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                             <div class="custom-file">
                                 <div id="upload_video_container">
                                     <label for="club-video">Choose Club Video: </label>
-                                    <input id="club_video" name="club_video" type="file" class="custom-file-input" onchange="attachFile('club_video');" />
+                                    <input id="club_video" name="club_video" type="file" class="custom-file-input" accept="video/mp4,video/x-m4v,video/*" onchange="attachFile('club_video');" />
                                 </div>
                                 <div class="image-preview hidden" id="preview_video_container">
                                     <button type="button" onclick="closeVideoPic();" class="close-button-profile-img">
@@ -94,7 +94,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                 <input id="zip" placeholder="Zip" name="zip" type="text" tabindex="13" required />
                             </div>
                             <div class="form-group">
-                                <input id="landmark" placeholder="Landmark" name="landmark" type="text" tabindex="14" required />
+                                <input id="landmark" placeholder="Landmark" name="landmark" type="text" tabindex="14" />
                             </div>
                             <div class="form-group">
                                 <textarea id="address" placeholder="Address" name="address" type="text" tabindex="15" required></textarea>
@@ -162,5 +162,22 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
         <?php include 'footer.php'; ?>
         <script src="js/bootbox.min.js"></script>
         <script src="js/popper.min.js"></script>
+<!--        <script type="text/javascript">
+
+                                    function attachFile()
+                                    {
+                                        var type = document.getElementById("cover_image").value;
+                                        var res = type.match(".jpg", ".png", ".gif");
+
+                                        if (!res)
+                                        {
+                                            alert("sucess");
+                                        } else
+                                        {
+                                            alert("Sorry only jpeg images are accepted");
+                                            document.getElementById("cover_image").value = "; //clear the uploaded file
+                                        }
+                                    }
+        </script>-->
     </body>
 </html>
