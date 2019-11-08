@@ -4747,10 +4747,10 @@ hr {
     z-index: 9;
     border: 3px solid #fc2d2c;
     transition: all 0.2s linear;
-   filter: brightness(100%);
+    filter: brightness(100%);
 }
 #gPhoto h5{
-   opacity: 0;
+    opacity: 0;
 }
 
 .photo .col-sm-4{
@@ -4761,8 +4761,8 @@ hr {
 }
 #gPhoto:hover h5{
     background: #363636;
-    padding: 20px;
-    margin-top: -9px;
+    padding: 5px;
+    /* margin-top: -9px; */
     color: #fff;
     z-index: 2;
     transform: scale(1.2);
@@ -4770,6 +4770,7 @@ hr {
     transition: all 0.2s linear;
     z-index: 10;
     position: relative;
+    font-size: 13px;
 
 }
 
@@ -4807,4 +4808,8 @@ hr {
     height: 300px;
     padding-right: 2px;
     padding-left: 2px;
+}
+
+#gPhoto {
+    padding: 0;
 }

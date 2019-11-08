@@ -212,7 +212,7 @@ $menu_member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN clu
                             <form id='search-menu-form'>
                                 <input id='search-menu-text' name='q' placeholder='Search' type='search' class="head-search" autocomplete="off" />
                                 <button id='search-menu-button' type='submit'>                     
-                                    <span>Search</span>
+<!--                                    <span>Search</span>-->
                                 </button>
                             </form>
                         </div>
@@ -224,7 +224,7 @@ $menu_member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN clu
                     <a href="login?type=<?php echo $type; ?>" class="float-left margin-left-10">
                         <span>
                             <i class="fa fa-user search-bg"></i>
-                            <p> Login</p>
+<!--                            <p> Login</p>-->
                         </span>
                     </a>
                 <?php } else {
@@ -237,7 +237,7 @@ $menu_member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN clu
                                 <img src="<?php echo BASE_URL . $menu_member['profile_picture']; ?>" alt="" />
                             <?php } ?>
                             <ul id="logout-dropdown" class="logout-dropdown">
-                                <p><?php echo $row['name']; ?></p> 
+<!--                                <p><?php echo $row['name']; ?></p> -->
                                 <li><a href="my-account?type=<?php echo $type; ?>">Profile</a></li>
                                 <li><a href="#" onclick="logoutUser();">Logout</a></li>
                             </ul>
@@ -256,7 +256,7 @@ $menu_member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN clu
                     </a>
                 <?php } else {
                     ?>
-                    <span class="mob-logout-profile" onclick="openLogout();">
+                    <span class="mob-logout-profile" onclick="openLogout1();">
                         <?php if (isset($menu_member['profile_picture']) && $menu_member['profile_picture'] == '') { ?>
                             <img src="<?php echo BASE_URL . $menu_member['gender']; ?>.jpg" alt="" />
                         <?php } else { ?>
@@ -315,6 +315,14 @@ $menu_member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN clu
     }
 
     function openLogout() {
+        var x = document.getElementById("logout-dropdown");
+        if (x.style.display != "block") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+    function openLogout1() {
         var x = document.getElementById("logout-dropdown");
         if (x.style.display != "block") {
             x.style.display = "block";
