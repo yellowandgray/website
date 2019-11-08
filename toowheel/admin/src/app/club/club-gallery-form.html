@@ -1,6 +1,6 @@
 <h2 mat-dialog-title>Club Gallery</h2>
 <mat-dialog-content class="mat-typography">
-    <div fxLayout="row" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="end center">
+    <!--<div fxLayout="row" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="end center">
         <button type="button" mat-raised-button (click)="fileInput.click()"><mat-icon>add</mat-icon> Photos</button>
         <input hidden #fileInput type="file" id="file" (change)="submitPhotos($event)" multiple />
         <mat-icon matTooltip="Width: 1280px; Height: 600px;" matTooltipPosition="left" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
@@ -11,7 +11,7 @@
                [strokeWidth]="3"
                [diameter]="25">
         </mat-progress-spinner>
-    </div>
+    </div>-->
     <ng-container *ngFor="let data of result; let i = index">
         <div fxLayout="row" *ngIf="i % 4 == 0" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
             <ng-container *ngIf="result[i]">

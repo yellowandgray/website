@@ -27,7 +27,7 @@ export class ClubgalleryComponent implements OnInit {
   }
   image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
     getGallery(): void {
-  this.httpClient.get<any>('https://www.toowheel.com/beta/toowheel/api/v1/get_clubgallery')
+  this.httpClient.get<any>('https://www.toowheel.com/beta/toowheel/api/v1/get_club_gallery_by_club/'+sessionStorage.getItem("toowheel_club_id"))
   .subscribe(
           (res)=>{
               this.result = res["result"]["data"];
@@ -40,10 +40,10 @@ export class ClubgalleryComponent implements OnInit {
         );
   }  
   
-  openDialog(id, res): void  {
+  openDialog(id): void  {
     var data = null;
       if(id != 0) {
-      this[res].forEach(val=> {
+      this.result.forEach(val=> {
            if(parseInt(val.club_gallery_id) === parseInt(id)) {
                 data = val;
                 return false;
@@ -196,6 +196,7 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
           }
           this.loading = true;
           var formData = new FormData();
+          formData.append('club_id', sessionStorage.getItem("toowheel_club_id"));
           var url = '';
           if(this.club_gallery_id != 0) {
               formData.append('title', this.galleryForm.value.title);
@@ -212,7 +213,7 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
           formData.append('type', this.galleryForm.value.type);
           formData.append('media_path', this.media_path);
           formData.append('description', this.galleryForm.value.description);
-          url = 'insert_clubgallery';
+          url = 'insert_club_gallery';
           }
           if(this.thumb_path && this.thumb_path!= '') {
               formData.append('thumb_path', this.thumb_path);
