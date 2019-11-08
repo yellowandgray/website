@@ -67,17 +67,27 @@ $menu_member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN clu
                     <div id="News" class="tabcontent">
                         <div class="row news">
                             <?php foreach ($menu_latest_news as $row) { ?>
-                                <div class="news-cont">
-                                    <div>
-                                        <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="image" />
-                                        <div class="discover-slider-content">
-                                            <p class="clb-bg"><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 10) : $obj->charLimit($row['sponsor'], 10); ?></p>
+                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                    <div class="hovereffect">
+                                        <div class="news-thumb-menu" style="background: url(<?php echo BASE_URL . $row['thumb_image']; ?>)no-repeat;background-repeat: no-repeat;background-position: top;background-size: cover; "></div>
+<!--                                        <img src="<?php //echo BASE_URL . $row['thumb_image']; ?>" alt="image">-->
+                                        <a href="news?nid=<?php echo $row['news_id']; ?>" class="overlay">
                                             <h2><?php echo $row['title']; ?></h2>
-    <!--                                            <p><?php //echo $obj->charLimit($row['moto_text'], 20);               ?></p>-->
-                                        </div>
-                                        <center class="news-discover"><a href="news?nid=<?php echo $row['news_id']; ?>">DISCOVER</a></center>
+                                        </a>
                                     </div>
                                 </div>
+
+                                <!--                                <div class="news-cont">
+                                                                    <div>
+                                                                        <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="image" />
+                                                                        <div class="discover-slider-content">
+                                                                            <p class="clb-bg"><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 10) : $obj->charLimit($row['sponsor'], 10); ?></p>
+                                                                            <h2><?php echo $row['title']; ?></h2>
+                                                                                <p><?php //echo $obj->charLimit($row['moto_text'], 20);                   ?></p>
+                                                                        </div>
+                                                                        <center class="news-discover"><a href="news?nid=<?php echo $row['news_id']; ?>">DISCOVER</a></center>
+                                                                    </div>
+                                                                </div>-->
                             <?php } ?>
                         </div>
                         <div class="find-club-btn">
@@ -167,10 +177,10 @@ $menu_member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN clu
                                         </li>
                                     </ul>
                                     <!--                                    <div class="col-md-3 col-sm-6">
-                                                                            <a href="events?type=<?php //echo $type;               ?>" class="club-box">
-                                                                                <img src="<?php //echo BASE_URL . $row['thumb_image'];               ?>" alt="" />
-                                                                                <h3><?php //echo $row['title'];               ?></h3>
-                                                                                <p><?php //echo $row['location'];               ?></p>
+                                                                            <a href="events?type=<?php //echo $type;                   ?>" class="club-box">
+                                                                                <img src="<?php //echo BASE_URL . $row['thumb_image'];                   ?>" alt="" />
+                                                                                <h3><?php //echo $row['title'];                   ?></h3>
+                                                                                <p><?php //echo $row['location'];                   ?></p>
                                                                             </a>
                                                                         </div>-->
                                 <?php } ?>
@@ -227,6 +237,7 @@ $menu_member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN clu
                                 <img src="<?php echo BASE_URL . $menu_member['profile_picture']; ?>" alt="" />
                             <?php } ?>
                             <ul id="logout-dropdown" class="logout-dropdown">
+                                <p><?php echo $row['name']; ?></p> 
                                 <li><a href="my-account?type=<?php echo $type; ?>">Profile</a></li>
                                 <li><a href="#" onclick="logoutUser();">Logout</a></li>
                             </ul>
@@ -245,9 +256,17 @@ $menu_member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN clu
                     </a>
                 <?php } else {
                     ?>
-                    <a onclick="logoutUser();">
-                        <i class="fa fa-sign-out"></i>
-                    </a>
+                    <span class="mob-logout-profile" onclick="openLogout();">
+                        <?php if (isset($menu_member['profile_picture']) && $menu_member['profile_picture'] == '') { ?>
+                            <img src="<?php echo BASE_URL . $menu_member['gender']; ?>.jpg" alt="" />
+                        <?php } else { ?>
+                            <img src="<?php echo BASE_URL . $menu_member['profile_picture']; ?>" alt="" />
+                        <?php } ?>
+                        <ul id="logout-dropdown" class="logout-dropdown">
+                            <li><a href="my-account?type=<?php echo $type; ?>">Profile</a></li>
+                            <li><a href="#" onclick="logoutUser();">Logout</a></li>
+                        </ul>
+                    </span>
                 <?php }
                 ?>
             </div>
@@ -297,8 +316,7 @@ $menu_member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN clu
 
     function openLogout() {
         var x = document.getElementById("logout-dropdown");
-        if (x.style.display != "block")
-        {
+        if (x.style.display != "block") {
             x.style.display = "block";
         } else {
             x.style.display = "none";

@@ -20,8 +20,18 @@ function attachFile(id) {
         const validImageTypes = ['image/gif', 'image/jpg', 'image/jpeg', 'image/png'];
         if (!validImageTypes.includes(fileType)) {
             checkfiletype = true;
-//            alert('Invalid image format');
+            $('#' + id).val('');
             swal('Information', 'Invalid image format', 'info');
+        }
+    }
+    if (id == 'club_video') {
+        const file = $('#' + id)[0].files[0];
+        const  fileType = file['type'];
+        const validVideoTypes = ['video/ogg', 'video/mp4', 'video/webm', 'video/webm'];
+        if (!validVideoTypes.includes(fileType)) {
+            checkfiletype = true;
+            $('#' + id).val('');
+            swal('Information', 'Invalid video format', 'info');
         }
     }
     if ($.trim(val) != '' && checkfiletype == false) {
