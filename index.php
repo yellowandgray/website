@@ -4,6 +4,7 @@ require_once 'toowheel/api/include/common.php';
 $type = $_GET['type'];
 $obj = new Common();
 $configs = $obj->getLandingDetails();
+$menu_member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN club AS c ON c.club_id = m.club_id', 'm.member_id = ' . $_SESSION["member_id"]);
 ?>
 <!DOCTYPE html>
 <html>
@@ -59,9 +60,17 @@ $configs = $obj->getLandingDetails();
                             </a>
                         <?php } else {
                             ?>
-                            <a class="mob-noon login-button" onclick="logoutUser();">
-                                <i class="fa fa-sign-out"></i> Logout
-                            </a>
+                            <span class="mob-noon login-button" onclick="openLogout();">
+                                <?php if (isset($menu_member['profile_picture']) && $menu_member['profile_picture'] == '') { ?>
+                                    <img src="<?php echo BASE_URL . $menu_member['gender']; ?>.jpg" alt="" />
+                                <?php } else { ?>
+                                    <img src="<?php echo BASE_URL . $menu_member['profile_picture']; ?>" alt="" />
+                                <?php } ?>
+                                <ul id="logout-dropdown" class="logout-dropdown">
+                                    <li><a href="toowheel/my-account?type=<?php echo $type; ?>">Profile</a></li>
+                                    <li><a href="#" onclick="logoutUser();">Logout</a></li>
+                                </ul>
+                            </span>
                         <?php }
                         ?>
                         <?php
@@ -74,11 +83,17 @@ $configs = $obj->getLandingDetails();
                             </a>
                         <?php } else {
                             ?>
-                            <a class="mob-block" onclick="logoutUser();">
-                                <span class="login-button">
-                                    <i class="fa fa-sign-out"></i>
-                                </span>
-                            </a>
+                            <span class="mob-block" onclick="openLogout();">
+                                <?php if (isset($menu_member['profile_picture']) && $menu_member['profile_picture'] == '') { ?>
+                                    <img src="<?php echo BASE_URL . $menu_member['gender']; ?>.jpg" alt="" />
+                                <?php } else { ?>
+                                    <img src="<?php echo BASE_URL . $menu_member['profile_picture']; ?>" alt="" />
+                                <?php } ?>
+                                <ul id="logout-dropdown" class="logout-dropdown">
+                                    <li><a href="toowheel/my-account?type=<?php echo $type; ?>">Profile</a></li>
+                                    <li><a href="#" onclick="logoutUser();">Logout</a></li>
+                                </ul>
+                            </span>
                         <?php }
                         ?>
                     </div>
@@ -302,6 +317,16 @@ $configs = $obj->getLandingDetails();
                                                         }
                                                     });
                                         });
+
+                                        function openLogout() {
+                                            var x = document.getElementById("logout-dropdown");
+                                            if (x.style.display != "block")
+                                            {
+                                                x.style.display = "block";
+                                            } else {
+                                                x.style.display = "none";
+                                            }
+                                        }
         </script>
     </body>
 </html>

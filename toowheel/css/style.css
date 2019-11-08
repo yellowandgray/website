@@ -2112,4 +2112,37 @@ div#html5-watermark {
     border-radius: 50%;
     width: 2.5%;
     top: 25%;
+    height: 41%;
+    overflow: hidden;
+    -webkit-transition: 0.4s ease;
+    transition: 0.4s ease;
+}
+
+.user-profile-image span img:hover {
+    -webkit-transform: scale(1.08);
+    transform: scale(1.08);
+}
+
+.user-profile-image span .logout-dropdown {
+    display: none;
+}
+
+.user-profile-image span .logout-dropdown {
+    /*    display: block;*/
+    position: absolute;
+    top: 70%;
+    background: #fff;
+    padding: 0px 0;
+    list-style: none;
+    border-radius: 5px;
+}
+
+.user-profile-image span .logout-dropdown li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #333;
+}
+
+.user-profile-image span .logout-dropdown li a {
+    font-size: 14px;
+    color: #000;
 }
