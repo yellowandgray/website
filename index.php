@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once 'toowheel/api/include/common.php';
 $type = $_GET['type'];
 $obj = new Common();

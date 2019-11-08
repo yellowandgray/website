@@ -23,8 +23,7 @@ export class ClubgalleryComponent implements OnInit {
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
 
   ngOnInit() {
-      this.getGallery();  
-console.log("check11---->")    
+      this.getGallery();
   }
   image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
     getGallery(): void {
@@ -32,7 +31,6 @@ console.log("check11---->")
   .subscribe(
           (res)=>{
               this.result = res["result"]["data"];
-              console.log("gdfhgfh---->"+this.result)
         },
         (error)=>{
             this._snackBar.open(error["statusText"], '', {
@@ -125,7 +123,7 @@ console.log("check11---->")
 
 @Component({
   selector: 'gallery-form',
-  templateUrl: 'gallery-form.html',
+  templateUrl: 'clubgallery-form.html',
 })
 export class ClubGalleryForm {
 image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
@@ -249,7 +247,7 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
 
 @Component({
   selector: 'gallery-delete-confirmation',
-  templateUrl: 'gallery-delete-confirmation.html',
+  templateUrl: 'clubgallery-delete-confirmation.html',
 })
 export class ClubGalleryDelete {
     loading = false;

@@ -14,7 +14,7 @@ import * as moment from 'moment';
   styleUrls: ['./mymember.component.css']
 })
 export class MymemberComponent implements OnInit {
-
+  result = [];  
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
 
   ngOnInit() {
