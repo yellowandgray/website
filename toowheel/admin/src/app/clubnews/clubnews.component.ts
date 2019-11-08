@@ -164,8 +164,8 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
         this.newsForm = new FormGroup({
-      'type': new FormControl('', Validators.required),
-      'category_id': new FormControl('', Validators.required),
+      'type': new FormControl(),
+      'category_id': new FormControl(),
       'club_id': new FormControl(),
       'title': new FormControl('', Validators.required),
       'date': new FormControl('', Validators.required),
@@ -174,6 +174,8 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
       'author_name': new FormControl('', Validators.required),
       'description': new FormControl('', Validators.required),
       'description_1': new FormControl('', Validators.required),
+      'description_2': new FormControl('', Validators.required),
+      'description_3': new FormControl('', Validators.required),
       'youtube_id': new FormControl(),
       'sponsor': new FormControl()
       });
@@ -189,6 +191,8 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
            author_name: this.data.author_name,
            description: this.data.description_1,
            description_1: this.data.description_2,
+           description_2: this.data.description_3,
+           description_3: this.data.description_4,
            youtube_id: this.data.youtube_id,
            sponsor: this.data.sponsor
         });
@@ -197,6 +201,8 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
         this.thumb_image_path=this.data.thumb_image;
         this.banner_image_1_path=this.data.banner_1;
         this.banner_image_2_path=this.data.banner_2;
+        this.banner_image_3_path=this.data.banner_3;
+        this.banner_image_4_path=this.data.banner_4;
         this.getCategory();
         this.getClub();
     }else {
@@ -352,16 +358,24 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
           if(this.banner_image_2_path && this.banner_image_2_path != '') {
                formData.append('banner_2', this.banner_image_2_path); 
           }
+          if(this.banner_image_3_path && this.banner_image_3_path != '') {
+               formData.append('banner_3', this.banner_image_3_path); 
+          }
+          if(this.banner_image_4_path && this.banner_image_4_path != '') {
+               formData.append('banner_4', this.banner_image_4_path); 
+          }
           formData.append('moto_text', this.newsForm.value.moto_text);
           formData.append('description_1', this.newsForm.value.description);
           formData.append('description_2', this.newsForm.value.description_1);
+          formData.append('description_3', this.newsForm.value.description_2);
+          formData.append('description_4', this.newsForm.value.description_3);
           formData.append('youtube_id', this.newsForm.value.youtube_id);
           formData.append('sponsor', this.newsForm.value.sponsor);
         url = 'update_record/news/news_id = '+this.news_id;
       } else {
-        formData.append('type', this.newsForm.value.type);
-          formData.append('category_id', this.newsForm.value.category_id);
-          formData.append('club_id', this.newsForm.value.club_id);
+        formData.append('type', sessionStorage.getItem("toowheel_type"));
+          formData.append('category_id', sessionStorage.getItem("toowheel_category_id"));
+          formData.append('club_id', sessionStorage.getItem("toowheel_club_id"));
           formData.append('cover_image', this.cover_image_path);
           formData.append('title', this.newsForm.value.title);
           formData.append('media_id', this.newsForm.value.media);
@@ -370,11 +384,15 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
           formData.append('thumb_image', this.thumb_image_path);
           formData.append('banner_image_1', this.banner_image_1_path);
           formData.append('banner_image_2', this.banner_image_2_path);
+          formData.append('banner_image_3', this.banner_image_3_path);
+          formData.append('banner_image_4', this.banner_image_4_path);
           formData.append('moto_text', this.newsForm.value.moto_text);
           formData.append('description', this.newsForm.value.description);
           formData.append('description_1', this.newsForm.value.description_1);
+          formData.append('description_2', this.newsForm.value.description_2);
+          formData.append('description_3', this.newsForm.value.description_3);
           formData.append('youtube_id', this.newsForm.value.youtube_id);
-          formData.append('sponsor', this.newsForm.value.sponsor);
+          formData.append('sponsor', '');
         url = 'insert_news';
       }
       this.httpClient.post('https://www.toowheel.com/beta/toowheel/api/v1/'+url, formData).subscribe(

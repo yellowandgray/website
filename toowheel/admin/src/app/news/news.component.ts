@@ -175,10 +175,14 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
     thumb_image: string = 'Thumb Image';
     banner_image_1: string = 'Image 1';
     banner_image_2: string = 'Image 2';
+    banner_image_3: string = 'Image 2';
+    banner_image_4: string = 'Image 2';
     cover_image_path: string='';
     thumb_image_path: string='';
     banner_image_1_path: string='';
     banner_image_2_path: string='';
+    banner_image_3_path: string='';
+    banner_image_4_path: string='';
     constructor(
     public dialogRef: MatDialogRef<NewsForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -195,6 +199,8 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
       'author_name': new FormControl('', Validators.required),
       'description': new FormControl('', Validators.required),
       'description_1': new FormControl('', Validators.required),
+      'description_2': new FormControl('', Validators.required),
+      'description_3': new FormControl('', Validators.required),
       'youtube_id': new FormControl(),
       'sponsor': new FormControl()
       });
@@ -210,6 +216,8 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
            author_name: this.data.author_name,
            description: this.data.description_1,
            description_1: this.data.description_2,
+           description_2: this.data.description_3,
+           description_3: this.data.description_4,
            youtube_id: this.data.youtube_id,
            sponsor: this.data.sponsor
         });
@@ -218,6 +226,8 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
         this.thumb_image_path=this.data.thumb_image;
         this.banner_image_1_path=this.data.banner_1;
         this.banner_image_2_path=this.data.banner_2;
+        this.banner_image_3_path=this.data.banner_3;
+        this.banner_image_4_path=this.data.banner_4;
         this.getCategory();
         this.getClub();
     }else {
@@ -373,9 +383,17 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
           if(this.banner_image_2_path && this.banner_image_2_path != '') {
                formData.append('banner_2', this.banner_image_2_path); 
           }
+          if(this.banner_image_3_path && this.banner_image_3_path != '') {
+               formData.append('banner_3', this.banner_image_3_path); 
+          }
+          if(this.banner_image_4_path && this.banner_image_4_path != '') {
+               formData.append('banner_4', this.banner_image_4_path); 
+          }
           formData.append('moto_text', this.newsForm.value.moto_text);
           formData.append('description_1', this.newsForm.value.description);
           formData.append('description_2', this.newsForm.value.description_1);
+          formData.append('description_3', this.newsForm.value.description_2);
+          formData.append('description_4', this.newsForm.value.description_3);
           formData.append('youtube_id', this.newsForm.value.youtube_id);
           formData.append('sponsor', this.newsForm.value.sponsor);
         url = 'update_record/news/news_id = '+this.news_id;
@@ -391,9 +409,13 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
           formData.append('thumb_image', this.thumb_image_path);
           formData.append('banner_image_1', this.banner_image_1_path);
           formData.append('banner_image_2', this.banner_image_2_path);
+          formData.append('banner_image_3', this.banner_image_3_path);
+          formData.append('banner_image_4', this.banner_image_4_path);
           formData.append('moto_text', this.newsForm.value.moto_text);
           formData.append('description', this.newsForm.value.description);
           formData.append('description_1', this.newsForm.value.description_1);
+          formData.append('description_2', this.newsForm.value.description_2);
+          formData.append('description_3', this.newsForm.value.description_3);
           formData.append('youtube_id', this.newsForm.value.youtube_id);
           formData.append('sponsor', this.newsForm.value.sponsor);
         url = 'insert_news';
