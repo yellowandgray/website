@@ -865,34 +865,34 @@ $app->post('/loginadmin', function() use ($app) {
     $data = $app->request->post();
     $obj = new Common();
     $record = $obj->selectRow('*', 'users', 'email=\'' . $data['email'] . '\'');
-    /* if (count($record) > 0) {
-      $pass_matchs = $obj->decryptPassword($data['password'], $record['password']);
-      if ($pass_matchs == true) {
-      date_default_timezone_set("Asia/Kuala_Lumpur");
-      $obj->updateRecordWithWhere(array('last_login' => date('Y-m-d H:i:s')), 'users', 'users_id=' . $record['users_id']);
-      $res['error'] = false;
-      $res['message'] = 'Welcome ' . $record['name'];
-      $res['data'] = $record;
-      } else {
-      $res['message'] = 'Username or Password mismatch';
-      }
-      } else {
-      $club = $obj->selectRow('*', 'club', 'email=\'' . $data['email'] . '\'');
-      if (count($club) > 0) {
-      $pass_matchs = $obj->decryptPassword($data['password'], $club['password']);
-      if ($pass_matchs == true) {
-      date_default_timezone_set("Asia/Kuala_Lumpur");
-      $obj->updateRecordWithWhere(array('last_login' => date('Y-m-d H:i:s')), 'club', 'club_id=' . $club['club_id']);
-      $club['role'] = 'club';
-      $club['media_path'] = $club['logo'];
-      $res['error'] = false;
-      $res['message'] = 'Welcome ' . $club['name'];
-      $res['data'] = $club;
-      } else {
-      $res['message'] = 'Username or Password mismatch';
-      }
-      }
-      } */
+    if (count($record) > 0) {
+        $pass_matchs = $obj->decryptPassword($data['password'], $record['password']);
+        if ($pass_matchs == true) {
+            date_default_timezone_set("Asia/Kuala_Lumpur");
+            $obj->updateRecordWithWhere(array('last_login' => date('Y-m-d H:i:s')), 'users', 'users_id=' . $record['users_id']);
+            $res['error'] = false;
+            $res['message'] = 'Welcome ' . $record['name'];
+            $res['data'] = $record;
+        } else {
+            $res['message'] = 'Username or Password mismatch';
+        }
+    } else {
+        $club = $obj->selectRow('*', 'club', 'email=\'' . $data['email'] . '\'');
+        if (count($club) > 0) {
+            $pass_matchs = $obj->decryptPassword($data['password'], $club['password']);
+            if ($pass_matchs == true) {
+                date_default_timezone_set("Asia/Kuala_Lumpur");
+                $obj->updateRecordWithWhere(array('last_login' => date('Y-m-d H:i:s')), 'club', 'club_id=' . $club['club_id']);
+                $club['role'] = 'club';
+                $club['media_path'] = $club['logo'];
+                $res['error'] = false;
+                $res['message'] = 'Welcome ' . $club['name'];
+                $res['data'] = $club;
+            } else {
+                $res['message'] = 'Username or Password mismatch';
+            }
+        }
+    }
     echoRespnse(201, $res);
 });
 
