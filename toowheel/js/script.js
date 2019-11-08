@@ -13,7 +13,18 @@ var BASE_IMAGE_URL = 'http://www.toowheel.com/toowheel/api/v1/';
 
 function attachFile(id) {
     var val = $('#' + id).val();
-    if ($.trim(val) != '') {
+    var checkfiletype = false;
+    if (id == 'cover_image' || id == 'logo' || id == 'profile_image') {
+        const file = $('#' + id)[0].files[0];
+        const  fileType = file['type'];
+        const validImageTypes = ['image/gif', 'image/jpg', 'image/jpeg', 'image/png'];
+        if (!validImageTypes.includes(fileType)) {
+            checkfiletype = true;
+//            alert('Invalid image format');
+            swal('Information', 'Invalid image format', 'info');
+        }
+    }
+    if ($.trim(val) != '' && checkfiletype == false) {
         $('.loader').addClass('is-active');
         var form = new FormData();
         form.append('file', $('#' + id)[0].files[0]);
@@ -42,6 +53,19 @@ function attachFile(id) {
                         $("#preview_container").removeClass('hidden');
                         $("#upload_container").addClass('hidden');
                         $("#preview_container img").attr("src", BASE_IMAGE_URL + cover_image);
+
+//                        console.log("test" + data.result.data)
+//                        cover_image = data.result.data;
+//                        if (!cover_image.files[0].name.match(/.(jpg|jpeg|png|gif)$/i))
+//                        {
+//                            console.log("test1")
+//                            alert('not an image');
+//                        } else {
+//                            cover_image = data.result.data;
+//                            $("#preview_container").removeClass('hidden');
+//                            $("#upload_container").addClass('hidden');
+//                            $("#preview_container img").attr("src", BASE_IMAGE_URL + cover_image);
+//                        }
                     }
                     if (id == 'logo') {
                         logo = data.result.data;
@@ -65,7 +89,7 @@ function attachFile(id) {
             }
         });
     } else {
-        if (id != 'profile_image') {
+        if (id != 'profile_image' && checkfiletype == false) {
             swal('Information', 'Please attach slip', 'info');
         }
     }

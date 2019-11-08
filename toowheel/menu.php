@@ -7,6 +7,7 @@ $menu_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
 $autocomplete_club = $obj->selectAll('*', 'club', 'club_id > 0 AND type = \'' . $type . '\' ORDER BY name DESC');
 $autocomplete_news = $obj->selectAll('*', 'news', 'news_id > 0 AND type = \'' . $type . '\' ORDER BY title DESC');
 $autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_release_id > 0 AND type = \'' . $type . '\' ORDER BY title DESC');
+$menu_member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN club AS c ON c.club_id = m.club_id', 'm.member_id = ' . $_SESSION["member_id"]);
 ?>
 <section class="header">
     <div class="container">
@@ -72,7 +73,7 @@ $autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_relea
                                         <div class="discover-slider-content">
                                             <p class="clb-bg"><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 10) : $obj->charLimit($row['sponsor'], 10); ?></p>
                                             <h2><?php echo $row['title']; ?></h2>
-<!--                                            <p><?php //echo $obj->charLimit($row['moto_text'], 20); ?></p>-->
+    <!--                                            <p><?php //echo $obj->charLimit($row['moto_text'], 20);  ?></p>-->
                                         </div>
                                         <center class="news-discover"><a href="news?nid=<?php echo $row['news_id']; ?>">DISCOVER</a></center>
                                     </div>
@@ -166,10 +167,10 @@ $autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_relea
                                         </li>
                                     </ul>
                                     <!--                                    <div class="col-md-3 col-sm-6">
-                                                                            <a href="events?type=<?php //echo $type; ?>" class="club-box">
-                                                                                <img src="<?php //echo BASE_URL . $row['thumb_image']; ?>" alt="" />
-                                                                                <h3><?php //echo $row['title']; ?></h3>
-                                                                                <p><?php //echo $row['location']; ?></p>
+                                                                            <a href="events?type=<?php //echo $type;  ?>" class="club-box">
+                                                                                <img src="<?php //echo BASE_URL . $row['thumb_image'];  ?>" alt="" />
+                                                                                <h3><?php //echo $row['title'];  ?></h3>
+                                                                                <p><?php //echo $row['location'];  ?></p>
                                                                             </a>
                                                                         </div>-->
                                 <?php } ?>
@@ -187,7 +188,7 @@ $autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_relea
                     </div>
                 </div>
             </div>
-            <a href="../index" class="logo"><img src='img/logo.png' alt=''></a>
+            <a href="https://www.toowheel.com/beta/" class="logo"><img src='img/logo.png' alt=''></a>
 
             <div class="header-login">
                 <a href="#" id="search-menu-btn" class="float-left margin-left-10">
@@ -218,10 +219,13 @@ $autocomplete_press_release = $obj->selectAll('*', 'press_release', 'press_relea
                     </a>
                 <?php } else {
                     ?>
-                    <a style="cursor: pointer;" class="float-left margin-left-10" onclick="logoutUser();">
+                    <a style="cursor: pointer;" class="float-left margin-left-10 user-profile-image">
                         <span>
-                            <i class="fa fa-sign-out search-bg"></i>
-                            <p> Logout</p>
+                            <?php if (isset($member['profile_picture']) && $member['profile_picture'] == '') { ?>
+                                <img src="<?php echo BASE_URL . $member['gender']; ?>.jpg" alt="" />
+                            <?php } else { ?>
+                                <img class="tooltip" tip="Profile Image" src="<?php echo BASE_URL . $member['profile_picture']; ?>" alt="" />
+                            <?php } ?>
                         </span>
                     </a>                    
                 <?php }
