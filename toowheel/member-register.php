@@ -74,7 +74,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                             <div class="form-group">
                                                 <div id="upload_container">
                                                     <label class="font-size-12" for="upload-profile"><i class="fa fa-picture-o" aria-hidden="true"></i> Upload Your Profile Picture</label>
-                                                    <input type="file" class="form-control-file" id="profile_image" onchange="attachFile('profile_image');" />
+                                                    <input type="file" class="form-control-file" id="profile_image" accept="image/x-png,image/gif,image/jpeg" onchange="attachFile('profile_image');" />
                                                 </div>
                                                 <div class="image-preview hidden" id="preview_container">
                                                     <button type="button" onclick="closeProfilePic();" class="close-button-profile-img"><i class="fa fa-close"></i></button>
