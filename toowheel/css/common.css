@@ -4736,3 +4736,42 @@ hr {
 ::-webkit-scrollbar {
     width: 2px;
 }
+.photo img{
+    filter: brightness(70%);
+    transition: all 0.3s linear;
+}
+.photo img:hover{
+    transform: scale(1.2);
+    z-index: 9;
+    border: 3px solid #fc2d2c;
+    transition: all 0.2s linear;
+    box-shadow: 0px 0px 4px 3px #525252;
+    filter: brightness(100%);
+}
+
+.photo .col-sm-2{
+    position: relative;
+    width: 100%;
+    padding-right: 2px;
+    padding-left: 2px;
+}
+@media (max-width: 575px){
+    .col-sm-2 {
+        -ms-flex: 0 0 16.666667%;
+        flex: 0 0 16.666667%;
+        max-width: 16.666667%;
+
+        position: relative;
+        width: 100%;
+        padding-right: 2px;
+        padding-left: 2px;
+
+    }
+}
+@media (min-width: 679px) and (max-width: 991px){
+    .photo-section img {
+        width: 100%;
+        top: -83px;
+        position: relative;
+    }
+}
