@@ -24,6 +24,7 @@
     <link href="css/magnific-popup.min.css" rel="stylesheet" type="text/css"/>
     <link href="css/responsive.css" rel="stylesheet" type="text/css"/>
     <link href="css/slick-slider.css" rel="stylesheet" type="text/css"/>
+    <link href="css/gallery-section.css" rel="stylesheet" type="text/css"/>
     <link href="css/style.css" rel="stylesheet" type="text/css"/>
     <link href="css/common.css" rel="stylesheet" type="text/css"/>
     <link href="css/rangeslider.css" rel="stylesheet" type="text/css"/>
