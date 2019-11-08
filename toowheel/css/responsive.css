@@ -27,7 +27,7 @@
     .slick-track {left: 0 !important;}
     .upcoming-events-bg .content-detail {width: 52%;}
     .photo-section h1 {font-size: 3rem !important;}
-    .photo-section img {top: 0 !important;}
+    .photo-section img {top: -28px !important;}
     .video-img h1 {font-size: 3rem !important;}
     .video-section {top: 0 !important;}
     .header {height: 85px !important;}
@@ -262,7 +262,7 @@
 
 @media (min-width: 601px) and (max-width: 768px) {
     .photo-section h1 {font-size: 5rem !important;}
-    .photo-section img {top: 0 !important;}
+    .photo-section img {top: -55px !important;}
     .video-img h1 {font-size: 5rem !important;}
     .video-section {top: 0 !important;}
     .upcoming-events-bg .content-detail {

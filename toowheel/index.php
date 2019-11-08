@@ -190,60 +190,83 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                     </div>
                     </section>
                     <section class="photo-section">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-12">
+                        <div class="col-md-12">
+                            <div class="row photo">
+                                <!--                                <div class="col-md-12">
+                                                                    <h1>PHOTOS</h1>
+                                <?php //if ($type == 'two_wheel') { ?>
+                                                                        <a href="<?php //echo BASE_URL . $images[0]['media_path'];               ?>" class="html5lightbox" title="<?php //echo $images[0]['title'];               ?> <?php //echo $images[0]['description'];               ?>" data-group="imagegroup"><img src="<?php //echo BASE_URL . $configs['two_wheel_photos'];               ?>" class="popup-img" alt="" /></a>
+                                <?php //} else { ?>
+                                                                        <a href="<?php //echo BASE_URL . $images[0]['media_path'];               ?>" class="html5lightbox" title="<?php //echo $images[0]['title'];               ?> <?php //echo $images[0]['description'];               ?>" data-group="imagegroup"><img src="<?php //echo BASE_URL . $configs['four_wheel_photos'];               ?>" class="popup-img" alt="" /></a>
+                                <?php //} ?>
+                                                                </div>-->
+                                <div class="col-md-12 col-sm-12 col-xs-12">
                                     <h1>PHOTOS</h1>
-                                    <?php if ($type == 'two_wheel') { ?>
-                                        <a href="<?php echo BASE_URL . $images[0]['media_path']; ?>" class="html5lightbox" title="<?php echo $images[0]['title']; ?> <?php echo $images[0]['description']; ?>" data-group="imagegroup"><img src="<?php echo BASE_URL . $configs['two_wheel_photos']; ?>" class="popup-img" alt="" /></a>
-                                    <?php } else { ?>
-                                        <a href="<?php echo BASE_URL . $images[0]['media_path']; ?>" class="html5lightbox" title="<?php echo $images[0]['title']; ?> <?php echo $images[0]['description']; ?>" data-group="imagegroup"><img src="<?php echo BASE_URL . $configs['four_wheel_photos']; ?>" class="popup-img" alt="" /></a>
-                                    <?php } ?>
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-xs-6" id="gPhoto">
+                                    <img src="img/photo/001.jpg" alt="" class="img-responsive"/>
+
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-xs-6">
+                                    <img src="img/photo/002.jpg" alt="" class="img-responsive"/>
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-xs-6">
+                                    <img src="img/photo/003.jpg" alt="" class="img-responsive"/>
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-xs-6">
+                                    <img src="img/photo/004.jpg" alt="" class="img-responsive"/>
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-xs-6">
+                                    <img src="img/photo/005.jpg" alt="" class="img-responsive"/>
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-xs-6">
+                                    <img src="img/photo/001.jpg" alt="" class="img-responsive"/>
                                 </div>
                             </div>
+
                         </div>
-                </div>
-        </section>
-        <section class="video-img">
-            <div class="container">
-                <div class="flex-row">
-                    <h1>VIDEOS</h1>
-                </div>
-                <div class="home-gallery video-section">
-                    <?php if ($type == 'two_wheel') { ?>
-                        <a href="<?php echo BASE_URL . $videos[0]['media_path']; ?>" class="html5lightbox" title="<?php echo $videos[0]['title']; ?> <?php echo $videos[0]['description']; ?>" data-group="videogroup"><img src="<?php echo BASE_URL . $configs['two_wheel_videos']; ?>" class="popup-img" alt="" /></a>
-                    <?php } else { ?>
-                        <a href="<?php echo BASE_URL . $videos[0]['media_path']; ?>" class="html5lightbox" title="<?php echo $videos[0]['title']; ?> <?php echo $videos[0]['description']; ?>" data-group="videogroup"><img src="<?php echo BASE_URL . $configs['four_wheel_videos']; ?>" class="popup-img" alt="" /></a>
-                    <?php } ?>
-                </div>
-            </div>
-        </section>
-        <?php include 'social-media-embed.php'; ?>
-        <?php include 'partners-logos.php'; ?>
-        <?php include 'add-banner.php'; ?>
-        <?php include 'footer.php'; ?>
-        <script src="js/ninja-slider.js" type="text/javascript"></script>
-        <script src="js/ninjaVideoPlugin.js" type="text/javascript"></script>
-        <?php
-        foreach ($images as $key => $img) {
-            if ($key != 0) {
-                ?>
-                <a style="display: none;" href="<?php echo BASE_URL . $img['media_path']; ?>" class="html5lightbox" title="<?php echo $img['title']; ?><br/><div><?php echo $img['description']; ?></div>" data-group="imagegroup">Image</a>
-                <?php
-            }
-        }
-        ?>
-        <?php
-        foreach ($videos as $key => $vid) {
-            if ($key != 0) {
-                ?>
-                <a style="display: none;" href="<?php echo BASE_URL . $vid['media_path']; ?>" class="html5lightbox" title="<?php echo $vid['title']; ?><br/><div><?php echo $vid['description']; ?></div>" data-group="videogroup">Video</a>
-                <?php
-            }
-        }
-        ?>
-        <script src="js/jquery.magnific-popup.min.js" type="text/javascript"></script>
-        <script>
+
+                    </section>
+                    <section class="video-img">
+                        <div class="container">
+                            <div class="col-md-12">
+                                <h1>VIDEOS</h1>
+                            </div>
+                            <div class="home-gallery video-section">
+                                <?php if ($type == 'two_wheel') { ?>
+                                    <a href="<?php echo BASE_URL . $videos[0]['media_path']; ?>" class="html5lightbox" title="<?php echo $videos[0]['title']; ?> <?php echo $videos[0]['description']; ?>" data-group="videogroup"><img src="<?php echo BASE_URL . $configs['two_wheel_videos'];          ?>" class="popup-img" alt="" /></a>
+                                <?php } else { ?>
+                                    <a href="<?php echo BASE_URL . $videos[0]['media_path']; ?>" class="html5lightbox" title="<?php echo $videos[0]['title']; ?> <?php echo $videos[0]['description']; ?>" data-group="videogroup"><img src="<?php echo BASE_URL . $configs['four_wheel_videos'];          ?>" class="popup-img" alt="" /></a>
+                                <?php } ?>
+                            </div>
+                        </div>
+                    </section>
+                    <?php include 'social-media-embed.php'; ?>
+                    <?php include 'partners-logos.php'; ?>
+                    <?php include 'add-banner.php'; ?>
+                    <?php include 'footer.php'; ?>
+                    <script src="js/ninja-slider.js" type="text/javascript"></script>
+                    <script src="js/ninjaVideoPlugin.js" type="text/javascript"></script>
+                    <?php
+                    foreach ($images as $key => $img) {
+                        if ($key != 0) {
+                            ?>
+                            <a style="display: none;" href="<?php echo BASE_URL . $img['media_path']; ?>" class="html5lightbox" title="<?php echo $img['title']; ?><br/><div><?php echo $img['description']; ?></div>" data-group="imagegroup">Image</a>
+                            <?php
+                        }
+                    }
+                    ?>
+                    <?php
+                    foreach ($videos as $key => $vid) {
+                        if ($key != 0) {
+                            ?>
+                            <a style="display: none;" href="<?php echo BASE_URL . $vid['media_path']; ?>" class="html5lightbox" title="<?php echo $vid['title']; ?><br/><div><?php echo $vid['description']; ?></div>" data-group="videogroup">Video</a>
+                            <?php
+                        }
+                    }
+                    ?>
+                    <script src="js/jquery.magnific-popup.min.js" type="text/javascript"></script>
+                    <script>
             function lightbox(type) {
                 var ninjaSldr = document.getElementById("ninja-slider");
                 ninjaSldr.parentNode.style.display = "block";
@@ -361,6 +384,6 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                     }
                 });
             }
-        </script>
-    </body>
-</html>
+                    </script>
+                    </body>
+                    </html>
