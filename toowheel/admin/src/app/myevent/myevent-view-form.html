@@ -9,10 +9,6 @@
         </div>       
     </div>    
     <br/>    
-    <!--     <mat-option [value]="row.category_id" *ngFor="let row of categories">
-                                {{row.name}}-->
-
-
     <table mat-table class="member-table">
         <h2>Club Event Information:</h2>
         <tr>
@@ -22,11 +18,11 @@
         </tr>
         <tr>
             <th mat-header-cell>Category</th>
-            <td mat-cell> {{data.category_id}} </td>
+            <td mat-cell> {{data.category}} </td>
         </tr>
         <tr>
             <th mat-header-cell>Club name</th>
-            <td mat-cell> {{data.name}} </td>
+            <td mat-cell> {{data.club}} </td>
         </tr>
         <tr>
             <th mat-header-cell>Event Title</th>
@@ -44,10 +40,6 @@
             <th mat-header-cell>Location</th>
             <td mat-cell> {{data.location}} </td>
         </tr>
-        <tr>
-            <th mat-header-cell>Sponsor Name</th>
-            <td mat-cell>{{data.sponsor}}</td>
-        </tr>       
         <br/>
 
     </table>

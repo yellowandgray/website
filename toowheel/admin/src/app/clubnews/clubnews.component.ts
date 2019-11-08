@@ -38,10 +38,10 @@ export class ClubnewsComponent implements OnInit {
            }
            );
     }
-    openDialog(id, res): void  {
+    openDialog(id): void  {
     var data = null;
       if(id != 0) {
-      this[res].forEach(val=> {
+      this.result.forEach(val=> {
            if(parseInt(val.news_id) === parseInt(id)) {
                 data = val;
                 return false;
@@ -73,10 +73,10 @@ openGalleryDialog(id): void  {
         console.log('Closed');
     });
 }
-openView(id, res): void  {
+openView(id): void  {
         var data = null;
         if(id != 0) { 
-        this[res].forEach(val=> {
+        this.result.forEach(val=> {
              if(parseInt(val.news_id) === parseInt(id)) {
                   data = val;
                   return false;

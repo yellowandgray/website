@@ -1,7 +1,7 @@
 <h2 mat-dialog-title>Event</h2>
 <mat-dialog-content class="mat-typography">
     <form [formGroup]="clubeventForm" (ngSubmit)="onSubmit()">
-        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center" *ngIf="user_view_id == 0">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Type</mat-label>
@@ -29,7 +29,7 @@
         </div>
     </div>
     <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-        <div fxFlex="50%" *ngIf="user_view_id == 0">
+        <div fxFlex="50%">
             <mat-form-field appearance="outline" fxFlex="100%">
                 <mat-label>Club Name</mat-label>
                 <mat-select required formControlName="club_id">
@@ -103,7 +103,7 @@
     </div>
 </div>
 <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-    <div fxFlex="100%" *ngIf="user_view_id == 0">
+    <div fxFlex="100%">
         <mat-form-field appearance="outline" fxFlex="100%">
             <mat-label>Sponsor Name</mat-label>
             <input matInput placeholder="" formControlName="sponsor" />

@@ -118,7 +118,7 @@ export class ClubeventComponent implements OnInit {
                  this.getEvent();
            }
         });
-    }   
+    }
     sortRecords(arr, sort): void {
         switch(sort) {
             case 'title_a_z':
@@ -148,7 +148,6 @@ export class ClubEventForm {
     clubeventForm: FormGroup;
     loading = false;
     event_id = 0;
-    user_view_id = 0;
     categories:any[];
     clubs:any[];
     cover_image: string = 'Choose Event Picture';

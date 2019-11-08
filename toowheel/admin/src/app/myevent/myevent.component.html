@@ -1,1 +1,31 @@
-<p>myevent works!</p>
+<mat-sidenav-container fullscreen>
+    <mat-sidenav mode="side" opened cdkScrollable class="primary">
+        <app-sidenav></app-sidenav>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <app-header></app-header>
+        <div class="add-btn-container">
+            <button mat-raised-button color="primary" (click)="openDialog(0)"><mat-icon>add</mat-icon> Event</button>
+        </div>
+        <mat-list *ngIf="result.length > 0">
+            <mat-list-item class="list-container"  *ngFor="let data of result">
+                           <button mat-icon-button aria-label="label" (click)="openView(data.event_id)">
+                    <mat-icon #tooltip="matTooltip" matTooltip="View">remove_red_eye</mat-icon>
+                </button>
+                <button mat-icon-button aria-label="label" (click)="openDialog(data.event_id)">
+                    <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
+                </button>
+                <button mat-icon-button aria-label="label" (click)="confirmDelete(data.event_id)">
+                    <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
+                </button>
+                <img matListAvatar src="{{image_url}}{{data.cover_image}}" *ngIf="data.cover_image && data.cover_image != ''" alt="image" (click)="confirmDialog(data, 'preview')" />
+                     <h3 class="truncate" matLine>{{data.title}}</h3>
+                <p class="truncate1" matLine>{{data.location}}</p>
+                <p class="truncate2" matLine>{{data.event_from_date}} - {{data.event_to_date}}</p>
+            </mat-list-item>
+        </mat-list>
+        <div *ngIf="result.length == 0" class="section">
+            No Event found
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

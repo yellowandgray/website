@@ -98,7 +98,7 @@
                                 <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i]['club_id'])">
                                     <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                                 </button>
-                                <img matListAvatar src="{{image_url}}{{data.logo}}" *ngIf="data.logo && data.cover_image != ''" alt="..." (click)="confirmDialog(data, 'preview')" />
+                                <img matListAvatar src="{{image_url}}{{data.logo}}" *ngIf="data.logo && data.cover_image != ''" alt="image" (click)="confirmDialog(data, 'preview')" />
                                      <h3 class="truncate" matLine>{{data.name}}</h3>
                                 <p class="truncate1" matLine>{{data.category}}</p>     
                                 <p class="truncate2" matLine>{{data.about}}</p>
@@ -154,8 +154,8 @@
                                 <button mat-icon-button aria-label="label" (click)="confirmDelete(result_four_wheel[i]['club_id'])">
                                     <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                                 </button>                              
-                                <img matListAvatar src="{{image_url}}{{data.logo}}" *ngIf="data.logo && data.cover_image != ''" alt="..." (click)="confirmDialog(data, 'preview')" />
-                                     <!--                                         <img matListAvatar src="{{image_url}}{{data.gender}}.jpg" *ngIf="!data.cover_image || data.cover_image == ''" alt="..." />-->
+                                <img matListAvatar src="{{image_url}}{{data.logo}}" *ngIf="data.logo && data.cover_image != ''" alt="image" (click)="confirmDialog(data, 'preview')" />
+                                     <!--                                         <img matListAvatar src="{{image_url}}{{data.gender}}.jpg" *ngIf="!data.cover_image || data.cover_image == ''" alt="image" />-->
                                      <h3 class="truncate" matLine>{{data.name}}</h3>
                                 <p class="truncate1" matLine>{{data.category}}</p>     
                                 <p class="truncate2" matLine>{{data.about}}</p> 

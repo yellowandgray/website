@@ -41,8 +41,8 @@
                                             <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i]['club_gallery_id'])">
                                                 <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                                             </button>
-                                    <img matListAvatar src="{{image_url}}{{data.media_path}}" *ngIf="data.media_path && data.profile_picture != ''" alt="..." />
-<!--                                         <img matListAvatar src="{{image_url}}{{data.gender}}.jpg" *ngIf="!data.media_path || data.media_path == ''" alt="..." />-->
+                                    <img matListAvatar src="{{image_url}}{{data.media_path}}" *ngIf="data.media_path && data.profile_picture != ''" alt="image" />
+<!--                                         <img matListAvatar src="{{image_url}}{{data.gender}}.jpg" *ngIf="!data.media_path || data.media_path == ''" alt="image" />-->
                                     <h3 matLine>{{data.title}}</h3>
                                     <p matLine>{{data.description}}</p>                                   
                                 </mat-list-item>
@@ -82,8 +82,8 @@
                                             <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i]['club_gallery_id'])">
                                                 <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                                             </button>
-                                    <img matListAvatar src="{{image_url}}{{data.media_path}}" *ngIf="data.media_path && data.media_path != ''" alt="..." />
-<!--                                         <img matListAvatar src="{{image_url}}{{data.gender}}.jpg" *ngIf="!data.media_path || data.media_path == ''" alt="..." />-->
+                                    <img matListAvatar src="{{image_url}}{{data.media_path}}" *ngIf="data.media_path && data.media_path != ''" alt="image" />
+<!--                                         <img matListAvatar src="{{image_url}}{{data.gender}}.jpg" *ngIf="!data.media_path || data.media_path == ''" alt="image" />-->
                                     <h3 matLine>{{data.title}}</h3>
                                     <p matLine>{{data.description}}</p>                                   
                                 </mat-list-item>

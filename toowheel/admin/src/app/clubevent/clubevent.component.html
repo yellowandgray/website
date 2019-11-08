@@ -47,11 +47,11 @@
                             <button mat-icon-button aria-label="label" (click)="confirmDelete(data.event_id)">
                                 <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                             </button>
-                            <img matListAvatar src="{{image_url}}{{data.cover_image}}" *ngIf="data.cover_image && data.cover_image != ''" alt="..." (click)="confirmDialog(data, 'preview')" />
-                                 <!--                                         <img matListAvatar src="{{image_url}}{{data.gender}}.jpg" *ngIf="!data.cover_image || data.cover_image == ''" alt="..." />-->
+                            <img matListAvatar src="{{image_url}}{{data.cover_image}}" *ngIf="data.cover_image && data.cover_image != ''" alt="image" (click)="confirmDialog(data, 'preview')" />
+                                 <!--                                         <img matListAvatar src="{{image_url}}{{data.gender}}.jpg" *ngIf="!data.cover_image || data.cover_image == ''" alt="image" />-->
                                  <h3 class="truncate" matLine>{{data.title}}</h3>
                             <p class="truncate1" matLine>{{data.location}}</p>
-                            <p class="truncate2" matLine>{{data.event_date}}</p>
+                            <p class="truncate2" matLine>{{data.event_from_date}} - {{data.event_to_date}}</p>
                         </mat-list-item>
                     </ng-container>
                 </mat-list>
@@ -90,11 +90,10 @@
                             <button mat-icon-button aria-label="label" (click)="confirmDelete(data.event_id)">
                                 <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                             </button>
-                            <img matListAvatar src="{{image_url}}{{data.cover_image}}" *ngIf="data.cover_image && data.cover_image != ''" alt="..." (click)="confirmDialog(data, 'preview')" />
-                                 <!--                                         <img matListAvatar src="{{image_url}}{{data.gender}}.jpg" *ngIf="!data.cover_image || data.cover_image == ''" alt="..." />-->
+                            <img matListAvatar src="{{image_url}}{{data.cover_image}}" *ngIf="data.cover_image && data.cover_image != ''" alt="image" (click)="confirmDialog(data, 'preview')" />
                                  <h3 class="truncate" matLine>{{data.title}}</h3>
                             <p class="truncate1" matLine>{{data.location}}</p>
-                            <p class="truncate2" matLine>{{data.event_date}}</p>
+                            <p class="truncate2" matLine>{{data.event_from_date}} - {{data.event_to_date}}</p>
                         </mat-list-item>
                     </ng-container>
                 </mat-list>
