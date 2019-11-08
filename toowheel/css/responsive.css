@@ -12,10 +12,11 @@
     }
     .fooetr-5 button {
         right: -105px !important;
+        top: -40px !important;
     }
     .fooetr-5 input {
         position: relative !important;
-        left: -30px !important;
+        left: -10px !important;
     }
     .logo {
         margin: 10px auto 5px auto !important;;
@@ -391,6 +392,7 @@
     #club-register {
         width: 95% !important;
     }
+
     /*    .slick-dots {
                 display: none;
         }*/
@@ -529,7 +531,7 @@
     }
     /*    .bg-1 .container {bottom: 210px !important;}
         .bg-1 .slick-slider {bottom: 195px !important;}*/
-    .bg-1 {height: 768px !important;}
+    .bg-1 {height: 666px !important;}
     #club1 {
         position: relative !important;
         top: -70px !important;
@@ -1008,6 +1010,10 @@
     .tabcontent .news .discover-slider-content {
         top: -146px !important;
     }
+    .photo-section {
+        padding: 100px 0 0 !important;
+
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1450px) {
@@ -1197,5 +1203,72 @@
     }
     .img-responsive-h {
         height: auto !important;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .bg-1 {height: 666px !important;}
+}
+@media screen and (min-width: 992px) {
+    .photo-section img {
+        margin-bottom: -148px !important;
+    }
+}
+@media screen and (min-width: 769px) {
+    .photo-section img {
+        margin-bottom: -118px !important;
+    }
+    .events-content{
+        height:1900px; overflow: hidden;
+    }
+    #contentDiv{
+        height:1850px; overflow: scroll;
+    }
+}
+.fb-01{
+    display: block;
+}
+.fb-02{
+    display: none;
+}
+.fb-03{
+    display: none;
+}
+.fb-04{
+    display: none;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .fb-02 {
+        display: block;
+    }
+    .fb-01{
+        display: none !important;
+    }
+    .fb-03{
+        display: none;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .fb-01{
+        display: none;
+    }
+    .fb-02{
+        display: none;
+    }
+    .fb-03{
+        display: block;
+    }
+}
+@media (min-width: 320px) and (max-width: 355px) {
+    .fb-01{
+        display: none;
+    }
+    .fb-02{
+        display: none;
+    }
+    .fb-03{
+        display: none;
+    }
+    .fb-04{
+        display: block;
     }
 }

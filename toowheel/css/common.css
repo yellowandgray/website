@@ -426,7 +426,7 @@ button {
 
 
 }
-@media (max-width:364px) and (min-width:320px){
+@media (max-width:354px) and (min-width:320px){
     .fooetr-5 button {
         background-color: #ed1c24;
         border: none;
@@ -434,13 +434,13 @@ button {
         color: #fff;
         padding: 5px 10px 5px 10px !Important;
         position: relative;
-        right: -84px;
         outline: none;
+        right: -89px !important;
         top: -40px;
     }
 
-
 }
+
 @media (max-width:397px) and (min-width:320px){
 
     .footer-sec li a{
@@ -4686,8 +4686,19 @@ hr {
 .sidecontent-search-section input {
     background: transparent;
     outline: none;
-    border: 1px solid #333;
-    padding: 5px 10px;
+    border: 1px solid #bdbdbd;
+    padding: 5px 0px 5px 20px;
+    border-radius: 7px;
+    width: 90%;  
+    margin-left: 20px;
+
+}
+.sidecontent-search-section input:focus{
+    border-bottom: 1px solid #f00 !important;
+}
+.sidecontent-search-section input::placeholder {
+    font-size: 13px;
+    padding: 0px 0px 0px 30px;
 }
 
 .sidecontent-search-section a.btn-search-sidecontent {
@@ -4704,8 +4715,9 @@ hr {
 
 .sidecontent-search-section i {
     padding: 10px;
-    background: #333;
-    color: #fff;
+    background: #bdbdbd;
+    color: #f00;
+    position: absolute;
 }
 
 #sideslider .section-title h3 {
@@ -4714,4 +4726,13 @@ hr {
 
 #sideslider .fb_iframe_widget span {
     height: 360px !important;
+}
+.search {
+    display: flex;
+}
+.search-1 {
+    flex-basis: 100%;
+}
+::-webkit-scrollbar {
+    width: 2px;
 }

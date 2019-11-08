@@ -44,6 +44,8 @@ formData.append('password', this.loginForm.value.password);
          var role = sessionStorage.getItem("toowheel_role");
          if(role == 'Editor'){
                       this.router.navigateByUrl('/news');
+         } else if(role == 'club'){
+                      this.router.navigateByUrl('/myclub');
          }
         else{
 this.router.navigateByUrl('/dashboard');             
