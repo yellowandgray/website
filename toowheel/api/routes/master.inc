@@ -625,6 +625,18 @@ $app->get('/get_club_by_type/:type', function($type) {
     echoRespnse(201, $res);
 });
 
+$app->get('/get_club_by_id/:id', function($id) {
+    $res = array('error' => true, 'message' => 'Unable to get records');
+    $com = new Common();
+    $data = $com->selectRow('c.*, ca.name AS category', 'club AS c LEFT JOIN category AS ca ON c.category_id = ca.category_id', 'c.club_id > 0 AND c.club_id = \'' . $id . '\'');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
 $app->get('/get_medias', function() {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
