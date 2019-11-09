@@ -903,7 +903,6 @@ body {
     padding-top: 10px;
     font-weight: 600;
     margin: 30px 0;
-    font-size: 16px;
 }
 
 .press-release-content img {
@@ -2182,8 +2181,8 @@ div#html5-watermark {
     position: relative;
     text-align: center;
     cursor: default;
-    background: -webkit-linear-gradient(45deg, #fc2d2c 0%,#363636 100%);
-    background: linear-gradient(45deg, #fc2d2c 0%,#363636 100%);
+    background: -webkit-linear-gradient(45deg, #8a0302 100%,#080000 100%);
+    background: linear-gradient(45deg, #8a0302 100%,#080000 100%);
 }
 
 .news .hovereffect .overlay {

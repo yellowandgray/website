@@ -270,6 +270,9 @@
     .news .hovereffect h2 {
         font-size: 22px !important;
     }
+    .gallery {
+        display: block !important;
+    }
 }
 
 @media (min-width: 601px) and (max-width: 768px) {

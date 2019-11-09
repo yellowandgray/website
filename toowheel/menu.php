@@ -69,7 +69,7 @@ $menu_member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN clu
                             <?php foreach ($menu_latest_news as $row) { ?>
                                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                                     <div class="hovereffect">
-                                        <div class="news-thumb-menu" style="background: url(<?php echo BASE_URL . $row['thumb_image']; ?>)no-repeat;background-repeat: no-repeat;background-position: top;background-size: cover; "></div>
+                                        <div class="news-thumb-menu" style="background: url(<?php echo BASE_URL . $row['thumb_image']; ?>)no-repeat;background-repeat: no-repeat;background-position: center;background-size: cover; "></div>
 <!--                                        <img src="<?php //echo BASE_URL . $row['thumb_image']; ?>" alt="image">-->
                                         <a href="news?nid=<?php echo $row['news_id']; ?>" class="overlay">
                                             <h2><?php echo $row['title']; ?></h2>
