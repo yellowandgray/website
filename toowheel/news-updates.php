@@ -44,6 +44,7 @@ $news = $obj->selectAll('n.*, m.name AS media, c.name AS club, ca.name AS catego
                                 <h4><?php echo $row['title']; ?></h4>
                                 <span><?php echo $row['media']; ?> | <?php echo $row['author_name']; ?> | <?php echo date('M d, Y', strtotime($row['news_date'])); ?></span>
                                 <p><?php echo $row['moto_text']; ?></p>
+                                <p><?php echo $obj->charLimit($row['description_1'], 300); ?></p>
                                 <a href="news?nid=<?php echo $row['news_id']; ?>" class="all-news-button"> DISCOVER</a>
                             </div>
                         </div>

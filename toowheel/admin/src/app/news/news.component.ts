@@ -161,7 +161,6 @@ makeAsSpecial(typ, vlu, fld, nid, ctype) {
           formData.append('club_type', ctype);
           this.httpClient.post('https://www.toowheel.com/beta/toowheel/api/v1/special_news', formData).subscribe(
               (res)=>{
-                this.loading = false;
                 if(res["result"]["error"] === false) {
                     this.getNews();
                 }else{
@@ -171,7 +170,6 @@ makeAsSpecial(typ, vlu, fld, nid, ctype) {
                 }
             },
         (error)=>{
-            this.loading = false;
             this._snackBar.open(error["statusText"], '', {
                 duration: 2000,
               });
