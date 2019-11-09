@@ -91,7 +91,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                             <?php foreach ($news_flag as $row) { ?>
                                 <div class="col-md-6 col-sm-6 col-xs-6 padding-lr-5">
                                     <div class="news-img-02 news-01 height-two" onClick="document.location.href = 'news?nid=<?php echo $row['news_id']; ?>'">
-                                        <img src="img/events/001.jpg" alt="" class="img-responsive-h"/>
+                                        <img src="<?php echo BASE_URL . $row['cover_image']; ?>" alt="" class="img-responsive-h"/>
                                         <div class=" news-02-cont">
                                             <div class="position-ad-01">
                                                 <p class="clb-bg"><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 14) : $obj->charLimit($row['sponsor'], 14) ?></p>

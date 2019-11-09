@@ -741,7 +741,7 @@ button {
 .i-con a {
     padding: 0px;
     padding-top: 10px;
-    display: inline-block;
+    display: inline;
     border: 1px solid transparent;
     border-radius: 50%;
     -moz-transition: all 0.2s ease-in;

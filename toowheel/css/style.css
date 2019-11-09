@@ -2080,7 +2080,7 @@ div#html5-watermark {
 }
 
 .i-con a:hover {
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 }
 
 .i-con a:hover img {
