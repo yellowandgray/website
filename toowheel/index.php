@@ -192,43 +192,48 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
             </div>
         </section>
         <section class="photo-section">
-            <div class="col-md-12">
-                <div class="row photo">
+            <div class="container">
+                <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <h1>PHOTOS</h1>
                     </div>
-                    <?php if ($type == 'two_wheel') { ?>
-                        <div class="col-md-2 col-sm-4 col-xs-6" id="gPhoto">
-                            <a href="<?php echo BASE_URL . $images[18]['media_path']; ?>" class="html5lightbox" title="<?php echo $images[18]['title']; ?> <?php echo $images[18]['description']; ?>" data-group="imagegroup"><img src="img/photo/001.jpg" alt="" class="img-responsive"/></a>
-                            <h5 class="text-center">Toowheel Launch</h5>
-                        </div>
-                        <div class="col-md-2 col-sm-4 col-xs-6" id="gPhoto">
-                            <a href="<?php echo BASE_URL . $images[33]['media_path']; ?>" class="html5lightbox" title="<?php echo $images[33]['title']; ?> <?php echo $images[33]['description']; ?>" data-group="imagegroup"><img src="img/photo/002.jpg" alt="" class="img-responsive"/></a>
-                            <h5 class="text-center">Toowheel Launch</h5>
-                        </div>
-                        <div class="col-md-2 col-sm-4 col-xs-6" id="gPhoto">
-                            <a href="<?php echo BASE_URL . $images[65]['media_path']; ?>" class="html5lightbox" title="<?php echo $images[65]['title']; ?> <?php echo $images[65]['description']; ?>" data-group="imagegroup"><img src="img/photo/003.jpg" alt="" class="img-responsive"/></a>
-                            <h5 class="text-center">Toowheel Launch</h5>
-                        </div>
-                        <div class="col-md-2 col-sm-4 col-xs-6" id="gPhoto">
-                            <a href="<?php echo BASE_URL . $images[63]['media_path']; ?>" class="html5lightbox" title="<?php echo $images[63]['title']; ?> <?php echo $images[63]['description']; ?>" data-group="imagegroup"><img src="img/photo/004.jpg" alt="" class="img-responsive"/></a>
-                            <h5 class="text-center">Toowheel Launch</h5>
-                        </div>
-                        <div class="col-md-2 col-sm-4 col-xs-6" id="gPhoto">
-                            <a href="<?php echo BASE_URL . $images[50]['media_path']; ?>" class="html5lightbox" title="<?php echo $images[50]['title']; ?> <?php echo $images[50]['description']; ?>" data-group="imagegroup"><img src="img/photo/005.jpg" alt="" class="img-responsive"/></a>
-                            <h5 class="text-center">Toowheel Launch</h5>
-                        </div>
-                        <div class="col-md-2 col-sm-4 col-xs-6" id="gPhoto">
-                            <a href="<?php echo BASE_URL . $images[44]['media_path']; ?>" class="html5lightbox" title="<?php echo $images[44]['title']; ?> <?php echo $images[44]['description']; ?>" data-group="imagegroup"><img src="img/photo/006.jpg" alt="" class="img-responsive"/></a>
-                            <h5 class="text-center">Toowheel Launch</h5>
-                        </div>
-                    <?php } else { ?>
-                        <a href="<?php echo BASE_URL . $images[0]['media_path']; ?>" class="html5lightbox" title="<?php echo $images[0]['title']; ?> <?php echo $images[0]['description']; ?>" data-group="imagegroup"><img src="<?php echo BASE_URL . $configs['four_wheel_photos']; ?>" class="popup-img" alt="" /></a>
-                    <?php } ?>
                 </div>
-
             </div>
+            <div class="margin-0">
+                <div class="col-md-12">
+                    <div class="row photo">
 
+                        <?php if ($type == 'two_wheel') { ?>
+                            <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6" id="gPhoto">
+                                <a href="<?php echo BASE_URL . $images[18]['media_path']; ?>" class="html5lightbox" title="<?php echo $images[18]['title']; ?> <?php echo $images[18]['description']; ?>" data-group="imagegroup"><img src="img/photo/001.jpg" alt="" class="img-responsive"/></a>
+                                <h5 class="text-center">Toowheel Launch</h5>
+                            </div>
+                            <div class=" col-lg-2 col-md-4 col-sm-4 col-xs-6" id="gPhoto">
+                                <a href="<?php echo BASE_URL . $images[33]['media_path']; ?>" class="html5lightbox" title="<?php echo $images[33]['title']; ?> <?php echo $images[33]['description']; ?>" data-group="imagegroup"><img src="img/photo/002.jpg" alt="" class="img-responsive"/></a>
+                                <h5 class="text-center">Toowheel Launch</h5>
+                            </div>
+                            <div class=" col-lg-2 col-md-4 col-sm-4 col-xs-6" id="gPhoto">
+                                <a href="<?php echo BASE_URL . $images[65]['media_path']; ?>" class="html5lightbox" title="<?php echo $images[65]['title']; ?> <?php echo $images[65]['description']; ?>" data-group="imagegroup"><img src="img/photo/003.jpg" alt="" class="img-responsive"/></a>
+                                <h5 class="text-center">Toowheel Launch</h5>
+                            </div>
+                            <div class="col-lg-2  col-md-4 col-sm-4 col-xs-6" id="gPhoto">
+                                <a href="<?php echo BASE_URL . $images[63]['media_path']; ?>" class="html5lightbox" title="<?php echo $images[63]['title']; ?> <?php echo $images[63]['description']; ?>" data-group="imagegroup"><img src="img/photo/004.jpg" alt="" class="img-responsive"/></a>
+                                <h5 class="text-center">Toowheel Launch</h5>
+                            </div>
+                            <div class="col-lg-2  col-md-4 col-sm-4 col-xs-6" id="gPhoto">
+                                <a href="<?php echo BASE_URL . $images[50]['media_path']; ?>" class="html5lightbox" title="<?php echo $images[50]['title']; ?> <?php echo $images[50]['description']; ?>" data-group="imagegroup"><img src="img/photo/005.jpg" alt="" class="img-responsive"/></a>
+                                <h5 class="text-center">Toowheel Launch</h5>
+                            </div>
+                            <div class="col-lg-2  col-md-4 col-sm-4 col-xs-6" id="gPhoto">
+                                <a href="<?php echo BASE_URL . $images[44]['media_path']; ?>" class="html5lightbox" title="<?php echo $images[44]['title']; ?> <?php echo $images[44]['description']; ?>" data-group="imagegroup"><img src="img/photo/006.jpg" alt="" class="img-responsive"/></a>
+                                <h5 class="text-center">Toowheel Launch</h5>
+                            </div>
+                        <?php } else { ?>
+                            <a href="<?php echo BASE_URL . $images[0]['media_path']; ?>" class="html5lightbox" title="<?php echo $images[0]['title']; ?> <?php echo $images[0]['description']; ?>" data-group="imagegroup"><img src="<?php echo BASE_URL . $configs['four_wheel_photos']; ?>" class="popup-img" alt="" /></a>
+                        <?php } ?>
+                    </div>
+                </div>
+            </div>
         </section>
         <section class="video-img">
             <div class="container">
@@ -243,6 +248,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                     <?php } ?>
                 </div>
             </div>
+
         </section>
         <?php include 'social-media-embed.php'; ?>
         <?php include 'partners-logos.php'; ?>
@@ -388,5 +394,20 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                 });
             }
         </script>
+        <script>
+            var vid = document.getElementById("myVideo-s");
+            var vidtext = document.getElementById("text-v");
+
+            function playVid() {
+                vid.play();
+                vid.controls = "true";
+                vidtext.classList.add("video-t-1-click");
+                $this.style.display = "none";
+            }
+
+            function pauseVid() {
+                vid.pause();
+            }
+        </script> 
     </body>
 </html>
