@@ -110,6 +110,9 @@
     .mob-logout-profile img {
         top: -55px !important;
     }
+    .mob-logout-profile {
+        margin-left: 20px !important;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -1264,6 +1267,9 @@
     .fb-03{
         display: none;
     }
+    .logout-dropdown {
+        right: 40px !important;
+    }
 }
 @media (min-width: 768px) and (max-width: 991px) {
     .fb-01{
@@ -1274,6 +1280,9 @@
     }
     .fb-03{
         display: block;
+    }
+    .logout-dropdown {
+        right: 40px !important;
     }
 }
 @media (min-width: 320px) and (max-width: 355px) {

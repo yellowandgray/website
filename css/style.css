@@ -570,13 +570,14 @@ button {
     transition: 0.4s ease;
 }
 
+#logout-dropdown1 {
+    display: none;
+}
+
 .mob-block img {
-    position: absolute;
     border-radius: 50%;
-    width: 75%;
-    height: 50px;
-    left: 12px;
-    top: 0px;
+    width: 100%;
+    height: 60px;
     border: 1px solid red;
     overflow: hidden;
     -webkit-transition: 0.4s ease;
@@ -588,6 +589,66 @@ button {
     cursor: pointer;
     -webkit-transform: scale(1.08);
     transform: scale(1.08);
+}
+
+.logout-dropdown1 {
+    display: block;
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    right: 1px;
+    z-index: 1;
+}
+
+.logout-dropdown1 .header-logout {
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+    border-bottom: 1px solid #ececec;
+}
+
+.logout-dropdown1 .header-logout .member-profile-radius {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.logout-dropdown1 .header-logout .member-profile-radius img {
+    width: 25%;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.logout-dropdown1 ul {
+    list-style: none;
+    padding: 0 25px;
+}
+
+.logout-dropdown1 ul li {
+    padding: 10px 0;
+}
+
+.logout-dropdown1 ul li a {
+    font-size: 16px;
+    color: #000;
+}
+
+.logout-dropdown1 ul li a i {
+    font-size: 16px;
+    color: red;
+}
+
+.logout-dropdown1 .header-logout h3 {
+    font-size: 16px;
+    padding-top: 10px;
+    margin: 0;
+}
+
+.logout-dropdown1 .header-logout span {
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
 }
 
 #logout-dropdown {
@@ -628,6 +689,7 @@ button {
 
 .logout-dropdown li {
     padding-bottom: 15px;
+    padding-top: 5px;
 }
 
 .logout-dropdown li a {

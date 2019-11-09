@@ -36,7 +36,8 @@ $obj = new Common();
                                     <center><button type="submit">LOGIN</button></center>
                                 </form> 
                                 <h5><a href="#" class="forgot-password">Forgot your Password</a></h5>
-                                <div class="pop"><i class="fa fa-times-circle" aria-hidden="true"></i>
+                                <div class="pop">
+                                    <i class="fa fa-times-circle" aria-hidden="true"></i>
                                     <div class="margin-top-30">
                                         <h4>Enter Your Register Mail Id!</h4>
                                         <input type="email" id="forgotpassword_email" name="forgotpassword_email" placeholder="Enter Register Mail Id" onchange="removeValidation('forgotpassword_email');" />

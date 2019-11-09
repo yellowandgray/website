@@ -1301,14 +1301,13 @@ button {
     position: fixed;
     z-index: 9999;
     top: 100px;
-    left: 0;
-    width: 34%;
+    width: auto;
     height: 40%;
     padding: 20px;
     background: white;
     color: white;
     text-align: center;
-    margin: 0 33%;
+    margin: 0 auto;
 }
 
 .pop i{
@@ -1326,15 +1325,26 @@ button {
 .pop h4 {
     color: gray;
     margin-bottom: 20px;
+    font-size: 16px;
+}
+.pop input {
+    margin-bottom: 10px;
+    border: none;
+    background: #eee;
+    padding: 5px 30px;
+    border-radius: 25px;
+    text-align: center;
+    outline: none;
 }
 
 @media only screen and (min-width: 481px) {
     .pop {
-        /*        left: 47%;*/
-        top: 50%;
-        /*width: 30%;*/
-        height: 30%;
+        top: 15%;
+        width: 40%;
+        height: auto;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+        margin: 0 auto;
+        left: 30%;
     }
 } 
 .cc .active {

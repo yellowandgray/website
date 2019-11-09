@@ -20,7 +20,8 @@ body {
 .toggle {
     font-size: 30px;
     cursor: pointer;
-    margin: 25px 22% 0 0;
+    margin: 0 auto;
+    margin-top: 20px;
 }
 
 /*.toggle img {
@@ -74,7 +75,7 @@ body {
 
 .header-login {
     text-align: center;
-    margin-left: 15%;
+    margin: 0 auto;
     margin-top: 20px;
 }
 
@@ -85,7 +86,7 @@ body {
 .header-login p, .header-login a {
     color: #fff;
     font-size: 16px;
-    margin-top: 4px;
+    margin-top: 10px;
 }
 
 .header-login a:hover {
@@ -2119,6 +2120,10 @@ div#html5-watermark {
     cursor: pointer;
 }
 
+.user-profile-image {
+    cursor: pointer;
+}
+
 .user-profile-image span {
     width: 50px;
     height: 50px;
@@ -2131,7 +2136,7 @@ div#html5-watermark {
     left: 0;
     border: none;
     overflow: hidden;
-    cursor: auto;
+    cursor: pointer;
     border-radius: 50%;
 }
 
@@ -2151,31 +2156,61 @@ div#html5-watermark {
 .user-profile-image span img:hover {
     -webkit-transform: scale(1.08);
     transform: scale(1.08);
+    cursor: pointer;
 }
 
-.user-profile-image span .logout-dropdown {
+#logout-dropdown {
     display: none;
+}
+
+.logout-dropdown .member-profile-radius img {
+    border-radius: 50%;
+}
+
+.logout-dropdown ul {
+    list-style: none;
+    padding: 0px 20px;
+    text-align: left;
+}
+
+.logout-dropdown li {
+    padding-bottom: 15px;
+}
+
+.logout-dropdown li a {
+    font-size: 15px;
+    color: #000;
+}
+
+.logout-dropdown li a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+.logout-dropdown li a i {
+    font-size: 20px;
+    color: red;
+    width: 20px;
 }
 
 .mob-logout-profile .logout-dropdown {
     display: none;
 }
 
-.user-profile-image span .logout-dropdown {
+.logout-dropdown {
     /*    display: block;*/
     position: absolute;
-    top: 102%;
-    right: 0;
+    top: 75%;
+    right: 200px;
     background: #fff;
-    padding: 0px 0;
-    list-style: none;
     border-radius: 3px;
-    outline: none;
-    box-sizing: border-box;
     max-width: 300px;
-    max-height: 731px;
     width: 300px;
     z-index: 1;
+}
+
+#logout-dropdown1 {
+    display: none;
 }
 
 .logout-dropdown .header-logout {
@@ -2187,7 +2222,7 @@ div#html5-watermark {
     margin-bottom: 10px;
 }
 
-.logout-dropdown .header-logout .member-profile-radius {
+.logout-dropdown .header-logout .padding-lr-0 .member-profile-radius {
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -2195,20 +2230,82 @@ div#html5-watermark {
     margin-left: 10px;
 }
 
-.logout-dropdown .header-logout .member-profile-radius img:hover {
+.logout-dropdown .header-logout .padding-lr-0 .member-profile-radius img:hover {
     border: none;
     transform: scale(1);
 }
 
-.logout-dropdown h3 {
+.logout-dropdown .header-logout h3 {
     font-size: 13px;
     /* padding-left: 10px; */
     padding-top: 5px;
     margin: 0;
 }
 
-.logout-dropdown span {
+.logout-dropdown .header-logout span {
     font-size: 11px;
+}
+
+
+.logout-dropdown1 {
+    display: block;
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    right: 1px;
+    z-index: 1;
+}
+
+.logout-dropdown1 .header-logout {
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+    border-bottom: 1px solid #ececec;
+}
+
+.logout-dropdown1 .header-logout .member-profile-radius {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.logout-dropdown1 .header-logout .member-profile-radius img {
+    width: 25%;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.logout-dropdown1 ul {
+    list-style: none;
+    padding: 0 25px;
+    margin-bottom: 0;
+}
+
+.logout-dropdown1 ul li {
+    padding: 10px 0;
+}
+
+.logout-dropdown1 ul li a {
+    font-size: 16px;
+    color: #000;
+}
+
+.logout-dropdown1 ul li a i {
+    font-size: 16px;
+    color: red;
+}
+
+.logout-dropdown1 .header-logout h3 {
+    font-size: 16px;
+    padding-top: 10px;
+    margin: 0;
+}
+
+.logout-dropdown1 .header-logout span {
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
 }
 
 .news .col-lg-3, .news .col-md-4, .news .col-sm-6, .news .col-xs-12 {
