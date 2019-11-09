@@ -602,10 +602,16 @@ button {
     /*    display: block;*/
     position: absolute;
     top: 102%;
+    right: 0;
     background: #fff;
     padding: 0px 0;
     list-style: none;
     border-radius: 5px;
+    outline: none;
+    box-sizing: border-box;
+    max-width: 300px;
+    max-height: 731px;
+    width: 300px;
 }
 
 .mob-block .logout-dropdown {
@@ -617,12 +623,6 @@ button {
     list-style: none;
     border-radius: 5px;
     left: -2px;
-}
-
-.mob-noon .logout-dropdown li {
-    padding: 10px 20px;
-    border-bottom: 1px solid #333;
-    cursor: pointer;
 }
 
 .mob-noon .logout-dropdown li a {
@@ -647,4 +647,32 @@ button {
 
 .mob-block .logout-dropdown li a:hover {
     text-decoration: none;
+}
+
+.logout-dropdown .header-logout {
+    width: 100%;
+    display: flex;
+    padding: 20px;
+}
+
+.logout-dropdown ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.logout-dropdown .header-logout img {
+    position: relative;
+    top: 0;
+    width: 19%;
+    height: 50px;
+    border: none;
+    overflow: hidden;
+    border-radius: 50%;
+    cursor: auto;
+}
+
+.logout-dropdown .header-logout img:hover {
+    border: none;
+    transform: scale(1);
 }

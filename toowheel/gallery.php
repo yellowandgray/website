@@ -12,89 +12,148 @@ $obj = new Common();
     <body>
         <?php include 'menu.php'; ?>
         <div class="padding-top-108"></div>
-        <section id="gallery">
-            <div class="container">
-                <h1>Nom Nom Gallery</h1>
-                <div class="grid">
-                    <div class="item">
-                        <div class="item__details">
-                            jelly-o brownie sweet
-                        </div>
-                    </div>
-                    <div class="item item--large">
-                        <div class="item__details">
-                            Muffin jelly gingerbread 
-                        </div>
-                    </div>
-                    <div class="item item--medium">
-                        <div class="item__details">
-                            sesame snaps chocolate
-                        </div>
-                    </div>
-                    <div class="item item--large">
-                        <div class="item__details">
-                            Oat cake
-                        </div>
-                    </div>
-                    <div class="item item--full">
-                        <div class="item__details">
-                            jujubes cheesecake
-                        </div>
-                    </div>
-                    <div class="item item--medium">
-                        <div class="item__details">
-                            Dragée pudding brownie
-                        </div>
-                    </div>
-                    <div class="item item--large">
-                        <div class="item__details">
-                            Oat cake
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="item__details">
-                            powder toffee
-                        </div>
-                    </div>
-                    <div class="item item--medium">
-                        <div class="item__details">
-                            pudding cheesecake
-                        </div>
-                    </div>
-                    <div class="item item--large">
-                        <div class="item__details">
-                            toffee bear claw 
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="item__details">
-                            cake cookie croissant
-                        </div>
-                    </div>
-                    <div class="item item--medium">
-                        <div class="item__details">
-                            liquorice sweet roll
-                        </div>
-                    </div>
-                    <div class="item item--medium">
-                        <div class="item__details">
-                            chocolate marzipan
-                        </div>
-                    </div>
-                    <div class="item item--large">
-                        <div class="item__details">
-                            danish dessert lollipop
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="item__details">
-                            sugar plum dragée
-                        </div>
-                    </div>
+        <div class="gallery">
+            <div class="gallery__item">
+                <div class="embed">
+                    <a href="https://source.unsplash.com/collection/582659/1>" class="html5lightbox" data-group="imagegroup">
+                        <img src="https://source.unsplash.com/collection/582659/1" />
+                    </a>
                 </div>
-            </div><!-- End image gallery -->
-        </div><!-- End container --> 
-    </section>
-    <?php include 'footer.php'; ?>
-</body>
+            </div>
+            <div class="gallery__item">
+                <div class="embed">
+                    <a href="https://source.unsplash.com/collection/582659/1>" class="html5lightbox" data-group="imagegroup">
+                        <img src="https://source.unsplash.com/collection/582659/2" />
+                    </a>
+                </div>
+            </div>
+            <div class="gallery__item">
+                <div class="embed">
+                    <a href="https://source.unsplash.com/collection/582659/1>" class="html5lightbox" data-group="imagegroup">
+                        <img src="https://source.unsplash.com/collection/582659/3" />
+                    </a>
+                </div>
+            </div>
+            <div class="gallery__item gallery__item--v-2">
+                <div class="embed embed--1-2">
+                    <a href="https://source.unsplash.com/collection/582659/1>" class="html5lightbox" data-group="imagegroup">
+                        <img src="https://source.unsplash.com/collection/582659/4" />
+                    </a>
+                </div>
+            </div>
+            <div class="gallery__item">
+                <div class="embed">
+                    <a href="https://source.unsplash.com/collection/582659/1>" class="html5lightbox" data-group="imagegroup">
+                        <img src="https://source.unsplash.com/collection/582659/5" />
+                    </a>
+                </div>
+            </div>
+            <div class="gallery__item gallery__item--h-2">
+                <div class="embed embed--2-1">
+                    <a href="https://source.unsplash.com/collection/582659/1>" class="html5lightbox" data-group="imagegroup">
+                        <img src="https://source.unsplash.com/collection/582659/6" />
+                    </a>
+                </div>
+            </div>
+            <div class="gallery__item gallery__item--v-2">
+                <div class="embed embed--1-2">
+                    <a href="https://source.unsplash.com/collection/582659/1>" class="html5lightbox" data-group="imagegroup">
+                        <img src="https://source.unsplash.com/collection/582659/7" />
+                    </a>
+                </div>
+            </div>
+            <div class="gallery__item gallery__item--h-2">
+                <div class="embed embed--2-1">
+                    <a href="https://source.unsplash.com/collection/582659/1>" class="html5lightbox" data-group="imagegroup">
+                        <img src="https://source.unsplash.com/collection/582659/8" />
+                    </a>
+                </div>
+            </div>
+            <div class="gallery__item gallery__item--v-2">
+                <div class="embed embed--1-2">
+                    <a href="https://source.unsplash.com/collection/582659/1>" class="html5lightbox" data-group="imagegroup">
+                        <img src="https://source.unsplash.com/collection/582659/9" />
+                    </a>
+                </div>
+            </div>
+            <div class="gallery__item gallery__item--h-2 gallery__item--v-2">
+                <div class="embed">
+                    <a href="https://source.unsplash.com/collection/582659/1>" class="html5lightbox" data-group="imagegroup">
+                        <img src="https://source.unsplash.com/collection/582659/10" />
+                    </a>
+                </div>
+            </div>
+            <div class="gallery__item">
+                <div class="embed">
+                    <a href="https://source.unsplash.com/collection/582659/1>" class="html5lightbox" data-group="imagegroup">
+                        <img src="https://source.unsplash.com/collection/582659/11" />
+                    </a>
+                </div>
+            </div>
+            <div class="gallery__item gallery__item--h-2 gallery__item--v-2">
+                <div class="embed">
+                    <a href="https://source.unsplash.com/collection/582659/1>" class="html5lightbox" data-group="imagegroup">
+                        <img src="https://source.unsplash.com/collection/582659/12" />
+                    </a>
+                </div>
+            </div>
+            <div class="gallery__item">
+                <div class="embed">
+                    <a href="https://source.unsplash.com/collection/582659/1>" class="html5lightbox" data-group="imagegroup">
+                        <img src="https://source.unsplash.com/collection/582659/13" />
+                    </a>
+                </div>
+            </div>
+            <div class="gallery__item gallery__item--h-2 gallery__item--v-3">
+                <div class="embed embed--2-3">
+                    <a href="https://source.unsplash.com/collection/582659/1>" class="html5lightbox" data-group="imagegroup">
+                        <img src="https://source.unsplash.com/collection/582659/14" />
+                    </a>
+                </div>
+            </div>
+            <div class="gallery__item gallery__item--h-2 gallery__item--v-2">
+                <div class="embed">
+                    <a href="https://source.unsplash.com/collection/582659/1>" class="html5lightbox" data-group="imagegroup">
+                        <img src="https://source.unsplash.com/collection/582659/15" />
+                    </a>
+                </div>
+            </div>
+            <div class="gallery__item gallery__item--v-2">
+                <div class="embed embed--1-2">
+                    <a href="https://source.unsplash.com/collection/582659/1>" class="html5lightbox" data-group="imagegroup">
+                        <img src="https://source.unsplash.com/collection/582659/16" />
+                    </a>
+                </div>
+            </div>
+            <div class="gallery__item">
+                <div class="embed">
+                    <a href="https://source.unsplash.com/collection/582659/1>" class="html5lightbox" data-group="imagegroup">
+                        <img src="https://source.unsplash.com/collection/582659/17" />
+                    </a>
+                </div>
+            </div>
+            <div class="gallery__item">
+                <div class="embed">
+                    <a href="https://source.unsplash.com/collection/582659/1>" class="html5lightbox" data-group="imagegroup">
+                        <img src="https://source.unsplash.com/collection/582659/18" />
+                    </a>
+                </div>
+            </div>
+            <div class="gallery__item">
+                <div class="embed">
+                    <a href="https://source.unsplash.com/collection/582659/1>" class="html5lightbox" data-group="imagegroup">
+                        <img src="https://source.unsplash.com/collection/582659/19" />
+                    </a>
+                </div>
+            </div>
+            <div class="gallery__item">
+                <div class="embed">
+                    <a href="https://source.unsplash.com/collection/582659/1>" class="html5lightbox" data-group="imagegroup">
+                        <img src="https://source.unsplash.com/collection/582659/20" />
+                    </a>
+                </div>
+            </div>
+        </div>
+        <?php include 'footer.php'; ?>
+    </body>
 </html>

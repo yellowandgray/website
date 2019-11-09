@@ -66,10 +66,20 @@ $menu_member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN clu
                                 <?php } else { ?>
                                     <img src="<?php echo BASE_URL . $menu_member['profile_picture']; ?>" alt="" />
                                 <?php } ?>
-                                <ul id="logout-dropdown" class="logout-dropdown">
-                                    <li><a href="toowheel/my-account?type=<?php echo $type; ?>">Profile</a></li>
-                                    <li><a href="#" onclick="logoutUser();">Logout</a></li>
-                                </ul>
+                                <div id="logout-dropdown" class="logout-dropdown">
+                                    <div class="header-logout">
+                                        <?php if (isset($menu_member['profile_picture']) && $menu_member['profile_picture'] == '') { ?>
+                                            <img src="<?php echo BASE_URL . $menu_member['gender']; ?>.jpg" alt="" />
+                                        <?php } else { ?>
+                                            <img src="<?php echo BASE_URL . $menu_member['profile_picture']; ?>" alt="" />
+                                        <?php } ?>
+                                            <h3><?php echo $menu_member['name'];  ?></h3>
+                                    </div>
+                                    <ul>
+                                        <li><a href="toowheel/my-account?type=<?php echo $type; ?>"><i class="fa fa-user" aria-hidden="true"></i> Profile</a></li>
+                                        <li><a href="#" onclick="logoutUser();">Logout</a></li>
+                                    </ul>
+                                </div>
                             </span>
                         <?php }
                         ?>
@@ -326,7 +336,34 @@ $menu_member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN clu
                                             } else {
                                                 x.style.display = "none";
                                             }
+                                            window.onclick = function (event) {
+                                                if (event.target == x) {
+                                                    x.style.display = "none";
+                                                }
+                                            }
                                         }
+
+                                        function logoutUser() {
+                                            $('.loader').addClass('is-active');
+                                            $.ajax({
+                                                type: "POST",
+                                                url: 'toowheel/api/v1/logout_user',
+                                                data: {},
+                                                success: function (data) {
+                                                    $('.loader').removeClass('is-active');
+                                                    if (data.result.error === false) {
+                                                        window.location = 'toowheel/login?type=two_wheel';
+                                                    } else {
+                                                        swal('Information', data.result.message, 'info');
+                                                    }
+                                                },
+                                                error: function (err) {
+                                                    $('.loader').removeClass('is-active');
+                                                    swal('Error', err.statusText, 'error');
+                                                }
+                                            });
+                                        }
+
         </script>
     </body>
 </html>
