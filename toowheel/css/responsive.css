@@ -1287,3 +1287,17 @@
         display: block;
     }
 }
+@media screen and (min-width: 1200px) {
+    .photo-section h1 {
+        font-size: 7rem !important;
+        text-align: left  !important;
+        position: relative  !important;
+        top: -44px !important;
+    }
+    .video-img h1 {
+        font-size: 7rem !important;
+        text-align: left  !important;
+        position: relative  !important;
+        top: -24px !important;
+    }
+}
