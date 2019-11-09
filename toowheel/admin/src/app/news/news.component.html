@@ -45,16 +45,16 @@
                             <button mat-icon-button aria-label="label" (click)="confirmDelete(data['news_id'])">
                                 <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                             </button>
-                            <button mat-icon-button aria-label="label">
+                            <button mat-icon-button aria-label="label" *ngIf="data.isflag == 0" (click)="makeAsSpecial('flag',1,'isflag', data.news_id)">
                                 <mat-icon #tooltip="matTooltip" matTooltip="Make Hot News">outlined_flag</mat-icon>
                             </button>
-                            <button mat-icon-button aria-label="label">
+                            <button mat-icon-button aria-label="label" *ngIf="data.isflag == 1" (click)="makeAsSpecial('flag',0,'isflag', data.news_id)">
                                 <mat-icon #tooltip="matTooltip" matTooltip="Remove from Hot News">flag</mat-icon>
                             </button>
-                            <button mat-icon-button aria-label="label">
+                            <button mat-icon-button aria-label="label" *ngIf="data.isstar == 0" (click)="makeAsSpecial('star',1,'isstar', data.news_id)">
                                 <mat-icon #tooltip="matTooltip" matTooltip="Make Star News">star_border</mat-icon>
                             </button>
-                            <button mat-icon-button aria-label="label">
+                            <button mat-icon-button aria-label="label" *ngIf="data.isstar == 1" (click)="makeAsSpecial('star',0,'isstar', data.news_id)">
                                 <mat-icon #tooltip="matTooltip" matTooltip="Remove from Star News">star</mat-icon>
                             </button>
                             <img matListAvatar src="{{image_url}}{{data.cover_image}}" *ngIf="data.cover_image && data.cover_image != ''" alt="image" (click)="confirmDialog(data, 'preview')" />
