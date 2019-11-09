@@ -15,24 +15,24 @@ $news = $obj->selectAll('n.*, m.name AS media, c.name AS club, ca.name AS catego
         <div class="padding-top-108"></div>
         <div class="news-all" style="padding-top: 40px;padding-bottom: 0px">
             <div class="container">
-<!--                <div class="row">
-                    <div class="col-md-8">
-                        <div class="press-release-search">
-                            <input type="text" name="press_release_search" placeholder="Search by Name" />
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="press-release-sort">
-                            <select name="sort_by">
-                                <option>Sort by</option>
-                                <option>Name A-Z</option>
-                                <option>Name Z-A</option>
-                                <option>Created Date ASC</option>
-                                <option>Created Date DESC</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>-->
+                <!--                <div class="row">
+                                    <div class="col-md-8">
+                                        <div class="press-release-search">
+                                            <input type="text" name="press_release_search" placeholder="Search by Name" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="press-release-sort">
+                                            <select name="sort_by">
+                                                <option>Sort by</option>
+                                                <option>Name A-Z</option>
+                                                <option>Name Z-A</option>
+                                                <option>Created Date ASC</option>
+                                                <option>Created Date DESC</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>-->
                 <h3>NEWS & UPDATES</h3>
                 <div class="news-all-content">
                     <?php foreach ($news as $row) { ?>
@@ -45,6 +45,7 @@ $news = $obj->selectAll('n.*, m.name AS media, c.name AS club, ca.name AS catego
                                 <span><?php echo $row['media']; ?> | <?php echo $row['author_name']; ?> | <?php echo date('M d, Y', strtotime($row['news_date'])); ?></span>
                                 <p><?php echo $row['moto_text']; ?></p>
                                 <p><?php echo $obj->charLimit($row['description_1'], 300); ?></p>
+                                <br/>
                                 <a href="news?nid=<?php echo $row['news_id']; ?>" class="all-news-button"> DISCOVER</a>
                             </div>
                         </div>

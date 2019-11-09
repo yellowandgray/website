@@ -962,12 +962,13 @@ body {
 }
 
 .press-download-button {
-    background: red;
+    background: #ed1c24;
     color: #fff;
-    padding: 0.3rem 1rem;
+    padding: 0.2rem 1rem;
     margin-top: 20px;
     border-radius: 25px;
     border: 1px solid red;
+    font-size: 13px;
 }
 
 .press-download-button:hover {
@@ -979,11 +980,12 @@ body {
 }
 
 .all-news-button {
-    background: red;
+    background: #ed1c24;
     color: #fff;
     padding: 0.3rem 1rem;
     margin-top: 20px;
     border-radius: 25px;
+    font-size: 13px;
 }
 
 .all-news-button:hover {
