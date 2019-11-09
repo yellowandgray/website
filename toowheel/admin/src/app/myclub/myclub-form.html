@@ -1,62 +1,33 @@
-<h2 mat-dialog-title>Config</h2>
+<h2 mat-dialog-title>Club</h2>
 <mat-dialog-content class="mat-typography">
-    <form [formGroup]="configForm" (ngSubmit)="onSubmit()">
-        <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
-            <div fxFlex="50%">
-                <mat-form-field appearance="outline" class="full-width">
-                    <mat-label>Name</mat-label>
-                    <input matInput placeholder="" required formControlName="display_name" [(ngModel)]="display_name" />
-                    <mat-error>Display Name is required</mat-error>
-                </mat-form-field>
-            </div>
-            <div fxFlex="50%" fxLayoutAlign="center center" *ngIf="field_type === 'image'">
-                <button *ngIf="value == ''" type="button" mat-raised-button (click)="fileInput.click()">{{file_name}}</button>
-                <input hidden #fileInput type="file" id="file" (change)="fileProgress($event)" />
-                <mat-icon *ngIf="value == ''" matTooltip="Width: 693px, Height: 822px;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
-                 <div class="preview-image" *ngIf="value != ''">
+    <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+        <div fxFlex="50%" fxLayoutAlign="center center" *ngIf="field_type === 'image'">
+            <button *ngIf="value == ''" type="button" mat-raised-button (click)="fileInput.click()">{{file_name}}</button>
+            <input hidden #fileInput type="file" id="file" (change)="fileProgress($event)" />
+                   <mat-icon *ngIf="value == ''" matTooltip="Width: 693px, Height: 822px;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
+            <div class="preview-image" *ngIf="value != ''">
                 <img class="dialog-picture" mat-card-image src="{{image_url}}{{value}}" alt="Photo" />
                 <button mat-icon-button aria-label="Close icon" (click)="removeMedia('value')">
                     <mat-icon>close</mat-icon>
                 </button>
             </div>
-            </div>
-            <div fxFlex="50%" *ngIf="field_type === 'text'">
-                <mat-form-field class="full-width">
-                    <mat-label>Value</mat-label>
-                    <textarea rows="6" matInput placeholder="" required [(ngModel)]="value" [ngModelOptions]="{standalone: true}"></textarea>
-                </mat-form-field>
-            </div>
-            <div fxFlex="50%" *ngIf="name === 'landing_banner_ad' || name === 'home_banner_ad'">
-                <mat-form-field appearance="outline">
-                    <mat-label>Select Ad.</mat-label>
-                    <mat-select [(ngModel)]="value" [ngModelOptions]="{standalone: true}">
-                        <mat-option *ngFor="let ad of ads" [value]="ad.advertisement_id">
-                            {{ad.title}}
-                    </mat-option>
-                </mat-select>
+        </div>
+        <div fxFlex="50%" *ngIf="field_type === 'text'">
+            <mat-form-field class="full-width">
+                <mat-label>Value</mat-label>
+                <textarea rows="6" matInput placeholder="" required [(ngModel)]="value" [ngModelOptions]="{standalone: true}"></textarea>
             </mat-form-field>
         </div>
-        <div fxFlex="50%" *ngIf="name === 'home_card_ad1' || name === 'home_card_ad2'">
-            <mat-form-field appearance="outline">
-                <mat-label>Select Ad.</mat-label>
-                <mat-select [(ngModel)]="value" [ngModelOptions]="{standalone: true}">
-                    <mat-option *ngFor="let ad of ads_card" [value]="ad.advertisement_id">
-                        {{ad.title}}
-                </mat-option>
-            </mat-select>
-        </mat-form-field>
     </div>
-</div>
-<div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-    <button mat-button [mat-dialog-close]="false">Cancel</button>
-    <button mat-button type="submit" [disabled]="loading">Save</button>
-    <mat-progress-spinner
-        class="example-margin"
-        *ngIf="loading"
-        [mode]="'indeterminate'"
-        [strokeWidth]="3"
-        [diameter]="25">
-    </mat-progress-spinner>
-</div>
-</form>
+    <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+        <button mat-button [mat-dialog-close]="false">Cancel</button>
+        <button mat-button  (click)="onSubmit()" [disabled]="loading">Save</button>
+        <mat-progress-spinner
+            class="example-margin"
+            *ngIf="loading"
+            [mode]="'indeterminate'"
+            [strokeWidth]="3"
+            [diameter]="25">
+        </mat-progress-spinner>
+    </div>
 </mat-dialog-content>
