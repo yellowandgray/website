@@ -62,6 +62,14 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
                             <img src="<?php echo BASE_URL . $news['banner_2']; ?>" alt="" style="width: 100%" /><br/><br/>
                         <?php } ?>
                         <p><?php echo nl2br($news['description_2']); ?></p>
+                        <p id="tese"><?php echo nl2br($news['description_3']); ?></p>
+                        <?php if (isset($news['banner_3']) && $news['banner_3'] != '') { ?>
+                            <img src="<?php echo BASE_URL . $news['banner_3']; ?>" alt="" style="width: 100%" /><br/><br/>
+                        <?php } ?>
+                        <p id="tese"><?php echo nl2br($news['description_4']); ?></p>
+                        <?php if (isset($news['banner_4']) && $news['banner_4'] != '') { ?>
+                            <img src="<?php echo BASE_URL . $news['banner_4']; ?>" alt="" style="width: 100%" /><br/><br/>
+                        <?php } ?>
                         <?php if (isset($news['youtube_id']) && $news['youtube_id'] != '' && $news['youtube_id'] != null && $news['youtube_id'] != 'null' && $news['youtube_id'] != 'undefined') { ?>
                             <iframe src="https://www.youtube.com/embed/<?php echo $news['youtube_id']; ?>" style="width: 100%; height: auto;" frameborder="0" allowfullscreen></iframe><br/><br/>
                         <?php } ?>
@@ -114,14 +122,13 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
                                 </div>
                             </div>
                             <div id="fb-root"></div>
-
                             <?php foreach ($releated_news as $row) { ?>
                                 <div class="side-news">
                                     <span class="side-news-widget1">
                                         <span><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 30) : $obj->charLimit($row['sponsor'], 30); ?></span>
                                     </span>
                                     <div class="press-cover-image-bg" style="background: url(<?php echo BASE_URL . $row['cover_image']; ?>)no-repeat;background-repeat: no-repeat;background-position: top;background-size: cover; "></div>
-        <!--                                <img src="<?php //echo BASE_URL . $row['cover_image'];                  ?>" alt=" image" />-->
+        <!--                                <img src="<?php //echo BASE_URL . $row['cover_image'];                   ?>" alt=" image" />-->
                                     <h4><?php echo $row['title']; ?></h4>
                                     <p><?php echo $obj->charLimit($row['moto_text'], 120); ?></p>
                                     <div class="button-1">
@@ -133,14 +140,12 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
                         </div>
                     </div>
                 </div>
-
-
                 <div class="row" style="padding-top: 20px;">
                     <?php foreach ($similar_news as $row) { ?>
                         <div class="col-md-3">
                             <div class="events-upcoming">
                                 <div class="press-cover-image-bg" style="background: url(<?php echo BASE_URL . $row['cover_image']; ?>)no-repeat;background-repeat: no-repeat;background-position: top;background-size: cover; "></div>
-    <!--                                <img src="<?php //echo BASE_URL . $row['cover_image'];                   ?>" alt="" />-->
+    <!--                                <img src="<?php //echo BASE_URL . $row['cover_image'];                    ?>" alt="" />-->
                                 <div class="events-upcoming-content">
                                     <h4><?php echo $row['title']; ?></h4>
                                     <p><?php echo $obj->charLimit($row['moto_text'], 75); ?></p>
@@ -158,7 +163,6 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
             </div>
         </div>
         <?php include 'footer.php'; ?>
-
         <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v5.0"></script>
         <script src="js/sticky-sidebar-scroll.min.js" type="text/javascript"></script>
         <script type='text/javascript'>
