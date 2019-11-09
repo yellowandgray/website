@@ -186,7 +186,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                                 </div>
                             </div>
                         <?php } ?>
-                        <div><a href="events?type=<?php echo $type; ?>" class="btn-secondary">SEE MORE</a></div>
+                        <div ><a href="events?type=<?php echo $type; ?>" class="btn-secondary">SEE MORE </a></div>
                     </div>
                 </div>
             </div>
@@ -196,6 +196,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <h1>PHOTOS</h1>
+                        <!--<div class="s-photo"><a href="gallery?type=<?php //echo $type; ?>" class="btn-secondary">SEE MORE PHOTOS</a></div>-->
                     </div>
                 </div>
             </div>
@@ -239,6 +240,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
             <div class="container">
                 <div class="flex-row">
                     <h1>VIDEOS</h1>
+                    <!--<div class="s-photo"><a href="gallery?type=<?php //echo $type; ?>" class="btn-secondary">SEE MORE VIDEOS</a></div>-->
                 </div>
                 <div class="home-gallery video-section">
                     <?php if ($type == 'two_wheel') { ?>
@@ -247,7 +249,9 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                         <a href="<?php echo BASE_URL . $videos[0]['media_path']; ?>" class="html5lightbox" title="<?php echo $videos[0]['title']; ?> <?php echo $videos[0]['description']; ?>" data-group="videogroup"><img src="<?php echo BASE_URL . $configs['four_wheel_videos']; ?>" class="popup-img" alt="" /></a>
                     <?php } ?>
                 </div>
+
             </div>
+            
 
         </section>
         <?php include 'social-media-embed.php'; ?>
@@ -276,136 +280,142 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
         ?>
         <script src="js/jquery.magnific-popup.min.js" type="text/javascript"></script>
         <script>
-            function lightbox(type) {
-                var ninjaSldr = document.getElementById("ninja-slider");
-                ninjaSldr.parentNode.style.display = "block";
-                nslider.init();
-                var fsBtn = document.getElementById("fsBtn");
-                fsBtn.click();
-            }
-            function fsIconClick(isFullscreen, ninjaSldr) { //fsIconClick is the default event handler of the fullscreen button
-                if (isFullscreen) {
-                    ninjaSldr.parentNode.style.display = "none";
-                }
-            }
-            $(".home-gallery").magnificPopup({
-                delegate: 'a',
-                type: 'image',
-                gallery: {
-                    enabled: true
-                }
-            });
-            function charLimit(str, len) {
-                if (str && str !== null && str !== 'null') {
-                    if (str.length <= len) {
-                        return str;
-                    } else {
-                        var y = str.substring(0, len) + '...';
-                        return y;
-                    }
-                }
-            }
-
-            function openTag(evt, cid, type) {
-                var i, tablink, remove = false;
-                if (evt !== null) {
-                    if ((evt.currentTarget.className).indexOf('active') !== -1) {
-                        remove = true;
-                    }
-                    tablink = document.getElementsByClassName("tablink");
-                    for (i = 0; i < tablink.length; i++) {
-                        tablink[i].className = tablink[i].className.replace(" active", "");
-                    }
-                    if (remove == false) {
-                        evt.currentTarget.className += " active";
-                    } else {
-                        cid = 0;
-                    }
-                }
-                $.ajax({
-                    type: "GET",
-                    url: 'api/v1/get_news_by_category/' + cid + '/' + type,
-                    success: function (data) {
-                        $('.slider').slick('unslick');
-                        $('#club1 .slider').empty();
-                        var BASE_URL = 'https://www.toowheel.com/toowheel/api/v1/';
-                        if (data.result.error === false) {
-                            var list = '';
-                            $.each(data.result.data, function (key, val) {
-                                var name = val.sponsor;
-                                if (val.club && val.club !== null && val.club !== 'null') {
-                                    name = val.club;
+                                function lightbox(type) {
+                                    var ninjaSldr = document.getElementById("ninja-slider");
+                                    ninjaSldr.parentNode.style.display = "block";
+                                    nslider.init();
+                                    var fsBtn = document.getElementById("fsBtn");
+                                    fsBtn.click();
                                 }
-                                list = list + '<div class="discover-slider"><img src="' + BASE_URL + val.thumb_image + '" alt="alt" /><div class="discover-slider-content"><p class="clb-bg">' + charLimit(name, 10) + '</p><h2>' + val.title + '</h2><p>' + charLimit(val.moto_text, 60) + '</p></div><div class="discover-btn"><a href="news?nid=' + val.news_id + '" class="discover-btn-home">DISCOVER</a></div></div>';
-                            });
-                            $('#club1 .slider').html(list);
-                            $('.slider').slick({
-                                dots: true,
-                                infinite: true,
-                                speed: 500,
-                                slidesToShow: 6,
-                                slidesToScroll: 1,
-                                autoplay: true,
-                                autoplaySpeed: 2000,
-                                arrows: true,
-                                responsive: [{
-                                        breakpoint: 1024,
-                                        settings: {
-                                            slidesToShow: 4,
-                                            slidesToScroll: 1,
-                                            dots: true,
-                                            autoplay: true
+                                function fsIconClick(isFullscreen, ninjaSldr) { //fsIconClick is the default event handler of the fullscreen button
+                                    if (isFullscreen) {
+                                        ninjaSldr.parentNode.style.display = "none";
+                                    }
+                                }
+                                $(".home-gallery").magnificPopup({
+                                    delegate: 'a',
+                                    type: 'image',
+                                    gallery: {
+                                        enabled: true
+                                    }
+                                });
+                                function charLimit(str, len) {
+                                    if (str && str !== null && str !== 'null') {
+                                        if (str.length <= len) {
+                                            return str;
+                                        } else {
+                                            var y = str.substring(0, len) + '...';
+                                            return y;
                                         }
-                                    },
-                                    {
-                                        breakpoint: 991,
-                                        settings: {
-                                            slidesToShow: 3,
-                                            slidesToScroll: 1,
-                                            dots: false,
-                                            autoplay: true
+                                    }
+                                }
+
+                                function openTag(evt, cid, type) {
+                                    var i, tablink, remove = false;
+                                    if (evt !== null) {
+                                        if ((evt.currentTarget.className).indexOf('active') !== -1) {
+                                            remove = true;
                                         }
-                                    },
-                                    {
-                                        breakpoint: 600,
-                                        settings: {
-                                            slidesToShow: 1,
-                                            slidesToScroll: 1,
-                                            dots: false,
-                                            autoplay: true
+                                        tablink = document.getElementsByClassName("tablink");
+                                        for (i = 0; i < tablink.length; i++) {
+                                            tablink[i].className = tablink[i].className.replace(" active", "");
                                         }
-                                    },
-                                    {
-                                        breakpoint: 400,
-                                        settings: {
-                                            arrows: false,
-                                            slidesToShow: 1,
-                                            slidesToScroll: 1,
-                                            dots: false,
-                                            autoplay: true
+                                        if (remove == false) {
+                                            evt.currentTarget.className += " active";
+                                        } else {
+                                            cid = 0;
                                         }
-                                    }]
-                            });
-                        }
-                    },
-                    error: function (err) {
-                        $('#club1 .slider').empty();
-                    }
-                });
-            }
+                                    }
+                                    $.ajax({
+                                        type: "GET",
+                                        url: 'api/v1/get_news_by_category/' + cid + '/' + type,
+                                        success: function (data) {
+                                            $('.slider').slick('unslick');
+                                            $('#club1 .slider').empty();
+                                            var BASE_URL = 'https://www.toowheel.com/toowheel/api/v1/';
+                                            if (data.result.error === false) {
+                                                var list = '';
+                                                $.each(data.result.data, function (key, val) {
+                                                    var name = val.sponsor;
+                                                    if (val.club && val.club !== null && val.club !== 'null') {
+                                                        name = val.club;
+                                                    }
+                                                    list = list + '<div class="discover-slider"><img src="' + BASE_URL + val.thumb_image + '" alt="alt" /><div class="discover-slider-content"><p class="clb-bg">' + charLimit(name, 10) + '</p><h2>' + val.title + '</h2><p>' + charLimit(val.moto_text, 60) + '</p></div><div class="discover-btn"><a href="news?nid=' + val.news_id + '" class="discover-btn-home">DISCOVER</a></div></div>';
+                                                });
+                                                $('#club1 .slider').html(list);
+                                                $('.slider').slick({
+                                                    dots: true,
+                                                    infinite: true,
+                                                    speed: 500,
+                                                    slidesToShow: 6,
+                                                    slidesToScroll: 1,
+                                                    autoplay: true,
+                                                    autoplaySpeed: 2000,
+                                                    arrows: true,
+                                                    responsive: [{
+                                                            breakpoint: 1024,
+                                                            settings: {
+                                                                slidesToShow: 4,
+                                                                slidesToScroll: 1,
+                                                                dots: true,
+                                                                autoplay: true
+                                                            }
+                                                        },
+                                                        {
+                                                            breakpoint: 991,
+                                                            settings: {
+                                                                slidesToShow: 3,
+                                                                slidesToScroll: 1,
+                                                                dots: false,
+                                                                autoplay: true
+                                                            }
+                                                        },
+                                                        {
+                                                            breakpoint: 600,
+                                                            settings: {
+                                                                slidesToShow: 1,
+                                                                slidesToScroll: 1,
+                                                                dots: false,
+                                                                autoplay: true
+                                                            }
+                                                        },
+                                                        {
+                                                            breakpoint: 400,
+                                                            settings: {
+                                                                arrows: false,
+                                                                slidesToShow: 1,
+                                                                slidesToScroll: 1,
+                                                                dots: false,
+                                                                autoplay: true
+                                                            }
+                                                        }]
+                                                });
+                                            }
+                                        },
+                                        error: function (err) {
+                                            $('#club1 .slider').empty();
+                                        }
+                                    });
+                                }
         </script>
         <script>
-            var vid = document.getElementById("myVideo-s");
+            var vidImg = document.getElementById("vimg");
+            var vid = "";
             var vidtext = document.getElementById("text-v");
 
-            function playVid() {
+            function playVid(currentvideo, vimg) {
+//                vid = document.getElementById(currentvideo);
+                vid = document.getElementById(currentvideo);
+                vidImg = document.getElementById(vimg);
                 vid.play();
                 vid.controls = "true";
                 vidtext.classList.add("video-t-1-click");
-                $this.style.display = "none";
+                vidImg.style.display = "none";
+                .style.color = 'grey'
             }
 
-            function pauseVid() {
+            function pauseVid(currentvideo) {
+                vid = document.getElementById(currentvideo);
                 vid.pause();
             }
         </script> 
