@@ -2138,6 +2138,7 @@ div#html5-watermark {
     overflow: hidden;
     cursor: pointer;
     border-radius: 50%;
+    height: 50px;
 }
 
 .mob-logout-profile img {

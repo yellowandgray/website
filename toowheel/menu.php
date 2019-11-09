@@ -39,14 +39,14 @@ $menu_member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN clu
 <!--                        <button class="tablinks"><a href="workshop-landing?type=<?php echo $type; ?>">Workshop <i class="fa fa-caret-right" aria-hidden="true"></i></a></button>-->
                         <div class="line-g"></div>
                         <h5>FOLLOW US</h5>
-                        <ul class="nav__ul">
+<!--                        <ul class="nav__ul">
                             <li class="i-con">
                                 <a href="https://www.facebook.com/Toowheel-Malaysia-102602757819930" target="_blank"><img src="img/social-icons/fb.png" alt="fb"></a>
                                 <a href="https://www.instagram.com/p/B2iG45lnGi-/" target="_blank"><img src="img/social-icons/insta.png" alt="fb"></a>
                                 <a href="https://twitter.com/@ToowheelM" target="_blank"><img src="img/social-icons/twitter.png" alt="fb"></a>
                                 <a href="https://www.youtube.com/channel/UCueyRbB52hjc0XUIqbkYxcg" target="_blank"><img src="img/social-icons/yt.png" alt="fb"></a>
                             </li>
-                        </ul>
+                        </ul>-->
                     </div>
                     <div id="About" class="tabcontent">
                         <h3>About</h3>

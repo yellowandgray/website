@@ -1324,27 +1324,55 @@ button {
 
 .pop h4 {
     color: gray;
-    margin-bottom: 20px;
-    font-size: 16px;
+    margin-bottom: 5px;
+    font-size: 18px;
 }
 .pop input {
     margin-bottom: 10px;
     border: none;
-    background: #eee;
-    padding: 5px 30px;
-    border-radius: 25px;
+    background: transparent;
+    padding: 5px 0px;
+    border-radius: 0;
     text-align: center;
     outline: none;
+    border-bottom: 1px solid #333;
+    width: 100%;
+}
+
+.forgot-password-content {
+    padding-top: 30px;
+}
+
+.pop button {
+    margin: 0px;
+    border: 1px solid #ed1c24;
+    background: #eee;
+    padding: 10px 0px;
+    border-radius: 0;
+    color: #fff;
+    background-color: #ed1c24;
+    outline: none;
+    transition: 0.3s;
+    font-size: 12px;
+    width: 100%;
+}
+
+.pop center button:hover {
+
+    border: 1px solid #ed1c24;
+    color: #ed1c24;
+    background-color: transparent;
+    transition: 0.3s;
 }
 
 @media only screen and (min-width: 481px) {
     .pop {
         top: 15%;
-        width: 40%;
+        width: 25%;
         height: auto;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
         margin: 0 auto;
-        left: 30%;
+        left: 35%;
     }
 } 
 .cc .active {
@@ -1456,7 +1484,7 @@ button {
     width: auto;
     position: absolute;
     top: 0;
-    font-size: 16px;
+    font-size: 14px;
     opacity: 0;
     left: 0;
     padding: 6px;
@@ -3841,12 +3869,20 @@ thead td {
         top: 100px;
         left: 0;
         width: 80%;
-        height: 40%;
+        height: auto;
         padding: 20px;
         background: white;
         color: white;
         text-align: center;
         margin: 0 10%;
+    }
+
+}
+
+@media (max-width:991px) and (min-width:768px) {
+    .pop {
+        width: 80%;
+        left: 10%;
     }
 }
 .pop-up-img {
@@ -3862,6 +3898,16 @@ thead td {
 
     margin: 0 30%;
     box-shadow: 0 0 5px 0px red;
+}
+
+.forgot-password-content {
+    text-align: center;
+}
+
+.forgot-password-content p {
+    color: #000;
+    font-size: 15px;
+    padding: 0 30px;
 }
 
 .form-group i.fa-facebook {

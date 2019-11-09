@@ -40,7 +40,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                     <div class="custom-file">
                                         <div id="upload_container">
                                             <label for="cover-image">Cover Image</label>
-                                            <input placeholder="Cover Image" style="font-size: 16px" id="cover_image" name="cover_image" type="file" class="custom-file-input " accept="image/x-png,image/gif,image/jpeg" onchange="attachFile('cover_image');" />
+                                            <input placeholder="Cover Image" id="cover_image" name="cover_image" type="file" class="custom-file-input " accept="image/x-png,image/gif,image/jpeg" onchange="attachFile('cover_image');" />
                                         </div>
                                         <div class="image-preview hidden" id="preview_container">
                                             <button type="button" onclick="closeCoverPic();" class="close-button-profile-img">
