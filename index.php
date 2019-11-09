@@ -54,33 +54,48 @@ $menu_member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN clu
                     <div class="header-login">
                         <?php
                         if (!isset($_SESSION["member_id"])) {
-                            ?>
+                            foreach ($menu_member as $row)
+                                
+                                ?>
                             <a href="toowheel/login?type=<?php echo $type; ?>" class="mob-noon login-button">
                                 <i class="fa fa-user"></i> Login
                             </a>
                         <?php } else {
                             ?>
-                            <span class="mob-noon login-button" onclick="openLogout();">
+                            <span class="mob-noon login-button" id="open-logout">
                                 <?php if (isset($menu_member['profile_picture']) && $menu_member['profile_picture'] == '') { ?>
                                     <img src="<?php echo BASE_URL . $menu_member['gender']; ?>.jpg" alt="" />
                                 <?php } else { ?>
                                     <img src="<?php echo BASE_URL . $menu_member['profile_picture']; ?>" alt="" />
                                 <?php } ?>
-                                <div id="logout-dropdown" class="logout-dropdown">
-                                    <div class="header-logout">
-                                        <?php if (isset($menu_member['profile_picture']) && $menu_member['profile_picture'] == '') { ?>
-                                            <img src="<?php echo BASE_URL . $menu_member['gender']; ?>.jpg" alt="" />
-                                        <?php } else { ?>
-                                            <img src="<?php echo BASE_URL . $menu_member['profile_picture']; ?>" alt="" />
-                                        <?php } ?>
-                                            <h3><?php echo $menu_member['name'];  ?></h3>
-                                    </div>
-                                    <ul>
-                                        <li><a href="toowheel/my-account?type=<?php echo $type; ?>"><i class="fa fa-user" aria-hidden="true"></i> Profile</a></li>
-                                        <li><a href="#" onclick="logoutUser();">Logout</a></li>
-                                    </ul>
-                                </div>
                             </span>
+                            <div id="logout-dropdown" class="logout-dropdown">
+                                <div class="header-logout row">
+                                    <div class="col-xl-3 col-sm-12 padding-lr-0">
+                                        <div class="member-profile-radius">
+                                            <?php if (isset($menu_member['profile_picture']) && $menu_member['profile_picture'] == '') { ?>
+                                                <img src="<?php echo BASE_URL . $menu_member['gender']; ?>.jpg" alt="" />
+                                            <?php } else { ?>
+                                                <img src="<?php echo BASE_URL . $menu_member['profile_picture']; ?>" alt="" />
+                                            <?php } ?>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-9 col-sm-12 padding-lr-0">
+                                        <h3><?php echo $menu_member['first_name']; ?> <?php echo $menu_member['last_name']; ?></h3>
+                                        <span><?php echo $menu_member['email_id']; ?></span>
+                                    </div>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <a href="toowheel/my-account?type=<?php echo $type; ?>">
+                                            <i class="fa fa-user" aria-hidden="true"></i> Profile</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" onclick="logoutUser();">
+                                            <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
+                                    </li>
+                                </ul>
+                            </div>
                         <?php }
                         ?>
                         <?php
@@ -328,20 +343,24 @@ $menu_member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN clu
                                                     });
                                         });
 
-                                        function openLogout() {
-                                            var x = document.getElementById("logout-dropdown");
-                                            if (x.style.display != "block")
-                                            {
-                                                x.style.display = "block";
-                                            } else {
-                                                x.style.display = "none";
+                                        $("#open-logout").click(function (e) {
+                                            e.stopPropagation();
+                                            $("#logout-dropdown").show("fast");
+                                        });
+                                        $(document).click(function (e) {
+                                            if (!(e.target.id === 'logout-dropdown')) {
+                                                $("#logout-dropdown").hide("fast");
                                             }
-                                            window.onclick = function (event) {
-                                                if (event.target == x) {
-                                                    x.style.display = "none";
-                                                }
-                                            }
-                                        }
+                                        });
+//                                        function openLogout() {
+//                                            var x = document.getElementById("logout-dropdown");
+//                                            if (x.style.display != "block")
+//                                            {
+//                                                x.style.display = "block";
+//                                            } else {
+//                                                x.style.display = "none";
+//                                            }
+//                                        }
 
                                         function logoutUser() {
                                             $('.loader').addClass('is-active');

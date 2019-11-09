@@ -2082,7 +2082,7 @@ div#html5-watermark {
 
 .i-con a:hover img {
     opacity: 1;
-    filter: drop-shadow(0px 0px 4px rgba(133, 133, 133, 0.5));
+    filter: drop-shadow(0px 0px 4px rgba(255, 255, 255, 1));
     -moz-transition: all 0.2s ease-in;
     -o-transition: all 0.2s ease-in;
     -webkit-transition: all 0.2s ease-in;
@@ -2119,15 +2119,20 @@ div#html5-watermark {
     cursor: pointer;
 }
 
-.user-profile-image span img {
+.user-profile-image span {
+    width: 50px;
+    height: 50px;
+    margin: 0;
     position: absolute;
-    border-radius: 50%;
-    width: 2.5%;
-    top: 25%;
-    height: 41%;
+}
+.user-profile-image span img {
+    position: relative;
+    top: 0;
+    left: 0;
+    border: none;
     overflow: hidden;
-    -webkit-transition: 0.4s ease;
-    transition: 0.4s ease;
+    cursor: auto;
+    border-radius: 50%;
 }
 
 .mob-logout-profile img {
@@ -2159,27 +2164,51 @@ div#html5-watermark {
 .user-profile-image span .logout-dropdown {
     /*    display: block;*/
     position: absolute;
-    top: 70%;
+    top: 102%;
+    right: 0;
     background: #fff;
     padding: 0px 0;
     list-style: none;
-    border-radius: 5px;
+    border-radius: 3px;
+    outline: none;
+    box-sizing: border-box;
+    max-width: 300px;
+    max-height: 731px;
+    width: 300px;
+    z-index: 1;
 }
 
-.user-profile-image span .logout-dropdown li {
-    padding: 10px 20px;
-    border-bottom: 1px solid #333;
+.logout-dropdown .header-logout {
+    width: 100%;
+    padding: 20px 0;
+    text-align: left;
+    border-bottom: 1px solid #cecece;
+    margin: 0;
+    margin-bottom: 10px;
 }
 
-.user-profile-image span .logout-dropdown li a {
-    font-size: 14px;
-    color: #000;
+.logout-dropdown .header-logout .member-profile-radius {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    margin-left: 10px;
 }
 
-.logout-dropdown p {
-    color: #000;
-    font-size: 16px;
-    font-weight: 600;
+.logout-dropdown .header-logout .member-profile-radius img:hover {
+    border: none;
+    transform: scale(1);
+}
+
+.logout-dropdown h3 {
+    font-size: 13px;
+    /* padding-left: 10px; */
+    padding-top: 5px;
+    margin: 0;
+}
+
+.logout-dropdown span {
+    font-size: 11px;
 }
 
 .news .col-lg-3, .news .col-md-4, .news .col-sm-6, .news .col-xs-12 {

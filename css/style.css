@@ -17,11 +17,11 @@ p {
 .logo {
     text-align: center;
     margin: 0 auto;
-    width: 80%;
+    width: 30%;
 }
 
 .logo img {
-    width: 50%;
+    width: 100%;
 }
 
 .header-login {
@@ -590,7 +590,7 @@ button {
     transform: scale(1.08);
 }
 
-.mob-noon .logout-dropdown {
+#logout-dropdown {
     display: none;
 }
 
@@ -606,12 +606,13 @@ button {
     background: #fff;
     padding: 0px 0;
     list-style: none;
-    border-radius: 5px;
+    border-radius: 3px;
     outline: none;
     box-sizing: border-box;
     max-width: 300px;
     max-height: 731px;
     width: 300px;
+    z-index: 1;
 }
 
 .mob-block .logout-dropdown {
@@ -625,12 +626,22 @@ button {
     left: -2px;
 }
 
-.mob-noon .logout-dropdown li a {
-    font-size: 14px;
+.logout-dropdown li {
+    padding-bottom: 15px;
+}
+
+.logout-dropdown li a {
+    font-size: 15px;
     color: #000;
 }
 
-.mob-noon .logout-dropdown li a:hover {
+.logout-dropdown li a i {
+    font-size: 20px;
+    color: red;
+    width: 20px;
+}
+
+.logout-dropdown li a:hover {
     text-decoration: none;
 }
 
@@ -651,28 +662,72 @@ button {
 
 .logout-dropdown .header-logout {
     width: 100%;
-    display: flex;
-    padding: 20px;
+    padding: 20px 0;
+    text-align: left;
+    border-bottom: 1px solid #cecece;
+    margin: 0;
+    margin-bottom: 10px;
 }
 
 .logout-dropdown ul {
     list-style: none;
-    padding: 0;
+    padding: 0px 20px;
     text-align: left;
 }
 
-.logout-dropdown .header-logout img {
-    position: relative;
-    top: 0;
-    width: 19%;
+.logout-dropdown .header-logout .member-profile-radius {
+    /*    border-radius: 50%; */
+    width: 50px;
     height: 50px;
-    border: none;
-    overflow: hidden;
-    border-radius: 50%;
-    cursor: auto;
+    margin: 0;
+    margin-left: 10px;
 }
 
-.logout-dropdown .header-logout img:hover {
+.logout-dropdown .header-logout .member-profile-radius img {
+    position: relative;
+    top: 0;
+    left: 0;
+    border: none;
+    overflow: hidden;
+    cursor: auto;
+    width: 100%;
+    border-radius: 50%;
+    height: 50px;
+}
+
+.logout-dropdown .header-logout .member-profile-radius img:hover {
     border: none;
     transform: scale(1);
+}
+
+/*.logout-dropdown:before {
+    content: "";
+    clear: both;
+}*/
+
+.logout-dropdown h3 {
+    font-size: 13px;
+    /* padding-left: 10px; */
+    padding-top: 5px;
+    margin: 0;
+}
+
+.logout-dropdown {
+    background: #fff;
+    padding: 2px;
+    width: 300px;
+    position: absolute;
+    right: 200px;
+    top: 10%;
+    border-radius: 3px;
+    z-index: 1;
+}
+
+.logout-dropdown span {
+    font-size: 11px;
+}
+
+.padding-lr-0 {
+    padding-left: 0;
+    padding-right: 0;
 }

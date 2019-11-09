@@ -38,8 +38,6 @@ export class NewsComponent implements OnInit {
            );
      }
 
-         
-         
   openDialog(id, res): void  {
     var data = null;
       if(id != 0) {
@@ -155,7 +153,28 @@ confirmDialog(id, action): void  {
             break;
         }
     }
-
+makeAsSpecial(typ, vlu, fld, nid, ctype) {
+    var formData = new FormData();
+          formData.append(fld, vlu);
+          formData.append('type', typ);
+          formData.append('news_id', nid);
+          formData.append('club_type', ctype);
+          this.httpClient.post('https://www.toowheel.com/beta/toowheel/api/v1/special_news', formData).subscribe(
+              (res)=>{
+                if(res["result"]["error"] === false) {
+                    this.getNews();
+                }else{
+    this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+        (error)=>{
+            this._snackBar.open(error["statusText"], '', {
+                duration: 2000,
+              });
+        });
+}
 }
 
 @Component({
@@ -175,8 +194,8 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
     thumb_image: string = 'Thumb Image';
     banner_image_1: string = 'Image 1';
     banner_image_2: string = 'Image 2';
-    banner_image_3: string = 'Image 2';
-    banner_image_4: string = 'Image 2';
+    banner_image_3: string = 'Image 3';
+    banner_image_4: string = 'Image 4';
     cover_image_path: string='';
     thumb_image_path: string='';
     banner_image_1_path: string='';

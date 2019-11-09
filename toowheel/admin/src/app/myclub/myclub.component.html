@@ -9,10 +9,10 @@
                 <mat-card-header>
                     <mat-card-title>Logo</mat-card-title>
                 </mat-card-header>
-                <img mat-card-image src="{{image_url}}{{data.value}}" alt="image" />
+                <img mat-card-image src="{{image_url}}{{data.logo}}" alt="image" />
                 <mat-card-actions>
                     <button mat-icon-button matTooltip="Edit" aria-label="label">
-                        <mat-icon (click)="openDialog(data.config_id, 'result')">edit</mat-icon>
+                        <mat-icon (click)="openDialog(data.logo, 'image', 'logo')">edit</mat-icon>
                     </button>
                 </mat-card-actions>
             </mat-card>
@@ -20,23 +20,23 @@
                 <mat-card-header>
                     <mat-card-title>Cover Image</mat-card-title>
                 </mat-card-header>
-                <img mat-card-image src="{{image_url}}{{data.value}}" alt="image" />
+                <img mat-card-image src="{{image_url}}{{data.cover_image}}" alt="image" />
                 <mat-card-actions>
                     <button mat-icon-button matTooltip="Edit" aria-label="label">
-                        <mat-icon (click)="openDialog(data.config_id, 'result')">edit</mat-icon>
+                        <mat-icon (click)="openDialog(data.cover_image, 'image', 'cover_image')">edit</mat-icon>
                     </button>
                 </mat-card-actions>
             </mat-card>
             <mat-card fxFlex="25%">
                 <mat-card-header>
-                    <mat-card-title>Description</mat-card-title>
+                    <mat-card-title>About</mat-card-title>
                 </mat-card-header>
                 <mat-card-content>
-                    <p>{{data.value}}</p>
+                    <p>{{data.about}}</p>
                 </mat-card-content>
                 <mat-card-actions>
                     <button mat-icon-button matTooltip="Edit" aria-label="label">
-                        <mat-icon (click)="openDialog(data.config_id, 'result')">edit</mat-icon>
+                        <mat-icon (click)="openDialog(data.about, 'text', 'about')">edit</mat-icon>
                     </button>
                 </mat-card-actions>
             </mat-card>
