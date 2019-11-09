@@ -27,7 +27,7 @@ export class ClubgalleryComponent implements OnInit {
   }
   image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
     getGallery(): void {
-  this.httpClient.get<any>('https://www.toowheel.com/beta/toowheel/api/v1/get_clubgallery')
+  this.httpClient.get<any>('https://www.toowheel.com/beta/toowheel/api/v1/get_club_gallery_by_club/'+sessionStorage.getItem("toowheel_club_id"))
   .subscribe(
           (res)=>{
               this.result = res["result"]["data"];
