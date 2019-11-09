@@ -153,11 +153,12 @@ confirmDialog(id, action): void  {
             break;
         }
     }
-makeAsSpecial(typ, vlu, fld, nid) {
+makeAsSpecial(typ, vlu, fld, nid, ctype) {
     var formData = new FormData();
           formData.append(fld, vlu);
           formData.append('type', typ);
           formData.append('news_id', nid);
+          formData.append('club_type', ctype);
           this.httpClient.post('https://www.toowheel.com/beta/toowheel/api/v1/special_news', formData).subscribe(
               (res)=>{
                 this.loading = false;

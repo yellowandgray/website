@@ -1181,7 +1181,7 @@ $app->post('/special_news', function() use ($app) {
                 $res['message'] = 'Status updated successfully';
             }
         } else {
-            $exist = $obj->selectRow('COUNT(news_id) AS total', 'news', 'isstar = 1');
+            $exist = $obj->selectRow('COUNT(news_id) AS total', 'news', 'type = \''.$data['club_type'].'\' AND isstar = 1');
             if ($exist['total'] == 0) {
                 $update = $obj->updateRecordWithWhere(array('isstar' => 1), 'news', 'news_id = ' . $data['news_id']);
                 if ($update > 0) {
@@ -1201,7 +1201,7 @@ $app->post('/special_news', function() use ($app) {
                 $res['message'] = 'Status updated successfully';
             }
         } else {
-            $exist = $obj->selectRow('COUNT(news_id) AS total', 'news', 'isflag = 1');
+            $exist = $obj->selectRow('COUNT(news_id) AS total', 'news', 'type = \''.$data['club_type'].'\' AND isflag = 1');
             if ($exist['total'] < 4) {
                 $update = $obj->updateRecordWithWhere(array('isflag' => 1), 'news', 'news_id = ' . $data['news_id']);
                 if ($update > 0) {
