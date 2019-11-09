@@ -2070,10 +2070,23 @@ div#html5-watermark {
     width: 25px;
     margin: 0 10px;
     opacity: 0.7;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
 }
 
-.i-con a img:hover {
+.i-con a:hover {
+    border: 1px solid red;
+}
+
+.i-con a:hover img {
     opacity: 1;
+    filter: drop-shadow(0px 0px 4px rgba(133, 133, 133, 0.5));
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
 }
 
 .log-in form input[type="checkbox"] {
@@ -2214,7 +2227,7 @@ div#html5-watermark {
     position: relative;
     font-size: 13px;
     background-color: transparent;
-    padding: 15% 0 10px 0;
+    padding: 0% 0 10px 0;
     text-align: left;
 }
 
@@ -2275,4 +2288,13 @@ div#html5-watermark {
 
 .mob-logout-profile .logout-dropdown li a {
     color: #000;
+}
+
+.news .hovereffect a span {
+    font-size: 11px;
+    background: #fc2d2c;
+    width: auto;
+    padding: 2px 5px;
+    color: #fff;
+    border-right: ridge;
 }
