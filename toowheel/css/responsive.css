@@ -110,6 +110,9 @@
     .mob-logout-profile img {
         top: -55px !important;
     }
+    .mob-logout-profile {
+        margin-left: 20px !important;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -269,6 +272,9 @@
     }
     .news .hovereffect h2 {
         font-size: 22px !important;
+    }
+    .gallery {
+        display: block !important;
     }
 }
 
@@ -1261,6 +1267,9 @@
     .fb-03{
         display: none;
     }
+    .logout-dropdown {
+        right: 40px !important;
+    }
 }
 @media (min-width: 768px) and (max-width: 991px) {
     .fb-01{
@@ -1271,6 +1280,9 @@
     }
     .fb-03{
         display: block;
+    }
+    .logout-dropdown {
+        right: 40px !important;
     }
 }
 @media (min-width: 320px) and (max-width: 355px) {
@@ -1285,5 +1297,19 @@
     }
     .fb-04{
         display: block;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .photo-section h1 {
+        font-size: 7rem !important;
+        text-align: left  !important;
+        position: relative  !important;
+        top: -44px !important;
+    }
+    .video-img h1 {
+        font-size: 7rem !important;
+        text-align: left  !important;
+        position: relative  !important;
+        top: -24px !important;
     }
 }

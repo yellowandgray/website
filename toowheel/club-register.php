@@ -35,48 +35,53 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                     <option>Select Category</option>
                                 </select>
                             </div>
-                            <div class="custom-file">
-                                <div id="upload_container">
-                                    <label for="cover-image">Choose Cover Image: </label>
-                                    <input style="font-size: 16px" id="cover_image" name="cover_image" type="file" class="custom-file-input" accept="image/x-png,image/gif,image/jpeg" onchange="attachFile('cover_image');" />
+                            <div class="form-row file-up text-center">
+                                <div class="col-md-4">
+                                    <div class="custom-file">
+                                        <div id="upload_container">
+                                            <label for="cover-image">Cover Image</label>
+                                            <input placeholder="Cover Image" id="cover_image" name="cover_image" type="file" class="custom-file-input " accept="image/x-png,image/gif,image/jpeg" onchange="attachFile('cover_image');" />
+                                        </div>
+                                        <div class="image-preview hidden" id="preview_container">
+                                            <button type="button" onclick="closeCoverPic();" class="close-button-profile-img">
+                                                <i class="fa fa-close"></i>
+                                            </button>
+                                            <img src="" alt="image" />
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="image-preview hidden" id="preview_container">
-                                    <button type="button" onclick="closeCoverPic();" class="close-button-profile-img">
-                                        <i class="fa fa-close"></i>
-                                    </button>
-                                    <img src="" alt="image" />
+                                <div class="col-md-4">
+                                    <div class="custom-file">
+                                        <div id="upload_logo_container">
+                                            <label for="logo">Club Logo </label>
+                                            <input id="logo" name="logo" type="file" class="custom-file-input" accept="image/x-png,image/gif,image/jpeg" onchange="attachFile('logo');" />
+                                        </div>
+                                        <div class="image-preview hidden" id="preview_logo_container">
+                                            <button type="button" onclick="closeLogoPic();" class="close-button-profile-img">
+                                                <i class="fa fa-close"></i>
+                                            </button>
+                                            <img src="" alt="image" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+
+                                    <div class="custom-file">
+                                        <div id="upload_video_container">
+                                            <label for="club-video">Club Video</label>
+                                            <input id="club_video" name="club_video" type="file" class="custom-file-input" accept="video/mp4,video/x-m4v,video/*" onchange="attachFile('club_video');" />
+                                        </div>
+                                        <div class="image-preview hidden" id="preview_video_container">
+                                            <button type="button" onclick="closeVideoPic();" class="close-button-profile-img">
+                                                <i class="fa fa-close"></i>
+                                            </button>
+                                            <img src="" alt="image" />
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <br/>
-                            <br/>
-                            <div class="custom-file">
-                                <div id="upload_logo_container">
-                                    <label for="logo">Choose Club Logo: </label>
-                                    <input id="logo" name="logo" type="file" class="custom-file-input" accept="image/x-png,image/gif,image/jpeg" onchange="attachFile('logo');" />
-                                </div>
-                                <div class="image-preview hidden" id="preview_logo_container">
-                                    <button type="button" onclick="closeLogoPic();" class="close-button-profile-img">
-                                        <i class="fa fa-close"></i>
-                                    </button>
-                                    <img src="" alt="image" />
-                                </div>
-                            </div>
-                            <br/>
-                            <br/>
-                            <div class="custom-file">
-                                <div id="upload_video_container">
-                                    <label for="club-video">Choose Club Video: </label>
-                                    <input id="club_video" name="club_video" type="file" class="custom-file-input" accept="video/mp4,video/x-m4v,video/*" onchange="attachFile('club_video');" />
-                                </div>
-                                <div class="image-preview hidden" id="preview_video_container">
-                                    <button type="button" onclick="closeVideoPic();" class="close-button-profile-img">
-                                        <i class="fa fa-close"></i>
-                                    </button>
-                                    <img src="" alt="image" />
-                                </div>
-                            </div>
-                            <br/>
-                            <br/>
+                          
                             <div class="form-group">
                                 <input id="mobile" placeholder="Contact No." name="mobile" type="text" tabindex="9" required />
                             </div>

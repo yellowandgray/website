@@ -54,28 +54,55 @@ $menu_member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN clu
                     <div class="header-login">
                         <?php
                         if (!isset($_SESSION["member_id"])) {
-                            ?>
+                            foreach ($menu_member as $row)
+                                
+                                ?>
                             <a href="toowheel/login?type=<?php echo $type; ?>" class="mob-noon login-button">
                                 <i class="fa fa-user"></i> Login
                             </a>
                         <?php } else {
                             ?>
-                            <span class="mob-noon login-button" onclick="openLogout();">
+                            <span class="mob-noon login-button" id="open-logout">
                                 <?php if (isset($menu_member['profile_picture']) && $menu_member['profile_picture'] == '') { ?>
                                     <img src="<?php echo BASE_URL . $menu_member['gender']; ?>.jpg" alt="" />
                                 <?php } else { ?>
                                     <img src="<?php echo BASE_URL . $menu_member['profile_picture']; ?>" alt="" />
                                 <?php } ?>
-                                <ul id="logout-dropdown" class="logout-dropdown">
-                                    <li><a href="toowheel/my-account?type=<?php echo $type; ?>">Profile</a></li>
-                                    <li><a href="#" onclick="logoutUser();">Logout</a></li>
-                                </ul>
                             </span>
+                            <div id="logout-dropdown" class="logout-dropdown">
+                                <div class="header-logout row">
+                                    <div class="col-xl-3 col-sm-3 padding-lr-0">
+                                        <div class="member-profile-radius">
+                                            <?php if (isset($menu_member['profile_picture']) && $menu_member['profile_picture'] == '') { ?>
+                                                <img src="<?php echo BASE_URL . $menu_member['gender']; ?>.jpg" alt="" />
+                                            <?php } else { ?>
+                                                <img src="<?php echo BASE_URL . $menu_member['profile_picture']; ?>" alt="" />
+                                            <?php } ?>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-9 col-sm-9 padding-lr-0">
+                                        <h3><?php echo $menu_member['first_name']; ?> <?php echo $menu_member['last_name']; ?></h3>
+                                        <span><?php echo $menu_member['email_id']; ?></span>
+                                    </div>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <a href="toowheel/my-account?type=<?php echo $type; ?>">
+                                            <i class="fa fa-user" aria-hidden="true"></i> Profile</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" onclick="logoutUser();">
+                                            <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
+                                    </li>
+                                </ul>
+                            </div>
                         <?php }
                         ?>
                         <?php
                         if (!isset($_SESSION["member_id"])) {
-                            ?>
+                            foreach ($menu_member as $row)
+                                
+                                ?>
                             <a href="toowheel/login?type=<?php echo $type; ?>" class="mob-block">
                                 <span class="login-button">
                                     <i class="fa fa-user"></i>
@@ -83,17 +110,40 @@ $menu_member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN clu
                             </a>
                         <?php } else {
                             ?>
-                            <span class="mob-block" onclick="openLogout();">
+                            <span class="mob-block" id="open-logout1">
                                 <?php if (isset($menu_member['profile_picture']) && $menu_member['profile_picture'] == '') { ?>
                                     <img src="<?php echo BASE_URL . $menu_member['gender']; ?>.jpg" alt="" />
                                 <?php } else { ?>
                                     <img src="<?php echo BASE_URL . $menu_member['profile_picture']; ?>" alt="" />
-                                <?php } ?>
-                                <ul id="logout-dropdown" class="logout-dropdown">
-                                    <li><a href="toowheel/my-account?type=<?php echo $type; ?>">Profile</a></li>
-                                    <li><a href="#" onclick="logoutUser();">Logout</a></li>
-                                </ul>
+    <?php } ?>
                             </span>
+                            <div id="logout-dropdown1" class="logout-dropdown1">
+                                <div class="header-logout row">
+                                    <div class="col-xl-3 col-sm-3 padding-lr-0">
+                                        <div class="member-profile-radius">
+                                            <?php if (isset($menu_member['profile_picture']) && $menu_member['profile_picture'] == '') { ?>
+                                                <img src="<?php echo BASE_URL . $menu_member['gender']; ?>.jpg" alt="" />
+                                            <?php } else { ?>
+                                                <img src="<?php echo BASE_URL . $menu_member['profile_picture']; ?>" alt="" />
+    <?php } ?>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-9 col-sm-9 padding-lr-0">
+                                        <h3><?php echo $menu_member['first_name']; ?> <?php echo $menu_member['last_name']; ?></h3>
+                                        <span><?php echo $menu_member['email_id']; ?></span>
+                                    </div>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <a href="toowheel/my-account?type=<?php echo $type; ?>">
+                                            <i class="fa fa-user" aria-hidden="true"></i> Profile</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" onclick="logoutUser();">
+                                            <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
+                                    </li>
+                                </ul>
+                            </div>
                         <?php }
                         ?>
                     </div>
@@ -318,15 +368,55 @@ $menu_member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN clu
                                                     });
                                         });
 
-                                        function openLogout() {
-                                            var x = document.getElementById("logout-dropdown");
-                                            if (x.style.display != "block")
-                                            {
-                                                x.style.display = "block";
-                                            } else {
-                                                x.style.display = "none";
+                                        $("#open-logout").click(function (e) {
+                                            e.stopPropagation();
+                                            $("#logout-dropdown").show("fast");
+                                        });
+                                        $(document).click(function (e) {
+                                            if (!(e.target.id === 'logout-dropdown')) {
+                                                $("#logout-dropdown").hide("fast");
                                             }
+                                        });
+                                        $("#open-logout1").click(function (e) {
+                                            e.stopPropagation();
+                                            $("#logout-dropdown1").show("fast");
+                                        });
+                                        $(document).click(function (e) {
+                                            if (!(e.target.id === 'logout-dropdown1')) {
+                                                $("#logout-dropdown1").hide("fast");
+                                            }
+                                        });
+//                                        function openLogout() {
+//                                            var x = document.getElementById("logout-dropdown");
+//                                            if (x.style.display != "block")
+//                                            {
+//                                                x.style.display = "block";
+//                                            } else {
+//                                                x.style.display = "none";
+//                                            }
+//                                        }
+
+                                        function logoutUser() {
+                                            $('.loader').addClass('is-active');
+                                            $.ajax({
+                                                type: "POST",
+                                                url: 'toowheel/api/v1/logout_user',
+                                                data: {},
+                                                success: function (data) {
+                                                    $('.loader').removeClass('is-active');
+                                                    if (data.result.error === false) {
+                                                        window.location = 'toowheel/login?type=two_wheel';
+                                                    } else {
+                                                        swal('Information', data.result.message, 'info');
+                                                    }
+                                                },
+                                                error: function (err) {
+                                                    $('.loader').removeClass('is-active');
+                                                    swal('Error', err.statusText, 'error');
+                                                }
+                                            });
                                         }
+
         </script>
     </body>
 </html>

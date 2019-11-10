@@ -20,7 +20,8 @@ body {
 .toggle {
     font-size: 30px;
     cursor: pointer;
-    margin: 25px 22% 0 0;
+    margin: 0 auto;
+    margin-top: 20px;
 }
 
 /*.toggle img {
@@ -74,7 +75,7 @@ body {
 
 .header-login {
     text-align: center;
-    margin-left: 15%;
+    margin: 0 auto;
     margin-top: 20px;
 }
 
@@ -85,7 +86,7 @@ body {
 .header-login p, .header-login a {
     color: #fff;
     font-size: 16px;
-    margin-top: 4px;
+    margin-top: 10px;
 }
 
 .header-login a:hover {
@@ -523,7 +524,7 @@ body {
 
 .photo-section img {
     width: 100%;
-    top: -120px;
+    top: -100px;
     position: relative;
 }
 
@@ -903,7 +904,6 @@ body {
     padding-top: 10px;
     font-weight: 600;
     margin: 30px 0;
-    font-size: 16px;
 }
 
 .press-release-content img {
@@ -962,12 +962,13 @@ body {
 }
 
 .press-download-button {
-    background: red;
+    background: #ed1c24;
     color: #fff;
-    padding: 0.3rem 1rem;
+    padding: 0.2rem 1rem;
     margin-top: 20px;
     border-radius: 25px;
     border: 1px solid red;
+    font-size: 13px;
 }
 
 .press-download-button:hover {
@@ -979,11 +980,12 @@ body {
 }
 
 .all-news-button {
-    background: red;
+    background: #ed1c24;
     color: #fff;
     padding: 0.3rem 1rem;
     margin-top: 20px;
     border-radius: 25px;
+    font-size: 13px;
 }
 
 .all-news-button:hover {
@@ -2071,10 +2073,23 @@ div#html5-watermark {
     width: 25px;
     margin: 0 10px;
     opacity: 0.7;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
 }
 
-.i-con a img:hover {
+.i-con a:hover {
+    /*border: 1px solid red;*/
+}
+
+.i-con a:hover img {
     opacity: 1;
+    filter: drop-shadow(0px 0px 4px rgba(255, 255, 255, 1));
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
 }
 
 .log-in form input[type="checkbox"] {
@@ -2107,15 +2122,25 @@ div#html5-watermark {
     cursor: pointer;
 }
 
-.user-profile-image span img {
+.user-profile-image {
+    cursor: pointer;
+}
+
+.user-profile-image span {
+    width: 50px;
+    height: 50px;
+    margin: 0;
     position: absolute;
-    border-radius: 50%;
-    width: 2.5%;
-    top: 25%;
-    height: 41%;
+}
+.user-profile-image span img {
+    position: relative;
+    top: 0;
+    left: 0;
+    border: none;
     overflow: hidden;
-    -webkit-transition: 0.4s ease;
-    transition: 0.4s ease;
+    cursor: pointer;
+    border-radius: 50%;
+    height: 50px;
 }
 
 .mob-logout-profile img {
@@ -2134,40 +2159,156 @@ div#html5-watermark {
 .user-profile-image span img:hover {
     -webkit-transform: scale(1.08);
     transform: scale(1.08);
+    cursor: pointer;
 }
 
-.user-profile-image span .logout-dropdown {
+#logout-dropdown {
     display: none;
+}
+
+.logout-dropdown .member-profile-radius img {
+    border-radius: 50%;
+}
+
+.logout-dropdown ul {
+    list-style: none;
+    padding: 0px 20px;
+    text-align: left;
+}
+
+.logout-dropdown li {
+    padding-bottom: 15px;
+}
+
+.logout-dropdown li a {
+    font-size: 15px;
+    color: #000;
+}
+
+.logout-dropdown li a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+.logout-dropdown li a i {
+    font-size: 20px;
+    color: red;
+    width: 20px;
 }
 
 .mob-logout-profile .logout-dropdown {
     display: none;
 }
 
-.user-profile-image span .logout-dropdown {
+.logout-dropdown {
     /*    display: block;*/
     position: absolute;
-    top: 70%;
+    top: 75%;
+    right: 200px;
     background: #fff;
-    padding: 0px 0;
+    border-radius: 3px;
+    max-width: 300px;
+    width: 300px;
+    z-index: 1;
+}
+
+#logout-dropdown1 {
+    display: none;
+}
+
+.logout-dropdown .header-logout {
+    width: 100%;
+    padding: 20px 0;
+    text-align: left;
+    border-bottom: 1px solid #cecece;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.logout-dropdown .header-logout .padding-lr-0 .member-profile-radius {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    margin-left: 10px;
+}
+
+.logout-dropdown .header-logout .padding-lr-0 .member-profile-radius img:hover {
+    border: none;
+    transform: scale(1);
+}
+
+.logout-dropdown .header-logout h3 {
+    font-size: 13px;
+    /* padding-left: 10px; */
+    padding-top: 5px;
+    margin: 0;
+}
+
+.logout-dropdown .header-logout span {
+    font-size: 11px;
+}
+
+
+.logout-dropdown1 {
+    display: block;
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    right: 1px;
+    z-index: 1;
+}
+
+.logout-dropdown1 .header-logout {
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+    border-bottom: 1px solid #ececec;
+}
+
+.logout-dropdown1 .header-logout .member-profile-radius {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.logout-dropdown1 .header-logout .member-profile-radius img {
+    width: 25%;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.logout-dropdown1 ul {
     list-style: none;
-    border-radius: 5px;
+    padding: 0 25px;
+    margin-bottom: 0;
 }
 
-.user-profile-image span .logout-dropdown li {
-    padding: 10px 20px;
-    border-bottom: 1px solid #333;
+.logout-dropdown1 ul li {
+    padding: 10px 0;
 }
 
-.user-profile-image span .logout-dropdown li a {
-    font-size: 14px;
-    color: #000;
-}
-
-.logout-dropdown p {
-    color: #000;
+.logout-dropdown1 ul li a {
     font-size: 16px;
-    font-weight: 600;
+    color: #000;
+}
+
+.logout-dropdown1 ul li a i {
+    font-size: 16px;
+    color: red;
+}
+
+.logout-dropdown1 .header-logout h3 {
+    font-size: 16px;
+    padding-top: 10px;
+    margin: 0;
+}
+
+.logout-dropdown1 .header-logout span {
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
 }
 
 .news .col-lg-3, .news .col-md-4, .news .col-sm-6, .news .col-xs-12 {
@@ -2182,8 +2323,8 @@ div#html5-watermark {
     position: relative;
     text-align: center;
     cursor: default;
-    background: -webkit-linear-gradient(45deg, #fc2d2c 0%,#363636 100%);
-    background: linear-gradient(45deg, #fc2d2c 0%,#363636 100%);
+    background: -webkit-linear-gradient(45deg, #8a0302 100%,#080000 100%);
+    background: linear-gradient(45deg, #8a0302 100%,#080000 100%);
 }
 
 .news .hovereffect .overlay {
@@ -2215,7 +2356,7 @@ div#html5-watermark {
     position: relative;
     font-size: 13px;
     background-color: transparent;
-    padding: 15% 0 10px 0;
+    padding: 0% 0 10px 0;
     text-align: left;
 }
 
@@ -2276,4 +2417,13 @@ div#html5-watermark {
 
 .mob-logout-profile .logout-dropdown li a {
     color: #000;
+}
+
+.news .hovereffect a span {
+    font-size: 11px;
+    background: #fc2d2c;
+    width: auto;
+    padding: 2px 5px;
+    color: #fff;
+    border-right: ridge;
 }

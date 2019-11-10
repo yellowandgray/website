@@ -36,12 +36,19 @@ $obj = new Common();
                                     <center><button type="submit">LOGIN</button></center>
                                 </form> 
                                 <h5><a href="#" class="forgot-password">Forgot your Password</a></h5>
-                                <div class="pop"><i class="fa fa-times-circle" aria-hidden="true"></i>
+                                <div class="pop">
+                                    <i class="fa fa-times-circle" aria-hidden="true"></i>
                                     <div class="margin-top-30">
-                                        <h4>Enter Your Register Mail Id!</h4>
+                                        <div class="">
+                                            <img src="img/login/login-password-img.jpg" alt="" />
+                                        </div>
+                                        <div class="forgot-password-content">
+                                            <h4>Don't worry, we've all been there.</h4>
+                                            <p>We can help! All you need to do is enter your email ID and follow the instructions!</p>
+                                        </div>
                                         <input type="email" id="forgotpassword_email" name="forgotpassword_email" placeholder="Enter Register Mail Id" onchange="removeValidation('forgotpassword_email');" />
                                         <div id="forgotpassword_email_error"></div>
-                                        <center><button onclick="forgotPassword();">Submit</button></center>
+                                        <button onclick="forgotPassword();">Submit</button>
                                     </div>
                                 </div>
                             </div>

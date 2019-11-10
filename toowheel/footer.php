@@ -265,6 +265,26 @@
         noSuggestionNotice: 'Sorry, no matching results',
         groupBy: 'category'
     });
+    $("#open-logout").click(function (e) {
+        console.log("test");
+        e.stopPropagation();
+        $("#logout-dropdown").show("fast");
+    });
+    $(document).click(function (e) {
+        if (!(e.target.id === 'logout-dropdown')) {
+            $("#logout-dropdown").hide("fast");
+        }
+    });
+    $("#open-logout1").click(function (e) {
+        console.log("test");
+        e.stopPropagation();
+        $("#logout-dropdown1").show("fast");
+    });
+    $(document).click(function (e) {
+        if (!(e.target.id === 'logout-dropdown1')) {
+            $("#logout-dropdown1").hide("fast");
+        }
+    });
 </script>
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v5.0"></script>

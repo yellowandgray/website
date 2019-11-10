@@ -6,7 +6,7 @@
         <app-header></app-header>
         <mat-list *ngIf="result.length > 0">
             <mat-list-item class="list-container" *ngFor="let data of result">
-                           <button mat-icon-button aria-label="label" (click)="openView(data.member_id, 'result')">
+                           <button mat-icon-button aria-label="label" (click)="openView(data.member_id)">
                     <mat-icon #tooltip="matTooltip" matTooltip="View">remove_red_eye</mat-icon>
                 </button>
                 <img matListAvatar src="{{image_url}}{{data.profile_picture}}" *ngIf="data.profile_picture && data.profile_picture != ''" alt="image" (click)="confirmDialog(data, 'preview')" />
@@ -17,6 +17,7 @@
             </mat-list-item>
         </mat-list>
         <div *ngIf="result.length == 0" class="section">
+            <br/>
             No Member found
         </div>
     </mat-sidenav-content>
