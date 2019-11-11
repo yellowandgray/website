@@ -533,8 +533,8 @@
 
 @media (max-width: 1368px) and (min-width: 1200px) {
     .discover-slider-content {
-        top: -160px !important;
-        height: 125px !important;
+        top: -124px !important;
+        height: 124px !important;
     }
     .discover-slider-content center .btn-primary {
         top: 0 !Important;
@@ -1256,7 +1256,9 @@
         height:1900px; overflow: hidden;
     }
     #contentDiv{
-        height:1850px; overflow: scroll;
+        height:1850px; 
+        overflow: scroll;
+        padding-top: 10px;
     }
 }
 .fb-01{
@@ -1315,15 +1317,13 @@
 }
 @media screen and (min-width: 1200px) {
     .photo-section h1 {
-        font-size: 7rem !important;
+        font-size: 12rem !important;
         text-align: left  !important;
         position: relative  !important;
-        top: -44px !important;
     }
     .video-img h1 {
-        font-size: 7rem !important;
+        font-size: 12rem !important;
         text-align: left  !important;
         position: relative  !important;
-        top: -24px !important;
     }
 }
