@@ -398,7 +398,7 @@
         font-size: 18px !important;
     }
     #sideslider {
-        height: 2200px !important;
+        height: 2600px !important;
     }
 }
 
@@ -494,7 +494,7 @@
         right: 18% !important;
     }
     #sideslider {
-        height: 2200px !important;
+        height: 2600px !important;
     }
 }
 
@@ -1259,11 +1259,11 @@
         margin-bottom: -118px !important;
     }
     .events-content{
-        height:1900px; overflow: hidden;
+/*        height:1900px; overflow: hidden;*/
     }
     #contentDiv{
-        height:1850px; 
-        overflow: scroll;
+/*        height:1850px; 
+        overflow: scroll;*/
         padding-top: 10px;
     }
 }

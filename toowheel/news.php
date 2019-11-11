@@ -87,7 +87,7 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
                         <?php } ?>
                     </div>
                     <div class="col-md-4">
-                        <div>
+                        <div id="sideslider">
                             <div class="sidecontent-search-section search">
                                 <div class="search-1">
                                     <i class="fa fa-search" aria-hidden="true"></i><input placeholder='Search Here' type='search' class="head-search" autocomplete="off" />
