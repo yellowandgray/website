@@ -262,7 +262,7 @@ body {
     bottom: 137px;
     border-bottom-right-radius: 7px;
     border-bottom-left-radius: 7px;
-    height: 130px;
+    height: 137px;
 }
 
 .clb-bg {
@@ -284,7 +284,7 @@ body {
     font-weight: 600;
     margin-top: 6px;
     overflow: hidden;
-    height: 50px;
+    height: 57px;
 }
 
 .discover-slider-content p {
@@ -1947,7 +1947,7 @@ div#html5-watermark {
 
 .discover-btn {
     position: absolute;
-    bottom: 10px;
+    bottom: 5px;
     text-align: center;
     width: 4%;
     margin: 0 auto;
@@ -2203,7 +2203,7 @@ div#html5-watermark {
 .logout-dropdown {
     /*    display: block;*/
     position: absolute;
-    top: 75%;
+    top: 80%;
     right: 200px;
     background: #fff;
     border-radius: 3px;
@@ -2323,6 +2323,7 @@ div#html5-watermark {
     position: relative;
     text-align: center;
     cursor: default;
+    border-radius: 10px;
     background: -webkit-linear-gradient(45deg, #8a0302 100%,#080000 100%);
     background: linear-gradient(45deg, #8a0302 100%,#080000 100%);
 }
@@ -2426,4 +2427,14 @@ div#html5-watermark {
     padding: 2px 5px;
     color: #fff;
     border-right: ridge;
+}
+
+.news .hovereffect .news-thumb-menu .menu-news-title-view h2 {
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+}
+
+.news .hovereffect:hover .news-thumb-menu .menu-news-title-view h2 {
+    display: none;
 }

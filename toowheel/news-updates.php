@@ -38,7 +38,8 @@ $news = $obj->selectAll('n.*, m.name AS media, c.name AS club, ca.name AS catego
                     <?php foreach ($news as $row) { ?>
                         <div class="row">
                             <div class="col-md-3">
-                                <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="image" />
+                                 <div class="news-cover-image-bg" style="background: url(<?php echo BASE_URL . $row['thumb_image']; ?>)no-repeat;background-repeat: no-repeat;background-position: top;background-size: cover; "></div>
+<!--                                <img src="" alt="image" />-->
                             </div>
                             <div class="col-md-9">
                                 <h4><?php echo $row['title']; ?></h4>

@@ -55,11 +55,14 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                     <div class="slider">
                         <?php foreach ($news as $row) { ?>
                             <div class="discover-slider">
-                                <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="alt" />
+                                <a href="news?nid=<?php echo $row['news_id']; ?>">
+                                    <div class="home-news-thumb-image" style="background: url(<?php echo BASE_URL . $row['thumb_image']; ?>)no-repeat;background-repeat: no-repeat;background-position: top;background-size: cover;"></div>
+                                </a>
+<!--                                <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="alt" />-->
                                 <div class="discover-slider-content">
                                     <p class="clb-bg"><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 14) : $obj->charLimit($row['sponsor'], 14) ?></p>
                                     <h2><?php echo $row['title']; ?></h2>
-                                    <p><?php echo $obj->charLimit($row['moto_text'], 60); ?></p>
+<!--                                    <p><?php //echo $obj->charLimit($row['moto_text'], 60); ?></p>-->
                                 </div>
                                 <div class="discover-btn">
                                     <a href="news?nid=<?php echo $row['news_id']; ?>" class="discover-btn-home">DISCOVER</a>
@@ -70,7 +73,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                 </div>
             </div>
         </section>
-        <section class="media-press-release pad-t-80">
+<!--        <section class="media-press-release pad-t-80">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 padding-lr-5">
@@ -106,7 +109,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                     </div>
                 </div>
             </div>
-        </section>
+        </section>-->
         <section class="media-press-release" onClick="document.location.href = 'press-release?type=<?php echo $type; ?>'">
             <div class="container">
                 <div class="col-md-12">
@@ -306,7 +309,7 @@ $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'vid
                                                     if (val.club && val.club !== null && val.club !== 'null') {
                                                         name = val.club;
                                                     }
-                                                    list = list + '<div class="discover-slider"><img src="' + BASE_URL + val.thumb_image + '" alt="alt" /><div class="discover-slider-content"><p class="clb-bg">' + charLimit(name, 10) + '</p><h2>' + val.title + '</h2><p>' + charLimit(val.moto_text, 60) + '</p></div><div class="discover-btn"><a href="news?nid=' + val.news_id + '" class="discover-btn-home">DISCOVER</a></div></div>';
+                                                    list = list + '<div class="discover-slider"><a href="news?nid=' + val.news_id + '"><div class="home-news-thumb-image" style="background: url('+ BASE_URL + val.thumb_image +')no-repeat;background-repeat: no-repeat;background-position: top;background-size: cover;"></div></a><div class="discover-slider-content"><p class="clb-bg">' + charLimit(name, 10) + '</p><h2>' + val.title + '</h2></div><div class="discover-btn"><a href="news?nid=' + val.news_id + '" class="discover-btn-home">DISCOVER</a></div></div>';
                                                 });
                                                 $('#club1 .slider').html(list);
                                                 $('.slider').slick({

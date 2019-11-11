@@ -41,7 +41,7 @@
     .footer__logo img {width: 100% !important;}
     .tag-box p {font-size: 14px !important;}
     .bg-1 .container {bottom: 0px !important;}
-    .bg-1 .slick-slider {bottom: 0px !important;}
+    .bg-1 .slick-slider {bottom: 15px !important;}
     .social-media-section .social-bg span {font-size: 35px !important;}
     .social-media-section h2 {font-size: 11px !important;bottom: 70px !important;}
     .social-icon {bottom: 90px !important;}
@@ -234,7 +234,7 @@
         top: 0 !important;
     }
     .discover-btn {
-        width: 4% !important;
+        width: 3.5% !important;
     }
     .custom-file-input {
         position: unset !important;
@@ -276,6 +276,12 @@
     .gallery {
         display: block !important;
     }
+    .news .hovereffect .news-thumb-menu .menu-news-title-view h2 {
+        left: 13% !important;
+    }
+    .news-cover-image-bg {
+        height: auto !important;
+    }
 }
 
 @media (min-width: 601px) and (max-width: 768px) {
@@ -299,7 +305,7 @@
         font-size: 80px !important;
     }
     .bg-1 .container {bottom: 0px !important;}
-    .bg-1 .slick-slider {bottom: 0px !important;}
+    .bg-1 .slick-slider {bottom: 30px !important;}
     .fs-gal-close {
         top: 100px !important;
         right: 10% !important;
@@ -346,6 +352,9 @@
         font-size: 12px !Important;
     }
     .press-cover-image-bg {
+        height: 100px !important;
+    }
+    .news-cover-image-bg {
         height: 100px !important;
     }
     .events-upcoming-content h4 {
@@ -490,6 +499,11 @@
     .discover-btn {
         width: 140px !important;
     }
+    .discover-slider-content h2 {
+        font-size: 12px !important;
+        height: 86px !important;
+        font-weight: 500 !important;
+    }
 }
 
 @media (min-width: 1025px)  and (max-width: 1199px) {
@@ -570,7 +584,7 @@
 @media (min-width: 1843px) and (max-width: 2560px) {
     .discover-slider-content {
         top: -123px !important;
-        height: 115px !important;
+        height: 123px !important;
     }
     .video-bg-banner .video-overlay {
         height: 100% !important;
@@ -1198,7 +1212,7 @@
         margin-bottom: -157px !important;
     }
     .head-news h1 {
-        font-size: 15px !important;
+        font-size: 17px !important;
     }
     /*    .head-news {
             height: 169px !important;

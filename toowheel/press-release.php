@@ -39,7 +39,8 @@ $press_release = $obj->selectAll('p.*, m.name AS media', 'press_release AS p LEF
                         <div class="border-bottom" style="margin-bottom: 10px;">
                             <div class="row">
                                 <div class="col-md-3">
-                                    <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="">
+                                    <div class="news-cover-image-bg" style="background: url(<?php echo BASE_URL . $row['thumb_image']; ?>)no-repeat;background-repeat: no-repeat;background-position: top;background-size: cover; "></div>
+<!--                                    <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="">-->
                                 </div>
                                 <div class="col-md-9">
                                     <h4><?php echo $row['title']; ?></h4>

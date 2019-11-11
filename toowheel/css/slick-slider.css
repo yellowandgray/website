@@ -145,7 +145,15 @@ button.slick-prev, button.slick-prev:hover {
 .slick-initialized .slick-slide
 {
     display: block;
+    height: 360px;
 }
+
+/*@media screen and (max-width: 600px) {
+    .slick-initialized .slick-slide {
+        height: 380px;
+    }
+}*/
+
 .slick-loading .slick-slide
 {
     visibility: hidden;
@@ -279,7 +287,7 @@ button.slick-prev, button.slick-prev:hover {
 /* Dots */
 .slick-slider
 {
-    /*margin-bottom: 30px;*/
+    margin-bottom: 30px;
 }
 
 .slick-dots
