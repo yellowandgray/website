@@ -347,7 +347,7 @@
 }
 @media (max-width:364px) and (min-width:320px){
     .fooetr-5 .i-con {
-        padding: 10px 1px 0px 59px !important;
+        padding: 20px 1px 0px 10px !important;
     }
 
 }
@@ -466,6 +466,12 @@
     }
 }
 
+@media (min-width: 1200px) and (max-width: 1440px) {
+    .logout-dropdown {
+/*        right: 120px;*/
+    }
+}
+
 @media (min-width: 1300px) and (max-width: 1400px) {
     /*    .footer {
             top: 200px !Important;
@@ -474,12 +480,12 @@
 
 @media (min-width: 768px) and (max-width: 991px) {
     .logout-dropdown {
-        right: 40px !important;
+/*        right: 40px !important;*/
     }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
     .logout-dropdown {
-        right: 40px !important;
+/*        right: 40px !important;*/
     }
 }

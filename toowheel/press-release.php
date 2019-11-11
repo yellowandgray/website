@@ -39,11 +39,11 @@ $press_release = $obj->selectAll('p.*, m.name AS media', 'press_release AS p LEF
                         <div class="border-bottom" style="margin-bottom: 10px;">
                             <div class="row">
                                 <div class="col-md-3">
-                                    <div class="news-cover-image-bg" style="background: url(<?php echo BASE_URL . $row['thumb_image']; ?>)no-repeat;background-repeat: no-repeat;background-position: top;background-size: cover; "></div>
+                                    <div onClick="document.location.href = 'press?pid=<?php echo $row['press_release_id']; ?>'" class="news-cover-image-bg" style="background: url(<?php echo BASE_URL . $row['thumb_image']; ?>)no-repeat;background-repeat: no-repeat;background-position: top;background-size: cover; cursor: pointer; "></div>
 <!--                                    <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="">-->
                                 </div>
                                 <div class="col-md-9">
-                                    <h4><?php echo $row['title']; ?></h4>
+                                    <h4><a href="press?pid=<?php echo $row['press_release_id']; ?>"><?php echo $row['title']; ?></a></h4>
                                     <span><?php echo $row['media']; ?> | <?php echo $row['author_name']; ?> | <?php echo date('M d, Y', strtotime($row['press_release_date'])); ?></span>
                                     <p><?php echo nl2br($row['description_1']); ?></p>
                                     <a href="press?pid=<?php echo $row['press_release_id']; ?>" class="press-download-button"> Read More</a>

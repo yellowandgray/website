@@ -38,11 +38,11 @@ $news = $obj->selectAll('n.*, m.name AS media, c.name AS club, ca.name AS catego
                     <?php foreach ($news as $row) { ?>
                         <div class="row">
                             <div class="col-md-3">
-                                 <div class="news-cover-image-bg" style="background: url(<?php echo BASE_URL . $row['thumb_image']; ?>)no-repeat;background-repeat: no-repeat;background-position: top;background-size: cover; "></div>
+                                 <div class="news-cover-image-bg" onClick="document.location.href = 'news?nid=<?php echo $row['news_id']; ?>'" style="background: url(<?php echo BASE_URL . $row['thumb_image']; ?>)no-repeat;background-repeat: no-repeat;background-position: top;background-size: cover; cursor: pointer; "></div>
 <!--                                <img src="" alt="image" />-->
                             </div>
                             <div class="col-md-9">
-                                <h4><?php echo $row['title']; ?></h4>
+                                <h4><a href="news?nid=<?php echo $row['news_id']; ?>"><?php echo $row['title']; ?></a></h4>
                                 <span><?php echo $row['media']; ?> | <?php echo $row['author_name']; ?> | <?php echo date('M d, Y', strtotime($row['news_date'])); ?></span>
                                 <p><?php echo nl2br($row['moto_text']); ?></p>
                                 <br/>

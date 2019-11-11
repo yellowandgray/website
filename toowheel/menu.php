@@ -1,6 +1,6 @@
 <?php
 session_start();
-$menu_latest_news = $obj->selectAll('n.*, m.name AS media, c.name AS club, ca.name AS category', 'news AS n LEFT JOIN media AS m ON m.media_id = n.media_id LEFT JOIN club AS c ON c.club_id = n.club_id LEFT JOIN category AS ca ON ca.category_id = n.category_id AND ca.category_id = c.category_id', 'n.news_id > 0 AND n.type = \'' . $type . '\' ORDER BY n.news_id DESC LIMIT 8');
+$menu_latest_news = $obj->selectAll('n.*, m.name AS media, c.name AS club, ca.name AS category', 'news AS n LEFT JOIN media AS m ON m.media_id = n.media_id LEFT JOIN club AS c ON c.club_id = n.club_id LEFT JOIN category AS ca ON ca.category_id = n.category_id AND ca.category_id = c.category_id', 'n.news_id > 0 AND n.type = \'' . $type . '\' ORDER BY n.news_id DESC LIMIT 12');
 $menu_press_release = $obj->selectAll('p.*, m.name AS media', 'press_release AS p LEFT JOIN media AS m ON m.media_id = p.media_id', 'p.type = \'' . $type . '\' ORDER BY p.press_release_id DESC LIMIT 3');
 $menu_findclub = $obj->selectAll('*', 'club', 'club_id > 0 AND type = \'' . $type . '\' AND published = 1 ORDER BY club_id DESC LIMIT 8');
 $menu_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS e LEFT JOIN club AS c ON c.club_id = e.club_id LEFT JOIN category AS ca ON ca.category_id = e.category_id AND ca.category_id = c.category_id', 'e.event_id > 0 AND e.type = \'' . $type . '\' ORDER BY e.event_id DESC LIMIT 3');
@@ -74,7 +74,7 @@ $menu_member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN clu
                                                 <h2><?php echo $obj->charLimit($row['title'], 18); ?></h2>
                                             </div>
                                         </div>
-    <!--                                        <img src="<?php //echo BASE_URL . $row['thumb_image'];           ?>" alt="image">-->
+    <!--                                        <img src="<?php //echo BASE_URL . $row['thumb_image'];            ?>" alt="image">-->
                                         <a href="news?nid=<?php echo $row['news_id']; ?>" class="overlay">
                                             <span class="news-menu-sponsor-text"><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 17) : $obj->charLimit($row['sponsor'], 17); ?></span>
                                             <h2><?php echo $row['title']; ?></h2>
@@ -87,7 +87,7 @@ $menu_member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN clu
                                                                         <div class="discover-slider-content">
                                                                             <p class="clb-bg"><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 10) : $obj->charLimit($row['sponsor'], 10); ?></p>
                                                                             <h2><?php echo $row['title']; ?></h2>
-                                                                                <p><?php //echo $obj->charLimit($row['moto_text'], 20);                             ?></p>
+                                                                                <p><?php //echo $obj->charLimit($row['moto_text'], 20);                              ?></p>
                                                                         </div>
                                                                         <center class="news-discover"><a href="news?nid=<?php echo $row['news_id']; ?>">DISCOVER</a></center>
                                                                     </div>
@@ -181,10 +181,10 @@ $menu_member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN clu
                                         </li>
                                     </ul>
                                     <!--                                    <div class="col-md-3 col-sm-6">
-                                                                            <a href="events?type=<?php //echo $type;                             ?>" class="club-box">
-                                                                                <img src="<?php //echo BASE_URL . $row['thumb_image'];                             ?>" alt="" />
-                                                                                <h3><?php //echo $row['title'];                             ?></h3>
-                                                                                <p><?php //echo $row['location'];                             ?></p>
+                                                                            <a href="events?type=<?php //echo $type;                              ?>" class="club-box">
+                                                                                <img src="<?php //echo BASE_URL . $row['thumb_image'];                              ?>" alt="" />
+                                                                                <h3><?php //echo $row['title'];                              ?></h3>
+                                                                                <p><?php //echo $row['location'];                              ?></p>
                                                                             </a>
                                                                         </div>-->
                                 <?php } ?>
@@ -241,35 +241,35 @@ $menu_member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN clu
                             <?php } else { ?>
                                 <img src="<?php echo BASE_URL . $menu_member['profile_picture']; ?>" alt="" />
                             <?php } ?>
+                            <div id="logout-dropdown" class="logout-dropdown">
+                                <div class="header-logout row">
+                                    <div class="col-xl-3 col-sm-3 padding-lr-0">
+                                        <div class="member-profile-radius">
+                                            <?php if (isset($menu_member['profile_picture']) && $menu_member['profile_picture'] == '') { ?>
+                                                <img src="<?php echo BASE_URL . $menu_member['gender']; ?>.jpg" alt="" />
+                                            <?php } else { ?>
+                                                <img src="<?php echo BASE_URL . $menu_member['profile_picture']; ?>" alt="" />
+                                            <?php } ?>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-9 col-sm-9 padding-lr-0">
+                                        <h3><?php echo $menu_member['first_name']; ?> <?php echo $menu_member['last_name']; ?></h3>
+                                        <span><?php echo $menu_member['email_id']; ?></span>
+                                    </div>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <a href="my-account?type=<?php echo $type; ?>">
+                                            <i class="fa fa-user" aria-hidden="true"></i> Profile</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" onclick="logoutUser();">
+                                            <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </span>
                     </div> 
-                    <div id="logout-dropdown" class="logout-dropdown">
-                        <div class="header-logout row">
-                            <div class="col-xl-3 col-sm-3 padding-lr-0">
-                                <div class="member-profile-radius">
-                                    <?php if (isset($menu_member['profile_picture']) && $menu_member['profile_picture'] == '') { ?>
-                                        <img src="<?php echo BASE_URL . $menu_member['gender']; ?>.jpg" alt="" />
-                                    <?php } else { ?>
-                                        <img src="<?php echo BASE_URL . $menu_member['profile_picture']; ?>" alt="" />
-                                    <?php } ?>
-                                </div>
-                            </div>
-                            <div class="col-xl-9 col-sm-9 padding-lr-0">
-                                <h3><?php echo $menu_member['first_name']; ?> <?php echo $menu_member['last_name']; ?></h3>
-                                <span><?php echo $menu_member['email_id']; ?></span>
-                            </div>
-                        </div>
-                        <ul>
-                            <li>
-                                <a href="my-account?type=<?php echo $type; ?>">
-                                    <i class="fa fa-user" aria-hidden="true"></i> Profile</a>
-                            </li>
-                            <li>
-                                <a href="#" onclick="logoutUser();">
-                                    <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
-                            </li>
-                        </ul>
-                    </div>
                 <?php }
                 ?>
             </div>

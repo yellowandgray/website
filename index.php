@@ -68,34 +68,34 @@ $menu_member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN clu
                                 <?php } else { ?>
                                     <img src="<?php echo BASE_URL . $menu_member['profile_picture']; ?>" alt="" />
                                 <?php } ?>
-                            </span>
-                            <div id="logout-dropdown" class="logout-dropdown">
-                                <div class="header-logout row">
-                                    <div class="col-xl-3 col-sm-3 padding-lr-0">
-                                        <div class="member-profile-radius">
-                                            <?php if (isset($menu_member['profile_picture']) && $menu_member['profile_picture'] == '') { ?>
-                                                <img src="<?php echo BASE_URL . $menu_member['gender']; ?>.jpg" alt="" />
-                                            <?php } else { ?>
-                                                <img src="<?php echo BASE_URL . $menu_member['profile_picture']; ?>" alt="" />
-                                            <?php } ?>
+                                <div id="logout-dropdown" class="logout-dropdown">
+                                    <div class="header-logout row">
+                                        <div class="col-xl-3 col-sm-3 padding-lr-0">
+                                            <div class="member-profile-radius">
+                                                <?php if (isset($menu_member['profile_picture']) && $menu_member['profile_picture'] == '') { ?>
+                                                    <img src="<?php echo BASE_URL . $menu_member['gender']; ?>.jpg" alt="" />
+                                                <?php } else { ?>
+                                                    <img src="<?php echo BASE_URL . $menu_member['profile_picture']; ?>" alt="" />
+                                                <?php } ?>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-9 col-sm-9 padding-lr-0">
+                                            <h3><?php echo $menu_member['first_name']; ?> <?php echo $menu_member['last_name']; ?></h3>
+                                            <span><?php echo $menu_member['email_id']; ?></span>
                                         </div>
                                     </div>
-                                    <div class="col-xl-9 col-sm-9 padding-lr-0">
-                                        <h3><?php echo $menu_member['first_name']; ?> <?php echo $menu_member['last_name']; ?></h3>
-                                        <span><?php echo $menu_member['email_id']; ?></span>
-                                    </div>
+                                    <ul>
+                                        <li>
+                                            <a href="toowheel/my-account?type=<?php echo $type; ?>">
+                                                <i class="fa fa-user" aria-hidden="true"></i> Profile</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" onclick="logoutUser();">
+                                                <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <ul>
-                                    <li>
-                                        <a href="toowheel/my-account?type=<?php echo $type; ?>">
-                                            <i class="fa fa-user" aria-hidden="true"></i> Profile</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" onclick="logoutUser();">
-                                            <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
-                                    </li>
-                                </ul>
-                            </div>
+                            </span>
                         <?php }
                         ?>
                         <?php
@@ -115,7 +115,7 @@ $menu_member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN clu
                                     <img src="<?php echo BASE_URL . $menu_member['gender']; ?>.jpg" alt="" />
                                 <?php } else { ?>
                                     <img src="<?php echo BASE_URL . $menu_member['profile_picture']; ?>" alt="" />
-    <?php } ?>
+                                <?php } ?>
                             </span>
                             <div id="logout-dropdown1" class="logout-dropdown1">
                                 <div class="header-logout row">
@@ -125,7 +125,7 @@ $menu_member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN clu
                                                 <img src="<?php echo BASE_URL . $menu_member['gender']; ?>.jpg" alt="" />
                                             <?php } else { ?>
                                                 <img src="<?php echo BASE_URL . $menu_member['profile_picture']; ?>" alt="" />
-    <?php } ?>
+                                            <?php } ?>
                                         </div>
                                     </div>
                                     <div class="col-xl-9 col-sm-9 padding-lr-0">
