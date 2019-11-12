@@ -1121,6 +1121,7 @@ body {
     margin: 0;
     font-weight: 500;
     color: #fff;
+    z-index: 1;
 }
 
 .side-news .side-news-widget1 span {

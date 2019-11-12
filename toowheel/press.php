@@ -102,8 +102,10 @@ $type = $press_release['type'];
                             <?php foreach ($releated_press_release as $row) { ?>
                                 <div class="side-news">
                                     <span class="side-news-widget1"><span><?php echo $row['author_name']; ?></span></span>
-                                    <div class="press-cover-image-bg" onclick="document.location.href = 'press?pid=<?php echo $row['press_release_id']; ?>'" style="background: url(<?php echo BASE_URL . $row['cover_image']; ?>)no-repeat;background-repeat: no-repeat;background-position: top;background-size: cover;cursor: pointer; "></div>
-    <!--                                <img src="<?php //echo BASE_URL . $row['cover_image'];  ?>" alt="" />-->
+                                    <div class="press-bg-hover">
+                                        <div class="press-cover-image-bg" onclick="document.location.href = 'press?pid=<?php echo $row['press_release_id']; ?>'" style="background: url(<?php echo BASE_URL . $row['cover_image']; ?>)no-repeat;background-repeat: no-repeat;background-position: top;background-size: cover;cursor: pointer; "></div>
+                                    </div>
+    <!--                                <img src="<?php //echo BASE_URL . $row['cover_image'];     ?>" alt="" />-->
                                     <h4><a href="press?pid=<?php echo $row['press_release_id']; ?>"><?php echo $row['title']; ?></a></h4>
                                     <p><?php echo $obj->charLimit($row['description_1'], 275); ?></p>
                                     <div class="button-1">
@@ -120,8 +122,10 @@ $type = $press_release['type'];
                 <div class="row" style="padding-top: 20px;">
                     <?php foreach ($similar_press_release as $row) { ?>
                         <div class="col-md-3">
-                            <div class="events-upcoming">
-                                <div class="press-cover-image-bg" onclick="document.location.href = 'press?pid=<?php echo $row['press_release_id']; ?>'" style="background: url(<?php echo BASE_URL . $row['cover_image']; ?>)no-repeat;background-repeat: no-repeat;background-position: top;background-size: cover;cursor: pointer; "></div>
+                            <div class="events-upcoming news-bottom-section">
+                                <div class="news-bg-hover">
+                                    <div class="press-cover-image-bg" onclick="document.location.href = 'press?pid=<?php echo $row['press_release_id']; ?>'" style="background: url(<?php echo BASE_URL . $row['cover_image']; ?>)no-repeat;background-repeat: no-repeat;background-position: top;background-size: cover;cursor: pointer; "></div>
+                                </div>
     <!--                                <img src="" alt="" />-->
                                 <div class="events-upcoming-content">
                                     <h4><a href="press?pid=<?php echo $row['press_release_id']; ?>"><?php echo $row['title']; ?></a></h4>
@@ -142,11 +146,11 @@ $type = $press_release['type'];
     </div>
     <?php include 'footer.php'; ?>
     <script src="js/sticky-sidebar-scroll.min.js" type="text/javascript"></script>
-        <script type='text/javascript'>
-            $(document).ready(function () {
-                $.stickysidebarscroll("#sideslider", {offset: {top: 100, bottom: 200, width: 100}});
-            });
-        </script>
+    <script type='text/javascript'>
+                                        $(document).ready(function () {
+                                            $.stickysidebarscroll("#sideslider", {offset: {top: 100, bottom: 200, width: 100}});
+                                        });
+    </script>
     <script type="text/javascript">
         var twitterShare = document.querySelector('[data-js="twitter-share"]');
 

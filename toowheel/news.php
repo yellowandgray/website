@@ -79,7 +79,9 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
                                 <div class="row event-gallery-section">
                                     <?php foreach ($news_gallery as $row) { ?>
                                         <div class="col-md-3 col-sm-6">
-                                            <img class="fs-gal" src="<?php echo BASE_URL . $row['media_path']; ?>" alt="" data-url="<?php echo BASE_URL . $row['media_path']; ?>"/>
+                                            <div class="news-gallery-bg-hover">
+                                                <div class="news-gallery-overlay-section fs-gal"style="background: url(<?php echo BASE_URL . $row['media_path']; ?>)no-repeat;background-repeat: no-repeat;background-position: top;background-size: cover;cursor: pointer; " data-url="<?php echo BASE_URL . $row['media_path']; ?>"></div>
+                                            </div>
                                         </div>
                                     <?php } ?>
                                 </div>
@@ -127,8 +129,10 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
                                     <span class="side-news-widget1">
                                         <span><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 30) : $obj->charLimit($row['sponsor'], 30); ?></span>
                                     </span>
-                                    <div class="press-cover-image-bg" onclick="document.location.href = 'news?nid=<?php echo $row['news_id']; ?>'" style="background: url(<?php echo BASE_URL . $row['cover_image']; ?>)no-repeat;background-repeat: no-repeat;background-position: top;background-size: cover;cursor: pointer; "></div>
-        <!--                                <img src="<?php //echo BASE_URL . $row['cover_image'];                   ?>" alt=" image" />-->
+                                    <div class="press-bg-hover">
+                                        <div class="press-cover-image-bg" onclick="document.location.href = 'news?nid=<?php echo $row['news_id']; ?>'" style="background: url(<?php echo BASE_URL . $row['cover_image']; ?>)no-repeat;background-repeat: no-repeat;background-position: top;background-size: cover;cursor: pointer; "></div>
+                                    </div>
+        <!--                                <img src="<?php //echo BASE_URL . $row['cover_image'];                      ?>" alt=" image" />-->
                                     <h4><a href="news?nid=<?php echo $row['news_id']; ?>"><?php echo $row['title']; ?></a></h4>
                                     <p><?php echo $obj->charLimit($row['moto_text'], 120); ?></p>
                                     <div class="button-1">
@@ -143,9 +147,11 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
                 <div class="row" style="padding-top: 20px;">
                     <?php foreach ($similar_news as $row) { ?>
                         <div class="col-md-3">
-                            <div class="events-upcoming">
-                                <div class="press-cover-image-bg" onclick="document.location.href = 'news?nid=<?php echo $row['news_id']; ?>'" style="background: url(<?php echo BASE_URL . $row['cover_image']; ?>)no-repeat;background-repeat: no-repeat;background-position: top;background-size: cover;cursor: pointer; "></div>
-    <!--                                <img src="<?php //echo BASE_URL . $row['cover_image'];                    ?>" alt="" />-->
+                            <div class="events-upcoming news-bottom-section">
+                                <div class="news-bg-hover">
+                                    <div class="press-cover-image-bg" onclick="document.location.href = 'news?nid=<?php echo $row['news_id']; ?>'" style="background: url(<?php echo BASE_URL . $row['cover_image']; ?>)no-repeat;background-repeat: no-repeat;background-position: top;background-size: cover;cursor: pointer; "></div>
+                                </div>
+    <!--                                <img src="<?php //echo BASE_URL . $row['cover_image'];                       ?>" alt="" />-->
                                 <div class="events-upcoming-content">
                                     <h4><a href="news?nid=<?php echo $row['news_id']; ?>"><?php echo $row['title']; ?></a></h4>
                                     <p><?php echo $obj->charLimit($row['moto_text'], 75); ?></p>
@@ -166,24 +172,24 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
         <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v5.0"></script>
         <script src="js/sticky-sidebar-scroll.min.js" type="text/javascript"></script>
         <script type='text/javascript'>
-            $(document).ready(function () {
-                $.stickysidebarscroll("#sideslider", {offset: {top: 100, bottom: 200, width: 100}});
-            });
-            //        $(document).ready(function () {
-            //            $(window).scroll(function () {
-            //
-            //                if ($(window).scrollTop() > 500) {
-            //                    $('#sidebar').css('position', 'fixed');
-            //                    $('#sidebar').css('top', '0');
-            //                } else if ($(window).scrollTop() <= 500) {
-            //                    $('#sidebar').css('position', '');
-            //                    $('#sidebar').css('top', '');
-            //                }
-            //                if ($('#sidebar').offset().top + $("#sidebar").height() > $("#footer").offset().top) {
-            //                    $('#sidebar').css('top', -($("#sidebar").offset().top + $("#sidebar").height() - $("#footer").offset().top));
-            //                }
-            //            });
-            //        });
+                                        $(document).ready(function () {
+                                            $.stickysidebarscroll("#sideslider", {offset: {top: 100, bottom: 200, width: 100}});
+                                        });
+                                        //        $(document).ready(function () {
+                                        //            $(window).scroll(function () {
+                                        //
+                                        //                if ($(window).scrollTop() > 500) {
+                                        //                    $('#sidebar').css('position', 'fixed');
+                                        //                    $('#sidebar').css('top', '0');
+                                        //                } else if ($(window).scrollTop() <= 500) {
+                                        //                    $('#sidebar').css('position', '');
+                                        //                    $('#sidebar').css('top', '');
+                                        //                }
+                                        //                if ($('#sidebar').offset().top + $("#sidebar").height() > $("#footer").offset().top) {
+                                        //                    $('#sidebar').css('top', -($("#sidebar").offset().top + $("#sidebar").height() - $("#footer").offset().top));
+                                        //                }
+                                        //            });
+                                        //        });
         </script>
         <script type="text/javascript">
             var twitterShare = document.querySelector('[data-js="twitter-share"]');
