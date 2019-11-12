@@ -30,81 +30,77 @@
                         </div>
                     </div>
                 </section> 
-<!--                <section class="section">
-                    <br/>                     
-                    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-                        <div class="searchdesign" fxFlex="30%">
-                            <b>Search by club name</b>
-                        </div>
-                        <div class="searchdesign" fxFlex="70%">
-                            <b>Sort</b>
-                        </div>
-                    </div>
-                    <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
-                        <div class="searchdesign" fxFlex="30%">
-                            <mat-form-field [floatLabel]="'never'" fxFlex="100%">
-                                <input matInput type="text" placeholder="Type here" [(ngModel)]="searchTermTW" />
-                            </mat-form-field>
-                        </div>
-                        <div fxFlex="70%" fxLayout="row">
-                            <div fxLayout="row" fxLayoutAlign="center center">
-                                <div>Name</div>
-                                <div fxLayout="column">
-                                    <button class="sort-icon" mat-icon-button color="primary" aria-label="icon" (click)="sortRecords('result', 'title_a_z')">
-                                        <mat-icon>keyboard_arrow_up</mat-icon>
-                                    </button>
-                                    <button class="sort-icon" mat-icon-button color="primary" aria-label="icon" (click)="sortRecords('result', 'title_z_a')">
-                                        <mat-icon>keyboard_arrow_down</mat-icon>
-                                    </button>                                
-                                </div>
-                            </div>
-                            &nbsp;&nbsp;&nbsp;
-                            <div fxLayout="row" fxLayoutAlign="center center">
-                                <div>Date</div>
-                                <div fxLayout="column">
-                                    <button class="sort-icon" mat-icon-button color="primary" aria-label="icon" (click)="sortRecords('result', 'created_a_z')">
-                                        <mat-icon>keyboard_arrow_up</mat-icon>
-                                    </button>
-                                    <button class="sort-icon" mat-icon-button color="primary" aria-label="icon" (click)="sortRecords('result', 'created_z_a')">
-                                        <mat-icon>keyboard_arrow_down</mat-icon>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>-->
+                <!--                <section class="section">
+                                    <br/>                     
+                                    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+                                        <div class="searchdesign" fxFlex="30%">
+                                            <b>Search by club name</b>
+                                        </div>
+                                        <div class="searchdesign" fxFlex="70%">
+                                            <b>Sort</b>
+                                        </div>
+                                    </div>
+                                    <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+                                        <div class="searchdesign" fxFlex="30%">
+                                            <mat-form-field [floatLabel]="'never'" fxFlex="100%">
+                                                <input matInput type="text" placeholder="Type here" [(ngModel)]="searchTermTW" />
+                                            </mat-form-field>
+                                        </div>
+                                        <div fxFlex="70%" fxLayout="row">
+                                            <div fxLayout="row" fxLayoutAlign="center center">
+                                                <div>Name</div>
+                                                <div fxLayout="column">
+                                                    <button class="sort-icon" mat-icon-button color="primary" aria-label="icon" (click)="sortRecords('result', 'title_a_z')">
+                                                        <mat-icon>keyboard_arrow_up</mat-icon>
+                                                    </button>
+                                                    <button class="sort-icon" mat-icon-button color="primary" aria-label="icon" (click)="sortRecords('result', 'title_z_a')">
+                                                        <mat-icon>keyboard_arrow_down</mat-icon>
+                                                    </button>                                
+                                                </div>
+                                            </div>
+                                            &nbsp;&nbsp;&nbsp;
+                                            <div fxLayout="row" fxLayoutAlign="center center">
+                                                <div>Date</div>
+                                                <div fxLayout="column">
+                                                    <button class="sort-icon" mat-icon-button color="primary" aria-label="icon" (click)="sortRecords('result', 'created_a_z')">
+                                                        <mat-icon>keyboard_arrow_up</mat-icon>
+                                                    </button>
+                                                    <button class="sort-icon" mat-icon-button color="primary" aria-label="icon" (click)="sortRecords('result', 'created_z_a')">
+                                                        <mat-icon>keyboard_arrow_down</mat-icon>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>-->
                 <mat-list>
-                    <ng-container *ngFor="let data of result | filterEventClub: searchTermTW; let i = index">
-                        <ng-container *ngIf="result[i] ">
-                            <mat-list-item class="list-container">
-                                <button mat-icon-button aria-label="label" (click)="changeStatus(result[i]['club_id'], 1)" *ngIf="result[i]['published'] == 0 && result[i]['source'] == 'web'">
-                                        <mat-icon #tooltip="matTooltip" matTooltip="Done">done</mat-icon>
-                                </button>
-                                <button mat-icon-button aria-label="label" (click)="changeStatus(result[i]['club_id'], 0)" *ngIf="result[i]['published'] == 1 && result[i]['source'] == 'web'">
-                                        <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
-                                </button>
-                                <button mat-icon-button aria-label="label" (click)="openGalleryDialog(result[i]['club_id'])">
-                                    <mat-icon #tooltip="matTooltip" matTooltip="Club Gallery">collections</mat-icon>
-                                </button>
-                                <button mat-icon-button aria-label="label" routerLink="/announcement/{{result[i]['club_id']}}">
-                                    <mat-icon #tooltip="matTooltip" matTooltip="Announcement">hearing</mat-icon>
-                                </button>
-                                <button mat-icon-button aria-label="label" (click)="openView(result[i]['club_id'],'result')">
-                                    <mat-icon #tooltip="matTooltip" matTooltip="View">remove_red_eye</mat-icon>
-                                </button>
-                                <button mat-icon-button aria-label="label" (click)="openDialog(result[i]['club_id'], 'result')">
-                                    <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
-                                </button>
-                                <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i]['club_id'])">
-                                    <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
-                                </button>
-                                <img matListAvatar src="{{image_url}}{{data.logo}}" *ngIf="data.logo && data.cover_image != ''" alt="image" (click)="confirmDialog(data, 'preview')" />
-                                     <h3 class="truncate" matLine>{{data.name}}</h3>
-                                <p class="truncate1" matLine>{{data.category}}</p>     
-                                <p class="truncate2" matLine>{{data.about}}</p>
-                            </mat-list-item>
-                        </ng-container>
-                    </ng-container>
+                    <mat-list-item *ngFor="let data of result | filterEventClub: searchTermTW">
+                        <button mat-icon-button aria-label="label" (click)="changeStatus(data.club_id, 1)" *ngIf="data.published == 0 && data.source == 'web'">
+                            <mat-icon #tooltip="matTooltip" matTooltip="Done">done</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label" (click)="changeStatus(data.club_id, 0)" *ngIf="data.published == 1 && data.source == 'web'">
+                            <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label" (click)="openGalleryDialog(data.club_id)">
+                            <mat-icon #tooltip="matTooltip" matTooltip="Club Gallery">collections</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label" routerLink="/announcement/{{data.club_id}}">
+                            <mat-icon #tooltip="matTooltip" matTooltip="Announcement">hearing</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label" (click)="openView(data.club_id,'result')">
+                            <mat-icon #tooltip="matTooltip" matTooltip="View">remove_red_eye</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label" (click)="openDialog(data.club_id, 'result')">
+                            <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label" (click)="confirmDelete(data.club_id)">
+                            <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
+                        </button>
+                        <img matListAvatar src="{{image_url}}{{data.logo}}" *ngIf="data.logo && data.cover_image != ''" alt="image" (click)="confirmDialog(data, 'preview')" />
+                             <h3 class="truncate" matLine>{{data.name}}</h3>
+                        <p class="truncate1" matLine>{{data.category}}</p>
+                        <p class="truncate2" matLine>{{data.about}}</p>
+                    </mat-list-item>
                 </mat-list>
             </mat-tab>
             <mat-tab label="4 Wheeler">
@@ -130,179 +126,34 @@
                     </div>
                 </section>  
                 <mat-list>
-                    <ng-container *ngFor="let data of result_four_wheel | filterEventClub: searchTermFW; let i = index">
-                        <ng-container *ngIf="result_four_wheel[i]">
-                            <mat-list-item class="list-container">
-                                <button mat-icon-button aria-label="label" (click)="changeStatus(result_four_wheel[i]['club_id'], 1)" *ngIf="result_four_wheel[i]['published'] == 0 && result_four_wheel[i]['source'] == 'web'">
-                                        <mat-icon #tooltip="matTooltip" matTooltip="Done">done</mat-icon>
-                                </button>
-                                <button mat-icon-button aria-label="label" (click)="changeStatus(result_four_wheel[i]['club_id'], 0)" *ngIf="result_four_wheel[i]['published'] == 1 && result_four_wheel[i]['source'] == 'web'">
-                                        <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
-                                </button>
-                                <button mat-icon-button aria-label="label" (click)="openGalleryDialog(result_four_wheel[i]['club_id'])">
-                                    <mat-icon #tooltip="matTooltip" matTooltip="Club Gallery">collections</mat-icon>
-                                </button>
-                                <button mat-icon-button aria-label="label" routerLink="/announcement/{{result_four_wheel[i]['club_id']}}">
-                                    <mat-icon #tooltip="matTooltip" matTooltip="Announcement">hearing</mat-icon>
-                                </button>
-                                <button mat-icon-button aria-label="label" (click)="openView(result_four_wheel[i]['club_id'],'result_four_wheel')">
-                                    <mat-icon #tooltip="matTooltip" matTooltip="View">remove_red_eye</mat-icon>
-                                </button>
-                                <button mat-icon-button aria-label="label" (click)="openDialog(result_four_wheel[i]['club_id'], 'result_four_wheel')">
-                                    <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
-                                </button>
-                                <button mat-icon-button aria-label="label" (click)="confirmDelete(result_four_wheel[i]['club_id'])">
-                                    <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
-                                </button>                              
-                                <img matListAvatar src="{{image_url}}{{data.logo}}" *ngIf="data.logo && data.cover_image != ''" alt="image" (click)="confirmDialog(data, 'preview')" />
-                                     <!--                                         <img matListAvatar src="{{image_url}}{{data.gender}}.jpg" *ngIf="!data.cover_image || data.cover_image == ''" alt="image" />-->
-                                     <h3 class="truncate" matLine>{{data.name}}</h3>
-                                <p class="truncate1" matLine>{{data.category}}</p>     
-                                <p class="truncate2" matLine>{{data.about}}</p> 
-                            </mat-list-item>
-                        </ng-container>
-                    </ng-container>
-                </mat-list> 
-                <!--                <ng-container *ngFor="let data of result_four_wheel; let i = index">
-                                    <div fxLayout="row" *ngIf="i % 4 == 0" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
-                                        <ng-container *ngIf="result_four_wheel[i]">
-                                            <mat-card fxFlex="25%" [class.web-club]="result_four_wheel[i]['source'] == 'web'">
-                                                <mat-card-header>
-                                                    <mat-card-title>{{result_four_wheel[i]['name']}}</mat-card-title>
-                                                    <mat-card-subtitle>{{result_four_wheel[i]['category']|uppercase}}</mat-card-subtitle>
-                                                </mat-card-header>
-                                                <img mat-card-image src="{{image_url}}{{result_four_wheel[i]['cover_image']}}" alt="Photo of a Shiba Inu" />
-                                                <mat-card-content>
-                                                    <p>
-                                                        {{result_four_wheel[i]['about']}}
-                                                    </p>
-                                                </mat-card-content>
-                                                <mat-card-actions>
-                                                    <button mat-icon-button aria-label="label" (click)="changeStatus(result_four_wheel[i]['club_id'], 1)" *ngIf="result_four_wheel[i]['published'] == 0 && result_four_wheel[i]['source'] == 'web'">
-                                                            <mat-icon>done</mat-icon>
-                                                    </button>
-                                                    <button mat-icon-button aria-label="label" (click)="changeStatus(result_four_wheel[i]['club_id'], 0)" *ngIf="result_four_wheel[i]['published'] == 1 && result_four_wheel[i]['source'] == 'web'">
-                                                            <mat-icon>block</mat-icon>
-                                                    </button>
-                                                    <button mat-icon-button aria-label="label" (click)="openGalleryDialog(result_four_wheel[i]['club_id'])">
-                                                        <mat-icon>collections</mat-icon>
-                                                    </button>
-                                                    <button mat-icon-button aria-label="label" routerLink="/announcement/{{result_four_wheel[i]['club_id']}}">
-                                                        <mat-icon>hearing</mat-icon>
-                                                    </button>
-                                                    <button mat-icon-button aria-label="label" (click)="openDialog(result_four_wheel[i]['club_id'], 'result_four_wheel')">
-                                                        <mat-icon>edit</mat-icon>
-                                                    </button>
-                                                    <button mat-icon-button aria-label="label" (click)="confirmDelete(result_four_wheel[i]['club_id'])">
-                                                        <mat-icon>delete</mat-icon>
-                                                    </button>
-                                                </mat-card-actions>
-                                            </mat-card>
-                                        </ng-container>
-                                        <ng-container *ngIf="result_four_wheel[i + 1]">
-                                            <mat-card fxFlex="25%" [class.web-club]="result_four_wheel[i + 1]['source'] == 'web'">
-                                                <mat-card-header>
-                                                    <mat-card-title>{{result_four_wheel[i + 1]['name']}}</mat-card-title>
-                                                    <mat-card-subtitle>{{result_four_wheel[i + 1]['category']|uppercase}}</mat-card-subtitle>
-                                                </mat-card-header>
-                                                <img mat-card-image src="{{image_url}}{{result_four_wheel[i + 1]['cover_image']}}" alt="Photo of a Shiba Inu" />
-                                                <mat-card-content>
-                                                    <p>
-                                                        {{result_four_wheel[i + 1]['about']}}
-                                                    </p>
-                                                </mat-card-content>
-                                                <mat-card-actions>
-                                                    <button mat-icon-button aria-label="label" (click)="changeStatus(result_four_wheel[i + 1]['club_id'], 1)" *ngIf="result_four_wheel[i + 1]['published'] == 0 && result_four_wheel[i + 1]['source'] == 'web'">
-                                                            <mat-icon>done</mat-icon>
-                                                    </button>
-                                                    <button mat-icon-button aria-label="label" (click)="changeStatus(result_four_wheel[i + 1]['club_id'], 0)" *ngIf="result_four_wheel[i + 1]['published'] == 1 && result_four_wheel[i + 1]['source'] == 'web'">
-                                                            <mat-icon>block</mat-icon>
-                                                    </button>
-                                                    <button mat-icon-button aria-label="label" (click)="openGalleryDialog(result_four_wheel[i + 1]['club_id'])">
-                                                        <mat-icon>collections</mat-icon>
-                                                    </button>
-                                                    <button mat-icon-button aria-label="label" routerLink="/announcement/{{result_four_wheel[i + 1]['club_id']}}">
-                                                        <mat-icon>hearing</mat-icon>
-                                                    </button>
-                                                    <button mat-icon-button aria-label="label" (click)="openDialog(result_four_wheel[i + 1]['club_id'], 'result_four_wheel')">
-                                                        <mat-icon>edit</mat-icon>
-                                                    </button>
-                                                    <button mat-icon-button aria-label="label" (click)="confirmDelete(result_four_wheel[i + 1]['club_id'])">
-                                                        <mat-icon>delete</mat-icon>
-                                                    </button>
-                                                </mat-card-actions>
-                                            </mat-card>
-                                        </ng-container>
-                                        <ng-container *ngIf="result_four_wheel[i + 2]">
-                                            <mat-card fxFlex="25%" [class.web-club]="result_four_wheel[i + 2]['source'] == 'web'">
-                                                <mat-card-header>
-                                                    <mat-card-title>{{result_four_wheel[i + 2]['name']}}</mat-card-title>
-                                                    <mat-card-subtitle>{{result_four_wheel[i + 2]['category']|uppercase}}</mat-card-subtitle>
-                                                </mat-card-header>
-                                                <img mat-card-image src="{{image_url}}{{result_four_wheel[i + 2]['cover_image']}}" alt="Photo of a Shiba Inu" />
-                                                <mat-card-content>
-                                                    <p>
-                                                        {{result_four_wheel[i + 2]['about']}}
-                                                    </p>
-                                                </mat-card-content>
-                                                <mat-card-actions>
-                                                    <button mat-icon-button aria-label="label" (click)="changeStatus(result_four_wheel[i + 2]['club_id'], 1)" *ngIf="result_four_wheel[i + 2]['published'] == 0 && result_four_wheel[i + 2]['source'] == 'web'">
-                                                            <mat-icon>done</mat-icon>
-                                                    </button>
-                                                    <button mat-icon-button aria-label="label" (click)="changeStatus(result_four_wheel[i + 2]['club_id'], 0)" *ngIf="result_four_wheel[i + 2]['published'] == 1 && result_four_wheel[i + 2]['source'] == 'web'">
-                                                            <mat-icon>block</mat-icon>
-                                                    </button>
-                                                    <button mat-icon-button aria-label="label" (click)="openGalleryDialog(result_four_wheel[i + 2]['club_id'])">
-                                                        <mat-icon>collections</mat-icon>
-                                                    </button>
-                                                    <button mat-icon-button aria-label="label" routerLink="/announcement/{{result_four_wheel[i + 2]['club_id']}}">
-                                                        <mat-icon>hearing</mat-icon>
-                                                    </button>
-                                                    <button mat-icon-button aria-label="label" (click)="openDialog(result_four_wheel[i + 2]['club_id'], 'result_four_wheel')">
-                                                        <mat-icon>edit</mat-icon>
-                                                    </button>
-                                                    <button mat-icon-button aria-label="label" (click)="confirmDelete(result_four_wheel[i + 2]['club_id'])">
-                                                        <mat-icon>delete</mat-icon>
-                                                    </button>
-                                                </mat-card-actions>
-                                            </mat-card> 
-                                        </ng-container>
-                                        <ng-container *ngIf="result_four_wheel[i + 3]">
-                                            <mat-card fxFlex="25%" [class.web-club]="result_four_wheel[i + 3]['source'] == 'web'">
-                                                <mat-card-header>
-                                                    <mat-card-title>{{result_four_wheel[i + 3]['name']}}</mat-card-title>
-                                                    <mat-card-subtitle>{{result_four_wheel[i + 3]['category']|uppercase}}</mat-card-subtitle>
-                                                </mat-card-header>
-                                                <img mat-card-image src="{{image_url}}{{result_four_wheel[i + 3]['cover_image']}}" alt="Photo of a Shiba Inu" />
-                                                <mat-card-content>
-                                                    <p>
-                                                        {{result_four_wheel[i + 3]['about']}}
-                                                    </p>
-                                                </mat-card-content>
-                                                <mat-card-actions>
-                                                    <button mat-icon-button aria-label="label" (click)="changeStatus(result_four_wheel[i + 3]['club_id'], 1)" *ngIf="result_four_wheel[i + 3]['published'] == 0 && result_four_wheel[i + 3]['source'] == 'web'">
-                                                            <mat-icon>done</mat-icon>
-                                                    </button>
-                                                    <button mat-icon-button aria-label="label" (click)="changeStatus(result_four_wheel[i + 3]['club_id'], 0)" *ngIf="result_four_wheel[i + 3]['published'] == 1 && result_four_wheel[i + 3]['source'] == 'web'">
-                                                            <mat-icon>block</mat-icon>
-                                                    </button>
-                                                    <button mat-icon-button aria-label="label" (click)="openGalleryDialog(result_four_wheel[i + 3]['club_id'])">
-                                                        <mat-icon>collections</mat-icon>
-                                                    </button>
-                                                    <button mat-icon-button aria-label="label" routerLink="/announcement/{{result_four_wheel[i + 3]['club_id']}}">
-                                                        <mat-icon>hearing</mat-icon>
-                                                    </button>
-                                                    <button mat-icon-button aria-label="label" (click)="openDialog(result_four_wheel[i + 3]['club_id'], 'result_four_wheel')">
-                                                        <mat-icon>edit</mat-icon>
-                                                    </button>
-                                                    <button mat-icon-button aria-label="label" (click)="confirmDelete(result_four_wheel[i + 3]['club_id'])">
-                                                        <mat-icon>delete</mat-icon>
-                                                    </button>
-                                                </mat-card-actions>
-                                            </mat-card> 
-                                        </ng-container>
-                                    </div>            
-                                </ng-container>-->
+                    <mat-list-item class="list-container" *ngFor="let data of result_four_wheel | filterEventClub: searchTermFW">
+                                   <button mat-icon-button aria-label="label" (click)="changeStatus(data.club_id, 1)" *ngIf="data.published == 0 && data.source == 'web'">
+                            <mat-icon #tooltip="matTooltip" matTooltip="Done">done</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label" (click)="changeStatus(data.club_id, 0)" *ngIf="data.published == 1 && data.source == 'web'">
+                            <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label" (click)="openGalleryDialog(data.club_id)">
+                            <mat-icon #tooltip="matTooltip" matTooltip="Club Gallery">collections</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label" routerLink="/announcement/{{data.club_id}}">
+                            <mat-icon #tooltip="matTooltip" matTooltip="Announcement">hearing</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label" (click)="openView(data.club_id,'result_four_wheel')">
+                            <mat-icon #tooltip="matTooltip" matTooltip="View">remove_red_eye</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label" (click)="openDialog(data.club_id, 'result_four_wheel')">
+                            <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label" (click)="confirmDelete(data.club_id)">
+                            <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
+                        </button>
+                        <img matListAvatar src="{{image_url}}{{data.logo}}" *ngIf="data.logo && data.cover_image != ''" alt="image" (click)="confirmDialog(data, 'preview')" />
+                             <h3 class="truncate" matLine>{{data.name}}</h3>
+                        <p class="truncate1" matLine>{{data.category}}</p>
+                        <p class="truncate2" matLine>{{data.about}}</p>
+                    </mat-list-item>
+                </mat-list>
             </mat-tab>
         </mat-tab-group>
     </mat-sidenav-content>

@@ -50,7 +50,7 @@
             <input hidden #fileInputCover type="file" id="file_cover" (change)="fileProgress($event,'file_cover_name', 'cover_image')" />
                    <mat-icon *ngIf="cover_image == ''" matTooltip="Width: 1583px, Height: 400px;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
             <div class="preview-image" *ngIf="cover_image != ''">
-                <img class="dialog-picture" matTooltip="CoverImage" mat-card-image src="{{image_url}}{{cover_image}}" alt="Photo" />
+                <img class="dialog-picture" mat-card-image src="{{image_url}}{{cover_image}}" alt="Photo" />
                 <button mat-icon-button aria-label="Close icon" (click)="removeMedia('cover_image')">
                     <mat-icon>close</mat-icon>
                 </button>
@@ -61,7 +61,7 @@
             <input hidden #fileInputLogo type="file" id="file_logo" (change)="fileProgress($event,'file_logo_name', 'logo_image')" />
                    <mat-icon *ngIf="logo_image == ''" matTooltip="Width: 320px, Height: 320px;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
             <div class="preview-image" *ngIf="logo_image != ''">
-                <img class="dialog-picture" matTooltip="CoverImage" mat-card-image src="{{image_url}}{{logo_image}}" alt="Photo" />
+                <img class="dialog-picture" mat-card-image src="{{image_url}}{{logo_image}}" alt="Photo" />
                 <button mat-icon-button aria-label="Close icon" (click)="removeMedia('logo_image')">
                     <mat-icon>close</mat-icon>
                 </button>
@@ -75,7 +75,6 @@
                 <video class="dialog-picture" style="height: 100%; width: 90%" controls muted>
                     <source src="{{image_url}}{{club_video}}" type="video/mp4">              
                 </video>
-                <!--                <img class="dialog-picture" matTooltip="CoverImage" mat-card-image  src="https://www.toowheel.com/beta/toowheel/api/v1/male.jpg" alt="Photo" />-->
                 <button mat-icon-button aria-label="Close icon" (click)="removeMedia('club_video')">
                     <mat-icon>close</mat-icon>
                 </button>
