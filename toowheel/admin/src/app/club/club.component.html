@@ -29,50 +29,7 @@
                             </mat-form-field>
                         </div>
                     </div>
-                </section> 
-                <!--                <section class="section">
-                                    <br/>                     
-                                    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-                                        <div class="searchdesign" fxFlex="30%">
-                                            <b>Search by club name</b>
-                                        </div>
-                                        <div class="searchdesign" fxFlex="70%">
-                                            <b>Sort</b>
-                                        </div>
-                                    </div>
-                                    <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
-                                        <div class="searchdesign" fxFlex="30%">
-                                            <mat-form-field [floatLabel]="'never'" fxFlex="100%">
-                                                <input matInput type="text" placeholder="Type here" [(ngModel)]="searchTermTW" />
-                                            </mat-form-field>
-                                        </div>
-                                        <div fxFlex="70%" fxLayout="row">
-                                            <div fxLayout="row" fxLayoutAlign="center center">
-                                                <div>Name</div>
-                                                <div fxLayout="column">
-                                                    <button class="sort-icon" mat-icon-button color="primary" aria-label="icon" (click)="sortRecords('result', 'title_a_z')">
-                                                        <mat-icon>keyboard_arrow_up</mat-icon>
-                                                    </button>
-                                                    <button class="sort-icon" mat-icon-button color="primary" aria-label="icon" (click)="sortRecords('result', 'title_z_a')">
-                                                        <mat-icon>keyboard_arrow_down</mat-icon>
-                                                    </button>                                
-                                                </div>
-                                            </div>
-                                            &nbsp;&nbsp;&nbsp;
-                                            <div fxLayout="row" fxLayoutAlign="center center">
-                                                <div>Date</div>
-                                                <div fxLayout="column">
-                                                    <button class="sort-icon" mat-icon-button color="primary" aria-label="icon" (click)="sortRecords('result', 'created_a_z')">
-                                                        <mat-icon>keyboard_arrow_up</mat-icon>
-                                                    </button>
-                                                    <button class="sort-icon" mat-icon-button color="primary" aria-label="icon" (click)="sortRecords('result', 'created_z_a')">
-                                                        <mat-icon>keyboard_arrow_down</mat-icon>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>-->
+                </section>
                 <mat-list>
                     <mat-list-item *ngFor="let data of result | filterEventClub: searchTermTW">
                         <button mat-icon-button aria-label="label" (click)="changeStatus(data.club_id, 1)" *ngIf="data.published == 0 && data.source == 'web'">
@@ -100,6 +57,7 @@
                              <h3 class="truncate" matLine>{{data.name}}</h3>
                         <p class="truncate1" matLine>{{data.category}}</p>
                         <p class="truncate2" matLine>{{data.about}}</p>
+                        <mat-divider></mat-divider>
                     </mat-list-item>
                 </mat-list>
             </mat-tab>
@@ -126,7 +84,7 @@
                     </div>
                 </section>  
                 <mat-list>
-                    <mat-list-item class="list-container" *ngFor="let data of result_four_wheel | filterEventClub: searchTermFW">
+                    <mat-list-item *ngFor="let data of result_four_wheel | filterEventClub: searchTermFW">
                                    <button mat-icon-button aria-label="label" (click)="changeStatus(data.club_id, 1)" *ngIf="data.published == 0 && data.source == 'web'">
                             <mat-icon #tooltip="matTooltip" matTooltip="Done">done</mat-icon>
                         </button>
@@ -152,6 +110,7 @@
                              <h3 class="truncate" matLine>{{data.name}}</h3>
                         <p class="truncate1" matLine>{{data.category}}</p>
                         <p class="truncate2" matLine>{{data.about}}</p>
+                        <mat-divider></mat-divider>
                     </mat-list-item>
                 </mat-list>
             </mat-tab>

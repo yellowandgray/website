@@ -1,222 +1,19 @@
-<!--<h2 mat-dialog-title>ClubView</h2>
-<mat-dialog-content class="mat-typography">
-    <form [formGroup]="clubForm">
-        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
-            <div fxFlex="50%">
-                <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Type</mat-label>
-                    <mat-select disabled formControlName="type" (selectionChange)="getCategory()">
-                        <mat-option [value]="'two_wheel'">
-                            Two Wheeler
-                        </mat-option>
-                        <mat-option [value]="'four_wheel'">
-                            Four Wheeler
-                        </mat-option>
-                    </mat-select>                    
-                </mat-form-field>
-            </div>
-            <div fxFlex="50%">
-                <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Category</mat-label>
-                    <mat-select disabled formControlName="category_id">
-                        <mat-option [value]="row.category_id" *ngFor="let row of categories">
-                            {{row.name}}
-                    </mat-option>
-                </mat-select>               
-            </mat-form-field>
-        </div>
-    </div>
-    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">        
-
-                        <div fxFlex="50%" class="dialog-picture">
-                            <img mat-card-image src="{{image_url}}{{data['logo']}}" alt="Photo">
-                        </div>
-                    <img class="dialog-picture" mat-card-image src="{{image_url}}{{data['logo']}}" alt="Photo" />
-        <div fxFlex="33%">
-            <img class="dialog-picture" matTooltip="CoverImage"  mat-card-image src="{{image_url}}{{data['cover_image']}}" alt="Photo" />
-        </div>
-        <div fxFlex="33%">
-            <img class="dialog-picture"  matTooltip="Logo" mat-card-image src="{{image_url}}{{data['logo']}}" alt="Photo" />
-        </div>
-        <div fxFlex="33%">   
-            <video width="320" height="240" controls muted>
-                <source src="{{image_url}}{{data['club_video']}}" type="video/mp4">            
-          </video>                 
-            <video class="video-fluid" matTooltip="Video" style="width: 100%; height: 100% " layout-fill loop="loop"  autoplay="autoplay" preload="auto" controls muted>
-
-                <source src="{{image_url}}{{data['club_video']}}" type="video/mp4"/>
-            </video>
-        </div>
-    </div>
-    <br/>
-    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-        <div fxFlex="50%">
-            <mat-form-field appearance="outline" fxFlex="100%">
-                <mat-label>Club name</mat-label>
-                <input matInput readonly placeholder="" formControlName="name" />               
-            </mat-form-field>
-        </div>
-        <div fxFlex="50%">
-            <mat-form-field appearance="outline" fxFlex="100%">
-                <mat-label>Rank</mat-label>
-                <input matInput readonly placeholder="" formControlName="rank" />                
-            </mat-form-field>
-        </div>       
-    </div>
-        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
-            <div fxFlex="50%">
-                <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Rank</mat-label>
-                    <input matInput readonly placeholder="" formControlName="rank" />                
-                </mat-form-field>
-            </div>
-            <div fxFlex="50%">
-                <button type="button" mat-raised-button (click)="fileInputBanner.click()">{{club_video_name}}</button>
-                <input hidden #fileInputBanner type="file" id="file_banner" (change)="fileProgress($event, 'club_video_name', 'club_video')" />
-                <mat-icon matTooltip="Width: any, Height: any;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
-            </div>
-        </div>
-    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-        <div fxFlex="50%">
-            <mat-form-field appearance="outline" fxFlex="100%">
-                <mat-label>Email</mat-label>
-                <input matInput readonly placeholder="" formControlName="email" />             
-            </mat-form-field>
-        </div>
-        <div fxFlex="50%">
-            <mat-form-field appearance="outline" fxFlex="100%">
-                <mat-label>Phone</mat-label>
-                <input matInput readonly placeholder="" formControlName="mobile" />              
-            </mat-form-field>
-        </div>
-    </div>
-    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-        <div fxFlex="50%">
-            <mat-form-field appearance="outline" fxFlex="100%">
-                <mat-label>Facebook Link</mat-label>
-                <input matInput readonly placeholder="" formControlName="facebook_link" />             
-            </mat-form-field>
-        </div>
-        <div fxFlex="50%">
-            <mat-form-field appearance="outline" fxFlex="100%">
-                <mat-label>Youtube Link</mat-label>
-                <input matInput readonly placeholder="" formControlName="youtube_link" />              
-            </mat-form-field>
-        </div>
-    </div>
-    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-        <div fxFlex="50%">
-            <mat-form-field appearance="outline" fxFlex="100%">
-                <mat-label>Twitter Link</mat-label>
-                <input matInput readonly placeholder="" formControlName="twitter_link" />              
-            </mat-form-field>
-        </div>
-        <div fxFlex="50%">
-            <mat-form-field appearance="outline" fxFlex="100%">
-                <mat-label>Instagram Link</mat-label>
-                <input matInput  readonly placeholder="" formControlName="instagram_link" />               
-            </mat-form-field>
-        </div>
-    </div>
-    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
-        <div fxFlex="50%">
-            <mat-form-field appearance="outline" fxFlex="100%">
-                <mat-label>State</mat-label>
-                <mat-select disabled formControlName="state">
-                    <mat-option [value]="row.state_id" *ngFor="let row of states">
-                        {{row.name}}
-                </mat-option>
-            </mat-select>          
-        </mat-form-field>
-    </div>
-    <div fxFlex="50%">
-        <mat-form-field appearance="outline" fxFlex="100%">
-            <mat-label>City</mat-label>
-            <input matInput readonly placeholder="" formControlName="city" />       
-        </mat-form-field>
-    </div>
-</div>
-<div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
-    <div fxFlex="50%">
-        <mat-form-field appearance="outline" fxFlex="100%">
-            <mat-label>Zip</mat-label>
-            <input matInput readonly placeholder="" formControlName="zip" />        
-        </mat-form-field>
-    </div>
-    <div fxFlex="50%">
-        <mat-form-field appearance="outline" fxFlex="100%">
-            <mat-label>Landmark</mat-label>
-            <input matInput readonly placeholder="" formControlName="landmark" />     
-        </mat-form-field>
-    </div>
-</div>
-<div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
-    <div fxFlex="100%">
-        <mat-form-field fxFlex="100%">
-            <mat-label>Address</mat-label>
-            <textarea matInput readonly rows="4" placeholder="" formControlName="address"></textarea>      
-        </mat-form-field>
-    </div>
-</div>
-<div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
-    <div fxFlex="50%">
-        <mat-form-field appearance="outline" fxFlex="100%">
-            <mat-label>Club Leader Name (Full Name)</mat-label>
-            <input matInput readonly placeholder="" formControlName="club_leader_name" />     
-        </mat-form-field>
-    </div>
-    <div fxFlex="50%">
-                <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>No. of Members</mat-label>
-                    <input matInput placeholder="" formControlName="no_of_member" />
-                    <mat-error>Members is required</mat-error>
-                </mat-form-field>
-    </div>
-</div>
-<div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
-    <div fxFlex="100%">
-        <mat-form-field class="full-width" fxFlex="100%">
-            <mat-label>About club</mat-label>
-            <textarea rows="6" matInput readonly placeholder="" formControlName="about"></textarea>     
-        </mat-form-field>
-    </div>
-</div>
-<div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
-    <button mat-button [mat-dialog-close]="false">Close</button> 
-
-</div>
-</form>
-</mat-dialog-content>-->
 <h2 mat-dialog-title>Club Details</h2>
 <mat-dialog-content class="mat-typography">    
-    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.8%" fxLayoutAlign="start center">        
-
-        <!--                <div fxFlex="50%" class="dialog-picture">
-                            <img mat-card-image src="{{image_url}}{{data['logo']}}" alt="Photo">
-                        </div>-->
-        <!--            <img class="dialog-picture" mat-card-image src="{{image_url}}{{data['logo']}}" alt="Photo" />-->
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.8%" fxLayoutAlign="start center"> 
         <div fxFlex="33%">
             <img class="dialog-picture1" matTooltip="CoverImage"  mat-card-image src="{{image_url}}{{data['cover_image']}}" alt="Photo" />
         </div>
         <div fxFlex="33%">
-            <img class="dialog-picture1"  matTooltip="Logo" mat-card-image src="{{image_url}}{{data['logo']}}" alt="Photo" />
+            <img class="dialog-picture1" mat-card-image src="{{image_url}}{{data['logo']}}" alt="Photo" />
         </div>
         <div fxFlex="33%">   
-            <!--            <video width="320" height="240" controls muted>
-                            <source src="{{image_url}}{{data['club_video']}}" type="video/mp4">            
-                      </video>-->                 
-            <video class="video-fluid" matTooltip="Video" style="width: 100%; height: 100% " layout-fill loop="loop"  autoplay="autoplay" preload="auto" controls muted>
-
-                <source src="{{image_url}}{{data['club_video']}}" type="video/mp4"/>
+            <video class="video-fluid" style="width: 100%; height: 100% " layout-fill loop="loop"  autoplay="autoplay" preload="auto" controls muted *ngIf="data['club_video'] && data['club_video'] != '' && data['club_video'] != null && data['club_video'] != 'null'">
+                   <source src="{{image_url}}{{data['club_video']}}" type="video/mp4"/>
             </video>
         </div>
     </div>    
-    <br/> 
-
-    <!--     <mat-option [value]="row.category_id" *ngFor="let row of categories">
-                                {{row.name}}-->
-
-
+    <br/>
     <table mat-table class="member-table">
         <h2>Club Information:</h2>
         <tr>
@@ -226,7 +23,7 @@
         </tr>
         <tr>
             <th mat-header-cell>Category</th>
-            <td mat-cell> {{data.category_id}} </td>
+            <td mat-cell> {{data.category}} </td>
         </tr>
         <tr>
             <th mat-header-cell>Club name</th>
@@ -262,7 +59,7 @@
         </tr>
         <tr>
             <th mat-header-cell>Club Leader Name (Full Name)</th>
-            <td mat-cell> {{data.club_leader_name}} </td>
+            <td mat-cell> {{data.leader_name}} </td>
         </tr>
         <tr>
             <th mat-header-cell>Address</th>

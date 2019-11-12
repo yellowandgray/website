@@ -564,7 +564,7 @@ $app->get('/get_four_wheel_category', function() {
 $app->get('/get_two_wheel_club', function() {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
-    $data = $com->selectAll('c.*, ca.name AS category', 'club AS c LEFT JOIN category AS ca ON c.category_id = ca.category_id', 'c.club_id > 0 AND c.type = \'two_wheel\'');
+    $data = $com->selectAll('c.*, ca.name AS category, s.name AS state', 'club AS c LEFT JOIN state AS s ON s.state_id = c.state_id LEFT JOIN category AS ca ON c.category_id = ca.category_id', 'c.club_id > 0 AND c.type = \'two_wheel\'');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
@@ -576,7 +576,7 @@ $app->get('/get_two_wheel_club', function() {
 $app->get('/get_four_wheel_club', function() {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
-    $data = $com->selectAll('c.*, ca.name AS category', 'club AS c LEFT JOIN category AS ca ON c.category_id = ca.category_id', 'c.club_id > 0 AND c.type = \'four_wheel\'');
+    $data = $com->selectAll('c.*, ca.name AS category, s.name AS state', 'club AS c LEFT JOIN state AS s ON s.state_id = c.state_id LEFT JOIN category AS ca ON c.category_id = ca.category_id', 'c.club_id > 0 AND c.type = \'four_wheel\'');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
@@ -1165,7 +1165,7 @@ $app->post('/special_news', function() use ($app) {
                 $res['message'] = 'Status updated successfully';
             }
         } else {
-            $exist = $obj->selectRow('COUNT(news_id) AS total', 'news', 'type = \''.$data['club_type'].'\' AND isstar = 1');
+            $exist = $obj->selectRow('COUNT(news_id) AS total', 'news', 'type = \'' . $data['club_type'] . '\' AND isstar = 1');
             if ($exist['total'] == 0) {
                 $update = $obj->updateRecordWithWhere(array('isstar' => 1), 'news', 'news_id = ' . $data['news_id']);
                 if ($update > 0) {
@@ -1185,7 +1185,7 @@ $app->post('/special_news', function() use ($app) {
                 $res['message'] = 'Status updated successfully';
             }
         } else {
-            $exist = $obj->selectRow('COUNT(news_id) AS total', 'news', 'type = \''.$data['club_type'].'\' AND isflag = 1');
+            $exist = $obj->selectRow('COUNT(news_id) AS total', 'news', 'type = \'' . $data['club_type'] . '\' AND isflag = 1');
             if ($exist['total'] < 4) {
                 $update = $obj->updateRecordWithWhere(array('isflag' => 1), 'news', 'news_id = ' . $data['news_id']);
                 if ($update > 0) {

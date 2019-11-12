@@ -26,10 +26,6 @@
     font-size: 0pt;
 }
 
-.list-container { 
-    border-bottom: 1px solid #ccc;
-}
-
 .dialog-picture {
     max-height: none;
 }
