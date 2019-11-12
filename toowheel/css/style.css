@@ -2374,6 +2374,7 @@ div#html5-watermark {
     border-radius: 0;
     background: -webkit-linear-gradient(45deg, #8a0302 100%,#080000 100%);
     background: linear-gradient(45deg, #8a0302 100%,#080000 100%);
+    border: 1px solid #000;
 }
 
 .news .hovereffect .overlay {
@@ -2391,12 +2392,12 @@ div#html5-watermark {
     display: block;
     position: relative;
     max-width: none;
-    width: calc(100% + 60px);
+    width: calc(100% + 40px);
     -webkit-transition: opacity 0.35s, -webkit-transform 0.45s;
     transition: opacity 0.35s, transform 0.45s;
     -webkit-transform: translate3d(-40px,0,0);
     transform: translate3d(-40px,0,0);
-    height: 150px;
+    height: 170px;
 }
 
 .news .hovereffect h2 {
@@ -2411,10 +2412,10 @@ div#html5-watermark {
 
 .news .hovereffect .overlay:before {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    bottom: 20px;
-    left: 20px;
+    top: 15px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
     border: 1px solid #fff;
     content: '';
     opacity: 0;
@@ -2480,10 +2481,12 @@ div#html5-watermark {
 .news .hovereffect .news-thumb-menu .menu-news-title-view h2 {
     position: absolute;
     bottom: -9px;
-    left: 11%;
+    left: 13%;
     background: #00000073;
     width: 100%;
+    height: 25px;
     padding: 10px 10px 5px 10px;
+    overflow: hidden;
 }
 
 .news .hovereffect:hover .news-thumb-menu .menu-news-title-view h2 {

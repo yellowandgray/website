@@ -70,7 +70,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                         </div>
                                     </div>
                                     <div class="form-row">
-                                        <div class="col-xl-4 col-sm-12 margin-b-20">
+                                        <div class="col-xl-4 col-sm-12 margin-b-20 file-up">
                                             <div class="form-group">
                                                 <div id="upload_container">
                                                     <label class="font-size-12" for="upload-profile"><i class="fa fa-picture-o" aria-hidden="true"></i> Upload Your Profile Picture</label>

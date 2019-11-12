@@ -16,7 +16,7 @@ $news_flag = $obj->selectAll('n.*, m.name AS media, c.name AS club, ca.name AS c
 $events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS e LEFT JOIN club AS c ON c.club_id = e.club_id LEFT JOIN category AS ca ON ca.category_id = e.category_id', 'e.event_id > 0 AND e.type = \'' . $type . '\' ORDER BY e.event_id DESC LIMIT 4');
 $images = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'image\' AND type = \'' . $type . '\' ORDER BY gallery_id DESC');
 $videos = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND media_type = \'video\' AND type = \'' . $type . '\' ORDER BY gallery_id DESC');
-$press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS p LEFT JOIN media AS m ON m.media_id = p.media_id', 'p.type = \'' . $type . '\' ORDER BY p.press_release_id DESC LIMIT 2');
+$press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS p LEFT JOIN media AS m ON m.media_id = p.media_id', 'p.type = \'' . $type . '\' ORDER BY p.press_release_id DESC LIMIT 3');
 ?>
 <!DOCTYPE html>
 <html>
@@ -74,13 +74,12 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
                 </div>
             </div>
         </section>
-<!--        <section class="media-press-release pad-t-80">
+        <section class="media-press-release pad-t-80">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-6 padding-lr-5">
                         <div class="news-img-01 news-01 height-one" onClick="document.location.href = 'news?nid=<?php echo $news_star['news_id']; ?>'">
                             <div class="news-home-flag-large" style="background: url(<?php echo BASE_URL . $row['cover_image']; ?>)no-repeat; background-position: center; background-size: cover; "></div>
-                            <img src="<?php echo BASE_URL . $news_star['cover_image']; ?>" alt="" class="img-responsive-01">
                             <div class="news-01-cont">
                                 <div class="position-ad">
                                     <span class="sponsor-bg"><?php echo $news_star['club_id'] != 0 ? $obj->charLimit($news_star['club'], 14) : $obj->charLimit($news_star['sponsor'], 14) ?></span>
@@ -97,7 +96,6 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
                                     <div class="col-md-6 col-sm-6 col-xs-6 padding-lr-5">
                                         <div class="news-img-02 news-01 height-two" onClick="document.location.href = 'news?nid=<?php echo $row['news_id']; ?>'">
                                             <div class="news-home-flag" style="background: url(<?php echo BASE_URL . $row['cover_image']; ?>)no-repeat; background-position: center; background-size: cover; "></div>
-                                                <img src="<?php echo BASE_URL . $row['cover_image']; ?>" alt="" class="img-responsive-h"/>
                                             <div class=" news-02-cont">
                                                 <div class="position-ad-01">
                                                     <span class="sponsor-bg"><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 14) : $obj->charLimit($row['sponsor'], 14) ?></span>
@@ -112,7 +110,7 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
                     </div>
                 </div>
             </div>
-        </section>-->
+        </section>
         <section class="media-press-release">
             <div class="container">
                 <div class="row">

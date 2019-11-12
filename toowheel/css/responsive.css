@@ -143,7 +143,9 @@
 
 @media (min-width: 320px) and (max-width: 575px) {
     .news .hovereffect .news-thumb-menu .menu-news-title-view h2 {
-        left: 9% !important;
+        left: 12% !important;
+        height: 40px !important;
+        bottom: -10px !important;
     }
 }
 
@@ -202,7 +204,9 @@
         bottom: 34px !important;
     }
     .btn-tranparent span {
-        font-size: 12px;
+        font-size: 16px;
+        position: relative;
+        bottom: 18px;
     }
     .video-bg-banner {
         height: auto !important;

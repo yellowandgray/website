@@ -1,6 +1,6 @@
 <?php
 session_start();
-$menu_latest_news = $obj->selectAll('n.*, m.name AS media, c.name AS club, ca.name AS category', 'news AS n LEFT JOIN media AS m ON m.media_id = n.media_id LEFT JOIN club AS c ON c.club_id = n.club_id LEFT JOIN category AS ca ON ca.category_id = n.category_id AND ca.category_id = c.category_id', 'n.news_id > 0 AND n.type = \'' . $type . '\' ORDER BY n.news_id DESC LIMIT 12');
+$menu_latest_news = $obj->selectAll('n.*, m.name AS media, c.name AS club, ca.name AS category', 'news AS n LEFT JOIN media AS m ON m.media_id = n.media_id LEFT JOIN club AS c ON c.club_id = n.club_id LEFT JOIN category AS ca ON ca.category_id = n.category_id AND ca.category_id = c.category_id', 'n.news_id > 0 AND n.type = \'' . $type . '\' ORDER BY n.news_id DESC LIMIT 9');
 $menu_press_release = $obj->selectAll('p.*, m.name AS media', 'press_release AS p LEFT JOIN media AS m ON m.media_id = p.media_id', 'p.type = \'' . $type . '\' ORDER BY p.press_release_id DESC LIMIT 3');
 $menu_findclub = $obj->selectAll('*', 'club', 'club_id > 0 AND type = \'' . $type . '\' AND published = 1 ORDER BY club_id DESC LIMIT 8');
 $menu_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'event AS e LEFT JOIN club AS c ON c.club_id = e.club_id LEFT JOIN category AS ca ON ca.category_id = e.category_id AND ca.category_id = c.category_id', 'e.event_id > 0 AND e.type = \'' . $type . '\' ORDER BY e.event_id DESC LIMIT 3');
@@ -69,9 +69,9 @@ $menu_member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN clu
                             <?php foreach ($menu_latest_news as $row) { ?>
                                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                                     <div class="hovereffect">
-                                        <div class="news-thumb-menu" style="background: url(<?php echo BASE_URL . $row['thumb_image']; ?>)no-repeat;background-repeat: no-repeat;background-position: center;background-size: cover; ">
+                                        <div class="news-thumb-menu" style="background: url(<?php echo BASE_URL . $row['cover_image']; ?>)no-repeat;background-repeat: no-repeat;background-position: center;background-size: cover; ">
                                             <div class="menu-news-title-view">
-                                                <h2><?php echo $obj->charLimit($row['title'], 18); ?></h2>
+                                                <h2><?php echo $row['title']; ?></h2>
                                             </div>
                                         </div>
     <!--                                        <img src="<?php //echo BASE_URL . $row['thumb_image'];            ?>" alt="image">-->
@@ -214,9 +214,9 @@ $menu_member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN clu
                             <i id="close-btn" class="fa fa-times"></i>
                             <form id='search-menu-form'>
                                 <input id='search-menu-text' name='q' placeholder='Search' type='search' class="head-search" autocomplete="off" />
-                                <button id='search-menu-button' type='submit'>                     
+<!--                                <button id='search-menu-button'>                     
                                     <span>Search</span>
-                                </button>
+                                </button>-->
                             </form>
                         </div>
                     </div>

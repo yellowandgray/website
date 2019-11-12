@@ -1492,6 +1492,18 @@ button {
 }
 
 
+#basic_information input[type="file"] {
+    width: auto;
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    opacity: 0;
+    left: 0;
+    padding: 6px;
+    cursor: pointer;
+}
+
+
 /*#club-register input[type="file"]:hover {
     border-bottom: none;
     outline: none;
