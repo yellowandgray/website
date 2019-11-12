@@ -64,19 +64,55 @@ $type = $press_release['type'];
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <?php foreach ($releated_press_release as $row) { ?>
-                            <div class="side-news">
-                                <span class="side-news-widget1"><span><?php echo $row['author_name']; ?></span></span>
-                                <div class="press-cover-image-bg" style="background: url(<?php echo BASE_URL . $row['cover_image']; ?>)no-repeat;background-repeat: no-repeat;background-position: top;background-size: cover; "></div>
-<!--                                <img src="<?php //echo BASE_URL . $row['cover_image']; ?>" alt="" />-->
-                                <h4><?php echo $row['title']; ?></h4>
-                                <p><?php echo $obj->charLimit($row['description_1'], 275); ?></p>
-                                <div class="button-1">
-                                    <div class="eff-1"></div>
-                                    <a href="press?pid=<?php echo $row['press_release_id']; ?>">Discover</a>
+                        <div id="sideslider">
+                            <div class="sidecontent-search-section search">
+                                <div class="search-1">
+                                    <i class="fa fa-search" aria-hidden="true"></i><input placeholder='Search Here' type='search' class="head-search" autocomplete="off" />
+                                </div>
+
+                            </div>
+                            <div class="section-title">
+                                <h3>LIKE FACEBOOK KAMI</h3>
+                            </div>
+                            <div class="fb-01">
+                                <div class="fb-page" data-href="https://www.facebook.com/Toowheel-Malaysia-102602757819930" data-tabs="timeline" data-width="" data-height="350px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                                    <blockquote cite="https://www.facebook.com/Toowheel-Malaysia-102602757819930" class="fb-xfbml-parse-ignore">
+                                        <a href="https://www.facebook.com/Toowheel-Malaysia-102602757819930">Toowheel Malaysia</a></blockquote>
                                 </div>
                             </div>
-                        <?php } ?>
+                            <div class="fb-02">
+                                <div class="fb-page" data-href="https://www.facebook.com/Toowheel-Malaysia-102602757819930" data-tabs="timeline" data-width="280px" data-height="350px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                                    <blockquote cite="https://www.facebook.com/Toowheel-Malaysia-102602757819930" class="fb-xfbml-parse-ignore">
+                                        <a href="https://www.facebook.com/Toowheel-Malaysia-102602757819930">Toowheel Malaysia</a></blockquote>
+                                </div>
+                            </div>
+                            <div class="fb-03">
+                                <div class="fb-page" data-href="https://www.facebook.com/Toowheel-Malaysia-102602757819930" data-tabs="timeline" data-width="210px" data-height="350px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                                    <blockquote cite="https://www.facebook.com/Toowheel-Malaysia-102602757819930" class="fb-xfbml-parse-ignore">
+                                        <a href="https://www.facebook.com/Toowheel-Malaysia-102602757819930">Toowheel Malaysia</a></blockquote>
+                                </div>
+                            </div>
+                            <div class="fb-04">
+                                <div class="fb-page" data-href="https://www.facebook.com/Toowheel-Malaysia-102602757819930" data-tabs="timeline" data-width="290px" data-height="350px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                                    <blockquote cite="https://www.facebook.com/Toowheel-Malaysia-102602757819930" class="fb-xfbml-parse-ignore">
+                                        <a href="https://www.facebook.com/Toowheel-Malaysia-102602757819930">Toowheel Malaysia</a></blockquote>
+                                </div>
+                            </div>
+                            <div id="fb-root"></div>
+                            <?php foreach ($releated_press_release as $row) { ?>
+                                <div class="side-news">
+                                    <span class="side-news-widget1"><span><?php echo $row['author_name']; ?></span></span>
+                                    <div class="press-cover-image-bg" onclick="document.location.href = 'press?pid=<?php echo $row['press_release_id']; ?>'" style="background: url(<?php echo BASE_URL . $row['cover_image']; ?>)no-repeat;background-repeat: no-repeat;background-position: top;background-size: cover;cursor: pointer; "></div>
+    <!--                                <img src="<?php //echo BASE_URL . $row['cover_image'];  ?>" alt="" />-->
+                                    <h4><a href="press?pid=<?php echo $row['press_release_id']; ?>"><?php echo $row['title']; ?></a></h4>
+                                    <p><?php echo $obj->charLimit($row['description_1'], 275); ?></p>
+                                    <div class="button-1">
+                                        <div class="eff-1"></div>
+                                        <a href="press?pid=<?php echo $row['press_release_id']; ?>">Discover</a>
+                                    </div>
+                                </div>
+                            <?php } ?>
+                        </div>
                     </div>
                 </div>
 
@@ -85,10 +121,10 @@ $type = $press_release['type'];
                     <?php foreach ($similar_press_release as $row) { ?>
                         <div class="col-md-3">
                             <div class="events-upcoming">
-                                <div class="press-cover-image-bg" style="background: url(<?php echo BASE_URL . $row['cover_image']; ?>)no-repeat;background-repeat: no-repeat;background-position: top;background-size: cover; "></div>
-<!--                                <img src="" alt="" />-->
+                                <div class="press-cover-image-bg" onclick="document.location.href = 'press?pid=<?php echo $row['press_release_id']; ?>'" style="background: url(<?php echo BASE_URL . $row['cover_image']; ?>)no-repeat;background-repeat: no-repeat;background-position: top;background-size: cover;cursor: pointer; "></div>
+    <!--                                <img src="" alt="" />-->
                                 <div class="events-upcoming-content">
-                                    <h4><?php echo $row['title']; ?></h4>
+                                    <h4><a href="press?pid=<?php echo $row['press_release_id']; ?>"><?php echo $row['title']; ?></a></h4>
                                     <p><?php echo $obj->charLimit($row['description_1'], 75); ?></p>
                                 </div>
                                 <center>
@@ -105,6 +141,12 @@ $type = $press_release['type'];
         </div>
     </div>
     <?php include 'footer.php'; ?>
+    <script src="js/sticky-sidebar-scroll.min.js" type="text/javascript"></script>
+        <script type='text/javascript'>
+            $(document).ready(function () {
+                $.stickysidebarscroll("#sideslider", {offset: {top: 100, bottom: 200, width: 100}});
+            });
+        </script>
     <script type="text/javascript">
         var twitterShare = document.querySelector('[data-js="twitter-share"]');
 
@@ -127,7 +169,7 @@ $type = $press_release['type'];
             }
             return false;
         };
-        
+
         var pinterestShare = document.querySelector('[data-js="pinterest-share"]');
 
         pinterestShare.onclick = function (e) {
