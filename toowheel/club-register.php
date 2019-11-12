@@ -39,7 +39,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                 <div class="col-md-6">
                                     <div class="custom-file">
                                         <div id="upload_container">
-                                            
+
                                             <label for="cover-image"><i class="fa fa-picture-o" aria-hidden="true"></i> Cover Image</label>
                                             <input placeholder="Cover Image" id="cover_image" name="cover_image" type="file" class="custom-file-input " accept="image/x-png,image/gif,image/jpeg" onchange="attachFile('cover_image');" />
                                         </div>
@@ -65,24 +65,24 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                         </div>
                                     </div>
                                 </div>
-<!--                                <div class="col-md-4">
-
-                                    <div class="custom-file">
-                                        <div id="upload_video_container">
-                                            <label for="club-video"><i class="fa fa-play-circle" aria-hidden="true"></i> Club Video</label>
-                                            <input id="club_video" name="club_video" type="file" class="custom-file-input" accept="video/mp4,video/x-m4v,video/*" onchange="attachFile('club_video');" />
-                                        </div>
-                                        <div class="image-preview hidden" id="preview_video_container">
-                                            <button type="button" onclick="closeVideoPic();" class="close-button-profile-img">
-                                                <i class="fa fa-close"></i>
-                                            </button>
-                                            <img src="" alt="image" />
-                                        </div>
-                                    </div>
-                                </div>-->
+                                <!--                                <div class="col-md-4">
+                                
+                                                                    <div class="custom-file">
+                                                                        <div id="upload_video_container">
+                                                                            <label for="club-video"><i class="fa fa-play-circle" aria-hidden="true"></i> Club Video</label>
+                                                                            <input id="club_video" name="club_video" type="file" class="custom-file-input" accept="video/mp4,video/x-m4v,video/*" onchange="attachFile('club_video');" />
+                                                                        </div>
+                                                                        <div class="image-preview hidden" id="preview_video_container">
+                                                                            <button type="button" onclick="closeVideoPic();" class="close-button-profile-img">
+                                                                                <i class="fa fa-close"></i>
+                                                                            </button>
+                                                                            <img src="" alt="image" />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>-->
                             </div>
                             <br/>
-                          
+
                             <div class="form-group">
                                 <input id="mobile" placeholder="Contact No." name="mobile" type="text" tabindex="9" required />
                             </div>
@@ -120,12 +120,12 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                             </div>
                             <div class="form-group">
                                 <input id="password" placeholder="Password" name="password" type="password" tabindex="8" required onKeyUp="checkPasswordStrength();" />
-                                <span class="input-group-addon eye-icon" onclick="showTextPassword()"><i class="fa fa-eye" aria-hidden="true"></i></span>
+                                <span class="fa fa-eye-slash input-group-addon eye-icon toggle-password" toggle="#password-field" onclick="showTextPassword();"></span>
                                 <div id="password_error"></div>
                             </div>
                             <div class="form-group">
                                 <input id="confirm_password" placeholder="Confirm Password" name="confirm_password" type="password" tabindex="8" required />
-                                <span class="input-group-addon eye-icon" onclick="showTextPassword2()"><i class="fa fa-eye" aria-hidden="true"></i></span>
+                                <span class="fa fa-eye-slash input-group-addon eye-icon toggle-password" toggle="#password-field" onclick="showTextPassword2()"></span>
                                 <div id="confirm_password_error"></div>
                             </div>
                             <h4>Social Media</h4>

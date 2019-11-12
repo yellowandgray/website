@@ -31,7 +31,11 @@ $obj = new Common();
                                 <h3>LOGIN ACCOUNT</h3>
                                 <form onsubmit="return loginMember();">
                                     <div class="input-container"><i class="fa fa-user-o icon" aria-hidden="true"></i><input type="text" name="email" id="email" placeholder="Email" /></div>
-                                    <div class="input-container" style="position: relative; left: 10px;"><i class="fa fa-key" aria-hidden="true"></i><input type="password" name="password" id="password" placeholder="Password" /><i class="fa fa-eye" aria-hidden="true" style="right: 30px;cursor: pointer" onclick="showTextPassword();"></i></div>
+                                    <div class="input-container" style="position: relative; left: 10px;">
+                                        <i class="fa fa-key" aria-hidden="true"></i>
+                                        <input type="password" name="password" id="password" placeholder="Password" />
+                                        <span class="fa fa-eye-slash input-group-addon eye-icon toggle-password" toggle="#password-field" onclick="showTextPassword();" style="right: 30px;position: relative;color: #ed1c24;cursor: pointer;"></span>
+                                    </div>
 <!--                                    <span style="font-size: 12px;color: #a5a5a5;"><input type="checkbox" onclick="showTextPassword()"> Show Password</span>-->
                                     <center><button type="submit">LOGIN</button></center>
                                 </form> 

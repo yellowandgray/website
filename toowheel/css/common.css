@@ -1154,7 +1154,7 @@ button {
 
 .event-n h3 {
     color: red;
-    font-size: 25px;
+    font-size: 22px;
     margin-bottom: 20px;
 }
 
@@ -5123,4 +5123,8 @@ hr {
 
 .mega-menu-tab ul.nav__ul {
     padding: 0;
+}
+
+.input-group>.custom-file .custom-file-input:focus~.custom-file-label, .input-group>.custom-select:focus, .input-group>.form-control:focus {
+    z-index: 1;
 }

@@ -467,7 +467,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                                     <span class="input-group-text"><i class="fa fa-key" aria-hidden="true"></i></span>
                                                 </div>
                                                 <input type="password" class="form-control" name="password" id="password" placeholder="Password" required-i onchange="removeValidation('password');" onKeyUp="checkPasswordStrength();" />
-                                                <span class="input-group-addon eye-icon" onclick="showTextPassword()"><i class="fa fa-eye" aria-hidden="true"></i></span>
+                                                <span class="fa fa-eye-slash input-group-addon eye-icon toggle-password" toggle="#password-field" onclick="showTextPassword()"></span>
                                             </div>
                                             <div id="password_error"></div>
                                         </div>
@@ -479,7 +479,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                                                     <span class="input-group-text"><i class="fa fa-key" aria-hidden="true"></i></span>
                                                 </div>
                                                 <input type="password" class="form-control" name="cnfpassword" id="cnfpassword" placeholder="Confirm Password" required-i onchange="removeValidation('cnfpassword');" />
-                                                <span class="input-group-addon eye-icon" onclick="showTextPassword1()"><i class="fa fa-eye" aria-hidden="true"></i></span>
+                                                <span class="fa fa-eye-slash input-group-addon eye-icon toggle-password" toggle="#password-field" onclick="showTextPassword1()"></span>
                                             </div>
                                             <div id="cnfpassword_error"></div>
                                         </div>

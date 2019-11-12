@@ -1136,6 +1136,15 @@ body {
     /*    text-align: center;*/
 }
 
+.side-news h4 a {
+    color: #000;
+}
+
+.side-news h4 a:hover {
+    color: #ed1c24;
+    text-decoration: none;
+}
+
 .clr-white {
     color: #fff;
 }
@@ -1161,6 +1170,15 @@ body {
 .events-upcoming-content h4 {
     font-size: 15px;
     font-weight: 700;
+}
+
+.events-upcoming-content h4 a {
+    color: #000;
+}
+
+.events-upcoming-content h4 a:hover {
+    color: #ed1c24;
+    text-decoration: none;
 }
 
 .events-upcoming-content p {

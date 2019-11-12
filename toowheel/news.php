@@ -127,9 +127,9 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
                                     <span class="side-news-widget1">
                                         <span><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 30) : $obj->charLimit($row['sponsor'], 30); ?></span>
                                     </span>
-                                    <div class="press-cover-image-bg" style="background: url(<?php echo BASE_URL . $row['cover_image']; ?>)no-repeat;background-repeat: no-repeat;background-position: top;background-size: cover; "></div>
+                                    <div class="press-cover-image-bg" onclick="document.location.href = 'news?nid=<?php echo $row['news_id']; ?>'" style="background: url(<?php echo BASE_URL . $row['cover_image']; ?>)no-repeat;background-repeat: no-repeat;background-position: top;background-size: cover;cursor: pointer; "></div>
         <!--                                <img src="<?php //echo BASE_URL . $row['cover_image'];                   ?>" alt=" image" />-->
-                                    <h4><?php echo $row['title']; ?></h4>
+                                    <h4><a href="news?nid=<?php echo $row['news_id']; ?>"><?php echo $row['title']; ?></a></h4>
                                     <p><?php echo $obj->charLimit($row['moto_text'], 120); ?></p>
                                     <div class="button-1">
                                         <div class="eff-1"></div>
@@ -144,10 +144,10 @@ $news_gallery = $obj->selectAll('*', 'news_gallery', 'news_id = ' . $nid);
                     <?php foreach ($similar_news as $row) { ?>
                         <div class="col-md-3">
                             <div class="events-upcoming">
-                                <div class="press-cover-image-bg" style="background: url(<?php echo BASE_URL . $row['cover_image']; ?>)no-repeat;background-repeat: no-repeat;background-position: top;background-size: cover; "></div>
+                                <div class="press-cover-image-bg" onclick="document.location.href = 'news?nid=<?php echo $row['news_id']; ?>'" style="background: url(<?php echo BASE_URL . $row['cover_image']; ?>)no-repeat;background-repeat: no-repeat;background-position: top;background-size: cover;cursor: pointer; "></div>
     <!--                                <img src="<?php //echo BASE_URL . $row['cover_image'];                    ?>" alt="" />-->
                                 <div class="events-upcoming-content">
-                                    <h4><?php echo $row['title']; ?></h4>
+                                    <h4><a href="news?nid=<?php echo $row['news_id']; ?>"><?php echo $row['title']; ?></a></h4>
                                     <p><?php echo $obj->charLimit($row['moto_text'], 75); ?></p>
                                 </div>
                                 <center>
