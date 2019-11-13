@@ -1238,9 +1238,10 @@ button {
     box-shadow: 0px 0px 6px 0px #777;
 }
 .past-event h3{
-    font-size: 17px;
-    color: #363636;
+    font-size: 16px;
+    color: #ed1c24;
     font-weight: 600;
+    margin: 15px 0;
 }
 .past-event  p span {
     font-size: 15px;
@@ -1249,7 +1250,7 @@ button {
 }
 .past-event  p {
     margin-bottom: 2px;
-    font-size: 14px;
+    font-size: 13px;
     text-align: left;
 }
 .past-event  h5 {
@@ -4557,7 +4558,7 @@ hr {
 
 .events-btn {
     background: #ff0000c9;
-    padding: 7px 10px;
+    padding: 5px 20px;
     text-decoration: none;
     font-size: 10px;
     color: #fff;
@@ -4814,6 +4815,10 @@ hr {
 
 .margin-b-20 {
     margin-bottom: 10px;
+}
+
+.past-event center {
+    margin-bottom: 20px;
 }
 
 .btn-secondary {
@@ -5214,16 +5219,4 @@ hr {
         border: none;
         filter: brightness(100%);
     }
-}
-.video-gal:hover img{
-    opacity: 0;
-    transition: all 0.5s linear;
-}
-.video-gal:hover i{
-    opacity: 0;
-    transition: all 0.02s linear;
-}
-.video-gal:hover {
-    background: #363636;
-    cursor: pointer;
 }
