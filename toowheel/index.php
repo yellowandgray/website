@@ -65,7 +65,7 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
                                 <div class="discover-slider-content">
                                     <p class="clb-bg"><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 14) : $obj->charLimit($row['sponsor'], 14) ?></p>
                                     <h2><?php echo $row['title']; ?></h2>
-    <!--                                    <p><?php //echo $obj->charLimit($row['moto_text'], 60);           ?></p>-->
+    <!--                                    <p><?php //echo $obj->charLimit($row['moto_text'], 60);            ?></p>-->
 
                                     <div class="discover-btn">
                                         <a href="news?nid=<?php echo $row['news_id']; ?>" class="discover-btn-home">DISCOVER</a>
@@ -125,7 +125,7 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
                             <?php foreach ($press_release_menu as $row) { ?>
                                 <div class="row margin-b-20 ">
                                     <!--                                    <div class="col-md-2">
-                                                                            <div class="home-press-release-bg" style="background: url(<?php //echo BASE_URL . $row['thumb_image'];      ?>)no-repeat;background-position: center;background-size: cover;cursor: pointer;width: 100%;height: 150px;"></div>
+                                                                            <div class="home-press-release-bg" style="background: url(<?php //echo BASE_URL . $row['thumb_image'];       ?>)no-repeat;background-position: center;background-size: cover;cursor: pointer;width: 100%;height: 150px;"></div>
                                                                         </div>-->
                                     <div class="col-md-12">
                                         <div class="press-width float-right">
@@ -188,7 +188,7 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <h1>PHOTOS</h1>
-                        <!--<div class="s-photo"><a href="gallery?type=<?php //echo $type;           ?>" class="btn-secondary">SEE MORE PHOTOS</a></div>-->
+                        <!--<div class="s-photo"><a href="gallery?type=<?php //echo $type;            ?>" class="btn-secondary">SEE MORE PHOTOS</a></div>-->
                     </div>
                 </div>
             </div>
@@ -232,15 +232,22 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
             <div class="container">
                 <div class="flex-row">
                     <h1>VIDEOS</h1>
-                    <!--<div class="s-photo"><a href="gallery?type=<?php //echo $type;           ?>" class="btn-secondary">SEE MORE VIDEOS</a></div>-->
+                    <!--<div class="s-photo"><a href="gallery?type=<?php //echo $type;            ?>" class="btn-secondary">SEE MORE VIDEOS</a></div>-->
+                    <div class="home-gallery video-section">
+                        <?php if ($type == 'two_wheel') { ?>
+                            <a href="<?php echo BASE_URL . $videos[0]['media_path']; ?>" class="html5lightbox" title="<?php echo $videos[0]['title']; ?> <?php echo $videos[0]['description']; ?>" data-group="videogroup"><img src="<?php echo BASE_URL . $configs['two_wheel_videos']; ?>" class="popup-img" alt="" /></a>
+                        <?php } else { ?>
+                            <a href="<?php echo BASE_URL . $videos[0]['media_path']; ?>" class="html5lightbox" title="<?php echo $videos[0]['title']; ?> <?php echo $videos[0]['description']; ?>" data-group="videogroup"><img src="<?php echo BASE_URL . $configs['four_wheel_videos']; ?>" class="popup-img" alt="" /></a>
+                        <?php } ?>
+                    </div>
                 </div>
             </div>
-            <div class="row margin-0 home-gallery video-section">
+<!--            <div class="row margin-0 home-gallery video-section">
                 <div class="col-md-12 pad-0" id="video-pic">
                     <div class="video-gallery">
                         <div class="column-1">
                             <div class="video-gal">
-                                <!--<img src="img/photo/007.jpg" alt="" class="img-responsive"/>-->
+                                <img src="img/photo/007.jpg" alt="" class="img-responsive"/>
                                 <video id="myVideo1" width="100%" height="500"  muted="">
                                     <source src="video/002.mp4" type="video/mp4">
                                 </video>
@@ -300,7 +307,7 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
                     </div>
                 </div>
 
-            </div>
+            </div>-->
         </section>
         <?php include 'social-media-embed.php'; ?>
         <?php include 'partners-logos.php'; ?>
