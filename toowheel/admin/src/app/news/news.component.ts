@@ -524,9 +524,11 @@ export class NewsGalleryForm {
           formData.append('file', <File>fileInput.target.files[i]);
       this.httpClient.post('https://www.toowheel.com/beta/toowheel/api/v1/insert_news_gallery', formData).subscribe(
           (res)=>{
+              console.log(i);
+              console.log((((fileInput.target.files).length)));
                 this.loading = false;
                 if(res["result"]["error"] === false) {
-                    if(i == (((fileInput.target.files).length) - 1)){
+                    if(i == (((fileInput.target.files).length))){
                     this.getImages();
                     }
                 }else{
