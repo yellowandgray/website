@@ -146,7 +146,7 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
                     <div class="col-xl-4 col-md-6 col-sm-12">
                         <div class="advertaisement-bg">
                             <a href="<?php echo $card_add_one['url']; ?>" target="_blank">
-                                <img src="<?php echo BASE_URL . $card_add_one['image']; ?>" alt="" style="width: 100%;" />
+                                <img src="<?php echo BASE_URL . $card_add_one['image']; ?>" alt="" style="width: 90%;margin: 0 5%;" />
                             </a>
                             <div class="icon-bg"><i class="fa fa-play" aria-hidden="true"></i></div>
                         </div>
@@ -154,7 +154,7 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
                     <div class="col-xl-4 col-md-6 col-sm-12">
                         <div class="advertaisement-bg">
                             <a href="<?php echo $card_add_two['url']; ?>" target="_blank">
-                                <img src="<?php echo BASE_URL . $card_add_two['image']; ?>" alt="" style="width: 100%;" />
+                                <img src="<?php echo BASE_URL . $card_add_two['image']; ?>" alt="" style="width: 90%;margin: 0 5%;" />
                             </a>
                             <div class="icon-bg"><i class="fa fa-play" aria-hidden="true"></i></div>
                         </div>

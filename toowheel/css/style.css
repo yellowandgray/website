@@ -414,15 +414,15 @@ body {
 
 .btn-tranparent {
     display: inline-block;
-    text-align: center;
+    /* text-align: center; */
     vertical-align: middle;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background-color: transparent;
+    background-color: #ed1c24;
     border: 1px solid transparent;
-    padding: .375rem .75rem;
+    padding: 20px 17px;
     line-height: 1.5;
     border-radius: .25rem;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
@@ -431,8 +431,9 @@ body {
     font-size: 20px;
     color: #fff;
     font-weight: 600;
-    margin-left: 20px;
+    /* margin-left: 20px; */
     text-decoration: none;
+    width: 100%;
 }
 
 .btn-tranparent span {
@@ -445,7 +446,7 @@ body {
 .btn-tranparent span:after {
     content: '\00bb';
     position: absolute;
-    opacity: 0;
+    opacity: 1;
     top: 0;
     right: -20px;
     transition: 0.5s;
@@ -456,10 +457,9 @@ body {
     color: #fff;
 }
 
-.btn-tranparent:hover span:after {
-    opacity: 1;
-    right: 0;
-}
+/*.btn-tranparent:hover span:after {
+    
+}*/
 
 .advertaisement-bg {
     margin: 20px 0;
@@ -517,7 +517,7 @@ body {
 }
 
 .content-detail h6 {
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 700;
     margin-top: .5rem;
     color: #a0a0a0;
