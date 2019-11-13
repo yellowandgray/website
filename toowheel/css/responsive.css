@@ -458,7 +458,7 @@
         font-size: 100px !important;
     }
     .bg-1 .container {bottom: 0px !important;}
-    .header-login input[type=search] {right: 23% !Important;}
+/*    .header-login input[type=search] {right: 23% !Important;}*/
     .fs-gal-close {
         top: 50px !Important;
         right: 12% !Important;
@@ -611,10 +611,10 @@
     .video-bg-banner .video-overlay {
         height: 100% !important;
     }
-    .header-login input[type=search] {
+/*    .header-login input[type=search] {
         right: 29.5% !important;
         width: 65px!important;
-    }
+    }*/
 /*    .discover-btn {
         width: 2.8% !important;
     }*/
@@ -663,40 +663,40 @@
 
 
 @media (min-width: 768px) and (max-width: 805px) {
-    .header-login input[type=search] {
+/*    .header-login input[type=search] {
         right: 16% !important;
-    }
+    }*/
 }
 
 @media (min-width: 992px) and (max-width: 1204px) {
-    .header-login input[type=search] {
+/*    .header-login input[type=search] {
         right: 14.5% !important;
-    }
+    }*/
 }
 
 @media (min-width: 1205px) and (max-width: 1166px) {
-    .header-login input[type=search] { 
+/*    .header-login input[type=search] { 
         right: 13% !important;
-    }
+    }*/
 }
 
 
 @media (min-width: 1167px) and (max-width: 1200px) {
-    .header-login input[type=search] {
+/*    .header-login input[type=search] {
         right: 17.5% !important;
-    }
+    }*/
 }
 
 @media (min-width: 1200px) and (max-width: 1399px) {
-    .header-login input[type=search] {
+/*    .header-login input[type=search] {
         right: 15% !important;
-    }
+    }*/
 }
 
 @media (min-width: 1400px) and (max-width: 1440px) {
-    .header-login input[type=search] {
+/*    .header-login input[type=search] {
         right: 17% !important;
-    }
+    }*/
 }
 
 @media (min-width: 1401px) and (max-width: 1439px) {
@@ -706,9 +706,9 @@
 }
 
 @media (min-width: 1441px) and (max-width: 1500px) {
-    .header-login input[type=search] {
+/*    .header-login input[type=search] {
         right: 18% !important;
-    }
+    }*/
     .bg-1 span {
         font-size: 190px !important;
     }

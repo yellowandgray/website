@@ -2619,7 +2619,14 @@ body .calender-box{
     transition: all 0.5s linear;
 }
 
-.discover-slider .home-news-thumb-image:hover {
+.discover-slider .home-news-thumb-hover {
+    width: 100%;
+    height: 360px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.discover-slider .home-news-thumb-hover:hover  .home-news-thumb-image {
     -webkit-transform: scale(1.08);
     transform: scale(1.08);
 }
