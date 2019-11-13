@@ -577,8 +577,8 @@ button {
 
 .mob-block img {
     border-radius: 50%;
-    width: 100%;
-    height: 60px;
+    width: auto;
+    height: 45px;
     border: 1px solid red;
     overflow: hidden;
     -webkit-transition: 0.4s ease;

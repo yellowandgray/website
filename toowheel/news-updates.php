@@ -13,7 +13,7 @@ $news = $obj->selectAll('n.*, m.name AS media, c.name AS club, ca.name AS catego
     <body>
         <?php include 'menu.php'; ?>
         <div class="padding-top-108"></div>
-        <div class="news-all" style="padding-top: 40px;padding-bottom: 0px">
+        <div class="news-all" style="padding-top: 0px;padding-bottom: 0px">
             <div class="container">
                 <!--                <div class="row">
                                     <div class="col-md-8">

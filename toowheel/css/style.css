@@ -2211,14 +2211,15 @@ div#html5-watermark {
 .mob-logout-profile img {
     position: relative;
     border-radius: 50%;
-    width: 10%;
+    width: 12%;
     top: -70px;
     right: 20px;
     float: right;
-    height: 45px;
+    height: auto;
     /* overflow: hidden; */
     -webkit-transition: 0.4s ease;
     transition: 0.4s ease;
+    border: 1px solid #ed1c24;
 }
 
 .user-profile-image span img:hover {
