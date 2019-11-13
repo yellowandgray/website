@@ -13,7 +13,7 @@ $press_release = $obj->selectAll('p.*, m.name AS media', 'press_release AS p LEF
     <body>
         <?php include 'menu.php'; ?>
         <div class="padding-top-108"></div>
-        <div class="press-release" style="padding-top: 40px;">
+        <div class="press-release">
             <div class="container">
 <!--                <div class="row">
                     <div class="col-md-8">

@@ -77,7 +77,7 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
                 </div>
             </div>
         </section>
-        <section class="media-press-release pad-t-80">
+<!--        <section class="media-press-release pad-t-80">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-6 padding-lr-5">
@@ -113,7 +113,7 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
                     </div>
                 </div>
             </div>
-        </section>
+        </section>-->
         <section class="media-press-release">
             <div class="container">
                 <div class="row">

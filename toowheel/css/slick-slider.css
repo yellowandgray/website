@@ -293,7 +293,7 @@ button.slick-prev, button.slick-prev:hover {
 .slick-dots
 {
     position: absolute;
-    bottom: -100px;
+    bottom: -60px;
     display: block;
     width: 100%;
     padding: 0;
