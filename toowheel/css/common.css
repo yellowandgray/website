@@ -4914,7 +4914,7 @@ hr {
     height: 400px;
 }
 #gPhoto:hover img{
-    transform: scale(1.2);
+    transform: scale(1.05);
     z-index: 9;
     border: 3px solid #fc2d2c;
     transition: all 0.2s linear;
@@ -4936,7 +4936,7 @@ hr {
     /* margin-top: -9px; */
     color: #fff;
     z-index: 2;
-    transform: scale(1.2);
+    transform: scale(1.05);
     opacity: 1;
     transition: all 0.2s linear;
     z-index: 10;
