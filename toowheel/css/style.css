@@ -659,7 +659,7 @@ body {
 }
 
 .partners-section .text-center {
-/*    box-shadow: 0 0 2px 1px #c3c3c3;*/
+    /*    box-shadow: 0 0 2px 1px #c3c3c3;*/
     margin-bottom: 15px;
     border-radius: 5px;
     padding: 10px 10px;
@@ -2011,23 +2011,21 @@ div#html5-watermark {
     position: relative;
     top: -130px;
 }
-/*
+
 .discover-btn {
-    position: absolute;
-    bottom: 5px;
     text-align: center;
-    width: 4%;
-    margin: 0 auto;
-    padding: 0 10px;
+    position: relative;
+    top: 25px;
 }
 
 .discover-btn .discover-btn-home {
     background: red;
     color: #fff;
-    padding: 5px 15px;
+    text-decoration: none;
+    padding: 5px 20px;
     border-radius: 25px;
-    font-size: 14px;
-    font-weight: 700;
+    font-size: 12px;
+    font-weight: 600;
     border: 1px solid red;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
@@ -2037,7 +2035,7 @@ div#html5-watermark {
     color: red;
     border: 1px solid red;
     text-decoration: none;
-}*/
+}
 .dont-show{
     padding: 10px;
     /* background: #363636; */

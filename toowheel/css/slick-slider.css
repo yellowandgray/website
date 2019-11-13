@@ -145,7 +145,7 @@ button.slick-prev, button.slick-prev:hover {
 .slick-initialized .slick-slide
 {
     display: block;
-    height: 360px;
+    height: 380px;
 }
 
 /*@media screen and (max-width: 600px) {
