@@ -5204,9 +5204,9 @@ hr {
         flex-direction: column;
     }
 }
-@media (min-width: 320px) and (max-width: 768px){
+@media (min-width: 320px) and (max-width: 767px){
     #gPhoto:hover h5{
-       transform: scale(1);
+       display: none;
     }
     #gPhoto:hover img {
     transform: scale(1);
