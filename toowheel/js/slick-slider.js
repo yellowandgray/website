@@ -31,9 +31,9 @@ jQuery(document).ready(function ($) {
             {
                 breakpoint: 600,
                 settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    arrows: true,
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    arrows: false,
                     dots: false,
                     autoplay: true
                 }
@@ -41,9 +41,9 @@ jQuery(document).ready(function ($) {
             {
                 breakpoint: 400,
                 settings: {
-                    arrows: true,
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
+                    arrows: false,
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
                     dots: false,
                     autoplay: true
                 }

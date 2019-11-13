@@ -438,8 +438,9 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
                                                              {
                                                                  breakpoint: 600,
                                                                  settings: {
-                                                                     slidesToShow: 1,
-                                                                     slidesToScroll: 1,
+                                                                     arrow: false,
+                                                                     slidesToShow: 2,
+                                                                     slidesToScroll: 2,
                                                                      dots: false,
                                                                      autoplay: true
                                                                  }
@@ -448,8 +449,8 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
                                                                  breakpoint: 400,
                                                                  settings: {
                                                                      arrows: false,
-                                                                     slidesToShow: 1,
-                                                                     slidesToScroll: 1,
+                                                                     slidesToShow: 2,
+                                                                     slidesToScroll: 2,
                                                                      dots: false,
                                                                      autoplay: true
                                                                  }
