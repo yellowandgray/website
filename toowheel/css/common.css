@@ -3830,7 +3830,7 @@ thead td {
     flex-basis: 24%;
 }
 .partners-section .pan-1,.partners-section .pan-2 {
-    box-shadow: 0 0 2px 1px #c3c3c3;
+    /*box-shadow: 0 0 2px 1px #c3c3c3;*/
     margin-bottom: 15px;
     border-radius: 5px;
     padding: 10px 10px;
@@ -4841,7 +4841,7 @@ hr {
     width: 2px;
 }
 .photo img {
-    filter: brightness(70%);
+    filter: brightness(100%);
     transition: all 0.3s linear;
     width: 100%;
     height: 400px;
@@ -4917,9 +4917,6 @@ hr {
     padding-left: 2px;
 }
 
-#gPhoto {
-    padding: 0;
-}
 .pad-0{
     padding: 0px;
 }
@@ -5111,4 +5108,34 @@ hr {
 
 .mega-menu-tab ul.nav__ul {
     padding: 0;
+}
+#gPhoto {
+    padding: 0px;
+}
+@media  screen and (min-width: 992px){
+    #gPhoto:nth-child(3) {
+        top:-30px;
+    }
+
+    #gPhoto:nth-child(5) {
+        top:-30px;
+    }
+    #gPhoto:nth-child(3):hover {
+        z-index: 10;
+    }
+
+    #gPhoto:nth-child(5):hover {
+        z-index: 10;
+    }
+    #gPhoto {
+        padding: 10px;
+        transform: skewX(10deg);
+    }
+
+}
+@media  (max-width:1023px) and (min-width:320px){
+    .media-press-release {
+        top: -31px !important;
+        padding-top: 10px;
+    }
 }

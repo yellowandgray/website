@@ -63,7 +63,7 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
                                 <div class="discover-slider-content">
                                     <p class="clb-bg"><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 14) : $obj->charLimit($row['sponsor'], 14) ?></p>
                                     <h2><?php echo $row['title']; ?></h2>
-    <!--                                    <p><?php //echo $obj->charLimit($row['moto_text'], 60);       ?></p>-->
+    <!--                                    <p><?php //echo $obj->charLimit($row['moto_text'], 60);        ?></p>-->
                                 </div>
                                 <div class="discover-btn">
                                     <a href="news?nid=<?php echo $row['news_id']; ?>" class="discover-btn-home">DISCOVER</a>
@@ -74,7 +74,7 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
                 </div>
             </div>
         </section>
-        <section class="media-press-release pad-t-80">
+<!--        <section class="media-press-release pad-t-80">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-6 padding-lr-5">
@@ -93,24 +93,24 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
                     <div class="col-md-6">
                         <div class="row">
         <?php foreach ($news_flag as $row) { ?>
-                                    <div class="col-md-6 col-sm-6 col-xs-6 padding-lr-5">
-                                        <div class="news-img-02 news-01 height-two" onClick="document.location.href = 'news?nid=<?php echo $row['news_id']; ?>'">
-                                            <div class="news-home-flag" style="background: url(<?php echo BASE_URL . $row['cover_image']; ?>)no-repeat; background-position: center; background-size: cover; "></div>
-                                            <div class=" news-02-cont">
-                                                <div class="position-ad-01">
-                                                    <span class="sponsor-bg"><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 14) : $obj->charLimit($row['sponsor'], 14) ?></span>
-                                                    <h2><?php echo $row['title']; ?></h2>
+                                        <div class="col-md-6 col-sm-6 col-xs-6 padding-lr-5">
+                                            <div class="news-img-02 news-01 height-two" onClick="document.location.href = 'news?nid=<?php echo $row['news_id']; ?>'">
+                                                <div class="news-home-flag" style="background: url(<?php echo BASE_URL . $row['cover_image']; ?>)no-repeat; background-position: center; background-size: cover; "></div>
+                                                <div class=" news-02-cont">
+                                                    <div class="position-ad-01">
+                                                        <span class="sponsor-bg"><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 14) : $obj->charLimit($row['sponsor'], 14) ?></span>
+                                                        <h2><?php echo $row['title']; ?></h2>
 
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
         <?php } ?>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </section>-->
         <section class="media-press-release">
             <div class="container">
                 <div class="row">
@@ -122,7 +122,7 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
                             <?php foreach ($press_release_menu as $row) { ?>
                                 <div class="row margin-b-20 ">
                                     <!--                                    <div class="col-md-2">
-                                                                            <div class="home-press-release-bg" style="background: url(<?php //echo BASE_URL . $row['thumb_image'];  ?>)no-repeat;background-position: center;background-size: cover;cursor: pointer;width: 100%;height: 150px;"></div>
+                                                                            <div class="home-press-release-bg" style="background: url(<?php //echo BASE_URL . $row['thumb_image'];   ?>)no-repeat;background-position: center;background-size: cover;cursor: pointer;width: 100%;height: 150px;"></div>
                                                                         </div>-->
                                     <div class="col-md-12">
                                         <div class="press-width float-right">
@@ -140,10 +140,10 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
                 </div>
             </div>
         </section>
-        <section class="section-bg">
+        <section class="media-press-release" style="background:#212121;">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-4 col-sm-12">
+                    <div class="col-xl-4 col-md-6 col-sm-12">
                         <div class="advertaisement-bg">
                             <a href="<?php echo $card_add_one['url']; ?>" target="_blank">
                                 <img src="<?php echo BASE_URL . $card_add_one['image']; ?>" alt="" style="width: 100%;" />
@@ -151,7 +151,7 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
                             <div class="icon-bg"><i class="fa fa-play" aria-hidden="true"></i></div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-sm-12">
+                    <div class="col-xl-4 col-md-6 col-sm-12">
                         <div class="advertaisement-bg">
                             <a href="<?php echo $card_add_two['url']; ?>" target="_blank">
                                 <img src="<?php echo BASE_URL . $card_add_two['image']; ?>" alt="" style="width: 100%;" />
@@ -159,7 +159,7 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
                             <div class="icon-bg"><i class="fa fa-play" aria-hidden="true"></i></div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-sm-12">
+                    <div class="col-xl-4 col-md-12 col-sm-12">
                         <div class="upcoming-events">
                             <h4>UPCOMING EVENTS</h4>
                         </div>
@@ -180,12 +180,12 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
                 </div>
             </div>
         </section>
-        <section class="photo-section">
+        <section class="photo-section" style="background:#212121;">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <h1>PHOTOS</h1>
-                        <!--<div class="s-photo"><a href="gallery?type=<?php //echo $type;       ?>" class="btn-secondary">SEE MORE PHOTOS</a></div>-->
+                        <!--<div class="s-photo"><a href="gallery?type=<?php //echo $type;        ?>" class="btn-secondary">SEE MORE PHOTOS</a></div>-->
                     </div>
                 </div>
             </div>
@@ -194,30 +194,32 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
                     <div class="row photo">
 
                         <?php if ($type == 'two_wheel') { ?>
-                            <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6" id="gPhoto">
+                            <div class="col-lg-1 col-md-1 col-sm-0 col-xs-3" > </div>
+                            <div class="col-lg-2 col-md-2 col-sm-12 col-xs-6" id="gPhoto">
                                 <a href="<?php echo BASE_URL . $images[18]['media_path']; ?>" class="html5lightbox" title="<?php echo $images[18]['title']; ?> <?php echo $images[18]['description']; ?>" data-group="imagegroup"><img src="img/photo/001.jpg" alt="" class="img-responsive"/></a>
                                 <h5 class="text-center">Toowheel Launch</h5>
                             </div>
-                            <div class=" col-lg-2 col-md-4 col-sm-4 col-xs-6" id="gPhoto">
+                            <div class=" col-lg-2 col-md-2 col-sm-12 col-xs-6" id="gPhoto">
                                 <a href="<?php echo BASE_URL . $images[33]['media_path']; ?>" class="html5lightbox" title="<?php echo $images[33]['title']; ?> <?php echo $images[33]['description']; ?>" data-group="imagegroup"><img src="img/photo/002.jpg" alt="" class="img-responsive"/></a>
                                 <h5 class="text-center">Toowheel Launch</h5>
                             </div>
-                            <div class=" col-lg-2 col-md-4 col-sm-4 col-xs-6" id="gPhoto">
+                            <div class=" col-lg-2 col-md-2 col-sm-12 col-xs-6" id="gPhoto">
                                 <a href="<?php echo BASE_URL . $images[65]['media_path']; ?>" class="html5lightbox" title="<?php echo $images[65]['title']; ?> <?php echo $images[65]['description']; ?>" data-group="imagegroup"><img src="img/photo/003.jpg" alt="" class="img-responsive"/></a>
                                 <h5 class="text-center">Toowheel Launch</h5>
                             </div>
-                            <div class="col-lg-2  col-md-4 col-sm-4 col-xs-6" id="gPhoto">
+                            <div class="col-lg-2  col-md-2 col-sm-12 col-xs-6" id="gPhoto">
                                 <a href="<?php echo BASE_URL . $images[63]['media_path']; ?>" class="html5lightbox" title="<?php echo $images[63]['title']; ?> <?php echo $images[63]['description']; ?>" data-group="imagegroup"><img src="img/photo/004.jpg" alt="" class="img-responsive"/></a>
                                 <h5 class="text-center">Toowheel Launch</h5>
                             </div>
-                            <div class="col-lg-2  col-md-4 col-sm-4 col-xs-6" id="gPhoto">
+                            <div class="col-lg-2  col-md-2 col-sm-12 col-xs-6" id="gPhoto">
                                 <a href="<?php echo BASE_URL . $images[50]['media_path']; ?>" class="html5lightbox" title="<?php echo $images[50]['title']; ?> <?php echo $images[50]['description']; ?>" data-group="imagegroup"><img src="img/photo/005.jpg" alt="" class="img-responsive"/></a>
                                 <h5 class="text-center">Toowheel Launch</h5>
                             </div>
-                            <div class="col-lg-2  col-md-4 col-sm-4 col-xs-6" id="gPhoto">
-                                <a href="<?php echo BASE_URL . $images[44]['media_path']; ?>" class="html5lightbox" title="<?php echo $images[44]['title']; ?> <?php echo $images[44]['description']; ?>" data-group="imagegroup"><img src="img/photo/006.jpg" alt="" class="img-responsive"/></a>
-                                <h5 class="text-center">Toowheel Launch</h5>
-                            </div>
+                            <div class="col-lg-1 col-md-1 col-sm-0 col-xs-3" >  </div>
+                            <!--                            <div class="col-lg-2  col-md-4 col-sm-4 col-xs-6" id="gPhoto">
+                                                            <a href="<?php echo BASE_URL . $images[44]['media_path']; ?>" class="html5lightbox" title="<?php echo $images[44]['title']; ?> <?php echo $images[44]['description']; ?>" data-group="imagegroup"><img src="img/photo/006.jpg" alt="" class="img-responsive"/></a>
+                                                            <h5 class="text-center">Toowheel Launch</h5>
+                                                        </div>-->
                         <?php } else { ?>
                             <a href="<?php echo BASE_URL . $images[0]['media_path']; ?>" class="html5lightbox" title="<?php echo $images[0]['title']; ?> <?php echo $images[0]['description']; ?>" data-group="imagegroup"><img src="<?php echo BASE_URL . $configs['four_wheel_photos']; ?>" class="popup-img" alt="" /></a>
                         <?php } ?>
@@ -225,11 +227,11 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
                 </div>
             </div>
         </section>
-        <section class="video-img">
+        <section class="video-img" style="background:#212121;">
             <div class="container">
                 <div class="flex-row">
                     <h1>VIDEOS</h1>
-                    <!--<div class="s-photo"><a href="gallery?type=<?php //echo $type;       ?>" class="btn-secondary">SEE MORE VIDEOS</a></div>-->
+                    <!--<div class="s-photo"><a href="gallery?type=<?php //echo $type;        ?>" class="btn-secondary">SEE MORE VIDEOS</a></div>-->
                 </div>
                 <div class="home-gallery video-section">
                     <?php if ($type == 'two_wheel') { ?>
