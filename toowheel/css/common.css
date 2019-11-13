@@ -4937,10 +4937,10 @@ hr {
     padding-right: 2px;
     padding-left: 2px;
 }
-+#gPhoto:hover h5{
+#gPhoto:hover h5{
     background: rgba(0, 0, 0, 0.49);
     padding: 5px;
-     margin-top: -7px; 
+    margin-top: -7px; 
     color: #fff;
     z-index: 2;
     transform: scale(1.05);
@@ -5206,12 +5206,24 @@ hr {
 }
 @media (min-width: 320px) and (max-width: 767px){
     #gPhoto:hover h5{
-       display: none;
+        display: none;
     }
     #gPhoto:hover img {
-    transform: scale(1);
-    z-index: 9;
-    border: none;
-    filter: brightness(100%);
+        transform: scale(1);
+        z-index: 9;
+        border: none;
+        filter: brightness(100%);
+    }
 }
+.video-gal:hover img{
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.video-gal:hover i{
+    opacity: 0;
+    transition: all 0.02s linear;
+}
+.video-gal:hover {
+    background: #363636;
+    cursor: pointer;
 }
