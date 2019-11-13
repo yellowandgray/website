@@ -803,6 +803,30 @@ $app->post('/update_user_status/:table/:where', function($table, $where) use ($a
     echoRespnse(201, $res);
 });
 
+$app->post('/update_club_status/:table/:where', function($table, $where) use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to update');
+    $data = $app->request->post();
+    $com = new Common();
+    $record = $com->updateRecordWithWhere($data, $table, $where);
+    if ($record > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Record updated successfully';
+        $tpy = new Thirdparty();
+        $data = $com->selectRow('*', $table, $where);
+        $data['link'] = LOGIN_PATH;
+        if ($data['published'] == 1) {
+            $template = $com->selectRow('*', 'templates', 'name=\'club_activated\' AND type=\'email\' AND target=\'user\'');
+        }
+        if ($data['published'] == 0) {
+            $template = $com->selectRow('*', 'templates', 'name=\'club_blocked\' AND type=\'email\' AND target=\'user\'');
+        }
+        $data['password'] = 'Your password';
+        $body = $com->getReplacedString($template['body_web'], $data);
+        $tpy->sendMail($data['email_id'], $data['leader_name'], $body, $body, $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
+    }
+    echoRespnse(201, $res);
+});
+
 $app->post('/update_tshirt_status/:table/:where', function($table, $where) use ($app) {
     $res = array('error' => true, 'message' => 'Unable to update');
     $data = $app->request->post();

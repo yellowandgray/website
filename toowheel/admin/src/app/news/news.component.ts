@@ -526,7 +526,7 @@ export class NewsGalleryForm {
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
-                    if(i == (((fileInput.target.files).length) - 1)){
+                    if(i == (((fileInput.target.files).length))){
                     this.getImages();
                     }
                 }else{
