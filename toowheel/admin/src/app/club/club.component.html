@@ -35,7 +35,7 @@
                         <button mat-icon-button aria-label="label" (click)="changeStatus(data.club_id, 1)" *ngIf="data.published == 0 && data.source == 'web'">
                             <mat-icon #tooltip="matTooltip" matTooltip="Done">done</mat-icon>
                         </button>
-                        <button mat-icon-button aria-label="label" (click)="changeStatus(data.club_id, 0)" *ngIf="data.published == 1 && data.source == 'web'">
+                        <button mat-icon-button aria-label="label" (click)="confirmDelete(data.club_id, 'block')" *ngIf="data.published == 1 && data.source == 'web'">
                             <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
                         </button>
                         <button mat-icon-button aria-label="label" (click)="openGalleryDialog(data.club_id)">
@@ -50,7 +50,7 @@
                         <button mat-icon-button aria-label="label" (click)="openDialog(data.club_id, 'result')">
                             <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
                         </button>
-                        <button mat-icon-button aria-label="label" (click)="confirmDelete(data.club_id)">
+                        <button mat-icon-button aria-label="label" (click)="confirmDelete(data.club_id, 'delete')">
                             <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                         </button>
                         <img matListAvatar src="{{image_url}}{{data.logo}}" *ngIf="data.logo && data.cover_image != ''" alt="image" (click)="confirmDialog(data, 'preview')" />

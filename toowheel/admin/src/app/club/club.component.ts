@@ -4,7 +4,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-club',
@@ -74,7 +74,7 @@ export class ClubComponent implements OnInit {
        }
     });
     }
-    confirmDelete(id): void  {
+    confirmDelete(id, action): void  {
         var data = null;
           if(id != 0) { 
                     data = id;
@@ -82,7 +82,7 @@ export class ClubComponent implements OnInit {
         const dialogRef = this.dialog.open(ClubDelete, {
             minWidth: "40%",
             maxWidth: "40%",
-            data: data
+            data: {data: data, action: action}
         });
 
        dialogRef.afterClosed().subscribe(result => {
@@ -117,7 +117,6 @@ export class ClubComponent implements OnInit {
        }
     });
     }
-    
     
      confirmDialog(id, action): void  {
     var data = null;
@@ -154,7 +153,7 @@ export class ClubComponent implements OnInit {
     changeStatus(id, status): void {
       var formData = new FormData();
       formData.append('published', status);
-      this.httpClient.post<any>('https://www.toowheel.com/beta/toowheel/api/v1/update_record/club/club_id = '+id, formData)
+      this.httpClient.post<any>('https://www.toowheel.com/beta/toowheel/api/v1/update_club_status/club/club_id = '+id, formData)
   .subscribe(
           (res)=>{
               this.getClub();
@@ -432,14 +431,17 @@ export class ClubForm {
 })
 export class ClubDelete {
     loading = false;
+    blockreason = '';
     club_id = 0;
+    action: string = '';
     constructor(
     public dialogRef: MatDialogRef<ClubDelete>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
+    this.action = this.data.action;
         if(this.data != null) { 
-            this.club_id = this.data;
+            this.club_id = this.data.data;
     }
 }
 
@@ -467,6 +469,31 @@ export class ClubDelete {
             }
         );
   }
+  changeStatus(): void {
+        var formData = new FormData();
+        formData.append('published', '0');
+        formData.append('block_reason', this.blockreason);
+        formData.append('blocked_by', sessionStorage.getItem("toowheel_users_id"));
+        formData.append('blocked_at', moment().format('YYYY-MM-DD'));
+        this.httpClient.post<any>('https://www.toowheel.com/beta/toowheel/api/v1/update_club_status/club/club_id = '+this.club_id, formData)
+    .subscribe(
+            (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this.dialogRef.close(true);
+                }else{
+           this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+          },
+          (error)=>{
+              this._snackBar.open(error["statusText"], '', {
+        duration: 2000,
+      });
+          }
+          );
+    }
 }
 
 @Component({

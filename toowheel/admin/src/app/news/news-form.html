@@ -136,13 +136,6 @@
             </button>
         </div>
     </div>
-    <div fxFlex="50%">
-        <angular-editor id="editor1" formControlName="description" [config]="editorConfig"></angular-editor>
-    </div>
-</div>
-<br/>
-<br/>
-<div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
     <div fxFlex="50%" fxLayoutAlign="center center">
         <button *ngIf="banner_image_2_path == ''" type="button" mat-raised-button (click)="fileInputBanner2.click()">{{banner_image_2}}</button>
         <input hidden #fileInputBanner2 type="file" id="file_banner_2" (change)="fileProgress($event, 'banner_image_2', 'banner_image_2_path')" />
@@ -153,6 +146,13 @@
                 <mat-icon>close</mat-icon>
             </button>
         </div>
+    </div>
+</div>
+<br/>
+<br/>
+<div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+    <div fxFlex="50%">
+        <angular-editor id="editor1" formControlName="description" [config]="editorConfig"></angular-editor>
     </div>
     <div fxFlex="50%">
         <angular-editor id="editor2" formControlName="description_1" [config]="editorConfig"></angular-editor>
@@ -172,13 +172,6 @@
             </button>
         </div>
     </div>
-    <div fxFlex="50%">
-        <angular-editor id="editor3" formControlName="description_2" [config]="editorConfig"></angular-editor>
-    </div>
-</div>
-<br/>
-<br/>
-<div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
     <div fxFlex="50%" fxLayoutAlign="center center">
         <button *ngIf="banner_image_4_path == ''" type="button" mat-raised-button (click)="fileInputBanner4.click()">{{banner_image_4}}</button>
         <input hidden #fileInputBanner4 type="file" id="file_banner_4" (change)="fileProgress($event, 'banner_image_4', 'banner_image_4_path')" />
@@ -189,6 +182,13 @@
                 <mat-icon>close</mat-icon>
             </button>
         </div>
+    </div>    
+</div>
+<br/>
+<br/>
+<div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+    <div fxFlex="50%">
+        <angular-editor id="editor3" formControlName="description_2" [config]="editorConfig"></angular-editor>
     </div>
     <div fxFlex="50%">
         <angular-editor id="editor4" formControlName="description_3" [config]="editorConfig"></angular-editor>
