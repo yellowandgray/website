@@ -659,7 +659,7 @@ body {
 }
 
 .partners-section .text-center {
-    box-shadow: 0 0 2px 1px #c3c3c3;
+/*    box-shadow: 0 0 2px 1px #c3c3c3;*/
     margin-bottom: 15px;
     border-radius: 5px;
     padding: 10px 10px;
@@ -2011,7 +2011,7 @@ div#html5-watermark {
     position: relative;
     top: -130px;
 }
-
+/*
 .discover-btn {
     position: absolute;
     bottom: 5px;
@@ -2037,7 +2037,7 @@ div#html5-watermark {
     color: red;
     border: 1px solid red;
     text-decoration: none;
-}
+}*/
 .dont-show{
     padding: 10px;
     /* background: #363636; */

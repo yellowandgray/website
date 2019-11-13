@@ -308,7 +308,7 @@ button.slick-prev, button.slick-prev:hover {
 
     width: 20px;
     height: 20px;
-    margin: 0 5px;
+    margin: 0px;
     padding: 0;
 
     cursor: pointer;
@@ -317,15 +317,11 @@ button.slick-prev, button.slick-prev:hover {
 {
     font-size: 0;
     line-height: 0;
-
     display: block;
-
-    width: 20px;
-    height: 20px;
-    padding: 20px;
-
+    width: 14px;
+    height: 14px;
+    padding: 7px;
     cursor: pointer;
-
     color: #fff;
     border: 0;
     outline: none;
@@ -344,22 +340,17 @@ button.slick-prev, button.slick-prev:hover {
 .slick-dots li button:before
 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 90px;
+    font-size: 65px;
     line-height: 20px;
-
     position: absolute;
     top: 0;
     left: 0;
-
-    width: 20px;
-    height: 20px;
-
+    width: 14px;
+    height: 14px;
     content: '•';
     text-align: center;
-
     opacity: .25;
     color: black;
-
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }

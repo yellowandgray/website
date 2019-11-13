@@ -3855,7 +3855,7 @@ thead td {
     flex-basis: 24%;
 }
 .partners-section .pan-1,.partners-section .pan-2 {
-    box-shadow: 0 0 2px 1px #c3c3c3;
+/*    box-shadow: 0 0 2px 1px #c3c3c3;*/
     margin-bottom: 15px;
     border-radius: 5px;
     padding: 10px 10px;
@@ -4904,9 +4904,9 @@ hr {
 .search-1 {
     flex-basis: 100%;
 }
-::-webkit-scrollbar {
+/*::-webkit-scrollbar {
     width: 2px;
-}
+}*/
 .photo img {
     filter: brightness(70%);
     transition: all 0.3s linear;
