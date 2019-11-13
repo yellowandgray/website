@@ -4904,9 +4904,9 @@ hr {
 .search-1 {
     flex-basis: 100%;
 }
-::-webkit-scrollbar {
+/*::-webkit-scrollbar {
     width: 2px;
-}
+}*/
 .photo img {
     filter: brightness(70%);
     transition: all 0.3s linear;
