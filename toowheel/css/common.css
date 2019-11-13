@@ -3855,7 +3855,7 @@ thead td {
     flex-basis: 24%;
 }
 .partners-section .pan-1,.partners-section .pan-2 {
-/*    box-shadow: 0 0 2px 1px #c3c3c3;*/
+    /*    box-shadow: 0 0 2px 1px #c3c3c3;*/
     margin-bottom: 15px;
     border-radius: 5px;
     padding: 10px 10px;
@@ -4914,7 +4914,7 @@ hr {
     height: 400px;
 }
 #gPhoto:hover img{
-    transform: scale(1.2);
+    transform: scale(1.05);
     z-index: 9;
     border: 3px solid #fc2d2c;
     transition: all 0.2s linear;
@@ -4936,7 +4936,7 @@ hr {
     /* margin-top: -9px; */
     color: #fff;
     z-index: 2;
-    transform: scale(1.2);
+    transform: scale(1.05);
     opacity: 1;
     transition: all 0.2s linear;
     z-index: 10;
@@ -5003,6 +5003,7 @@ hr {
     display: flex;
     flex-direction: column;
     width: 25%;
+    flex-wrap: wrap;
 }
 .video-gal{
     flex: 1;
@@ -5049,10 +5050,7 @@ hr {
     transition:  all 0.3s linear;
     opacity: 1;
 }
-.video-t-1-click{
-    bottom: -100px !important;
-    opacity: 0 !important;
-}
+
 .video-gal:hover i{
 
     transition:  all 0.3s linear;
@@ -5182,4 +5180,20 @@ hr {
 
 .input-group>.custom-file .custom-file-input:focus~.custom-file-label, .input-group>.custom-select:focus, .input-group>.form-control:focus {
     z-index: 1;
+}
+.video-gallery{
+    display: flex;
+    flex-wrap: wrap;
+}
+@media (min-width: 564px) and (max-width: 768px){
+    .column-1 {
+        flex-basis: 100%;
+        flex-direction: row;
+    }
+}
+@media (min-width: 320px) and (max-width: 563px){
+    .column-1 {
+        flex-basis: 100%;
+        flex-direction: column;
+    }
 }
