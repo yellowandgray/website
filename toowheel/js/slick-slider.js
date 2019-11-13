@@ -5,7 +5,7 @@ jQuery(document).ready(function ($) {
         speed: 500,
         slidesToShow: 6,
         slidesToScroll: 1,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 2000,
         arrows: true,
         responsive: [{
@@ -15,7 +15,7 @@ jQuery(document).ready(function ($) {
                     slidesToScroll: 1,
                     arrows: true,
                     dots: false,
-                    autoplay: true
+                    autoplay: false
                 }
             },
             {
@@ -25,7 +25,7 @@ jQuery(document).ready(function ($) {
                     slidesToScroll: 1,
                     arrows: true,
                     dots: false,
-                    autoplay: true
+                    autoplay: false
                 }
             },
             {
@@ -35,7 +35,7 @@ jQuery(document).ready(function ($) {
                     slidesToScroll: 1,
                     arrows: true,
                     dots: false,
-                    autoplay: true
+                    autoplay: false
                 }
             },
             {
@@ -45,7 +45,7 @@ jQuery(document).ready(function ($) {
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     dots: false,
-                    autoplay: true
+                    autoplay: false
                 }
             }]
     });
