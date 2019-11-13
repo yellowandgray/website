@@ -274,7 +274,7 @@ body {
     text-align: center;
     margin: 0;
     font-weight: 700;
-    height: 25px !important;
+    height: 25px;
     transform: skew(-20deg);
 }
 
@@ -291,7 +291,7 @@ body {
     color: #fff;
     margin-bottom: 8px;
     font-size: 10px;
-    height: 45px;
+/*    height: 45px;*/
     overflow: hidden;
     text-align: left;
 }
