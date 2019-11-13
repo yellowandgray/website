@@ -60,16 +60,40 @@ $past_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
                                 <h5>Past Events</h5>
                                 <?php foreach ($past_events as $row) { ?>
                                     <div class="row">
-                                        <div class="col-xl-6 col-sm-12">
+                                        <div class="col-xl-12 col-sm-12">
                                             <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="image" class="img-responsive"/>
-                                            <p><span>Club/Sponsor:</span> <?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 20) : $obj->charLimit($row['sponsor'], 20); ?></p>
-                                            <p><span>From Date:</span> <?php echo date('M d, Y', strtotime($row['event_from_date'])); ?></p>
-                                            <p><span>To Date:</span> <?php echo date('M d, Y', strtotime($row['event_to_date'])); ?></p>
-                                            <p><span>Location:</span> <?php echo $row['location']; ?></p>
                                         </div>
-                                        <div class="col-xl-6 col-sm-12">
+                                        <div class="col-xl-12 col-sm-12">
                                             <h3><?php echo $row['title']; ?></h3>
-                                            <p><strong>Description</strong><br/> <?php echo $row['description']; ?></p>
+                                            <table class="past-event-table">
+                                                <tr>
+                                                    <th>Club/Sponsor:</th>
+                                                    <td><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 20) : $obj->charLimit($row['sponsor'], 20); ?></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>From Date:</th>
+                                                    <td><?php echo date('M d, Y', strtotime($row['event_from_date'])); ?></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>To Date:</th>
+                                                    <td><?php echo date('M d, Y', strtotime($row['event_to_date'])); ?></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Location:</th>
+                                                    <td><?php echo $row['location']; ?></td>
+                                                </tr>
+                                            </table>
+        <!--                                            <p><span></span> </p>
+                                            <p><span></span> </p>
+                                            <p><span>To Date:</span> </p>
+                                            <p><span>Location:</span> </p>-->
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <div class="row">
+                                        <div class="col-xl-12 col-sm-12">
+                                            <strong>Description</strong>
+                                            <p><?php echo $row['description']; ?></p>
                                         </div>
                                     </div>
                                     <hr>
