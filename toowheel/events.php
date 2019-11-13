@@ -79,13 +79,8 @@ $past_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
                                                     <td><?php echo $row['location']; ?></td>
                                                 </tr>
                                             </table>
-        <!--                                            <p><span></span> </p>
-                                            <p><span></span> </p>
-                                            <p><span>To Date:</span> </p>
-                                            <p><span>Location:</span> </p>-->
                                         </div>
                                     </div>
-                                    <br/>
                                     <div class="row">
                                         <div class="col-xl-12 col-sm-12">
                                             <strong>Description: </strong>

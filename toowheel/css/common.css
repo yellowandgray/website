@@ -5237,3 +5237,7 @@ hr {
     padding: 2px;
     font-size: 12px;
 }
+
+.past-event strong {
+    font-size: 12px;
+}
