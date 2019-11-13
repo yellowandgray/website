@@ -5073,7 +5073,7 @@ hr {
     position: absolute;
     z-index: 10;
     background: #0009;
-    padding: 20px;
+    padding: 8px;
     bottom: -100px;
     width: 100%;
     opacity: 0;

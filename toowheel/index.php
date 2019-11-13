@@ -64,7 +64,7 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
     <!--                                <img src="<?php echo BASE_URL . $row['thumb_image']; ?>" alt="alt" />-->
                                 <div class="discover-slider-content">
                                     <p class="clb-bg"><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 14) : $obj->charLimit($row['sponsor'], 14) ?></p>
-                                    <h2><?php echo $row['title']; ?></h2>
+                                    <h2><a href="news?nid=<?php echo $row['news_id']; ?>"><?php echo $row['title']; ?></a></h2>
     <!--                                    <p><?php //echo $obj->charLimit($row['moto_text'], 60);                      ?></p>-->
 
                                     <div class="discover-btn">

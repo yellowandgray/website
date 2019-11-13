@@ -287,6 +287,19 @@ body {
     height: 57px;
 }
 
+.discover-slider-content h2 a {
+    color: #fff;
+}
+
+.discover-slider-content h2 a:hover {
+    color: #dadada;
+    text-decoration: none;
+}
+
+.discover-slider-content h2 a:focus {
+    outline: none;
+}
+
 .discover-slider-content p {
     color: #fff;
     margin-bottom: 8px;
@@ -2028,6 +2041,10 @@ div#html5-watermark {
     font-weight: 600;
     border: 1px solid red;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.discover-btn .discover-btn-home:focus {
+    outline: none;
 }
 
 .discover-btn .discover-btn-home:hover {
