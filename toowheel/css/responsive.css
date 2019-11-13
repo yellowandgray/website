@@ -147,6 +147,9 @@
         height: 28px !important;
         bottom: -10px !important;
     }
+    #club-register h4 {
+        font-size: 16px !important;
+    }
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
@@ -259,7 +262,7 @@
             width: 3.5% !important;
         }*/
     .custom-file-input {
-        position: unset !important;
+/*        position: unset !important;*/
         width: 100% !important;
         padding-left: 0px !important;
     }
