@@ -71,12 +71,8 @@ $past_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
                                                     <td><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 20) : $obj->charLimit($row['sponsor'], 20); ?></td>
                                                 </tr>
                                                 <tr>
-                                                    <th>From Date:</th>
-                                                    <td><?php echo date('M d, Y', strtotime($row['event_from_date'])); ?></td>
-                                                </tr>
-                                                <tr>
-                                                    <th>To Date:</th>
-                                                    <td><?php echo date('M d, Y', strtotime($row['event_to_date'])); ?></td>
+                                                    <th>Date:</th>
+                                                    <td><?php echo date('M d, Y', strtotime($row['event_from_date'])); ?> | <?php echo date('M d, Y', strtotime($row['event_to_date'])); ?></td>
                                                 </tr>
                                                 <tr>
                                                     <th>Location:</th>
@@ -92,7 +88,7 @@ $past_events = $obj->selectAll('e.*, c.name AS club, ca.name AS category', 'even
                                     <br/>
                                     <div class="row">
                                         <div class="col-xl-12 col-sm-12">
-                                            <strong>Description</strong>
+                                            <strong>Description: </strong>
                                             <p><?php echo $row['description']; ?></p>
                                         </div>
                                     </div>
