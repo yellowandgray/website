@@ -38,7 +38,7 @@
     .photo-section h1 {font-size: 3rem !important;}
     .photo-section img {top: -28px !important;}
     .video-img h1 {font-size: 3rem !important;}
-    .video-section {top: 0 !important;}
+    .video-section {top: 45px !important;}
     .header {height: 85px !important;}
     .logo {width: 66% !important; margin: 0 auto !important;}
     .discover-slider-content {top: -142px !important;}
@@ -310,7 +310,7 @@
     .photo-section h1 {font-size: 5rem !important;}
     .photo-section img {top: -55px !important;}
     .video-img h1 {font-size: 5rem !important;}
-    .video-section {top: 0 !important;}
+    .video-section {top: 22px !important;}
     .upcoming-events-bg .content-detail {
         width: 67% !important;
     }

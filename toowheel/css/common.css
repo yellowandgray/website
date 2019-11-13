@@ -5197,3 +5197,14 @@ hr {
         flex-direction: column;
     }
 }
+@media (min-width: 320px) and (max-width: 768px){
+    #gPhoto:hover h5{
+       transform: scale(1);
+    }
+    #gPhoto:hover img {
+    transform: scale(1);
+    z-index: 9;
+    border: none;
+    filter: brightness(100%);
+}
+}
