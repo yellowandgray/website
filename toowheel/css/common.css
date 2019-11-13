@@ -5058,10 +5058,10 @@ hr {
     opacity: 1;
 }
 
-.video-gal:hover i{
-
-    transition:  all 0.3s linear;
+.video-gal:hover i {
+    transition: all 0.3s linear;
     opacity: 1;
+    background: #ed1c24;
 }
 
 .video-t-1{
@@ -5206,7 +5206,7 @@ hr {
 }
 @media (min-width: 320px) and (max-width: 768px){
     #gPhoto:hover h5{
-       transform: scale(1);
+       display: none;
     }
     #gPhoto:hover img {
     transform: scale(1);

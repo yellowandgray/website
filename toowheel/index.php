@@ -233,16 +233,16 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
                 <div class="flex-row">
                     <h1>VIDEOS</h1>
                     <!--<div class="s-photo"><a href="gallery?type=<?php //echo $type;            ?>" class="btn-secondary">SEE MORE VIDEOS</a></div>-->
-                    <div class="home-gallery video-section">
+<!--                    <div class="home-gallery video-section">
                         <?php if ($type == 'two_wheel') { ?>
                             <a href="<?php echo BASE_URL . $videos[0]['media_path']; ?>" class="html5lightbox" title="<?php echo $videos[0]['title']; ?> <?php echo $videos[0]['description']; ?>" data-group="videogroup"><img src="<?php echo BASE_URL . $configs['two_wheel_videos']; ?>" class="popup-img" alt="" /></a>
                         <?php } else { ?>
                             <a href="<?php echo BASE_URL . $videos[0]['media_path']; ?>" class="html5lightbox" title="<?php echo $videos[0]['title']; ?> <?php echo $videos[0]['description']; ?>" data-group="videogroup"><img src="<?php echo BASE_URL . $configs['four_wheel_videos']; ?>" class="popup-img" alt="" /></a>
                         <?php } ?>
-                    </div>
+                    </div>-->
                 </div>
             </div>
-<!--            <div class="row margin-0 home-gallery video-section">
+            <div class="row margin-0 home-gallery video-section">
                 <div class="col-md-12 pad-0" id="video-pic">
                     <div class="video-gallery">
                         <div class="column-1">
@@ -307,7 +307,7 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
                     </div>
                 </div>
 
-            </div>-->
+            </div>
         </section>
         <?php include 'social-media-embed.php'; ?>
         <?php include 'partners-logos.php'; ?>
