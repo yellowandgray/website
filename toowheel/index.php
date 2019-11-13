@@ -232,82 +232,82 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
             <div class="container">
                 <div class="flex-row">
                     <h1>VIDEOS</h1>
-                    <!--<div class="s-photo"><a href="gallery?type=<?php //echo $type;             ?>" class="btn-secondary">SEE MORE VIDEOS</a></div>-->
-                    <div class="home-gallery video-section">
+                    <!--<div class="s-photo"><a href="gallery?type=<?php //echo $type;            ?>" class="btn-secondary">SEE MORE VIDEOS</a></div>-->
+<!--                    <div class="home-gallery video-section">
                         <?php if ($type == 'two_wheel') { ?>
                             <a href="<?php echo BASE_URL . $videos[0]['media_path']; ?>" class="html5lightbox" title="<?php echo $videos[0]['title']; ?> <?php echo $videos[0]['description']; ?>" data-group="videogroup"><img src="<?php echo BASE_URL . $configs['two_wheel_videos']; ?>" class="popup-img" alt="" /></a>
                         <?php } else { ?>
                             <a href="<?php echo BASE_URL . $videos[0]['media_path']; ?>" class="html5lightbox" title="<?php echo $videos[0]['title']; ?> <?php echo $videos[0]['description']; ?>" data-group="videogroup"><img src="<?php echo BASE_URL . $configs['four_wheel_videos']; ?>" class="popup-img" alt="" /></a>
                         <?php } ?>
-                    </div>
+                    </div>-->
                 </div>
             </div>
-            <!--            <div class="row margin-0 home-gallery video-section">
-                            <div class="col-md-12 pad-0" id="video-pic">
-                                <div class="video-gallery">
-                                    <div class="column-1">
-                                        <div class="video-gal">
-                                            <img src="img/photo/007.jpg" alt="" class="img-responsive"/>
-                                            <video id="myVideo1" width="100%" height="500"  muted="">
-                                                <source src="video/002.mp4" type="video/mp4">
-                                            </video>
-                                            <img  id="vimg01" src="img/photo/007.jpg" alt="" class="img-responsive popup-img"/>
-                                            <a href="video/002.mp4" class="html5lightbox" title="" data-group="videogroup"> <i class="fa fa-play-circle-o" aria-hidden="true"></i></a>
-                                            <div class="video-t-1" id="text-v">
-                                                <h4>Toowheel</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="column-1">
-            
-                                        <div class="video-gal">
-                                            <video id="myVideo3" width="100%" height="250" muted="" >
-                                                <source src="video/004.mp4" type="video/mp4">
-                                            </video>
-                                            <img id="vimg02" src="img/photo/009.jpg" alt="" class="img-responsive"/>
-                                            <a href="video/004.mp4" class="html5lightbox" title="1st convoy arrival , stay tuned for official video . Thx to fan cam" data-group="videogroup"> <i  class="fa fa-play-circle-o" aria-hidden="true"></i></a>
-                                            <div class="video-t-1" id="text-v">
-                                                <h4>1st convoy arrival , stay tuned for official video . Thx to fan cam </h4>
-                                            </div>
-                                        </div>
-                                        <div class="video-gal">
-                                            <video id="myVideo2" width="100%" height="250" muted="" >
-                                                <source src="video/003.mp4" type="video/mp4">
-                                            </video>
-                                            <img id="vimg03" src="img/photo/008.jpg" alt="" class="img-responsive"/>
-                                            <a href="video/003.mp4" class="html5lightbox" title="2nd convoy , stay tuned for official video." data-group="videogroup"> <i  class="fa fa-play-circle-o" aria-hidden="true"></i></a>
-                                            <div class="video-t-1" id="text-v">
-                                                <h4>2nd convoy , stay tuned for official video.</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="column-1">
-                                        <div class="video-gal">
-                                            <video id="myVideo4" width="100%" height="250" muted="">
-                                                <source src="video/005.mp4" type="video/mp4">
-                                            </video>
-                                            <img id="vimg04" src="img/photo/010.jpg" alt="" class="img-responsive"/>
-                                            <a href="video/005.mp4" class="html5lightbox" title="3rd convoy in coming." data-group="videogroup"> <i  class="fa fa-play-circle-o" aria-hidden="true"></i></a>
-                                            <div class="video-t-1" id="text-v">
-                                                <h4>3rd convoy in coming.</h4>
-            
-                                            </div>
-                                        </div>
-                                        <div class="video-gal">
-                                            <video id="myVideo5" width="100%" height="250" muted="" >
-                                                <source src="video/006.mp4" type="video/mp4">
-                                            </video>
-                                            <img id="vimg05" src="img/photo/011.jpg" alt="" class="img-responsive"/>
-                                            <a href="video/006.mp4" class="html5lightbox" title="Soft Launching Toowheel Group" data-group="videogroup"> <i onclick="playVid('myVideo1', 'vimg01')"  class="fa fa-play-circle-o" aria-hidden="true"></i></a>
-                                            <div class="video-t-1" id="text-v">
-                                                <h4>Soft Launching Toowheel Group</h4>
-                                            </div>
-                                        </div>
-                                    </div>
+            <div class="row margin-0 home-gallery video-section">
+                <div class="col-md-12 pad-0" id="video-pic">
+                    <div class="video-gallery">
+                        <div class="column-1">
+                            <div class="video-gal">
+                                <img src="img/photo/007.jpg" alt="" class="img-responsive"/>
+                                <video id="myVideo1" width="100%" height="500"  muted="">
+                                    <source src="video/002.mp4" type="video/mp4">
+                                </video>
+                                <img  id="vimg01" src="img/photo/007.jpg" alt="" class="img-responsive popup-img"/>
+                                <a href="video/002.mp4" class="html5lightbox" title="" data-group="videogroup"> <i class="fa fa-play-circle-o" aria-hidden="true"></i></a>
+                                <div class="video-t-1" id="text-v">
+                                    <h4>Toowheel</h4>
                                 </div>
                             </div>
-            
-                        </div>-->
+                        </div>
+                        <div class="column-1">
+
+                            <div class="video-gal">
+                                <video id="myVideo3" width="100%" height="250" muted="" >
+                                    <source src="video/004.mp4" type="video/mp4">
+                                </video>
+                                <img id="vimg02" src="img/photo/009.jpg" alt="" class="img-responsive"/>
+                                <a href="video/004.mp4" class="html5lightbox" title="1st convoy arrival , stay tuned for official video . Thx to fan cam" data-group="videogroup"> <i  class="fa fa-play-circle-o" aria-hidden="true"></i></a>
+                                <div class="video-t-1" id="text-v">
+                                    <h4>1st convoy arrival , stay tuned for official video . Thx to fan cam </h4>
+                                </div>
+                            </div>
+                            <div class="video-gal">
+                                <video id="myVideo2" width="100%" height="250" muted="" >
+                                    <source src="video/003.mp4" type="video/mp4">
+                                </video>
+                                <img id="vimg03" src="img/photo/008.jpg" alt="" class="img-responsive"/>
+                                <a href="video/003.mp4" class="html5lightbox" title="2nd convoy , stay tuned for official video." data-group="videogroup"> <i  class="fa fa-play-circle-o" aria-hidden="true"></i></a>
+                                <div class="video-t-1" id="text-v">
+                                    <h4>2nd convoy , stay tuned for official video.</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column-1">
+                            <div class="video-gal">
+                                <video id="myVideo4" width="100%" height="250" muted="">
+                                    <source src="video/005.mp4" type="video/mp4">
+                                </video>
+                                <img id="vimg04" src="img/photo/010.jpg" alt="" class="img-responsive"/>
+                                <a href="video/005.mp4" class="html5lightbox" title="3rd convoy in coming." data-group="videogroup"> <i  class="fa fa-play-circle-o" aria-hidden="true"></i></a>
+                                <div class="video-t-1" id="text-v">
+                                    <h4>3rd convoy in coming.</h4>
+
+                                </div>
+                            </div>
+                            <div class="video-gal">
+                                <video id="myVideo5" width="100%" height="250" muted="" >
+                                    <source src="video/006.mp4" type="video/mp4">
+                                </video>
+                                <img id="vimg05" src="img/photo/011.jpg" alt="" class="img-responsive"/>
+                                <a href="video/006.mp4" class="html5lightbox" title="Soft Launching Toowheel Group" data-group="videogroup"> <i onclick="playVid('myVideo1', 'vimg01')"  class="fa fa-play-circle-o" aria-hidden="true"></i></a>
+                                <div class="video-t-1" id="text-v">
+                                    <h4>Soft Launching Toowheel Group</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </section>
         <?php include 'social-media-embed.php'; ?>
         <?php include 'partners-logos.php'; ?>

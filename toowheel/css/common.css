@@ -5058,10 +5058,10 @@ hr {
     opacity: 1;
 }
 
-.video-gal:hover i{
-
-    transition:  all 0.3s linear;
+.video-gal:hover i {
+    transition: all 0.3s linear;
     opacity: 1;
+    background: #ed1c24;
 }
 
 .video-t-1{
