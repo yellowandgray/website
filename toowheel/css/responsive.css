@@ -56,6 +56,19 @@
     .clb-bg {
         height: 23px !important;
     }
+    .event-gallery-section .news-gallery-bg-hover {
+        height: 200px !important;
+    }
+    .event-gallery-section .news-gallery-bg-hover .news-gallery-overlay-section {
+        height: 200px !important;
+    }
+    .tab-pane #club_list {
+       left: 0px !important;
+    }
+    .fooetr-5 .i-con {
+        padding: 0 !important;
+        padding-top: 20px !important;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -80,12 +93,15 @@
     .search-section .search-btn  {padding: 12px 12px !important;}
     .search-section {
         margin-bottom: 20px !important;
-        /*        margin-left: 12px;*/
+        width: 100%;
     }
     .bg-1 span {font-size: 40px !important;}
     .button-8 {width: 33% !important;}
     .events-content {top: -30px !important;position: relative;}
-    .margin-rl-25 {margin-right: -15px !important; margin-left: -15px !important;}
+    .margin-rl-25 {
+/*        margin-right: -15px !important;
+        margin-left: -15px !important;*/
+    }
     .search-section .search-btn  {display: none !important;}
     .search-section input  {border-radius: 25px !important;}
     .sw-theme-arrows > .nav-tabs > li {width: 100% !important;}
@@ -150,9 +166,13 @@
 @media screen and (max-width: 500px) {
     .search-sort-order {
         width: 100%;
+        margin: 0 auto;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
     }
     .search-section input {
         padding: 10px 25px !important;
+        width: 100%;
     }
 }
 
@@ -193,6 +213,9 @@
 @media (min-width: 576px) and (max-width: 767px) {
     .news .hovereffect .news-thumb-menu .menu-news-title-view h2 {
         left: 13% !important;
+    }
+    .tab-pane #club_list {
+        left: 25% !important;
     }
 }
 
