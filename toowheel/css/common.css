@@ -5229,7 +5229,7 @@ hr {
 }
 
 .video-gal:hover i{
-    opacity: 0;
+    display: none;
     transition: all 0.02s linear;
 }
 .video-gal:hover {

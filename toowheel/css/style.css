@@ -304,7 +304,7 @@ body {
     color: #fff;
     margin-bottom: 8px;
     font-size: 10px;
-/*    height: 45px;*/
+    /*    height: 45px;*/
     overflow: hidden;
     text-align: left;
 }
@@ -1410,7 +1410,8 @@ body {
 }
 
 .tab-pane #club_list {
-    margin: 0 auto !important;
+    position: relative;
+    left: 9%;
 }
 
 .find-club-title {

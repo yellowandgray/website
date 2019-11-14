@@ -254,7 +254,7 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
                                     </video>
                                 </a>
                             <!--<img  id="vimg01" src="img/photo/007.jpg" alt="" class="img-responsive popup-img"/>-->
-                                <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+                                <a href="video/002.mp4" class="html5lightbox" title="" data-group="videogroup"><i class="fa fa-play-circle-o" aria-hidden="true"></i></a>
                                 <div class="video-t-1" id="text-v">
                                     <h4>Toowheel Intro</h4>
                                 </div>
@@ -269,7 +269,7 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
                                         <source src="video/004.mp4" type="video/mp4">
                                     </video>
                                 </a>
-                                <i  class="fa fa-play-circle-o" aria-hidden="true"></i>
+                                <a href="video/004.mp4" class="html5lightbox" title="1st convoy arrival , stay tuned for official video . Thx to fan cam" data-group="videogroup"><i  class="fa fa-play-circle-o" aria-hidden="true"></i></a>
                                 <div class="video-t-1" id="text-v">
                                     <h4>1st convoy arrival , stay tuned for official video . Thx to fan cam </h4>
                                 </div>
@@ -281,7 +281,7 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
                                         <source src="video/003.mp4" type="video/mp4">
                                     </video>
                                 </a>
-                                <i  class="fa fa-play-circle-o" aria-hidden="true"></i>
+                                <a href="video/003.mp4" class="html5lightbox" title="2nd convoy , stay tuned for official video." data-group="videogroup"><i  class="fa fa-play-circle-o" aria-hidden="true"></i></a>
                                 <div class="video-t-1" id="text-v">
                                     <h4>2nd convoy , stay tuned for official video.</h4>
                                 </div>
@@ -295,7 +295,7 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
                                         <source src="video/005.mp4" type="video/mp4">
                                     </video>
                                 </a>
-                                <i  class="fa fa-play-circle-o" aria-hidden="true"></i>
+                                <a href="video/005.mp4" class="html5lightbox" title="3rd convoy in coming." data-group="videogroup"> <i  class="fa fa-play-circle-o" aria-hidden="true"></i></a>
                                 <div class="video-t-1" id="text-v">
                                     <h4>3rd convoy in coming.</h4>
 
@@ -308,7 +308,7 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
                                         <source src="video/006.mp4" type="video/mp4">
                                     </video>
                                 </a>
-                                <i onclick="playVid('myVideo1', 'vimg01')"  class="fa fa-play-circle-o" aria-hidden="true"></i>
+                                <a href="video/006.mp4" class="html5lightbox" title="Soft Launching Toowheel Group" data-group="videogroup"><i onclick="playVid('myVideo1', 'vimg01')"  class="fa fa-play-circle-o" aria-hidden="true"></i></a>
                                 <div class="video-t-1" id="text-v">
                                     <h4>Soft Launching Toowheel Group</h4>
                                 </div>
