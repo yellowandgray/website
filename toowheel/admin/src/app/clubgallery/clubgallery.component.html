@@ -18,7 +18,7 @@
                             <button mat-icon-button aria-label="label" (click)="confirmDelete(data.club_gallery_id)">
                                 <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                             </button>
-                            <img matListAvatar src="{{image_url}}{{data.media_path}}" *ngIf="data.media_path && data.media_path != ''" alt="image" />
+                            <img matListAvatar src="{{image_url}}{{data.media_path}}" *ngIf="data.media_path && data.media_path != ''" alt="image" (click)="confirmDialog(data, 'preview')" />
                                  <h3 matLine>{{data.title}}</h3>
                             <p matLine>{{data.description}}</p>                                   
                         </mat-list-item>
@@ -32,10 +32,13 @@
                             <button mat-icon-button aria-label="label" (click)="openDialog(data.club_gallery_id)">
                                 <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
                             </button>
+                            <button mat-icon-button aria-label="label" (click)="confirmDialog(data, 'preview_video')">
+                                <mat-icon #tooltip="matTooltip" matTooltip="Preview">videocam</mat-icon>
+                            </button>
                             <button mat-icon-button aria-label="label" (click)="confirmDelete(data.club_gallery_id)">
                                 <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                             </button>
-                            <img matListAvatar src="{{image_url}}{{data.media_path}}" *ngIf="data.media_path && data.media_path != ''" alt="image" />
+                            <img matListAvatar src="{{image_url}}{{data.media_path}}" *ngIf="data.media_path && data.media_path != ''" alt="image" (click)="confirmDialog(data, 'preview_thumb')" />
                                  <h3 matLine>{{data.title}}</h3>
                             <p matLine>{{data.description}}</p>                                   
                         </mat-list-item>

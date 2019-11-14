@@ -132,7 +132,7 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
     club_gallery_id = 0;
     media_path: string='';
     media_type: string='';
-    thumb_path: string;
+    thumb_path: string = '';
     file_name: string = 'Select Picture';
     file_name_thumb: string = 'Select Thumb';
     constructor(
@@ -206,17 +206,18 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
           if(this.media_path && this.media_path != '') {
           formData.append('media_path', this.media_path);
           }
+          if(this.thumb_path && this.thumb_path!= '') {
+              formData.append('thumb_path', this.thumb_path);
+          }
           url = 'update_record/club_gallery/club_gallery_id = '+this.club_gallery_id;
           } else {
                 formData.append('title', this.galleryForm.value.title);
           formData.append('media_type', this.galleryForm.value.media_type);
           formData.append('type', this.galleryForm.value.type);
           formData.append('media_path', this.media_path);
+          formData.append('thumb_path', this.thumb_path);
           formData.append('description', this.galleryForm.value.description);
           url = 'insert_club_gallery';
-          }
-          if(this.thumb_path && this.thumb_path!= '') {
-              formData.append('thumb_path', this.thumb_path);
           }
           this.httpClient.post('https://www.toowheel.com/beta/toowheel/api/v1/'+url, formData).subscribe(
               (res)=>{

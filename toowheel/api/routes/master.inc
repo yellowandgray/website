@@ -168,7 +168,11 @@ $app->post('/insert_club_gallery', function() use ($app) {
     if (isset($_FILES) && isset($_FILES['file'])) {
         $path = $com->saveFile($_FILES['file'], 'uploads');
     }
-    $record = $com->insertRecord(array('title' => $data['title'], 'description' => $data['description'], 'media_type' => $data['media_type'], 'club_id' => $data['club_id'], 'media_path' => $data['media_path']), 'club_gallery');
+    $array = array('media_type' => $data['media_type'], 'title' => $data['title'], 'media_path' => $data['media_path'], 'description' => $data['description'], 'club_id' => $data['club_id']);
+    if (isset($data['thumb_path'])) {
+        $array['thumb_path'] = $data['thumb_path'];
+    }
+    $record = $com->insertRecord($array, 'club_gallery');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
