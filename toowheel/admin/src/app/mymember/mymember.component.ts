@@ -14,6 +14,8 @@ import * as moment from 'moment';
   styleUrls: ['./mymember.component.css']
 })
 export class MymemberComponent implements OnInit {
+  searchTerm: string = '';
+  sortdata: string = '';
   result = [];  
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
 
@@ -77,6 +79,24 @@ openView(id): void  {
         if(result !== false && result !== 'false') {
             }
         });
+    }
+    sortRecords(): void {
+        switch(this.sortdata) {
+            case 'title_a_z':
+                (this.result).sort((a,b) => a.first_name.localeCompare(b.first_name));
+            break;
+            case 'title_z_a':
+            (this.result).sort((a,b) => b.first_name.localeCompare(a.first_name));
+            break;
+            case 'created_a_z':
+                (this.result).sort((a,b) => a.created_at.localeCompare(b.created_at));
+            break;
+            case 'created_z_a':
+                (this.result).sort((a,b) => b.created_at.localeCompare(a.created_at));
+            break;
+            default:
+            break;
+        }
     }
 }
 @Component({

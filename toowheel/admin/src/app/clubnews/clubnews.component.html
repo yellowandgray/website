@@ -26,7 +26,7 @@
             </div>
         </div>
         <mat-list *ngIf="result.length > 0">
-            <mat-list-item class="list-container" *ngFor="let data of result">
+            <mat-list-item class="list-container" *ngFor="let data of result | filterClubNews:searchTerm">
                            <button mat-icon-button aria-label="label" (click)="openGalleryDialog(data['news_id'])">
                     <mat-icon #tooltip="matTooltip" matTooltip="Add Image">panorama</mat-icon>
                 </button>

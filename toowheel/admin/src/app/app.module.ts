@@ -74,6 +74,10 @@ import { ClubannouncementComponent, ClubAnnouncementForm, ClubAnnouncementDelete
 import { MyclubComponent, MyClubForm } from './myclub/myclub.component';
 import { MyeventComponent, MyEventForm, PictureViewMyEvent, MyEventViewFrom, MyEventDelete } from './myevent/myevent.component';
 import { MymemberComponent, MyMemberDelete, MyMemberViewForm } from './mymember/mymember.component';
+import { filterClubNews } from './clubnews/filter-clubnews';
+import { filterClubEvent } from './myevent/filter-clubevent';
+import { filterClubAnnouncement } from './clubannouncement/filter-clubannouncement';
+import { filterMyMember } from './mymember/filter-mymember';
 
 @NgModule({
   declarations: [
@@ -187,7 +191,11 @@ import { MymemberComponent, MyMemberDelete, MyMemberViewForm } from './mymember/
     MyEventDelete, 
     MymemberComponent,
     MyMemberDelete, 
-    MyMemberViewForm
+    MyMemberViewForm,
+    filterClubNews,
+    filterClubEvent,
+    filterClubAnnouncement,
+    filterMyMember
   ],
   imports: [
     BrowserModule,
