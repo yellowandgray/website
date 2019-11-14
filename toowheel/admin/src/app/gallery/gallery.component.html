@@ -39,18 +39,23 @@
                         </section> 
                         <mat-list>
                             <ng-container *ngFor="let data of result | filterEventgallery:searchTermTW;let i = index">
-                                <ng-container *ngIf="result[i]['media_type'] === 'image'">
+                                <ng-container *ngIf="data.media_type === 'image'">
                                     <mat-list-item class="list-container">
-                                        <button mat-icon-button aria-label="label" (click)="openDialog(result[i]['gallery_id'], 'result')">
+                                        <button mat-icon-button aria-label="label" (click)="openDialog(data.gallery_id, 'result')">
                                             <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
                                         </button>
-                                        <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i]['gallery_id'])">
+                                        <button mat-icon-button aria-label="label" (click)="confirmDelete(data.gallery_id)">
                                             <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                                         </button>
-                                        <img matListAvatar src="{{image_url}}{{data.media_path}}" *ngIf="data.media_path && data.profile_picture != ''" alt="image" />
-                                             <!--                                         <img matListAvatar src="{{image_url}}{{data.gender}}.jpg" *ngIf="!data.media_path || data.media_path == ''" alt="image" />-->
-                                             <h3 matLine>{{data.title}}</h3>
-                                        <p matLine>{{data.description}}</p>                                   
+                                        <button mat-icon-button aria-label="label" *ngIf="data.isflag == 0" (click)="makeAsSpecial('image', 1, 'isflag', data.gallery_id, 'two_wheel')">
+                                                <mat-icon #tooltip="matTooltip" matTooltip="Make Hot Gallery">outlined_flag</mat-icon>
+                                        </button>
+                                        <button mat-icon-button aria-label="label" *ngIf="data.isflag == 1" (click)="makeAsSpecial('image', 0, 'isflag', data.gallery_id, 'two_wheel')">
+                                                <mat-icon #tooltip="matTooltip" matTooltip="Remove From Hot Gallery">flag</mat-icon>
+                                        </button>
+                                        <img matListAvatar src="{{image_url}}{{data.media_path}}" *ngIf="data.media_path" alt="image" (click)="confirmDialog(data, 'preview')" />
+                                        <h3 matLine>{{data.title}}</h3>
+                                        <p matLine>{{data.description}}</p>
                                     </mat-list-item>
                                 </ng-container>
                             </ng-container>
@@ -85,19 +90,24 @@
                         </section> 
                         <mat-list>
                             <ng-container *ngFor="let data of result | filterEventgallery:searchTermTWV;let i = index">
-                                <ng-container *ngIf="result[i]['media_type'] === 'video'">
+                                <ng-container *ngIf="data.media_type === 'video'">
                                     <mat-list-item class="list-container">
-                                        <button mat-icon-button aria-label="label" (click)="openDialog(result[i]['gallery_id'], 'result')">
+                                        <button mat-icon-button aria-label="label" (click)="openDialog(data.gallery_id, 'result')">
                                             <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
                                         </button>
-                                        <button mat-icon-button aria-label="label" (click)="confirmDelete(result[i]['gallery_id'])">
+                                        <button mat-icon-button aria-label="label" (click)="confirmDialog(data, 'preview_video')">
+                                            <mat-icon #tooltip="matTooltip" matTooltip="Preview">videocam</mat-icon>
+                                        </button>
+                                        <button mat-icon-button aria-label="label" (click)="confirmDelete(data.gallery_id)">
                                             <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                                         </button>
-                                        <!--                                    <img matListAvatar src="{{image_url}}{{data.media_path}}" *ngIf="data.media_path && data.profile_picture != ''" alt="image" (click)="confirmDialog(data, 'preview')" />-->
-                                        <!--                                         <img matListAvatar src="{{image_url}}{{data.gender}}.jpg" *ngIf="!data.media_path || data.media_path == ''" alt="image" />-->
-                                        <video matListAvatar  controls *ngIf="result[i]['media_type'] === 'video'">
-                                               <source src="{{image_url}}{{result[i]['media_path']}}" type="video/mp4" />
-                                        </video>
+                                        <button mat-icon-button aria-label="label" *ngIf="data.isflag == 0" (click)="makeAsSpecial('video', 1, 'isflag', data.gallery_id, 'two_wheel')">
+                                                <mat-icon #tooltip="matTooltip" matTooltip="Make Hot Gallery">outlined_flag</mat-icon>
+                                        </button>
+                                        <button mat-icon-button aria-label="label" *ngIf="data.isflag == 1" (click)="makeAsSpecial('video', 0, 'isflag', data.gallery_id, 'two_wheel')">
+                                                <mat-icon #tooltip="matTooltip" matTooltip="Remove From Hot Gallery">flag</mat-icon>
+                                        </button>
+                                        <img matListAvatar src="{{image_url}}{{data.thumb_path}}" *ngIf="data.thumb_path" alt="image" (click)="confirmDialog(data, 'preview_thumb')" />
                                         <h3 matLine>{{data.title}}</h3>
                                         <p matLine>{{data.description}}</p>                                   
                                     </mat-list-item>
@@ -138,18 +148,23 @@
                         </section>
                         <mat-list>
                             <ng-container *ngFor="let data of result_four_wheel | filterEventgallery:searchTermFW; let i = index">
-                                <ng-container *ngIf="result_four_wheel[i]['media_type'] === 'image'">
+                                <ng-container *ngIf="data.media_type === 'image'">
                                     <mat-list-item class="list-container">
-                                        <button mat-icon-button aria-label="label" (click)="openDialog(result_four_wheel[i]['gallery_id'], 'result_four_wheel')">
+                                        <button mat-icon-button aria-label="label" (click)="openDialog(data.gallery_id, 'result_four_wheel')">
                                             <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
                                         </button>
-                                        <button mat-icon-button aria-label="label" (click)="confirmDelete(result_four_wheel[i]['gallery_id'])">
+                                        <button mat-icon-button aria-label="label" (click)="confirmDelete(data.gallery_id)">
                                             <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                                         </button>
-                                        <img matListAvatar src="{{image_url}}{{data.media_path}}" *ngIf="data.media_path && data.media_path != ''" alt="image" />
-                                             <!--                                         <img matListAvatar src="{{image_url}}{{data.gender}}.jpg" *ngIf="!data.media_path || data.media_path == ''" alt="image" />-->
-                                             <h3 matLine>{{data.title}}</h3>
-                                        <p matLine>{{data.description}}</p>                                   
+                                        <button mat-icon-button aria-label="label" *ngIf="data.isflag == 0" (click)="makeAsSpecial('image', 1, 'isflag', data.gallery_id, 'four_wheel')">
+                                                <mat-icon #tooltip="matTooltip" matTooltip="Make Hot Gallery">outlined_flag</mat-icon>
+                                        </button>
+                                        <button mat-icon-button aria-label="label" *ngIf="data.isflag == 1" (click)="makeAsSpecial('image', 0, 'isflag', data.gallery_id, 'four_wheel')">
+                                                <mat-icon #tooltip="matTooltip" matTooltip="Remove From Hot Gallery">flag</mat-icon>
+                                        </button>
+                                        <img matListAvatar src="{{image_url}}{{data.media_path}}" *ngIf="data.media_path" alt="image" (click)="confirmDialog(data, 'preview')" />
+                                        <h3 matLine>{{data.title}}</h3>
+                                        <p matLine>{{data.description}}</p>
                                     </mat-list-item>
                                 </ng-container>
                             </ng-container>
@@ -184,17 +199,24 @@
                         </section>
                         <mat-list>
                             <ng-container *ngFor="let data of result_four_wheel | filterEventgallery:searchTermFWV; let i = index">
-                                <ng-container *ngIf="result_four_wheel[i]['media_type'] === 'video'">
+                                <ng-container *ngIf="data.media_type === 'video'">
                                     <mat-list-item class="list-container">
-                                        <button mat-icon-button aria-label="label" (click)="openDialog(result_four_wheel[i]['gallery_id'], 'result_four_wheel')">
+                                        <button mat-icon-button aria-label="label" (click)="openDialog(data.gallery_id, 'result_four_wheel')">
                                             <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
                                         </button>
-                                        <button mat-icon-button aria-label="label" (click)="confirmDelete(result_four_wheel[i]['gallery_id'])">
+                                        <button mat-icon-button aria-label="label" (click)="confirmDialog(data, 'preview_video')">
+                                            <mat-icon #tooltip="matTooltip" matTooltip="Preview">videocam</mat-icon>
+                                        </button>
+                                        <button mat-icon-button aria-label="label" (click)="confirmDelete(data.gallery_id)">
                                             <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                                         </button>
-                                        <video matListAvatar  controls *ngIf="result_four_wheel[i]['media_type'] === 'video'">
-                                               <source src="{{image_url}}{{result_four_wheel[i]['media_path']}}" type="video/mp4" />
-                                        </video>
+                                        <button mat-icon-button aria-label="label" *ngIf="data.isflag == 0" (click)="makeAsSpecial('video', 1, 'isflag', data.gallery_id, 'four_wheel')">
+                                                <mat-icon #tooltip="matTooltip" matTooltip="Make Hot Gallery">outlined_flag</mat-icon>
+                                        </button>
+                                        <button mat-icon-button aria-label="label" *ngIf="data.isflag == 1" (click)="makeAsSpecial('video', 0, 'isflag', data.gallery_id, 'four_wheel')">
+                                                <mat-icon #tooltip="matTooltip" matTooltip="Remove From Hot Gallery">flag</mat-icon>
+                                        </button>
+                                        <img matListAvatar src="{{image_url}}{{data.thumb_path}}" *ngIf="data.thumb_path" alt="image" (click)="confirmDialog(data, 'preview_thumb')" />
                                         <h3 matLine>{{data.title}}</h3>
                                         <p matLine>{{data.description}}</p>                                   
                                     </mat-list-item>

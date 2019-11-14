@@ -134,8 +134,29 @@ export class GalleryComponent implements OnInit {
             break;
         }
     }
-
-
+    makeAsSpecial(typ, vlu, fld, gid, gtype) {
+    var formData = new FormData();
+          formData.append(fld, vlu);
+          formData.append('media_type', typ);
+          formData.append('gallery_id', gid);
+          formData.append('type', gtype);
+          this.httpClient.post('https://www.toowheel.com/beta/toowheel/api/v1/special_gallery', formData).subscribe(
+              (res)=>{
+                if(res["result"]["error"] === false) {
+                    this.getGallery();
+                    this.getGalleryFourWheel();
+                }else{
+    this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+        (error)=>{
+            this._snackBar.open(error["statusText"], '', {
+                duration: 2000,
+              });
+        });
+}
 }
 
 @Component({
@@ -149,7 +170,7 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
     gallery_id = 0;
     media_path: string='';
     media_type: string='';
-    thumb_path: string;
+    thumb_path: string='';
     file_name: string = 'Select Picture';
     file_name_thumb: string = 'Select Thumb';
     constructor(
@@ -222,6 +243,9 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
           if(this.media_path && this.media_path != '') {
           formData.append('media_path', this.media_path);
           }
+          if(this.thumb_path && this.thumb_path!= '') {
+              formData.append('thumb_path', this.thumb_path);
+          }
           url = 'update_record/gallery/gallery_id = '+this.gallery_id;
           } else {
                 formData.append('title', this.galleryForm.value.title);
@@ -229,10 +253,8 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
           formData.append('type', this.galleryForm.value.type);
           formData.append('media_path', this.media_path);
           formData.append('description', this.galleryForm.value.description);
+          formData.append('thumb_path', this.thumb_path);
           url = 'insert_gallery';
-          }
-          if(this.thumb_path && this.thumb_path!= '') {
-              formData.append('thumb_path', this.thumb_path);
           }
           this.httpClient.post('https://www.toowheel.com/beta/toowheel/api/v1/'+url, formData).subscribe(
               (res)=>{
