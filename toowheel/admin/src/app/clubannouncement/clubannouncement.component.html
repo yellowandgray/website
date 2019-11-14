@@ -4,10 +4,28 @@
     </mat-sidenav>
     <mat-sidenav-content>
         <app-header></app-header>
-        <div class="add-btn-container">
-            <button mat-raised-button color="primary" (click)="openDialog(0)"><mat-icon>add</mat-icon> Announcement</button>
+        <div class="add-btn-container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <div class="searchdesign" fxFlex="50%">
+                <mat-form-field fxFlex="100%">
+                    <input matInput type="text" placeholder="Search by name" [(ngModel)]="searchTerm" />
+                </mat-form-field>
+            </div>
+            <div fxFlex="20%">
+                <mat-form-field fxFlex="100%">
+                    <mat-label>Sort by</mat-label>
+                    <mat-select [(ngModel)]="sortdata" (selectionChange)="sortRecords()">
+                        <mat-option value="title_a_z">Title A-Z</mat-option>
+                        <mat-option value="title_z_a">Title Z-A</mat-option>
+                        <mat-option value="created_a_z">Created Date ASC</mat-option>
+                        <mat-option value="created_z_a">Created Date DESC</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div fxFlex="30%" class="add-btn-container">
+                <button mat-raised-button color="primary" (click)="openDialog(0)"><mat-icon>add</mat-icon> Announcement</button>
+            </div>
         </div>
-        <ng-container *ngFor="let data of result; let i = index">
+        <ng-container *ngFor="let data of result | filterClubAnnouncement:searchTerm; let i = index">
             <div fxLayout="row" *ngIf="i % 4 == 0" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
                 <ng-container *ngIf="result[i]">
                     <mat-card fxFlex="25%">

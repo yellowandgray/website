@@ -14,6 +14,8 @@ import * as moment from 'moment';
   styleUrls: ['./myevent.component.css']
 })
 export class MyeventComponent implements OnInit {
+  searchTerm: string = '';
+  sortdata: string = '';
   result = [];
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
 
@@ -112,6 +114,24 @@ export class MyeventComponent implements OnInit {
                  this.getEvent();
            }
         });
+    }
+sortRecords(): void {
+        switch(this.sortdata) {
+            case 'title_a_z':
+                (this.result).sort((a,b) => a.title.localeCompare(b.title));
+            break;
+            case 'title_z_a':
+            (this.result).sort((a,b) => b.title.localeCompare(a.title));
+            break;
+            case 'created_a_z':
+                (this.result).sort((a,b) => a.created_at.localeCompare(b.created_at));
+            break;
+            case 'created_z_a':
+                (this.result).sort((a,b) => b.created_at.localeCompare(a.created_at));
+            break;
+            default:
+            break;
+        }
     }
 }
 @Component({

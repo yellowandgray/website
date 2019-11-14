@@ -13,6 +13,8 @@ import * as moment from 'moment';
   styleUrls: ['./clubannouncement.component.css']
 })
 export class ClubannouncementComponent implements OnInit {
+  searchTerm: string = '';
+  sortdata: string = '';
   result = [];
   club_id = sessionStorage.getItem("toowheel_club_id");  
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient, private route: ActivatedRoute) { }
@@ -77,6 +79,24 @@ confirmDelete(id): void  {
        }
     });
 }
+sortRecords(): void {
+        switch(this.sortdata) {
+            case 'title_a_z':
+                (this.result).sort((a,b) => a.title.localeCompare(b.title));
+            break;
+            case 'title_z_a':
+            (this.result).sort((a,b) => b.title.localeCompare(a.title));
+            break;
+            case 'created_a_z':
+                (this.result).sort((a,b) => a.created_at.localeCompare(b.created_at));
+            break;
+            case 'created_z_a':
+                (this.result).sort((a,b) => b.created_at.localeCompare(a.created_at));
+            break;
+            default:
+            break;
+        }
+    }
 }
 @Component({
   selector: 'clubannouncement-form',
