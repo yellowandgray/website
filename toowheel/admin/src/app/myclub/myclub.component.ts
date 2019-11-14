@@ -17,7 +17,7 @@ export class MyclubComponent implements OnInit {
   ngOnInit() {
       this.getClub();
   }
-  data = {logo: '', cover_image: '', about: '', phone: '', address: '', landmark: '', facebook_link: '', youtube_link: '', twitter_link: '', instagram_link: '', leader_name: ''};
+  data = {logo: '', cover_image: '', about: '', phone: '', email_id: '', address: '', landmark: '', facebook_link: '', youtube_link: '', twitter_link: '', instagram_link: '', leader_name: ''};
   getClub(): void {
   this.httpClient.get<any>('https://www.toowheel.com/beta/toowheel/api/v1/get_club_by_id/'+sessionStorage.getItem("toowheel_club_id"))
   .subscribe(
@@ -25,7 +25,7 @@ export class MyclubComponent implements OnInit {
               this.data = res["result"]["data"];
         },
         (error)=>{
-            this.data = {logo: '', cover_image: '', about: '', phone: '', address: '', landmark: '', facebook_link: '', youtube_link: '', twitter_link: '', instagram_link: '', leader_name: ''};
+            this.data = {logo: '', cover_image: '', about: '', phone: '', email_id: '', address: '', landmark: '', facebook_link: '', youtube_link: '', twitter_link: '', instagram_link: '', leader_name: ''};
             this._snackBar.open(error["statusText"], '', {
       duration: 2000,
     });
