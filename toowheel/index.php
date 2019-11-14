@@ -433,7 +433,7 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
                                                         speed: 500,
                                                         slidesToShow: 6,
                                                         slidesToScroll: 1,
-                                                        autoplay: false,
+                                                        autoplay: true,
                                                         autoplaySpeed: 2000,
                                                         arrows: true,
                                                         responsive: [{
@@ -442,7 +442,7 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
                                                                     slidesToShow: 4,
                                                                     slidesToScroll: 1,
                                                                     dots: true,
-                                                                    autoplay: false
+                                                                    autoplay: true
                                                                 }
                                                             },
                                                             {
@@ -451,16 +451,17 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
                                                                     slidesToShow: 3,
                                                                     slidesToScroll: 1,
                                                                     dots: false,
-                                                                    autoplay: false
+                                                                    autoplay: true
                                                                 }
                                                             },
                                                             {
                                                                 breakpoint: 600,
                                                                 settings: {
+                                                                    arrows: false,
                                                                     slidesToShow: 2,
                                                                     slidesToScroll: 2,
                                                                     dots: false,
-                                                                    autoplay: false
+                                                                    autoplay: true
                                                                 }
                                                             },
                                                             {
@@ -470,7 +471,7 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
                                                                     slidesToShow: 2,
                                                                     slidesToScroll: 2,
                                                                     dots: false,
-                                                                    autoplay: false
+                                                                    autoplay: true
                                                                 }
                                                             }]
                                                     });

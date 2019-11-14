@@ -31,7 +31,7 @@
         width: 100% !important;
     }
     .discover-slider .home-news-thumb-image {
-        height: 250px !important;
+        height: 200px !important;
     }
     .discover-btn {
         display: none !important;
@@ -152,6 +152,9 @@
 @media (min-width: 320px) and (max-width: 575px) {
     .news .hovereffect .news-thumb-menu .menu-news-title-view h2 {
         left: 9% !important;
+    }
+    .discover-slider .home-news-thumb-hover {
+        height: 200px !important;
     }
 }
 
@@ -948,7 +951,7 @@
 @media (min-width: 320px) and (max-width: 599px) { 
     .discover-slider-content {
         height: 100px !important;
-        bottom: 210px !important;
+        bottom: 100px !important;
     }
     .discover-slider-content h2 {
         font-size: 12px !important;
