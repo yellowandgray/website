@@ -122,10 +122,10 @@
     <br/>
     <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
         <div fxFlex="50%" fxLayoutAlign="center center">
-            <button *ngIf="banner_image_3_path == ''" type="button" mat-raised-button (click)="fileInputBanner1.click()">{{banner_image_3}}</button>
-            <input hidden #fileInputBanner1 type="file" id="file_banner_1" (change)="fileProgress($event, 'banner_image_3', 'banner_image_3_path')" />
+            <button *ngIf="banner_image_3_path == ''" type="button" mat-raised-button (click)="fileInputBanner3.click()">{{banner_image_3}}</button>
+            <input hidden #fileInputBanner3 type="file" id="file_banner_1" (change)="fileProgress($event, 'banner_image_3', 'banner_image_3_path')" />
             <mat-icon *ngIf="banner_image_3_path == ''" matTooltip="Width: 650px, Height: Any;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
-             <div class="preview-image" *ngIf="banner_image_1_path != ''">
+             <div class="preview-image" *ngIf="banner_image_3_path != ''">
                 <img class="dialog-picture" mat-card-image src="{{image_url}}{{banner_image_3_path}}" alt="Photo" />
                 <button mat-icon-button aria-label="Close icon" (click)="removeMedia('banner_image_3_path')">
                     <mat-icon>close</mat-icon>
@@ -133,10 +133,10 @@
             </div>
         </div>
         <div fxFlex="50%" fxLayoutAlign="center center">
-            <button *ngIf="banner_image_4_path == ''" type="button" mat-raised-button (click)="fileInputBanner2.click()">{{banner_image_4}}</button>
-            <input hidden #fileInputBanner2 type="file" id="file_banner_2" (change)="fileProgress($event, 'banner_image_4', 'banner_image_4_path')" />
+            <button *ngIf="banner_image_4_path == ''" type="button" mat-raised-button (click)="fileInputBanner4.click()">{{banner_image_4}}</button>
+            <input hidden #fileInputBanner4 type="file" id="file_banner_2" (change)="fileProgress($event, 'banner_image_4', 'banner_image_4_path')" />
             <mat-icon *ngIf="banner_image_4_path == ''" matTooltip="Width: 650px, Height: Any;" matTooltipPosition="right" style="cursor: pointer;margin-left: 10px;">info</mat-icon>
-             <div class="preview-image" *ngIf="banner_image_2_path != ''">
+             <div class="preview-image" *ngIf="banner_image_4_path != ''">
                 <img class="dialog-picture" mat-card-image src="{{image_url}}{{banner_image_4_path}}" alt="Photo" />
                 <button mat-icon-button aria-label="Close icon" (click)="removeMedia('banner_image_4_path')">
                     <mat-icon>close</mat-icon>

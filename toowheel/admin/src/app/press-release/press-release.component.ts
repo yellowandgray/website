@@ -316,6 +316,12 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
           if(this.banner_image_2_path && this.banner_image_2_path != '') {
                formData.append('banner_2', this.banner_image_2_path); 
           }
+          if(this.banner_image_3_path && this.banner_image_3_path != '') {
+               formData.append('banner_3', this.banner_image_3_path); 
+          }
+          if(this.banner_image_4_path && this.banner_image_4_path != '') {
+               formData.append('banner_4', this.banner_image_4_path); 
+          }
           formData.append('description_1', this.pressreleaseForm.value.description);
           formData.append('description_2', this.pressreleaseForm.value.description_1);
           formData.append('description_3', this.pressreleaseForm.value.description_2);
@@ -336,6 +342,8 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
           formData.append('banner_image_4', this.banner_image_4_path);
           formData.append('description', this.pressreleaseForm.value.description);
           formData.append('description_1', this.pressreleaseForm.value.description_1);
+          formData.append('description_2', this.pressreleaseForm.value.description_2);
+          formData.append('description_3', this.pressreleaseForm.value.description_3);
           formData.append('youtube_id', this.pressreleaseForm.value.youtube_id);
         url = 'insert_press_release';
       }
@@ -371,6 +379,12 @@ removeMedia(url) {
       }
       if(url === 'banner_image_2_path') {
           this.banner_image_2= 'Choose Image 2';
+      }
+      if(url === 'banner_image_3_path') {
+          this.banner_image_3= 'Choose Image 3';
+      }
+      if(url === 'banner_image_4_path') {
+          this.banner_image_4= 'Choose Image 4';
       }
   }
 }
@@ -460,10 +474,14 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
     thumb_image: string = 'Choose Thumb Image';
     banner_image_1: string = 'Choose Image 1';
     banner_image_2: string = 'Choose Image 2';
+    banner_image_3: string = 'Choose Image 3';
+    banner_image_4: string = 'Choose Image 4';
     cover_image_path: string='';
     thumb_image_path: string='';
     banner_image_1_path: string='';
     banner_image_2_path: string='';
+    banner_image_3_path: string='';
+    banner_image_4_path: string='';
     constructor(
     public dialogRef: MatDialogRef<PressreleaseViewFrom>,
     private sanitizer: DomSanitizer,
@@ -478,6 +496,8 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
       'author_name': new FormControl('', Validators.required),
       'description': new FormControl('', Validators.required),
       'description_1': new FormControl('', Validators.required),
+      'description_2': new FormControl('', Validators.required),
+      'description_3': new FormControl('', Validators.required),
       'youtube_id': new FormControl()
         });
         if(this.data != null) {
@@ -489,6 +509,8 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
            author_name: this.data.author_name,
            description: this.data.description_1,
            description_1: this.data.description_2,
+           description_2: this.data.description_3,
+           description_3: this.data.description_4,
            youtube_id: this.data.youtube_id
         });
         this.press_release_id = this.data.press_release_id;
@@ -496,6 +518,8 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
         this.thumb_image_path = this.data.thumb_image;
         this.banner_image_1_path = this.data.banner_1;
         this.banner_image_2_path = this.data.banner_2;
+        this.banner_image_3_path = this.data.banner_3;
+        this.banner_image_4_path = this.data.banner_4;
     }else {
         this.pressreleaseForm.patchValue({
                 date: new Date()

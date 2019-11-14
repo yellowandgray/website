@@ -126,7 +126,7 @@ $app->post('/insert_press_release', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('type' => $data['type'], 'cover_image' => $data['cover_image'], 'title' => $data['title'], 'media_id' => $data['media_id'], 'author_name' => $data['author_name'], 'press_release_date' => $data['date'], 'thumb_image' => $data['thumb_image'], 'banner_1' => $data['banner_image_1'], 'banner_2' => $data['banner_image_2'], 'description_1' => $data['description'], 'description_2' => $data['description_1'], 'youtube_id' => $data['youtube_id']), 'press_release');
+    $record = $com->insertRecord(array('type' => $data['type'], 'cover_image' => $data['cover_image'], 'title' => $data['title'], 'media_id' => $data['media_id'], 'author_name' => $data['author_name'], 'press_release_date' => $data['date'], 'thumb_image' => $data['thumb_image'], 'banner_1' => $data['banner_image_1'], 'banner_2' => $data['banner_image_2'],'banner_3' => $data['banner_image_3'],'banner_4' => $data['banner_image_4'], 'description_1' => $data['description'], 'description_2' => $data['description_1'],'description_3' => $data['description_2'],'description_4' => $data['description_3'], 'youtube_id' => $data['youtube_id']), 'press_release');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
