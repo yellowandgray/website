@@ -18,6 +18,12 @@
                 <textarea rows="6" matInput placeholder="" required [(ngModel)]="value" [ngModelOptions]="{standalone: true}"></textarea>
             </mat-form-field>
         </div>
+        <div fxFlex="50%" *ngIf="field_type === 'input'">
+            <mat-form-field class="full-width">
+                <mat-label>Value</mat-label>
+                <input matInput placeholder="" type="text" required [(ngModel)]="value" [ngModelOptions]="{standalone: true}" />
+            </mat-form-field>
+        </div>
     </div>
     <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
         <button mat-button [mat-dialog-close]="false">Cancel</button>

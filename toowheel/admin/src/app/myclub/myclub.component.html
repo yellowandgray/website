@@ -4,43 +4,168 @@
     </mat-sidenav>
     <mat-sidenav-content>
         <app-header></app-header>
-        <div fxLayout="row" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="start start">
-            <mat-card fxFlex="25%">
-                <mat-card-header>
-                    <mat-card-title>Logo</mat-card-title>
-                </mat-card-header>
-                <img mat-card-image src="{{image_url}}{{data.logo}}" alt="image" />
-                <mat-card-actions>
-                    <button mat-icon-button matTooltip="Edit" aria-label="label">
-                        <mat-icon (click)="openDialog(data.logo, 'image', 'logo')">edit</mat-icon>
-                    </button>
-                </mat-card-actions>
-            </mat-card>
-            <mat-card fxFlex="25%">
-                <mat-card-header>
-                    <mat-card-title>Cover Image</mat-card-title>
-                </mat-card-header>
-                <img mat-card-image src="{{image_url}}{{data.cover_image}}" alt="image" />
-                <mat-card-actions>
-                    <button mat-icon-button matTooltip="Edit" aria-label="label">
-                        <mat-icon (click)="openDialog(data.cover_image, 'image', 'cover_image')">edit</mat-icon>
-                    </button>
-                </mat-card-actions>
-            </mat-card>
-            <mat-card fxFlex="25%">
-                <mat-card-header>
-                    <mat-card-title>About</mat-card-title>
-                </mat-card-header>
-                <mat-card-content>
-                    <p>{{data.about}}</p>
-                </mat-card-content>
-                <mat-card-actions>
-                    <button mat-icon-button matTooltip="Edit" aria-label="label">
-                        <mat-icon (click)="openDialog(data.about, 'text', 'about')">edit</mat-icon>
-                    </button>
-                </mat-card-actions>
-            </mat-card>
-            <div fxFlex="25%"></div>
-        </div>
+        <section class="section">
+            <br/>
+            <div fxLayout="row" fxLayoutWrap fxLayoutGap="2%" fxLayoutAlign="start start">
+                <mat-card fxFlex="25%">
+                    <mat-card-header>
+                        <mat-card-title>Phone</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>{{data.phone}}</p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-icon-button matTooltip="Edit" aria-label="label">
+                            <mat-icon (click)="openDialog(data.phone, 'input', 'phone')">edit</mat-icon>
+                        </button>
+                    </mat-card-actions>
+                </mat-card>
+                <mat-card fxFlex="25%">
+                    <mat-card-header>
+                        <mat-card-title>Email</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>{{data.email_id}}</p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-icon-button matTooltip="Edit" aria-label="label">
+                            <mat-icon (click)="openDialog(data.email_id, 'input', 'email_id')">edit</mat-icon>
+                        </button>
+                    </mat-card-actions>
+                </mat-card>
+                <mat-card fxFlex="25%">
+                    <mat-card-header>
+                        <mat-card-title>Address</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>{{data.address}}</p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-icon-button matTooltip="Edit" aria-label="label">
+                            <mat-icon (click)="openDialog(data.address, 'input', 'address')">edit</mat-icon>
+                        </button>
+                    </mat-card-actions>
+                </mat-card>
+                <mat-card fxFlex="25%">
+                    <mat-card-header>
+                        <mat-card-title>Landmark</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>{{data.landmark}}</p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-icon-button matTooltip="Edit" aria-label="label">
+                            <mat-icon (click)="openDialog(data.landmark, 'input', 'landmark')">edit</mat-icon>
+                        </button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+            <br/>
+            <div fxLayout="row" fxLayoutWrap fxLayoutGap="2%" fxLayoutAlign="start start">
+                <mat-card fxFlex="25%">
+                    <mat-card-header>
+                        <mat-card-title>Facebook</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>{{data.facebook_link}}</p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-icon-button matTooltip="Edit" aria-label="label">
+                            <mat-icon (click)="openDialog(data.facebook_link, 'input', 'facebook_link')">edit</mat-icon>
+                        </button>
+                    </mat-card-actions>
+                </mat-card>
+                <mat-card fxFlex="25%">
+                    <mat-card-header>
+                        <mat-card-title>YouTube</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>{{data.youtube_link}}</p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-icon-button matTooltip="Edit" aria-label="label">
+                            <mat-icon (click)="openDialog(data.youtube_link, 'input', 'youtube_link')">edit</mat-icon>
+                        </button>
+                    </mat-card-actions>
+                </mat-card>
+                <mat-card fxFlex="25%">
+                    <mat-card-header>
+                        <mat-card-title>Twitter</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>{{data.twitter_link}}</p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-icon-button matTooltip="Edit" aria-label="label">
+                            <mat-icon (click)="openDialog(data.twitter_link, 'input', 'twitter_link')">edit</mat-icon>
+                        </button>
+                    </mat-card-actions>
+                </mat-card>
+                <mat-card fxFlex="25%">
+                    <mat-card-header>
+                        <mat-card-title>LinkedIn</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>{{data.instagram_link}}</p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-icon-button matTooltip="Edit" aria-label="label">
+                            <mat-icon (click)="openDialog(data.instagram_link, 'input', 'instagram_link')">edit</mat-icon>
+                        </button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+            <br/>
+            <div fxLayout="row" fxLayoutWrap fxLayoutGap="2%" fxLayoutAlign="start start">
+                <mat-card fxFlex="25%">
+                    <mat-card-header>
+                        <mat-card-title>Logo</mat-card-title>
+                    </mat-card-header>
+                    <img mat-card-image src="{{image_url}}{{data.logo}}" alt="image" />
+                    <mat-card-actions>
+                        <button mat-icon-button matTooltip="Edit" aria-label="label">
+                            <mat-icon (click)="openDialog(data.logo, 'image', 'logo')">edit</mat-icon>
+                        </button>
+                    </mat-card-actions>
+                </mat-card>
+                <mat-card fxFlex="25%">
+                    <mat-card-header>
+                        <mat-card-title>Cover Image</mat-card-title>
+                    </mat-card-header>
+                    <img mat-card-image src="{{image_url}}{{data.cover_image}}" alt="image" />
+                    <mat-card-actions>
+                        <button mat-icon-button matTooltip="Edit" aria-label="label">
+                            <mat-icon (click)="openDialog(data.cover_image, 'image', 'cover_image')">edit</mat-icon>
+                        </button>
+                    </mat-card-actions>
+                </mat-card>
+                <mat-card fxFlex="25%">
+                    <mat-card-header>
+                        <mat-card-title>About</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>{{data.about}}</p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-icon-button matTooltip="Edit" aria-label="label">
+                            <mat-icon (click)="openDialog(data.about, 'text', 'about')">edit</mat-icon>
+                        </button>
+                    </mat-card-actions>
+                </mat-card>
+                <mat-card fxFlex="25%">
+                    <mat-card-header>
+                        <mat-card-title>Leader</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>{{data.leader_name}}</p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-icon-button matTooltip="Edit" aria-label="label">
+                            <mat-icon (click)="openDialog(data.leader_name, 'input', 'leader_name')">edit</mat-icon>
+                        </button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </section>
     </mat-sidenav-content>
 </mat-sidenav-container>
