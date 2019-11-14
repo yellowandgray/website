@@ -15,7 +15,7 @@ jQuery(document).ready(function ($) {
                     slidesToScroll: 1,
                     arrows: true,
                     dots: false,
-                    autoplay: true
+                    autoplay: false
                 }
             },
             {
@@ -25,27 +25,27 @@ jQuery(document).ready(function ($) {
                     slidesToScroll: 1,
                     arrows: true,
                     dots: false,
-                    autoplay: true
+                    autoplay: false
                 }
             },
             {
                 breakpoint: 600,
                 settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    arrows: true,
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    arrows: false,
                     dots: false,
-                    autoplay: true
+                    autoplay: false
                 }
             },
             {
                 breakpoint: 400,
                 settings: {
-                    arrows: true,
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
+                    arrows: false,
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
                     dots: false,
-                    autoplay: true
+                    autoplay: false
                 }
             }]
     });
