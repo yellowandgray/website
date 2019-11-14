@@ -63,7 +63,7 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
                                 <div class="discover-slider-content">
                                     <p class="clb-bg"><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 14) : $obj->charLimit($row['sponsor'], 14) ?></p>
                                     <h2><?php echo $row['title']; ?></h2>
-    <!--                                    <p><?php //echo $obj->charLimit($row['moto_text'], 60);        ?></p>-->
+    <!--                                    <p><?php //echo $obj->charLimit($row['moto_text'], 60);         ?></p>-->
                                 </div>
                                 <div class="discover-btn">
                                     <a href="news?nid=<?php echo $row['news_id']; ?>" class="discover-btn-home">DISCOVER</a>
@@ -112,31 +112,29 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
             </div>
         </section>
         <section class="media-press-release">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12" onClick="document.location.href = 'press-release?type=<?php echo $type; ?>'">
-                        <div class="media-bg" style="background: url(img/media-bg.jpg)no-repeat; background-position: left; background-size: cover;">
+            <div class="row">
+                <div class="col-md-12" onClick="document.location.href = 'press-release?type=<?php echo $type; ?>'">
+                    <div class="media-bg" style="background: url(img/media-bg.jpg)no-repeat; background-position: left; background-size: cover;">
 <!--                            <a href="press-release?type=<?php echo $type; ?>">
-                                <img src="img/media-bg.jpg" alt="" />
-                            </a>-->
-                            <?php foreach ($press_release_menu as $row) { ?>
-                                <div class="row margin-b-20 ">
-                                    <!--                                    <div class="col-md-2">
-                                                                            <div class="home-press-release-bg" style="background: url(<?php //echo BASE_URL . $row['thumb_image'];   ?>)no-repeat;background-position: center;background-size: cover;cursor: pointer;width: 100%;height: 150px;"></div>
-                                                                        </div>-->
-                                    <div class="col-md-12">
-                                        <div class="press-width float-right">
-                                            <h4><a href="press?pid=<?php echo $row['press_release_id']; ?>"><?php echo $row['title']; ?></a></h4>
-                                            <span><?php echo $row['media']; ?> | <?php echo $row['author_name']; ?> | <?php echo date('M d, Y', strtotime($row['press_release_date'])); ?></span>
-                                        </div>
+                            <img src="img/media-bg.jpg" alt="" />
+                        </a>-->
+                        <?php foreach ($press_release_menu as $row) { ?>
+                            <div class="row margin-b-20 ">
+                                <!--                                    <div class="col-md-2">
+                                                                        <div class="home-press-release-bg" style="background: url(<?php //echo BASE_URL . $row['thumb_image'];    ?>)no-repeat;background-position: center;background-size: cover;cursor: pointer;width: 100%;height: 150px;"></div>
+                                                                    </div>-->
+                                <div class="col-md-12">
+                                    <div class="press-width float-right">
+                                        <h4><a href="press?pid=<?php echo $row['press_release_id']; ?>"><?php echo $row['title']; ?></a></h4>
+                                        <span><?php echo $row['media']; ?> | <?php echo $row['author_name']; ?> | <?php echo date('M d, Y', strtotime($row['press_release_date'])); ?></span>
                                     </div>
                                 </div>
-                            <?php } ?>
-                        </div>
-                        <a href="press-release?type=<?php echo $type; ?>" class="btn-tranparent">
-                            <span>ALL PRESS RELEASE</span>
-                        </a>
+                            </div>
+                        <?php } ?>
                     </div>
+                    <a href="press-release?type=<?php echo $type; ?>" class="btn-tranparent">
+                        <span>ALL PRESS RELEASE</span>
+                    </a>
                 </div>
             </div>
         </section>
@@ -185,7 +183,7 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <h1>PHOTOS</h1>
-                        <!--<div class="s-photo"><a href="gallery?type=<?php //echo $type;        ?>" class="btn-secondary">SEE MORE PHOTOS</a></div>-->
+                        <!--<div class="s-photo"><a href="gallery?type=<?php //echo $type;         ?>" class="btn-secondary">SEE MORE PHOTOS</a></div>-->
                     </div>
                 </div>
             </div>
@@ -231,7 +229,7 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
             <div class="container">
                 <div class="flex-row">
                     <h1>VIDEOS</h1>
-                    <!--<div class="s-photo"><a href="gallery?type=<?php //echo $type;        ?>" class="btn-secondary">SEE MORE VIDEOS</a></div>-->
+                    <!--<div class="s-photo"><a href="gallery?type=<?php //echo $type;         ?>" class="btn-secondary">SEE MORE VIDEOS</a></div>-->
                 </div>
                 <div class="home-gallery video-section">
                     <?php if ($type == 'two_wheel') { ?>
@@ -271,123 +269,123 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
         ?>
         <script src="js/jquery.magnific-popup.min.js" type="text/javascript"></script>
         <script>
-                        function lightbox(type) {
-                            var ninjaSldr = document.getElementById("ninja-slider");
-                            ninjaSldr.parentNode.style.display = "block";
-                            nslider.init();
-                            var fsBtn = document.getElementById("fsBtn");
-                            fsBtn.click();
+                    function lightbox(type) {
+                        var ninjaSldr = document.getElementById("ninja-slider");
+                        ninjaSldr.parentNode.style.display = "block";
+                        nslider.init();
+                        var fsBtn = document.getElementById("fsBtn");
+                        fsBtn.click();
+                    }
+                    function fsIconClick(isFullscreen, ninjaSldr) { //fsIconClick is the default event handler of the fullscreen button
+                        if (isFullscreen) {
+                            ninjaSldr.parentNode.style.display = "none";
                         }
-                        function fsIconClick(isFullscreen, ninjaSldr) { //fsIconClick is the default event handler of the fullscreen button
-                            if (isFullscreen) {
-                                ninjaSldr.parentNode.style.display = "none";
+                    }
+                    $(".home-gallery").magnificPopup({
+                        delegate: 'a',
+                        type: 'image',
+                        gallery: {
+                            enabled: true
+                        }
+                    });
+                    function charLimit(str, len) {
+                        if (str && str !== null && str !== 'null') {
+                            if (str.length <= len) {
+                                return str;
+                            } else {
+                                var y = str.substring(0, len) + '...';
+                                return y;
                             }
                         }
-                        $(".home-gallery").magnificPopup({
-                            delegate: 'a',
-                            type: 'image',
-                            gallery: {
-                                enabled: true
+                    }
+
+                    function openTag(evt, cid, type) {
+                        var i, tablink, remove = false;
+                        if (evt !== null) {
+                            if ((evt.currentTarget.className).indexOf('active') !== -1) {
+                                remove = true;
+                            }
+                            tablink = document.getElementsByClassName("tablink");
+                            for (i = 0; i < tablink.length; i++) {
+                                tablink[i].className = tablink[i].className.replace(" active", "");
+                            }
+                            if (remove == false) {
+                                evt.currentTarget.className += " active";
+                            } else {
+                                cid = 0;
+                            }
+                        }
+                        $.ajax({
+                            type: "GET",
+                            url: 'api/v1/get_news_by_category/' + cid + '/' + type,
+                            success: function (data) {
+                                $('.slider').slick('unslick');
+                                $('#club1 .slider').empty();
+                                var BASE_URL = 'https://www.toowheel.com/toowheel/api/v1/';
+                                if (data.result.error === false) {
+                                    var list = '';
+                                    $.each(data.result.data, function (key, val) {
+                                        var name = val.sponsor;
+                                        if (val.club && val.club !== null && val.club !== 'null') {
+                                            name = val.club;
+                                        }
+                                        list = list + '<div class="discover-slider"><a href="news?nid=' + val.news_id + '"><div class="home-news-thumb-image" style="background: url(' + BASE_URL + val.thumb_image + ')no-repeat;background-repeat: no-repeat;background-position: top;background-size: cover;"></div></a><div class="discover-slider-content"><p class="clb-bg">' + charLimit(name, 10) + '</p><h2>' + val.title + '</h2></div><div class="discover-btn"><a href="news?nid=' + val.news_id + '" class="discover-btn-home">DISCOVER</a></div></div>';
+                                    });
+                                    $('#club1 .slider').html(list);
+                                    $('.slider').slick({
+                                        dots: true,
+                                        infinite: true,
+                                        speed: 500,
+                                        slidesToShow: 6,
+                                        slidesToScroll: 1,
+                                        autoplay: false,
+                                        autoplaySpeed: 2000,
+                                        arrows: true,
+                                        responsive: [{
+                                                breakpoint: 1024,
+                                                settings: {
+                                                    slidesToShow: 4,
+                                                    slidesToScroll: 1,
+                                                    dots: true,
+                                                    autoplay: true
+                                                }
+                                            },
+                                            {
+                                                breakpoint: 991,
+                                                settings: {
+                                                    slidesToShow: 3,
+                                                    slidesToScroll: 1,
+                                                    dots: false,
+                                                    autoplay: true
+                                                }
+                                            },
+                                            {
+                                                breakpoint: 600,
+                                                settings: {
+                                                    slidesToShow: 1,
+                                                    slidesToScroll: 1,
+                                                    dots: false,
+                                                    autoplay: true
+                                                }
+                                            },
+                                            {
+                                                breakpoint: 400,
+                                                settings: {
+                                                    arrows: false,
+                                                    slidesToShow: 1,
+                                                    slidesToScroll: 1,
+                                                    dots: false,
+                                                    autoplay: true
+                                                }
+                                            }]
+                                    });
+                                }
+                            },
+                            error: function (err) {
+                                $('#club1 .slider').empty();
                             }
                         });
-                        function charLimit(str, len) {
-                            if (str && str !== null && str !== 'null') {
-                                if (str.length <= len) {
-                                    return str;
-                                } else {
-                                    var y = str.substring(0, len) + '...';
-                                    return y;
-                                }
-                            }
-                        }
-
-                        function openTag(evt, cid, type) {
-                            var i, tablink, remove = false;
-                            if (evt !== null) {
-                                if ((evt.currentTarget.className).indexOf('active') !== -1) {
-                                    remove = true;
-                                }
-                                tablink = document.getElementsByClassName("tablink");
-                                for (i = 0; i < tablink.length; i++) {
-                                    tablink[i].className = tablink[i].className.replace(" active", "");
-                                }
-                                if (remove == false) {
-                                    evt.currentTarget.className += " active";
-                                } else {
-                                    cid = 0;
-                                }
-                            }
-                            $.ajax({
-                                type: "GET",
-                                url: 'api/v1/get_news_by_category/' + cid + '/' + type,
-                                success: function (data) {
-                                    $('.slider').slick('unslick');
-                                    $('#club1 .slider').empty();
-                                    var BASE_URL = 'https://www.toowheel.com/toowheel/api/v1/';
-                                    if (data.result.error === false) {
-                                        var list = '';
-                                        $.each(data.result.data, function (key, val) {
-                                            var name = val.sponsor;
-                                            if (val.club && val.club !== null && val.club !== 'null') {
-                                                name = val.club;
-                                            }
-                                            list = list + '<div class="discover-slider"><a href="news?nid=' + val.news_id + '"><div class="home-news-thumb-image" style="background: url(' + BASE_URL + val.thumb_image + ')no-repeat;background-repeat: no-repeat;background-position: top;background-size: cover;"></div></a><div class="discover-slider-content"><p class="clb-bg">' + charLimit(name, 10) + '</p><h2>' + val.title + '</h2></div><div class="discover-btn"><a href="news?nid=' + val.news_id + '" class="discover-btn-home">DISCOVER</a></div></div>';
-                                        });
-                                        $('#club1 .slider').html(list);
-                                        $('.slider').slick({
-                                            dots: true,
-                                            infinite: true,
-                                            speed: 500,
-                                            slidesToShow: 6,
-                                            slidesToScroll: 1,
-                                            autoplay: false,
-                                            autoplaySpeed: 2000,
-                                            arrows: true,
-                                            responsive: [{
-                                                    breakpoint: 1024,
-                                                    settings: {
-                                                        slidesToShow: 4,
-                                                        slidesToScroll: 1,
-                                                        dots: true,
-                                                        autoplay: true
-                                                    }
-                                                },
-                                                {
-                                                    breakpoint: 991,
-                                                    settings: {
-                                                        slidesToShow: 3,
-                                                        slidesToScroll: 1,
-                                                        dots: false,
-                                                        autoplay: true
-                                                    }
-                                                },
-                                                {
-                                                    breakpoint: 600,
-                                                    settings: {
-                                                        slidesToShow: 1,
-                                                        slidesToScroll: 1,
-                                                        dots: false,
-                                                        autoplay: true
-                                                    }
-                                                },
-                                                {
-                                                    breakpoint: 400,
-                                                    settings: {
-                                                        arrows: false,
-                                                        slidesToShow: 1,
-                                                        slidesToScroll: 1,
-                                                        dots: false,
-                                                        autoplay: true
-                                                    }
-                                                }]
-                                        });
-                                    }
-                                },
-                                error: function (err) {
-                                    $('#club1 .slider').empty();
-                                }
-                            });
-                        }
+                    }
         </script>
         <script>
             var vidImg = document.getElementById("vimg");
