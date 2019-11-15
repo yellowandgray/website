@@ -881,6 +881,7 @@ button {
     padding: 0px 10px 0;
     margin-bottom: 10px;
     border-bottom: 1px solid gray;
+    width: 100%;
 }
 .release-cont-1{
     flex: 1;
@@ -2021,6 +2022,9 @@ button {
 .club-logo {
     position: relative;
     z-index: 1;
+    overflow: hidden;
+    width: 330px;
+    height: 330px;
 }
 
 .w-text h2{
@@ -2042,7 +2046,7 @@ button {
     justify-content: space-between;
     align-items: center;
     position: relative;
-    bottom: 157px;
+    bottom: 330px;
 }
 .w-text-con{
     flex-basis: 30%;
@@ -2075,7 +2079,7 @@ button {
     box-shadow: 0px 0px 6px 0px #bbb7b7;
     margin-bottom: 20px;
     position: relative;
-    bottom: 192px;
+    bottom: 355px;
     background: #fff;
 }
 
@@ -2087,6 +2091,7 @@ button {
     color: #676666;
     font-weight: 600;
     font-size: 17px;
+    text-align: left;
 }
 
 .w-text-con-1 p a{
@@ -2125,10 +2130,10 @@ button {
 }
 
 .anounce-con-1{
-    flex-basis:18%
+    flex-basis:12%
 }
 .anounce-con-1:nth-child(2){
-    flex-basis:80%
+    flex-basis:88%
 }
 .box-anounce{
     padding: 5px;
@@ -2164,7 +2169,7 @@ button {
     color: #a0a0a0;
 }
 .anounce-con h3  { 
-    font-size: 20px;
+    font-size: 14px;
     font-weight: 600;
     color: #4c4c4c;
 }
@@ -2176,10 +2181,11 @@ button {
 }
 .anounce-con-1 h5  {
     font-style: italic;
+    margin-bottom: 5px;
 
 }
 .anounce-con-1 p  { 
-    font-size: 10px;
+    font-size: 12px;
     margin: 2px 0px;
 }
 .anounce-con-1 h3  { 
@@ -2647,35 +2653,50 @@ body .calender-box{
     border-bottom-right-radius: 7px;
     border-bottom-left-radius: 7px;
 }
+
+.club-cover-overlay2 .discover-slider .discover-slider-content {
+    bottom: 100px;
+    height: 100px;
+}
+
 .event-section {
     position: relative;
-    top: -200px;
+    top: -378px;
     flex-wrap: wrap;
 }
 
-@media (max-width:934px) and (min-width:768px){
+@media (max-width:991px) and (min-width:768px){
     .w-text h2 {
         font-size: 17px;
         font-weight: 600;
-        color: #ed1c24;
+        color: #ffffff;
+        padding: 0;
     }
     .w-text h5 {
         font-size: 13px;
         font-weight: 600;
-        color: #ed1c24;
+        color: #ffffff;
+        padding: 0 !important;
     }
     .w-text-con-1 p {
         font-weight: 600;
         color: #676666;
         font-size: 12px;
     }
-    .club-logo img {
-        width: 100%;
-    }
     .club-logo {
         position: relative;
         bottom: 37px;
         z-index: 1;
+        width: 100%;
+        height: 195px;
+    }
+    .club-logo .club-view-logo {
+        border-radius: 50%;
+        box-shadow: 0 0 4px 1px #909090;
+        border: 2px solid #fff;
+        border-color: red;
+        width: 100%;
+        height: 195px;
     }
     .w-text-1 {
         padding: 25px 10px 10px 10px;
@@ -2690,23 +2711,25 @@ body .calender-box{
         box-shadow: 0px 0px 6px 0px #bbb7b7;
         margin-bottom: 20px;
         position: relative;
-        bottom: 100px;
+        bottom: 150px;
         background: #fff;
     }
     .event-section.club-cover-overlay2 {
-        top: -120px !important;
+        top: -170px !important;
     }
 }
 @media (max-width:767px) and (min-width:531px){
     .w-text h2 {
         font-size: 14px;
         font-weight: 600;
-        color: #ed1c24;
+        color: #ffffff;
+        padding: 0;
     }
     .w-text h5 {
         font-size: 13px;
         font-weight: 600;
-        color: #ed1c24;
+        color: #ffffff;
+        padding: 0;
     }
     .w-text-con-1 p {
         font-weight: 600;
@@ -2717,17 +2740,16 @@ body .calender-box{
         width: 70%;
     }
     .club-logo {
-        position: relative;
-        bottom:0px;
         z-index: 1;
-        left: 20px;
+        width: 100%;
+        height: 125px;
     }
     .w-text-1 {
         padding: 25px 10px 10px 10px;
         box-shadow: 0px 0px 6px 0px #bbb7b7;
         margin-bottom: 20px;
         position: relative;
-        bottom: 90px;
+        bottom: 130px;
         background: #fff;
     }
     .w-text {
@@ -2735,7 +2757,11 @@ body .calender-box{
         justify-content: space-between;
         align-items: center;
         position: relative;
-        bottom: 46px;
+        bottom: 140px;
+    }
+    .club-logo .club-view-logo {
+        width: 100%;
+        height: 125px;
     }
 }
 @media (max-width:530px) and (min-width:320px){
@@ -2809,7 +2835,7 @@ body .calender-box{
 @media (max-width:767px) and (min-width:320px){
     .event-section {
         position: relative;
-        top: -102px;
+        top: -150px;
         flex-wrap: wrap;
     }
 }
@@ -2842,7 +2868,7 @@ body .calender-box{
 
     .event-section {
         position: relative;
-        top: -52px;
+        top: -63px;
         flex-wrap: wrap;
     }
     .club-logo {
@@ -3440,7 +3466,7 @@ body .calender-box{
 }
 
 .club-gallery img {
-    width: 32%;
+    width: 24%;
     margin-bottom: -3px;
     height: 130px;
 }
@@ -4770,7 +4796,42 @@ hr {
 
 .club-details .container {
     box-shadow: 0 0 14px 0 #eee;
-    padding: 40px 30px;
+    padding: 20px 10px;
+}
+
+.club-details .about-myclub h1 {
+    font-size: 22px;
+    color: red;
+    padding: 10px 0;
+    font-weight: 700;
+}
+
+.club-details .myclub-news h1 {
+    font-size: 22px;
+    color: red;
+    padding: 10px 0;
+    font-weight: 700;
+}
+
+.club-details .myclub-events h1 {
+    font-size: 22px;
+    color: red;
+    padding: 10px 0;
+    font-weight: 700;
+}
+
+.club-details .myclub-gallery h1 {
+    font-size: 22px;
+    color: red;
+    padding: 10px 0;
+    font-weight: 700;
+}
+
+.club-details .about-myclub hr {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    border: 0;
+    border-top: 1px solid #a5a5a5;
 }
 
 #basic_information .eye-icon {
@@ -5251,4 +5312,63 @@ hr {
 
 .past-event strong {
     font-size: 12px;
+}
+
+.myclub-events .box-anounce-1 .anounce-con-1 span.mon-myevent, .myclub-events .box-anounce-1 .anounce-con-1 span.date-myevent {
+    font-size: 50px;
+    font-weight: 600;
+    color: #505050;
+}
+
+.anounce-con h5 {
+    margin-bottom: 0;
+}
+
+.chat-container {
+    border: 2px solid #dedede;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.darker {
+    border-color: #ccc;
+    background-color: #ddd;
+}
+
+.chat-container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.chat-container img {
+    float: left;
+    max-width: 60px;
+    width: 100%;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+.chat-container img.right {
+    float: right;
+    margin-left: 20px;
+    margin-right:0;
+}
+
+.time-right {
+    float: right;
+    color: #aaa;
+}
+
+.time-left {
+    float: left;
+    color: #999;
+}
+
+.event-desc p span {
+    color: #000;
+    font-weight: 400;
+    font-size: 15px;
 }

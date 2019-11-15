@@ -26,6 +26,18 @@
     }
 }
 
+@media only screen and (max-width: 530px) {
+    .club-logo {
+        width: 100% !important;
+        height: 99px !important;
+        left: 0 !important;
+    }
+    .club-logo .club-view-logo {
+        width: 100% !Important;
+        height: 99px !important;
+    }
+}
+
 @media only screen and (max-width: 575px) {
     .news-02-cont {
         width: 100% !important;
@@ -63,7 +75,7 @@
         height: 200px !important;
     }
     .tab-pane #club_list {
-       left: 0px !important;
+        left: 0px !important;
     }
     .fooetr-5 .i-con {
         padding: 0 !important;
@@ -99,8 +111,8 @@
     .button-8 {width: 33% !important;}
     .events-content {top: -30px !important;position: relative;}
     .margin-rl-25 {
-/*        margin-right: -15px !important;
-        margin-left: -15px !important;*/
+        /*        margin-right: -15px !important;
+                margin-left: -15px !important;*/
     }
     .search-section .search-btn  {display: none !important;}
     .search-section input  {border-radius: 25px !important;}
@@ -1142,10 +1154,10 @@
 }
 @media (min-width: 992px) and (max-width: 2000px) {
     .club-gallery img {
-        height: 80px !Important;
+        height: 160px !Important;
     }
     .w-text-1 {
-        bottom: 183px !Important;
+        bottom: 356px !Important;
     }
 }
 @media (min-width: 935px) and (max-width: 991px) {
@@ -1166,9 +1178,9 @@
     .event-section.club-cover-overlay2 {
         top: -130px !important;
     }
-    .w-text-1 {
+/*    .w-text-1 {
         bottom: 110px !important;
-    }
+    }*/
     .w-text h2 {
         font-size: 19px !important;
     }
@@ -1189,12 +1201,12 @@
         position: relative;
         bottom: 150px  !important;
     }
-    .club-cover-overlay .w-text h2 {
+/*    .club-cover-overlay .w-text h2 {
         padding-top: 50px !important;
-    }
-    .club-cover-overlay .w-text-con h5 {
+    }*/
+/*    .club-cover-overlay .w-text-con h5 {
         padding-top: 50px !important;
-    }
+    }*/
 }
 @media (min-width: 768px) and (max-width: 991px) {
     .club-box {
@@ -1215,6 +1227,9 @@
 @media (min-width: 992px) and (max-width: 1199px) {
     .club-logo img {
         height: 272px !important;
+    }
+    .event-section {
+        top: -379px !important;
     }
 }
 @media (min-width: 768px) and (max-width: 991px) {
