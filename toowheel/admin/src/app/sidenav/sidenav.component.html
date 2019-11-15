@@ -1,7 +1,16 @@
 <div class="text-center">
     <img src="assets/logo.png" alt="image" />
 </div>
-<mat-nav-list fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center" class="user-nav-info">
+<mat-list class="login-user-bg">
+    <mat-list-item>
+        <img matListAvatar src="{{image_url}}{{data.gender}}.jpg" *ngIf="!data.avatar || data.avatar == ''" alt="" />
+        <img matListAvatar src="{{image_url}}{{data.avatar}}" *ngIf="data.avatar && data.avatar != ''" alt="user_profile_image" />
+        <h4 matLine>{{data.name}}</h4>
+        <p matLine>{{data.role | titlecase}}</p>
+    </mat-list-item>
+    <p class="last-login" *ngIf="data.last_login && data.last_login != '0000-00-00 00:00:00'">Last Login: {{data.last_login | date: 'dd-MM-yyyy hh:mm:ss'}}</p>
+</mat-list>
+<!--<mat-nav-list fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center" class="user-nav-info">
     <div mat-list-item fxFlex="20">
         <img matListAvatar src="{{image_url}}{{data.gender}}.jpg" *ngIf="!data.avatar || data.avatar == ''" alt="" />
         <img matListAvatar src="{{image_url}}{{data.avatar}}" *ngIf="data.avatar && data.avatar != ''" alt="user_profile_image" />
@@ -10,8 +19,8 @@
         <h4>{{data.name}}</h4>
         <p>{{data.role | titlecase}}</p>
     </div>
-</mat-nav-list>
-<p class="last-login" *ngIf="data.last_login && data.last_login != '0000-00-00 00:00:00'">Last Login: {{data.last_login | date: 'dd-MM-yyyy hh:mm:ss'}}</p>
+</mat-nav-list>-->
+
 <mat-nav-list>
     <a mat-list-item routerLinkActive="active-nav" routerLink="/dashboard" *ngIf="data.role != 'Editor' && data.role != 'club'">
        <mat-icon>dashboard</mat-icon> Toowheel Dashboard

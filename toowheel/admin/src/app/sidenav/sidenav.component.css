@@ -1,17 +1,8 @@
-.user-nav-info {
-    padding: 5px 6px;
+.login-user-bg {
     background: #4a4a4a;
 }
 
-.user-nav-info img {
-    width: 100%;
-    border-radius: 25px
-}
-
-.user-info {
-    padding: 0 10px;
-}
-.user-info h4 {
+.login-user-bg h4 {
     font-size: 14px;
     padding: 0;
     margin: 0;
@@ -19,7 +10,7 @@
     color: #fff;
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
-.user-info p {
+.login-user-bg p {
     font-size: 13px;
     padding: 0;
     margin: 0;
@@ -27,6 +18,11 @@
     color: #fff;
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+p.last-login {
+    padding-bottom: 5px !important;
+}
+
 p.mat-l {
     font-size: 15px !important;
     text-align: left;
