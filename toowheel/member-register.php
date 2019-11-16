@@ -524,14 +524,12 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                             <div id="step-3" class="">
                                 <h2>Make Payment</h2>
                                 <div class="row">
-                                    <div class="col-md-2"></div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-6">
                                         <div class="member-register-btn"><a id="paywith_paypal"></a></div>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-6">
                                         <div class="member-register-btn cdm-found"><a href="#">CDM / Fund Transfer</a></div>
                                     </div>
-                                    <div class="col-md-2"></div>
                                     <div class="col-md-12">
                                         <div class="pop-1 member-register-popup"><i class="fa fa-times-circle" aria-hidden="true"></i>
                                             <div class="margin-top-30">
