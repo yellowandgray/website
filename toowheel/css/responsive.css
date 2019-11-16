@@ -437,8 +437,12 @@
     .button-8 a {
         font-size: 12px !Important;
     }
+    .side-news .press-bg-hover {
+        width: 100% !important;
+        height: 250px !important;
+    }
     .press-cover-image-bg {
-        height: 100px !important;
+        height: 250px !important;
     }
     .news-cover-image-bg {
         height: 100px !important;
@@ -478,7 +482,7 @@
         font-size: 18px !important;
     }
     #sideslider {
-        height: 2600px !important;
+        height: 3500px !important;
     }
 }
 
@@ -1154,7 +1158,7 @@
 }
 @media (min-width: 992px) and (max-width: 2000px) {
     .club-gallery img {
-        height: 160px !Important;
+        height: 100px !Important;
     }
     .w-text-1 {
         bottom: 356px !Important;

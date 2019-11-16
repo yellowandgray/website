@@ -33,6 +33,7 @@
     <link href="css/fs-gal.css" rel="stylesheet" type="text/css"/>
     <link rel="dns-prefetch" href="https://code.jquery.com" />
     <link href="css/sweet-alert.css" rel="stylesheet" type="text/css"/>
+    <link href="css/shorten.css" rel="stylesheet" type="text/css"/>
     <style>
         @font-face {
             font-family: "VenusRising";

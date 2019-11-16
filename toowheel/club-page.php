@@ -117,9 +117,9 @@ if ($type == 'four_wheel') {
                         <div class="myclub-news">
                             <?php if (count($news) > 0) { ?>
                                 <h1>News & Updates</h1>
-                                <div class="slider">
+                                <div class="row">
                                     <?php foreach ($news as $row) { ?>
-                                        <div class="discover-slider">
+                                        <div class="col-xl-4 col-md-4 col-sm-4 discover-slider">
                                             <a href="news?nid=<?php echo $row['news_id']; ?>">
                                                 <div class="home-news-thumb-hover">
                                                     <div class="home-news-thumb-image" style="background: url(<?php echo BASE_URL . $row['cover_image']; ?>)no-repeat;background-repeat: no-repeat;background-position: top;background-size: cover;"></div>
@@ -140,41 +140,33 @@ if ($type == 'four_wheel') {
                                 </div>
                             <?php } ?>
                         </div>
-                        <div class="myclub-events">
-                            <h1>Events & Activities</h1>
-                            <?php foreach ($events as $row) { ?>
-                                <div class="anounce box-anounce-1">
-                                    <div class="anounce-con-1">
-                                        <span class="date-myevent"><?php echo date('d', strtotime($row['event_from_date'])) ?></span>
-                                        <span class="mon-myevent"><?php echo $row['event_date']; ?></span>
-                                        <p class="text-center"><?php echo date('M', strtotime($row['event_from_date'])) ?></p>
-                                    </div>  
-                                    <div class="anounce-con-1">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <h5><a>CLUB ADMIN</a></h5>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p class="float-right"><em><?php echo date('M d, Y', strtotime($row['event_from_date'])) ?> | <?php echo date('M d, Y', strtotime($row['event_to_date'])) ?></em></p>
-                                            </div>
-                                        </div>
-                                        <h3><?php echo $row['title']; ?></h3>
-                                        <p><?php echo $row['description']; ?></p>
-                                    </div>  
+                        <div class="member-gird">
+                            <h1>Member</h1>
+                            <div class="row">
+                                <div class="col-lg-4 col-xl-4 col-md-4 col-sm-4">
+                                    <div class="chat-container">
+                                        <img src="img/1.jpg" alt="Avatar" style="width:100%;">
+                                        <h3>Member Questions 1</h3>
+                                        <input type="text" name="answer" placeholder="Type Your Answer" />
+                                        <i class="fa fa-paper-plane" aria-hidden="true" type="submit"></i>
+                                    </div>
                                 </div>
-                            <?php } ?>
-                        </div>
-                        <div class="myclub-gallery">
-                            <h1>Gallery</h1>
-                            <?php if ($club['club_video'] && $club['club_video'] != '' && $club['club_video'] != 'undefined') { ?>
-                                <video muted loop controls id="myVideo" class="img-responsive">
-                                    <source src="<?php echo BASE_URL . $club['club_video']; ?>" type="video/mp4">
-                                </video>
-                            <?php } ?>
-                            <div class="img-b-10px club-gallery">
-                                <?php foreach ($images as $row) { ?>
-                                    <img class="fs-gal" src="<?php echo BASE_URL . $row['media_path']; ?>" alt=""  data-url="<?php echo BASE_URL . $row['media_path']; ?>" class="img-responsive"/>
-                                <?php } ?>
+                                <div class="col-lg-4 col-xl-4 col-md-4 col-sm-4">
+                                    <div class="chat-container">
+                                        <img src="img/1.jpg" alt="Avatar" style="width:100%;">
+                                        <h3>Member Questions 1</h3>
+                                        <input type="text" name="answer" placeholder="Type Your Answer" />
+                                        <i class="fa fa-paper-plane" aria-hidden="true" type="submit"></i>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-xl-4 col-md-4 col-sm-4">
+                                    <div class="chat-container">
+                                        <img src="img/1.jpg" alt="Avatar" style="width:100%;">
+                                        <h3>Member Questions 1</h3>
+                                        <input type="text" name="answer" placeholder="Type Your Answer" />
+                                        <i class="fa fa-paper-plane" aria-hidden="true" type="submit"></i>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -199,24 +191,48 @@ if ($type == 'four_wheel') {
                                                 <h5><a>CLUB ADMIN</a></h5>
                                                 <span><em><?php echo date('M d, Y', strtotime($row['announcement_date'])); ?></em></span>
                                                 <h3><?php echo $row['title']; ?></h3>
-                                                <p><?php echo nl2br($obj->charLimit($row['description'], 220)); ?></p>
+                                                <p class="desc"><?php echo nl2br($row['description']); ?></p>
                                             </div>  
                                         </div>
                                     <?php } ?>
                                 </div>
                             <?php } ?>
                         </div>
-                        <div class="col-lg-12 col-xl-12 col-md-12">
-                            <div class="chat-container">
-                                <img src="img/1.jpg" alt="Avatar" style="width:100%;">
-                                <p>Hello. How are you today?</p>
-                                <span class="time-right">11:00</span>
-                            </div>
-
-                            <div class="chat-container darker">
-                                <img src="img/1.jpg" alt="Avatar" class="right" style="width:100%;">
-                                <p>Hey! I'm fine. Thanks for asking!</p>
-                                <span class="time-left">11:01</span>
+                        <div class="myclub-events">
+                            <h1>Events & Activities</h1>
+                            <?php foreach ($events as $row) { ?>
+                                <div class="anounce box-anounce-1">
+                                    <div class="anounce-con-1">
+                                        <span class="date-myevent"><?php echo date('d', strtotime($row['event_from_date'])) ?></span>
+                                        <span class="mon-myevent"><?php echo $row['event_date']; ?></span>
+                                        <p class="text-center"><?php echo date('M', strtotime($row['event_from_date'])) ?></p>
+                                    </div>  
+                                    <div class="anounce-con-1">
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <h5><a>CLUB ADMIN</a></h5>
+                                            </div>
+                                            <div class="col-md-7">
+                                                <p class="float-right"><em><?php echo date('M d, Y', strtotime($row['event_from_date'])) ?> | <?php echo date('M d, Y', strtotime($row['event_to_date'])) ?></em></p>
+                                            </div>
+                                        </div>
+                                        <h3><?php echo $row['title']; ?></h3>
+                                        <p class="desc"><?php echo $row['description']; ?></p>
+                                    </div>  
+                                </div>
+                            <?php } ?>
+                        </div>
+                        <div class="myclub-gallery">
+                            <h1>Gallery</h1>
+                            <?php if ($club['club_video'] && $club['club_video'] != '' && $club['club_video'] != 'undefined') { ?>
+                                <video muted loop controls id="myVideo" class="img-responsive">
+                                    <source src="<?php echo BASE_URL . $club['club_video']; ?>" type="video/mp4">
+                                </video>
+                            <?php } ?>
+                            <div class="img-b-10px club-gallery">
+                                <?php foreach ($images as $row) { ?>
+                                    <img class="fs-gal" src="<?php echo BASE_URL . $row['media_path']; ?>" alt=""  data-url="<?php echo BASE_URL . $row['media_path']; ?>" class="img-responsive"/>
+                                <?php } ?>
                             </div>
                         </div>
                         <div class="col-lg-12 col-xl-12 col-md-12">
@@ -333,6 +349,7 @@ if ($type == 'four_wheel') {
         <script src="js/sweet-alert.min.js" type="text/javascript"></script>
         <script src="js/jquery.autocomplete.min.js" type="text/javascript"></script>
         <script type="text/javascript" async defer src="//assets.pinterest.com/js/pinit.js"></script>
+        <script src="js/jquery-shorten.js" type="text/javascript"></script>
         <script>
                                             function showTextPassword() {
                                                 var x = document.getElementById("password");
@@ -740,6 +757,11 @@ if ($type == 'four_wheel') {
             function getId(id) {
                 return document.getElementById(id);
             }
+        </script>
+        <script>
+            jQuery(function ($) {
+                $('.desc').shorten();
+            });
         </script>
     </body>
 </html>

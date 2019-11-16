@@ -2130,10 +2130,10 @@ button {
 }
 
 .anounce-con-1{
-    flex-basis:12%
+    flex-basis:16%;
 }
 .anounce-con-1:nth-child(2){
-    flex-basis:88%
+    flex-basis:84%
 }
 .box-anounce{
     padding: 5px;
@@ -2633,6 +2633,18 @@ body .calender-box{
     overflow: hidden;
 }
 
+.myclub-news .discover-slider {
+    height: 290px;
+    overflow: hidden;
+}
+
+.myclub-news .discover-slider .home-news-thumb-hover {
+    width: 100%;
+    height: 290px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
 .discover-slider .home-news-thumb-hover:hover  .home-news-thumb-image {
     -webkit-transform: scale(1.08);
     transform: scale(1.08);
@@ -2811,7 +2823,7 @@ body .calender-box{
 }
 .img-b-10px{
     margin: 2px auto;
-    text-align: center;
+    text-align: left;
 }
 @media (max-width:991px) and (min-width:320px){
     .img-b-10px {
@@ -3466,9 +3478,9 @@ body .calender-box{
 }
 
 .club-gallery img {
-    width: 24%;
+    width: 23%;
     margin-bottom: -3px;
-    height: 130px;
+    height: 90px;
 }
 
 .box-anounce .discover-slider-content center a {
@@ -4628,7 +4640,7 @@ hr {
 }
 
 .press-bg-hover {
-    width: 350px;
+    width: 100%;
     height: 180px;
     overflow: hidden;
 }
@@ -5321,7 +5333,7 @@ hr {
 }
 
 .anounce-con h5 {
-    margin-bottom: 0;
+    margin-bottom: 5px;
 }
 
 .chat-container {
@@ -5347,7 +5359,7 @@ hr {
     float: left;
     max-width: 60px;
     width: 100%;
-    margin-right: 20px;
+    margin-right: 5px;
     border-radius: 50%;
 }
 
@@ -5370,5 +5382,58 @@ hr {
 .event-desc p span {
     color: #000;
     font-weight: 400;
+    font-size: 15px;
+}
+
+.chat-container p {
+    padding-top: 20px;
+    margin: 0;
+    text-align: left;
+    font-size: 13px;
+}
+
+.shorten-detail {
+    color: #000 !important;
+}
+
+.shorten-toggle {
+    margin-left: 2px;
+}
+
+.member-gird {
+    padding-top: 20px;
+}
+
+.member-gird h1 {
+    color: red;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.member-gird .chat-container h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #858585;
+}
+
+.member-gird .chat-container input {
+    width: 100%;
+    margin-top: 10px;
+    padding: 5px 25px 5px 10px;
+    border-radius: 25px;
+    background: white;
+    outline: none;
+    border: 1px solid #e3e3e3;
+    position: relative;
+    font-size: 12px;
+}
+
+.member-gird .chat-container i {
+    position: absolute;
+    margin-top: 10px;
+    padding: 7px 0;
+    right: 35px;
+    -webkit-appearance: none;
+    cursor: pointer;
     font-size: 15px;
 }
