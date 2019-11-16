@@ -34,7 +34,7 @@
                         </div>
                     </div>
                     <div class="col-lg-8 product-details pl-md-5 ftco-animate">
-                        <h3>environmental policy</h3>
+                        <h3>Environmental Policy</h3>
                         <p>Our governance policies dictate that environmental responsibilities are assigned the highest priority in all stages of research and development, manufacture, marketing, product application, and end life disposal of its products.</p>
                         <p>The company is committed to sustainable development, balancing innovative solutions that help satisfy society’s needs, whilst optimizing use of resources. All reasonable steps are taken to prevent harm to human health and the environment.</p>
                         <p>When bonded to a surface or substrate, Fresche antimicrobials are safe, non-toxic, inert and completely safe for use around people, plants and animals. Even during the disposal stage of treated antimicrobial surfaces [such as in land fill], there is no zone of inhibition or chemical leaching to impact waterways and other ecological processes.</p>
