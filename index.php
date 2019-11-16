@@ -18,52 +18,11 @@
                 <div class="slider-item">
                     <div class="container">
                         <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
-                            <div class="col-md-12 ftco-animate">
-                                <div class="row">
-                                    <div class="col-md-12 product-text col-sm-12">
-                                        <!--<h1 class="mb-2">PRODUCT</h1>-->
-                                        <h2 class="subheading mb-4" style="text-align: center;">According to Prof Gilbert, children's immune systems were more healthy and robust than they are today because of more relaxed attitudes to germs. He explains that more fermented foods which contain bacteria, enable children higher exposure to animals, plants and soil more often.</h2>
-                                    </div>
-
-                                </div>
-                                <div class="row res-feature-1">
-                                    <div class="col-md-12">
-
-                                        <div class="row feature-l"> 
-                                            <div class="col-md-2">
-                                                <div class="box-1">
-                                                    <a onclick="document.getElementById('featured').classList.add('featured-view')"><img src="images/feature/003.png" alt=""/><p>Non Leaching & Non Depleting</p></a>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <div class="box-1">
-                                                    <a onclick="document.getElementById('featured-1').classList.add('featured-view')"><img src="images/feature/002.png" alt=""/><p>Mode of Action </p></a>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <div class="box-1">
-                                                    <a onclick="document.getElementById('featured-2').classList.add('featured-view')"><img src="images/feature/006.png" alt="" /><p>Lock and Bond</p> </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <div class="box-1">
-                                                    <a onclick="document.getElementById('featured-3').classList.add('featured-view')"><img src="images/feature/001.png" alt=""/><p>No Heavy metals or Chemicals</p></a>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <div class="box-1">
-                                                    <a onclick="document.getElementById('featured-4').classList.add('featured-view')"><img src="images/feature/004.png" alt="" /><p>Enduring protection</p></a>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <div class="box-1">
-                                                    <a onclick="document.getElementById('featured-5').classList.add('featured-view')"><img src="images/feature/005.png" alt=""/><p>Pathogens</p></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="col-lg-8 col-md-8 ftco-animate product-text">
+                                <!--<h1 class="mb-2">PRODUCT</h1>-->
+                                <h2 class="subheading mb-4" style="text-align: center;">GAIN SUPER POWER WITH <span>FRESCHE</span></h2>
                             </div>
+                            <div class="col-md-4"></div>
                         </div>
                     </div>
                 </div>
@@ -71,7 +30,6 @@
         </section>
         <section class="ftco-category pad-20-80 res-feature">
             <div class="col-md-12">
-
                 <div class="row feature-l"> 
                     <div class="col-md-2 col-sm-2 col-4">
                         <div class="box-1">
@@ -105,7 +63,6 @@
                     </div>
                 </div>
             </div>
-
         </section>
         <section class=" ftco-category pad-80" id="featured">
             <div class="row">
@@ -212,7 +169,6 @@
                     <p>Fresche surface bonded antimicrobials are unmatched in their delivery of consistent, enduring, safe, high performance antimicrobial activity.</p>
                 </div>
             </div>
-
         </section>
         <section class=" ftco-category pad-80" id="featured-5">
             <div class="row">
@@ -238,6 +194,43 @@
 
         </section>
         <section class=" ftco-category pad-80">
+            <div class="row res-feature-1 application-1">
+                <div class="col-md-12">
+
+                    <div class="row feature-l"> 
+                        <div class="col-md-2">
+                            <div class="box-1">
+                                <a onclick="document.getElementById('featured').classList.add('featured-view')"><img src="images/feature/003.png" alt=""/><p>Non Leaching & Non Depleting</p></a>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="box-1">
+                                <a onclick="document.getElementById('featured-1').classList.add('featured-view')"><img src="images/feature/002.png" alt=""/><p>Mode of Action </p></a>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="box-1">
+                                <a onclick="document.getElementById('featured-2').classList.add('featured-view')"><img src="images/feature/006.png" alt="" /><p>Lock and Bond</p> </a>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="box-1">
+                                <a onclick="document.getElementById('featured-3').classList.add('featured-view')"><img src="images/feature/001.png" alt=""/><p>No Heavy metals or Chemicals</p></a>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="box-1">
+                                <a onclick="document.getElementById('featured-4').classList.add('featured-view')"><img src="images/feature/004.png" alt="" /><p>Enduring protection</p></a>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="box-1">
+                                <a onclick="document.getElementById('featured-5').classList.add('featured-view')"><img src="images/feature/005.png" alt=""/><p>Pathogens</p></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-md-12 heading-section ftco-animate deal-of-the-day ftco-animate">
                     <!--<span class="subheading">Best Price For You</span>-->
