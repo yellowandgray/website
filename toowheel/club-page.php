@@ -9,10 +9,10 @@ $club = $obj->selectRow('*', 'club', 'club_id = ' . $cid);
 $type = $club['type'];
 $announcements = $obj->selectAll('*', 'announcement', 'club_id = ' . $cid . ' LIMIT 3');
 $events = $obj->selectAll('*', 'event', 'club_id = ' . $cid . ' LIMIT 3');
-$news = $obj->selectAll('n.*, c.name AS club', 'news AS n LEFT JOIN club AS c ON c.club_id = n.club_id', 'n.club_id = ' . $cid . ' LIMIT 3');
+$news = $obj->selectAll('n.*, c.name AS club', 'news AS n LEFT JOIN club AS c ON c.club_id = n.club_id', 'n.club_id = ' . $cid);
 $images = $obj->selectAll('*', 'club_gallery', 'club_id = ' . $cid);
 $ad = $obj->selectRow('*', 'advertisement', 'type = \'card\' RAND() LIMIT 1');
-$club_members = $obj->selectAll('*', 'member', 'club_id = ' . $cid);
+$club_members = $obj->selectAll('m.*, s.name AS state', 'member AS m LEFT JOIN state AS s ON s.state_id = m.state_id', 'm.club_id = ' . $cid);
 $club_type = '2 WHEEL CLUB';
 if ($type == 'four_wheel') {
     $club_type = '4 WHEEL CLUB';
@@ -59,7 +59,7 @@ if ($type == 'four_wheel') {
                                     </div>
                                 </div>
                             </div>
-                            <div class="w-text-con-1">
+                            <div class="w-text-con-1" style="text-align: right;">
                                 <div class="row">
                                     <!--                                    <div class="col-md-5">
                                                                             <p><a onclick="document.getElementById('about-club').classList.add('club-about')" style="cursor: pointer;">About</a></p>
@@ -114,7 +114,7 @@ if ($type == 'four_wheel') {
                     <div class="col-lg-8 col-xl-8 col-md-8">
                         <div class="about-myclub">
                             <h1>About Club</h1>
-                            <p><?php echo $club['about']; ?></p>
+                            <p class="desc"><?php echo $club['about']; ?></p>
                             <hr>
                         </div>
                         <div class="myclub-news">
@@ -167,35 +167,35 @@ if ($type == 'four_wheel') {
                                 ?>
                             </div>
                         </div>
-<!--                        <div class="member-gird">
-                            <h1>Member</h1>
-                            <div class="row">
-                                <div class="col-lg-4 col-xl-4 col-md-4 col-sm-4">
-                                    <div class="chat-container">
-                                        <img src="img/1.jpg" alt="Avatar" style="width:100%;">
-                                        <h3>Member Questions 1</h3>
-                                        <input type="text" name="answer" placeholder="Type Your Answer" />
-                                        <i class="fa fa-paper-plane" aria-hidden="true" type="submit"></i>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-xl-4 col-md-4 col-sm-4">
-                                    <div class="chat-container">
-                                        <img src="img/1.jpg" alt="Avatar" style="width:100%;">
-                                        <h3>Member Questions 1</h3>
-                                        <input type="text" name="answer" placeholder="Type Your Answer" />
-                                        <i class="fa fa-paper-plane" aria-hidden="true" type="submit"></i>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-xl-4 col-md-4 col-sm-4">
-                                    <div class="chat-container">
-                                        <img src="img/1.jpg" alt="Avatar" style="width:100%;">
-                                        <h3>Member Questions 1</h3>
-                                        <input type="text" name="answer" placeholder="Type Your Answer" />
-                                        <i class="fa fa-paper-plane" aria-hidden="true" type="submit"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>-->
+                        <!--                        <div class="member-gird">
+                                                    <h1>Member</h1>
+                                                    <div class="row">
+                                                        <div class="col-lg-4 col-xl-4 col-md-4 col-sm-4">
+                                                            <div class="chat-container">
+                                                                <img src="img/1.jpg" alt="Avatar" style="width:100%;">
+                                                                <h3>Member Questions 1</h3>
+                                                                <input type="text" name="answer" placeholder="Type Your Answer" />
+                                                                <i class="fa fa-paper-plane" aria-hidden="true" type="submit"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4 col-xl-4 col-md-4 col-sm-4">
+                                                            <div class="chat-container">
+                                                                <img src="img/1.jpg" alt="Avatar" style="width:100%;">
+                                                                <h3>Member Questions 1</h3>
+                                                                <input type="text" name="answer" placeholder="Type Your Answer" />
+                                                                <i class="fa fa-paper-plane" aria-hidden="true" type="submit"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4 col-xl-4 col-md-4 col-sm-4">
+                                                            <div class="chat-container">
+                                                                <img src="img/1.jpg" alt="Avatar" style="width:100%;">
+                                                                <h3>Member Questions 1</h3>
+                                                                <input type="text" name="answer" placeholder="Type Your Answer" />
+                                                                <i class="fa fa-paper-plane" aria-hidden="true" type="submit"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>-->
                     </div>
                     <div class="col-lg-4 col-md-4 box-anounce event-con">
                         <!--<div class="col-lg-12 col-mg-12">
@@ -253,22 +253,25 @@ if ($type == 'four_wheel') {
                                 </div>
                             <?php } ?>
                             <center>
-                                <a href="#" class="announcement-btn">Read More</a>
+                                <a href="club-events?cid=<?php echo $row['club_id']; ?>" class="announcement-btn">Read More</a>
                             </center>
                             <br/>
                         </div>
                         <div class="my-club-member">
-                             <h1>My Club Members List</h1>
-                            <?php foreach ($club_members as $row) { ?>
-                                <div class="row">
-                                    <div class="col-lg-12 col-xl-12 col-md-12 col-sm-12">
-                                        <div class="chat-container">
-                                            <img src="<?php echo BASE_URL . $row['profile_picture']; ?>" alt="Profile" style="width:100%;">
-                                            <h3><?php echo $row['first_name']; ?> <?php echo $row['last_name']; ?></h3>
+                            <h1>My Club Members List</h1>
+                            <div class="member-list-scroll">
+                                <?php foreach ($club_members as $row) { ?>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-xl-12 col-md-12 col-sm-12">
+                                            <div class="chat-container">
+                                                <img src="<?php echo BASE_URL . $row['profile_picture']; ?>" alt="Profile" style="width:100%;">
+                                                <h3><?php echo $row['first_name']; ?> <?php echo $row['last_name']; ?></h3>
+                                                <p><?php echo $row['state']; ?></p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            <?php } ?>
+                                <?php } ?>
+                            </div>
                         </div>
                         <div class="col-lg-12 col-xl-12 col-md-12">
                             <div class="img-box-ad">

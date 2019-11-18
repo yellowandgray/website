@@ -2634,7 +2634,7 @@ body .calender-box{
 }
 
 .myclub-news .discover-slider {
-    height: 290px;
+    height: 300px;
     overflow: hidden;
 }
 
@@ -5376,6 +5376,7 @@ hr {
     width: 100%;
     margin-right: 5px;
     border-radius: 50%;
+    height: 62px;
 }
 
 .chat-container img.right {
@@ -5401,7 +5402,6 @@ hr {
 }
 
 .chat-container p {
-    padding-top: 20px;
     margin: 0;
     text-align: left;
     font-size: 13px;
@@ -5632,7 +5632,7 @@ hr {
     text-decoration: none;
 }
 
-.my-club-member {
+.member-list-scroll {
     height: 300px;
     overflow-y: auto;
     overflow-x: hidden;
@@ -5649,4 +5649,6 @@ hr {
     font-size: 16px;
     font-weight: 600;
     color: #444;
+    margin: 0;
+    padding-top: 10px;
 }
