@@ -125,7 +125,7 @@ export class ClubAnnouncementForm {
         if(this.data.data != null) {
            this.announcementForm.patchValue({
            title: this.data.data.title,
-           announcement_date: this.data.data.announcement_date,
+           announcement_date: new Date(this.data.data.announcement_date),
            description: this.data.data.description
         });
         this.announcement_id = this.data.data.announcement_id;

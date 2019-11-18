@@ -110,7 +110,7 @@ export class AnnouncementForm {
         if(this.data.data != null) {
            this.announcementForm.patchValue({
            title: this.data.data.title,
-           announcement_date: this.data.data.announcement_date,
+           announcement_date: new Date(this.data.data.announcement_date),
            description: this.data.data.description
         });
         this.announcement_id = this.data.data.announcement_id;
@@ -152,7 +152,7 @@ export class AnnouncementForm {
       if(this.announcement_id != 0) {
         formData.append('club_id', this.club_id);
           formData.append('title', this.announcementForm.value.title);
-          formData.append('announcement_date', this.announcementForm.value.announcement_date);
+          formData.append('announcement_date', moment(this.announcementForm.value.announcement_date).format('YYYY-MM-DD'));
           if(this.thumb_image_path && this.thumb_image_path != '') {
           formData.append('thumb_image', this.thumb_image_path);
           }
@@ -161,7 +161,7 @@ export class AnnouncementForm {
       } else {
         formData.append('club_id', this.club_id);
           formData.append('title', this.announcementForm.value.title);
-          formData.append('announcement_date', this.announcementForm.value.announcement_date);
+          formData.append('announcement_date', moment(this.announcementForm.value.announcement_date).format('YYYY-MM-DD'));
           formData.append('thumb_image', this.thumb_image_path);
           formData.append('description', this.announcementForm.value.description);
         url = 'insert_announcement';
