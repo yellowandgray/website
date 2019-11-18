@@ -24,8 +24,19 @@ $obj = new Common();
         <section class="workshop-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-6">
                         <h3>WORKSHOP</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="workshop-sort-list">
+                            <i class="fa fa-sliders" aria-hidden="true"></i>
+                            <i class="fa fa-sort-amount-asc" aria-hidden="true"></i>
+                            <i class="fa fa-th-list" aria-hidden="true"></i>
+                            <div class="workshop-search">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                                <input type="text" placeholder="Search Here..." />
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="border-bottom" style="padding-bottom: 40px;padding-top: 40px;">

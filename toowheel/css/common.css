@@ -2140,7 +2140,7 @@ button {
     /*    box-shadow: 0px 0px 4px 2px #bdbdbd;*/
 }
 .box-anounce-1{
-    padding: 5px;
+    padding: 8px;
     box-shadow: 0px 0px 5px 3px #bdbdbd;
     background: #eee;
     border-radius: 5px;
@@ -4210,10 +4210,12 @@ thead td {
 
 .workshop-section {
     padding: 40px 0;
+    background: #525659;
 }
 
 .workshop-section h3 {
-    color: red;
+    color: #ececec;
+    font-weight: 600;
 }
 
 .image-border-width {
@@ -5443,14 +5445,46 @@ hr {
     margin: 0;
     padding: 0;
     list-style: none;
-    bottom: 0;
+    bottom: 100px;
 }
 
 .workshop-cover-bg .workshop-teaser li {
     float: left;
     color: #fff;
     margin-right: 15px;
-    border-top: 2px solid #fff;
+    border-top: 5px solid #fff;
     font-size: 22px;
     font-weight: 500;
+}
+
+.workshop-sort-list {
+    float: right;
+}
+
+.workshop-sort-list i {
+    float: left;
+    margin: 10px;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.69);
+}
+
+.workshop-sort-list .workshop-search {
+    float: left;
+    margin: 0 10px;
+}
+
+.workshop-sort-list .workshop-search input {
+    background: #fff;
+    outline: none;
+    border: 1px solid red;
+    border-radius: 25px;
+    padding: 5px 10px;
+}
+
+.workshop-sort-list .workshop-search i {
+    position: absolute;
+    color: #000;
+    top: 9px;
+    margin: 0;
+    margin-left: 12px;
 }
