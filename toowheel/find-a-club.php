@@ -67,7 +67,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
             <div class="container-fluid">
                 <div class="row" style="max-width: 1200px; margin: 0 auto;" id="club_list">
                     <?php foreach ($findclub as $row) { ?>
-                        <div class="club-box" data-name="<?php echo $row['name']; ?>" data-state="<?php echo $row['state_id']; ?>" data-category="<?php echo $row['category_id']; ?>">
+                        <div class="club-box" onclick="window.location.href = 'club-page?cid=<?php echo $row['club_id']; ?>';" data-name="<?php echo $row['name']; ?>" data-state="<?php echo $row['state_id']; ?>" data-category="<?php echo $row['category_id']; ?>">
                             <div class="rank-button">
                                 <?php if ($row['rank'] && $row['rank'] != 0) { ?>
                                     <span>#<?php echo $row['rank']; ?></span>
@@ -76,7 +76,7 @@ $states = $obj->selectAll('*', 'state', 'state_id > 0');
                             <img src="<?php echo BASE_URL . $row['logo']; ?>" alt="" />
                             <h3> <?php echo $row['name']; ?></h3>
                             <p> <?php echo $row['city']; ?></p>
-                            <a href="club-page?cid=<?php echo $row['club_id']; ?>" class="find-club-button">Read More</a>
+<!--                            <a href="club-page?cid=<?php echo $row['club_id']; ?>" class="find-club-button">Read More</a>-->
                         </div>
                     <?php } ?>
                 </div>

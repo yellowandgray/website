@@ -12,13 +12,47 @@ $obj = new Common();
     <body>
         <?php include 'menu.php'; ?>
         <div class="padding-top-108"></div>
-        <section class="workshop-cover-bg" style="background: url(img/workshop/workshop-landing-cover.jpg)no-repeat;background-size: cover;background-position: center;width: 100%; height: 600px;">
+<!--        <section class="workshop-cover-bg" style="background: url(img/workshop/workshop-landing-cover.jpg)no-repeat;background-size: cover;background-position: center;width: 100%; height: 600px;">
             <div class="container">
                 <ul class="workshop-teaser">
                     <li>Workshop Teaser 1</li>
                     <li>Workshop Teaser 2</li>
                     <li>Workshop Teaser 3</li>
                 </ul>
+            </div>
+        </section>-->
+        <section class="workshop-slider">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">
+                        Workshop Teaser 1
+                    </li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1">
+                        Workshop Teaser 2
+                    </li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2">
+                        Workshop Teaser 3
+                    </li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="img/workshop/workshop-landing-cover.jpg" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="img/workshop/workshop-landing-cover.jpg" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="img/workshop/workshop-landing-cover.jpg" alt="Third slide">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
         </section>
         <section class="workshop-section">
@@ -39,68 +73,177 @@ $obj = new Common();
                         </div>
                     </div>
                 </div>
-                <div class="border-bottom" style="padding-bottom: 40px;padding-top: 40px;">
+                <div class="workshop-list-section">
                     <div class="row">
-                        <div class="col-md-2">
-                            <img src="img/slider/slider-002.png" alt="" class="image-border-width">
-                        </div>
-                        <div class="col-md-10">
-                            <h4>Workshop Title</h4>
-                            <span>Location | Expertise(Category)</span>
-                            <div class="rating">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span> 
+                        <div class="col-md-4">
+                            <div class="image-border-width" style="background: url(img/workshop/001.jpg)no-repeat;background-position: center;background-size: cover;">
+                                <img src="img/workshop/workshop-logo.png" alt="" />
                             </div>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                            <a href="workshop?type=<?php echo $type; ?>" class="workshop-btn"> Read More</a>
+
+                        </div>
+                        <div class="col-md-4">
+                            <div class="list-part-section">
+                                <p>Bike Experts Brothers</p>
+                                <h4>Engine Optimization Workshop</h4>
+                                <span>Reviews</span>
+                                <div class="rating">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span> 
+                                </div>
+                                <div class="list-tag-section">
+                                    <span>Tags</span>
+                                    <ul>
+                                        <li>Engine</li>
+                                        <li>Maintenance</li>
+                                        <li>500cc+ Motorbikes</li>
+                                    </ul>
+                                </div>
+    <!--                            <a href="workshop?type=<?php echo $type; ?>" class="workshop-btn"> Read More</a>-->
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="list-part-section1">
+                                <p><i class="fa fa-map-marker" aria-hidden="true"></i> Petaling Jaya, Selangor</p>
+                            </div>
+                            <div class="list-part-section2">
+                                <p>Member's Recommendation <i class="fa fa-long-arrow-up" aria-hidden="true"></i><span>13</span> <i class="fa fa-long-arrow-down" aria-hidden="true"></i></p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="border-bottom" style="padding-bottom: 40px;padding-top: 40px;">
+                <div class="workshop-list-section">
                     <div class="row">
-                        <div class="col-md-2">
-                            <img src="img/slider/slider-002.png" alt="" class="image-border-width">
-                        </div>
-                        <div class="col-md-10">
-                            <h4>Workshop Title</h4>
-                            <span>Location | Expertise(Category)</span>
-                            <div class="rating">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span> 
+                        <div class="col-md-4">
+                            <div class="image-border-width" style="background: url(img/workshop/001.jpg)no-repeat;background-position: center;background-size: cover;">
+                                <img src="img/workshop/workshop-logo.png" alt="" />
                             </div>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                            <a href="workshop?type=<?php echo $type; ?>" class="workshop-btn"> Read More</a>
+
+                        </div>
+                        <div class="col-md-4">
+                            <div class="list-part-section">
+                                <p>Bike Experts Brothers</p>
+                                <h4>Engine Optimization Workshop</h4>
+                                <span>Reviews</span>
+                                <div class="rating">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span> 
+                                </div>
+                                <div class="list-tag-section">
+                                    <span>Tags</span>
+                                    <ul>
+                                        <li>Engine</li>
+                                        <li>Maintenance</li>
+                                        <li>500cc+ Motorbikes</li>
+                                    </ul>
+                                </div>
+    <!--                            <a href="workshop?type=<?php echo $type; ?>" class="workshop-btn"> Read More</a>-->
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="list-part-section1">
+                                <p><i class="fa fa-map-marker" aria-hidden="true"></i> Petaling Jaya, Selangor</p>
+                            </div>
+                            <div class="list-part-section2">
+                                <p>Member's Recommendation <i class="fa fa-long-arrow-up" aria-hidden="true"></i><span>13</span> <i class="fa fa-long-arrow-down" aria-hidden="true"></i></p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="border-bottom" style="padding-bottom: 40px;padding-top: 40px;">
+                <div class="workshop-list-section">
                     <div class="row">
-                        <div class="col-md-2">
-                            <img src="img/slider/slider-002.png" alt="" class="image-border-width">
-                        </div>
-                        <div class="col-md-10">
-                            <h4>Workshop Title</h4>
-                            <span>Location | Expertise(Category)</span>
-                            <div class="rating">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span> 
+                        <div class="col-md-4">
+                            <div class="image-border-width" style="background: url(img/workshop/001.jpg)no-repeat;background-position: center;background-size: cover;">
+                                <img src="img/workshop/workshop-logo.png" alt="" />
                             </div>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                            <a href="workshop?type=<?php echo $type; ?>" class="workshop-btn"> Read More</a>
+
+                        </div>
+                        <div class="col-md-4">
+                            <div class="list-part-section">
+                                <p>Bike Experts Brothers</p>
+                                <h4>Engine Optimization Workshop</h4>
+                                <span>Reviews</span>
+                                <div class="rating">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span> 
+                                </div>
+                                <div class="list-tag-section">
+                                    <span>Tags</span>
+                                    <ul>
+                                        <li>Engine</li>
+                                        <li>Maintenance</li>
+                                        <li>500cc+ Motorbikes</li>
+                                    </ul>
+                                </div>
+    <!--                            <a href="workshop?type=<?php echo $type; ?>" class="workshop-btn"> Read More</a>-->
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="list-part-section1">
+                                <p><i class="fa fa-map-marker" aria-hidden="true"></i> Petaling Jaya, Selangor</p>
+                            </div>
+                            <div class="list-part-section2">
+                                <p>Member's Recommendation <i class="fa fa-long-arrow-up" aria-hidden="true"></i><span>13</span> <i class="fa fa-long-arrow-down" aria-hidden="true"></i></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="workshop-list-section">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="image-border-width" style="background: url(img/workshop/001.jpg)no-repeat;background-position: center;background-size: cover;">
+                                <img src="img/workshop/workshop-logo.png" alt="" />
+                            </div>
+
+                        </div>
+                        <div class="col-md-4">
+                            <div class="list-part-section">
+                                <p>Bike Experts Brothers</p>
+                                <h4>Engine Optimization Workshop</h4>
+                                <span>Reviews</span>
+                                <div class="rating">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span> 
+                                </div>
+                                <div class="list-tag-section">
+                                    <span>Tags</span>
+                                    <ul>
+                                        <li>Engine</li>
+                                        <li>Maintenance</li>
+                                        <li>500cc+ Motorbikes</li>
+                                    </ul>
+                                </div>
+    <!--                            <a href="workshop?type=<?php echo $type; ?>" class="workshop-btn"> Read More</a>-->
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="list-part-section1">
+                                <p><i class="fa fa-map-marker" aria-hidden="true"></i> Petaling Jaya, Selangor</p>
+                            </div>
+                            <div class="list-part-section2">
+                                <p>Member's Recommendation <i class="fa fa-long-arrow-up" aria-hidden="true"></i><span>13</span> <i class="fa fa-long-arrow-down" aria-hidden="true"></i></p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <?php include 'footer.php'; ?>
+        <script>
+            $('.carousel').carousel({
+                interval: 1000
+            });
+        </script>
     </body>
 </html>

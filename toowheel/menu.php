@@ -144,7 +144,7 @@ $menu_member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN clu
                             <div class="row">
                                 <?php foreach ($menu_findclub as $row) { ?>
                                     <div class="col-md-3 col-sm-6">
-                                        <div class="club-box">
+                                        <div class="club-box" onclick="window.location.href = 'club-page?cid=<?php echo $row['club_id']; ?>';">
                                             <div class="rank-h">
                                                 <?php if ($row['rank'] && $row['rank'] != 0) { ?>
                                                     <span>#<?php echo $row['rank']; ?></span>

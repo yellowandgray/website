@@ -12,6 +12,7 @@ $events = $obj->selectAll('*', 'event', 'club_id = ' . $cid . ' LIMIT 3');
 $news = $obj->selectAll('n.*, c.name AS club', 'news AS n LEFT JOIN club AS c ON c.club_id = n.club_id', 'n.club_id = ' . $cid . ' LIMIT 3');
 $images = $obj->selectAll('*', 'club_gallery', 'club_id = ' . $cid);
 $ad = $obj->selectRow('*', 'advertisement', 'type = \'card\' RAND() LIMIT 1');
+$club_members = $obj->selectAll('*', 'member', 'club_id = ' . $cid);
 $club_type = '2 WHEEL CLUB';
 if ($type == 'four_wheel') {
     $club_type = '4 WHEEL CLUB';
@@ -142,7 +143,31 @@ if ($type == 'four_wheel') {
                                 </div>
                             <?php } ?>
                         </div>
-                        <div class="member-gird">
+                        <div class="myclub-gallery">
+                            <h1>Gallery</h1>
+                            <?php if ($club['club_video'] && $club['club_video'] != '' && $club['club_video'] != 'undefined') { ?>
+                                <video muted loop controls id="myVideo" class="img-responsive">
+                                    <source src="<?php echo BASE_URL . $club['club_video']; ?>" type="video/mp4">
+                                </video>
+                            <?php } ?>
+                            <div class="img-b-10px club-gallery">
+                                <?php
+                                foreach ($images as $row) {
+                                    if ($row['media_type'] == 'image') {
+                                        ?>
+                                        <img class="fs-gal" src="<?php echo BASE_URL . $row['media_path']; ?>" alt=""  data-url="<?php echo BASE_URL . $row['media_path']; ?>" class="img-responsive" data-type="image" />
+                                    <?php } else { ?>
+                                        <span class="club-video-section">
+                                            <i class="fa fa-video-camera" aria-hidden="true"></i>
+                                            <img class="fs-gal" src="<?php echo BASE_URL . $row['thumb_path']; ?>" alt=""  data-url="<?php echo BASE_URL . $row['media_path']; ?>" class="img-responsive" data-type="video" />
+                                        </span>
+                                        <?php
+                                    }
+                                }
+                                ?>
+                            </div>
+                        </div>
+<!--                        <div class="member-gird">
                             <h1>Member</h1>
                             <div class="row">
                                 <div class="col-lg-4 col-xl-4 col-md-4 col-sm-4">
@@ -170,7 +195,7 @@ if ($type == 'four_wheel') {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
                     </div>
                     <div class="col-lg-4 col-md-4 box-anounce event-con">
                         <!--<div class="col-lg-12 col-mg-12">
@@ -199,6 +224,10 @@ if ($type == 'four_wheel') {
                                     <?php } ?>
                                 </div>
                             <?php } ?>
+                            <center>
+                                <a href="#" class="announcement-btn">Read More</a>
+                            </center>
+                            <br/>
                         </div>
                         <div class="myclub-events">
                             <h1>Events & Activities</h1>
@@ -223,26 +252,23 @@ if ($type == 'four_wheel') {
                                     </div>  
                                 </div>
                             <?php } ?>
+                            <center>
+                                <a href="#" class="announcement-btn">Read More</a>
+                            </center>
+                            <br/>
                         </div>
-                        <div class="myclub-gallery">
-                            <h1>Gallery</h1>
-                            <?php if ($club['club_video'] && $club['club_video'] != '' && $club['club_video'] != 'undefined') { ?>
-                                <video muted loop controls id="myVideo" class="img-responsive">
-                                    <source src="<?php echo BASE_URL . $club['club_video']; ?>" type="video/mp4">
-                                </video>
+                        <div class="my-club-member">
+                             <h1>My Club Members List</h1>
+                            <?php foreach ($club_members as $row) { ?>
+                                <div class="row">
+                                    <div class="col-lg-12 col-xl-12 col-md-12 col-sm-12">
+                                        <div class="chat-container">
+                                            <img src="<?php echo BASE_URL . $row['profile_picture']; ?>" alt="Profile" style="width:100%;">
+                                            <h3><?php echo $row['first_name']; ?> <?php echo $row['last_name']; ?></h3>
+                                        </div>
+                                    </div>
+                                </div>
                             <?php } ?>
-                            <div class="img-b-10px club-gallery">
-                                <?php
-                                foreach ($images as $row) {
-                                    if ($row['media_type'] == 'image') {
-                                        ?>
-                                        <img class="fs-gal" src="<?php echo BASE_URL . $row['media_path']; ?>" alt=""  data-url="<?php echo BASE_URL . $row['media_path']; ?>" class="img-responsive" data-type="image" />
-                                    <?php } else { ?>
-                                        <img class="fs-gal" src="<?php echo BASE_URL . $row['thumb_path']; ?>" alt=""  data-url="<?php echo BASE_URL . $row['media_path']; ?>" class="img-responsive" data-type="video" />
-                                    <?php }
-                                }
-                                ?>
-                            </div>
                         </div>
                         <div class="col-lg-12 col-xl-12 col-md-12">
                             <div class="img-box-ad">
@@ -253,147 +279,44 @@ if ($type == 'four_wheel') {
                 </div>
             </div>
         </div>
-        <footer class="footer">
-            <div class="container">
-                <div class="footer-sec">
-                    <div class="footer-section fooetr-1">
-                        <img src="img/footer-logo.png" alt=""/>
-                    </div>
-                    <div class="footer-section fooetr-2">
-                        <ul class="footer__nav">
-                            <li class="nav__item">
-                                <a href="index?type=two_wheel" class="footer-text">2 Wheel</a>
-                                <br/>
-                                <a href="index?type=four_wheel" class="footer-text">4 Wheel</a>
-                                <br/>
-                                <a href="news-updates?type=<?php echo $type; ?>" class="footer-text">NEWS & MEDIA</a>
-                                <br/>
-                                <a href="events?type=<?php echo $type; ?>" class="footer-text">UPCOMING EVENTS</a>
-                                <br/>
-                                <a href="press-release?type=<?php echo $type; ?>" class="footer-text">PRESS RELEASE</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer-section fooetr-3">
-                        <ul class="footer__nav">
-                            <li class="nav__item">
-                                <h2 class="nav__title">MEMBERS</h2>
-                                <ul class="nav__ul">
-                                    <li>
-                                        <a href="login?type=<?php echo $type; ?>">Login</a>
-                                    </li>
-                                    <li>
-                                        <a href="member-register?type=<?php echo $type; ?>">Be A Member</a>
-                                    </li>
-                                    <li>
-                                        <a href="member-benefits?type=<?php echo $type; ?>">Member Benefits</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <ul class="footer__nav">
-                            <li class="nav__item">
-                                <h2 class="nav__title">CLUB</h2>
-                                <ul class="nav__ul">
-                                    <li>
-                                        <a href="find-a-club?type=<?php echo $type; ?>">Find A Club</a>
-                                    </li>
-                                    <li>
-                                        <a href="club-register?type=<?php echo $type; ?>">Register My Club</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer-section fooetr-4">
-                        <ul class="footer__nav">
-                            <li class="nav__item">
-                                <h2 class="nav__title">TOOWHEEL</h2>
-                                <ul class="nav__ul">
-                                    <li>
-                                        <a href="about?type=<?php echo $type; ?>">About us</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Contact us</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer-section fooetr-5">
-                        <ul class="footer__nav">
-                            <li class="nav__item">
-                                <h2 class="nav__title color-w">ALWAYS GET IN TOUCH</h2>
-                                <span>Receive updates on our Upcoming Events</span>
-                                <ul class="nav__ul" style="margin-top: 10px;">
-                                    <li>
-                                        <form onsubmit="return subscribeNewsLetter();">
-                                            <input type="email" id="newsletter_email" name="newsletter_email" placeholder="Email Address" required="" />
-                                            <button type="submit">submit</button>
-                                        </form>
-                                    </li>
-                                    <li class="i-con text-center">
-                                        <a href="https://www.facebook.com/Toowheel-Malaysia-102602757819930" target="_blank"><img src="img/social-icons/fb.png" alt="fb"></a>
-                                        <a href="https://www.instagram.com/p/B2iG45lnGi-/" target="_blank"><img src="img/social-icons/insta.png" alt="fb"></a>
-                                        <a href="https://twitter.com/@ToowheelM" target="_blank"><img src="img/social-icons/twitter.png" alt="fb"></a>
-                                        <a href="https://www.youtube.com/channel/UCueyRbB52hjc0XUIqbkYxcg" target="_blank"><img src="img/social-icons/yt.png" alt="fb"></a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
-        <script src="js/bootstrap.js" type="text/javascript"></script>
-        <script src="js/slick-slider_1.js" type="text/javascript"></script>
-        <script src="js/rangeslider.min.js" type="text/javascript"></script>
-        <script src="js/jquery.easing.min.js" type="text/javascript"></script>
-        <script src="js/jquery.smartWizard_step_by.min.js" type="text/javascript"></script>
-        <script src="js/html5lightbox.js" type="text/javascript"></script>
-        <script src="js/script.js" type="text/javascript"></script>
-        <script src="js/fs-gal.js" type="text/javascript"></script>
-        <script src="js/sweet-alert.min.js" type="text/javascript"></script>
-        <script src="js/jquery.autocomplete.min.js" type="text/javascript"></script>
-        <script type="text/javascript" async defer src="//assets.pinterest.com/js/pinit.js"></script>
+        <?php include 'footer.php' ?>
         <script src="js/jquery-shorten.js" type="text/javascript"></script>
         <script>
-                                            function showTextPassword() {
-                                                var x = document.getElementById("password");
-                                                if (x.type === "password") {
-                                                    x.type = "text";
-                                                } else {
-                                                    x.type = "password";
-                                                }
-                                            }
-                                            function showTextPassword1() {
-                                                var x = document.getElementById("cnfpassword");
-                                                if (x.type === "password") {
-                                                    x.type = "text";
-                                                } else {
-                                                    x.type = "password";
-                                                }
-                                            }
-                                            function showTextPassword2() {
-                                                var x = document.getElementById("confirm_password");
-                                                if (x.type === "password") {
-                                                    x.type = "text";
-                                                } else {
-                                                    x.type = "password";
-                                                }
-                                            }
+            function showTextPassword() {
+                var x = document.getElementById("password");
+                if (x.type === "password") {
+                    x.type = "text";
+                } else {
+                    x.type = "password";
+                }
+            }
+            function showTextPassword1() {
+                var x = document.getElementById("cnfpassword");
+                if (x.type === "password") {
+                    x.type = "text";
+                } else {
+                    x.type = "password";
+                }
+            }
+            function showTextPassword2() {
+                var x = document.getElementById("confirm_password");
+                if (x.type === "password") {
+                    x.type = "text";
+                } else {
+                    x.type = "password";
+                }
+            }
 
-                                            $(".toggle-password").click(function () {
+            $(".toggle-password").click(function () {
 
-                                                $(this).toggleClass("fa-eye-slash fa-eye");
-                                                var input = $($(this).attr("toggle"));
-                                                if (input.attr("type") == "password") {
-                                                    input.attr("type", "text");
-                                                } else {
-                                                    input.attr("type", "password");
-                                                }
-                                            });
+                $(this).toggleClass("fa-eye-slash fa-eye");
+                var input = $($(this).attr("toggle"));
+                if (input.attr("type") == "password") {
+                    input.attr("type", "text");
+                } else {
+                    input.attr("type", "password");
+                }
+            });
         </script>
         <script type="text/javascript">
 
@@ -557,58 +480,6 @@ if ($type == 'four_wheel') {
         <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v5.0"></script>
         <!--mega-menu-->
         <script>
-            jQuery(document).ready(function ($) {
-                $('.slider').slick({
-                    dots: true,
-                    infinite: true,
-                    speed: 500,
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                    autoplay: false,
-                    autoplaySpeed: 2000,
-                    arrows: true,
-                    responsive: [{
-                            breakpoint: 1024,
-                            settings: {
-                                slidesToShow: 2,
-                                slidesToScroll: 1,
-                                arrows: true,
-                                dots: false,
-                                autoplay: false
-                            }
-                        },
-                        {
-                            breakpoint: 991,
-                            settings: {
-                                slidesToShow: 2,
-                                slidesToScroll: 1,
-                                arrows: true,
-                                dots: false,
-                                autoplay: false
-                            }
-                        },
-                        {
-                            breakpoint: 600,
-                            settings: {
-                                slidesToShow: 2,
-                                slidesToScroll: 2,
-                                arrows: false,
-                                dots: false,
-                                autoplay: false
-                            }
-                        },
-                        {
-                            breakpoint: 400,
-                            settings: {
-                                arrows: false,
-                                slidesToShow: 2,
-                                slidesToScroll: 2,
-                                dots: false,
-                                autoplay: false
-                            }
-                        }]
-                });
-            });
             var Cal = function (divId) {
 
                 //Store div id

@@ -231,6 +231,11 @@ body {
     padding: 0 20px;
     margin: 5px 5px;
     cursor: pointer;
+    transition: 0.3s;
+}
+
+.tag-box:hover {
+    background: #b9b9b9bf;
 }
 
 .tag-box.active {background: #b9b9b9bf;}
@@ -1436,6 +1441,7 @@ body {
     margin-left: 12px;
     margin-right: 12px;
     width: 18%;
+    cursor: pointer;
 }
 
 .club-box img {
