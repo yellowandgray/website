@@ -5437,3 +5437,20 @@ hr {
     cursor: pointer;
     font-size: 15px;
 }
+
+.workshop-cover-bg .workshop-teaser {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    bottom: 0;
+}
+
+.workshop-cover-bg .workshop-teaser li {
+    float: left;
+    color: #fff;
+    margin-right: 15px;
+    border-top: 2px solid #fff;
+    font-size: 22px;
+    font-weight: 500;
+}

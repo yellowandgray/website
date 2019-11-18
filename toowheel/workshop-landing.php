@@ -12,6 +12,15 @@ $obj = new Common();
     <body>
         <?php include 'menu.php'; ?>
         <div class="padding-top-108"></div>
+        <section class="workshop-cover-bg" style="background: url(img/workshop/workshop-landing-cover.jpg)no-repeat;background-size: cover;background-position: center;width: 100%; height: 600px;">
+            <div class="container">
+                <ul class="workshop-teaser">
+                    <li>Workshop Teaser 1</li>
+                    <li>Workshop Teaser 2</li>
+                    <li>Workshop Teaser 3</li>
+                </ul>
+            </div>
+        </section>
         <section class="workshop-section">
             <div class="container">
                 <div class="row">
