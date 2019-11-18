@@ -258,7 +258,7 @@ if ($type == 'four_wheel') {
                             <br/>
                         </div>
                         <div class="my-club-member">
-                            <h1>My Club Members List</h1>
+                            <h1>Members</h1>
                             <div class="member-list-scroll">
                                 <?php foreach ($club_members as $row) { ?>
                                     <div class="row">
