@@ -104,7 +104,6 @@ if ($type == 'four_wheel') {
             <!--pop-up-gallery-->
 
         </section>
-
         <div class="club-details event-section club-cover-overlay2">
             <div class="container ">
                 <div class="row">
@@ -244,7 +243,6 @@ if ($type == 'four_wheel') {
                 </div>
             </div>
         </div>
-
         <footer class="footer">
             <div class="container">
                 <div class="footer-sec">
