@@ -6,15 +6,15 @@
 
 var fsGal_preloads = new Array();
 
-$('document').ready(function() {
+$('document').ready(function () {
 
     $('.fs-gal-view').css('display', 'flex').hide();
 
     // Make gallery objects clickable, also dynamic added objects
-    $('body').on('click', '.fs-gal', function(e) {
+    $('body').on('click', '.fs-gal', function (e) {
         fsGal_DisplayImage($(e.currentTarget));
     });
-  
+
     if ($('.fs-gal')[0]) {
         preloadImage($('.fs-gal')[0].dataset.url); // Preload the very first image, if it exists
     }
@@ -25,14 +25,30 @@ $('document').ready(function() {
         // Set current image
         title = obj.attr('title');
         alt = obj.attr('alt');
-        if (!title) { title = alt; }
+        media_type = obj.attr('data-type');
+        if (!title) {
+            title = alt;
+        }
+        videoElem = $('.fs-gal-main-video source');
         imgElem = $('.fs-gal-main');
         imgElem.attr('title', title);
         imgElem.attr('alt', alt);
         imgElem.attr('src', obj.attr('data-url'));
+        videoElem.attr('src', obj.attr('data-url'));
+        if (media_type == 'image') {
+            $('.fs-gal-main-video').addClass('hidden');
+            $('.fs-gal-main').removeClass('hidden');
+        } else {
+            $('.fs-gal-main').addClass('hidden');
+            $('.fs-gal-main-video').removeClass('hidden');
+            $('.fs-gal-main-video')[0].load();
+        }
         $('.fs-gal-view > h1').text(title);
-        if (!title || title == '') { $('.fs-gal-view > h1').fadeOut(); }
-        else { $('.fs-gal-view > h1').fadeIn(); }
+        if (!title || title == '') {
+            $('.fs-gal-view > h1').fadeOut();
+        } else {
+            $('.fs-gal-view > h1').fadeIn();
+        }
 
         // Create buttons
         var current = $('.fs-gal').index(obj);
@@ -47,13 +63,12 @@ $('document').ready(function() {
         $('.fs-gal-view').fadeIn(); // Display gallery
 
         // Wrap gallery
-        if (current == $('.fs-gal').length - 1)  { // Last image
+        if (current == $('.fs-gal').length - 1) { // Last image
             $('.fs-gal-view > .fs-gal-next').attr('data-img-index', 0);
-        }
-        else if (current == 0)  { // Last image
+        } else if (current == 0) { // Last image
             $('.fs-gal-view > .fs-gal-prev').attr('data-img-index', $('.fs-gal').length - 1);
         }
-      
+
         preloadNextAndPrev(); // Preload next images
 
     }
@@ -75,9 +90,9 @@ $('document').ready(function() {
 
     // Preload an image
     function preloadImage(source) {
-      var preload = (new Image());
-      preload.src = source
-      fsGal_preloads.push(preload);
+        var preload = (new Image());
+        preload.src = source
+        fsGal_preloads.push(preload);
     }
 
     // Check if the image viewer is displayed
@@ -86,42 +101,39 @@ $('document').ready(function() {
     }
 
     // Gallery navigation
-    $('.fs-gal-view .fs-gal-nav').click(function(e) {
+    $('.fs-gal-view .fs-gal-nav').click(function (e) {
         e.stopPropagation();
         if (isViewerOpen()) {
             var index = $(this).attr('data-img-index');
             var img = $($('.fs-gal').get(index));
             fsGal_DisplayImage(img);
-        }        
+        }
     });
 
     // Close gallery
-    $('.fs-gal-view').click(function(e) {
+    $('.fs-gal-view').click(function (e) {
         $('.fs-gal-view').fadeOut();
     });
-    $('.fs-gal-main').click(function(e) {
+    $('.fs-gal-main').click(function (e) {
         e.stopPropagation();
     });
 
     // Keyboard navigation
-    $('body').keydown(function(e) {
-        if (e.keyCode == 37) { 
+    $('body').keydown(function (e) {
+        if (e.keyCode == 37) {
             $('.fs-gal-view .fs-gal-prev').click(); // Left arrow
-        }
-        else if(e.keyCode == 39) {
+        } else if (e.keyCode == 39) {
             $('.fs-gal-view .fs-gal-next').click(); // Right arrow
-        }
-        else if(e.keyCode == 27) {
+        } else if (e.keyCode == 27) {
             $('.fs-gal-view .fs-gal-close').click(); // ESC
         }
     });
 
     // Scroll navigation
-    $(window).bind('mousewheel', function(e) {
+    $(window).bind('mousewheel', function (e) {
         if (e.originalEvent.wheelDelta >= 0) { // Scroll up, go to previous image
             $('.fs-gal-view .fs-gal-prev').click();
-        }
-        else { // Scroll down, go to next image
+        } else { // Scroll down, go to next image
             $('.fs-gal-view .fs-gal-next').click();
         }
     });
@@ -132,15 +144,15 @@ $('document').ready(function() {
     var gestureZone = $('.fs-gal-view')[0];
 
     // Listen to touch start
-    gestureZone.addEventListener('touchstart', function(event) {
+    gestureZone.addEventListener('touchstart', function (event) {
         touchstartX = event.changedTouches[0].screenX;
     }, false);
 
     // Listen to touch end
-    gestureZone.addEventListener('touchend', function(event) {
+    gestureZone.addEventListener('touchend', function (event) {
         touchendX = event.changedTouches[0].screenX;
         handleGesture();
-    }, false); 
+    }, false);
 
     // Deterimine touch gesture direction
     function handleGesture() {

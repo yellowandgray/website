@@ -10,7 +10,7 @@ $type = $club['type'];
 $announcements = $obj->selectAll('*', 'announcement', 'club_id = ' . $cid . ' LIMIT 3');
 $events = $obj->selectAll('*', 'event', 'club_id = ' . $cid . ' LIMIT 3');
 $news = $obj->selectAll('n.*, c.name AS club', 'news AS n LEFT JOIN club AS c ON c.club_id = n.club_id', 'n.club_id = ' . $cid . ' LIMIT 3');
-$images = $obj->selectAll('media_path', 'club_gallery', 'club_id = ' . $cid);
+$images = $obj->selectAll('*', 'club_gallery', 'club_id = ' . $cid);
 $ad = $obj->selectRow('*', 'advertisement', 'type = \'card\' RAND() LIMIT 1');
 $club_type = '2 WHEEL CLUB';
 if ($type == 'four_wheel') {
@@ -100,6 +100,9 @@ if ($type == 'four_wheel') {
                 <img class="fs-gal-next fs-gal-nav" src="img/next.svg" alt="Next picture" title="Next picture" />
                 <img class="fs-gal-close" src="img/close.svg" alt="Close gallery" title="Close gallery" />
                 <img class="fs-gal-main" src="" alt="" />
+                <video muted loop controls class="fs-gal-main-video">
+                    <source src="" type="video/mp4">
+                </video>
             </div>
             <!--pop-up-gallery-->
 
@@ -229,9 +232,16 @@ if ($type == 'four_wheel') {
                                 </video>
                             <?php } ?>
                             <div class="img-b-10px club-gallery">
-                                <?php foreach ($images as $row) { ?>
-                                    <img class="fs-gal" src="<?php echo BASE_URL . $row['media_path']; ?>" alt=""  data-url="<?php echo BASE_URL . $row['media_path']; ?>" class="img-responsive"/>
-                                <?php } ?>
+                                <?php
+                                foreach ($images as $row) {
+                                    if ($row['media_type'] == 'image') {
+                                        ?>
+                                        <img class="fs-gal" src="<?php echo BASE_URL . $row['media_path']; ?>" alt=""  data-url="<?php echo BASE_URL . $row['media_path']; ?>" class="img-responsive" data-type="image" />
+                                    <?php } else { ?>
+                                        <img class="fs-gal" src="<?php echo BASE_URL . $row['thumb_path']; ?>" alt=""  data-url="<?php echo BASE_URL . $row['media_path']; ?>" class="img-responsive" data-type="video" />
+                                    <?php }
+                                }
+                                ?>
                             </div>
                         </div>
                         <div class="col-lg-12 col-xl-12 col-md-12">
