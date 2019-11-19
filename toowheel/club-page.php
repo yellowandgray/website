@@ -263,7 +263,7 @@ if ($type == 'four_wheel') {
                                 <?php foreach ($club_members as $row) { ?>
                                     <div class="row">
                                         <div class="col-lg-12 col-xl-12 col-md-12 col-sm-12">
-                                            <div class="chat-container">
+                                            <div class="chat-container" onclick="window.location.href = 'my-account?type=two_wheel'">
                                                 <img src="<?php echo BASE_URL . $row['profile_picture']; ?>" alt="Profile" style="width:100%;">
                                                 <h3><?php echo $row['first_name']; ?> <?php echo $row['last_name']; ?></h3>
                                                 <p><?php echo $row['state']; ?></p>
