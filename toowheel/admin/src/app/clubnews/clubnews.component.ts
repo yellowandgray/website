@@ -477,6 +477,7 @@ export class ClubNewsGalleryForm {
                 if(res["result"]["error"] === false) {
                     this.result = res["result"]["data"];
                 }else{
+                this.result = [];
     this._snackBar.open(res["result"]["message"], '', {
           duration: 2000,
         });
