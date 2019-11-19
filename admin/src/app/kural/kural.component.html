@@ -1,0 +1,22 @@
+<mat-sidenav-container fullscreen>
+    <mat-sidenav mode="side" opened cdkScrollable class="primary">
+        <app-sidenav></app-sidenav>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <app-header></app-header>
+        <div class="add-btn-container">
+            <button mat-raised-button color="primary" (click)="openDialog(0, 'null');"><mat-icon>add</mat-icon> Kural</button>
+        </div>
+        <mat-list>
+            <mat-list-item *ngFor="let data of result">
+                <button mat-icon-button aria-label="label" (click)="openDialog(data.thirukkural_id, 'result');">
+                    <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
+                </button>
+                <button mat-icon-button aria-label="label" (click)="confirmDelete(data.thirukkural_id, 'delete')">
+                    <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
+                </button>
+                <h3 matLine>{{data.thirukkural}}</h3>
+            </mat-list-item>
+        </mat-list>
+    </mat-sidenav-content>
+</mat-sidenav-container>
