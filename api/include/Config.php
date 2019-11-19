@@ -1,10 +1,16 @@
 <?php
-
+/* Database credentials. Assuming you are running MySQL
+server with default setting (user 'root' with no password) */
+define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', '');
-define('DB_NAME', 'toowheel');
-define('DB_HOST', 'localhost');
-define('BASE_URL', 'https://www.toowheel.com/beta/toowheel/api/v1/');
-define('FILES_PATH', 'https://www.toowheel.com/beta/toowheel/');
-define('LOGIN_PATH', 'https://www.toowheel.com/beta/toowheel/login.php?type=two_wheel');
-define('LOGIN_ADMIN_PATH', 'https://www.toowheel.com/beta/admin');
+define('DB_NAME', 'fresche');
+ 
+/* Attempt to connect to MySQL database */
+$link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+ 
+// Check connection
+if($link === false){
+    die("ERROR: Could not connect. " . mysqli_connect_error());
+}
+?>

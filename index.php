@@ -23,7 +23,7 @@
         <!-- End of LiveChat code -->
 
         <!-- END nav -->
-<?php include 'enquiry.php'; ?>
+        <?php include 'enquiry.php'; ?>
         <section id="home-section" class="hero" style="background-image:url(images/bg_green-06.jpg);background-size:cover">
             <!--            <div id="video-viewport">
                             <video width="1920" height="1280" autoplay muted loop>
@@ -31,7 +31,7 @@
                                 Your browser does not support the <code>video</code> tag.
                             </video>
                         </div>-->
-<?php include 'menu.php'; ?>
+            <?php include 'menu.php'; ?>
             <div class="home-slider owl-carousel">
                 <div class="slider-item">
                     <div class="container">
@@ -82,6 +82,7 @@
                 </div>
             </div>
         </section>
+
         <section class=" ftco-category pad-80" id="featured">
             <div class="row">
                 <i onclick="document.getElementById('featured').classList.remove('featured-view')" class="fa fa-times" aria-hidden="true"></i>
@@ -377,8 +378,8 @@
                                     <div class="row" style="padding:0 10px;">
                                         <div class="col-md-4 col-sm-4 col-xs-6">
                                             <div class="report-logo">
-                                                <img src="images/acc/008.png" alt=""/>
-                                                <p>Fresche Application Testing</p>
+                                                <img src="images/acc/005-01.png" alt="" class=""/>
+                                                <p>US EPA</p>
                                             </div>
                                             <div class="report-logo">
                                                 <img src="images/acc/002.png" alt=""/>
@@ -410,16 +411,18 @@
                                         </div>
                                         <div class="col-md-4 col-sm-4 col-xs-6">
                                             <div class="report-logo">
-                                                <img src="images/acc/005-01.png" alt="" class=""/>
-                                                <p>US EPA</p>
+                                                <img src="images/acc/001.png" alt=""/>
+                                                <p>BANGALORE TEST HOUSE</p>
+
                                             </div>
                                             <!--                                            <div class="report-logo">
                                                                                             <img src="images/acc/010.png" alt="" />
                                                                                             <p>Primary Industry in New Zealand</p>
                                                                                         </div>-->
                                             <div class="report-logo">
-                                                <img src="images/acc/001.png" alt=""/>
-                                                <p>BANGALORE TEST HOUSE</p>
+                                                <img src="images/acc/008.png" alt=""/>
+                                                <p>Fresche Application Testing</p>
+
                                             </div>
 
                                             <div class="report-logo">
@@ -666,6 +669,6 @@
             </div>
         </section>
 
-<?php include 'footer.php'; ?>
+        <?php include 'footer.php'; ?>
     </body>
 </html>

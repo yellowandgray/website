@@ -5,7 +5,7 @@
     <div class="enquiry-form">
         <div class="field">
             <form action="/action_page.php" class="form-container" id="form-messages">
-                <h2 class="text-center">Quick Enquiry</h2>
+                <h2 class="text-center">Connect With Us</h2>
 
                 <div class="row">
                     <div class="col-md-12">
@@ -19,6 +19,13 @@
                     </div>
                     <div class="col-md-12">
                         <textarea name="fname" placeholder="Comments"></textarea>
+                    </div>
+                    <div class="col-md-12">
+                        <select>
+                            <option value="">Choose your Segment</option>
+                            <option value="textile">Textile</option>
+                            <option value="surface">Surface</option>
+                        </select>
                     </div>
                     <div class="col-md-12">
                         <input type="submit" placeholder="submit">
