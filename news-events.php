@@ -35,6 +35,7 @@
                                 <p onclick="openCity('aug')"> Aug 2019</p>
                                 <p onclick="openCity('sep')">Sep 2019</p>
                                 <p onclick="openCity('oct')">Oct 2019</p>
+                                <p onclick="openCity('nov')">Nov 2019</p>
                             </div>
                         </div>
                     </div>
@@ -409,6 +410,26 @@
                         </div>
                     </div>
                     <!--About Txt Video End-->
+                </section>
+                <section class="wf100 about month" id="nov" style="display: none">
+                    <div class="about-video-section wf100 event-section" style="padding-bottom: 0;">
+                        <div class="container" style="padding-bottom: 10px; border-bottom: 2px dashed #eee ;">
+                            <h2 class="margin-bottom-0 text-center">Aqua Excellence Award 2019'</h2> 
+                            <p class="text-center">(30th of Oct 2019)</p>
+                            <br/>
+    <!--                        <center>(On Wednesday, the 10<sup>th</sup> of July 2019,.at 10 a.m in our School premises)</center>-->
+    <!--                        <p class="text-center">(Feb 10, 2019 Sunday)</p>-->
+                            <div class="row events-margin padding-bottom-30">
+                                <div class="col-md-12">
+                                    <div class="event-img-margin">
+                                        <img src="images/event-aqua/0001.jpg" alt=""/>
+                                        <p>THANJAVUR DOCTOR RECEIVES CENTRAL MINISTERS AWARD FOR WATER CONSERVATION IN HOSPITALS </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a type="button" href="events-aqua.php" class="btn-custom" style="position:relative; left:44%;">Read More</a>
+                        </div>
+                    </div>
                 </section>
                 <!--About Txt Video End-->
             </section>
