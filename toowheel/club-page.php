@@ -198,13 +198,13 @@ if ($type == 'four_wheel') {
                                                 </div>-->
                     </div>
                     <div class="col-lg-4 col-md-4 box-anounce event-con">
-                        <!--<div class="col-lg-12 col-mg-12">
+                        <div class="col-lg-12 col-mg-12">
                             <div class="calendar-wrapper">
                                 <button id="btnPrev" type="button">Prev</button>
                                 <button id="btnNext" type="button">Next</button>
                                 <div id="divCal"></div>
                             </div>
-                        </div>-->
+                        </div>
                         <div class="event-con">
                             <?php if (count($announcements) > 0) { ?>
                                 <div class="box-anounce">
@@ -285,41 +285,41 @@ if ($type == 'four_wheel') {
         <?php include 'footer.php' ?>
         <script src="js/jquery-shorten.js" type="text/javascript"></script>
         <script>
-            function showTextPassword() {
-                var x = document.getElementById("password");
-                if (x.type === "password") {
-                    x.type = "text";
-                } else {
-                    x.type = "password";
-                }
-            }
-            function showTextPassword1() {
-                var x = document.getElementById("cnfpassword");
-                if (x.type === "password") {
-                    x.type = "text";
-                } else {
-                    x.type = "password";
-                }
-            }
-            function showTextPassword2() {
-                var x = document.getElementById("confirm_password");
-                if (x.type === "password") {
-                    x.type = "text";
-                } else {
-                    x.type = "password";
-                }
-            }
+                                            function showTextPassword() {
+                                                var x = document.getElementById("password");
+                                                if (x.type === "password") {
+                                                    x.type = "text";
+                                                } else {
+                                                    x.type = "password";
+                                                }
+                                            }
+                                            function showTextPassword1() {
+                                                var x = document.getElementById("cnfpassword");
+                                                if (x.type === "password") {
+                                                    x.type = "text";
+                                                } else {
+                                                    x.type = "password";
+                                                }
+                                            }
+                                            function showTextPassword2() {
+                                                var x = document.getElementById("confirm_password");
+                                                if (x.type === "password") {
+                                                    x.type = "text";
+                                                } else {
+                                                    x.type = "password";
+                                                }
+                                            }
 
-            $(".toggle-password").click(function () {
+                                            $(".toggle-password").click(function () {
 
-                $(this).toggleClass("fa-eye-slash fa-eye");
-                var input = $($(this).attr("toggle"));
-                if (input.attr("type") == "password") {
-                    input.attr("type", "text");
-                } else {
-                    input.attr("type", "password");
-                }
-            });
+                                                $(this).toggleClass("fa-eye-slash fa-eye");
+                                                var input = $($(this).attr("toggle"));
+                                                if (input.attr("type") == "password") {
+                                                    input.attr("type", "text");
+                                                } else {
+                                                    input.attr("type", "password");
+                                                }
+                                            });
         </script>
         <script type="text/javascript">
 
@@ -335,28 +335,7 @@ if ($type == 'four_wheel') {
             });
         </script>
         <script type="text/javascript">
-            function openNav() {
-                document.getElementById("mySidenav").style.height = "100%";
-                document.getElementById("mySidenav").style.top = "95px";
-            }
-            function closeNav() {
-                document.getElementById("mySidenav").style.height = "0";
-                document.getElementById("mySidenav").style.top = "-800px";
-            }
             $(document).ready(function () {
-                $('#nav-icon3').click(function () {
-                    $(this).toggleClass('open');
-                    if ($(this).hasClass('open')) {
-                        openNav();
-                    } else {
-                        closeNav();
-                    }
-                });
-                $('body').click(function () {
-                    if (!$('#nav-icon3').hasClass('open')) {
-                        closeNav();
-                    }
-                });
                 // Step show event
                 $("#smartwizard").on("showStep", function (e, anchorObject, stepNumber, stepDirection, stepPosition) {
                     $('.sw-btn-next').removeClass('hidden');
@@ -540,7 +519,6 @@ if ($type == 'four_wheel') {
 
             // Show month (year, month)
             Cal.prototype.showMonth = function (y, m) {
-
                 var d = new Date()
                         // First day of the week in the selected month
                         , firstDayOfMonth = new Date(y, m, 1).getDay()
