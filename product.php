@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <?php
-    require_once 'api/include/config.php';
-    ?>
+
     <?php
     $page = 'products';
     include 'head.php';
