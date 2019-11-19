@@ -46,7 +46,11 @@
 }
 @media (max-width: 767px) and (min-width: 320px){
     .subheading{
-        display: none !important;
+        /*display: none !important;*/
+    }
+    .owl-carousel.home-slider .slider-item .slider-text .subheading {
+        font-size: 43px !important;
+
     }
     .navbar-dark .navbar-toggler {
         position: absolute;

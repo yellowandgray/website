@@ -86,7 +86,7 @@
                     </div>
                     <div class="col-md-4 about-pic">
                         <img src="images/about/01.png" alt=""/>
-                        <h3>THE OPPORTUNITY</h3>
+                        <h3>BUSINESS OPPORTUNITY</h3>
                         <div>
                             <div class="about-sec" style="background-image: url('images/about/003.jpg'); background-size: cover;">
                                 <p>The product offers immense application opportunities across a wide range of Industry verticals . The environment friendly technology with US - EPA recognised, European BPR  and  OEKO-TEX recognition  for use as a textile additive makes it the ideal and safe technology for adoption across industries.   The fact that the product is not aldehyde / alcohol based but water based increases its utility.</p>

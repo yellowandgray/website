@@ -52,7 +52,7 @@
                 </div>
                 <div class="row block-9 mb-5">
                     <div class="col-md-12 d-flex">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.8769329986767!2d77.60381861484956!3d12.979722318211808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1662c8ac5555%3A0xf3ba9f317a0882d5!2sGuardian%20Health%20Management%20Pvt%20Limited!5e0!3m2!1sen!2sin!4v1572417203819!5m2!1sen!2sin" width="100%" height="250px" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.0543067145604!2d77.74562911484949!3d12.968376818457816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1662c8ac5555%3A0xf3ba9f317a0882d5!2sGuardian%20Health%20Management%20Pvt%20Limited!5e0!3m2!1sen!2sin!4v1574169366003!5m2!1sen!2sin" width="100%" height="250px" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                     </div>
                 </div>
                 <div class="row block-9 m">
