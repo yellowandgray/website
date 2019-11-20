@@ -216,10 +216,10 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
       'media': new FormControl('', Validators.required),
       'moto_text': new FormControl('', Validators.required),
       'author_name': new FormControl('', Validators.required),
-      'description': new FormControl('', Validators.required),
-      'description_1': new FormControl('', Validators.required),
-      'description_2': new FormControl('', Validators.required),
-      'description_3': new FormControl('', Validators.required),
+      'description': new FormControl(''),
+      'description_1': new FormControl(''),
+      'description_2': new FormControl(''),
+      'description_3': new FormControl(''),
       'youtube_id': new FormControl(),
       'sponsor': new FormControl()
       });
