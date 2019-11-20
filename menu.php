@@ -1,4 +1,5 @@
-<?php //
+<?php
+//
 require_once 'api/include/config.php';
 $sql = "SELECT * FROM product";
 $result = mysqli_query($link, $sql);
@@ -93,3 +94,21 @@ $result = mysqli_query($link, $sql);
         </div>
     </div>
 </nav>
+
+
+<!--<script src="https://static.landbot.io/landbot-widget/landbot-widget-1.0.0.js"></script>
+<script>
+  var myLandbot = new LandbotLivechat({
+    index: 'https://landbot.io/u/H-309342-H7AU98K8MU375VTK/index.html',
+  });
+</script>-->
+
+<script src= "https://chat.hippochat.io/js/widget.js"></script>
+<script>
+                                             window.initHippo({
+                                                    appSecretKey: "b5302cc09c9bd01d68dcfc7e00d4926e"
+                                            });
+</script>
+ End of Hippo Code 
+
+<!--<script async>(function(w, d) { w.CollectId = "5dd50a9e042939079bde579f"; var h = d.head || d.getElementsByTagName("head")[0]; var s = d.createElement("script"); s.setAttribute("type", "text/javascript"); s.setAttribute("src", "https://collectcdn.com/launcher.js"); h.appendChild(s); })(window, document);</script>-->
