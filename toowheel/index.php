@@ -67,7 +67,7 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
                                 <div class="discover-slider-content">
                                     <p class="clb-bg"><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 14) : $obj->charLimit($row['sponsor'], 14) ?></p>
                                     <h2><a href="news?nid=<?php echo $row['news_id']; ?>"><?php echo $row['title']; ?></a></h2>
-    <!--                                    <p><?php //echo $obj->charLimit($row['moto_text'], 60);                                  ?></p>-->
+    <!--                                    <p><?php //echo $obj->charLimit($row['moto_text'], 60);                                     ?></p>-->
 
                                     <div class="discover-btn">
                                         <a href="news?nid=<?php echo $row['news_id']; ?>" class="discover-btn-home">DISCOVER</a>
@@ -82,37 +82,41 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
         <section class="media-press-release pad-t-80">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-6 padding-lr-5">
-                        <div class="news-img-01 news-01 height-one" onClick="document.location.href = 'news?nid=<?php echo $news_star['news_id']; ?>'">
-                            <div class="news-home-flag-large" style="background: url(<?php echo BASE_URL . $news_star['cover_image']; ?>)no-repeat; background-position: center; background-size: cover; "></div>
-                            <div class="news-01-cont">
-                                <div class="position-ad">
-                                    <span class="sponsor-bg"><?php echo $news_star['club_id'] != 0 ? $obj->charLimit($news_star['club'], 14) : $obj->charLimit($news_star['sponsor'], 14) ?></span>
-                                    <h2><?php echo $news_star['title']; ?></h2>
-                                    <p><?php echo $news_star['media']; ?> | <?php echo $news_star['author_name']; ?> | <?php echo date('M d, Y', strtotime($news_star['news_date'])); ?></p>
+                    <?php if (count($news_star) > 0) { ?>
+                        <div class="col-md-6 padding-lr-5">
+                            <div class="news-img-01 news-01 height-one" onClick="document.location.href = 'news?nid=<?php echo $news_star['news_id']; ?>'">
+                                <div class="news-home-flag-large" style="background: url(<?php echo BASE_URL . $news_star['cover_image']; ?>)no-repeat; background-position: center; background-size: cover; "></div>
+                                <div class="news-01-cont">
+                                    <div class="position-ad">
+                                        <span class="sponsor-bg"><?php echo $news_star['club_id'] != 0 ? $obj->charLimit($news_star['club'], 14) : $obj->charLimit($news_star['sponsor'], 14) ?></span>
+                                        <h2><?php echo $news_star['title']; ?></h2>
+                                        <p><?php echo $news_star['media']; ?> | <?php echo $news_star['author_name']; ?> | <?php echo date('M d, Y', strtotime($news_star['news_date'])); ?></p>
 
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="row">
-                            <?php foreach ($news_flag as $row) { ?>
-                                <div class="col-md-6 col-sm-6 col-xs-6 padding-lr-5">
-                                    <div class="news-img-02 news-01 height-two" onClick="document.location.href = 'news?nid=<?php echo $row['news_id']; ?>'">
-                                        <div class="news-home-flag" style="background: url(<?php echo BASE_URL . $row['cover_image']; ?>)no-repeat; background-position: center; background-size: cover; "></div>
-                                        <div class=" news-02-cont">
-                                            <div class="position-ad-01">
-                                                <span class="sponsor-bg"><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 14) : $obj->charLimit($row['sponsor'], 14) ?></span>
-                                                <h2><?php echo $row['title']; ?></h2>
+                    <?php } ?>
+                    <?php if (count($news_flag) > 0) { ?>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <?php foreach ($news_flag as $row) { ?>
+                                    <div class="col-md-6 col-sm-6 col-xs-6 padding-lr-5">
+                                        <div class="news-img-02 news-01 height-two" onClick="document.location.href = 'news?nid=<?php echo $row['news_id']; ?>'">
+                                            <div class="news-home-flag" style="background: url(<?php echo BASE_URL . $row['cover_image']; ?>)no-repeat; background-position: center; background-size: cover; "></div>
+                                            <div class=" news-02-cont">
+                                                <div class="position-ad-01">
+                                                    <span class="sponsor-bg"><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 14) : $obj->charLimit($row['sponsor'], 14) ?></span>
+                                                    <h2><?php echo $row['title']; ?></h2>
 
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            <?php } ?>
+                                <?php } ?>
+                            </div>
                         </div>
-                    </div>
+                    <?php } ?>
                 </div>
             </div>
         </section>
@@ -127,7 +131,7 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
                             <?php foreach ($press_release_menu as $row) { ?>
                                 <div class="row margin-b-20 ">
                                     <!--                                    <div class="col-md-2">
-                                                                            <div class="home-press-release-bg" style="background: url(<?php //echo BASE_URL . $row['thumb_image'];                             ?>)no-repeat;background-position: center;background-size: cover;cursor: pointer;width: 100%;height: 150px;"></div>
+                                                                            <div class="home-press-release-bg" style="background: url(<?php //echo BASE_URL . $row['thumb_image'];                                ?>)no-repeat;background-position: center;background-size: cover;cursor: pointer;width: 100%;height: 150px;"></div>
                                                                         </div>-->
                                     <div class="col-md-12">
                                         <div class="press-width float-right">
@@ -190,7 +194,7 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <h1>PHOTOS</h1>
-                        <!--<div class="s-photo"><a href="gallery?target=image&type=<?php echo $type; ?>" class="btn-secondary">SEE MORE PHOTOS</a></div>-->
+                        <div class="s-photo"><a href="gallery?target=image&type=<?php echo $type; ?>" class="btn-secondary">SEE MORE PHOTOS</a></div>
                     </div>
                 </div>
             </div>
@@ -219,7 +223,7 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
             <div class="container">
                 <div class="flex-row">
                     <h1>VIDEOS</h1>
-                    <!--<div class="s-photo"><a href="gallery?target=video&type=<?php //echo $type;    ?>" class="btn-secondary">SEE MORE VIDEOS</a></div>-->
+                    <!--<div class="s-photo"><a href="gallery?target=video&type=<?php //echo $type;       ?>" class="btn-secondary">SEE MORE VIDEOS</a></div>-->
                 </div>
             </div>
             <div class="row margin-0 home-gallery video-section">

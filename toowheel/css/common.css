@@ -5357,7 +5357,7 @@ hr {
     border-radius: 5px;
     padding: 10px;
     margin: 10px 0;
-/*    cursor: pointer;*/
+    /*    cursor: pointer;*/
 }
 
 .darker {
@@ -5656,4 +5656,25 @@ hr {
 
 .calendar-wrapper {
     display: none;
+}
+.gallery {
+    padding: 20px 10%;
+}
+.gallery .gallery__item:nth-child(odd){
+    grid-row-end: span 2 !important;
+}
+.gallery .gallery__item:nth-child(even){
+    grid-row-end: span 1 !important;
+}
+.gallery .gallery__item:nth-child(odd) .embed:nth-child(odd){
+    padding-top: calc(100% / (1 / 2)) !important;
+}
+.gallery .gallery__item:nth-child(odd) .embed:nth-child(even){
+    padding-top: calc(100% / (1 / 1)) !important;
+}
+.gallery .gallery__item:nth-child(even) .embed:nth-child(odd){
+    padding-top: calc(100% / (1 / 1)) !important;
+}
+.gallery .gallery__item:nth-child(even) .embed:nth-child(even){
+    padding-top: calc(100% / (1 / 1)) !important;
 }
