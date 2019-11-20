@@ -74,6 +74,18 @@ export class ClubComponent implements OnInit {
        }
     });
     }
+    openAddGalleryDialog(id): void  {
+    const dialogRef = this.dialog.open(ClubAddGalleryForm, {
+        minWidth: "80%",
+        maxWidth: "80%",
+        data: id
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+        if(result !== false && result !== 'false') {
+        }
+    });
+}
     confirmDelete(id, action): void  {
         var data = null;
           if(id != 0) { 
@@ -92,7 +104,6 @@ export class ClubComponent implements OnInit {
            }
         });
     }
-    
     
     openView(id, res): void  {
       var data = null;
@@ -766,5 +777,122 @@ export class ClubViewFrom {
             });
         });
     }  
-            
-            }   
+}
+
+@Component({
+  selector: 'gallery-form',
+  templateUrl: 'clubgallery-form.html',
+})
+export class ClubAddGalleryForm {
+image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
+    galleryForm: FormGroup;
+    loading = false;
+    club_gallery_id = 0;
+    club_id = '';
+    media_path: string='';
+    media_type: string='';
+    thumb_path: string = '';
+    file_name: string = 'Select Picture';
+    file_name_thumb: string = 'Select Thumb';
+    constructor(
+    public dialogRef: MatDialogRef<ClubAddGalleryForm>,
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {
+         this.galleryForm = new FormGroup({
+      'title': new FormControl('', Validators.required),
+      'media_type': new FormControl('', Validators.required),
+      'type': new FormControl(''),
+      'description': new FormControl('')
+        });
+        if(this.data != null) {
+        this.club_id = this.data;
+        }
+    }
+   
+    fileProgress(fileInput: any, name: string, path: string) {
+        var fileData = <File>fileInput.target.files[0];
+        this[name] = fileData.name;
+        this.loading = true;
+          var formData = new FormData();
+          formData.append('file', fileData);
+          this.httpClient.post('https://www.toowheel.com/beta/toowheel/api/v1/upload_file', formData).subscribe(
+              (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this[path] = res["result"]["data"];
+                }else{
+    this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+            (error)=>{
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+        });
+            });
+    }
+    changeUploadText() : void {
+      if(this.galleryForm.value.media_type == 'video') {
+          this.file_name = 'Select Video';
+      } else {
+          this.file_name = 'Select Picture';
+      }
+  }
+  onSubmit() {
+          if (this.galleryForm.invalid || this.media_path == '') {
+                return;
+          }
+          this.loading = true;
+          var formData = new FormData();
+          formData.append('club_id', this.club_id);
+          var url = '';
+          if(this.club_gallery_id != 0) {
+              formData.append('title', this.galleryForm.value.title);
+          formData.append('media_type', this.galleryForm.value.media_type);
+          formData.append('type', this.galleryForm.value.type);
+          formData.append('description', this.galleryForm.value.description);
+          if(this.media_path && this.media_path != '') {
+          formData.append('media_path', this.media_path);
+          }
+          if(this.thumb_path && this.thumb_path!= '') {
+              formData.append('thumb_path', this.thumb_path);
+          }
+          url = 'update_record/club_gallery/club_gallery_id = '+this.club_gallery_id;
+          } else {
+                formData.append('title', this.galleryForm.value.title);
+          formData.append('media_type', this.galleryForm.value.media_type);
+          formData.append('type', this.galleryForm.value.type);
+          formData.append('media_path', this.media_path);
+          formData.append('thumb_path', this.thumb_path);
+          formData.append('description', this.galleryForm.value.description);
+          url = 'insert_club_gallery';
+          }
+          this.httpClient.post('https://www.toowheel.com/beta/toowheel/api/v1/'+url, formData).subscribe(
+              (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this.dialogRef.close(true);
+                }else{
+            this._snackBar.open(res["result"]["message"], '', {
+              duration: 2000,
+            });
+            }
+            },
+            (error)=>{
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+        });
+            }
+            );
+      }
+  removeMedia(url) {
+      this[url] = '';
+      if(url === 'media_path') {
+          this.file_name= 'Select Picture';
+      }     
+  }
+}

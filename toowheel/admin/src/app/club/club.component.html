@@ -41,6 +41,9 @@
                         <button mat-icon-button aria-label="label" (click)="openGalleryDialog(data.club_id)">
                             <mat-icon #tooltip="matTooltip" matTooltip="Club Gallery">collections</mat-icon>
                         </button>
+                        <button mat-icon-button aria-label="label" (click)="openAddGalleryDialog(data.club_id)">
+                            <mat-icon #tooltip="matTooltip" matTooltip="Add Club Gallery">add_a_photo</mat-icon>
+                        </button>
                         <button mat-icon-button aria-label="label" routerLink="/announcement/{{data.club_id}}">
                             <mat-icon #tooltip="matTooltip" matTooltip="Announcement">hearing</mat-icon>
                         </button>
@@ -85,7 +88,7 @@
                 </section>  
                 <mat-list>
                     <mat-list-item *ngFor="let data of result_four_wheel | filterEventClub: searchTermFW">
-                                   <button mat-icon-button aria-label="label" (click)="changeStatus(data.club_id, 1)" *ngIf="data.published == 0 && data.source == 'web'">
+                        <button mat-icon-button aria-label="label" (click)="changeStatus(data.club_id, 1)" *ngIf="data.published == 0 && data.source == 'web'">
                             <mat-icon #tooltip="matTooltip" matTooltip="Done">done</mat-icon>
                         </button>
                         <button mat-icon-button aria-label="label" (click)="confirmDelete(data.club_id, 'block')" *ngIf="data.published == 1 && data.source == 'web'">
@@ -93,6 +96,9 @@
                         </button>
                         <button mat-icon-button aria-label="label" (click)="openGalleryDialog(data.club_id)">
                             <mat-icon #tooltip="matTooltip" matTooltip="Club Gallery">collections</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label" (click)="openAddGalleryDialog(data.club_id)">
+                            <mat-icon #tooltip="matTooltip" matTooltip="Add Club Gallery">add_a_photo</mat-icon>
                         </button>
                         <button mat-icon-button aria-label="label" routerLink="/announcement/{{data.club_id}}">
                             <mat-icon #tooltip="matTooltip" matTooltip="Announcement">hearing</mat-icon>
