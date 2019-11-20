@@ -92,24 +92,6 @@ class Common {
         return $str;
     }
 
-    public function getLandingDetails() {
-        $return = array();
-        $data = $this->selectAll('name, value', 'config', 'name IN (\'landing_twowheel_image\', \'landing_fourwheel_image\', \'landing_description\', \'landing_about_us_image\', \'landing_news_updates_image\', \'landing_join_club_image\', \'landing_shop_now_image\', \'landing_banner_ad\')');
-        foreach ($data as $row) {
-            $return[$row['name']] = $row['value'];
-        }
-        return $return;
-    }
-
-    public function getHomeDetails() {
-        $return = array();
-        $data = $this->selectAll('name, value', 'config', 'name IN (\'home_banner_video\', \'home_card_ad1\', \'home_card_ad2\', \'home_banner_ad\', \'home_banner_video_four_wheel\', \'two_wheel_photos\', \'two_wheel_videos\', \'four_wheel_photos\', \'four_wheel_videos\')');
-        foreach ($data as $row) {
-            $return[$row['name']] = $row['value'];
-        }
-        return $return;
-    }
-
     public function charLimit($str, $len) {
         if ($str && $str != null && $str != 'null' && $str != 'undefined') {
             if (strlen($str) <= $len) {
