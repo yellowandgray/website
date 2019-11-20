@@ -386,28 +386,16 @@ image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';
         formData.append('type', this.newsForm.value.type);
           formData.append('category_id', this.newsForm.value.category_id);
           formData.append('club_id', this.newsForm.value.club_id);
-          if(this.cover_image_path && this.cover_image_path != '') {
           formData.append('cover_image', this.cover_image_path);
-          }
           formData.append('title', this.newsForm.value.title);
           formData.append('media_id', this.newsForm.value.media);
           formData.append('author_name', this.newsForm.value.author_name);
           formData.append('news_date', moment(this.newsForm.value.date).format('YYYY-MM-DD'));
-          if(this.thumb_image_path && this.thumb_image_path != '') {
           formData.append('thumb_image', this.thumb_image_path);
-          }
-          if(this.banner_image_1_path && this.banner_image_1_path != '') {
               formData.append('banner_1', this.banner_image_1_path);
-          }
-          if(this.banner_image_2_path && this.banner_image_2_path != '') {
                formData.append('banner_2', this.banner_image_2_path); 
-          }
-          if(this.banner_image_3_path && this.banner_image_3_path != '') {
                formData.append('banner_3', this.banner_image_3_path); 
-          }
-          if(this.banner_image_4_path && this.banner_image_4_path != '') {
                formData.append('banner_4', this.banner_image_4_path); 
-          }
           formData.append('moto_text', this.newsForm.value.moto_text);
           formData.append('description_1', this.newsForm.value.description);
           formData.append('description_2', this.newsForm.value.description_1);

@@ -892,17 +892,21 @@ $app->post('/loginadmin', function() use ($app) {
     } else {
         $club = $obj->selectRow('*', 'club', 'email=\'' . $data['email'] . '\'');
         if (count($club) > 0) {
-            $pass_matchs = $obj->decryptPassword($data['password'], $club['password']);
-            if ($pass_matchs == true) {
-                date_default_timezone_set("Asia/Kuala_Lumpur");
-                $obj->updateRecordWithWhere(array('last_login' => date('Y-m-d H:i:s')), 'club', 'club_id=' . $club['club_id']);
-                $club['role'] = 'club';
-                $club['media_path'] = $club['logo'];
-                $res['error'] = false;
-                $res['message'] = 'Welcome ' . $club['name'];
-                $res['data'] = $club;
+            if ($club['published'] == 1) {
+                $pass_matchs = $obj->decryptPassword($data['password'], $club['password']);
+                if ($pass_matchs == true) {
+                    date_default_timezone_set("Asia/Kuala_Lumpur");
+                    $obj->updateRecordWithWhere(array('last_login' => date('Y-m-d H:i:s')), 'club', 'club_id=' . $club['club_id']);
+                    $club['role'] = 'club';
+                    $club['media_path'] = $club['logo'];
+                    $res['error'] = false;
+                    $res['message'] = 'Welcome ' . $club['name'];
+                    $res['data'] = $club;
+                } else {
+                    $res['message'] = 'Username or Password mismatch';
+                }
             } else {
-                $res['message'] = 'Username or Password mismatch';
+                $res['message'] = 'Sorry! you club was not activated kindly contact admin';
             }
         }
     }
@@ -1240,14 +1244,27 @@ $app->post('/special_gallery', function() use ($app) {
         }
     } else {
         $exist = $obj->selectRow('COUNT(gallery_id) AS total', 'gallery', 'type = \'' . $data['type'] . '\' AND isflag = 1 AND media_type = \'' . $data['media_type'] . '\'');
-        if ($exist['total'] < 6) {
-            $update = $obj->updateRecordWithWhere(array('isflag' => 1), 'gallery', 'gallery_id = ' . $data['gallery_id']);
-            if ($update > 0) {
-                $res['error'] = false;
-                $res['message'] = 'Status updated successfully';
+        if ($data['media_type'] == 'image') {
+            if ($exist['total'] < 6) {
+                $update = $obj->updateRecordWithWhere(array('isflag' => 1), 'gallery', 'gallery_id = ' . $data['gallery_id']);
+                if ($update > 0) {
+                    $res['error'] = false;
+                    $res['message'] = 'Status updated successfully';
+                }
+            } else {
+                $res['message'] = 'Already reached maximum count';
             }
-        } else {
-            $res['message'] = 'Already reached maximum count';
+        }
+        if ($data['media_type'] == 'video') {
+            if ($exist['total'] < 5) {
+                $update = $obj->updateRecordWithWhere(array('isflag' => 1), 'gallery', 'gallery_id = ' . $data['gallery_id']);
+                if ($update > 0) {
+                    $res['error'] = false;
+                    $res['message'] = 'Status updated successfully';
+                }
+            } else {
+                $res['message'] = 'Already reached maximum count';
+            }
         }
     }
     echoRespnse(201, $res);
