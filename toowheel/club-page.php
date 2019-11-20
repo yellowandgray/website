@@ -144,6 +144,7 @@ if ($type == 'four_wheel') {
                             <?php } ?>
                         </div>
                         <div class="myclub-gallery">
+                             <?php if (count($images) > 0) { ?>
                             <h1>Gallery</h1>
                             <?php if ($club['club_video'] && $club['club_video'] != '' && $club['club_video'] != 'undefined') { ?>
                                 <video muted loop controls id="myVideo" class="img-responsive">
@@ -166,6 +167,7 @@ if ($type == 'four_wheel') {
                                 }
                                 ?>
                             </div>
+                            <?php } ?>
                         </div>
                         <!--                        <div class="member-gird">
                                                     <h1>Member</h1>
@@ -225,53 +227,57 @@ if ($type == 'four_wheel') {
                                 </div>
                             <?php } ?>
 <!--                            <center>
-                                <a href="#" class="announcement-btn">Read More</a>
-                            </center>
-                            <br/>-->
+                            <a href="#" class="announcement-btn">Read More</a>
+                        </center>
+                        <br/>-->
                         </div>
                         <div class="myclub-events">
-                            <h1>Events & Activities</h1>
-                            <?php foreach ($events as $row) { ?>
-                                <div class="anounce box-anounce-1">
-                                    <div class="anounce-con-1">
-                                        <span class="date-myevent"><?php echo date('d', strtotime($row['event_from_date'])) ?></span>
-                                        <span class="mon-myevent"><?php echo $row['event_date']; ?></span>
-                                        <p class="text-center"><?php echo date('M', strtotime($row['event_from_date'])) ?></p>
-                                    </div>  
-                                    <div class="anounce-con-1">
-                                        <div class="row">
-                                            <div class="col-md-5">
-                                                <h5><a>CLUB ADMIN</a></h5>
+                            <?php if (count($events) > 0) { ?>
+                                <h1>Events & Activities</h1>
+                                <?php foreach ($events as $row) { ?>
+                                    <div class="anounce box-anounce-1">
+                                        <div class="anounce-con-1">
+                                            <span class="date-myevent"><?php echo date('d', strtotime($row['event_from_date'])) ?></span>
+                                            <span class="mon-myevent"><?php echo $row['event_date']; ?></span>
+                                            <p class="text-center"><?php echo date('M', strtotime($row['event_from_date'])) ?></p>
+                                        </div>  
+                                        <div class="anounce-con-1">
+                                            <div class="row">
+                                                <div class="col-md-5">
+                                                    <h5><a>CLUB ADMIN</a></h5>
+                                                </div>
+                                                <div class="col-md-7">
+                                                    <p class="float-right"><em><?php echo date('M d, Y', strtotime($row['event_from_date'])) ?> | <?php echo date('M d, Y', strtotime($row['event_to_date'])) ?></em></p>
+                                                </div>
                                             </div>
-                                            <div class="col-md-7">
-                                                <p class="float-right"><em><?php echo date('M d, Y', strtotime($row['event_from_date'])) ?> | <?php echo date('M d, Y', strtotime($row['event_to_date'])) ?></em></p>
-                                            </div>
-                                        </div>
-                                        <h3><?php echo $row['title']; ?></h3>
-                                        <p class="desc"><?php echo $row['description']; ?></p>
-                                    </div>  
-                                </div>
-                            <?php } ?>
-<!--                            <center>
-                                <a href="club-events?cid=<?php echo $row['club_id']; ?>" class="announcement-btn">Read More</a>
-                            </center>
-                            <br/>-->
-                        </div>
-                        <div class="my-club-member">
-                            <h1>Members</h1>
-                            <div class="member-list-scroll">
-                                <?php foreach ($club_members as $row) { ?>
-                                    <div class="row">
-                                        <div class="col-lg-12 col-xl-12 col-md-12 col-sm-12">
-                                            <div class="chat-container">
-                                                <img src="<?php echo BASE_URL . $row['profile_picture']; ?>" alt="Profile" style="width:100%;">
-                                                <h3><?php echo $row['first_name']; ?> <?php echo $row['last_name']; ?></h3>
-                                                <p><?php echo $row['state']; ?></p>
-                                            </div>
-                                        </div>
+                                            <h3><?php echo $row['title']; ?></h3>
+                                            <p class="desc"><?php echo $row['description']; ?></p>
+                                        </div>  
                                     </div>
                                 <?php } ?>
-                            </div>
+                            <?php } ?>
+<!--                            <center>
+                            <a href="club-events?cid=<?php echo $row['club_id']; ?>" class="announcement-btn">Read More</a>
+                        </center>
+                        <br/>-->
+                        </div>
+                        <div class="my-club-member">
+                            <?php if (count($club_members) > 0) { ?>
+                                <h1>Members</h1>
+                                <div class="member-list-scroll">
+                                    <?php foreach ($club_members as $row) { ?>
+                                        <div class="row">
+                                            <div class="col-lg-12 col-xl-12 col-md-12 col-sm-12">
+                                                <div class="chat-container">
+                                                    <img src="<?php echo BASE_URL . $row['profile_picture']; ?>" alt="Profile" style="width:100%;">
+                                                    <h3><?php echo $row['first_name']; ?> <?php echo $row['last_name']; ?></h3>
+                                                    <p><?php echo $row['state']; ?></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <?php } ?>
+                                </div>
+                            <?php } ?>
                         </div>
                         <div class="col-lg-12 col-xl-12 col-md-12">
                             <div class="img-box-ad">
@@ -285,41 +291,41 @@ if ($type == 'four_wheel') {
         <?php include 'footer.php' ?>
         <script src="js/jquery-shorten.js" type="text/javascript"></script>
         <script>
-                                            function showTextPassword() {
-                                                var x = document.getElementById("password");
-                                                if (x.type === "password") {
-                                                    x.type = "text";
-                                                } else {
-                                                    x.type = "password";
-                                                }
-                                            }
-                                            function showTextPassword1() {
-                                                var x = document.getElementById("cnfpassword");
-                                                if (x.type === "password") {
-                                                    x.type = "text";
-                                                } else {
-                                                    x.type = "password";
-                                                }
-                                            }
-                                            function showTextPassword2() {
-                                                var x = document.getElementById("confirm_password");
-                                                if (x.type === "password") {
-                                                    x.type = "text";
-                                                } else {
-                                                    x.type = "password";
-                                                }
-                                            }
+            function showTextPassword() {
+                var x = document.getElementById("password");
+                if (x.type === "password") {
+                    x.type = "text";
+                } else {
+                    x.type = "password";
+                }
+            }
+            function showTextPassword1() {
+                var x = document.getElementById("cnfpassword");
+                if (x.type === "password") {
+                    x.type = "text";
+                } else {
+                    x.type = "password";
+                }
+            }
+            function showTextPassword2() {
+                var x = document.getElementById("confirm_password");
+                if (x.type === "password") {
+                    x.type = "text";
+                } else {
+                    x.type = "password";
+                }
+            }
 
-                                            $(".toggle-password").click(function () {
+            $(".toggle-password").click(function () {
 
-                                                $(this).toggleClass("fa-eye-slash fa-eye");
-                                                var input = $($(this).attr("toggle"));
-                                                if (input.attr("type") == "password") {
-                                                    input.attr("type", "text");
-                                                } else {
-                                                    input.attr("type", "password");
-                                                }
-                                            });
+                $(this).toggleClass("fa-eye-slash fa-eye");
+                var input = $($(this).attr("toggle"));
+                if (input.attr("type") == "password") {
+                    input.attr("type", "text");
+                } else {
+                    input.attr("type", "password");
+                }
+            });
         </script>
         <script type="text/javascript">
 
