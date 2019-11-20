@@ -67,7 +67,7 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
                                 <div class="discover-slider-content">
                                     <p class="clb-bg"><?php echo $row['club_id'] != 0 ? $obj->charLimit($row['club'], 14) : $obj->charLimit($row['sponsor'], 14) ?></p>
                                     <h2><a href="news?nid=<?php echo $row['news_id']; ?>"><?php echo $row['title']; ?></a></h2>
-    <!--                                    <p><?php //echo $obj->charLimit($row['moto_text'], 60);                                 ?></p>-->
+    <!--                                    <p><?php //echo $obj->charLimit($row['moto_text'], 60);                                  ?></p>-->
 
                                     <div class="discover-btn">
                                         <a href="news?nid=<?php echo $row['news_id']; ?>" class="discover-btn-home">DISCOVER</a>
@@ -127,7 +127,7 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
                             <?php foreach ($press_release_menu as $row) { ?>
                                 <div class="row margin-b-20 ">
                                     <!--                                    <div class="col-md-2">
-                                                                            <div class="home-press-release-bg" style="background: url(<?php //echo BASE_URL . $row['thumb_image'];                            ?>)no-repeat;background-position: center;background-size: cover;cursor: pointer;width: 100%;height: 150px;"></div>
+                                                                            <div class="home-press-release-bg" style="background: url(<?php //echo BASE_URL . $row['thumb_image'];                             ?>)no-repeat;background-position: center;background-size: cover;cursor: pointer;width: 100%;height: 150px;"></div>
                                                                         </div>-->
                                     <div class="col-md-12">
                                         <div class="press-width float-right">
@@ -219,7 +219,7 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
             <div class="container">
                 <div class="flex-row">
                     <h1>VIDEOS</h1>
-                    <!--<div class="s-photo"><a href="gallery?target=video&type=<?php //echo $type;   ?>" class="btn-secondary">SEE MORE VIDEOS</a></div>-->
+                    <!--<div class="s-photo"><a href="gallery?target=video&type=<?php //echo $type;    ?>" class="btn-secondary">SEE MORE VIDEOS</a></div>-->
                 </div>
             </div>
             <div class="row margin-0 home-gallery video-section">
@@ -242,19 +242,19 @@ $press_release_menu = $obj->selectAll('p.*, m.name AS media', 'press_release AS 
                         <div class="column-1">
                             <div class="video-gal">
                                 <img id="vimg02" src="<?php echo BASE_URL . $video_flag[1]['thumb_path']; ?>" alt="" class="img-responsive"/>
-                                <a href="<?php echo BASE_URL . $video_flag[1]['media_path']; ?>" class="html5lightbox" title="1st convoy arrival , stay tuned for official video . Thx to fan cam" data-group="videogroup"> 
-                                    <video onmouseover="this.play()" onmouseout="this.pause();this.currentTime = 0;" id="myVideo3" width="100%" height="250" muted="" >
+                                <a href="<?php echo BASE_URL . $video_flag[1]['media_path']; ?>" class="html5lightbox" title="1st convoy arrival , stay tuned for official video . Thx to fan cam" data-group="videogroup">
+                                    <video onmouseover="this.play()" onmouseout="this.pause();this.currentTime = 0;" id="myVideo2" width="100%" height="250" muted="" >
                                         <source src="<?php echo BASE_URL . $video_flag[1]['media_path']; ?>" type="video/mp4">
                                     </video>
                                 </a>
-                                <a href="<?php echo BASE_URL . $video_flag[1]['media_path']; ?>" class="html5lightbox" title="1st convoy arrival , stay tuned for official video . Thx to fan cam" data-group="videogroup"><i  class="fa fa-play-circle-o" aria-hidden="true"></i></a>
+                                <a href="<?php echo BASE_URL . $video_flag[1]['media_path']; ?>" class="html5lightbox" title="2nd convoy , stay tuned for official video." data-group="videogroup"><i  class="fa fa-play-circle-o" aria-hidden="true"></i></a>
                                 <div class="video-t-1" id="text-v">
                                     <h4><?php echo $video_flag[1]['title']; ?></h4>
                                 </div>
                             </div>
                             <div class="video-gal">
                                 <img id="vimg03" src="<?php echo BASE_URL . $video_flag[2]['thumb_path']; ?>" alt="" class="img-responsive"/>
-                               <a href="<?php echo BASE_URL . $video_flag[2]['media_path']; ?>" class="html5lightbox" title="2nd convoy , stay tuned for official video." data-group="videogroup">
+                                <a href="<?php echo BASE_URL . $video_flag[2]['media_path']; ?>" class="html5lightbox" title="2nd convoy , stay tuned for official video." data-group="videogroup">
                                     <video onmouseover="this.play()" onmouseout="this.pause();this.currentTime = 0;" id="myVideo2" width="100%" height="250" muted="" >
                                         <source src="<?php echo BASE_URL . $video_flag[2]['media_path']; ?>" type="video/mp4">
                                     </video>

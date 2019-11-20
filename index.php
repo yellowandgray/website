@@ -307,9 +307,7 @@ $menu_member = $obj->selectRow('m.*, c.name AS club', 'member AS m LEFT JOIN clu
                         <li class="nav__item">
                             <h2 class="nav__title color-w">ALWAYS GET IN TOUCH</h2>
                             <ul class="nav__ul" style="margin-top: 10px;">
-                                <li>
-                                    <a href="#">Receive updates on our Upcoming Events</a>
-                                </li>
+                                <li style="color:#fff">Receive updates on our Upcoming Events</li>
                                 <li>
                                     <form onsubmit="return subscribeNewsLetter();">
                                         <input type="email" id="newsletter_email" name="newsletter_email" placeholder="Email Address" required="">
