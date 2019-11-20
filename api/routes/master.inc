@@ -37,6 +37,30 @@ $app->post('/insert_kural', function() use ($app) {
     echoRespnse(201, $res);
 });
 
+$app->post('/insert_member', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to insert');
+    $data = $app->request->post();
+    $com = new Common();
+    $record = $com->insertRecord(array('lid' => $data['lid'], 'name' => $data['name'], 'dob' => $data['dob'], 'gender' => $data['gender'], 'email' => $data['email'], 'mobile' => $data['mobile'], 'country' => $data['country']), 'member');
+    if ($record > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Record inserted successfully';
+    }
+    echoRespnse(201, $res);
+});
+
+$app->post('/insert_task', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to insert');
+    $data = $app->request->post();
+    $com = new Common();
+    $record = $com->insertRecord(array('member_id' => $data['member_id'], 'mobile' => $data['mobile'], 'a' => $data['a'], 'b' => $data['b'], 'c' => $data['c'], 'd' => $data['d']), 'task');
+    if ($record > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Record inserted successfully';
+    }
+    echoRespnse(201, $res);
+});
+
 $app->get('/get_thirukkural', function() {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
@@ -77,6 +101,30 @@ $app->get('/get_adhigaram', function() {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
     $data = $com->selectAll('*', 'adhigarangal', 'adhigaram_id > 0');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_member', function() {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('*', 'member', 'member_id > 0');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_task', function() {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('*', 'task', 'task_id > 0');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';

@@ -27,8 +27,8 @@ export class KuralComponent implements OnInit {
            },
            (error)=>{
                this._snackBar.open(error["statusText"], '', {
-         duration: 2000,
-       });
+            duration: 2000,
+        });
            }
            );
      }
@@ -57,7 +57,7 @@ export class KuralComponent implements OnInit {
     confirmDelete(id): void  {
         var data = null;
           if(id != 0) { 
-                    data = id;
+            data = id;
           }
         const dialogRef = this.dialog.open(ThirukkuralDelete, {
             minWidth: "40%",

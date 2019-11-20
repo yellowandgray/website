@@ -23,10 +23,14 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
 
 import { KuralComponent, KuralForm, ThirukkuralDelete } from './kural/kural.component';
 import { HeaderComponent } from './header/header.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
+import { MemberComponent, MemberForm, MemberDelete } from './member/member.component';
+import { TaskComponent, TaskDelete } from './task/task.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +39,12 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     HeaderComponent,
     SidenavComponent,
     KuralForm,
-    ThirukkuralDelete
+    ThirukkuralDelete,
+    MemberComponent,
+    MemberForm,
+    MemberDelete,
+    TaskComponent,
+    TaskDelete
   ],
   imports: [
     BrowserModule,
@@ -59,9 +68,11 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     MatProgressBarModule,
     MatSnackBarModule,
     MatBadgeModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
- entryComponents: [KuralComponent, KuralForm, ThirukkuralDelete],
+ entryComponents: [KuralComponent, KuralForm, ThirukkuralDelete, MemberComponent, MemberForm, MemberDelete, TaskComponent, TaskDelete],
   providers: [],
   bootstrap: [AppComponent]
 })
