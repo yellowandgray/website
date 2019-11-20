@@ -13,6 +13,9 @@ $medias = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND type = \'' . $type
     <body>
         <?php include 'menu.php'; ?>
         <div class="padding-top-108"></div>
+        <div class="news-all" style="padding: 20px 10% 0px 10%;">
+            <h3>TOOWHEEL GALLERY</h3>
+        </div>
         <div class="gallery">
             <?php foreach ($medias as $media) { ?>
                 <div class="gallery__item">
@@ -24,6 +27,7 @@ $medias = $obj->selectAll('*', 'gallery', 'gallery_id > 0 AND type = \'' . $type
                 </div>
             <?php } ?>
         </div>
+
         <?php include 'footer.php'; ?>
     </body>
 </html>
