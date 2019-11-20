@@ -144,6 +144,7 @@ if ($type == 'four_wheel') {
                             <?php } ?>
                         </div>
                         <div class="myclub-gallery">
+                             <?php if (count($images) > 0) { ?>
                             <h1>Gallery</h1>
                             <?php if ($club['club_video'] && $club['club_video'] != '' && $club['club_video'] != 'undefined') { ?>
                                 <video muted loop controls id="myVideo" class="img-responsive">
@@ -166,6 +167,7 @@ if ($type == 'four_wheel') {
                                 }
                                 ?>
                             </div>
+                            <?php } ?>
                         </div>
                         <!--                        <div class="member-gird">
                                                     <h1>Member</h1>
@@ -198,13 +200,13 @@ if ($type == 'four_wheel') {
                                                 </div>-->
                     </div>
                     <div class="col-lg-4 col-md-4 box-anounce event-con">
-                        <!--<div class="col-lg-12 col-mg-12">
+                        <div class="col-lg-12 col-mg-12">
                             <div class="calendar-wrapper">
                                 <button id="btnPrev" type="button">Prev</button>
                                 <button id="btnNext" type="button">Next</button>
                                 <div id="divCal"></div>
                             </div>
-                        </div>-->
+                        </div>
                         <div class="event-con">
                             <?php if (count($announcements) > 0) { ?>
                                 <div class="box-anounce">
@@ -224,54 +226,58 @@ if ($type == 'four_wheel') {
                                     <?php } ?>
                                 </div>
                             <?php } ?>
-                            <center>
-                                <a href="#" class="announcement-btn">Read More</a>
-                            </center>
-                            <br/>
+<!--                            <center>
+                            <a href="#" class="announcement-btn">Read More</a>
+                        </center>
+                        <br/>-->
                         </div>
                         <div class="myclub-events">
-                            <h1>Events & Activities</h1>
-                            <?php foreach ($events as $row) { ?>
-                                <div class="anounce box-anounce-1">
-                                    <div class="anounce-con-1">
-                                        <span class="date-myevent"><?php echo date('d', strtotime($row['event_from_date'])) ?></span>
-                                        <span class="mon-myevent"><?php echo $row['event_date']; ?></span>
-                                        <p class="text-center"><?php echo date('M', strtotime($row['event_from_date'])) ?></p>
-                                    </div>  
-                                    <div class="anounce-con-1">
-                                        <div class="row">
-                                            <div class="col-md-5">
-                                                <h5><a>CLUB ADMIN</a></h5>
+                            <?php if (count($events) > 0) { ?>
+                                <h1>Events & Activities</h1>
+                                <?php foreach ($events as $row) { ?>
+                                    <div class="anounce box-anounce-1">
+                                        <div class="anounce-con-1">
+                                            <span class="date-myevent"><?php echo date('d', strtotime($row['event_from_date'])) ?></span>
+                                            <span class="mon-myevent"><?php echo $row['event_date']; ?></span>
+                                            <p class="text-center"><?php echo date('M', strtotime($row['event_from_date'])) ?></p>
+                                        </div>  
+                                        <div class="anounce-con-1">
+                                            <div class="row">
+                                                <div class="col-md-5">
+                                                    <h5><a>CLUB ADMIN</a></h5>
+                                                </div>
+                                                <div class="col-md-7">
+                                                    <p class="float-right"><em><?php echo date('M d, Y', strtotime($row['event_from_date'])) ?> | <?php echo date('M d, Y', strtotime($row['event_to_date'])) ?></em></p>
+                                                </div>
                                             </div>
-                                            <div class="col-md-7">
-                                                <p class="float-right"><em><?php echo date('M d, Y', strtotime($row['event_from_date'])) ?> | <?php echo date('M d, Y', strtotime($row['event_to_date'])) ?></em></p>
-                                            </div>
-                                        </div>
-                                        <h3><?php echo $row['title']; ?></h3>
-                                        <p class="desc"><?php echo $row['description']; ?></p>
-                                    </div>  
-                                </div>
-                            <?php } ?>
-                            <center>
-                                <a href="club-events?cid=<?php echo $row['club_id']; ?>" class="announcement-btn">Read More</a>
-                            </center>
-                            <br/>
-                        </div>
-                        <div class="my-club-member">
-                            <h1>Members</h1>
-                            <div class="member-list-scroll">
-                                <?php foreach ($club_members as $row) { ?>
-                                    <div class="row">
-                                        <div class="col-lg-12 col-xl-12 col-md-12 col-sm-12">
-                                            <div class="chat-container" onclick="window.location.href = 'my-account?type=two_wheel'">
-                                                <img src="<?php echo BASE_URL . $row['profile_picture']; ?>" alt="Profile" style="width:100%;">
-                                                <h3><?php echo $row['first_name']; ?> <?php echo $row['last_name']; ?></h3>
-                                                <p><?php echo $row['state']; ?></p>
-                                            </div>
-                                        </div>
+                                            <h3><?php echo $row['title']; ?></h3>
+                                            <p class="desc"><?php echo $row['description']; ?></p>
+                                        </div>  
                                     </div>
                                 <?php } ?>
-                            </div>
+                            <?php } ?>
+<!--                            <center>
+                            <a href="club-events?cid=<?php echo $row['club_id']; ?>" class="announcement-btn">Read More</a>
+                        </center>
+                        <br/>-->
+                        </div>
+                        <div class="my-club-member">
+                            <?php if (count($club_members) > 0) { ?>
+                                <h1>Members</h1>
+                                <div class="member-list-scroll">
+                                    <?php foreach ($club_members as $row) { ?>
+                                        <div class="row">
+                                            <div class="col-lg-12 col-xl-12 col-md-12 col-sm-12">
+                                                <div class="chat-container">
+                                                    <img src="<?php echo BASE_URL . $row['profile_picture']; ?>" alt="Profile" style="width:100%;">
+                                                    <h3><?php echo $row['first_name']; ?> <?php echo $row['last_name']; ?></h3>
+                                                    <p><?php echo $row['state']; ?></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <?php } ?>
+                                </div>
+                            <?php } ?>
                         </div>
                         <div class="col-lg-12 col-xl-12 col-md-12">
                             <div class="img-box-ad">
@@ -335,28 +341,7 @@ if ($type == 'four_wheel') {
             });
         </script>
         <script type="text/javascript">
-            function openNav() {
-                document.getElementById("mySidenav").style.height = "100%";
-                document.getElementById("mySidenav").style.top = "95px";
-            }
-            function closeNav() {
-                document.getElementById("mySidenav").style.height = "0";
-                document.getElementById("mySidenav").style.top = "-800px";
-            }
             $(document).ready(function () {
-                $('#nav-icon3').click(function () {
-                    $(this).toggleClass('open');
-                    if ($(this).hasClass('open')) {
-                        openNav();
-                    } else {
-                        closeNav();
-                    }
-                });
-                $('body').click(function () {
-                    if (!$('#nav-icon3').hasClass('open')) {
-                        closeNav();
-                    }
-                });
                 // Step show event
                 $("#smartwizard").on("showStep", function (e, anchorObject, stepNumber, stepDirection, stepPosition) {
                     $('.sw-btn-next').removeClass('hidden');
@@ -540,7 +525,6 @@ if ($type == 'four_wheel') {
 
             // Show month (year, month)
             Cal.prototype.showMonth = function (y, m) {
-
                 var d = new Date()
                         // First day of the week in the selected month
                         , firstDayOfMonth = new Date(y, m, 1).getDay()

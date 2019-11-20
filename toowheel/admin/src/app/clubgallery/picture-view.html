@@ -3,7 +3,7 @@
          <img class="member-profile" mat-card-image *ngIf="action == 'preview_thumb'" src="{{image_url}}{{data['thumb_path']}}" alt="Photo" />
          <video matListAvatar controls *ngIf="action == 'preview_video'" style="width: 100%; height: auto;">
          <source src="{{image_url}}{{data['media_path']}}" type="video/mp4" />
-    </video>        
+    </video>
     <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
         <button mat-button cdkFocusInitial [mat-dialog-close]="false">Cancel</button>      
     </div>

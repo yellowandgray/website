@@ -20,12 +20,12 @@
                             </button>
                             <img matListAvatar src="{{image_url}}{{data.media_path}}" *ngIf="data.media_path && data.media_path != ''" alt="image" (click)="confirmDialog(data, 'preview')" />
                                  <h3 matLine>{{data.title}}</h3>
-                            <p matLine>{{data.description}}</p>                                   
+                            <p matLine>{{data.description}}</p>
                         </mat-list-item>
                     </ng-container>
                 </mat-list>
             </mat-tab>
-            <mat-tab label="Videos">               
+            <mat-tab label="Videos">
                 <mat-list>
                     <ng-container *ngFor="let data of result">
                         <mat-list-item class="list-container" *ngIf="data.media_type === 'video'">
