@@ -224,10 +224,10 @@ if ($type == 'four_wheel') {
                                     <?php } ?>
                                 </div>
                             <?php } ?>
-                            <center>
+<!--                            <center>
                                 <a href="#" class="announcement-btn">Read More</a>
                             </center>
-                            <br/>
+                            <br/>-->
                         </div>
                         <div class="myclub-events">
                             <h1>Events & Activities</h1>
@@ -252,10 +252,10 @@ if ($type == 'four_wheel') {
                                     </div>  
                                 </div>
                             <?php } ?>
-                            <center>
+<!--                            <center>
                                 <a href="club-events?cid=<?php echo $row['club_id']; ?>" class="announcement-btn">Read More</a>
                             </center>
-                            <br/>
+                            <br/>-->
                         </div>
                         <div class="my-club-member">
                             <h1>Members</h1>
@@ -263,7 +263,7 @@ if ($type == 'four_wheel') {
                                 <?php foreach ($club_members as $row) { ?>
                                     <div class="row">
                                         <div class="col-lg-12 col-xl-12 col-md-12 col-sm-12">
-                                            <div class="chat-container" onclick="window.location.href = 'my-account?type=two_wheel'">
+                                            <div class="chat-container">
                                                 <img src="<?php echo BASE_URL . $row['profile_picture']; ?>" alt="Profile" style="width:100%;">
                                                 <h3><?php echo $row['first_name']; ?> <?php echo $row['last_name']; ?></h3>
                                                 <p><?php echo $row['state']; ?></p>

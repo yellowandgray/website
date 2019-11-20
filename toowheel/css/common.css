@@ -5357,7 +5357,7 @@ hr {
     border-radius: 5px;
     padding: 10px;
     margin: 10px 0;
-    cursor: pointer;
+/*    cursor: pointer;*/
 }
 
 .darker {
@@ -5652,4 +5652,8 @@ hr {
     color: #444;
     margin: 0;
     padding-top: 10px;
+}
+
+.calendar-wrapper {
+    display: none;
 }
