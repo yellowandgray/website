@@ -1,0 +1,70 @@
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
+import { LoginComponent } from './login/login.component';
+import { TestimonialComponent, TestimonialDelete } from './testimonial/testimonial.component';
+import { ProductComponent } from './product/product.component';
+import { MemberComponent } from './member/member.component';
+import { OrderComponent } from './order/order.component';
+
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatCardModule} from '@angular/material/card';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {HttpClientModule} from '@angular/common/http';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    SidenavComponent,
+    LoginComponent,
+    TestimonialComponent,
+    TestimonialDelete,
+    ProductComponent,
+    MemberComponent,
+    OrderComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
+    BrowserAnimationsModule,
+    MatTooltipModule,
+    MatSidenavModule,
+    MatListModule,
+    FlexLayoutModule,
+    MatCardModule,
+    MatProgressBarModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatSnackBarModule,
+    HttpClientModule,
+    MatDialogModule,
+    MatProgressSpinnerModule
+  ],
+  entryComponents: [TestimonialComponent, TestimonialDelete, ProductComponent, MemberComponent, OrderComponent],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
