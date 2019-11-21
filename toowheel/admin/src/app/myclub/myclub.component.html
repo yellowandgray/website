@@ -4,169 +4,318 @@
     </mat-sidenav>
     <mat-sidenav-content>
         <app-header></app-header>
-        <div class="">
-            <img src="{{image_url}}{{data.cover_image}}" alt="image" style="width: 100%" />
+        <div fxLayout="row" fxLayoutWrap fxLayoutGap="2%" fxLayoutAlign="start start">
+            <mat-card fxFlex="50%">
+                <h3>Cover Image</h3>
+                <img src="{{image_url}}{{data.cover_image}}" alt="image" style="width: 100%" />
+                <button mat-icon-button matTooltip="Edit" aria-label="label">
+                    <mat-icon (click)="openDialog(data.cover_image, 'image', 'cover_image')">edit</mat-icon>
+                </button>
+            </mat-card>
+            <mat-card fxFlex="50%">
+                <h3>Logo</h3>
+                <img src="{{image_url}}{{data.logo}}" alt="image" style="width: 100%" />
+                <button mat-icon-button matTooltip="Edit" aria-label="label">
+                    <mat-icon (click)="openDialog(data.logo, 'image', 'logo')">edit</mat-icon>
+                </button>
+            </mat-card>
         </div>
         <section class="section">
             <br/>
             <div fxLayout="row" fxLayoutWrap fxLayoutGap="2%" fxLayoutAlign="start start">
-                <mat-card fxFlex="25%">
-                    <mat-card-header>
-                        <mat-card-title>Phone</mat-card-title>
-                    </mat-card-header>
-                    <mat-card-content>
-                        <p>{{data.phone}}</p>
-                    </mat-card-content>
-                    <mat-card-actions>
-                        <button mat-icon-button matTooltip="Edit" aria-label="label">
-                            <mat-icon (click)="openDialog(data.phone, 'input', 'phone')">edit</mat-icon>
-                        </button>
-                    </mat-card-actions>
+                <mat-card fxFlex="33%">
+                    <mat-form-field fxFlex="100%">
+                        <input matInput placeholder="Phone" value="{{data.phone}}" [readonly]="!editable">
+                    </mat-form-field>
+                    <button mat-icon-button matTooltip="Edit" aria-label="label" *ngIf="!enableEdit" (click)="enableEdit = true; editable = true">
+                            <mat-icon>edit</mat-icon>
+                    </button>
+                    <button mat-icon-button matTooltip="Close" aria-label="label" *ngIf="enableEdit" (click)="enableEdit = false; editable = false" >
+                            <mat-icon>close</mat-icon>
+                    </button>
+                    <button mat-icon-button matTooltip="Done" aria-label="label" *ngIf="enableEdit" (click)="onSubmit()" [disabled]="loading">
+                        <mat-icon>done</mat-icon>
+                    </button>
+                    <mat-progress-spinner class="example-margin" *ngIf="loading" [mode]="'indeterminate'" [strokeWidth]="3" [diameter]="25"></mat-progress-spinner>
+                    <!--                <mat-card-header>
+                                        <mat-card-title>Phone</mat-card-title>
+                                        </mat-card-header>
+                                        <mat-card-content>
+                                            <p></p>
+                                        </mat-card-content>
+                                        <mat-card-actions>
+                                            <button mat-icon-button matTooltip="Edit" aria-label="label">
+                                                <mat-icon (click)="openDialog(data.phone, 'input', 'phone')">edit</mat-icon>
+                                            </button>
+                                        </mat-card-actions>
+                    -->
                 </mat-card>
-                <mat-card fxFlex="25%">
-                    <mat-card-header>
-                        <mat-card-title>Email</mat-card-title>
-                    </mat-card-header>
-                    <mat-card-content>
-                        <p>{{data.email_id}}</p>
-                    </mat-card-content>
-                    <mat-card-actions>
-                        <button mat-icon-button matTooltip="Edit" aria-label="label">
-                            <mat-icon (click)="openDialog(data.email_id, 'input', 'email_id')">edit</mat-icon>
-                        </button>
-                    </mat-card-actions>
+                <mat-card fxFlex="33%">
+                    <mat-form-field fxFlex="100%">
+                        <input matInput placeholder="Email" value="{{data.email_id}}" [readonly]="!editable" >
+                    </mat-form-field>
+                    <button mat-icon-button matTooltip="Edit" aria-label="label" *ngIf="!enableEdit1" (click)="enableEdit1 = true; editable = true">
+                            <mat-icon>edit</mat-icon>
+                    </button>
+                    <button mat-icon-button matTooltip="Close" aria-label="label" *ngIf="enableEdit1" (click)="enableEdit1=false; editable = false" >
+                        <mat-icon>close</mat-icon>
+                    </button>
+                    <button mat-icon-button matTooltip="Done" aria-label="label" *ngIf="enableEdit1"  [disabled]="loading1">
+                        <mat-icon>done</mat-icon>
+                    </button>
+                    <mat-progress-spinner class="example-margin" *ngIf="loading1" [mode]="'indeterminate'" [strokeWidth]="3" [diameter]="25"></mat-progress-spinner>
+                    <!--                    <mat-card-header>
+                                            <mat-card-title>Email</mat-card-title>
+                                        </mat-card-header>
+                                        <mat-card-content>
+                                            <p>{{data.email_id}}</p>
+                                        </mat-card-content>
+                                        <mat-card-actions>
+                                            <button mat-icon-button matTooltip="Edit" aria-label="label">
+                                                <mat-icon (click)="openDialog(data.email_id, 'input', 'email_id')">edit</mat-icon>
+                                            </button>
+                                        </mat-card-actions>-->
                 </mat-card>
-                <mat-card fxFlex="25%">
-                    <mat-card-header>
-                        <mat-card-title>Address</mat-card-title>
-                    </mat-card-header>
-                    <mat-card-content>
-                        <p>{{data.address}}</p>
-                    </mat-card-content>
-                    <mat-card-actions>
-                        <button mat-icon-button matTooltip="Edit" aria-label="label">
-                            <mat-icon (click)="openDialog(data.address, 'input', 'address')">edit</mat-icon>
-                        </button>
-                    </mat-card-actions>
-                </mat-card>
-                <mat-card fxFlex="25%">
-                    <mat-card-header>
-                        <mat-card-title>Landmark</mat-card-title>
-                    </mat-card-header>
-                    <mat-card-content>
-                        <p>{{data.landmark}}</p>
-                    </mat-card-content>
-                    <mat-card-actions>
-                        <button mat-icon-button matTooltip="Edit" aria-label="label">
-                            <mat-icon (click)="openDialog(data.landmark, 'input', 'landmark')">edit</mat-icon>
-                        </button>
-                    </mat-card-actions>
-                </mat-card>
-            </div>
-            <br/>
-            <div fxLayout="row" fxLayoutWrap fxLayoutGap="2%" fxLayoutAlign="start start">
-                <mat-card fxFlex="25%">
-                    <mat-card-header>
-                        <mat-card-title>Facebook</mat-card-title>
-                    </mat-card-header>
-                    <mat-card-content>
-                        <p>{{data.facebook_link}}</p>
-                    </mat-card-content>
-                    <mat-card-actions>
-                        <button mat-icon-button matTooltip="Edit" aria-label="label">
-                            <mat-icon (click)="openDialog(data.facebook_link, 'input', 'facebook_link')">edit</mat-icon>
-                        </button>
-                    </mat-card-actions>
-                </mat-card>
-                <mat-card fxFlex="25%">
-                    <mat-card-header>
-                        <mat-card-title>YouTube</mat-card-title>
-                    </mat-card-header>
-                    <mat-card-content>
-                        <p>{{data.youtube_link}}</p>
-                    </mat-card-content>
-                    <mat-card-actions>
-                        <button mat-icon-button matTooltip="Edit" aria-label="label">
-                            <mat-icon (click)="openDialog(data.youtube_link, 'input', 'youtube_link')">edit</mat-icon>
-                        </button>
-                    </mat-card-actions>
-                </mat-card>
-                <mat-card fxFlex="25%">
-                    <mat-card-header>
-                        <mat-card-title>Twitter</mat-card-title>
-                    </mat-card-header>
-                    <mat-card-content>
-                        <p>{{data.twitter_link}}</p>
-                    </mat-card-content>
-                    <mat-card-actions>
-                        <button mat-icon-button matTooltip="Edit" aria-label="label">
-                            <mat-icon (click)="openDialog(data.twitter_link, 'input', 'twitter_link')">edit</mat-icon>
-                        </button>
-                    </mat-card-actions>
-                </mat-card>
-                <mat-card fxFlex="25%">
-                    <mat-card-header>
-                        <mat-card-title>LinkedIn</mat-card-title>
-                    </mat-card-header>
-                    <mat-card-content>
-                        <p>{{data.instagram_link}}</p>
-                    </mat-card-content>
-                    <mat-card-actions>
-                        <button mat-icon-button matTooltip="Edit" aria-label="label">
-                            <mat-icon (click)="openDialog(data.instagram_link, 'input', 'instagram_link')">edit</mat-icon>
-                        </button>
-                    </mat-card-actions>
+                <mat-card fxFlex="33%">
+                    <mat-form-field fxFlex="100%">
+                        <input matInput placeholder="Address" value="{{data.address}}" [readonly]="!editable" >
+                    </mat-form-field>
+                    <button mat-icon-button matTooltip="Edit" aria-label="label" *ngIf="!enableEdit2" (click)="enableEdit2 = true; editable = true">
+                            <mat-icon>edit</mat-icon>
+                    </button>
+                    <button mat-icon-button matTooltip="Close" aria-label="label" *ngIf="enableEdit2" (click)="enableEdit2=false; editable = false" >
+                        <mat-icon>close</mat-icon>
+                    </button>
+                    <button mat-icon-button mat-icon-button matTooltip="Done" aria-label="label" *ngIf="enableEdit2"  [disabled]="loading2">
+                        <mat-icon>done</mat-icon>
+                    </button>
+                    <mat-progress-spinner class="example-margin" *ngIf="loading2" [mode]="'indeterminate'" [strokeWidth]="3" [diameter]="25"></mat-progress-spinner>
+                    <!--                    <mat-card-header>
+                                            <mat-card-title>Address</mat-card-title>
+                                        </mat-card-header>
+                                        <mat-card-content>
+                                            <p>{{data.address}}</p>
+                                        </mat-card-content>
+                                        <mat-card-actions>
+                                            <button mat-icon-button matTooltip="Edit" aria-label="label">
+                                                <mat-icon (click)="openDialog(data.address, 'input', 'address')">edit</mat-icon>
+                                            </button>
+                                        </mat-card-actions>-->
                 </mat-card>
             </div>
             <br/>
             <div fxLayout="row" fxLayoutWrap fxLayoutGap="2%" fxLayoutAlign="start start">
-                <mat-card fxFlex="25%">
-                    <mat-card-header>
-                        <mat-card-title>Logo</mat-card-title>
-                    </mat-card-header>
-                    <img mat-card-image src="{{image_url}}{{data.logo}}" alt="image" />
-                    <mat-card-actions>
-                        <button mat-icon-button matTooltip="Edit" aria-label="label">
-                            <mat-icon (click)="openDialog(data.logo, 'image', 'logo')">edit</mat-icon>
-                        </button>
-                    </mat-card-actions>
+                <mat-card fxFlex="33%">
+                    <mat-form-field fxFlex="100%">
+                        <input matInput placeholder="Landmark" value="{{data.landmark}}" [readonly]="!editable" >
+                    </mat-form-field>
+                    <button mat-icon-button matTooltip="Edit" aria-label="label" *ngIf="!enableEdit3" (click)="enableEdit3 = true; editable = true">
+                            <mat-icon>edit</mat-icon>
+                    </button>
+                    <button mat-icon-button matTooltip="Close" aria-label="label" *ngIf="enableEdit3" (click)="enableEdit3=false; editable = false" >
+                        <mat-icon>close</mat-icon>
+                    </button>
+                    <button mat-icon-button matTooltip="Done" aria-label="label" *ngIf="enableEdit3"  [disabled]="loading3">
+                        <mat-icon>done</mat-icon>
+                    </button>
+                    <mat-progress-spinner class="example-margin" *ngIf="loading3" [mode]="'indeterminate'" [strokeWidth]="3" [diameter]="25"></mat-progress-spinner>
+                    <!--                    <mat-card-header>
+                                            <mat-card-title>Landmark</mat-card-title>
+                                        </mat-card-header>
+                                        <mat-card-content>
+                                            <p>{{data.landmark}}</p>
+                                        </mat-card-content>
+                                        <mat-card-actions>
+                                            <button mat-icon-button matTooltip="Edit" aria-label="label">
+                                                <mat-icon (click)="openDialog(data.landmark, 'input', 'landmark')">edit</mat-icon>
+                                            </button>
+                                        </mat-card-actions>-->
                 </mat-card>
-                <mat-card fxFlex="25%">
-                    <mat-card-header>
-                        <mat-card-title>Cover Image</mat-card-title>
-                    </mat-card-header>
-                    <img mat-card-image src="{{image_url}}{{data.cover_image}}" alt="image" />
-                    <mat-card-actions>
-                        <button mat-icon-button matTooltip="Edit" aria-label="label">
-                            <mat-icon (click)="openDialog(data.cover_image, 'image', 'cover_image')">edit</mat-icon>
-                        </button>
-                    </mat-card-actions>
+                <mat-card fxFlex="33%">
+                    <mat-form-field fxFlex="100%">
+                        <input matInput placeholder="Facebook" value="{{data.facebook_link}}" [readonly]="!editable" >
+                    </mat-form-field>
+                    <button mat-icon-button matTooltip="Edit" aria-label="label" *ngIf="!enableEdit4" (click)="enableEdit4 = true; editable = true">
+                            <mat-icon>edit</mat-icon>
+                    </button>
+                    <button mat-icon-button matTooltip="Close" aria-label="label" *ngIf="enableEdit4" (click)="enableEdit4=false; editable = false" >
+                        <mat-icon>close</mat-icon>
+                    </button>
+                    <button mat-icon-button matTooltip="Done" aria-label="label" *ngIf="enableEdit4"  [disabled]="loading4">
+                        <mat-icon>done</mat-icon>
+                    </button>
+                    <mat-progress-spinner class="example-margin" *ngIf="loading4" [mode]="'indeterminate'" [strokeWidth]="3" [diameter]="25"></mat-progress-spinner>
+                    <!--                    <mat-card-header>
+                                            <mat-card-title>Facebook</mat-card-title>
+                                        </mat-card-header>
+                                        <mat-card-content>
+                                            <p>{{data.facebook_link}}</p>
+                                        </mat-card-content>
+                                        <mat-card-actions>
+                                            <button mat-icon-button matTooltip="Edit" aria-label="label">
+                                                <mat-icon (click)="openDialog(data.facebook_link, 'input', 'facebook_link')">edit</mat-icon>
+                                            </button>
+                                        </mat-card-actions>-->
                 </mat-card>
-                <mat-card fxFlex="25%">
-                    <mat-card-header>
-                        <mat-card-title>About</mat-card-title>
-                    </mat-card-header>
-                    <mat-card-content>
-                        <p>{{data.about}}</p>
-                    </mat-card-content>
-                    <mat-card-actions>
-                        <button mat-icon-button matTooltip="Edit" aria-label="label">
-                            <mat-icon (click)="openDialog(data.about, 'text', 'about')">edit</mat-icon>
-                        </button>
-                    </mat-card-actions>
+                <mat-card fxFlex="33%">
+                    <mat-form-field fxFlex="100%">
+                        <input matInput placeholder="YouTube" value="{{data.youtube_link}}" [readonly]="!editable" >
+                    </mat-form-field>
+                    <button mat-icon-button matTooltip="Edit" aria-label="label" *ngIf="!enableEdit5" (click)="enableEdit5 = true; editable = true">
+                            <mat-icon>edit</mat-icon>
+                    </button>
+                    <button mat-icon-button matTooltip="Close" aria-label="label" *ngIf="enableEdit5" (click)="enableEdit5=false; editable = false" >
+                        <mat-icon>close</mat-icon>
+                    </button>
+                    <button mat-icon-button matTooltip="Done" aria-label="label" *ngIf="enableEdit5"  [disabled]="loading5">
+                        <mat-icon>done</mat-icon>
+                    </button>
+                    <mat-progress-spinner class="example-margin" *ngIf="loading5" [mode]="'indeterminate'" [strokeWidth]="3" [diameter]="25"></mat-progress-spinner>
+                    <!--                    <mat-card-header>
+                                            <mat-card-title>YouTube</mat-card-title>
+                                        </mat-card-header>
+                                        <mat-card-content>
+                                            <p>{{data.youtube_link}}</p>
+                                        </mat-card-content>
+                                        <mat-card-actions>
+                                            <button mat-icon-button matTooltip="Edit" aria-label="label">
+                                                <mat-icon (click)="openDialog(data.youtube_link, 'input', 'youtube_link')">edit</mat-icon>
+                                            </button>
+                                        </mat-card-actions>-->
                 </mat-card>
-                <mat-card fxFlex="25%">
-                    <mat-card-header>
-                        <mat-card-title>Leader</mat-card-title>
-                    </mat-card-header>
-                    <mat-card-content>
-                        <p>{{data.leader_name}}</p>
-                    </mat-card-content>
-                    <mat-card-actions>
-                        <button mat-icon-button matTooltip="Edit" aria-label="label">
-                            <mat-icon (click)="openDialog(data.leader_name, 'input', 'leader_name')">edit</mat-icon>
-                        </button>
-                    </mat-card-actions>
+            </div>
+            <br/>
+            <div fxLayout="row" fxLayoutWrap fxLayoutGap="2%" fxLayoutAlign="start start">
+                <mat-card fxFlex="33%">
+                    <mat-form-field fxFlex="100%">
+                        <input matInput placeholder="Twitter" value="{{data.twitter_link}}" [readonly]="!editable" >
+                    </mat-form-field>
+                    <button mat-icon-button matTooltip="Edit" aria-label="label" *ngIf="!enableEdit6" (click)="enableEdit6 = true; editable = true">
+                            <mat-icon>edit</mat-icon>
+                    </button>
+                    <button mat-icon-button matTooltip="Close" aria-label="label" *ngIf="enableEdit6" (click)="enableEdit6=false; editable = false" >
+                        <mat-icon>close</mat-icon>
+                    </button>
+                    <button mat-icon-button matTooltip="Done" aria-label="label" *ngIf="enableEdit6"  [disabled]="loading6">
+                        <mat-icon>done</mat-icon>
+                    </button>
+                    <mat-progress-spinner class="example-margin" *ngIf="loading6" [mode]="'indeterminate'" [strokeWidth]="3" [diameter]="25"></mat-progress-spinner>
+                    <!--                    <mat-card-header>
+                                            <mat-card-title>Twitter</mat-card-title>
+                                        </mat-card-header>
+                                        <mat-card-content>
+                                            <p>{{data.twitter_link}}</p>
+                                        </mat-card-content>
+                                        <mat-card-actions>
+                                            <button mat-icon-button matTooltip="Edit" aria-label="label">
+                                                <mat-icon (click)="openDialog(data.twitter_link, 'input', 'twitter_link')">edit</mat-icon>
+                                            </button>
+                                        </mat-card-actions>-->
+                </mat-card>
+                <mat-card fxFlex="33%">
+                    <mat-form-field fxFlex="100%">
+                        <input matInput placeholder="Instagram" value="{{data.instagram_link}}" [readonly]="!editable" >
+                    </mat-form-field>
+                    <button mat-icon-button matTooltip="Edit" aria-label="label" *ngIf="!enableEdit7" (click)="enableEdit7 = true; editable = true">
+                            <mat-icon>edit</mat-icon>
+                    </button>
+                    <button mat-icon-button matTooltip="Close" aria-label="label" *ngIf="enableEdit7" (click)="enableEdit7=false; editable = false" >
+                        <mat-icon>close</mat-icon>
+                    </button>
+                    <button mat-icon-button matTooltip="Done" aria-label="label" *ngIf="enableEdit7"  [disabled]="loading7">
+                        <mat-icon>done</mat-icon>
+                    </button>
+                    <mat-progress-spinner class="example-margin" *ngIf="loading7" [mode]="'indeterminate'" [strokeWidth]="3" [diameter]="25"></mat-progress-spinner>
+                    <!--                    <mat-card-header>
+                                            <mat-card-title>Instagram</mat-card-title>
+                                        </mat-card-header>
+                                        <mat-card-content>
+                                            <p>{{data.instagram_link}}</p>
+                                        </mat-card-content>
+                                        <mat-card-actions>
+                                            <button mat-icon-button matTooltip="Edit" aria-label="label">
+                                                <mat-icon (click)="openDialog(data.instagram_link, 'input', 'instagram_link')">edit</mat-icon>
+                                            </button>
+                                        </mat-card-actions>-->
+                </mat-card>
+                <!--                <mat-card fxFlex="25%">
+                                    <mat-card-header>
+                                        <mat-card-title>Logo</mat-card-title>
+                                    </mat-card-header>
+                                    <img mat-card-image src="{{image_url}}{{data.logo}}" alt="image" />
+                                    <mat-card-actions>
+                                        <button mat-icon-button matTooltip="Edit" aria-label="label">
+                                            <mat-icon (click)="openDialog(data.logo, 'image', 'logo')">edit</mat-icon>
+                                        </button>
+                                    </mat-card-actions>
+                                </mat-card>-->
+                <!--                <mat-card fxFlex="25%">
+                                    <mat-card-header>
+                                        <mat-card-title>Cover Image</mat-card-title>
+                                    </mat-card-header>
+                                    <img mat-card-image src="{{image_url}}{{data.cover_image}}" alt="image" />
+                                    <mat-card-actions>
+                                        <button mat-icon-button matTooltip="Edit" aria-label="label">
+                                            <mat-icon (click)="openDialog(data.cover_image, 'image', 'cover_image')">edit</mat-icon>
+                                        </button>
+                                    </mat-card-actions>
+                                </mat-card>-->
+                <mat-card fxFlex="33%">
+                    <mat-form-field fxFlex="100%">
+                        <input matInput placeholder="Leader" value="{{data.leader_name}}" [readonly]="!editable" >
+                    </mat-form-field>
+                    <button mat-icon-button matTooltip="Edit" aria-label="label" *ngIf="!enableEdit8" (click)="enableEdit8 = true; editable = true">
+                            <mat-icon>edit</mat-icon>
+                    </button>
+                    <button mat-icon-button matTooltip="Close" aria-label="label" *ngIf="enableEdit8" (click)="enableEdit8=false; editable = false" >
+                        <mat-icon>close</mat-icon>
+                    </button>
+                    <button mat-icon-button matTooltip="Done" aria-label="label" *ngIf="enableEdit8"  [disabled]="loading8">
+                        <mat-icon>done</mat-icon>
+                    </button>
+                    <mat-progress-spinner class="example-margin" *ngIf="loading8" [mode]="'indeterminate'" [strokeWidth]="3" [diameter]="25"></mat-progress-spinner>
+                    <!--                    <mat-card-header>
+                                            <mat-card-title>Leader</mat-card-title>
+                                        </mat-card-header>
+                                        <mat-card-content>
+                                            <p>{{data.leader_name}}</p>
+                                        </mat-card-content>
+                                        <mat-card-actions>
+                                            <button mat-icon-button matTooltip="Edit" aria-label="label">
+                                                <mat-icon (click)="openDialog(data.leader_name, 'input', 'leader_name')">edit</mat-icon>
+                                            </button>
+                                        </mat-card-actions>-->
+                </mat-card>
+            </div>
+            <br/>
+            <div fxLayout="row" fxLayoutWrap fxLayoutGap="2%" fxLayoutAlign="start start">
+                <mat-card fxFlex="100%">
+                    <mat-form-field fxFlex="100%">
+                        <textarea rows="6" matInput placeholder="" readonly="true" required value="{{data.about}}" [readonly]="!editable"></textarea>
+                    </mat-form-field>
+                    <br/>
+                    <button mat-icon-button matTooltip="Edit" aria-label="label" *ngIf="!enableEdit9" (click)="enableEdit9 = true; editable = true">
+                            <mat-icon>edit</mat-icon>
+                    </button>
+                    <button mat-icon-button matTooltip="Close" aria-label="label" *ngIf="enableEdit9" (click)="enableEdit9=false; editable = false" >
+                        <mat-icon>close</mat-icon>
+                    </button>
+                    <button mat-icon-button matTooltip="Done" aria-label="label" *ngIf="enableEdit9"  [disabled]="loading9">
+                        <mat-icon>done</mat-icon>
+                    </button>
+                    <mat-progress-spinner class="example-margin" *ngIf="loading9" [mode]="'indeterminate'" [strokeWidth]="3" [diameter]="25"></mat-progress-spinner>
+
+                    <!--                    <mat-card-header>
+                                            <mat-card-title>About</mat-card-title>
+                                        </mat-card-header>
+                                        <mat-card-content>
+                                            <p>{{data.about}}</p>
+                                        </mat-card-content>
+                                        <mat-card-actions>
+                                            <button mat-icon-button matTooltip="Edit" aria-label="label">
+                                                <mat-icon (click)="openDialog(data.about, 'text', 'about')">edit</mat-icon>
+                                            </button>
+                                        </mat-card-actions>-->
                 </mat-card>
             </div>
         </section>

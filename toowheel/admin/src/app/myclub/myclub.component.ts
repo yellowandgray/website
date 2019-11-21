@@ -12,8 +12,12 @@ import { HttpClient } from '@angular/common/http';
 })
 export class MyclubComponent implements OnInit {
   image_url: string = 'https://www.toowheel.com/beta/toowheel/api/v1/';  
+     loading = false;
+    value: string='';
+    field_type: string;
+    field_name: string;
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
-
+    
   ngOnInit() {
       this.getClub();
   }
@@ -32,11 +36,35 @@ export class MyclubComponent implements OnInit {
         }
         );
   }
+    onSubmit() {          
+          this.loading = true;
+          var formData = new FormData();
+          formData.append(this.field_name, this.value);
+          this.httpClient.post('https://www.toowheel.com/beta/toowheel/api/v1/update_record/club/club_id='+sessionStorage.getItem("toowheel_club_id"), formData).subscribe(
+              (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    console.log("test");
+                     
+                }else{
+this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+            (error)=>{
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+        });
+            }
+            );
+      }
   openDialog(val, typ, fld): void  {
       var data = {field_name: fld, field_type: typ, value: val};
     const dialogRef = this.dialog.open(MyClubForm, {
-        minWidth: "80%",
-        maxWidth: "80%",
+        minWidth: "40%",
+        maxWidth: "40%",
         data: data
     });
     dialogRef.afterClosed().subscribe(result => {
