@@ -11,43 +11,8 @@
             <div class="ftco-footer-widget ftco-footer-widget-img mb-4">
                 <a href="index.php"> <img src="images/logo-01.png" alt=""/></a>
                 <p>Fresche Bioscience is a new generation SI QAC antimicrobial which delivers high performance, broad spectrum antibacterial, anti-fungal, mould and odour protection on surfaces to which they are either applied or infused. They are widely recognised as one of the worlds most advanced non-volatile, surface bonded antimicrobial, safe for people, plants, pets and the environment.</p>
-                <!--                  <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                                        <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                                        <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                                        <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-                                    </ul>-->
             </div>
         </div>
-        <!--            <div class="footer-1">
-                        <div class="ftco-footer-widget mb-4 ml-md-5">
-                            <h2 class="ftco-heading-2">Menu</h2>
-                            <ul class="list-unstyled">
-                                <li><a href="#" class="py-2 d-block">Products</a></li>
-                                <li><a href="#" class="py-2 d-block">Applications</a></li>
-                                <li><a href="#" class="py-2 d-block">Artifacts</a></li>
-                                <li><a href="#" class="py-2 d-block">Testimonial</a></li>
-                                <li><a href="#" class="py-2 d-block">About</a></li>
-                                <li><a href="#" class="py-2 d-block">Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>-->
-        <!--            <div class="footer-1">
-                        <div class="ftco-footer-widget mb-4">
-                            <h2 class="ftco-heading-2">Our Brands</h2>
-                            <div class="d-flex">
-                                <ul class="list-unstyled mr-l-5 pr-l-3 mr-4">
-                                    <li><a href="#" class="py-2 d-block">Shipping Information</a></li>
-                                    <li><a href="#" class="py-2 d-block">Returns &amp; Exchange</a></li>
-                                    <li><a href="#" class="py-2 d-block">Terms &amp; Conditions</a></li>
-                                    <li><a href="#" class="py-2 d-block">Privacy Policy</a></li>
-                                </ul>
-                                <ul class="list-unstyled">
-                                    <li><a href="#" class="py-2 d-block">FAQs</a></li>
-                                    <li><a href="#" class="py-2 d-block">Contact</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>-->
         <div class="footer-2">
             <div class="ftco-footer-widget mb-4">
                 <form class="footer-h">
@@ -107,7 +72,16 @@
 <!-- loader -->
 <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
+<!--chatbot-->
 
+<script src= "https://chat.hippochat.io/js/widget.js"></script>
+<script>
+                         window.initHippo({
+                                appSecretKey: "b5302cc09c9bd01d68dcfc7e00d4926e"
+                        });
+</script>
+
+<!--chatbot-->
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery-migrate-3.0.1.min.js"></script>
 <script src="js/popper.min.js"></script>

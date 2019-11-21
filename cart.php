@@ -6,6 +6,9 @@
     <?php
     $page = 'about';
     include 'head.php';
+    require_once 'api/include/common.php';
+    $obj = new Common();
+    $cart = $obj->selectRow('*', 'product', 'id = 1');
     ?>
     <body class="goto-here">
 
@@ -43,51 +46,47 @@
                             <div class="row">
                                 <div class="col-md-8">
                                     <div class="items-n">
-                                        <?php
-                                        foreach ($result as $key => $val)
-                                            if ($val['type'] == 'combo' && $val['quantity'] !== '0') {
-                                                ?>
-                                                <div class="row" style="padding: 10px;">
-                                                    <div class="col-md-3 cart-img">
-                                                        <img src="<?php echo $val['image']; ?>" alt=""/>
-                                                        <div class="add-num">
-                                                            <input type="number" value="<?php echo $val['quantity']; ?>">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-5">
-                                                        <h5><?php echo $key . " " . $val['name']; ?></h5>
-                                                        <!--<p>Volume: <span>1l + 1.5l</span></p>-->
-                                                        <p><i class="fa fa-inr" aria-hidden="true"></i></i> <?php echo $val['price'] * $val['quantity']; ?></p>
-                                                        <p class="cart-remove"><a href="#">Remove</a></p>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <p class="delivery">Delivery in 4 - 5 days</p>
-                                                        <p class="replace">10 Days Replacement Policy</p>
-                                                    </div>
-                                                </div>
 
-                                            <?php } elseif ($val['type'] == 'mini' && $val['quantity'] !== '0') { ?>
-                                                <hr>
-                                                <div class="row" style="padding: 10px;">
-                                                    <div class="col-md-3 cart-img">
-                                                        <img src="<?php echo $val['image']; ?>" alt=""/>
-                                                        <div class="add-num">
-                                                            <input type="number" value="<?php echo $val['quantity']; ?>">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-5">
-                                                        <h5>Fresche Mini Kit</h5>
-                                                        <p>Volume: <span>2 sets of 5 ml </span></p>
-                                                        <p><i class="fa fa-inr" aria-hidden="true"></i></i> <?php echo $val['price'] * $val['quantity']; ?></p>
-                                                        <p class="cart-remove"><a href="#">Remove</a></p>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <p class="delivery">Delivery in 4 - 5 days</p>
-                                                        <p class="replace">10 Days Replacement Policy</p>
-
-                                                    </div>
+                                        <div class="row" style="padding: 10px;">
+                                            <div class="col-md-3 cart-img">
+                                                <img src="<?php echo $cart['image']; ?>" alt=""/>
+                                                <div class="add-num">
+                                                    <input type="number" value="<?php echo $cart['quantity']; ?>">
                                                 </div>
-                                            <?php } ?>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <h5><?php echo $cart['name']; ?></h5>
+                                                <!--<p>Volume: <span>1l + 1.5l</span></p>-->
+                                                <p><i class="fa fa-inr" aria-hidden="true"></i> <?php echo $cart['price'] * $cart['quantity']; ?></p>
+                                                <p class="cart-remove"><a> Remove</a></p>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <p class="delivery">Delivery in 4 - 5 days</p>
+                                                <p class="replace">10 Days Replacement Policy</p>
+                                            </div>
+                                        </div>
+
+                                        <hr>
+                                        <!--                                                <div class="row" style="padding: 10px;">
+                                                                                            <div class="col-md-3 cart-img">
+                                                                                                <img src="<?php echo $val['image']; ?>" alt=""/>
+                                                                                                <div class="add-num">
+                                                                                                    <input type="number" value="<?php echo $val['quantity']; ?>">
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="col-md-5">
+                                                                                                <h5>Fresche Mini Kit</h5>
+                                                                                                <p>Volume: <span>2 sets of 5 ml </span></p>
+                                                                                                <p><i class="fa fa-inr" aria-hidden="true"></i></i> <?php echo $val['price'] * $val['quantity']; ?></p>
+                                                                                                <p class="cart-remove"><a href="#">Remove</a></p>
+                                                                                            </div>
+                                                                                            <div class="col-md-4">
+                                                                                                <p class="delivery">Delivery in 4 - 5 days</p>
+                                                                                                <p class="replace">10 Days Replacement Policy</p>
+                                        
+                                                                                            </div>
+                                                                                        </div>-->
+
 
                                         <div class="row">
                                             <div class="col-md-12 ">

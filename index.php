@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-    <?php include 'head.php'; ?>
+    <?php
+    include 'head.php';
+    ?>
     <body class="goto-here">
 
         <!-- END nav -->
@@ -19,7 +21,19 @@
                         <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
                             <div class="col-lg-8 col-md-8 ftco-animate product-text">
                                 <!--<h1 class="mb-2">PRODUCT</h1>-->
-                                <h2 class="subheading mb-4" style="text-align: center;">GAIN SUPER POWER WITH <span>FRESCHE</span></h2>
+                                <!--<h2 class="subheading mb-4" style="text-align: center;">GAIN SUPER POWER WITH <span>FRESCHE</span></h2><article class="container">-->
+                                <div class="foo">
+                                    <span class="letter" data-letter="GAIN SUPER POWER WITH">GAIN SUPER POWER WITH</span>
+                                    <span class="letter-2" data-letter="FRESCHE">FRESCHE</span>
+                                    <!--                                    <article class="container-text">
+                                                                                 <blockquote>
+                                                                                     <strong>Gain</strong> <span>Super Power </span> <em>With</em><strong>FRESCHE</strong>
+                                                                                 </blockquote>
+                                                                                 <b>Einstein, A.</b>
+                                         
+                                                                             </article>-->
+                                </div>
+
                             </div>
                             <div class="col-md-4"></div>
                         </div>
@@ -303,14 +317,14 @@
                 </div>
             </div>
         </section>
-<!--        <section class="img" style="background:#88d4f9;">
+    <!--        <section class="img" style="background:#88d4f9;">
             <div class="pad-80">
                 <div class="row acc">
                     <div class="col-md-12 heading-section ftco-animate deal-of-the-day ftco-animate">
                          <span class="subheading">Best Price For You</span>
                         <h2 class="mb-4 text-center">Accreditation</h2>
                         <p class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-
+    
                         <div class="row">
                             <div class="col-md-3">
                                 <div class="text-center box-2" style="background-image: url(images/acc/bg-001.jpg);background-size: cover;">
@@ -343,7 +357,7 @@
                                                     <i class="fa fa-long-arrow-right" aria-hidden="true"></i> <li>European BPR</li>
                                                     <i class="fa fa-long-arrow-right" aria-hidden="true"></i> <li>Primary Industry in New Zealand</li>
                                                 </ul>
-
+    
                     </div>
                 </div> 
             </div>                
