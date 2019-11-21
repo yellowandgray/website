@@ -39,16 +39,16 @@
                         <a href="environmental-policy.php"><i class="fa fa-globe" aria-hidden="true"></i><h2 class="ftco-heading-2">Environmental Policy</h2></a>
                     </div>
                     <div class="block-23 mb-3 footer-3">
-                        <a href="privacy-policy.php"><i class="fa fa-user-secret" aria-hidden="true"></i><h2 class="ftco-heading-2">Privacy Policy</h2></a>
+                        <a href="privacy-policy.php"><i class="fa fa-user-secret" aria-hidden="true"></i><h2 class="ftco-heading-2">Privacy & Disclaimer Policy</h2></a>
                     </div>
                     <div class="block-23 mb-3 footer-3">
-                        <a href="privacy-policy.php"><i class="fa fa-hand-o-right" aria-hidden="true"></i> <h2 class="ftco-heading-2 ">Disclaimer Policy</h2></a>
+<!--                        <a href="privacy-policy.php"><i class="fa fa-hand-o-right" aria-hidden="true"></i> <h2 class="ftco-heading-2 ">Disclaimer Policy</h2></a>-->
                     </div>
                     <div class="block-23 mb-3 footer-3">
                         <ul class="ftco-footer-social list-unstyled float-md-left float-lft">
-                            <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                            <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                            <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                            <li class="ftco-animate"><a href="https://twitter.com/FrescheIndia" target="block"><span class="icon-twitter"></span></a></li>
+                            <li class="ftco-animate"><a href="https://www.facebook.com/frescheindia/" target="block"><span class="icon-facebook"></span></a></li>
+                            <li class="ftco-animate"><a href="https://www.instagram.com/p/B4jbAoupksk/" target="block"><span class="icon-instagram"></span></a></li>
                         </ul>
                     </div>
                 </div> 
