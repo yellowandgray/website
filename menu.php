@@ -75,8 +75,8 @@
                                         echo 'active';
                                     }
                                     ?>"><a href="contact.php" class="nav-link">Contact</a></li>
-                                    <li class="nav-item cta cta-colored"><a href="#" class="nav-link" ><span class="icon-shopping_cart"></span></a></li>
-                                    <li class="nav-item cta cta-colored"><a onclick="document.getElementById('id01').style.display = 'block'" class="nav-link"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+                                    <li class=" menu-icon nav-item cta cta-colored"><a href="#" class="nav-link" ><span class="icon-shopping_cart"></span></a></li>
+                                    <li class=" menu-icon nav-item cta cta-colored"><a onclick="document.getElementById('id01').style.display = 'block'" class="nav-link"><i class="fa fa-user" aria-hidden="true"></i></a></li>
                                     <!--<li class="nav-item cta cta-colored"> <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Cart (<span class="total-count"></span>)</button><button class="clear-cart btn btn-danger">Clear Cart</button></li>-->
                                     <?php include 'login.php'; ?>
                                 </ul>

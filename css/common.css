@@ -741,6 +741,7 @@ footer .copy p{
 .certificate img {
     width: 50%  !important;
     margin: 0 auto  !important;
+    width: 60% !important;
 }
 .accredition {
     width: 100%;
@@ -2078,4 +2079,10 @@ span.psw{
 .box-1 img{
     transition: all 0.07s linear;
 
+}
+.menu-icon a{
+    font-size: 20px !important;
+}
+.report-logo img{
+    width: 25%;
 }
