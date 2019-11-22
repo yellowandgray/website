@@ -1,0 +1,12 @@
+<mat-list>
+    <ng-container *ngFor="let data of result">
+        <mat-list-item>
+            <button mat-icon-button aria-label="label" (click)="confirmDelete(data.testimonial_id)">
+                <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
+            </button>
+            <h4 mat-line>{{data.name}}</h4>
+            <span matLine>{{data.company}}</span>
+            <p mat-line>{{data.description}}</p>
+        </mat-list-item>
+    </ng-container>
+</mat-list>

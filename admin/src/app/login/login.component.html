@@ -1,0 +1,20 @@
+<mat-card class="login-card">
+    <mat-progress-bar mode="indeterminate" *ngIf="loading"></mat-progress-bar>
+    <mat-card-content style="padding: 16px;">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <h1 class="text-center">
+                <img src="assets/logo.png" alt="image" />
+            </h1>
+            <h1>Login</h1>
+            <mat-form-field appearance="outline">
+                <mat-label>User Name</mat-label>
+                <input matInput placeholder="" required formControlName="username" autofocus >
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input matInput type="password" placeholder="" required formControlName="password">
+            </mat-form-field>
+            <button [disabled]="!loginForm.valid" mat-raised-button color="primary" type="submit">Login</button>
+        </form>
+    </mat-card-content>
+</mat-card>

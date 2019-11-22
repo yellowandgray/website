@@ -1,0 +1,18 @@
+mat-card {
+    width: 400px;
+    margin: 2em auto;
+}
+
+.login-card h1 {
+    font-size: 20px;
+    text-align: center;
+}
+
+.login-card button {
+    text-align: center;
+    margin: 0 auto;
+}
+
+mat-form-field {
+    width: 100%;
+}

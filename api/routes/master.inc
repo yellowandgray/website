@@ -15,6 +15,18 @@ $app->post('/update_config', function() use ($app) {
 });
 
 
+$app->get('/delete_record/:table/:where', function($table, $where) {
+    $res = array('error' => true, 'message' => 'Unable to delete');
+    $com = new Common();
+    $data = $com->deleteRecordWithWhere($table, $where);
+    if ($data > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Record deleted successfully';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
 
 $app->post('/insert_category', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
@@ -41,3 +53,33 @@ $app->get('/get_landing_configs', function() {
     echoRespnse(201, $res);
 });
 
+
+$app->post('/loginadmin', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Invalid login details');
+    $data = $app->request->post();
+    $obj = new Common();
+    $record = $obj->selectRow('*', 'users', 'users_id=\'' . $data['username'] . '\'');
+    $pass_matchs = $obj->decryptPassword($data['password'], $record['password']);
+        if ($record == true) {
+            $res['error'] = false;
+            $res['message'] = 'Welcome ' . $record['name'];
+            $res['data'] = $record;
+        } else {
+            $res['message'] = 'Username or Password mismatch';
+        }
+    echoRespnse(201, $res);
+});
+
+
+
+$app->get('/get_testimonial', function() {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('*', 'testimonial', 'testimonial_id > 0');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
