@@ -7,8 +7,8 @@ import { HeaderComponent } from './header/header.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { LoginComponent } from './login/login.component';
 import { TestimonialComponent, TestimonialDelete } from './testimonial/testimonial.component';
-import { ProductComponent } from './product/product.component';
-import { MemberComponent } from './member/member.component';
+import { ProductComponent, ProductForm, ProductDelete } from './product/product.component';
+import { MemberComponent, MemberForm, MemberDelete } from './member/member.component';
 import { OrderComponent } from './order/order.component';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -28,6 +28,13 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {HttpClientModule} from '@angular/common/http';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatSelectModule} from '@angular/material/select';
+import { AngularEditorModule } from '@kolkov/angular-editor';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatBadgeModule} from '@angular/material/badge';
 
 @NgModule({
   declarations: [
@@ -38,7 +45,11 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     TestimonialComponent,
     TestimonialDelete,
     ProductComponent,
+    ProductForm,
+    ProductDelete,
     MemberComponent,
+    MemberForm,
+    MemberDelete,
     OrderComponent
   ],
   imports: [
@@ -61,9 +72,16 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     MatSnackBarModule,
     HttpClientModule,
     MatDialogModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatSelectModule,
+    AngularEditorModule,
+    MatRadioModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatExpansionModule,
+    MatBadgeModule
   ],
-  entryComponents: [TestimonialComponent, TestimonialDelete, ProductComponent, MemberComponent, OrderComponent],
+  entryComponents: [TestimonialComponent, TestimonialDelete, ProductComponent, ProductForm, ProductDelete, MemberComponent, MemberForm, MemberDelete, OrderComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
