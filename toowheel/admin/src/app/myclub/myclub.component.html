@@ -51,15 +51,15 @@
                 </mat-card>
                 <mat-card fxFlex="33%">
                     <mat-form-field fxFlex="100%">
-                        <input matInput placeholder="Email"  [(ngModel)]="data.email_id" [readonly]="!editable" >
+                        <input matInput placeholder="Email"  [(ngModel)]="data.email_id" [readonly]="!editable1" >
                     </mat-form-field>
-                    <button mat-icon-button matTooltip="Edit" aria-label="label" *ngIf="!enableEdit1" (click)="enableEdit1 = true; editable = true">
+                    <button mat-icon-button matTooltip="Edit" aria-label="label" *ngIf="!enableEdit1" (click)="enableEdit1 = true; editable1 = true">
                             <mat-icon>edit</mat-icon>
                     </button>
-                    <button mat-icon-button matTooltip="Close" aria-label="label" *ngIf="enableEdit1" (click)="enableEdit1=false; editable = false" >
+                    <button mat-icon-button matTooltip="Close" aria-label="label" *ngIf="enableEdit1" (click)="enableEdit1=false; editable1 = false" >
                         <mat-icon>close</mat-icon>
                     </button>
-                    <button mat-icon-button matTooltip="Done" aria-label="label" *ngIf="enableEdit1" (click)="onSubmit('email_id', data.email_id); enableEdit1 = false; editable = false">
+                    <button mat-icon-button matTooltip="Done" aria-label="label" *ngIf="enableEdit1" (click)="onSubmit('email_id', data.email_id); enableEdit1 = false; editable1 = false">
                         <mat-icon>done</mat-icon>
                     </button>
                     <!--                    <mat-card-header>
@@ -76,15 +76,15 @@
                 </mat-card>
                 <mat-card fxFlex="33%">
                     <mat-form-field fxFlex="100%">
-                        <input matInput placeholder="Address" [(ngModel)]="data.address" [readonly]="!editable" >
+                        <input matInput placeholder="Address" [(ngModel)]="data.address" [readonly]="!editable2" >
                     </mat-form-field>
-                    <button mat-icon-button matTooltip="Edit" aria-label="label" *ngIf="!enableEdit2" (click)="enableEdit2 = true; editable = true">
+                    <button mat-icon-button matTooltip="Edit" aria-label="label" *ngIf="!enableEdit2" (click)="enableEdit2 = true; editable2 = true">
                             <mat-icon>edit</mat-icon>
                     </button>
-                    <button mat-icon-button matTooltip="Close" aria-label="label" *ngIf="enableEdit2" (click)="enableEdit2=false; editable = false" >
+                    <button mat-icon-button matTooltip="Close" aria-label="label" *ngIf="enableEdit2" (click)="enableEdit2=false; editable2 = false" >
                         <mat-icon>close</mat-icon>
                     </button>
-                    <button mat-icon-button mat-icon-button matTooltip="Done" aria-label="label" *ngIf="enableEdit2" (click)="onSubmit('address', data.address); enableEdit2 = false; editable = false">
+                    <button mat-icon-button mat-icon-button matTooltip="Done" aria-label="label" *ngIf="enableEdit2" (click)="onSubmit('address', data.address); enableEdit2 = false; editable2 = false">
                         <mat-icon>done</mat-icon>
                     </button>
                     <!--                    <mat-card-header>
@@ -104,15 +104,15 @@
             <div fxLayout="row" fxLayoutWrap fxLayoutGap="2%" fxLayoutAlign="start start">
                 <mat-card fxFlex="33%">
                     <mat-form-field fxFlex="100%">
-                        <input matInput placeholder="Landmark" [(ngModel)]="data.landmark" [readonly]="!editable" >
+                        <input matInput placeholder="Landmark" [(ngModel)]="data.landmark" [readonly]="!editable3" >
                     </mat-form-field>
-                    <button mat-icon-button matTooltip="Edit" aria-label="label" *ngIf="!enableEdit3" (click)="enableEdit3 = true; editable = true">
+                    <button mat-icon-button matTooltip="Edit" aria-label="label" *ngIf="!enableEdit3" (click)="enableEdit3 = true; editable3 = true">
                             <mat-icon>edit</mat-icon>
                     </button>
-                    <button mat-icon-button matTooltip="Close" aria-label="label" *ngIf="enableEdit3" (click)="enableEdit3=false; editable = false" >
+                    <button mat-icon-button matTooltip="Close" aria-label="label" *ngIf="enableEdit3" (click)="enableEdit3=false; editable3 = false" >
                         <mat-icon>close</mat-icon>
                     </button>
-                    <button mat-icon-button matTooltip="Done" aria-label="label" *ngIf="enableEdit3" (click)="onSubmit('landmark', data.landmark); enableEdit3 = false; editable = false">
+                    <button mat-icon-button matTooltip="Done" aria-label="label" *ngIf="enableEdit3" (click)="onSubmit('landmark', data.landmark); enableEdit3 = false; editable3 = false">
                         <mat-icon>done</mat-icon>
                     </button>
                     <!--                    <mat-card-header>
@@ -129,15 +129,15 @@
                 </mat-card>
                 <mat-card fxFlex="33%">
                     <mat-form-field fxFlex="100%">
-                        <input matInput placeholder="Facebook" [(ngModel)]="data.facebook_link" [readonly]="!editable" >
+                        <input matInput placeholder="Facebook" [(ngModel)]="data.facebook_link" [readonly]="!editable4" >
                     </mat-form-field>
-                    <button mat-icon-button matTooltip="Edit" aria-label="label" *ngIf="!enableEdit4" (click)="enableEdit4 = true; editable = true">
+                    <button mat-icon-button matTooltip="Edit" aria-label="label" *ngIf="!enableEdit4" (click)="enableEdit4 = true; editable4 = true">
                             <mat-icon>edit</mat-icon>
                     </button>
-                    <button mat-icon-button matTooltip="Close" aria-label="label" *ngIf="enableEdit4" (click)="enableEdit4=false; editable = false" >
+                    <button mat-icon-button matTooltip="Close" aria-label="label" *ngIf="enableEdit4" (click)="enableEdit4=false; editable4 = false" >
                         <mat-icon>close</mat-icon>
                     </button>
-                    <button mat-icon-button matTooltip="Done" aria-label="label" *ngIf="enableEdit4" (click)="onSubmit('facebook_link', data.facebook_link); enableEdit4 = false; editable = false">
+                    <button mat-icon-button matTooltip="Done" aria-label="label" *ngIf="enableEdit4" (click)="onSubmit('facebook_link', data.facebook_link); enableEdit4 = false; editable4 = false">
                         <mat-icon>done</mat-icon>
                     </button>
                     <!--                    <mat-card-header>
@@ -154,15 +154,15 @@
                 </mat-card>
                 <mat-card fxFlex="33%">
                     <mat-form-field fxFlex="100%">
-                        <input matInput placeholder="YouTube" [(ngModel)]="data.youtube_link" [readonly]="!editable" >
+                        <input matInput placeholder="YouTube" [(ngModel)]="data.youtube_link" [readonly]="!editable5" >
                     </mat-form-field>
-                    <button mat-icon-button matTooltip="Edit" aria-label="label" *ngIf="!enableEdit5" (click)="enableEdit5 = true; editable = true">
+                    <button mat-icon-button matTooltip="Edit" aria-label="label" *ngIf="!enableEdit5" (click)="enableEdit5 = true; editable5 = true">
                             <mat-icon>edit</mat-icon>
                     </button>
-                    <button mat-icon-button matTooltip="Close" aria-label="label" *ngIf="enableEdit5" (click)="enableEdit5=false; editable = false" >
+                    <button mat-icon-button matTooltip="Close" aria-label="label" *ngIf="enableEdit5" (click)="enableEdit5=false; editable5 = false" >
                         <mat-icon>close</mat-icon>
                     </button>
-                    <button mat-icon-button matTooltip="Done" aria-label="label" *ngIf="enableEdit5" (click)="onSubmit('youtube_link', data.youtube_link); enableEdit5 = false; editable = false">
+                    <button mat-icon-button matTooltip="Done" aria-label="label" *ngIf="enableEdit5" (click)="onSubmit('youtube_link', data.youtube_link); enableEdit5 = false; editable5 = false">
                         <mat-icon>done</mat-icon>
                     </button>
                     <!--                    <mat-card-header>
@@ -182,15 +182,15 @@
             <div fxLayout="row" fxLayoutWrap fxLayoutGap="2%" fxLayoutAlign="start start">
                 <mat-card fxFlex="33%">
                     <mat-form-field fxFlex="100%">
-                        <input matInput placeholder="Twitter" [(ngModel)]="data.twitter_link" [readonly]="!editable" >
+                        <input matInput placeholder="Twitter" [(ngModel)]="data.twitter_link" [readonly]="!editable6" >
                     </mat-form-field>
-                    <button mat-icon-button matTooltip="Edit" aria-label="label" *ngIf="!enableEdit6" (click)="enableEdit6 = true; editable = true">
+                    <button mat-icon-button matTooltip="Edit" aria-label="label" *ngIf="!enableEdit6" (click)="enableEdit6 = true; editable6 = true">
                             <mat-icon>edit</mat-icon>
                     </button>
-                    <button mat-icon-button matTooltip="Close" aria-label="label" *ngIf="enableEdit6" (click)="enableEdit6=false; editable = false" >
+                    <button mat-icon-button matTooltip="Close" aria-label="label" *ngIf="enableEdit6" (click)="enableEdit6=false; editable6 = false" >
                         <mat-icon>close</mat-icon>
                     </button>
-                    <button mat-icon-button matTooltip="Done" aria-label="label" *ngIf="enableEdit6" (click)="onSubmit('twitter_link', data.twitter_link); enableEdit6 = false; editable = false">
+                    <button mat-icon-button matTooltip="Done" aria-label="label" *ngIf="enableEdit6" (click)="onSubmit('twitter_link', data.twitter_link); enableEdit6 = false; editable6 = false">
                         <mat-icon>done</mat-icon>
                     </button>
                     <!--                    <mat-card-header>
@@ -207,15 +207,15 @@
                 </mat-card>
                 <mat-card fxFlex="33%">
                     <mat-form-field fxFlex="100%">
-                        <input matInput placeholder="Instagram" [(ngModel)]="data.instagram_link" [readonly]="!editable" >
+                        <input matInput placeholder="Instagram" [(ngModel)]="data.instagram_link" [readonly]="!editable7" >
                     </mat-form-field>
-                    <button mat-icon-button matTooltip="Edit" aria-label="label" *ngIf="!enableEdit7" (click)="enableEdit7 = true; editable = true">
+                    <button mat-icon-button matTooltip="Edit" aria-label="label" *ngIf="!enableEdit7" (click)="enableEdit7 = true; editable7 = true">
                             <mat-icon>edit</mat-icon>
                     </button>
-                    <button mat-icon-button matTooltip="Close" aria-label="label" *ngIf="enableEdit7" (click)="enableEdit7=false; editable = false" >
+                    <button mat-icon-button matTooltip="Close" aria-label="label" *ngIf="enableEdit7" (click)="enableEdit7=false; editable7 = false" >
                         <mat-icon>close</mat-icon>
                     </button>
-                    <button mat-icon-button matTooltip="Done" aria-label="label" *ngIf="enableEdit7" (click)="onSubmit('instagram_link', data.instagram_link); enableEdit7 = false; editable = false">
+                    <button mat-icon-button matTooltip="Done" aria-label="label" *ngIf="enableEdit7" (click)="onSubmit('instagram_link', data.instagram_link); enableEdit7 = false; editable7 = false">
                         <mat-icon>done</mat-icon>
                     </button>
                     <!--                    <mat-card-header>
@@ -254,15 +254,15 @@
                                 </mat-card>-->
                 <mat-card fxFlex="33%">
                     <mat-form-field fxFlex="100%">
-                        <input matInput placeholder="Leader" [(ngModel)]="data.leader_name" [readonly]="!editable" >
+                        <input matInput placeholder="Leader" [(ngModel)]="data.leader_name" [readonly]="!editable8" >
                     </mat-form-field>
-                    <button mat-icon-button matTooltip="Edit" aria-label="label" *ngIf="!enableEdit8" (click)="enableEdit8 = true; editable = true">
+                    <button mat-icon-button matTooltip="Edit" aria-label="label" *ngIf="!enableEdit8" (click)="enableEdit8 = true; editable8 = true">
                             <mat-icon>edit</mat-icon>
                     </button>
-                    <button mat-icon-button matTooltip="Close" aria-label="label" *ngIf="enableEdit8" (click)="enableEdit8=false; editable = false" >
+                    <button mat-icon-button matTooltip="Close" aria-label="label" *ngIf="enableEdit8" (click)="enableEdit8=false; editable8 = false" >
                         <mat-icon>close</mat-icon>
                     </button>
-                    <button mat-icon-button matTooltip="Done" aria-label="label" *ngIf="enableEdit8" (click)="onSubmit('leader_name', data.leader_name); enableEdit8 = false; editable = false">
+                    <button mat-icon-button matTooltip="Done" aria-label="label" *ngIf="enableEdit8" (click)="onSubmit('leader_name', data.leader_name); enableEdit8 = false; editable8 = false">
                         <mat-icon>done</mat-icon>
                     </button>
                     <!--                    <mat-card-header>
@@ -282,16 +282,16 @@
             <div fxLayout="row" fxLayoutWrap fxLayoutGap="2%" fxLayoutAlign="start start">
                 <mat-card fxFlex="100%">
                     <mat-form-field fxFlex="100%">
-                        <textarea rows="6" matInput placeholder="" required [(ngModel)]="data.about" [readonly]="!editable"></textarea>
+                        <textarea rows="6" matInput placeholder="" required [(ngModel)]="data.about" [readonly]="!editable9"></textarea>
                     </mat-form-field>
                     <br/>
-                    <button mat-icon-button matTooltip="Edit" aria-label="label" *ngIf="!enableEdit9" (click)="enableEdit9 = true; editable = true">
+                    <button mat-icon-button matTooltip="Edit" aria-label="label" *ngIf="!enableEdit9" (click)="enableEdit9 = true; editable9 = true">
                             <mat-icon>edit</mat-icon>
                     </button>
-                    <button mat-icon-button matTooltip="Close" aria-label="label" *ngIf="enableEdit9" (click)="enableEdit9=false; editable = false" >
+                    <button mat-icon-button matTooltip="Close" aria-label="label" *ngIf="enableEdit9" (click)="enableEdit9=false; editable9 = false" >
                         <mat-icon>close</mat-icon>
                     </button>
-                    <button mat-icon-button matTooltip="Done" aria-label="label" *ngIf="enableEdit9" (click)="onSubmit('about', data.about); enableEdit9 = false; editable = false">
+                    <button mat-icon-button matTooltip="Done" aria-label="label" *ngIf="enableEdit9" (click)="onSubmit('about', data.about); enableEdit9 = false; editable9 = false">
                         <mat-icon>done</mat-icon>
                     </button>
 

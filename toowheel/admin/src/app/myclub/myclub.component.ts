@@ -16,6 +16,26 @@ export class MyclubComponent implements OnInit {
     value: string='';
     field_type: string;
     field_name: string;
+    editable=false;
+    editable1=false;
+    editable2=false;
+    editable3=false;
+    editable4=false;
+    editable5=false;
+    editable6=false;
+    editable7=false;
+    editable8=false;
+    editable9=false;
+    enableEdit=false;
+    enableEdit1=false;
+    enableEdit2=false;
+    enableEdit3=false;
+    enableEdit4=false;
+    enableEdit5=false;
+    enableEdit6=false;
+    enableEdit7=false;
+    enableEdit8=false;
+    enableEdit9=false;
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
     
   ngOnInit() {
