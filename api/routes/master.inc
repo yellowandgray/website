@@ -121,6 +121,19 @@ $app->get('/get_testimonial', function() {
     echoRespnse(201, $res);
 });
 
+$app->get('/get_order', function() {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('*', 'order', 'order_id > 0');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+
 $app->get('/get_product', function() {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();

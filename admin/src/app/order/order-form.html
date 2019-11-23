@@ -1,0 +1,30 @@
+<h2 mat-dialog-title>Order</h2>
+<mat-dialog-content class="mat-typography">
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+        <div fxFlex="50%">
+            <mat-form-field appearance="outline" fxFlex="100%">
+                <mat-label>Product Name</mat-label>
+                <input matInput placeholder="" required formControlName="pname" />
+                <mat-error>Product Name is required</mat-error>
+            </mat-form-field>
+        </div>
+        <div fxFlex="50%">
+            <mat-form-field appearance="outline" fxFlex="100%">
+                <mat-label>Items</mat-label>
+                <input matInput placeholder="" required formControlName="lname" />
+                <mat-error>Last Name is required</mat-error>
+            </mat-form-field>
+        </div>
+    </div>
+    <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
+        <button mat-button [mat-dialog-close]="false">Cancel</button>
+        <button mat-button type="submit" [disabled]="loading">Save</button>
+        <mat-progress-spinner
+            class="example-margin"
+            *ngIf="loading"
+            [mode]="'indeterminate'"
+            [strokeWidth]="3"
+            [diameter]="25">
+        </mat-progress-spinner>
+    </div>
+</mat-dialog-content>

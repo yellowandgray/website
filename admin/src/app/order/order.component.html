@@ -4,5 +4,14 @@
     </mat-sidenav>
     <mat-sidenav-content>
         <app-header></app-header>
+        <mat-list>
+            <ng-container *ngFor="let data of result">
+                <mat-list-item>
+                    <h4 mat-line>{{data.product_name}}</h4>
+                    <p matLine>{{data.member_id}} {{data.product_price}}</p>
+                    <p mat-line>{{data.items}}</p>
+                </mat-list-item>
+            </ng-container>
+        </mat-list>
     </mat-sidenav-content>
 </mat-sidenav-container>
