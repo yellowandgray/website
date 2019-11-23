@@ -52,7 +52,7 @@
     <a mat-list-item routerLinkActive="active-nav" routerLink="/clubevent" *ngIf="data.role != 'club' && data.role != 'Editor'">
         <mat-icon>event_note</mat-icon> Event
     </a>
-    <a mat-list-item routerLinkActive="active-nav" routerLink="/press-release" *ngIf="data.role != 'club' && data.role != 'Editor'">
+    <a mat-list-item routerLinkActive="active-nav" routerLink="/press-release" *ngIf="data.role != 'club'">
         <mat-icon>event_note</mat-icon> Press Release
     </a>
     <a mat-list-item routerLinkActive="active-nav" routerLink="/gallery" *ngIf="data.role != 'club' && data.role != 'Editor'">
