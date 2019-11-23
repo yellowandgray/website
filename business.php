@@ -6,9 +6,7 @@
     <?php
     $page = 'about';
     include 'head.php';
-    require_once 'api/include/common.php';
-    $obj = new Common();
-    $cart = $obj->selectRow('*', 'product', 'id = 1');
+   
     ?>
     <body class="goto-here">
 

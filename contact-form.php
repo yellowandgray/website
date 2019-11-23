@@ -60,15 +60,15 @@ if ($_POST['fname']) {
 
 
 
-    $mail->Username = "noreply@";  // GMAIL username
+    $mail->Username = "";  // GMAIL username
 
 
 
-    $mail->Password = "Admin@";            // GMAIL password
+    $mail->Password = "";            // GMAIL password
 
     $mail->IsHTML(true);
 
-    $mail->SetFrom('noreply@guardianhealthmanagement.com', 'Guardian health management');
+    $mail->SetFrom('', 'Guardian health management');
 
     $mail->Subject = "Contact Form Submited" . date('d-m-y H:i:s');
 
@@ -157,7 +157,7 @@ if ($_POST['fname']) {
 
     // More headers
 
-    $address = "";
+    $address = "projects@yellowandgray.com";
 
 
     $mail->AddAddress($address, "Guardian health management");
