@@ -36,10 +36,10 @@ export class MyclubComponent implements OnInit {
         }
         );
   }
-    onSubmit() {          
+    onSubmit(field, value) {          
           this.loading = true;
           var formData = new FormData();
-          formData.append(this.field_name, this.value);
+          formData.append(field, value);
           this.httpClient.post('https://www.toowheel.com/beta/toowheel/api/v1/update_record/club/club_id='+sessionStorage.getItem("toowheel_club_id"), formData).subscribe(
               (res)=>{
                 this.loading = false;
