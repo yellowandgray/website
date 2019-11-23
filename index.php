@@ -22,13 +22,17 @@
                             <div class="col-lg-8 col-md-8 ftco-animate product-text">
                                 <!--<h1 class="mb-2">PRODUCT</h1>-->
                                 <!--<h2 class="subheading mb-4" style="text-align: center;">GAIN SUPER POWER WITH <span>FRESCHE</span></h2><article class="container">-->
-                               
+
                             </div>
                             <div class="col-md-4"></div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="curve">
+                <img src="images/box.png" alt=""/>
+            </div>
+
         </section>
         <section class="ftco-category pad-20-80 res-feature">
             <div class="col-md-12">
