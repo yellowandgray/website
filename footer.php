@@ -15,18 +15,18 @@
         </div>
         <div class="footer-2">
             <div class="ftco-footer-widget mb-4">
-                <form class="footer-h">
+                <form class="footer-h enquiry-footer-form">
                     <div class="block-23 mb-3 footer-3">
                         <i class="fa fa-share-square-o" aria-hidden="true"></i> <h2 class="ftco-heading-2">Fresche Newsletter</h2>
                     </div>
-                    <div class="news">
+                    <div class="news form-group">
                         <input type="text" name="fname" placeholder="Name">
                         <input type="email" name="email" placeholder="Email Address">
                     </div>
-                    <div class="footer-3">
+                    <div class="footer-3 form-group">
                         <div class="button-2">
                             <div class="eff-1"></div>
-                            <a href="#">SUBMIT</a>
+                            <a type="sumbit">SUBMIT</a>
                         </div>
                     </div>
 
@@ -101,7 +101,8 @@
 <script src="js/materialize.min.js" type="text/javascript"></script>
 <script src="js/materialize.js" type="text/javascript"></script>
 <script src="js/fs-gal.js" type="text/javascript"></script>
-
+<script src="js/sweetalert.min.js" type="text/javascript"></script>
+<script src="js/contact.form.js" type="text/javascript"></script>
 <!--add to cart-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" type="text/javascript"></script>
 <script>

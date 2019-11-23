@@ -359,7 +359,7 @@
                         <div class=" accredition">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <div class="row" style="padding:0 10px;">
+                                    <div class="row" style="padding:0 140px;">
                                         <div class="col-md-4 col-sm-4 col-xs-6">
                                             <div class="report-logo">
                                                 <img src="images/acc/005-01.png" alt="" class=""/>

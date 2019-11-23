@@ -57,7 +57,7 @@
                 </div>
                 <div class="row block-9 m">
                     <div class="col-md-12 order-md-last d-flex">
-                        <form action="#" class="bg-white p-5 contact-form">
+                        <form class="bg-white p-5 contact-form">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group bg-1">
