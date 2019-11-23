@@ -79,6 +79,7 @@ export class MemberComponent implements OnInit {
 })
 export class MemberForm {
     memberForm: FormGroup;
+    loading = false;
     member_id = 0;
     constructor(
     public dialogRef: MatDialogRef<MemberForm>,
