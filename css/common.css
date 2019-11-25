@@ -97,6 +97,26 @@
     text-align: center;
 }
 
+.switch-gear-section {
+    padding: 0px 0 50px;
+}
+
+.switch-gear-section .section_tittle {
+    margin-bottom: 40px;
+}
+
+.switch-gear-section .unordered-list li {
+    font-size: 18px;
+}
+
+.switch-gear-section .unordered-list li:before {
+    top: 10px;
+}
+
+.margin-auto {
+    margin: 0 auto;
+}
+
 @media screen and (max-width: 991px) {
     .our_industries .single_industries a img {
         width: auto !important;

@@ -34,7 +34,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-4 col-sm-6">
+                    <div class="col-lg-3 col-sm-6">
                         <div class="single_industries">
                             <img src="img/ind/industries_1.png" alt="">
                             <h3> <a href="#"> SWITCHGEARS</a></h3>
@@ -42,7 +42,7 @@
                             <a href="switchgears" class="read-more-btn">Read More <img src="img/right-arrow.svg" alt="" /></a>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6">
+                    <div class="col-lg-3 col-sm-6">
                         <div class="single_industries">
                             <img src="img/ind/industries_2.png" alt="">
                             <h3><a href="#">TRANSFORMERS</a></h3>
@@ -50,12 +50,22 @@
                             <a href="transformers" class="read-more-btn">Read More <img src="img/right-arrow.svg" alt="" /></a>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6">
+                    <div class="col-lg-3 col-sm-6">
                         <div class="single_industries">
                             <img src="img/ind/industries_3.png" alt="">
                             <h3><a href="#">CABLES</a></h3>
                             <p>Cabling is an expensive business and must be treated carefully. The expenditure of substitution once the routes are all concealed is bigger.</p>
                             <a href="cables" class="read-more-btn">Read More <img src="img/right-arrow.svg" alt="" /></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="single_industries">
+                            <img src="img/ind/industries_4.png" alt="">
+                            <h3>
+                                <a href="electrical-fire-suppression">ELECTRICAL FIRE SUPPRESSION SYSTEM</a>
+                            </h3>
+                            <p>Electrical panels and enclosures are found in every industry across the world. cost-effective system to eliminate fires at the source.</p>
+                            <a href="electrical-fire-suppression" class="read-more-btn">Read More <img src="img/right-arrow.svg" alt="" /></a>
                         </div>
                     </div>
                 </div>

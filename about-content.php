@@ -6,5 +6,5 @@
     <p>We’ve provided such services on low and high voltage systems throughout the Singapore. We always supply a comprehensive report to authenticate our work and pride ourselves on delivering professional testing and commissioning support, for a fair price.</p>
     <p>we can also act as an authorised person, when switching on clients’ networks and projects. Our electrical engineers are extensively trained and certified to carry out testing and commissioning works.</p>
     <p>By Choosing us, You no need to worry about the Completion of project, we will take care of that.</p>
-    <a href="about" class="btn_2">read more</a>
+<!--    <a href="about" class="btn_2">read more</a>-->
 </div>

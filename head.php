@@ -21,4 +21,5 @@
     <!-- style CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link href="css/common.css" rel="stylesheet" type="text/css"/>
+    <link href="css/sweetalert.css" rel="stylesheet" type="text/css"/>
 </head>

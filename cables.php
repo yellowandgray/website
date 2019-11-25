@@ -67,6 +67,33 @@
                 </div>
             </div>
         </section>
+        <!--::industries start::-->
+        <section class="switch-gear-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="section_tittle">
+                            <h2>Testing and Commissioning of HV Cables</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="unordered-list">
+                            <li>DC Hipot testing</li>
+                            <li>Very low frequency (VLF) dielectric withstand voltage</li>
+                            <li>Power frequency (50/60 Hz) dielectric withstand voltage</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="unordered-list">
+                            <li>Power factor/ dissipation factor (tan delta):</li>
+                            <li>DC insulation resistance:</li>
+                            <li>Cable and jointing services including termination and Testing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--::industries end::-->
         <!--================ Blog Area end =================-->
 
         <!--::subscribe area start::-->

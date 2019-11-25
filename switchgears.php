@@ -84,6 +84,42 @@
                 </div>
             </div>
         </section>
+        <!--::industries start::-->
+        <section class="switch-gear-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="section_tittle">
+                            <h2>Electrical Switch Gear Testing and Commissioning</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="unordered-list">
+                            <li>HV & LV Switchboards</li>
+                            <li>Secondary Injection of Protection Relays</li>
+                            <li>Calibration of Transducers</li>
+                            <li>Primary Injection of Current Transformers</li>
+                            <li>Insulation Resistance Tests</li>
+                            <li><strong>Earth Testing</strong></li>
+                            <li>Contact Resistance</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="unordered-list">
+                            <li>Testing of High Voltage Equipment</li>
+                            <li>Transformer Winding Resistance Testing</li>
+                            <li>Cable and Cable Fault Locating</li>
+                            <li>Generator Governor Response Tests</li>
+                            <li>Automatic Voltage Regulator Tests</li>
+                            <li>Polarization Index Tests</li>
+                            <li>Power Transformer Testing</li>
+                            <li>Power Generators</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--::industries end::-->
         <!--================ Blog Area end =================-->
 
         <!--::subscribe area start::-->

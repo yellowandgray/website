@@ -104,3 +104,5 @@
 <script src="js/slick.min.js"></script>
 <!-- custom js -->
 <script src="js/custom.js"></script>
+<script src="js/contact.form.js" type="text/javascript"></script>
+<script src="js/sweetalert.min.js" type="text/javascript"></script>

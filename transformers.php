@@ -88,6 +88,39 @@
                 </div>
             </div>
         </section>
+        <!--::industries start::-->
+        <section class="switch-gear-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="section_tittle">
+                            <h2>Transformer Testing, Maintenance and Repairs</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="unordered-list">
+                            <li>Online Filtering</li>
+                            <li>Repairing Online and Offline Tap Changers</li>
+                            <li>Overhauling</li>
+                            <li>General Transformer Maintenance</li>
+                            <li>Transformer Testing and Commissioning</li>
+                            <li>Frequency Response Analysis</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="unordered-list">
+                            <li>Leakage Reaction</li>
+                            <li>Ratio</li>
+                            <li>DC Winding Resistance</li>
+                            <li>Insulation</li>
+                            <li>Testing of Insulating Oil</li>
+                            <li>Dielectric capacitance & Tan Delta measurement</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--::industries end::-->
         <!--================ Blog Area end =================-->
 
         <!--::subscribe area start::-->
