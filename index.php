@@ -153,7 +153,7 @@
         <!--::industries end::-->
 
         <!-- about part start-->
-        <section class="about_part section_bg section_padding" style="background: url(img/about-bg.jpg)no-repeat;background-attachment: fixed;background-size: cover;background-position: center;">
+<!--        <section class="about_part section_bg section_padding" style="background: url(img/about-bg.jpg)no-repeat;background-attachment: fixed;background-size: cover;background-position: center;">
             <div class="container">
                 <div class="row align-items-center justify-content-between">
                     <div class="col-md-6 col-lg-6">
@@ -270,7 +270,7 @@
         <!--::industries end::-->
 
         <!-- portfolio_part start-->
-        <section class="portfolio_part section_padding">
+<!--        <section class="portfolio_part section_padding">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -337,7 +337,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>-->
         <!-- portfolio_part part end-->
 
         <!--::industries start::-->

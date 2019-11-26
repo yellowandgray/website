@@ -37,7 +37,7 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="single_industries">
                             <img src="img/ind/industries_1.png" alt="">
-                            <h3> <a href="#"> SWITCHGEARS</a></h3>
+                            <h3> <a href="switchgears"> SWITCHGEARS</a></h3>
                             <p>The Design of the insulation system for metal-enclosed switchgear is based upon life expectancy of about 30 years.</p>
                             <a href="switchgears" class="read-more-btn">Read More <img src="img/right-arrow.svg" alt="" /></a>
                         </div>
@@ -45,7 +45,7 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="single_industries">
                             <img src="img/ind/industries_2.png" alt="">
-                            <h3><a href="#">TRANSFORMERS</a></h3>
+                            <h3><a href="transformers">TRANSFORMERS</a></h3>
                             <p>High-voltage transformers are some of the most important (and expensive) pieces of equipment required for operating a power system.</p>
                             <a href="transformers" class="read-more-btn">Read More <img src="img/right-arrow.svg" alt="" /></a>
                         </div>
@@ -53,7 +53,7 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="single_industries">
                             <img src="img/ind/industries_3.png" alt="">
-                            <h3><a href="#">CABLES</a></h3>
+                            <h3><a href="cables">CABLES</a></h3>
                             <p>Cabling is an expensive business and must be treated carefully. The expenditure of substitution once the routes are all concealed is bigger.</p>
                             <a href="cables" class="read-more-btn">Read More <img src="img/right-arrow.svg" alt="" /></a>
                         </div>

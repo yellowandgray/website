@@ -2187,7 +2187,13 @@ ul {
 @media (max-width: 576px) {
     /* line 7, ../../01 cl html template/New folder/May 2019/175  Supreme Industry/Supreme Industry Html/sass/_menu.scss */
     .main_menu .navbar-brand img {
-        max-width: 150px;
+        max-width: 200px;
+    }
+    .banner_part .banner_text .btn_1 {
+        display: none;
+    }
+    .carousel-indicators {
+        display: none;
     }
 }
 
@@ -2196,19 +2202,22 @@ ul {
     .main_menu .navbar-brand img {
         max-width: 200px;
     }
+    .banner_part .banner_text .btn_1 {
+        display: none;
+    }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     /* line 7, ../../01 cl html template/New folder/May 2019/175  Supreme Industry/Supreme Industry Html/sass/_menu.scss */
     .main_menu .navbar-brand img {
-        max-width: 200px;
+        max-width: 300px;
     }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
     /* line 7, ../../01 cl html template/New folder/May 2019/175  Supreme Industry/Supreme Industry Html/sass/_menu.scss */
     .main_menu .navbar-brand img {
-        max-width: 200px;
+        max-width: 400px;
     }
 }
 
