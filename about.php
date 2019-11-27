@@ -71,7 +71,7 @@
                             <div class="about-sec" style="background-image: url('images/about/001.jpg'); background-size: cover;">
                                 <p>Guardian health management is a firm, promoted and managed by professionals in the Chemical Industry, with over 4 decades of collective experience in managing the business side of high technology chemicals catering to various industries, including Textiles and Fabrics. The company represents leading global technology and its associated brand names in India. The company is known for its quality & ethical business practices.</p>
                             </div>
-                            <h5 class="see"><a href="application.php">See More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></h5>
+                            <h5 class="see"><a href="#">See More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></h5>
                         </div>
 
                     </div>
@@ -82,7 +82,7 @@
                             <div class="about-sec" style="background-image: url('images/about/002.jpg'); background-size: cover;">
                                 <p>The product is an advanced customary formulation from the R&D laboratories of an Australian based Multinational company.  The products are widely used in over 15 developed countries.  The performance delivery parameters far exceeds the industry standards. In effectiveness on a wide variety of Bacteria and it's surface bonding mechanism is unparalleled.</p>
                             </div>
-                            <h5 class="see"><a href="application.php">See More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></h5>
+                            <h5 class="see"><a href="product.php">See More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></h5>
                         </div>
 
                     </div>
