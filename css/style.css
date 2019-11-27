@@ -34,7 +34,7 @@ input:hover, input:focus {
 
 /* line 18, ../../01 cl html template/New folder/May 2019/175  Supreme Industry/Supreme Industry Html/sass/_common.scss */
 .section_padding {
-    padding: 130px 0px;
+    padding: 60px 0px;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
@@ -54,7 +54,7 @@ input:hover, input:focus {
 @media (max-width: 576px) {
     /* line 18, ../../01 cl html template/New folder/May 2019/175  Supreme Industry/Supreme Industry Html/sass/_common.scss */
     .section_padding {
-        padding: 70px 0px;
+        padding: 70px 0px 0;
     }
 }
 
@@ -157,7 +157,7 @@ p {
     color: #777;
     font-family: "Barlow Condensed", sans-serif;
     line-height: 1.8;
-    font-size: 16px;
+    font-size: 17px;
     margin-bottom: 0px;
     font-weight: 400;
 }
@@ -2805,7 +2805,7 @@ ul {
 @media (max-width: 576px) {
     /* line 2, ../../01 cl html template/New folder/May 2019/175  Supreme Industry/Supreme Industry Html/sass/_service.scss */
     .service_part {
-        padding: 70px 0px 55px;
+        padding: 70px 0px 40px;
     }
 }
 
@@ -2831,6 +2831,7 @@ ul {
     -webkit-transition: 1s;
     transition: 1s;
     cursor: pointer;
+    height: 355px;
 }
 
 @media (max-width: 576px) {
@@ -3223,13 +3224,13 @@ ul {
 
 /* line 1, ../../01 cl html template/New folder/May 2019/175  Supreme Industry/Supreme Industry Html/sass/_our_industries.scss */
 .our_industries {
-    padding: 130px 0px 55px;
+    padding: 60px 0px;
 }
 
 @media (max-width: 991px) {
     /* line 1, ../../01 cl html template/New folder/May 2019/175  Supreme Industry/Supreme Industry Html/sass/_our_industries.scss */
     .our_industries {
-        padding: 70px 0px 55px;
+        padding: 70px 0px 0px;
     }
 }
 
@@ -7063,7 +7064,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* line 1089, ../../01 cl html template/New folder/May 2019/175  Supreme Industry/Supreme Industry Html/sass/_elements.scss */
 .section-top-border {
-    padding: 50px 0;
+    padding: 30px 0 0;
     border-top: 1px dotted #eee;
 }
 

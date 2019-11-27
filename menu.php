@@ -8,14 +8,14 @@
                         <a href="mailto:sales@sttesting.com.sg"><i class="flaticon-at"></i>sales@sttesting.com.sg</a>
                     </div>
                 </div>
-<!--                <div class="col-lg-6 col-sm-4">
-                    <div class="sub_menu_social_icon">
-                        <a href="#"><i class="flaticon-facebook"></i></a>
-                        <a href="#"><i class="flaticon-twitter"></i></a>
-                        <a href="#"><i class="flaticon-skype"></i></a>
-                        <a href="#"><i class="flaticon-instagram"></i></a>
-                    </div>
-                </div>-->
+                <!--                <div class="col-lg-6 col-sm-4">
+                                    <div class="sub_menu_social_icon">
+                                        <a href="#"><i class="flaticon-facebook"></i></a>
+                                        <a href="#"><i class="flaticon-twitter"></i></a>
+                                        <a href="#"><i class="flaticon-skype"></i></a>
+                                        <a href="#"><i class="flaticon-instagram"></i></a>
+                                    </div>
+                                </div>-->
             </div>
         </div>
     </div>
@@ -40,8 +40,14 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="about">About us</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="service">Services</a>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="service" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="switchgears">SWITCHGEARS</a>
+                                        <a class="dropdown-item" href="transformers">TRANSFORMERS</a>
+                                        <a class="dropdown-item" href="cables">CABLES</a>
+                                        <a class="dropdown-item" href="electrical-fire-suppression">ELECTRICAL FIRE SUPPRESSION SYSTEM</a>
+                                    </div>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="project">Projects</a>

@@ -178,8 +178,7 @@
                             <i class="flaticon-chip"></i>
                             <span class="line"></span>
                             <h3>Advance Technology</h3>
-                            <p>All fish day af emale very appear moved seas above Fifth them grass gathere above
-                                male moveth whose life rule she gathering seas of is sea night</p>
+                            <p>We follow advance technology implementations in order to serve our clients world class solutions.</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-sm-6 col-md-6">
@@ -187,8 +186,7 @@
                             <i class="flaticon-cap"></i>
                             <span class="line"></span>
                             <h3>World Quality Service</h3>
-                            <p>All fish day af emale very appear moved seas above Fifth them grass gathere above
-                                male moveth whose life rule she gathering seas of is sea night</p>
+                            <p>Our services are unique and unmatchable with greater efficiency, quality and accuracy.</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-sm-6 col-md-6">
@@ -196,8 +194,7 @@
                             <i class="flaticon-wallet"></i>
                             <span class="line"></span>
                             <h3>Intelligent solutions</h3>
-                            <p>All fish day af emale very appear moved seas above Fifth them grass gathere above
-                                male moveth whose life rule she gathering seas of is sea night</p>
+                            <p>We always seek to identify intelligent methods to fulfill clients requirements.</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-sm-6 col-md-6">
@@ -205,8 +202,7 @@
                             <i class="flaticon-audio"></i>
                             <span class="line"></span>
                             <h3>Lifetime Support</h3>
-                            <p>All fish day af emale very appear moved seas above Fifth them grass gathere above
-                                male moveth whose life rule she gathering seas of is sea night</p>
+                            <p>We provide lifetime support, which gives client a greater support within their organization and stake holders.</p>
                         </div>
                     </div>
                 </div>

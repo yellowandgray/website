@@ -55,7 +55,7 @@
 
 .ptb-40 {
     padding-top: 40px;
-    padding-bottom: 80px;
+    padding-bottom: 40px;
 }
 
 .custom-portfolio .card-columns {
@@ -102,7 +102,7 @@
 }
 
 .switch-gear-section {
-    padding: 0px 0 50px;
+    padding: 40px 0;
 }
 
 .switch-gear-section .section_tittle {
@@ -150,6 +150,7 @@
 .switch-img-box {
     padding: 5px;
     box-shadow: 0 0 5px 2px #e3e3e3;
+    margin-bottom: 20px;
 }
 
 .switch-img-box img {
@@ -173,7 +174,7 @@
 }
 
 .section_padding_custom {
-    padding: 130px 0 0;
+    padding: 60px 0 0;
 }
 
 .portfolio_part .card-columns .card:hover .card_iner img {
@@ -182,4 +183,14 @@
 
 .portfolio_part .card-columns .card:hover .card_iner img {
     box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: #fe5c24;
+}
+
+.fs-19 {
+    font-size: 19px;
 }

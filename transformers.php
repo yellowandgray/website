@@ -26,7 +26,7 @@
         <!-- breadcrumb start-->
 
         <!--================Blog Area =================-->
-        <section class="blog_area single-post-area section_padding">
+        <section class="blog_area single-post-area section_padding_custom">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 mb-30">

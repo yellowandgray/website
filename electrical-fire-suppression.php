@@ -46,11 +46,11 @@
                 <div class="row">
                     <div class="col-lg-8 posts-list">
                         <div class="single-post">
-                            <p class="excert">Our product is its unique flexible detection tube which provides 100% efficiency with zero false alarms. If a pipe bursts at high heat, it is placed in and around the fire hazard areas.</p>
+                            <p class="excert fs-19">Our product is its unique flexible detection tube which provides 100% efficiency with zero false alarms. If a pipe bursts at high heat, it is placed in and around the fire hazard areas.</p>
                             <br/>
                         </div>
                         <div class="section-top-border">
-                            <p>Providing a simple solution that protects valuable assets, the system works when the detection tube reacts with heat, generates internal pressure, and when the pipe bursts, usually exits the extinguishing media directly into the danger area.</p>
+                            <p class="fs-19">Providing a simple solution that protects valuable assets, the system works when the detection tube reacts with heat, generates internal pressure, and when the pipe bursts, usually exits the extinguishing media directly into the danger area.</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
