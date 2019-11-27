@@ -303,16 +303,6 @@
                                         <p class="text-justify"> Our CBSE method of education through Continuous Comprehensive Evaluation(CCE) is a curricular initiative shifting emphasis from assessment to holistic learning. We follow the NCERT books, which supplements the learning process at ENPEE. Our friendly & welcoming classrooms offer children the space to learn the right way. </p>
                                     </div>
                                 </div>
-                                <div class="blog-post wf100">
-                                    <h5 class="text-center color-black">ENPEE Sports Academy</h5>
-                                    <div class="col-md-6">
-                                        <img src="images/sports-001.jpg" alt=""  class="img-s">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <img src="images/sports-002.jpg" alt=""  class="img-s">
-                                    </div>
-                                   
-                                </div>
                                 <!--Blog Post End-->
                             </div>
                         </div>
@@ -325,19 +315,19 @@
                             <!--title end-->
                             <div class="event-posts wf100">
                                 <!--Blog Post Start-->
-<!--                                <div class="event-post">
-                                    <div class="event-thumb">
-                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/event-knowledge-innovation-excellence.jpg" alt="Knowledge Innovation Excellence - ENPEE International School" title="Knowledge Innovation Excellence - ENPEE International School">
-                                        <ul class="post-meta">
-                                            <li>28th September, 2019 </li>
-                                            <li> 11:00 am - 04:00 pm</li>
-                                        </ul>
-                                    </div>
-                                    <div class="event-txt">
-                                        <h6><a href="news-events.php#upcome-event">First Annual Carnival Enpee 2019</a></h6>
-                                        <p><i class="fas fa-map-marker-alt"></i> Enpee Internatioal School, Karaikal </p>
-                                    </div>
-                                </div>-->
+                                <!--                                <div class="event-post">
+                                                                    <div class="event-thumb">
+                                                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/event-knowledge-innovation-excellence.jpg" alt="Knowledge Innovation Excellence - ENPEE International School" title="Knowledge Innovation Excellence - ENPEE International School">
+                                                                        <ul class="post-meta">
+                                                                            <li>28th September, 2019 </li>
+                                                                            <li> 11:00 am - 04:00 pm</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <div class="event-txt">
+                                                                        <h6><a href="news-events.php#upcome-event">First Annual Carnival Enpee 2019</a></h6>
+                                                                        <p><i class="fas fa-map-marker-alt"></i> Enpee Internatioal School, Karaikal </p>
+                                                                    </div>
+                                                                </div>-->
                                 <!--Blog Post End-->
                                 <!--Blog Post Start-->
                                 <div class="event-post">
@@ -361,6 +351,21 @@
                 </div>
             </section>
             <!--News Post Section End-->
+
+            <div class="blog-post wf100">
+                <div class="container">
+                    <div class="row">
+                        <h5 class="text-center color-black padding-bottom-30">ENPEE Sports Academy</h5>
+                        <div class="col-md-6">
+                            <img src="images/sports-001.jpg" alt="ENPEE International School - Sports Academy"  class="img-s">
+                        </div>
+                        <div class="col-md-6">
+                            <img src="images/sports-002.jpg" alt="ENPEE International School - Sports Academy"  class="img-s">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!--Fundraising Campaigns Section Start-->
 <!--            <section class="wf100 p80 fcampaigns">
                 <div class="container">
