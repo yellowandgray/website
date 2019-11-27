@@ -33,7 +33,9 @@
                         <div class="section_tittle">
                             <h2>Electrical Fire Suppression System</h2>
                         </div>
-                        <img src="img/electrical-suppression/cover.jpg" alt="" />
+                        <div class="switch-img-box">
+                            <img src="img/electrical-suppression/cover.jpg" alt="" />
+                        </div>
                         <br/>
                         <br/>
                         <div class="single-post">
@@ -53,7 +55,9 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="blog_right_sidebar">
-                            <img src="img/electrical-suppression/001.png" alt="" />
+                            <div class="switch-img-box">
+                                <img src="img/electrical-suppression/001.png" alt="" />
+                            </div>
                             <!--                            <div class="switch-points">
                                                             <ul class="unordered-list">
                                                                 <li>Contact resistance</li>

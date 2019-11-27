@@ -41,11 +41,15 @@
     top: 15px;
 }
 
-.switch-list .unordered-list li {
+.switch-list {
+    margin-top: 15px;
+}
+
+.switch-list.unordered-list li {
     font-size: 18px;
 }
 
-.switch-list .unordered-list li::before {
+.switch-list.unordered-list li::before {
     top: 12px;
 }
 
@@ -117,8 +121,65 @@
     margin: 0 auto;
 }
 
+@media screen and (max-width: 767px) {
+    .image_text_overlay {
+        background: transparent !important;
+        position: unset !important;
+        padding: 20px 0 !important;
+    }
+    .image_text_overlay .switch-points ul li {
+        color: #000 !important;
+    }
+    .menu_fixed .navbar-brand img {
+        max-width: 210px !Important;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .height_custom {
+        height: 800px;
+    }
+}
+
 @media screen and (max-width: 991px) {
     .our_industries .single_industries a img {
         width: auto !important;
     }
+}
+
+.switch-img-box {
+    padding: 5px;
+    box-shadow: 0 0 5px 2px #e3e3e3;
+}
+
+.switch-img-box img {
+    width: 100%;
+}
+
+.image_text_overlay {
+    position: relative;
+    bottom: 205px;
+    padding: 20px 20px 0;
+    background: rgba(0, 0, 0, 0.6);
+    margin: 0 5px;
+}
+
+.image_text_overlay .switch-points {
+    margin: 0;
+}
+
+.image_text_overlay .switch-points ul li {
+    color: #fff;
+}
+
+.section_padding_custom {
+    padding: 130px 0 0;
+}
+
+.portfolio_part .card-columns .card:hover .card_iner img {
+    transition: 0.5s;
+}
+
+.portfolio_part .card-columns .card:hover .card_iner img {
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
 }

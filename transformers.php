@@ -33,7 +33,9 @@
                         <div class="section_tittle">
                             <h2>Transformers</h2>
                         </div>
-                        <img src="img/transformers/cover.jpg" alt="" />
+                        <div class="switch-img-box">
+                            <img src="img/transformers/cover.jpg" alt="" />
+                        </div>
                     </div>
                 </div>
                 <div class="row">
@@ -45,6 +47,11 @@
                         </div>
                         <div class="section-top-border">
                             <div class="row">
+                                <div class="col-md-6">
+                                    <div class="switch-img-box">
+                                        <img src="img/transformers/side-img-1.jpg" alt="" />
+                                    </div>
+                                </div>
                                 <div class="col-md-6 mt-sm-20">
                                     <div class="switch-points">
                                         <ul class="unordered-list">
@@ -54,22 +61,21 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <img src="img/transformers/side-img-1.jpg" alt="" />
-                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="blog_right_sidebar">
-                            <img src="img/transformers/side-img.jpg" alt="" />
-                            <div class="switch-points">
-                                <ul class="unordered-list">
-                                    <li>Transformer Oil test</li>
-                                    <li>Vector Group test</li>
-                                    <li>Polarization Index</li>
-                                    <li>Tangen Delta</li>
-                                </ul>
+                            <div class="switch-img-box">
+                                <img src="img/transformers/side-img.jpg" alt="" />
+                                <div class="switch-points">
+                                    <ul class="unordered-list">
+                                        <li>Transformer Oil test</li>
+                                        <li>Vector Group test</li>
+                                        <li>Polarization Index</li>
+                                        <li>Tangen Delta</li>
+                                    </ul>
+                                </div>
                             </div>
                             <hr>
                         </div>

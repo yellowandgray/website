@@ -25,7 +25,7 @@
         <!--                                <h5>Since <span>1990</span> </h5>-->
                                         <h1> SWITCH GEAR</h1>
                                         <h3>Switch Gear Installation and testing commissioning</h3>
-                                        <a href="about" class="btn_1">learn more </a>
+                                        <a href="switchgears" class="btn_1">learn more </a>
                                     </div>
                                 </div>
                             </div>
@@ -42,7 +42,7 @@
         <!--                                <h5>Since <span>1990</span> </h5>-->
                                         <h1> TRANSFORMER</h1>
                                         <h3>Transformer installation and testing commissioning</h3>
-                                        <a href="about" class="btn_1">learn more </a>
+                                        <a href="transformers" class="btn_1">learn more </a>
                                     </div>
                                 </div>
                             </div>
@@ -59,7 +59,7 @@
         <!--                                <h5>Since <span>1990</span> </h5>-->
                                         <h1>CABLE</h1>
                                         <h3>HT cable termination and testing commissioning</h3>
-                                        <a href="about" class="btn_1">learn more </a>
+                                        <a href="cables" class="btn_1">learn more </a>
                                     </div>
                                 </div>
                             </div>
@@ -76,7 +76,7 @@
         <!--                                <h5>Since <span>1990</span> </h5>-->
                                         <h1>FIRE SUPPRESSION SYSTEM</h1>
                                         <h3>Fire suppression system installation and inspection and testing</h3>
-                                        <a href="about" class="btn_1">learn more </a>
+                                        <a href="electrical-fire-suppression" class="btn_1">learn more </a>
                                     </div>
                                 </div>
                             </div>

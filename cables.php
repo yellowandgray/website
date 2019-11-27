@@ -33,7 +33,9 @@
                         <div class="section_tittle">
                             <h2>HT Cables Termination and Testing</h2>
                         </div>
-                        <img src="img/cables/cover.jpg" alt="" />
+                        <div class="switch-img-box">
+                            <img src="img/cables/cover.jpg" alt="" />
+                        </div>
                     </div>
                 </div>
                 <div class="row">
@@ -44,22 +46,28 @@
                         <div class="section-top-border">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <img src="img/cables/cable.jpg" alt="" />
+                                    <div class="switch-img-box">
+                                        <img src="img/cables/cable.jpg" alt="" />
+                                    </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <img src="img/cables/cable-1.jpg" alt="" />
+                                    <div class="switch-img-box">
+                                        <img src="img/cables/cable-1.jpg" alt="" />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="blog_right_sidebar">
-                            <img src="img/cables/side-img.jpg" alt="" />
-                            <div class="switch-points">
-                                <ul class="unordered-list">
-                                    <li>VLF Test</li>
-                                    <li>DC Hi-Pot</li>
-                                </ul>
+                            <div class="switch-img-box">
+                                <img src="img/cables/side-img.jpg" alt="" />
+                                <div class="switch-points">
+                                    <ul class="unordered-list">
+                                        <li>VLF Test</li>
+                                        <li>DC Hi-Pot</li>
+                                    </ul>
+                                </div>
                             </div>
                             <hr>
                         </div>

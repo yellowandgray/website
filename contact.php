@@ -77,7 +77,7 @@
                             <span class="contact-info__icon"><i class="ti-home"></i></span>
                             <div class="media-body">
                                 <h3>S&T Testing Services Pte Ltd.</h3>
-                                <p>iSPACE, 7 Soon Lee Street Unit 02-11,<br/> Singapore 627608</p>
+                                <p>iSPACE, 7 Soon Lee Street Unit 02-12,<br/> Singapore 627608</p>
                             </div>
                         </div>
                         <div class="media contact-info">

@@ -29,11 +29,13 @@
         <section class="custom-portfolio portfolio_part section_padding">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12 card-columns">
-                        <div class="card tittle">
-                            <blockquote class="blockquote mb-0">
+                    <div class="col-lg-12">
+                        <div class="tittle">
+                            <!--                            <blockquote class="blockquote mb-0">-->
+                            <div class="section_tittle">
                                 <h2>Completed Projects</h2>
-                            </blockquote>
+                            </div>
+                            <!--                            </blockquote>-->
                         </div>
                     </div>
                 </div>
@@ -44,8 +46,8 @@
                                 <div class="card_iner overlay">
                                     <img src="img/project/001.png" class="card-img-top" alt="...">
                                     <div class="card-body">
-                                        <h5 class="card-title">Title Comes Here</h5>
-                                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                        <h5 class="card-title">Complete Project</h5>
+<!--                                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>-->
                                         </a>
                                     </div>
                                 </div>
@@ -54,9 +56,8 @@
                                 <div class="card_iner overlay">
                                     <img src="img/project/002.png" class="card-img-top" alt="...">
                                     <div class="card-body">
-                                        <h5 class="card-title">Title Comes Here</h5>
-                                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                        </a>
+                                        <h5 class="card-title">Complete Project</h5>
+<!--                                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>-->
                                     </div>
                                 </div>
                             </div>
@@ -64,9 +65,8 @@
                                 <div class="card_iner overlay">
                                     <img src="img/project/003.png" class="card-img-top" alt="...">
                                     <div class="card-body">
-                                        <h5 class="card-title">Title Comes Here</h5>
-                                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                        </a>
+                                        <h5 class="card-title">Complete Project</h5>
+<!--                                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>-->
                                     </div>
                                 </div>
                             </div>
@@ -74,9 +74,9 @@
                                 <div class="card_iner overlay">
                                     <img src="img/project/004.png" class="card-img-top" alt="...">
                                     <div class="card-body">
-                                        <h5 class="card-title">Title Comes Here</h5>
-                                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                        </a>
+                                        <h5 class="card-title">Complete Project</h5>
+ <!--                                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>-->
+
                                     </div>
                                 </div>
                             </div>
@@ -84,39 +84,39 @@
                                 <div class="card_iner overlay">
                                     <img src="img/project/005.png" class="card-img-top" alt="...">
                                     <div class="card-body">
-                                        <h5 class="card-title">Title Comes Here</h5>
-                                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                        </a>
+                                        <h5 class="card-title">Complete Project</h5>
+<!--                                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>-->
+
                                     </div>
                                 </div>
                             </div>
-<!--                            <div class="card ">
-                                <div class="card_iner overlay">
-                                    <img src="img/project/006.png" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Title Comes Here</h5>
-                                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card ">
-                                <div class="card_iner overlay">
-                                    <img src="img/project/007.png" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Title Comes Here</h5>
-                                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>-->
+                            <!--                            <div class="card ">
+                                                            <div class="card_iner overlay">
+                                                                <img src="img/project/006.png" class="card-img-top" alt="...">
+                                                                <div class="card-body">
+                                                                    <h5 class="card-title">Title Comes Here</h5>
+                                                                    <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card ">
+                                                            <div class="card_iner overlay">
+                                                                <img src="img/project/007.png" class="card-img-top" alt="...">
+                                                                <div class="card-body">
+                                                                    <h5 class="card-title">Title Comes Here</h5>
+                                                                    <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>-->
                             <div class="card ">
                                 <div class="card_iner overlay">
                                     <img src="img/project/008.png" class="card-img-top" alt="...">
                                     <div class="card-body">
-                                        <h5 class="card-title">Title Comes Here</h5>
-                                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                        </a>
+                                        <h5 class="card-title">Complete Project</h5>
+<!--                                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>-->
+
                                     </div>
                                 </div>
                             </div>
@@ -124,9 +124,9 @@
                                 <div class="card_iner overlay">
                                     <img src="img/project/009.png" class="card-img-top" alt="...">
                                     <div class="card-body">
-                                        <h5 class="card-title">Title Comes Here</h5>
-                                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                        </a>
+                                        <h5 class="card-title">Complete Project</h5>
+<!--                                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>-->
+
                                     </div>
                                 </div>
                             </div>
@@ -134,9 +134,8 @@
                                 <div class="card_iner overlay">
                                     <img src="img/project/010.png" class="card-img-top" alt="...">
                                     <div class="card-body">
-                                        <h5 class="card-title">Title Comes Here</h5>
-                                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                        </a>
+                                        <h5 class="card-title">Complete Project</h5>
+<!--                                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>-->
                                     </div>
                                 </div>
                             </div>
@@ -144,9 +143,8 @@
                                 <div class="card_iner overlay">
                                     <img src="img/project/011.png" class="card-img-top" alt="...">
                                     <div class="card-body">
-                                        <h5 class="card-title">Title Comes Here</h5>
-                                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                        </a>
+                                        <h5 class="card-title">Complete Project</h5>
+<!--                                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>-->
                                     </div>
                                 </div>
                             </div>
@@ -154,8 +152,8 @@
                                 <div class="card_iner overlay">
                                     <img src="img/project/012.png" class="card-img-top" alt="...">
                                     <div class="card-body">
-                                        <h5 class="card-title">Title Comes Here</h5>
-                                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                        <h5 class="card-title">Complete Project</h5>
+<!--                                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>-->
                                         </a>
                                     </div>
                                 </div>
@@ -164,9 +162,8 @@
                                 <div class="card_iner overlay">
                                     <img src="img/project/013.png" class="card-img-top" alt="...">
                                     <div class="card-body">
-                                        <h5 class="card-title">Title Comes Here</h5>
-                                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                        </a>
+                                        <h5 class="card-title">Complete Project</h5>
+<!--                                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>-->
                                     </div>
                                 </div>
                             </div>
@@ -174,9 +171,8 @@
                                 <div class="card_iner overlay">
                                     <img src="img/project/014.png" class="card-img-top" alt="...">
                                     <div class="card-body">
-                                        <h5 class="card-title">Title Comes Here</h5>
-                                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                        </a>
+                                        <h5 class="card-title">Complete Project</h5>
+<!--                                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>-->
                                     </div>
                                 </div>
                             </div>
@@ -184,9 +180,8 @@
                                 <div class="card_iner overlay">
                                     <img src="img/project/015.png" class="card-img-top" alt="...">
                                     <div class="card-body">
-                                        <h5 class="card-title">Title Comes Here</h5>
-                                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                        </a>
+                                        <h5 class="card-title">Complete Project</h5>
+<!--                                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>-->
                                     </div>
                                 </div>
                             </div>
@@ -194,9 +189,8 @@
                                 <div class="card_iner overlay">
                                     <img src="img/project/016.png" class="card-img-top" alt="...">
                                     <div class="card-body">
-                                        <h5 class="card-title">Title Comes Here</h5>
-                                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                        </a>
+                                        <h5 class="card-title">Complete Project</h5>
+<!--                                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>-->
                                     </div>
                                 </div>
                             </div>
@@ -204,17 +198,16 @@
                                 <div class="card_iner overlay">
                                     <img src="img/project/017.png" class="card-img-top" alt="...">
                                     <div class="card-body">
-                                        <h5 class="card-title">Title Comes Here</h5>
-                                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                        </a>
+                                        <h5 class="card-title">Complete Project</h5>
+<!--                                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>-->
                                     </div>
                                 </div>
                             </div>
-<!--                            <div class="card see_more_project">
-                                <blockquote class="blockquote mb-0">
-                                    <a href="#" class="btn_1">more project</a>
-                                </blockquote>
-                            </div>-->
+                            <!--                            <div class="card see_more_project">
+                                                            <blockquote class="blockquote mb-0">
+                                                                <a href="#" class="btn_1">more project</a>
+                                                            </blockquote>
+                                                        </div>-->
                         </div>
                     </div>
                 </div>
