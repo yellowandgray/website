@@ -34,6 +34,10 @@ $testimonials = $obj->selectAll('*', 'testimonial', 'testimonial_id > 0');
                     </div>
                 </div>
             </div>
+            <div class="curve">
+                <img src="images/box.png" alt=""/>
+            </div>
+
         </section>
         <section class="ftco-category pad-20-80 res-feature">
             <div class="col-md-12">

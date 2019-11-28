@@ -2091,6 +2091,23 @@ span.psw{
     width: 35%;
 }
 
+.curve img{
+    width: 100%;
+    height: auto;
+    position: relative;
+    bottom: -10px;
+}
+@media (max-width: 700px) and (min-width: 320px) {
+
+    .curve img{
+        width: 100%;
+        height: auto;
+        position: relative;
+        bottom: -2px;
+    }
+
+}
+
 .product-list {
     background: #fff;
 }

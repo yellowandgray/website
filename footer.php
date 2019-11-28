@@ -41,6 +41,7 @@
                             <li class="ftco-animate"><a href="https://twitter.com/FrescheIndia" target="block"><span class="icon-twitter"></span></a></li>
                             <li class="ftco-animate"><a href="https://www.facebook.com/frescheindia/" target="block"><span class="icon-facebook"></span></a></li>
                             <li class="ftco-animate"><a href="https://www.instagram.com/p/B4jbAoupksk/" target="block"><span class="icon-instagram"></span></a></li>
+                            <li class="ftco-animate"><a href="https://youtu.be/hL0eNG_99HM" target="block"><span class="icon-youtube"></span></a></li>
                         </ul>
                     </div>
                 </div> 
@@ -69,7 +70,8 @@
 <script src= "https://chat.hippochat.io/js/widget.js"></script>
 <script>
                          window.initHippo({
-                                appSecretKey: "b5302cc09c9bd01d68dcfc7e00d4926e"
+//                                appSecretKey: "b5302cc09c9bd01d68dcfc7e00d4926e"
+                                appSecretKey: "a30208592c47814e71898845310c0d09"
                         });
 </script>
 
