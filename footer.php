@@ -1,48 +1,40 @@
 <footer class="ftco-footer ftco-section">
-    <!--    <div class="row">
-            <div class="mouse">
-                <a href="#" class="mouse-icon">
-                    <div class="mouse-wheel"><span class="ion-ios-arrow-up"></span></div>
-                </a>
-            </div>
-        </div>-->
     <div class="row footer-h">
-        <div class="footer-1">
+        <div class="col-md-5">
             <div class="ftco-footer-widget ftco-footer-widget-img mb-4">
                 <a href="index.php"> <img src="images/logo-01.png" alt=""/></a>
                 <p>Fresche Bioscience is a new generation SI QAC antimicrobial which delivers high performance, broad spectrum antibacterial, anti-fungal, mould and odour protection on surfaces to which they are either applied or infused. They are widely recognised as one of the worlds most advanced non-volatile, surface bonded antimicrobial, safe for people, plants, pets and the environment.</p>
             </div>
         </div>
-        <div class="footer-2">
+        <div class="col-md-7">
             <div class="ftco-footer-widget mb-4">
-                <form class="footer-h enquiry-footer-form">
-                    <div class="block-23 mb-3 footer-3">
-                        <i class="fa fa-share-square-o" aria-hidden="true"></i> <h2 class="ftco-heading-2">Fresche Newsletter</h2>
-                    </div>
+                <div class="block-23 mb-3 footer-3">
+                    <h2 class="ftco-heading-2">Fresche Newsletter</h2>
+                </div>
+                <form class="enquiry-footer-form">
                     <div class="news form-group">
-                        <input type="text" name="fname" placeholder="Name">
-                        <input type="email" name="email" placeholder="Email Address">
-                    </div>
-                    <div class="footer-3 form-group">
+                        <input type="text" name="fname" placeholder="Name" required>
+                        <input type="email" name="email" placeholder="Email Address" required>
                         <div class="button-2">
                             <div class="eff-1"></div>
                             <a type="sumbit">SUBMIT</a>
                         </div>
                     </div>
-
-                </form> 
-
+                </form>
             </div>
             <div class="ftco-footer-widget mb-4 policy">
-                <div class="footer-h">
+                <div class="footer-h p-lr-0">
                     <div class="block-23 mb-3 footer-3">
-                        <a href="environmental-policy.php"><i class="fa fa-globe" aria-hidden="true"></i><h2 class="ftco-heading-2">Environmental Policy</h2></a>
+                        <a href="environmental-policy.php">
+                            <i class="fa fa-globe" aria-hidden="true"></i>
+                            <p>Environmental Policy</p>
+                        </a>
                     </div>
                     <div class="block-23 mb-3 footer-3">
-                        <a href="privacy-policy.php"><i class="fa fa-user-secret" aria-hidden="true"></i><h2 class="ftco-heading-2">Privacy & Disclaimer Policy</h2></a>
-                    </div>
-                    <div class="block-23 mb-3 footer-3">
-<!--                        <a href="privacy-policy.php"><i class="fa fa-hand-o-right" aria-hidden="true"></i> <h2 class="ftco-heading-2 ">Disclaimer Policy</h2></a>-->
+                        <a href="privacy-policy.php">
+                            <i class="fa fa-user-secret" aria-hidden="true"></i>
+                            <p>Privacy & Disclaimer Policy</p>
+                        </a>
                     </div>
                     <div class="block-23 mb-3 footer-3">
                         <ul class="ftco-footer-social list-unstyled float-md-left float-lft">

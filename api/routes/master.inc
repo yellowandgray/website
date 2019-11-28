@@ -67,6 +67,18 @@ $app->post('/insert_product', function() use ($app) {
     echoRespnse(201, $res);
 });
 
+$app->post('/insert_testimonial', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to insert');
+    $data = $app->request->post();
+    $com = new Common();
+    $record = $com->insertRecord(array('name' => $data['name'], 'company' => $data['company'], 'description' => $data['description']), 'testimonial');
+    if ($record > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Record inserted successfully';
+    }
+    echoRespnse(201, $res);
+});
+
 $app->post('/insert_member', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
@@ -124,7 +136,7 @@ $app->get('/get_testimonial', function() {
 $app->get('/get_order', function() {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
-    $data = $com->selectAll('*', 'order', 'order_id > 0');
+    $data = $com->selectAll('*', 'orders', 'orders_id > 0');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';

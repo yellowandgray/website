@@ -1,14 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
-
     <?php
     $page = 'about';
     include 'head.php';
-    require_once 'api/include/common.php';
-    $obj = new Common();
-    $cart = $obj->selectRow('*', 'product', 'id = 1');
     ?>
     <body class="goto-here">
 
@@ -24,7 +18,7 @@
                 <div class="row no-gutters slider-text align-items-center justify-content-center">
                     <div class="col-md-9 ftco-animate text-center">
                         <h1 class="mb-0 bread">MY CART</h1>
-                        <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home-</a></span> <span class="mr-2"></span> <span>My Cart</span></p>
+                        <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home</a></span><span class="mr-2">-</span> <span>My Cart</span></p>
 
                     </div>
                 </div>
@@ -35,106 +29,85 @@
             <div class="pad-lr-80">
                 <div class="container">
                     <div class="row">
-
-                        <div class="col-md-12">
-                            <div class="row">
-                                <div class="col-md-12 items">
-                                    <h3>My Cart</h3>
-                                    <hr>
+                        <div class="col-md-12 items">
+                            <h3>My Cart</h3>
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="bg-white">
+                                <div class="check-login">
+                                    <h4><span>1</span> LOGIN OR SIGNUP</h4>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <div class="items-n">
+                                <div class="user-login">
 
-                                        <div class="row" style="padding: 10px;">
-                                            <div class="col-md-3 cart-img">
-                                                <img src="<?php echo $cart['image']; ?>" alt=""/>
-                                                <div class="add-num">
-                                                    <input type="number" value="<?php echo $cart['quantity']; ?>">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <h5><?php echo $cart['name']; ?></h5>
-                                                <!--<p>Volume: <span>1l + 1.5l</span></p>-->
-                                                <p><i class="fa fa-inr" aria-hidden="true"></i> <?php echo $cart['price'] * $cart['quantity']; ?></p>
-                                                <p class="cart-remove"><a> Remove</a></p>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <p class="delivery">Delivery in 4 - 5 days</p>
-                                                <p class="replace">10 Days Replacement Policy</p>
-                                            </div>
+                                    <!--default-->
+
+                                    <div class="flow-1">
+                                        <input type="text" placeholder="Enter Phone/email">
+                                        <button type="submit">CONTINUE</button>
+                                    </div>
+
+                                    <!--flow-2-not in user list-->
+
+                                    <div class="flow-2">
+                                        <div class="">
+                                            <input type="text" placeholder="Enter OTP">
                                         </div>
-
-                                        <hr>
-                                        <!--                                                <div class="row" style="padding: 10px;">
-                                                                                            <div class="col-md-3 cart-img">
-                                                                                                <img src="<?php echo $val['image']; ?>" alt=""/>
-                                                                                                <div class="add-num">
-                                                                                                    <input type="number" value="<?php echo $val['quantity']; ?>">
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            <div class="col-md-5">
-                                                                                                <h5>Fresche Mini Kit</h5>
-                                                                                                <p>Volume: <span>2 sets of 5 ml </span></p>
-                                                                                                <p><i class="fa fa-inr" aria-hidden="true"></i></i> <?php echo $val['price'] * $val['quantity']; ?></p>
-                                                                                                <p class="cart-remove"><a href="#">Remove</a></p>
-                                                                                            </div>
-                                                                                            <div class="col-md-4">
-                                                                                                <p class="delivery">Delivery in 4 - 5 days</p>
-                                                                                                <p class="replace">10 Days Replacement Policy</p>
-                                        
-                                                                                            </div>
-                                                                                        </div>-->
-
-
-                                        <div class="row">
-                                            <div class="col-md-12 ">
-                                                <div class="add-next">
-                                                    <button><a href="checkout.php" style="color: #fff">PLACE ORDER</a></button>
-                                                </div> 
-                                            </div> 
+                                        <div class="">
+                                            <input type="text" placeholder="Set Password">
                                         </div>
                                     </div>
 
-                                </div>
-                                <div class="col-md-4 ">
-                                    <div class="total-amount">
-                                        <p class="price-tetail">PRICE DETAILS</p>
-                                        <hr>
-                                        <div class="row price-cart">
-                                            <div class="col-md-6">
-                                                <p>Price(2 item)</p>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p><i class="fa fa-inr" aria-hidden="true"></i></i> 8250.00</p>
-                                            </div>
-                                        </div>
-                                        <div class="row price-cart">
-                                            <div class="col-md-6">
-                                                <p>Delivery</p>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>FREE</p>
-                                            </div>
-                                        </div>
-                                        <hr>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <p class="total-p">Total Payable</p>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p><i class="fa fa-inr" aria-hidden="true"></i></i> 8250.00</p>
-                                            </div>
+                                    <!--flow-3- user in list-->
 
+                                    <div class="flow-3">
+                                        <div class="">
+                                            <input type="text" placeholder="Password">
+                                            <a href="">Forget?</a>
                                         </div>
-
                                     </div>
-                                    <p class="need">Need help? <a href="contact.php">Contact Us</a></p>
+                                    <div class="login-final-submit">
+                                        <button type="submit">LOGIN</button>
+                                        <br/>
+                                    <a href="#" class="text-center margin-top-10">Not to Quardian? Create Your Account</a>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="product-list">
+                                    <h1><span>2</span> Product List</h1>
+                                    <div class="product cart-flex">
+                                        <div class="product-image">
+                                            <img src="images/product-01.jpg">
+                                        </div>
+                                        <div class="product-price"><i class="fa fa-inr" aria-hidden="true"></i> 8000</div>
+                                        <div class="product-quantity">
+                                            <input type="number" value="1" min="1">
+                                        </div>
+                                        <div class="product-removal">
+                                            <button class="remove-product">
+                                                Remove
+                                            </button>
+                                        </div>
+                                        <div class="product-line-price"><i class="fa fa-inr" aria-hidden="true"></i> 8000</div>
+                                    </div>
                                 </div>
                             </div>
-
-
+                        </div>
+                        <div class="col-md-4 ">
+                            <div class="total-amount">
+                                <p class="price-tetail">PRICE DETAILS</p>
+                                <hr>
+                                <div class="totals">
+                                    <div class="totals-item">
+                                        <label>Subtotal</label>
+                                        <div class="totals-value" id="cart-subtotal">8000</div>
+                                    </div>
+                                </div>
+                                <button class="checkout">Checkout</button>
+                            </div>
+                            <p class="need">Need help? <a href="contact.php">Contact Us</a></p>
                         </div>
                     </div>
                 </div>
@@ -143,5 +116,84 @@
 
 
         <?php include 'footer.php'; ?>
+        <script>
+            /* Set rates + misc */
+            var taxRate = 0.05;
+            var shippingRate = 15.00;
+            var fadeTime = 300;
+
+
+            /* Assign actions */
+            $('.product-quantity input').change(function () {
+                updateQuantity(this);
+            });
+
+            $('.product-removal button').click(function () {
+                removeItem(this);
+            });
+
+
+            /* Recalculate cart */
+            function recalculateCart()
+            {
+                var subtotal = 0;
+
+                /* Sum up row totals */
+                $('.product').each(function () {
+                    subtotal += parseFloat($(this).children('.product-line-price').text());
+                });
+
+                /* Calculate totals */
+                var tax = subtotal * taxRate;
+                var shipping = (subtotal > 0 ? shippingRate : 0);
+                var total = subtotal + tax + shipping;
+
+                /* Update totals display */
+                $('.totals-value').fadeOut(fadeTime, function () {
+                    $('#cart-subtotal').html(subtotal.toFixed(2));
+                    $('#cart-tax').html(tax.toFixed(2));
+                    $('#cart-shipping').html(shipping.toFixed(2));
+                    $('#cart-total').html(total.toFixed(2));
+                    if (total == 0) {
+                        $('.checkout').fadeOut(fadeTime);
+                    } else {
+                        $('.checkout').fadeIn(fadeTime);
+                    }
+                    $('.totals-value').fadeIn(fadeTime);
+                });
+            }
+
+
+            /* Update quantity */
+            function updateQuantity(quantityInput)
+            {
+                /* Calculate line price */
+                var productRow = $(quantityInput).parent().parent();
+                var price = parseFloat(productRow.children('.product-price').text());
+                var quantity = $(quantityInput).val();
+                var linePrice = price * quantity;
+
+                /* Update line price display and recalc cart totals */
+                productRow.children('.product-line-price').each(function () {
+                    $(this).fadeOut(fadeTime, function () {
+                        $(this).text(linePrice.toFixed(2));
+                        recalculateCart();
+                        $(this).fadeIn(fadeTime);
+                    });
+                });
+            }
+
+
+            /* Remove item from cart */
+            function removeItem(removeButton)
+            {
+                /* Remove row from DOM and recalc cart total */
+                var productRow = $(removeButton).parent().parent();
+                productRow.slideUp(fadeTime, function () {
+                    productRow.remove();
+                    recalculateCart();
+                });
+            }
+        </script>
     </body>
 </html>

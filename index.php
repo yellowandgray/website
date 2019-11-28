@@ -1,3 +1,8 @@
+<?php
+require_once 'api/include/common.php';
+$obj = new Common();
+$testimonials = $obj->selectAll('*', 'testimonial', 'testimonial_id > 0');
+?>
 <!DOCTYPE html>
 <html lang="en">
     <?php
@@ -22,7 +27,7 @@
                             <div class="col-lg-8 col-md-8 ftco-animate product-text">
                                 <!--<h1 class="mb-2">PRODUCT</h1>-->
                                 <!--<h2 class="subheading mb-4" style="text-align: center;">GAIN SUPER POWER WITH <span>FRESCHE</span></h2><article class="container">-->
-                               
+
                             </div>
                             <div class="col-md-4"></div>
                         </div>
@@ -594,7 +599,7 @@
                                 <div class=" see-1">
                                     <div class=" button-1">
                                         <div class="eff-1"></div>
-                                        <a href="#">See More</a>
+                                        <a href="about.php">See More</a>
                                     </div>
                                 </div>
                             </div>
@@ -615,24 +620,25 @@
             </div> 
         </section>
 
-
         <section class="ftco-section testimony-section bg-blue">
             <div class="container">
                 <div class="row ftco-animate">
                     <div class="col-md-12">
                         <div class="carousel-testimony owl-carousel">
-                            <div class="item">
-                                <div class="testimony-wrap p-4 pb-5">
-                                    <div class="text text-center">
-                                        <i class="icon-quote-left"></i> <p class="mb-5 pl-4 ">Fresche  antimicrobial is an agent that can be used for surface hygiene and claims to deliver broad spectrum, high performance surface hygiene in domestic, commercial or industrial manufacturing environments.This  product  was tested in the laboratory.</p><i class="icon-quote-right"></i>
+                            <?php foreach ($testimonials as $row) { ?>
+                                <div class="item">
+                                    <div class="testimony-wrap p-4 pb-5">
+                                        <div class="text text-center">
+                                            <i class="icon-quote-left"></i> <p class="mb-5 pl-4 "><?php echo $row['description']; ?></p><i class="icon-quote-right"></i>
+                                        </div>
+                                        <div class="testimony-name text-right">
+                                            <p class="name"><?php echo $row['name']; ?></p>
+                                            <span class="position"><?php echo $row['company']; ?></span>
+                                        </div> 
                                     </div>
-                                    <div class="testimony-name text-right">
-                                        <p class="name">Mayaprasanna Pillai</p>
-                                        <span class="position">KG Hospital</span>
-                                    </div> 
                                 </div>
-                            </div>
-                            <div class="item">
+                            <?php } ?>
+<!--                            <div class="item">
                                 <div class="testimony-wrap p-4 pb-5">
                                     <div class="text text-center">
                                         <i class="icon-quote-left"></i> <p class="mb-5 pl-4 ">I would like to update you that the we are impressed with the tenure of efficacy of your FRESCHE anti microbial product. We are crossing 6 months and the surface in our 3rd West area is still fungal free and the dust resistant nature of the surface is an added advantage. </p><i class="icon-quote-right"></i>
@@ -642,10 +648,7 @@
                                         <span class="position">Sr. Manager, Housekeeping Department, KMCH Hospital.</span>
                                     </div> 
                                 </div>
-                            </div>
-
-
-
+                            </div>-->
                         </div>
                     </div>
 

@@ -121,13 +121,13 @@ export class ProductForm {
         formData.append('product_price', this.productForm.value.product_price);
         formData.append('product_name', this.productForm.value.product_name);
         formData.append('description', this.productForm.value.description);
-        formData.append('product_image', this.productForm.value.image_path);
+        formData.append('product_image', this.image_path);
         url = 'update_record/product/product_id = '+this.product_id;
       } else {
         formData.append('product_price', this.productForm.value.product_price);
         formData.append('product_name', this.productForm.value.product_name);
         formData.append('description', this.productForm.value.description);
-        formData.append('product_image', this.productForm.value.image_path);
+        formData.append('product_image', this.image_path);
         url = 'insert_product';
       }
       this.httpClient.post('http://localhost/project/fresche/api/v1/'+url, formData).subscribe(

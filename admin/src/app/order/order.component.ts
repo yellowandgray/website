@@ -10,14 +10,14 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./order.component.css']
 })
 export class OrderComponent implements OnInit {
-    result = [];
+  result = [];
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
 
   ngOnInit() {
     this.getOrder();
   }
     getOrder(): void {
-     this.httpClient.get<any>('https://localhost/project/fresche/api/v1/get_order')
+     this.httpClient.get<any>('http://localhost/project/fresche/api/v1/get_order')
      .subscribe(
              (res)=>{
                  this.result = res["result"]["data"];

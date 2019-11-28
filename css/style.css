@@ -2053,7 +2053,7 @@ textarea.form-control {
         -o-transition: none;
         transition: none; } }
 .btn:hover {
-    color: #212529;
+    color: #ffffff;
     text-decoration: none; }
 .btn:focus, .btn.focus {
     outline: 0;
@@ -9206,10 +9206,18 @@ textarea.form-control {
     text-transform: uppercase;
     letter-spacing: .1em; }
 .ftco-footer .ftco-footer-widget h2 {
-    font-weight: normal;
     margin-bottom: 20px;
-    font-size: 16px;
-    font-weight: 500; }
+    font-size: 25px;
+    font-weight: 500;
+    padding: 0; }
+.block-23 a p {
+    padding-left: 25px;
+    color: #0056b3 !important;
+    position: absolute;
+    font-weight: 600;
+    float: left;
+    margin-right: 20px;
+}
 .ftco-footer .ftco-footer-widget ul li {
     font-size: 14px;
     margin-bottom: 0px; }
@@ -9490,7 +9498,8 @@ textarea.form-control {
     font-size: 12px;
     font-weight: 400;
     text-transform: uppercase;
-    letter-spacing: 2px; }
+    letter-spacing: 2px;
+    color: #e3e3e3; }
 .testimony-wrap .line {
     position: relative;
     border-left: 1px solid #e6e6e6; }
@@ -9628,7 +9637,8 @@ textarea.form-control {
 .block-23 ul li, .block-23 ul li > a {
     display: table;
     line-height: 1.5;
-    margin-bottom: 15px; }
+    margin-bottom: 15px;
+    float: left;}
 .block-23 ul li .icon, .block-23 ul li .text {
     display: table-cell;
     vertical-align: top; }
@@ -10014,3 +10024,17 @@ textarea.form-control {
     100% {
         stroke-dasharray: 89, 200;
         stroke-dashoffset: -136px; } }
+
+
+.total-count {
+    font-size: 12px;
+    position: relative;
+    color: #ffffff;
+    top: -20px;
+    right: 5px;
+    border: 1px solid #0071bc;
+    border-radius: 50%;
+    padding: 4px 7px;
+    background: #0071bc;
+    outline: none;
+}

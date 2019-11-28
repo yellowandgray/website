@@ -213,7 +213,7 @@
     background: #eaeaea;
     border: none;
     border-radius: 4px;
-    width: 44%;
+    width: 30%;
     float: left;
     /*    margin-left: 14px;*/   
     margin: 8px 5px;
@@ -221,6 +221,7 @@
 }
 .button-2 a {
     font-size: 13px;
+    color: #fff !important;
 }
 .see-2 .button-1 {
     display: none;

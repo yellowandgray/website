@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { LoginComponent } from './login/login.component';
-import { TestimonialComponent, TestimonialDelete } from './testimonial/testimonial.component';
+import { TestimonialComponent, TestimonialForm, TestimonialDelete } from './testimonial/testimonial.component';
 import { ProductComponent, ProductForm, ProductDelete } from './product/product.component';
 import { MemberComponent, MemberForm, MemberDelete } from './member/member.component';
 import { OrderComponent } from './order/order.component';
@@ -43,6 +43,7 @@ import {MatBadgeModule} from '@angular/material/badge';
     SidenavComponent,
     LoginComponent,
     TestimonialComponent,
+    TestimonialForm,
     TestimonialDelete,
     ProductComponent,
     ProductForm,
@@ -81,7 +82,7 @@ import {MatBadgeModule} from '@angular/material/badge';
     MatExpansionModule,
     MatBadgeModule
   ],
-  entryComponents: [TestimonialComponent, TestimonialDelete, ProductComponent, ProductForm, ProductDelete, MemberComponent, MemberForm, MemberDelete, OrderComponent],
+  entryComponents: [TestimonialComponent, TestimonialForm, TestimonialDelete, ProductComponent, ProductForm, ProductDelete, MemberComponent, MemberForm, MemberDelete, OrderComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
