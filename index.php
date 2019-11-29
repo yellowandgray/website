@@ -117,7 +117,7 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="single_industries">
                             <img src="img/ind/industries_2.png" alt="">
-                            <h3><a href="switchgears">TRANSFORMERS</a></h3>
+                            <h3><a href="transformers">TRANSFORMERS</a></h3>
                             <p>High-voltage transformers are some of the most important (and expensive) pieces of equipment required for operating a power system.</p>
                             <a href="transformers" class="read-more-btn">Read More <img src="img/right-arrow.svg" alt="" /></a>
                         </div>
