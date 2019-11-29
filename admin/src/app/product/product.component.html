@@ -16,6 +16,7 @@
                     <button mat-icon-button aria-label="label" (click)="confirmDelete(data.product_id)">
                         <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                     </button>
+                    <img matListAvatar src="{{image_url}}{{data.image_path}}" *ngIf="data.image_path && data.image_path != ''" alt="image" (click)="imageView(data, 'preview')" />
                     <h4 mat-line>{{data.product_name}}</h4>
                     <span matLine>{{data.product_price}}</span>
                     <p mat-line>{{data.description}}</p>

@@ -71,6 +71,25 @@ export class ProductComponent implements OnInit {
        }
     });
     }
+    imageView(id, action): void  {
+        var data = null;
+          if(id != 0) { 
+            data = id;
+          }
+        const dialogRef = this.dialog.open(ProductImageView, {
+            minWidth: "40%",
+            maxWidth: "40%",
+            data: {
+                data: data,
+                action: action
+            }
+        });
+
+       dialogRef.afterClosed().subscribe(result => {
+           if(result !== false && result !== 'false') {
+           }
+        });
+    }
 }
 
 @Component({
@@ -102,11 +121,7 @@ export class ProductForm {
            description: this.data.description,
         });
             this.product_id = this.data.product_id;
-            this.product_image = this.data.image_path;
-        }else {
-            this.productForm.patchValue({
-                    date: new Date()
-                });
+            this.image_path = this.data.image_path;
         }
     }
 
@@ -121,7 +136,7 @@ export class ProductForm {
         formData.append('product_price', this.productForm.value.product_price);
         formData.append('product_name', this.productForm.value.product_name);
         formData.append('description', this.productForm.value.description);
-        formData.append('product_image', this.image_path);
+        formData.append('media_path', this.image_path);
         url = 'update_record/product/product_id = '+this.product_id;
       } else {
         formData.append('product_price', this.productForm.value.product_price);
@@ -268,3 +283,29 @@ export class ProductDelete {
         );
   }
 }
+
+@Component({
+  selector: 'picture-view',
+  templateUrl: 'picture-view.html',
+})
+ 
+export class ProductImageView {
+    image_url: string = 'http://localhost/project/fresche/api/v1/';
+    action: string = '';
+    loading = false;
+    product_id = 0;
+    data: any;
+    constructor(
+        public dialogRef: MatDialogRef<ProductImageView>,
+        @Inject(MAT_DIALOG_DATA) public datapopup: any,
+        private _snackBar: MatSnackBar,
+        private httpClient: HttpClient) {
+            if(this.datapopup != null) { 
+                this.action = this.datapopup.action;
+                this.data = this.datapopup.data;
+                if(this.datapopup.action == 'delete') {
+                    this.product_id = this.datapopup.data;
+                }
+            }
+        }
+    }

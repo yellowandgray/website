@@ -26,94 +26,116 @@
         </div>
 
         <section class="ftco-section" style="background-color: #f1f3f6;padding: 0px 0 0 !important;">
-            <div class="pad-lr-80">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 items">
-                            <h3>My Cart</h3>
+            <!--            <div class="pad-lr-80">-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 items">
+                        <h3>My Cart</h3>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="bg-white">
+                            <div class="check-login">
+                                <h4><span>1</span> LOGIN OR SIGNUP</h4>
+                            </div>
+                            <div class="user-login">
+
+                                <!--default-->
+
+                                <div class="flow-1">
+                                    <input type="text" placeholder="Enter Phone/email">
+                                    <button type="submit">CONTINUE</button>
+                                </div>
+
+                                <!--flow-2-not in user list-->
+
+                                <div class="flow-2">
+                                    <input type="text" placeholder="Enter OTP">
+                                    <input type="text" placeholder="Set Password">
+                                </div>
+
+                                <!--flow-3- user in list-->
+
+                                <div class="flow-3">
+                                    <input type="text" placeholder="Password">
+                                    <p data-toggle="modal" data-target="#myModal">Forget?</p>
+                                </div>
+                                <div class="login-final-submit">
+                                    <button type="submit">LOGIN</button>
+                                    <br/>
+                                    <a href="member-register.php" class="text-center margin-top-10">Not to Quardian? Create Your Account</a>
+                                </div>
+                            </div>
                             <hr>
+                            <div class="product-list">
+                                <h1><span>2</span> Product List</h1>
+                                <div class="product cart-flex">
+                                    <div class="product-image">
+                                        <img src="images/product-01.jpg">
+                                    </div>
+                                    <div class="product-price">
+                                        <i class="fa fa-inr" aria-hidden="true"></i> 8000
+                                    </div>
+                                    <div class="product-quantity">
+                                        <input type="number" value="1" min="1">
+                                    </div>
+                                    <div class="product-removal">
+                                        <button class="remove-product">
+                                            Remove
+                                        </button>
+                                    </div>
+                                    <div class="product-line-price"><i class="fa fa-inr" aria-hidden="true"></i> 8000</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-8">
-                            <div class="bg-white">
-                                <div class="check-login">
-                                    <h4><span>1</span> LOGIN OR SIGNUP</h4>
-                                </div>
-                                <div class="user-login">
-
-                                    <!--default-->
-
-                                    <div class="flow-1">
-                                        <input type="text" placeholder="Enter Phone/email">
-                                        <button type="submit">CONTINUE</button>
-                                    </div>
-
-                                    <!--flow-2-not in user list-->
-
-                                    <div class="flow-2">
-                                        <div class="">
-                                            <input type="text" placeholder="Enter OTP">
-                                        </div>
-                                        <div class="">
-                                            <input type="text" placeholder="Set Password">
-                                        </div>
-                                    </div>
-
-                                    <!--flow-3- user in list-->
-
-                                    <div class="flow-3">
-                                        <div class="">
-                                            <input type="text" placeholder="Password">
-                                            <a href="">Forget?</a>
-                                        </div>
-                                    </div>
-                                    <div class="login-final-submit">
-                                        <button type="submit">LOGIN</button>
-                                        <br/>
-                                    <a href="#" class="text-center margin-top-10">Not to Quardian? Create Your Account</a>
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="product-list">
-                                    <h1><span>2</span> Product List</h1>
-                                    <div class="product cart-flex">
-                                        <div class="product-image">
-                                            <img src="images/product-01.jpg">
-                                        </div>
-                                        <div class="product-price"><i class="fa fa-inr" aria-hidden="true"></i> 8000</div>
-                                        <div class="product-quantity">
-                                            <input type="number" value="1" min="1">
-                                        </div>
-                                        <div class="product-removal">
-                                            <button class="remove-product">
-                                                Remove
-                                            </button>
-                                        </div>
-                                        <div class="product-line-price"><i class="fa fa-inr" aria-hidden="true"></i> 8000</div>
-                                    </div>
+                    <div class="col-md-4 ">
+                        <div class="total-amount">
+                            <p class="price-tetail">PRICE DETAILS</p>
+                            <hr>
+                            <div class="totals">
+                                <div class="totals-item">
+                                    <label>Subtotal</label>
+                                    <div class="totals-value" id="cart-subtotal">8000</div>
                                 </div>
                             </div>
+                            <button class="checkout">Checkout</button>
                         </div>
-                        <div class="col-md-4 ">
-                            <div class="total-amount">
-                                <p class="price-tetail">PRICE DETAILS</p>
-                                <hr>
-                                <div class="totals">
-                                    <div class="totals-item">
-                                        <label>Subtotal</label>
-                                        <div class="totals-value" id="cart-subtotal">8000</div>
-                                    </div>
-                                </div>
-                                <button class="checkout">Checkout</button>
-                            </div>
-                            <p class="need">Need help? <a href="contact.php">Contact Us</a></p>
-                        </div>
+                        <p class="need">Need help? <a href="contact.php">Contact Us</a></p>
                     </div>
                 </div>
             </div>
+            <!--            </div>-->
         </section>
 
+        <!-- Modal -->
+<!--        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+
+                 Modal content
+                <div class="modal-content">
+                    <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Forget password</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                            </div>
+                            <button type="submit" class="btn-forget">Submit</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>-->
 
         <?php include 'footer.php'; ?>
         <script>

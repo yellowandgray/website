@@ -76,7 +76,7 @@
                                     }
                                     ?>"><a href="contact.php" class="nav-link">Contact</a></li>
                                     <li class=" menu-icon nav-item cta cta-colored"><a href="cart.php" class="nav-link" data-target="#cart"><span class="icon-shopping_cart"></span><span class="total-count"></span></a></li>
-                                    <li class=" menu-icon nav-item cta cta-colored"><a href="#" class="nav-link"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+                                    <li class=" menu-icon nav-item cta cta-colored" data-toggle="modal" data-target="#myModal"><a href="#" class="nav-link"><i class="fa fa-user" aria-hidden="true"></i></a></li>
                                     <!--<li class=" menu-icon nav-item cta cta-colored"><a onclick="document.getElementById('id01').style.display = 'block'" class="nav-link"><i class="fa fa-user" aria-hidden="true"></i></a></li>-->
                                     <!--<li class="nav-item cta cta-colored"> <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Cart (<span class="total-count"></span>)</button><button class="clear-cart btn btn-danger">Clear Cart</button></li>-->
                                     <?php include 'login.php'; ?>
@@ -89,5 +89,35 @@
         </div>
     </div>
 </nav>
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <!--                        <button type="button" class="close" data-dismiss="modal">&times;</button>-->
+                <h4 class="modal-title">Login</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="user_name" placeholder="Enter Phone/Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="password" placeholder="Enter Your Password" required>
+                    </div>
+                    <button type="submit" class="btn-forget">Submit</button>
+                    <br/>
+                    <a href="member-register.php" class="text-center margin-top-10">Not to Quardian? Create Your Account</a>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
 
 

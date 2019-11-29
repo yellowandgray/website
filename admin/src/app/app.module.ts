@@ -7,9 +7,10 @@ import { HeaderComponent } from './header/header.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { LoginComponent } from './login/login.component';
 import { TestimonialComponent, TestimonialForm, TestimonialDelete } from './testimonial/testimonial.component';
-import { ProductComponent, ProductForm, ProductDelete } from './product/product.component';
+import { ProductComponent, ProductForm, ProductDelete, ProductImageView } from './product/product.component';
 import { MemberComponent, MemberForm, MemberDelete } from './member/member.component';
 import { OrderComponent } from './order/order.component';
+import { BannerComponent, BannerForm, BannerImageView, BannerDelete } from './banner/banner.component';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
@@ -47,11 +48,16 @@ import {MatBadgeModule} from '@angular/material/badge';
     TestimonialDelete,
     ProductComponent,
     ProductForm,
+    ProductImageView,
     ProductDelete,
     MemberComponent,
     MemberForm,
     MemberDelete,
-    OrderComponent
+    OrderComponent,
+    BannerComponent,
+    BannerForm,
+    BannerImageView,
+    BannerDelete
   ],
   imports: [
     BrowserModule,
@@ -82,7 +88,7 @@ import {MatBadgeModule} from '@angular/material/badge';
     MatExpansionModule,
     MatBadgeModule
   ],
-  entryComponents: [TestimonialComponent, TestimonialForm, TestimonialDelete, ProductComponent, ProductForm, ProductDelete, MemberComponent, MemberForm, MemberDelete, OrderComponent],
+  entryComponents: [TestimonialComponent, TestimonialForm, TestimonialDelete, ProductComponent, ProductForm, ProductImageView, ProductDelete, MemberComponent, MemberForm, MemberDelete, OrderComponent, BannerComponent, BannerForm, BannerImageView, BannerDelete],
   providers: [],
   bootstrap: [AppComponent]
 })
