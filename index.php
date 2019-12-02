@@ -370,7 +370,7 @@ $testimonials = $obj->selectAll('*', 'testimonial', 'testimonial_id > 0');
                 </div>
                 <div class="col-md-3 heading-section ftco-animate deal-of-the-day ftco-animate">
                    <!--<span class="subheading">Best Price For You</span>-->
-                    <img src="images/feature/001.jpg" alt="" class="pad-t-45 img-responsive"/>
+                    <img src="images/applications/textiles.jpg" alt="" class="pad-t-45 img-responsive"/>
                 </div>
                 <div class="col-md-9 heading-section ftco-animate deal-of-the-day ftco-animate">
                     <h5>Textile products are prone to host microorganisms responsible for diseases, unpleasant odours, colour degradation and deterioration of textile fibres and substrates.</h5>
@@ -400,7 +400,7 @@ $testimonials = $obj->selectAll('*', 'testimonial', 'testimonial_id > 0');
                 </div>
                 <div class="col-md-3 heading-section ftco-animate deal-of-the-day ftco-animate">
                    <!--<span class="subheading">Best Price For You</span>-->
-                    <img src="images/feature/001.jpg" alt="" class="pad-t-45 img-responsive"/>
+                    <img src="images/applications/food-packaging.jpg" alt="" class="pad-t-45 img-responsive"/>
                 </div>
                 <div class="col-md-9 heading-section ftco-animate deal-of-the-day ftco-animate">
                     <h5>Food manufacturing, storage, processing, packaging and distribution environments represent significant hygiene challenges. Fresche Bioscience is an effective broad spectrum anti bacterial, anti fungal, mould and odour control treatment which bonds to the surface on which it is applied. As a bound antimicrobial, it does not leach from the surface or deplete in antimicrobial efficacy.</h5>
@@ -425,9 +425,48 @@ $testimonials = $obj->selectAll('*', 'testimonial', 'testimonial_id > 0');
                                    <!--<span class="subheading">Best Price For You</span>-->
                     <h2 class="mb-4 text-head">Footwear & Leather</h2>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 footwear-css">
+                    <br/>
                     <h5>NEW GENERATION MICROBIAL CONTROL AND PROTECTION FOR LEATHER.</h5>
-                    
+                    <img src="images/applications/footwear.jpg" alt="" class="img-responsive"/>
+                    <h5>Did you know that sweat from your feet has no odour?</h5>
+                    <p>It's the bacteria that grows on our feet or in the shoes we wear hat actually cause odour.</p>
+                    <p>These bacteria convert the sweat and oil from skin into a complex mixture of chemical compounds that lead to unpleasant odours. The truth is that your shoes DO NOTHING to stop your sweat turning into odour!</p>
+                    <p>Sure, many brands might argue their shoes have better ventilation & odour absorbing chemicals. But, unless that sweet "magically disappears" from your shoes, the bacteria are going to accumulate and YOUR feet is going to produce unpleasant odour!</p>
+                    <ul>
+                        <li>Give yourself an environmental market edge <br/> Reduce chemical use and increase productivity <br/> A clean, green, safe solution.</li>
+                    </ul>
+                    <h6>Approved for use by:</h6>
+                    <h4>US EPA | EU BPR | OEKO-TEX</h4>
+                </div>
+                <div class="col-md-6">
+                    <br/>
+                    <ul>
+                        <li>ENVIRONMENTAL INTEGRITY</li>
+                        <li>VALIDATED MICROBIAL PERFORMANCE</li>
+                        <li>NO HEAVY METALS OR CHEMICAL TOXINS</li>
+                        <li>LOCK & BOND MICROBIAL PROTECTION</li>
+                        <li>NON LEACHING AND NON DEPLETING</li>
+                        <li>EFFICIENT MECHANICAL MODE OF ACTION</li>
+                        <li>CLEAN, FRESH & ODOUR FREE</li>
+                    </ul>
+                    <h4 class="clr-blue">FRESCHE BENEFITS</h4>
+                    <h4>Bio-Active Odour Protection</h4>
+                    <ul>
+                        <li>Anti-Odour</li>
+                        <li>Anti-Microbial</li>
+                        <li>Anti-Fungal</li>
+                        <li>Durable</li>
+                        <li>Anti-Static</li>
+                        <li>Non-Toxic</li>
+                        <li>Safe For You And The Planet</li>
+                        <li>Derived From Coconut Oil (sustainable & renewable resource)</li>
+                    </ul>
+                    <div class="bg-do-it">
+                        <h5>Fresche SiQuat technology delivers durable and validated microbial performance with environmental integrity at an affordable cost.</h5>
+                        <h2>LETS DO IT NOW</h2>
+                        <p>Call us for an obilgation free discussion and production trail.</p>
+                    </div>
                 </div>
             </div>
 
@@ -441,7 +480,7 @@ $testimonials = $obj->selectAll('*', 'testimonial', 'testimonial_id > 0');
                 </div>
                 <div class="col-md-3 heading-section ftco-animate deal-of-the-day ftco-animate">
                    <!--<span class="subheading">Best Price For You</span>-->
-                    <img src="images/feature/001.jpg" alt="" class="pad-t-45 img-responsive"/>
+                    <img src="images/applications/footwear.jpg" alt="" class="pad-t-45 img-responsive"/>
                 </div>
                 <div class="col-md-9 heading-section ftco-animate deal-of-the-day ftco-animate">
                     <!--<span class="subheading">Best Price For You</span>-->

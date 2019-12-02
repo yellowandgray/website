@@ -2321,3 +2321,39 @@ span.psw{
 .padding-lr-20per {
     padding:0 20%;
 }
+
+.footwear-css h6 {
+    color: #009ddc;
+    font-weight: 600;
+}
+
+.footwear-css h4 {
+    font-size: 17px;
+    font-weight: 900;
+}
+
+.clr-blue {
+    color: #009ddc;
+}
+
+.bg-do-it {
+    background: rgb(196, 223, 243);
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.bg-do-it h5 {
+    color: #009ddc;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.bg-do-it h2 {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.bg-do-it p {
+    font-size: 20px !important;
+    font-weight: 900;
+}
