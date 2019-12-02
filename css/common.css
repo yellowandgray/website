@@ -222,6 +222,12 @@ body {
     color: #000000;
     border-bottom: 1px solid #000;
     padding-bottom: 5px;
+    cursor: pointer;
+}
+
+.see a:hover {
+    text-decoration: none;
+    color: #0073bc;
 }
 .div-1{
     overflow: hidden;
@@ -1259,15 +1265,39 @@ footer .copy p{
 #featured-5{
     display: none;
 }
+#featured-6{
+    display: none;
+}
+#featured-7{
+    display: none;
+}
+#featured-8{
+    display: none;
+}
+#featured-9{
+    display: none;
+}
+#featured-10{
+    display: none;
+}
+#featured-11{
+    display: none;
+}
 .featured-view h2{
     color: #f57478 !important;
     font-size: 33px !important;
 }
 .featured-view p{
     color: #444 !important;
-    padding: 0px 60px;
+    /*    padding: 0px 60px;*/
 
 }
+
+.featured-view h5 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
 .featured-view  {
     display: block !important;
     position: fixed;
@@ -1296,7 +1326,7 @@ footer .copy p{
     width: 0px
 }
 .pad-t-45{
-    padding: 45px 0 0 0;
+    padding: 25px 0 10px 0;
 }
 
 .hov-img-1{

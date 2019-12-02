@@ -255,29 +255,29 @@ $testimonials = $obj->selectAll('*', 'testimonial', 'testimonial_id > 0');
                         <div class="col-md-4">
                             <div class="div-1">
                                 <div class="div-2">
-                                    <a href="application.php"><img src="images/applications/002.jpg" alt="" class="img-responsive"/></a>
+                                    <a href="#" onclick="document.getElementById('featured-6').classList.add('featured-view')"><img src="images/applications/002.jpg" alt="" class="img-responsive"/></a>
                                 </div>
                             </div>
                             <h3>Hotels</h3>
-                            <h3 class="see"><a href="application.php">See More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></h3>
+                            <h3 class="see"><a href="#" onclick="document.getElementById('featured-6').classList.add('featured-view')">See More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></h3>
                         </div>
                         <div class="col-md-4">
                             <div class="div-1">
                                 <div class="div-2">
-                                    <a href="application.php"><img src="images/applications/004.jpg" alt="" class="img-responsive"/></a>
+                                    <a href="#" onclick="document.getElementById('featured-7').classList.add('featured-view')"><img src="images/applications/004.jpg" alt="" class="img-responsive"/></a>
                                 </div>
                             </div>
                             <h3>Hospitals</h3>
-                            <h3 class="see"><a href="application.php">See More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></h3>
+                            <h3 class="see"><a href="#" onclick="document.getElementById('featured-7').classList.add('featured-view')">See More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></h3>
                         </div>
                         <div class="col-md-4">
                             <div class="div-1">
                                 <div class="div-2">
-                                    <a href="application.php"><img src="images/applications/001.jpg" alt="" class="img-responsive"/></a>
+                                    <a href="#" onclick="document.getElementById('featured-8').classList.add('featured-view')"><img src="images/applications/001.jpg" alt="" class="img-responsive"/></a>
                                 </div>
                             </div>
                             <h3>Textiles</h3>
-                            <h3 class="see"><a href="application.php">See More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></h3>
+                            <h3 class="see"><a href="#" onclick="document.getElementById('featured-8').classList.add('featured-view')">See More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></h3>
                         </div>
 
                     </div>
@@ -285,35 +285,175 @@ $testimonials = $obj->selectAll('*', 'testimonial', 'testimonial_id > 0');
                         <div class="col-md-4">
                             <div class="div-1">
                                 <div class="div-2">
-                                    <a href="application.php"><img src="images/applications/006.jpg" alt="" class="img-responsive"/></a>
+                                    <a href="#" onclick="document.getElementById('featured-9').classList.add('featured-view')"><img src="images/applications/006.jpg" alt="" class="img-responsive"/></a>
                                 </div>
                             </div>
                             <h3>Food & Packaging</h3>
-                            <h3 class="see"><a href="application.php">See More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></h3>
+                            <h3 class="see"><a href="#" onclick="document.getElementById('featured-9').classList.add('featured-view')">See More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></h3>
                         </div>
                         <div class="col-md-4">
                             <div class="div-1">
                                 <div class="div-2">
-                                    <a href="application.php"><img src="images/applications/003.jpg" alt="" class="img-responsive"/></a>
+                                    <a href="#" onclick="document.getElementById('featured-10').classList.add('featured-view')"><img src="images/applications/003.jpg" alt="" class="img-responsive"/></a>
                                 </div>
                             </div>
 
                             <h3>Footwear & Leather</h3>
-                            <h3 class="see"><a href="application.php">See More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></h3>
+                            <h3 class="see"><a href="#" onclick="document.getElementById('featured-10').classList.add('featured-view')">See More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></h3>
                         </div>
                         <div class="col-md-4">
                             <div class="div-1">
                                 <div class="div-2">
-                                    <a href="application.php"><img src="images/applications/005.jpg" alt="" class="img-responsive"/></a>
+                                    <a href="#" onclick="document.getElementById('featured-11').classList.add('featured-view')"><img src="images/applications/005.jpg" alt="" class="img-responsive"/></a>
                                 </div>
                             </div>
                             <h3>Institution and Aged Care</h3>
-                            <h3 class="see"><a href="application.php">See More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a> </h3>
+                            <h3 class="see"><a href="#" onclick="document.getElementById('featured-11').classList.add('featured-view')">See More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a> </h3>
                         </div>
 
                     </div>
                 </div>
             </div>
+        </section>
+        <section class=" ftco-category pad-80" id="featured-6">
+            <div class="row">
+                <i onclick="document.getElementById('featured-6').classList.remove('featured-view')" class="fa fa-times" aria-hidden="true"></i>
+                <div class="col-md-12 heading-section ftco-animate deal-of-the-day ftco-animate bg-gray">
+                                   <!--<span class="subheading">Best Price For You</span>-->
+                    <h2 class="mb-4 text-head">Hotels</h2>
+                </div>
+                <div class="col-md-3 heading-section ftco-animate deal-of-the-day ftco-animate">
+                   <!--<span class="subheading">Best Price For You</span>-->
+                    <img src="images/feature/001.jpg" alt="" class="pad-t-45 img-responsive"/>
+                </div>
+                <div class="col-md-9 heading-section ftco-animate deal-of-the-day ftco-animate">
+                    <!--<span class="subheading">Best Price For You</span>-->
+                    <p>Bacteria are present in most human and natural environments on earth, growing in water, waste, soil and the live bodies of people, plants and animals. Bacteria are living organisms that are neither plants nor animals, but belong to a group all by themselves.</p>
+                    <p>Individually they are generally not more than one single cell, however there are normally millions of them together due to their ability to rapidly multiply. There are typically 40 million bacterial cells in a gram of soil and a million bacterial cells in a millilitre of fresh water.</p>
+                    <p>There are approximately ten times as many bacterial cells as there are human cells in the body, with large numbers of bacteria on our skin and in the human gut. The vast majority of the bacteria in the body are rendered harmless by the protective effects of the human immune system and a few are beneficial.</p>
+                    <p>However, a growing number of bacterial forms are pathogenic and cause illness, poor health and infectious disease.</p>
+                    <p>Microorganisms that cause diseases are called pathogens. They are specialised to infect body tissues where they reproduce and cause damage that gives rise to the symptoms of the infection.</p>
+                    <p>The World Health Organisation is particularly concerned at the rising presence of nosocomial (healthcare acquired infections) contracted in hospital and healthcare environments. Healthcare-associated infections are those which were not present [and without evidence of incubation] at the time of admission to a healthcare setting. Within hours after admission, a patient's flora begins to acquire characteristics of the surrounding bacterial pool, and HAI infections are responsible for numerous deaths worldwide each year.</p>
+                </div>
+            </div>
+
+        </section>
+        <section class=" ftco-category pad-80" id="featured-7">
+            <div class="row">
+                <i onclick="document.getElementById('featured-7').classList.remove('featured-view')" class="fa fa-times" aria-hidden="true"></i>
+                <div class="col-md-12 heading-section ftco-animate deal-of-the-day ftco-animate bg-gray">
+                                   <!--<span class="subheading">Best Price For You</span>-->
+                    <h2 class="mb-4 text-head">Hospitals</h2>
+                </div>
+                <div class="col-md-3 heading-section ftco-animate deal-of-the-day ftco-animate">
+                   <!--<span class="subheading">Best Price For You</span>-->
+                    <img src="images/feature/001.jpg" alt="" class="pad-t-45 img-responsive"/>
+                </div>
+                <div class="col-md-9 heading-section ftco-animate deal-of-the-day ftco-animate">
+                    <!--<span class="subheading">Best Price For You</span>-->
+                    <p>Bacteria are present in most human and natural environments on earth, growing in water, waste, soil and the live bodies of people, plants and animals. Bacteria are living organisms that are neither plants nor animals, but belong to a group all by themselves.</p>
+                    <p>Individually they are generally not more than one single cell, however there are normally millions of them together due to their ability to rapidly multiply. There are typically 40 million bacterial cells in a gram of soil and a million bacterial cells in a millilitre of fresh water.</p>
+                    <p>There are approximately ten times as many bacterial cells as there are human cells in the body, with large numbers of bacteria on our skin and in the human gut. The vast majority of the bacteria in the body are rendered harmless by the protective effects of the human immune system and a few are beneficial.</p>
+                    <p>However, a growing number of bacterial forms are pathogenic and cause illness, poor health and infectious disease.</p>
+                    <p>Microorganisms that cause diseases are called pathogens. They are specialised to infect body tissues where they reproduce and cause damage that gives rise to the symptoms of the infection.</p>
+                    <p>The World Health Organisation is particularly concerned at the rising presence of nosocomial (healthcare acquired infections) contracted in hospital and healthcare environments. Healthcare-associated infections are those which were not present [and without evidence of incubation] at the time of admission to a healthcare setting. Within hours after admission, a patient's flora begins to acquire characteristics of the surrounding bacterial pool, and HAI infections are responsible for numerous deaths worldwide each year.</p>
+                </div>
+            </div>
+
+        </section>
+        <section class=" ftco-category pad-80" id="featured-8">
+            <div class="row">
+                <i onclick="document.getElementById('featured-8').classList.remove('featured-view')" class="fa fa-times" aria-hidden="true"></i>
+                <div class="col-md-12 heading-section ftco-animate deal-of-the-day ftco-animate bg-gray">
+                                   <!--<span class="subheading">Best Price For You</span>-->
+                    <h2 class="mb-4 text-head">Textiles</h2>
+                </div>
+                <div class="col-md-3 heading-section ftco-animate deal-of-the-day ftco-animate">
+                   <!--<span class="subheading">Best Price For You</span>-->
+                    <img src="images/feature/001.jpg" alt="" class="pad-t-45 img-responsive"/>
+                </div>
+                <div class="col-md-9 heading-section ftco-animate deal-of-the-day ftco-animate">
+                    <h5>Textile products are prone to host microorganisms responsible for diseases, unpleasant odours, colour degradation and deterioration of textile fibres and substrates.</h5>
+                    <p>Many current antimicrobial products applied to textiles, include toxic chemicals or compounds such as triclosan, heavy metals, silver or organo tin, zinc, copper, all of which are leaching technologies. In each case the compound leaves the surface on which it has been applied, and progressively depletes in antimicrobial efficacy leaving the surface unprotected from microbial infestation.</p>
+                    <p>Fresche microbial control and protection treatments for commercial and industrial textiles are a new and highly effective approach to long-term protection of natural and synthetic fibres. They form a covalent "lock and bond" with the surface or substrate on which they are applied, and they provide durable, persistent, long-term protection against bacterial and fungal attack.</p>
+                    <p>Available in both ready to use or concentrate form, they can be applied by spray, pad bath or exhaust methods. Fresche microbial control and protection treatments are transparent and invisible when applied, and do not change the hand, color or appearance of the textile.</p>
+                    <ul>
+                        <li>domestic and commercial floor coverings</li>
+                        <li>window furnishing fabrics</li>
+                        <li>upholstery furnishing fabrics</li>
+                        <li>bath towels and mats</li>
+                        <li>kitchen towels and table wear</li>
+                        <li>tents, back packs, sleeping bags and annexes</li>
+                        <li>truck tarpaulins and crop protection covers</li>
+                        <li>automotive, aircraft, cinemas, public venues</li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+        <section class=" ftco-category pad-80" id="featured-9">
+            <div class="row">
+                <i onclick="document.getElementById('featured-9').classList.remove('featured-view')" class="fa fa-times" aria-hidden="true"></i>
+                <div class="col-md-12 heading-section ftco-animate deal-of-the-day ftco-animate bg-gray">
+                                   <!--<span class="subheading">Best Price For You</span>-->
+                    <h2 class="mb-4 text-head">Food & Packaging</h2>
+                </div>
+                <div class="col-md-3 heading-section ftco-animate deal-of-the-day ftco-animate">
+                   <!--<span class="subheading">Best Price For You</span>-->
+                    <img src="images/feature/001.jpg" alt="" class="pad-t-45 img-responsive"/>
+                </div>
+                <div class="col-md-9 heading-section ftco-animate deal-of-the-day ftco-animate">
+                    <h5>Food manufacturing, storage, processing, packaging and distribution environments represent significant hygiene challenges. Fresche Bioscience is an effective broad spectrum anti bacterial, anti fungal, mould and odour control treatment which bonds to the surface on which it is applied. As a bound antimicrobial, it does not leach from the surface or deplete in antimicrobial efficacy.</h5>
+                    <p>As with surface and environmental hygiene, Fresche microbial control and surface protection effectively protects the treated surface from microbial attack, and stops microbes from colonizing the surface.</p>
+                    <p>Surface hygiene applications in food and beverage verticals* include:</p>
+                    <ul>
+                        <li>food storage</li>
+                        <li>food processing</li>
+                        <li>food packaging</li>
+                        <li>food distribution</li>
+                        <li>bottling equipment</li>
+                    </ul>
+                    <p>*As regulations differ widely by region, Fresche may not be approved for use in every jurisdiction. Care should be taken to ensure all local requirements are satisfied prior to using Fresche in food manufacturing and storage areas or packaging.</p>
+                </div>
+            </div>
+
+        </section>
+        <section class=" ftco-category pad-80" id="featured-10">
+            <div class="row">
+                <i onclick="document.getElementById('featured-10').classList.remove('featured-view')" class="fa fa-times" aria-hidden="true"></i>
+                <div class="col-md-12 heading-section ftco-animate deal-of-the-day ftco-animate bg-gray">
+                                   <!--<span class="subheading">Best Price For You</span>-->
+                    <h2 class="mb-4 text-head">Footwear & Leather</h2>
+                </div>
+                <div class="col-md-6">
+                    <h5>NEW GENERATION MICROBIAL CONTROL AND PROTECTION FOR LEATHER.</h5>
+                    
+                </div>
+            </div>
+
+        </section>
+        <section class=" ftco-category pad-80" id="featured-11">
+            <div class="row">
+                <i onclick="document.getElementById('featured-11').classList.remove('featured-view')" class="fa fa-times" aria-hidden="true"></i>
+                <div class="col-md-12 heading-section ftco-animate deal-of-the-day ftco-animate bg-gray">
+                                   <!--<span class="subheading">Best Price For You</span>-->
+                    <h2 class="mb-4 text-head">Institution and Aged Care</h2>
+                </div>
+                <div class="col-md-3 heading-section ftco-animate deal-of-the-day ftco-animate">
+                   <!--<span class="subheading">Best Price For You</span>-->
+                    <img src="images/feature/001.jpg" alt="" class="pad-t-45 img-responsive"/>
+                </div>
+                <div class="col-md-9 heading-section ftco-animate deal-of-the-day ftco-animate">
+                    <!--<span class="subheading">Best Price For You</span>-->
+                    <p>Bacteria are present in most human and natural environments on earth, growing in water, waste, soil and the live bodies of people, plants and animals. Bacteria are living organisms that are neither plants nor animals, but belong to a group all by themselves.</p>
+                    <p>Individually they are generally not more than one single cell, however there are normally millions of them together due to their ability to rapidly multiply. There are typically 40 million bacterial cells in a gram of soil and a million bacterial cells in a millilitre of fresh water.</p>
+                    <p>There are approximately ten times as many bacterial cells as there are human cells in the body, with large numbers of bacteria on our skin and in the human gut. The vast majority of the bacteria in the body are rendered harmless by the protective effects of the human immune system and a few are beneficial.</p>
+                    <p>However, a growing number of bacterial forms are pathogenic and cause illness, poor health and infectious disease.</p>
+                    <p>Microorganisms that cause diseases are called pathogens. They are specialised to infect body tissues where they reproduce and cause damage that gives rise to the symptoms of the infection.</p>
+                    <p>The World Health Organisation is particularly concerned at the rising presence of nosocomial (healthcare acquired infections) contracted in hospital and healthcare environments. Healthcare-associated infections are those which were not present [and without evidence of incubation] at the time of admission to a healthcare setting. Within hours after admission, a patient's flora begins to acquire characteristics of the surrounding bacterial pool, and HAI infections are responsible for numerous deaths worldwide each year.</p>
+                </div>
+            </div>
+
         </section>
     <!--        <section class="img" style="background:#88d4f9;">
             <div class="pad-80">
@@ -642,17 +782,17 @@ $testimonials = $obj->selectAll('*', 'testimonial', 'testimonial_id > 0');
                                     </div>
                                 </div>
                             <?php } ?>
-<!--                            <div class="item">
-                                <div class="testimony-wrap p-4 pb-5">
-                                    <div class="text text-center">
-                                        <i class="icon-quote-left"></i> <p class="mb-5 pl-4 ">I would like to update you that the we are impressed with the tenure of efficacy of your FRESCHE anti microbial product. We are crossing 6 months and the surface in our 3rd West area is still fungal free and the dust resistant nature of the surface is an added advantage. </p><i class="icon-quote-right"></i>
-                                    </div>
-                                    <div class="testimony-name text-right">
-                                        <p class="name">SHANKAR M</p>
-                                        <span class="position">Sr. Manager, Housekeeping Department, KMCH Hospital.</span>
-                                    </div> 
-                                </div>
-                            </div>-->
+                            <!--                            <div class="item">
+                                                            <div class="testimony-wrap p-4 pb-5">
+                                                                <div class="text text-center">
+                                                                    <i class="icon-quote-left"></i> <p class="mb-5 pl-4 ">I would like to update you that the we are impressed with the tenure of efficacy of your FRESCHE anti microbial product. We are crossing 6 months and the surface in our 3rd West area is still fungal free and the dust resistant nature of the surface is an added advantage. </p><i class="icon-quote-right"></i>
+                                                                </div>
+                                                                <div class="testimony-name text-right">
+                                                                    <p class="name">SHANKAR M</p>
+                                                                    <span class="position">Sr. Manager, Housekeeping Department, KMCH Hospital.</span>
+                                                                </div> 
+                                                            </div>
+                                                        </div>-->
                         </div>
                     </div>
 
