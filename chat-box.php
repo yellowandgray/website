@@ -1,4 +1,4 @@
-<div class="chat-box">
+<!--<div class="chat-box">
     <button class="chatbox-open">
     <i class="fa fa-comment fa-2x" aria-hidden="true"></i>
   </button>
@@ -61,4 +61,4 @@
   </footer>
 </section>
 
-</div>
+</div>-->

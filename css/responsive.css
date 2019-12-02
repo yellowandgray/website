@@ -3,6 +3,21 @@
         width: 100%;
         padding: 0 10px;
     }
+    .news input {
+        width: 100% !important;
+    }
+    .enquiry-footer-form .form-group .button-2 {
+        width: 50% !important;
+    }
+    .ftco-footer .ftco-footer-widget h2 {
+        font-size: 22px !important;
+    }
+    .report-logo img {
+        width: auto !important;
+    }
+    .padding-lr-20per {
+        padding: 0 !important;
+    }
 }
 
 @media (max-width: 991px) and (min-width: 320px){

@@ -67,13 +67,13 @@
 
 <!--chatbot-->
 
-<script src= "https://chat.hippochat.io/js/widget.js"></script>
+<!--<script src= "https://chat.hippochat.io/js/widget.js"></script>
 <script>
                          window.initHippo({
 //                                appSecretKey: "b5302cc09c9bd01d68dcfc7e00d4926e"
                                 appSecretKey: "a30208592c47814e71898845310c0d09"
                         });
-</script>
+</script>-->
 
 <!--chatbot-->
 <script src="js/jquery.min.js"></script>

@@ -259,7 +259,7 @@ $testimonials = $obj->selectAll('*', 'testimonial', 'testimonial_id > 0');
                                 </div>
                             </div>
                             <h3>Hotels</h3>
-                            <h3 class="see"><a href="product.php">See More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></h3>
+                            <h3 class="see"><a href="application.php">See More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></h3>
                         </div>
                         <div class="col-md-4">
                             <div class="div-1">
@@ -368,7 +368,7 @@ $testimonials = $obj->selectAll('*', 'testimonial', 'testimonial_id > 0');
                         <div class=" accredition">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <div class="row" style="padding:0 140px;">
+                                    <div class="row padding-lr-20per">
                                         <div class="col-md-4 col-sm-4 col-xs-6">
                                             <div class="report-logo">
                                                 <img src="images/acc/005-01.png" alt="" class=""/>

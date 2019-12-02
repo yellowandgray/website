@@ -1639,12 +1639,12 @@ span.psw{
 .report-logo{
     text-align: center;
     /* background: #37a0e6; */
-    padding: 10px 0px 12px 0px;
-    margin-bottom: 30px;
+    padding: 10px 0 10px;
+    margin: 15px auto;
     height: 100px;
     border-radius: 0px;
-    /* box-shadow: 0px 0px 1px 0px #eee; */
-    /*border: 1px solid #eee;*/
+    cursor: pointer;
+    width: 90%;
 }
 
 
@@ -2103,7 +2103,7 @@ span.psw{
     font-size: 20px !important;
 }
 .report-logo img{
-    width: 35%;
+    width: 50%;
 }
 
 .curve img{
@@ -2286,4 +2286,8 @@ span.psw{
     box-shadow: 0 0 10px 0 #e3e3e3;
     padding: 40px 20px;
     margin: 0 auto;
+}
+
+.padding-lr-20per {
+    padding:0 20%;
 }
