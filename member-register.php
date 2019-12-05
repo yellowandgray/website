@@ -34,6 +34,18 @@
                         <div class="form-group">
                             <input type="text" name="mobile" class="form-control" id="mobile" placeholder="Mobile">
                         </div>
+                        <div class="row">
+                            <div class="col form-group">
+                                <select>
+                                    <option value="gender">Select Gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                            </div>
+                            <div class="col form-group">
+                                <input type="text" class="form-control" placeholder="Age">
+                            </div>
+                        </div>
                         <div class="form-group">
                             <textarea type="text" rows="4" name="address" class="form-control" id="address" placeholder="Address"></textarea>
                         </div>
@@ -77,6 +89,9 @@
                         </div>
                         <div class="form-group">
                             <input type="text" name="city" class="form-control" id="city" placeholder="City">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="pincode" class="form-control" id="pincode" placeholder="Pincode">
                         </div>
                         <h6>Login Information:</h6>
                         <div class="form-group">
