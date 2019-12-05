@@ -16,7 +16,7 @@
                     <button mat-icon-button aria-label="label" (click)="confirmDelete(data.banner_id)">
                         <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                     </button>
-                    <img matListAvatar src="{{image_url}}{{data.image_path}}" *ngIf="data.image_path && data.image_path != ''" alt="image" (click)="pictureView(data, 'preview')" />
+                    <img matListAvatar class="cursor" src="{{image_url}}{{data.image_path}}" *ngIf="data.image_path && data.image_path != ''" alt="image" (click)="pictureView(data, 'preview')" />
                     <h4 mat-line>{{data.title}}</h4>
                 </mat-list-item>
             </ng-container>
