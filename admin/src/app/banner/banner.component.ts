@@ -59,8 +59,8 @@ export class BannerComponent implements OnInit {
             data = id;
           }
         const dialogRef = this.dialog.open(BannerImageView, {
-            minWidth: "80%",
-            maxWidth: "80%",
+            minWidth: "40%",
+            maxWidth: "40%",
             data: {
                 data: data,
                 action: action
@@ -129,7 +129,7 @@ export class BannerForm {
       var url = '';
           if(this.banner_id != 0) {
         formData.append('title', this.bannerForm.value.title);
-        formData.append('banner_image', this.image_path);
+        formData.append('image_path', this.image_path);
         url = 'update_record/banner/banner_id = '+this.banner_id;
       } else {
         formData.append('title', this.bannerForm.value.title);

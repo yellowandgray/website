@@ -136,7 +136,7 @@ export class ProductForm {
         formData.append('product_price', this.productForm.value.product_price);
         formData.append('product_name', this.productForm.value.product_name);
         formData.append('description', this.productForm.value.description);
-        formData.append('media_path', this.image_path);
+        formData.append('image_path', this.image_path);
         url = 'update_record/product/product_id = '+this.product_id;
       } else {
         formData.append('product_price', this.productForm.value.product_price);
@@ -234,7 +234,7 @@ export class ProductForm {
     removeMedia(url) {
         this[url] = '';
         if(url === 'image_path') {
-            this.product_image= 'Select Picture';
+            this.product_image= 'Select Product Image';
         }     
     }
 
