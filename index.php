@@ -2,6 +2,7 @@
 require_once 'api/include/common.php';
 $obj = new Common();
 $testimonials = $obj->selectAll('*', 'testimonial', 'testimonial_id > 0');
+$banners = $obj->selectAll('*', 'banner', 'banner_id > 0');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,33 +13,36 @@ $testimonials = $obj->selectAll('*', 'testimonial', 'testimonial_id > 0');
 
         <!-- END nav -->
         <?php include 'enquiry.php'; ?>
-        <section id="home-section" class="hero" style="background-image:url(images/bg_green-06.jpg);background-size:cover">
-            <!--            <div id="video-viewport">
-                            <video width="1920" height="1280" autoplay muted loop>
-                                <source src="video/nature-01.mp4" type="video/mp4">
-                                Your browser does not support the <code>video</code> tag.
-                            </video>
-                        </div>-->
-            <?php include 'menu.php'; ?>
-            <div class="home-slider owl-carousel">
-                <div class="slider-item">
-                    <div class="container">
-                        <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
-                            <div class="col-lg-8 col-md-8 ftco-animate product-text">
-                                <!--<h1 class="mb-2">PRODUCT</h1>-->
-                                <!--<h2 class="subheading mb-4" style="text-align: center;">GAIN SUPER POWER WITH <span>FRESCHE</span></h2><article class="container">-->
 
+        <?php foreach ($banners as $row) { ?>
+            <section id="home-section" class="hero" style="background-image:url(<?php echo BASE_URL . $row['image_path']; ?>);background-size:cover">
+                <!--            <div id="video-viewport">
+                                <video width="1920" height="1280" autoplay muted loop>
+                                    <source src="video/nature-01.mp4" type="video/mp4">
+                                    Your browser does not support the <code>video</code> tag.
+                                </video>
+                            </div>-->
+                <?php include 'menu.php'; ?>
+                <div class="home-slider owl-carousel">
+                    <div class="slider-item">
+                        <div class="container">
+                            <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+                                <div class="col-lg-8 col-md-8 ftco-animate product-text">
+                                    <!--<h1 class="mb-2">PRODUCT</h1>-->
+                                    <!--<h2 class="subheading mb-4" style="text-align: center;">GAIN SUPER POWER WITH <span>FRESCHE</span></h2><article class="container">-->
+
+                                </div>
+                                <div class="col-md-4"></div>
                             </div>
-                            <div class="col-md-4"></div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="curve">
-                <img src="images/box.png" alt=""/>
-            </div>
+                <div class="curve">
+                    <img src="images/box.png" alt=""/>
+                </div>
 
-        </section>
+            </section>
+        <?php } ?>
         <section class="ftco-category pad-20-80 res-feature">
             <div class="col-md-12">
                 <div class="row feature-l"> 

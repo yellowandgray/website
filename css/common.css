@@ -1008,8 +1008,8 @@ footer .copy p{
 }
 .product {
     border: none;
-    box-shadow: 3px 3px 10px 1px #b9b9b9;
-    height: 480px;
+    /*    box-shadow: 3px 3px 10px 1px #b9b9b9;*/
+    /*    height: 480px;*/
     background: #fff;
 }
 .product .img-prod h3{
@@ -1426,8 +1426,8 @@ footer .copy p{
 
 input[type=text], input[type=password] {
     width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
+    padding: 10px;
+    margin: 4px 0;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
@@ -1798,11 +1798,19 @@ span.psw{
     font-weight: 600 !important;
 }
 
-.cart-img img{
-    width: 50%;
-    margin: 0 25%;
+.cart-img {
+    text-align: center;
 }
-.cart-remove a{
+
+.cart-img img{
+    width: 80%;
+}
+
+.product-update {
+    margin: auto;
+}
+
+.cart-remove button{
     color: #f90000;
     padding-right: 46px;
     font-weight: 600;
@@ -1859,7 +1867,8 @@ span.psw{
 }
 .items-n{  
     background: #fff;
-
+    padding: 40px 0;
+    margin-bottom: 20px;
 }
 .bg-l-blue{
     background: rgba(0, 0, 0, 0.66);
@@ -1885,7 +1894,7 @@ span.psw{
 }
 .check-login{
     padding: 10px 10px 4px 10px;
-    margin-bottom: 10px;
+    /*    margin-bottom: 10px;*/
     background: #0072bb;
 }
 .check-login h4 {
@@ -1907,14 +1916,14 @@ span.psw{
     background: none;
     padding: 10px 0px;
     outline: none;
+    width: 100%;
 }
 .user-login{
-    width: 60%;
+    width: 50%;
     margin: 0 auto;
 }
 .user-login input::placeholder{
-    padding: 10px 10px;
-    font-size: 12px;
+    font-size: 14px;
 }
 .flow-1 button{
     width: auto;
@@ -1960,61 +1969,74 @@ span.psw{
 
 } 
 .flow-1{
-    text-align: center;
-
+    padding: 40px 0 20px;
 } 
+
+.flow-1 a {
+    text-align: right;
+    width: 100%;
+    font-size: 14px;
+}
+
 .user-address input{
     border: 1px solid #e2e2e2;
     background: none;
-    padding: 10px 0px;
+    padding: 10px;
     outline: none;
 }
 .user-address input::placeholder{
-    padding: 10px 10px;
-    font-size: 12px;
+    font-size: 14px;
 }
 .user-address{
-    padding: 10px 0px 10px 30px;
-    width: 60%;
+    padding: 30px 0;
+    width: 80%;
+    margin: 0 auto;
 }
 .user-address textarea{
     overflow: auto;
     resize: vertical;
     width: 100%;
-    height: 100px;
+    padding: 10px;
     border: 1px solid #e2e2e2;
     margin: 5px 0px;
     outline: none;
 }
 .user-address textarea::placeholder{
-    padding: 10px 10px;
-    font-size: 12px;
+    font-size: 14px;
 }
 .user-address select{
     overflow: auto;
     resize: vertical;
     width: 100%;
-    height: 50px;
+    padding: 15px 0;
     border: 1px solid #e2e2e2;
-    margin: 6px 0px;
+    margin: 8px 0px;
     outline: none;
 }
 .user-address select::placeholder{
-    padding: 10px 10px;
-    font-size: 12px;
+    font-size: 14px;
 }
 .address-submit button{
-    width: 200px;
-    /*float: right;*/
-    padding: 5px;
+    width: auto;
+    /* float: right; */
+    padding: 5px 20px;
     background: #f73e45;
     color: #fff;
-    font-weight: 600;
-    border: none;
+    font-weight: 500;
+    border: 1px solid #f73e45;
     margin-top: 20px;
     font-size: 14px;
     outline: none;
+    cursor: pointer;
+    transition: all 0.3s;
 }
+
+.address-submit button:hover {
+    background: transparent;
+    color: #f73e45;
+    border: 1px solid #f73e45;
+}
+
 .address-submit{
     text-align: center;
     outline: none;
@@ -2076,22 +2098,25 @@ span.psw{
     font-size: 13px;
 }
 .product-update h5{
-    font-size: 13px;
+    font-size: 20px;
     font-weight: 600;
     color: #969696;
-    padding-top: 40px;
 }
 .product-update .cart-remove a {
-    color: #0072bb;
+    color: #ed1c24;
     padding-right: 46px;
     font-weight: 600;
     font-size: 12px;
 }
+
+.checkout-money {
+    margin: auto;
+    text-align: center;
+}
+
 .checkout-money p{
-    font-size: 13px;
+    font-size: 18px;
     font-weight: 600;
-    color: #000000;
-    padding-top: 40px;
 }
 .new-acc a{
     cursor: pointer !important;
@@ -2155,6 +2180,7 @@ span.psw{
 
 .product-list {
     background: #fff;
+    margin-bottom: 10px;
 }
 
 .product-list h1 {
@@ -2356,4 +2382,81 @@ span.psw{
 .bg-do-it p {
     font-size: 20px !important;
     font-weight: 900;
+}
+
+.member-register-form .btn-forget {
+    background: #ec1d25;
+    color: #fff;
+    padding: 2px 30px;
+    border: 1px solid #ec1d25;
+    font-size: 16px;
+}
+
+.member-register-form .btn-forget:hover {
+    background: transparent;
+    color: #ec1d25;
+    border: 1px solid #ec1d25;
+}
+
+.margin-lr-0 {
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+
+.product-image {
+    margin: auto 0;
+}
+
+.product-price {
+    text-align: center;
+    /*    padding-top: 20px;*/
+    margin: auto 0;
+}
+
+.product-quantity input {
+    width: 100%;
+}
+
+.product-quantity {
+    margin: auto 0;
+}
+
+.product-removal {
+    margin: auto 0;
+}
+
+.product-removal button.remove-product {
+    background: transparent;
+    outline: none;
+    border: none;
+    color: #ed1c24;
+    cursor: pointer;
+}
+
+.project-list .product {
+    height: auto !important;
+}
+
+.product-line-price {
+    margin: auto 0;
+}
+
+.m-b-10 {
+    margin-bottom: 10px;
+}
+
+.member-register-form form input::placeholder, textarea::placeholder, select::placeholder {
+    font-size: 14px;
+}
+
+.member-register-form form select {
+    padding: 15px 8px;
+    margin: 8px 0;
+    width: 100%;
+}
+
+.member-register-form h4 {
+    font-size: 25px;
+    font-weight: 900;
+    color: #ed1c24;
 }
