@@ -81,7 +81,7 @@
                         <div>
                             <div class="about-sec" style="background-image: url('images/about/002.jpg'); background-size: cover;">
                                 <p>The product is an advanced customary formulation from the R&D laboratories of an Australian based Multinational company.  The products are widely used in over 15 developed countries.  The performance delivery parameters far exceeds the industry standards. In effectiveness on a wide variety of Bacteria and it's surface bonding mechanism is unparalleled.</p>
-                                <h5 class="see"><a href="application.php">See More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></h5>
+                                <h5 class="see"><a href="product.php">See More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></h5>
                             </div>
 
                         </div>
