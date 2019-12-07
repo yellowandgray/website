@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 07, 2019 at 10:31 AM
+-- Generation Time: Dec 05, 2019 at 03:29 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.2.12
 
@@ -59,15 +59,13 @@ CREATE TABLE `member` (
   `age` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `mobile` varchar(255) NOT NULL,
-  `membership_id` varchar(255) NOT NULL,
+  `member_list_id` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `confirm_password` varchar(255) NOT NULL,
   `reset_code` varchar(255) NOT NULL,
   `reset_initiated_at` datetime NOT NULL,
   `reset_expired_at` datetime NOT NULL,
   `address` text NOT NULL,
-  `address_1` text NOT NULL,
-  `state_id` int(11) NOT NULL,
+  `state` varchar(255) NOT NULL,
   `city` varchar(255) NOT NULL,
   `pincode` varchar(255) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -84,30 +82,11 @@ CREATE TABLE `member` (
 
 CREATE TABLE `orders` (
   `orders_id` int(11) NOT NULL,
+  `product_name` varchar(255) NOT NULL,
+  `items` varchar(25) NOT NULL,
   `product_price` varchar(255) NOT NULL,
   `image_path` varchar(255) NOT NULL,
   `member_id` int(11) NOT NULL,
-  `address` text NOT NULL,
-  `state_id` int(11) NOT NULL,
-  `city` varchar(255) NOT NULL,
-  `delivery_status` varchar(255) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `created_by` int(11) NOT NULL,
-  `updated_by` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `order_item`
---
-
-CREATE TABLE `order_item` (
-  `order_item_id` int(11) NOT NULL,
-  `order_id` int(11) NOT NULL,
-  `product` varchar(255) NOT NULL,
-  `product_qty` varchar(255) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `created_by` int(11) NOT NULL,
@@ -138,60 +117,6 @@ CREATE TABLE `product` (
 
 INSERT INTO `product` (`product_id`, `product_name`, `description`, `product_price`, `image_path`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
 (1, 'test', 'test', 'tet', 'uploads/3e46a328dfe4f67aebf7091be64bc26e.jpg', '2019-12-05 06:40:47', '0000-00-00 00:00:00', 0, 0);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `state`
---
-
-CREATE TABLE `state` (
-  `state_id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `created_by` int(11) NOT NULL,
-  `updated_by` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `state`
---
-
-INSERT INTO `state` (`state_id`, `name`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
-(1, 'Andhra Pradesh', '2019-12-07 08:38:53', '0000-00-00 00:00:00', 1, 1),
-(2, 'Arunachal Pradesh', '2019-12-07 08:38:53', '0000-00-00 00:00:00', 1, 1),
-(3, 'Assam', '2019-12-07 08:38:53', '0000-00-00 00:00:00', 1, 1),
-(4, 'Bihar', '2019-12-07 08:38:53', '0000-00-00 00:00:00', 1, 1),
-(5, 'Chhattisgarh', '2019-12-07 08:38:53', '0000-00-00 00:00:00', 1, 1),
-(6, 'Dadra and Nagar Haveli', '2019-12-07 08:38:53', '0000-00-00 00:00:00', 1, 1),
-(7, 'Daman and Diu', '2019-12-07 08:38:53', '0000-00-00 00:00:00', 1, 1),
-(8, 'Delhi', '2019-12-07 08:38:54', '0000-00-00 00:00:00', 1, 1),
-(9, 'Goa', '2019-12-07 08:38:54', '0000-00-00 00:00:00', 1, 1),
-(10, 'Gujarat', '2019-12-07 08:38:54', '0000-00-00 00:00:00', 1, 1),
-(11, 'Haryana', '2019-12-07 08:38:54', '0000-00-00 00:00:00', 1, 1),
-(12, 'Himachal Pradesh', '2019-12-07 08:38:54', '0000-00-00 00:00:00', 1, 1),
-(13, 'Jammu and Kashmir', '2019-12-07 08:38:54', '0000-00-00 00:00:00', 1, 1),
-(14, 'Jharkhand', '2019-12-07 08:38:54', '0000-00-00 00:00:00', 1, 1),
-(15, 'Karnataka', '2019-12-07 08:38:54', '0000-00-00 00:00:00', 1, 1),
-(16, 'Kerala', '2019-12-07 08:38:54', '0000-00-00 00:00:00', 1, 1),
-(17, 'Madhya Pradesh', '2019-12-07 08:38:54', '0000-00-00 00:00:00', 1, 1),
-(18, 'Maharashtra', '2019-12-07 08:38:54', '0000-00-00 00:00:00', 1, 1),
-(19, 'Manipur', '2019-12-07 08:38:54', '0000-00-00 00:00:00', 1, 1),
-(20, 'Meghalaya', '2019-12-07 08:38:54', '0000-00-00 00:00:00', 1, 1),
-(21, 'Mizoram', '2019-12-07 08:38:54', '0000-00-00 00:00:00', 1, 1),
-(22, 'Nagaland', '2019-12-07 08:38:54', '0000-00-00 00:00:00', 1, 1),
-(23, 'Orissa', '2019-12-07 08:38:54', '0000-00-00 00:00:00', 1, 1),
-(24, 'Puducherry', '2019-12-07 08:38:54', '0000-00-00 00:00:00', 1, 1),
-(25, 'Punjab', '2019-12-07 08:38:54', '0000-00-00 00:00:00', 1, 1),
-(26, 'Rajasthan', '2019-12-07 08:38:54', '0000-00-00 00:00:00', 1, 1),
-(27, 'Sikkim', '2019-12-07 08:38:54', '0000-00-00 00:00:00', 1, 1),
-(28, 'Tamil Nadu', '2019-12-07 08:38:54', '0000-00-00 00:00:00', 1, 1),
-(29, 'Telangana', '2019-12-07 08:38:54', '0000-00-00 00:00:00', 1, 1),
-(30, 'Tripura', '2019-12-07 08:38:54', '0000-00-00 00:00:00', 1, 1),
-(31, 'Uttar Pradesh', '2019-12-07 08:38:54', '0000-00-00 00:00:00', 1, 1),
-(32, 'Uttarakhand', '2019-12-07 08:38:54', '0000-00-00 00:00:00', 1, 1),
-(33, 'West Bengal', '2019-12-07 08:38:54', '0000-00-00 00:00:00', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -258,22 +183,10 @@ ALTER TABLE `orders`
   ADD PRIMARY KEY (`orders_id`);
 
 --
--- Indexes for table `order_item`
---
-ALTER TABLE `order_item`
-  ADD PRIMARY KEY (`order_item_id`);
-
---
 -- Indexes for table `product`
 --
 ALTER TABLE `product`
   ADD PRIMARY KEY (`product_id`);
-
---
--- Indexes for table `state`
---
-ALTER TABLE `state`
-  ADD PRIMARY KEY (`state_id`);
 
 --
 -- Indexes for table `testimonial`
@@ -310,22 +223,10 @@ ALTER TABLE `orders`
   MODIFY `orders_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `order_item`
---
-ALTER TABLE `order_item`
-  MODIFY `order_item_id` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
   MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `state`
---
-ALTER TABLE `state`
-  MODIFY `state_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT for table `testimonial`
