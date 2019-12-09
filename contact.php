@@ -57,31 +57,31 @@
                 </div>
                 <div class="row block-9 m">
                     <div class="col-md-12 order-md-last d-flex">
-                        <form class="bg-white p-5 contact-form">
+                        <form class="contact-form bg-white p-5">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group bg-1">
-                                        <input type="text" class="form-control" name="fname" placeholder="Your Name">
+                                        <input type="text" class="form-control" name="fname" placeholder="Your Name" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group bg-1">
-                                        <input type="text" class="form-control" name="email" placeholder="Your Email">
+                                        <input type="email" class="form-control" name="email" placeholder="Your Email" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group bg-1">
-                                        <input type="text" class="form-control" name="contact" placeholder="Your Phone">
+                                        <input type="text" class="form-control" name="contact" placeholder="Your Phone" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group bg-1">
-                                        <input type="text" class="form-control" name="subject" placeholder="Subject">
+                                        <input type="text" class="form-control" name="subject" placeholder="Subject" required>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group bg-1">
-                                        <textarea id="" cols="30" rows="5" name="message" class="form-control" placeholder="Message"></textarea>
+                                        <textarea id="" cols="30" rows="5" name="message" class="form-control" placeholder="Message" required></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group submit-btn">

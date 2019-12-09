@@ -89,6 +89,22 @@ $app->post('/insert_banner', function() use ($app) {
     echoRespnse(201, $res);
 });
 
+$app->post('/subscribe_news_letter', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to subscribe');
+    $data = $app->request->post();
+    $com = new Common();
+    $exist = $com->selectRow('*', 'newsletter', 'email=\'' . $data['email'] . '\'');
+    if (count($exist) > 0) {
+        $res['message'] = 'This email have already subscribed';
+    } else {
+        $record = $com->insertRecord(array('email' => $data['email']), 'newsletter');
+        if ($record > 0) {
+            $res['error'] = false;
+            $res['message'] = 'Record inserted successfully';
+        }
+    }
+    echoRespnse(201, $res);
+});
 
 $app->get('/get_testimonial', function() {
     $res = array('error' => true, 'message' => 'No records found');
@@ -143,6 +159,19 @@ $app->get('/get_banner', function() {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
     $data = $com->selectAll('*', 'banner', 'banner_id > 0');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+
+$app->get('/get_newsletter', function() {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('*', 'newsletter', 'newsletter_id > 0');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
