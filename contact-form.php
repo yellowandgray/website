@@ -52,7 +52,7 @@ if ($_POST['fname']) {
 
 
 
-    $mail->Host = "";      // sets GMAIL as the SMTP server
+    $mail->Host = "a2plcpnl0113.prod.iad2.secureserver.net";      // sets GMAIL as the SMTP server
 
 
 
@@ -60,11 +60,11 @@ if ($_POST['fname']) {
 
 
 
-    $mail->Username = "";  // GMAIL username
+    $mail->Username = "no-reply@ghmindia.com";  // GMAIL username
 
 
 
-    $mail->Password = "";            // GMAIL password
+    $mail->Password = "Admin@Fresche";            // GMAIL password
 
     $mail->IsHTML(true);
 
