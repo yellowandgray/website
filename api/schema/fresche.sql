@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 07, 2019 at 10:31 AM
+-- Generation Time: Dec 09, 2019 at 11:58 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.2.12
 
@@ -84,10 +84,10 @@ CREATE TABLE `member` (
 
 CREATE TABLE `orders` (
   `orders_id` int(11) NOT NULL,
-  `product_price` varchar(255) NOT NULL,
-  `image_path` varchar(255) NOT NULL,
   `member_id` int(11) NOT NULL,
-  `address` text NOT NULL,
+  `grand_total` varchar(255) NOT NULL,
+  `address_1` text NOT NULL,
+  `address_2` text NOT NULL,
   `state_id` int(11) NOT NULL,
   `city` varchar(255) NOT NULL,
   `delivery_status` varchar(255) NOT NULL,
@@ -108,6 +108,9 @@ CREATE TABLE `order_item` (
   `order_id` int(11) NOT NULL,
   `product` varchar(255) NOT NULL,
   `product_qty` varchar(255) NOT NULL,
+  `price` varchar(255) NOT NULL,
+  `total` varchar(255) NOT NULL,
+  `grand_total` varchar(255) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `created_by` int(11) NOT NULL,
@@ -196,6 +199,34 @@ INSERT INTO `state` (`state_id`, `name`, `created_at`, `updated_at`, `created_by
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `templates`
+--
+
+CREATE TABLE `templates` (
+  `ID` int(11) NOT NULL,
+  `name` varchar(200) NOT NULL,
+  `subject` varchar(250) NOT NULL,
+  `body_web` text NOT NULL,
+  `body_mobile` text NOT NULL,
+  `type` varchar(50) NOT NULL,
+  `target` varchar(25) NOT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT '1',
+  `mail` varchar(200) NOT NULL,
+  `mail_name` varchar(200) NOT NULL,
+  `cc` varchar(200) NOT NULL,
+  `cc_name` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `templates`
+--
+
+INSERT INTO `templates` (`ID`, `name`, `subject`, `body_web`, `body_mobile`, `type`, `target`, `status`, `mail`, `mail_name`, `cc`, `cc_name`) VALUES
+(1, 'order_recived', 'Your order details', '<!DOCTYPE html>\r\n<html>\r\n    <head></head>\r\n    <body>\r\n        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"width: 100%; max-width: 800px; margin: 0 auto; border: 1px dotted #0071bc;\">\r\n            <tbody>\r\n                <tr>\r\n                    <td colspan=\"3\" style=\"text-align: center;background-color: #ffffff;border-bottom: 2px solid #0070bd;\">\r\n                        <a href=\"http://ghmindia.com\"><img style=\"width: 30%; max-width: 700px; margin:0 35%;padding: 10px 0px;\" src=\"http://ghmindia.com/images/logo-01.png\" alt=\"image\" /></a>\r\n                    </td>\r\n                </tr>\r\n                <tr>\r\n                    <td colspan=\"3\" style=\"padding: 15px;\">\r\n                        <p>Dear [first_name] [last_name],</p>\r\n                        <p>Thank\'s for your order #[order_id]</p>\r\n                        <p>Below are your order details</p>\r\n                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"width: 100%; max-width: 800px; margin: 0 auto; border: 1px solid #000;\">\r\n                            <tr>\r\n                                <th style=\"border: 1px solid #000; text-align: left;padding: 5px;text-align: center;\">Product</th>\r\n                                <th style=\"border: 1px solid #000; text-align: left;padding: 5px;text-align: center;\">price</th>\r\n                                <th style=\"border: 1px solid #000; text-align: left;padding: 5px;text-align: center;\">Quantity</th>\r\n                                <th style=\"border: 1px solid #000; text-align: left;padding: 5px;text-align: center;\">Total</th>\r\n                                <th style=\"border: 1px solid #000; text-align: left;padding: 5px;text-align: center;\">Grand Total</th>\r\n                            </tr>\r\n                            <tr>\r\n                                <td style=\"border: 1px solid #000;padding: 5px\">\r\n                                    <img style=\"width: 50%; max-width: 700px;margin: 0 25%;\" src=\"http://ghmindia.com/images/product001.png\" alt=\"image\" />\r\n                                    <p style=\"text-align: center;\">Combo Pack</p>\r\n                                </td>\r\n                                <td style=\"border: 1px solid #000;padding: 5px;text-align: center;\">8000</td>\r\n                                <td style=\"border: 1px solid #000;padding: 5px;text-align: center;\">1</td>\r\n                                <td style=\"border: 1px solid #000;padding: 5px;text-align: center;\">8000</td>\r\n                                <td style=\"border: 1px solid #000;padding: 5px;text-align: center;\">8000</td>\r\n                            </tr>\r\n                        </table>\r\n\r\n                    </td>\r\n                </tr>\r\n                <tr>\r\n					<td>\r\n						<p>Regards</p>\r\n						<p>Guardian Health Management.</p>\r\n					</td>\r\n                </tr>\r\n                <tr>\r\n                    <td style=\"padding: 15px;background-color: #ffffff;color: #ffffff;width: 33%;border-top: 1px solid #0071bc;\">\r\n                        <a href=\"http://ghmindia.com\"><img style=\"width: 50%; max-width: 700px;\" src=\"http://ghmindia.com/images/logo-01.png\" alt=\"image\" /></a>\r\n                    </td>\r\n\r\n                    <td colspan=\"2\" style=\"padding: 15px; background-color: #fff;border-top: 1px solid #0071bc;\">\r\n                        <div style=\"width: 100%;margin: 0 0 0 55%;\">\r\n                            <a href=\"https://twitter.com/FrescheIndia\" target=\"_blank\"  style=\"float:left; padding: 10px; color: #fff;width: 35px;\"><img style=\"width: 100%;\" src=\"http://ghmindia.com/images/social-icons/twitter.png\" alt=\"image\" /></a>\r\n                            <a href=\"https://www.facebook.com/frescheindia/\" target=\"_blank\"  style=\"float:left;width: 35px;padding: 10px;color: #fff;\"><img style=\"width: 100%;\" src=\"http://ghmindia.com/images/social-icons/facebook.png\" alt=\"image\" /></a>\r\n                            <a href=\"https://www.instagram.com/p/B4jbAoupksk/\" target=\"_blank\"  style=\"float:left; padding: 10px; color: #fff;width: 35px;\"><img style=\"width: 100%;\" src=\"http://ghmindia.com/images/social-icons/instagram.png\" alt=\"image\" /></a>\r\n                            <a href=\"https://www.youtube.com/watch?v=hL0eNG_99HM&feature=youtu.be\" target=\"_blank\"  style=\"float:left;padding: 10px;color: #fff;width: 35px;\"><img style=\"width: 100%;\" src=\"http://ghmindia.com/images/social-icons/youtube.png\" alt=\"image\" /></a>\r\n                        </div>\r\n                    </td>\r\n                </tr>\r\n            </tbody>\r\n        </table>\r\n    </body>\r\n</html>', '<!DOCTYPE html>\r\n<html>\r\n    <head></head>\r\n    <body>\r\n        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"width: 100%; max-width: 800px; margin: 0 auto; border: 1px dotted #0071bc;\">\r\n            <tbody>\r\n                <tr>\r\n                    <td colspan=\"3\" style=\"text-align: center; background-color: #fff;border-bottom: 1px solid #0071bc;\">\r\n                        <a href=\"http://ghmindia.com\"><img style=\"width: 30%; max-width: 700px; margin:0 35%;padding: 10px 0px;\" src=\"http://ghmindia.com/images/logo-01.png\" alt=\"image\" /></a>\r\n                    </td>\r\n                </tr>\r\n                <tr>\r\n                    <td colspan=\"3\" style=\"padding: 15px;\">\r\n                        <p>Dear [first_name] [last_name],</p>\r\n                        <p>Thank\'s for your order #[order_id]</p>\r\n                        <p>Below are your order details</p>\r\n                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"width: 100%; max-width: 800px; margin: 0 auto; border: 1px solid #000;\">\r\n                            <tr>\r\n                                <th style=\"border: 1px solid #000; text-align: left;padding: 5px;text-align: center;\">Product</th>\r\n                                <th style=\"border: 1px solid #000; text-align: left;padding: 5px;text-align: center;\">price</th>\r\n                                <th style=\"border: 1px solid #000; text-align: left;padding: 5px;text-align: center;\">Quantity</th>\r\n                                <th style=\"border: 1px solid #000; text-align: left;padding: 5px;text-align: center;\">Total</th>\r\n                                <th style=\"border: 1px solid #000; text-align: left;padding: 5px;text-align: center;\">Grand Total</th>\r\n                            </tr>\r\n                            <tr>\r\n                                <td style=\"border: 1px solid #000;padding: 5px\">\r\n                                    <img style=\"width: 50%; max-width: 700px;margin: 0 25%;\" src=\"http://ghmindia.com/images/product001.png\" alt=\"image\" />\r\n                                    <p style=\"text-align: center;\">Combo Pack</p>\r\n                                </td>\r\n                                <td style=\"border: 1px solid #000;padding: 5px;text-align: center;\">8000</td>\r\n                                <td style=\"border: 1px solid #000;padding: 5px;text-align: center;\">1</td>\r\n                                <td style=\"border: 1px solid #000;padding: 5px;text-align: center;\">8000</td>\r\n                                <td style=\"border: 1px solid #000;padding: 5px;text-align: center;\">8000</td>\r\n                            </tr>\r\n                        </table>\r\n\r\n                    </td>\r\n                </tr>\r\n                <tr>\r\n					<td>\r\n						<p>Regards</p>\r\n						<p>Guardian Health Management.</p>\r\n					</td>\r\n                </tr>\r\n                <tr>\r\n                    <td style=\"padding: 15px;background-color: #ffffff;color: #ffffff;width: 33%;border-top: 1px solid #0071bc;\">\r\n                        <a href=\"http://ghmindia.com\"><img style=\"width: 50%; max-width: 700px;\" src=\"http://ghmindia.com/images/logo-01.png\" alt=\"image\" /></a>\r\n                    </td>\r\n\r\n                    <td colspan=\"2\" style=\"padding: 15px; background-color: #fff;border-top: 1px solid #0071bc;\">\r\n                        <div style=\"width: 100%;margin: 0 0 0 55%;\">\r\n                            <a href=\"https://twitter.com/FrescheIndia\" target=\"_blank\"  style=\"float:left; padding: 10px; color: #fff;width: 35px;\"><img style=\"width: 100%;\" src=\"http://ghmindia.com/images/social-icons/twitter.png\" alt=\"image\" /></a>\r\n                            <a href=\"https://www.facebook.com/frescheindia/\" target=\"_blank\"  style=\"float:left;width: 35px;padding: 10px;color: #fff;\"><img style=\"width: 100%;\" src=\"http://ghmindia.com/images/social-icons/facebook.png\" alt=\"image\" /></a>\r\n                            <a href=\"https://www.instagram.com/p/B4jbAoupksk/\" target=\"_blank\"  style=\"float:left; padding: 10px; color: #fff;width: 35px;\"><img style=\"width: 100%;\" src=\"http://ghmindia.com/images/social-icons/instagram.png\" alt=\"image\" /></a>\r\n                            <a href=\"https://www.youtube.com/watch?v=hL0eNG_99HM&feature=youtu.be\" target=\"_blank\"  style=\"float:left;padding: 10px;color: #fff;width: 35px;\"><img style=\"width: 100%;\" src=\"http://ghmindia.com/images/social-icons/youtube.png\" alt=\"image\" /></a>\r\n                        </div>\r\n                    </td>\r\n                </tr>\r\n            </tbody>\r\n        </table>\r\n    </body>\r\n</html>', 'email', 'user', 1, 'noreply@ghmindia.com', 'Guardian Health Management', '', '');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `testimonial`
 --
 
@@ -276,6 +307,12 @@ ALTER TABLE `state`
   ADD PRIMARY KEY (`state_id`);
 
 --
+-- Indexes for table `templates`
+--
+ALTER TABLE `templates`
+  ADD PRIMARY KEY (`ID`);
+
+--
 -- Indexes for table `testimonial`
 --
 ALTER TABLE `testimonial`
@@ -326,6 +363,12 @@ ALTER TABLE `product`
 --
 ALTER TABLE `state`
   MODIFY `state_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+
+--
+-- AUTO_INCREMENT for table `templates`
+--
+ALTER TABLE `templates`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `testimonial`
