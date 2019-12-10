@@ -1,49 +1,23 @@
 <h2 mat-dialog-title>Member</h2>
 <mat-dialog-content class="mat-typography">
     <form  [formGroup]="memberForm" (ngSubmit)="onSubmit()">
-    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
-        <div fxFlex="50%">
-            <mat-form-field appearance="outline" fxFlex="100%">
-                <mat-label>First Name</mat-label>
-                <input matInput placeholder="" required formControlName="fname" />
-                <mat-error>First Name is required</mat-error>
-            </mat-form-field>
-        </div>
-        <div fxFlex="50%">
-            <mat-form-field appearance="outline" fxFlex="100%">
-                <mat-label>Last Name</mat-label>
-                <input matInput placeholder="" required formControlName="lname" />
-                <mat-error>Last Name is required</mat-error>
-            </mat-form-field>
-        </div>
-    </div>
-    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Gender</mat-label>
-                    <mat-select formControlName="gender">
-                        <mat-option value="male"> Male </mat-option>
-                        <mat-option value="female"> Female</mat-option>
-                    </mat-select>
-                    <mat-error>Gender is required</mat-error>
+                    <mat-label>First Name</mat-label>
+                    <input matInput placeholder="" required formControlName="fname" />
+                    <mat-error>First Name is required</mat-error>
                 </mat-form-field>
             </div>
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Age</mat-label>
-                    <input matInput placeholder="" required formControlName="age" />
-                    <mat-error>Age is required</mat-error>
+                    <mat-label>Last Name</mat-label>
+                    <input matInput placeholder="" required formControlName="lname" />
+                    <mat-error>Last Name is required</mat-error>
                 </mat-form-field>
             </div>
         </div>
-    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
-            <div fxFlex="50%">
-                <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Email</mat-label>
-                    <input matInput placeholder="" required formControlName="email" />
-                    <mat-error>Email is required</mat-error>
-                </mat-form-field>
-            </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Mobile</mat-label>
@@ -51,15 +25,31 @@
                     <mat-error>Mobile is required</mat-error>
                 </mat-form-field>
             </div>
-        </div>
-    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Date of Birth</mat-label>
-                    <input matInput placeholder="" required formControlName="dob" />
-                    <mat-error>DOB is required</mat-error>
+                    <mat-label>Email/User name</mat-label>
+                    <input matInput placeholder="" required formControlName="email" />
+                    <mat-error>Email/User name is required</mat-error>
                 </mat-form-field>
             </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Password</mat-label>
+                    <input matInput placeholder="" required formControlName="password" />
+                    <mat-error>password is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Confirm Password</mat-label>
+                    <input matInput placeholder="" required formControlName="confirm_password" />
+                    <mat-error>Confirm password is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Member Id</mat-label>
@@ -67,12 +57,37 @@
                     <mat-error>Member Id is required</mat-error>
                 </mat-form-field>
             </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>State</mat-label>
+                    <mat-select formControlName="state">
+                        <mat-option [value]="row.state_id" *ngFor="let row of states"> {{row.name}} </mat-option>
+                    </mat-select>
+                    <mat-error>State is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>City</mat-label>
+                    <input matInput placeholder="" required formControlName="city" />
+                    <mat-error>City is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Pincode</mat-label>
+                    <input matInput placeholder="" required formControlName="pincode" />
+                    <mat-error>Pincode is required</mat-error>
+                </mat-form-field>
+            </div>
         </div>
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
             <div fxFlex="100%">
                 <mat-form-field fxFlex="100%">
                     <mat-label>Address</mat-label>
-                    <textarea rows="4" matInput placeholder="" required formControlName="address"></textarea>
+                    <textarea rows="5" matInput placeholder="" required formControlName="address"></textarea>
                     <mat-error>Address is required</mat-error>
                 </mat-form-field>
             </div>

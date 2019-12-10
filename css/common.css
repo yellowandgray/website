@@ -474,9 +474,7 @@ video {
     right: 48px;
 }
 .button-2 {
-    width: 50%;
-    height: 40px;
-    /* border: 1px solid #ed1820; */
+    border: 1px solid #ed1820;
     border-radius: 20px;
     text-align: center;
     cursor: pointer;
@@ -485,9 +483,11 @@ video {
     overflow: hidden;
     margin: 0 0 10px 0;
     background: #ed1c24;
-    padding: 10px;
-    left: 21px;
+    padding: 5px 40px;
+    left: 20px;
     top: 2px;
+    box-shadow: none;
+    transition: all .5s ease;
 }
 .eff-1 {
     width: 157px;
@@ -520,21 +520,20 @@ video {
 .button-2:hover .eff-1 {
     right: 0;
 }
-.button-2 a  {
-    font-size: 16px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 400;
-    line-height: 32px;
-    transition: all .5s ease;
-    z-index: 2;
-    position: relative;
-    top: -5px;
-}
-.button-2:hover a {
-    color: #fff;
 
+.button-2 span.cw-button {
+    color: #fff !important;
+    font-size: 15px;
 }
+
+.button-2:hover  {
+    background: transparent;
+    border: 1px solid #ed1820;
+}
+.button-2:hover span.cw-button  {
+    color: #ef3239 !important;
+}
+
 .text-head:after {
     height: 2px;
     width: 100px;
@@ -2505,7 +2504,7 @@ span.psw{
     padding: 40px 0 0;
 }
 .my-order table {
-/*    border-collapse: collapse;*/
+    /*    border-collapse: collapse;*/
 }
 
 .my-order table th, .my-order table td {

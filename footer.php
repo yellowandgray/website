@@ -11,16 +11,35 @@
                 <div class="block-23 mb-3 footer-3">
                     <h2 class="ftco-heading-2">Fresche Newsletter</h2>
                 </div>
-                <form class="enquiry-footer-form">
-                    <div class="news form-group">
-                        <input type="text" name="fname" placeholder="Name" required>
-                        <input type="email" name="email" placeholder="Email Address" required>
-                        <div class="button-2">
-                            <div class="eff-1"></div>
-                            <a type="sumbit">SUBMIT</a>
+                <form class="newsletter-section" onsubmit="return subscribeNewsLetter();">
+                    <div class="form-row align-items-center">
+                        <div class="col-auto">
+                            <input type="text" class="form-control mb-2" name="news_name" id="news_name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="col-auto">
+                            <div class="input-group mb-2">
+                                <input type="email" class="form-control" name="news_email" id="news_email" placeholder="Enter your email" required>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <button type="submit" class="button-2">
+<!--                                <div class="eff-1"></div>-->
+                                <span class="cw-button">Submit</span>
+                            </button>
                         </div>
                     </div>
                 </form>
+                <!--                <div class="news form-group">
+                                    <form class="enquiry-footer-form" onsubmit="return subscribeNewsLetter();">
+                                        <input type="text" id="newsletter_name" name="name" placeholder="Name" required>
+                                        <input type="email" id="newsletter_email" name="email" placeholder="Email Address" required>
+                                        <div class="button-2">
+                                            <div class="eff-1"></div>
+                                            <a type="sumbit">SUBMIT</a>
+                                        </div>
+                
+                                    </form>
+                                </div>-->
             </div>
             <div class="ftco-footer-widget mb-4 policy">
                 <div class="footer-h p-lr-0">
@@ -63,7 +82,9 @@
 
 
 <!-- loader -->
-<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+<div id="ftco-loader" class="show fullscreen">
+    <svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg>
+</div>
 
 <!--chatbot-->
 
@@ -97,6 +118,7 @@
 <script src="js/fs-gal.js" type="text/javascript"></script>
 <script src="js/sweetalert.min.js" type="text/javascript"></script>
 <script src="js/contact.form.js" type="text/javascript"></script>
+<script src="js/common.js" type="text/javascript"></script>
 <!--add to cart-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" type="text/javascript"></script>
 <script>
