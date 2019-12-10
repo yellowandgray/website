@@ -11,7 +11,7 @@ import { ProductComponent, ProductForm, ProductDelete, ProductImageView } from '
 import { MemberComponent, MemberForm, MemberDelete } from './member/member.component';
 import { OrderComponent } from './order/order.component';
 import { BannerComponent, BannerForm, BannerImageView, BannerDelete } from './banner/banner.component';
-import { NewsletterComponent } from './newsletter/newsletter.component';
+import { NewsletterComponent, NewsletterDelete } from './newsletter/newsletter.component';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
@@ -59,7 +59,8 @@ import {MatBadgeModule} from '@angular/material/badge';
     BannerForm,
     BannerImageView,
     BannerDelete,
-    NewsletterComponent
+    NewsletterComponent,
+    NewsletterDelete
   ],
   imports: [
     BrowserModule,
@@ -90,7 +91,7 @@ import {MatBadgeModule} from '@angular/material/badge';
     MatExpansionModule,
     MatBadgeModule
   ],
-  entryComponents: [TestimonialComponent, TestimonialForm, TestimonialDelete, ProductComponent, ProductForm, ProductImageView, ProductDelete, MemberComponent, MemberForm, MemberDelete, OrderComponent, BannerComponent, BannerForm, BannerImageView, BannerDelete, NewsletterComponent],
+  entryComponents: [TestimonialComponent, TestimonialForm, TestimonialDelete, ProductComponent, ProductForm, ProductImageView, ProductDelete, MemberComponent, MemberForm, MemberDelete, OrderComponent, BannerComponent, BannerForm, BannerImageView, BannerDelete, NewsletterComponent, NewsletterDelete],
   providers: [],
   bootstrap: [AppComponent]
 })

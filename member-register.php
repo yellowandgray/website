@@ -1,7 +1,10 @@
 <html lang="en">
     <?php
+    require_once 'api/include/common.php';
     $page = 'about';
     include 'head.php';
+    $obj = new Common();
+    $states = $obj->selectAll('*', 'state', 'state_id > 0');
     ?>
     <body class="goto-here">
         <section>
@@ -24,7 +27,7 @@
                 <div class="member-register-form">
                     <h4>Member Register</h4>
                     <h6>Member Information:</h6>
-                    <form>
+                    <form onsubmit="return MemberInsert();">
                         <div class="form-group">
                             <input type="text" name="fname" class="form-control" id="fname" placeholder="First Name">
                         </div>
@@ -34,57 +37,14 @@
                         <div class="form-group">
                             <input type="text" name="mobile" class="form-control" id="mobile" placeholder="Mobile">
                         </div>
-                        <div class="row">
-                            <div class="col form-group">
-                                <select>
-                                    <option value="gender">Select Gender</option>
-                                    <option value="male">Male</option>
-                                    <option value="female">Female</option>
-                                </select>
-                            </div>
-                            <div class="col form-group">
-                                <input type="text" class="form-control" placeholder="Age">
-                            </div>
-                        </div>
                         <div class="form-group">
                             <textarea type="text" rows="4" name="address" class="form-control" id="address" placeholder="Address"></textarea>
                         </div>
                         <div class="form-group">
-                            <select>
-                                <option value="SELECT STATE">Select State</option>
-                                <option value="Andhra Pradesh">Andhra Pradesh</option>
-                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-                                <option value="Assam">Assam</option>
-                                <option value="Bihar">Bihar</option>
-                                <option value="Chhattisgarh">Chhattisgarh</option>
-                                <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
-                                <option value="Daman and Diu">Daman and Diu</option>
-                                <option value="Delhi">Delhi</option>
-                                <option value="Goa">Goa</option>
-                                <option value="Gujarat">Gujarat</option>
-                                <option value="Haryana">Haryana</option>
-                                <option value="Himachal Pradesh">Himachal Pradesh</option>
-                                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
-                                <option value="Jharkhand">Jharkhand</option>
-                                <option value="Karnataka">Karnataka</option>
-                                <option value="Kerala">Kerala</option>
-                                <option value="Madhya Pradesh">Madhya Pradesh</option>
-                                <option value="Maharashtra">Maharashtra</option>
-                                <option value="Manipur">Manipur</option>
-                                <option value="Meghalaya">Meghalaya</option>
-                                <option value="Mizoram">Mizoram</option>
-                                <option value="Nagaland">Nagaland</option>
-                                <option value="Orissa">Orissa</option>
-                                <option value="Puducherry">Puducherry</option>
-                                <option value="Punjab">Punjab</option>
-                                <option value="Rajasthan">Rajasthan</option>
-                                <option value="Sikkim">Sikkim</option>
-                                <option value="Tamil Nadu" selected>Tamil Nadu</option>
-                                <option value="Telangana">Telangana</option>
-                                <option value="Tripura">Tripura</option>
-                                <option value="Uttar Pradesh">Uttar Pradesh</option>
-                                <option value="Uttarakhand">Uttarakhand</option>
-                                <option value="West Bengal">West Bengal</option>
+                            <select id="state">
+                                <?php foreach ($states as $row) { ?>
+                                    <option value="<?php echo $row['state_id']; ?>"><?php echo $row['name']; ?></option>
+                                <?php } ?>
                             </select>
                         </div>
                         <div class="form-group">
@@ -101,7 +61,7 @@
                             <input type="password" name="password" class="form-control" id="password" placeholder="Enter Password">
                         </div>
                         <div class="form-group">
-                            <input type="password" name="c_password" class="form-control" id="password" placeholder="Confirm Password">
+                            <input type="password" name="confirm_password" class="form-control" id="confirm_password" placeholder="Confirm Password">
                         </div>
                         <button type="submit" class="btn btn-forget">Submit</button>
                     </form>

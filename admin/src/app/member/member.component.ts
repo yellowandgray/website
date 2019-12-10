@@ -92,7 +92,6 @@ export class MemberForm {
             'lname': new FormControl('', Validators.required),
             'email': new FormControl('', Validators.required),
             'mobile': new FormControl('', Validators.required),
-            'member_list_id': new FormControl('', Validators.required),
             'address': new FormControl('', Validators.required),
             'password': new FormControl('', Validators.required),
             'confirm_password': new FormControl('', Validators.required),
@@ -109,7 +108,6 @@ export class MemberForm {
            password: this.data.password,
            confirm_password: this.data.confirm_password,
            mobile: this.data.mobile,
-           member_list_id: this.data.membership_id,
            address: this.data.address,
            state: this.data.state_id,
            city: this.data.city,
@@ -162,7 +160,6 @@ export class MemberForm {
         formData.append('password', this.memberForm.value.password);
         formData.append('confirm_password', this.memberForm.value.confirm_password);
         formData.append('mobile', this.memberForm.value.mobile);
-        formData.append('membership_id', this.memberForm.value.member_list_id);
         formData.append('address', this.memberForm.value.address);
         formData.append('state_id', this.memberForm.value.state);
         formData.append('city', this.memberForm.value.city);

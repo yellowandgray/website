@@ -17,3 +17,32 @@ function subscribeNewsLetter() {
     });
     return false;
 }
+
+function MemberInsert() {
+    $.ajax({
+        type: "POST",
+        url: './api/v1/insert_front_member',
+        data: {fname: $('#fname').val(), lname: $('#lname').val(), mobile: $('#mobile').val(), address: $('#address').val(), state: $('#state').val(), city: $('#city').val(), pincode: $('#pincode').val(), email: $('#email').val(), password: $('#password').val(), confirm_password: $('#confirm_password').val()},
+        success: function (data) {
+            if (data.result.error === false) {
+                $('#fname').val(''); 
+                $('#lname').val(''); 
+                $('#mobile').val(''); 
+                $('#address').val(''); 
+                $('#state').val(''); 
+                $('#city').val(''); 
+                $('#pincode').val(''); 
+                $('#email').val(''); 
+                $('#password').val(''); 
+                $('#confirm_password').val('');
+                swal("Thanks for the registration", "", "success");
+            } else {
+                swal("Oops!", data.result.message, "info");
+            }
+        },
+        error: function (err) {
+            swal("Oops!", err.statusText, "error");
+        }
+    });
+    return false;
+}
