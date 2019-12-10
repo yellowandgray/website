@@ -321,30 +321,51 @@ $banners = $obj->selectAll('*', 'banner', 'banner_id > 0');
         </section>
         <section class=" ftco-category pad-80" id="featured-6">
             <div class="row">
-                <i onclick="document.getElementById('featured-6').classList.remove('featured-view')" class="fa fa-times" aria-hidden="true"></i>
+                <i onclick="document.getElementById('featured-6').classList.remove('featured-view')" class="fa fa-times remove" aria-hidden="true"></i>
                 <div class="col-md-12 heading-section ftco-animate deal-of-the-day ftco-animate bg-gray">
                                    <!--<span class="subheading">Best Price For You</span>-->
-                    <h2 class="mb-4 text-head">Hotels</h2>
+                    <h2 class="mb-4 text-head">Fresche Website content for Hotel Industry:</h2>
                 </div>
                 <div class="col-md-3 heading-section ftco-animate deal-of-the-day ftco-animate">
                    <!--<span class="subheading">Best Price For You</span>-->
-                    <img src="images/feature/001.jpg" alt="" class="pad-t-45 img-responsive"/>
+                    <img src="images/hopital-001.png" alt="" class="pad-t-45 img-responsive"/>
+                  
                 </div>
                 <div class="col-md-9 heading-section ftco-animate deal-of-the-day ftco-animate">
                     <!--<span class="subheading">Best Price For You</span>-->
-                    <p>Bacteria are present in most human and natural environments on earth, growing in water, waste, soil and the live bodies of people, plants and animals. Bacteria are living organisms that are neither plants nor animals, but belong to a group all by themselves.</p>
-                    <p>Individually they are generally not more than one single cell, however there are normally millions of them together due to their ability to rapidly multiply. There are typically 40 million bacterial cells in a gram of soil and a million bacterial cells in a millilitre of fresh water.</p>
-                    <p>There are approximately ten times as many bacterial cells as there are human cells in the body, with large numbers of bacteria on our skin and in the human gut. The vast majority of the bacteria in the body are rendered harmless by the protective effects of the human immune system and a few are beneficial.</p>
-                    <p>However, a growing number of bacterial forms are pathogenic and cause illness, poor health and infectious disease.</p>
-                    <p>Microorganisms that cause diseases are called pathogens. They are specialised to infect body tissues where they reproduce and cause damage that gives rise to the symptoms of the infection.</p>
-                    <p>The World Health Organisation is particularly concerned at the rising presence of nosocomial (healthcare acquired infections) contracted in hospital and healthcare environments. Healthcare-associated infections are those which were not present [and without evidence of incubation] at the time of admission to a healthcare setting. Within hours after admission, a patient's flora begins to acquire characteristics of the surrounding bacterial pool, and HAI infections are responsible for numerous deaths worldwide each year.</p>
+                    <h4>Dangers of contamination</h4>
+                    <p>Presence of microbes is very common in Hotels</p>
+                    <p>The germs are carried by large number of different individuals using same facility poses threat of cross contamination.</p>
+                    <h5>The Problems:</h5>
+                    <p>Bed Linen, Pillow Covers, Towels & Uniforms, are the most vulnerable carriers</p>
+
+                    <p>Uniforms, Linen are susceptible to  bacterial, fungal and other  microbial contamination  resulting in Contaminated Food areas,   Unpleasant Odour,   Low Brand Image, Customer dissatisfaction </p>
+                    <p class="font-weight-bold">Get Your Fresche tag to communicate the Unique Value Addition  to your customers</p>
+                    <h4>Results:</h4>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="tech-list">
+                                <i class="fa fa-check-circle" aria-hidden="true"></i><li>Odour-Free, Bacteria-Free, Fungus-Free Linen</li>
+                                <i class="fa fa-check-circle" aria-hidden="true"></i><li>Taking Customer Care to the next level</li>
+                                <i class="fa fa-check-circle" aria-hidden="true"></i><li>Unique Solution for Customer Safety and  Protection</li>
+                                <i class="fa fa-check-circle" aria-hidden="true"></i><li>Enhance Customer Satisfaction</li>
+                                <i class="fa fa-check-circle" aria-hidden="true"></i><li>Boosts your Brand Image</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 heading-section ftco-animate deal-of-the-day ftco-animate">
+                       <!--<span class="subheading">Best Price For You</span>-->
+
+                            <img src="images/applications/app/005.jpg" alt="" class="pad-t-45 img-responsive"/>
+                        </div>
+                    </div>
                 </div>
+
             </div>
 
         </section>
         <section class=" ftco-category pad-80" id="featured-7">
             <div class="row">
-                <i onclick="document.getElementById('featured-7').classList.remove('featured-view')" class="fa fa-times" aria-hidden="true"></i>
+                <i onclick="document.getElementById('featured-7').classList.remove('featured-view')" class="fa fa-times remove" aria-hidden="true"></i>
                 <div class="col-md-12 heading-section ftco-animate deal-of-the-day ftco-animate bg-gray">
                                    <!--<span class="subheading">Best Price For You</span>-->
                     <h2 class="mb-4 text-head">Hospitals</h2>
@@ -367,7 +388,7 @@ $banners = $obj->selectAll('*', 'banner', 'banner_id > 0');
         </section>
         <section class=" ftco-category pad-80" id="featured-8">
             <div class="row">
-                <i onclick="document.getElementById('featured-8').classList.remove('featured-view')" class="fa fa-times" aria-hidden="true"></i>
+                <i onclick="document.getElementById('featured-8').classList.remove('featured-view')" class="fa fa-times remove" aria-hidden="true"></i>
                 <div class="col-md-12 heading-section ftco-animate deal-of-the-day ftco-animate bg-gray">
                                    <!--<span class="subheading">Best Price For You</span>-->
                     <h2 class="mb-4 text-head">Textiles</h2>
@@ -397,7 +418,7 @@ $banners = $obj->selectAll('*', 'banner', 'banner_id > 0');
         </section>
         <section class=" ftco-category pad-80" id="featured-9">
             <div class="row">
-                <i onclick="document.getElementById('featured-9').classList.remove('featured-view')" class="fa fa-times" aria-hidden="true"></i>
+                <i onclick="document.getElementById('featured-9').classList.remove('featured-view')" class="fa fa-times remove" aria-hidden="true"></i>
                 <div class="col-md-12 heading-section ftco-animate deal-of-the-day ftco-animate bg-gray">
                                    <!--<span class="subheading">Best Price For You</span>-->
                     <h2 class="mb-4 text-head">Food & Packaging</h2>
@@ -424,7 +445,7 @@ $banners = $obj->selectAll('*', 'banner', 'banner_id > 0');
         </section>
         <section class=" ftco-category pad-80" id="featured-10">
             <div class="row">
-                <i onclick="document.getElementById('featured-10').classList.remove('featured-view')" class="fa fa-times" aria-hidden="true"></i>
+                <i onclick="document.getElementById('featured-10').classList.remove('featured-view')" class="fa fa-times remove" aria-hidden="true"></i>
                 <div class="col-md-12 heading-section ftco-animate deal-of-the-day ftco-animate bg-gray">
                                    <!--<span class="subheading">Best Price For You</span>-->
                     <h2 class="mb-4 text-head">Footwear & Leather</h2>
@@ -477,7 +498,7 @@ $banners = $obj->selectAll('*', 'banner', 'banner_id > 0');
         </section>
         <section class=" ftco-category pad-80" id="featured-11">
             <div class="row">
-                <i onclick="document.getElementById('featured-11').classList.remove('featured-view')" class="fa fa-times" aria-hidden="true"></i>
+                <i onclick="document.getElementById('featured-11').classList.remove('featured-view')" class="fa fa-times remove" aria-hidden="true"></i>
                 <div class="col-md-12 heading-section ftco-animate deal-of-the-day ftco-animate bg-gray">
                                    <!--<span class="subheading">Best Price For You</span>-->
                     <h2 class="mb-4 text-head">Institution and Aged Care</h2>
@@ -498,51 +519,52 @@ $banners = $obj->selectAll('*', 'banner', 'banner_id > 0');
             </div>
 
         </section>
-    <!--        <section class="img" style="background:#88d4f9;">
-            <div class="pad-80">
-                <div class="row acc">
-                    <div class="col-md-12 heading-section ftco-animate deal-of-the-day ftco-animate">
-                         <span class="subheading">Best Price For You</span>
-                        <h2 class="mb-4 text-center">Accreditation</h2>
-                        <p class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-    
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="text-center box-2" style="background-image: url(images/acc/bg-001.jpg);background-size: cover;">
-                                    <img src="images/acc/001.png" alt=""/>
-                                    <p>US EPA</p>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="text-center box-2" style="background-image: url(images/acc/bg-004.jpg); background-size: cover;">
-                                    <img src="images/acc/002.png" alt=""/>
-                                    <p>Oeko-Tex</p>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="text-center box-2" style="background-image: url(images/acc/bg-002.jpg);background-size: cover;">
-                                    <img src="images/acc/003.png" alt=""/>
-                                    <p>European BPR</p>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="text-center box-2" style="background-image: url(images/acc/bg-003.jpg);background-size: cover;">
-                                    <img src="images/acc/004.png" alt="" />
-                                    <p>Primary Industry in New Zealand</p>
-                                </div>
-                            </div>
+
+<!--        <section class="img" style="background:#88d4f9;">
+    <div class="pad-80">
+        <div class="row acc">
+            <div class="col-md-12 heading-section ftco-animate deal-of-the-day ftco-animate">
+                 <span class="subheading">Best Price For You</span>
+                <h2 class="mb-4 text-center">Accreditation</h2>
+                <p class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="text-center box-2" style="background-image: url(images/acc/bg-001.jpg);background-size: cover;">
+                            <img src="images/acc/001.png" alt=""/>
+                            <p>US EPA</p>
                         </div>
-                                                <ul class="acc-list">
-                                                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i> <li>US EPA</li>
-                                                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i> <li>Oeko-Tex</li>
-                                                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i> <li>European BPR</li>
-                                                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i> <li>Primary Industry in New Zealand</li>
-                                                </ul>
-    
                     </div>
-                </div> 
-            </div>                
-        </section>-->
+                    <div class="col-md-3">
+                        <div class="text-center box-2" style="background-image: url(images/acc/bg-004.jpg); background-size: cover;">
+                            <img src="images/acc/002.png" alt=""/>
+                            <p>Oeko-Tex</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="text-center box-2" style="background-image: url(images/acc/bg-002.jpg);background-size: cover;">
+                            <img src="images/acc/003.png" alt=""/>
+                            <p>European BPR</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="text-center box-2" style="background-image: url(images/acc/bg-003.jpg);background-size: cover;">
+                            <img src="images/acc/004.png" alt="" />
+                            <p>Primary Industry in New Zealand</p>
+                        </div>
+                    </div>
+                </div>
+                                        <ul class="acc-list">
+                                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> <li>US EPA</li>
+                                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> <li>Oeko-Tex</li>
+                                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> <li>European BPR</li>
+                                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> <li>Primary Industry in New Zealand</li>
+                                        </ul>
+
+            </div>
+        </div> 
+    </div>                
+</section>-->
         <section class="img" style="background-image: url(images/bg-acc.jpg); background-size: cover;">
             <div class="pad-80">
                 <div class="row acc">

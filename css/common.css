@@ -1312,7 +1312,7 @@ footer .copy p{
     box-shadow: 2px 1px 7px 0px #c3c3c3;
 }
 
-.featured-view i {
+.featured-view .remove {
     position: fixed;
     right: 12%;
     font-size: 23px;

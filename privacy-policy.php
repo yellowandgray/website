@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <?php
-    $page = 'products';
-    include 'head.php';
+     include 'head.php';
     ?>
     <body class="goto-here">
 
