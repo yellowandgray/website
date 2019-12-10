@@ -81,6 +81,7 @@ export class MemberForm {
     memberForm: FormGroup;
     loading = false;
     member_id = 0;
+    states:any[];
     constructor(
     public dialogRef: MatDialogRef<MemberForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -89,29 +90,50 @@ export class MemberForm {
         this.memberForm = new FormGroup ({
             'fname': new FormControl('', Validators.required),
             'lname': new FormControl('', Validators.required),
-            'gender': new FormControl('', Validators.required),
-            'age': new FormControl('', Validators.required),
             'email': new FormControl('', Validators.required),
             'mobile': new FormControl('', Validators.required),
-            'dob': new FormControl('', Validators.required),
             'member_list_id': new FormControl('', Validators.required),
             'address': new FormControl('', Validators.required),
+            'password': new FormControl('', Validators.required),
+            'confirm_password': new FormControl('', Validators.required),
+            'city': new FormControl('', Validators.required),
+            'state': new FormControl('', Validators.required),
+            'pincode': new FormControl('', Validators.required),
         }); 
             
         if(this.data != null) {
            this.memberForm.patchValue({
            fname: this.data.fname,
            lname: this.data.lname,
-           gender: this.data.gender,
-           age: this.data.age,
            email: this.data.email,
+           password: this.data.password,
+           confirm_password: this.data.confirm_password,
            mobile: this.data.mobile,
-           dob: this.data.dob,
-           member_list_id: this.data.member_list_id,
+           member_list_id: this.data.membership_id,
            address: this.data.address,
+           state: this.data.state_id,
+           city: this.data.city,
+           pincode: this.data.pincode,
         });
             this.member_id = this.data.member_id;
         }
+
+        this.httpClient.get('https://localhost/project/fresche/api/v1/get_state').subscribe(
+              (res)=>{
+                if(res["result"]["error"] === false) {
+                    this.states = res["result"]["data"];
+                }else{
+            this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+            (error)=>{
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+            });
+        });
+
     }
     onSubmit() {
       if (this.memberForm.invalid) {
@@ -123,24 +145,28 @@ export class MemberForm {
         if(this.member_id != 0) {
         formData.append('fname', this.memberForm.value.fname);
         formData.append('lname', this.memberForm.value.lname);
-        formData.append('gender', this.memberForm.value.gender);
-        formData.append('age', this.memberForm.value.age);
         formData.append('email', this.memberForm.value.email);
+        formData.append('password', this.memberForm.value.password);
+        formData.append('confirm_password', this.memberForm.value.confirm_password);
         formData.append('mobile', this.memberForm.value.mobile);
-        formData.append('dob', this.memberForm.value.dob);
-        formData.append('member_list_id', this.memberForm.value.member_list_id);
+        formData.append('membership_id', this.memberForm.value.member_list_id);
         formData.append('address', this.memberForm.value.address);
+        formData.append('state_id', this.memberForm.value.state);
+        formData.append('city', this.memberForm.value.city);
+        formData.append('pincode', this.memberForm.value.pincode);
         url = 'update_record/member/member_id = '+this.member_id;
       } else {
         formData.append('fname', this.memberForm.value.fname);
         formData.append('lname', this.memberForm.value.lname);
-        formData.append('gender', this.memberForm.value.gender);
-        formData.append('age', this.memberForm.value.age);
         formData.append('email', this.memberForm.value.email);
+        formData.append('password', this.memberForm.value.password);
+        formData.append('confirm_password', this.memberForm.value.confirm_password);
         formData.append('mobile', this.memberForm.value.mobile);
-        formData.append('dob', this.memberForm.value.dob);
-        formData.append('member_list_id', this.memberForm.value.member_list_id);
+        formData.append('membership_id', this.memberForm.value.member_list_id);
         formData.append('address', this.memberForm.value.address);
+        formData.append('state_id', this.memberForm.value.state);
+        formData.append('city', this.memberForm.value.city);
+        formData.append('pincode', this.memberForm.value.pincode);
         url = 'insert_member';
       }
       this.httpClient.post('http://localhost/project/fresche/api/v1/'+url, formData).subscribe(

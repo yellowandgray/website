@@ -68,7 +68,7 @@ $app->post('/insert_member', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('fname' => $data['fname'], 'lname' => $data['lname'], 'gender' => $data['gender'], 'age' => $data['age'], 'email' => $data['email'], 'mobile' => $data['mobile'], 'dob' => $data['dob'], 'member_list_id' => $data['member_list_id'], 'address' => $data['address']), 'member');
+    $record = $com->insertRecord(array('fname' => $data['fname'], 'lname' => $data['lname'], 'email' => $data['email'], 'password' => $data['password'], 'confirm_password' => $data['confirm_password'], 'mobile' => $data['mobile'], 'membership_id' => $data['membership_id'], 'address' => $data['address'], 'state_id' => $data['state_id'], 'city' => $data['city'], 'pincode' => $data['pincode']), 'member');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
@@ -97,7 +97,7 @@ $app->post('/subscribe_news_letter', function() use ($app) {
     if (count($exist) > 0) {
         $res['message'] = 'This email have already subscribed';
     } else {
-        $record = $com->insertRecord(array('email' => $data['email']), 'newsletter');
+        $record = $com->insertRecord(array('email' => $data['email'], 'name' => $data['name']), 'newsletter');
         if ($record > 0) {
             $res['error'] = false;
             $res['message'] = 'Record inserted successfully';
@@ -172,6 +172,18 @@ $app->get('/get_newsletter', function() {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
     $data = $com->selectAll('*', 'newsletter', 'newsletter_id > 0');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_state', function() {
+    $res = array('error' => true, 'message' => 'Unable to get records');
+    $com = new Common();
+    $data = $com->selectAll('*', 'state', 'state_id > 0');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
