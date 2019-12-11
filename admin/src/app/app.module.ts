@@ -9,7 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { TestimonialComponent, TestimonialForm, TestimonialDelete } from './testimonial/testimonial.component';
 import { ProductComponent, ProductForm, ProductDelete, ProductImageView } from './product/product.component';
 import { MemberComponent, MemberForm, MemberDelete } from './member/member.component';
-import { OrderComponent } from './order/order.component';
+import { OrderComponent, OrderViewForm, DeliveryStatusForm, OrderDelete } from './order/order.component';
 import { BannerComponent, BannerForm, BannerImageView, BannerDelete } from './banner/banner.component';
 import { NewsletterComponent, NewsletterDelete } from './newsletter/newsletter.component';
 
@@ -55,6 +55,9 @@ import {MatBadgeModule} from '@angular/material/badge';
     MemberForm,
     MemberDelete,
     OrderComponent,
+    OrderViewForm,
+    DeliveryStatusForm,
+    OrderDelete,
     BannerComponent,
     BannerForm,
     BannerImageView,
@@ -91,7 +94,7 @@ import {MatBadgeModule} from '@angular/material/badge';
     MatExpansionModule,
     MatBadgeModule
   ],
-  entryComponents: [TestimonialComponent, TestimonialForm, TestimonialDelete, ProductComponent, ProductForm, ProductImageView, ProductDelete, MemberComponent, MemberForm, MemberDelete, OrderComponent, BannerComponent, BannerForm, BannerImageView, BannerDelete, NewsletterComponent, NewsletterDelete],
+  entryComponents: [TestimonialComponent, TestimonialForm, TestimonialDelete, ProductComponent, ProductForm, ProductImageView, ProductDelete, MemberComponent, MemberForm, MemberDelete, OrderComponent, OrderViewForm, DeliveryStatusForm, OrderDelete, BannerComponent, BannerForm, BannerImageView, BannerDelete, NewsletterComponent, NewsletterDelete],
   providers: [],
   bootstrap: [AppComponent]
 })

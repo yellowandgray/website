@@ -59,3 +59,7 @@ mat-sidenav {
 .cursor {
     cursor: pointer;
 }
+
+.active-nav {
+    background: rgba(0,0,0,.04);
+}

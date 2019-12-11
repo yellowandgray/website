@@ -7,9 +7,17 @@
         <mat-list>
             <ng-container *ngFor="let data of result">
                 <mat-list-item>
-                    <h4 mat-line>{{data.product_name}}</h4>
-                    <p matLine>{{data.member_id}} {{data.product_price}}</p>
-                    <p mat-line>{{data.items}}</p>
+                    <button mat-icon-button aria-label="label" (click)="openDialog()">
+                        <mat-icon #tooltip="matTooltip" matTooltip="View">remove_red_eye</mat-icon>
+                    </button>
+                    <button mat-icon-button aria-label="label" (click)="openDeliveryStatus()">
+                        <mat-icon #tooltip="matTooltip" matTooltip="Delivery Status">local_shipping</mat-icon>
+                    </button>
+                    <button mat-icon-button aria-label="label" (click)="confirmDelete(data.orders_id)">
+                        <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
+                    </button>
+                    <h4 mat-line>{{data.fname}} {{data.lname}}</h4>
+                    <p matLine>{{data.address_1}} {{data.city}} {{data.state}}</p>
                 </mat-list-item>
             </ng-container>
         </mat-list>

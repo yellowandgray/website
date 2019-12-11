@@ -34,7 +34,7 @@ export class ProductComponent implements OnInit {
            );
      }
         openDialog(id, res): void {
-            var data = null;
+          var data = null;
           if(id != 0) {
           this[res].forEach(val=> {
                if(parseInt(val.product_id) === parseInt(id)) {
@@ -109,7 +109,7 @@ export class ProductForm {
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
         this.productForm = new FormGroup ({
-            'product_price': new FormControl('', Validators.required),
+            'product_price': new FormControl(''),
             'product_name': new FormControl('', Validators.required),
             'description': new FormControl('', Validators.required),
         });
