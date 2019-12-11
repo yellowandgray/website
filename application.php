@@ -28,7 +28,7 @@
         <section class="ftco-section" >
             <div class="pad-lr-80">
                 <div class="row box-4">
-                    <div class=" col-lg-8 product-details pl-md-5 ftco-animate">
+                    <div class=" col-lg-6 product-details pl-md-5 ftco-animate">
                         <h3 class="text-center">ANTIMICROBIALS</h3>
                         <p class="font-weight-bold">Bacteria, Fungi and Molds come under the category of microbial. In which the Fungus and mold are the visible manifestations while Bacteria per se are invisible to the Human eye. They are present everywhere and multiply rapidly.   </p>
                         <p class="font-weight-bold">There are 100's of Bacteria and classified as Gram Positive, Gram Negative....They are present in hospitals, schools, public transportation.....washrooms, houses, temples, hotels literally everywhere.</p>
@@ -36,13 +36,23 @@
                         <p class="font-weight-bold">It is a huge Industry that supports the healthy existence of Human Beings in a silent manner. </p>
                         <!--<button class="button-03"><a href="#"><i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart</a></button>-->
                     </div>
-                    <div class=" text-center col-lg-4 product-details pl-md-5 ftco-animate">
-
-                        <img src="images/applications/app/005.jpg" class="product-img-responsive" alt=""/>
+                    <!--                    <div class=" text-center col-lg-4 product-details pl-md-5 ftco-animate">
+                    
+                                            <img src="images/applications/app/005.jpg" class="product-img-responsive" alt=""/>
+                                        </div>-->
+                    <div class="col-lg-6  app-img ftco-animate">
+                        <div class="">
+                        <!--<a href="images/product-01.png" class="image-popup"><img src="images/product-01.png" class="img-fluid" alt="Colorlib Template"></a>-->
+                            <video width="320" height="240" controls autoplay=true>
+                                <source src="video/Fresche.mp4" type="video/mp4">
+                                Your browser does not support the <code>video</code> tag.
+                            </video>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+       
         <section class="ftco-section">
             <div class="pad-lr-80">
                 <div class="row">

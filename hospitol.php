@@ -16,7 +16,7 @@
             <div class="container">
                 <div class="row no-gutters slider-text align-items-center justify-content-center">
                     <div class="col-md-9 ftco-animate text-center">
-                        <h1 class="mb-0 bread">Fresche Website content for Hospital Industry</h1>
+                        <h1 class="mb-0 bread">Hospital Industry</h1>
                     </div>
                 </div>
             </div>
@@ -32,7 +32,6 @@
                                                                         <!--<button class="button-03"><a href="#"><i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart</a></button>-->
                     </div>
                     <div class=" text-center col-lg-4 product-details pl-md-5 ftco-animate">
-
                         <img src="images/applications/app/005.jpg" class="product-img-responsive" alt=""/>
                     </div>
                 </div>
@@ -49,8 +48,11 @@
                     </div>
                     <div class="col-lg-8 product-details app-con pl-md-5 ftco-animate">
                         <h3>Delivering Powerful Outcomes</h3>
-                        <h5></h5>
-                        <!--<button class="button-03"><a href="#"><i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart</a></button>-->
+                        <p>Fresche is the worlds first surface bonding, aqueous based, broad spectrum antimicrobial which delivers high level, persistent, continuing, antimicrobial control and  protection of surfaces and substrates in healthcare environments. Fresche delivers a terminal kill of bacteria, and because it is not ingested into the bacteria it does not permit the building of microbial resistance.</p>
+                        <p>Fresche contains no heavy metals, no toxic chemicals, no poisons. It is green, clean and safe for patients, patient families, hospital employees, and the environment.</p>
+                        <p>Unlike conventional biocides, Fresche SiQac compounds do not leach, and they do not deplete as a bound antimicrobial, and inhibitory performance does not diminish on account of the disinfection process. Because of this, Fresche stands continually on guard to protect surfaces from microbial attack and colonisation.</p>
+                        <p>We believe it is a powerful advance in the management and control of healthcare acquired infections [HAI's], and offers health providers significant potential to improve patient health outcomes together with lowering of patient risks, and facilitating release of hospital assets tied to re admissions on account of increasingly aggressive patient HAI’s.</p>
+<!--<button class="button-03"><a href="#"><i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart</a></button>-->
                     </div>
                 </div>
             </div>
@@ -59,17 +61,17 @@
             <div class="pad-lr-80">
                 <div class="row">
                     <div class="col-lg-8 product-details  app-con pl-md-5 ftco-animate">
-                        <h3>Footwear</h3>
-                        <h5>Did you know that sweat from your feet has no odour?</h5>
-                        <p>It’s the bacteria that grows on our feet or in the shoes we wear that actually cause odour.</p>
-                        <p>These bacteria convert the sweat and oil from skin into a complex mixture of chemical compounds that lead to unpleasant odours. The truth is that your shoes DO NOTHING to stop your sweat turning into odour!</p>
-                        <p>Sure, many brands might argue their shoes have better ventilation & odour absorbing chemicals. But, unless that sweat “magically disappears” from your shoes, the bacteria are going to accumulate and YOUR feet is going to produce unpleasant odours!</p>
+                        <h3>Protecting Hospital Patients</h3>
+                        <p>The challenge for hospital and healthcare practitioners is how to prevent and control hospital-acquired and other healthcare-associated infections in a perpetually changing medical environment.</p>
+                        <p>Hospitals worldwide, are experiencing an increased volume of immuno compromised patients, increasingly complex medical procedures and a growing presence of harmful and biocide resistant microorganisms.</p>
+                        <p>Most biocides available today in India have limited time efficacy, lasting generally from a few minutes to a few days.</p>
+                        <p>Fresche is a powerful new weapon in infection management, persistently protecting surfaces from attack or colonization by pathogens, and reducing potential touch points which promote cross contamination.</p>
                         <!--<button class="button-03"><a href="#"><i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart</a></button>-->
                     </div>
                     <div class="col-lg-4 mb-5 app-img ftco-animate">
                         <div class="">
                        <!--<a href="images/product-01.png" class="image-popup"><img src="images/product-01.png" class="img-fluid" alt="Colorlib Template"></a>-->
-                            <img src="images/applications/app/002.jpg" class="product-img-responsive" alt="">
+                            <img src="images/hospital-004.jpg" class="product-img-responsive" alt="">
                         </div>
                     </div>
                 </div>
@@ -81,16 +83,17 @@
                     <div class="col-lg-4 mb-5 app-img  ftco-animate">
                         <div class="">
                         <!--<a href="images/product-01.png" class="image-popup"><img src="images/product-01.png" class="img-fluid" alt="Colorlib Template"></a>-->
-                            <img src="images/applications/app/003.jpg" class="product-img-responsive" alt="">
+                            <img src="images/hospital-003.jpg" class="product-img-responsive" alt="">
                         </div>
                     </div>
                     <div class="col-lg-8 product-details pl-md-5  app-con ftco-animate">
-                        <h3>Surface</h3>
-                        <h5>DOES YOUR COMMERCIAL DISINFECTION PRODUCT PROVIDE YOU WITH UP TO 7 DAYS OF BROAD SPECTRUM MICROBIAL CONTROL & PROTECTION?</h5>
-                        <p>Many disinfectant products are inefficient. They destroy resident germs on the surface being treated, but last only a short time before new microorganisms arrive to recolonise and recontaminate the surface.</p>
-                        <p>FRESCHE EF 3851 is a dual action, surface bonding, commercial grade disinfectant, which delivers long term, broad spectrum microbial control and protection on treated surfaces. It not only sanitises the surface, but continues to protect the surface from bacteria, fungus and molds, for upto 7 days.</p>
-                        <p>FRESCHE EF 3851 is non-corrosive, non staining, stable and safe for people, pets, plants and the environment. FRESCHE EF 3851 is redefining conventional performance and durability paradigms of safe microbial control and protection.</p>
-                        <!--<button class="button-03"><a href="#"><i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart</a></button>-->
+                        <h3>Protecting Hospital Employees</h3>
+                        <p>All hospitals have infection control procedures and policies, and staff take every precaution to avoid infections. However the risk of employee infection can never be eliminated and some employees have a higher risk of acquiring an infection than others.</p>
+                        <p>A key issue, is the fact that pathogens are transmitted around hospital environments either as airborne pathogens, or as passengers on textiles and equipment moving in and around the hospital environment.</p>
+                        <p>Fresche is highly efficient when applied [or infused] into all forms of textiles. As a bound antimicrobial, it delivers a 99.9% terminal knock down of bacteria, followed by persistent microbial protection for the life of the textile.</p>
+                        <p>Its “lock and bond” is durable for minimum 50 washes.</p>
+                        <p>While Infusion of Fresche to textiles is best at the production stage, hospital textiles can be retro-treated with great results.</p>
+<!--<button class="button-03"><a href="#"><i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart</a></button>-->
                     </div>
                 </div>
             </div>
@@ -98,32 +101,38 @@
         <section class="ftco-section pad-b-50" style="background-image: url('images/bg_02.png'); background-size: cover;">
             <div class="pad-lr-80">
                 <div class="row">
-                    <div class="col-lg-12 product-details pl-md-5  app-con ftco-animate">
-                        <h3>Hospital</h3>
-                        <div class="box-3 text-for-hai">
-                            <h5 class="text-center">Hospital Acquired Infections [HAI]</h5>
-                            <p class="text-center">The World Health Organization ranks nosocomial or hospital acquired infections [HAI’s] as the third most significant threat to the human race.</p>
-                            <p class="text-center">“10-30% of the patients admitted to hospitals and nursing homes In India acquires nosocomial infection as against an impressive 5% in the west.” -Hospital Infection Society –India</p>
-                        </div> 
-                    </div>
-                </div>
-                <div class="row">
+
                     <div class="col-lg-8 product-details pl-md-5  app-con ftco-animate">
-
-                        <h5>Does your commercial disinfection product provide you with up to 7 days of broadspectrum microbial control & protection?</h5>
-                        <p>Many disinfectant products are inefficient. They destroy germs on the surface being treated,but last only a short time before new microorganisms arrive to recolonise and recontaminate the surface.</p>
-                        <p>Fresche EF3851 is a dual action, surface bonding commercial grade disinfectant, which delivers long term, broadspectrum microbial controland protection on treated surfaces.It not only sanitises the surface, but continue to protect the surface from bacteria, fungus, and molds for up to 7 days.</p>
-
-                        <h5>YOUR FRESCHE APPLICATION</h5>
-                        <p>Operation thatre, ICU, Cath lab, Emergency room, Lobby area, Stretchers, ECG Monitor, Oprating table, Instrument Cabinet, Trolley, Surgeon’s tools, Hospital linen, Surgical drapes, OT floors and walls, ICU bed, Spotlight, Floors, Walls, Ceilings, Bedpan, Kidney dish, Bedrails, Air filters, Evaporative coolers, Rubbish and Recycling areas.</p>
-                        <!--<button class="button-03"><a href="#"><i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart</a></button>-->
+                        <h3>Protecting Hospital Environments</h3>
+                        <p>Modern day hospitals are large scale communities in themselves, embracing surgeons, administrators, casualty staff, paramedics, nursing teams, contractors, patients, families, patient doctors, visitors and hospital ancillaries. The hospital environment is both complex and intense.</p>
+                        <p>Hospitals worldwide are severely compromised by the presence of pathogens which impact sick or unwell patients, whose recovery depends on being cared for in a safe, secure and hygienically clean environment.</p>
+                        <p>Fresche SiQac technology stands alone in its capacity to deliver a safer more protected environment for patients and healthcare employees.</p>
+                        <p>Its non-leaching, non-depleting, non-chemical mode of action is a quantum opportunity for infection control managers and hospital administrators to gain significant traction in the war on superbugs and pathogens.</p>
+                     <!--<button class="button-03"><a href="#"><i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart</a></button>-->
                     </div>
                     <div class="col-lg-4 mb-5 app-img ftco-animate">
                         <div class="">
                        <!--<a href="images/product-01.png" class="image-popup"><img src="images/product-01.png" class="img-fluid" alt="Colorlib Template"></a>-->
-                            <img src="images/applications/app/004.jpg" class="product-img-responsive" alt="">
+                            <img src="images/hospital-002.jpg" class="product-img-responsive" alt="">
                         </div>
                     </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 mb-5 app-img ftco-animate">
+                        <div class="">
+                       <!--<a href="images/product-01.png" class="image-popup"><img src="images/product-01.png" class="img-fluid" alt="Colorlib Template"></a>-->
+                            <img src="images/hospital-001.jpg" class="product-img-responsive" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-8 product-details pl-md-5  app-con ftco-animate">
+                        <h3>Protecting Hospital Laundry</h3>
+                        <p>The best approach is for Fresche microbial protection to be applied to hospital textiles at the manufacturing stage. Fresche technical managers work with hospital suppliers to implement this powerful microbial control technology.</p>
+                        <p>Traditional methods of sanitizing hospital laundry is by application of either steam                                        [or heat] to the face of the textile or by chemical sanitization. This frequently degrades the life of the textile, and is not always efficient.</p>
+                        <p>Fresche can be applied to hospital linen in a protocol where Fresche microbial protection compounds are applied to the textile during the final stage laundering process. Following this application, most treated hospital textiles can be washed in cold water and still meet healthcare standards. This represents a significant saving in energy costs and carbon footprint</p>
+                        <p>Fresche Bioscience can engage with hospital laundry staff to conduct application and bacterial challenge validation trials.</p>
+                        <!--<button class="button-03"><a href="#"><i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart</a></button>-->
+                    </div>
+
                 </div>
             </div>
         </section>

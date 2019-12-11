@@ -1283,7 +1283,7 @@ footer .copy p{
     display: none;
 }
 .featured-view h2{
-    color: #f57478 !important;
+    color: #ff0008 !important;
     font-size: 33px !important;
 }
 .featured-view p{
@@ -1368,7 +1368,7 @@ footer .copy p{
         color: #444 !important;
         padding: 2px;
     }
-    .featured-view i {
+    .featured-view .remove {
         position: fixed;
         right: 13%;
         font-size: 23px;
