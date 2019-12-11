@@ -133,7 +133,7 @@ $app->get('/get_testimonial', function() {
 $app->get('/get_order', function() {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
-    $data = $com->selectAll('*', 'orders', 'orders_id > 0');
+    $data = $com->selectAll('o.*, s.name AS state, m.fname, m.lname', 'orders AS o LEFT JOIN state AS s ON s.state_id = o.state_id LEFT JOIN member AS m ON m.member_id = o.member_id', 'o.orders_id > 0 order by o.orders_id DESC');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
