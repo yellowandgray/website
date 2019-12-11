@@ -47,7 +47,7 @@
                                                             <source src="video/Fresche.mp4" type="video/mp4">
                                                             Your browser does not support the <code>video</code> tag.
                                                         </video>-->
-                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/hL0eNG_99HM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/hL0eNG_99HM/?&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
