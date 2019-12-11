@@ -2,7 +2,11 @@
 <!DOCTYPE html>
 <html lang="en">
     <?php
+    require_once 'api/include/common.php';
     include 'head.php';
+    $obj = new Common();
+    $states = $obj->selectAll('*', 'state', 'state_id > 0');
+    $members = $obj->selectAll('m.*, s.name AS state', 'member AS m LEFT JOIN state AS s ON s.state_id = m.state_id', 'member_id > 0');
     ?>
     <body class="goto-here">
 
@@ -133,124 +137,71 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="check m-b-10">
-                                    <h4><span>1</span> LOGIN</h4>
-                                    <!--flow-4- after login-->
-                                    <div class="flow-4">
-                                        <hr>
-                                        <h5>Vignesh V <span>+91 1234567890</span></h5>
-                                        <button>Change</button>
-                                    </div>
-                                </div>
+                                <!--                                <div class="check m-b-10">
+                                                                    <h4><span>1</span> LOGIN</h4>
+                                                                    flow-4- after login
+                                                                    <div class="flow-4">
+                                                                        <hr>
+                                                                        <h5>Vignesh V <span>+91 1234567890</span></h5>
+                                                                        <button>Change</button>
+                                                                    </div>
+                                                                </div>-->
                                 <div class="bg-white m-b-10">
                                     <div class="check-login">
-                                        <h4><span>1</span> LOGIN OP SIGNUP</h4>
+                                        <h4><span>1</span> ENTER YOUR DETAILS</h4>
                                     </div>
-                                    <div class="user-login">
-
-                                        <!--default-->
-
-                                        <div class="flow-1">
-                                            <input type="email" placeholder="Enter Your Email" id="email" name="email">
-                                            <input type="password" placeholder="Enter Your Password" id="password" name="password">
-                                            <a href="">Forget password?</a>
-                                            <br/>
-                                            <button type="submit">CONTINUE</button>
+                                    <form class="user-register" onsubmit="return MemberInsert();">
+                                        <div class="form-group">
+                                            <input type="text" name="name" class="form-control" id="fname" placeholder="First Name" required>
                                         </div>
-                                    </div>
+                                        <div class="form-group">
+                                            <input type="text" name="name" class="form-control" id="lname" placeholder="Last Name" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" name="email" class="form-control" id="email" placeholder="Email Address" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="mobile" class="form-control" id="mobile" placeholder="Mobile" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea type="text" rows="4" name="address" class="form-control" id="address" placeholder="Delivery Address" required></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <select id="state" required>
+                                                <?php foreach ($states as $row) { ?>
+                                                    <option value="<?php echo $row['state_id']; ?>"><?php echo $row['name']; ?></option>
+                                                <?php } ?>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="city" class="form-control" id="city" placeholder="City" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="pincode" class="form-control" id="pincode" placeholder="Pincode" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="altphone" placeholder="Alternate Phone (Optional)">
+                                        </div>
+                                        <button type="submit" class="btn member-register-btn">Submit</button>
+                                    </form>
                                 </div>
-
-                                <div class="check m-b-10">
-                                    <h4><span>2</span> DELIVERY ADDRESS</h4>
-                                    <div class="address-flow-2">
-                                        <hr>
-                                        <h5>Vignesh V <span>+91 1234567890</span></h5>
-                                        <p>YG STUDIO, no.12, Durga colony, 4th cross street,<br/>sembakkam.chennai-600073</p>
-                                        <button>Edit</button>
-                                    </div>
-                                </div>
-                                <div class="bg-white m-b-10">
-                                    <div class="check-login">
+                                <?php if (count($members) > 0) { ?>
+                                    <div class="check m-b-10">
                                         <h4><span>2</span> DELIVERY ADDRESS</h4>
+                                        <div class="address-flow-2">
+                                            <?php foreach ($members as $row) { ?>
+                                                <hr>
+                                                <h5><?php echo $row['fname']; ?> <?php echo $row['lname']; ?> - <span><?php echo $row['mobile']; ?></span> - <span><?php echo $row['email']; ?></span></h5>
+                                                <p><?php echo $row['address']; ?> <br/> <?php echo $row['city']; ?> - <?php echo $row['pincode']; ?> <br/><?php echo $row['state']; ?></p>
+                                                <button>Edit</button>
+                                            <?php } ?>
+                                        </div>
+                                        <center>
+                                            <button class="btn payment-btn">MAKE PAYMENT</button>
+                                        </center>
+                                        <br/>
                                     </div>
-                                    <!--address-flow-1-->
-                                    <div class="user-address">
-                                        <form>
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <textarea  placeholder="Address" rows="4"></textarea>
-                                                </div>
-
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <select>
-                                                        <option value="SELECT STATE">Select State</option>
-                                                        <option value="Andhra Pradesh">Andhra Pradesh</option>
-                                                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-                                                        <option value="Assam">Assam</option>
-                                                        <option value="Bihar">Bihar</option>
-                                                        <option value="Chhattisgarh">Chhattisgarh</option>
-                                                        <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
-                                                        <option value="Daman and Diu">Daman and Diu</option>
-                                                        <option value="Delhi">Delhi</option>
-                                                        <option value="Goa">Goa</option>
-                                                        <option value="Gujarat">Gujarat</option>
-                                                        <option value="Haryana">Haryana</option>
-                                                        <option value="Himachal Pradesh">Himachal Pradesh</option>
-                                                        <option value="Jammu and Kashmir">Jammu and Kashmir</option>
-                                                        <option value="Jharkhand">Jharkhand</option>
-                                                        <option value="Karnataka">Karnataka</option>
-                                                        <option value="Kerala">Kerala</option>
-                                                        <option value="Madhya Pradesh">Madhya Pradesh</option>
-                                                        <option value="Maharashtra">Maharashtra</option>
-                                                        <option value="Manipur">Manipur</option>
-                                                        <option value="Meghalaya">Meghalaya</option>
-                                                        <option value="Mizoram">Mizoram</option>
-                                                        <option value="Nagaland">Nagaland</option>
-                                                        <option value="Orissa">Orissa</option>
-                                                        <option value="Puducherry">Puducherry</option>
-                                                        <option value="Punjab">Punjab</option>
-                                                        <option value="Rajasthan">Rajasthan</option>
-                                                        <option value="Sikkim">Sikkim</option>
-                                                        <option value="Tamil Nadu" selected>Tamil Nadu</option>
-                                                        <option value="Telangana">Telangana</option>
-                                                        <option value="Tripura">Tripura</option>
-                                                        <option value="Uttar Pradesh">Uttar Pradesh</option>
-                                                        <option value="Uttarakhand">Uttarakhand</option>
-                                                        <option value="West Bengal">West Bengal</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <input type="text" placeholder="City/District/Town">
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <input type="text" placeholder="Pincode" name="pincode">
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <input type="text" placeholder="Landmark (Optional)">
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <input type="text" placeholder="Alternate Phone (Optional)">
-                                                </div>
-
-                                            </div>
-                                            <div class="row address-submit">
-                                                <div class="col-md-12">
-                                                    <button type="submit">MAKE PAYMENT</button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <!--address-flow-1-->
-                                    <div class="saved-address">
-
-                                    </div>
-                                </div>
+                                <?php } ?>
                                 <div class="check m-b-10">
                                     <h4><span>3</span> PAYMENT OPTIONS</h4>
                                 </div>

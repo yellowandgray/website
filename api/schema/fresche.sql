@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 11, 2019 at 06:40 AM
+-- Generation Time: Dec 11, 2019 at 02:39 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.2.12
 
@@ -98,18 +98,29 @@ CREATE TABLE `newsletter` (
 
 CREATE TABLE `orders` (
   `orders_id` int(11) NOT NULL,
-  `member_id` int(11) NOT NULL,
+  `member_name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `mobile` varchar(255) NOT NULL,
   `grand_total` varchar(255) NOT NULL,
-  `address_1` text NOT NULL,
-  `address_2` text NOT NULL,
+  `address` text NOT NULL,
   `state_id` int(11) NOT NULL,
   `city` varchar(255) NOT NULL,
+  `pincode` varchar(255) NOT NULL,
   `delivery_status` varchar(255) NOT NULL,
+  `shipped_at` varchar(255) NOT NULL,
+  `delivery_at` varchar(255) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `created_by` int(11) NOT NULL,
   `updated_by` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`orders_id`, `member_name`, `email`, `mobile`, `grand_total`, `address`, `state_id`, `city`, `pincode`, `delivery_status`, `shipped_at`, `delivery_at`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
+(1, 'Umasekar', 'umasekar098@gmail.com', '7639600998', '8000', 'Durga colony, 4th cross street, Sembakkam.', 28, 'Chennai', '600075', 'Pending', '', '', '2019-12-11 13:14:20', '0000-00-00 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -120,7 +131,7 @@ CREATE TABLE `orders` (
 CREATE TABLE `order_item` (
   `order_item_id` int(11) NOT NULL,
   `order_id` int(11) NOT NULL,
-  `product` varchar(255) NOT NULL,
+  `product_name` varchar(255) NOT NULL,
   `product_qty` varchar(255) NOT NULL,
   `price` varchar(255) NOT NULL,
   `total` varchar(255) NOT NULL,
@@ -148,6 +159,14 @@ CREATE TABLE `product` (
   `created_by` int(11) NOT NULL,
   `updated_by` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `product`
+--
+
+INSERT INTO `product` (`product_id`, `product_name`, `description`, `product_price`, `image_path`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
+(1, 'FRESCHE EF 3851', '<span>FRESCHE EF 3851 is a high performance hospital-grade surface disinfection treatment. Fresche SiQuat advanced microbial control and protection solutions shift the biocidal paradigm in delivery of efficient, long term bacterial, fungal, mould and odour control.</span><div><span><br></span></div><div><h5><b><font size=\"3\">FOGGING LARGE ENVIRONMENTS</font></b></h5></div><div><br></div><div><p>FRESCHE EF 3851 can be applied to large areas such as operation theatres, ICU, emergency rooms, cool rooms, pipes, drains and walkways, warehouse areas, storage bins, building walls and ceilings. Any person applying FRESCHE EF 3851 must comply with local or industry OHS protection protocols, which may apply.</p><p>Before applying FRESCHE EF 3851 directly all dirt, dust, biofilms mould, fungus or other contaminants must be removed from the surface to be treated, and dried prior to application.</p></div>', '0', 'uploads/4bb1bde1f667d50099e79003f4aa0f7b.png', '2019-12-11 11:30:37', '0000-00-00 00:00:00', 0, 0),
+(2, 'BZ1 Binder', '<p>Fresche BZ1 is a non-formaldehyde containing polymeric resin used with the Fresche EF3851 antimicrobials to improve durability of anti microbial protection when applied to synthetics, cellulosics, and their blends.</p><p>Fresche BZ1 is pad applied at a 1.0-2.0% level on the weight of bath volume with Fresche antimicrobials. The treated fabric can then be dried and cured with &#34;normal&#34; drying and curing/heat setting temperatures and dwell time consistent with the fabric construction.</p>', '0', 'uploads/53204108ff0ca5444804cfcd2325eea3.png', '2019-12-11 11:31:08', '0000-00-00 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -351,7 +370,7 @@ ALTER TABLE `banner`
 -- AUTO_INCREMENT for table `member`
 --
 ALTER TABLE `member`
-  MODIFY `member_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `member_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `newsletter`
@@ -363,7 +382,7 @@ ALTER TABLE `newsletter`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `orders_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `orders_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `order_item`
@@ -375,7 +394,7 @@ ALTER TABLE `order_item`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `state`
