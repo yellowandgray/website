@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 09, 2019 at 04:03 PM
+-- Generation Time: Dec 11, 2019 at 06:40 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.2.12
 
@@ -55,8 +55,6 @@ CREATE TABLE `member` (
   `member_id` int(11) NOT NULL,
   `fname` varchar(255) NOT NULL,
   `lname` varchar(255) NOT NULL,
-  `gender` varchar(255) NOT NULL,
-  `age` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `mobile` varchar(255) NOT NULL,
   `membership_id` varchar(255) NOT NULL,
@@ -150,13 +148,6 @@ CREATE TABLE `product` (
   `created_by` int(11) NOT NULL,
   `updated_by` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `product`
---
-
-INSERT INTO `product` (`product_id`, `product_name`, `description`, `product_price`, `image_path`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
-(1, 'test', 'test', 'tet', 'uploads/3e46a328dfe4f67aebf7091be64bc26e.jpg', '2019-12-05 06:40:47', '0000-00-00 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -384,7 +375,7 @@ ALTER TABLE `order_item`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `state`
@@ -396,7 +387,7 @@ ALTER TABLE `state`
 -- AUTO_INCREMENT for table `templates`
 --
 ALTER TABLE `templates`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `testimonial`

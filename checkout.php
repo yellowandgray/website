@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html lang="en">
     <?php
-    $page = 'about';
     include 'head.php';
     ?>
     <body class="goto-here">
