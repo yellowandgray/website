@@ -19,9 +19,9 @@ export class ProductComponent implements OnInit {
   ngOnInit() {
     this.getProduct();
   }
-    image_url: string = 'http://ghmindia.com/api/v1/';
+    image_url: string = 'http://localhost/project/fresche/api/v1/';
     getProduct(): void {
-     this.httpClient.get<any>('http://ghmindia.com/api/v1/get_product')
+     this.httpClient.get<any>('http://localhost/project/fresche/api/v1/get_product')
      .subscribe(
              (res)=>{
                  this.result = res["result"]["data"];
@@ -97,7 +97,7 @@ export class ProductComponent implements OnInit {
   templateUrl: 'product-form.html',
 })
 export class ProductForm {
-    image_url: string = 'http://ghmindia.com/api/v1/';
+    image_url: string = 'http://localhost/project/fresche/api/v1/';
     productForm: FormGroup;
     loading = false;
     product_id = 0;
@@ -145,7 +145,7 @@ export class ProductForm {
         formData.append('product_image', this.image_path);
         url = 'insert_product';
       }
-      this.httpClient.post('http://ghmindia.com/api/v1/'+url, formData).subscribe(
+      this.httpClient.post('http://localhost/project/fresche/api/v1/'+url, formData).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -171,7 +171,7 @@ export class ProductForm {
         this.loading = true;
           var formData = new FormData();
           formData.append('file', fileData);
-          this.httpClient.post('http://ghmindia.com/api/v1/upload_file', formData).subscribe(
+          this.httpClient.post('http://localhost/project/fresche/api/v1/upload_file', formData).subscribe(
               (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -263,7 +263,7 @@ export class ProductDelete {
             return;
       }
       this.loading = true;
-      this.httpClient.get('http://ghmindia.com/api/v1/delete_record/product/product_id='+this.product_id).subscribe(
+      this.httpClient.get('http://localhost/project/fresche/api/v1/delete_record/product/product_id='+this.product_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -290,7 +290,7 @@ export class ProductDelete {
 })
  
 export class ProductImageView {
-    image_url: string = 'http://ghmindia.com/api/v1/';
+    image_url: string = 'http://localhost/project/fresche/api/v1/';
     action: string = '';
     loading = false;
     product_id = 0;

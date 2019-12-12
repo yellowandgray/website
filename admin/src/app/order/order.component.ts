@@ -17,7 +17,7 @@ export class OrderComponent implements OnInit {
     this.getOrder();
   }
     getOrder(): void {
-     this.httpClient.get<any>('http://ghmindia.com/api/v1/get_order')
+     this.httpClient.get<any>('http://localhost/project/fresche/api/v1/get_order')
      .subscribe(
              (res)=>{
                  this.result = res["result"]["data"];
@@ -128,7 +128,7 @@ export class OrderDelete {
             return;
       }
       this.loading = true;
-      this.httpClient.get('http://ghmindia.com/api/v1/delete_record/orders/orders_id='+this.orders_id).subscribe(
+      this.httpClient.get('http://localhost/project/fresche/api/v1/delete_record/orders/orders_id='+this.orders_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {

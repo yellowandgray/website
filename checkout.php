@@ -6,7 +6,7 @@
     include 'head.php';
     $obj = new Common();
     $states = $obj->selectAll('*', 'state', 'state_id > 0');
-    $members = $obj->selectAll('m.*, s.name AS state', 'member AS m LEFT JOIN state AS s ON s.state_id = m.state_id', 'member_id > 0');
+    $members = $obj->selectAll('o.*, s.name AS state', 'orders AS o LEFT JOIN state AS s ON s.state_id = o.state_id', 'orders_id > 0');
     ?>
     <body class="goto-here">
 
@@ -137,15 +137,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!--                                <div class="check m-b-10">
-                                                                    <h4><span>1</span> LOGIN</h4>
-                                                                    flow-4- after login
-                                                                    <div class="flow-4">
-                                                                        <hr>
-                                                                        <h5>Vignesh V <span>+91 1234567890</span></h5>
-                                                                        <button>Change</button>
-                                                                    </div>
-                                                                </div>-->
                                 <div class="bg-white m-b-10">
                                     <div class="check-login">
                                         <h4><span>1</span> ENTER YOUR DETAILS</h4>
@@ -191,7 +182,7 @@
                                         <div class="address-flow-2">
                                             <?php foreach ($members as $row) { ?>
                                                 <hr>
-                                                <h5><?php echo $row['fname']; ?> <?php echo $row['lname']; ?> - <span><?php echo $row['mobile']; ?></span> - <span><?php echo $row['email']; ?></span></h5>
+                                                <h5><?php echo $row['member_name']; ?> - <span><?php echo $row['mobile']; ?></span> - <span><?php echo $row['email']; ?></span></h5>
                                                 <p><?php echo $row['address']; ?> <br/> <?php echo $row['city']; ?> - <?php echo $row['pincode']; ?> <br/><?php echo $row['state']; ?></p>
                                                 <button>Edit</button>
                                             <?php } ?>
