@@ -554,16 +554,8 @@ $banners = $obj->selectAll('*', 'banner', 'banner_id > 0');
                     <br/>
                     <h5>NEW GENERATION MICROBIAL CONTROL AND PROTECTION FOR LEATHER.</h5>
                     <img src="images/applications/footwear.jpg" alt="" class="img-responsive"/>
-                    <h5>Did you know that sweat from your feet has no odour?</h5>
-                    <p>It's the bacteria that grows on our feet or in the shoes we wear hat actually cause odour.</p>
-                    <p>These bacteria convert the sweat and oil from skin into a complex mixture of chemical compounds that lead to unpleasant odours. The truth is that your shoes DO NOTHING to stop your sweat turning into odour!</p>
-                    <p>Sure, many brands might argue their shoes have better ventilation & odour absorbing chemicals. But, unless that sweet "magically disappears" from your shoes, the bacteria are going to accumulate and YOUR feet is going to produce unpleasant odour!</p>
-                    <ul>
-                        <li>Give yourself an environmental market edge <br/> Reduce chemical use and increase productivity <br/> A clean, green, safe solution.</li>
-                    </ul>
-                    <h6>Approved for use by:</h6>
-                    <h4>US EPA | EU BPR | OEKO-TEX</h4>
                 </div>
+
                 <div class="col-md-6">
                     <br/>
                     <ul>
@@ -587,11 +579,22 @@ $banners = $obj->selectAll('*', 'banner', 'banner_id > 0');
                         <li>Safe For You And The Planet</li>
                         <li>Derived From Coconut Oil (sustainable & renewable resource)</li>
                     </ul>
-                    <div class="bg-do-it">
-                        <h5>Fresche SiQuat technology delivers durable and validated microbial performance with environmental integrity at an affordable cost.</h5>
-                        <h2>LETS DO IT NOW</h2>
-                        <p>Call us for an obilgation free discussion and production trail.</p>
-                    </div>
+                    <!--                    <div class="bg-do-it">
+                                            <h5>Fresche SiQuat technology delivers durable and validated microbial performance with environmental integrity at an affordable cost.</h5>
+                                            <h2>LETS DO IT NOW</h2>
+                                            <p>Call us for an obilgation free discussion and production trail.</p>
+                                        </div>-->
+                </div>
+                <div class="col-md-12 footwear-css">
+                    <h5>Did you know that sweat from your feet has no odour?</h5>
+                    <p>It's the bacteria that grows on our feet or in the shoes we wear hat actually cause odour.</p>
+                    <p>These bacteria convert the sweat and oil from skin into a complex mixture of chemical compounds that lead to unpleasant odours. The truth is that your shoes DO NOTHING to stop your sweat turning into odour!</p>
+                    <p>Sure, many brands might argue their shoes have better ventilation & odour absorbing chemicals. But, unless that sweet "magically disappears" from your shoes, the bacteria are going to accumulate and YOUR feet is going to produce unpleasant odour!</p>
+                    <ul>
+                        <li>Give yourself an environmental market edge <br/> Reduce chemical use and increase productivity <br/> A clean, green, safe solution.</li>
+                    </ul>
+                    <h6>Approved for use by:</h6>
+                    <h4>US EPA | EU BPR | OEKO-TEX</h4>
                 </div>
             </div>
 
