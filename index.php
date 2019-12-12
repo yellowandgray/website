@@ -172,12 +172,24 @@
                                         <div class="item"><img src="images/carosel/pic-project-based-curriculum.jpg" alt="Project Based Curriculum - ENPEE International School" title="Project Based Curriculum - ENPEE International School"></div>
                                     </div>
                                 </div>
-                                <div class="pic2"><div class="about-video-img-1"><a href="Enpee-slide-video.mp4" data-toggle="lightbox" data-width="1280"><i class="fas fa-play"></i></a><img src="images/aboutpic2.jpg" alt="Modern Infrastructure-ENPEE International School" title="Modern Infrastructure-ENPEE International School"></div></div>
+                                <div class="pic2"><div class="about-video-img-1"><a id="myBtn9" data-toggle="lightbox" data-width="1280"><i class="fas fa-play"></i></a><img src="images/aboutpic2.jpg" alt="Modern Infrastructure-ENPEE International School" title="Modern Infrastructure-ENPEE International School"></div></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+            <div id="myModal-1" class="modal staff-detail" style="z-index: 999;">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close" style="z-index: 9999;">&times;</span>
+                    <video width="100%" height="300" controls autoplay="">
+                        <source src="Enpee-slide-video.mp4" type="video/mp4">
+                        Your browser does not support the <code>video</code> tag.
+                    </video>
+                </div>
+
+            </div>
             <!--About Section End-->
             <!--Services Slider Start-->
             <section class="home-services wf100 p80bottom">
@@ -260,7 +272,7 @@
                             <!--title start-->
                             <div class="section-title">
                                 <strong>Programs Offered</strong>
-                                <h2>ENPEE International School offers the following programs for the Academic Year 2019-2020</h2>
+                                <h2>ENPEE International School offers the following programs for the Academic Year 2020-2021</h2>
                                 <p>At ENPEE international school, we believe in leading a child to the highest broad-based development – mentally, physically, spiritually, socially and emotionally. Such holistic development aids a lofty learner to achieve their rightful goals in all spheres of life. ENPEE follows the CBSE method of education, offering various languages such as Tamil, French, Arabic and Hindi to its learners.</p>
                             </div>
                             <!--title end-->
@@ -293,9 +305,9 @@
                                 <!--Blog Post End-->
                                 <!--Blog Post Start-->
                                 <div class="blog-post wf100">
-                                    <div class="blog-thumb"><a href="#"><i class="fas fa-link"></i></a> <img src="images/pic-class-one-five.jpg" alt="Class I to V - ENPEE International School" title="Class I to V - ENPEE International School"></div>
+                                    <div class="blog-thumb"><a href="#"><i class="fas fa-link"></i></a> <img src="images/pic-class-one-five.jpg" alt="Class I to VIII - ENPEE International School" title="Class I to VIII - ENPEE International School"></div>
                                     <div class="blog-txt">
-                                        <h5><a href="#">Class I to V</a></h5>
+                                        <h5><a href="#">Class I to VIII</a></h5>
                                         <!--                                        <ul class="post-meta">
                                                                                     <li><span>By:</span> Danial John</li>
                                                                                     <li><span>Posted:</span> 29 September, 2018</li>
@@ -520,6 +532,9 @@
                                                         <option value="III STD ">III STD </option>
                                                         <option value="IV STD">IV STD</option>
                                                         <option value="V STD">V STD</option>
+                                                        <option value="VI STD">VI STD</option>
+                                                        <option value="VII STD">VII STD</option>
+                                                        <option value="VIII STD">VIII STD</option>
                                                     </select>
 
                                                 </div>
@@ -638,27 +653,20 @@
             <script>
                 $('#contactform').multiSelect({
                     noneText: 'Choose Your Program'});
-
-
                 // Get the modal
                 var modal = document.getElementById('myModal');
-
                 // Get the button that opens the modal
                 var btn = document.getElementById("myBtn");
-
                 // Get the <span> element that closes the modal
                 var span = document.getElementsByClassName("close")[0];
-
                 // When the user clicks the button, open the modal
                 onload = function () {
                     //modal.style.display = "block";
                 };
-
                 // When the user clicks on <span> (x), close the modal
                 span.onclick = function () {
                     modal.style.display = "none";
                 };
-
                 // When the user clicks anywhere outside of the modal, close it
                 window.onclick = function (event) {
                     if (event.target == modal) {
@@ -671,6 +679,38 @@
                     video_container.innerHTML = '';
                 });
             </script>
+            <script>
+                // Get the modal
+                var modal = document.getElementById('myModal-1');
+
+                // Get the button that opens the modal
+                var btn = document.getElementById("myBtn9");
+
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+
+                // When the user clicks the button, open the modal 
+                btn.onclick = function () {
+                    modal.style.display = "block";
+                }
+
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function () {
+                    modal.style.display = "none";
+                }
+
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function (event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+                $(".close").click(function () {
+                    modal.style.display = "none";
+                });
+
+            </script>
+
         </div>
     </body>
 </html>

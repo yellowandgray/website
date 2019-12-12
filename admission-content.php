@@ -9,7 +9,7 @@
                         <img src="images/enpeekkl-admission-open.jpg" alt="Enpee International School Admission Opens" title="Enpee International School Admission Opens" />
                     </div>
                     <div class="col-md-8">
-                        <p>Admissions for  academic year 2019-20 open for Pre-KG to STD V. Contact Address: ENPEE International School, Château Français, ENPEE Enclave, 241/2, Puthakudy Village, Vadamattam Main Road, Nedungadu Panchayat, Karaikal – 609609. U.T of Puducherry.</p>
+                        <p>Admissions for  academic year 2020-21 open for Pre-KG to STD VIII. Contact Address: ENPEE International School, Château Français, ENPEE Enclave, 241/2, Puthakudy Village, Vadamattam Main Road, Nedungadu Panchayat, Karaikal – 609609. U.T of Puducherry.</p>
                         <a type="button" href="contact.php" class="btn-custom">Enquire Now</a>
                     </div>
                 </div>

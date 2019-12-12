@@ -1406,3 +1406,13 @@ marquee {
     background: #333;
     margin-top: 10px;
 }
+.staff-detail .close {
+    color: #000 !important;
+}
+.video-location{
+    background: rgba(245, 239, 239, 0.8);
+    /* width: 80%; */
+    text-align: center;
+    padding: 30px;
+    width: 400px;
+}

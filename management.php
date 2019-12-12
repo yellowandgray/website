@@ -209,7 +209,7 @@
             </section>
             <!--Footer Start-->
             <?php include 'footer.php'; ?>
-            <div id="myModal" class="modal">
+            <div id="myModal" class="modal staff-detail">
 
                 <!-- Modal content -->
                 <div class="modal-content">
@@ -225,7 +225,7 @@
                 </div>
 
             </div>
-            <div id="myModal1" class="modal">
+            <div id="myModal1" class="modal staff-detail">
 
                 <!-- Modal content -->
                 <div class="modal-content">
@@ -238,7 +238,7 @@
                 </div>
 
             </div>
-            <div id="myModal2" class="modal">
+            <div id="myModal2" class="modal staff-detail">
 
                 <!-- Modal content -->
                 <div class="modal-content">
@@ -251,7 +251,7 @@
                 </div>
 
             </div>
-            <div id="myModal3" class="modal">
+            <div id="myModal3" class="modal staff-detail">
 
                 <!-- Modal content -->
                 <div class="modal-content">
@@ -266,7 +266,7 @@
                 </div>
 
             </div>
-            <div id="myModal4" class="modal">
+            <div id="myModal4" class="modal staff-detail">
 
                 <!-- Modal content -->
                 <div class="modal-content">
@@ -282,7 +282,7 @@
                 </div>
 
             </div>
-            <div id="myModal5" class="modal">
+            <div id="myModal5" class="modal staff-detail">
 
                 <!-- Modal content -->
                 <div class="modal-content">
@@ -298,7 +298,7 @@
                 </div>
 
             </div>
-            <div id="myModal6" class="modal">
+            <div id="myModal6" class="modal staff-detail">
 
                 <!-- Modal content -->
                 <div class="modal-content">

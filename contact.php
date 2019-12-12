@@ -78,6 +78,9 @@
                                                         <option value="III STD ">III STD </option>
                                                         <option value="IV STD">IV STD</option>
                                                         <option value="V STD">V STD</option>
+                                                        <option value="VI STD">VI STD</option>
+                                                        <option value="VII STD">VII STD</option>
+                                                        <option value="VIII STD">VIII STD</option>
                                                     </select>
                                                 </div>
                                             </li>
