@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 11, 2019 at 02:39 PM
+-- Generation Time: Dec 12, 2019 at 09:10 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.2.12
 
@@ -73,6 +73,13 @@ CREATE TABLE `member` (
   `created_by` int(11) NOT NULL,
   `updated_by` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `member`
+--
+
+INSERT INTO `member` (`member_id`, `fname`, `lname`, `email`, `mobile`, `membership_id`, `password`, `confirm_password`, `reset_code`, `reset_initiated_at`, `reset_expired_at`, `address`, `address_1`, `state_id`, `city`, `pincode`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
+(1, 'test', 'test', 'test@test.com', 'test', '', '', '', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'test', '', 1, 'test', 'test', '2019-12-12 07:30:49', '0000-00-00 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -165,7 +172,7 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`product_id`, `product_name`, `description`, `product_price`, `image_path`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
-(1, 'FRESCHE EF 3851', '<span>FRESCHE EF 3851 is a high performance hospital-grade surface disinfection treatment. Fresche SiQuat advanced microbial control and protection solutions shift the biocidal paradigm in delivery of efficient, long term bacterial, fungal, mould and odour control.</span><div><span><br></span></div><div><h5><b><font size=\"3\">FOGGING LARGE ENVIRONMENTS</font></b></h5></div><div><br></div><div><p>FRESCHE EF 3851 can be applied to large areas such as operation theatres, ICU, emergency rooms, cool rooms, pipes, drains and walkways, warehouse areas, storage bins, building walls and ceilings. Any person applying FRESCHE EF 3851 must comply with local or industry OHS protection protocols, which may apply.</p><p>Before applying FRESCHE EF 3851 directly all dirt, dust, biofilms mould, fungus or other contaminants must be removed from the surface to be treated, and dried prior to application.</p></div>', '0', 'uploads/4bb1bde1f667d50099e79003f4aa0f7b.png', '2019-12-11 11:30:37', '0000-00-00 00:00:00', 0, 0),
+(1, 'FRESCHE EF 3851', '<span>FRESCHE EF 3851 is a high performance hospital-grade surface disinfection treatment. Fresche SiQuat advanced microbial control and protection solutions shift the biocidal paradigm in delivery of efficient, long term bacterial, fungal, mould and odour control.</span><div><div><h5><b><font size=\"3\">FOGGING LARGE ENVIRONMENTS</font></b></h5></div><div><p>FRESCHE EF 3851 can be applied to large areas such as operation theatres, ICU, emergency rooms, cool rooms, pipes, drains and walkways, warehouse areas, storage bins, building walls and ceilings. Any person applying FRESCHE EF 3851 must comply with local or industry OHS protection protocols, which may apply.</p><p>Before applying FRESCHE EF 3851 directly all dirt, dust, biofilms mould, fungus or other contaminants must be removed from the surface to be treated, and dried prior to application.</p></div></div>', '0', 'uploads/4bb1bde1f667d50099e79003f4aa0f7b.png', '2019-12-12 06:17:35', '0000-00-00 00:00:00', 0, 0),
 (2, 'BZ1 Binder', '<p>Fresche BZ1 is a non-formaldehyde containing polymeric resin used with the Fresche EF3851 antimicrobials to improve durability of anti microbial protection when applied to synthetics, cellulosics, and their blends.</p><p>Fresche BZ1 is pad applied at a 1.0-2.0% level on the weight of bath volume with Fresche antimicrobials. The treated fabric can then be dried and cured with &#34;normal&#34; drying and curing/heat setting temperatures and dwell time consistent with the fabric construction.</p>', '0', 'uploads/53204108ff0ca5444804cfcd2325eea3.png', '2019-12-11 11:31:08', '0000-00-00 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
@@ -370,7 +377,7 @@ ALTER TABLE `banner`
 -- AUTO_INCREMENT for table `member`
 --
 ALTER TABLE `member`
-  MODIFY `member_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `member_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `newsletter`

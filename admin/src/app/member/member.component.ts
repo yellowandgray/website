@@ -20,7 +20,7 @@ export class MemberComponent implements OnInit {
         this.getMember();
     }
     getMember(): void {
-     this.httpClient.get<any>('http://localhost/project/fresche/api/v1/get_member')
+     this.httpClient.get<any>('http://ghmindia.com/api/v1/get_member')
      .subscribe(
              (res)=>{
                  this.result = res["result"]["data"];
@@ -166,7 +166,7 @@ export class MemberForm {
         formData.append('pincode', this.memberForm.value.pincode);
         url = 'insert_member';
       }
-      this.httpClient.post('http://localhost/project/fresche/api/v1/'+url, formData).subscribe(
+      this.httpClient.post('http://ghmindia.com/api/v1/'+url, formData).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -210,7 +210,7 @@ export class MemberDelete {
             return;
       }
       this.loading = true;
-      this.httpClient.get('http://localhost/project/fresche/api/v1/delete_record/member/member_id='+this.member_id).subscribe(
+      this.httpClient.get('http://ghmindia.com/api/v1/delete_record/member/member_id='+this.member_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
