@@ -4,6 +4,10 @@
     <?php
     $page = 'products';
     include 'head.php';
+    require_once 'api/include/common.php';
+    $obj = new Common();
+    $product_1 = $obj->selectRow('*', 'product', 'product_id = 1');
+    $product_2 = $obj->selectRow('*', 'product', 'product_id = 2');
     ?>
     <body class="goto-here">
 
@@ -36,15 +40,12 @@
                     <div class="col-lg-4 mb-5  ftco-animate">
                         <div class="product-img-box">
                         <!--<a href="images/product-01.png" class="image-popup"><img src="images/product-01.png" class="img-fluid" alt="Colorlib Template"></a>-->
-                            <img src="images/product-02.png" class="product-img-responsive" alt="">
+                            <img src="<?php echo BASE_URL . $product_1['image_path']; ?>" class="product-img-responsive" alt="">
                         </div>
                     </div>
                     <div class="col-lg-8 product-details pl-md-5 ftco-animate">
-                        <h3>FRESCHE EF 3851</h3>
-                        <p>FRESCHE EF 3851 is a high performance hospital-grade surface disinfection treatment. Fresche SiQuat advanced microbial control and protection solutions shift the biocidal paradigm in delivery of efficient, long term bacterial, fungal, mould and odour control.</p>
-                        <h5>FOGGING LARGE ENVIRONMENTS</h5>
-                        <p>FRESCHE EF 3851 can be applied to large areas such as operation theatres, ICU, emergency rooms, cool rooms, pipes, drains and walkways, warehouse areas, storage bins, building walls and ceilings. Any person applying FRESCHE EF 3851 must comply with local or industry OHS protection protocols, which may apply.</p>
-                        <p>Before applying FRESCHE EF 3851 directly all dirt, dust, biofilms mould, fungus or other contaminants must be removed from the surface to be treated, and dried prior to application.</p>
+                        <h3><?php echo $product_1['product_name']; ?></h3>
+                        <p><?php echo $product_1['description']; ?></p>
                         <!--<button class="button-03"><a href="#"><i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart</a></button>-->
                     </div>
                 </div>
@@ -56,9 +57,8 @@
                     <div class="col-lg-8  product-details pl-md-5 ftco-animate">
                         <div class="row">
                             <div class=" col-md-12 bz1-order-2">
-                                <h3>BZ1 Binder</h3>
-                                <p>Fresche BZ1 is a non-formaldehyde containing polymeric resin used with the Fresche EF3851 antimicrobials to improve durability of anti microbial protection when applied to synthetics, cellulosics, and their blends.</p>
-                                <p>Fresche BZ1 is pad applied at a 1.0-2.0% level on the weight of bath volume with Fresche antimicrobials. The treated fabric can then be dried and cured with "normal" drying and curing/heat setting temperatures and dwell time consistent with the fabric construction.</p>
+                                <h3><?php echo $product_2['product_name']; ?></h3>
+                                <p><?php echo $product_2['description']; ?></p>
                                <!--<p class="add-price">(It contains 1 KG Fresche EF 3851 and 1.5 KG of Bz 1 Binder)</p>-->
                             </div>
                             <div class=" col-md-12  bz1-order ">
@@ -83,7 +83,7 @@
                         <div class="product-img-box">
                             <!--<a href="images/product-0
                             1.png" class="image-popup"><img src="images/product-01.png" class="img-fluid" alt="Colorlib Template"></a>-->
-                            <img src="images/product-03.png" class="product-img-responsive" alt="">
+                            <img src="<?php echo BASE_URL . $product_2['image_path']; ?>" class="product-img-responsive" alt="">
                         </div>
                     </div>
 

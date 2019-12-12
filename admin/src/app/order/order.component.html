@@ -16,8 +16,8 @@
                     <button mat-icon-button aria-label="label" (click)="confirmDelete(data.orders_id)">
                         <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                     </button>
-                    <h4 mat-line>{{data.fname}} {{data.lname}}</h4>
-                    <p matLine>{{data.address_1}} | {{data.city}} | {{data.state}}</p>
+                    <h4 mat-line>{{data.member_name}}</h4>
+                    <p matLine>{{data.address}} | {{data.city}} | {{data.state}}</p>
                 </mat-list-item>
             </ng-container>
         </mat-list>
