@@ -393,7 +393,7 @@
                                     <p class="padding-15 text-justify">The Kindergarten programs provided the child with Academic and overall readiness to step into the world of Primary education, from Early years.</p><br/><br/><br/><br/>
                                 </div>
                                 <div class="col-md-4 text-center">
-                                    <span class="dot"><p>CLASSES <br/>I to V</p></span>
+                                    <span class="dot"><p>CLASSES <br/>I to VIII</p></span>
                                     <p class="padding-15 text-justify">Primary class program, to be affiliated to the CBSE method of education, is available from the Academic year 2019. Our friendly & welcoming classrooms offer children the space to learn the right way.</p>
                                 </div>
                             </div>
@@ -506,7 +506,7 @@
                                 <div class="col-md-6 hover-btn">
                                     <h4 class="text-left">Rtn. PHF. Hajee Mr. L. KAMAL  BATCHA</h4>
                                     <p class="text-justify margin-bottom-0">He is a multi-faceted personality, with a pleasing disposition and a philanthropic bent of mind, but basically wedded to the pharma community, by creating new products at affordable rates for the community healthcare.<br/><br/><span class="bold">Founder and CHAIRMAN:  MARAICAYAR TRUST (1992)</span><br/><a href="#">Read More</a></p>
-                                    
+
                                     <p class="text-center bold">Awards</p>
                                     <section class="customer-logos slider">
                                         <div class="slide"><img src="images/awards/enpee-awards-001.png"></div>
@@ -695,7 +695,7 @@
                                 <a href="#" class="blog-img" style="background-image: url(images/blog-2.jpg);">
                                 </a>
                                 <div class="desc">
-                                    <h2><a href="blog.html">Admission for Classes I to V Starts on</a></h2>
+                                    <h2><a href="blog.html">Admission for Classes I to VIII Starts on</a></h2>
                                     <p class="admin"><span>March 02, 2019</span></p>
             <!--                                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>-->
                                 </div>

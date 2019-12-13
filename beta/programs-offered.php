@@ -75,7 +75,7 @@
                                 <div class="campaign-box">
                                     <div class="campaign-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/pic-class-one-five.jpg" alt="Class I to V - ENPEE International School" title="Class I to V - ENPEE International School"> </div>
                                     <div class="campaign-txt">
-                                        <h5><a href="#">Class I to V</a></h5>
+                                        <h5><a href="#">Class I to VIII</a></h5>
                                         <p class="text-justify">Our CBSE method of education through Continuous Comprehensive Evaluation (CCE) is a curricular initiative shifting emphasis from assessment to holistic learning. We follow the NCERT books, which supplements the learning process at ENPEE. Our friendly & welcoming classrooms offer children the space to learn the right way.</p>
 
                                     </div>
