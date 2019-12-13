@@ -182,8 +182,8 @@
 
                 <!-- Modal content -->
                 <div class="modal-content">
-                    <span class="close" style="z-index: 9999;">&times;</span>
-                    <video width="100%" height="300" controls autoplay="">
+                    <span class="close close-1" style="z-index: 9999;">&times;</span>
+                    <video id="pause" width="100%" height="300" controls>
                         <source src="Enpee-slide-video.mp4" type="video/mp4">
                         Your browser does not support the <code>video</code> tag.
                     </video>
@@ -682,21 +682,25 @@
             <script>
                 // Get the modal
                 var modal = document.getElementById('myModal-1');
+                var vpause = document.getElementById("pause");
 
                 // Get the button that opens the modal
                 var btn = document.getElementById("myBtn9");
 
                 // Get the <span> element that closes the modal
-                var span = document.getElementsByClassName("close")[0];
+                var span = document.getElementsByClassName("close-1")[0];
 
                 // When the user clicks the button, open the modal 
                 btn.onclick = function () {
                     modal.style.display = "block";
+                    vpause.autoplay = true;
+                    vpause.load();
                 }
 
                 // When the user clicks on <span> (x), close the modal
                 span.onclick = function () {
                     modal.style.display = "none";
+                    vpause.pause();
                 }
 
                 // When the user clicks anywhere outside of the modal, close it
@@ -707,6 +711,7 @@
                 }
                 $(".close").click(function () {
                     modal.style.display = "none";
+
                 });
 
             </script>
