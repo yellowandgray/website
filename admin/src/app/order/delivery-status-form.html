@@ -1,27 +1,41 @@
-<h2 mat-dialog-title>Delivery Status</h2>
-<mat-dialog-content class="mat-typography">
-    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
-        <div fxFlex="100%">
-            <mat-form-field appearance="outline" fxFlex="100%">
-                <mat-label>Change Delivery Status</mat-label>
-                <mat-select formControlName="state">
-                    <mat-option value="Created">Created</mat-option>
-                    <mat-option value="Shipped">Shipped</mat-option>
-                    <mat-option value="Delivered">Delivered</mat-option>
-                </mat-select>
-                <mat-error>Change Status is required</mat-error>
-            </mat-form-field>
-        </div>
+<div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+    <div fxFlex="50%">
+        <h2 mat-dialog-title>Delivery Status</h2>        
     </div>
-    <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
-        <button mat-button [mat-dialog-close]="false">Cancel</button>
-        <button mat-button type="submit" [disabled]="loading">Save</button>
-        <mat-progress-spinner
-            class="example-margin"
-            *ngIf="loading"
-            [mode]="'indeterminate'"
-            [strokeWidth]="3"
-            [diameter]="25">
-        </mat-progress-spinner>
+    <div fxFlex="50%">
+        <mat-form-field appearance="outline" fxFlex="100%">
+            <mat-label>Delivery Status</mat-label>
+            <mat-select>
+                <mat-option value="pending">
+                    Pending
+                </mat-option>
+                <mat-option value="shipped">
+                    Shipped
+                </mat-option>
+                <mat-option value="delivered">
+                    Delivered
+                </mat-option>
+            </mat-select>
+        </mat-form-field>        
     </div>
-</mat-dialog-content>
+</div>
+<!--<mat-dialog-content class="mat-typography">
+    <div fxLayout="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start end">
+        <table mat-table class="member-table" *ngIf="data.activated_at != '0000-00-00'">
+            <tr>
+                <th mat-header-cell>Activated on</th>
+                <td mat-cell> {{data.activated_at | date: 'dd/MM/yyyy'}} </td>
+            </tr>
+            <tr>
+                <th mat-header-cell>Shipped on</th>
+                <td mat-cell *ngIf="data.t_shirt_status > 1"> {{data.shipped_at | date: 'dd/MM/yyyy'}} </td>
+                <td mat-cell *ngIf="data.t_shirt_status == 1"> <button mat-raised-button color="accent" (click)="changeStatus(data.member_id, 2)">Shipped</button>  </td>
+            </tr>
+            <tr>
+                <th mat-header-cell>Delivered on</th>
+                <td mat-cell *ngIf="data.t_shirt_status > 2"> {{data.delivered_at | date: 'dd/MM/yyyy'}} </td>
+                <td mat-cell *ngIf="data.t_shirt_status == 2"> <button mat-raised-button color="warn" (click)="changeStatus(data.member_id, 3)">Delivered</button> </td>
+            </tr>
+        </table>
+    </div>
+</mat-dialog-content>-->

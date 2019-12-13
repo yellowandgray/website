@@ -63,3 +63,17 @@ mat-sidenav {
 .active-nav {
     background: rgba(0,0,0,.04);
 }
+
+.order-table th {
+    text-align: left;
+}
+
+.table-order-1 {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table-order-1 th, .table-order-1 td {
+    padding: 5px;
+    border: 1px solid #000;
+}

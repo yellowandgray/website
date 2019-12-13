@@ -1,16 +1,66 @@
 <h2 mat-dialog-title>Order Details</h2>
 <mat-dialog-content class="mat-typography">
-    <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-<!--        <ng-container *ngFor="let data of result">-->
-            <table>
+    <form [formGroup]="orderviewForm">
+        <h3>Member Details</h3>
+        <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <table class="order-table">
                 <tr>
-                    <td></td>
-                    <td></td>
+                    <td>Name</td>
+                    <td> : </td>
+                    <th>{{data.member_name}}</th>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td> : </td>
+                    <th>{{data.email}}</th>
+                </tr>
+                <tr>
+                    <td>Mobile</td>
+                    <td> : </td>
+                    <th>{{data.mobile}}</th>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td> : </td>
+                    <th>{{data.address}}</th>
+                </tr>
+                <tr>
+                    <td>City</td>
+                    <td> : </td>
+                    <th>{{data.city}}</th>
+                </tr>
+                <tr>
+                    <td>State</td>
+                    <td> : </td>
+                    <th>{{data.state}}</th>
+                </tr>
+                <tr>
+                    <td>Pincode</td>
+                    <td> : </td>
+                    <th>{{data.pincode}}</th>
                 </tr>
             </table>
-<!--        </ng-container>-->
-    </div>
-    <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
-        <button mat-button [mat-dialog-close]="false">Cancel</button>
-    </div>
+        </div>
+        <br/>
+        <h3>Order Details</h3>
+        <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <table class="table-order-1">
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Qty</th>
+                    <th>Grand Total</th>
+                </tr>
+                <tr>
+                    <td>{{data.product_name}}</td>
+                    <td>{{data.product_price}}</td>
+                    <td>{{data.qty}}</td>
+                    <td>{{data.grand_total}}</td>
+                </tr>
+            </table>
+        </div>
+        <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
+            <button mat-button [mat-dialog-close]="false">Cancel</button>
+        </div>
+    </form>
 </mat-dialog-content>

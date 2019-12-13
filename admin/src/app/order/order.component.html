@@ -7,7 +7,7 @@
         <mat-list>
             <ng-container *ngFor="let data of result">
                 <mat-list-item>
-                    <button mat-icon-button aria-label="label" (click)="openDialog()">
+                    <button mat-icon-button aria-label="label" (click)="openDialog(data.orders_id, 'result')">
                         <mat-icon #tooltip="matTooltip" matTooltip="View">remove_red_eye</mat-icon>
                     </button>
                     <button mat-icon-button aria-label="label" (click)="openDeliveryStatus()">

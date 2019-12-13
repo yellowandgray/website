@@ -52,6 +52,18 @@ $app->post('/insert_product', function() use ($app) {
     echoRespnse(201, $res);
 });
 
+$app->post('/update_tshirt_status/:table/:where', function($table, $where) use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to update');
+    $data = $app->request->post();
+    $com = new Common();
+    $record = $com->updateRecordWithWhere($data, $table, $where);
+    if ($record > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Record updated successfully';
+    }
+    echoRespnse(201, $res);
+});
+
 $app->post('/insert_testimonial', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();

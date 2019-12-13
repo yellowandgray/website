@@ -30,13 +30,23 @@ export class OrderComponent implements OnInit {
         );
      }
      
-    openDialog(): void {
+    openDialog(id, res): void {
+        var data = null;
+        if(id != 0) { 
+        this[res].forEach(val=> {
+             if(parseInt(val.orders_id) === parseInt(id)) {
+                  data = val;
+                  return false;
+             }
+           });
+        }
         const dialogRef = this.dialog.open(OrderViewForm, {
             minWidth: "40%",
-            maxWidth: "40%"
+            maxWidth: "40%",
+            data: data
         });
         dialogRef.afterClosed().subscribe(result => {
-            console.log('The dialog was closed');
+        if(result !== false && result !== 'false') {}
         });
     }
     openDeliveryStatus(): void {
@@ -78,7 +88,36 @@ export class OrderViewForm {
     public dialogRef: MatDialogRef<OrderViewForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
-    private httpClient: HttpClient) {}
+    private httpClient: HttpClient) {
+        this.orderViewForm = new FormGroup({
+            'member_name': new FormControl('', Validators.required),
+            'email': new FormControl('', Validators.required),
+            'grand_total': new FormControl('', Validators.required),
+            'address': new FormControl('', Validators.required),
+            'state_id': new FormControl('', Validators.required),
+            'city': new FormControl('', Validators.required),
+            'pincode': new FormControl('', Validators.required),
+            'delivery_status': new FormControl('', Validators.required),
+            'shipped_at': new FormControl('', Validators.required),
+            'delivery_at': new FormControl()
+        });
+        if(this.data != null) {
+           this.orderViewForm.patchValue({
+           member_name: this.data.type,
+           email: this.data.category_id,
+           mobile: this.data.club_id,
+           grand_total: this.data.title,
+           address: this.data.news_date,
+           state_id: this.data.state_id,
+           city: this.data.city,
+           pincode: this.data.pincode,
+           delivery_status: this.data.delivery_status,
+           shipped_at: this.data.shipped_at,
+           delivery_at: this.data.delivery_at
+        });
+            this.orders_id = this.data.orders_id;
+        }
+    }
 
   onNoClick(): void {
     this.dialogRef.close();
@@ -92,18 +131,14 @@ export class OrderViewForm {
 })
 
 export class DeliveryStatusForm {
-    loading = false;
+    delivery_status = 0;
     constructor(
     public dialogRef: MatDialogRef<DeliveryStatusForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {}
-
-  onNoClick(): void {
-    this.dialogRef.close();
-  }
-
-}
+        
+    }
 
 
 @Component({
