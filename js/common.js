@@ -143,8 +143,8 @@ function loadCartDetails() {
     if (cartItems === null || cartItems.length === 0) {
         window.location = 'index.php';
     } else {
-        console.log(cartItems);
         $('#cart_quantity').val(cartItems[0].count);
+        $('.product-quantity input').trigger('change');
     }
 }
 

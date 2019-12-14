@@ -225,8 +225,12 @@ $app->post('/new_order', function() use ($app) {
     $com = new Common();
     $insertion = $com->insertRecord($data, 'orders');
     if ($insertion > 0) {
+        $tpy = new Thirdparty();
         $res['error'] = false;
         $res['message'] = 'Order placed successfully order reference number is #' . $insertion;
+        $template = $com->selectRow('*', 'templates', 'name=\'order_recived\' AND type=\'email\' AND target=\'user\'');
+        $body = $com->getReplacedString($template['body_web'], $data);
+        $tpy->sendMail($data['email'], $data['fname'], $body, $body, $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);
     } else {
         $res['message'] = 'Sorry unable to create order kindly contact our support team your transaction id is ' . $data['transaction_id'];
     }
