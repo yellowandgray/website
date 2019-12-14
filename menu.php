@@ -22,7 +22,7 @@
                     <p class="btn-apply"><a href="index.php#enquiry">Enquire Now</a></p> |
                     <!--<p class="btn-apply"><a href="">News & Events</a></p>-->
                     <p class="btn-apply"><a href="news-events.php"><img src="images/event.gif" alt=""/></a></p>
-                    
+
                 </div>
             </div>
         </div>
@@ -70,7 +70,7 @@
                             echo 'active';
                         }
                         ?>"><a href="programs-offered.php">Programs offered</a></li>
-<!--                        <li class="<?php
+                        <!--                        <li class="<?php
                         if ($page == 'testimonials') {
                             echo 'active';
                         }
@@ -136,7 +136,7 @@
                         echo 'active';
                     }
                     ?>"><a href="programs-offered.php">Programs offered</a></li>
-<!--                    <li class="<?php
+                    <!--                    <li class="<?php
                     if ($page == 'testimonials') {
                         echo 'active';
                     }
@@ -170,5 +170,5 @@
     <div class="col-md-4">
         <div class="boder-2"></div>
     </div>
-    <marquee><a href="http://enpeekkl.com/images/download/ENPEE-School-Flyer-ENG&TAM-2019.pdf" target="blank">ENPEE International School, Château Français, ENPEE Enclave, 241/2, Puthakudy Village, Vadamattam Main Road, Nedungadu Panchayat, Karaikal – 609609. U.T of Puducherry.</a></marquee>
+    <marquee><span class="blink_text">Admissions for academic year 2020-21 open for Pre-KG to STD VIII </span> - <a href="http://enpeekkl.com/images/download/ENPEE-School-Flyer-ENG&TAM-2019.pdf" target="blank">ENPEE International School, Château Français, ENPEE Enclave, 241/2, Puthakudy Village, Vadamattam Main Road, Nedungadu Panchayat, Karaikal – 609609. U.T of Puducherry.</a></marquee>
 </nav>

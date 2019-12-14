@@ -139,11 +139,11 @@
                                     Vadamattam Main Road, Nedungadu Panchayat, <br/>
                                     Karaikal – 609609. U.T of Puducherry
                                 </p><br/>
-                                <p><strong>ADMINISTRATIVE OFFICE:</strong><br/>
+<!--                                <p><strong>ADMINISTRATIVE OFFICE:</strong><br/>
                                     Old No 79, Mohideen Palli Street, <br/> 
                                     OPP: Axis Bank & Lathaa Super Market,<br/>
                                      Karaikal - 609602. U.T of Puducherry
-                                </p>
+                                </p>-->
                             </div>
                         </div>
                         <!--Contact Info End--> 
