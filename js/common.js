@@ -53,7 +53,7 @@ function makePayment() {
             amount: (($('#cart_quantity').val() * 8000) * 100),
             name: $('#fname').val(),
             description: "Purchase product",
-            image: "https://phalamrutha.com/images/razorpay.png",
+            image: "http://ghmindia.com/images/logo-01.png",
             handler: function (response) {
                 var data = {fname: $.trim($('#fname').val()), lname: $.trim($('#lname').val()), email: $.trim($('#email').val()), mobile: $.trim($('#mobile').val()), address: $.trim($('#address').val()), city: $.trim($('#city').val()), pincode: $.trim($('#pincode').val()), alt_mobile: $.trim($('#altphone').val()), quantity: $('#cart_quantity').val(), state_id: $('#state').val(), grand_total: ($('#cart_quantity').val() * 8000), transaction_id: response.razorpay_payment_id};
                 $.ajax({

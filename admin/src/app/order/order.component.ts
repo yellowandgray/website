@@ -83,13 +83,15 @@ export class OrderComponent implements OnInit {
 })
 
 export class OrderViewForm {
+    orderviewForm: FormGroup;
     loading = false;
+    orders_id = 0;
     constructor(
     public dialogRef: MatDialogRef<OrderViewForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
-        this.orderViewForm = new FormGroup({
+        this.orderviewForm = new FormGroup({
             'member_name': new FormControl('', Validators.required),
             'email': new FormControl('', Validators.required),
             'grand_total': new FormControl('', Validators.required),
@@ -102,7 +104,7 @@ export class OrderViewForm {
             'delivery_at': new FormControl()
         });
         if(this.data != null) {
-           this.orderViewForm.patchValue({
+           this.orderviewForm.patchValue({
            member_name: this.data.type,
            email: this.data.category_id,
            mobile: this.data.club_id,
