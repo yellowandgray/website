@@ -82,7 +82,7 @@ $banners = $obj->selectAll('*', 'banner', 'banner_id > 0');
 
         <section class=" ftco-category pad-80" id="featured">
             <div class="row">
-                <i onclick="document.getElementById('featured').classList.remove('featured-view')" class="fa fa-times" aria-hidden="true"></i>
+                <i onclick="document.getElementById('featured').classList.remove('featured-view')" class="fa fa-times remove" aria-hidden="true"></i>
                 <div class="col-md-12 heading-section ftco-animate deal-of-the-day ftco-animate bg-gray">
                <!--<span class="subheading">Best Price For You</span>-->
                     <h2 class="mb-4 text-head">Non-leaching & Non-depleting</h2>
@@ -102,7 +102,7 @@ $banners = $obj->selectAll('*', 'banner', 'banner_id > 0');
         </section>
         <section class=" ftco-category pad-80" id="featured-1">
             <div class="row">
-                <i onclick="document.getElementById('featured-1').classList.remove('featured-view')" class="fa fa-times" aria-hidden="true"></i>
+                <i onclick="document.getElementById('featured-1').classList.remove('featured-view')" class="fa fa-times remove" aria-hidden="true"></i>
                 <div class="col-md-12 heading-section ftco-animate deal-of-the-day ftco-animate bg-gray">
                     <!--<span class="subheading">Best Price For You</span>-->
                     <h2 class="mb-4 text-head">Mode of Action</h2>
@@ -125,7 +125,7 @@ $banners = $obj->selectAll('*', 'banner', 'banner_id > 0');
         </section>
         <section class=" ftco-category pad-80" id="featured-2">
             <div class="row">
-                <i onclick="document.getElementById('featured-2').classList.remove('featured-view')" class="fa fa-times" aria-hidden="true"></i>
+                <i onclick="document.getElementById('featured-2').classList.remove('featured-view')" class="fa fa-times remove" aria-hidden="true"></i>
                 <div class="col-md-12 heading-section ftco-animate deal-of-the-day ftco-animate bg-gray">
                                     <!--<span class="subheading">Best Price For You</span>-->
                     <h2 class="mb-4 text-head">Lock & Bond</h2>
@@ -147,7 +147,7 @@ $banners = $obj->selectAll('*', 'banner', 'banner_id > 0');
         </section>
         <section class=" ftco-category pad-80" id="featured-3">
             <div class="row">
-                <i onclick="document.getElementById('featured-3').classList.remove('featured-view')" class="fa fa-times" aria-hidden="true"></i>
+                <i onclick="document.getElementById('featured-3').classList.remove('featured-view')" class="fa fa-times remove" aria-hidden="true"></i>
                 <div class="col-md-12 heading-section ftco-animate deal-of-the-day ftco-animate bg-gray">
                     <!--<span class="subheading">Best Price For You</span>-->
                     <h2 class="mb-4 text-head">No heavy metals or volatile chemicals</h2>
@@ -168,7 +168,7 @@ $banners = $obj->selectAll('*', 'banner', 'banner_id > 0');
         </section>
         <section class=" ftco-category pad-80" id="featured-4">
             <div class="row">
-                <i onclick="document.getElementById('featured-4').classList.remove('featured-view')" class="fa fa-times" aria-hidden="true"></i>
+                <i onclick="document.getElementById('featured-4').classList.remove('featured-view')" class="fa fa-times remove" aria-hidden="true"></i>
                 <div class="col-md-12 heading-section ftco-animate deal-of-the-day ftco-animate bg-gray">
                    <!--<span class="subheading">Best Price For You</span>-->
                     <h2 class="mb-4 text-head">Enduring protection</h2>
@@ -188,7 +188,7 @@ $banners = $obj->selectAll('*', 'banner', 'banner_id > 0');
         </section>
         <section class=" ftco-category pad-80" id="featured-5">
             <div class="row">
-                <i onclick="document.getElementById('featured-5').classList.remove('featured-view')" class="fa fa-times" aria-hidden="true"></i>
+                <i onclick="document.getElementById('featured-5').classList.remove('featured-view')" class="fa fa-times remove" aria-hidden="true"></i>
                 <div class="col-md-12 heading-section ftco-animate deal-of-the-day ftco-animate bg-gray">
                                    <!--<span class="subheading">Best Price For You</span>-->
                     <h2 class="mb-4 text-head">Pathogens</h2>
