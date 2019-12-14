@@ -979,7 +979,7 @@ ul.submenu li a{
 }
 
 .c-info {
-    height: 315px;
+    height: 400px;
     margin-bottom: 20px;
 }
 
@@ -1415,4 +1415,11 @@ marquee {
     text-align: center;
     padding: 30px;
     width: 400px;
+}
+@media (max-width: 767px) and (min-width: 320px) {
+
+    .c-info {
+        height: auto;
+        margin-bottom: 20px;
+    }
 }
