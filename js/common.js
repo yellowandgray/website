@@ -46,41 +46,36 @@ function MemberInsert() {
 }
 
 
-function buyProduct() {
+function makePayment() {
     var rzpOptions = {
         key: "rzp_test_zksOkaS0IXezA2",
-        amount: ((amt + (amt * 0.01)) * 100),
-        name: name,
-        description: "Account Recharge",
+        amount: (($('#cart_quantity').val() * 8000) * 100),
+        name: $('#fname').val(),
+        description: "Purchase product",
         image: "https://phalamrutha.com/images/razorpay.png",
         handler: function (response) {
             var data = {action: 'credit', amount: amt, user_code: code, remark: 'RazorpayTransaction', identity: 'Transaction id: ' + response.razorpay_payment_id};
-            $.isLoading({text: 'Loading...'});
-            var api = new $.RestClient('v1/');
-            api.add('user', {url: 'transaction', stripTrailingSlash: true});
-            var result = api.user.create(data);
-            result.done(function (rs) {
-                if (rs.result.error === false) {
-                    if (type === 'checkout') {
-                        window.location = 'checkout.php';
+            $.ajax({
+                type: "POST",
+                url: './api/v1/subscribe_news_letter',
+                data: {name: $('#news_name').val(), email: $('#news_email').val()},
+                success: function (data) {
+                    if (data.result.error === false) {
+                        $('#news_name').val(''), $('#news_email').val('');
+                        swal("Thanks for the subscription", "we will get in touch with you", "success");
+                    } else {
+                        swal("Oops!", data.result.message, "info");
                     }
-                    if (type === 'payment') {
-                        window.location = 'mypayments.php';
-                    }
-                } else {
-                    swal('Error', rs.result.message, 'error');
-                    $.isLoading('hide');
+                },
+                error: function (err) {
+                    swal("Oops!", err.statusText, "error");
                 }
-            });
-            result.fail(function (err) {
-                $.isLoading('hide');
-                swal('Error', 'Process failed!!', 'error');
             });
         },
         prefill: {
-            name: name,
-            email: email,
-            contact: mobile
+            name: $('#fname').val(),
+            email: $('#email').val(),
+            contact: $('#mobile').val()
         },
         notes: {
             address: "RazorpayTransaction"
@@ -99,4 +94,19 @@ function goToCheckout() {
     } else {
         swal('Information', 'Your cart is empty', 'info')
     }
+}
+
+function loadCartDetails() {
+    var cartItems = JSON.parse(sessionStorage.getItem('shoppingCart'));
+    if (cartItems === null || cartItems.length === 0) {
+        window.location = 'index.php';
+    } else {
+        console.log(cartItems);
+        $('#cart_quantity').val(cartItems[0].count);
+    }
+}
+
+function removeProduct() {
+    shoppingCart.clearCart();
+    window.location = 'index.php';
 }

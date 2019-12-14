@@ -8,9 +8,7 @@
     $states = $obj->selectAll('*', 'state', 'state_id > 0');
     $members = $obj->selectAll('o.*, s.name AS state', 'orders AS o LEFT JOIN state AS s ON s.state_id = o.state_id', 'orders_id > 0');
     ?>
-    <body class="goto-here">
-
-
+    <body class="goto-here" onload="loadCartDetails();">
         <!-- END nav -->
         <?php include 'enquiry.php'; ?>
         <section>
@@ -119,16 +117,16 @@
                                 <div class="product-list">
                                     <div class="product row margin-lr-0">
                                         <div class="col-md-3 product-image">
-                                            <img src="images/product-01.jpg">
+                                            <img src="images/product001.png">
                                         </div>
                                         <div class="col-md-2 product-price">
                                             <i class="fa fa-inr" aria-hidden="true"></i> 8000
                                         </div>
                                         <div class="col-md-2 product-quantity">
-                                            <input type="number" value="1" min="1">
+                                            <input id="cart_quantity" type="number" value="1" min="1">
                                         </div>
                                         <div class="col-md-2 product-removal">
-                                            <button class="remove-product">
+                                            <button class="remove-product" onclick="removeProduct();">
                                                 Remove
                                             </button>
                                         </div>
@@ -139,7 +137,7 @@
                                 </div>
                                 <div class="bg-white m-b-10">
                                     <div class="check-login">
-                                        <h4><span>1</span> ENTER YOUR DETAILS</h4>
+                                        <h4><span>2</span> ENTER YOUR DETAILS</h4>
                                     </div>
                                     <form class="user-register" onsubmit="return MemberInsert();">
                                         <div class="form-group">
@@ -173,28 +171,8 @@
                                         <div class="form-group">
                                             <input type="text" class="form-control" id="altphone" placeholder="Alternate Phone (Optional)">
                                         </div>
-                                        <button type="submit" class="btn member-register-btn">Submit</button>
+                                        <button type="submit" class="btn member-register-btn">Make Payment</button>
                                     </form>
-                                </div>
-                                <?php if (count($members) > 0) { ?>
-                                    <div class="check m-b-10">
-                                        <h4><span>2</span> DELIVERY ADDRESS</h4>
-                                        <div class="address-flow-2">
-                                            <?php foreach ($members as $row) { ?>
-                                                <hr>
-                                                <h5><?php echo $row['member_name']; ?> - <span><?php echo $row['mobile']; ?></span> - <span><?php echo $row['email']; ?></span></h5>
-                                                <p><?php echo $row['address']; ?> <br/> <?php echo $row['city']; ?> - <?php echo $row['pincode']; ?> <br/><?php echo $row['state']; ?></p>
-                                                <button>Edit</button>
-                                            <?php } ?>
-                                        </div>
-                                        <center>
-                                            <button class="btn payment-btn">MAKE PAYMENT</button>
-                                        </center>
-                                        <br/>
-                                    </div>
-                                <?php } ?>
-                                <div class="check m-b-10">
-                                    <h4><span>3</span> PAYMENT OPTIONS</h4>
                                 </div>
                             </div>
                             <div class="col-md-4 ">
@@ -207,8 +185,7 @@
                                             <div class="totals-value" id="cart-subtotal">8000</div>
                                         </div>
                                     </div>
-                                    <button class="checkout">Checkout</button>
-
+                                    <button class="checkout" onclick="makePayment();">Make Payment</button>
                                 </div>
                                 <p class="need">Need help? <a href="contact.php">Contact Us</a></p>
                             </div>
@@ -221,6 +198,7 @@
         </section>
 
         <?php include 'footer.php'; ?>
+        <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
         <script>
             /* Set rates + misc */
             var taxRate = 0.05;
