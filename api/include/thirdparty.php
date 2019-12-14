@@ -16,14 +16,6 @@ class thirdparty {
     public function sendMail($to_id, $to_name, $body_web, $body_mobile, $subject, $from_url, $from_name, $attach_url, $attach_name, $bcc, $bcc_name) {
         if (filter_var($to_id, FILTER_VALIDATE_EMAIL)) {
             $mail = new PHPMailer();  // create a new object
-            $mail->IsSMTP(); // telling the class to use SMTP
-            $mail->Host = "s13696.securessl.net"; // SMTP server
-            $mail->Port = 587;
-            $mail->Username = "admin@toowheel.com"; // SMTP account username
-            $mail->Password = "too-2010-##";        // SMTP account password
-            $mail->SMTPSecure = 'tls';
-            $mail->SMTPAuth = true;
-            $mail->SMTPDebug = 1;                     // enables SMTP debug information (for testing)
             $mail->From = $from_url;
             $mail->FromName = $from_name;
             $mail->AddReplyTo($from_url, $from_name); //reply-to address
