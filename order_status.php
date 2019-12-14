@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-    <?php include 'head.php'; 
+    <?php
+    include 'head.php';
     require_once 'api/include/common.php';
     $obj = new Common();
-    $order = $obj->selectRow('*', 'orders', 'orders_id > 0'); 
+    $order = $obj->selectRow('*', 'orders', 'orders_id > 0');
     ?>
     <body class="goto-here">
         <section class="order-success-section">
@@ -21,6 +22,7 @@
                 </div>
             </div>
         </section>
-    <?php include 'footer.php'; ?>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
     </body>
 </html>

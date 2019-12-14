@@ -18,6 +18,9 @@
     .padding-lr-20per {
         padding: 0 !important;
     }
+    .order-success {
+        width: 90% !important;
+    }
     .order-success h2 {
         font-size: 20px !important;
     }
