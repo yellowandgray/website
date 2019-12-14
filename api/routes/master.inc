@@ -154,7 +154,6 @@ $app->get('/get_order', function() {
     echoRespnse(201, $res);
 });
 
-
 $app->get('/get_product', function() {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
@@ -191,7 +190,6 @@ $app->get('/get_banner', function() {
     echoRespnse(201, $res);
 });
 
-
 $app->get('/get_newsletter', function() {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
@@ -212,6 +210,25 @@ $app->get('/get_state', function() {
         $res['error'] = false;
         $res['message'] = 'Records found';
         $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->post('/new_order', function() use ($app) {
+    date_default_timezone_set('Asia/Kolkata');
+    $res = array('error' => true, 'message' => 'Unable to subscribe');
+    $data = $app->request->post();
+    $data['created_at'] = date('Y-m-d H:i:s');
+    $data['updated_at'] = date('Y-m-d H:i:s');
+    $data['created_by'] = 1;
+    $data['updated_by'] = 1;
+    $com = new Common();
+    $insertion = $com->insertRecord($data, 'orders');
+    if ($insertion > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Order placed successfully order reference number is #' . $insertion;
+    } else {
+        $res['message'] = 'Sorry unable to create order kindly contact our support team your transaction id is ' . $data['transaction_id'];
     }
     echoRespnse(201, $res);
 });

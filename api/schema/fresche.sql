@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 12, 2019 at 09:10 AM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 7.2.12
+-- Generation Time: Dec 14, 2019 at 07:37 AM
+-- Server version: 10.1.38-MariaDB
+-- PHP Version: 7.3.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -79,7 +79,8 @@ CREATE TABLE `member` (
 --
 
 INSERT INTO `member` (`member_id`, `fname`, `lname`, `email`, `mobile`, `membership_id`, `password`, `confirm_password`, `reset_code`, `reset_initiated_at`, `reset_expired_at`, `address`, `address_1`, `state_id`, `city`, `pincode`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
-(1, 'test', 'test', 'test@test.com', 'test', '', '', '', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'test', '', 1, 'test', 'test', '2019-12-12 07:30:49', '0000-00-00 00:00:00', 0, 0);
+(1, 'test', 'test', 'test@test.com', 'test', '', '', '', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'test', '', 1, 'test', 'test', '2019-12-12 07:30:49', '0000-00-00 00:00:00', 0, 0),
+(2, 'Mushaqdeen', 'J', 'mushaqdeen@gmail.com', '9884794962', '', '', '', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'Address', '', 28, 'Chennai', '600041', '2019-12-14 05:56:23', '0000-00-00 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -105,7 +106,10 @@ CREATE TABLE `newsletter` (
 
 CREATE TABLE `orders` (
   `orders_id` int(11) NOT NULL,
-  `member_name` varchar(255) NOT NULL,
+  `fname` varchar(255) NOT NULL DEFAULT '',
+  `lname` varchar(255) NOT NULL DEFAULT '',
+  `alt_mobile` varchar(15) NOT NULL DEFAULT '',
+  `quantity` int(11) NOT NULL DEFAULT '1',
   `email` varchar(255) NOT NULL,
   `mobile` varchar(255) NOT NULL,
   `grand_total` varchar(255) NOT NULL,
@@ -113,7 +117,8 @@ CREATE TABLE `orders` (
   `state_id` int(11) NOT NULL,
   `city` varchar(255) NOT NULL,
   `pincode` varchar(255) NOT NULL,
-  `delivery_status` varchar(255) NOT NULL,
+  `transaction_id` varchar(255) NOT NULL DEFAULT '',
+  `delivery_status` varchar(255) NOT NULL DEFAULT 'created',
   `shipped_at` varchar(255) NOT NULL,
   `delivery_at` varchar(255) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -126,8 +131,9 @@ CREATE TABLE `orders` (
 -- Dumping data for table `orders`
 --
 
-INSERT INTO `orders` (`orders_id`, `member_name`, `email`, `mobile`, `grand_total`, `address`, `state_id`, `city`, `pincode`, `delivery_status`, `shipped_at`, `delivery_at`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
-(1, 'Umasekar', 'umasekar098@gmail.com', '7639600998', '8000', 'Durga colony, 4th cross street, Sembakkam.', 28, 'Chennai', '600075', 'Pending', '', '', '2019-12-11 13:14:20', '0000-00-00 00:00:00', 0, 0);
+INSERT INTO `orders` (`orders_id`, `fname`, `lname`, `alt_mobile`, `quantity`, `email`, `mobile`, `grand_total`, `address`, `state_id`, `city`, `pincode`, `transaction_id`, `delivery_status`, `shipped_at`, `delivery_at`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
+(1, 'Umasekar', '', '', 1, 'umasekar098@gmail.com', '7639600998', '8000', 'Durga colony, 4th cross street, Sembakkam.', 28, 'Chennai', '600075', '', 'Pending', '', '', '2019-12-11 13:14:20', '0000-00-00 00:00:00', 0, 0),
+(2, 'Mushaqdeen', 'J', '', 1, 'mushaqdeen@yahoo.co.in', '9884794962', '8000', '2/107', 0, 'Chennai', '600041', 'pay_DrzVJEzR9LwWQr', 'created', '', '', '2019-12-14 06:32:33', '2019-12-14 06:32:33', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -377,7 +383,7 @@ ALTER TABLE `banner`
 -- AUTO_INCREMENT for table `member`
 --
 ALTER TABLE `member`
-  MODIFY `member_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `member_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `newsletter`
@@ -389,7 +395,7 @@ ALTER TABLE `newsletter`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `orders_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `orders_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `order_item`

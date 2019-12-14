@@ -139,7 +139,7 @@
                                     <div class="check-login">
                                         <h4><span>2</span> ENTER YOUR DETAILS</h4>
                                     </div>
-                                    <form class="user-register" onsubmit="return MemberInsert();">
+                                    <form class="user-register" onsubmit="return makePayment();">
                                         <div class="form-group">
                                             <input type="text" name="name" class="form-control" id="fname" placeholder="First Name" required>
                                         </div>
@@ -169,7 +169,7 @@
                                             <input type="text" name="pincode" class="form-control" id="pincode" placeholder="Pincode" required>
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="form-control" id="altphone" placeholder="Alternate Phone (Optional)">
+                                            <input type="text" class="form-control" name="altphone" id="altphone" placeholder="Alternate Phone (Optional)">
                                         </div>
                                         <button type="submit" class="btn member-register-btn">Make Payment</button>
                                     </form>
@@ -190,8 +190,6 @@
                                 <p class="need">Need help? <a href="contact.php">Contact Us</a></p>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
             </div>
@@ -200,83 +198,83 @@
         <?php include 'footer.php'; ?>
         <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
         <script>
-            /* Set rates + misc */
-            var taxRate = 0.05;
-            var shippingRate = 15.00;
-            var fadeTime = 300;
+                                        /* Set rates + misc */
+                                        var taxRate = 0.05;
+                                        var shippingRate = 15.00;
+                                        var fadeTime = 300;
 
 
-            /* Assign actions */
-            $('.product-quantity input').change(function () {
-                updateQuantity(this);
-            });
+                                        /* Assign actions */
+                                        $('.product-quantity input').change(function () {
+                                            updateQuantity(this);
+                                        });
 
-            $('.product-removal button').click(function () {
-                removeItem(this);
-            });
-
-
-            /* Recalculate cart */
-            function recalculateCart()
-            {
-                var subtotal = 0;
-
-                /* Sum up row totals */
-                $('.product').each(function () {
-                    subtotal += parseFloat($(this).children('.product-line-price').text());
-                });
-
-                /* Calculate totals */
-                var tax = subtotal * taxRate;
-                var shipping = (subtotal > 0 ? shippingRate : 0);
-                var total = subtotal + tax + shipping;
-
-                /* Update totals display */
-                $('.totals-value').fadeOut(fadeTime, function () {
-                    $('#cart-subtotal').html(subtotal.toFixed(2));
-                    $('#cart-tax').html(tax.toFixed(2));
-                    $('#cart-shipping').html(shipping.toFixed(2));
-                    $('#cart-total').html(total.toFixed(2));
-                    if (total == 0) {
-                        $('.checkout').fadeOut(fadeTime);
-                    } else {
-                        $('.checkout').fadeIn(fadeTime);
-                    }
-                    $('.totals-value').fadeIn(fadeTime);
-                });
-            }
+                                        $('.product-removal button').click(function () {
+                                            removeItem(this);
+                                        });
 
 
-            /* Update quantity */
-            function updateQuantity(quantityInput)
-            {
-                /* Calculate line price */
-                var productRow = $(quantityInput).parent().parent();
-                var price = parseFloat(productRow.children('.product-price').text());
-                var quantity = $(quantityInput).val();
-                var linePrice = price * quantity;
+                                        /* Recalculate cart */
+                                        function recalculateCart()
+                                        {
+                                            var subtotal = 0;
 
-                /* Update line price display and recalc cart totals */
-                productRow.children('.product-line-price').each(function () {
-                    $(this).fadeOut(fadeTime, function () {
-                        $(this).text(linePrice.toFixed(2));
-                        recalculateCart();
-                        $(this).fadeIn(fadeTime);
-                    });
-                });
-            }
+                                            /* Sum up row totals */
+                                            $('.product').each(function () {
+                                                subtotal += parseFloat($(this).children('.product-line-price').text());
+                                            });
+
+                                            /* Calculate totals */
+                                            var tax = subtotal * taxRate;
+                                            var shipping = (subtotal > 0 ? shippingRate : 0);
+                                            var total = subtotal + tax + shipping;
+
+                                            /* Update totals display */
+                                            $('.totals-value').fadeOut(fadeTime, function () {
+                                                $('#cart-subtotal').html(subtotal.toFixed(2));
+                                                $('#cart-tax').html(tax.toFixed(2));
+                                                $('#cart-shipping').html(shipping.toFixed(2));
+                                                $('#cart-total').html(total.toFixed(2));
+                                                if (total == 0) {
+                                                    $('.checkout').fadeOut(fadeTime);
+                                                } else {
+                                                    $('.checkout').fadeIn(fadeTime);
+                                                }
+                                                $('.totals-value').fadeIn(fadeTime);
+                                            });
+                                        }
 
 
-            /* Remove item from cart */
-            function removeItem(removeButton)
-            {
-                /* Remove row from DOM and recalc cart total */
-                var productRow = $(removeButton).parent().parent();
-                productRow.slideUp(fadeTime, function () {
-                    productRow.remove();
-                    recalculateCart();
-                });
-            }
+                                        /* Update quantity */
+                                        function updateQuantity(quantityInput)
+                                        {
+                                            /* Calculate line price */
+                                            var productRow = $(quantityInput).parent().parent();
+                                            var price = parseFloat(productRow.children('.product-price').text());
+                                            var quantity = $(quantityInput).val();
+                                            var linePrice = price * quantity;
+
+                                            /* Update line price display and recalc cart totals */
+                                            productRow.children('.product-line-price').each(function () {
+                                                $(this).fadeOut(fadeTime, function () {
+                                                    $(this).text(linePrice.toFixed(2));
+                                                    recalculateCart();
+                                                    $(this).fadeIn(fadeTime);
+                                                });
+                                            });
+                                        }
+
+
+                                        /* Remove item from cart */
+                                        function removeItem(removeButton)
+                                        {
+                                            /* Remove row from DOM and recalc cart total */
+                                            var productRow = $(removeButton).parent().parent();
+                                            productRow.slideUp(fadeTime, function () {
+                                                productRow.remove();
+                                                recalculateCart();
+                                            });
+                                        }
         </script>
     </body>
 </html>
