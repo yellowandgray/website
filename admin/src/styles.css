@@ -76,4 +76,15 @@ mat-sidenav {
 .table-order-1 th, .table-order-1 td {
     padding: 5px;
     border: 1px solid #000;
+    text-align: center;
+}
+
+
+.product-cart-image {
+    width: 30%;
+    text-align: center;
+}
+
+.product-cart-image img {
+    width: 50%;
 }
