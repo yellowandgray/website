@@ -62,6 +62,7 @@ function makePayment() {
                     data: data,
                     success: function (data) {
                         if (data.result.error === false) {
+                            shoppingCart.clearCart();
                             swal("Success", data.result.message, "success");
                         } else {
                             swal("Oops!", data.result.message, "info");
