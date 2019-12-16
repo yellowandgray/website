@@ -49,7 +49,7 @@ function MemberInsert() {
 function makePayment() {
     if (validDetails()) {
         var rzpOptions = {
-            key: "rzp_test_zksOkaS0IXezA2",
+            key: "rzp_live_i38CED8NpGScFL",
             amount: (($('#cart_quantity').val() * 8000) * 100),
             name: $('#fname').val(),
             description: "Purchase product",
