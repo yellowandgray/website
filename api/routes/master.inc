@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 $app->post('/update_record/:table/:where', function($table, $where) use ($app) {
     $res = array('error' => true, 'message' => 'Unable to update');
     $data = $app->request->post();
@@ -228,6 +229,8 @@ $app->post('/new_order', function() use ($app) {
         $tpy = new Thirdparty();
         $res['error'] = false;
         $res['message'] = 'Order placed successfully order reference number is #' . $insertion;
+        $data['orders_id'] = $insertion;
+        $_SESSION['orders_id'] = $insertion;
         $template = $com->selectRow('*', 'templates', 'name=\'order_recived\' AND type=\'email\' AND target=\'user\'');
         $body = $com->getReplacedString($template['body_web'], $data);
         $tpy->sendMail($data['email'], $data['fname'], $body, $body, $template['subject'], $template['mail'], $template['mail_name'], '', '', $template['cc'], $template['cc_name']);

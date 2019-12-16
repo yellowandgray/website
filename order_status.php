@@ -1,10 +1,17 @@
+<?php
+session_start();
+if (isset($_SESSION['orders_id']) && $_SESSION['orders_id'] != 0) {
+    require_once 'api/include/common.php';
+    $obj = new Common();
+    $order = $obj->selectRow('*', 'orders', 'orders_id = ' . $_SESSION['orders_id']);
+} else {
+    header("Location: index.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
     <?php
     include 'head.php';
-    require_once 'api/include/common.php';
-    $obj = new Common();
-    $order = $obj->selectRow('*', 'orders', 'orders_id > 0');
     ?>
     <body class="goto-here">
         <section class="order-success-section">

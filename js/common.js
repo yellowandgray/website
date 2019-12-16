@@ -63,7 +63,7 @@ function makePayment() {
                     success: function (data) {
                         if (data.result.error === false) {
                             shoppingCart.clearCart();
-                            swal("Success", data.result.message, "success");
+                            window.location = 'order_status.php';
                         } else {
                             swal("Oops!", data.result.message, "info");
                         }
