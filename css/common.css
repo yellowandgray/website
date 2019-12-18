@@ -1449,3 +1449,16 @@ marquee {
     50% { opacity: 0.0; }
     100% { opacity: 1.0; }
 }
+.reg-text p{
+    display: block !important;
+    text-align: center !important;
+}
+@media screen and (min-width: 1248px) {
+    .reg-text p{
+        position: absolute;
+        margin: 0 34%;
+        top: -25px;
+    }
+}
+
+

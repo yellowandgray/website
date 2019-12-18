@@ -1,6 +1,6 @@
 <nav class="colorlib-nav" role="navigation">
     <div class="upper-menu">
-        <div class="container">
+        <div class="" style="padding: 0px 10px;">
             <div class="row">
                 <div class="col-xs-8">
                     <p>
@@ -23,6 +23,9 @@
                     <!--<p class="btn-apply"><a href="">News & Events</a></p>-->
                     <p class="btn-apply"><a href="news-events.php"><img src="images/event.gif" alt=""/></a></p>
 
+                </div>
+                <div class="col-xs-12 reg-text">
+                    <p>Recognised by PUDUCHERRY GOVERNMENT CODE NO: UN -03</p>
                 </div>
             </div>
         </div>
