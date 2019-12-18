@@ -2558,3 +2558,25 @@ span.psw{
 .order-success a {
     font-size: 16px;
 }
+
+.go-cart {
+    background: #005ca5;
+    padding: 5.5px 5px;
+    position: absolute;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+
+.go-cart span.icon-shopping_cart {
+    color: #fff;
+    padding: 0 5px;
+    position: relative;
+    top: 3px;
+}
+
+.go-cart span.total-count {
+    top: 0px;
+    right: 10px;
+    border: none;
+    background: none;
+}
