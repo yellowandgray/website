@@ -18,7 +18,7 @@
             </div>
             <!--Header End-->
             <!--Inner Header Start-->
-            <section class="wf100 p100 inner-header" style="background: url(images/sub-banner/banner-06.jpg) no-repeat;">
+            <section class="wf100 p100 inner-header" style="background: url(images/sub-banner/banner-08.jpg) no-repeat;">
                 <div class="container">
                     <h1>Contact Us</h1>
                     <!--                    <ul>

@@ -204,6 +204,7 @@
                             <div class="ser-txt">
                                 <h4> <a href="#">Fully Secured 5 Acre Campus </a> </h4>
                                 <span class="aicon"><i class="fas fa-arrow-right"></i></span>
+                                <br/>
                             </div>
                         </div>
                     </div>
@@ -217,6 +218,7 @@
                                 <h4> <a href="#">Interactive/ Digitized Classrooms</a>
                                 </h4>
                                 <span class="aicon"><i class="fas fa-arrow-right"></i></span>
+                                <br/>
                             </div>
                         </div>
                     </div>
@@ -240,9 +242,9 @@
                             <div class="ser-thumb"><a href="#"><i class="fas fa-link"></i></a>
                                 <img src="images/community-football.jpg" alt="Community Football Ground - ENPEE International School" title="Community Football Ground - ENPEE International School"></div>
                             <div class="ser-txt">
-                                <h4> <a href="#">Community Football Ground</a></h4>
+                                <!--<h4> <a href="#">Community Football Ground</a></h4>-->
+                                <h4> <a href="#">SPORTS ACADEMY <span style="font-size: 18px;">with Advanced Sports Assessment and Facility by Professionals</span></a></h4>
                                 <span class="aicon"><i class="fas fa-arrow-right"></i></span>
-                                <br>
                             </div>
                         </div>
                     </div>
@@ -256,6 +258,7 @@
                                 <h4> <a href="#">Air-Conditioned School Buses</a>
                                 </h4>
                                 <span class="aicon"><i class="fas fa-arrow-right"></i></span>
+                                <br/>
                             </div>
                         </div>
                     </div>

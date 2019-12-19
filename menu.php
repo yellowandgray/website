@@ -25,7 +25,7 @@
 
                 </div>
                 <div class="col-xs-12 reg-text">
-                    <p>Recognised by PUDUCHERRY GOVERNMENT CODE NO: UN -03</p>
+                    <p>Recognised by: PUDUCHERRY GOVT. CODE NO: UN-03</p>
                 </div>
             </div>
         </div>
