@@ -80,13 +80,13 @@ class PHPMailer {
      * Sets the From email address for the message.
      * @var string
      */
-    public $From = 'info@yellowandgray.com';
+    public $From = 'no-reply@ghmindia.com';
 
     /**
      * Sets the From name of the message.
      * @var string
      */
-    public $FromName = 'Yellow and Gray Studio';
+    public $FromName = 'Guardian Health Management';
 
     /**
      * Sets the Sender email (Return-Path) of the message.  If not empty,
@@ -250,13 +250,13 @@ class PHPMailer {
      * Sets SMTP username.
      * @var string
      */
-    public $Username = 'info@ygbeta.in';
+    public $Username = 'no-reply@ghmindia.com';
 
     /**
      * Sets SMTP password.
      * @var string
      */
-    public $Password = 'ygbeta';
+    public $Password = 'Admin@Fresche';
 
     /**
      *  Sets SMTP auth type. Options are LOGIN | PLAIN | NTLM  (default LOGIN)

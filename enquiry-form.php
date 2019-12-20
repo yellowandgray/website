@@ -17,6 +17,7 @@ if ($_POST['fname']) {
 
 
 
+//    require_once('api/include/PHPMailer/class.phpmailer.php');
     require_once('PHPMailer/class.phpmailer.php');
 
 
@@ -59,11 +60,11 @@ if ($_POST['fname']) {
 
 
 
-    $mail->Username = "";  // GMAIL username noreply@venusdyesandchemicals.com
+    $mail->Username = "no-reply@ghmindia.com";  // GMAIL username noreply@venusdyesandchemicals.com
 
 
 
-    $mail->Password = "";            // GMAIL password gHm2019@admin
+    $mail->Password = "Admin@Fresche";            // GMAIL password gHm2019@admin
 
     $mail->IsHTML(true);
 
@@ -91,7 +92,7 @@ if ($_POST['fname']) {
             <tbody>
             <tr>
             <td style = "padding:36px 48px;display:block">
-            <h1 style = "color:#ffffff;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif;font-size:30px;font-weight:300;line-height:150%;margin:0;text-align:center"><img src = "http://venusdyesandchemicals.com/images/logo-01.png" alt = "Guardian Health Management" style = "width:25%" /></h1>
+            <h1 style = "color:#ffffff;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif;font-size:30px;font-weight:300;line-height:150%;margin:0;text-align:center"><img src = "http://ghmindia.com/images/logo-01.png" alt = "Guardian Health Management" style = "width:25%" /></h1>
             </td>
             </tr>
             </tbody>
@@ -110,10 +111,10 @@ if ($_POST['fname']) {
             <td valign = "top" style = "padding:48px">
             <div style = "color:#737373;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif;font-size:14px;line-height:150%;text-align:left">
             <h3 style = "margin:0 0 16px; text-align:center;">Enquiry Form</h3>
-            <p style = "margin:0 0 16px">first Name: ' . $fname . '</p>
+            <p style = "margin:0 0 16px">Name: ' . $fname . '</p>
             <p style = "margin:0 0 16px">Email: ' . $email . '</p>
             <p style = "margin:0 0 16px">Contact: ' . $phone . '</p>
-            <p style = "margin:0 0 16px">Subject: ' . $segment . '</p>
+            <p style = "margin:0 0 16px">Segment: ' . $segment . '</p>
             <p style = "margin:0 0 16px">Message: ' . $message . '</p>
             <p style = "margin:0 0 16px">Sent From Website</p></div>
             </td>

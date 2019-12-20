@@ -18,6 +18,7 @@ if ($_POST['fname']) {
 
 
 
+//    require_once('api/include/PHPMailer/class.phpmailer.php');
     require_once('PHPMailer/class.phpmailer.php');
 
 
@@ -92,7 +93,7 @@ if ($_POST['fname']) {
             <tbody>
             <tr>
             <td style = "padding:36px 48px;display:block">
-            <h1 style = "color:#ffffff;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif;font-size:30px;font-weight:300;line-height:150%;margin:0;text-align:center"><img src = "http://www.aaluvglobal.com/images/logo-png.jpg" alt = "Guardian health management" style = "width:25%" /></h1>
+            <h1 style = "color:#ffffff;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif;font-size:30px;font-weight:300;line-height:150%;margin:0;text-align:center"><img src = "http://ghmindia.com/images/logo-01.png" alt = "Guardian health management" style = "width:25%" /></h1>
             </td>
             </tr>
             </tbody>
