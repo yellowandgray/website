@@ -1,6 +1,6 @@
 <nav class="colorlib-nav" role="navigation">
     <div class="upper-menu">
-        <div class="" style="padding: 0px 10px;">
+        <div class="" style="padding: 0px 15px;">
             <div class="row">
                 <div class="col-xs-8">
                     <p>

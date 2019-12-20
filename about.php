@@ -60,6 +60,11 @@
                                                 <td>WHETHER CO-EDUCATIONAL</td>
                                                 <td>Yes</td>
                                             </tr>
+                                            <tr>
+                                                <td>RECOGNISED BY:</td>
+                                                <td>PUDUCHERRY GOVT. CODE NO: UN-03
+                                                </td>
+                                            </tr>
                                         </tbody>
                                     </table>
     <!--                                <p>  Our Early Childhood classrooms are, of course open and flexible with lot of places to explore & learn. We have dance, music, theatre incorporated in learning and sports given its due space in learning. Our outdoor spaces teach health, wellbeing & physical education not only to our students, but also to our faculty members. All our classrooms are provided with personal lockers for children to store their belongings, which inculcates self-discipline and responsibility in a child. Our learning spaces are also used outside the school hours for extracurricular activities, coffee mornings for the parental community and other activities. </p>
