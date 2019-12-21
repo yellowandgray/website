@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 21, 2019 at 01:07 PM
+-- Generation Time: Dec 21, 2019 at 02:38 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.2.12
 
@@ -62,6 +62,8 @@ CREATE TABLE `student_register` (
   `password` varchar(255) NOT NULL,
   `confirm_password` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
+  `status` tinyint(4) NOT NULL DEFAULT '1',
+  `block_reason` varchar(255) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `created_by` int(11) NOT NULL,
@@ -72,9 +74,9 @@ CREATE TABLE `student_register` (
 -- Dumping data for table `student_register`
 --
 
-INSERT INTO `student_register` (`student_register_id`, `user_name`, `student_name`, `parent_name`, `mobile`, `city`, `pin`, `school_name`, `standard`, `password`, `confirm_password`, `email`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
-(1, 'test', 'test', 'test', '1234567890', 'test', 'test', 'test', '10th-State-Board', 'test', 'test', '', '2019-12-19 12:38:56', '0000-00-00 00:00:00', 0, 0),
-(2, 'aumak7639', 'Umasekar', 'Arumugam', '7639600998', 'Chennai', '600073', 'YG', '10th-State-Board', '123456', '123456', 'umasekar098@gmail.com', '2019-12-19 13:32:57', '0000-00-00 00:00:00', 0, 0);
+INSERT INTO `student_register` (`student_register_id`, `user_name`, `student_name`, `parent_name`, `mobile`, `city`, `pin`, `school_name`, `standard`, `password`, `confirm_password`, `email`, `status`, `block_reason`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
+(1, 'test', 'test', 'test', '1234567890', 'test', 'test', 'test', '10th-State-Board', 'test', 'test', '', 1, '', '2019-12-19 12:38:56', '0000-00-00 00:00:00', 0, 0),
+(2, 'aumak7639', 'Umasekar', 'Arumugam', '7639600998', 'Chennai', '600073', 'YG', '10th-State-Board', '123456', '123456', 'umasekar098@gmail.com', 1, '', '2019-12-19 13:32:57', '0000-00-00 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
 

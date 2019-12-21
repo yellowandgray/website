@@ -17,3 +17,4 @@
 <script src="js/custom.js"></script>
 <script src="js/sweetalert.min.js" type="text/javascript"></script>
 <script src="js/common.js" type="text/javascript"></script>
+<script src="js/vue.min.js" type="text/javascript"></script>

@@ -13,6 +13,7 @@
     <link href="css/jcarousel.css" rel="stylesheet" />
     <link href="css/flexslider.css" rel="stylesheet" />
     <link href="css/slitslider.css" rel="stylesheet" />
+    <link href="css/quiz-css.css" rel="stylesheet" type="text/css"/>
     <link href="css/sweetalert.css" rel="stylesheet" type="text/css"/>
     <link href="css/style.css" rel="stylesheet" />
     <link href="css/custom.css" rel="stylesheet" type="text/css"/>
