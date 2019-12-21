@@ -117,3 +117,15 @@ $app->get('/get_topic', function() {
     }
     echoRespnse(201, $res);
 });
+
+$app->get('/get_student', function() {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('*', 'student_register', 'student_register_id > 0');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});

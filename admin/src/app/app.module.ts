@@ -28,6 +28,7 @@ import { HeaderComponent } from './header/header.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { QuestionComponent } from './question/question.component';
 import { TopicComponent, TopicForm, TopicDelete } from './topic/topic.component';
+import { UserComponent, UserForm, UserDelete, BlockForm, ResultForm } from './user/user.component';
 
 
 
@@ -42,7 +43,12 @@ import { TopicComponent, TopicForm, TopicDelete } from './topic/topic.component'
     QuestionComponent,
     TopicComponent,
     TopicForm,
-    TopicDelete
+    TopicDelete,
+    UserComponent,
+    UserForm,
+    UserDelete,
+    BlockForm,
+    ResultForm
   ],
   imports: [
     BrowserModule,
@@ -69,7 +75,7 @@ import { TopicComponent, TopicForm, TopicDelete } from './topic/topic.component'
     MatSelectModule,
     
   ],
-  entryComponents: [SubjectComponent, SubjectForm, SubjectDelete, QuestionComponent, TopicComponent, TopicForm, TopicDelete],
+  entryComponents: [SubjectComponent, SubjectForm, SubjectDelete, QuestionComponent, TopicComponent, TopicForm, TopicDelete, UserComponent, UserForm, UserDelete, BlockForm, ResultForm],
   providers: [],
   bootstrap: [AppComponent]
 })
