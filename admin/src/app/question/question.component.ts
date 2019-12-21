@@ -11,13 +11,13 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 export class QuestionComponent implements OnInit {
 
     suject = [];
-    chapter = [];
+    topic = [];
 
     constructor(private httpClient: HttpClient, private _snackBar: MatSnackBar) { }
 
   ngOnInit() {
         this.getsubject();
-        this.getchapter();
+        this.gettopic();
     }
     getsubject(): void {
         this.httpClient.get<any>('http://localhost/project/mekana/api/v1/get_subject')
@@ -32,11 +32,11 @@ export class QuestionComponent implements OnInit {
             }
         );
     }
-    getchapter(): void {
-        this.httpClient.get<any>('http://localhost/project/mekana/api/v1/get_chapter')
+    gettopic(): void {
+        this.httpClient.get<any>('http://localhost/project/mekana/api/v1/get_topic')
         .subscribe(
                 (res)=>{
-                    this.chapter = res["result"]["data"];
+                    this.topic = res["result"]["data"];
               },
               (error)=>{
                 this._snackBar.open(error["statusText"], '', {

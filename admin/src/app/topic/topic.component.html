@@ -10,7 +10,7 @@
         <mat-list>
             <ng-container *ngFor="let data of topic">
                 <mat-list-item>
-                    <button mat-icon-button aria-label="label" (click)="openDialog(data.topic_id, 'subject')">
+                    <button mat-icon-button aria-label="label" (click)="openDialog(data.topic_id, 'topic')">
                         <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
                     </button>
                     <button mat-icon-button aria-label="label" (click)="confirmDelete(data.topic_id)">
