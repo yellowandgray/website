@@ -37,3 +37,8 @@ mat-sidenav-content {
     margin: 10px;
     text-align: right;
 }
+
+.user-table-section table th, .user-table-section table td {
+    width: 47%;
+    text-align: left;
+}

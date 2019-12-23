@@ -20,13 +20,15 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatSelectModule} from '@angular/material/select';
+import { AngularEditorModule } from '@kolkov/angular-editor';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SubjectComponent, SubjectForm, SubjectDelete } from './subject/subject.component';
 import { HeaderComponent } from './header/header.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
-import { QuestionComponent } from './question/question.component';
+import { QuestionComponent, QuestionForm } from './question/question.component';
 import { TopicComponent, TopicForm, TopicDelete } from './topic/topic.component';
 import { UserComponent, UserForm, UserDelete, BlockForm, ResultForm } from './user/user.component';
 
@@ -41,6 +43,7 @@ import { UserComponent, UserForm, UserDelete, BlockForm, ResultForm } from './us
     HeaderComponent,
     SidenavComponent,
     QuestionComponent,
+    QuestionForm,
     TopicComponent,
     TopicForm,
     TopicDelete,
@@ -73,9 +76,11 @@ import { UserComponent, UserForm, UserDelete, BlockForm, ResultForm } from './us
     MatProgressSpinnerModule,
     MatProgressBarModule,
     MatSelectModule,
+    AngularEditorModule,
+    MatExpansionModule,
     
   ],
-  entryComponents: [SubjectComponent, SubjectForm, SubjectDelete, QuestionComponent, TopicComponent, TopicForm, TopicDelete, UserComponent, UserForm, UserDelete, BlockForm, ResultForm],
+  entryComponents: [SubjectComponent, SubjectForm, SubjectDelete, QuestionComponent, QuestionForm, TopicComponent, TopicForm, TopicDelete, UserComponent, UserForm, UserDelete, BlockForm, ResultForm],
   providers: [],
   bootstrap: [AppComponent]
 })

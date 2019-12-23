@@ -17,7 +17,7 @@
                             <div class="subject-1-text">
                                 <h2>Tamil</h2>
                                 <p>Lorem Ipsum is simply dummy text of the printing.</p>
-                                <button class="btn btn-theme margintop10">SEE MORE...</button>
+                                <button class="btn btn-theme margintop10" onclick="window.location='quiz_page'">SEE MORE...</button>
                             </div>
                         </div>
                         <div class="span3 subject-section">

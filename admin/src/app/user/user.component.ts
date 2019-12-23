@@ -5,6 +5,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import {MatExpansionModule} from '@angular/material/expansion';
 import { Observable } from 'rxjs';
 
 @Component({

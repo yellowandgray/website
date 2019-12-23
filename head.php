@@ -1,3 +1,7 @@
+<?php 
+require_once 'api/include/common.php';
+$obj = new Common();
+?>
 <head>
     <meta charset="utf-8">
     <title>Flattern - Flat and trendy bootstrap site template</title>
