@@ -1,92 +1,54 @@
-$(document).ready(function () {
-    $('#get-started').on('click', function () {
-        var $sidenav, $this;
-        $this = $(this);
-        $sidenav = $('#popup-container');
-        if ($this.hasClass('active')) {
-            $this.removeClass('active');
-            return $sidenav.removeClass('active');
-        } else {
-            $this.addClass('active');
-            return $sidenav.addClass('active');
+function registerStudent() {
+    $('.loader').addClass('is-active');
+    $.ajax({
+        type: "POST",
+        url: 'api/v1/insert_student',
+        data: {user_name: $('#user_name').val(), student_name: $('#student_name').val(), parent_name: $('#parent_name').val(), mobile: $('#mobile').val(), city: $('#city').val(), pin: $('#pin').val(), school_name: $('#school_name').val(), select_standard: $('#select_standard').val(), email: $('#email').val(), password: $('#password').val(), confirm_password: $('#confirm_password').val()},
+        success: function (data) {
+            $('.loader').removeClass('is-active');
+            if (data.result.error === false) {
+                $('#user_name').val('');
+                $('#student_name').val('');
+                $('#parent_name').val('');
+                $('#mobile').val('');
+                $('#city').val('');
+                $('#pin').val('')
+                $('#school_name').val('');
+                $('#select_standard').val('');
+                $('#email').val('');
+                $('#password').val('');
+                $('#confirm_password').val('');
+                swal("Thank you!", " Our Team will get in touch with you soon.", "success");
+            } else {
+                swal("Oops!", data.result.message, "info");
+            }
+        },
+        error: function (err) {
+            $('.loader').removeClass('is-active');
+            swal("Oops!", err.statusText, "error");
         }
     });
-    $('#get-started').on('click', function () {
-        var $sidenav, $this;
-        $this = $(this);
-        $sidenav = $('#popup-container');
-        if ($this.hasClass('open')) {
-            $this.removeClass('open');
-            return $sidenav.removeClass('open');
-        } else {
-            $this.addClass('open');
-            return $sidenav.addClass('open');
+    return false;
+}
+
+function loginStudent() {
+    $('.loader').addClass('is-active');
+    $.ajax({
+        type: "POST",
+        url: 'api/v1/loginstudent',
+        data: {user_name: $('#user-name').val(), password: $('#password1').val()},
+        success: function (data) {
+            $('.loader').removeClass('is-active');
+            if (data.result.error === false) {
+                window.location = 'home_subject';
+            } else {
+                swal('Information', data.result.message, 'info');
+            }
+        },
+        error: function (err) {
+            $('.loader').removeClass('is-active');
+            swal('Error', err.statusText, 'error');
         }
     });
-    $('#popup-container').find('.close').on('click', function () {
-        $(this).parent().removeClass('open');
-        $('#get-started').removeClass('open')
-        return $('#popup-container').removeClass('open');
-        return $('#get-started').removeClass('open');
-    });
-});
-
-// When the DOM is ready, run this function
-$(document).ready(function () {
-    //Set the carousel options
-    $('#quote-carousel').carousel({
-        pause: true,
-        interval: 4000,
-    });
-});
-
-$(window).load(function () {
-    $(".popup-container").fadeIn(3500);
-    $(".trigger_popup_fricc").click(function () {
-        $('.hover_bkgr_fricc').show();
-    });
-//    $('.hover_bkgr_fricc').click(function () {
-//        $('.hover_bkgr_fricc').hide();
-//    });
-    $('.popupCloseButton').click(function () {
-        $('.hover_bkgr_fricc').hide();
-    });
-});
-
-function openForm() {
-    $(".chat-popup").fadeIn(2500);
-    document.getElementById("myQus").style.display = "block";
-}
-
-function closeForm() {
-    document.getElementById("myQus").style.display = "none";
-}
-
-window.onload = function () {
-    document.getElementById('noteButton').onclick = showNote;
-};
-
-
-
-function showNote(e) {
-    var x = 0, y = 0;
-    if (!e)
-        e = window.event;
-    if (e.pageX || e.pageY) {
-        x = e.pageX;
-        y = e.pageY;
-    } else if (e.clientX || e.clientY) {
-        x = e.clientX + document.body.scrollLeft
-                + document.documentElement.scrollLeft;
-        y = e.clientY + document.body.scrollTop
-                + document.documentElement.scrollTop;
-    }
-    var noteDiv = document.getElementById("noteDiv");
-    noteDiv.style.display = "block";
-    noteDiv.style.left = (x + 20) + "px";
-    noteDiv.style.top = (y) + "px";
-}
-
-function hideNote() {
-    document.getElementById("noteDiv").style.display = "none";
+    return false;
 }

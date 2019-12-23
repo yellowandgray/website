@@ -1,0 +1,109 @@
+<h2 mat-dialog-title>User</h2>
+<mat-dialog-content class="mat-typography">
+    <form [formGroup]="questionForm" (ngSubmit)="onSubmit()">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Subject</mat-label>
+                    <mat-select required formControlName="subject_id">
+                        <mat-option [value]="row.subject_id" *ngFor="let row of subject">
+                            {{row.name}}
+                        </mat-option>
+                    </mat-select>
+                    <mat-error>Subject is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Topic</mat-label>
+                    <mat-select required formControlName="topic_id">
+                        <mat-option [value]="row.topic_id" *ngFor="let row of topic">
+                            {{row.name}}
+                        </mat-option>
+                    </mat-select>
+                    <mat-error>Topic is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Sub Topic</mat-label>
+                    <input matInput placeholder="" required formControlName="sub_topic" />
+                    <mat-error>Sub Topic is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Question Type</mat-label>
+                    <mat-select required formControlName="question_type">
+                        <mat-option value="easy">Easy</mat-option>
+                        <mat-option value="medium">Medium</mat-option>
+                        <mat-option value="hard">Hard</mat-option>
+                        <mat-option value="very_hard">Vary Hard</mat-option>
+                    </mat-select>
+                    <mat-error>Question Type is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+            <div fxFlex="100%">
+                <angular-editor id="editor1" formControlName="question" [config]="editorConfig"></angular-editor>
+            </div>
+        </div>
+        <br />
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Option A</mat-label>
+                    <input matInput placeholder="" required formControlName="a" />
+                    <mat-error>Option A is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Option B</mat-label>
+                    <input matInput placeholder="" required formControlName="b" />
+                    <mat-error>Option B is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Option C</mat-label>
+                    <input matInput placeholder="" required formControlName="c" />
+                    <mat-error>Option C is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Option D</mat-label>
+                    <input matInput placeholder="" required formControlName="d" />
+                    <mat-error>Option D is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Answer</mat-label>
+                    <mat-select required formControlName="answer">
+                        <mat-option value="a">A</mat-option>
+                        <mat-option value="b">B</mat-option>
+                        <mat-option value="c">C</mat-option>
+                        <mat-option value="d">D</mat-option>
+                    </mat-select>
+                    <mat-error>Answer is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
+            <button mat-button [mat-dialog-close]="false">Cancel</button>
+            <button mat-button type="submit" [disabled]="loading">Save</button>
+            <mat-progress-spinner class="example-margin" *ngIf="loading" [mode]="'indeterminate'" [strokeWidth]="3"
+                [diameter]="25">
+            </mat-progress-spinner>
+        </div>
+    </form>
+</mat-dialog-content>

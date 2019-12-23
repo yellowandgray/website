@@ -1,0 +1,32 @@
+<mat-sidenav-container fullscreen>
+    <mat-sidenav mode="side" opened cdkScrollable class="primary">
+        <app-sidenav></app-sidenav>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <app-header></app-header>
+        <div class="add-btn-container">
+            <button mat-raised-button color="primary" (click)="openDialog(0, 'null')"><mat-icon>add</mat-icon> User</button>
+        </div>
+        <mat-list>
+            <ng-container *ngFor="let data of student">
+                <mat-list-item>
+                    <button mat-icon-button aria-label="label" (click)="openBlock()">
+                        <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
+                    </button>
+                    <button mat-icon-button aria-label="label" (click)="openResult()">
+                        <mat-icon #tooltip="matTooltip" matTooltip="Result">insert_drive_file</mat-icon>
+                    </button>
+                    <button mat-icon-button aria-label="label" (click)="openDialog(data.student_register_id, 'student')">
+                        <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
+                    </button>
+                    <button mat-icon-button aria-label="label" (click)="confirmDelete(data.student_register_id)">
+                        <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
+                    </button>
+                    <h4 mat-line>{{data.student_name}}</h4>
+                    <p mat-line>{{data.parent_name}} | {{data.mobile}} | {{data.city}}</p>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+            </ng-container>
+        </mat-list>
+    </mat-sidenav-content>
+</mat-sidenav-container>

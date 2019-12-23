@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+mat-sidenav {
+    max-width: 250px;
+    min-width: 250px;
+}
+
+.mat-drawer {
+    background-color: #30445c !important;
+}
+
+mat-sidenav .mat-list-item-content {
+    color: #fff;
+}
+
+.logo-bg {
+    color: #fff;
+    text-align: center;
+}
+
+.mat-list-item .mat-icon {
+    padding-right: 5px!important;
+}
+
+mat-sidenav-content {
+    margin-left: 250px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.add-btn-container {
+    margin: 10px;
+    text-align: right;
+}
