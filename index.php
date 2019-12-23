@@ -2,7 +2,7 @@
 require_once 'api/include/common.php';
 $obj = new Common();
 $testimonials = $obj->selectAll('*', 'testimonial', 'testimonial_id > 0');
-$banners = $obj->selectAll('*', 'banner', 'banner_id > 0');
+$banners = $obj->selectAll('*', 'banner', 'banner_id > 0 LIMIT 1');
 ?>
 <!DOCTYPE html>
 <html lang="en">
