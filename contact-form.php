@@ -9,7 +9,7 @@ if ($_POST['fname']) {
     $email = $_REQUEST['email'];
 
     $phone = $_REQUEST['contact'];
-    
+
     $subject = $_REQUEST['subject'];
 
     $message = $_REQUEST['message'];
@@ -18,11 +18,8 @@ if ($_POST['fname']) {
 
 
 
-//    require_once('api/include/PHPMailer/class.phpmailer.php');
-    require_once('PHPMailer/class.phpmailer.php');
-
-
-
+    require_once('api/include/PHPMailer/class.phpmailer.php');
+    //require_once('PHPMailer/class.phpmailer.php');
     //include("include/PHPMailer/class.smtp.php"); // optional, gets called from within class.phpmailer.php if not already loaded
 
 
@@ -31,46 +28,12 @@ if ($_POST['fname']) {
 
 
 
-    $mail->IsSMTP();
 
 
 
-    $mail->Mailer = 'smtp';
-
-
-
-    $mail->SMTPDebug = 1;                     // enables SMTP debug information (for testing)
-    // 1 = errors and messages
-    // 2 = messages only
-
-
-
-    $mail->SMTPAuth = true;                  // enable SMTP authentication
-
-
-
-    $mail->SMTPSecure = "ssl";                 // sets the prefix to the servier
-
-
-
-    $mail->Host = "a2plcpnl0113.prod.iad2.secureserver.net";      // sets GMAIL as the SMTP server
-
-
-
-    $mail->Port = 465;                   // set the SMTP port for the GMAIL server
-
-
-
-    $mail->Username = "no-reply@ghmindia.com";  // GMAIL username
-
-
-
-    $mail->Password = "Admin@Fresche";            // GMAIL password
-
-    $mail->IsHTML(true);
-
-    $mail->SetFrom('', 'Guardian health management');
-
+    $mail->From = 'no-reply@ghmindia.com';
+    $mail->FromName = 'Guardian health management';
+    $mail->AddReplyTo('no-reply@ghmindia.com', 'Guardian health management'); //reply-to address
     $mail->Subject = "Contact Form Submited" . date('d-m-y H:i:s');
 
     $message = '<table border = "0" cellpadding = "0" cellspacing = "0" height = "100%" width = "100%">
@@ -112,7 +75,7 @@ if ($_POST['fname']) {
             <td valign = "top" style = "padding:48px">
             <div style = "color:#737373;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif;font-size:14px;line-height:150%;text-align:left">
             <h3 style = "margin:0 0 16px; text-align:center;">Contact Form</h3>
-            <p style = "margin:0 0 16px">first Name: ' . $fname . '</p>
+            <p style = "margin:0 0 16px">Name: ' . $fname . '</p>
             <p style = "margin:0 0 16px">Email: ' . $email . '</p>
             <p style = "margin:0 0 16px">Contact: ' . $phone . '</p>
             <p style = "margin:0 0 16px">Subject: ' . $subject . '</p>
@@ -147,16 +110,10 @@ if ($_POST['fname']) {
             </tr>
             </tbody>
             </table>';
-    // Always set content-type when sending HTML email
 
-    $headers = "MIME-Version: 1.0" . "\r\n";
-
-    // headers for attachment 
-    $headers .= "\nMIME-Version: 1.0\n" . "Content-Type: multipart/mixed;\n" . " boundary=\"{$mime_boundary}\"";
 
     $mail->Body = $message;
-
-    // More headers
+    $mail->AltBody = $message;
 
     $address = "projects@yellowandgray.com";
 
