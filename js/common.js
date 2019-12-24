@@ -52,3 +52,25 @@ function loginStudent() {
     });
     return false;
 }
+
+
+function logoutUser() {
+    $('.loader').addClass('is-active');
+    $.ajax({
+        type: "POST",
+        url: 'api/v1/logout_student',
+        data: {},
+        success: function (data) {
+            $('.loader').removeClass('is-active');
+            if (data.result.error === false) {
+                window.location = 'index';
+            } else {
+                swal('Information', data.result.message, 'info');
+            }
+        },
+        error: function (err) {
+            $('.loader').removeClass('is-active');
+            swal('Error', err.statusText, 'error');
+        }
+    });
+}

@@ -74,7 +74,6 @@ and open the template in the editor.
 }
 
 .subject-1 .subject-1-img {
-    background: url(../img/no-image.png)no-repeat;
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -143,14 +142,17 @@ and open the template in the editor.
 }
 
 .control-group .controls input {
-    padding: 15px 5px;
-    width: auto;
+    width: 95%;
 }
 
 .control-group .controls select {
-    width: auto;
+    width: 99.3%;
 }
 
 .control-group .controls input[type="checkbox"] {
     width: auto;
+}
+
+.p-t-10 {
+    padding-top: 10px;
 }

@@ -42,3 +42,20 @@ mat-sidenav-content {
     width: 47%;
     text-align: left;
 }
+
+.preview-image {
+    position: relative;
+}
+
+.preview-image button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #fff;
+    color: #000;
+}
+
+
+.preview-image .dialog-picture {
+    width: 100%;
+}

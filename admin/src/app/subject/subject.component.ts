@@ -24,6 +24,7 @@ export class SubjectComponent implements OnInit {
     this.getsubject();
     this.gettopic();
   }
+  image_url: string = 'http://localhost/project/mekana/api/v1/';
   getsubject(): void {
     this.httpClient.get<any>('http://localhost/project/mekana/api/v1/get_subject')
       .subscribe(
@@ -96,9 +97,12 @@ export class SubjectComponent implements OnInit {
   templateUrl: 'subject-form.html',
 })
 export class SubjectForm {
+  image_url: string = 'http://localhost/project/mekana/api/v1/';
   subjectForm: FormGroup;
   loading = false;
   subject_id = 0;
+  subject_image: string = 'Select Subject Image';
+  image_path: string = '';
   constructor(
     public dialogRef: MatDialogRef<SubjectForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -114,6 +118,7 @@ export class SubjectForm {
         description: this.data.description,
       });
       this.subject_id = this.data.subject_id;
+      this.image_path = this.data.image_path;
     }
   }
 
@@ -127,10 +132,12 @@ export class SubjectForm {
     if (this.subject_id != 0) {
       formData.append('name', this.subjectForm.value.name);
       formData.append('description', this.subjectForm.value.description);
+      formData.append('image_path', this.image_path);
       url = 'update_record/subject/subject_id = ' + this.subject_id;
     } else {
       formData.append('name', this.subjectForm.value.name);
       formData.append('description', this.subjectForm.value.description);
+      formData.append('subject_image', this.image_path);
       url = 'insert_subject';
     }
     this.httpClient.post('http://localhost/project/mekana/api/v1/' + url, formData).subscribe(
@@ -151,6 +158,32 @@ export class SubjectForm {
         });
       }
     );
+  }
+
+
+  fileProgress(fileInput: any, name: string, path: string) {
+    var fileData = <File>fileInput.target.files[0];
+    this[name] = fileData.name;
+    this.loading = true;
+    var formData = new FormData();
+    formData.append('file', fileData);
+    this.httpClient.post('http://localhost/project/mekana/api/v1/upload_file', formData).subscribe(
+      (res) => {
+        this.loading = false;
+        if (res["result"]["error"] === false) {
+          this[path] = res["result"]["data"];
+        } else {
+          this._snackBar.open(res["result"]["message"], '', {
+            duration: 2000,
+          });
+        }
+      },
+      (error) => {
+        this.loading = false;
+        this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+        });
+      });
   }
 
   editorConfig: AngularEditorConfig = {
@@ -193,6 +226,13 @@ export class SubjectForm {
     sanitize: true,
     toolbarPosition: 'top',
   };
+
+  removeMedia(url) {
+    this[url] = '';
+    if (url === 'image_path') {
+      this.subject_image = 'Select Subject Image';
+    }
+  }
 
 }
 

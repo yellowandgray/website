@@ -49,12 +49,19 @@ $app->post('/loginstudent', function() use ($app) {
     if (count($record) > 0) {        
         if ($data['password'] == $record['password']) {       
             $res['error'] = false;
+            $_SESSION['student_register_id'] = $record['student_register_id'];
             $res['message'] = 'Welcome ' . $record['student_name'];
             $res['data'] = $record;
         } else {
             $res['message'] = 'Username or Password mismatch';
         }
     }
+    echoRespnse(201, $res);
+});
+
+$app->post('/logout_student', function() use ($app) {
+    $res = array('error' => false, 'message' => 'No user found in this email id');
+    session_destroy();
     echoRespnse(201, $res);
 });
 
@@ -74,7 +81,7 @@ $app->post('/insert_subject', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('name' => $data['name'], 'description' => $data['description']), 'subject');
+    $record = $com->insertRecord(array('name' => $data['name'], 'description' => $data['description'], 'subject_image' => $data['image_path']), 'subject');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
