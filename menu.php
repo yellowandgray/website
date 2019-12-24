@@ -45,9 +45,19 @@ if (isset($_SESSION['student_register_id'])) {
                 </div>
             <?php } else {
                 ?>
-                <div class = "span8 text-right">
-                    <div class="p-t-20">
-                        <a href = '#' onclick="logoutUser();"><i class="icon-signout"></i> Logout</a>
+                <div class="logout_position">
+                    <div id="open-logout" class="logout_section" style="background: url(img/avatar.png)no-repeat;background-position: center;">
+                        <div class="logout_dropdown">
+                            <div class="user_profile">
+                                <img src="img/avatar_1.png" alt="" />
+                                <h5><?php echo $login_member['student_name']; ?></h5>
+                            </div>
+                            <ul class="logout_list">
+                                <li onclick="window.location = 'home_subject'">Subject</li>
+                                <li onclick="window.location = 'student_result'">Result</li>
+                                <li onclick="logoutUser();">Logout</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             <?php }

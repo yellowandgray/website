@@ -18,3 +18,15 @@
 <script src="js/sweetalert.min.js" type="text/javascript"></script>
 <script src="js/common.js" type="text/javascript"></script>
 <script src="js/vue.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $("#open-logout").click(function (e) {
+        console.log("test");
+        e.stopPropagation();
+        $(".logout_dropdown").show("fast");
+    });
+    $(document).click(function (e) {
+        if (!(e.target.class === 'logout_dropdown')) {
+            $(".logout_dropdown").hide("fast");
+        }
+    });
+</script>
