@@ -672,7 +672,7 @@ $banners = $obj->selectAll('*', 'banner', 'banner_id > 0');
             <div class="pad-80">
                 <div class="row acc">
                     <div class="col-md-8 col-sm-12 heading-section ftco-animate deal-of-the-day ftco-animate" style="z-index: 1;">
-                        <h2 class="mb-4 text-center">Recognised / Tested By</h2>
+                        <h2 class="mb-4 text-center well">Recognised / Tested By</h2>
                         <div class=" accredition">
                             <div class="row">
                                 <div class="col-md-12">
@@ -803,13 +803,13 @@ $banners = $obj->selectAll('*', 'banner', 'banner_id > 0');
                         <div class="row ftco-animate">
                             <div class="col-md-12">
                                 <div class="carousel-testimony owl-carousel">
-                                    <div class="item">
+<!--                                    <div class="item">
                                         <div class="testimony-wrap p-4 pb-5">
                                             <div class="text text-center certificate">
                                                 <img class="fs-gal" src="images/report/001.jpg" alt="" class="img-responsive" data-url="images/report/001.jpg"/>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div>-->
                                     <div class="item">
                                         <div class="testimony-wrap p-4 pb-5 ">
                                             <div class="text text-center certificate">
@@ -869,13 +869,13 @@ $banners = $obj->selectAll('*', 'banner', 'banner_id > 0');
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="item">
+<!--                                    <div class="item">
                                         <div class="testimony-wrap p-4 pb-5">
                                             <div class="text text-center certificate">
                                                 <img class="fs-gal" src="images/report/010.jpg" alt=""  class="img-responsive" data-url="images/report/010.jpg"/>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div>-->
                                     <div class="item">
                                         <div class="testimony-wrap p-4 pb-5">
                                             <div class="text text-center certificate">

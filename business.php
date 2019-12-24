@@ -48,13 +48,13 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-4 mb-5  ftco-animate">
+                    <div class="col-lg-4 mb-5 sec-oreder-2 ftco-animate">
                         <div class="">
                         <!--<a href="images/product-01.png" class="image-popup"><img src="images/product-01.png" class="img-fluid" alt="Colorlib Template"></a>-->
                             <img src="images/applications/app/001.jpg" class="product-img-responsive" alt="">
                         </div>
                     </div>
-                    <div class="col-lg-8 product-details pl-md-5 ftco-animate">
+                    <div class="col-lg-8  sec-oreder-1 product-details pl-md-5 ftco-animate">
                         <h5>A FEW SUGGESTED BUSINESS ASSOCIATION ......TIP OF AN ICEBERG....</h5>
                         <p><strong>DISTRIBUTORSHIP AND DEALERSHIP</strong></p>
                         <p>We are currently engaged in setting up a PAN INDIA Dealership and Distributorship network to take the product across the last mile to the end users.</p>
@@ -78,13 +78,13 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-4 mb-5  ftco-animate">
+                    <div class="col-lg-4 mb-5 sec-oreder-2 ftco-animate">
                         <div class="">
                         <!--<a href="images/product-01.png" class="image-popup"><img src="images/product-01.png" class="img-fluid" alt="Colorlib Template"></a>-->
                             <img src="images/applications/app/003.jpg" class="product-img-responsive" alt="">
                         </div>
                     </div>
-                    <div class="col-lg-8 product-details pl-md-5 ftco-animate">
+                    <div class="col-lg-8 sec-oreder-1 product-details pl-md-5 ftco-animate">
                         <h5>If developing product is your core strength...</h5>
                         <p>The scope for developing Antimicrobial protected products is immense. The only limitation would be your creativity. We standby our manufacturing partners by signing a non commercial co Branding contract with the worlds leading Technology Brand in the field of Antimicrobials. </p>
                         <p>Be it an odor Free Sanitary napkins or  manufacturing fungus free civil engineering products or manufacturing Bacteria FREE uniforms for the Defence and Services Industry. </p>

@@ -474,7 +474,7 @@ video {
     right: 48px;
 }
 .button-2 {
-    border: 1px solid #ed1820;
+    border: none;
     border-radius: 20px;
     text-align: center;
     cursor: pointer;
@@ -1427,7 +1427,7 @@ footer .copy p{
 input[type=text], input[type=password] {
     width: 100%;
     padding: 10px;
-    margin: 4px 0;
+    /*margin: 4px 0;*/
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
@@ -2580,4 +2580,15 @@ span.psw{
     right: 10px;
     border: none;
     background: none;
+}
+
+@media (max-width: 991px) and (min-width: 320px){
+    .sec-oreder-2{
+        order: 2;
+    }
+    .sec-oreder-1{
+        order: 1;
+    }
+    
+
 }
