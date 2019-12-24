@@ -253,7 +253,7 @@ header .logo {
 }
 
 header .logo img {
-    margin-bottom: 10px;
+    margin: 5px 0;
 }
 
 header .logo h1 {

@@ -15,8 +15,8 @@ if (isset($_SESSION['student_register_id'])) {
             <div class = 'span4'>
                 <div class = 'logo'>
                     <a href = 'index'>
-                    <!--                        <img src = 'img/logo.png' alt = '' class = 'logo' />-->
-                        <h1>Feringo</h1>
+                        <img src = 'img/logo.png' alt = '' class = 'logo' />
+<!--                        <h1>Feringo</h1>-->
                     </a>
                 </div>
             </div>
@@ -46,7 +46,7 @@ if (isset($_SESSION['student_register_id'])) {
             <?php } else {
                 ?>
                 <div class = "span8 text-right">
-                    <div class="p-t-10">
+                    <div class="p-t-20">
                         <a href = '#' onclick="logoutUser();"><i class="icon-signout"></i> Logout</a>
                     </div>
                 </div>

@@ -3,6 +3,8 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
+
+
 /* 
     Created on : Dec 19, 2019, 2:39:03 PM
     Author     : Yellowandgray
@@ -26,10 +28,10 @@ and open the template in the editor.
 }
 
 .box-custom .box-img {
-    webkit-transition: all .3s ease-out; 
-    -moz-transition: all .3s ease-out; 
-    -o-transition: all .3s ease-out; 
-    transition: all .3s ease-out; 
+    webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
     -webkit-backface-visibility: hidden;
     -webkit-perspective: 1000;
 }
@@ -71,18 +73,19 @@ and open the template in the editor.
     overflow: hidden;
     position: relative;
     top: -25px;
+    border-bottom: 1px solid #e3e3e3;
 }
 
 .subject-1 .subject-1-img {
-    background-size: cover;
+    background-size: cover !important;
     background-position: center;
     width: 100%;
-    height: 200px;
+    height: 250px;
     overflow: hidden;
-    webkit-transition: all .3s ease-out; 
-    -moz-transition: all .3s ease-out; 
-    -o-transition: all .3s ease-out; 
-    transition: all .3s ease-out; 
+    webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
     -webkit-backface-visibility: hidden;
     -webkit-perspective: 1000;
 }
@@ -111,11 +114,11 @@ and open the template in the editor.
 
 .price {
     background: #5cb85c;
-    box-shadow: 0 1px rgba(0,0,0,.2);
-    -moz-box-shadow: 0 1px rgba(0,0,0,.2);
-    -webkit-box-shadow: 0 1px rgba(0,0,0,.2);
+    box-shadow: 0 1px rgba(0, 0, 0, .2);
+    -moz-box-shadow: 0 1px rgba(0, 0, 0, .2);
+    -webkit-box-shadow: 0 1px rgba(0, 0, 0, .2);
     color: #fff;
-    text-shadow: 0 1px rgba(0,0,0,.3);
+    text-shadow: 0 1px rgba(0, 0, 0, .3);
     position: relative;
     font-size: 14px;
     left: -10px;
@@ -153,6 +156,85 @@ and open the template in the editor.
     width: auto;
 }
 
-.p-t-10 {
-    padding-top: 10px;
+.p-t-20 {
+    padding-top: 20px;
+}
+
+.topic_section {
+    padding: 120px 0;
+}
+
+.side_section {
+    background: #fff;
+    /* box-shadow: 0 0 9px 5px #e3e3e3; */
+    overflow: hidden;
+    text-align: justify;
+}
+
+.side_section h2 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.topic_section_1 h2 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.topic-list {
+    margin: 0 0 0 0;
+}
+
+.topic-list li {
+    list-style: none;
+    margin: 12px 0;
+    padding-bottom: 10px;
+    transition: all 0.5s;
+    cursor: pointer;
+    border-bottom: 1px solid;
+}
+
+.topic-list li i {
+    font-size: 25px;
+    display: none;
+    transition: all 0.5s;
+}
+
+.topic-list li:hover i {
+    display: block;
+    position: absolute;
+    transition: all 0.5s;
+    padding-right: 5px;
+}
+
+.topic-list li:hover a {
+    padding-left: 35px;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+.topic-list li a {
+    font-size: 25px;
+    font-weight: 600;
+    color: #3e3e3e;
+    transition: all 0.5s;
+    padding-left: 15px;
+}
+
+.topic-list li a:hover {
+    text-decoration: none;
+    color: #b3b3b3;
+    transition: all 0.5s;
+}
+
+.topic-list li input[type="checkbox"] {
+    position: absolute;
+    /* top: 0; */
+    right: 0;
+    height: 25px;
+    width: 25px;
+    /* background-color: #eee; */
+    border-radius: 50%;
 }

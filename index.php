@@ -1,3 +1,7 @@
+<?php 
+require_once 'api/include/common.php';
+$obj = new Common();
+?>
 <!DOCTYPE html>
 <html lang="en">
     <?php include 'head.php'; ?>
