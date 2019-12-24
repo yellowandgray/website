@@ -71,7 +71,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group bg-1">
-                                        <input type="text" class="form-control" name="contact" placeholder="Your Phone" required>
+                                        <input type="text" class="form-control" name="contact" placeholder="Your Phone" maxlength="10" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">

@@ -12,7 +12,7 @@
                         <input type="text" name="fname" placeholder="Name" required>
                     </div>
                     <div class="col-md-12 form-group">
-                        <input type="text" name="phone" placeholder="Phone" required>
+                        <input type="text" inputmode="numeric"  name="phone" placeholder="Phone" maxlength="10" required>
                     </div>
                     <div class="col-md-12 form-group">
                         <input type="email" name="email" placeholder="Email" required>

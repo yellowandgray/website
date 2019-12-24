@@ -910,7 +910,7 @@ footer .copy p{
 }
 @media (min-width:992px) and (max-width:1305px) {
     .product {
-        height: 465px !important;
+        /*height: 465px !important;*/
     }
 }
 @media (min-width:320px) and (max-width:991px) {
@@ -928,7 +928,7 @@ footer .copy p{
 }
 @media (min-width:320px) and (max-width:547px) {
     .product {
-        height: 460px !important;
+        /*height: 460px !important;*/
     }
     .pad-lr-80 {
         padding: 0px 20px !important;
@@ -2589,6 +2589,25 @@ span.psw{
     .sec-oreder-1{
         order: 1;
     }
-    
-
+}
+@media (max-width: 1365px) and (min-width: 320px){
+    .button-03 {
+        padding: 0px 10px !important;
+    }
+    .total-count {
+        padding: 4px 1px !important;
+    }
+}
+@media (max-width: 767px) and (min-width: 320px){
+    .product-image img {
+        width: 50% !important;
+        margin: 0 25%;
+    }
+}
+.contact-form input::placeholder { 
+    font-family: 'Montserrat', sans-serif !important;
+}
+.contact-form textarea::placeholder { 
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 16px;
 }

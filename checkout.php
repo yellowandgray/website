@@ -116,21 +116,21 @@
                                 </div>
                                 <div class="product-list">
                                     <div class="product row margin-lr-0">
-                                        <div class="col-md-3 product-image">
+                                        <div class="col-md-3 col-12 product-image">
                                             <img src="images/product001.png">
                                         </div>
-                                        <div class="col-md-2 product-price">
+                                        <div class="col-md-2 col-12 product-price">
                                             <i class="fa fa-inr" aria-hidden="true"></i> 8000
                                         </div>
-                                        <div class="col-md-2 product-quantity">
+                                        <div class="col-md-2  col-4  product-quantity">
                                             <input id="cart_quantity" type="number" value="1" min="1">
                                         </div>
-                                        <div class="col-md-2 product-removal">
+                                        <div class="col-md-2  col-4  product-removal">
                                             <button class="remove-product" onclick="removeProduct();">
-                                                Remove
+                                               <i class="fa fa-trash" aria-hidden="true"></i>
                                             </button>
                                         </div>
-                                        <div class="col-md-2 product-line-price">
+                                        <div class="col-md-2  col-4  product-line-price">
                                             <i class="fa fa-inr" aria-hidden="true"></i> 8000
                                         </div>
                                     </div>

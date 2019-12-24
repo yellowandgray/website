@@ -6,11 +6,11 @@ if ($_POST['fname']) {
     $fname = $_REQUEST['fname'];
 
     $email = $_REQUEST['email'];
-    
+
     $phone = $_REQUEST['phone'];
 
     $message = $_REQUEST['message'];
-    
+
     $segment = $_REQUEST['segment'];
 
     error_reporting(E_STRICT);
@@ -18,7 +18,7 @@ if ($_POST['fname']) {
 
 
 //    require_once('api/include/PHPMailer/class.phpmailer.php');
-    require_once('PHPMailer/class.phpmailer.php');
+    require_once('api/include/PHPMailer/class.phpmailer.php');
 
 
 
@@ -30,47 +30,13 @@ if ($_POST['fname']) {
 
 
 
-    $mail->IsSMTP();
 
 
 
-    $mail->Mailer = 'smtp';
-
-
-
-    $mail->SMTPDebug = 1;                     // enables SMTP debug information (for testing)
-    // 1 = errors and messages
-    // 2 = messages only
-
-
-
-    $mail->SMTPAuth = true;                  // enable SMTP authentication
-
-
-
-    $mail->SMTPSecure = "ssl";                 // sets the prefix to the servier
-
-
-
-    $mail->Host = "";      // sets GMAIL as the SMTP server
-
-
-
-    $mail->Port = 465;                   // set the SMTP port for the GMAIL server
-
-
-
-    $mail->Username = "no-reply@ghmindia.com";  // GMAIL username noreply@venusdyesandchemicals.com
-
-
-
-    $mail->Password = "Admin@Fresche";            // GMAIL password gHm2019@admin
-
-    $mail->IsHTML(true);
-
-    $mail->SetFrom('', 'Guardian health management');
-
-    $mail->Subject = "Enquiry Form Submited" . date('d-m-y H:i:s');
+    $mail->From = 'no-reply@ghmindia.com';
+    $mail->FromName = 'Guardian health management';
+    $mail->AddReplyTo('no-reply@ghmindia.com', 'Guardian health management'); //reply-to address
+    $mail->Subject = "Contact Form Submited" . date('d-m-y H:i:s');
 
     $message = '<table border = "0" cellpadding = "0" cellspacing = "0" height = "100%" width = "100%">
             <tbody>
@@ -92,7 +58,7 @@ if ($_POST['fname']) {
             <tbody>
             <tr>
             <td style = "padding:36px 48px;display:block">
-            <h1 style = "color:#ffffff;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif;font-size:30px;font-weight:300;line-height:150%;margin:0;text-align:center"><img src = "http://ghmindia.com/images/logo-01.png" alt = "Guardian Health Management" style = "width:25%" /></h1>
+            <h1 style = "color:#ffffff;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif;font-size:30px;font-weight:300;line-height:150%;margin:0;text-align:center"><img src = "http://ghmindia.com/images/logo-01.png" alt = "Guardian health management" style = "width:25%" /></h1>
             </td>
             </tr>
             </tbody>
@@ -146,16 +112,10 @@ if ($_POST['fname']) {
             </tr>
             </tbody>
             </table>';
-    // Always set content-type when sending HTML email
 
-    $headers = "MIME-Version: 1.0" . "\r\n";
-
-    // headers for attachment 
-    $headers .= "\nMIME-Version: 1.0\n" . "Content-Type: multipart/mixed;\n" . " boundary=\"{$mime_boundary}\"";
 
     $mail->Body = $message;
-
-    // More headers
+    $mail->AltBody = $message;
 
     $address = "projects@yellowandgray.com";
 
@@ -177,4 +137,6 @@ if ($_POST['fname']) {
     }
 }
 ?>
+
+
 
