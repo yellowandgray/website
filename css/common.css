@@ -2611,3 +2611,17 @@ span.psw{
     font-family: 'Montserrat', sans-serif !important;
     font-size: 16px;
 }
+.hero-web {
+    display: block;
+}
+.hero-mob{
+    display: none;
+}
+@media (max-width: 600px) and (min-width: 320px){
+    .hero-mob {
+        display: block;
+    }
+    .hero-web{
+        display: none;
+    }
+}

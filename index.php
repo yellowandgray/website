@@ -15,7 +15,33 @@ $banners = $obj->selectAll('*', 'banner', 'banner_id > 0 LIMIT 1');
         <?php include 'enquiry.php'; ?>
 
         <?php foreach ($banners as $row) { ?>
-            <section id="home-section" class="hero" style="background-image:url(<?php echo BASE_URL . $row['image_path']; ?>);background-size:cover">
+            <section id="home-section" class="hero hero-web" style="background-image:url(<?php echo BASE_URL . $row['image_path']; ?>);background-size:cover">
+                <!--            <div id="video-viewport">
+                                   <video width="1920" height="1280" autoplay muted loop>
+                                       <source src="video/nature-01.mp4" type="video/mp4">
+                                       Your browser does not support the <code>video</code> tag.
+                                   </video>
+                               </div>-->
+                <?php include 'menu.php'; ?>
+                <div class="home-slider owl-carousel">
+                    <div class="slider-item">
+                        <div class="container">
+                            <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+                                <div class="col-lg-8 col-md-8 ftco-animate product-text">
+                                    <!--<h1 class="mb-2">PRODUCT</h1>-->
+                                    <!--<h2 class="subheading mb-4" style="text-align: center;">GAIN SUPER POWER WITH <span>FRESCHE</span></h2><article class="container">-->
+
+                                </div>
+                                <div class="col-md-4"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="curve">
+                    <img src="images/box.png" alt=""/>
+                </div>
+            </section>
+            <section id="home-section" class="hero hero-mob" style="background-image:url(images/bg-mobile.jpg);background-size:cover">
                 <!--            <div id="video-viewport">
                                 <video width="1920" height="1280" autoplay muted loop>
                                     <source src="video/nature-01.mp4" type="video/mp4">
@@ -40,7 +66,6 @@ $banners = $obj->selectAll('*', 'banner', 'banner_id > 0 LIMIT 1');
                 <div class="curve">
                     <img src="images/box.png" alt=""/>
                 </div>
-
             </section>
         <?php } ?>
         <section class="ftco-category pad-20-80 res-feature">
@@ -803,13 +828,13 @@ $banners = $obj->selectAll('*', 'banner', 'banner_id > 0 LIMIT 1');
                         <div class="row ftco-animate">
                             <div class="col-md-12">
                                 <div class="carousel-testimony owl-carousel">
-<!--                                    <div class="item">
-                                        <div class="testimony-wrap p-4 pb-5">
-                                            <div class="text text-center certificate">
-                                                <img class="fs-gal" src="images/report/001.jpg" alt="" class="img-responsive" data-url="images/report/001.jpg"/>
-                                            </div>
-                                        </div>
-                                    </div>-->
+                                    <!--                                    <div class="item">
+                                                                            <div class="testimony-wrap p-4 pb-5">
+                                                                                <div class="text text-center certificate">
+                                                                                    <img class="fs-gal" src="images/report/001.jpg" alt="" class="img-responsive" data-url="images/report/001.jpg"/>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>-->
                                     <div class="item">
                                         <div class="testimony-wrap p-4 pb-5 ">
                                             <div class="text text-center certificate">
@@ -869,13 +894,13 @@ $banners = $obj->selectAll('*', 'banner', 'banner_id > 0 LIMIT 1');
                                             </div>
                                         </div>
                                     </div>
-<!--                                    <div class="item">
-                                        <div class="testimony-wrap p-4 pb-5">
-                                            <div class="text text-center certificate">
-                                                <img class="fs-gal" src="images/report/010.jpg" alt=""  class="img-responsive" data-url="images/report/010.jpg"/>
-                                            </div>
-                                        </div>
-                                    </div>-->
+                                    <!--                                    <div class="item">
+                                                                            <div class="testimony-wrap p-4 pb-5">
+                                                                                <div class="text text-center certificate">
+                                                                                    <img class="fs-gal" src="images/report/010.jpg" alt=""  class="img-responsive" data-url="images/report/010.jpg"/>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>-->
                                     <div class="item">
                                         <div class="testimony-wrap p-4 pb-5">
                                             <div class="text text-center certificate">
