@@ -11,12 +11,10 @@ $student = $obj->selectrow('*', 'student_register', 'student_register_id > 0');
             <section class="topic_section">
                 <div class="container">
                     <div class="row">
-                        <div class="span3">
+                        <div class="span4">
                             <div class="result_user_section">
                                 <div class="user_profile" style="background: url(img/avatar_1.png)no-repeat;background-position: center;"></div>
                             </div>
-                        </div>
-                        <div class="span9">
                             <div class="user_details">
                                 <h2><?php echo $student['student_name']; ?></h2>
                                 <h4><?php echo $student['parent_name']; ?> <span><?php echo $student['mobile'] ?></span></h4>
@@ -24,12 +22,7 @@ $student = $obj->selectrow('*', 'student_register', 'student_register_id > 0');
                                 <p><?php echo $student['city']; ?> <?php echo $student['pin']; ?> </p>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="span4">
-
-                        </div>
-                        <div class="span6">
+                        <div class="span8">
                             <h4>My Completed Task</h4>
                             <!-- start: Accordion -->
                             <div class="accordion" id="accordion2">

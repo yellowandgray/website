@@ -290,9 +290,9 @@ and open the template in the editor.
 }
 
 .result_user_section .user_profile {
-    height: 200px;
+    height: 190px;
     border-radius: 50%;
-    width: 75%;
+    width: 50%;
     text-align: center;
     margin: 0 auto;
     border: 1px solid red;
