@@ -192,7 +192,7 @@ and open the template in the editor.
 .topic_section_1 h2 {
     font-size: 30px;
     font-weight: 600;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
 }
 
 /*.topic-list {
@@ -339,6 +339,7 @@ and open the template in the editor.
 .topic_list_position_left {
     float: left;
     width: 50%;
+    margin-bottom: 10px;
 }
 
 .topic_list_position_right {
@@ -350,10 +351,12 @@ and open the template in the editor.
 .topic_list_position_left a {
     font-size: 25px;
     text-decoration: none;
+    transition: all 0.3s;
 }
 
 .topic_list_position_left a:hover {
     text-decoration: none;
+    color: #5cb85c;
 }
 
 .topic_list_position_left a i {
@@ -363,4 +366,5 @@ and open the template in the editor.
 .topic_list_section a.btn-green, .topic_list_section a.btn-danger {
     float: right;
     margin-left: 5px;
+    margin-bottom: 5px;
 }
