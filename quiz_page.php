@@ -1,6 +1,7 @@
-<?php 
+<?php
 require_once 'api/include/common.php';
 $obj = new Common();
+$topics = $obj->selectRow('t.*, s.name AS subject', 'topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id', 'topic_id > 0');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,83 +14,91 @@ $obj = new Common();
         <?php include 'menu.php'; ?>
         <div class="quiz-section">
             <section class="container">
-
-                <!--questionBox-->
-                <div class="questionBox" id="app">
-                    <!--qusetionContainer-->
-                    <div class="questionContainer" v-if="questionIndex<quiz.questions.length" v-bind:key="questionIndex">
-                        <div class="question-header">
-                            <h1 class="title is-6">Quiz</h1>
-                            <!--progress-->
-                            <div class="progressContainer">
-                                <progress class="progress is-info is-small" :value="(questionIndex/quiz.questions.length)*100" max="100">{{(questionIndex/quiz.questions.length)*100}}%</progress>
-                                <p>{{(questionIndex/quiz.questions.length)*100}}% complete</p>
-                            </div>
-                            <!--/progress-->
-                        </div>
-
-                        <!-- questionTitle -->
-                        <h2 class="titleContainer title">{{ quiz.questions[questionIndex].text }}</h2>
-
-                        <!-- quizOptions -->
-                        <div class="optionContainer">
-                            <div class="option" v-for="(response, index) in quiz.questions[questionIndex].responses" @click="selectOption(index)" :class="{ 'is-selected': userResponses[questionIndex] == index}" :key="index">
-                                 {{ index | charIndex }}. {{ response.text }}
+                <div class="row">
+                    <div class="span4">
+                        <div class="side_section">
+                            <h2><?php echo $topics['subject']; ?> > <?php echo $topics['name']; ?></h2>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                         </div>
                     </div>
+                    <!--question Box-->
+                    <div class="span8">
+                        <div class="questionBox" id="app">
+                            <!--qusetionContainer-->
+                            <div class="questionContainer" v-if="questionIndex<quiz.questions.length" v-bind:key="questionIndex">
+                                <div class="question-header">
+                                    <h1 class="title is-6">Quiz</h1>
+                                    <!--progress-->
+                                    <div class="progressContainer">
+                                        <progress class="progress is-info is-small" :value="(questionIndex/quiz.questions.length)*100" max="100">{{(questionIndex/quiz.questions.length)*100}}%</progress>
+                                        <p>{{(questionIndex/quiz.questions.length)*100}}% complete</p>
+                                    </div>
+                                    <!--/progress-->
+                                </div>
 
-                    <!--quizFooter: navigation and progress-->
-                    <footer class="questionFooter">
+                                <!-- questionTitle -->
+                                <h2 class="titleContainer title">{{ quiz.questions[questionIndex].text }}</h2>
 
-                        <!--pagination-->
-                        <nav class="pagination" role="navigation" aria-label="pagination">
+                                <!-- quizOptions -->
+                                <div class="optionContainer">
+                                    <div class="option" v-for="(response, index) in quiz.questions[questionIndex].responses" @click="selectOption(index)" :class="{ 'is-selected': userResponses[questionIndex] == index}" :key="index">
+                                         {{ index | charIndex }}. {{ response.text }}
+                                </div>
+                            </div>
 
-                            <!-- back button -->
-                            <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">
-                               Back
-                        </a>
+                            <!--quizFooter: navigation and progress-->
+                            <footer class="questionFooter">
 
-                        <!-- next button -->
-                        <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
-                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}
-                        </a>
+                                <!--pagination-->
+                                <nav class="pagination" role="navigation" aria-label="pagination">
 
-                    </nav>
-                    <!--/pagination-->
+                                    <!-- back button -->
+                                    <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">
+                                       Back
+                                </a>
 
-                </footer>
-                <!--/quizFooter-->
+                                <!-- next button -->
+                                <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
+                                    {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}
+                                </a>
 
+                            </nav>
+                            <!--/pagination-->
+
+                        </footer>
+                        <!--/quizFooter-->
+
+                    </div>
+                    <!--/questionContainer-->
+
+                    <!--quizCompletedResult-->
+                    <div v-if="questionIndex >= quiz.questions.length" v-bind:key="questionIndex" class="quizCompleted has-text-centered">
+
+                        <!-- quizCompletedIcon: Achievement Icon -->
+                        <span class="icon">
+                            <i class="fa" :class="score()>3?'fa-check-circle-o is-active':'fa-times-circle'"></i>
+                        </span>
+
+                        <!--resultTitleBlock-->
+                        <h2 class="title">
+                            You did {{ (score()>7?'an amazing':(score()<4?'a poor':'a good')) }} job!
+                        </h2>
+                        <p class="subtitle">
+                            Total score: {{ score() }} / {{ quiz.questions.length }}
+                        </p>
+                        <br>
+                        <a class="button1" @click="restart()">Restart <i class="fa fa-refresh"></i></a>
+                        <!--/resultTitleBlock-->
+
+                    </div>
+                    <!--/quizCompetedResult-->
+
+                    <!-- 		</transition> -->
+
+                </div>
             </div>
-            <!--/questionContainer-->
-
-            <!--quizCompletedResult-->
-            <div v-if="questionIndex >= quiz.questions.length" v-bind:key="questionIndex" class="quizCompleted has-text-centered">
-
-                <!-- quizCompletedIcon: Achievement Icon -->
-                <span class="icon">
-                    <i class="fa" :class="score()>3?'fa-check-circle-o is-active':'fa-times-circle'"></i>
-                </span>
-
-                <!--resultTitleBlock-->
-                <h2 class="title">
-                    You did {{ (score()>7?'an amazing':(score()<4?'a poor':'a good')) }} job!
-                </h2>
-                <p class="subtitle">
-                    Total score: {{ score() }} / {{ quiz.questions.length }}
-                </p>
-                <br>
-                <a class="button1" @click="restart()">Restart <i class="fa fa-refresh"></i></a>
-                <!--/resultTitleBlock-->
-
-            </div>
-            <!--/quizCompetedResult-->
-
-            <!-- 		</transition> -->
-
+            <!-- question Box -->
         </div>
-        <!--/questionBox-->
-
     </section>
 </div>
 <!--/container-->

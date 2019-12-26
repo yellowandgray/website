@@ -195,7 +195,7 @@ and open the template in the editor.
     margin-bottom: 5px;
 }
 
-.topic-list {
+/*.topic-list {
     margin: 0 0 0 0;
 }
 
@@ -243,13 +243,13 @@ and open the template in the editor.
 
 .topic-list li input[type="checkbox"] {
     position: absolute;
-    /* top: 0; */
+     top: 0; 
     right: 0;
-    height: 25px;
-    width: 25px;
-    /* background-color: #eee; */
+    height: 20px;
+    width: 20px;
+     background-color: #eee; 
     border-radius: 50%;
-}
+}*/
 
 .logout_dropdown {
     display: none;
@@ -334,4 +334,33 @@ and open the template in the editor.
     padding-top: 20px;
     width: 50%;
     border-radius: 50%;
+}
+
+.topic_list_position_left {
+    float: left;
+    width: 50%;
+}
+
+.topic_list_position_right {
+    float: left;
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+.topic_list_position_left a {
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.topic_list_position_left a:hover {
+    text-decoration: none;
+}
+
+.topic_list_position_left a i {
+    font-size: 25px;
+}
+
+.topic_list_section a.btn-green, .topic_list_section a.btn-danger {
+    float: right;
+    margin-left: 5px;
 }
