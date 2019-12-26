@@ -1,7 +1,8 @@
-<?php 
+<?php
 require_once 'api/include/common.php';
 $obj = new Common();
 $topics = $obj->selectAll('*', 'topic', 'topic_id > 0');
+$sub_topics = $obj->selectAll('*', 'sub_topic', 'sub_topic_id > 0');
 ?>
 <html lang="en">
     <?php include 'head.php'; ?>
@@ -20,11 +21,37 @@ $topics = $obj->selectAll('*', 'topic', 'topic_id > 0');
                         <div class="span8">
                             <div class="topic_section_1">
                                 <h2>Topic Title</h2>
-                                <?php foreach ($topics as $row) { ?>
-                                    <ul class="topic-list">
-                                        <li><i class="icon-angle-right"></i><a href="quiz_page"> <?php echo $row['name']; ?></a> <input type="checkbox" name=""></li>
-                                    </ul>
-                                <?php } ?>
+
+
+                                <!-- start: Accordion -->
+                                <div class="accordion" id="accordion2">
+                                    <div class="accordion-group">
+                                        <?php foreach ($topics as $row) { ?>
+                                            <div class="accordion-heading">
+                                                <a class="accordion-toggle fs-20" data-toggle="collapse" data-parent="#accordion2" href="#<?php echo $row['topic_id']; ?>">
+                                                    <i class="icon-angle-down"></i> <?php echo $row['name']; ?> </a>
+                                            </div>
+                                            <div id="<?php echo $row['topic_id']; ?>" class="accordion-body collapse pad-lft">
+                                                <div>
+                                                    <?php foreach ($sub_topics as $subrow) { ?>
+                                                        <?php if ($subrow['topic_id'] == $row['topic_id']) { ?> 
+                                                            <div class="topic_list_section">
+                                                                <div class="topic_list_position_left">
+                                                                    <a href="quiz_page"><i class="icon-caret-right"></i>  <?php echo $subrow['name']; ?></a>
+                                                                </div>
+                                                                <div class="topic_list_position_right">
+                                                                    <a href="#" class="btn btn-green">Restart</a> 
+                                                                    <a href="#" class="btn btn-danger">Resume</a>
+                                                                </div>
+                                                            </div>
+                                                        <?php } ?>
+                                                    <?php } ?>
+                                                </div>
+                                            </div>
+                                        <?php } ?>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>

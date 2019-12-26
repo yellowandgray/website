@@ -228,12 +228,13 @@ and open the template in the editor.
 }
 
 .topic-list li a {
-    font-size: 25px;
+    font-size: 18px;
     font-weight: 600;
-    color: #3e3e3e;
+    color: #f03c02;
     transition: all 0.5s;
     padding-left: 15px;
 }
+
 
 .topic-list li a:hover {
     text-decoration: none;
@@ -334,4 +335,45 @@ and open the template in the editor.
     padding-top: 20px;
     width: 50%;
     border-radius: 50%;
+}
+
+.topic_list_position_left {
+    float: left;
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+.topic_list_position_right {
+    float: left;
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+.topic_list_position_left a {
+    font-size: 19px;
+    text-decoration: none;
+    transition: all 0.3s;
+    color: #30445c;
+}
+
+.topic_list_position_left a:hover {
+    text-decoration: none;
+    color: #5cb85c;
+}
+
+.topic_list_position_left a i {
+    font-size: 25px;
+}
+
+.topic_list_section a.btn-green, .topic_list_section a.btn-danger {
+    float: right;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+.pad-lft {
+    padding-left:10%;
+    margin-top:10px;
+}
+.fs-20{
+    font-size: 20px;
 }

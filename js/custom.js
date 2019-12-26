@@ -81,14 +81,14 @@ jQuery(document).ready(function($) {
   $('.accordion').on('show', function(e) {
 
     $(e.target).prev('.accordion-heading').find('.accordion-toggle').addClass('active');
-    $(e.target).prev('.accordion-heading').find('.accordion-toggle i').removeClass('icon-plus');
-    $(e.target).prev('.accordion-heading').find('.accordion-toggle i').addClass('icon-minus');
+    $(e.target).prev('.accordion-heading').find('.accordion-toggle i').removeClass('icon-angle-down');
+    $(e.target).prev('.accordion-heading').find('.accordion-toggle i').addClass('icon-angle-up');
   });
 
   $('.accordion').on('hide', function(e) {
     $(this).find('.accordion-toggle').not($(e.target)).removeClass('active');
-    $(this).find('.accordion-toggle i').not($(e.target)).removeClass('icon-minus');
-    $(this).find('.accordion-toggle i').not($(e.target)).addClass('icon-plus');
+    $(this).find('.accordion-toggle i').not($(e.target)).removeClass('icon-angle-up');
+    $(this).find('.accordion-toggle i').not($(e.target)).addClass('icon-angle-down');
   });
 
 
