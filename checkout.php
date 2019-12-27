@@ -185,7 +185,7 @@
                                             <div class="totals-value" id="cart-subtotal">8000</div>
                                         </div>
                                         <div class="totals-item">
-                                            <label>Subtotal</label>
+                                            <label>GST (18%)</label>
                                             <div class="totals-value" id="cart-tax">1440</div>
                                         </div>
                                         <div class="totals-item totals-item-total">
