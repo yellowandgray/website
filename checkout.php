@@ -141,32 +141,32 @@
                                     </div>
                                     <form class="user-register" onsubmit="return makePayment();">
                                         <div class="form-group">
-                                            <input type="text" name="name" class="form-control" id="fname" placeholder="First Name" required>
+                                            <input type="text" name="name" class="form-control" id="fname" placeholder="First Name">
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" name="name" class="form-control" id="lname" placeholder="Last Name" required>
+                                            <input type="text" name="name" class="form-control" id="lname" placeholder="Last Name">
                                         </div>
                                         <div class="form-group">
-                                            <input type="email" name="email" class="form-control" id="email" placeholder="Email Address" required>
+                                            <input type="email" name="email" class="form-control" id="email" placeholder="Email Address">
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" name="mobile" class="form-control" id="mobile" placeholder="Mobile" required>
+                                            <input type="text" name="mobile" class="form-control" id="mobile" placeholder="Mobile">
                                         </div>
                                         <div class="form-group">
-                                            <textarea type="text" rows="4" name="address" class="form-control" id="address" placeholder="Delivery Address" required></textarea>
+                                            <textarea type="text" rows="4" name="address" class="form-control" id="address" placeholder="Delivery Address"></textarea>
                                         </div>
                                         <div class="form-group">
-                                            <select id="state" required>
+                                            <select id="state">
                                                 <?php foreach ($states as $row) { ?>
                                                     <option value="<?php echo $row['state_id']; ?>"><?php echo $row['name']; ?></option>
                                                 <?php } ?>
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" name="city" class="form-control" id="city" placeholder="City" required>
+                                            <input type="text" name="city" class="form-control" id="city" placeholder="City">
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" name="pincode" class="form-control" id="pincode" placeholder="Pincode" required>
+                                            <input type="text" name="pincode" class="form-control" id="pincode" placeholder="Pincode">
                                         </div>
                                         <div class="form-group">
                                             <input type="text" class="form-control" name="altphone" id="altphone" placeholder="Alternate Phone (Optional)">
