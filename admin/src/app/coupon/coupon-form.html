@@ -1,0 +1,59 @@
+<h2 mat-dialog-title>Coupon</h2>
+<mat-dialog-content class="mat-typography">
+    <form [formGroup]="couponForm" (ngSubmit)="onSubmit()">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Coupon Name</mat-label>
+                    <input matInput placeholder="" required formControlName="coupon_name" />
+                    <mat-error>Coupon Name is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Reduce Amount</mat-label>
+                    <input matInput placeholder="" required formControlName="reduce_amt" />
+                    <mat-error>Reduce Amount is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Start Date</mat-label>
+                    <input matInput required formControlName="start_date" [matDatepicker]="picker" placeholder="Choose a date">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                    <mat-error>Start Date is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>End Date</mat-label>
+                    <input matInput required formControlName="end_date" [matDatepicker]="picker_1" placeholder="Choose a date">
+                    <mat-datepicker-toggle matSuffix [for]="picker_1"></mat-datepicker-toggle>
+                    <mat-datepicker #picker_1></mat-datepicker>
+                    <mat-error>End Date is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Status</mat-label>
+                    <mat-select required formControlName="status">
+                        <mat-option [value]="1">Active</mat-option>
+                        <mat-option [value]="0">In-Active</mat-option>
+                    </mat-select>
+                    <mat-error>Status is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
+            <button mat-button [mat-dialog-close]="false">Cancel</button>
+            <button mat-button type="submit" [disabled]="loading">Save</button>
+            <mat-progress-spinner class="example-margin" *ngIf="loading" [mode]="'indeterminate'" [strokeWidth]="3" [diameter]="25">
+            </mat-progress-spinner>
+        </div>
+    </form>
+</mat-dialog-content>

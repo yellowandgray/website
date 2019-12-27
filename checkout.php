@@ -127,7 +127,7 @@
                                         </div>
                                         <div class="col-md-2  col-4  product-removal">
                                             <button class="remove-product" onclick="removeProduct();">
-                                               <i class="fa fa-trash" aria-hidden="true"></i>
+                                                <i class="fa fa-trash" aria-hidden="true"></i>
                                             </button>
                                         </div>
                                         <div class="col-md-2  col-4  product-line-price">
@@ -171,7 +171,7 @@
                                         <div class="form-group">
                                             <input type="text" class="form-control" name="altphone" id="altphone" placeholder="Alternate Phone (Optional)">
                                         </div>
-                                        <button type="submit" class="btn member-register-btn">Make Payment</button>
+                                        <button type="submit" class="btn member-register-btn" onclick="makePayment();">Make Payment</button>
                                     </form>
                                 </div>
                             </div>
@@ -183,6 +183,14 @@
                                         <div class="totals-item">
                                             <label>Subtotal</label>
                                             <div class="totals-value" id="cart-subtotal">8000</div>
+                                        </div>
+                                        <div class="totals-item">
+                                            <label>Subtotal</label>
+                                            <div class="totals-value" id="cart-tax">1440</div>
+                                        </div>
+                                        <div class="totals-item totals-item-total">
+                                            <label>Grand Total</label>
+                                            <div class="totals-value" id="cart-total">9440</div>
                                         </div>
                                     </div>
                                     <button class="checkout" onclick="makePayment();">Make Payment</button>
@@ -199,8 +207,8 @@
         <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
         <script>
                                         /* Set rates + misc */
-                                        var taxRate = 0.05;
-                                        var shippingRate = 15.00;
+                                        var taxRate = 0.18;
+                                        var shippingRate = 00;
                                         var fadeTime = 300;
 
 

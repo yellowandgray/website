@@ -114,6 +114,18 @@ $app->post('/insert_banner', function() use ($app) {
     echoRespnse(201, $res);
 });
 
+$app->post('/insert_coupon', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to insert');
+    $data = $app->request->post();
+    $com = new Common();
+    $record = $com->insertRecord(array('coupon_name' => $data['coupon_name'], 'reduce_amt' => $data['reduce_amt'], 'start_date' => $data['start_date'], 'end_date' => $data['end_date'], 'status' => $data['status']), 'coupon');
+    if ($record > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Record inserted successfully';
+    }
+    echoRespnse(201, $res);
+});
+
 $app->post('/subscribe_news_letter', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to subscribe');
     $data = $app->request->post();
@@ -207,6 +219,18 @@ $app->get('/get_state', function() {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
     $data = $com->selectAll('*', 'state', 'state_id > 0');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_coupon', function() {
+    $res = array('error' => true, 'message' => 'Unable to get records');
+    $com = new Common();
+    $data = $com->selectAll('*', 'coupon', 'coupon_id > 0');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';

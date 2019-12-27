@@ -8,6 +8,7 @@ import { MemberComponent } from './member/member.component';
 import { OrderComponent } from './order/order.component';
 import { BannerComponent } from './banner/banner.component';
 import { NewsletterComponent } from './newsletter/newsletter.component';
+import { CouponComponent } from './coupon/coupon.component';
 
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
         {path: 'member', component: MemberComponent},
         {path: 'banner', component: BannerComponent},
         {path: 'newsletter', component: NewsletterComponent},
+        {path: 'coupon', component: CouponComponent},
     ];
 
 @NgModule({

@@ -1,18 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { SidenavComponent } from './sidenav/sidenav.component';
-import { LoginComponent } from './login/login.component';
-import { TestimonialComponent, TestimonialForm, TestimonialDelete } from './testimonial/testimonial.component';
-import { ProductComponent, ProductForm, ProductDelete, ProductImageView } from './product/product.component';
-import { MemberComponent, MemberForm, MemberDelete } from './member/member.component';
-import { OrderComponent, OrderViewForm, DeliveryStatusForm, OrderDelete } from './order/order.component';
-import { BannerComponent, BannerForm, BannerImageView, BannerDelete } from './banner/banner.component';
-import { NewsletterComponent, NewsletterDelete } from './newsletter/newsletter.component';
-
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
@@ -37,6 +25,19 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatBadgeModule} from '@angular/material/badge';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
+import { LoginComponent } from './login/login.component';
+import { TestimonialComponent, TestimonialForm, TestimonialDelete } from './testimonial/testimonial.component';
+import { ProductComponent, ProductForm, ProductDelete, ProductImageView } from './product/product.component';
+import { MemberComponent, MemberForm, MemberDelete } from './member/member.component';
+import { OrderComponent, OrderViewForm, DeliveryStatusForm, OrderDelete } from './order/order.component';
+import { BannerComponent, BannerForm, BannerImageView, BannerDelete } from './banner/banner.component';
+import { NewsletterComponent, NewsletterDelete } from './newsletter/newsletter.component';
+import { CouponComponent, CouponForm, CouponDelete } from './coupon/coupon.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,10 @@ import {MatBadgeModule} from '@angular/material/badge';
     BannerImageView,
     BannerDelete,
     NewsletterComponent,
-    NewsletterDelete
+    NewsletterDelete,
+    CouponComponent,
+    CouponForm,
+    CouponDelete
   ],
   imports: [
     BrowserModule,
@@ -94,7 +98,7 @@ import {MatBadgeModule} from '@angular/material/badge';
     MatExpansionModule,
     MatBadgeModule
   ],
-  entryComponents: [TestimonialComponent, TestimonialForm, TestimonialDelete, ProductComponent, ProductForm, ProductImageView, ProductDelete, MemberComponent, MemberForm, MemberDelete, OrderComponent, OrderViewForm, DeliveryStatusForm, OrderDelete, BannerComponent, BannerForm, BannerImageView, BannerDelete, NewsletterComponent, NewsletterDelete],
+  entryComponents: [TestimonialComponent, TestimonialForm, TestimonialDelete, ProductComponent, ProductForm, ProductImageView, ProductDelete, MemberComponent, MemberForm, MemberDelete, OrderComponent, OrderViewForm, DeliveryStatusForm, OrderDelete, BannerComponent, BannerForm, BannerImageView, BannerDelete, NewsletterComponent, NewsletterDelete, CouponComponent, CouponForm, CouponDelete],
   providers: [],
   bootstrap: [AppComponent]
 })
