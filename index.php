@@ -633,16 +633,20 @@ $banners = $obj->selectAll('*', 'banner', 'banner_id > 0 LIMIT 1');
                 </div>
                 <div class="col-md-3 heading-section ftco-animate deal-of-the-day ftco-animate">
                    <!--<span class="subheading">Best Price For You</span>-->
-                    <img src="images/applications/footwear.jpg" alt="" class="pad-t-45 img-responsive"/>
+                    <img src="images/applications/app/004.jpg" alt="" class="pad-t-45 img-responsive"/>
                 </div>
                 <div class="col-md-9 heading-section ftco-animate deal-of-the-day ftco-animate">
                     <!--<span class="subheading">Best Price For You</span>-->
-                    <p>Bacteria are present in most human and natural environments on earth, growing in water, waste, soil and the live bodies of people, plants and animals. Bacteria are living organisms that are neither plants nor animals, but belong to a group all by themselves.</p>
-                    <p>Individually they are generally not more than one single cell, however there are normally millions of them together due to their ability to rapidly multiply. There are typically 40 million bacterial cells in a gram of soil and a million bacterial cells in a millilitre of fresh water.</p>
-                    <p>There are approximately ten times as many bacterial cells as there are human cells in the body, with large numbers of bacteria on our skin and in the human gut. The vast majority of the bacteria in the body are rendered harmless by the protective effects of the human immune system and a few are beneficial.</p>
-                    <p>However, a growing number of bacterial forms are pathogenic and cause illness, poor health and infectious disease.</p>
-                    <p>Microorganisms that cause diseases are called pathogens. They are specialised to infect body tissues where they reproduce and cause damage that gives rise to the symptoms of the infection.</p>
-                    <p>The World Health Organisation is particularly concerned at the rising presence of nosocomial (healthcare acquired infections) contracted in hospital and healthcare environments. Healthcare-associated infections are those which were not present [and without evidence of incubation] at the time of admission to a healthcare setting. Within hours after admission, a patient's flora begins to acquire characteristics of the surrounding bacterial pool, and HAI infections are responsible for numerous deaths worldwide each year.</p>
+                    <h4>Institutions:</h4>
+                    <p>Did you know that every 60 seconds, a working adult touches as many as 30 objects which may be contaminated by bacteria or viruses causing infectious disease?  According to one recent workplace microbial survey, &quot;desktop surfaces, computer keyboards, mouse and telephone receivers are more contaminated than restroom toilet seats.</p>
+                    <p>Even if your workspace appears pristine, there could be unseen germs lurking. Steering clear of transmittable germs can be particularly difficult in close-quartered working environments, where illnesses easily spread from one worker to another.</p>
+                    <p>Harmful bacteria can cause unpleasant symptoms, such as nausea, severe stomach cramps, dehydration, loss of appetite, bloody diarrhea, and vomiting.</p>
+                    <p>Combatting these germs starts with an understanding of where they are most commonly found. Keeping the following surfaces clean and germ-free is the first step toward minimizing your risk of infection:</p>
+                    <p>Reception, desks, toilets, doors, taps, bathrooms, showers, hand rails, coffee machines, microwave buttons, water towers, lifts and elevators, keypads and keyboards, meeting rooms, touch screen telephones, photocopies, mobiles, canteen tables and chairs, food benches, refrigerators, air filters, air ducts, evaporative coolers, rubbish and recycling areas.</p>
+                    <p>Use Fresche spray or Fresche treated disinfectant wipes to rid your desk — including surfaces like your phone and computer keyboard — of germs that could potentially cause contagious illnesses.  These proactive practices will help instill health-conscious behaviors among your team, reducing the risk of bacteria-borne illness in the workplace</p>
+                    <p>Fresche locks and bonds to applied surfaces and protects them from bacteria, fungi, mould and makes them odour-free.</p>
+                    <h4>AGED & DISABILITY CARE</h4>
+                    <p>Reception, beds and bed tables, canteen benches, tables, chairs, children play areas, toilets, bathrooms, food trolleys, handrails, kitchen benches, cool rooms, refrigerators, communal areas, air filters, air ducts, evaporative coolers, rubbish, lifts and elevators.</p>
                 </div>
             </div>
 
