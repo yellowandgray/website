@@ -8,23 +8,22 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'app-topic',
-  templateUrl: './topic.component.html',
-  styleUrls: ['./topic.component.css']
+  selector: 'app-sub-topic',
+  templateUrl: './sub-topic.component.html',
+  styleUrls: ['./sub-topic.component.css']
 })
-export class TopicComponent implements OnInit {
-    topic = [];
-    subject = [];
-    constructor(public dialog: MatDialog, private httpClient: HttpClient, private _snackBar: MatSnackBar) { }
+export class SubTopicComponent implements OnInit {
 
-    ngOnInit() {
-        this.gettopic();
-    }
-    gettopic(): void {
-        this.httpClient.get<any>('http://localhost/project/mekana_new/api/v1/get_topic')
+  constructor(public dialog: MatDialog, private httpClient: HttpClient, private _snackBar: MatSnackBar) { }
+    sub_topic = [];
+  ngOnInit() {
+        this.getsubtopic();
+  }
+    getsubtopic(): void {
+        this.httpClient.get<any>('http://localhost/project/mekana_new/api/v1/get_sub_topic')
         .subscribe(
                 (res)=>{
-                    this.topic = res["result"]["data"];
+                    this.sub_topic = res["result"]["data"];
               },
               (error)=>{
                 this._snackBar.open(error["statusText"], '', {
@@ -37,13 +36,13 @@ export class TopicComponent implements OnInit {
         var data = null;
           if(id != 0) {
           this[res].forEach(val=> {
-               if(parseInt(val.topic_id) === parseInt(id)) {
+               if(parseInt(val.sub_topic_id) === parseInt(id)) {
                     data = val;
                     return false;
                 }
             });
         }
-        const dialogRef = this.dialog.open(TopicForm, {
+        const dialogRef = this.dialog.open(SubTopicForm, {
           minWidth: "40%",
           maxWidth: "40%",
           data: data
@@ -51,57 +50,59 @@ export class TopicComponent implements OnInit {
 
         dialogRef.afterClosed().subscribe(result => {
           if(result !== false && result !== 'false') {
-                this.gettopic();
+                this.getsubtopic();
             }
         });
     }
+    
     confirmDelete(id): void  {
         var data = null;
           if(id != 0) { 
             data = id;
           }
-    const dialogRef = this.dialog.open(TopicDelete, {
+    const dialogRef = this.dialog.open(SubTopicDelete, {
         minWidth: "40%",
         maxWidth: "40%",
         data: data
     });
    dialogRef.afterClosed().subscribe(result => {
        if(result !== false && result !== 'false') {
-          this.gettopic();
+          this.getsubtopic();
        }
     });
     }
 }
 
+
 @Component({
-  selector: 'topic-form',
-  templateUrl: 'topic-form.html',
+  selector: 'sub-topic-form',
+  templateUrl: 'sub-topic-form.html',
 })
-export class TopicForm {
-    topicForm: FormGroup;
+export class SubTopicForm {
+    subtopicForm: FormGroup;
     loading = false;
-    topic_id = 0;
-    subject:any[];
+    sub_topic_id = 0;
+    topic:any[];
     constructor(
-    public dialogRef: MatDialogRef<TopicForm>,
+    public dialogRef: MatDialogRef<SubTopicForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
-        this.topicForm = new FormGroup ({
-            'subject_id': new FormControl('', Validators.required),
+        this.subtopicForm = new FormGroup ({
+            'topic_id': new FormControl('', Validators.required),
             'name': new FormControl('', Validators.required)
         });
         if(this.data != null) {
-           this.topicForm.patchValue({
+           this.subtopicForm.patchValue({
            name: this.data.name,
-           subject_id: this.data.subject_id,
+           topic_id: this.data.topic_id,
         });
-            this.topic_id = this.data.topic_id;
+            this.sub_topic_id = this.data.sub_topic_id;
         }
-        this.httpClient.get('http://localhost/project/mekana_new/api/v1/get_subject').subscribe(
+        this.httpClient.get('http://localhost/project/mekana_new/api/v1/get_topic').subscribe(
               (res)=>{
                 if(res["result"]["error"] === false) {
-                    this.subject = res["result"]["data"];
+                    this.topic = res["result"]["data"];
                 }else{
     this._snackBar.open(res["result"]["message"], '', {
           duration: 2000,
@@ -116,20 +117,20 @@ export class TopicForm {
     }
 
     onSubmit() {
-      if (this.topicForm.invalid) {
+      if (this.subtopicForm.invalid) {
             return;
       }
       this.loading = true;
       var formData = new FormData();
       var url = '';
-          if(this.topic_id != 0) {
-        formData.append('name', this.topicForm.value.name);
-        formData.append('subject_id', this.topicForm.value.subject_id);
-        url = 'update_record/topic/topic_id = '+this.topic_id;
+          if(this.sub_topic_id != 0) {
+        formData.append('name', this.subtopicForm.value.name);
+        formData.append('topic_id', this.subtopicForm.value.topic_id);
+        url = 'update_record/sub_topic/sub_topic_id = '+this.sub_topic_id;
       } else {
-        formData.append('name', this.topicForm.value.name);
-        formData.append('subject_id', this.topicForm.value.subject_id);
-        url = 'insert_topic';
+        formData.append('name', this.subtopicForm.value.name);
+        formData.append('topic_id', this.subtopicForm.value.topic_id);
+        url = 'insert_sub_topic';
       }
       this.httpClient.post('http://localhost/project/mekana_new/api/v1/'+url, formData).subscribe(
           (res)=>{
@@ -153,29 +154,30 @@ export class TopicForm {
 
 }
 
+
 @Component({
-  selector: 'topic-delete-confirmation',
-  templateUrl: 'topic-delete-confirmation.html',
+  selector: 'sub-topic-delete-confirmation',
+  templateUrl: 'sub-topic-delete-confirmation.html',
 })
-export class TopicDelete {
+export class SubTopicDelete {
     loading = false;
-    topic_id = 0;
+    sub_topic_id = 0;
     constructor(
-    public dialogRef: MatDialogRef<TopicDelete>,
+    public dialogRef: MatDialogRef<SubTopicDelete>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
     if(this.data != null) { 
-        this.topic_id = this.data;
+        this.sub_topic_id = this.data;
     }
 }
 
   confirmDelete() {
-      if (this.topic_id == null || this.topic_id == 0) {
+      if (this.sub_topic_id == null || this.sub_topic_id == 0) {
             return;
       }
       this.loading = true;
-      this.httpClient.get('http://localhost/project/mekana_new/api/v1/delete_record/topic/topic_id='+this.topic_id).subscribe(
+      this.httpClient.get('http://localhost/project/mekana_new/api/v1/delete_record/sub_topic/sub_topic_id='+this.sub_topic_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
