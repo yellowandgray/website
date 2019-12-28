@@ -368,3 +368,8 @@ and open the template in the editor.
     margin-left: 5px;
     margin-bottom: 5px;
 }
+
+.display-content {
+    padding: 80px 0 40px; 
+    background: #e3e3e3;
+}

@@ -1,4 +1,4 @@
-<?php 
+<?php
 require_once 'api/include/common.php';
 $obj = new Common();
 ?>
@@ -150,6 +150,56 @@ $obj = new Common();
                             <div class="box-text">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="display-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="span12">
+                            <h3>Quiz Contents</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="span6">
+                            <ul>
+                                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+                                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+                                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+                                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+                                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+                                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+                                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+                                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+                                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+                                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+                                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+                                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+                            </ul>
+                        </div>
+                        <div class="span6">
+                            <img src="img/no-image.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="content">
+                <div class="container">
+                    <div class="row">
+                        <div class="span12">
+                            <h3>Quiz Videos</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="span4">
+                            <iframe height="250" style="width: 100%" src="https://www.youtube.com/embed/Be2istzBgk4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="span4">
+                            <iframe style="width: 100%" height="250" src="https://www.youtube.com/embed/Be2istzBgk4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="span4">
+                            <iframe style="width: 100%" height="250" src="https://www.youtube.com/embed/Be2istzBgk4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
