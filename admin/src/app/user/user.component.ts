@@ -23,7 +23,7 @@ export class UserComponent implements OnInit {
         this.getuser();
     }
     getuser(): void {
-        this.httpClient.get<any>('http://localhost/project/mekana/api/v1/get_student')
+        this.httpClient.get<any>('http://localhost/project/mekana_new/api/v1/get_student')
         .subscribe(
                 (res)=>{
                     this.student = res["result"]["data"];
@@ -175,7 +175,7 @@ export class UserForm {
         formData.append('email', this.userForm.value.email);
         url = 'insert_student';
       }
-      this.httpClient.post('http://localhost/project/mekana/api/v1/'+url, formData).subscribe(
+      this.httpClient.post('http://localhost/project/mekana_new/api/v1/'+url, formData).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -220,7 +220,7 @@ export class UserDelete {
             return;
       }
       this.loading = true;
-      this.httpClient.get('http://localhost/project/mekana/api/v1/delete_record/student_register/student_register_id='+this.student_register_id).subscribe(
+      this.httpClient.get('http://localhost/project/mekana_new/api/v1/delete_record/student_register/student_register_id='+this.student_register_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {

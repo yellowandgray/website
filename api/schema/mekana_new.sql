@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 26, 2019 at 06:44 AM
+-- Generation Time: Dec 28, 2019 at 09:20 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.2.12
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `mekana`
+-- Database: `mekana_new`
 --
 
 -- --------------------------------------------------------
@@ -33,6 +33,8 @@ CREATE TABLE `question` (
   `subject_id` int(11) NOT NULL,
   `topic_id` int(11) NOT NULL,
   `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `sub_topic` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `question_type` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `a` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `b` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `c` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
@@ -48,9 +50,9 @@ CREATE TABLE `question` (
 -- Dumping data for table `question`
 --
 
-INSERT INTO `question` (`question_id`, `subject_id`, `topic_id`, `name`, `a`, `b`, `c`, `d`, `answer`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
-(1, 1, 1, 'test', 'test', 'test', 'est', 'test', 'a', '2019-12-23 10:12:50', '0000-00-00 00:00:00', 0, 0),
-(2, 4, 1, 'India partition year?<br><br>', '1945', '1946', '1947', '1948', 'c', '2019-12-24 07:31:15', '0000-00-00 00:00:00', 0, 0);
+INSERT INTO `question` (`question_id`, `subject_id`, `topic_id`, `name`, `sub_topic`, `question_type`, `a`, `b`, `c`, `d`, `answer`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
+(1, 1, 1, 'test', '', '', 'test', 'test', 'est', 'test', 'a', '2019-12-23 10:12:50', '0000-00-00 00:00:00', 0, 0),
+(2, 1, 1, 'test 1', 'test', 'easy', 'test', 'test1', 'test2', 'test3', 'b', '2019-12-23 12:57:45', '0000-00-00 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -95,7 +97,6 @@ INSERT INTO `student_register` (`student_register_id`, `user_name`, `student_nam
 CREATE TABLE `subject` (
   `subject_id` int(11) NOT NULL,
   `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `image_path` varchar(255) NOT NULL,
   `description` varchar(500) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
@@ -107,12 +108,35 @@ CREATE TABLE `subject` (
 -- Dumping data for table `subject`
 --
 
-INSERT INTO `subject` (`subject_id`, `name`, `image_path`, `description`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
-(1, 'தமிழ்', 'uploads/e2f00f87f1c423318196f629b4f35635.png', '<span>Lorem Ipsum is simply dummy text of the printing.</span>', '2019-12-24 06:05:36', '0000-00-00 00:00:00', 1, 1),
-(2, 'English', 'uploads/6bd0006c70ea421b1c2d61fe7833b6f8.png', '<span>Lorem Ipsum is simply dummy text of the printing.</span>', '2019-12-24 06:05:47', '0000-00-00 00:00:00', 1, 1),
-(3, 'Maths', 'uploads/6c5717bea3ae27741bdd6f89819f276f.png', '<span>Lorem Ipsum is simply dummy text of the printing.</span>', '2019-12-24 06:05:54', '0000-00-00 00:00:00', 1, 1),
-(4, 'Group 1(தமிழ்)', 'uploads/1c171cff6e5c29d390e8c04838317ff4.png', '<span>Lorem Ipsum is simply dummy text of the printing.</span>', '2019-12-24 07:25:59', '0000-00-00 00:00:00', 1, 1),
-(5, 'Group 4 (தமிழ்)', 'uploads/2ca601296c63b44b114c1e96b13acf7e.png', '<span>Lorem Ipsum is simply dummy text of the printing.</span>', '2019-12-24 07:26:18', '0000-00-00 00:00:00', 1, 1);
+INSERT INTO `subject` (`subject_id`, `name`, `description`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
+(1, 'தமிழ்', '<span>Lorem Ipsum is simply dummy text of the printing.</span>', '2019-12-23 11:13:51', '0000-00-00 00:00:00', 1, 1),
+(2, 'English', '<span>Lorem Ipsum is simply dummy text of the printing.</span>', '2019-12-23 11:13:57', '0000-00-00 00:00:00', 1, 1),
+(3, 'Maths', '<span>Lorem Ipsum is simply dummy text of the printing.</span>', '2019-12-23 11:14:01', '0000-00-00 00:00:00', 1, 1),
+(4, 'Science', '<span>Lorem Ipsum is simply dummy text of the printing.</span>', '2019-12-23 11:14:03', '0000-00-00 00:00:00', 1, 1),
+(5, 'Social Science', '<span>Lorem Ipsum is simply dummy text of the printing.</span>', '2019-12-23 11:14:05', '0000-00-00 00:00:00', 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sub_topic`
+--
+
+CREATE TABLE `sub_topic` (
+  `sub_topic_id` int(11) NOT NULL,
+  `topic_id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `created_by` int(11) NOT NULL,
+  `updated_by` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `sub_topic`
+--
+
+INSERT INTO `sub_topic` (`sub_topic_id`, `topic_id`, `name`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
+(3, 1, 'test', '2019-12-28 08:19:24', '0000-00-00 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -135,8 +159,8 @@ CREATE TABLE `topic` (
 --
 
 INSERT INTO `topic` (`topic_id`, `subject_id`, `name`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
-(1, 4, 'History', '2019-12-24 07:27:00', '0000-00-00 00:00:00', 1, 1),
-(2, 2, 'Topic 2', '2019-12-20 12:30:00', '0000-00-00 00:00:00', 1, 1),
+(1, 1, 'Topic 1', '2019-12-21 10:14:49', '0000-00-00 00:00:00', 1, 1),
+(2, 2, 'Topic 2', '2019-12-23 12:58:56', '0000-00-00 00:00:00', 1, 1),
 (3, 3, 'Topic 3', '2019-12-20 12:30:11', '0000-00-00 00:00:00', 1, 1),
 (4, 4, 'Topic 4', '2019-12-20 12:30:26', '0000-00-00 00:00:00', 1, 1),
 (5, 5, 'Topic 5', '2019-12-20 12:30:52', '0000-00-00 00:00:00', 1, 1);
@@ -162,6 +186,12 @@ ALTER TABLE `student_register`
 --
 ALTER TABLE `subject`
   ADD PRIMARY KEY (`subject_id`);
+
+--
+-- Indexes for table `sub_topic`
+--
+ALTER TABLE `sub_topic`
+  ADD PRIMARY KEY (`sub_topic_id`);
 
 --
 -- Indexes for table `topic`
@@ -190,6 +220,12 @@ ALTER TABLE `student_register`
 --
 ALTER TABLE `subject`
   MODIFY `subject_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `sub_topic`
+--
+ALTER TABLE `sub_topic`
+  MODIFY `sub_topic_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `topic`
