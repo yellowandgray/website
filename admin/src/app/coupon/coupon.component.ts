@@ -54,6 +54,23 @@ export class CouponComponent implements OnInit {
       }
     });
   }
+    confirmDelete(id): void  {
+        var data = null;
+          if(id != 0) { 
+            data = id;
+          }
+        const dialogRef = this.dialog.open(CouponDelete, {
+            minWidth: "40%",
+            maxWidth: "40%",
+            data: data
+        });
+
+       dialogRef.afterClosed().subscribe(result => {
+           if(result !== false && result !== 'false') {
+                this.getCoupon();
+           }
+        });
+    }
 }
 
 
