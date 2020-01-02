@@ -10085,3 +10085,7 @@ textarea.form-control {
     border-radius: 0;
     border: 1px solid #ed1c24;
 }
+
+button[disabled]:hover {
+    cursor: no-drop;
+}

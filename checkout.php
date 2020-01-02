@@ -63,37 +63,37 @@
                                     </div>
                                     <form id="register_section" class="user-register" onsubmit="return makePayment();">
                                         <div class="form-group">
-                                            <input type="text" name="name" class="form-control" id="fname" placeholder="First Name">
+                                            <input type="text" name="name" class="form-control" id="fname" placeholder="First Name" onchange="checkValidation();" />
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" name="name" class="form-control" id="lname" placeholder="Last Name">
+                                            <input type="text" name="name" class="form-control" id="lname" placeholder="Last Name" onchange="checkValidation();" />
                                         </div>
                                         <div class="form-group">
-                                            <input type="email" name="email" class="form-control" id="email" placeholder="Email Address">
+                                            <input type="email" name="email" class="form-control" id="email" placeholder="Email Address" onchange="checkValidation();" />
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" name="mobile" class="form-control" id="mobile" placeholder="Mobile">
+                                            <input type="text" name="mobile" class="form-control" id="mobile" placeholder="Mobile" onchange="checkValidation();" />
                                         </div>
                                         <div class="form-group">
-                                            <textarea type="text" rows="4" name="address" class="form-control" id="address" placeholder="Delivery Address"></textarea>
+                                            <textarea type="text" rows="4" name="address" class="form-control" id="address" placeholder="Delivery Address" onchange="checkValidation();"></textarea>
                                         </div>
                                         <div class="form-group">
-                                            <select id="state">
+                                            <select id="state" onchange="checkValidation();">
                                                 <?php foreach ($states as $row) { ?>
                                                     <option value="<?php echo $row['state_id']; ?>"><?php echo $row['name']; ?></option>
                                                 <?php } ?>
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" name="city" class="form-control" id="city" placeholder="City">
+                                            <input type="text" name="city" class="form-control" id="city" placeholder="City" onchange="checkValidation();" />
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" name="pincode" class="form-control" id="pincode" placeholder="Pincode">
+                                            <input type="text" name="pincode" class="form-control" id="pincode" placeholder="Pincode" onchange="checkValidation();" />
                                         </div>
                                         <div class="form-group">
                                             <input type="text" class="form-control" name="altphone" id="altphone" placeholder="Alternate Phone (Optional)">
                                         </div>
-                                        <button id="disable_button" type="submit" class="btn member-register-btn" onclick="makePayment();">Make Payment</button>
+                                        <button id="disable_button" type="submit" class="btn member-register-btn" onclick="makePayment();" disabled>Make Payment</button>
                                     </form>
                                 </div>
                             </div>
@@ -115,7 +115,7 @@
                                             <div class="totals-value" id="cart-total">9440</div>
                                         </div>
                                     </div>
-                                    <button class="checkout" onclick="makePayment();">Make Payment</button>
+                                    <button id="disable_button_checkout" class="checkout" onclick="makePayment();" disabled>Make Payment</button>
                                 </div>
                                 <p class="need">Need help? <a href="contact.php">Contact Us</a></p>
                             </div>
