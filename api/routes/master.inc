@@ -101,7 +101,6 @@ $app->post('/insert_topic', function() use ($app) {
     echoRespnse(201, $res);
 });
 
-
 $app->post('/insert_question', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
@@ -113,7 +112,6 @@ $app->post('/insert_question', function() use ($app) {
     }
     echoRespnse(201, $res);
 });
-
 
 $app->get('/get_subject', function() {
     $res = array('error' => true, 'message' => 'No records found');
