@@ -45,6 +45,15 @@ function MemberInsert() {
     return false;
 }
 
+function checkValidation() {
+    if (validDetails()) {
+        $('#disable_button').prop("disabled", false);
+        $('#disable_button_checkout').prop("disabled", false);
+    } else {
+        $('#disable_button').prop("disabled", true);
+        $('#disable_button_checkout').prop("disabled", true);
+    }
+}
 
 function makePayment() {
     if (validDetails()) {
@@ -93,37 +102,37 @@ function makePayment() {
 
 function validDetails() {
     if ($.trim($('#fname').val()) === '') {
-        swal('Information', 'Please provide first name', 'info');
+        //swal('Information', 'Please provide first name', 'info');
         $('#fname').focus();
         return false;
     }
     if ($.trim($('#lname').val()) === '') {
-        swal('Information', 'Please provide last name', 'info');
+        //swal('Information', 'Please provide last name', 'info');
         $('#lname').focus();
         return false;
     }
     if ($.trim($('#email').val()) === '') {
-        swal('Information', 'Please provide email', 'info');
+        //swal('Information', 'Please provide email', 'info');
         $('#email').focus();
         return false;
     }
     if ($.trim($('#mobile').val()) === '') {
-        swal('Information', 'Please provide mobile', 'info');
+        //swal('Information', 'Please provide mobile', 'info');
         $('#mobile').focus();
         return false;
     }
     if ($.trim($('#address').val()) === '') {
-        swal('Information', 'Please provide address', 'info');
+        //swal('Information', 'Please provide address', 'info');
         $('#address').focus();
         return false;
     }
     if ($.trim($('#city').val()) === '') {
-        swal('Information', 'Please provide city', 'info');
+        //swal('Information', 'Please provide city', 'info');
         $('#city').focus();
         return false;
     }
     if ($.trim($('#pincode').val()) === '') {
-        swal('Information', 'Please provide pincode', 'info');
+        //swal('Information', 'Please provide pincode', 'info');
         $('#pincode').focus();
         return false;
     }
