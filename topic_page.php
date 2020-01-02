@@ -24,7 +24,7 @@ $topics = $obj->selectAll('*', 'topic', 'topic_id > 0');
                                 <?php foreach ($topics as $row) { ?>
                                     <div class="topic_list_section">
                                         <div class="topic_list_position_left">
-                                            <a href="quiz_page"><i class="icon-caret-right"></i> <?php echo $row['name']; ?></a>
+                                            <i class="icon-caret-right"></i><a href="quiz_page"> <?php echo $row['name']; ?></a>
                                         </div>
                                         <div class="topic_list_position_right">
                                             <a href="#" class="btn btn-green">Restart</a> 

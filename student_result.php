@@ -37,16 +37,16 @@ $student = $obj->selectrow('*', 'student_register', 'student_register_id > 0');
                                                 <thead>
                                                     <tr>
                                                         <th>
-                                                            #
+                                                            Question No.
                                                         </th>
                                                         <th>
-                                                            First Name
+                                                            Attend Questions
                                                         </th>
                                                         <th>
-                                                            Last Name
+                                                            Correct Question
                                                         </th>
                                                         <th>
-                                                            Username
+                                                            Wrong Question
                                                         </th>
                                                     </tr>
                                                 </thead>
@@ -56,41 +56,41 @@ $student = $obj->selectrow('*', 'student_register', 'student_register_id > 0');
                                                             1
                                                         </td>
                                                         <td>
-                                                            Mark
+                                                            20
                                                         </td>
                                                         <td>
-                                                            Otto
+                                                            15
                                                         </td>
                                                         <td>
-                                                            @mdo
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            2
-                                                        </td>
-                                                        <td>
-                                                            Jacob
-                                                        </td>
-                                                        <td>
-                                                            Thornton
-                                                        </td>
-                                                        <td>
-                                                            @fat
+                                                            5
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            3
+                                                            1
                                                         </td>
                                                         <td>
-                                                            Larry
+                                                            20
                                                         </td>
                                                         <td>
-                                                            the Bird
+                                                            15
                                                         </td>
                                                         <td>
-                                                            @twitter
+                                                            5
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            1
+                                                        </td>
+                                                        <td>
+                                                            20
+                                                        </td>
+                                                        <td>
+                                                            15
+                                                        </td>
+                                                        <td>
+                                                            5
                                                         </td>
                                                     </tr>
                                                 </tbody>
@@ -109,16 +109,16 @@ $student = $obj->selectrow('*', 'student_register', 'student_register_id > 0');
                                                 <thead>
                                                     <tr>
                                                         <th>
-                                                            #
+                                                            Question No.
                                                         </th>
                                                         <th>
-                                                            First Name
+                                                            Attend Questions
                                                         </th>
                                                         <th>
-                                                            Last Name
+                                                            Correct Question
                                                         </th>
                                                         <th>
-                                                            Username
+                                                            Wrong Question
                                                         </th>
                                                     </tr>
                                                 </thead>
@@ -128,41 +128,41 @@ $student = $obj->selectrow('*', 'student_register', 'student_register_id > 0');
                                                             1
                                                         </td>
                                                         <td>
-                                                            Mark
+                                                            20
                                                         </td>
                                                         <td>
-                                                            Otto
+                                                            15
                                                         </td>
                                                         <td>
-                                                            @mdo
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            2
-                                                        </td>
-                                                        <td>
-                                                            Jacob
-                                                        </td>
-                                                        <td>
-                                                            Thornton
-                                                        </td>
-                                                        <td>
-                                                            @fat
+                                                            5
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            3
+                                                            1
                                                         </td>
                                                         <td>
-                                                            Larry
+                                                            20
                                                         </td>
                                                         <td>
-                                                            the Bird
+                                                            15
                                                         </td>
                                                         <td>
-                                                            @twitter
+                                                            5
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            1
+                                                        </td>
+                                                        <td>
+                                                            20
+                                                        </td>
+                                                        <td>
+                                                            15
+                                                        </td>
+                                                        <td>
+                                                            5
                                                         </td>
                                                     </tr>
                                                 </tbody>
@@ -181,16 +181,16 @@ $student = $obj->selectrow('*', 'student_register', 'student_register_id > 0');
                                                 <thead>
                                                     <tr>
                                                         <th>
-                                                            #
+                                                            Question No.
                                                         </th>
                                                         <th>
-                                                            First Name
+                                                            Attend Questions
                                                         </th>
                                                         <th>
-                                                            Last Name
+                                                            Correct Question
                                                         </th>
                                                         <th>
-                                                            Username
+                                                            Wrong Question
                                                         </th>
                                                     </tr>
                                                 </thead>
@@ -200,41 +200,41 @@ $student = $obj->selectrow('*', 'student_register', 'student_register_id > 0');
                                                             1
                                                         </td>
                                                         <td>
-                                                            Mark
+                                                            20
                                                         </td>
                                                         <td>
-                                                            Otto
+                                                            15
                                                         </td>
                                                         <td>
-                                                            @mdo
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            2
-                                                        </td>
-                                                        <td>
-                                                            Jacob
-                                                        </td>
-                                                        <td>
-                                                            Thornton
-                                                        </td>
-                                                        <td>
-                                                            @fat
+                                                            5
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            3
+                                                            1
                                                         </td>
                                                         <td>
-                                                            Larry
+                                                            20
                                                         </td>
                                                         <td>
-                                                            the Bird
+                                                            15
                                                         </td>
                                                         <td>
-                                                            @twitter
+                                                            5
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            1
+                                                        </td>
+                                                        <td>
+                                                            20
+                                                        </td>
+                                                        <td>
+                                                            15
+                                                        </td>
+                                                        <td>
+                                                            5
                                                         </td>
                                                     </tr>
                                                 </tbody>
