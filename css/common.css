@@ -2409,20 +2409,21 @@ span.psw{
 
 .product-price {
     text-align: center;
-    /*    padding-top: 20px;*/
-    margin: auto 0;
+    /* padding-top: 20px; */
+    margin: auto;
 }
 
 .product-quantity input {
     width: 100%;
+    border: 1px solid;
 }
 
 .product-quantity {
-    margin: auto 0;
+    margin: auto;
 }
 
 .product-removal {
-    margin: auto 0;
+    margin: auto;
 }
 
 .product-removal button.remove-product {
@@ -2431,6 +2432,7 @@ span.psw{
     border: none;
     color: #ed1c24;
     cursor: pointer;
+    width: 100%;
 }
 
 .project-list .product {
