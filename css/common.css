@@ -2584,6 +2584,10 @@ span.psw{
     background: none;
 }
 
+.totals-value {
+    float: right;
+}
+
 @media (max-width: 991px) and (min-width: 320px){
     .sec-oreder-2{
         order: 2;
