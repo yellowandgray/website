@@ -363,6 +363,9 @@ and open the template in the editor.
 
 .topic_list_position_left a i {
     font-size: 25px;
+    position: relative;
+    top: 3px;
+    color: #F03C02;
 }
 
 .topic_list_section a.btn-green, .topic_list_section a.btn-danger {
@@ -371,11 +374,16 @@ and open the template in the editor.
     margin-bottom: 5px;
 }
 .pad-lft {
-    padding-left:10%;
-    margin-top:10px;
+    padding-left: 5%;
+    margin-top: 10px;
 }
 .fs-20{
     font-size: 20px;
+}
+
+.sub_topic_title h6 {
+    font-size: 20px;
+    font-weight: 500;
 }
 
 /*   difficulty checkbox */
@@ -386,12 +394,7 @@ and open the template in the editor.
 }
 .span8 label{
     font-weight: 400;
-    color: #60a260;
-    padding-bottom: 10px;
-}
-.span8 label:hover  {
-    font-weight: 400;
-    color: #6484ab;
+    color: #353535;
 }
 /* The container */
 .dif-container {
@@ -417,10 +420,10 @@ and open the template in the editor.
 /* Create a custom radio button */
 .checkmark {
     position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
+    top: 10px;
+    left: 10px;
+    height: 20px;
+    width: 20px;
     background-color: #eee;
     border-radius: 50%;
 }
@@ -432,7 +435,7 @@ and open the template in the editor.
 
 /* When the radio button is checked, add a blue background */
 .dif-container input:checked ~ .checkmark {
-    background-color: #2196F3;
+    background-color: #30445c;
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
@@ -449,18 +452,50 @@ and open the template in the editor.
 
 /* Style the indicator (dot/circle) */
 .dif-container .checkmark:after {
-    top: 9px;
-    left: 9px;
-    width: 8px;
-    height: 8px;
+    top: 8px;
+    left: 8px;
+    width: 5px;
+    height: 5px;
     border-radius: 50%;
     background: white;
 }
 .box-dif{
-    padding: 10px 20px;
-    background: #e4e4e4;
+    padding: 20px;
+    background: #e3e3e3;
     border-radius: 8px;
 }
 .continue{
     padding: 10px 0px;
+}
+
+.btn_custom {
+    background: #F03C02;
+    color: #fff;
+    padding: 5px 10px;
+    border: 1px solid #F03C02;
+    transition: all .5s;
+}
+
+.btn_custom:hover {
+    background: transparent;
+    color: #F03C02;
+    border: 1px solid #F03C02;
+    text-decoration: none;
+}
+
+.accordion .accordion-group .accordion-heading a {
+    text-decoration: none;
+}
+
+.box-dif .dif-container {
+    padding: 10px;
+    padding-left: 40px;
+    color: #f03c02;
+    background: #fff;
+    transition: all .5s;
+}
+
+.box-dif .dif-container:hover {
+    color: #fff;
+    background: #f03c02;
 }

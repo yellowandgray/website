@@ -38,7 +38,7 @@ $sub_topics = $obj->selectAll('*', 'sub_topic', 'sub_topic_id > 0');
                                     <span class="checkmark"></span>
                                 </label>
                                 <div class="continue">
-                                    <a href="topic_page.php" class="btn btn-theme btn-large e_pulse">Continue</a>
+                                    <a href="topic_page.php" class="btn_custom">Continue</a>
                                 </div>
                             </div>
                         </div>

@@ -15,7 +15,7 @@ $subjects = $obj->selectAll('*', 'subject', 'subject_id > 0');
                     </h4>
                     <div class="row margin-auto">
                         <?php foreach ($subjects as $row) { ?>
-                            <div class="span3 subject-section" onclick="window.location='topic_page'">
+                            <div class="span3 subject-section" onclick="window.location='difficulty'">
                                 <div class="price">Entroll</div>
                                 <div class="subject-1">
                                     <div class="subject-1-img" style="background: url(<?php echo BASE_URL . $row['image_path']; ?>)no-repeat;"></div>
@@ -23,7 +23,7 @@ $subjects = $obj->selectAll('*', 'subject', 'subject_id > 0');
                                 <div class="subject-1-text">
                                     <h2><?php echo $row['name']; ?></h2>
                                     <p><?php echo $row['description']; ?></p>
-                                    <button class="btn btn-theme margintop10" onclick="window.location='topic_page'">SEE MORE...</button>
+                                    <button class="btn btn-theme margintop10" onclick="window.location='difficulty'">SEE MORE...</button>
                                 </div>
                             </div>
                         <?php } ?>

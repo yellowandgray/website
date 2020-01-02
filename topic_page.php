@@ -32,7 +32,8 @@ $sub_topics = $obj->selectAll('*', 'sub_topic', 'sub_topic_id > 0');
                                                     <i class="icon-angle-down"></i> <?php echo $row['name']; ?> </a>
                                             </div>
                                             <div id="<?php echo $row['topic_id']; ?>" class="accordion-body collapse pad-lft">
-                                                <div>
+                                                <div class="sub_topic_title">
+                                                    <h6>Sub Topic</h6>
                                                     <?php foreach ($sub_topics as $subrow) { ?>
                                                         <?php if ($subrow['topic_id'] == $row['topic_id']) { ?> 
                                                             <div class="topic_list_section">
