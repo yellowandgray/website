@@ -139,39 +139,39 @@
                                     <div class="check-login">
                                         <h4><span>2</span> ENTER YOUR DETAILS</h4>
                                     </div>
-                                    <form class="user-register" onsubmit="return makePayment();">
+                                    <form id="register_section" class="user-register" onsubmit="return makePayment();">
                                         <div class="form-group">
-                                            <input type="text" name="name" class="form-control" id="fname" placeholder="First Name">
+                                            <input type="text" name="name" class="form-control" id="fname" placeholder="First Name" data-ok="false">
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" name="name" class="form-control" id="lname" placeholder="Last Name">
+                                            <input type="text" name="name" class="form-control" id="lname" placeholder="Last Name" data-ok="false">
                                         </div>
                                         <div class="form-group">
-                                            <input type="email" name="email" class="form-control" id="email" placeholder="Email Address">
+                                            <input type="email" name="email" class="form-control" id="email" placeholder="Email Address" data-ok="false">
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" name="mobile" class="form-control" id="mobile" placeholder="Mobile">
+                                            <input type="text" name="mobile" class="form-control" id="mobile" placeholder="Mobile" data-ok="false">
                                         </div>
                                         <div class="form-group">
-                                            <textarea type="text" rows="4" name="address" class="form-control" id="address" placeholder="Delivery Address"></textarea>
+                                            <textarea type="text" rows="4" name="address" class="form-control" id="address" placeholder="Delivery Address" data-ok="false"></textarea>
                                         </div>
                                         <div class="form-group">
-                                            <select id="state">
+                                            <select id="state" data-ok="false">
                                                 <?php foreach ($states as $row) { ?>
                                                     <option value="<?php echo $row['state_id']; ?>"><?php echo $row['name']; ?></option>
                                                 <?php } ?>
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" name="city" class="form-control" id="city" placeholder="City">
+                                            <input type="text" name="city" class="form-control" id="city" placeholder="City" data-ok="false">
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" name="pincode" class="form-control" id="pincode" placeholder="Pincode">
+                                            <input type="text" name="pincode" class="form-control" id="pincode" placeholder="Pincode" data-ok="false">
                                         </div>
                                         <div class="form-group">
                                             <input type="text" class="form-control" name="altphone" id="altphone" placeholder="Alternate Phone (Optional)">
                                         </div>
-                                        <button type="submit" class="btn member-register-btn" onclick="makePayment();">Make Payment</button>
+                                        <button id="disable_button" type="submit" class="btn member-register-btn" onclick="makePayment();" aria-disabled="true" aria-describedby="fname lname email mobile address state city pincode">Make Payment</button>
                                     </form>
                                 </div>
                             </div>

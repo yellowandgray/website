@@ -115,7 +115,7 @@ if ($_POST['fname']) {
     $mail->Body = $message;
     $mail->AltBody = $message;
 
-    $address = "projects@yellowandgray.com";
+    $address = "info@ghmindia.com";
 
 
     $mail->AddAddress($address, "Guardian health management");
