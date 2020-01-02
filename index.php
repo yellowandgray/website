@@ -601,7 +601,7 @@
                                 <li class="col-md-3 col-sm-6 f-cat f-cat2 f-cat3"><span> <a href="images/facilities/dance-01.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a><img src="images/facilities/dance-01.jpg" alt="Dance - ENPEE International School" title="Dance - ENPEE International School"></span> </li>
                                 <li class="col-md-3 col-sm-6 f-cat f-cat3 f-cat1"><span> <a href="images/facilities/music-01.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a> <img src="images/facilities/music-01.jpg" alt="Music - ENPEE International School" title="Music - ENPEE International School"></span> </lre-Ki>
                                 <li class="col-md-3 col-sm-6 f-cat f-cat4 f-cat2"><span> <a href="images/facilities/sports-1.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a><img src="images/facilities/sports-1.jpg" alt="Sports - ENPEE International School" title="Sports - ENPEE International School"></span> </li>
-                                <li class="col-md-3 col-sm-6 f-cat f-cat1 f-cat4"><span> <a href="images/facilities/pic-yoga-01.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a><img src="images/facilities/pic-yoga-01.jpg" alt="Yoga - ENPEE International School" title="Yoga - ENPEE International School"></span> </li>
+                                <li class="col-md-3 col-sm-6 f-cat f-cat1 f-cat4"><span> <a href="images/facilities/pic-yoga-01.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a><img src="images/facilities/pic-yoga-01.jpg" alt="Games for Kids - ENPEE International School" title="Yoga - ENPEE International School"></span> </li>
                                 <li class="col-md-3 col-sm-6 f-cat f-cat2 f-cat3"><span> <a href="images/facilities/theatre-1.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a><img src="images/facilities/theatre-1.jpg" alt="Theatre - ENPEE International School" title="Theatre - ENPEE International School"></span> </li>
                                 <li class="col-md-3 col-sm-6 f-cat f-cat3 f-cat2"><span> <a href="images/facilities/swim-1.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a><img src="images/facilities/swim-1.jpg" alt="Class Room - ENPEE International School" title="Class Room - ENPEE International School"></span> </li>
                                 <li class="col-md-3 col-sm-6 f-cat f-cat4 f-cat1"><span> <a href="images/facilities/tour-01.jpg" data-rel="prettyPhoto[gallery]"> <i class="fas fa-search"></i> </a><img src="images/facilities/tour-01.jpg" alt="Tourism - ENPEE International School" title="Tourism - ENPEE International School"></span> </li>
@@ -617,10 +617,18 @@
                     <h2 class="text-center padding-tb-30">Technology Partners</h2>
                     <!--                    <div id="partner-logos" class="owl-carousel owl-theme">-->
                     <div class="row">
-                        <div class="col-md-3"></div>
-                        <div class="col-md-3"><a href="http://www.yellowandgray.com" target="_blank"><img src="images/partners/logo-YGSTUDIO.png" alt="Yellowandgray" title="Yellowandgray"></a></div>
-                        <div class="col-md-3"><a href="http://morfosis.co.in/" target="_blank"><img src="images/partners/002.png" alt="Morfosis" title="Morfosis"></a></div>
-                        <div class="col-md-3"></div>
+                        <div class="col-md-4 col-sm-4"><a href="http://www.yellowandgray.com" target="_blank"><img src="images/partners/logo-YGSTUDIO.png" alt="Yellowandgray" title="Yellowandgray" class="img-responsive center-block"></a></div>
+                        <div class="col-md-4 col-sm-4"><a href="http://morfosis.co.in/" target="_blank"><img src="images/partners/002.png" alt="Morfosis" title="Morfosis" class="img-responsive center-block"></a></div>
+                        <div class="col-md-4 col-sm-4"><a href="http://www.sportzvillage.com/schools/" target="_blank"><img src="images/partners/005.png" alt="sportzvillage" title="sportzvillage" class="img-responsive center-block"></a></div>
+                        
+                    </div>
+                    <h2 class="text-center padding-tb-30">Infrastructure Providers</h2>
+                    <!--                    <div id="partner-logos" class="owl-carousel owl-theme">-->
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4"><a href="https://www.ki.com/" target="_blank"><img src="images/partners/003.png" alt="Krueger International Furniture" title="Krueger International Furniture" class="img-responsive center-block"></a></div>
+                        <div class="col-md-4 col-sm-4"><a href="#" target="_blank"><img src="images/partners/004.png" alt="" title="" class="img-responsive center-block"></a></div>
+                        <div class="col-md-4 col-sm-4"><a href="https://www.forcemotors.com/" target="_blank"><img src="images/partners/006.png" alt="forcemotors" title="forcemotors" class="img-responsive center-block"></a></div>
+                       
                     </div>
 <!--                        <div class="item"><img src="images/partners/001.png" alt=""></div>
                     <div class="item"><img src="images/partners/002.png" alt=""></div>
