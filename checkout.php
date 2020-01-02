@@ -30,84 +30,6 @@
         <section class="ftco-section" style="background-color: #f1f3f6;">
             <div class="container">
                 <div class="row">
-                    <!--                    <div class="col-lg-12 pl-md-5 ftco-animate pad-80">
-                                            <div class="tab-add">
-                                                <button class="tablinks-add" onclick="openCity(event, 'step-1')" id="defaultOpen">Cart</button>
-                                                <button class="tablinks-add" onclick="openCity(event, 'step-2')">Shipping Address</button>
-                                                <button class="tablinks-add" onclick="openCity(event, 'step-3')">Payment</button>
-                                            </div>
-                                            <div id="step-1" class="tabcontent">
-                                                <table class="add-table">
-                                                    <tr>
-                                                        <th>Product name</th>
-                                                        <th>Price</th>
-                                                        <th>Quantity</th>
-                                                        <th>Total</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Fresche Mini Kit</td>
-                                                        <td><i class="fa fa-inr" aria-hidden="true"></i></i> 250</td>
-                                                        <td>1</td>
-                                                        <td><i class="fa fa-inr" aria-hidden="true"></i> 250</td>
-                                                    </tr>
-                                                </table>
-                                                <div class="add-next">
-                                                    <button>next</button>
-                                                </div>
-                    
-                                            </div>
-                    
-                                            <div id="step-2" class="tabcontent">
-                                                <div class="shipping">
-                                                    <from>
-                                                        <div class="row">
-                                                            <div class="col-md-6">
-                                                                <label for="fname"><i class="fa fa-user"></i> Full Name</label>
-                                                                <input type="text" id="fname" name="firstname" placeholder="">
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <label for="email"><i class="fa fa-envelope"></i> Email</label>
-                                                                <input type="text" id="email" name="email" placeholder="">
-                                                            </div>
-                                                        </div>
-                    
-                    
-                                                        <div>
-                                                            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
-                                                            <input type="text" id="adr" name="address" placeholder="">
-                                                        </div>
-                                                        <div>
-                                                            <label for="city"><i class="fa fa-institution"></i> City</label>
-                                                            <input type="text" id="city" name="city" placeholder="">
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-md-6">
-                                                                <label for="state"></label>
-                                                                <input type="text" id="state" name="state" placeholder="State">
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <label for="zip"></label>
-                                                                <input type="text" id="zip" name="zip" placeholder="Pin">
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <input type="submit" value="Continue to checkout" class="btn">
-                                                        </div>
-                                                    </from>
-                                                    <div class="add-next">
-                                                        <button class="color-back">Back</button>
-                                                        <button>next</button>
-                                                    </div>
-                                                </div>
-                    
-                    
-                                            </div>
-                    
-                                            <div id="step-3" class="tabcontent">
-                                                <h3>Tokyo</h3>
-                                                <p>Tokyo is the capital of Japan.</p>
-                                            </div>
-                                        </div>-->
                     <div class="col-md-12">
                         <div class="row">
                             <div class="col-md-8">
@@ -141,37 +63,37 @@
                                     </div>
                                     <form id="register_section" class="user-register" onsubmit="return makePayment();">
                                         <div class="form-group">
-                                            <input type="text" name="name" class="form-control" id="fname" placeholder="First Name" data-ok="false">
+                                            <input type="text" name="name" class="form-control" id="fname" placeholder="First Name">
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" name="name" class="form-control" id="lname" placeholder="Last Name" data-ok="false">
+                                            <input type="text" name="name" class="form-control" id="lname" placeholder="Last Name">
                                         </div>
                                         <div class="form-group">
-                                            <input type="email" name="email" class="form-control" id="email" placeholder="Email Address" data-ok="false">
+                                            <input type="email" name="email" class="form-control" id="email" placeholder="Email Address">
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" name="mobile" class="form-control" id="mobile" placeholder="Mobile" data-ok="false">
+                                            <input type="text" name="mobile" class="form-control" id="mobile" placeholder="Mobile">
                                         </div>
                                         <div class="form-group">
-                                            <textarea type="text" rows="4" name="address" class="form-control" id="address" placeholder="Delivery Address" data-ok="false"></textarea>
+                                            <textarea type="text" rows="4" name="address" class="form-control" id="address" placeholder="Delivery Address"></textarea>
                                         </div>
                                         <div class="form-group">
-                                            <select id="state" data-ok="false">
+                                            <select id="state">
                                                 <?php foreach ($states as $row) { ?>
                                                     <option value="<?php echo $row['state_id']; ?>"><?php echo $row['name']; ?></option>
                                                 <?php } ?>
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" name="city" class="form-control" id="city" placeholder="City" data-ok="false">
+                                            <input type="text" name="city" class="form-control" id="city" placeholder="City">
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" name="pincode" class="form-control" id="pincode" placeholder="Pincode" data-ok="false">
+                                            <input type="text" name="pincode" class="form-control" id="pincode" placeholder="Pincode">
                                         </div>
                                         <div class="form-group">
                                             <input type="text" class="form-control" name="altphone" id="altphone" placeholder="Alternate Phone (Optional)">
                                         </div>
-                                        <button id="disable_button" type="submit" class="btn member-register-btn" onclick="makePayment();" aria-disabled="true" aria-describedby="fname lname email mobile address state city pincode">Make Payment</button>
+                                        <button id="disable_button" type="submit" class="btn member-register-btn" onclick="makePayment();">Make Payment</button>
                                     </form>
                                 </div>
                             </div>
