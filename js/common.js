@@ -50,7 +50,7 @@ function makePayment() {
     if (validDetails()) {
         var rzpOptions = {
             key: "rzp_live_i38CED8NpGScFL",
-            amount: (($('#cart_quantity').val() * 8000) * 100),
+            amount: (($('#cart_quantity').val() * 8000 + ($('#cart_quantity').val() * 8000 * 18 / 100)) * 100),
             name: $('#fname').val(),
             description: "Purchase product",
             image: "http://ghmindia.com/images/logo-01.png",
