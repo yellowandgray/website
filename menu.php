@@ -25,7 +25,9 @@ if (isset($_SESSION['student_register_id'])) {
                 <div class = 'span8'>
                     <div class = 'headnav'>
                         <ul>
-                            <li><a href = '#mySignup' data-toggle = 'modal'><i class = 'icon-user'></i> Register</a></li>
+                            <li>
+                                <a href = '#mySignup' data-toggle = 'modal'><i class = 'icon-user'></i> Register</a>
+                            </li>
                             <li>
                                 <a href = '#mySignin' data-toggle = 'modal'>Sign in</a>
                             </li>
@@ -33,9 +35,15 @@ if (isset($_SESSION['student_register_id'])) {
                     </div>
                     <div class = 'headnav-1'>
                         <ul>
-                            <li><a href = '#mySignup' data-toggle = 'modal'><i class = 'icon-user'></i></a></li>
                             <li>
-                                <a href = '#mySignin' data-toggle = 'modal'><i class="icon-signin"></i></a>
+                                <a href = '#mySignup' data-toggle = 'modal'>
+                                    <i class = 'icon-user'></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href = '#mySignin' data-toggle = 'modal'>
+                                    <i class="icon-signin"></i>
+                                </a>
                             </li>
                         </ul>
                     </div>
