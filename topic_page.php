@@ -65,6 +65,6 @@ $topics = $obj->selectAll('t.*, IFNULL(MAX(q.question_id), 0) AS max_questions, 
             </section>
             <?php include 'footer.php'; ?>
         </div>
-        <?php include 'script . php'; ?>
+        <?php include 'script.php'; ?>
     </body>
 </html>
