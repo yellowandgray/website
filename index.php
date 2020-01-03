@@ -138,7 +138,7 @@ $obj = new Common();
                         </div>
                         <div class="span4 box-shadow">
                             <div class="box-custom">
-                                <div class="box-img"></div>
+                                <div class="box-img2"></div>
                             </div>
                             <div class="box-text">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
@@ -146,7 +146,7 @@ $obj = new Common();
                         </div>
                         <div class="span4 box-shadow">
                             <div class="box-custom">
-                                <div class="box-img"></div>
+                                <div class="box-img3"></div>
                             </div>
                             <div class="box-text">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
