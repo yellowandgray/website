@@ -150,7 +150,6 @@ if (count($questions) > 0) {
                 this.userResponses = Array(this.quiz.questions.length).fill(null);
             },
             selectOption: function (index) {
-                console.log(index);
                 Vue.set(this.userResponses, this.questionIndex, index);
                 if (this.questionIndex < this.quiz.questions.length)
                     this.questionIndex++;
