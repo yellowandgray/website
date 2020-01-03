@@ -28,7 +28,7 @@ import { AppComponent } from './app.component';
 import { SubjectComponent, SubjectForm, SubjectDelete } from './subject/subject.component';
 import { HeaderComponent } from './header/header.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
-import { QuestionComponent, QuestionForm } from './question/question.component';
+import { QuestionComponent, QuestionForm, QuestionDelete } from './question/question.component';
 import { TopicComponent, TopicForm, TopicDelete } from './topic/topic.component';
 import { UserComponent, UserForm, UserDelete, BlockForm, ResultForm } from './user/user.component';
 
@@ -44,6 +44,7 @@ import { UserComponent, UserForm, UserDelete, BlockForm, ResultForm } from './us
     SidenavComponent,
     QuestionComponent,
     QuestionForm,
+    QuestionDelete,
     TopicComponent,
     TopicForm,
     TopicDelete,
@@ -80,7 +81,7 @@ import { UserComponent, UserForm, UserDelete, BlockForm, ResultForm } from './us
     MatExpansionModule,
     
   ],
-  entryComponents: [SubjectComponent, SubjectForm, SubjectDelete, QuestionComponent, QuestionForm, TopicComponent, TopicForm, TopicDelete, UserComponent, UserForm, UserDelete, BlockForm, ResultForm],
+  entryComponents: [SubjectComponent, SubjectForm, SubjectDelete, QuestionComponent, QuestionForm, QuestionDelete, TopicComponent, TopicForm, TopicDelete, UserComponent, UserForm, UserDelete, BlockForm, ResultForm],
   providers: [],
   bootstrap: [AppComponent]
 })

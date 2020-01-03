@@ -31,6 +31,14 @@ if (isset($_SESSION['student_register_id'])) {
                             </li>
                         </ul>
                     </div>
+                    <div class = 'headnav-1'>
+                        <ul>
+                            <li><a href = '#mySignup' data-toggle = 'modal'><i class = 'icon-user'></i></a></li>
+                            <li>
+                                <a href = '#mySignin' data-toggle = 'modal'><i class="icon-signin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
                     <!-- Signup Modal -->
                     <?php include 'singnup.php'; ?>
                     <!-- end signup modal -->
