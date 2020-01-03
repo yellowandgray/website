@@ -2,7 +2,34 @@
 session_start();
 require_once 'api/include/common.php';
 $obj = new Common();
-$topics = $obj->selectRow('t.*, s.name AS subject', 'topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id', 'topic_id > 0');
+if (!isset($_GET['topic']) || !isset($_SESSION['student_register_id'])) {
+    header('Location: topic_page');
+}
+$student = $obj->selectRow('*', 'student_register', 'student_register_id = ' . $_SESSION['student_register_id']);
+$topic = $obj->selectRow('t.topic_id, t.name, s.name AS subject, s.description', 'topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id', 't.name = \'' . $_GET['topic'] . '\' AND t.subject_id = ' . $_SESSION['student_selected_subject_id']);
+if (count($topic) == 0) {
+    header('Location: topic_page');
+}
+$_SESSION['student_selected_topic_id'] = $topic['topic_id'];
+$questions = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer', 'question', 'topic_id = ' . $topic['topic_id'] . ' LIMIT 2');
+$questions_list = array();
+if (count($questions) > 0) {
+    foreach ($questions as $q) {
+        $options = array();
+        array_push($options, array('text' => $q['a'], 'correct' => ($q['answer'] == 'A' ? true : false)));
+        array_push($options, array('text' => $q['b'], 'correct' => ($q['answer'] == 'B' ? true : false)));
+        if (isset($q['c'])) {
+            array_push($options, array('text' => $q['c'], 'correct' => ($q['answer'] == 'C' ? true : false)));
+        }
+        if (isset($q['d'])) {
+            array_push($options, array('text' => $q['d'], 'correct' => ($q['answer'] == 'D' ? true : false)));
+        }
+        array_push($questions_list, array(
+            'text' => $q['name'],
+            'responses' => $options
+        ));
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,8 +45,8 @@ $topics = $obj->selectRow('t.*, s.name AS subject', 'topic AS t LEFT JOIN subjec
                 <div class="row">
                     <div class="span4">
                         <div class="side_section">
-                            <h2><?php echo $topics['subject']; ?> / <?php echo $topics['name']; ?></h2>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            <h2><?php echo $topic['subject']; ?> / <?php echo $topic['name']; ?></h2>
+                            <p><?php echo $topic['description']; ?></p>
                         </div>
                     </div>
                     <!--question Box-->
@@ -36,17 +63,14 @@ $topics = $obj->selectRow('t.*, s.name AS subject', 'topic AS t LEFT JOIN subjec
                                     </div>
                                     <!--/progress-->
                                 </div>
-
                                 <!-- questionTitle -->
                                 <h2 class="titleContainer title">{{ quiz.questions[questionIndex].text }}</h2>
-
                                 <!-- quizOptions -->
                                 <div class="optionContainer">
                                     <div class="option" v-for="(response, index) in quiz.questions[questionIndex].responses" @click="selectOption(index)" :class="{ 'is-selected': userResponses[questionIndex] == index}" :key="index">
                                          {{ index | charIndex }}. {{ response.text }}
                                 </div>
                             </div>
-
                             <!--quizFooter: navigation and progress-->
                             <footer class="questionFooter">
 
@@ -68,10 +92,8 @@ $topics = $obj->selectRow('t.*, s.name AS subject', 'topic AS t LEFT JOIN subjec
 
                         </footer>
                         <!--/quizFooter-->
-
                     </div>
                     <!--/questionContainer-->
-
                     <!--quizCompletedResult-->
                     <div v-if="questionIndex >= quiz.questions.length" v-bind:key="questionIndex" class="quizCompleted has-text-centered">
 
@@ -93,9 +115,7 @@ $topics = $obj->selectRow('t.*, s.name AS subject', 'topic AS t LEFT JOIN subjec
 
                     </div>
                     <!--/quizCompetedResult-->
-
                     <!-- 		</transition> -->
-
                 </div>
             </div>
             <!-- question Box -->
@@ -107,130 +127,10 @@ $topics = $obj->selectRow('t.*, s.name AS subject', 'topic AS t LEFT JOIN subjec
 <?php include 'script.php'; ?>
 <script>
     var quiz = {
-        user: "Dave",
-        questions: [
-            {
-                text: "What is the full form of HTTP?",
-                responses: [
-                    {text: "Hyper text transfer package"},
-                    {text: "Hyper text transfer protocol", correct: true},
-                    {text: "Hyphenation text test program"},
-                    {text: "None of the above"}
-                ]
-            },
-            {
-                text: "ஒரு மைல் என்பது எத்தனை கிலோ மீட்டர்?",
-                responses: [
-                    {text: "2.456 கி.மீ"},
-                    {text: "1.609 கி.மீ", correct: true},
-                    {text: "2.150 கி.மீ"},
-                    {text: "1.125 கி.மீ"}
-                ]
-            },
-            {
-                text: "HTML document start and end with which tag pairs?",
-                responses: [
-                    {text: "HTML", correct: true},
-                    {text: "WEB"},
-                    {text: "HEAD"},
-                    {text: "BODY"}
-                ]
-            },
-            {
-                text: "( 4 1/2 ) ( 6 2/3 ) ( 0.40 ) = ?",
-                responses: [
-                    {text: "3.2", correct: true},
-                    {text: "2 2/3"},
-                    {text: "6"},
-                    {text: "12"}
-                ]
-            },
-            {
-                text: "Which tag is used to create body text in HTML?",
-                responses: [
-                    {text: "HEAD"},
-                    {text: "BODY", correct: true},
-                    {text: "TITLE"},
-                    {text: "TEXT"}
-                ]
-            },
-            {
-                text: "Outlook Express is _________",
-                responses: [
-                    {text: "E-Mail Client", correct: true},
-                    {text: "Browser"},
-                    {
-                        text: "Search Engine"
-                    },
-                    {text: "None of the above"}
-                ]
-            },
-            {
-                text: "What is a search engine?",
-                responses: [
-                    {text: "A hardware component "},
-                    {
-                        text: "A machinery engine that search data"
-                    },
-                    {text: "A web site that searches anything", correct: true},
-                    {text: "A program that searches engines"}
-                ]
-            },
-            {
-                text:
-                        "What does the .com domain represents?",
-                responses: [
-                    {text: "Network"},
-                    {text: "Education"},
-                    {text: "Commercial", correct: true},
-                    {text: "None of the above"}
-                ]
-            },
-            {
-                text: "In Satellite based communication, VSAT stands for? ",
-                responses: [
-                    {text: " Very Small Aperture Terminal", correct: true},
-                    {text: "Varying Size Aperture Terminal "},
-                    {
-                        text: "Very Small Analog Terminal"
-                    },
-                    {text: "None of the above"}
-                ]
-            },
-            {
-                text: "What is the full form of TCP/IP? ",
-                responses: [
-                    {text: "Telephone call protocol / international protocol"},
-                    {text: "Transmission control protocol / internet protocol", correct: true},
-                    {text: "Transport control protocol / internet protocol "},
-                    {text: "None of the above"}
-                ]
-            },
-            {
-                text:
-                        "What is the full form of HTML?",
-                responses: [
-                    {
-                        text: "Hyper text marking language"
-                    },
-                    {text: "Hyphenation text markup language "},
-                    {text: "Hyper text markup language", correct: true},
-                    {text: "Hyphenation test marking language"}
-                ]
-            },
-            {
-                text: "\"Yahoo\", \"Infoseek\" and \"Lycos\" are _________?",
-                responses: [
-                    {text: "Browsers "},
-                    {text: "Search Engines", correct: true},
-                    {text: "News Group"},
-                    {text: "None of the above"}
-                ]
-            }
-        ]
+        user: "<?php echo $student['student_name']; ?>",
+        questions: <?php echo json_encode($questions_list); ?>
     },
             userResponseSkelaton = Array(quiz.questions.length).fill(null);
-
     var app = new Vue({
         el: "#app",
         data: {
@@ -250,14 +150,15 @@ $topics = $obj->selectRow('t.*, s.name AS subject', 'topic AS t LEFT JOIN subjec
                 this.userResponses = Array(this.quiz.questions.length).fill(null);
             },
             selectOption: function (index) {
+                console.log(index);
                 Vue.set(this.userResponses, this.questionIndex, index);
-                //console.log(this.userResponses);
+                if (this.questionIndex < this.quiz.questions.length)
+                    this.questionIndex++;
             },
             next: function () {
                 if (this.questionIndex < this.quiz.questions.length)
                     this.questionIndex++;
             },
-
             prev: function () {
                 if (this.quiz.questions.length > 0)
                     this.questionIndex--;
@@ -281,7 +182,6 @@ $topics = $obj->selectRow('t.*, s.name AS subject', 'topic AS t LEFT JOIN subjec
             }
         }
     });
-
 </script>
 </body>
 </html>
