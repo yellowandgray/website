@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once 'api/include/common.php';
 $obj = new Common();
 $topics = $obj->selectRow('t.*, s.name AS subject', 'topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id', 'topic_id > 0');

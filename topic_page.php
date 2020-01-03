@@ -56,7 +56,7 @@ $topics = $obj->selectAll('t.*, IFNULL(MAX(q.question_id), 0) AS max_questions, 
                                     }
                                 } else {
                                     ?>
-                                    Sorry no topics were found
+                                    <p>Sorry no topics were found</p>
                                 <?php } ?>
                             </div>
                         </div>

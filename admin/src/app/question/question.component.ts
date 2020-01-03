@@ -26,7 +26,7 @@ export class QuestionComponent implements OnInit {
         this.getQuestion();
     }
     getQuestion(): void {
-        this.httpClient.get<any>('http://localhost/microview/megana/api/v1/get_question')
+        this.httpClient.get<any>('http://localhost/project/mekana/api/v1/get_question')
         .subscribe(
                 (res)=>{
                     this.question = res["result"]["data"];
@@ -39,7 +39,7 @@ export class QuestionComponent implements OnInit {
         );
     }
     getsubject(): void {
-        this.httpClient.get<any>('http://localhost/microview/megana/api/v1/get_subject')
+        this.httpClient.get<any>('http://localhost/project/mekana/api/v1/get_subject')
             .subscribe(
                 (res) => {
                     this.suject = res["result"]["data"];
@@ -52,7 +52,7 @@ export class QuestionComponent implements OnInit {
             );
     }
     gettopic(): void {
-        this.httpClient.get<any>('http://localhost/microview/megana/api/v1/get_topic')
+        this.httpClient.get<any>('http://localhost/project/mekana/api/v1/get_topic')
             .subscribe(
                 (res) => {
                     this.topic = res["result"]["data"];
@@ -129,7 +129,7 @@ export class QuestionForm {
         });
             this.question_id = this.data.question_id;
         }
-        this.httpClient.get('http://localhost/microview/megana/api/v1/get_subject').subscribe(
+        this.httpClient.get('http://localhost/project/mekana/api/v1/get_subject').subscribe(
             (res) => {
                 if (res["result"]["error"] === false) {
                     this.subject = res["result"]["data"];
@@ -144,7 +144,7 @@ export class QuestionForm {
                     duration: 2000,
                 });
             });
-        this.httpClient.get('http://localhost/microview/megana/api/v1/get_topic').subscribe(
+        this.httpClient.get('http://localhost/project/mekana/api/v1/get_topic').subscribe(
             (res) => {
                 if (res["result"]["error"] === false) {
                     this.topic = res["result"]["data"];
@@ -189,7 +189,7 @@ export class QuestionForm {
             formData.append('answer', this.questionForm.value.answer);
           url = 'insert_question';
         }
-        this.httpClient.post('http://localhost/microview/megana/api/v1/'+url, formData).subscribe(
+        this.httpClient.post('http://localhost/project/mekana/api/v1/'+url, formData).subscribe(
             (res)=>{
                   this.loading = false;
                   if(res["result"]["error"] === false) {

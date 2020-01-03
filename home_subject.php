@@ -1,4 +1,5 @@
 <?php 
+session_start();
 require_once 'api/include/common.php';
 $obj = new Common();
 $subjects = $obj->selectAll('*', 'subject', 'subject_id > 0');
