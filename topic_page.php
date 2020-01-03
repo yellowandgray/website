@@ -40,7 +40,7 @@ $topics = $obj->selectAll('t.*, IFNULL(MAX(q.question_id), 0) AS max_questions, 
                                             </div>
                                             <div class="topic_list_position_right">
                                                 <?php if ($row['max_questions_answered'] == 0) { ?>
-                                                    <a href="#" class="btn btn-green">Start</a>
+                                                    <a href="quiz_page?topic=<?php echo $row['name']; ?>" class="btn btn-green">Start</a>
                                                     <?php
                                                 }
                                                 if ($row['max_questions_answered'] == $row['max_questions']) {

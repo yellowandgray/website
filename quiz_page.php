@@ -11,7 +11,7 @@ if (count($topic) == 0) {
     header('Location: topic_page');
 }
 $_SESSION['student_selected_topic_id'] = $topic['topic_id'];
-$questions = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer', 'question', 'topic_id = ' . $topic['topic_id'] . ' LIMIT 2');
+$questions = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer', 'question', 'topic_id = ' . $topic['topic_id'] . ' LIMIT 30');
 $questions_list = array();
 if (count($questions) > 0) {
     foreach ($questions as $q) {
