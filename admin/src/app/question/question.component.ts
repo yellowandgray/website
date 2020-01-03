@@ -6,6 +6,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
+import { Observable } from 'rxjs';
 
 @Component({
     selector: 'app-question',
@@ -86,6 +87,24 @@ export class QuestionComponent implements OnInit {
                 this.getQuestion();
             }
         });
+    }
+
+    
+    confirmDelete(id): void  {
+        var data = null;
+          if(id != 0) { 
+            data = id;
+          }
+    const dialogRef = this.dialog.open(QuestionDelete, {
+        minWidth: "40%",
+        maxWidth: "40%",
+        data: data
+    });
+   dialogRef.afterClosed().subscribe(result => {
+       if(result !== false && result !== 'false') {
+          this.getQuestion();
+       }
+    });
     }
 
 }
@@ -171,7 +190,7 @@ export class QuestionForm {
           if(this.question_id != 0) {
           formData.append('subject_id', this.questionForm.value.subject_id);
           formData.append('topic_id', this.questionForm.value.topic_id);
-          formData.append('question', this.questionForm.value.question);
+          formData.append('name', this.questionForm.value.question);
           formData.append('a', this.questionForm.value.a);
           formData.append('b', this.questionForm.value.b);
           formData.append('c', this.questionForm.value.c);
@@ -249,4 +268,49 @@ export class QuestionForm {
         sanitize: true,
         toolbarPosition: 'top',
     };
+}
+
+
+
+@Component({
+  selector: 'question-delete-confirmation',
+  templateUrl: 'question-delete-confirmation.html',
+})
+export class QuestionDelete {
+    loading = false;
+    question_id = 0;
+    constructor(
+    public dialogRef: MatDialogRef<QuestionDelete>,
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {
+    if(this.data != null) { 
+        this.question_id = this.data;
+    }
+}
+
+  confirmDelete() {
+      if (this.question_id == null || this.question_id == 0) {
+            return;
+      }
+      this.loading = true;
+      this.httpClient.get('http://localhost/project/mekana/api/v1/delete_record/question/question_id='+this.question_id).subscribe(
+          (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this.dialogRef.close(true);
+                }else{
+            this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+            (error)=>{
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+        });
+            }
+        );
+  }
 }

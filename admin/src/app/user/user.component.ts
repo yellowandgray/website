@@ -118,10 +118,10 @@ export class UserForm {
             'city': new FormControl('', Validators.required),
             'pin': new FormControl('', Validators.required),
             'school_name': new FormControl('', Validators.required),
-            'select_standard': new FormControl('', Validators.required),
+            'standard': new FormControl('', Validators.required),
             'password': new FormControl('', Validators.required),
             'confirm_password': new FormControl('', Validators.required),
-            'email': new FormControl('', Validators.required)
+            'email': new FormControl('')
         });
         if(this.data != null) {
            this.userForm.patchValue({
@@ -132,7 +132,7 @@ export class UserForm {
            city: this.data.city,
            pin: this.data.pin,
            school_name: this.data.school_name,
-           standard: this.data.select_standard,
+           standard: this.data.standard,
            password: this.data.password,
            confirm_password: this.data.confirm_password,
            email: this.data.email,
@@ -156,7 +156,7 @@ export class UserForm {
         formData.append('city', this.userForm.value.city);
         formData.append('pin', this.userForm.value.pin);
         formData.append('school_name', this.userForm.value.school_name);
-        formData.append('select_standard', this.userForm.value.standard);
+        formData.append('standard', this.userForm.value.standard);
         formData.append('password', this.userForm.value.password);
         formData.append('confirm_password', this.userForm.value.confirm_password);
         formData.append('email', this.userForm.value.email);
@@ -169,7 +169,7 @@ export class UserForm {
         formData.append('city', this.userForm.value.city);
         formData.append('pin', this.userForm.value.pin);
         formData.append('school_name', this.userForm.value.school_name);
-        formData.append('select_standard', this.userForm.value.standard);
+        formData.append('standard', this.userForm.value.standard);
         formData.append('password', this.userForm.value.password);
         formData.append('confirm_password', this.userForm.value.confirm_password);
         formData.append('email', this.userForm.value.email);

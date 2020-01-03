@@ -3,7 +3,7 @@ function registerStudent() {
     $.ajax({
         type: "POST",
         url: 'api/v1/insert_student',
-        data: {user_name: $('#user_name').val(), student_name: $('#student_name').val(), parent_name: $('#parent_name').val(), mobile: $('#mobile').val(), city: $('#city').val(), pin: $('#pin').val(), school_name: $('#school_name').val(), select_standard: $('#select_standard').val(), email: $('#email').val(), password: $('#password').val(), confirm_password: $('#confirm_password').val()},
+        data: {user_name: $('#user_name').val(), student_name: $('#student_name').val(), parent_name: $('#parent_name').val(), mobile: $('#mobile').val(), city: $('#city').val(), pin: $('#pin').val(), school_name: $('#school_name').val(), standard: $('#standard').val(), email: $('#email').val(), password: $('#password').val(), confirm_password: $('#confirm_password').val()},
         success: function (data) {
             $('.loader').removeClass('is-active');
             if (data.result.error === false) {
@@ -14,7 +14,7 @@ function registerStudent() {
                 $('#city').val('');
                 $('#pin').val('')
                 $('#school_name').val('');
-                $('#select_standard').val('');
+                $('#standard').val('');
                 $('#email').val('');
                 $('#password').val('');
                 $('#confirm_password').val('');

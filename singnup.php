@@ -50,7 +50,7 @@
             <div class = 'control-group'>
                 <label class = 'control-label' for = 'slelct_standard'>Select Standard</label>
                 <div class = 'controls'>
-                    <select id = 'select_standard' required>
+                    <select id = 'standard' required>
                         <option value = '10th-State-Board'>10th State Board</option>
                         <option value = '10th-CBSC'>10th CBSC</option>
                     </select>
