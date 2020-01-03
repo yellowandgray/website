@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 02, 2020 at 07:35 PM
+-- Generation Time: Jan 03, 2020 at 07:44 AM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.4
 
@@ -235,6 +235,7 @@ CREATE TABLE `student_answer` (
   `actual_answer_option` varchar(2) NOT NULL DEFAULT '',
   `is_correct_answer` tinyint(1) NOT NULL DEFAULT '0',
   `is_skipped` tinyint(1) NOT NULL DEFAULT '0',
+  `student_register_id` int(11) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `created_by` int(11) DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
