@@ -2633,6 +2633,11 @@ article .align-right {
     .headnav-1 ul li a {
         font-size: 22px;
     }
+    .subject-section {
+        width: 95% !important;
+        margin: 0 auto !important;
+        margin-bottom: 30px !important;
+    }
 }
 
 @media (max-width: 360px) {}

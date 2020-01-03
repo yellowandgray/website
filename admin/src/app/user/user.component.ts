@@ -5,7 +5,6 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import {MatExpansionModule} from '@angular/material/expansion';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -58,24 +57,28 @@ export class UserComponent implements OnInit {
             }
         });
     }
-    openBlock(id, res): void {
+    openBlock(): void {
         const dialogRef = this.dialog.open(BlockForm, {
           minWidth: "40%",
           maxWidth: "40%"
         });
 
         dialogRef.afterClosed().subscribe(result => {
-          
+          if(result !== false && result !== 'false') {
+           
+         }
         });
     }
-    openResult(id, res): void {
+    openResult(): void {
         const dialogRef = this.dialog.open(ResultForm, {
           minWidth: "40%",
           maxWidth: "40%"
         });
 
         dialogRef.afterClosed().subscribe(result => {
-          
+          if(result !== false && result !== 'false') {
+            
+         }
         });
     }
     confirmDelete(id): void  {
