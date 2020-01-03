@@ -20,7 +20,7 @@
 <script src="js/vue.min.js" type="text/javascript"></script>
 <script type="text/javascript">
     $("#open-logout").click(function (e) {
-        console.log("test");
+        //console.log("test");
         e.stopPropagation();
         $(".logout_dropdown").show("fast");
     });

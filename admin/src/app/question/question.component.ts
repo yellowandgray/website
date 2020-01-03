@@ -312,5 +312,5 @@ export class QuestionDelete {
         });
             }
         );
-  }
+    }
 }
