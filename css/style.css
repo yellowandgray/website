@@ -2386,10 +2386,10 @@ article img.pull-right, article .align-right {
 
 @media (max-width: 480px) {
     header .logo {
-        margin: 0 auto;
+/*        margin: 0 auto;*/
         text-align: center;
         margin-top: 20px;
-        float: none;
+/*        float: none;*/
     }
     header .logo img {
         margin-bottom: 10px;
@@ -2449,6 +2449,31 @@ article img.pull-right, article .align-right {
         width: 20px;
         height: 20px;
         font-size: 14px;
+    }
+    .headnav {
+        display: none;
+    }
+    .headnav-1 {
+        display: block !important;
+        float: right;
+        margin: 15px 0 0 0;
+        border-bottom: 1px dotted #e6e6e6;
+    }
+    .headnav-1 ul {
+        margin-left: 0;
+        list-style: none;
+    }
+    .headnav-1 ul li {
+        display: inline;
+        margin-left: 10px;
+    }
+    .headnav-1 ul li a {
+        font-size: 22px;
+    }
+    .subject-section {
+        width: 95% !important;
+        margin: 0 auto !important;
+        margin-bottom: 30px !important;
     }
 }
 

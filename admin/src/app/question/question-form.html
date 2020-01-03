@@ -26,6 +26,31 @@
             </div>
         </div>
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Sub Topic</mat-label>
+                    <mat-select required formControlName="sub_topic_id">
+                        <mat-option [value]="row.sub_topic_id" *ngFor="let row of sub_topic">
+                            {{row.name}}
+                        </mat-option>
+                    </mat-select>
+                    <mat-error>Topic is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Difficulty Level</mat-label>
+                    <mat-select required formControlName="question_type">
+                        <mat-option value="Easy">Easy</mat-option>
+                        <mat-option value="Normal">Normal</mat-option>
+                        <mat-option value="Hard">Hard</mat-option>
+                        <mat-option value="Very-Hard">Very Hard</mat-option>
+                    </mat-select>
+                    <mat-error>Difficulty Level is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
             <div fxFlex="100%">
                 <angular-editor id="editor1" formControlName="question" [config]="editorConfig"></angular-editor>
             </div>

@@ -1,7 +1,16 @@
 <?php
 require_once 'api/include/common.php';
+session_start();
 $obj = new Common();
-$topics = $obj->selectAll('*', 'topic', 'topic_id > 0');
+if (!isset($_GET['subject']) || !isset($_SESSION['student_register_id'])) {
+    header('Location: home_subject');
+}
+$subject = $obj->selectRow('*', 'subject', 'name = \'' . $_GET['subject'] . '\'');
+if (count($subject) == 0) {
+    header('Location: home_subject');
+}
+$_SESSION['student_selected_subject_id'] = $subject['subject_id'];
+$topics = $obj->selectAll('t.*, IFNULL(MAX(q.question_id), 0) AS max_questions, IFNULL(MAX(sa.question_id), 0) AS max_questions_answered', 'topic AS t LEFT JOIN question AS q ON q.subject_id = t.subject_id AND q.topic_id = t.topic_id LEFT JOIN student_answer AS sa ON sa.subject_id = q.subject_id AND sa.topic_id = q.topic_id AND sa.student_register_id = ' . $_SESSION['student_register_id'], 't.subject_id = ' . $subject['subject_id']);
 $sub_topics = $obj->selectAll('*', 'sub_topic', 'sub_topic_id > 0');
 ?>
 <html lang="en">

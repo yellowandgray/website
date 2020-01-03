@@ -1,4 +1,5 @@
-<?php 
+<?php
+session_start();
 require_once 'api/include/common.php';
 $obj = new Common();
 ?>
@@ -7,22 +8,6 @@ $obj = new Common();
     <?php include 'head.php'; ?>
     <body>
         <div id="wrapper">
-            <!-- toggle top area -->
-            <!--            <div class="hidden-top">
-                            <div class="hidden-top-inner container">
-                                <div class="row">
-                                    <div class="span12">
-                                        <ul>
-                                            <li><strong>We are available for any custom works this month</strong></li>
-                                            <li>Main office: Springville center X264, Park Ave S.01</li>
-                                            <li>Call us <i class="icon-phone"></i> (123) 456-7890 - (123) 555-7891</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>-->
-            <!-- end toggle top area -->
-            <!-- start header -->
             <?php include 'menu.php'; ?>
             <!-- end header -->
             <section id="featured">
@@ -33,13 +18,6 @@ $obj = new Common();
                             <div class="sl-slide-inner">
                                 <div class="bg-img bg-img-1">
                                 </div>
-<!--                                <h2><strong>Premium</strong> template</h2>-->
-                                <!--                                <blockquote>
-                                                                    <p>
-                                                                        You have just dined, and however scrupulously the slaughterhouse is concealed in the graceful distance of miles, there is complicity.
-                                                                    </p>
-                                                                    <cite>Johny Doe Mblangsak</cite>
-                                                                </blockquote>-->
                             </div>
                         </div>
                         <div class="sl-slide" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
@@ -137,7 +115,7 @@ $obj = new Common();
                         </div>
                         <div class="span4 box-shadow">
                             <div class="box-custom">
-                                <div class="box-img"></div>
+                                <div class="box-img2"></div>
                             </div>
                             <div class="box-text">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
@@ -145,11 +123,61 @@ $obj = new Common();
                         </div>
                         <div class="span4 box-shadow">
                             <div class="box-custom">
-                                <div class="box-img"></div>
+                                <div class="box-img3"></div>
                             </div>
                             <div class="box-text">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="display-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="span12">
+                            <h3>Quiz Contents</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="span6">
+                            <ul>
+                                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+                                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+                                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+                                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+                                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+                                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+                                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+                                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+                                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+                                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+                                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+                                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+                            </ul>
+                        </div>
+                        <div class="span6">
+                            <img src="img/no-image.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="content">
+                <div class="container">
+                    <div class="row">
+                        <div class="span12">
+                            <h3>Quiz Videos</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="span4">
+                            <iframe height="250" style="width: 100%" src="https://www.youtube.com/embed/Be2istzBgk4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="span4">
+                            <iframe style="width: 100%" height="250" src="https://www.youtube.com/embed/Be2istzBgk4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="span4">
+                            <iframe style="width: 100%" height="250" src="https://www.youtube.com/embed/Be2istzBgk4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>

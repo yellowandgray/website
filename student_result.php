@@ -1,7 +1,10 @@
 <?php
+session_start();
 require_once 'api/include/common.php';
 $obj = new Common();
-$student = $obj->selectrow('*', 'student_register', 'student_register_id > 0');
+if (isset($_SESSION['student_register_id'])) {
+$student = $obj->selectrow('*', 'student_register', 'student_register_id = ' . $_SESSION["student_register_id"]);
+}
 ?>
 <html lang="en">
     <?php include 'head.php'; ?>

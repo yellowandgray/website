@@ -16,6 +16,7 @@ export class QuestionComponent implements OnInit {
 
     suject = [];
     topic = [];
+    sub_topic = [];
     question = [];
 
     constructor(public dialog: MatDialog, private httpClient: HttpClient, private _snackBar: MatSnackBar) { }
@@ -23,6 +24,7 @@ export class QuestionComponent implements OnInit {
     ngOnInit() {
         this.getsubject();
         this.gettopic();
+        this.getsubtopic();
         this.getQuestion();
     }
     getQuestion(): void {
@@ -56,6 +58,19 @@ export class QuestionComponent implements OnInit {
             .subscribe(
                 (res) => {
                     this.topic = res["result"]["data"];
+                },
+                (error) => {
+                    this._snackBar.open(error["statusText"], '', {
+                        duration: 2000,
+                    });
+                }
+            );
+    }
+    getsubtopic(): void {
+        this.httpClient.get<any>('http://localhost/project/mekana_new/api/v1/get_sub_topic')
+            .subscribe(
+                (res) => {
+                    this.sub_topic = res["result"]["data"];
                 },
                 (error) => {
                     this._snackBar.open(error["statusText"], '', {
@@ -101,6 +116,7 @@ export class QuestionForm {
     question_id = 0;
     subject: any[];
     topic: any[];
+    sub_topic: any[];
     constructor(
         public dialogRef: MatDialogRef<QuestionForm>,
         @Inject(MAT_DIALOG_DATA) public data: any,
@@ -110,6 +126,8 @@ export class QuestionForm {
             'subject_id': new FormControl('', Validators.required),
             'topic_id': new FormControl('', Validators.required),
             'question': new FormControl('', Validators.required),
+            'sub_topic_id': new FormControl('', Validators.required),
+            'question_type': new FormControl('', Validators.required),
             'a': new FormControl('', Validators.required),
             'b': new FormControl('', Validators.required),
             'c': new FormControl('', Validators.required),
@@ -120,6 +138,8 @@ export class QuestionForm {
            this.questionForm.patchValue({
            subject_id: this.data.subject_id,
            topic_id: this.data.topic_id,
+           sub_topic_id: this.data.sub_topic_id,
+           question_type: this.data.question_type,
            question: this.data.name,
            a: this.data.a,
            b: this.data.b,
@@ -159,6 +179,21 @@ export class QuestionForm {
                     duration: 2000,
                 });
             });
+        this.httpClient.get('http://localhost/project/mekana_new/api/v1/get_sub_topic').subscribe(
+            (res) => {
+                if (res["result"]["error"] === false) {
+                    this.sub_topic = res["result"]["data"];
+                } else {
+                    this._snackBar.open(res["result"]["message"], '', {
+                        duration: 2000,
+                    });
+                }
+            },
+            (error) => {
+                this._snackBar.open(error["statusText"], '', {
+                    duration: 2000,
+                });
+            });
     }
     
     onSubmit() {
@@ -171,6 +206,8 @@ export class QuestionForm {
           if(this.question_id != 0) {
           formData.append('subject_id', this.questionForm.value.subject_id);
           formData.append('topic_id', this.questionForm.value.topic_id);
+          formData.append('sub_topic_id', this.questionForm.value.sub_topic_id);
+          formData.append('question_type', this.questionForm.value.question_type);
           formData.append('question', this.questionForm.value.question);
           formData.append('a', this.questionForm.value.a);
           formData.append('b', this.questionForm.value.b);
@@ -181,6 +218,8 @@ export class QuestionForm {
         } else {
             formData.append('subject_id', this.questionForm.value.subject_id);
             formData.append('topic_id', this.questionForm.value.topic_id);
+            formData.append('sub_topic_id', this.questionForm.value.sub_topic_id);
+            formData.append('question_type', this.questionForm.value.question_type);
             formData.append('question', this.questionForm.value.question);
             formData.append('a', this.questionForm.value.a);
             formData.append('b', this.questionForm.value.b);
