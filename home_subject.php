@@ -28,50 +28,6 @@ $subjects = $obj->selectAll('*', 'subject', 'subject_id > 0');
                                 </div>
                             </div>
                         <?php } ?>
-                        <!--<div class="span3 subject-section">
-                            <div class="price">Entroll</div>
-                            <div class="subject-1">
-                                <div class="subject-1-img"></div>
-                            </div>
-                            <div class="subject-1-text">
-                                <h2>English</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing.</p>
-                                <button class="btn btn-theme margintop10">SEE MORE...</button>
-                            </div>
-                        </div>
-                        <div class="span3 subject-section">
-                            <div class="price">Entroll</div>
-                            <div class="subject-1">
-                                <div class="subject-1-img"></div>
-                            </div>
-                            <div class="subject-1-text">
-                                <h2>Maths</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing.</p>
-                                <button class="btn btn-theme margintop10">SEE MORE...</button>
-                            </div>
-                        </div>
-                        <div class="span3 subject-section">
-                            <div class="price">Entroll</div>
-                            <div class="subject-1">
-                                <div class="subject-1-img"></div>
-                            </div>
-                            <div class="subject-1-text">
-                                <h2>Science</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing.</p>
-                                <button class="btn btn-theme margintop10">SEE MORE...</button>
-                            </div>
-                        </div>
-                        <div class="span3 subject-section">
-                            <div class="price">Entroll</div>
-                            <div class="subject-1">
-                                <div class="subject-1-img"></div>
-                            </div>
-                            <div class="subject-1-text">
-                                <h2>Social Science</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing.</p>
-                                <button class="btn btn-theme margintop10">SEE MORE...</button>
-                            </div>
-                        </div>-->
                     </div>
                 </div>
             </section>
