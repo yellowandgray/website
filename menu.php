@@ -1,5 +1,4 @@
 <?php
-session_start();
 if (isset($_SESSION['student_register_id'])) {
     $login_member = $obj->selectRow('*', 'student_register', 'student_register_id = ' . $_SESSION["student_register_id"]);
 }
@@ -16,7 +15,7 @@ if (isset($_SESSION['student_register_id'])) {
                 <div class = 'logo'>
                     <a href = 'index'>
                         <img src = 'img/logo.png' alt = '' class = 'logo' />
-<!--                        <h1>Feringo</h1>-->
+                        <!--                        <h1>Feringo</h1>-->
                     </a>
                 </div>
             </div>

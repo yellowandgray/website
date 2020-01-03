@@ -44,7 +44,7 @@ $topics = $obj->selectAll('*, MAX()', 'topic', 'subject_id = ' . $subject['subje
                                     }
                                 } else {
                                     ?>
-                                    Sorry no topics were found
+                                    <p>Sorry no topics were found</p>
                                 <?php } ?>
                             </div>
                         </div>
