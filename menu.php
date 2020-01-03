@@ -1,5 +1,4 @@
 <?php
-session_start();
 if (isset($_SESSION['student_register_id'])) {
     $login_member = $obj->selectRow('*', 'student_register', 'student_register_id = ' . $_SESSION["student_register_id"]);
 }
