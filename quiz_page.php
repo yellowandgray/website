@@ -59,7 +59,8 @@ if (count($questions) > 0) {
                                     <!--progress-->
                                     <div class="progressContainer">
                                         <progress class="progress is-info is-small" :value="(questionIndex/quiz.questions.length)*100" max="100">{{(questionIndex/quiz.questions.length)*100}}%</progress>
-                                        <p>{{(questionIndex/quiz.questions.length)*100}}% complete</p>
+                                        <p><span  class="label label-info">Total Questions: <span class="">{{quiz.questions.length}}</span></span></p>
+                                        <p class="label label-success"><span class="">{{((quiz.questions.length)-(quiz.questions.length-questionIndex))}}</span> completed</p>
                                     </div>
                                     <!--/progress-->
                                 </div>
@@ -80,6 +81,9 @@ if (count($questions) > 0) {
                                     <!-- back button -->
                                     <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">
                                        Back
+                                </a>
+                                    <a class="button " href="home_subject.php">
+                                       Home
                                 </a>
 
                                 <!-- next button -->

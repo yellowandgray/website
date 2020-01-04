@@ -436,3 +436,13 @@ and open the template in the editor.
 .headnav-1 {
     display: none;
 }
+@media screen and (max-width:390px){
+    .pagination .button{
+        padding: 0.2rem 1rem;
+        border: 1px solid rgba(0, 0, 0, 0.25);
+        border-radius: 5rem;
+        margin: 0 0.1rem;
+        transition: 0.3s;
+        background: #F03C02;
+    }
+}
