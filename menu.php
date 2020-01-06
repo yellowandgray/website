@@ -1,21 +1,15 @@
 <?php
 if (isset($_SESSION['student_register_id'])) {
-    $login_member = $obj->selectRow('*', 'student_register', 'student_register_id = ' . $_SESSION["student_register_id"]);
+    $login_student = $obj->selectRow('*', 'student_register', 'student_register_id = ' . $_SESSION["student_register_id"]);
 }
 ?>
 <header>
     <div class = 'container'>
-        <!-- hidden top area toggle link -->
-        <!--                    <div id = 'header-hidden-link'>
-        <a href = '#' class = 'toggle-link' title = "Click me you'll get a surprise" data-target = '.hidden-top'><i></i>Open</a>
-        </div>-->
-        <!-- end toggle link -->
         <div class = 'row nomargin'>
             <div class = 'span4'>
                 <div class = 'logo'>
                     <a href = 'index'>
                         <img src = 'img/logo.png' alt = '' class = 'logo' />
-                        <!--                        <h1>Feringo</h1>-->
                     </a>
                 </div>
             </div>
@@ -26,23 +20,15 @@ if (isset($_SESSION['student_register_id'])) {
                     <div class = 'headnav'>
                         <ul>
                             <li>
-                                <a href = '#mySignup' data-toggle = 'modal'><i class = 'icon-user'></i> Register</a>
-                            </li>
-                            <li>
-                                <a href = '#mySignin' data-toggle = 'modal'>Sign in</a>
+                                <a href = '#mySignin' data-toggle = 'modal'><i class = 'icon-user'></i></a>
                             </li>
                         </ul>
                     </div>
                     <div class = 'headnav-1'>
                         <ul>
                             <li>
-                                <a href = '#mySignup' data-toggle = 'modal'>
-                                    <i class = 'icon-user'></i>
-                                </a>
-                            </li>
-                            <li>
                                 <a href = '#mySignin' data-toggle = 'modal'>
-                                    <i class="icon-signin"></i>
+                                    <i class = 'icon-user'></i>
                                 </a>
                             </li>
                         </ul>
@@ -61,11 +47,21 @@ if (isset($_SESSION['student_register_id'])) {
             <?php } else {
                 ?>
                 <div class="logout_position">
-                    <div id="open-logout" class="logout_section" style="background: url(img/avatar.png)no-repeat;background-position: center;">
+                    <div id="open-logout" class="logout_section">
+    <!--                        <img src='<?php //echo BASE_URL . $login_student['profile_image'];   ?>' alt=''>-->
+                        <?php if (isset($login_student['profile_image']) && $login_student['profile_image'] == '') { ?>
+                            <img src="<?php echo BASE_URL . $login_student['gender']; ?>.jpg" alt="" />
+                        <?php } else { ?>
+                            <img src="<?php echo BASE_URL . $login_student['profile_image']; ?>" alt="" />
+                        <?php } ?>
                         <div class="logout_dropdown">
                             <div class="user_profile">
-                                <img src="img/avatar_1.png" alt="" />
-                                <h5><?php echo $login_member['student_name']; ?></h5>
+                                <?php if (isset($login_student['profile_image']) && $login_student['profile_image'] == '') { ?>
+                                    <img src="<?php echo BASE_URL . $login_student['gender']; ?>.jpg" alt="" />
+                                <?php } else { ?>
+                                    <img src="<?php echo BASE_URL . $login_student['profile_image']; ?>" alt="" />
+                                <?php } ?>
+                                <h5><?php echo $login_student['student_name']; ?></h5>
                             </div>
                             <ul class="logout_list">
                                 <li onclick="window.location = 'home_subject'">Subject</li>

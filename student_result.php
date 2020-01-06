@@ -3,8 +3,9 @@ session_start();
 require_once 'api/include/common.php';
 $obj = new Common();
 if (isset($_SESSION['student_register_id'])) {
-$student = $obj->selectrow('*', 'student_register', 'student_register_id = ' . $_SESSION["student_register_id"]);
+    $student = $obj->selectrow('*', 'student_register', 'student_register_id = ' . $_SESSION["student_register_id"]);
 }
+$student_answer = $obj->selectAll('sa.*, s.name AS subject, t.name AS topic, q.name AS question', 'student_answer AS sa LEFT JOIN subject AS s ON s.subject_id = sa.subject_id LEFT JOIN topic AS t ON t.topic_id = sa.topic_id LEFT JOIN question AS q ON q.question_id = sa.question_id', 'sa.question_id > 0');
 ?>
 <html lang="en">
     <?php include 'head.php'; ?>
@@ -28,224 +29,26 @@ $student = $obj->selectrow('*', 'student_register', 'student_register_id = ' . $
                         <div class="span8">
                             <h4>My Completed Task</h4>
                             <!-- start: Accordion -->
-                            <div class="accordion" id="accordion2">
-                                <div class="accordion-group">
-                                    <div class="accordion-heading">
-                                        <a class="accordion-toggle active" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-                                            <i class="icon-minus"></i> Topic 1 </a>
-                                    </div>
-                                    <div id="collapseOne" class="accordion-body collapse in">
-                                        <div class="accordion-inner">
-                                            <table class="table">
-                                                <thead>
-                                                    <tr>
-                                                        <th>
-                                                            Question No.
-                                                        </th>
-                                                        <th>
-                                                            Attend Questions
-                                                        </th>
-                                                        <th>
-                                                            Correct Question
-                                                        </th>
-                                                        <th>
-                                                            Wrong Question
-                                                        </th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            1
-                                                        </td>
-                                                        <td>
-                                                            20
-                                                        </td>
-                                                        <td>
-                                                            15
-                                                        </td>
-                                                        <td>
-                                                            5
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            1
-                                                        </td>
-                                                        <td>
-                                                            20
-                                                        </td>
-                                                        <td>
-                                                            15
-                                                        </td>
-                                                        <td>
-                                                            5
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            1
-                                                        </td>
-                                                        <td>
-                                                            20
-                                                        </td>
-                                                        <td>
-                                                            15
-                                                        </td>
-                                                        <td>
-                                                            5
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
+                            <?php foreach ($student_answer as $row) { ?>
+                                <div class="accordion" id="accordion2">
+                                    <div class="accordion-group">
+                                        <div class="accordion-heading">
+                                            <a class="accordion-toggle active" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne>"><i class="icon-minus"></i> <?php echo $row['subject']; ?> - <?php echo $row['topic']; ?>  <span>Attend Questions: 25/30</span></a>
+                                        </div>
+                                        <div id="collapseOne" class="accordion-body collapse in">
+                                            <div class="accordion-inner">
+                                                <!-- questionTitle -->
+                                                <h2 class="titleContainer title"> <?php echo $row['question']; ?></h2>
+                                                <!-- quizOptions -->
+                                                <div class="optionContainer">
+                                                    <div class="option">You Choose: <?php echo $row['answer_option']; ?></div>
+                                                    <div class="option">Correct Answer: <?php echo $row['actual_answer_option']; ?></div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="accordion-group">
-                                    <div class="accordion-heading">
-                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-                                            <i class="icon-plus"></i> Topic 2 </a>
-                                    </div>
-                                    <div id="collapseTwo" class="accordion-body collapse">
-                                        <div class="accordion-inner">
-                                            <table class="table">
-                                                <thead>
-                                                    <tr>
-                                                        <th>
-                                                            Question No.
-                                                        </th>
-                                                        <th>
-                                                            Attend Questions
-                                                        </th>
-                                                        <th>
-                                                            Correct Question
-                                                        </th>
-                                                        <th>
-                                                            Wrong Question
-                                                        </th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            1
-                                                        </td>
-                                                        <td>
-                                                            20
-                                                        </td>
-                                                        <td>
-                                                            15
-                                                        </td>
-                                                        <td>
-                                                            5
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            1
-                                                        </td>
-                                                        <td>
-                                                            20
-                                                        </td>
-                                                        <td>
-                                                            15
-                                                        </td>
-                                                        <td>
-                                                            5
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            1
-                                                        </td>
-                                                        <td>
-                                                            20
-                                                        </td>
-                                                        <td>
-                                                            15
-                                                        </td>
-                                                        <td>
-                                                            5
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-group">
-                                    <div class="accordion-heading">
-                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
-                                            <i class="icon-plus"></i> Topic 3 </a>
-                                    </div>
-                                    <div id="collapseThree" class="accordion-body collapse">
-                                        <div class="accordion-inner">
-                                            <table class="table">
-                                                <thead>
-                                                    <tr>
-                                                        <th>
-                                                            Question No.
-                                                        </th>
-                                                        <th>
-                                                            Attend Questions
-                                                        </th>
-                                                        <th>
-                                                            Correct Question
-                                                        </th>
-                                                        <th>
-                                                            Wrong Question
-                                                        </th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            1
-                                                        </td>
-                                                        <td>
-                                                            20
-                                                        </td>
-                                                        <td>
-                                                            15
-                                                        </td>
-                                                        <td>
-                                                            5
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            1
-                                                        </td>
-                                                        <td>
-                                                            20
-                                                        </td>
-                                                        <td>
-                                                            15
-                                                        </td>
-                                                        <td>
-                                                            5
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            1
-                                                        </td>
-                                                        <td>
-                                                            20
-                                                        </td>
-                                                        <td>
-                                                            15
-                                                        </td>
-                                                        <td>
-                                                            5
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <?php } ?>
                             <!--end: Accordion -->
                         </div>
                     </div>

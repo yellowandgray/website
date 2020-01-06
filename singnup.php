@@ -18,6 +18,27 @@
                 </div>
             </div>
             <div class = 'control-group'>
+                <label class = 'control-label' for = 'upload-profile'>Upload Your Profile Picture</label>
+                <div class = 'controls'>
+                    <div id="upload_container">
+                        <input type="file" id="profile_image" accept="image/x-png,image/gif,image/jpeg" onchange="attachFile('profile_image');" />
+                    </div>
+                    <div class="image-preview hidden" id="preview_container">
+                        <button type="button" onclick="closeProfilePic();" class="close-button-profile-img"><i class="icon-remove-sign"></i></button>
+                        <img src="" alt="image" />
+                    </div>
+                </div>
+            </div>
+            <div class = 'control-group'>
+                <label class = 'control-label' for = 'gender'>Gender</label>
+                <div class = 'controls'>
+                    <select class="form-control" id="gender" name="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+            </div>
+            <div class = 'control-group'>
                 <label class = 'control-label' for = 'parent_name'>Parent Name</label>
                 <div class = 'controls'>
                     <input type = 'text' id = 'parent_name' placeholder = 'Parent Name' required>
@@ -26,7 +47,7 @@
             <div class = 'control-group'>
                 <label class = 'control-label' for = 'mobile'>Mobile</label>
                 <div class = 'controls'>
-                    <input type = 'text' id = 'mobile' maxlength = '10' placeholder = 'Ex:123-456-7890' pattern = '[0-9]{10}' required>
+                    <input type = 'text' id = 'mobile' maxlength = '10' placeholder = 'Ex:9876543210' pattern = '[0-9]{10}' required>
                 </div>
             </div>
             <div class = 'control-group'>

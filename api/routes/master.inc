@@ -46,8 +46,8 @@ $app->post('/loginstudent', function() use ($app) {
     $data = $app->request->post();
     $obj = new Common();
     $record = $obj->selectRow('*', 'student_register', 'user_name=\'' . $data['user_name'] . '\'');
-    if (count($record) > 0) {        
-        if ($data['password'] == $record['password']) {       
+    if (count($record) > 0) {
+        if ($data['password'] == $record['password']) {
             $res['error'] = false;
             $_SESSION['student_register_id'] = $record['student_register_id'];
             $res['message'] = 'Welcome ' . $record['student_name'];
@@ -69,7 +69,10 @@ $app->post('/insert_student', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('user_name' => $data['user_name'], 'student_name' => $data['student_name'], 'parent_name' => $data['parent_name'], 'mobile' => $data['mobile'], 'city' => $data['city'], 'pin' => $data['pin'], 'school_name' => $data['school_name'], 'standard' => $data['standard'], 'email' => $data['email'], 'password' => $data['password'], 'confirm_password' => $data['confirm_password']), 'student_register');
+    if (!isset($data['profile_image'])) {
+        $data['profile_image'] = '';
+    }
+    $record = $com->insertRecord(array('user_name' => $data['user_name'], 'student_name' => $data['student_name'], 'profile_image' => $data['profile_image'], 'gender' => $data['gender'], 'parent_name' => $data['parent_name'], 'mobile' => $data['mobile'], 'city' => $data['city'], 'pin' => $data['pin'], 'school_name' => $data['school_name'], 'standard' => $data['standard'], 'email' => $data['email'], 'password' => $data['password'], 'confirm_password' => $data['confirm_password']), 'student_register');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';

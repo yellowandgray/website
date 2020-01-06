@@ -315,7 +315,7 @@ header .logo h1 {
 
 .headnav ul li a {
     outline: 0;
-    font-size: 12px;
+    font-size: 30px;
     font-weight: 600;
 }
 
@@ -331,6 +331,12 @@ header .logo h1 {
 @media (min-width: 768px) {
     header .navigation {
         float: right;
+    }
+    .topic_list_section {
+        width: 100%;
+        height: 40px;
+        border-bottom: 1px solid #e3e3e3;
+        margin-bottom: 10px;
     }
 }
 
@@ -2631,12 +2637,46 @@ article .align-right {
         margin-left: 10px;
     }
     .headnav-1 ul li a {
-        font-size: 22px;
+        font-size: 30px;
     }
     .subject-section {
         width: 95% !important;
         margin: 0 auto !important;
         margin-bottom: 30px !important;
+    }
+    .topic_section {
+        padding: 90px 0 !important;
+    }
+    .quiz-section {
+        padding: 90px 0 40px !important;
+    }
+    /*    .side_section p {
+            display: none !Important;
+        }*/
+    .goto-here .questionBox .question-header .progressContainer {
+        width: 100%;
+    }
+    .lable-blue {
+        float: left;
+        width: auto;
+    }
+    .label-success {
+        width: auto;
+        margin-top: 0px !important;
+        margin-bottom: 0;
+    }
+    .lenth_width {
+        width: 65%;
+        margin: 0 auto;
+    }
+    .topic_list_position_left {
+        width: 100% !important;
+    }
+    .pagination a.btn-green {
+        padding: 5px 20px !important;
+    }
+    .result_user_section .user_profile {
+        height: 150px !important; 
     }
 }
 

@@ -20,7 +20,7 @@
 
 .goto-here .questionBox {
     /* max-width: 30rem; */
-    width: 70%;
+    width: 50%;
     /* min-height: 30rem; */
     background: #fafafa;
     position: relative;
@@ -55,7 +55,7 @@
 }
 
 .goto-here .questionBox .question-header .progressContainer>progress {
-    margin: 0;
+    margin: 0 0 5px 0;
     border-radius: 5rem;
     overflow: hidden;
     border: none;
@@ -141,7 +141,8 @@
 
 .goto-here .questionBox .questionContainer .optionContainer .option.is-selected {
     border-color: rgb(130, 174, 70);
-    background-color: white;
+    background-color: rgb(130, 174, 70);
+    color: #fff;
 }
 
 .goto-here .questionBox .questionContainer .optionContainer .option:hover {
@@ -223,7 +224,7 @@
 
 @media screen and (max-width: 767px) {
     .goto-here .title {
-        font-size: 20px;
+        font-size: 18px;
     }
 }
 

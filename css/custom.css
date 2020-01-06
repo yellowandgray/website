@@ -215,13 +215,22 @@ and open the template in the editor.
 }
 
 .logout_section {
-    padding-top: 20px;
+    /*    padding-top: 20px;
+        border-radius: 50%;
+        width: 50px;*/
+    margin-top: 5px;
+    /*    height: 30px;
+        background-position: center;*/
+    cursor: pointer;
+}
+
+.logout_section img {
     border-radius: 50%;
     width: 50px;
-    margin-top: 5px;
-    height: 30px;
-    background-position: center;
-    cursor: pointer;
+    height: 50px;
+    box-shadow: 0 0 6px 5px #e3e3e3;
+    padding: 1px;
+    border: 1px solid #a40b0b;
 }
 
 .topic_section {
@@ -236,15 +245,24 @@ and open the template in the editor.
 }
 
 .side_section h2 {
-    font-size: 22px;
+    font-size: 25px;
     font-weight: 600;
     margin-bottom: 5px;
+    text-align: center;
+}
+
+.side_section h4 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 .topic_section_1 h2 {
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 600;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 
@@ -384,20 +402,28 @@ and open the template in the editor.
 }
 
 .user_profile img {
-    padding-top: 20px;
-    width: 50%;
+    margin-top: 10px;
+    width: 70px;
     border-radius: 50%;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    height: 70px;
+}
+
+.user_profile h5 {
+    margin-bottom: 10px;
 }
 
 .topic_list_position_left {
     float: left;
-    width: 50%;
+    width: 75%;
     margin-bottom: 10px;
 }
 
 .topic_list_position_right {
     float: left;
-    width: 50%;
+    width: 25%;
     margin-bottom: 10px;
 }
 
@@ -443,9 +469,64 @@ and open the template in the editor.
         border-radius: 5rem;
         margin: 0 0.1rem;
         transition: 0.3s;
-        background: #F03C02;
+        background: #30445c;
     }
 }
 .lable-blue{
     background-color: #30445c;
 }
+
+.hidden {
+    display: none;
+}
+
+.image-preview {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-preview img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    max-height: 200px;
+}
+
+.close-button-profile-img {
+    position: absolute;
+    top: 0px;
+    right: 36%;
+    cursor: pointer;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    font-size: 22px;
+}
+
+.pagination a.btn-green {
+    padding: 5px 30px;
+    border-radius: 5rem;
+    margin: 0 0.25rem;
+    transition: 0.3s;
+    position: relative;
+}
+
+.pagination a.btn-green:hover {
+    background: transparent;
+    border: 1px solid #479c18;
+    color: #479c18;
+}
+
+.accordion-inner h2.titleContainer {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.accordion-heading a.accordion-toggle span {
+    float: right;
+}
+
+/*.accordion-inner .optionContainer .option {
+    float: left;
+}*/

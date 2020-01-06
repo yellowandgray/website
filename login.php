@@ -24,10 +24,10 @@
             </div>
             <div class="control-group">
                 <div class="controls">
-                    <button type="submit" class="btn">Sign in</button>
+                    <button type="submit" class="btn">Sign in</button> Forgot password? <a href="#myReset" data-dismiss="modal" aria-hidden="true" data-toggle="modal">Reset</a>
                 </div>
                 <p class="aligncenter margintop20">
-                    Forgot password? <a href="#myReset" data-dismiss="modal" aria-hidden="true" data-toggle="modal">Reset</a>
+                    Click here to create the new account <a href = '#mySignup' data-dismiss="modal" aria-hidden="true" data-toggle="modal">Register Now!</a>
                 </p>
             </div>
         </form>

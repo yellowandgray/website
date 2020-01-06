@@ -43,25 +43,24 @@ if (count($questions) > 0) {
         <div class="quiz-section">
             <section class="container">
                 <div class="row">
-                    <div class="span4">
+                    <div class="span12">
                         <div class="side_section">
-                            <h2><?php echo $topic['subject']; ?> / <?php echo $topic['name']; ?></h2>
-                            <p><?php echo $topic['description']; ?></p>
+                            <h2><?php echo $topic['subject']; ?></h2>
+                            <h4><?php echo $topic['name']; ?></h4>
                         </div>
-                    </div>
-                    <!--question Box-->
-                    <div class="span8">
+                        <!--question Box-->
                         <div class="questionBox" id="app">
                             <!--qusetionContainer-->
                             <div class="questionContainer" v-if="questionIndex<quiz.questions.length" v-bind:key="questionIndex">
                                 <div class="question-header">
-                                    <h1 class="title is-6"><?php echo $topic['subject']; ?></h1>
-                                    <h4><?php echo $topic['name']; ?></h4>
+                                    <h1 class="title is-6">Quiz</h1> 
                                     <!--progress-->
                                     <div class="progressContainer">
                                         <progress class="progress is-info is-small" :value="(questionIndex/quiz.questions.length)*100" max="100">{{(questionIndex/quiz.questions.length)*100}}%</progress>
-                                        <p><span  class="label lable-blue">Total Questions: <span class="">{{quiz.questions.length}}</span></span></p>
-                                        <p class="label label-success"><span class="">{{((quiz.questions.length)-(quiz.questions.length-questionIndex))}}</span> completed</p>
+                                        <div class="lenth_width">
+                                            <p><span  class="label lable-blue">Total: <span class="">{{quiz.questions.length}}</span></span></p>
+                                            <p class="label label-success"><span class="">Count: {{((quiz.questions.length)-(quiz.questions.length-questionIndex))}}</span></p>
+                                        </div>
                                     </div>
                                     <!--/progress-->
                                 </div>
@@ -83,8 +82,8 @@ if (count($questions) > 0) {
                                     <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">
                                        Back
                                 </a>
-                                    <a class="button " href="home_subject.php">
-                                       Home
+                                <a class="btn btn-green" href="home_subject.php">
+                                    Home
                                 </a>
 
                                 <!-- next button -->
@@ -117,14 +116,15 @@ if (count($questions) > 0) {
                         <br>
                         <a class="button1" @click="restart()">Restart <i class="fa fa-refresh"></i></a>
                         <a class="button1" onclick="window.location = 'home_subject'">Home <i class="fa fa-refresh"></i></a>
+                        <a class="button1" onclick="window.location = 'student_result'">Full Result <i class="fa fa-refresh"></i></a>
                         <!--/resultTitleBlock-->
 
                     </div>
                     <!--/quizCompetedResult-->
                     <!-- 		</transition> -->
                 </div>
+                <!-- question Box -->
             </div>
-            <!-- question Box -->
         </div>
     </section>
 </div>
