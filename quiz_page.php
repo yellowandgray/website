@@ -55,7 +55,8 @@ if (count($questions) > 0) {
                             <!--qusetionContainer-->
                             <div class="questionContainer" v-if="questionIndex<quiz.questions.length" v-bind:key="questionIndex">
                                 <div class="question-header">
-                                    <h1 class="title is-6">Quiz</h1>
+                                    <h1 class="title is-6"><?php echo $topic['subject']; ?></h1>
+                                    <h4><?php echo $topic['name']; ?></h4>
                                     <!--progress-->
                                     <div class="progressContainer">
                                         <progress class="progress is-info is-small" :value="(questionIndex/quiz.questions.length)*100" max="100">{{(questionIndex/quiz.questions.length)*100}}%</progress>
@@ -115,6 +116,7 @@ if (count($questions) > 0) {
                         </p>
                         <br>
                         <a class="button1" @click="restart()">Restart <i class="fa fa-refresh"></i></a>
+                        <a class="button1" onclick="window.location = 'home_subject'">Home <i class="fa fa-refresh"></i></a>
                         <!--/resultTitleBlock-->
 
                     </div>
