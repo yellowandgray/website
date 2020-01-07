@@ -19,18 +19,25 @@ $student_answer = $obj->selectAll('sa.*, s.name AS subject, t.name AS topic', 's
                     <div class = 'row'>
                         <div class = 'span4'>
                             <div class = 'result_user_section'>
-                                <div class = 'user_profile' style = 'background: url(img/avatar_1.png)no-repeat;background-position: center;'></div>
+                                <?php if (isset($login_student['profile_image']) && $login_student['profile_image'] == '') {
+                                    ?>
+                                    <div class = 'user_profile' style = 'background: url(<?php echo BASE_URL . $login_student['gender']; ?>.jpg)no-repeat;background-position: center;'></div>
+                                <?php } else {
+                                    ?>
+                                    <div class = 'user_profile' style = 'background: url(<?php echo BASE_URL . $login_student['profile_image']; ?>)no-repeat;background-position: center;'></div>
+                                <?php }
+                                ?>
                             </div>
                             <div class = 'user_details'>
                                 <h2><?php echo $student['student_name'];
-            ?></h2>
+                                ?></h2>
                                 <h4><?php echo $student['parent_name'];
-            ?> <span><?php echo $student['mobile'] ?></span></h4>
+                                ?> <span><?php echo $student['mobile'] ?></span></h4>
                                 <h5><?php echo $student['school_name'];
-            ?> </h5>
+                                ?> </h5>
                                 <p><?php echo $student['city'];
-            ?> <?php echo $student['pin'];
-            ?> </p>
+                                ?> <?php echo $student['pin'];
+                                ?> </p>
                             </div>
                         </div>
                         <div class = 'span8'>
@@ -48,15 +55,15 @@ $student_answer = $obj->selectAll('sa.*, s.name AS subject, t.name AS topic', 's
                                             <div class = 'accordion-inner'>
                                                 <!-- questionTitle -->
                                                 <h2 class = 'titleContainer title'><?php echo $row['topic'];
-                                ?></h2>
+                                ?> <span>Date: 10-01-2020</span></h2>
                                                 <!-- quizOptions -->
                                                 <table class = 'table table-striped'>
                                                     <thead>
                                                         <tr>
-                                                            <th>#</th>
-                                                            <th>First Name</th>
-                                                            <th>Last Name</th>
-                                                            <th>Username</th>
+                                                            <th>Total Questions</th>
+                                                            <th>Attend Questions</th>
+                                                            <th><i class="icon-ok-sign"></i></th>
+                                                            <th><i class="font-icon-remove-circle"></i></th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>

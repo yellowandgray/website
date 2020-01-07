@@ -530,12 +530,12 @@ and open the template in the editor.
 }
 
 .accordion-inner h2.titleContainer {
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 500;
     margin-bottom: 10px;
 }
 
-.accordion-heading a.accordion-toggle span {
+.accordion-inner h2 span {
     float: right;
 }
 
