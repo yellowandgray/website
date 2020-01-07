@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 02, 2020 at 12:40 PM
+-- Generation Time: Jan 07, 2020 at 07:33 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.2.12
 
@@ -49,83 +49,83 @@ CREATE TABLE `question` (
 --
 
 INSERT INTO `question` (`question_id`, `subject_id`, `topic_id`, `name`, `a`, `b`, `c`, `d`, `answer`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
-(1, 6, 1, '1.?????? In 1848 ____________ prepared a series of four prints visualising his dream of a world made up of democratic and Social Republics.', 'Frederic sorrieu', 'Voltaire', 'Montesquieu', 'rousseau', 'A', '2020-01-02 08:56:11', '0000-00-00 00:00:00', 0, 0),
-(2, 6, 1, '2. The first print of the series, shows the peoples of _____________________.', 'Asia and Europe', ' Europe and North America ', 'Europe and America', 'North America and South America', 'C', '2020-01-02 11:34:46', '0000-00-00 00:00:00', 0, 0),
-(3, 6, 1, '3.???? Men and women of all ages and social classes marching in a long train, and offering homage to the ___________________.', 'Statue of Liberty', 'Statue of Republic', 'Statue of Nationality', ' Statue of Freedom ', 'A', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(4, 6, 1, '4.????? During the nineteenth century, ________________ emerged as a force which brought changes in the political and mental world of Europe.', 'Nationalism', 'Secutarism', 'Republic', 'Democracy', '', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(5, 6, 1, '5.?????? ____________________ delivered lecture at the university of Sorbonne.', 'Karl Marx', 'Lafayette', 'Mirabeau', ' Frnst Renan ', 'D', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(6, 6, 1, '6.??????  In ________________ lecture delivered at the university of Sorbonne.', '1883', '1884', '1882', '1885', 'C', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(7, 6, 1, '7.????? The first clear expression of nationalism came with the ________________.', 'Chinese Rebellion', 'French Revolution', 'Russian Revolution', 'American Revolution ', 'B', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(8, 6, 1, '8.?????? The French Revolution held in _______________.', '1798', '1789', '1790', '1767', 'B', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(9, 6, 1, '9.?????? In 1789, France was a full ? fledges territorial state under the rule of an ________________.', 'absolute  monarch', 'oligarchy', 'fendalism', 'Republic', 'A', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(10, 6, 1, '10.?????? The political and constitutional changes that came in the wake of the _________________.', 'Chinese Rebellion', 'French Revolution', 'Russian Revolution', 'American Revolution ', 'B', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(11, 6, 1, '11.The French Revolution led to the transfer of _______________ from the monarchy.', 'Sovereignty', 'Liberty', 'Freedom', 'Republic', 'A', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(12, 6, 1, '12.? The ideas of ___________- and ______________ emphasised the nation of a united community enjoying equal rights under a constitution.', 'La patrie and le citoyen', 'people and citizen', 'citizen and ruler', 'people and ruler ', 'A', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(13, 6, 1, '13.?? The _______________was elected by the body of active citizens.', 'Estates general', 'Assembly', 'Parliament', 'Legislative', 'A', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(14, 6, 1, '14.? The Estates general was renamed the ___________________.', 'Assembly', 'Parliament', 'Legislative', 'National Assembly', 'D', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(15, 6, 1, '15.French revolution formulated ______________ laws for all citizens within its territory.', ' Different', 'Monarch', 'Constitution', 'Uniform', 'D', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(16, 6, 1, '16.???? ______________ became the common language of the nation.', 'Spanish', 'English', 'Local language', 'French', 'D', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(17, 6, 1, '17. The revolutionaries declared that it was the destiny of the French nation to _______________ the people.', 'Liberate', 'despotism', 'communalism', 'socialism', 'A', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(18, 6, 1, '18.???? In Europe, students and other members of educated middle classes began setting up ______________.', 'Students club', 'Jacobin clubs', 'society', 'youth club ', 'B', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(19, 6, 1, '19.?? The French armies which moved into Holland, Belgium, Switzerland and Italy in the _______________.', '1780?s', '1770?s', '1790?s', '1800?s ', 'C', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(20, 6, 1, '20.?? The French armies began to carry the idea of ________________ abroad.', 'Socialism', 'communalism', 'nationalism', 'despotism ', '', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(21, 6, 1, '21.The cover of a German almanac designed by ___________________.', 'Andreas Rebmann', 'Mirabeau', 'Lafayette', 'KarlMarx ', 'A', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(22, 6, 1, '22.??? The cover of a German almanac designed in _________________.', 'Mainz ', 'Moscow', 'Paris', 'France', 'A', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(23, 6, 1, '23.????? Rebmann was a member of a german _____________ group.', 'Student', 'youth', 'Jacobia', 'press', 'C', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(24, 6, 1, '24.??? ________________ set about introducing many of the reforms that he had already introduced in France.', ' Nicholas I', 'Nicholas II', 'Napolean', 'Danton', 'C', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(25, 6, 1, '25.????? The civil of 1804 usually known as the _______________.', 'Danton code', 'Napoleonic code', 'Lafayette code', 'Marat code ', 'B', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
+(1, 6, 1, '1. In 1848 ____________ prepared a series of four prints visualising his dream of a world made up of democratic and Social Republics.', 'Frederic sorrieu', 'Voltaire', 'Montesquieu', 'rousseau', 'A', '2020-01-06 05:30:27', '0000-00-00 00:00:00', 0, 0),
+(2, 6, 2, '2. The first print of the series, shows the peoples of _____________________.', 'Asia and Europe', ' Europe and North America ', 'Europe and America', 'North America and South America', 'C', '2020-01-06 10:45:09', '0000-00-00 00:00:00', 0, 0),
+(3, 6, 4, '3. Men and women of all ages and social classes marching in a long train, and offering homage to the ___________________.', 'Statue of Liberty', 'Statue of Republic', 'Statue of Nationality', ' Statue of Freedom ', 'A', '2020-01-06 10:45:14', '0000-00-00 00:00:00', 0, 0),
+(4, 6, 5, '4. During the nineteenth century, ________________ emerged as a force which brought changes in the political and mental world of Europe.', 'Nationalism', 'Secutarism', 'Republic', 'Democracy', '', '2020-01-06 10:45:19', '0000-00-00 00:00:00', 0, 0),
+(5, 6, 6, '5. ____________________ delivered lecture at the university of Sorbonne.', 'Karl Marx', 'Lafayette', 'Mirabeau', ' Frnst Renan ', 'D', '2020-01-06 10:45:28', '0000-00-00 00:00:00', 0, 0),
+(6, 6, 4, '6. In ________________ lecture delivered at the university of Sorbonne.', '1883', '1884', '1882', '1885', 'C', '2020-01-06 12:48:16', '0000-00-00 00:00:00', 0, 0),
+(7, 6, 4, '7. The first clear expression of nationalism came with the ________________.', 'Chinese Rebellion', 'French Revolution', 'Russian Revolution', 'American Revolution ', 'B', '2020-01-06 12:48:20', '0000-00-00 00:00:00', 0, 0),
+(8, 6, 4, '8. The French Revolution held in _______________.', '1798', '1789', '1790', '1767', 'B', '2020-01-06 12:48:22', '0000-00-00 00:00:00', 0, 0),
+(9, 6, 4, '9. In 1789, France was a full ? fledges territorial state under the rule of an ________________.', 'absolute  monarch', 'oligarchy', 'fendalism', 'Republic', 'A', '2020-01-06 12:48:23', '0000-00-00 00:00:00', 0, 0),
+(10, 6, 4, '10. The political and constitutional changes that came in the wake of the _________________.', 'Chinese Rebellion', 'French Revolution', 'Russian Revolution', 'American Revolution ', 'B', '2020-01-06 12:48:26', '0000-00-00 00:00:00', 0, 0),
+(11, 6, 4, '11.The French Revolution led to the transfer of _______________ from the monarchy.', 'Sovereignty', 'Liberty', 'Freedom', 'Republic', 'A', '2020-01-06 12:48:31', '0000-00-00 00:00:00', 0, 0),
+(12, 6, 4, '12. The ideas of ___________- and ______________ emphasised the nation of a united community enjoying equal rights under a constitution.', 'La patrie and le citoyen', 'people and citizen', 'citizen and ruler', 'people and ruler ', 'A', '2020-01-06 12:48:33', '0000-00-00 00:00:00', 0, 0),
+(13, 6, 4, '13. The _______________was elected by the body of active citizens.', 'Estates general', 'Assembly', 'Parliament', 'Legislative', 'A', '2020-01-06 12:48:34', '0000-00-00 00:00:00', 0, 0),
+(14, 6, 4, '14. The Estates general was renamed the ___________________.', 'Assembly', 'Parliament', 'Legislative', 'National Assembly', 'D', '2020-01-06 12:48:35', '0000-00-00 00:00:00', 0, 0),
+(15, 6, 5, '15.French revolution formulated ______________ laws for all citizens within its territory.', ' Different', 'Monarch', 'Constitution', 'Uniform', 'D', '2020-01-06 12:48:41', '0000-00-00 00:00:00', 0, 0),
+(16, 6, 5, '16. ______________ became the common language of the nation.', 'Spanish', 'English', 'Local language', 'French', 'D', '2020-01-06 12:48:46', '0000-00-00 00:00:00', 0, 0),
+(17, 6, 5, '17. The revolutionaries declared that it was the destiny of the French nation to _______________ the people.', 'Liberate', 'despotism', 'communalism', 'socialism', 'A', '2020-01-06 12:48:48', '0000-00-00 00:00:00', 0, 0),
+(18, 6, 5, '18. In Europe, students and other members of educated middle classes began setting up ______________.', 'Students club', 'Jacobin clubs', 'society', 'youth club ', 'B', '2020-01-06 12:48:50', '0000-00-00 00:00:00', 0, 0),
+(19, 6, 5, '19.?? The French armies which moved into Holland, Belgium, Switzerland and Italy in the _______________.', '1780?s', '1770?s', '1790?s', '1800?s ', 'C', '2020-01-06 12:48:55', '0000-00-00 00:00:00', 0, 0),
+(20, 6, 5, '20.?? The French armies began to carry the idea of ________________ abroad.', 'Socialism', 'communalism', 'nationalism', 'despotism ', '', '2020-01-06 12:48:56', '0000-00-00 00:00:00', 0, 0),
+(21, 6, 5, '21.The cover of a German almanac designed by ___________________.', 'Andreas Rebmann', 'Mirabeau', 'Lafayette', 'KarlMarx ', 'A', '2020-01-06 12:48:59', '0000-00-00 00:00:00', 0, 0),
+(22, 6, 5, '22.??? The cover of a German almanac designed in _________________.', 'Mainz ', 'Moscow', 'Paris', 'France', 'A', '2020-01-06 12:49:00', '0000-00-00 00:00:00', 0, 0),
+(23, 6, 5, '23.????? Rebmann was a member of a german _____________ group.', 'Student', 'youth', 'Jacobia', 'press', 'C', '2020-01-06 12:49:02', '0000-00-00 00:00:00', 0, 0),
+(24, 6, 5, '24.??? ________________ set about introducing many of the reforms that he had already introduced in France.', ' Nicholas I', 'Nicholas II', 'Napolean', 'Danton', 'C', '2020-01-06 12:49:04', '0000-00-00 00:00:00', 0, 0),
+(25, 6, 5, '25.????? The civil of 1804 usually known as the _______________.', 'Danton code', 'Napoleonic code', 'Lafayette code', 'Marat code ', 'B', '2020-01-06 12:49:10', '0000-00-00 00:00:00', 0, 0),
 (26, 6, 1, '26.?????? Napoleonic code was exported to the regions under _______________ control.', 'Vote', 'property', 'education', 'equality', 'B', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(27, 6, 1, '27.?????? Napoleonic code was exported to the regions under ______________ control.', 'European', 'Spain', 'French', 'Switzerland', 'C', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(28, 6, 1, '28.?????? _________________ simplified the administrative system.', 'Lafeyette', 'Napoleon', 'Karl Marx', 'Marat', 'B', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(29, 6, 1, '29.?????? Napolean abolished the _______________ system.', 'Socialism', 'communalism', 'feudal', 'nationalism ', 'C', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(30, 6, 1, '30.?????? ______________ would facilitate the movement and exchange of goods from one region to another.', 'Common national currency', 'dollar', 'Euro', 'Rupees ', 'A', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(31, 6, 1, '31.????? The ______________  armies were welcomed as harbingers of liberty.', 'American', 'Britain', 'French', 'Russian', 'C', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(32, 6, 1, '32.Karl Kaspar Firtz is the painter of _________________.', 'Germany', 'France', 'Britain', 'America ', 'A', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(33, 6, 1, '33.? The planting of Tree of Liberty in Zweibrucken, ________________________.', 'London', 'France', 'Germany', 'Russia', 'C', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(34, 6, 1, '34.??? ________________________soldiers, recognisable by their blue, white and red uniforms.', 'Russian', 'French', 'American', 'Britain', 'B', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(35, 6, 1, '35.?? Napolean lost the battle of Leipzig in ____________________.', '1813', '1874', '1799', '1796', 'A', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(36, 6, 1, '36.Napolean invades in ____________________________.', '1797', '1798', '1799', '1796', 'A', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(37, 6, 1, '37. Eastern and Central Europe were under ________________________.', 'autocratic monarchies', 'monarchy', 'oligarchy', 'democracy', 'A', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(38, 6, 1, '38.??? The Habsburg Empire that ruled over ___________________.', 'Hungary', 'Austria', 'Austria ? Hungary', 'Bulgaria', 'C', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(39, 6, 1, '39.??? The regions of Lombardy and Venetia were spoke ________________________ language.', 'Italian', 'Spanish', 'German', 'Polish', 'C', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(40, 6, 1, '40.?? In Hungary, half of the population spoke _____________________ while the other half spoke a variety of dialects.', 'Magyar', 'Polish', 'German', ' Italian', 'A', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(41, 6, 1, '41.????? Greek struggle for independence begins in ____________________.', '1820', '1821', '1823', '1824', 'B', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(42, 6, 1, '42.?????? Socially and politically was the dominant class of the European continent.', 'Aristocracy', 'Zamindars', 'Agrarian', 'Peasant', 'A', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(43, 6, 1, '43.?????? Industrialisation began in England in the second half of the ___________________ century.', '16th ', '17th ', '18th', ' 19th', 'C', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(44, 6, 1, '44.?????? The term liberalism derives from the ___________________ root.', 'Greek', 'Latin', 'Arabic', ' German', 'B', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(45, 6, 1, '45.?????? The meaning of liber is _______________________.', 'Join', 'free', 'people', 'citizen', 'B', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(46, 6, 1, '46. The French revolution, _____________________ had stood for the end of autocracy.', 'Democratic', 'liberalism', 'republic', 'freedom ', 'B', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(47, 6, 1, '47.??? Men without _____________________ and women were excluded from political rights.', 'Property', 'education', 'complete the age of 18', ' qualification ', 'A', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(48, 6, 1, '48.???? Napoleon defeated at _____________________.', 'Waterloo', 'Germany', 'Wellington', 'Paris ', 'A', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(49, 6, 1, '49.???? The Vienna peace settlement was signed in ____________.', '1815', '1816', '1817', '1818', 'A', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(50, 6, 1, '50.?????? Slav nationalism gathers force in the Habsburg and Ottaman Empires in _________________.', '1905', '1966', '1907', '1908', 'A', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(51, 6, 1, '51.?? Men without _____________________ and all women were excluded from without political rights.', 'property', 'education', 'complete the age of 18', 'qualification', 'A', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(52, 6, 1, '52.Napoleon defeated at _________________________.', 'Waterloo', 'Germany ', 'Wellington', 'Paris', 'A', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(53, 6, 1, '53.?? The Vienna Peace settlement was signed in __________________.', '1815', '1816', '1817', '1818', 'A', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(54, 6, 1, '54.?? Unification of Italy during _________________________.', '1859 ? 1870', '1849 ? 1869', '1850 ? 1888', '1869 - 1881 ', 'A', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(55, 6, 1, '55.? Slan nationalism gathers force in the Habsburg and Ottaman Empires in _____________________.', '1905', '1906', '1907', '1908', '', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(56, 6, 1, '56.?? In ___________________________, a customs union was formed at the initiative of Prussia.', '1835', '1834', '1836', '1837', 'B', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(57, 6, 1, '57.?? Customs union also called as ____________________.', 'guilt', 'shop', 'zollverein', 'trade union ', 'C', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(58, 6, 1, '58.?? The union abolished tariff barriers and reduced the number of currencies from over __________________.', 'five', 'two', 'thirty to two', 'sixty to thirty  ', 'C', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(59, 6, 1, '59.?? A wave of economic nationalism strengthened the ____________________.', 'unification', 'nationalism', ' democracy', 'patriotism', 'B', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(60, 6, 1, '60.?? After the defeat of Napoleon in 1815, European government were driven by a spirit of _______________ .', 'communication', 'conservation', 'democracy', ' republic ', 'B', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(61, 6, 1, '61.?? The abolition of ____________________________ and serfdom could strengthen the autocratic monarchies in Europe.', 'taxation', 'feudalism', 'communalism', 'democracy ', 'B', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(62, 6, 1, '62.? The congress was hosted by the Austrian chancellor _______________________.', 'Duke William', 'Duke Metternich', 'James Duke', 'John Duke ', 'B', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(63, 6, 1, '63.The aim of the Zollverein is to bind the Germans words?', 'Friedrich list', 'Marat', 'Lafayette', 'Mirabean', 'A', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(64, 6, 1, '64.?? Britain, Russia, Prussia and Austria who had collectively defeated ____________________ in 1815.', 'Napoleon', 'Stalin', 'Lenin', 'Hitler', 'A', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(65, 6, 1, '65.?? The Bourbon dynasty, which had been deposed during the ________________________ Revolution.', 'Russia', 'American', 'French', 'Chinese', 'C', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(66, 6, 1, '66.____________________ was given control of northern Italy.', 'Hungary', 'Austria', 'Bulgaria', 'Rumania ', 'B', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(67, 6, 1, '67. Conservative regimes set up in ______________________.', '1816', '1815', '1817', '1818', 'B', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(68, 6, 1, '68.?? ____________________ sprang up in many European states to train revolutionaries and spread their ideas.', 'Missions', 'Organization', 'Secret societies', 'Societies', 'C', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(69, 6, 1, '69.?? __________________ was established to fight for liberty and freedom.', 'Paris Peace Conference ', 'Vienna Congress', 'Berlin Congress', 'Congo Conference', 'B', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(70, 6, 1, '70.?? The Italian revolutionary Giuseppe Mazzini was born in _______________________.', 'Genoa, 1807', 'Genoa, 1800', 'Genoa, 1801', 'Genoa, 1816', 'A', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(71, 6, 1, '71.?? Guiseppe Mazzini was sent into exile in ________________.', '1831', '1830', '1829', '1828', 'A', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(72, 6, 1, '72.?? The first upheaval took place in France in _____________________.', 'June 1831', 'July 1830', 'June 1821', 'July 1831 ', 'B', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(73, 6, 1, '73.?? ___________________ sparked an uprising in Brussels which led to Belgium breaking away from the united kingdom of the Netherlands.', 'The July Revolution', 'The August Revolution', 'The French Revolution', 'Russian Revolution ', 'A', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(74, 6, 1, '74.?? Since fifteenth century Greece became the part of _____________________.', 'Ottaman Empire', 'Russia', 'England', 'France', 'A', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(75, 6, 1, '75.?? The Greeks started their revolution for independence in ___________________.', '1820', '1822', '1821', '1823', 'C', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(76, 6, 1, '76.?? The English Poet ________________ organized funds to supported Greece.', 'Lord Byron', 'Robert Brown', 'Browning', 'Charles wood ', 'A', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
-(77, 6, 1, '77.?? The English Poet Lord Byron died of fever _____________.', '1825', '1824', '1826', '1827', 'B', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
+(27, 6, 2, '27.?????? Napoleonic code was exported to the regions under ______________ control.', 'European', 'Spain', 'French', 'Switzerland', 'C', '2020-01-06 12:49:23', '0000-00-00 00:00:00', 0, 0),
+(28, 6, 2, '28.?????? _________________ simplified the administrative system.', 'Lafeyette', 'Napoleon', 'Karl Marx', 'Marat', 'B', '2020-01-06 12:49:26', '0000-00-00 00:00:00', 0, 0),
+(29, 6, 2, '29.?????? Napolean abolished the _______________ system.', 'Socialism', 'communalism', 'feudal', 'nationalism ', 'C', '2020-01-06 12:49:27', '0000-00-00 00:00:00', 0, 0),
+(30, 6, 2, '30.?????? ______________ would facilitate the movement and exchange of goods from one region to another.', 'Common national currency', 'dollar', 'Euro', 'Rupees ', 'A', '2020-01-06 12:49:29', '0000-00-00 00:00:00', 0, 0),
+(31, 6, 2, '31.????? The ______________  armies were welcomed as harbingers of liberty.', 'American', 'Britain', 'French', 'Russian', 'C', '2020-01-06 12:49:32', '0000-00-00 00:00:00', 0, 0),
+(32, 6, 2, '32.Karl Kaspar Firtz is the painter of _________________.', 'Germany', 'France', 'Britain', 'America ', 'A', '2020-01-06 12:49:33', '0000-00-00 00:00:00', 0, 0),
+(33, 6, 2, '33.? The planting of Tree of Liberty in Zweibrucken, ________________________.', 'London', 'France', 'Germany', 'Russia', 'C', '2020-01-06 12:49:35', '0000-00-00 00:00:00', 0, 0),
+(34, 6, 2, '34.??? ________________________soldiers, recognisable by their blue, white and red uniforms.', 'Russian', 'French', 'American', 'Britain', 'B', '2020-01-06 12:49:35', '0000-00-00 00:00:00', 0, 0),
+(35, 6, 2, '35.?? Napolean lost the battle of Leipzig in ____________________.', '1813', '1874', '1799', '1796', 'A', '2020-01-06 12:49:36', '0000-00-00 00:00:00', 0, 0),
+(36, 6, 2, '36.Napolean invades in ____________________________.', '1797', '1798', '1799', '1796', 'A', '2020-01-06 12:49:37', '0000-00-00 00:00:00', 0, 0),
+(37, 6, 2, '37. Eastern and Central Europe were under ________________________.', 'autocratic monarchies', 'monarchy', 'oligarchy', 'democracy', 'A', '2020-01-06 12:49:38', '0000-00-00 00:00:00', 0, 0),
+(38, 6, 2, '38.??? The Habsburg Empire that ruled over ___________________.', 'Hungary', 'Austria', 'Austria ? Hungary', 'Bulgaria', 'C', '2020-01-06 12:49:39', '0000-00-00 00:00:00', 0, 0),
+(39, 6, 2, '39.??? The regions of Lombardy and Venetia were spoke ________________________ language.', 'Italian', 'Spanish', 'German', 'Polish', 'C', '2020-01-06 12:49:43', '0000-00-00 00:00:00', 0, 0),
+(40, 6, 2, '40.?? In Hungary, half of the population spoke _____________________ while the other half spoke a variety of dialects.', 'Magyar', 'Polish', 'German', ' Italian', 'A', '2020-01-06 12:49:46', '0000-00-00 00:00:00', 0, 0),
+(41, 6, 2, '41.????? Greek struggle for independence begins in ____________________.', '1820', '1821', '1823', '1824', 'B', '2020-01-06 12:49:47', '0000-00-00 00:00:00', 0, 0),
+(42, 6, 2, '42.?????? Socially and politically was the dominant class of the European continent.', 'Aristocracy', 'Zamindars', 'Agrarian', 'Peasant', 'A', '2020-01-06 12:49:50', '0000-00-00 00:00:00', 0, 0),
+(43, 6, 2, '43.?????? Industrialisation began in England in the second half of the ___________________ century.', '16th ', '17th ', '18th', ' 19th', 'C', '2020-01-06 12:49:52', '0000-00-00 00:00:00', 0, 0),
+(44, 6, 2, '44.?????? The term liberalism derives from the ___________________ root.', 'Greek', 'Latin', 'Arabic', ' German', 'B', '2020-01-06 12:49:53', '0000-00-00 00:00:00', 0, 0),
+(45, 6, 2, '45.?????? The meaning of liber is _______________________.', 'Join', 'free', 'people', 'citizen', 'B', '2020-01-06 12:49:54', '0000-00-00 00:00:00', 0, 0),
+(46, 6, 2, '46. The French revolution, _____________________ had stood for the end of autocracy.', 'Democratic', 'liberalism', 'republic', 'freedom ', 'B', '2020-01-06 12:49:56', '0000-00-00 00:00:00', 0, 0),
+(47, 6, 2, '47.??? Men without _____________________ and women were excluded from political rights.', 'Property', 'education', 'complete the age of 18', ' qualification ', 'A', '2020-01-06 12:49:57', '0000-00-00 00:00:00', 0, 0),
+(48, 6, 2, '48.???? Napoleon defeated at _____________________.', 'Waterloo', 'Germany', 'Wellington', 'Paris ', 'A', '2020-01-06 12:49:59', '0000-00-00 00:00:00', 0, 0),
+(49, 6, 2, '49.???? The Vienna peace settlement was signed in ____________.', '1815', '1816', '1817', '1818', 'A', '2020-01-06 12:50:00', '0000-00-00 00:00:00', 0, 0),
+(50, 6, 2, '50.?????? Slav nationalism gathers force in the Habsburg and Ottaman Empires in _________________.', '1905', '1966', '1907', '1908', 'A', '2020-01-06 12:50:01', '0000-00-00 00:00:00', 0, 0),
+(51, 6, 2, '51.?? Men without _____________________ and all women were excluded from without political rights.', 'property', 'education', 'complete the age of 18', 'qualification', 'A', '2020-01-06 12:50:02', '0000-00-00 00:00:00', 0, 0),
+(52, 6, 2, '52.Napoleon defeated at _________________________.', 'Waterloo', 'Germany ', 'Wellington', 'Paris', 'A', '2020-01-06 12:50:04', '0000-00-00 00:00:00', 0, 0),
+(53, 6, 2, '53.?? The Vienna Peace settlement was signed in __________________.', '1815', '1816', '1817', '1818', 'A', '2020-01-06 12:50:07', '0000-00-00 00:00:00', 0, 0),
+(54, 6, 2, '54.?? Unification of Italy during _________________________.', '1859 ? 1870', '1849 ? 1869', '1850 ? 1888', '1869 - 1881 ', 'A', '2020-01-06 12:50:08', '0000-00-00 00:00:00', 0, 0),
+(55, 6, 2, '55.? Slan nationalism gathers force in the Habsburg and Ottaman Empires in _____________________.', '1905', '1906', '1907', '1908', '', '2020-01-06 12:50:12', '0000-00-00 00:00:00', 0, 0),
+(56, 6, 6, '56.?? In ___________________________, a customs union was formed at the initiative of Prussia.', '1835', '1834', '1836', '1837', 'B', '2020-01-06 12:50:32', '0000-00-00 00:00:00', 0, 0),
+(57, 6, 6, '57.?? Customs union also called as ____________________.', 'guilt', 'shop', 'zollverein', 'trade union ', 'C', '2020-01-06 12:50:33', '0000-00-00 00:00:00', 0, 0),
+(58, 6, 6, '58.?? The union abolished tariff barriers and reduced the number of currencies from over __________________.', 'five', 'two', 'thirty to two', 'sixty to thirty  ', 'C', '2020-01-06 12:50:34', '0000-00-00 00:00:00', 0, 0),
+(59, 6, 6, '59.?? A wave of economic nationalism strengthened the ____________________.', 'unification', 'nationalism', ' democracy', 'patriotism', 'B', '2020-01-06 12:50:35', '0000-00-00 00:00:00', 0, 0),
+(60, 6, 6, '60.?? After the defeat of Napoleon in 1815, European government were driven by a spirit of _______________ .', 'communication', 'conservation', 'democracy', ' republic ', 'B', '2020-01-06 12:50:37', '0000-00-00 00:00:00', 0, 0),
+(61, 6, 6, '61.?? The abolition of ____________________________ and serfdom could strengthen the autocratic monarchies in Europe.', 'taxation', 'feudalism', 'communalism', 'democracy ', 'B', '2020-01-06 12:50:38', '0000-00-00 00:00:00', 0, 0),
+(62, 6, 6, '62.? The congress was hosted by the Austrian chancellor _______________________.', 'Duke William', 'Duke Metternich', 'James Duke', 'John Duke ', 'B', '2020-01-06 12:50:41', '0000-00-00 00:00:00', 0, 0),
+(63, 6, 6, '63.The aim of the Zollverein is to bind the Germans words?', 'Friedrich list', 'Marat', 'Lafayette', 'Mirabean', 'A', '2020-01-06 12:50:42', '0000-00-00 00:00:00', 0, 0),
+(64, 6, 6, '64.?? Britain, Russia, Prussia and Austria who had collectively defeated ____________________ in 1815.', 'Napoleon', 'Stalin', 'Lenin', 'Hitler', 'A', '2020-01-06 12:50:43', '0000-00-00 00:00:00', 0, 0),
+(65, 6, 6, '65.?? The Bourbon dynasty, which had been deposed during the ________________________ Revolution.', 'Russia', 'American', 'French', 'Chinese', 'C', '2020-01-06 12:50:44', '0000-00-00 00:00:00', 0, 0),
+(66, 6, 6, '66.____________________ was given control of northern Italy.', 'Hungary', 'Austria', 'Bulgaria', 'Rumania ', 'B', '2020-01-06 12:50:47', '0000-00-00 00:00:00', 0, 0),
+(67, 6, 6, '67. Conservative regimes set up in ______________________.', '1816', '1815', '1817', '1818', 'B', '2020-01-06 12:50:48', '0000-00-00 00:00:00', 0, 0),
+(68, 6, 6, '68.?? ____________________ sprang up in many European states to train revolutionaries and spread their ideas.', 'Missions', 'Organization', 'Secret societies', 'Societies', 'C', '2020-01-06 12:50:49', '0000-00-00 00:00:00', 0, 0),
+(69, 6, 6, '69.?? __________________ was established to fight for liberty and freedom.', 'Paris Peace Conference ', 'Vienna Congress', 'Berlin Congress', 'Congo Conference', 'B', '2020-01-06 12:50:50', '0000-00-00 00:00:00', 0, 0),
+(70, 6, 6, '70.?? The Italian revolutionary Giuseppe Mazzini was born in _______________________.', 'Genoa, 1807', 'Genoa, 1800', 'Genoa, 1801', 'Genoa, 1816', 'A', '2020-01-06 12:50:51', '0000-00-00 00:00:00', 0, 0),
+(71, 6, 6, '71.?? Guiseppe Mazzini was sent into exile in ________________.', '1831', '1830', '1829', '1828', 'A', '2020-01-06 12:50:52', '0000-00-00 00:00:00', 0, 0),
+(72, 6, 6, '72.?? The first upheaval took place in France in _____________________.', 'June 1831', 'July 1830', 'June 1821', 'July 1831 ', 'B', '2020-01-06 12:50:52', '0000-00-00 00:00:00', 0, 0),
+(73, 6, 6, '73.?? ___________________ sparked an uprising in Brussels which led to Belgium breaking away from the united kingdom of the Netherlands.', 'The July Revolution', 'The August Revolution', 'The French Revolution', 'Russian Revolution ', 'A', '2020-01-06 12:50:53', '0000-00-00 00:00:00', 0, 0),
+(74, 6, 6, '74.?? Since fifteenth century Greece became the part of _____________________.', 'Ottaman Empire', 'Russia', 'England', 'France', 'A', '2020-01-06 12:50:54', '0000-00-00 00:00:00', 0, 0),
+(75, 6, 6, '75.?? The Greeks started their revolution for independence in ___________________.', '1820', '1822', '1821', '1823', 'C', '2020-01-06 12:50:55', '0000-00-00 00:00:00', 0, 0),
+(76, 6, 6, '76.?? The English Poet ________________ organized funds to supported Greece.', 'Lord Byron', 'Robert Brown', 'Browning', 'Charles wood ', 'A', '2020-01-06 12:50:56', '0000-00-00 00:00:00', 0, 0),
+(77, 6, 6, '77.?? The English Poet Lord Byron died of fever _____________.', '1825', '1824', '1826', '1827', 'B', '2020-01-06 12:50:57', '0000-00-00 00:00:00', 0, 0),
 (78, 6, 1, '78.?? The Treaty of  Constantinople was signed in ', '1832', '1833', '1842', '1827', 'A', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
 (79, 6, 1, '79.?? The Treaty of  ________________ recognized Greece as an independent nation.', 'Paris', 'Contantinople', 'London', 'Versatiles', 'B', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
 (80, 6, 1, '80.?? _____________________ played an important role in creating the idea of the nation.', 'culture', 'tradition', 'education', 'knowledge ', 'A', '2020-01-02 11:35:03', '0000-00-00 00:00:00', 0, 0),
@@ -223,6 +223,38 @@ INSERT INTO `question` (`question_id`, `subject_id`, `topic_id`, `name`, `a`, `b
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `student_answer`
+--
+
+CREATE TABLE `student_answer` (
+  `student_answer_id` int(11) NOT NULL,
+  `subject_id` int(11) DEFAULT NULL,
+  `topic_id` int(11) DEFAULT NULL,
+  `question_id` int(11) DEFAULT NULL,
+  `answer_option` varchar(2) DEFAULT NULL,
+  `actual_answer_option` varchar(2) NOT NULL DEFAULT '',
+  `is_correct_answer` tinyint(1) NOT NULL DEFAULT '0',
+  `is_skipped` tinyint(1) NOT NULL DEFAULT '0',
+  `student_register_id` int(11) DEFAULT NULL,
+  `answer_attempt` int(11) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `created_by` int(11) DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `updated_by` int(11) DEFAULT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT '1'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `student_answer`
+--
+
+INSERT INTO `student_answer` (`student_answer_id`, `subject_id`, `topic_id`, `question_id`, `answer_option`, `actual_answer_option`, `is_correct_answer`, `is_skipped`, `student_register_id`, `answer_attempt`, `created_at`, `created_by`, `updated_at`, `updated_by`, `status`) VALUES
+(1, 6, 1, 5, 'A', 'D', 0, 0, 2, NULL, NULL, NULL, NULL, NULL, 1),
+(2, 6, 2, 7, 'A', 'D', 0, 0, 2, NULL, NULL, NULL, NULL, NULL, 1);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `student_register`
 --
 
@@ -230,6 +262,8 @@ CREATE TABLE `student_register` (
   `student_register_id` int(11) NOT NULL,
   `user_name` varchar(255) NOT NULL,
   `student_name` varchar(255) NOT NULL,
+  `profile_image` varchar(255) NOT NULL DEFAULT '',
+  `gender` varchar(255) NOT NULL,
   `parent_name` varchar(255) NOT NULL,
   `mobile` varchar(255) NOT NULL,
   `city` varchar(255) NOT NULL,
@@ -251,8 +285,10 @@ CREATE TABLE `student_register` (
 -- Dumping data for table `student_register`
 --
 
-INSERT INTO `student_register` (`student_register_id`, `user_name`, `student_name`, `parent_name`, `mobile`, `city`, `pin`, `school_name`, `standard`, `password`, `confirm_password`, `email`, `status`, `block_reason`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
-(2, 'aumak7639', 'Umasekar', 'Arumugam', '7639600998', 'Chennai', '600073', 'School Name, Chennai', '10th-State-Board', '123456', '123456', 'umasekar098@gmail.com', 1, '', '2020-01-02 08:18:52', '0000-00-00 00:00:00', 0, 0);
+INSERT INTO `student_register` (`student_register_id`, `user_name`, `student_name`, `profile_image`, `gender`, `parent_name`, `mobile`, `city`, `pin`, `school_name`, `standard`, `password`, `confirm_password`, `email`, `status`, `block_reason`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
+(2, 'aumak7639', 'Umasekar', '', 'male', 'Arumugam', '7639600998', 'Chennai', '600073', 'School Name, Chennai', '10th-State-Board', '123456', '123456', 'umasekar098@gmail.com', 1, '', '2020-01-07 05:25:58', '0000-00-00 00:00:00', 0, 0),
+(3, 'mushaqdeen@yahoo.co.in', 'Mushaqdeen', '', 'male', 'Jalaludeen', '9884794962', 'Chennai', '600041', 'Yellow and Gray', '10th-State-Board', '123456', '123456', '', 1, '', '2020-01-06 08:04:31', '0000-00-00 00:00:00', 0, 0),
+(8, 'umasekar', 'umasekar', '', 'male', 'Arumugam', '1234567890', 'test', 'test', 'test', '10th-State-Board', '123456', '123456', '', 1, '', '2020-01-06 10:34:42', '0000-00-00 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -304,7 +340,11 @@ CREATE TABLE `topic` (
 --
 
 INSERT INTO `topic` (`topic_id`, `subject_id`, `name`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
-(1, 6, 'The Rise of Nationalism in Europe', '2020-01-02 07:56:29', '0000-00-00 00:00:00', 1, 1);
+(1, 6, 'The Rise of Nationalism in Europe', '2020-01-02 07:56:29', '0000-00-00 00:00:00', 1, 1),
+(2, 6, 'Nationalism in india.', '2020-01-06 10:21:01', '0000-00-00 00:00:00', 0, 0),
+(4, 6, 'The Making of a global world', '2020-01-06 10:21:18', '0000-00-00 00:00:00', 0, 0),
+(5, 6, 'The age of industriallzation', '2020-01-06 10:21:43', '0000-00-00 00:00:00', 0, 0),
+(6, 6, 'Print culture and the modern world', '2020-01-06 10:22:01', '0000-00-00 00:00:00', 0, 0);
 
 --
 -- Indexes for dumped tables
@@ -315,6 +355,12 @@ INSERT INTO `topic` (`topic_id`, `subject_id`, `name`, `created_at`, `updated_at
 --
 ALTER TABLE `question`
   ADD PRIMARY KEY (`question_id`);
+
+--
+-- Indexes for table `student_answer`
+--
+ALTER TABLE `student_answer`
+  ADD PRIMARY KEY (`student_answer_id`);
 
 --
 -- Indexes for table `student_register`
@@ -345,10 +391,16 @@ ALTER TABLE `question`
   MODIFY `question_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=171;
 
 --
+-- AUTO_INCREMENT for table `student_answer`
+--
+ALTER TABLE `student_answer`
+  MODIFY `student_answer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `student_register`
 --
 ALTER TABLE `student_register`
-  MODIFY `student_register_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `student_register_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `subject`
@@ -360,7 +412,7 @@ ALTER TABLE `subject`
 -- AUTO_INCREMENT for table `topic`
 --
 ALTER TABLE `topic`
-  MODIFY `topic_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `topic_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
