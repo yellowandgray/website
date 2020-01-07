@@ -32,7 +32,7 @@
                                         <label class = 'control-label' for = 'upload-profile'>Upload Your Profile Picture</label>
                                         <div class = 'controls'>
                                             <div id="upload_container">
-                                                <input type="file" id="profile_image" accept="image/x-png,image/gif,image/jpeg" onchange="attachFile('profile_image');" />
+                                                <input type="file" id="profile_picture" accept="image/x-png,image/gif,image/jpeg" onchange="attachFile('profile_picture');" />
                                             </div>
                                             <div class="image-preview hidden" id="preview_container">
                                                 <button type="button" onclick="closeProfilePic();" class="close-button-profile-img"><i class="icon-remove-sign"></i></button>

@@ -17,7 +17,7 @@ function attachFile(id) {
             success: function(data) {
                 $('.loader').removeClass('is-active');
                 if (data.result.error === false) {
-                    if (id == 'profile_image') {
+                    if (id == 'profile_picture') {
                         $("#preview_container").removeClass('hidden');
                         $("#upload_container").addClass('hidden');
                         avatar = data.result.data;
@@ -33,7 +33,7 @@ function attachFile(id) {
             }
         });
     } else {
-        if (id != 'profile_image' && checkfiletype == false) {
+        if (id != 'profile_picture' && checkfiletype == false) {
             swal('Information', 'Please attach profile', 'info');
         }
     }
@@ -44,7 +44,7 @@ function registerStudent() {
     $.ajax({
         type: "POST",
         url: 'api/v1/insert_student',
-        data: { user_name: $('#user_name').val(), student_name: $('#student_name').val(), parent_name: $('#parent_name').val(), profile_image: avatar, gender: $('#gender').val(), mobile: $('#mobile').val(), city: $('#city').val(), pin: $('#pin').val(), school_name: $('#school_name').val(), standard: $('#standard').val(), email: $('#email').val(), password: $('#password').val(), confirm_password: $('#confirm_password').val() },
+        data: { user_name: $('#user_name').val(), student_name: $('#student_name').val(), parent_name: $('#parent_name').val(), profile_picture: avatar, gender: $('#gender').val(), mobile: $('#mobile').val(), city: $('#city').val(), pin: $('#pin').val(), school_name: $('#school_name').val(), standard: $('#standard').val(), email: $('#email').val(), password: $('#password').val(), confirm_password: $('#confirm_password').val() },
         success: function(data) {
             $('.loader').removeClass('is-active');
             if (data.result.error === false) {
@@ -52,7 +52,7 @@ function registerStudent() {
                 $('#student_name').val('');
                 $('#parent_name').val('');
                 $('#gender').val('');
-                $("#profile_image").val('');
+                $("#profile_picture").val('');
                 $('#parent_name').val('');
                 $('#mobile').val('');
                 $('#city').val('');
@@ -120,7 +120,7 @@ function logoutUser() {
 }
 
 function closeProfilePic() {
-    $("#profile_image").val('');
+    $("#profile_picture").val('');
     $("#preview_container").addClass('hidden');
     $("#upload_container").removeClass('hidden');
 }
