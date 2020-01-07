@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="en">
     <?php $page = 'make-different';
-    include 'head.php'; ?>
+    include 'head.php';
+    ?>
     <body>
         <div class="wrapper">
             <!--Header Start-->
@@ -53,14 +54,19 @@
                             <div class="about-pic">
                                 <div class="pic1">
                                     <div id="pic-slider" class="owl-carousel owl-theme">
-                                        <div class="item"><img src="images/carosel/pic-Staff.jpg" alt="Experienced Skilled Staff - ENPEE International School" title="Experienced Skilled Staff - ENPEE International School"></div>
+                                        <div class="item"><img src="images/carosel/001.jpg" alt="Secured Campus" title="Secured Campus"></div>
+                                        <div class="item"><img src="images/carosel/008.jpg" alt="AC class rooms " title="AC class rooms "></div>
 <!--                                        <div class="item"><img src="images/carosel/pic-doscipline.jpg" alt=""></div>-->
-                                        <div class="item"><img src="images/carosel/pic-frenchstyle.jpg" alt="French Style Architechture - ENPEE International School" title="French Style Architechture - ENPEE International School"></div>
-                                        <div class="item"><img src="images/carosel/pic-interactive-learning.jpg" alt="Interactive Learning - ENPEE International School" title="Interactive Learning - ENPEE International School"></div>
-                                        <div class="item"><img src="images/carosel/pic-project-based-curriculum.jpg" alt="Project Based Curriculum - ENPEE International School" title="Project Based Curriculum - ENPEE International School"></div>
+                                        <div class="item"><img src="images/carosel/007.jpg" alt="Smart boards" title="Smart boards"></div>
+                                        <div class="item"><img src="images/carosel/005.jpg" alt="AC Transport" title="AC Transport"></div>
+                                        <div class="item"><img src="images/carosel/002.jpg" alt="Advanced sports facilities" title="Advanced sports facilities"></div>
+                                        <div class="item"><img src="images/carosel/003.jpg" alt="Extra Curricular Activities" title="Extra Curricular Activities"></div>
+                                        <div class="item"><img src="images/carosel/004.jpg" alt="Events" title="Events"></div>
+                                        <div class="item"><img src="images/carosel/006.jpg" alt="Infrastructure" title="Infrastructure"></div>
+                                        <div class="item"><img src="images/carosel/009.jpg" alt="ROBOTICS" title="ROBOTICS"></div>
                                     </div>
                                 </div>
-                                <div class="pic2"><img src="images/aboutpic2.jpg" alt="Modern Infrastructure-ENPEE International School" title="Modern Infrastructure-ENPEE International School"></div>
+                                <div class="pic2"><div class="about-video-img-1"><a id="myBtn9" data-toggle="lightbox" data-width="1280"><i class="fas fa-play"></i></a><img src="images/aboutpic2.jpg" alt="Modern Infrastructure-ENPEE International School" title="Modern Infrastructure-ENPEE International School"></div></div>
                             </div>
                         </div>
                     </div>
