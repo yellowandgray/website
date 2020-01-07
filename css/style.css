@@ -2547,6 +2547,10 @@ article .align-right {
     [class*="span"] {
         margin-bottom: 20px;
     }
+    .accordion-inner h2 span {
+        float: left !important;
+        margin-top: 5px;
+    }
 }
 
 @media (max-width: 480px) {

@@ -53,37 +53,23 @@ $student_answer = $obj->selectAll('sa.*, s.name AS subject, t.name AS topic', 's
                                         </div>
                                         <div id = 'collapseOne' class = 'accordion-body collapse in'>
                                             <div class = 'accordion-inner'>
-                                                <!-- questionTitle -->
-                                                <h2 class = 'titleContainer title'><?php echo $row['topic'];
+                                                <h2 class = 'titleContainer title'> <i class="font-icon-arrow-simple-right"></i> <?php echo $row['topic'];
                                 ?> <span>Date: 10-01-2020</span></h2>
-                                                <!-- quizOptions -->
-                                                <table class = 'table table-striped'>
+                                                <table class = 'table table-striped result_table'>
                                                     <thead>
                                                         <tr>
-                                                            <th>Total Questions</th>
-                                                            <th>Attend Questions</th>
-                                                            <th><i class="icon-ok-sign"></i></th>
-                                                            <th><i class="font-icon-remove-circle"></i></th>
+                                                            <th class="text-center">Total Questions</th>
+                                                            <th class="text-center">Attend Questions</th>
+                                                            <th class="text-center"><i class="icon-ok-sign"></i></th>
+                                                            <th class="text-center"><i class="font-icon-remove-circle"></i></th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                         <tr>
-                                                            <td>1</td>
-                                                            <td>Mark</td>
-                                                            <td>Otto</td>
-                                                            <td>@mdo</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>2</td>
-                                                            <td>Jacob</td>
-                                                            <td>Thornton</td>
-                                                            <td>@fat</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>3</td>
-                                                            <td>Larry</td>
-                                                            <td>the Bird</td>
-                                                            <td>@twitter</td>
+                                                            <td>100</td>
+                                                            <td>95</td>
+                                                            <td>68</td>
+                                                            <td>27</td>
                                                         </tr>
                                                     </tbody>
                                                 </table>

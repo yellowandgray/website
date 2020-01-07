@@ -539,6 +539,19 @@ and open the template in the editor.
     float: right;
 }
 
+.text-center {
+    text-align: center !Important;
+}
+
+.result_table .icon-ok-sign {
+    color: #479c18;
+    font-size: 20px;
+}
+
+.result_table .font-icon-remove-circle {
+    color: #F03C02;
+    font-size: 20px;
+}
 
 /*.accordion-inner .optionContainer .option {
     float: left;
