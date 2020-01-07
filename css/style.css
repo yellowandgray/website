@@ -2659,11 +2659,15 @@ article .align-right {
     .lable-blue {
         float: left;
         width: auto;
+        font-size: 15px;
+        font-weight: 600;
     }
     .label-success {
         width: auto;
         margin-top: 0px !important;
         margin-bottom: 0;
+        font-size: 15px;
+        font-weight: 600;
     }
     .lenth_width {
         width: 65%;
@@ -2676,7 +2680,7 @@ article .align-right {
         padding: 5px 20px !important;
     }
     .result_user_section .user_profile {
-        height: 150px !important; 
+        height: 150px !important;
     }
 }
 

@@ -59,7 +59,7 @@ if (count($questions) > 0) {
                                         <progress class="progress is-info is-small" :value="(questionIndex/quiz.questions.length)*100" max="100">{{(questionIndex/quiz.questions.length)*100}}%</progress>
                                         <div class="lenth_width">
                                             <p><span  class="label lable-blue">Total: <span class="">{{quiz.questions.length}}</span></span></p>
-                                            <p class="label label-success"><span class="">Count: {{((quiz.questions.length)-(quiz.questions.length-questionIndex))}}</span></p>
+                                            <p><span class="label label-success">Count: {{((quiz.questions.length)-(quiz.questions.length-questionIndex))}}</span></p>
                                         </div>
                                     </div>
                                     <!--/progress-->

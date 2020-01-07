@@ -462,8 +462,9 @@ and open the template in the editor.
 .headnav-1 {
     display: none;
 }
-@media screen and (max-width:390px){
-    .pagination .button{
+
+@media screen and (max-width:390px) {
+    .pagination .button {
         padding: 0.2rem 1rem;
         border: 1px solid rgba(0, 0, 0, 0.25);
         border-radius: 5rem;
@@ -472,8 +473,19 @@ and open the template in the editor.
         background: #30445c;
     }
 }
-.lable-blue{
+
+.lable-blue {
     background-color: #30445c;
+}
+
+.lenth_width p span.lable-blue {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.lenth_width p span.label-success {
+    font-size: 15px;
+    font-weight: 600;
 }
 
 .hidden {
@@ -526,6 +538,7 @@ and open the template in the editor.
 .accordion-heading a.accordion-toggle span {
     float: right;
 }
+
 
 /*.accordion-inner .optionContainer .option {
     float: left;
