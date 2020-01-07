@@ -2959,5 +2959,12 @@ article .align-right {
     outline: 0;
 }
 
+#featured #mySignin .modal {
+    top : 20% !important;
+}
+#featured #mySignup .modal {
+    top : 20% !important;
+}
+
 
 /* Theme Styler :: End */
