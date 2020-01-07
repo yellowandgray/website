@@ -3,28 +3,13 @@
     <?php include 'head.php'; ?>
     <body>
         <div id="wrapper">
-            <!-- toggle top area -->
-            <!--            <div class="hidden-top">
-                            <div class="hidden-top-inner container">
-                                <div class="row">
-                                    <div class="span12">
-                                        <ul>
-                                            <li><strong>We are available for any custom works this month</strong></li>
-                                            <li>Main office: Springville center X264, Park Ave S.01</li>
-                                            <li>Call us <i class="icon-phone"></i> (123) 456-7890 - (123) 555-7891</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>-->
-            <!-- end toggle top area -->
-            <!-- start header -->
-
-            <section id="featured">
+            <section id="featured-1">
 
                 <div id="mySignin" tabindex="-1" role="dialog" aria-labelledby="mySigninModalLabel" aria-hidden="true">
-                    <div class = 'logo text-center'>
-                        <img src = 'img/logo.png' alt = '' class = 'logo' />
+                    <div class = 'logo'>
+                        <a href='index'>
+                            <img src = 'img/logo.png' alt = '' class = 'logo' />
+                        </a>
 
                     </div>
                     <div class="modal styled">
@@ -56,7 +41,7 @@
                                         <button type="submit" class="btn">Sign in</button> Forgot password? <a href="#myReset" data-dismiss="modal" aria-hidden="true" data-toggle="modal">Reset</a>
                                     </div>
                                     <p class="aligncenter margintop20">
-                                        Click here to create the new account <a href = '#mySignup' data-dismiss="modal" aria-hidden="true" data-toggle="modal">Register Now!</a>
+                                        Click here to create the new account <a href = 'register-page'>Register Now!</a>
                                     </p>
                                 </div>
                             </form>
@@ -64,7 +49,11 @@
                     </div>
                 </div>
             </section>
-        </div>
 
+            <!-- Reset Modal -->
+            <?php include 'reset_password.php'; ?>
+            <!-- end reset modal -->
+        </div>
+        <?php include 'script.php'; ?>
     </body>
 </html>

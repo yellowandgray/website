@@ -33,16 +33,6 @@ if (isset($_SESSION['student_register_id'])) {
                             </li>
                         </ul>
                     </div>
-                    <!-- Signup Modal -->
-                    <?php include 'singnup.php'; ?>
-                    <!-- end signup modal -->
-                    <!-- Sign in Modal -->
-                    <?php include 'login.php';
-                    ?>
-                    <!-- end signin modal -->
-                    <!-- Reset Modal -->
-                    <?php include 'reset_password.php'; ?>
-                    <!-- end reset modal -->
                 </div>
             <?php } else {
                 ?>

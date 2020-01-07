@@ -2674,7 +2674,7 @@ article .align-right {
         font-weight: 600;
     }
     .lenth_width {
-        width: 65%;
+        width: 75%;
         margin: 0 auto;
     }
     .topic_list_position_left {
@@ -2685,6 +2685,15 @@ article .align-right {
     }
     .result_user_section .user_profile {
         height: 150px !important;
+    }
+    .signup-section {
+        width: 90% !important;
+    }
+    .signup-title {
+        width: auto !important;
+    }
+    .control-group .controls select {
+        width: 100% !important;
     }
 }
 
@@ -2959,11 +2968,32 @@ article .align-right {
     outline: 0;
 }
 
-#featured #mySignin .modal {
-    top : 20% !important;
+#featured-1 {
+    background: #ffffff;
+    position: relative;
+    margin: 0;
+    padding: 63px 0 0 0px;
 }
-#featured #mySignup .modal {
-    top : 20% !important;
+
+#featured-1 #mySignup:focus {
+    outline: none !important;
+}
+
+#featured-1 #mySignin:focus {
+    outline: none !important;
+}
+
+#featured-1 #mySignin .modal {
+    position: relative !important;
+    /* top: 56% !important; */
+    margin: 15px auto;
+    left: 0;
+}
+#featured-1 #mySignup .modal {
+    position: relative !important;
+    /* top: 56% !important; */
+    margin: 15px auto;
+    left: 0;
 }
 
 
