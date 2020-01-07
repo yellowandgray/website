@@ -20,14 +20,16 @@ if (isset($_SESSION['student_register_id'])) {
                     <div class = 'headnav'>
                         <ul>
                             <li>
-                                <a href = 'login-page.php'><i class = 'icon-user'></i></a>
+                                <a href = 'login-page'>
+                                    <i class = 'icon-user'></i>
+                                </a>
                             </li>
                         </ul>
                     </div>
                     <div class = 'headnav-1'>
                         <ul>
                             <li>
-                                <a href = '#mySignin' data-toggle = 'modal'>
+                                <a href = 'login-page'>
                                     <i class = 'icon-user'></i>
                                 </a>
                             </li>
