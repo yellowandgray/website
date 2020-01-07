@@ -20,7 +20,7 @@ if (isset($_SESSION['student_register_id'])) {
                     <div class = 'headnav'>
                         <ul>
                             <li>
-                                <a href = '#mySignin' data-toggle = 'modal'><i class = 'icon-user'></i></a>
+                                <a href = 'login-page.php'><i class = 'icon-user'></i></a>
                             </li>
                         </ul>
                     </div>
