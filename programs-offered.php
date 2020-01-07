@@ -7,7 +7,7 @@
     <body>
         <div class="wrapper">
             <!--Header Start-->
-<?php include 'menu.php'; ?>
+            <?php include 'menu.php'; ?>
             <div id="search">
                 <button type="button" class="close">×</button>
                 <form class="search-overlay-form">
@@ -27,7 +27,7 @@
                 </div>
             </section>
             <!--Inner Header End--> 
-<?php include 'admission-content.php'; ?>
+            <?php include 'admission-content.php'; ?>
             <!--About Start-->
             <section class="wf100 about">
                 <!--Fundraising Campaigns Section Start-->
@@ -70,7 +70,7 @@
                                 </div>
                                 <!--campaign box end--> 
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-4 ">
                                 <!--campaign box start-->
                                 <div class="campaign-box">
                                     <div class="campaign-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/pic-class-one-five.jpg" alt="Class I to V - ENPEE International School" title="Class I to V - ENPEE International School"> </div>
@@ -86,11 +86,11 @@
                             <div class="col-md-4 padding-15">
                                 <!--campaign box start-->
                                 <div class="campaign-box">
-                                     <div class="campaign-txt">
+                                    <div class="campaign-txt">
                                         <h5>ENPEE Sports Academy</h5>
-                                   </div>
+                                    </div>
                                     <div class="campaign-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/sports-001.jpg" alt="" title=""> </div>
-                                   
+
                                     <!--                                    <a href="management.php" class="dbutton">Read More</a> -->
                                 </div>
                                 <!--campaign box end--> 
@@ -98,14 +98,62 @@
                             <div class="col-md-4 padding-15">
                                 <!--campaign box start-->
                                 <div class="campaign-box">
-                                     <div class="campaign-txt">
+                                    <div class="campaign-txt">
                                         <h5>ENPEE Sports Academy</h5>
-                                   </div>
+                                    </div>
                                     <div class="campaign-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/sports-002.jpg" alt="" title=""> </div>
-                                    
-                                 </div>
+
+                                </div>
                                 <!--campaign box end--> 
                             </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="wf100 p80 fcampaigns">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <!--title start-->
+                                <div class="section-title">
+                                    <h2>ROBOTICS</h2>
+                                    <p>In today’s’ technology-driven world, it’s important now more than ever to prepare students for the future. Teaching robotics to young students throughout their schooling can increase their ability to be creative and innovative thinkers and more productive members of society. </p>
+                                    <p>ENPEE INTERNATIONAL SCHOOL has recognized the importance of robotics in the classroom we train our students the basics of robotics, we can open a whole new world to them and exciting opportunities that they wouldn’t have access to otherwise.</p>
+                                </div>
+                                <!--title end--> 
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 col-sm-3 mb-2">
+                                <!--campaign box start-->
+                                <div class="campaign-thumb"> <a href="#"><i class="fas fa-link"></i></a><img src="images/program-offered/001.jpg" alt="Pre-KG - ENPEE International School" title="Pre-KG - ENPEE International School"> </div>
+                            </div>
+                            <div class="col-md-3 col-sm-3 mb-2">
+                                <!--campaign box start-->
+                                <div class="campaign-thumb"> <a href="#"><i class="fas fa-link"></i></a><img src="images/program-offered/002.jpg" alt="Pre-KG - ENPEE International School" title="Pre-KG - ENPEE International School"> </div>
+                            </div>
+                            <div class="col-md-3 col-sm-3 mb-2">
+                                <!--campaign box start-->
+                                <div class="campaign-thumb"> <a href="#"><i class="fas fa-link"></i></a><img src="images/program-offered/003.jpg" alt="Pre-KG - ENPEE International School" title="Pre-KG - ENPEE International School"> </div>
+                            </div>
+                            <div class="col-md-3 col-sm-3 mb-2">
+                                <!--campaign box start-->
+                                <div class="campaign-thumb"> <a href="#"><i class="fas fa-link"></i></a><img src="images/program-offered/004.jpg" alt="Pre-KG - ENPEE International School" title="Pre-KG - ENPEE International School"> </div>
+                            </div>
+                            <div class="col-md-3 col-sm-3 mb-2">
+                                <!--campaign box start-->
+                                <div class="campaign-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/program-offered/005.jpg" alt="Pre-KG - ENPEE International School" title="Pre-KG - ENPEE International School"> </div>
+                            </div>
+                            <div class="col-md-3 col-sm-3 mb-2">
+                                <!--campaign box start-->
+                                <div class="campaign-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/program-offered/006.jpg" alt="Pre-KG - ENPEE International School" title="Pre-KG - ENPEE International School"> </div>
+                            </div>
+                            <div class="col-md-3 col-sm-3 mb-2">
+                                <!--campaign box start-->
+                                <div class="campaign-thumb"> <a href="#"><i class="fas fa-link"></i></a><img src="images/program-offered/007.jpg" alt="Pre-KG - ENPEE International School" title="Pre-KG - ENPEE International School"> </div>
+                            </div>
+
+
+
                         </div>
                     </div>
                 </section>
@@ -113,7 +161,7 @@
             </section>
             <!--About End--> 
             <!--Footer Start-->
-<?php include 'footer.php'; ?>
+            <?php include 'footer.php'; ?>
         </div>
     </body>
 </html>

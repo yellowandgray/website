@@ -165,11 +165,16 @@
                             <div class="about-pic">
                                 <div class="pic1">
                                     <div id="pic-slider" class="owl-carousel owl-theme">
-                                        <div class="item"><img src="images/carosel/pic-Staff.jpg" alt="Experienced Skilled Staff - ENPEE International School" title="Experienced Skilled Staff - ENPEE International School"></div>
+                                        <div class="item"><img src="images/carosel/001.jpg" alt="Secured Campus" title="Secured Campus"></div>
+                                        <div class="item"><img src="images/carosel/008.jpg" alt="AC class rooms " title="AC class rooms "></div>
 <!--                                        <div class="item"><img src="images/carosel/pic-doscipline.jpg" alt=""></div>-->
-                                        <div class="item"><img src="images/carosel/pic-frenchstyle.jpg" alt="French Style Architechture - ENPEE International School" title="French Style Architechture - ENPEE International School"></div>
-                                        <div class="item"><img src="images/carosel/pic-interactive-learning.jpg" alt="Interactive Learning - ENPEE International School" title="Interactive Learning - ENPEE International School"></div>
-                                        <div class="item"><img src="images/carosel/pic-project-based-curriculum.jpg" alt="Project Based Curriculum - ENPEE International School" title="Project Based Curriculum - ENPEE International School"></div>
+                                        <div class="item"><img src="images/carosel/007.jpg" alt="Smart boards" title="Smart boards"></div>
+                                        <div class="item"><img src="images/carosel/005.jpg" alt="AC Transport" title="AC Transport"></div>
+                                        <div class="item"><img src="images/carosel/002.jpg" alt="Advanced sports facilities" title="Advanced sports facilities"></div>
+                                        <div class="item"><img src="images/carosel/003.jpg" alt="Extra Curricular Activities" title="Extra Curricular Activities"></div>
+                                        <div class="item"><img src="images/carosel/004.jpg" alt="Events" title="Events"></div>
+                                        <div class="item"><img src="images/carosel/006.jpg" alt="Infrastructure" title="Infrastructure"></div>
+                                        <div class="item"><img src="images/carosel/009.jpg" alt="ROBOTICS" title="ROBOTICS"></div>
                                     </div>
                                 </div>
                                 <div class="pic2"><div class="about-video-img-1"><a id="myBtn9" data-toggle="lightbox" data-width="1280"><i class="fas fa-play"></i></a><img src="images/aboutpic2.jpg" alt="Modern Infrastructure-ENPEE International School" title="Modern Infrastructure-ENPEE International School"></div></div>
@@ -620,7 +625,7 @@
                         <div class="col-md-4 col-sm-4"><a href="http://www.yellowandgray.com" target="_blank"><img src="images/partners/logo-YGSTUDIO.png" alt="Yellowandgray" title="Yellowandgray" class="img-responsive center-block"></a></div>
                         <div class="col-md-4 col-sm-4"><a href="http://morfosis.co.in/" target="_blank"><img src="images/partners/002.png" alt="Morfosis" title="Morfosis" class="img-responsive center-block"></a></div>
                         <div class="col-md-4 col-sm-4"><a href="http://www.sportzvillage.com/schools/" target="_blank"><img src="images/partners/005.png" alt="sportzvillage" title="sportzvillage" class="img-responsive center-block"></a></div>
-                        
+
                     </div>
                     <h2 class="text-center padding-tb-30">Infrastructure Providers</h2>
                     <!--                    <div id="partner-logos" class="owl-carousel owl-theme">-->
@@ -628,7 +633,7 @@
                         <div class="col-md-4 col-sm-4"><a href="https://www.ki.com/" target="_blank"><img src="images/partners/003.png" alt="Krueger International Furniture" title="Krueger International Furniture" class="img-responsive center-block"></a></div>
                         <div class="col-md-4 col-sm-4"><a href="#" target="_blank"><img src="images/partners/004.png" alt="" title="" class="img-responsive center-block"></a></div>
                         <div class="col-md-4 col-sm-4"><a href="https://www.forcemotors.com/" target="_blank"><img src="images/partners/006.png" alt="forcemotors" title="forcemotors" class="img-responsive center-block"></a></div>
-                       
+
                     </div>
 <!--                        <div class="item"><img src="images/partners/001.png" alt=""></div>
                     <div class="item"><img src="images/partners/002.png" alt=""></div>
