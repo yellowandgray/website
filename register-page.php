@@ -24,6 +24,7 @@
 
 
                 <div id = 'mySignup'  tabindex = '-1' role = 'dialog' aria-labelledby = 'mySignupModalLabel' aria-hidden = 'true'>
+                    
                     <div class = 'logo text-center'>
                         <img src = 'img/logo.png' alt = '' class = 'logo' />
 
