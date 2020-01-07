@@ -2957,3 +2957,10 @@ article .align-right {
 
 
 /* Theme Styler :: End */
+
+#featured #mySignin .modal {
+    top : 20% !important;
+}
+#featured #mySignup .modal {
+    top : 20% !important;
+}
