@@ -359,9 +359,10 @@ and open the template in the editor.
 .result_user_section {}
 
 .result_user_section .user_profile {
-    height: 190px;
+    height: 200px;
+    width: 200px;
     border-radius: 50%;
-    width: 50%;
+    max-width: 100%;
     text-align: center;
     margin: 0 auto;
     border: 1px solid red;

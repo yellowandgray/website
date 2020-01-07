@@ -21,10 +21,10 @@ $student_answer = $obj->selectAll('sa.*, s.name AS subject, t.name AS topic', 's
                             <div class = 'result_user_section'>
                                 <?php if (isset($login_student['profile_image']) && $login_student['profile_image'] == '') {
                                     ?>
-                                    <div class = 'user_profile' style = 'background: url(<?php echo BASE_URL . $login_student['gender']; ?>.jpg)no-repeat;background-position: center;'></div>
+                                    <div class = 'user_profile' style = 'background: url(<?php echo BASE_URL . $login_student['gender']; ?>.jpg)no-repeat;background-position: center;background-size: cover'></div>
                                 <?php } else {
                                     ?>
-                                    <div class = 'user_profile' style = 'background: url(<?php echo BASE_URL . $login_student['profile_image']; ?>)no-repeat;background-position: center;'></div>
+                                    <div class = 'user_profile' style = 'background: url(<?php echo BASE_URL . $login_student['profile_image']; ?>)no-repeat;background-position: center;background-size: cover'></div>
                                 <?php }
                                 ?>
                             </div>
