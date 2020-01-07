@@ -156,9 +156,12 @@ if (count($questions) > 0) {
                 this.userResponses = Array(this.quiz.questions.length).fill(null);
             },
             selectOption: function (index) {
-                Vue.set(this.userResponses, this.questionIndex, index);
-                if (this.questionIndex < this.quiz.questions.length)
-                    this.questionIndex++;
+                setTimeout(() => {
+                    Vue.set(this.userResponses, this.questionIndex, index);
+                    if (this.questionIndex < this.quiz.questions.length) {
+                        this.questionIndex++;
+                    }
+                }, 1000);
             },
             next: function () {
                 if (this.questionIndex < this.quiz.questions.length)
