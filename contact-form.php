@@ -29,15 +29,15 @@ if ($_POST['name']) {
 
     $mail->SMTPSecure = "ssl";                 // sets the prefix to the servier
 
-    $mail->Host = "box975.bluehost.com";      // sets GMAIL as the SMTP server
+    $mail->Host = "mail.alias-innovation.com";      // sets GMAIL as the SMTP server
 
     $mail->Port = 465;                   // set the SMTP port for the GMAIL server
 
-    $mail->Username = "noreply@enpeekkl.com";  // GMAIL username
+    $mail->Username = "venkat@alias-innovation.com";  // GMAIL username
 
-    $mail->Password = "Admin@EnPE3Kkl";            // GMAIL password
+    $mail->Password = "guestmalaysia9000";            // GMAIL password
     $mail->IsHTML(true);
-    $mail->SetFrom('noreply@enpeekkl.com', 'ALIAS');
+    $mail->SetFrom('venkat@alias-innovation.com', 'ALIAS');
     $mail->Subject = "Contact Form Submited" . date('d-m-y H:i:s');
     $message = '<table border = "0" cellpadding = "0" cellspacing = "0" height = "100%" width = "100%">
             <tbody>
@@ -59,7 +59,7 @@ if ($_POST['name']) {
             <tbody>
             <tr>
             <td style = "padding:36px 48px;display:block">
-            <h1 style = "color:#ffffff;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif;font-size:30px;font-weight:300;line-height:150%;margin:0;text-align:center"><img src = "http://alias-innovation.com/images/logo.png" alt = "ALIAS" style = "width:50%" /></h1>
+            <h1 style = "color:#ffffff;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif;font-size:30px;font-weight:300;line-height:150%;margin:0;text-align:center"><img src = "http://alias-innovation.com/images/logo.png" alt = "ALIAS" style = "width:100%" /></h1>
             </td>
             </tr>
             </tbody>
@@ -116,10 +116,10 @@ if ($_POST['name']) {
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
     $mail->Body = $message;
     // More headers
-    $address = "info@enpeekkl.com";
+    $address = "info@alias-innovation.com";
     $mail->AddAddress($address, "ALIAS");
-    $mail->AddCC('npschoolkkl@gmail.com', 'ALIAS');
-    $mail->AddCC('arrchanac@gmail.com', 'ALIAS');
+    $mail->AddCC('gerard@alias-innovation.com', 'ALIAS');
+    $mail->AddCC('jenika@icontent.my', 'ALIAS');
 
     if (!$mail->Send()) {
         echo "error";
