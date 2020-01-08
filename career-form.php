@@ -181,7 +181,7 @@ if ($_POST['name']) {
 
     $mail->AddAddress($address, "ENPEEKKL");
     $mail->AddCC('npschoolkkl@gmail.com', 'ENPEEKKL');
-    $mail->AddCC('arrchanac@gmail.com', 'ENPEEKKL');
+    //$mail->AddCC('arrchanac@gmail.com', 'ENPEEKKL');
     $mail->AddAttachment($temp_file_path);
 
 

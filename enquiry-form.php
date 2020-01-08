@@ -130,7 +130,7 @@ if ($_POST['name']) {
     $address = "info@enpeekkl.com";
     $mail->AddAddress($address, "ENPEEKKL");
     $mail->AddCC('npschoolkkl@gmail.com', 'ENPEEKKL');
-    $mail->AddCC('arrchanac@gmail.com', 'ENPEEKKL');
+    //$mail->AddCC('arrchanac@gmail.com', 'ENPEEKKL');
 
     if (!$mail->Send()) {
         echo "error";
