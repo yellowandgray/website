@@ -68,7 +68,7 @@ if (count($questions) > 0) {
                                 <h2 class="titleContainer title">{{ quiz.questions[questionIndex].text }}</h2>
                                 <!-- quizOptions -->
                                 <div class="optionContainer">
-                                    <div class="option" v-for="(response, index) in quiz.questions[questionIndex].responses" @click="selectOption(index)" :class="{ 'is-selected': userResponses[questionIndex] == index}" :key="index">
+                                    <div id="two" class="option" v-for="(response, index) in quiz.questions[questionIndex].responses" @click="selectOption(index)" :class="{ 'is-selected': userResponses[questionIndex] == index}" :key="index">
                                          {{ index | charIndex }}. {{ response.text }}
                                 </div>
                             </div>

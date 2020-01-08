@@ -162,7 +162,7 @@ export class UserForm {
       formData.append('student_name', this.userForm.value.student_name);
       formData.append('parent_name', this.userForm.value.parent_name);
       formData.append('gender', this.userForm.value.gender);
-      formData.append('profile_image', this.userForm.value.profile_image);
+formData.append('profile_image', this.profile_image);
       formData.append('mobile', this.userForm.value.mobile);
       formData.append('city', this.userForm.value.city);
       formData.append('pin', this.userForm.value.pin);
@@ -176,7 +176,7 @@ export class UserForm {
       formData.append('user_name', this.userForm.value.user_name);
       formData.append('student_name', this.userForm.value.student_name);
       formData.append('gender', this.userForm.value.gender);
-      formData.append('profile_picture', this.userForm.value.profile_image);
+      formData.append('profile_picture', this.profile_image);
       formData.append('parent_name', this.userForm.value.parent_name);
       formData.append('mobile', this.userForm.value.mobile);
       formData.append('city', this.userForm.value.city);

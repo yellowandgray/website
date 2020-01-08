@@ -152,6 +152,15 @@
 
 .goto-here .questionBox .questionContainer .optionContainer .option:active {
     transform: scaleX(0.9);
+    border-color: rgb(130, 174, 70);
+    background-color: rgb(130, 174, 70);
+    color: #fff;
+}
+
+#two:focus {
+    border-color: rgb(130, 174, 70);
+    background-color: rgb(130, 174, 70);
+    color: #fff;
 }
 
 .goto-here .questionBox .questionContainer .questionFooter {
