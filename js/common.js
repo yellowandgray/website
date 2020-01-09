@@ -84,7 +84,7 @@ function loginStudent() {
         success: function(data) {
             $('.loader').removeClass('is-active');
             if (data.result.error === false) {
-                window.location = 'home_subject';
+                window.location = 'select_language';
             } else {
                 swal('Information', data.result.message, 'info');
             }

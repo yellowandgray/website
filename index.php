@@ -118,7 +118,7 @@ $obj = new Common();
                                     <h3>Online <span class="highlight"><strong>Mentoring</strong></span> and <span class="highlight"><strong>Coaching</strong></span></h3>
                                 </div>
                                 <div class="cta floatright">
-                                    <a class="btn btn-large btn-theme btn-rounded" href="#mySignup" data-toggle="modal">Register Now</a>
+                                    <a class="btn btn-large btn-theme btn-rounded" href="register-page">Register Now</a>
                                 </div>
                             </div>
                         </div>

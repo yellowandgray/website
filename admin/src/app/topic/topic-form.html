@@ -4,15 +4,28 @@
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Subject</mat-label>
-                    <mat-select required formControlName="subject_id">
-                        <mat-option [value]="row.subject_id" *ngFor="let row of subject">
+                    <mat-label>Language</mat-label>
+                    <mat-select required formControlName="language_id">
+                        <mat-option [value]="row.language_id" *ngFor="let row of language">
                             {{row.name}}
                         </mat-option>
                     </mat-select>
-                    <mat-error>Subject is required</mat-error>
+                    <mat-error>Language is required</mat-error>
                 </mat-form-field>
             </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Year</mat-label>
+                    <mat-select required formControlName="year_id">
+                        <mat-option [value]="row.year_id" *ngFor="let row of year">
+                            {{row.year}}
+                        </mat-option>
+                    </mat-select>
+                    <mat-error>Year is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Topic Name</mat-label>
@@ -24,12 +37,7 @@
         <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
             <button mat-button [mat-dialog-close]="false">Cancel</button>
             <button mat-button type="submit" [disabled]="loading">Save</button>
-            <mat-progress-spinner
-                class="example-margin"
-                *ngIf="loading"
-                [mode]="'indeterminate'"
-                [strokeWidth]="3"
-                [diameter]="25">
+            <mat-progress-spinner class="example-margin" *ngIf="loading" [mode]="'indeterminate'" [strokeWidth]="3" [diameter]="25">
             </mat-progress-spinner>
         </div>
     </form>

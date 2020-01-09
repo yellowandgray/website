@@ -13,8 +13,8 @@
 
                     </div>
                     <div class="modal styled">
-                        <div class="modal-header">
-                            <!--<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>-->
+                        <div class="modal-header login-section">
+                            <a href="index"><i class="font-icon-arrow-simple-left"></i></a>
                             <h4 id="mySigninModalLabel"  class="text-center"><strong>Login</strong></h4>
                         </div>
                         <div class="modal-body">

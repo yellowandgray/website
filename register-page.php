@@ -12,6 +12,7 @@
                             </div>
                             <br/>
                             <div class="signup-title">
+                                <a href="login-page"><i class="font-icon-arrow-simple-left"></i></a>
                                 <h4>Register <strong>Form</strong></h4>
                             </div>
                             <div class="signup-section">

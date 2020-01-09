@@ -15,14 +15,12 @@ import { Observable } from 'rxjs';
 })
 export class QuestionComponent implements OnInit {
 
-    suject = [];
     topic = [];
     question = [];
 
     constructor(public dialog: MatDialog, private httpClient: HttpClient, private _snackBar: MatSnackBar) { }
 
     ngOnInit() {
-        this.getsubject();
         this.gettopic();
         this.getQuestion();
     }
@@ -38,19 +36,6 @@ export class QuestionComponent implements OnInit {
                 });
             }
         );
-    }
-    getsubject(): void {
-        this.httpClient.get<any>('http://localhost/project/mekana/api/v1/get_subject')
-            .subscribe(
-                (res) => {
-                    this.suject = res["result"]["data"];
-                },
-                (error) => {
-                    this._snackBar.open(error["statusText"], '', {
-                        duration: 2000,
-                    });
-                }
-            );
     }
     gettopic(): void {
         this.httpClient.get<any>('http://localhost/project/mekana/api/v1/get_topic')
@@ -118,7 +103,6 @@ export class QuestionForm {
     questionForm: FormGroup;
     loading = false;
     question_id = 0;
-    subject: any[];
     topic: any[];
     constructor(
         public dialogRef: MatDialogRef<QuestionForm>,
@@ -126,7 +110,6 @@ export class QuestionForm {
         private _snackBar: MatSnackBar,
         private httpClient: HttpClient) {
         this.questionForm = new FormGroup({
-            'subject_id': new FormControl('', Validators.required),
             'topic_id': new FormControl('', Validators.required),
             'question': new FormControl('', Validators.required),
             'a': new FormControl('', Validators.required),
@@ -137,7 +120,6 @@ export class QuestionForm {
         });
         if(this.data != null) {
            this.questionForm.patchValue({
-           subject_id: this.data.subject_id,
            topic_id: this.data.topic_id,
            question: this.data.name,
            a: this.data.a,
@@ -148,21 +130,6 @@ export class QuestionForm {
         });
             this.question_id = this.data.question_id;
         }
-        this.httpClient.get('http://localhost/project/mekana/api/v1/get_subject').subscribe(
-            (res) => {
-                if (res["result"]["error"] === false) {
-                    this.subject = res["result"]["data"];
-                } else {
-                    this._snackBar.open(res["result"]["message"], '', {
-                        duration: 2000,
-                    });
-                }
-            },
-            (error) => {
-                this._snackBar.open(error["statusText"], '', {
-                    duration: 2000,
-                });
-            });
         this.httpClient.get('http://localhost/project/mekana/api/v1/get_topic').subscribe(
             (res) => {
                 if (res["result"]["error"] === false) {
@@ -188,7 +155,6 @@ export class QuestionForm {
         var formData = new FormData();
         var url = '';
           if(this.question_id != 0) {
-          formData.append('subject_id', this.questionForm.value.subject_id);
           formData.append('topic_id', this.questionForm.value.topic_id);
           formData.append('name', this.questionForm.value.question);
           formData.append('a', this.questionForm.value.a);
@@ -198,7 +164,6 @@ export class QuestionForm {
           formData.append('answer', this.questionForm.value.answer);
           url = 'update_record/question/question_id = '+this.question_id;
         } else {
-            formData.append('subject_id', this.questionForm.value.subject_id);
             formData.append('topic_id', this.questionForm.value.topic_id);
             formData.append('question', this.questionForm.value.question);
             formData.append('a', this.questionForm.value.a);

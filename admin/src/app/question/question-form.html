@@ -1,19 +1,8 @@
 <h2 mat-dialog-title>User</h2>
 <mat-dialog-content class="mat-typography">
     <form [formGroup]="questionForm" (ngSubmit)="onSubmit()">
-        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
-            <div fxFlex="50%">
-                <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Subject</mat-label>
-                    <mat-select required formControlName="subject_id">
-                        <mat-option [value]="row.subject_id" *ngFor="let row of subject">
-                            {{row.name}}
-                        </mat-option>
-                    </mat-select>
-                    <mat-error>Subject is required</mat-error>
-                </mat-form-field>
-            </div>
-            <div fxFlex="50%">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <div fxFlex="100%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Topic</mat-label>
                     <mat-select required formControlName="topic_id">
@@ -80,8 +69,7 @@
         <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
             <button mat-button [mat-dialog-close]="false">Cancel</button>
             <button mat-button type="submit" [disabled]="loading">Save</button>
-            <mat-progress-spinner class="example-margin" *ngIf="loading" [mode]="'indeterminate'" [strokeWidth]="3"
-                [diameter]="25">
+            <mat-progress-spinner class="example-margin" *ngIf="loading" [mode]="'indeterminate'" [strokeWidth]="3" [diameter]="25">
             </mat-progress-spinner>
         </div>
     </form>

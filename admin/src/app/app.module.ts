@@ -31,6 +31,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { QuestionComponent, QuestionForm, QuestionDelete } from './question/question.component';
 import { TopicComponent, TopicForm, TopicDelete } from './topic/topic.component';
 import { UserComponent, UserForm, UserDelete, BlockForm, ResultForm } from './user/user.component';
+import { YearComponent, YearForm, YearDelete } from './year/year.component';
 
 
 
@@ -52,7 +53,10 @@ import { UserComponent, UserForm, UserDelete, BlockForm, ResultForm } from './us
     UserForm,
     UserDelete,
     BlockForm,
-    ResultForm
+    ResultForm,
+    YearComponent,
+    YearForm,
+    YearDelete
   ],
   imports: [
     BrowserModule,
@@ -81,7 +85,7 @@ import { UserComponent, UserForm, UserDelete, BlockForm, ResultForm } from './us
     MatExpansionModule,
     
   ],
-  entryComponents: [SubjectComponent, SubjectForm, SubjectDelete, QuestionComponent, QuestionForm, QuestionDelete, TopicComponent, TopicForm, TopicDelete, UserComponent, UserForm, UserDelete, BlockForm, ResultForm],
+  entryComponents: [SubjectComponent, SubjectForm, SubjectDelete, QuestionComponent, QuestionForm, QuestionDelete, TopicComponent, TopicForm, TopicDelete, UserComponent, UserForm, UserDelete, BlockForm, ResultForm, YearComponent, YearForm, YearDelete],
   providers: [],
   bootstrap: [AppComponent]
 })
