@@ -175,7 +175,7 @@ if ($_POST['name']) {
 
     // More headers
 
-    $address = "info@enpeekkl.com";
+     $address = "info@enpeekkl.com";
     //$attach = $_FILES['pic'];
 
 

@@ -110,7 +110,7 @@
                                         </div>
                                         <div class="form-group">
                                             <li class="full">
-                                                Submit Your CV / Resume: <input type="file" name="resume" id="resume">
+                                                Submit Your CV / Resume: <input type="file" name="resume" id="resume" required>
                                             </li>
                                         </div>
                                         <li class="full">
