@@ -617,6 +617,26 @@ and open the template in the editor.
 }
 
 .language_section ul i {
+    /*    position: absolute;*/
+    margin-top: 11px;
+    font-size: 22px;
+    color: #f03c02;
+}
+
+.topic_option ul {
+    list-style: none;
+}
+
+.topic_option ul li {
+    font-size: 22px;
+    font-weight: 600;
+    padding: 5px 20px 15px;
+    padding-left: 30px;
+    border-bottom: 1px solid #e3e3e3;
+    color: #30445c;
+}
+
+.topic_option ul i {
     position: absolute;
     margin-top: 11px;
     font-size: 22px;

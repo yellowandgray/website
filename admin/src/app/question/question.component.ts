@@ -123,7 +123,7 @@ export class QuestionForm {
            this.questionForm.patchValue({
            topic_id: this.data.topic_id,
            question: this.data.name,
-           question_no: this.data.name,
+           question_no: this.data.question_no,
            a: this.data.a,
            b: this.data.b,
            c: this.data.c,
