@@ -1,3 +1,16 @@
+<?php
+require_once 'api/include/common.php';
+session_start();
+$obj = new Common();
+if (!isset($_GET['year']) || !isset($_SESSION['student_register_id'])) {
+    header('Location: years');
+}
+$year = $obj->selectRow('*', 'year', 'year = \'' . $_GET['year'] . '\'');
+if (count($year) == 0) {
+    header('Location: years');
+}
+$_SESSION['student_selected_year_id'] = $year['year_id'];
+?>
 <!DOCTYPE html>
 <html lang="en">
     <?php include 'head.php'; ?>
@@ -21,7 +34,7 @@
                             <div class="language_section">
                                 <ul>
                                     <i class="icon-angle-right"></i><a href="topic_page"><li> With Topics</li></a>
-                                    <i class="icon-angle-right"></i><a href="quiz_page"><li> Without Topic</li></a>
+                                    <i class="icon-angle-right"></i><a href="quiz_page?topic=all"><li> Without Topic</li></a>
                                 </ul>
                             </div>
                         </div>

@@ -33,7 +33,7 @@ $years = $obj->selectAll('y.year, y.year_id', 'topic AS t LEFT JOIN year AS y ON
                             <div class = 'language_section'>
                                 <ul>
                                     <?php foreach ($years as $row) { ?>
-                                        <li><i class = 'icon-angle-right'></i><a href = 'topic_select'> <?php echo $row['year']; ?></a></li>
+                                        <li><i class = 'icon-angle-right'></i><a href = 'topic_select?year=<?php echo $row['year'] ?>'> <?php echo $row['year']; ?></a></li>
                                             <?php } ?>
                                 </ul>
                             </div>
