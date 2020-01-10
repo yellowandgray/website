@@ -1,3 +1,9 @@
+<?php
+require_once 'api/include/common.php';
+session_start();
+$obj = new Common();
+$languages = $obj->selectAll('*', 'language', 'status = 1');
+?>
 <!DOCTYPE html>
 <html lang="en">
     <?php include 'head.php'; ?>
@@ -20,8 +26,9 @@
                         <div class="modal-body">
                             <div class="language_section">
                                 <ul>
-                                    <i class="icon-check"></i> <a href="years"><li> தமிழ்</li></a>
-                                    <i class="icon-check"></i> <a href="years"><li> English</li></a>
+                                    <?php foreach ($languages as $val) { ?>
+                                        <li><i class="icon-check"></i> <a href="years?lan=<?php echo $val['name'] ?>"><?php echo $val['name']; ?></a></li>
+                                        <?php } ?>
                                 </ul>
                             </div>
                         </div>
