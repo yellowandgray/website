@@ -18,7 +18,7 @@
                             <h4 id="mySigninModalLabel"  class="text-center">Choose <strong>Topic</strong></h4>
                         </div>
                         <div class="modal-body">
-                            <div class="language_section">
+                            <div class="topic_option">
                                 <ul>
                                     <i class="icon-angle-right"></i><a href="topic_page"><li> With Topics</li></a>
                                     <i class="icon-angle-right"></i><a href="quiz_page"><li> Without Topic</li></a>
