@@ -9,15 +9,15 @@ $languages = $obj->selectAll('*', 'language', 'status = 1');
     <?php include 'head.php'; ?>
     <body>
         <div id="wrapper">
+            <?php include 'menu.php'; ?>
             <section id="featured-1">
-
                 <div id="mySignin" tabindex="-1" aria-labelledby="mySigninModalLabel" aria-hidden="true">
-                    <div class = 'logo'>
+<!--                    <div class = 'logo'>
                         <a href='index'>
                             <img src = 'img/logo.png' alt = '' class = 'logo' />
                         </a>
 
-                    </div>
+                    </div>-->
                     <div class="modal styled">
                         <div class="modal-header login-section">
                             <a href="index"><i class="font-icon-arrow-simple-left"></i></a>

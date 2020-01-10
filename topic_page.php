@@ -21,7 +21,6 @@ $topics = $obj->selectAll('t.*, IFNULL(MAX(q.question_id), 0) AS max_questions, 
                             </div>
                             <div class="topic_section_1">
                                 <?php if (count($topics) > 0) { ?>
-                                    <h2>Topics</h2>
                                     <?php foreach ($topics as $row) { ?>
                                         <div class="topic_list_section">
                                             <div class="topic_list_position_left">
