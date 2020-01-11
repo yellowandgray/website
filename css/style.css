@@ -2551,6 +2551,13 @@ article .align-right {
         float: left !important;
         margin-top: 5px;
     }
+    .login-section i {
+        margin-left: 0 !important;
+        margin-top: 8px !important;
+    }
+    .modal.styled .modal-header h4 {
+        font-size: 24px !important;
+    }
 }
 
 @media (max-width: 480px) {
