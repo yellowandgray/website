@@ -20,7 +20,7 @@
     <!-- Theme skin -->
     <link id="t-colors" href="skins/default.css" rel="stylesheet" />
     <!-- boxed bg -->
-    <link id="bodybg" href="bodybg/bg1.css" rel="stylesheet" type="text/css" />
+<!--    <link id="bodybg" href="bodybg/bg1.css" rel="stylesheet" type="text/css" />-->
     <!-- Fav and touch icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png" />

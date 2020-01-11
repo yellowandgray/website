@@ -26,7 +26,7 @@ $years = $obj->selectAll('y.year, y.year_id', 'topic AS t LEFT JOIN year AS y ON
                     </div>-->
                     <div class = 'modal styled'>
                         <div class = 'modal-header login-section'>
-                            <a href = 'select_language'><i class = 'font-icon-arrow-simple-left'></i></a>
+                            <a href = '#' onclick="goBack()"><i class = 'font-icon-arrow-simple-left'></i></a>
                             <h4 id = 'mySigninModalLabel'  class = 'text-center'><?php echo $language['name']; ?> - Choose <strong>Year</strong></h4>
                         </div>
                         <div class = 'modal-body'>

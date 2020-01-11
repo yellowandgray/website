@@ -15,6 +15,7 @@ import { Observable } from 'rxjs';
 export class UserComponent implements OnInit {
 
   student = [];
+  image_url: string = 'http://localhost/project/mekana/api/v1/';
 
   constructor(public dialog: MatDialog, private httpClient: HttpClient, private _snackBar: MatSnackBar) { }
 
@@ -57,6 +58,25 @@ export class UserComponent implements OnInit {
       }
     });
   }
+
+  confirmDialog(id, action): void {
+    var data = null;
+    if (id != 0) {
+      data = id;
+    }
+    const dialogRef = this.dialog.open(PictureViewUser, {
+      minWidth: "40%",
+      maxWidth: "40%",
+      data: {
+        data: data,
+        action: action
+      }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+    });
+  }
+
   openBlock(): void {
     const dialogRef = this.dialog.open(BlockForm, {
       minWidth: "40%",
@@ -162,7 +182,7 @@ export class UserForm {
       formData.append('student_name', this.userForm.value.student_name);
       formData.append('parent_name', this.userForm.value.parent_name);
       formData.append('gender', this.userForm.value.gender);
-formData.append('profile_image', this.profile_image);
+      formData.append('profile_image', this.profile_image);
       formData.append('mobile', this.userForm.value.mobile);
       formData.append('city', this.userForm.value.city);
       formData.append('pin', this.userForm.value.pin);
@@ -313,4 +333,30 @@ export class ResultForm {
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) { }
+}
+
+@Component({
+  selector: 'picture-view',
+  templateUrl: 'picture-view.html',
+})
+
+export class PictureViewUser {
+  image_url: string = 'http://localhost/project/mekana/api/v1/';
+  action: string = '';
+  loading = false;
+  student_register_id = 0;
+  data: any;
+  constructor(
+    public dialogRef: MatDialogRef<PictureViewUser>,
+    @Inject(MAT_DIALOG_DATA) public datapopup: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {
+    if (this.datapopup != null) {
+      this.action = this.datapopup.action;
+      this.data = this.datapopup.data;
+      if (this.datapopup.action == 'delete') {
+        this.student_register_id = this.datapopup.data;
+      }
+    }
+  }
 }

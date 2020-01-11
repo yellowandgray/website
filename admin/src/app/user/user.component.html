@@ -22,6 +22,7 @@
                     <button mat-icon-button aria-label="label" (click)="confirmDelete(data.student_register_id)">
                         <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                     </button>
+                    <img matListAvatar src="{{image_url}}{{data.profile_image}}" *ngIf="data.profile_image && data.profile_image != ''" alt="image" (click)="confirmDialog(data, 'preview')" />
                     <h4 mat-line>{{data.student_name}}</h4>
                     <p mat-line>{{data.parent_name}} | {{data.mobile}} | {{data.city}}</p>
                 </mat-list-item>

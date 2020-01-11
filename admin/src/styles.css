@@ -23,9 +23,14 @@ mat-sidenav .mat-list-item-content {
     color: #fff;
 }
 
+.active-nav {
+    background: #6b6969;
+}
+
 .logo-bg {
-    color: #fff;
+    background-color: #fff;
     text-align: center;
+    padding: 20px 0;
 }
 
 .mat-list-item .mat-icon {
@@ -83,4 +88,10 @@ mat-sidenav-content {
     top: 0;
     background-color: #fff;
     color: #000;
+}
+
+.member-profile {
+    max-height: 100%!important;
+    height: auto!important;
+    width: 100%!important;
 }

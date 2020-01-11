@@ -234,14 +234,15 @@ and open the template in the editor.
 }
 
 .topic_section {
-    padding: 120px 0;
+    padding: 80px 0;
 }
 
 .side_section {
-    background: #fff;
+    background: #f03c02;
     /* box-shadow: 0 0 9px 5px #e3e3e3; */
     overflow: hidden;
     text-align: justify;
+    padding: 20px;
 }
 
 .side_section h2 {
@@ -249,6 +250,7 @@ and open the template in the editor.
     font-weight: 600;
     margin-bottom: 5px;
     text-align: center;
+    color: #fff;
 }
 
 .side_section h4 {
@@ -417,15 +419,13 @@ and open the template in the editor.
 }
 
 .topic_list_position_left {
-    float: left;
-    width: 75%;
-    margin-bottom: 10px;
+    position: relative;
 }
 
 .topic_list_position_right {
-    float: left;
-    width: 25%;
-    margin-bottom: 10px;
+    position: absolute;
+    right: 40px;
+    margin-top: -25px;
 }
 
 .topic_list_position_left a {
@@ -433,6 +433,7 @@ and open the template in the editor.
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s;
+    padding-left: 15px;
 }
 
 .topic_list_position_left a:hover {
@@ -442,6 +443,7 @@ and open the template in the editor.
 
 .topic_list_position_left i {
     font-size: 25px;
+    position: absolute;
 }
 
 .topic_list_section a.btn-green,
@@ -643,6 +645,39 @@ and open the template in the editor.
     color: #f03c02;
 }
 
-/*.accordion-inner .optionContainer .option {
-    float: left;
-}*/
+.topic_section_1 {
+    padding: 10px 20px;
+    /* margin-top: 10px; */
+    margin-bottom: 10px;
+    box-shadow: 0px 7px 20px 0px #e3e3e3;
+}
+
+.topic_list_section {
+    border-bottom: 1px solid #e3e3e3;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.pagenation-width {
+    text-align: center;
+}
+
+.modal-body {
+    position: relative;
+    /*     max-height: auto; */
+    padding: 15px;
+    /* overflow-y: auto; */
+}
+
+.topic-head a {
+    color: #fff;
+    font-size: 22px;
+    position: absolute;
+    margin-top: 9px;
+}
+
+.topic-head a:hover {
+    color: #fff;
+    opacity: .8;
+}

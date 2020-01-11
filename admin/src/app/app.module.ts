@@ -30,7 +30,7 @@ import { HeaderComponent } from './header/header.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { QuestionComponent, QuestionForm, QuestionDelete } from './question/question.component';
 import { TopicComponent, TopicForm, TopicDelete } from './topic/topic.component';
-import { UserComponent, UserForm, UserDelete, BlockForm, ResultForm } from './user/user.component';
+import { UserComponent, PictureViewUser, UserForm, UserDelete, BlockForm, ResultForm } from './user/user.component';
 import { YearComponent, YearForm, YearDelete } from './year/year.component';
 
 
@@ -50,6 +50,7 @@ import { YearComponent, YearForm, YearDelete } from './year/year.component';
     TopicForm,
     TopicDelete,
     UserComponent,
+    PictureViewUser,
     UserForm,
     UserDelete,
     BlockForm,
@@ -85,7 +86,7 @@ import { YearComponent, YearForm, YearDelete } from './year/year.component';
     MatExpansionModule,
     
   ],
-  entryComponents: [SubjectComponent, SubjectForm, SubjectDelete, QuestionComponent, QuestionForm, QuestionDelete, TopicComponent, TopicForm, TopicDelete, UserComponent, UserForm, UserDelete, BlockForm, ResultForm, YearComponent, YearForm, YearDelete],
+  entryComponents: [SubjectComponent, SubjectForm, SubjectDelete, QuestionComponent, QuestionForm, QuestionDelete, TopicComponent, TopicForm, TopicDelete, UserComponent, UserForm, PictureViewUser, UserDelete, BlockForm, ResultForm, YearComponent, YearForm, YearDelete],
   providers: [],
   bootstrap: [AppComponent]
 })

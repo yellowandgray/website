@@ -16,7 +16,8 @@ $topics = $obj->selectAll('t.*, IFNULL(MAX(q.question_id), 0) AS max_questions, 
                 <div class="container">
                     <div class="row">
                         <div class="span12">
-                            <div class="side_section">
+                            <div class="side_section topic-head">
+                                <a href="#" onclick="goBack()"><i class="font-icon-arrow-simple-left"></i></a>
                                 <h2>Topics</h2>
                             </div>
                             <div class="topic_section_1">
@@ -52,6 +53,23 @@ $topics = $obj->selectAll('t.*, IFNULL(MAX(q.question_id), 0) AS max_questions, 
                                     ?>
                                     <p>Sorry no topics were found</p>
                                 <?php } ?>
+                                <?php if (count($topics) > 9) { ?>
+                                    <div class="pagenation-width">
+                                        <div class="bs-docs-example">
+                                            <div class="pagination">
+                                                <ul>
+                                                    <li class="disabled"><a href="#">Prev</a></li>
+                                                    <li class="active"><a href="#">1</a></li>
+                                                    <li><a href="#">2</a></li>
+                                                    <li><a href="#">3</a></li>
+                                                    <li><a href="#">Next</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <?php } else { ?>
+                                    <div>&nbsp;</div>
+                                <?php }?>
                             </div>
                         </div>
                     </div>

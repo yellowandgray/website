@@ -29,7 +29,7 @@ $_SESSION['student_selected_year_id'] = $year['year_id'];
                                         </div>-->
                     <div class="modal styled">
                         <div class="modal-header login-section">
-                            <a href="index"><i class="font-icon-arrow-simple-left"></i></a>
+                            <a href="#" onclick="goBack()"><i class="font-icon-arrow-simple-left"></i></a>
                             <h4 id="mySigninModalLabel"  class="text-center"><?php echo $year['year']; ?> - <strong>Topic Type</strong></h4>
                         </div>
                         <div class="modal-body">
