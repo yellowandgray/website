@@ -3,15 +3,25 @@ session_start();
 require_once 'api/include/common.php';
 $obj = new Common();
 if (!isset($_GET['topic']) || !isset($_SESSION['student_register_id'])) {
-    header('Location: topic_page');
+    header('Location: topic_select');
 }
 $student = $obj->selectRow('*', 'student_register', 'student_register_id = ' . $_SESSION['student_register_id']);
-$topic = $obj->selectRow('t.topic_id, t.name, s.name AS subject, s.description', 'topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id', 't.name = \'' . $_GET['topic'] . '\' AND t.subject_id = ' . $_SESSION['student_selected_subject_id']);
-if (count($topic) == 0) {
-    header('Location: topic_page');
+if ($_GET['topic'] != 'all') {
+    $topic = $obj->selectRow('*', 'topic', 'name = \'' . $_GET['topic'] . '\' AND year_id = ' . $_SESSION['student_selected_year_id'] . ' AND language_id = ' . $_SESSION['student_selected_language_id']);
+    if (count($topic) == 0) {
+        header('Location: topic_select');
+    }
+    $_SESSION['student_selected_topic_id'] = $topic['topic_id'];
+} else {
+    $_SESSION['student_selected_topic_id'] = 0;
 }
-$_SESSION['student_selected_topic_id'] = $topic['topic_id'];
-$questions = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer', 'question', 'topic_id = ' . $topic['topic_id']);
+if ($_SESSION['student_selected_topic_id'] != 0) {
+    $questions = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer', 'question', 'topic_id = ' . $topic['topic_id']);
+} else {
+    $questions = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer', 'question', 'topic_id IN (SELECT topic_id FROM topic WHERE year_id = ' . $_SESSION['student_selected_year_id'] . ' AND language_id = ' . $_SESSION['student_selected_language_id'] . ')');
+}
+$language = $obj->selectRow('*', 'language', 'language_id = ' . $_SESSION['student_selected_language_id']);
+$year = $obj->selectRow('*', 'year', 'year_id = ' . $_SESSION['student_selected_year_id']);
 $questions_list = array();
 if (count($questions) > 0) {
     foreach ($questions as $q) {
@@ -45,8 +55,8 @@ if (count($questions) > 0) {
                 <div class="row">
                     <div class="span12">
                         <div class="side_section">
-                            <h2><?php echo $topic['subject']; ?></h2>
-                            <h4><?php echo $topic['name']; ?></h4>
+                            <h2><?php echo $language['name']; ?></h2>
+                            <h4><?php echo $year['year']; ?></h4>
                         </div>
                         <!--question Box-->
                         <div class="questionBox" id="app">
