@@ -40,6 +40,7 @@ if (count($questions) > 0) {
         ));
     }
 }
+global $topic;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -54,22 +55,31 @@ if (count($questions) > 0) {
             <section class="container">
                 <div class="row">
                     <div class="span12">
-                        <div class="side_section">
-                            <h2><?php echo $language['name']; ?></h2>
-                            <h4><?php echo $year['year']; ?></h4>
+                        <div class="quiz-question-section">
+                            <a href = '#' onclick="goBack()"><i class = 'font-icon-arrow-simple-left'></i></a>
+                            <h2><?php echo $language['name']; ?> - <?php echo $year['year']; ?> <strong>
+                                    <?php
+                                    $topics = $topic['name'];
+                                    if (is_null($topics)) {
+                                        echo '';
+                                    } else {
+                                        echo '-' . $topics;
+                                    }
+                                    ?>
+                                </strong></h2>
                         </div>
                         <!--question Box-->
                         <div class="questionBox" id="app">
                             <!--qusetionContainer-->
                             <div class="questionContainer" v-if="questionIndex<quiz.questions.length" v-bind:key="questionIndex">
                                 <div class="question-header">
-                                    <h1 class="title is-6">Quiz</h1> 
                                     <!--progress-->
                                     <div class="progressContainer">
+                                        <h1 class="title is-6">Quiz</h1> 
                                         <progress class="progress is-info is-small" :value="(questionIndex/quiz.questions.length)*100" max="100">{{(questionIndex/quiz.questions.length)*100}}%</progress>
                                         <div class="lenth_width">
-                                            <p><span  class="label lable-blue">Total: <span class="">{{quiz.questions.length}}</span></span></p>
-                                            <p><span class="label label-success">Count: {{((quiz.questions.length)-(quiz.questions.length-questionIndex))}}</span></p>
+                                            <span  class="label lable-blue">Total: {{quiz.questions.length}}</span>
+                                            <span class="label label-success">Attend: {{((quiz.questions.length)-(quiz.questions.length-questionIndex))}}</span>
                                         </div>
                                     </div>
                                     <!--/progress-->
@@ -89,117 +99,118 @@ if (count($questions) > 0) {
                                 <nav class="pagination" role="navigation" aria-label="pagination">
 
                                     <!-- back button -->
-                                    <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">
-                                       Back
-                                </a>
-                                <a class="btn btn-green" href="home_subject.php">
-                                    Home
-                                </a>
+                                    <!--                                    <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">
+                                                                           Back
+                                                                    </a>-->
+                                    <a class="btn btn-green" href="select_language">
+                                        Home
+                                    </a>
 
-                                <!-- next button -->
-                                <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
-                                    {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}
-                                </a>
+                                    <!-- next button -->
+                                    <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
+                                        {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}
+                                    </a>
 
-                            </nav>
-                            <!--/pagination-->
+                                </nav>
+                                <!--/pagination-->
 
-                        </footer>
-                        <!--/quizFooter-->
+                            </footer>
+                            <!--/quizFooter-->
+                        </div>
+                        <!--/questionContainer-->
+                        <!--quizCompletedResult-->
+                        <div v-if="questionIndex >= quiz.questions.length" v-bind:key="questionIndex" class="quizCompleted has-text-centered">
+
+                            <!-- quizCompletedIcon: Achievement Icon -->
+                            <span class="icon">
+                                <i class="fa" :class="score()>3?'fa-check-circle-o is-active':'fa-times-circle'"></i>
+                            </span>
+
+                            <!--resultTitleBlock-->
+                            <h2 class="title">
+                                You did {{ (score()>7?'an amazing':(score()<4?'a poor':'a good')) }} job!
+                            </h2>
+                            <p class="subtitle">
+                                Total score: {{ score() }} / {{ quiz.questions.length }}
+                            </p>
+                            <div class="">
+                                <a class="btn btn-theme btn-rounded" @click="restart()">Restart <i class="fa fa-refresh"></i></a>
+                                <a class="btn btn-theme btn-rounded" onclick="window.location = 'select_language'">Home <i class="fa fa-refresh"></i></a>
+                                <a class="btn btn-theme btn-rounded" onclick="window.location = 'student_result'">Full Result <i class="fa fa-refresh"></i></a>
+                                <!--/resultTitleBlock-->
+
+                            </div>
+                        </div>
+                        <!--/quizCompetedResult-->
+                        <!-- 		</transition> -->
                     </div>
-                    <!--/questionContainer-->
-                    <!--quizCompletedResult-->
-                    <div v-if="questionIndex >= quiz.questions.length" v-bind:key="questionIndex" class="quizCompleted has-text-centered">
-
-                        <!-- quizCompletedIcon: Achievement Icon -->
-                        <span class="icon">
-                            <i class="fa" :class="score()>3?'fa-check-circle-o is-active':'fa-times-circle'"></i>
-                        </span>
-
-                        <!--resultTitleBlock-->
-                        <h2 class="title">
-                            You did {{ (score()>7?'an amazing':(score()<4?'a poor':'a good')) }} job!
-                        </h2>
-                        <p class="subtitle">
-                            Total score: {{ score() }} / {{ quiz.questions.length }}
-                        </p>
-                        <br>
-                        <a class="button1" @click="restart()">Restart <i class="fa fa-refresh"></i></a>
-                        <a class="button1" onclick="window.location = 'home_subject'">Home <i class="fa fa-refresh"></i></a>
-                        <a class="button1" onclick="window.location = 'student_result'">Full Result <i class="fa fa-refresh"></i></a>
-                        <!--/resultTitleBlock-->
-
-                    </div>
-                    <!--/quizCompetedResult-->
-                    <!-- 		</transition> -->
+                    <!-- question Box -->
                 </div>
-                <!-- question Box -->
             </div>
-        </div>
-    </section>
-</div>
-<!--/container-->
+        </section>
+    </div>
+    <!--/container-->
 <?php include 'footer.php'; ?>
 <?php include 'script.php'; ?>
-<script>
-    var quiz = {
-        user: "<?php echo $student['student_name']; ?>",
-        questions: <?php echo json_encode($questions_list); ?>
-    },
-            userResponseSkelaton = Array(quiz.questions.length).fill(null);
-    var app = new Vue({
-        el: "#app",
-        data: {
-            quiz: quiz,
-            questionIndex: 0,
-            userResponses: userResponseSkelaton,
-            isActive: false
+    <script>
+        var quiz = {
+            user: "<?php echo $student['student_name']; ?>",
+            questions: <?php echo json_encode($questions_list); ?>
         },
-        filters: {
-            charIndex: function (i) {
-                return String.fromCharCode(97 + i);
-            }
-        },
-        methods: {
-            restart: function () {
-                this.questionIndex = 0;
-                this.userResponses = Array(this.quiz.questions.length).fill(null);
+                userResponseSkelaton = Array(quiz.questions.length).fill(null);
+        var app = new Vue({
+            el: "#app",
+            data: {
+                quiz: quiz,
+                questionIndex: 0,
+                userResponses: userResponseSkelaton,
+                isActive: false
             },
-            selectOption: function (index) {
-                setTimeout(() => {
-                    Vue.set(this.userResponses, this.questionIndex, index);
-                    if (this.questionIndex < this.quiz.questions.length) {
-                        this.questionIndex++;
-                    }
-                }, 1000);
-            },
-            next: function () {
-                if (this.questionIndex < this.quiz.questions.length)
-                    this.questionIndex++;
-            },
-            prev: function () {
-                if (this.quiz.questions.length > 0)
-                    this.questionIndex--;
-            },
-            // Return "true" count in userResponses
-            score: function () {
-                var score = 0;
-                for (let i = 0; i < this.userResponses.length; i++) {
-                    if (
-                            typeof this.quiz.questions[i].responses[
-                            this.userResponses[i]
-                    ] !== "undefined" &&
-                            this.quiz.questions[i].responses[this.userResponses[i]].correct
-                            ) {
-                        score = score + 1;
-                    }
+            filters: {
+                charIndex: function (i) {
+                    return String.fromCharCode(97 + i);
                 }
-                return score;
+            },
+            methods: {
+                restart: function () {
+                    this.questionIndex = 0;
+                    this.userResponses = Array(this.quiz.questions.length).fill(null);
+                },
+                selectOption: function (index) {
+                    setTimeout(() => {
+                        Vue.set(this.userResponses, this.questionIndex, index);
+                        if (this.questionIndex < this.quiz.questions.length) {
+                            this.questionIndex++;
+                        }
+                    }, 1000);
+                },
+                next: function () {
+                    if (this.questionIndex < this.quiz.questions.length)
+                        this.questionIndex++;
+                },
+                prev: function () {
+                    if (this.quiz.questions.length > 0)
+                        this.questionIndex--;
+                },
+                // Return "true" count in userResponses
+                score: function () {
+                    var score = 0;
+                    for (let i = 0; i < this.userResponses.length; i++) {
+                        if (
+                                typeof this.quiz.questions[i].responses[
+                                this.userResponses[i]
+                        ] !== "undefined" &&
+                                this.quiz.questions[i].responses[this.userResponses[i]].correct
+                                ) {
+                            score = score + 1;
+                        }
+                    }
+                    return score;
 
-                //return this.userResponses.filter(function(val) { return val }).length;
+                    //return this.userResponses.filter(function(val) { return val }).length;
+                }
             }
-        }
-    });
-</script>
+        });
+    </script>
 </body>
 </html>

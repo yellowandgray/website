@@ -2656,7 +2656,7 @@ article .align-right {
         padding: 90px 0 !important;
     }
     .quiz-section {
-        padding: 90px 0 40px !important;
+        padding: 95px 0 40px !important;
     }
     /*    .side_section p {
             display: none !Important;
@@ -2985,6 +2985,7 @@ article .align-right {
     position: relative;
     margin: 0;
     padding: 63px 0 0 0px;
+    z-index: 1;
 }
 
 #featured-1 #mySignup:focus {
