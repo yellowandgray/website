@@ -54,7 +54,7 @@
                             </a>
                         </div>
                         <div class="col-md-6 text-center">
-                            <a href="images/download/ENPEE-Brochure-2019-EDITED.pdf" target="blank">
+                            <a href="images/download/brochure.pdf" target="blank">
                                 <h5 title="ENPEE-Brochure-2019">ENPEE-Brochure-2019</h5>
                                 <img src="images/ENPEE-Brochure-2019.jpg" class="img-width download-box" alt="ENPEE-Brochure-2019" title="ENPEE-Brochure-2019">
                             </a>
