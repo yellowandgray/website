@@ -26,7 +26,7 @@ export class QuestionComponent implements OnInit {
         this.getQuestion();
     }
     getQuestion(): void {
-        this.httpClient.get<any>('http://localhost/mushak/mekana/api/v1/get_question')
+        this.httpClient.get<any>('http://localhost/project/mekana/api/v1/get_question')
         .subscribe(
                 (res)=>{
                     this.question = res["result"]["data"];
@@ -39,7 +39,7 @@ export class QuestionComponent implements OnInit {
         );
     }
     gettopic(): void {
-        this.httpClient.get<any>('http://localhost/mushak/mekana/api/v1/get_topic')
+        this.httpClient.get<any>('http://localhost/project/mekana/api/v1/get_topic')
             .subscribe(
                 (res) => {
                     this.topic = res["result"]["data"];
@@ -98,7 +98,7 @@ fileProgress(fileInput: any) {
         this.loading = true;
           var formData = new FormData();
           formData.append('file', fileData);
-          this.httpClient.post('http://localhost/mushak/mekana/api/v1/import_question', formData).subscribe(
+          this.httpClient.post('http://localhost/project/mekana/api/v1/import_question', formData).subscribe(
               (res)=>{
                 this.loading = false;
 this._snackBar.open(res["result"]["message"], '', {
@@ -152,7 +152,7 @@ export class QuestionForm {
         });
             this.question_id = this.data.question_id;
         }
-        this.httpClient.get('http://localhost/mushak/mekana/api/v1/get_topic').subscribe(
+        this.httpClient.get('http://localhost/project/mekana/api/v1/get_topic').subscribe(
             (res) => {
                 if (res["result"]["error"] === false) {
                     this.topic = res["result"]["data"];
@@ -197,7 +197,7 @@ export class QuestionForm {
             formData.append('answer', this.questionForm.value.answer);
           url = 'insert_question';
         }
-        this.httpClient.post('http://localhost/mushak/mekana/api/v1/'+url, formData).subscribe(
+        this.httpClient.post('http://localhost/project/mekana/api/v1/'+url, formData).subscribe(
             (res)=>{
                   this.loading = false;
                   if(res["result"]["error"] === false) {
@@ -283,7 +283,7 @@ export class QuestionDelete {
             return;
       }
       this.loading = true;
-      this.httpClient.get('http://localhost/mushak/mekana/api/v1/delete_record/question/question_id='+this.question_id).subscribe(
+      this.httpClient.get('http://localhost/project/mekana/api/v1/delete_record/question/question_id='+this.question_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
