@@ -17,12 +17,14 @@ export class QuestionComponent implements OnInit {
 
     topic = [];
     question = [];
+    year = [];
     loading = false;
     
     constructor(public dialog: MatDialog, private httpClient: HttpClient, private _snackBar: MatSnackBar) { }
 
     ngOnInit() {
         this.gettopic();
+        this.getyear();
         this.getQuestion();
     }
     getQuestion(): void {
@@ -43,6 +45,19 @@ export class QuestionComponent implements OnInit {
             .subscribe(
                 (res) => {
                     this.topic = res["result"]["data"];
+                },
+                (error) => {
+                    this._snackBar.open(error["statusText"], '', {
+                        duration: 2000,
+                    });
+                }
+            );
+    }
+    getyear(): void {
+        this.httpClient.get<any>('http://localhost/project/mekana/api/v1/get_year')
+            .subscribe(
+                (res) => {
+                    this.year = res["result"]["data"];
                 },
                 (error) => {
                     this._snackBar.open(error["statusText"], '', {

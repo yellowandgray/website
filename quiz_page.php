@@ -128,7 +128,7 @@ global $topic;
 
                             <!--resultTitleBlock-->
                             <h2 class="title">
-                                You did {{ (score()>7?'an amazing':(score()<4?'a poor':'a good')) }} job!
+                                You did {{ (score()>7?'an amazing':(score()<4?'improve':'a good')) }} knowledge!
                             </h2>
                             <p class="subtitle">
                                 Total score: {{ score() }} / {{ quiz.questions.length }}

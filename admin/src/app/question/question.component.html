@@ -20,28 +20,32 @@
             </button>
         </div>
         <mat-tab-group>
-            <mat-tab *ngFor="let data of topic" label="{{data.name}}">
-                <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[10, 20, 50, 100]">
-                </mat-paginator>
-                <mat-list>
-                    <ng-container *ngFor="let data of question">
-                        <mat-list-item>
-                            <button mat-icon-button aria-label="label" (click)="openDialog(data.question_id, 'question')">
-                                <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
-                            </button>
-                            <button mat-icon-button aria-label="label" (click)="confirmDelete(data.question_id)">
-                                <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
-                            </button>
-                            <p class="float-left">{{data.question_no}}.</p><h4 class="question" mat-line [innerHTML]="data.name"></h4>
-                            <p mat-line>A. {{data.a}}</p>
-                            <p mat-line>B. {{data.b}}</p>
-                            <p mat-line>C. {{data.c}}</p>
-                            <p mat-line>D. {{data.d}}</p>
-                            <h2 mat-line class="answer-font">Answer: {{data.answer}}</h2>
-                        </mat-list-item>
-                        <mat-divider></mat-divider>
-                    </ng-container>
-                </mat-list>
+            <mat-tab *ngFor="let data of year" label="{{data.year}}">
+                <mat-tab-group>
+                    <mat-tab *ngFor="let data of topic" label="{{data.name}}">
+                        <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[10, 20, 50, 100]">
+                        </mat-paginator>
+                        <mat-list>
+                            <ng-container *ngFor="let data of question">
+                                <mat-list-item>
+                                    <button mat-icon-button aria-label="label" (click)="openDialog(data.question_id, 'question')">
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
+                                    </button>
+                                    <button mat-icon-button aria-label="label" (click)="confirmDelete(data.question_id)">
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
+                                    </button>
+                                    <p class="float-left">{{data.question_no}}.</p><h4 class="question" mat-line [innerHTML]="data.name"></h4>
+                                    <p mat-line>A. {{data.a}}</p>
+                                    <p mat-line>B. {{data.b}}</p>
+                                    <p mat-line>C. {{data.c}}</p>
+                                    <p mat-line>D. {{data.d}}</p>
+                                    <h2 mat-line class="answer-font">Answer: {{data.answer}}</h2>
+                                </mat-list-item>
+                                <mat-divider></mat-divider>
+                            </ng-container>
+                        </mat-list>
+                    </mat-tab>
+                </mat-tab-group>
             </mat-tab>
         </mat-tab-group>
     </mat-sidenav-content>
