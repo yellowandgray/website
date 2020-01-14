@@ -35,22 +35,35 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="team-details-txt">
-                                    <p>Dr.Sakthivel M.D</p>
+                                    <h2 class="font-size-20">Dr.Sakthivel M.D</h2>
                                     <p>Advisory Board member of ENPEE International</p>
                                     <p>HOD of General Medicine, Vinayaka Mission’s Medical College, Karaikal.</p>
-                                    <br/>
+                                    <hr>
                                     <!--Partner Logos Section Start-->
                                 </div>
                             </div>
 
                             <div class="col-md-12">
                                 <div class="team-details-txt">
-                                    <p>MR.T.S.HARIHARAN BE., MBA</p>
+                                    <h2 class="font-size-20">MR.T.S.Hariharan B.E., M.B.A</h2>
                                     <p>Noida , New Delhi.</p>
                                     <p>An ardent sports personality represented TN Hockey team at National Level in under 14 and 16 levels</p>
                                     <p>An Engineer by profession with rich experiences in the field of Medical Electronics & Instrumentation and manufacturing of Hearing Devices.</p>
                                     <p>A team head /  Director of Operations  STARKEY Hearing Technologies India , an American MNC in NOIDA with an Engineering Degree from Bharathidasan University and a PG degree in Operations Management from Symbiosis.</p>
                                     <p>Member of School Management Committee in the reputed The Khaitan School , Noida.</p>
+                                    <!--Partner Logos Section Start-->
+                                    <hr>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="team-details-txt">
+                                    <h2 class="font-size-20">Prof. M. Najimudeen., M.Com., M.Phil., PGDCA.,</h2>
+                                    <p>Director,</p>
+                                    <p>Annai group of institutions, Kovilachery, Kumbakonam</p>
+                                    <p>Former Senate Member, Barathidasan University, Tiruchirappalli.</p>
+                                    <p>Former Member Education Committee, Wakf Board Tamilnadu.</p>
+                                    <p>School Committee Member in several Schools</p>
+                                    
                                     <!--Partner Logos Section Start-->
                                 </div>
                             </div>
