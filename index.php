@@ -353,6 +353,23 @@
                                 <div class="event-post">
                                     <div class="pic-link">
 <!--                                        <i class="fas fa-link"></i> -->
+                                        <a href="http://enpeekkl.com/images/event-002.jpg" target="blank"><img src="images/event-001.jpg" alt="Upcoming Events - ENPEE International School" title="Upcoming Events - ENPEE International School"></a>
+                                        <!--                                        <ul class="post-meta">
+                                                                                    <li>20 February, 2019 </li>
+                                                                                    <li> 10:00 am - 05:00 pm</li>
+                                                                                </ul>-->
+                                    </div>
+                                    <div class="event-txt">
+                                        <h6><a href="#enquiry">Upcoming Events</a></h6>
+                                        <h5>Samathuva Pongal - 2020</h5>
+                                        <p><i class="fas fa-map-marker-alt"></i> 13<sup>th</sup> January at 10.30 am <br/>ENPEE International School, Karaikal, U.T of Puducherry </p>
+                                    </div>
+                                </div>
+                                <!--Blog Post End-->
+                                <!--Blog Post Start-->
+                                <div class="event-post">
+                                    <div class="pic-link">
+<!--                                        <i class="fas fa-link"></i> -->
                                         <a href="#enquiry"><img src="images/pic-admission-open.jpg" alt="Admisstion open 2019-2020 - ENPEE International School" title="Admisstion open 2019-2020 - ENPEE International School"></a>
                                         <!--                                        <ul class="post-meta">
                                                                                     <li>20 February, 2019 </li>
@@ -630,9 +647,10 @@
                     <h2 class="text-center padding-tb-30">Infrastructure Providers</h2>
                     <!--                    <div id="partner-logos" class="owl-carousel owl-theme">-->
                     <div class="row">
-                        <div class="col-md-4 col-sm-4"><a href="https://www.ki.com/" target="_blank"><img src="images/partners/003.png" alt="Krueger International Furniture" title="Krueger International Furniture" class="img-responsive center-block"></a></div>
-                        <div class="col-md-4 col-sm-4"><a href="#" target="_blank"><img src="images/partners/004.png" alt="" title="" class="img-responsive center-block"></a></div>
-                        <div class="col-md-4 col-sm-4"><a href="https://www.forcemotors.com/" target="_blank"><img src="images/partners/006.png" alt="forcemotors" title="forcemotors" class="img-responsive center-block"></a></div>
+                        <div class="col-md-2 col-md-offset-2 col-sm-2"><a href="https://oasisitstore.in/contact/" target="_blank"><img src="images/partners/007.png" alt="Krueger International Furniture" title="Krueger International Furniture" class="img-responsive center-block"></a></div>
+                        <div class="col-md-2 col-sm-2"><a href="https://www.ki.com/" target="_blank"><img src="images/partners/003.png" alt="Krueger International Furniture" title="Krueger International Furniture" class="img-responsive center-block"></a></div>
+                        <div class="col-md-2 col-sm-2"><a href="#" target="_blank"><img src="images/partners/004.png" alt="" title="" class="img-responsive center-block"></a></div>
+                        <div class="col-md-2 col-sm-2"><a href="https://www.forcemotors.com/" target="_blank"><img src="images/partners/006.png" alt="forcemotors" title="forcemotors" class="img-responsive center-block"></a></div>
 
                     </div>
 <!--                        <div class="item"><img src="images/partners/001.png" alt=""></div>

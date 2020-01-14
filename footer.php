@@ -41,9 +41,9 @@
                     <div class="footer-widget">
                         <h5>Upcoming Events</h5>
                         <ul class="lastest-products">
-                            <li> <img src="images/cornival.jpg"  alt="Knowledge Innovation Excellence - ENPEE International School" title="Knowledge Innovation Excellence - ENPEE International School" style="width: 68px; height: 68px"> 
-                                <strong><a href="news-events.php#upcome-event">ENPEE International School - First Annual CARNIVAL</a></strong> 
-                                <span class="pdate"><i>Date:</i> 28 Sep 2019</span>
+                            <li> <img src="images/event-002.jpg"  alt="Samathuva Pongal-2020" title="Samathuva Pongal -2020 - ENPEE International School" style="width: 68px; height: 68px"> 
+                                <strong><a href="http://enpeekkl.com/images/event-002.jpg">Samathuva Pongal-2020</a></strong> 
+                                <span class="pdate"><i>Date:</i> 13<sup>th</sup> Jan 2020</span>
                             </li>
                             <li> 
                                 <a href="contact.php"><img src="images/pic-admission-open.jpg" alt="Admisstion open 2019-2020 - ENPEE International School" title="Admisstion open 2019-2020 - ENPEE International School" style="width: 68px; height: 68px"> </a>

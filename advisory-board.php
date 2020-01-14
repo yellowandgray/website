@@ -17,7 +17,7 @@
                         </div>-->
             <!--Header End-->
             <!--Inner Header Start-->
-            <section class="wf100 p100 inner-header" style="background: url(images/sub-banner/banner-0001.jpg) no-repeat;">
+            <section class="wf100 p100 inner-header" style="background: url(images/sub-banner/banner-0002.jpg) no-repeat;">
                 <div class="container">
                     <h1>Advisory Board</h1>
                     <!--                    <ul>
@@ -35,9 +35,22 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="team-details-txt">
-                                    <h2 class="font-size-20">Dr.Sakthivel M.D</h2>
+                                    <p>Dr.Sakthivel M.D</p>
                                     <p>Advisory Board member of ENPEE International</p>
                                     <p>HOD of General Medicine, Vinayaka Mission’s Medical College, Karaikal.</p>
+                                    <br/>
+                                    <!--Partner Logos Section Start-->
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="team-details-txt">
+                                    <p>MR.T.S.HARIHARAN BE., MBA</p>
+                                    <p>Noida , New Delhi.</p>
+                                    <p>An ardent sports personality represented TN Hockey team at National Level in under 14 and 16 levels</p>
+                                    <p>An Engineer by profession with rich experiences in the field of Medical Electronics & Instrumentation and manufacturing of Hearing Devices.</p>
+                                    <p>A team head /  Director of Operations  STARKEY Hearing Technologies India , an American MNC in NOIDA with an Engineering Degree from Bharathidasan University and a PG degree in Operations Management from Symbiosis.</p>
+                                    <p>Member of School Management Committee in the reputed The Khaitan School , Noida.</p>
                                     <!--Partner Logos Section Start-->
                                 </div>
                             </div>
