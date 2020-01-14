@@ -199,3 +199,49 @@ $app->get('/get_language', function() {
     }
     echoRespnse(201, $res);
 });
+
+$app->post('/import_question', function() use($app) {
+    $file = $_FILES;
+    $res = array('error' => true, 'message' => 'Unable to upload');
+    $handle = fopen($file['file']['tmp_name'], "r");
+    if (in_array($file['file']['type'], array('application/vnd.ms-excel', 'text/plain', 'text/csv', 'text/tsv', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'))) {
+        $first = true;
+        $count = 0;
+        $obj = new Common();
+        while (($row = fgetcsv($handle, 1000, ',')) !== FALSE) {
+            if (!$first) {
+                $language = $obj->selectRow('*', 'language', 'name=\'' . trim($row[1]) . '\'');
+                if (count($language) == 0) {
+                    $lid = $obj->insertRecord(array('name' => trim($row[1]), 'status' => 1, 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')), 'language');
+                } else {
+                    $lid = $language['language_id'];
+                }
+                $year = $obj->selectRow('*', 'year', 'year=\'' . trim($row[2]) . '\'');
+                if (count($year) == 0) {
+                    $yid = $obj->insertRecord(array('year' => trim($row[2]), 'status' => 1, 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')), 'year');
+                } else {
+                    $yid = $year['year_id'];
+                }
+                $topic = $obj->selectRow('*', 'topic', 'name=\'' . trim($row[2]) . '\' AND language_id = ' . $lid . ' AND year_id = ' . $yid);
+                if (count($topic) == 0) {
+                    $tid = $obj->insertRecord(array('name' => trim($row[3]), 'language_id' => $lid, 'year_id' => $yid, 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')), 'topic');
+                } else {
+                    $tid = $topic['topic_id'];
+                }
+                $data = array('topic_id' => $tid, 'name' => $row[4], 'a' => $row[5], 'b' => $row[6], 'c' => $row[7], 'd' => $row[7], 'answer' => $row[8], 'question_no' => $row[0], 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'));
+                $insert = $obj->insertRecord($data, 'question');
+                if ($insert > 0) {
+                    $count++;
+                }
+            } else {
+                $first = false;
+            }
+        }
+        if ($count > 0) {
+            $res = array('error' => false, 'message' => $count . ' records uploaded');
+        }
+    } else {
+        $res['message'] = 'File format mismatch';
+    }
+    echoRespnse(201, $res);
+});
