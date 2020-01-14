@@ -268,7 +268,7 @@ export class QuestionForm {
                 tag: 'h1',
             },
         ],
-        uploadUrl: 'v1/image',
+        uploadUrl: 'https://api.exapple.com/v1/image/upload',
         sanitize: true,
         toolbarPosition: 'top',
     };
