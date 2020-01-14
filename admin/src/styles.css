@@ -95,3 +95,7 @@ mat-sidenav-content {
     height: auto!important;
     width: 100%!important;
 }
+
+.mat-fab.mat-primary, .mat-flat-button.mat-primary, .mat-mini-fab.mat-primary, .mat-raised-button.mat-primary {
+    margin-right: 5px !important;
+}
