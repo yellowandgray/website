@@ -18,18 +18,33 @@ export class QuestionComponent implements OnInit {
     topic = [];
     question = [];
     year = [];
+    language = [];
     loading = false;
     file_name: string = 'Select Picture';
-    
+    selected_language = '';
     constructor(public dialog: MatDialog, private httpClient: HttpClient, private _snackBar: MatSnackBar) { }
 
     ngOnInit() {
-        this.gettopic();
-        this.getyear();
-        this.getQuestion();
+        this.getLanguage();
     }
-    getQuestion(): void {
-        this.httpClient.get<any>('http://localhost/project/mekana/api/v1/get_question')
+    getLanguage(): void {
+        this.httpClient.get<any>('http://localhost/mushak/mekana/api/v1/get_language')
+        .subscribe(
+                (res)=>{
+                    this.language = res["result"]["data"];
+                    this.selected_language = res["result"]["data"][0]['language_id'];
+                    this.getYearByLanguage();
+              },
+              (error)=>{
+                this._snackBar.open(error["statusText"], '', {
+                    duration: 2000,
+                });
+            }
+        );
+    }
+    getQuestionsByTopic(ev): void {
+        var tid = this.topic[ev.index].topic_id;
+        this.httpClient.get<any>('http://localhost/mushak/mekana/api/v1/get_question_by_topic/'+tid)
         .subscribe(
                 (res)=>{
                     this.question = res["result"]["data"];
@@ -41,8 +56,8 @@ export class QuestionComponent implements OnInit {
             }
         );
     }
-    gettopic(): void {
-        this.httpClient.get<any>('http://localhost/project/mekana/api/v1/get_topic')
+    getTopicByLngNYear(ev): void {
+        this.httpClient.get<any>('http://localhost/mushak/mekana/api/v1/get_topic_by_lng_year/'+this.selected_language+'/'+this.year[ev.index].year_id)
             .subscribe(
                 (res) => {
                     this.topic = res["result"]["data"];
@@ -54,8 +69,8 @@ export class QuestionComponent implements OnInit {
                 }
             );
     }
-    getyear(): void {
-        this.httpClient.get<any>('http://localhost/project/mekana/api/v1/get_year')
+    getYearByLanguage(): void {
+        this.httpClient.get<any>('http://localhost/mushak/mekana/api/v1/get_year_by_language/'+this.selected_language)
             .subscribe(
                 (res) => {
                     this.year = res["result"]["data"];
