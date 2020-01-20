@@ -210,25 +210,27 @@ $app->post('/import_question', function() use($app) {
         $obj = new Common();
         while (($row = fgetcsv($handle, 1000, ',')) !== FALSE) {
             if (!$first) {
-                $language = $obj->selectRow('*', 'language', 'name=\'' . trim($row[1]) . '\'');
+                $language = $obj->selectRow('*', 'language', 'name=\'' . trim($row[0]) . '\'');
                 if (count($language) == 0) {
-                    $lid = $obj->insertRecord(array('name' => trim($row[1]), 'status' => 1, 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')), 'language');
+                    $lid = $obj->insertRecord(array('name' => trim($row[0]), 'status' => 1, 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')), 'language');
                 } else {
                     $lid = $language['language_id'];
                 }
-                $year = $obj->selectRow('*', 'year', 'year=\'' . trim($row[2]) . '\'');
+                $year = $obj->selectRow('*', 'year', 'year=\'' . trim($row[1]) . '\'');
                 if (count($year) == 0) {
-                    $yid = $obj->insertRecord(array('year' => trim($row[2]), 'status' => 1, 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')), 'year');
+                    $yid = $obj->insertRecord(array('year' => trim($row[1]), 'status' => 1, 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')), 'year');
                 } else {
                     $yid = $year['year_id'];
                 }
                 $topic = $obj->selectRow('*', 'topic', 'name=\'' . trim($row[2]) . '\' AND language_id = ' . $lid . ' AND year_id = ' . $yid);
                 if (count($topic) == 0) {
-                    $tid = $obj->insertRecord(array('name' => trim($row[3]), 'language_id' => $lid, 'year_id' => $yid, 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')), 'topic');
+                    $tid = $obj->insertRecord(array('name' => trim($row[2]), 'language_id' => $lid, 'year_id' => $yid, 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')), 'topic');
                 } else {
                     $tid = $topic['topic_id'];
                 }
-                $data = array('topic_id' => $tid, 'name' => $row[4], 'a' => $row[5], 'b' => $row[6], 'c' => $row[7], 'd' => $row[7], 'answer' => $row[8], 'question_no' => $row[0], 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'));
+                $qnoqry = $obj->selectRow('IFNULL(MAX(question_no), 0) AS max_no', 'question', 'topic_id=' . $tid);
+                $qno = $qnoqry['max_no'];
+                $data = array('topic_id' => $tid, 'name' => $row[3], 'a' => $row[4], 'b' => $row[5], 'c' => $row[6], 'd' => $row[6], 'answer' => $row[7], 'question_no' => ($qno + 1), 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'));
                 $insert = $obj->insertRecord($data, 'question');
                 if ($insert > 0) {
                     $count++;
@@ -244,4 +246,20 @@ $app->post('/import_question', function() use($app) {
         $res['message'] = 'File format mismatch';
     }
     echoRespnse(201, $res);
+});
+
+$app->post('/upload_image', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to upload image');
+    $obj = new Common();
+    $data = '';
+    if (isset($_FILES) && isset($_FILES['file'])) {
+        $data = $obj->saveFile($_FILES['file'], 'uploads');
+    }
+    if ($data != '') {
+        $res['error'] = false;
+        $res['message'] = 'Image uploaded successfully';
+        $res['imageUrl'] = $data;
+        $res['extension'] = $obj->getExtension($data);
+    }
+    return $res;
 });
