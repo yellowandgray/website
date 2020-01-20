@@ -28,7 +28,7 @@ export class QuestionComponent implements OnInit {
         this.getLanguage();
     }
     getLanguage(): void {
-        this.httpClient.get<any>('http://localhost/mushak/mekana/api/v1/get_language')
+        this.httpClient.get<any>('http://localhost/project/mekana/api/v1/get_language')
         .subscribe(
                 (res)=>{
                     this.language = res["result"]["data"];
@@ -44,7 +44,7 @@ export class QuestionComponent implements OnInit {
     }
     getQuestionsByTopic(ev): void {
         var tid = this.topic[ev.index].topic_id;
-        this.httpClient.get<any>('http://localhost/mushak/mekana/api/v1/get_question_by_topic/'+tid)
+        this.httpClient.get<any>('http://localhost/project/mekana/api/v1/get_question_by_topic/'+tid)
         .subscribe(
                 (res)=>{
                     this.question = res["result"]["data"];
@@ -57,7 +57,7 @@ export class QuestionComponent implements OnInit {
         );
     }
     getTopicByLngNYear(ev): void {
-        this.httpClient.get<any>('http://localhost/mushak/mekana/api/v1/get_topic_by_lng_year/'+this.selected_language+'/'+this.year[ev.index].year_id)
+        this.httpClient.get<any>('http://localhost/project/mekana/api/v1/get_topic_by_lng_year/'+this.selected_language+'/'+this.year[ev.index].year_id)
             .subscribe(
                 (res) => {
                     this.topic = res["result"]["data"];
@@ -70,7 +70,7 @@ export class QuestionComponent implements OnInit {
             );
     }
     getYearByLanguage(): void {
-        this.httpClient.get<any>('http://localhost/mushak/mekana/api/v1/get_year_by_language/'+this.selected_language)
+        this.httpClient.get<any>('http://localhost/project/mekana/api/v1/get_year_by_language/'+this.selected_language)
             .subscribe(
                 (res) => {
                     this.year = res["result"]["data"];
@@ -101,7 +101,7 @@ export class QuestionComponent implements OnInit {
 
         dialogRef.afterClosed().subscribe(result => {
             if (result !== false && result !== 'false') {
-                this.getQuestion();
+                //this.getQuestion();
             }
         });
     }
@@ -119,7 +119,7 @@ export class QuestionComponent implements OnInit {
     });
    dialogRef.afterClosed().subscribe(result => {
        if(result !== false && result !== 'false') {
-          this.getQuestion();
+          //this.getQuestion();
        }
     });
     }
@@ -163,6 +163,7 @@ export class QuestionForm {
         this.questionForm = new FormGroup({
             'topic_id': new FormControl('', Validators.required),
             'question': new FormControl('', Validators.required),
+            'question_no': new FormControl('', Validators.required),
             'a': new FormControl('', Validators.required),
             'b': new FormControl('', Validators.required),
             'c': new FormControl('', Validators.required),
@@ -173,6 +174,7 @@ export class QuestionForm {
            this.questionForm.patchValue({
            topic_id: this.data.topic_id,
            question: this.data.name,
+           question_no: this.data.question_no,
            a: this.data.a,
            b: this.data.b,
            c: this.data.c,
@@ -208,6 +210,7 @@ export class QuestionForm {
           if(this.question_id != 0) {
           formData.append('topic_id', this.questionForm.value.topic_id);
           formData.append('name', this.questionForm.value.question);
+          formData.append('question_no', this.questionForm.value.question_no);
           formData.append('a', this.questionForm.value.a);
           formData.append('b', this.questionForm.value.b);
           formData.append('c', this.questionForm.value.c);
@@ -217,6 +220,7 @@ export class QuestionForm {
         } else {
             formData.append('topic_id', this.questionForm.value.topic_id);
             formData.append('question', this.questionForm.value.question);
+            formData.append('question_no', this.questionForm.value.question_no);
             formData.append('a', this.questionForm.value.a);
             formData.append('b', this.questionForm.value.b);
             formData.append('c', this.questionForm.value.c);
