@@ -127,7 +127,7 @@ global $topic;
                             </span>
 
                             <!--resultTitleBlock-->
-                            <h2 class="title">
+                            <h2 class="complete-title">
                                 You did {{ (score()>7?'an amazing':(score()<4?'improve':'a good')) }} knowledge!
                             </h2>
                             <p class="subtitle">
