@@ -53,7 +53,7 @@
             </div>
         </div>
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-            <div fxFlex="50%">
+            <div fxFlex="100%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Answer</mat-label>
                     <mat-select required formControlName="answer">
@@ -65,13 +65,13 @@
                     <mat-error>Answer is required</mat-error>
                 </mat-form-field>
             </div>
-            <div fxFlex="50%">
+            <!--<div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Question No</mat-label>
                     <input matInput placeholder="" required formControlName="question_no" />
                     <mat-error>Question No is required</mat-error>
                 </mat-form-field>
-            </div>
+            </div> -->
         </div>
         <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
             <button mat-button [mat-dialog-close]="false">Cancel</button>

@@ -10,6 +10,13 @@ and open the template in the editor.
     Author     : Yellowandgray
 */
 
+@font-face {
+    font-family: 'isMail_0';
+    src: url('../font/ismail_0.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .box-shadow {
     background: #fff;
     box-shadow: 0 0 9px 5px #e3e3e3;
@@ -616,6 +623,7 @@ and open the template in the editor.
     padding-left: 30px;
     border-bottom: 1px solid #e3e3e3;
     color: #30445c;
+    font-family: 'isMail_0', sans-serif;
 }
 
 .language_section ul i {
