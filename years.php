@@ -7,7 +7,7 @@ if (!isset($_GET['lan'])) {
 }
 $language = $obj->selectRow('*', 'language', 'name = \'' . $_GET['lan'] . '\'');
 $_SESSION['student_selected_language_id'] = $language['language_id'];
-$years = $obj->selectAll('y.year, y.year_id', 'topic AS t LEFT JOIN year AS y ON y.year_id = t.year_id', 't.language_id = ' . $_SESSION['student_selected_language_id'].' GROUP BY year_id');
+$years = $obj->selectAll('y.year, y.year_id', 'topic AS t LEFT JOIN year AS y ON y.year_id = t.year_id', 't.language_id = ' . $_SESSION['student_selected_language_id'].' GROUP BY y.year_id');
 ?>
 <!DOCTYPE html>
 <html lang = 'en'>
