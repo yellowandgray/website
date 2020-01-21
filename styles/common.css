@@ -400,7 +400,7 @@ input[type=submit]:hover {
 /* Modal Body */
 .modal-body-1 {
     padding: 2px 16px;
-    top: -55px;
+/*    top: -55px;*/
 }
 
 #myBtn {
@@ -561,7 +561,7 @@ textarea::placeholder {
     height: 100%;
     background: rgba(0, 0, 0, 0.75);
     z-index: 99999;
-    overflow: scroll;
+/*    overflow: scroll;*/
     padding-top: 10%;
 }
 .modal-dialog {

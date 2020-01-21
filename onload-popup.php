@@ -6,7 +6,7 @@
                 <span class="clo" onClick="PopUp('hide')" >&times;</span>
             </div>
             <div class="modal-body-1">
-                <h2 class="text-center">FINANCIAL FREEDOM</h2><br>
+<!--                <h2 class="text-center">FINANCIAL FREEDOM</h2><br>-->
 <!--                <p>Do you <strong style="text-decoration: underline" >know how much</strong> you need to be FREE?</p>
                 <p>What if you learnt that you could be Financially Free <strong style="text-decoration: underline" >much sooner </strong>than you could ever imagine?</p>
                 <p>To learn <strong style="text-decoration: underline" >how</strong>, giving away my <strong style="text-decoration: underline;font-size: 16px;" >3-step course</strong> AND the Financial Freedom calculator for <strong style="text-decoration: underline" >FREE</strong> to the first 100 subscribers!! Please let us know below the best email address you would like to receive it on:</p>-->
