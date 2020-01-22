@@ -623,7 +623,7 @@ and open the template in the editor.
     padding-left: 0px;
     border-bottom: 1px solid #e3e3e3;
     color: #30445c;
-/*    font-family: 'isMail_0', sans-serif;*/
+    /*    font-family: 'isMail_0', sans-serif;*/
 }
 
 .language_section ul i {
@@ -720,4 +720,39 @@ and open the template in the editor.
     font-size: 22px;
     padding-left: 10px;
     margin-top: 8px;
+}
+
+.subject-section-order li input {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+}
+
+.subject-section-order li label {
+    padding-left: 30px;
+    font-size: 20px;
+    color: #F03C02;
+    margin-bottom: 10px;
+    position: relative;
+    top: 3px;
+}
+
+.subject-section-order li ul li input {
+    position: absolute;
+}
+
+.subject-section-order li ul li label {
+    padding-left: 0px;
+}
+
+.subject-section-order li ul li label span {
+    padding-left: 30px;
+    font-size: 18px;
+    position: relative;
+    top: 3px;
+}
+
+.heading-custom {
+    font-size: 25px !important;
+    margin-bottom: 20px !important;
 }
