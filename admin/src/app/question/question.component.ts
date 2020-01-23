@@ -164,6 +164,7 @@ export class QuestionForm {
             'topic_id': new FormControl('', Validators.required),
             'question': new FormControl('', Validators.required),
             'question_no': new FormControl('', Validators.required),
+            'direction': new FormControl('', Validators.required),
             'a': new FormControl('', Validators.required),
             'b': new FormControl('', Validators.required),
             'c': new FormControl('', Validators.required),
@@ -175,6 +176,7 @@ export class QuestionForm {
            topic_id: this.data.topic_id,
            question: this.data.name,
            question_no: this.data.question_no,
+           direction: this.data.direction,
            a: this.data.a,
            b: this.data.b,
            c: this.data.c,
@@ -211,6 +213,7 @@ export class QuestionForm {
           formData.append('topic_id', this.questionForm.value.topic_id);
           formData.append('name', this.questionForm.value.question);
           formData.append('question_no', this.questionForm.value.question_no);
+          formData.append('direction', this.questionForm.value.direction);
           formData.append('a', this.questionForm.value.a);
           formData.append('b', this.questionForm.value.b);
           formData.append('c', this.questionForm.value.c);
@@ -221,6 +224,7 @@ export class QuestionForm {
             formData.append('topic_id', this.questionForm.value.topic_id);
             formData.append('question', this.questionForm.value.question);
             formData.append('question_no', this.questionForm.value.question_no);
+            formData.append('direction', this.questionForm.value.direction);
             formData.append('a', this.questionForm.value.a);
             formData.append('b', this.questionForm.value.b);
             formData.append('c', this.questionForm.value.c);
