@@ -2550,12 +2550,14 @@ article .align-right {
     }
     .login-section i {
         margin-left: 0 !important;
-        margin-top: 14px !important;
+        margin-top: 5px !important;
     }
     .modal.styled .modal-header h4 {
         font-size: 20px !important;
         margin-top: 10px;
         margin-bottom: 10px;
+        width: 75%;
+        margin: 0 auto;
     }
     .topic_list_position_right a.btn-danger {
         float: none !important;
@@ -3028,6 +3030,7 @@ article .align-right {
     left: 0;
     border: none;
 }
+
 #featured-1 #mySignup .modal {
     position: relative !important;
     /* top: 56% !important; */

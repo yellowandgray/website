@@ -756,3 +756,126 @@ and open the template in the editor.
     font-size: 25px !important;
     margin-bottom: 20px !important;
 }
+
+
+/* Base for label styling */
+
+.year_select_section [type="checkbox"]:not(:checked),
+.year_select_section [type="checkbox"]:checked {
+    position: absolute;
+    left: -9999px;
+}
+
+.year_select_section [type="checkbox"]:not(:checked)+label,
+.year_select_section [type="checkbox"]:checked+label {
+    position: relative;
+    padding-left: 1.95em;
+    cursor: pointer;
+    margin-top: 10px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+
+/* checkbox aspect */
+
+.year_select_section [type="checkbox"]:not(:checked)+label:before,
+.year_select_section [type="checkbox"]:checked+label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1.25em;
+    height: 1.25em;
+    border: 2px solid #ccc;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, .1);
+}
+
+
+/* checked mark aspect */
+
+.year_select_section [type="checkbox"]:not(:checked)+label:after,
+.year_select_section [type="checkbox"]:checked+label:after {
+    content: '\2713\0020';
+    position: absolute;
+    top: .15em;
+    left: .22em;
+    font-size: 1.3em;
+    line-height: 0.8;
+    color: #5cb85c;
+    transition: all .2s;
+    font-family: 'Lucida Sans Unicode', 'Arial Unicode MS', Arial;
+}
+
+
+/* checked mark aspect changes */
+
+.year_select_section [type="checkbox"]:not(:checked)+label:after {
+    opacity: 0;
+    transform: scale(0);
+}
+
+.year_select_section [type="checkbox"]:checked+label:after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/* disabled checkbox */
+
+.year_select_section [type="checkbox"]:disabled:not(:checked)+label:before,
+.year_select_section [type="checkbox"]:disabled:checked+label:before {
+    box-shadow: none;
+    border-color: #bbb;
+    background-color: #ddd;
+}
+
+.year_select_section [type="checkbox"]:disabled:checked+label:after {
+    color: #999;
+}
+
+.year_select_section [type="checkbox"]:disabled+label {
+    color: #aaa;
+}
+
+
+/* accessibility */
+
+.year_select_section [type="checkbox"]:checked:focus+label:before,
+.year_select_section [type="checkbox"]:not(:checked):focus+label:before {
+    border: 2px dotted blue;
+}
+
+
+/* hover style just for information */
+
+.year_select_section label:hover:before {
+    border: 2px solid #4778d9!important;
+}
+
+.list-none {
+    list-style: none;
+}
+
+.list-none li {
+    padding-bottom: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.list-none li i {
+    color: #F03C02;
+    font-size: 20px;
+}
+
+.list-none li a {
+    font-size: 20px;
+    font-weight: 600;
+}
