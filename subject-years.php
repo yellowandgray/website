@@ -28,14 +28,32 @@
                     </div>
                     <div class='modal-body'>
                         <div class='year_select_section'>
-                            <p>
-                                <input type='checkbox' id='test1' />
-                                <label for='test1'>2010</label>
-                            </p>
-                            <p>
-                                <input type='checkbox' id='test2' />
-                                <label for='test2'>2011</label>
-                            </p>
+                            <ul>
+                                <li>
+                                    <input type='checkbox' />
+                                    <label>2010</label>
+                                </li>
+                                <li>
+                                    <input type='checkbox' />
+                                    <label>2011</label>
+                                </li>
+                                <li>
+                                    <input type='checkbox' />
+                                    <label>2012</label>
+                                </li>
+                                <li>
+                                    <input type='checkbox' />
+                                    <label>2013</label>
+                                </li>
+                                <li>
+                                    <input type='checkbox' />
+                                    <label>2014</label>
+                                </li>
+                                <li>
+                                    <input type='checkbox' />
+                                    <label>2015</label>
+                                </li>
+                            </ul>
                             <div class='text-right'>
                                 <a href='quiz_page' class='btn btn-danger'>Next</a>
                             </div>

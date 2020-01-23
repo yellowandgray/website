@@ -27,7 +27,7 @@ $years = $obj->selectAll( '*', 'year', 'year_id > 0' );
                             <ul class="list-none">
                                 <?php foreach ($years as $row) { ?>
                                 <li>
-                                    <i class="icon-check"></i> <a href=""><?php echo $row['year']; ?></a>
+                                    <i class="icon-check"></i> <a href="quiz_page"><?php echo $row['year']; ?></a>
                                 </li>
                                 <?php } ?>
                             </ul>

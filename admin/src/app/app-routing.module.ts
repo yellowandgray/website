@@ -8,7 +8,8 @@ import { YearComponent } from './year/year.component';
 
 
 const routes: Routes = [
-        {path: '', component: YearComponent},
+        {path: '', component: SubjectComponent},
+        {path: 'subject', component: SubjectComponent},
         {path: 'topic', component: TopicComponent},
         {path: 'question', component: QuestionComponent},
         {path: 'user', component: UserComponent},
