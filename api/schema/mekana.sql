@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jan 13, 2020 at 02:55 PM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 7.2.12
+-- Host: localhost
+-- Generation Time: Jan 23, 2020 at 09:45 PM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.2.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -32,7 +32,7 @@ CREATE TABLE `language` (
   `language_id` int(11) NOT NULL,
   `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `status` varchar(255) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `created_by` int(11) NOT NULL,
   `updated_by` int(11) NOT NULL
@@ -56,13 +56,15 @@ CREATE TABLE `question` (
   `question_id` int(11) NOT NULL,
   `topic_id` int(11) NOT NULL,
   `name` varchar(500) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `image_path` varchar(500) NOT NULL DEFAULT '',
+  `direction` varchar(10) NOT NULL DEFAULT '',
   `a` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `b` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `c` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `d` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `answer` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `question_no` int(11) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `created_by` int(11) NOT NULL,
   `updated_by` int(11) NOT NULL
@@ -72,17 +74,17 @@ CREATE TABLE `question` (
 -- Dumping data for table `question`
 --
 
-INSERT INTO `question` (`question_id`, `topic_id`, `name`, `a`, `b`, `c`, `d`, `answer`, `question_no`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
-(1, 3, 'In vaccum all objects fall with', 'same acceleration and heavy bodies reach groud first', 'same acceleration and reach the ground at the same time', 'different acceleratin and reach the ground at different time', 'different acceleration and heavy bodies reach ground first', 'B', 1, '2020-01-13 10:08:45', '0000-00-00 00:00:00', 0, 0),
-(2, 3, 'The time of reverberation of a hall can be decreased by', 'having a number of loud speakers', 'opening all windows and doors', 'closing all windows and doors', 'speaking loudly', 'B', 2, '2020-01-13 10:09:37', '0000-00-00 00:00:00', 0, 0),
-(3, 4, 'which spectroscopy is used in chemical examination of intersteller space?', 'Microwave spectroscopy', 'Infrared (IR) spectroscopy', 'Raman spectroscopy', 'NMR spectroscopy', 'A', 1, '2020-01-13 10:12:28', '0000-00-00 00:00:00', 0, 0),
-(4, 4, 'The Indian Salt Petre is', 'Ammonium nitrate NH4 NO3', 'Sodium Nitrate (Na NO 3  )', 'Potassium Nitrate KNO 3 ', 'Calcium nitrate Ca(NO 3)2', 'C', 2, '2020-01-13 10:14:43', '0000-00-00 00:00:00', 0, 0),
-(5, 4, 'The&#160; unit for equivalent conductivity is', 'ohm-1 cm-1', 'ohm -1 cm-2 eq-1', 'ohm-1 cm 2 eq -1', 'S cm -2 eq -1', 'C', 3, '2020-01-13 10:15:56', '0000-00-00 00:00:00', 0, 0),
-(6, 4, 'The end product of anaerobic respiration is', 'Acetyl C0-A', 'Ethanol alcohol ', 'Pyruvic acid', 'succinic acid', 'B', 4, '2020-01-13 10:17:49', '0000-00-00 00:00:00', 0, 0),
-(7, 5, 'The main constituent of steel in India are', 'Ni and Cu', 'Mn and Cr', 'Fe and Cu', 'Ti and Cr', 'B', 1, '2020-01-13 10:18:45', '0000-00-00 00:00:00', 0, 0),
-(8, 5, 'When did the Prime Minister of India inaugrate the country\'s longest rail -cum-road- bridge built over the Brahmaputra river at Bogibeel near Dibrgarh in Assam?', 'On November 25, 2018', 'On December 25,2018', 'On December 10,2018', 'On November 10,2018', 'B', 2, '2020-01-13 10:19:56', '0000-00-00 00:00:00', 0, 0),
-(9, 6, 'Golden rice is genetically modified crop. Where the incorporated gene is meant for biosynthesis of', 'Vitamin A', 'Vitamin B', 'Vitamin C', 'Vitamin D', 'A', 1, '2020-01-13 10:21:23', '0000-00-00 00:00:00', 0, 0),
-(10, 7, 'Most widely used bioweapon is', 'Bacillus subtilis', 'Vibrio Cholerae', 'Bacilllus anthracis', 'Escherichia coli', 'C', 1, '2020-01-13 10:23:07', '0000-00-00 00:00:00', 0, 0);
+INSERT INTO `question` (`question_id`, `topic_id`, `name`, `image_path`, `direction`, `a`, `b`, `c`, `d`, `answer`, `question_no`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
+(1, 3, 'In vaccum all objects fall with', '', '', 'same acceleration and heavy bodies reach groud first', 'same acceleration and reach the ground at the same time', 'different acceleratin and reach the ground at different time', 'different acceleration and heavy bodies reach ground first', 'B', 1, '2020-01-13 10:08:45', '0000-00-00 00:00:00', 0, 0),
+(2, 3, 'The time of reverberation of a hall can be decreased by', '', '', 'having a number of loud speakers', 'opening all windows and doors', 'closing all windows and doors', 'speaking loudly', 'B', 2, '2020-01-13 10:09:37', '0000-00-00 00:00:00', 0, 0),
+(3, 4, 'which spectroscopy is used in chemical examination of intersteller space?', '', '', 'Microwave spectroscopy', 'Infrared (IR) spectroscopy', 'Raman spectroscopy', 'NMR spectroscopy', 'A', 1, '2020-01-13 10:12:28', '0000-00-00 00:00:00', 0, 0),
+(4, 4, 'The Indian Salt Petre is', '', '', 'Ammonium nitrate NH4 NO3', 'Sodium Nitrate (Na NO 3  )', 'Potassium Nitrate KNO 3 ', 'Calcium nitrate Ca(NO 3)2', 'C', 2, '2020-01-13 10:14:43', '0000-00-00 00:00:00', 0, 0),
+(5, 4, 'The&#160; unit for equivalent conductivity is', '', '', 'ohm-1 cm-1', 'ohm -1 cm-2 eq-1', 'ohm-1 cm 2 eq -1', 'S cm -2 eq -1', 'C', 3, '2020-01-13 10:15:56', '0000-00-00 00:00:00', 0, 0),
+(6, 4, 'The end product of anaerobic respiration is', '', '', 'Acetyl C0-A', 'Ethanol alcohol ', 'Pyruvic acid', 'succinic acid', 'B', 4, '2020-01-13 10:17:49', '0000-00-00 00:00:00', 0, 0),
+(7, 5, 'The main constituent of steel in India are', '', '', 'Ni and Cu', 'Mn and Cr', 'Fe and Cu', 'Ti and Cr', 'B', 1, '2020-01-13 10:18:45', '0000-00-00 00:00:00', 0, 0),
+(8, 5, 'When did the Prime Minister of India inaugrate the country\'s longest rail -cum-road- bridge built over the Brahmaputra river at Bogibeel near Dibrgarh in Assam?', '', '', 'On November 25, 2018', 'On December 25,2018', 'On December 10,2018', 'On November 10,2018', 'B', 2, '2020-01-13 10:19:56', '0000-00-00 00:00:00', 0, 0),
+(9, 6, 'Golden rice is genetically modified crop. Where the incorporated gene is meant for biosynthesis of', '', '', 'Vitamin A', 'Vitamin B', 'Vitamin C', 'Vitamin D', 'A', 1, '2020-01-13 10:21:23', '0000-00-00 00:00:00', 0, 0),
+(10, 7, 'Most widely used bioweapon is', '', '', 'Bacillus subtilis', 'Vibrio Cholerae', 'Bacilllus anthracis', 'Escherichia coli', 'C', 1, '2020-01-13 10:23:07', '0000-00-00 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -98,15 +100,15 @@ CREATE TABLE `student_answer` (
   `question_id` int(11) NOT NULL,
   `answer_option` varchar(2) DEFAULT NULL,
   `actual_answer_option` varchar(2) NOT NULL DEFAULT '',
-  `is_correct_answer` tinyint(1) NOT NULL DEFAULT '0',
-  `is_skipped` tinyint(1) NOT NULL DEFAULT '0',
+  `is_correct_answer` tinyint(1) NOT NULL DEFAULT 0,
+  `is_skipped` tinyint(1) NOT NULL DEFAULT 0,
   `student_register_id` int(11) DEFAULT NULL,
   `answer_attempt` int(11) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `created_by` int(11) DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   `updated_by` int(11) DEFAULT NULL,
-  `status` tinyint(1) NOT NULL DEFAULT '1'
+  `status` tinyint(1) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -138,9 +140,9 @@ CREATE TABLE `student_register` (
   `password` varchar(255) NOT NULL,
   `confirm_password` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `status` tinyint(4) NOT NULL DEFAULT '1',
+  `status` tinyint(4) NOT NULL DEFAULT 1,
   `block_reason` varchar(255) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `created_by` int(11) NOT NULL,
   `updated_by` int(11) NOT NULL
@@ -166,7 +168,7 @@ CREATE TABLE `subject` (
   `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `image_path` varchar(255) NOT NULL,
   `description` varchar(500) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `created_by` int(11) NOT NULL,
   `updated_by` int(11) NOT NULL
@@ -194,8 +196,9 @@ CREATE TABLE `topic` (
   `topic_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
   `year_id` int(11) NOT NULL,
+  `subject_id` int(11) DEFAULT NULL,
   `name` varchar(255) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `created_by` int(11) NOT NULL,
   `updated_by` int(11) NOT NULL
@@ -205,12 +208,12 @@ CREATE TABLE `topic` (
 -- Dumping data for table `topic`
 --
 
-INSERT INTO `topic` (`topic_id`, `language_id`, `year_id`, `name`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
-(3, 1, 1, 'Topic Physics', '2020-01-13 09:50:00', '0000-00-00 00:00:00', 0, 0),
-(4, 1, 1, 'Topic Chemistry', '2020-01-13 09:50:15', '0000-00-00 00:00:00', 0, 0),
-(5, 1, 2, 'Topic Politics', '2020-01-13 12:41:47', '0000-00-00 00:00:00', 0, 0),
-(6, 1, 2, 'Topic Biology', '2020-01-13 12:41:51', '0000-00-00 00:00:00', 0, 0),
-(7, 1, 2, 'Topic General', '2020-01-13 12:41:53', '0000-00-00 00:00:00', 0, 0);
+INSERT INTO `topic` (`topic_id`, `language_id`, `year_id`, `subject_id`, `name`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
+(3, 1, 1, NULL, 'Topic Physics', '2020-01-13 09:50:00', '0000-00-00 00:00:00', 0, 0),
+(4, 1, 1, NULL, 'Topic Chemistry', '2020-01-13 09:50:15', '0000-00-00 00:00:00', 0, 0),
+(5, 1, 2, NULL, 'Topic Politics', '2020-01-13 12:41:47', '0000-00-00 00:00:00', 0, 0),
+(6, 1, 2, NULL, 'Topic Biology', '2020-01-13 12:41:51', '0000-00-00 00:00:00', 0, 0),
+(7, 1, 2, NULL, 'Topic General', '2020-01-13 12:41:53', '0000-00-00 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -221,11 +224,11 @@ INSERT INTO `topic` (`topic_id`, `language_id`, `year_id`, `name`, `created_at`,
 CREATE TABLE `year` (
   `year_id` int(11) NOT NULL,
   `year` varchar(255) NOT NULL,
-  `status` int(1) NOT NULL DEFAULT '1',
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `status` int(1) NOT NULL DEFAULT 1,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `created_by` int(11) NOT NULL DEFAULT '1',
-  `updated_by` int(11) NOT NULL DEFAULT '1'
+  `created_by` int(11) NOT NULL DEFAULT 1,
+  `updated_by` int(11) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
