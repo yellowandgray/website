@@ -82,6 +82,7 @@ export class TopicForm {
     topic_id = 0;
     language:any[];
     year:any[];
+    subject:any[];
     constructor(
     public dialogRef: MatDialogRef<TopicForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -90,6 +91,7 @@ export class TopicForm {
         this.topicForm = new FormGroup ({
             'year_id': new FormControl('', Validators.required),
             'language_id': new FormControl('', Validators.required),
+            'subject_id': new FormControl('', Validators.required),
             'name': new FormControl('', Validators.required),
         });
         if(this.data != null) {
@@ -97,6 +99,7 @@ export class TopicForm {
            name: this.data.name,
            year_id: this.data.year_id,
            language_id: this.data.language_id,
+           subject_id: this.data.subject_id,
         });
             this.topic_id = this.data.topic_id;
         }
@@ -132,6 +135,22 @@ export class TopicForm {
                     duration: 2000,
                 });
             });
+
+        this.httpClient.get('http://localhost/project/mekana/api/v1/get_subject').subscribe(
+            (res) => {
+                if (res["result"]["error"] === false) {
+                    this.subject = res["result"]["data"];
+                } else {
+                    this._snackBar.open(res["result"]["message"], '', {
+                        duration: 2000,
+                    });
+                }
+            },
+            (error) => {
+                this._snackBar.open(error["statusText"], '', {
+                    duration: 2000,
+                });
+            });
     }
 
     onSubmit() {
@@ -145,11 +164,13 @@ export class TopicForm {
         formData.append('name', this.topicForm.value.name);
         formData.append('language_id', this.topicForm.value.language_id);
         formData.append('year_id', this.topicForm.value.year_id);
+        formData.append('subject_id', this.topicForm.value.subject_id);
         url = 'update_record/topic/topic_id = '+this.topic_id;
       } else {
         formData.append('name', this.topicForm.value.name);
         formData.append('language_id', this.topicForm.value.language_id);
         formData.append('year_id', this.topicForm.value.year_id);
+        formData.append('subject_id', this.topicForm.value.subject_id);
         url = 'insert_topic';
       }
       this.httpClient.post('http://localhost/project/mekana/api/v1/'+url, formData).subscribe(
