@@ -22,7 +22,7 @@ $languages = $obj->selectAll('*', 'language', 'status = 1');
                                 <ul>
                                     <?php foreach ($languages as $val) { ?>
                                        <li><i class="icon-check"></i> 
-                                            <a href="question-subject-order"><?php echo $val['name'];  ?></a>
+                                            <a href="question-subject-order?lan=<?php echo $val['name'];  ?>"><?php echo $val['name'];  ?></a>
                                         </li>
                                     <?php } ?>
                                     <!-- <li>

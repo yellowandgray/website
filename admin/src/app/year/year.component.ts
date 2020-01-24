@@ -20,7 +20,7 @@ export class YearComponent implements OnInit {
     this.getYear();
   }
   getYear(): void {
-        this.httpClient.get<any>('http://localhost/project/mekana/api/v1/get_year')
+        this.httpClient.get<any>('http://localhost/microview/mekana/api/v1/get_year')
         .subscribe(
                 (res)=>{
                     this.year = res["result"]["data"];
@@ -115,7 +115,7 @@ export class YearForm {
         formData.append('status', this.yearForm.value.status);
         url = 'insert_year';
       }
-      this.httpClient.post('http://localhost/project/mekana/api/v1/'+url, formData).subscribe(
+      this.httpClient.post('http://localhost/microview/mekana/api/v1/'+url, formData).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -159,7 +159,7 @@ export class YearDelete {
             return;
       }
       this.loading = true;
-      this.httpClient.get('http://localhost/project/mekana/api/v1/delete_record/year/year_id='+this.year_id).subscribe(
+      this.httpClient.get('http://localhost/microview/mekana/api/v1/delete_record/year/year_id='+this.year_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {

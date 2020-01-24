@@ -1,6 +1,20 @@
+<?php
+session_start();
+require_once 'api/include/common.php';
+$obj = new Common();
+if (!isset($_SESSION['student_selected_language_id'])) {
+    header('Location: select_language');
+}
+$_SESSION['student_selected_type'] = 'subject';
+$topics = $obj->selectAll('t.*, s.name AS subject', 'topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id', 't.language_id=' . $_SESSION['student_selected_language_id']);
+$alltopics = array();
+foreach ($topics as $row) {
+    $alltopics[$row['subject']][] = $row;
+}
+$counter = 0;
+?>
 <html lang="en">
     <?php include 'head.php'; ?>
-
     <body>
         <div id="wrapper">
             <?php include 'menu.php'; ?>
@@ -14,26 +28,23 @@
                         <div class="modal-body">
                             <div class="language_section">
                                 <ul class="subject-section-order">
-                                    <li>
-                                        <input type="checkbox" id="option"><label for="option" class="heading-custom"> Science</label>
-                                        <ul>
-                                            <li><label class="pl-0"><input type="checkbox" class="subOption"> <span>Chemistry</span></label></li>
-                                            <li><label class="pl-0"><input type="checkbox" class="subOption"> <span>Physics</span></label></li>
-                                            <li><label class="pl-0"><input type="checkbox" class="subOption"> <span>Biology</span></label></li>
-                                        </ul>
-                                    </li>
-<!--                                    <li>
-                                        <input type="checkbox" id="option"><label for="option" class="heading-custom"> Maths</label>
-                                        <ul>
-                                            <li><label class="pl-0"><input type="checkbox" class="subOption"> <span>Algebra</span></label></li>
-                                            <li><label class="pl-0"><input type="checkbox" class="subOption"> <span>Combinatorics</span></label></li>
-                                            <li><label class="pl-0"><input type="checkbox" class="subOption"> <span>Logic</span></label></li>
-                                        </ul>
-                                    </li>-->
+                                    <?php
+                                    foreach ($alltopics as $key => $row) {
+                                        $counter++;
+                                        ?>
+                                        <li>
+                                            <input type="checkbox" id="option<?php echo $counter; ?>"><label for="option<?php echo $counter; ?>" class="heading-custom"> <?php echo $key; ?></label>
+                                            <ul>
+                                                <?php foreach ($row as $r) { ?>
+                                                    <li><label class="pl-0"><input type="checkbox" name="suboptions[]" value="<?php echo $r['topic_id']; ?>" class="subOption<?php echo $counter; ?> suboptions"> <span><?php echo $r['name']; ?></span></label></li>
+                                                <?php } ?>
+                                            </ul>
+                                        </li>
+                                    <?php } ?>
                                 </ul>
                             </div>
                             <div class="text-right">
-                                <a href="subject-years" class="btn btn-danger">Next</a>
+                                <a href="#" onclick="goToYears();" class="btn btn-danger">Next</a>
                             </div>
                         </div>
                     </div>
@@ -42,21 +53,37 @@
         </div>
         <?php include 'script.php'; ?>
         <script type="text/javascript">
-            var checkboxes = document.querySelectorAll('input.subOption'),
-                    checkall = document.getElementById('option');
-
-            for (var i = 0; i < checkboxes.length; i++) {
-                checkboxes[i].onclick = function () {
-                    var checkedCount = document.querySelectorAll('input.subOption:checked').length;
-
-                    checkall.checked = checkedCount > 0;
-                    checkall.indeterminate = checkedCount > 0 && checkedCount < checkboxes.length;
+            var counter = <?php echo $counter; ?>;
+            for (var j = 1; j <= counter; j++) {
+                var option = j;
+                window['checkboxes' + option] = document.querySelectorAll('input.subOption' + option),
+                        window['checkall' + option] = document.getElementById('option' + option);
+                for (var i = 0; i < window['checkboxes' + option].length; i++) {
+                    window['checkboxes' + option][i].onclick = function () {
+                        window['checkedCount' + option] = document.querySelectorAll('input.subOption' + option + ':checked').length;
+                        window['checkall' + option].checked = window['checkedCount' + option] > 0;
+                        window['checkall' + option].indeterminate = window['checkedCount' + option] > 0 && window['checkedCount' + option] < window['checkboxes' + option].length;
+                    }
+                }
+                window['checkall' + option].onclick = function () {
+                    console.log(this);
+                    for (var i = 0; i < window['checkboxes' + option].length; i++) {
+                        window['checkboxes' + option][i].checked = this.checked;
+                    }
                 }
             }
 
-            checkall.onclick = function () {
-                for (var i = 0; i < checkboxes.length; i++) {
-                    checkboxes[i].checked = this.checked;
+            function goToYears() {
+                var topics = [];
+                $('.suboptions').each(function (key, ele) {
+                    if (ele.checked === true) {
+                        topics.push(ele.value);
+                    }
+                });
+                if (topics.length > 0) {
+                    window.location = 'subject-years?topics=' + topics.join(',');
+                } else {
+                    alert('Please select atleast one topic');
                 }
             }
         </script>

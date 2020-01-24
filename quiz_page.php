@@ -1,27 +1,31 @@
 <?php
 session_start();
 require_once 'api/include/common.php';
+$questions = array();
 $obj = new Common();
-if (!isset($_GET['topic']) || !isset($_SESSION['student_register_id'])) {
-    header('Location: topic_select');
+$type = '';
+if (!isset($_SESSION['student_selected_type']) || !isset($_SESSION['student_register_id'])) {
+    header('Location: qorder-years');
 }
-$student = $obj->selectRow('*', 'student_register', 'student_register_id = ' . $_SESSION['student_register_id']);
-if ($_GET['topic'] != 'all') {
-    $topic = $obj->selectRow('*', 'topic', 'name = \'' . $_GET['topic'] . '\' AND year_id = ' . $_SESSION['student_selected_year_id'] . ' AND language_id = ' . $_SESSION['student_selected_language_id']);
-    if (count($topic) == 0) {
-        header('Location: topic_select');
+if ($_SESSION['student_selected_type'] == 'order') {
+    if (!isset($_GET['year'])) {
+        header('Location: qorder-years');
     }
-    $_SESSION['student_selected_topic_id'] = $topic['topic_id'];
-} else {
-    $_SESSION['student_selected_topic_id'] = 0;
-}
-if ($_SESSION['student_selected_topic_id'] != 0) {
-    $questions = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer', 'question', 'topic_id = ' . $topic['topic_id']);
-} else {
+    $type = 'Question Order';
+    $selyear = $obj->selectRow('*', 'year', 'year=\'' . $_GET['year'] . '\'');
+    $_SESSION['student_selected_year_id'] = $selyear['year_id'];
     $questions = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer', 'question', 'topic_id IN (SELECT topic_id FROM topic WHERE year_id = ' . $_SESSION['student_selected_year_id'] . ' AND language_id = ' . $_SESSION['student_selected_language_id'] . ')');
 }
+if ($_SESSION['student_selected_type'] == 'subject') {
+    if (!isset($_GET['years'])) {
+        header('Location: subject-years?topics=' . $_SESSION['student_selected_topics_id']);
+    }
+    $type = 'Subject Order';
+    $_SESSION['student_selected_years_id'] = $_GET['years'];
+    $questions = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer', 'question', 'topic_id IN (SELECT topic_id FROM topic WHERE year_id IN (' . $_SESSION['student_selected_years_id'] . ') AND topic_id IN (' . $_SESSION['student_selected_topics_id'] . ') ORDER BY subject_id ASC, year_id ASC)');
+}
+$student = $obj->selectRow('*', 'student_register', 'student_register_id = ' . $_SESSION['student_register_id']);
 $language = $obj->selectRow('*', 'language', 'language_id = ' . $_SESSION['student_selected_language_id']);
-$year = $obj->selectRow('*', 'year', 'year_id = ' . $_SESSION['student_selected_year_id']);
 $questions_list = array();
 if (count($questions) > 0) {
     foreach ($questions as $q) {
@@ -40,7 +44,6 @@ if (count($questions) > 0) {
         ));
     }
 }
-global $topic;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -57,16 +60,7 @@ global $topic;
                     <div class="span12">
                         <div class="quiz-question-section">
                             <a href = '#' onclick="goBack()"><i class = 'font-icon-arrow-simple-left'></i></a>
-                            <h2><?php echo $language['name']; ?> - <?php echo $year['year']; ?> <strong>
-                                    <?php
-                                    $topics = $topic['name'];
-                                    if (is_null($topics)) {
-                                        echo '';
-                                    } else {
-                                        echo '-' . $topics;
-                                    }
-                                    ?>
-                                </strong></h2>
+                            <h2><?php echo $language['name']; ?> - <?php echo $type; ?></h2>
                         </div>
                         <!--question Box-->
                         <div class="questionBox" id="app">
@@ -150,8 +144,8 @@ global $topic;
         </section>
     </div>
     <!--/container-->
-<?php include 'footer.php'; ?>
-<?php include 'script.php'; ?>
+    <?php include 'footer.php'; ?>
+    <?php include 'script.php'; ?>
     <script>
         var quiz = {
             user: "<?php echo $student['student_name']; ?>",
