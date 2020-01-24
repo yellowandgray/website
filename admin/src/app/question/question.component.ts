@@ -29,35 +29,35 @@ export class QuestionComponent implements OnInit {
     }
     getLanguage(): void {
         this.httpClient.get<any>('http://localhost/project/mekana/api/v1/get_language')
-        .subscribe(
-                (res)=>{
+            .subscribe(
+                (res) => {
                     this.language = res["result"]["data"];
                     this.selected_language = res["result"]["data"][0]['language_id'];
                     this.getYearByLanguage();
-              },
-              (error)=>{
-                this._snackBar.open(error["statusText"], '', {
-                    duration: 2000,
-                });
-            }
-        );
+                },
+                (error) => {
+                    this._snackBar.open(error["statusText"], '', {
+                        duration: 2000,
+                    });
+                }
+            );
     }
     getQuestionsByTopic(ev): void {
         var tid = this.topic[ev.index].topic_id;
-        this.httpClient.get<any>('http://localhost/project/mekana/api/v1/get_question_by_topic/'+tid)
-        .subscribe(
-                (res)=>{
+        this.httpClient.get<any>('http://localhost/project/mekana/api/v1/get_question_by_topic/' + tid)
+            .subscribe(
+                (res) => {
                     this.question = res["result"]["data"];
-              },
-              (error)=>{
-                this._snackBar.open(error["statusText"], '', {
-                    duration: 2000,
-                });
-            }
-        );
+                },
+                (error) => {
+                    this._snackBar.open(error["statusText"], '', {
+                        duration: 2000,
+                    });
+                }
+            );
     }
     getTopicByLngNYear(ev): void {
-        this.httpClient.get<any>('http://localhost/project/mekana/api/v1/get_topic_by_lng_year/'+this.selected_language+'/'+this.year[ev.index].year_id)
+        this.httpClient.get<any>('http://localhost/project/mekana/api/v1/get_topic_by_lng_year/' + this.selected_language + '/' + this.year[ev.index].year_id)
             .subscribe(
                 (res) => {
                     this.topic = res["result"]["data"];
@@ -70,7 +70,7 @@ export class QuestionComponent implements OnInit {
             );
     }
     getYearByLanguage(): void {
-        this.httpClient.get<any>('http://localhost/project/mekana/api/v1/get_year_by_language/'+this.selected_language)
+        this.httpClient.get<any>('http://localhost/project/mekana/api/v1/get_year_by_language/' + this.selected_language)
             .subscribe(
                 (res) => {
                     this.year = res["result"]["data"];
@@ -85,9 +85,9 @@ export class QuestionComponent implements OnInit {
 
     openDialog(id, res): void {
         var data = null;
-          if(id != 0) {
-          this[res].forEach(val=> {
-               if(parseInt(val.question_id) === parseInt(id)) {
+        if (id != 0) {
+            this[res].forEach(val => {
+                if (parseInt(val.question_id) === parseInt(id)) {
                     data = val;
                     return false;
                 }
@@ -106,41 +106,41 @@ export class QuestionComponent implements OnInit {
         });
     }
 
-    
-    confirmDelete(id): void  {
+
+    confirmDelete(id): void {
         var data = null;
-          if(id != 0) { 
+        if (id != 0) {
             data = id;
-          }
-    const dialogRef = this.dialog.open(QuestionDelete, {
-        minWidth: "40%",
-        maxWidth: "40%",
-        data: data
-    });
-   dialogRef.afterClosed().subscribe(result => {
-       if(result !== false && result !== 'false') {
-          //this.getQuestion();
-       }
-    });
+        }
+        const dialogRef = this.dialog.open(QuestionDelete, {
+            minWidth: "40%",
+            maxWidth: "40%",
+            data: data
+        });
+        dialogRef.afterClosed().subscribe(result => {
+            if (result !== false && result !== 'false') {
+                //this.getQuestion();
+            }
+        });
     }
-fileProgress(fileInput: any) {
+    fileProgress(fileInput: any) {
         var fileData = <File>fileInput.target.files[0];
         this.file_name = fileData.name;
         this.loading = true;
-          var formData = new FormData();
-          formData.append('file', fileData);
-          this.httpClient.post('http://localhost/project/mekana/api/v1/import_question', formData).subscribe(
-              (res)=>{
+        var formData = new FormData();
+        formData.append('file', fileData);
+        this.httpClient.post('http://localhost/project/mekana/api/v1/import_question', formData).subscribe(
+            (res) => {
                 this.loading = false;
-this._snackBar.open(res["result"]["message"], '', {
-          duration: 2000,
-        });
+                this._snackBar.open(res["result"]["message"], '', {
+                    duration: 2000,
+                });
             },
-            (error)=>{
+            (error) => {
                 this.loading = false;
                 this._snackBar.open(error["statusText"], '', {
-          duration: 2000,
-        });
+                    duration: 2000,
+                });
             });
     }
 }
@@ -151,9 +151,12 @@ this._snackBar.open(res["result"]["message"], '', {
     templateUrl: 'question-form.html',
 })
 export class QuestionForm {
+    image_url: string = 'http://localhost/project/mekana/api/v1/';
     questionForm: FormGroup;
     loading = false;
     question_id = 0;
+    question_image: string = 'Select question Image';
+    image_path: string = '';
     topic: any[];
     constructor(
         public dialogRef: MatDialogRef<QuestionForm>,
@@ -171,18 +174,18 @@ export class QuestionForm {
             'd': new FormControl('', Validators.required),
             'answer': new FormControl('', Validators.required),
         });
-        if(this.data != null) {
-           this.questionForm.patchValue({
-           topic_id: this.data.topic_id,
-           question: this.data.name,
-           question_no: this.data.question_no,
-           direction: this.data.direction,
-           a: this.data.a,
-           b: this.data.b,
-           c: this.data.c,
-           d: this.data.d,
-           answer: this.data.answer,
-        });
+        if (this.data != null) {
+            this.questionForm.patchValue({
+                topic_id: this.data.topic_id,
+                question: this.data.name,
+                question_no: this.data.question_no,
+                direction: this.data.direction,
+                a: this.data.a,
+                b: this.data.b,
+                c: this.data.c,
+                d: this.data.d,
+                answer: this.data.answer,
+            });
             this.question_id = this.data.question_id;
         }
         this.httpClient.get('http://localhost/project/mekana/api/v1/get_topic').subscribe(
@@ -201,28 +204,18 @@ export class QuestionForm {
                 });
             });
     }
-    
+
     onSubmit() {
         if (this.questionForm.invalid) {
-              return;
+            return;
         }
         this.loading = true;
         var formData = new FormData();
         var url = '';
-          if(this.question_id != 0) {
-          formData.append('topic_id', this.questionForm.value.topic_id);
-          formData.append('name', this.questionForm.value.question);
-          formData.append('question_no', this.questionForm.value.question_no);
-          formData.append('direction', this.questionForm.value.direction);
-          formData.append('a', this.questionForm.value.a);
-          formData.append('b', this.questionForm.value.b);
-          formData.append('c', this.questionForm.value.c);
-          formData.append('d', this.questionForm.value.d);
-          formData.append('answer', this.questionForm.value.answer);
-          url = 'update_record/question/question_id = '+this.question_id;
-        } else {
+        if (this.question_id != 0) {
             formData.append('topic_id', this.questionForm.value.topic_id);
-            formData.append('question', this.questionForm.value.question);
+            formData.append('name', this.questionForm.value.question);
+            formData.append('image_path', this.image_path);
             formData.append('question_no', this.questionForm.value.question_no);
             formData.append('direction', this.questionForm.value.direction);
             formData.append('a', this.questionForm.value.a);
@@ -230,26 +223,71 @@ export class QuestionForm {
             formData.append('c', this.questionForm.value.c);
             formData.append('d', this.questionForm.value.d);
             formData.append('answer', this.questionForm.value.answer);
-          url = 'insert_question';
+            url = 'update_record/question/question_id = ' + this.question_id;
+        } else {
+            formData.append('topic_id', this.questionForm.value.topic_id);
+            formData.append('question', this.questionForm.value.question);
+            formData.append('question_image', this.image_path);
+            formData.append('question_no', this.questionForm.value.question_no);
+            formData.append('direction', this.questionForm.value.direction);
+            formData.append('a', this.questionForm.value.a);
+            formData.append('b', this.questionForm.value.b);
+            formData.append('c', this.questionForm.value.c);
+            formData.append('d', this.questionForm.value.d);
+            formData.append('answer', this.questionForm.value.answer);
+            url = 'insert_question';
         }
-        this.httpClient.post('http://localhost/project/mekana/api/v1/'+url, formData).subscribe(
-            (res)=>{
-                  this.loading = false;
-                  if(res["result"]["error"] === false) {
-                      this.dialogRef.close(true);
-                  }else{
-              this._snackBar.open(res["result"]["message"], '', {
-                duration: 2000,
-              });
-              }
-              },
-              (error)=>{
-                  this.loading = false;
-                  this._snackBar.open(error["statusText"], '', {
-            duration: 2000,
-          });
+        this.httpClient.post('http://localhost/project/mekana/api/v1/' + url, formData).subscribe(
+            (res) => {
+                this.loading = false;
+                if (res["result"]["error"] === false) {
+                    this.dialogRef.close(true);
+                } else {
+                    this._snackBar.open(res["result"]["message"], '', {
+                        duration: 2000,
+                    });
+                }
+            },
+            (error) => {
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+                    duration: 2000,
+                });
+            }
+        );
+    }
+
+    fileProgress(fileInput: any, name: string, path: string) {
+        var fileData = <File>fileInput.target.files[0];
+        this[name] = fileData.name;
+        this.loading = true;
+        var formData = new FormData();
+        formData.append('file', fileData);
+        this.httpClient.post('http://localhost/project/mekana/api/v1/upload_file', formData).subscribe(
+            (res) => {
+                this.loading = false;
+                if (res["result"]["error"] === false) {
+                    this[path] = res["result"]["data"];
+                } else {
+                    this._snackBar.open(res["result"]["message"], '', {
+                        duration: 2000,
+                    });
+                }
+            },
+            (error) => {
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+                    duration: 2000,
+                });
+            });
+    }
+
+
+    removeMedia(url) {
+        this[url] = '';
+        if (url === 'image_path') {
+            this.question_image = 'Select Question Image';
         }
-      );
     }
 
     editorConfig: AngularEditorConfig = {
@@ -297,43 +335,43 @@ export class QuestionForm {
 
 
 @Component({
-  selector: 'question-delete-confirmation',
-  templateUrl: 'question-delete-confirmation.html',
+    selector: 'question-delete-confirmation',
+    templateUrl: 'question-delete-confirmation.html',
 })
 export class QuestionDelete {
     loading = false;
     question_id = 0;
     constructor(
-    public dialogRef: MatDialogRef<QuestionDelete>,
-    @Inject(MAT_DIALOG_DATA) public data: any,
-    private _snackBar: MatSnackBar,
-    private httpClient: HttpClient) {
-    if(this.data != null) { 
-        this.question_id = this.data;
+        public dialogRef: MatDialogRef<QuestionDelete>,
+        @Inject(MAT_DIALOG_DATA) public data: any,
+        private _snackBar: MatSnackBar,
+        private httpClient: HttpClient) {
+        if (this.data != null) {
+            this.question_id = this.data;
+        }
     }
-}
 
-  confirmDelete() {
-      if (this.question_id == null || this.question_id == 0) {
+    confirmDelete() {
+        if (this.question_id == null || this.question_id == 0) {
             return;
-      }
-      this.loading = true;
-      this.httpClient.get('http://localhost/project/mekana/api/v1/delete_record/question/question_id='+this.question_id).subscribe(
-          (res)=>{
+        }
+        this.loading = true;
+        this.httpClient.get('http://localhost/project/mekana/api/v1/delete_record/question/question_id=' + this.question_id).subscribe(
+            (res) => {
                 this.loading = false;
-                if(res["result"]["error"] === false) {
+                if (res["result"]["error"] === false) {
                     this.dialogRef.close(true);
-                }else{
-            this._snackBar.open(res["result"]["message"], '', {
-          duration: 2000,
-        });
+                } else {
+                    this._snackBar.open(res["result"]["message"], '', {
+                        duration: 2000,
+                    });
                 }
             },
-            (error)=>{
+            (error) => {
                 this.loading = false;
                 this._snackBar.open(error["statusText"], '', {
-          duration: 2000,
-        });
+                    duration: 2000,
+                });
             }
         );
     }
