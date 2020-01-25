@@ -22,6 +22,7 @@ export class QuestionComponent implements OnInit {
     loading = false;
     file_name: string = 'Select Picture';
     selected_language = '';
+    selected_topic_index = 0;
     constructor(public dialog: MatDialog, private httpClient: HttpClient, private _snackBar: MatSnackBar) { }
 
     ngOnInit() {
@@ -44,6 +45,7 @@ export class QuestionComponent implements OnInit {
     }
     getQuestionsByTopic(ev): void {
         var tid = this.topic[ev.index].topic_id;
+        selected_topic_index = ev.index;
         this.httpClient.get<any>('http://localhost/project/mekana/api/v1/get_question_by_topic/' + tid)
             .subscribe(
                 (res) => {
@@ -119,7 +121,7 @@ export class QuestionComponent implements OnInit {
         });
         dialogRef.afterClosed().subscribe(result => {
             if (result !== false && result !== 'false') {
-                //this.getQuestion();
+                this.getQuestionsByTopic({index: selected_topic_index});
             }
         });
     }
