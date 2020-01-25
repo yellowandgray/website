@@ -87,11 +87,11 @@ if (count($questions) > 0) {
                                 </div>
                                 <!-- questionTitle -->
                                 <div v-if="quiz.questions[questionIndex].show_image" class="text-center">
-                                    <img v-if="quiz.questions[questionIndex].direction == 'top'" v-bind:src="'http://localhost/microview/mekana/api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />
+                                    <img v-if="quiz.questions[questionIndex].direction == 'top'" v-bind:src="'http://localhost/project/mekana/api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />
                                 </div>
                                 <h2 class="titleContainer title">{{questionIndex + 1}}. {{ quiz.questions[questionIndex].text }}</h2>
                                 <div v-if="quiz.questions[questionIndex].show_image" class="text-center">
-                                    <img v-if="quiz.questions[questionIndex].direction == 'bottom'" v-bind:src="'http://localhost/microview/mekana/api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />
+                                    <img v-if="quiz.questions[questionIndex].direction == 'bottom'" v-bind:src="'http://localhost/project/mekana/api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />
                                 </div>
                                 <!-- quizOptions -->
                                 <div class="optionContainer">
