@@ -22,7 +22,7 @@ if ($_SESSION['student_selected_type'] == 'subject') {
     }
     $type = 'Subject Order';
     $_SESSION['student_selected_years_id'] = $_GET['years'];
-    $questions = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer', 'question', 'topic_id IN (SELECT topic_id FROM topic WHERE year_id IN (' . $_SESSION['student_selected_years_id'] . ') AND topic_id IN (' . $_SESSION['student_selected_topics_id'] . ') ORDER BY subject_id ASC, year_id ASC)');
+    $questions = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer, image_path, direction', 'question', 'topic_id IN (SELECT topic_id FROM topic WHERE year_id IN (' . $_SESSION['student_selected_years_id'] . ') AND topic_id IN (' . $_SESSION['student_selected_topics_id'] . ') ORDER BY subject_id ASC, year_id ASC)');
 }
 $student = $obj->selectRow('*', 'student_register', 'student_register_id = ' . $_SESSION['student_register_id']);
 $language = $obj->selectRow('*', 'language', 'language_id = ' . $_SESSION['student_selected_language_id']);
@@ -40,6 +40,8 @@ if (count($questions) > 0) {
         }
         array_push($questions_list, array(
             'text' => $q['name'],
+            'direction' => $q['direction'],
+            'image_path' => $q['image_path'],
             'responses' => $options
         ));
     }
@@ -83,7 +85,9 @@ if (count($questions) > 0) {
                                 <!-- quizOptions -->
                                 <div class="optionContainer">
                                     <div id="two" class="option" v-for="(response, index) in quiz.questions[questionIndex].responses" @click="selectOption(index)" :class="{ 'is-selected': userResponses[questionIndex] == index}" :key="index">
+                                         <img v-if="response.image_path != '' && response.direction == 'top'" src="{{response.image_path}}" alt="image" />
                                          {{ index | charIndex }}. {{ response.text }}
+                                         <img v-if="response.image_path != '' && response.direction == 'bottom'" src="{{response.image_path}}" alt="image" />
                                 </div>
                             </div>
                             <!--quizFooter: navigation and progress-->
