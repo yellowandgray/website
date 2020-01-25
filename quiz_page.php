@@ -14,7 +14,7 @@ if ($_SESSION['student_selected_type'] == 'order') {
     $type = 'Question Order';
     $selyear = $obj->selectRow('*', 'year', 'year=\'' . $_GET['year'] . '\'');
     $_SESSION['student_selected_year_id'] = $selyear['year_id'];
-    $questions = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer', 'question', 'topic_id IN (SELECT topic_id FROM topic WHERE year_id = ' . $_SESSION['student_selected_year_id'] . ' AND language_id = ' . $_SESSION['student_selected_language_id'] . ')');
+    $questions = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer, image_path, direction', 'question', 'topic_id IN (SELECT topic_id FROM topic WHERE year_id = ' . $_SESSION['student_selected_year_id'] . ' AND language_id = ' . $_SESSION['student_selected_language_id'] . ')');
 }
 if ($_SESSION['student_selected_type'] == 'subject') {
     if (!isset($_GET['years'])) {
@@ -90,12 +90,13 @@ if (count($questions) > 0) {
                                 <!-- quizOptions -->
                                 <div class="optionContainer">
                                     <div id="two" class="option" v-for="(response, index) in quiz.questions[questionIndex].responses" @click="selectOption(index)" :class="{ 'is-selected': userResponses[questionIndex] == index}" :key="index">
-                                         <div v-if="response.show_image">
-                                         <img v-if="response.direction == 'top'" v-bind:src="response.image_path" alt="image" />
+                                         <div v-if="response.show_image == true">
+                                             asdf
+                                         <img v-if="response.direction == 'top'" v-bind:src="'http://localhost/project/mekana/api/v1'+response.image_path" alt="image" />
                                         </div>
-                                        {{ index | charIndex }}. {{ response.text }}
+                                        {{ index | charIndex }}. {{ response.text }} {{response.show_image}}
                                         <div v-if="response.show_image">
-                                        <img v-if="response.direction == 'bottom'" v-bind:src="response.image_path" alt="image" />
+                                        <img v-if="response.direction == 'bottom'" v-bind:src="'http://localhost/project/mekana/api/v1'+response.image_path" alt="image" />
                                         </div>
                                     </div>
                                 </div>
@@ -160,6 +161,7 @@ if (count($questions) > 0) {
         <?php include 'footer.php'; ?>
         <?php include 'script.php'; ?>
         <script>
+            console.log(<?php echo json_encode($questions_list); ?>);
             var quiz = {
                 user: "<?php echo $student['student_name']; ?>",
                 questions: <?php echo json_encode($questions_list); ?>

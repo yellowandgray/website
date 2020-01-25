@@ -45,7 +45,7 @@ export class QuestionComponent implements OnInit {
     }
     getQuestionsByTopic(ev): void {
         var tid = this.topic[ev.index].topic_id;
-        selected_topic_index = ev.index;
+        this.selected_topic_index = ev.index;
         this.httpClient.get<any>('http://localhost/project/mekana/api/v1/get_question_by_topic/' + tid)
             .subscribe(
                 (res) => {
@@ -121,7 +121,7 @@ export class QuestionComponent implements OnInit {
         });
         dialogRef.afterClosed().subscribe(result => {
             if (result !== false && result !== 'false') {
-                this.getQuestionsByTopic({index: selected_topic_index});
+                this.getQuestionsByTopic({index: this.selected_topic_index});
             }
         });
     }

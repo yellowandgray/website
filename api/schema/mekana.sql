@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.2
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Jan 23, 2020 at 09:45 PM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.2.26
+-- Host: 127.0.0.1
+-- Generation Time: Jan 25, 2020 at 08:01 AM
+-- Server version: 10.1.37-MariaDB
+-- PHP Version: 7.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -32,7 +32,7 @@ CREATE TABLE `language` (
   `language_id` int(11) NOT NULL,
   `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `status` varchar(255) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `created_by` int(11) NOT NULL,
   `updated_by` int(11) NOT NULL
@@ -43,8 +43,8 @@ CREATE TABLE `language` (
 --
 
 INSERT INTO `language` (`language_id`, `name`, `status`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
-(1, 'தமிழ்', '1', '2020-01-09 12:59:32', '0000-00-00 00:00:00', 1, 1),
-(2, 'English', '1', '2020-01-09 12:58:42', '0000-00-00 00:00:00', 1, 1);
+(1, 'தமிழ்', '1', '2020-01-25 05:39:15', '0000-00-00 00:00:00', 1, 1),
+(2, 'English', '1', '2020-01-25 05:39:15', '0000-00-00 00:00:00', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -55,7 +55,7 @@ INSERT INTO `language` (`language_id`, `name`, `status`, `created_at`, `updated_
 CREATE TABLE `question` (
   `question_id` int(11) NOT NULL,
   `topic_id` int(11) NOT NULL,
-  `name` varchar(500) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `name` text CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `image_path` varchar(500) NOT NULL DEFAULT '',
   `direction` varchar(10) NOT NULL DEFAULT '',
   `a` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
@@ -64,7 +64,7 @@ CREATE TABLE `question` (
   `d` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `answer` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `question_no` int(11) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `created_by` int(11) NOT NULL,
   `updated_by` int(11) NOT NULL
@@ -75,16 +75,9 @@ CREATE TABLE `question` (
 --
 
 INSERT INTO `question` (`question_id`, `topic_id`, `name`, `image_path`, `direction`, `a`, `b`, `c`, `d`, `answer`, `question_no`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
-(1, 3, 'In vaccum all objects fall with', '', '', 'same acceleration and heavy bodies reach groud first', 'same acceleration and reach the ground at the same time', 'different acceleratin and reach the ground at different time', 'different acceleration and heavy bodies reach ground first', 'B', 1, '2020-01-13 10:08:45', '0000-00-00 00:00:00', 0, 0),
-(2, 3, 'The time of reverberation of a hall can be decreased by', '', '', 'having a number of loud speakers', 'opening all windows and doors', 'closing all windows and doors', 'speaking loudly', 'B', 2, '2020-01-13 10:09:37', '0000-00-00 00:00:00', 0, 0),
-(3, 4, 'which spectroscopy is used in chemical examination of intersteller space?', '', '', 'Microwave spectroscopy', 'Infrared (IR) spectroscopy', 'Raman spectroscopy', 'NMR spectroscopy', 'A', 1, '2020-01-13 10:12:28', '0000-00-00 00:00:00', 0, 0),
-(4, 4, 'The Indian Salt Petre is', '', '', 'Ammonium nitrate NH4 NO3', 'Sodium Nitrate (Na NO 3  )', 'Potassium Nitrate KNO 3 ', 'Calcium nitrate Ca(NO 3)2', 'C', 2, '2020-01-13 10:14:43', '0000-00-00 00:00:00', 0, 0),
-(5, 4, 'The&#160; unit for equivalent conductivity is', '', '', 'ohm-1 cm-1', 'ohm -1 cm-2 eq-1', 'ohm-1 cm 2 eq -1', 'S cm -2 eq -1', 'C', 3, '2020-01-13 10:15:56', '0000-00-00 00:00:00', 0, 0),
-(6, 4, 'The end product of anaerobic respiration is', '', '', 'Acetyl C0-A', 'Ethanol alcohol ', 'Pyruvic acid', 'succinic acid', 'B', 4, '2020-01-13 10:17:49', '0000-00-00 00:00:00', 0, 0),
-(7, 5, 'The main constituent of steel in India are', '', '', 'Ni and Cu', 'Mn and Cr', 'Fe and Cu', 'Ti and Cr', 'B', 1, '2020-01-13 10:18:45', '0000-00-00 00:00:00', 0, 0),
-(8, 5, 'When did the Prime Minister of India inaugrate the country\'s longest rail -cum-road- bridge built over the Brahmaputra river at Bogibeel near Dibrgarh in Assam?', '', '', 'On November 25, 2018', 'On December 25,2018', 'On December 10,2018', 'On November 10,2018', 'B', 2, '2020-01-13 10:19:56', '0000-00-00 00:00:00', 0, 0),
-(9, 6, 'Golden rice is genetically modified crop. Where the incorporated gene is meant for biosynthesis of', '', '', 'Vitamin A', 'Vitamin B', 'Vitamin C', 'Vitamin D', 'A', 1, '2020-01-13 10:21:23', '0000-00-00 00:00:00', 0, 0),
-(10, 7, 'Most widely used bioweapon is', '', '', 'Bacillus subtilis', 'Vibrio Cholerae', 'Bacilllus anthracis', 'Escherichia coli', 'C', 1, '2020-01-13 10:23:07', '0000-00-00 00:00:00', 0, 0);
+(2, 1, 'சகப்பிணைப்பு சேர்மங்களை உருவாக்கும் ஒரு கார மண் உலோகம் M. நீரில் கரையும் சல்பேட்டையும் (MSO₄), நீரில் கரையாத ஈரியல்பு தன்மை கொண்ட ஹைட்ராக்ஸைடையும் M(OH)₂ தருகின்றது அந்த உலோகம் M', 'uploads/88c8e86f346a14484bf5e4ea5c38cd7f.jpg', 'bottom', 'கால்சியம்', 'பெரிலியம்', 'மெக்னீசியம்', 'ஸ்டிரான்சியம்', 'A', 1, '2020-01-25 06:00:08', '0000-00-00 00:00:00', 0, 0),
+(3, 1, 'கீழ்க்கண்ட கூற்றுகளை ஆய்க\r\nI. வைரங்கள் மின்கடத்தா தன்மை உடையது\r\n\r\nII. மின்சார உலைகளில் பயன்படும் மின்வாய்கள் தயாரிக்க கிராபைட் பயன்படுகிறது\r\n\r\nIII. திட நிலையிலுள்ள கார்பன் மோனாக்சைடு உலர்ந்த பனிக்கட்டி என அழைக்கப்படுகிறது\r\n\r\nIV. கார்பன்டை ஆக்சைடு சிவப்பு லிட்மஸை நீல நிறமாக மாற்றும்\r\n\r\nமேற்கண்ட கூற்றுகளில் சரியானது எது?', 'uploads/88c8e86f346a14484bf5e4ea5c38cd7f.jpg', 'bottom', 'I மற்றும் III', 'II மற்றும் III', 'I மற்றும் II', 'III மற்றும் IV', 'B', 2, '2020-01-25 06:24:28', '0000-00-00 00:00:00', 0, 0),
+(4, 2, 'வரிசை ஐ மற்றும் வரிசை II-ஐ பொருத்தி, கீழ்க்கண்டவற்றின் சரியான விடையை தேர்ந்தெடு\r\n\r\nவரிசை ஐ (தாது)                            வரிசை ஐஐ (உலோகம்)\r\n\r\n(a) ஹேம்டைட்                            1. காரீயம்\r\n(b) சின்னபார்                             2. இரும்பு\r\n(c) காலமைன்                             3. பாதரசம்\r\n(d) கலீனா                                 4. ஜிங்க்', 'uploads/a6acf724d98ae27499977e42958eb8c4.jpg', 'top', '2, 3, 4, 1', '3, 2, 1, 4', '2, 4, 3, 1', '4, 2, 1, 3', 'A', 1, '2020-01-25 06:37:33', '0000-00-00 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -100,24 +93,16 @@ CREATE TABLE `student_answer` (
   `question_id` int(11) NOT NULL,
   `answer_option` varchar(2) DEFAULT NULL,
   `actual_answer_option` varchar(2) NOT NULL DEFAULT '',
-  `is_correct_answer` tinyint(1) NOT NULL DEFAULT 0,
-  `is_skipped` tinyint(1) NOT NULL DEFAULT 0,
+  `is_correct_answer` tinyint(1) NOT NULL DEFAULT '0',
+  `is_skipped` tinyint(1) NOT NULL DEFAULT '0',
   `student_register_id` int(11) DEFAULT NULL,
   `answer_attempt` int(11) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `created_by` int(11) DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   `updated_by` int(11) DEFAULT NULL,
-  `status` tinyint(1) NOT NULL DEFAULT 1
+  `status` tinyint(1) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `student_answer`
---
-
-INSERT INTO `student_answer` (`student_answer_id`, `language_id`, `year_id`, `topic_id`, `question_id`, `answer_option`, `actual_answer_option`, `is_correct_answer`, `is_skipped`, `student_register_id`, `answer_attempt`, `created_at`, `created_by`, `updated_at`, `updated_by`, `status`) VALUES
-(1, 1, 1, 1, 5, 'A', 'D', 0, 0, 2, NULL, NULL, NULL, NULL, NULL, 1),
-(2, 1, 1, 2, 7, 'A', 'D', 0, 0, 2, NULL, NULL, NULL, NULL, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -140,9 +125,9 @@ CREATE TABLE `student_register` (
   `password` varchar(255) NOT NULL,
   `confirm_password` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `status` tinyint(4) NOT NULL DEFAULT 1,
+  `status` tinyint(4) NOT NULL DEFAULT '1',
   `block_reason` varchar(255) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `created_by` int(11) NOT NULL,
   `updated_by` int(11) NOT NULL
@@ -153,9 +138,7 @@ CREATE TABLE `student_register` (
 --
 
 INSERT INTO `student_register` (`student_register_id`, `user_name`, `student_name`, `profile_image`, `gender`, `parent_name`, `mobile`, `city`, `pin`, `school_name`, `standard`, `password`, `confirm_password`, `email`, `status`, `block_reason`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
-(2, 'aumak7639', 'Umasekar', 'uploads/d62d22d81749b72dee2fb52b766cec2e.jpg', 'male', 'Arumugam', '7639600998', 'Chennai', '600073', 'School Name, Chennai', '10th-State-Board', '123456', '123456', 'umasekar098@gmail.com', 1, '', '2020-01-08 09:50:08', '0000-00-00 00:00:00', 0, 0),
-(3, 'mushaqdeen@yahoo.co.in', 'Mushaqdeen', 'uploads/179c36531b49e4c6b18c661ab398f040.jpg', 'male', 'Jalaludeen', '9884794962', 'Chennai', '600041', 'Yellow and Gray', '10th-State-Board', '123456', '123456', '', 1, '', '2020-01-08 09:50:15', '0000-00-00 00:00:00', 0, 0),
-(12, 'Umasekar', 'umasekar', 'uploads/60688cb1571499308a585de69136d055.jpg', 'male', 'Arumugam', '7639600998', 'Chennai', '600073', 'Yellowandgray', '10th-State-Board', '123456', '123456', '', 1, '', '2020-01-11 06:03:47', '0000-00-00 00:00:00', 0, 0);
+(1, 'aumak7639', 'Umasekar', 'uploads/9bcc4d1b98c5cc4a652386244852627c.png', 'male', 'Arumugam', '7639600998', 'Chennai', '600073', 'Yg', '10th-State-Board', '123456', '123456', '', 1, '', '2020-01-25 06:02:20', '0000-00-00 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -168,7 +151,7 @@ CREATE TABLE `subject` (
   `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `image_path` varchar(255) NOT NULL,
   `description` varchar(500) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `created_by` int(11) NOT NULL,
   `updated_by` int(11) NOT NULL
@@ -179,12 +162,7 @@ CREATE TABLE `subject` (
 --
 
 INSERT INTO `subject` (`subject_id`, `name`, `image_path`, `description`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
-(1, 'தமிழ்', 'uploads/e2f00f87f1c423318196f629b4f35635.png', '<span>Lorem Ipsum is simply dummy text of the printing.</span>', '2019-12-24 06:05:36', '0000-00-00 00:00:00', 1, 1),
-(2, 'English', 'uploads/6bd0006c70ea421b1c2d61fe7833b6f8.png', '<span>Lorem Ipsum is simply dummy text of the printing.</span>', '2019-12-24 06:05:47', '0000-00-00 00:00:00', 1, 1),
-(3, 'Maths', 'uploads/6c5717bea3ae27741bdd6f89819f276f.png', '<span>Lorem Ipsum is simply dummy text of the printing.</span>', '2019-12-24 06:05:54', '0000-00-00 00:00:00', 1, 1),
-(4, 'Group 1(தமிழ்)', 'uploads/1c171cff6e5c29d390e8c04838317ff4.png', '<span>Lorem Ipsum is simply dummy text of the printing.</span>', '2019-12-24 07:25:59', '0000-00-00 00:00:00', 1, 1),
-(5, 'Group 4 (தமிழ்)', 'uploads/2ca601296c63b44b114c1e96b13acf7e.png', '<span>Lorem Ipsum is simply dummy text of the printing.</span>', '2019-12-24 07:26:18', '0000-00-00 00:00:00', 1, 1),
-(6, 'SOCIAL SCIENCE', 'uploads/2ca601296c63b44b114c1e96b13acf7e.png', '<span>Lorem Ipsum is simply dummy text of the printing.</span>', '2020-01-02 07:55:04', '0000-00-00 00:00:00', 1, 1);
+(1, 'SCIENCE', 'uploads/20e295771a45a533a2d3fc10d759121d.png', '<strong>Lorem Ipsum</strong><span>&#160;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span><br>', '2020-01-25 05:43:13', '0000-00-00 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -198,7 +176,7 @@ CREATE TABLE `topic` (
   `year_id` int(11) NOT NULL,
   `subject_id` int(11) DEFAULT NULL,
   `name` varchar(255) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `created_by` int(11) NOT NULL,
   `updated_by` int(11) NOT NULL
@@ -209,11 +187,8 @@ CREATE TABLE `topic` (
 --
 
 INSERT INTO `topic` (`topic_id`, `language_id`, `year_id`, `subject_id`, `name`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
-(3, 1, 1, NULL, 'Topic Physics', '2020-01-13 09:50:00', '0000-00-00 00:00:00', 0, 0),
-(4, 1, 1, NULL, 'Topic Chemistry', '2020-01-13 09:50:15', '0000-00-00 00:00:00', 0, 0),
-(5, 1, 2, NULL, 'Topic Politics', '2020-01-13 12:41:47', '0000-00-00 00:00:00', 0, 0),
-(6, 1, 2, NULL, 'Topic Biology', '2020-01-13 12:41:51', '0000-00-00 00:00:00', 0, 0),
-(7, 1, 2, NULL, 'Topic General', '2020-01-13 12:41:53', '0000-00-00 00:00:00', 0, 0);
+(1, 1, 1, 1, 'Chemistry', '2020-01-25 05:47:09', '0000-00-00 00:00:00', 0, 0),
+(2, 1, 2, 1, 'Chemistry', '2020-01-25 06:25:34', '0000-00-00 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -224,11 +199,11 @@ INSERT INTO `topic` (`topic_id`, `language_id`, `year_id`, `subject_id`, `name`,
 CREATE TABLE `year` (
   `year_id` int(11) NOT NULL,
   `year` varchar(255) NOT NULL,
-  `status` int(1) NOT NULL DEFAULT 1,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `status` int(1) NOT NULL DEFAULT '1',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `created_by` int(11) NOT NULL DEFAULT 1,
-  `updated_by` int(11) NOT NULL DEFAULT 1
+  `created_by` int(11) NOT NULL DEFAULT '1',
+  `updated_by` int(11) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -236,8 +211,11 @@ CREATE TABLE `year` (
 --
 
 INSERT INTO `year` (`year_id`, `year`, `status`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
-(1, '2018-2019', 1, '2020-01-13 09:49:33', '0000-00-00 00:00:00', 1, 1),
-(2, '2019-2020', 1, '2020-01-13 11:59:10', '0000-00-00 00:00:00', 1, 1);
+(1, '2010-2011', 1, '2020-01-25 05:45:03', '0000-00-00 00:00:00', 1, 1),
+(2, '2011-2012', 1, '2020-01-25 05:45:15', '0000-00-00 00:00:00', 1, 1),
+(3, '2012-2013', 1, '2020-01-25 05:45:23', '0000-00-00 00:00:00', 1, 1),
+(4, '2013-2014', 1, '2020-01-25 05:45:30', '0000-00-00 00:00:00', 1, 1),
+(5, '2014-2015', 1, '2020-01-25 05:45:40', '0000-00-00 00:00:00', 1, 1);
 
 --
 -- Indexes for dumped tables
@@ -299,37 +277,37 @@ ALTER TABLE `language`
 -- AUTO_INCREMENT for table `question`
 --
 ALTER TABLE `question`
-  MODIFY `question_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `question_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `student_answer`
 --
 ALTER TABLE `student_answer`
-  MODIFY `student_answer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `student_answer_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `student_register`
 --
 ALTER TABLE `student_register`
-  MODIFY `student_register_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `student_register_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `subject`
 --
 ALTER TABLE `subject`
-  MODIFY `subject_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `subject_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `topic`
 --
 ALTER TABLE `topic`
-  MODIFY `topic_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `topic_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `year`
 --
 ALTER TABLE `year`
-  MODIFY `year_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `year_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
