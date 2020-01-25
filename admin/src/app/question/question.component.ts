@@ -101,7 +101,7 @@ export class QuestionComponent implements OnInit {
 
         dialogRef.afterClosed().subscribe(result => {
             if (result !== false && result !== 'false') {
-                //this.getQuestion();
+                //this.getQuestionsByTopic();
             }
         });
     }
@@ -119,7 +119,7 @@ export class QuestionComponent implements OnInit {
         });
         dialogRef.afterClosed().subscribe(result => {
             if (result !== false && result !== 'false') {
-                //this.getQuestion();
+                //this.getQuestionsByTopic();
             }
         });
     }
