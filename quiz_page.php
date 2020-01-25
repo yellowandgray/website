@@ -86,140 +86,140 @@ if (count($questions) > 0) {
                                     <!--/progress-->
                                 </div>
                                 <!-- questionTitle -->
-                                <h2 class="titleContainer title">{{ quiz.questions[questionIndex].text }}</h2>
+                                <div v-if="quiz.questions[questionIndex].show_image">
+                                    asdf
+                                    <img v-if="quiz.questions[questionIndex].direction == 'top'" v-bind:src="'http://localhost/project/mekana/api/v1'+quiz.questions[questionIndex].image_path" alt="image" />
+                                </div>
+                                <h2 class="titleContainer title">{{questionIndex + 1}}. {{ quiz.questions[questionIndex].text }}</h2>
+                                <div v-if="quiz.questions[questionIndex].show_image">
+                                    <img v-if="quiz.questions[questionIndex].direction == 'bottom'" v-bind:src="'http://localhost/project/mekana/api/v1'+quiz.questions[questionIndex].image_path" alt="image" />
+                                </div>
                                 <!-- quizOptions -->
                                 <div class="optionContainer">
                                     <div id="two" class="option" v-for="(response, index) in quiz.questions[questionIndex].responses" @click="selectOption(index)" :class="{ 'is-selected': userResponses[questionIndex] == index}" :key="index">
-                                         <div v-if="response.show_image == true">
-                                             asdf
-                                         <img v-if="response.direction == 'top'" v-bind:src="'http://localhost/project/mekana/api/v1'+response.image_path" alt="image" />
-                                        </div>
-                                        {{ index | charIndex }}. {{ response.text }} {{response.show_image}}
-                                        <div v-if="response.show_image">
-                                        <img v-if="response.direction == 'bottom'" v-bind:src="'http://localhost/project/mekana/api/v1'+response.image_path" alt="image" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--quizFooter: navigation and progress-->
-                                <footer class="questionFooter">
-
-                                    <!--pagination-->
-                                    <nav class="pagination" role="navigation" aria-label="pagination">
-
-                                        <!-- back button -->
-                                        <!--                                    <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">
-                                                                               Back
-                                                                        </a>-->
-                                        <a class="btn btn-green" href="select_language">
-                                            Home
-                                        </a>
-
-                                        <!-- next button -->
-                                        <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
-                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}
-                                        </a>
-
-                                    </nav>
-                                    <!--/pagination-->
-
-                                </footer>
-                                <!--/quizFooter-->
-                            </div>
-                            <!--/questionContainer-->
-                            <!--quizCompletedResult-->
-                            <div v-if="questionIndex >= quiz.questions.length" v-bind:key="questionIndex" class="quizCompleted has-text-centered">
-
-                                <!-- quizCompletedIcon: Achievement Icon -->
-                                <span class="icon">
-                                    <i class="fa" :class="score()>3?'fa-check-circle-o is-active':'fa-times-circle'"></i>
-                                </span>
-
-                                <!--resultTitleBlock-->
-                                <h2 class="complete-title">
-                                    You did {{ (score()>7?'an amazing':(score()<4?'improve':'a good')) }} knowledge!
-                                </h2>
-                                <p class="subtitle">
-                                    Total score: {{ score() }} / {{ quiz.questions.length }}
-                                </p>
-                                <div class="">
-                                    <a class="btn btn-theme btn-rounded" @click="restart()">Restart <i class="fa fa-refresh"></i></a>
-                                    <a class="btn btn-theme btn-rounded" onclick="window.location = 'select_language'">Home <i class="fa fa-refresh"></i></a>
-                                    <a class="btn btn-theme btn-rounded" onclick="window.location = 'student_result'">Full Result <i class="fa fa-refresh"></i></a>
-                                    <!--/resultTitleBlock-->
-
+                                         {{ index | charIndex }}. {{ response.text }} {{response.show_image}}
                                 </div>
                             </div>
-                            <!--/quizCompetedResult-->
-                            <!-- 		</transition> -->
+                            <!--quizFooter: navigation and progress-->
+                            <footer class="questionFooter">
+
+                                <!--pagination-->
+                                <nav class="pagination" role="navigation" aria-label="pagination">
+
+                                    <!-- back button -->
+                                    <!--                                    <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">
+                                                                           Back
+                                                                    </a>-->
+                                    <a class="btn btn-green" href="select_language">
+                                        Home
+                                    </a>
+
+                                    <!-- next button -->
+                                    <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
+                                        {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}
+                                    </a>
+
+                                </nav>
+                                <!--/pagination-->
+
+                            </footer>
+                            <!--/quizFooter-->
                         </div>
-                        <!-- question Box -->
-                    </div>
-                </div>
-            </section>
-        </div>
-        <!--/container-->
-        <?php include 'footer.php'; ?>
-        <?php include 'script.php'; ?>
-        <script>
-            console.log(<?php echo json_encode($questions_list); ?>);
-            var quiz = {
-                user: "<?php echo $student['student_name']; ?>",
-                questions: <?php echo json_encode($questions_list); ?>
-            },
-                    userResponseSkelaton = Array(quiz.questions.length).fill(null);
-            var app = new Vue({
-                el: "#app",
-                data: {
-                    quiz: quiz,
-                    questionIndex: 0,
-                    userResponses: userResponseSkelaton,
-                    isActive: false
-                },
-                filters: {
-                    charIndex: function (i) {
-                        return String.fromCharCode(97 + i);
-                    }
-                },
-                methods: {
-                    restart: function () {
-                        this.questionIndex = 0;
-                        this.userResponses = Array(this.quiz.questions.length).fill(null);
-                    },
-                    selectOption: function (index) {
-                        setTimeout(() => {
-                            Vue.set(this.userResponses, this.questionIndex, index);
-                            if (this.questionIndex < this.quiz.questions.length) {
-                                this.questionIndex++;
-                            }
-                        }, 1000);
-                    },
-                    next: function () {
-                        if (this.questionIndex < this.quiz.questions.length)
-                            this.questionIndex++;
-                    },
-                    prev: function () {
-                        if (this.quiz.questions.length > 0)
-                            this.questionIndex--;
-                    },
-                    // Return "true" count in userResponses
-                    score: function () {
-                        var score = 0;
-                        for (let i = 0; i < this.userResponses.length; i++) {
-                            if (
-                                    typeof this.quiz.questions[i].responses[
-                                    this.userResponses[i]
-                            ] !== "undefined" &&
-                                    this.quiz.questions[i].responses[this.userResponses[i]].correct
-                                    ) {
-                                score = score + 1;
-                            }
-                        }
-                        return score;
+                        <!--/questionContainer-->
+                        <!--quizCompletedResult-->
+                        <div v-if="questionIndex >= quiz.questions.length" v-bind:key="questionIndex" class="quizCompleted has-text-centered">
 
-                        //return this.userResponses.filter(function(val) { return val }).length;
-                    }
+                            <!-- quizCompletedIcon: Achievement Icon -->
+                            <span class="icon">
+                                <i class="fa" :class="score()>3?'fa-check-circle-o is-active':'fa-times-circle'"></i>
+                            </span>
+
+                            <!--resultTitleBlock-->
+                            <h2 class="complete-title">
+                                You did {{ (score()>7?'an amazing':(score()<4?'improve':'a good')) }} knowledge!
+                            </h2>
+                            <p class="subtitle">
+                                Total score: {{ score() }} / {{ quiz.questions.length }}
+                            </p>
+                            <div class="">
+                                <a class="btn btn-theme btn-rounded" @click="restart()">Restart <i class="fa fa-refresh"></i></a>
+                                <a class="btn btn-theme btn-rounded" onclick="window.location = 'select_language'">Home <i class="fa fa-refresh"></i></a>
+                                <a class="btn btn-theme btn-rounded" onclick="window.location = 'student_result'">Full Result <i class="fa fa-refresh"></i></a>
+                                <!--/resultTitleBlock-->
+
+                            </div>
+                        </div>
+                        <!--/quizCompetedResult-->
+                        <!-- 		</transition> -->
+                    </div>
+                    <!-- question Box -->
+                </div>
+            </div>
+        </section>
+    </div>
+    <!--/container-->
+    <?php include 'footer.php'; ?>
+    <?php include 'script.php'; ?>
+    <script>
+        console.log(<?php echo json_encode($questions_list); ?>);
+        var quiz = {
+            user: "<?php echo $student['student_name']; ?>",
+            questions: <?php echo json_encode($questions_list); ?>
+        },
+                userResponseSkelaton = Array(quiz.questions.length).fill(null);
+        var app = new Vue({
+            el: "#app",
+            data: {
+                quiz: quiz,
+                questionIndex: 0,
+                userResponses: userResponseSkelaton,
+                isActive: false
+            },
+            filters: {
+                charIndex: function (i) {
+                    return String.fromCharCode(97 + i);
                 }
-            });
-        </script>
-    </body>
+            },
+            methods: {
+                restart: function () {
+                    this.questionIndex = 0;
+                    this.userResponses = Array(this.quiz.questions.length).fill(null);
+                },
+                selectOption: function (index) {
+                    setTimeout(() => {
+                        Vue.set(this.userResponses, this.questionIndex, index);
+                        if (this.questionIndex < this.quiz.questions.length) {
+                            this.questionIndex++;
+                        }
+                    }, 1000);
+                },
+                next: function () {
+                    if (this.questionIndex < this.quiz.questions.length)
+                        this.questionIndex++;
+                },
+                prev: function () {
+                    if (this.quiz.questions.length > 0)
+                        this.questionIndex--;
+                },
+                // Return "true" count in userResponses
+                score: function () {
+                    var score = 0;
+                    for (let i = 0; i < this.userResponses.length; i++) {
+                        if (
+                                typeof this.quiz.questions[i].responses[
+                                this.userResponses[i]
+                        ] !== "undefined" &&
+                                this.quiz.questions[i].responses[this.userResponses[i]].correct
+                                ) {
+                            score = score + 1;
+                        }
+                    }
+                    return score;
+
+                    //return this.userResponses.filter(function(val) { return val }).length;
+                }
+            }
+        });
+    </script>
+</body>
 </html>
