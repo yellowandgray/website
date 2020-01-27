@@ -265,8 +265,8 @@ img.img-polaroid {
 .modal.styled .modal-header h4 {
     color: #fff;
     font-size: 25px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    width: 75%;
+    margin: 10px auto;
 }
 
 
@@ -3041,6 +3041,4 @@ article .align-right {
 
 /* Theme Styler :: End */
 
-.qes-img {
-    
-}
+.qes-img {}

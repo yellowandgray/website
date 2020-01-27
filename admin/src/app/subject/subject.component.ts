@@ -103,6 +103,7 @@ export class SubjectForm {
   subject_id = 0;
   subject_image: string = 'Select Subject Image';
   image_path: string = '';
+  language:any[];
   constructor(
     public dialogRef: MatDialogRef<SubjectForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -110,16 +111,34 @@ export class SubjectForm {
     private httpClient: HttpClient) {
     this.subjectForm = new FormGroup({
       'name': new FormControl('', Validators.required),
+      'language_id': new FormControl('', Validators.required),
       'description': new FormControl('', Validators.required),
     });
     if (this.data != null) {
       this.subjectForm.patchValue({
         name: this.data.name,
+        language_id: this.data.language_id,
         description: this.data.description,
       });
       this.subject_id = this.data.subject_id;
       this.image_path = this.data.image_path;
     }
+    
+    this.httpClient.get('http://localhost/project/mekana/api/v1/get_language').subscribe(
+      (res) => {
+          if (res["result"]["error"] === false) {
+              this.language = res["result"]["data"];
+          } else {
+              this._snackBar.open(res["result"]["message"], '', {
+                  duration: 2000,
+              });
+          }
+      },
+      (error) => {
+          this._snackBar.open(error["statusText"], '', {
+              duration: 2000,
+          });
+      });
   }
 
   onSubmit() {
@@ -131,11 +150,13 @@ export class SubjectForm {
     var url = '';
     if (this.subject_id != 0) {
       formData.append('name', this.subjectForm.value.name);
+      formData.append('language_id', this.subjectForm.value.language_id);
       formData.append('description', this.subjectForm.value.description);
       formData.append('image_path', this.image_path);
       url = 'update_record/subject/subject_id = ' + this.subject_id;
     } else {
       formData.append('name', this.subjectForm.value.name);
+      formData.append('language_id', this.subjectForm.value.language_id);
       formData.append('description', this.subjectForm.value.description);
       formData.append('subject_image', this.image_path);
       url = 'insert_subject';

@@ -160,6 +160,7 @@ export class QuestionForm {
     question_image: string = 'Select question Image';
     image_path: string = '';
     topic: any[];
+    year: any[];
     constructor(
         public dialogRef: MatDialogRef<QuestionForm>,
         @Inject(MAT_DIALOG_DATA) public data: any,
@@ -170,6 +171,7 @@ export class QuestionForm {
             'question': new FormControl('', Validators.required),
             'question_no': new FormControl('', Validators.required),
             'direction': new FormControl('', Validators.required),
+            'year_id': new FormControl('', Validators.required),
             'a': new FormControl('', Validators.required),
             'b': new FormControl('', Validators.required),
             'c': new FormControl('', Validators.required),
@@ -182,6 +184,7 @@ export class QuestionForm {
                 question: this.data.name,
                 question_no: this.data.question_no,
                 direction: this.data.direction,
+                year_id: this.data.year_id,
                 a: this.data.a,
                 b: this.data.b,
                 c: this.data.c,
@@ -194,6 +197,21 @@ export class QuestionForm {
             (res) => {
                 if (res["result"]["error"] === false) {
                     this.topic = res["result"]["data"];
+                } else {
+                    this._snackBar.open(res["result"]["message"], '', {
+                        duration: 2000,
+                    });
+                }
+            },
+            (error) => {
+                this._snackBar.open(error["statusText"], '', {
+                    duration: 2000,
+                });
+            });
+        this.httpClient.get('http://localhost/project/mekana/api/v1/get_year').subscribe(
+            (res) => {
+                if (res["result"]["error"] === false) {
+                    this.year = res["result"]["data"];
                 } else {
                     this._snackBar.open(res["result"]["message"], '', {
                         duration: 2000,
@@ -220,6 +238,7 @@ export class QuestionForm {
             formData.append('image_path', this.image_path);
             formData.append('question_no', this.questionForm.value.question_no);
             formData.append('direction', this.questionForm.value.direction);
+            formData.append('year_id', this.questionForm.value.year_id);
             formData.append('a', this.questionForm.value.a);
             formData.append('b', this.questionForm.value.b);
             formData.append('c', this.questionForm.value.c);
@@ -232,6 +251,7 @@ export class QuestionForm {
             formData.append('question_image', this.image_path);
             formData.append('question_no', this.questionForm.value.question_no);
             formData.append('direction', this.questionForm.value.direction);
+            formData.append('year_id', this.questionForm.value.year_id);
             formData.append('a', this.questionForm.value.a);
             formData.append('b', this.questionForm.value.b);
             formData.append('c', this.questionForm.value.c);

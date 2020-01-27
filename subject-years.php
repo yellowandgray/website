@@ -7,6 +7,7 @@ if (!isset($_GET['topics'])) {
 }
 $_SESSION['student_selected_topics_id'] = $_GET['topics'];
 $years = $obj->selectAll('*', 'year', 'status = 1');
+$language = $obj->selectRow('*', 'language', 'language_id=' . $_SESSION['student_selected_language_id']);
 ?>
 <!DOCTYPE html>
 <html lang='en'>
@@ -22,8 +23,8 @@ $years = $obj->selectAll('*', 'year', 'status = 1');
                     <div class='modal styled'>
                         <div class='modal-header login-section'>
                             <a href='question-subject-order'><i class='font-icon-arrow-simple-left'></i></a>
-                            <h4 id='mySigninModalLabel' class='text-center'><?php //echo $language['name'];
-            ?>Question Order - Choose <strong>Year</strong></h4>
+                            <h4 id='mySigninModalLabel' class='text-center'><?php echo $language['name'];
+            ?> - Question Order - Choose <strong>Year</strong></h4>
                         </div>
                         <div class='modal-body'>
                             <div class='year_select_section'>

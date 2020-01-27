@@ -1,7 +1,18 @@
-<h2 mat-dialog-title>User</h2>
+<h2 mat-dialog-title>Question</h2>
 <mat-dialog-content class="mat-typography">
     <form [formGroup]="questionForm" (ngSubmit)="onSubmit()">
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <div fxFlex="100%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Select Year</mat-label>
+                    <mat-select required formControlName="year_id">
+                        <mat-option [value]="row.year_id" *ngFor="let row of year">
+                            {{row.year}}
+                        </mat-option>
+                    </mat-select>
+                    <mat-error>Topic is required</mat-error>
+                </mat-form-field>
+            </div>
             <div fxFlex="100%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Topic</mat-label>
@@ -11,13 +22,6 @@
                         </mat-option>
                     </mat-select>
                     <mat-error>Topic is required</mat-error>
-                </mat-form-field>
-            </div>
-            <div fxFlex="50%">
-                <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Question No</mat-label>
-                    <input matInput placeholder="" required formControlName="question_no" />
-                    <mat-error>Question No is required</mat-error>
                 </mat-form-field>
             </div>
         </div>
@@ -38,13 +42,12 @@
                     <mat-select required formControlName="direction">
                         <mat-option value="top">Top</mat-option>
                         <mat-option value="bottom">Bottom</mat-option>
-                        <mat-option value="left">Left</mat-option>
-                        <mat-option value="right">Right</mat-option>
                     </mat-select>
                     <mat-error>Direction is required</mat-error>
                 </mat-form-field>
             </div>
         </div>
+        <br/>
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
             <div fxFlex="100%">
                 <angular-editor id="editor1" formControlName="question" [config]="editorConfig"></angular-editor>
@@ -84,7 +87,7 @@
             </div>
         </div>
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-            <div fxFlex="100%">
+            <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Answer</mat-label>
                     <mat-select required formControlName="answer">
@@ -94,6 +97,13 @@
                         <mat-option value="D">D</mat-option>
                     </mat-select>
                     <mat-error>Answer is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Question No</mat-label>
+                    <input matInput placeholder="" required formControlName="question_no" />
+                    <mat-error>Question No is required</mat-error>
                 </mat-form-field>
             </div>
         </div>
