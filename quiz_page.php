@@ -22,7 +22,7 @@ if ($_SESSION['student_selected_type'] == 'subject') {
     }
     $type = 'Subject Order';
     $_SESSION['student_selected_years_id'] = $_GET['years'];
-    $questions = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer, image_path, direction', 'question', 'topic_id IN (SELECT topic_id FROM topic WHERE year_id IN (' . $_SESSION['student_selected_years_id'] . ') AND topic_id IN (' . $_SESSION['student_selected_topics_id'] . ') ORDER BY subject_id ASC, year_id ASC)');
+    $questions = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer, image_path, direction', 'question', 'topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = '. $_SESSION['student_selected_language_id'] .' AND t.topic_id IN (' . $_SESSION['student_selected_topics_id'] . ') ORDER BY t.subject_id ASC) AND year_id IN (' . $_SESSION['student_selected_years_id'] . ') ORDER BY year_id ASC');
 }
 $student = $obj->selectRow('*', 'student_register', 'student_register_id = ' . $_SESSION['student_register_id']);
 $language = $obj->selectRow('*', 'language', 'language_id = ' . $_SESSION['student_selected_language_id']);

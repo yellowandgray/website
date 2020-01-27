@@ -6,7 +6,7 @@ if (!isset($_SESSION['student_selected_language_id'])) {
     header('Location: select_language');
 }
 $_SESSION['student_selected_type'] = 'subject';
-$topics = $obj->selectAll('t.*, s.name AS subject', 'topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id', 't.language_id=' . $_SESSION['student_selected_language_id']);
+$topics = $obj->selectAll('t.*, s.name AS subject', 'topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id', 's.language_id=' . $_SESSION['student_selected_language_id']);
 $alltopics = array();
 foreach ($topics as $row) {
     $alltopics[$row['subject']][] = $row;
