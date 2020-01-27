@@ -40,7 +40,7 @@
                                     <li><i class="fas fa-check"></i> Highly Committed and Qualified Educators</li>
                                     <li><i class="fas fa-check"></i> Your Child's second home in an airconditioned ambience</li>
                                     <li><i class="fas fa-check"></i> State-of-the-Art Labs for all Curricula Mixed Age Group Activity Studio</li>
-                                    <li><i class="fas fa-check"></i> Mobile App enabling parents, students and staff to stay connected at all times</li>
+<!--                                    <li><i class="fas fa-check"></i> Mobile App enabling parents, students and staff to stay connected at all times</li>-->
                                     <li><i class="fas fa-check"></i> Air-conditioned and GPS enabled school transport with dedicated caretakers</li>
                                     <li><i class="fas fa-check"></i> Child-friendly and Participatory Classrooms</li>
                                     <li><i class="fas fa-check"></i> Digital Eyes all across the Campus</li>
