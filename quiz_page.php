@@ -14,7 +14,7 @@ if ($_SESSION['student_selected_type'] == 'order') {
     $type = 'Question Order';
     $selyear = $obj->selectRow('*', 'year', 'year=\'' . $_GET['year'] . '\'');
     $_SESSION['student_selected_year_id'] = $selyear['year_id'];
-    $questions = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer, image_path, direction', 'question', 'topic_id IN (SELECT topic_id FROM topic WHERE year_id = ' . $_SESSION['student_selected_year_id'] . ' AND language_id = ' . $_SESSION['student_selected_language_id'] . ')');
+    $questions = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer, image_path, direction', 'question', 'topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $_SESSION['student_selected_language_id'] . ') AND year_id = ' . $_SESSION['student_selected_year_id']);
 }
 if ($_SESSION['student_selected_type'] == 'subject') {
     if (!isset($_GET['years'])) {
@@ -89,7 +89,7 @@ if (count($questions) > 0) {
                                 <div v-if="quiz.questions[questionIndex].show_image" class="text-center">
                                     <img v-if="quiz.questions[questionIndex].direction == 'top'" v-bind:src="'http://localhost/project/mekana/api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />
                                 </div>
-                                <h2 class="titleContainer title">{{questionIndex + 1}}. {{ quiz.questions[questionIndex].text }}</h2>
+                                <h2 class="titleContainer title">{{questionIndex + 1}}. <span v-html="quiz.questions[questionIndex].text"></span></h2>
                                 <div v-if="quiz.questions[questionIndex].show_image" class="text-center">
                                     <img v-if="quiz.questions[questionIndex].direction == 'bottom'" v-bind:src="'http://localhost/project/mekana/api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />
                                 </div>
