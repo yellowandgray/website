@@ -25,7 +25,7 @@
         <mat-tab-group (selectedTabChange)="getTopicByLngNYear($event);">
             <mat-tab *ngFor="let data of year" label="{{data.year}}">
                 <mat-tab-group (selectedTabChange)="getQuestionsByTopic($event);">
-                    <mat-tab *ngFor="let data of topic" label="{{data.name}}">
+                    <mat-tab *ngFor="let data of topic" label="{{data.subject}} - {{data.name}}">
                         <!--<div class="add-btn-container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
                             <div class="search-input" fxFlex="50%">
                                 <mat-form-field fxFlex="100%">

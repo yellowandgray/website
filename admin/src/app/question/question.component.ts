@@ -22,6 +22,7 @@ export class QuestionComponent implements OnInit {
     loading = false;
     file_name: string = 'Select Picture';
     selected_language = '';
+    selected_year = '';
     selected_topic_index = 0;
     constructor(public dialog: MatDialog, private httpClient: HttpClient, private _snackBar: MatSnackBar) { }
 
@@ -46,7 +47,7 @@ export class QuestionComponent implements OnInit {
     getQuestionsByTopic(ev): void {
         var tid = this.topic[ev.index].topic_id;
         this.selected_topic_index = ev.index;
-        this.httpClient.get<any>('../api/v1/get_question_by_topic/' + tid)
+        this.httpClient.get<any>('../api/v1/get_question_by_topic_n_year/' + tid+'/'+this.selected_year)
             .subscribe(
                 (res) => {
                     this.question = res["result"]["data"];
@@ -59,6 +60,7 @@ export class QuestionComponent implements OnInit {
             );
     }
     getTopicByLngNYear(ev): void {
+        this.selected_year = this.year[ev.index].year_id;
         this.httpClient.get<any>('../api/v1/get_topic_by_lng_year/' + this.selected_language + '/' + this.year[ev.index].year_id)
             .subscribe(
                 (res) => {
@@ -72,7 +74,7 @@ export class QuestionComponent implements OnInit {
             );
     }
     getYearByLanguage(): void {
-        this.httpClient.get<any>('../api/v1/get_year_by_language/' + this.selected_language)
+        this.httpClient.get<any>('../api/v1/get_year')
             .subscribe(
                 (res) => {
                     this.year = res["result"]["data"];

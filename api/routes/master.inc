@@ -155,7 +155,7 @@ $app->get('/get_topic', function() {
 $app->get('/get_topic_by_lng_year/:lng/:yr', function($lng, $yr) {
     $res = array('error' => true, 'message' => 'No records found');
     $obj = new Common();
-    $data = $obj->selectAll('*', 'topic', 'year_id = ' . $yr . ' AND language_id = ' . $lng . ' GROUP BY topic_id');
+    $data = $obj->selectAll('t.*, s.name AS subject', 'topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id', 's.language_id = ' . $lng . ' GROUP BY t.topic_id');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
@@ -188,10 +188,10 @@ $app->get('/get_question', function() {
     echoRespnse(201, $res);
 });
 
-$app->get('/get_question_by_topic/:tid', function($tid) {
+$app->get('/get_question_by_topic_n_year/:tid/:yid', function($tid, $yid) {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
-    $data = $com->selectAll('*', 'question', 'question_id > 0 AND topic_id = ' . $tid);
+    $data = $com->selectAll('*', 'question', 'question_id > 0 AND topic_id = ' . $tid, ' AND year_id = ' . $yid);
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
