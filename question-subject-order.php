@@ -25,11 +25,11 @@ $_SESSION['student_selected_language_id'] = $language['language_id'];
                             <div class="language_section">
                                 <ul>
                                     <li>
-                                        <i class="icon-check"></i>
+                                        <i class="icon-double-angle-right"></i>
                                         <a href="qorder-years">Question Order</a>
                                     </li>
                                     <li>
-                                        <i class="icon-check"></i>
+                                        <i class="icon-double-angle-right"></i>
                                         <a href="subject">Subject Order</a>
                                     </li>
                                 </ul>
