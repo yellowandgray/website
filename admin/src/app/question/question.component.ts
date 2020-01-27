@@ -29,7 +29,7 @@ export class QuestionComponent implements OnInit {
         this.getLanguage();
     }
     getLanguage(): void {
-        this.httpClient.get<any>('http://localhost/mushak/mekana/api/v1/get_language')
+        this.httpClient.get<any>('../api/v1/get_language')
             .subscribe(
                 (res) => {
                     this.language = res["result"]["data"];
@@ -46,7 +46,7 @@ export class QuestionComponent implements OnInit {
     getQuestionsByTopic(ev): void {
         var tid = this.topic[ev.index].topic_id;
         this.selected_topic_index = ev.index;
-        this.httpClient.get<any>('http://localhost/mushak/mekana/api/v1/get_question_by_topic/' + tid)
+        this.httpClient.get<any>('../api/v1/get_question_by_topic/' + tid)
             .subscribe(
                 (res) => {
                     this.question = res["result"]["data"];
@@ -59,7 +59,7 @@ export class QuestionComponent implements OnInit {
             );
     }
     getTopicByLngNYear(ev): void {
-        this.httpClient.get<any>('http://localhost/mushak/mekana/api/v1/get_topic_by_lng_year/' + this.selected_language + '/' + this.year[ev.index].year_id)
+        this.httpClient.get<any>('../api/v1/get_topic_by_lng_year/' + this.selected_language + '/' + this.year[ev.index].year_id)
             .subscribe(
                 (res) => {
                     this.topic = res["result"]["data"];
@@ -72,7 +72,7 @@ export class QuestionComponent implements OnInit {
             );
     }
     getYearByLanguage(): void {
-        this.httpClient.get<any>('http://localhost/mushak/mekana/api/v1/get_year_by_language/' + this.selected_language)
+        this.httpClient.get<any>('../api/v1/get_year_by_language/' + this.selected_language)
             .subscribe(
                 (res) => {
                     this.year = res["result"]["data"];
@@ -131,7 +131,7 @@ export class QuestionComponent implements OnInit {
         this.loading = true;
         var formData = new FormData();
         formData.append('file', fileData);
-        this.httpClient.post('http://localhost/mushak/mekana/api/v1/import_question', formData).subscribe(
+        this.httpClient.post('../api/v1/import_question', formData).subscribe(
             (res) => {
                 this.loading = false;
                 this._snackBar.open(res["result"]["message"], '', {
@@ -153,7 +153,7 @@ export class QuestionComponent implements OnInit {
     templateUrl: 'question-form.html',
 })
 export class QuestionForm {
-    image_url: string = 'http://localhost/mushak/mekana/api/v1/';
+    image_url: string = '../api/v1/';
     questionForm: FormGroup;
     loading = false;
     question_id = 0;
@@ -193,7 +193,7 @@ export class QuestionForm {
             });
             this.question_id = this.data.question_id;
         }
-        this.httpClient.get('http://localhost/mushak/mekana/api/v1/get_topic').subscribe(
+        this.httpClient.get('../api/v1/get_topic').subscribe(
             (res) => {
                 if (res["result"]["error"] === false) {
                     this.topic = res["result"]["data"];
@@ -208,7 +208,7 @@ export class QuestionForm {
                     duration: 2000,
                 });
             });
-        this.httpClient.get('http://localhost/mushak/mekana/api/v1/get_year').subscribe(
+        this.httpClient.get('../api/v1/get_year').subscribe(
             (res) => {
                 if (res["result"]["error"] === false) {
                     this.year = res["result"]["data"];
@@ -259,7 +259,7 @@ export class QuestionForm {
             formData.append('answer', this.questionForm.value.answer);
             url = 'insert_question';
         }
-        this.httpClient.post('http://localhost/mushak/mekana/api/v1/' + url, formData).subscribe(
+        this.httpClient.post('../api/v1/' + url, formData).subscribe(
             (res) => {
                 this.loading = false;
                 if (res["result"]["error"] === false) {
@@ -285,7 +285,7 @@ export class QuestionForm {
         this.loading = true;
         var formData = new FormData();
         formData.append('file', fileData);
-        this.httpClient.post('http://localhost/mushak/mekana/api/v1/upload_file', formData).subscribe(
+        this.httpClient.post('../api/v1/upload_file', formData).subscribe(
             (res) => {
                 this.loading = false;
                 if (res["result"]["error"] === false) {
@@ -348,7 +348,7 @@ export class QuestionForm {
                 tag: 'h1',
             },
         ],
-        uploadUrl: 'http://localhost/mushak/mekana/api/v1/upload_image',
+        uploadUrl: '../api/v1/upload_image',
         sanitize: true,
         toolbarPosition: 'top',
     };
@@ -378,7 +378,7 @@ export class QuestionDelete {
             return;
         }
         this.loading = true;
-        this.httpClient.get('http://localhost/mushak/mekana/api/v1/delete_record/question/question_id=' + this.question_id).subscribe(
+        this.httpClient.get('../api/v1/delete_record/question/question_id=' + this.question_id).subscribe(
             (res) => {
                 this.loading = false;
                 if (res["result"]["error"] === false) {
