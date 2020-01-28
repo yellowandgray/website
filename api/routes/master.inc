@@ -84,7 +84,7 @@ $app->post('/insert_subject', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('name' => $data['name'], 'language_id' => $data['language_id'], 'description' => $data['description'], 'image_path' => $data['subject_image']), 'subject');
+    $record = $com->insertRecord(array('name' => $data['name'], 'description' => $data['description'], 'image_path' => $data['subject_image']), 'subject');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';

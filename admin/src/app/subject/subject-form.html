@@ -4,28 +4,15 @@
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Select Language</mat-label>
-                    <mat-select required formControlName="language_id">
-                        <mat-option [value]="row.language_id" *ngFor="let row of language">
-                            {{row.name}}
-                        </mat-option>
-                    </mat-select>
-                    <mat-error>Language is required</mat-error>
-                </mat-form-field>
-            </div>
-            <div fxFlex="50%">
-                <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Subject Title</mat-label>
                     <input matInput placeholder="" required formControlName="name" />
                     <mat-error>Subject Title is required</mat-error>
                 </mat-form-field>
             </div>
-        </div>
-        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
-            <div fxFlex="100%" fxLayoutAlign="center center">
+            <div fxFlex="50%" fxLayoutAlign="center center">
                 <button *ngIf="image_path == ''" type="button" mat-raised-button (click)="fileInput.click()">{{subject_image}}</button>
                 <input hidden #fileInput type="file" id="file" (change)="fileProgress($event, 'subject_image', 'image_path')" />
-                <div class="preview-image" *ngIf="image_path != ''">
+                       <div class="preview-image" *ngIf="image_path != ''">
                     <img class="dialog-picture" mat-card-image src="{{image_url}}{{image_path}}" alt="Photo" />
                     <button mat-icon-button aria-label="Close icon" (click)="removeMedia('image_path')">
                         <mat-icon>close</mat-icon>

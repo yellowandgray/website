@@ -22,11 +22,10 @@ export class SubjectComponent implements OnInit {
 
   ngOnInit() {
     this.getsubject();
-    this.gettopic();
   }
-  image_url: string = '../api/v1/';
+  image_url: string = 'http://localhost/microview/feringo/api/v1/';
   getsubject(): void {
-    this.httpClient.get<any>('../api/v1/get_subject')
+    this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_subject')
       .subscribe(
         (res) => {
           this.subject = res["result"]["data"];
@@ -38,20 +37,6 @@ export class SubjectComponent implements OnInit {
         }
       );
   }
-  gettopic(): void {
-    this.httpClient.get<any>('../api/v1/get_topic')
-      .subscribe(
-        (res) => {
-          this.topic = res["result"]["data"];
-        },
-        (error) => {
-          this._snackBar.open(error["statusText"], '', {
-            duration: 2000,
-          });
-        }
-      );
-  }
-
   openDialog(id, res): void {
     var data = null;
     if (id != 0) {
@@ -67,9 +52,8 @@ export class SubjectComponent implements OnInit {
       maxWidth: "40%",
       data: data
     });
-
     dialogRef.afterClosed().subscribe(result => {
-      if (result !== false && result !== 'false') {
+      if (typeof result != 'undefined' && result !== false && result !== 'false') {
         this.getsubject();
       }
     });
@@ -85,7 +69,7 @@ export class SubjectComponent implements OnInit {
       data: data
     });
     dialogRef.afterClosed().subscribe(result => {
-      if (result !== false && result !== 'false') {
+      if (typeof result !== 'undefined' && result !== false && result !== 'false') {
         this.getsubject();
       }
     });
@@ -97,13 +81,12 @@ export class SubjectComponent implements OnInit {
   templateUrl: 'subject-form.html',
 })
 export class SubjectForm {
-  image_url: string = '../api/v1/';
+  image_url: string = 'http://localhost/microview/feringo/api/v1/';
   subjectForm: FormGroup;
   loading = false;
   subject_id = 0;
   subject_image: string = 'Select Subject Image';
   image_path: string = '';
-  language:any[];
   constructor(
     public dialogRef: MatDialogRef<SubjectForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -111,34 +94,16 @@ export class SubjectForm {
     private httpClient: HttpClient) {
     this.subjectForm = new FormGroup({
       'name': new FormControl('', Validators.required),
-      'language_id': new FormControl('', Validators.required),
-      'description': new FormControl('', Validators.required),
+      'description': new FormControl('', Validators.required)
     });
     if (this.data != null) {
       this.subjectForm.patchValue({
         name: this.data.name,
-        language_id: this.data.language_id,
         description: this.data.description,
       });
       this.subject_id = this.data.subject_id;
       this.image_path = this.data.image_path;
     }
-    
-    this.httpClient.get('../api/v1/get_language').subscribe(
-      (res) => {
-          if (res["result"]["error"] === false) {
-              this.language = res["result"]["data"];
-          } else {
-              this._snackBar.open(res["result"]["message"], '', {
-                  duration: 2000,
-              });
-          }
-      },
-      (error) => {
-          this._snackBar.open(error["statusText"], '', {
-              duration: 2000,
-          });
-      });
   }
 
   onSubmit() {
@@ -150,18 +115,16 @@ export class SubjectForm {
     var url = '';
     if (this.subject_id != 0) {
       formData.append('name', this.subjectForm.value.name);
-      formData.append('language_id', this.subjectForm.value.language_id);
       formData.append('description', this.subjectForm.value.description);
       formData.append('image_path', this.image_path);
       url = 'update_record/subject/subject_id = ' + this.subject_id;
     } else {
       formData.append('name', this.subjectForm.value.name);
-      formData.append('language_id', this.subjectForm.value.language_id);
       formData.append('description', this.subjectForm.value.description);
       formData.append('subject_image', this.image_path);
       url = 'insert_subject';
     }
-    this.httpClient.post('../api/v1/' + url, formData).subscribe(
+    this.httpClient.post('http://localhost/microview/feringo/api/v1/' + url, formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -188,7 +151,7 @@ export class SubjectForm {
     this.loading = true;
     var formData = new FormData();
     formData.append('file', fileData);
-    this.httpClient.post('../api/v1/upload_file', formData).subscribe(
+    this.httpClient.post('http://localhost/microview/feringo/api/v1/upload_file', formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -278,7 +241,7 @@ export class SubjectDelete {
       return;
     }
     this.loading = true;
-    this.httpClient.get('../api/v1/delete_record/subject/subject_id=' + this.subject_id).subscribe(
+    this.httpClient.get('http://localhost/microview/feringo/api/v1/delete_record/subject/subject_id=' + this.subject_id).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
