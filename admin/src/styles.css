@@ -1,0 +1,115 @@
+/* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family: 'isMail_0';
+    src: url('assets/fonts/ismail_0.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+mat-sidenav {
+    max-width: 250px;
+    min-width: 250px;
+}
+
+.mat-drawer {
+    background-color: #30445c !important;
+}
+
+mat-sidenav .mat-list-item-content {
+    color: #fff;
+}
+
+.active-nav {
+    background: #6b6969;
+}
+
+.logo-bg {
+    background-color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.mat-list-item .mat-icon {
+    padding-right: 5px!important;
+}
+
+mat-sidenav-content {
+    margin-left: 250px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.add-btn-container {
+    margin: 10px;
+    text-align: right;
+}
+
+.user-table-section table th,
+.user-table-section table td {
+    width: 47%;
+    text-align: left;
+}
+
+.preview-image {
+    position: relative;
+}
+
+.preview-image button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #fff;
+    color: #000;
+}
+
+.preview-image .dialog-picture {
+    width: 100%;
+}
+
+.preview-image img {
+    max-width: 100%;
+    width: 250px;
+    height: auto;
+}
+
+.preview-image {
+    position: relative;
+}
+
+.preview-image button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #fff;
+    color: #000;
+}
+
+.member-profile {
+    max-height: 100%!important;
+    height: auto!important;
+    width: 100%!important;
+}
+
+.mat-fab.mat-primary,
+.mat-flat-button.mat-primary,
+.mat-mini-fab.mat-primary,
+.mat-raised-button.mat-primary {
+    margin-right: 5px !important;
+}
+
+.search-input {
+    padding: 10px;
+}

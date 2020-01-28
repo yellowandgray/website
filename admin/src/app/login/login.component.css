@@ -1,0 +1,22 @@
+mat-form-field {
+    width: 100%;
+}
+
+.login-card {
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.login-card .logo {
+    text-align: center;
+}
+
+.login-card .logo img {
+    width: 50%;
+}
+
+.login-card h1 {
+    font-size: 25px;
+    text-align: center;
+}

@@ -1,0 +1,117 @@
+<h2 mat-dialog-title>Question</h2>
+<mat-dialog-content class="mat-typography">
+    <form [formGroup]="questionForm" (ngSubmit)="onSubmit()">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <div fxFlex="100%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Select Year</mat-label>
+                    <mat-select required formControlName="year_id">
+                        <mat-option [value]="row.year_id" *ngFor="let row of year">
+                            {{row.year}}
+                        </mat-option>
+                    </mat-select>
+                    <mat-error>Topic is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="100%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Topic</mat-label>
+                    <mat-select required formControlName="topic_id">
+                        <mat-option [value]="row.topic_id" *ngFor="let row of topic">
+                            {{row.name}}
+                        </mat-option>
+                    </mat-select>
+                    <mat-error>Topic is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <div fxFlex="50%" fxLayoutAlign="center center">
+                <button *ngIf="image_path == ''" type="button" mat-raised-button (click)="fileInput.click()">{{question_image}}</button>
+                <input hidden #fileInput type="file" id="file" (change)="fileProgress($event, 'question_image', 'image_path')" />
+                <div class="preview-image" *ngIf="image_path != ''">
+                    <img class="dialog-picture" mat-card-image src="{{image_url}}{{image_path}}" alt="Photo" />
+                    <button mat-icon-button aria-label="Close icon" (click)="removeMedia('image_path')">
+                        <mat-icon>close</mat-icon>
+                    </button>
+                </div>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Image Direction</mat-label>
+                    <mat-select required formControlName="direction">
+                        <mat-option value="top">Top</mat-option>
+                        <mat-option value="bottom">Bottom</mat-option>
+                    </mat-select>
+                    <mat-error>Direction is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <br/>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+            <div fxFlex="100%">
+                <angular-editor id="editor1" formControlName="question" [config]="editorConfig"></angular-editor>
+            </div>
+        </div>
+        <br />
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Option A</mat-label>
+                    <input matInput placeholder="" required formControlName="a" />
+                    <mat-error>Option A is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Option B</mat-label>
+                    <input matInput placeholder="" required formControlName="b" />
+                    <mat-error>Option B is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Option C</mat-label>
+                    <input matInput placeholder="" required formControlName="c" />
+                    <mat-error>Option C is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Option D</mat-label>
+                    <input matInput placeholder="" required formControlName="d" />
+                    <mat-error>Option D is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Answer</mat-label>
+                    <mat-select required formControlName="answer">
+                        <mat-option value="A">A</mat-option>
+                        <mat-option value="B">B</mat-option>
+                        <mat-option value="C">C</mat-option>
+                        <mat-option value="D">D</mat-option>
+                    </mat-select>
+                    <mat-error>Answer is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Question No</mat-label>
+                    <input matInput placeholder="" required formControlName="question_no" />
+                    <mat-error>Question No is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
+            <button mat-button [mat-dialog-close]="false">Cancel</button>
+            <button mat-button type="submit" [disabled]="loading">Save</button>
+            <mat-progress-spinner class="example-margin" *ngIf="loading" [mode]="'indeterminate'" [strokeWidth]="3" [diameter]="25">
+            </mat-progress-spinner>
+        </div>
+    </form>
+</mat-dialog-content>
