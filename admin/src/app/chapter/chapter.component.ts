@@ -8,22 +8,22 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'app-year',
-  templateUrl: './year.component.html',
-  styleUrls: ['./year.component.css']
+  selector: 'app-chapter',
+  templateUrl: './chapter.component.html',
+  styleUrls: ['./chapter.component.css']
 })
-export class YearComponent implements OnInit {
-  year = [];
+export class ChapterComponent implements OnInit {
+  chapter = [];
   constructor(public dialog: MatDialog, private httpClient: HttpClient, private _snackBar: MatSnackBar) { }
 
   ngOnInit() {
-    this.getYear();
+    this.getChapter();
   }
-  getYear(): void {
-        this.httpClient.get<any>('../api/v1/get_year')
+  getChapter(): void {
+        this.httpClient.get<any>('../api/v1/get_chapter')
         .subscribe(
                 (res)=>{
-                    this.year = res["result"]["data"];
+                    this.chapter = res["result"]["data"];
               },
               (error)=>{
                 this._snackBar.open(error["statusText"], '', {
@@ -36,13 +36,13 @@ export class YearComponent implements OnInit {
     var data = null;
       if(id != 0) {
       this[res].forEach(val=> {
-           if(parseInt(val.year_id) === parseInt(id)) {
+           if(parseInt(val.chapter_id) === parseInt(id)) {
                 data = val;
                 return false;
             }
         });
     }
-    const dialogRef = this.dialog.open(YearForm, {
+    const dialogRef = this.dialog.open(ChapterForm, {
       minWidth: "40%",
       maxWidth: "40%",
       data: data
@@ -50,7 +50,7 @@ export class YearComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       if(result !== false && result !== 'false') {
-          this.getYear();
+          this.getChapter();
         }
     });
 }
@@ -60,60 +60,60 @@ export class YearComponent implements OnInit {
           if(id != 0) { 
             data = id;
           }
-    const dialogRef = this.dialog.open(YearDelete, {
+    const dialogRef = this.dialog.open(ChapterDelete, {
         minWidth: "40%",
         maxWidth: "40%",
         data: data
     });
    dialogRef.afterClosed().subscribe(result => {
        if(result !== false && result !== 'false') {
-          this.getYear();
+          this.getChapter();
        }
     });
     }
 }
 
 @Component({
-  selector: 'year-form',
-  templateUrl: 'year-form.html',
+  selector: 'chapter-form',
+  templateUrl: 'chapter-form.html',
 })
-export class YearForm {
-    yearForm: FormGroup;
+export class ChapterForm {
+    chapterForm: FormGroup;
     loading = false;
-    year_id = 0;
+    chapter_id = 0;
     constructor(
-    public dialogRef: MatDialogRef<YearForm>,
+    public dialogRef: MatDialogRef<ChapterForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
-        this.yearForm = new FormGroup ({
-            'year': new FormControl('', Validators.required),
+        this.chapterForm = new FormGroup ({
+            'chapter': new FormControl('', Validators.required),
             'status': new FormControl('', Validators.required)
         });
         if(this.data != null) {
-           this.yearForm.patchValue({
-            year: this.data.year,
+           this.chapterForm.patchValue({
+            chapter: this.data.chapter,
             status: this.data.status,
         });
-            this.year_id = this.data.year_id;
+            this.chapter_id = this.data.chapter_id;
         }
     }
 
     onSubmit() {
-      if (this.yearForm.invalid) {
+      if (this.chapterForm.invalid) {
             return;
       }
       this.loading = true;
       var formData = new FormData();
       var url = '';
-          if(this.year_id != 0) {
-        formData.append('year', this.yearForm.value.year);
-        formData.append('status', this.yearForm.value.status);
-        url = 'update_record/year/year_id = '+this.year_id;
+          if(this.chapter_id != 0) {
+        formData.append('chapter', this.chapterForm.value.chapter);
+        formData.append('status', this.chapterForm.value.status);
+        url = 'update_record/chapter/chapter_id = '+this.chapter_id;
       } else {
-        formData.append('year', this.yearForm.value.year);
-        formData.append('status', this.yearForm.value.status);
-        url = 'insert_year';
+        formData.append('chapter', this.chapterForm.value.chapter);
+        formData.append('status', this.chapterForm.value.status);
+        url = 'insert_chapter';
       }
       this.httpClient.post('../api/v1/'+url, formData).subscribe(
           (res)=>{
@@ -138,28 +138,28 @@ export class YearForm {
 }
 
 @Component({
-  selector: 'year-delete-confirmation',
-  templateUrl: 'year-delete-confirmation.html',
+  selector: 'chapter-delete-confirmation',
+  templateUrl: 'chapter-delete-confirmation.html',
 })
-export class YearDelete {
+export class ChapterDelete {
     loading = false;
-    year_id = 0;
+    chapter_id = 0;
     constructor(
-    public dialogRef: MatDialogRef<YearDelete>,
+    public dialogRef: MatDialogRef<ChapterDelete>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
     if(this.data != null) { 
-        this.year_id = this.data;
+        this.chapter_id = this.data;
     }
 }
 
   confirmDelete() {
-      if (this.year_id == null || this.year_id == 0) {
+      if (this.chapter_id == null || this.chapter_id == 0) {
             return;
       }
       this.loading = true;
-      this.httpClient.get('../api/v1/delete_record/year/year_id='+this.year_id).subscribe(
+      this.httpClient.get('../api/v1/delete_record/chapter/chapter_id='+this.chapter_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {

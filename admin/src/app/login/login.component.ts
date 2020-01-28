@@ -28,12 +28,12 @@ export class LoginComponent implements OnInit {
     var formData = new FormData();
     formData.append('user_name', this.loginForm.value.user_name);
     formData.append('password', this.loginForm.value.password);
-    this.httpClient.post('../api/v1/loginadmin', formData)
+    this.httpClient.post('http://localhost/microview/feringo/api/v1/loginadmin', formData)
       .subscribe(
         (res) => {
           this.loading = false;
           if (res["result"]["error"] === false) {
-            this.router.navigateByUrl('/year');
+            this.router.navigateByUrl('/subject');
           } else {
             this._snackBar.open(res["result"]["message"], '', {
               duration: 2000,

@@ -2,6 +2,6 @@
 
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', '');
-define('DB_NAME', 'mekana');
+define('DB_NAME', 'feringo');
 define('DB_HOST', 'localhost');
-define('BASE_URL', 'http://localhost/project/mekana/api/v1/');
+define('BASE_URL', 'http://localhost/microview/feringo/api/v1/');
