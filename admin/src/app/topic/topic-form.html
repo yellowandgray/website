@@ -5,27 +5,46 @@
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Subject</mat-label>
-                    <mat-select required formControlName="subject_id">
+                    <mat-select required formControlName="subject_id" (selectionChange)="getChapter()">
                         <mat-option [value]="row.subject_id" *ngFor="let row of subject">
                             {{row.name}}
-                        </mat-option>
-                    </mat-select>
-                    <mat-error>Subject is required</mat-error>
-                </mat-form-field>
-            </div>
-            <div fxFlex="50%">
-                <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Topic Name</mat-label>
-                    <input matInput placeholder="" required formControlName="name" />
-                    <mat-error>Topic is required</mat-error>
-                </mat-form-field>
-            </div>
+                    </mat-option>
+                </mat-select>
+                <mat-error>Subject is required</mat-error>
+            </mat-form-field>
         </div>
-        <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
-            <button mat-button [mat-dialog-close]="false">Cancel</button>
-            <button mat-button type="submit" [disabled]="loading">Save</button>
-            <mat-progress-spinner class="example-margin" *ngIf="loading" [mode]="'indeterminate'" [strokeWidth]="3" [diameter]="25">
-            </mat-progress-spinner>
-        </div>
-    </form>
+        <div fxFlex="50%">
+            <mat-form-field appearance="outline" fxFlex="100%">
+                <mat-label>Chapter</mat-label>
+                <mat-select required formControlName="chapter_id">
+                    <mat-option [value]="row.chapter_id" *ngFor="let row of chapter">
+                        {{row.name}}
+                </mat-option>
+            </mat-select>
+            <mat-error>Chapter is required</mat-error>
+        </mat-form-field>
+    </div>
+</div>
+<div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+    <div fxFlex="100%">
+        <mat-form-field appearance="outline" fxFlex="100%">
+            <mat-label>Topic Name</mat-label>
+            <input matInput placeholder="" required formControlName="name" />
+            <mat-error>Topic is required</mat-error>
+        </mat-form-field>
+    </div>
+</div>
+<br/>
+<div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+    <div fxFlex="100%">
+        <angular-editor id="editor1" formControlName="description" [config]="editorConfig"></angular-editor>
+    </div>
+</div>
+<div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
+    <button mat-button [mat-dialog-close]="false">Cancel</button>
+    <button mat-button type="submit" [disabled]="loading">Save</button>
+    <mat-progress-spinner class="example-margin" *ngIf="loading" [mode]="'indeterminate'" [strokeWidth]="3" [diameter]="25">
+    </mat-progress-spinner>
+</div>
+</form>
 </mat-dialog-content>

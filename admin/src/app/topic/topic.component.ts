@@ -13,14 +13,46 @@ import { Observable } from 'rxjs';
   styleUrls: ['./topic.component.css']
 })
 export class TopicComponent implements OnInit {
+subject = [];
+  chapter = [];
     topic = [];
     constructor(public dialog: MatDialog, private httpClient: HttpClient, private _snackBar: MatSnackBar) { }
-
+    selectedtopicind = 0;
     ngOnInit() {
-        this.gettopic();
+        this.getsubject();
     }
-    gettopic(): void {
-        this.httpClient.get<any>('../api/v1/get_topic')
+getsubject(): void {
+    this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_subject')
+      .subscribe(
+        (res) => {
+          this.subject = res["result"]["data"];
+        },
+        (error) => {
+          this._snackBar.open(error["statusText"], '', {
+            duration: 2000,
+          });
+        }
+      );
+  }
+  getChapter(ev): void {
+this.chapter = [];
+    this.selectedchapind = ev.index;
+        this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_chapter_by_subject/'+this.subject[ev.index].subject_id)
+        .subscribe(
+                (res)=>{
+                    this.chapter = res["result"]["data"];
+              },
+              (error)=>{
+                this._snackBar.open(error["statusText"], '', {
+                    duration: 2000,
+                });
+            }
+        );
+    }    
+getTopic(ev): void {
+this.topic = [];
+if(typeof this.chapter[ev.index] !== 'undefined') {
+        this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_topic_by_chapter/'+this.chapter[ev.index].chapter_id)
         .subscribe(
                 (res)=>{
                     this.topic = res["result"]["data"];
@@ -32,11 +64,13 @@ export class TopicComponent implements OnInit {
             }
         );
     }
+    }
     openDialog(id, res): void {
         var data = null;
           if(id != 0) {
           this[res].forEach(val=> {
                if(parseInt(val.topic_id) === parseInt(id)) {
+val.subject_id = this.chapter[this.selectedchapind].subject_id;
                     data = val;
                     return false;
                 }
@@ -45,12 +79,12 @@ export class TopicComponent implements OnInit {
         const dialogRef = this.dialog.open(TopicForm, {
           minWidth: "40%",
           maxWidth: "40%",
-          data: data
+          data: {data: data, subject: this.subject}
         });
 
         dialogRef.afterClosed().subscribe(result => {
-          if(result !== false && result !== 'false') {
-                this.gettopic();
+          if(typeof result !== 'undefined' && result !== false && result !== 'false') {
+                this.getTopic({index: this.selectedchapind});
             }
         });
     }
@@ -65,8 +99,8 @@ export class TopicComponent implements OnInit {
         data: data
     });
    dialogRef.afterClosed().subscribe(result => {
-       if(result !== false && result !== 'false') {
-          this.gettopic();
+       if(typeof result !== 'undefined' && result !== false && result !== 'false') {
+          this.getTopic({index: this.selectedchapind});
        }
     });
     }
@@ -81,6 +115,7 @@ export class TopicForm {
     loading = false;
     topic_id = 0;
     subject:any[];
+    chapter:any[];
     constructor(
     public dialogRef: MatDialogRef<TopicForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -88,32 +123,35 @@ export class TopicForm {
     private httpClient: HttpClient) {
         this.topicForm = new FormGroup ({
             'subject_id': new FormControl('', Validators.required),
+            'chapter_id': new FormControl('', Validators.required),
             'name': new FormControl('', Validators.required),
+            'description': new FormControl('', Validators.required)
         });
-        if(this.data != null) {
+        if(this.data.data != null) {
            this.topicForm.patchValue({
-           name: this.data.name,
-           subject_id: this.data.subject_id,
+           name: this.data.data.name,
+           chapter_id: this.data.data.chapter_id,
+           subject_id: this.data.data.subject_id,
+           description: this.data.data.description
         });
-            this.topic_id = this.data.topic_id;
+            this.topic_id = this.data.data.topic_id;
+        this.getChapter();
         }
-        this.httpClient.get('../api/v1/get_subject').subscribe(
-            (res) => {
-                if (res["result"]["error"] === false) {
-                    this.subject = res["result"]["data"];
-                } else {
-                    this._snackBar.open(res["result"]["message"], '', {
-                        duration: 2000,
-                    });
-                }
-            },
-            (error) => {
+        this.subject = this.data.subject;
+    }
+getChapter(): void {
+        this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_chapter_by_subject/'+this.topicForm.value.subject_id)
+        .subscribe(
+                (res)=>{
+                    this.chapter = res["result"]["data"];
+              },
+              (error)=>{
                 this._snackBar.open(error["statusText"], '', {
                     duration: 2000,
                 });
-            });
+            }
+        );
     }
-
     onSubmit() {
       if (this.topicForm.invalid) {
             return;
@@ -121,16 +159,15 @@ export class TopicForm {
       this.loading = true;
       var formData = new FormData();
       var url = '';
+      formData.append('name', this.topicForm.value.name);
+        formData.append('chapter_id', this.topicForm.value.chapter_id);
+        formData.append('description', this.topicForm.value.description);
           if(this.topic_id != 0) {
-        formData.append('name', this.topicForm.value.name);
-        formData.append('subject_id', this.topicForm.value.subject_id);
         url = 'update_record/topic/topic_id = '+this.topic_id;
       } else {
-        formData.append('name', this.topicForm.value.name);
-        formData.append('subject_id', this.topicForm.value.subject_id);
         url = 'insert_topic';
       }
-      this.httpClient.post('../api/v1/'+url, formData).subscribe(
+      this.httpClient.post('http://localhost/microview/feringo/api/v1/'+url, formData).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -149,6 +186,46 @@ export class TopicForm {
             }
             );
   }
+editorConfig: AngularEditorConfig = {
+    editable: true,
+    spellcheck: true,
+    height: '100px',
+    minHeight: '100px',
+    maxHeight: '100px',
+    width: 'auto',
+    minWidth: '0',
+    translate: 'yes',
+    enableToolbar: true,
+    showToolbar: true,
+    placeholder: 'Enter text here...',
+    defaultParagraphSeparator: '',
+    defaultFontName: '',
+    defaultFontSize: '',
+    fonts: [
+      { class: 'arial', name: 'Arial' },
+      { class: 'times-new-roman', name: 'Times New Roman' },
+      { class: 'calibri', name: 'Calibri' },
+      { class: 'comic-sans-ms', name: 'Comic Sans MS' }
+    ],
+    customClasses: [
+      {
+        name: 'quote',
+        class: 'quote',
+      },
+      {
+        name: 'redText',
+        class: 'redText'
+      },
+      {
+        name: 'titleText',
+        class: 'titleText',
+        tag: 'h1',
+      },
+    ],
+    uploadUrl: 'v1/image',
+    sanitize: true,
+    toolbarPosition: 'top',
+  };
 
 }
 
@@ -174,7 +251,7 @@ export class TopicDelete {
             return;
       }
       this.loading = true;
-      this.httpClient.get('../api/v1/delete_record/topic/topic_id='+this.topic_id).subscribe(
+      this.httpClient.get('http://localhost/microview/feringo/api/v1/delete_record/topic/topic_id='+this.topic_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {

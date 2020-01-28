@@ -109,7 +109,6 @@ export class ChapterForm {
             'subject_id': new FormControl('', Validators.required)
         });
         this.subject = this.data.subject;
-        console.log(this.data);
         if(this.data.data != null) {
            this.chapterForm.patchValue({
             name: this.data.data.name,

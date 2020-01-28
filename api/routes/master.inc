@@ -108,7 +108,7 @@ $app->post('/insert_topic', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('name' => $data['name'], 'subject_id' => $data['subject_id']), 'topic');
+    $record = $com->insertRecord(array('name' => $data['name'], 'chapter_id' => $data['chapter_id'], 'description' => $data['description']), 'topic');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
@@ -152,10 +152,10 @@ $app->get('/get_topic', function() {
     echoRespnse(201, $res);
 });
 
-$app->get('/get_topic_by_lng_year/:lng/:yr', function($lng, $yr) {
+$app->get('/get_topic_by_chapter/:cid', function($cid) {
     $res = array('error' => true, 'message' => 'No records found');
     $obj = new Common();
-    $data = $obj->selectAll('t.*, s.name AS subject', 'topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id', 's.language_id = ' . $lng . ' GROUP BY t.topic_id');
+    $data = $obj->selectAll('*', 'topic', 'chapter_id = ' . $cid);
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
