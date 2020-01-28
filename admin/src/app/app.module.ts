@@ -23,6 +23,7 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatSelectModule} from '@angular/material/select';
 import { AngularEditorModule } from '@kolkov/angular-editor';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MatCardModule} from '@angular/material/card';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -33,6 +34,7 @@ import { QuestionComponent, QuestionForm, QuestionDelete } from './question/ques
 import { TopicComponent, TopicForm, TopicDelete } from './topic/topic.component';
 import { UserComponent, PictureViewUser, UserForm, UserDelete, BlockForm, ResultForm } from './user/user.component';
 import { YearComponent, YearForm, YearDelete } from './year/year.component';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -58,7 +60,8 @@ import { YearComponent, YearForm, YearDelete } from './year/year.component';
     ResultForm,
     YearComponent,
     YearForm,
-    YearDelete
+    YearDelete,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -85,7 +88,8 @@ import { YearComponent, YearForm, YearDelete } from './year/year.component';
     MatSelectModule,
     AngularEditorModule,
     MatExpansionModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatCardModule
   ],
   entryComponents: [SubjectComponent, SubjectForm, SubjectDelete, QuestionComponent, QuestionForm, QuestionDelete, TopicComponent, TopicForm, TopicDelete, UserComponent, UserForm, PictureViewUser, UserDelete, BlockForm, ResultForm, YearComponent, YearForm, YearDelete],
   providers: [],

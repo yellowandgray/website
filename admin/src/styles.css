@@ -1,6 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
 
-
 @font-face {
     font-family: 'isMail_0';
     src: url('assets/fonts/ismail_0.ttf') format('truetype');
@@ -104,7 +103,10 @@ mat-sidenav-content {
     width: 100%!important;
 }
 
-.mat-fab.mat-primary, .mat-flat-button.mat-primary, .mat-mini-fab.mat-primary, .mat-raised-button.mat-primary {
+.mat-fab.mat-primary,
+.mat-flat-button.mat-primary,
+.mat-mini-fab.mat-primary,
+.mat-raised-button.mat-primary {
     margin-right: 5px !important;
 }
 

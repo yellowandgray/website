@@ -299,3 +299,20 @@ $app->post('/upload_image', function() use ($app) {
     }
     return $res;
 });
+
+$app->post('/loginadmin', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Invalid login details');
+    $data = $app->request->post();
+    $obj = new Common();
+    $record = $obj->selectRow('*', 'admin_login', 'user_name=\'' . $data['user_name'] . '\'');
+    if (count($record) > 0) {        
+        if ($data['password'] == $record['password']) {           
+            $res['error'] = false;
+            $res['message'] = 'Welcome ' . $record['name'];
+            $res['data'] = $record;
+        } else {
+            $res['message'] = 'Username or Password mismatch';
+        }
+    }
+    echoRespnse(201, $res);
+});
