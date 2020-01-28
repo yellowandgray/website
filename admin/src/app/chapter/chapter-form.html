@@ -1,27 +1,37 @@
 <h2 mat-dialog-title>Year</h2>
 <mat-dialog-content class="mat-typography">
-    <form [formGroup]="yearForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="chapterForm" (ngSubmit)="onSubmit()">
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Year</mat-label>
-                    <input matInput placeholder="" required formControlName="year" />
-                    <mat-error>Year is required</mat-error>
+                    <mat-label>Chapter</mat-label>
+                    <input matInput placeholder="" required formControlName="name" />
+                    <mat-error>Chapter is required</mat-error>
                 </mat-form-field>
             </div>
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Status</mat-label>
-                    <input matInput placeholder="" required formControlName="status" />
-                    <mat-error>Status is required</mat-error>
-                </mat-form-field>
-            </div>
+                    <mat-label>Subject</mat-label>
+                    <mat-select required formControlName="subject_id">
+                        <mat-option [value]="row.subject_id" *ngFor="let row of subject">
+                            {{row.name}}
+                    </mat-option>
+                </mat-select>
+                <mat-error>Topic is required</mat-error>
+            </mat-form-field>
         </div>
-        <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
-            <button mat-button [mat-dialog-close]="false">Cancel</button>
-            <button mat-button type="submit" [disabled]="loading">Save</button>
-            <mat-progress-spinner class="example-margin" *ngIf="loading" [mode]="'indeterminate'" [strokeWidth]="3" [diameter]="25">
-            </mat-progress-spinner>
+    </div>
+    <br/>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+        <div fxFlex="100%">
+            <angular-editor id="editor1" formControlName="description" [config]="editorConfig"></angular-editor>
         </div>
-    </form>
+    </div>
+    <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
+        <button mat-button [mat-dialog-close]="false">Cancel</button>
+        <button mat-button type="submit" [disabled]="loading">Save</button>
+        <mat-progress-spinner class="example-margin" *ngIf="loading" [mode]="'indeterminate'" [strokeWidth]="3" [diameter]="25">
+        </mat-progress-spinner>
+    </div>
+</form>
 </mat-dialog-content>

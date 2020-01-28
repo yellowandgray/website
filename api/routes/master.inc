@@ -92,11 +92,11 @@ $app->post('/insert_subject', function() use ($app) {
     echoRespnse(201, $res);
 });
 
-$app->post('/insert_year', function() use ($app) {
+$app->post('/insert_chapter', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('year' => $data['year'], 'status' => $data['status']), 'year');
+    $record = $com->insertRecord(array('name' => $data['name'], 'subject_id' => $data['subject_id'], 'description' => $data['description']), 'chapter');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
@@ -212,22 +212,10 @@ $app->get('/get_year', function() {
     echoRespnse(201, $res);
 });
 
-$app->get('/get_year_by_language/:lid', function($lid) {
+$app->get('/get_chapter_by_subject/:sid', function($sid) {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
-    $data = $com->selectAll('y.year, y.year_id', 'topic AS t LEFT JOIN year AS y ON y.year_id = t.year_id', 't.language_id = ' . $lid . ' GROUP BY y.year_id');
-    if (count($data) > 0) {
-        $res['error'] = false;
-        $res['message'] = 'Records found';
-        $res['data'] = $data;
-    }
-    echoRespnse(201, $res);
-});
-
-$app->get('/get_language', function() {
-    $res = array('error' => true, 'message' => 'No records found');
-    $com = new Common();
-    $data = $com->selectAll('*', 'language', 'language_id > 0');
+    $data = $com->selectAll('*', 'chapter', 'subject_id = ' . $sid);
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
@@ -305,8 +293,8 @@ $app->post('/loginadmin', function() use ($app) {
     $data = $app->request->post();
     $obj = new Common();
     $record = $obj->selectRow('*', 'admin_login', 'user_name=\'' . $data['user_name'] . '\'');
-    if (count($record) > 0) {        
-        if ($data['password'] == $record['password']) {           
+    if (count($record) > 0) {
+        if ($data['password'] == $record['password']) {
             $res['error'] = false;
             $res['message'] = 'Welcome ' . $record['name'];
             $res['data'] = $record;
@@ -316,3 +304,4 @@ $app->post('/loginadmin', function() use ($app) {
     }
     echoRespnse(201, $res);
 });
+
