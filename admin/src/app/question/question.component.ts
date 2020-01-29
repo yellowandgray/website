@@ -21,6 +21,8 @@ export class QuestionComponent implements OnInit {
     difficult = [];
     loading = false;
     file_name: string = 'Select Picture';
+    selected_subject_index = 0;
+    selected_chapter_index = 0;
     selected_topic_index = 0;
     constructor(public dialog: MatDialog, private httpClient: HttpClient, private _snackBar: MatSnackBar) { }
     ngOnInit() {
@@ -40,7 +42,8 @@ export class QuestionComponent implements OnInit {
       );
   }
    getChapter(ev): void {
-this.chapter = [];
+        this.chapter = [];
+        this.selected_subject_index = ev.index;
         this.httpClient.get<any>('http://localhost/mushak/feringo/api/v1/get_chapter_by_subject/'+this.subject[ev.index].subject_id)
         .subscribe(
                 (res)=>{
@@ -55,6 +58,7 @@ this.chapter = [];
     }    
 getTopic(ev): void {
 this.topic = [];
+this.selected_chapter_index = ev.index;
 if(typeof this.chapter[ev.index] !== 'undefined') {
         this.httpClient.get<any>('http://localhost/mushak/feringo/api/v1/get_topic_by_chapter/'+this.chapter[ev.index].chapter_id)
         .subscribe(
@@ -91,6 +95,8 @@ if(typeof this.question[ev.index] !== 'undefined') {
         if (id != 0) {
             this[res].forEach(val => {
                 if (parseInt(val.question_id) === parseInt(id)) {
+                    val.subject_id = this.subject[this.selected_subject_index].subject_id;
+                    val.chapter_id = this.chapter[this.selected_chapter_index].chapter_id;
                     data = val;
                     return false;
                 }
@@ -99,7 +105,7 @@ if(typeof this.question[ev.index] !== 'undefined') {
         const dialogRef = this.dialog.open(QuestionForm, {
             minWidth: "40%",
             maxWidth: "40%",
-            data: data
+            data: {data: data, subject: this.subject}
         });
 
         dialogRef.afterClosed().subscribe(result => {
@@ -108,8 +114,6 @@ if(typeof this.question[ev.index] !== 'undefined') {
             }
         });
     }
-
-
     confirmDelete(id): void {
         var data = null;
         if (id != 0) {
@@ -132,7 +136,7 @@ if(typeof this.question[ev.index] !== 'undefined') {
         this.loading = true;
         var formData = new FormData();
         formData.append('file', fileData);
-        this.httpClient.post('../api/v1/import_question', formData).subscribe(
+        this.httpClient.post('http://localhost/mushak/feringo/api/v1import_question', formData).subscribe(
             (res) => {
                 this.loading = false;
                 this._snackBar.open(res["result"]["message"], '', {
@@ -154,21 +158,26 @@ if(typeof this.question[ev.index] !== 'undefined') {
     templateUrl: 'question-form.html',
 })
 export class QuestionForm {
-    image_url: string = '../api/v1/';
+    image_url: string = 'http://localhost/mushak/feringo/api/v1//';
     questionForm: FormGroup;
     loading = false;
     question_id = 0;
     question_image: string = 'Select question Image';
     image_path: string = '';
+    subject: any[];
+    chapter: any[];
     topic: any[];
-    year: any[];
+    difficult: any[];
     constructor(
         public dialogRef: MatDialogRef<QuestionForm>,
         @Inject(MAT_DIALOG_DATA) public data: any,
         private _snackBar: MatSnackBar,
         private httpClient: HttpClient) {
         this.questionForm = new FormGroup({
+            'subject_id': new FormControl('', Validators.required),
+            'chapter_id': new FormControl('', Validators.required),
             'topic_id': new FormControl('', Validators.required),
+            'difficult_id': new FormControl('', Validators.required),
             'question': new FormControl('', Validators.required),
             'question_no': new FormControl('', Validators.required),
             'direction': new FormControl('', Validators.required),
@@ -179,13 +188,15 @@ export class QuestionForm {
             'd': new FormControl('', Validators.required),
             'answer': new FormControl('', Validators.required),
         });
-        if (this.data != null) {
+        if (this.data.data != null) {
             this.questionForm.patchValue({
-                topic_id: this.data.topic_id,
-                question: this.data.name,
-                question_no: this.data.question_no,
-                direction: this.data.direction,
-                year_id: this.data.year_id,
+                subject_id: this.data.data.subject_id,
+                chapter_id: this.data.data.chapter_id,
+                difficult_id: this.data.data.difficult_id,
+                topic_id: this.data.data.topic_id,
+                question: this.data.data.name,
+                question_no: this.data.data.question_no,
+                direction: this.data.data.direction,
                 a: this.data.a,
                 b: this.data.b,
                 c: this.data.c,
@@ -193,39 +204,48 @@ export class QuestionForm {
                 answer: this.data.answer,
             });
             this.question_id = this.data.question_id;
+            this.image_path = this.data.data.image_path;
+            this.getChapter();
         }
-        this.httpClient.get('../api/v1/get_topic').subscribe(
-            (res) => {
-                if (res["result"]["error"] === false) {
-                    this.topic = res["result"]["data"];
-                } else {
-                    this._snackBar.open(res["result"]["message"], '', {
-                        duration: 2000,
-                    });
-                }
-            },
-            (error) => {
+        this.subject = this.data.subject;
+        this.httpClient.get<any>('http://localhost/mushak/feringo/api/v1/get_difficult')
+        .subscribe(
+                (res)=>{
+                    this.difficult = res["result"]["data"];
+              },
+              (error)=>{
                 this._snackBar.open(error["statusText"], '', {
                     duration: 2000,
                 });
-            });
-        this.httpClient.get('../api/v1/get_year').subscribe(
-            (res) => {
-                if (res["result"]["error"] === false) {
-                    this.year = res["result"]["data"];
-                } else {
-                    this._snackBar.open(res["result"]["message"], '', {
-                        duration: 2000,
-                    });
-                }
-            },
-            (error) => {
-                this._snackBar.open(error["statusText"], '', {
-                    duration: 2000,
-                });
-            });
+            }
+        );
     }
-
+    getChapter(): void {
+        this.httpClient.get<any>('http://localhost/mushak/feringo/api/v1/get_chapter_by_subject/'+this.questionForm.value.subject_id)
+        .subscribe(
+                (res)=>{
+                    this.chapter = res["result"]["data"];
+              },
+              (error)=>{
+                this._snackBar.open(error["statusText"], '', {
+                    duration: 2000,
+                });
+            }
+        );
+    }    
+getTopic(): void {
+        this.httpClient.get<any>('http://localhost/mushak/feringo/api/v1/get_topic_by_chapter/'+this.questionForm.value.chapter_id)
+        .subscribe(
+                (res)=>{
+                    this.topic = res["result"]["data"];
+              },
+              (error)=>{
+                this._snackBar.open(error["statusText"], '', {
+                    duration: 2000,
+                });
+            }
+        );
+    }
     onSubmit() {
         if (this.questionForm.invalid) {
             return;
@@ -233,34 +253,23 @@ export class QuestionForm {
         this.loading = true;
         var formData = new FormData();
         var url = '';
-        if (this.question_id != 0) {
-            formData.append('topic_id', this.questionForm.value.topic_id);
+        formData.append('topic_id', this.questionForm.value.topic_id);
+            formData.append('difficult_id', this.questionForm.value.difficult_id);
             formData.append('name', this.questionForm.value.question);
             formData.append('image_path', this.image_path);
             formData.append('question_no', this.questionForm.value.question_no);
             formData.append('direction', this.questionForm.value.direction);
-            formData.append('year_id', this.questionForm.value.year_id);
             formData.append('a', this.questionForm.value.a);
             formData.append('b', this.questionForm.value.b);
             formData.append('c', this.questionForm.value.c);
             formData.append('d', this.questionForm.value.d);
             formData.append('answer', this.questionForm.value.answer);
+        if (this.question_id != 0) {
             url = 'update_record/question/question_id = ' + this.question_id;
         } else {
-            formData.append('topic_id', this.questionForm.value.topic_id);
-            formData.append('question', this.questionForm.value.question);
-            formData.append('question_image', this.image_path);
-            formData.append('question_no', this.questionForm.value.question_no);
-            formData.append('direction', this.questionForm.value.direction);
-            formData.append('year_id', this.questionForm.value.year_id);
-            formData.append('a', this.questionForm.value.a);
-            formData.append('b', this.questionForm.value.b);
-            formData.append('c', this.questionForm.value.c);
-            formData.append('d', this.questionForm.value.d);
-            formData.append('answer', this.questionForm.value.answer);
             url = 'insert_question';
         }
-        this.httpClient.post('../api/v1/' + url, formData).subscribe(
+        this.httpClient.post('http://localhost/mushak/feringo/api/v1/' + url, formData).subscribe(
             (res) => {
                 this.loading = false;
                 if (res["result"]["error"] === false) {
@@ -286,7 +295,7 @@ export class QuestionForm {
         this.loading = true;
         var formData = new FormData();
         formData.append('file', fileData);
-        this.httpClient.post('../api/v1/upload_file', formData).subscribe(
+        this.httpClient.post('http://localhost/mushak/feringo/api/v1//upload_file', formData).subscribe(
             (res) => {
                 this.loading = false;
                 if (res["result"]["error"] === false) {
@@ -304,15 +313,12 @@ export class QuestionForm {
                 });
             });
     }
-
-
     removeMedia(url) {
         this[url] = '';
         if (url === 'image_path') {
             this.question_image = 'Select Question Image';
         }
     }
-
     editorConfig: AngularEditorConfig = {
         editable: true,
         spellcheck: true,
@@ -349,7 +355,7 @@ export class QuestionForm {
                 tag: 'h1',
             },
         ],
-        uploadUrl: '../api/v1/upload_image',
+        uploadUrl: 'http://localhost/mushak/feringo/api/v1//upload_image',
         sanitize: true,
         toolbarPosition: 'top',
     };
@@ -379,7 +385,7 @@ export class QuestionDelete {
             return;
         }
         this.loading = true;
-        this.httpClient.get('../api/v1/delete_record/question/question_id=' + this.question_id).subscribe(
+        this.httpClient.get('http://localhost/mushak/feringo/api/v1//delete_record/question/question_id=' + this.question_id).subscribe(
             (res) => {
                 this.loading = false;
                 if (res["result"]["error"] === false) {
