@@ -16,14 +16,15 @@ import { Observable } from 'rxjs';
 export class DifficultyLevelComponent implements OnInit {
 
   constructor(public dialog: MatDialog, private httpClient: HttpClient, private _snackBar: MatSnackBar) { }
-  difficulty = [];
+  difficult = [];
   ngOnInit() {
+    this.getDifficult();
   }
-  getsubject(): void {
-    this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_difficulty')
+  getDifficult(): void {
+    this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_difficult')
       .subscribe(
         (res) => {
-          this.difficulty = res["result"]["data"];
+          this.difficult = res["result"]["data"];
         },
         (error) => {
           this._snackBar.open(error["statusText"], '', {
@@ -37,20 +38,20 @@ export class DifficultyLevelComponent implements OnInit {
     var data = null;
     if (id != 0) {
       this[res].forEach(val => {
-        if (parseInt(val.difficulty_id) === parseInt(id)) {
+        if (parseInt(val.difficult_id) === parseInt(id)) {
           data = val;
           return false;
         }
       });
     }
-    const dialogRef = this.dialog.open(DifficultyForm, {
+    const dialogRef = this.dialog.open(DifficultForm, {
       minWidth: "40%",
       maxWidth: "40%",
       data: data
     });
     dialogRef.afterClosed().subscribe(result => {
       if (typeof result != 'undefined' && result !== false && result !== 'false') {
-        this.getsubject();
+        this.getDifficult();
       }
     });
   }
@@ -59,14 +60,14 @@ export class DifficultyLevelComponent implements OnInit {
         if (id != 0) {
           data = id;
         }
-        const dialogRef = this.dialog.open(DifficaltyDelete, {
+        const dialogRef = this.dialog.open(DifficultDelete, {
           minWidth: "40%",
           maxWidth: "40%",
           data: data
         });
         dialogRef.afterClosed().subscribe(result => {
           if (typeof result !== 'undefined' && result !== false && result !== 'false') {
-            this.getsubject();
+            this.getDifficult();
           }
         });
   }
@@ -75,46 +76,46 @@ export class DifficultyLevelComponent implements OnInit {
 
 
 @Component({
-  selector: 'difficulty-form',
-  templateUrl: 'difficulty-form.html',
+  selector: 'difficult-form',
+  templateUrl: 'difficult-form.html',
 })
-export class DifficultyForm {
-  difficultyForm: FormGroup;
+export class DifficultForm {
+  difficultForm: FormGroup;
   loading = false;
-  difficulty_id = 0;
+  difficult_id = 0;
   constructor(
-    public dialogRef: MatDialogRef<DifficultyForm>,
+    public dialogRef: MatDialogRef<DifficultForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
-    this.difficultyForm = new FormGroup({
+    this.difficultForm = new FormGroup({
       'title': new FormControl('', Validators.required),
       'description': new FormControl('', Validators.required)
     });
     if (this.data != null) {
-      this.difficultyForm.patchValue({
-        title: this.data.title,
+      this.difficultForm.patchValue({
+        title: this.data.name,
         description: this.data.description,
       });
-      this.difficulty_id = this.data.difficulty_id;
+      this.difficult_id = this.data.difficult_id;
     }
   }
 
   onSubmit() {
-    if (this.difficultyForm.invalid) {
+    if (this.difficultForm.invalid) {
       return;
     }
     this.loading = true;
     var formData = new FormData();
     var url = '';
-    if (this.difficulty_id != 0) {
-      formData.append('title', this.difficultyForm.value.title);
-      formData.append('description', this.difficultyForm.value.description);
-      url = 'update_record/difficulty/difficulty_id = ' + this.difficulty_id;
+    if (this.difficult_id != 0) {
+      formData.append('title', this.difficultForm.value.title);
+      formData.append('description', this.difficultForm.value.description);
+      url = 'update_record/difficult/difficult_id = ' + this.difficult_id;
     } else {
-      formData.append('title', this.difficultyForm.value.title);
-      formData.append('description', this.difficultyForm.value.description);
-      url = 'insert_difficulty';
+      formData.append('title', this.difficultForm.value.title);
+      formData.append('description', this.difficultForm.value.description);
+      url = 'insert_difficult';
     }
     this.httpClient.post('http://localhost/project/feringo/api/v1/' + url, formData).subscribe(
       (res) => {
@@ -181,27 +182,27 @@ export class DifficultyForm {
 
 
 @Component({
-  selector: 'difficulty-delete-confirmation',
-  templateUrl: 'difficulty-delete-confirmation.html',
+  selector: 'difficult-delete-confirmation',
+  templateUrl: 'difficult-delete-confirmation.html',
 })
-export class DifficaltyDelete {
+export class DifficultDelete {
   loading = false;
-  difficulty_id = 0;
+  difficult_id = 0;
   constructor(
-    public dialogRef: MatDialogRef<DifficaltyDelete>,
+    public dialogRef: MatDialogRef<DifficultDelete>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
     if (this.data != null) {
-      this.subject_id = this.data;
+      this.difficult_id = this.data;
     }
   }
   confirmDelete() {
-    if (this.difficulty_id == null || this.difficulty_id == 0) {
+    if (this.difficult_id == null || this.difficult_id == 0) {
       return;
     }
     this.loading = true;
-    this.httpClient.get('http://localhost/project/feringo/api/v1/delete_record/difficulty/difficulty_id=' + this.difficulty_id).subscribe(
+    this.httpClient.get('http://localhost/project/feringo/api/v1/delete_record/difficult/difficult_id=' + this.difficult_id).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {

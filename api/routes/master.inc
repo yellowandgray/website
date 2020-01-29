@@ -128,11 +128,11 @@ $app->post('/insert_question', function() use ($app) {
     echoRespnse(201, $res);
 });
 
-$app->post('/insert_difficulty', function() use ($app) {
+$app->post('/insert_difficult', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('title' => $data['title'], 'description' => $data['description']), 'difficulty');
+    $record = $com->insertRecord(array('name' => $data['title'], 'description' => $data['description']), 'difficult');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
@@ -236,6 +236,19 @@ $app->get('/get_chapter_by_subject/:sid', function($sid) {
     }
     echoRespnse(201, $res);
 });
+
+$app->get('/get_difficult', function() {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('*', 'difficult', 'difficult_id > 0');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
 
 $app->post('/import_question', function() use($app) {
     $file = $_FILES;
