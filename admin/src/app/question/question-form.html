@@ -2,26 +2,50 @@
 <mat-dialog-content class="mat-typography">
     <form [formGroup]="questionForm" (ngSubmit)="onSubmit()">
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-            <div fxFlex="100%">
+            <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Select Year</mat-label>
-                    <mat-select required formControlName="year_id">
-                        <mat-option [value]="row.year_id" *ngFor="let row of year">
-                            {{row.year}}
+                    <mat-label>Select Subject</mat-label>
+                    <mat-select required formControlName="subject_id" (selectionChange)="getChapter()">
+                        <mat-option [value]="row.subject_id" *ngFor="let row of subject">
+                            {{row.name}}
                         </mat-option>
                     </mat-select>
-                    <mat-error>Topic is required</mat-error>
+                    <mat-error>Subject is required</mat-error>
                 </mat-form-field>
             </div>
-            <div fxFlex="100%">
+            <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Topic</mat-label>
+                    <mat-label>Chapter</mat-label>
+                    <mat-select required formControlName="chapter_id" (selectionChange)="getTopic()">
+                        <mat-option [value]="row.chapter_id" *ngFor="let row of chapter">
+                            {{row.name}}
+                        </mat-option>
+                    </mat-select>
+                    <mat-error>Chapter is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Select Topic</mat-label>
                     <mat-select required formControlName="topic_id">
                         <mat-option [value]="row.topic_id" *ngFor="let row of topic">
                             {{row.name}}
                         </mat-option>
                     </mat-select>
                     <mat-error>Topic is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Difficult</mat-label>
+                    <mat-select required formControlName="difficult_id">
+                        <mat-option [value]="row.difficult_id" *ngFor="let row of difficult">
+                            {{row.name}}
+                        </mat-option>
+                    </mat-select>
+                    <mat-error>Difficult is required</mat-error>
                 </mat-form-field>
             </div>
         </div>

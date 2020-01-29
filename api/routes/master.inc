@@ -120,7 +120,7 @@ $app->post('/insert_question', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('year_id' => $data['year_id'], 'topic_id' => $data['topic_id'], 'name' => $data['question'], 'question_no' => $data['question_no'], 'direction' => $data['direction'], 'image_path' => $data['question_image'], 'a' => $data['a'], 'b' => $data['b'], 'c' => $data['c'], 'd' => $data['d'], 'answer' => $data['answer']), 'question');
+    $record = $com->insertRecord(array('difficult_id' => $data['difficult_id'], 'topic_id' => $data['topic_id'], 'name' => $data['question'], 'question_no' => $data['question_no'], 'direction' => $data['direction'], 'image_path' => $data['question_image'], 'a' => $data['a'], 'b' => $data['b'], 'c' => $data['c'], 'd' => $data['d'], 'answer' => $data['answer']), 'question');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
@@ -201,10 +201,10 @@ $app->get('/get_question', function() {
     echoRespnse(201, $res);
 });
 
-$app->get('/get_question_by_topic_n_year/:tid/:yid', function($tid, $yid) {
+$app->get('/get_question_by_topic/:tid', function($tid) {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
-    $data = $com->selectAll('*', 'question', 'question_id > 0 AND topic_id = ' . $tid, ' AND year_id = ' . $yid);
+    $data = $com->selectAll('*', 'question', 'question_id > 0 AND topic_id = ' . $tid);
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
