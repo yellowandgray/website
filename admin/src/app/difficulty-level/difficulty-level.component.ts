@@ -54,6 +54,22 @@ export class DifficultyLevelComponent implements OnInit {
       }
     });
   }
+    confirmDelete(id): void {
+        var data = null;
+        if (id != 0) {
+          data = id;
+        }
+        const dialogRef = this.dialog.open(DifficaltyDelete, {
+          minWidth: "40%",
+          maxWidth: "40%",
+          data: data
+        });
+        dialogRef.afterClosed().subscribe(result => {
+          if (typeof result !== 'undefined' && result !== false && result !== 'false') {
+            this.getsubject();
+          }
+        });
+  }
 }
 
 
@@ -161,4 +177,47 @@ export class DifficultyForm {
     toolbarPosition: 'top',
   };
 
+}
+
+
+@Component({
+  selector: 'difficulty-delete-confirmation',
+  templateUrl: 'difficulty-delete-confirmation.html',
+})
+export class DifficaltyDelete {
+  loading = false;
+  difficulty_id = 0;
+  constructor(
+    public dialogRef: MatDialogRef<DifficaltyDelete>,
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {
+    if (this.data != null) {
+      this.subject_id = this.data;
+    }
+  }
+  confirmDelete() {
+    if (this.difficulty_id == null || this.difficulty_id == 0) {
+      return;
+    }
+    this.loading = true;
+    this.httpClient.get('http://localhost/project/feringo/api/v1/delete_record/difficulty/difficulty_id=' + this.difficulty_id).subscribe(
+      (res) => {
+        this.loading = false;
+        if (res["result"]["error"] === false) {
+          this.dialogRef.close(true);
+        } else {
+          this._snackBar.open(res["result"]["message"], '', {
+            duration: 2000,
+          });
+        }
+      },
+      (error) => {
+        this.loading = false;
+        this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+        });
+      }
+    );
+  }
 }

@@ -128,6 +128,19 @@ $app->post('/insert_question', function() use ($app) {
     echoRespnse(201, $res);
 });
 
+$app->post('/insert_difficulty', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to insert');
+    $data = $app->request->post();
+    $com = new Common();
+    $record = $com->insertRecord(array('title' => $data['title'], 'description' => $data['description']), 'difficulty');
+    if ($record > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Record inserted successfully';
+    }
+    echoRespnse(201, $res);
+});
+
+
 $app->get('/get_subject', function() {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
