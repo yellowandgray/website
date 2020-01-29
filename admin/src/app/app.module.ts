@@ -34,6 +34,7 @@ import { QuestionComponent, QuestionForm, QuestionDelete } from './question/ques
 import { TopicComponent, TopicForm, TopicDelete } from './topic/topic.component';
 import { ChapterComponent, ChapterForm, ChapterDelete } from './chapter/chapter.component';
 import { LoginComponent } from './login/login.component';
+import { DifficultyLevelComponent, DifficultyForm } from './difficulty-level/difficulty-level.component';
 
 
 
@@ -54,7 +55,9 @@ import { LoginComponent } from './login/login.component';
     ChapterComponent,
     ChapterForm,
     ChapterDelete,
-    LoginComponent
+    LoginComponent,
+    DifficultyLevelComponent,
+    DifficultyForm
   ],
   imports: [
     BrowserModule,
@@ -84,7 +87,7 @@ import { LoginComponent } from './login/login.component';
     MatButtonToggleModule,
     MatCardModule
   ],
-  entryComponents: [SubjectComponent, SubjectForm, SubjectDelete, QuestionComponent, QuestionForm, QuestionDelete, TopicComponent, TopicForm, TopicDelete, ChapterComponent, ChapterForm, ChapterDelete],
+  entryComponents: [SubjectComponent, SubjectForm, SubjectDelete, QuestionComponent, QuestionForm, QuestionDelete, TopicComponent, TopicForm, TopicDelete, ChapterComponent, ChapterForm, ChapterDelete, DifficultyLevelComponent, DifficultyForm],
   providers: [],
   bootstrap: [AppComponent]
 })
