@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.2
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Jan 29, 2020 at 02:01 AM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.2.26
+-- Host: 127.0.0.1
+-- Generation Time: Jan 29, 2020 at 06:59 AM
+-- Server version: 10.1.38-MariaDB
+-- PHP Version: 7.3.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -33,7 +33,7 @@ CREATE TABLE `admin_login` (
   `name` varchar(255) NOT NULL,
   `user_name` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `created_by` int(11) NOT NULL,
   `updated_by` int(11) NOT NULL
@@ -57,11 +57,11 @@ CREATE TABLE `chapter` (
   `subject_id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL DEFAULT '',
   `description` varchar(255) NOT NULL DEFAULT '',
-  `status` int(1) NOT NULL DEFAULT 1,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `status` int(1) NOT NULL DEFAULT '1',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `created_by` int(11) NOT NULL DEFAULT 1,
-  `updated_by` int(11) NOT NULL DEFAULT 1
+  `created_by` int(11) NOT NULL DEFAULT '1',
+  `updated_by` int(11) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -71,6 +71,22 @@ CREATE TABLE `chapter` (
 INSERT INTO `chapter` (`chapter_id`, `subject_id`, `name`, `description`, `status`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
 (2, 1, 'Chapter', 'SDf', 1, '2020-01-28 18:12:48', '0000-00-00 00:00:00', 1, 1),
 (3, 1, 'sdfa', 'sdfa', 1, '2020-01-28 18:13:20', '0000-00-00 00:00:00', 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `difficult`
+--
+
+CREATE TABLE `difficult` (
+  `difficult_id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL DEFAULT '',
+  `description` varchar(500) NOT NULL DEFAULT '',
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `created_by` int(11) NOT NULL DEFAULT '1',
+  `updated_by` int(11) NOT NULL DEFAULT '1'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -91,7 +107,7 @@ CREATE TABLE `question` (
   `d` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `answer` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `question_no` int(11) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `created_by` int(11) NOT NULL,
   `updated_by` int(11) NOT NULL
@@ -108,10 +124,10 @@ CREATE TABLE `subject` (
   `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `image_path` varchar(255) NOT NULL,
   `description` varchar(500) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `created_by` int(11) NOT NULL DEFAULT 1,
-  `updated_by` int(11) NOT NULL DEFAULT 1
+  `created_by` int(11) NOT NULL DEFAULT '1',
+  `updated_by` int(11) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -130,13 +146,13 @@ INSERT INTO `subject` (`subject_id`, `name`, `image_path`, `description`, `creat
 
 CREATE TABLE `topic` (
   `topic_id` int(11) NOT NULL,
-  `chapter_id` int(11) NOT NULL DEFAULT 0,
+  `chapter_id` int(11) NOT NULL DEFAULT '0',
   `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `description` varchar(255) NOT NULL DEFAULT '',
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `created_by` int(11) NOT NULL DEFAULT 1,
-  `updated_by` int(11) DEFAULT 1
+  `created_by` int(11) NOT NULL DEFAULT '1',
+  `updated_by` int(11) DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -154,6 +170,12 @@ ALTER TABLE `admin_login`
 --
 ALTER TABLE `chapter`
   ADD PRIMARY KEY (`chapter_id`);
+
+--
+-- Indexes for table `difficult`
+--
+ALTER TABLE `difficult`
+  ADD PRIMARY KEY (`difficult_id`);
 
 --
 -- Indexes for table `question`
@@ -188,6 +210,12 @@ ALTER TABLE `admin_login`
 --
 ALTER TABLE `chapter`
   MODIFY `chapter_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `difficult`
+--
+ALTER TABLE `difficult`
+  MODIFY `difficult_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `question`

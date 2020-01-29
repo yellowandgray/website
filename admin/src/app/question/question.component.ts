@@ -14,79 +14,78 @@ import { Observable } from 'rxjs';
     styleUrls: ['./question.component.css']
 })
 export class QuestionComponent implements OnInit {
-
-    topic = [];
     question = [];
-    year = [];
-    language = [];
+    subject = [];
+    chapter = [];
+    topic = [];
+    difficult = [];
     loading = false;
     file_name: string = 'Select Picture';
-    selected_language = '';
-    selected_year = '';
     selected_topic_index = 0;
     constructor(public dialog: MatDialog, private httpClient: HttpClient, private _snackBar: MatSnackBar) { }
-
     ngOnInit() {
-        this.getLanguage();
+        this.getSubject();
     }
-    getLanguage(): void {
-        this.httpClient.get<any>('../api/v1/get_language')
-            .subscribe(
-                (res) => {
-                    this.language = res["result"]["data"];
-                    this.selected_language = res["result"]["data"][0]['language_id'];
-                    this.getYearByLanguage();
-                },
-                (error) => {
-                    this._snackBar.open(error["statusText"], '', {
-                        duration: 2000,
-                    });
-                }
-            );
-    }
-    getQuestionsByTopic(ev): void {
-        var tid = this.topic[ev.index].topic_id;
-        this.selected_topic_index = ev.index;
-        this.httpClient.get<any>('../api/v1/get_question_by_topic_n_year/' + tid+'/'+this.selected_year)
-            .subscribe(
-                (res) => {
-                    this.question = res["result"]["data"];
-                },
-                (error) => {
-                    this._snackBar.open(error["statusText"], '', {
-                        duration: 2000,
-                    });
-                }
-            );
-    }
-    getTopicByLngNYear(ev): void {
-        this.selected_year = this.year[ev.index].year_id;
-        this.httpClient.get<any>('../api/v1/get_topic_by_lng_year/' + this.selected_language + '/' + this.year[ev.index].year_id)
-            .subscribe(
-                (res) => {
+    getSubject(): void {
+    this.httpClient.get<any>('http://localhost/mushak/feringo/api/v1/get_subject')
+      .subscribe(
+        (res) => {
+          this.subject = res["result"]["data"];
+        },
+        (error) => {
+          this._snackBar.open(error["statusText"], '', {
+            duration: 2000,
+          });
+        }
+      );
+  }
+   getChapter(ev): void {
+this.chapter = [];
+        this.httpClient.get<any>('http://localhost/mushak/feringo/api/v1/get_chapter_by_subject/'+this.subject[ev.index].subject_id)
+        .subscribe(
+                (res)=>{
+                    this.chapter = res["result"]["data"];
+              },
+              (error)=>{
+                this._snackBar.open(error["statusText"], '', {
+                    duration: 2000,
+                });
+            }
+        );
+    }    
+getTopic(ev): void {
+this.topic = [];
+if(typeof this.chapter[ev.index] !== 'undefined') {
+        this.httpClient.get<any>('http://localhost/mushak/feringo/api/v1/get_topic_by_chapter/'+this.chapter[ev.index].chapter_id)
+        .subscribe(
+                (res)=>{
                     this.topic = res["result"]["data"];
-                },
-                (error) => {
-                    this._snackBar.open(error["statusText"], '', {
-                        duration: 2000,
-                    });
-                }
-            );
+              },
+              (error)=>{
+                this._snackBar.open(error["statusText"], '', {
+                    duration: 2000,
+                });
+            }
+        );
     }
-    getYearByLanguage(): void {
-        this.httpClient.get<any>('../api/v1/get_year')
-            .subscribe(
-                (res) => {
-                    this.year = res["result"]["data"];
-                },
-                (error) => {
-                    this._snackBar.open(error["statusText"], '', {
-                        duration: 2000,
-                    });
-                }
-            );
     }
-
+    getQuestion(ev): void {
+this.question = [];
+this.selected_topic_index = ev.index;
+if(typeof this.question[ev.index] !== 'undefined') {
+        this.httpClient.get<any>('http://localhost/mushak/feringo/api/v1/get_question_by_topic/'+this.topic[ev.index].chapter_id)
+        .subscribe(
+                (res)=>{
+                    this.question = res["result"]["data"];
+              },
+              (error)=>{
+                this._snackBar.open(error["statusText"], '', {
+                    duration: 2000,
+                });
+            }
+        );
+    }
+    }
     openDialog(id, res): void {
         var data = null;
         if (id != 0) {
@@ -104,8 +103,8 @@ export class QuestionComponent implements OnInit {
         });
 
         dialogRef.afterClosed().subscribe(result => {
-            if (result !== false && result !== 'false') {
-                //this.getQuestionsByTopic();
+            if (typeof result !== 'undefined' && result !== false && result !== 'false') {
+                this.getQuestion({index: this.selected_topic_index});
             }
         });
     }
@@ -122,8 +121,8 @@ export class QuestionComponent implements OnInit {
             data: data
         });
         dialogRef.afterClosed().subscribe(result => {
-            if (result !== false && result !== 'false') {
-                this.getQuestionsByTopic({index: this.selected_topic_index});
+            if (typeof result !== 'undefined' && result !== false && result !== 'false') {
+                this.getQuestion({index: this.selected_topic_index});
             }
         });
     }
