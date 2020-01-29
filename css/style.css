@@ -145,11 +145,11 @@ body {
 }
 
 .carousel .carousel-item:first-of-type {
-    background-image: url("../img/custom-slider/001.jpg");
+    background-image: url("../img/custom-slider/002.jpg");
 }
 
 .carousel .carousel-item:nth-of-type(2) {
-    background-image: url("../img/custom-slider/002.jpg");
+    background-image: url("../img/custom-slider/001.jpg");
 }
 
 .carousel .carousel-item:nth-of-type(3) {
