@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 29, 2020 at 06:59 AM
+-- Generation Time: Jan 29, 2020 at 08:08 AM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.4
 
@@ -96,7 +96,6 @@ CREATE TABLE `difficult` (
 
 CREATE TABLE `question` (
   `question_id` int(11) NOT NULL,
-  `year_id` int(11) NOT NULL,
   `topic_id` int(11) NOT NULL,
   `name` text CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `image_path` varchar(500) NOT NULL DEFAULT '',
@@ -107,6 +106,7 @@ CREATE TABLE `question` (
   `d` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `answer` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `question_no` int(11) NOT NULL,
+  `difficult_id` int(11) NOT NULL DEFAULT '0',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `created_by` int(11) NOT NULL,
@@ -154,6 +154,13 @@ CREATE TABLE `topic` (
   `created_by` int(11) NOT NULL DEFAULT '1',
   `updated_by` int(11) DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `topic`
+--
+
+INSERT INTO `topic` (`topic_id`, `chapter_id`, `name`, `description`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
+(2, 2, 'My topic', 'Topic', '2020-01-29 06:33:20', '0000-00-00 00:00:00', 1, 1);
 
 --
 -- Indexes for dumped tables
@@ -233,7 +240,7 @@ ALTER TABLE `subject`
 -- AUTO_INCREMENT for table `topic`
 --
 ALTER TABLE `topic`
-  MODIFY `topic_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `topic_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
