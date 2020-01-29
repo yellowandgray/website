@@ -5,6 +5,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { AngularEditorConfig } from '@kolkov/angular-editor';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -153,8 +154,7 @@ formData.append('name', this.chapterForm.value.name);
             }
             );
   }
-
-editorConfig: AngularEditorConfig = {
+  editorConfig: AngularEditorConfig = {
     editable: true,
     spellcheck: true,
     height: '100px',
@@ -194,7 +194,6 @@ editorConfig: AngularEditorConfig = {
     sanitize: true,
     toolbarPosition: 'top',
   };
-
 }
 
 @Component({

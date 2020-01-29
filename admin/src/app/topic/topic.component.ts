@@ -5,6 +5,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { AngularEditorConfig } from '@kolkov/angular-editor';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -18,6 +19,7 @@ subject = [];
     topic = [];
     constructor(public dialog: MatDialog, private httpClient: HttpClient, private _snackBar: MatSnackBar) { }
     selectedtopicind = 0;
+    selectedchapind = 0;
     ngOnInit() {
         this.getsubject();
     }
