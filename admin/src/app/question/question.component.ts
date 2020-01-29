@@ -76,7 +76,7 @@ if(typeof this.chapter[ev.index] !== 'undefined') {
     getQuestion(ev): void {
 this.question = [];
 this.selected_topic_index = ev.index;
-if(typeof this.question[ev.index] !== 'undefined') {
+if(typeof this.topic[ev.index] !== 'undefined') {
         this.httpClient.get<any>('http://localhost/mushak/feringo/api/v1/get_question_by_topic/'+this.topic[ev.index].chapter_id)
         .subscribe(
                 (res)=>{
@@ -181,7 +181,6 @@ export class QuestionForm {
             'question': new FormControl('', Validators.required),
             'question_no': new FormControl('', Validators.required),
             'direction': new FormControl('', Validators.required),
-            'year_id': new FormControl('', Validators.required),
             'a': new FormControl('', Validators.required),
             'b': new FormControl('', Validators.required),
             'c': new FormControl('', Validators.required),
@@ -197,15 +196,16 @@ export class QuestionForm {
                 question: this.data.data.name,
                 question_no: this.data.data.question_no,
                 direction: this.data.data.direction,
-                a: this.data.a,
-                b: this.data.b,
-                c: this.data.c,
-                d: this.data.d,
-                answer: this.data.answer,
+                a: this.data.data.a,
+                b: this.data.data.b,
+                c: this.data.data.c,
+                d: this.data.data.d,
+                answer: this.data.data.answer,
             });
-            this.question_id = this.data.question_id;
+            this.question_id = this.data.data.question_id;
             this.image_path = this.data.data.image_path;
             this.getChapter();
+            this.getTopic();
         }
         this.subject = this.data.subject;
         this.httpClient.get<any>('http://localhost/mushak/feringo/api/v1/get_difficult')
