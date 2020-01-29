@@ -23,7 +23,7 @@ export class ChapterComponent implements OnInit {
     this.getsubject();
   }
 getsubject(): void {
-    this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_subject')
+    this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_subject')
       .subscribe(
         (res) => {
           this.subject = res["result"]["data"];
@@ -37,7 +37,7 @@ getsubject(): void {
   }
   getChapter(ev): void {
     this.selectedchapind = ev.index;
-        this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_chapter_by_subject/'+this.subject[ev.index].subject_id)
+        this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_chapter_by_subject/'+this.subject[ev.index].subject_id)
         .subscribe(
                 (res)=>{
                     this.chapter = res["result"]["data"];
@@ -135,7 +135,7 @@ formData.append('name', this.chapterForm.value.name);
       } else {
         url = 'insert_chapter';
       }
-      this.httpClient.post('http://localhost/microview/feringo/api/v1/'+url, formData).subscribe(
+      this.httpClient.post('http://localhost/project/feringo/api/v1/'+url, formData).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -218,7 +218,7 @@ export class ChapterDelete {
             return;
       }
       this.loading = true;
-      this.httpClient.get('http://localhost/microview/feringo/api/v1/delete_record/chapter/chapter_id='+this.chapter_id).subscribe(
+      this.httpClient.get('http://localhost/project/feringo/api/v1/delete_record/chapter/chapter_id='+this.chapter_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
