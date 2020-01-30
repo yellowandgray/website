@@ -4,9 +4,11 @@ require_once 'api/include/common.php';
 $questions = array();
 $obj = new Common();
 $type = '';
-if (!isset($_SESSION['student_selected_type']) || !isset($_SESSION['student_register_id'])) {
-    header('Location: qorder-years');
+if (!isset($_GET['difficult'])) {
+    $topic = $obj->selectRow('*', 'topic', 'topic_id = ' . $_SESSION['selected_topic_id']);
+    header('Location: difficult_level?topic=' . $topic['name']);
 }
+$_SESSION['selected_difficult_id'] = $difficult['difficult_id'];
 if ($_SESSION['student_selected_type'] == 'order') {
     if (!isset($_GET['year'])) {
         header('Location: qorder-years');
@@ -22,7 +24,7 @@ if ($_SESSION['student_selected_type'] == 'subject') {
     }
     $type = 'Subject Order';
     $_SESSION['student_selected_years_id'] = $_GET['years'];
-    $questions = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer, image_path, direction', 'question', 'topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = '. $_SESSION['student_selected_language_id'] .' AND t.topic_id IN (' . $_SESSION['student_selected_topics_id'] . ') ORDER BY t.subject_id ASC) AND year_id IN (' . $_SESSION['student_selected_years_id'] . ') ORDER BY year_id ASC');
+    $questions = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer, image_path, direction', 'question', 'topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $_SESSION['student_selected_language_id'] . ' AND t.topic_id IN (' . $_SESSION['student_selected_topics_id'] . ') ORDER BY t.subject_id ASC) AND year_id IN (' . $_SESSION['student_selected_years_id'] . ') ORDER BY year_id ASC');
 }
 $student = $obj->selectRow('*', 'student_register', 'student_register_id = ' . $_SESSION['student_register_id']);
 $language = $obj->selectRow('*', 'language', 'language_id = ' . $_SESSION['student_selected_language_id']);
