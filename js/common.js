@@ -63,6 +63,7 @@ function registerStudent() {
                 $('#password').val('');
                 $('#confirm_password').val('');
                 swal("Thank you!", " Our Team will get in touch with you soon.", "success");
+                window.location = 'login-page';
             } else {
                 swal("Oops!", data.result.message, "info");
             }
