@@ -4,8 +4,8 @@ require_once 'api/include/common.php';
 $questions = array();
 $obj = new Common();
 $type = '';
-if (!isset($_SESSION['student_selected_type']) || !isset($_SESSION['student_register_id'])) {
-    header('Location: qorder-years');
+if (!isset($_GET['difficult'])) {
+    header('Location: difficult_level');
 }
 if ($_SESSION['student_selected_type'] == 'order') {
     if (!isset($_GET['year'])) {
