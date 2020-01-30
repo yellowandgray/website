@@ -22,7 +22,7 @@ $_SESSION['selected_topic_id'] = $topic['topic_id'];
                 <div id="mySignin" tabindex="-1" aria-labelledby="mySigninModalLabel" aria-hidden="true">
                     <div class="modal styled">
                         <div class="modal-header login-section">
-                            <a href="topic_page"><i class="font-icon-arrow-simple-left"></i></a>
+                            <a href="home_subject"><i class="font-icon-arrow-simple-left"></i></a>
                             <h4 id="mySigninModalLabel"  class="text-center">Select <strong>Question Level</strong></h4>
                         </div>
                         <div class="modal-body">

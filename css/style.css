@@ -275,7 +275,7 @@ img.img-polaroid {
 header {
     background: #fff;
     margin: 0;
-    padding: 0 0 0 0;
+    padding: 0;
     position: fixed;
     z-index: 1050;
     width: 100%;
@@ -752,6 +752,12 @@ section.callaction {
 ==================================== */
 
 #content {
+    position: relative;
+    background: #f9f9f9;
+    padding: 50px 0 0 0;
+}
+
+#content-1 {
     position: relative;
     background: #fff;
     padding: 50px 0 0 0;
@@ -2044,6 +2050,8 @@ footer {
     background: #f9f9f9;
     /* padding: 50px 0 0 0; */
     color: #bbb;
+    position: relative;
+    top: 62px;
 }
 
 footer a {
@@ -2077,6 +2085,10 @@ ul.social-network li {
     display: inline;
 }
 
+.m-b-0 {
+    margin-bottom: 0 !important;
+}
+
 #sub-footer {
     background: #fff;
     text-shadow: none;
@@ -2084,7 +2096,7 @@ ul.social-network li {
     padding: 0;
     border-top: 1px solid #cacaca;
     padding-top: 30px;
-    margin: 20px 0 0 0;
+/*    margin: 20px 0 0 0;*/
 }
 
 #sub-footer p {
