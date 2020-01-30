@@ -23,8 +23,7 @@ $language = $obj->selectRow('*', 'language', 'language_id=' . $_SESSION['student
                     <div class='modal styled'>
                         <div class='modal-header login-section'>
                             <a href='question-subject-order'><i class='font-icon-arrow-simple-left'></i></a>
-                            <h4 id='mySigninModalLabel' class='text-center'><?php echo $language['name'];
-            ?> - Question Order - Choose <strong>Year</strong></h4>
+                            <h4 id='mySigninModalLabel' class='text-center'><?php echo $language['name']; ?> - Question Order <br/> <strong class="title-section">Choose Year</strong></h4>
                         </div>
                         <div class='modal-body'>
                             <div class='year_select_section'>

@@ -125,7 +125,7 @@ $obj = new Common();
                     </div>
                 </div>
             </section>
-            <section id="content">
+            <section id="content-1">
                 <div class="container">
                     <div class="row">
                         <div class="span4 box-shadow">
@@ -155,7 +155,7 @@ $obj = new Common();
                     </div>
                 </div>
             </section>
-            <section class="display-content">
+<!--            <section class="display-content">
                 <div class="container">
                     <div class="row">
                         <div class="span12">
@@ -184,7 +184,7 @@ $obj = new Common();
                         </div>
                     </div>
                 </div>
-            </section>
+            </section>-->
             <section id="content">
                 <div class="container">
                     <div class="row">

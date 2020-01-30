@@ -800,3 +800,7 @@ and open the template in the editor.
     padding-left: 30px;
     color: #F03C02;
 }
+
+.title-section {
+    font-size: 18px;
+}

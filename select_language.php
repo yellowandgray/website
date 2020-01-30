@@ -15,7 +15,7 @@ $languages = $obj->selectAll('*', 'language', 'status = 1');
                     <div class="modal styled">
                         <div class="modal-header login-section">
                             <a href="index"><i class="font-icon-arrow-simple-left"></i></a>
-                            <h4 id="mySigninModalLabel"  class="text-center">Select <strong>Language</strong></h4>
+                            <h4 id="mySigninModalLabel"  class="text-center">Select <br/> <strong class="title-section">Language</strong></h4>
                         </div>
                         <div class="modal-body">
                             <div class="language_section">

@@ -24,8 +24,7 @@ $counter = 0;
                     <div class="modal styled">
                         <div class="modal-header login-section">
                             <a href="question-subject-order"><i class="font-icon-arrow-simple-left"></i></a>
-                            <h4 id="mySigninModalLabel" class="text-center"><?php echo $language['name'];
-            ?> - Subject Order - Select <strong>Subject and Topic</strong></h4>
+                            <h4 id="mySigninModalLabel" class="text-center"><?php echo $language['name']; ?> - Subject Order <br/> <strong class="title-section">Select Subject and Topic</strong></h4>
                         </div>
                         <div class="modal-body">
                             <div class="language_section">

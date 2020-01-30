@@ -753,6 +753,12 @@ section.callaction {
 
 #content {
     position: relative;
+    background: #e3e3e3;
+    padding: 50px 0 0 0;
+}
+
+#content-1 {
+    position: relative;
     background: #fff;
     padding: 50px 0 0 0;
 }
@@ -2084,7 +2090,11 @@ ul.social-network li {
     padding: 0;
     border-top: 1px solid #cacaca;
     padding-top: 30px;
-    margin: 20px 0 0 0;
+/*    margin: 20px 0 0 0;*/
+}
+
+.m-b-0 {
+    margin-bottom: 0 !important;
 }
 
 #sub-footer p {

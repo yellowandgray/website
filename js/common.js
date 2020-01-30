@@ -48,6 +48,7 @@ function registerStudent() {
         success: function(data) {
             $('.loader').removeClass('is-active');
             if (data.result.error === false) {
+                window.location = 'login-page.php';
                 $('#user_name').val('');
                 $('#student_name').val('');
                 $('#parent_name').val('');
