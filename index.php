@@ -1,3 +1,8 @@
+<?php
+if (isset($_SESSION['student_register_id'])) {
+    $login_student = $obj->selectRow('*', 'student_register', 'student_register_id = ' . $_SESSION["student_register_id"]);
+}
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -26,9 +31,41 @@
         <header class="header-fixed">
             <div class="header-limiter">
                 <h1><a href="#"><img src='img/logo.png'></a></h1>
-                <nav>
-                    <a href="login-page" class="btn btn-custom">Attend The Quiz</a>
-                </nav>
+                <?php
+                if (!isset($_SESSION['student_register_id'])) {
+                    ?>
+                    <nav>
+                        <a href="login-page" class="btn btn-custom">Attend The Quiz</a>
+                    </nav>
+                <?php } else {
+                    ?>
+                    <div class="logout_position">
+                        <div id="open-logout" class="logout_section">
+        <!--                        <img src='<?php //echo BASE_URL . $login_student['profile_image'];    ?>' alt=''>-->
+                            <?php if (isset($login_student['profile_image']) && $login_student['profile_image'] == '') { ?>
+                                <img src="<?php echo BASE_URL . $login_student['gender']; ?>.jpg" alt="" />
+                            <?php } else { ?>
+                                <img src="<?php echo BASE_URL . $login_student['profile_image']; ?>" alt="" />
+                            <?php } ?>
+                            <div class="logout_dropdown">
+                                <div class="user_profile">
+                                    <?php if (isset($login_student['profile_image']) && $login_student['profile_image'] == '') { ?>
+                                        <img src="<?php echo BASE_URL . $login_student['gender']; ?>.jpg" alt="" />
+                                    <?php } else { ?>
+                                        <img src="<?php echo BASE_URL . $login_student['profile_image']; ?>" alt="" />
+                                    <?php } ?>
+                                    <h5><?php echo $login_student['student_name']; ?></h5>
+                                </div>
+                                <ul class="logout_list">
+                                    <li onclick="window.location = 'home_subject'">Subject</li>
+                                    <li onclick="window.location = 'student_result'">Result</li>
+                                    <li onclick="logoutUser();">Logout</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                <?php }
+                ?>
             </div>
         </header>
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="3000">
@@ -75,7 +112,7 @@
                     <div class="float-left">
                         <h3><span class="span-1 wow fadeInRight" data-wow-delay="0s">UNDERSTAND</span> <span class="span-2 wow fadeInRight" data-wow-delay="1s">LEARN</span> <span class="span-3 wow fadeInRight" data-wow-delay="2s">SCORE</span></h3>
                     </div>
-                    <div class="float-right wow fadeInRight" data-wow-delay="3s">
+                    <div class="float-right register-now-btn wow fadeInRight" data-wow-delay="3s">
                         <a href='register-page' class="register-btn wow pulse" data-wow-iteration="infinite" data-wow-duration="1500ms">Register Now!</a>
                     </div>
                 </div>
@@ -134,23 +171,23 @@
         <script src="feringo-landing/js/bootstrap.min.js" type="text/javascript"></script>
         <script src="feringo-landing/js/wow.js" type="text/javascript"></script>
         <script type="text/javascript">
-            $(document).ready(function () {
-                var showHeaderAt = 150;
-                var win = $(window),
-                        body = $('body');
-                // Show the fixed header only on larger screen devices
-                if (win.width() > 600) {
-                    // When we scroll more than 150px down, we set the
-                    // "fixed" class on the body element.
-                    win.on('scroll', function (e) {
-                        if (win.scrollTop() > showHeaderAt) {
-                            body.addClass('fixed');
-                        } else {
-                            body.removeClass('fixed');
-                        }
-                    });
-                }
-            });
+                                    $(document).ready(function () {
+                                        var showHeaderAt = 150;
+                                        var win = $(window),
+                                                body = $('body');
+                                        // Show the fixed header only on larger screen devices
+                                        if (win.width() > 600) {
+                                            // When we scroll more than 150px down, we set the
+                                            // "fixed" class on the body element.
+                                            win.on('scroll', function (e) {
+                                                if (win.scrollTop() > showHeaderAt) {
+                                                    body.addClass('fixed');
+                                                } else {
+                                                    body.removeClass('fixed');
+                                                }
+                                            });
+                                        }
+                                    });
         </script>
         <script>
             wow = new WOW(

@@ -312,3 +312,77 @@ footer a:hover {
 .home-box .box-custom {
     overflow: hidden;
 }
+
+.logout_position {
+    text-align: right;
+    float: right;
+    height: 100%;
+}
+
+.logout_section {
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.logout_section img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 0 6px 5px #e3e3e3;
+    padding: 1px;
+    border: 1px solid #30445c;
+}
+
+.logout_dropdown {
+    display: none;
+    position: absolute;
+    top: 62px;
+    right: 0;
+    box-shadow: 0 0 6px 2px #e3e3e3;
+    background: #fff;
+    padding: 0px 0;
+    list-style: none;
+    border-radius: 3px;
+    outline: none;
+    box-sizing: border-box;
+    z-index: 1;
+    width: 200px;
+}
+
+.user_profile {
+    text-align: center;
+}
+
+.user_profile img {
+    margin-top: 10px;
+    width: 70px;
+    border-radius: 50%;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    height: 70px;
+}
+
+.user_profile h5 {
+    margin-bottom: 10px;
+}
+
+.logout_list {
+    list-style: none;
+    margin: 0;
+    padding: 10px 15px;
+}
+
+.logout_list li {
+    text-align: left;
+    padding: 3px 0;
+    font-size: 16px;
+    cursor: pointer;
+    border-bottom: 1px dashed;
+}
+
+@media (max-width: 767px) {
+    .container {
+        width: 100% !Important;
+    }
+}
