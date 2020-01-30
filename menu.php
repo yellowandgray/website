@@ -56,7 +56,7 @@ if (isset($_SESSION['student_register_id'])) {
                                 <h5><?php echo $login_student['student_name']; ?></h5>
                             </div>
                             <ul class="logout_list">
-                                <li onclick="window.location = 'home_subject'">Language</li>
+                                <li onclick="window.location = 'home_subject'">Subject</li>
                                 <li onclick="window.location = 'student_result'">Result</li>
                                 <li onclick="logoutUser();">Logout</li>
                             </ul>
