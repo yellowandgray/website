@@ -76,7 +76,7 @@
                         <h3><span class="span-1 wow fadeInRight" data-wow-delay="0s">UNDERSTAND</span> <span class="span-2 wow fadeInRight" data-wow-delay="1s">LEARN</span> <span class="span-3 wow fadeInRight" data-wow-delay="2s">SCORE</span></h3>
                     </div>
                     <div class="float-right wow fadeInRight" data-wow-delay="3s">
-                        <a href='http://mekana.feringo.com/register' class="register-btn wow pulse" data-wow-iteration="infinite" data-wow-duration="1500ms">Register Now!</a>
+                        <a href='register-page' class="register-btn wow pulse" data-wow-iteration="infinite" data-wow-duration="1500ms">Register Now!</a>
                     </div>
                 </div>
             </div>

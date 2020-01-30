@@ -21,7 +21,7 @@ export class DifficultyLevelComponent implements OnInit {
     this.getDifficult();
   }
   getDifficult(): void {
-    this.httpClient.get<any>('../api/v1/get_difficult')
+    this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_difficult')
       .subscribe(
         (res) => {
           this.difficult = res["result"]["data"];
@@ -89,12 +89,12 @@ export class DifficultForm {
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
     this.difficultForm = new FormGroup({
-      'title': new FormControl('', Validators.required),
+      'name': new FormControl('', Validators.required),
       //'description': new FormControl('', Validators.required)
     });
     if (this.data != null) {
       this.difficultForm.patchValue({
-        title: this.data.name,
+        name: this.data.name,
         //description: this.data.description,
       });
       this.difficult_id = this.data.difficult_id;
@@ -109,15 +109,15 @@ export class DifficultForm {
     var formData = new FormData();
     var url = '';
     if (this.difficult_id != 0) {
-      formData.append('title', this.difficultForm.value.title);
+      formData.append('name', this.difficultForm.value.name);
       //formData.append('description', this.difficultForm.value.description);
       url = 'update_record/difficult/difficult_id = ' + this.difficult_id;
     } else {
-      formData.append('title', this.difficultForm.value.title);
+      formData.append('name', this.difficultForm.value.name);
       //formData.append('description', this.difficultForm.value.description);
       url = 'insert_difficult';
     }
-    this.httpClient.post('../api/v1/' + url, formData).subscribe(
+    this.httpClient.post('http://localhost/project/feringo/api/v1/' + url, formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -202,7 +202,7 @@ export class DifficultDelete {
       return;
     }
     this.loading = true;
-    this.httpClient.get('../api/v1/delete_record/difficult/difficult_id=' + this.difficult_id).subscribe(
+    this.httpClient.get('http://localhost/project/feringo/api/v1/delete_record/difficult/difficult_id=' + this.difficult_id).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {

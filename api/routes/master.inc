@@ -132,7 +132,7 @@ $app->post('/insert_difficult', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('name' => $data['title']), 'difficult');
+    $record = $com->insertRecord(array('name' => $data['name']), 'difficult');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
