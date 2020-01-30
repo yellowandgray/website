@@ -8,8 +8,9 @@ if (!isset($_GET['difficult'])) {
     $topic = $obj->selectRow('*', 'topic', 'topic_id = ' . $_SESSION['selected_topic_id']);
     header('Location: difficult_level?topic=' . $topic['name']);
 }
+$difficult = $obj->selectRow('*', 'difficult', 'name=\'' . $_GET['difficult'] . '\'');
 $_SESSION['selected_difficult_id'] = $difficult['difficult_id'];
-$questions = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer, image_path, direction', 'question', 'topic_id = ' . $_SESSION['selected_topic_id'] . ') AND year_id = ' . $_SESSION['student_selected_year_id']);
+$questions = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer, image_path, direction', 'question', 'topic_id = ' . $_SESSION['selected_topic_id'] . ' AND difficult_id <= ' . $_SESSION['selected_difficult_id']);
 $questions_list = array();
 if (count($questions) > 0) {
     foreach ($questions as $q) {
@@ -51,7 +52,7 @@ if (count($questions) > 0) {
                     <div class="span12">
                         <div class="quiz-question-section">
                             <a href = '#' onclick="goBack()"><i class = 'font-icon-arrow-simple-left'></i></a>
-                            <h2><?php echo $language['name']; ?> - <?php echo $type; ?></h2>
+                            <h2>Language</h2>
                         </div>
                         <!--question Box-->
                         <div class="questionBox" id="app">
@@ -144,9 +145,8 @@ if (count($questions) > 0) {
     <?php include 'footer.php'; ?>
     <?php include 'script.php'; ?>
     <script>
-        console.log(<?php echo json_encode($questions_list); ?>);
         var quiz = {
-            user: "<?php echo $student['student_name']; ?>",
+            user: "Feringo",
             questions: <?php echo json_encode($questions_list); ?>
         },
                 userResponseSkelaton = Array(quiz.questions.length).fill(null);
