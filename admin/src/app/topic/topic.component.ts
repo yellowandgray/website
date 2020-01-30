@@ -127,14 +127,14 @@ export class TopicForm {
             'subject_id': new FormControl('', Validators.required),
             'chapter_id': new FormControl('', Validators.required),
             'name': new FormControl('', Validators.required),
-            'description': new FormControl('', Validators.required)
+            //'description': new FormControl('', Validators.required)
         });
         if(this.data.data != null) {
            this.topicForm.patchValue({
            name: this.data.data.name,
            chapter_id: this.data.data.chapter_id,
            subject_id: this.data.data.subject_id,
-           description: this.data.data.description
+           //description: this.data.data.description
         });
             this.topic_id = this.data.data.topic_id;
         this.getChapter();
@@ -161,9 +161,9 @@ getChapter(): void {
       this.loading = true;
       var formData = new FormData();
       var url = '';
-      formData.append('name', this.topicForm.value.name);
+        formData.append('name', this.topicForm.value.name);
         formData.append('chapter_id', this.topicForm.value.chapter_id);
-        formData.append('description', this.topicForm.value.description);
+        //formData.append('description', this.topicForm.value.description);
           if(this.topic_id != 0) {
         url = 'update_record/topic/topic_id = '+this.topic_id;
       } else {

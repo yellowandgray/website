@@ -90,12 +90,12 @@ export class DifficultForm {
     private httpClient: HttpClient) {
     this.difficultForm = new FormGroup({
       'title': new FormControl('', Validators.required),
-      'description': new FormControl('', Validators.required)
+      //'description': new FormControl('', Validators.required)
     });
     if (this.data != null) {
       this.difficultForm.patchValue({
         title: this.data.name,
-        description: this.data.description,
+        //description: this.data.description,
       });
       this.difficult_id = this.data.difficult_id;
     }
@@ -110,11 +110,11 @@ export class DifficultForm {
     var url = '';
     if (this.difficult_id != 0) {
       formData.append('title', this.difficultForm.value.title);
-      formData.append('description', this.difficultForm.value.description);
+      //formData.append('description', this.difficultForm.value.description);
       url = 'update_record/difficult/difficult_id = ' + this.difficult_id;
     } else {
       formData.append('title', this.difficultForm.value.title);
-      formData.append('description', this.difficultForm.value.description);
+      //formData.append('description', this.difficultForm.value.description);
       url = 'insert_difficult';
     }
     this.httpClient.post('http://localhost/project/feringo/api/v1/' + url, formData).subscribe(

@@ -106,14 +106,14 @@ export class ChapterForm {
     private httpClient: HttpClient) {
         this.chapterForm = new FormGroup ({
             'name': new FormControl('', Validators.required),
-            'description': new FormControl('', Validators.required),
+            //'description': new FormControl('', Validators.required),
             'subject_id': new FormControl('', Validators.required)
         });
         this.subject = this.data.subject;
         if(this.data.data != null) {
            this.chapterForm.patchValue({
             name: this.data.data.name,
-            description: this.data.data.description,
+            //description: this.data.data.description,
             subject_id: this.data.data.subject_id,
         });
             this.chapter_id = this.data.data.chapter_id;
@@ -126,8 +126,8 @@ export class ChapterForm {
       }
       this.loading = true;
       var formData = new FormData();
-formData.append('name', this.chapterForm.value.name);
-        formData.append('description', this.chapterForm.value.description);
+        formData.append('name', this.chapterForm.value.name);
+        //formData.append('description', this.chapterForm.value.description);
         formData.append('subject_id', this.chapterForm.value.subject_id);
       var url = '';
           if(this.chapter_id != 0) {

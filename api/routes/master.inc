@@ -96,7 +96,7 @@ $app->post('/insert_chapter', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('name' => $data['name'], 'subject_id' => $data['subject_id'], 'description' => $data['description']), 'chapter');
+    $record = $com->insertRecord(array('name' => $data['name'], 'subject_id' => $data['subject_id']), 'chapter');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
@@ -108,7 +108,7 @@ $app->post('/insert_topic', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('name' => $data['name'], 'chapter_id' => $data['chapter_id'], 'description' => $data['description']), 'topic');
+    $record = $com->insertRecord(array('name' => $data['name'], 'chapter_id' => $data['chapter_id']), 'topic');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
@@ -132,7 +132,7 @@ $app->post('/insert_difficult', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('name' => $data['title'], 'description' => $data['description']), 'difficult');
+    $record = $com->insertRecord(array('name' => $data['title']), 'difficult');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
