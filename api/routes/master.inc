@@ -204,7 +204,7 @@ $app->get('/get_question', function() {
 $app->get('/get_question_by_topic/:tid', function($tid) {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
-    $data = $com->selectAll('*', 'question', 'question_id > 0 AND topic_id = ' . $tid .' ORDER BY question_id ASC LIMIT 10');
+    $data = $com->selectAll('*', 'question', 'question_id > 0 AND topic_id = ' . $tid . ' ORDER BY question_id DESC LIMIT 5');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
