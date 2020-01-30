@@ -1,134 +1,91 @@
-<?php
-session_start();
-require_once 'api/include/common.php';
-$obj = new Common();
-?>
 <!DOCTYPE html>
-<html lang="en">
-    <?php include 'head.php'; ?>
+<html>
+    <head>
+        <title>Mekana Feringo</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Mekana Feringo">
+        <meta name="keywords" content="Mekana Feringo">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" href="img/favicon.png" type="image/gif">
+
+        <link href="feringo-landing/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="feringo-landing/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="feringo-landing/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
+        <link href="feringo-landing/css/animate.css" rel="stylesheet" type="text/css"/>
+        <link href="feringo-landing/css/style.css" rel="stylesheet" type="text/css"/>
+        <link href="feringo-landing/css/responsive.css" rel="stylesheet" type="text/css"/>
+        <style>
+            .wow:first-child {
+                visibility: hidden;
+            }
+        </style>
+    </head>
     <body>
-        <div id="wrapper">
-            <!-- toggle top area -->
-            <!--            <div class="hidden-top">
-                            <div class="hidden-top-inner container">
-                                <div class="row">
-                                    <div class="span12">
-                                        <ul>
-                                            <li><strong>We are available for any custom works this month</strong></li>
-                                            <li>Main office: Springville center X264, Park Ave S.01</li>
-                                            <li>Call us <i class="icon-phone"></i> (123) 456-7890 - (123) 555-7891</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>-->
-            <!-- end toggle top area -->
-            <!-- start header -->
-            <?php include 'menu.php'; ?>
-            <!-- end header -->
-            <section id="featured">
-                <!-- start slider -->
-                <div id="slider" class="sl-slider-wrapper demo-2">
-                    <div class="sl-slider">
-                        <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
-                            <div class="sl-slide-inner">
-                                <div class="bg-img bg-img-1">
-                                </div>
-<!--                                <h2><strong>Premium</strong> template</h2>-->
-                                <!--                                <blockquote>
-                                                                    <p>
-                                                                        You have just dined, and however scrupulously the slaughterhouse is concealed in the graceful distance of miles, there is complicity.
-                                                                    </p>
-                                                                    <cite>Johny Doe Mblangsak</cite>
-                                                                </blockquote>-->
-                            </div>
-                        </div>
-                        <div class="sl-slide" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
-                            <div class="sl-slide-inner">
-                                <div class="bg-img bg-img-2">
-                                </div>
-                                <h2><strong>Twitter</strong> bootstrap</h2>
-                                <blockquote>
-                                    <p>
-                                        Until he extends the circle of his compassion to all living things, man will not himself find peace.
-                                    </p>
-                                    <cite>Ramond Schummiler</cite>
-                                </blockquote>
-                            </div>
-                        </div>
-                        <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
-                            <div class="sl-slide-inner">
-                                <div class="bg-img bg-img-3">
-                                </div>
-                                <h2><strong>Responsive</strong> layout</h2>
-                                <blockquote>
-                                    <p>
-                                        Thousands of people who say they 'love' animals sit down once or twice a day to enjoy the flesh of creatures who have been utterly deprived of everything that could make their lives worth living and who endured the awful suffering and the terror of the
-                                        abattoirs.
-                                    </p>
-                                    <cite>Andress Michel Aorta</cite>
-                                </blockquote>
-                            </div>
-                        </div>
-                        <div class="sl-slide" data-orientation="vertical" data-slice1-rotation="-5" data-slice2-rotation="25" data-slice1-scale="2" data-slice2-scale="1">
-                            <div class="sl-slide-inner">
-                                <div class="bg-img bg-img-4">
-                                </div>
-                                <h2><strong>Awesome</strong> features</h2>
-                                <blockquote>
-                                    <p>
-                                        The human body has no more need for cows' milk than it does for dogs' milk, horses' milk, or giraffes' milk.
-                                    </p>
-                                    <cite>Smilee Bounvaller</cite>
-                                </blockquote>
-                            </div>
-                        </div>
-                        <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-5" data-slice2-rotation="10" data-slice1-scale="2" data-slice2-scale="1">
-                            <div class="sl-slide-inner">
-                                <div class="bg-img bg-img-5">
-                                </div>
-                                <h2><strong>Premium</strong> support</h2>
-                                <blockquote>
-                                    <p>
-                                        I think if you want to eat more meat you should kill it yourself and eat it raw so that you are not blinded by the hypocrisy of having it processed for you.
-                                    </p>
-                                    <cite>Clarke Edward Thompson</cite>
-                                </blockquote>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /sl-slider -->
-                    <nav id="nav-dots" class="nav-dots">
-                        <span class="nav-dot-current"></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </nav>
-                </div>
-                <!-- /slider-wrapper -->
-                <!-- end slider -->
-            </section>
-            <section class="callaction">
-                <div class="container">
-                    <div class="row">
-                        <div class="span12">
-                            <div class="big-cta">
-                                <div class="cta-text">
-                                    <h3>Online <span class="highlight"><strong>Mentoring</strong></span> and <span class="highlight"><strong>Coaching</strong></span></h3>
-                                </div>
-                                <div class="cta floatright">
-                                    <a class="btn btn-large btn-theme btn-rounded" href="register-page">Register Now</a>
-                                </div>
-                            </div>
-                        </div>
+        <header class="header-fixed">
+            <div class="header-limiter">
+                <h1><a href="#"><img src='img/logo.png'></a></h1>
+                <nav>
+                    <a href="login-page" class="btn btn-custom">Attend The Quiz</a>
+                </nav>
+            </div>
+        </header>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="3000">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                    <div class="carousel-caption wow fadeInRight">
+                        <h2>Understand, Learn, Score</h2>
                     </div>
                 </div>
-            </section>
-            <section id="content">
-                <div class="container">
-                    <div class="row">
-                        <div class="span4 box-shadow">
+                <div id="target" class="carousel-item">
+                    <div class="carousel-caption wow fadeInRight">
+                        <h2>Smart Learning App</h2>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-caption wow fadeInRight">
+                        <h2>Easy to Learn and Score</h2>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-caption wow fadeInRight">
+                        <h2>Scoring Made Easy</h2>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <div class="home-register-section">
+            <div class="container">
+                <div class="">
+                    <div class="float-left">
+                        <h3><span class="span-1 wow fadeInRight" data-wow-delay="0s">UNDERSTAND</span> <span class="span-2 wow fadeInRight" data-wow-delay="1s">LEARN</span> <span class="span-3 wow fadeInRight" data-wow-delay="2s">SCORE</span></h3>
+                    </div>
+                    <div class="float-right wow fadeInRight" data-wow-delay="3s">
+                        <a href='http://mekana.feringo.com/register' class="register-btn wow pulse" data-wow-iteration="infinite" data-wow-duration="1500ms">Register Now!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="home-box wow fadeInDown">
                             <div class="box-custom">
                                 <div class="box-img"></div>
                             </div>
@@ -136,7 +93,19 @@ $obj = new Common();
                                 <p>Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
                             </div>
                         </div>
-                        <div class="span4 box-shadow">
+                    </div>
+                    <div class="col-md-4">
+                        <div class="home-box wow fadeInDown">
+                            <div class="box-custom">
+                                <div class="box-img1"></div>
+                            </div>
+                            <div class="box-text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="home-box wow fadeInDown">
                             <div class="box-custom">
                                 <div class="box-img2"></div>
                             </div>
@@ -144,72 +113,61 @@ $obj = new Common();
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
                             </div>
                         </div>
-                        <div class="span4 box-shadow">
-                            <div class="box-custom">
-                                <div class="box-img3"></div>
-                            </div>
-                            <div class="box-text">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
-            </section>
-            <section class="display-content">
-                <div class="container">
-                    <div class="row">
-                        <div class="span12">
-                            <h3>Quiz Contents</h3>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="span6">
-                            <ul>
-                                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
-                                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
-                                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
-                                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
-                                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
-                                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
-                                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
-                                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
-                                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
-                                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
-                                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
-                                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
-                            </ul>
-                        </div>
-                        <div class="span6">
-                            <img src="img/no-image.png" alt="" />
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="content">
-                <div class="container">
-                    <div class="row">
-                        <div class="span12">
-                            <h3>Quiz Videos</h3>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="span4">
-                            <iframe height="250" style="width: 100%" src="https://www.youtube.com/embed/Be2istzBgk4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <div class="span4">
-                            <iframe style="width: 100%" height="250" src="https://www.youtube.com/embed/Be2istzBgk4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <div class="span4">
-                            <iframe style="width: 100%" height="250" src="https://www.youtube.com/embed/Be2istzBgk4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <?php include 'footer.php'; ?>
+            </div>
         </div>
-        <a href="#" class="scrollup"><i class="icon-chevron-up icon-square icon-32 active"></i></a>
-        <!-- javascript ================================================== -->
-        <!-- Placed at the end of the document so the pages load faster -->
-        <?php include 'script.php'; ?>
+        <footer class="mainfooter" role="contentinfo">
+            <div class="footer-middle">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 copy">
+                            <p class="text-center">&copy; Copyright 2020 - Feringo.  All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="feringo-landing/js/common.js" type="text/javascript"></script>
+        <script src="feringo-landing/js/jquery.min.js" type="text/javascript"></script>
+<!--        <script src="js/bootstrap.js" type="text/javascript"></script>-->
+        <script src="feringo-landing/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="feringo-landing/js/wow.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                var showHeaderAt = 150;
+                var win = $(window),
+                        body = $('body');
+                // Show the fixed header only on larger screen devices
+                if (win.width() > 600) {
+                    // When we scroll more than 150px down, we set the
+                    // "fixed" class on the body element.
+                    win.on('scroll', function (e) {
+                        if (win.scrollTop() > showHeaderAt) {
+                            body.addClass('fixed');
+                        } else {
+                            body.removeClass('fixed');
+                        }
+                    });
+                }
+            });
+        </script>
+        <script>
+            wow = new WOW(
+                    {
+                        animateClass: 'animated',
+                        offset: 100,
+                        callback: function (box) {
+                            console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+                        }
+                    }
+            );
+            wow.init();
+            document.getElementById('moar').onclick = function () {
+                var section = document.createElement('section');
+                section.className = 'section--purple wow fadeInDown';
+                this.parentNode.insertBefore(section, this);
+            };
+        </script>
     </body>
 </html>

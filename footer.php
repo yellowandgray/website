@@ -1,7 +1,7 @@
 <footer>
     <div id="sub-footer">
         <div class="container">
-            <div class="row">
+            <div class="row m-b-0">
                 <div class="span6">
                     <div class="copyright">
                         <p>

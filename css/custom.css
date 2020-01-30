@@ -118,7 +118,13 @@ and open the template in the editor.
 }
 
 .subject-content {
-    padding: 100px 0 50px 0 !important;
+    /* margin: 50px 0 0px 0 !important; */
+    background: url(../img/home_bg.jpg)no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+    top: 62px;
 }
 
 .subject-section {
@@ -169,6 +175,13 @@ and open the template in the editor.
     padding: 5px;
     position: relative;
     top: -15px;
+    height: 225px;
+    overflow: hidden;
+}
+
+.subject-1-text button {
+    position: absolute;
+    bottom: 0;
 }
 
 .price {
@@ -245,7 +258,7 @@ and open the template in the editor.
 }
 
 .side_section {
-    background: #f03c02;
+    background: #30445c;
     /* box-shadow: 0 0 9px 5px #e3e3e3; */
     overflow: hidden;
     text-align: justify;
@@ -630,7 +643,7 @@ and open the template in the editor.
     /*    position: absolute;*/
     margin-top: 11px;
     font-size: 22px;
-    color: #f03c02;
+    color: #477cff;
 }
 
 .topic_option ul {
@@ -650,7 +663,7 @@ and open the template in the editor.
     position: absolute;
     margin-top: 11px;
     font-size: 22px;
-    color: #f03c02;
+    color: #477cff;
 }
 
 .topic_section_1 {
@@ -799,4 +812,16 @@ and open the template in the editor.
     padding-top: 4px;
     padding-left: 30px;
     color: #F03C02;
+}
+
+@media (max-width: 480px) {
+    .subject-content {
+        top: 88px !Important;
+    }
+}
+
+@media (max-width: 767px) {
+    .subject-content {
+        top: 82px !Important;
+    }
 }

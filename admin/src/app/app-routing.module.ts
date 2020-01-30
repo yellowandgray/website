@@ -9,8 +9,8 @@ import { DifficultyLevelComponent } from './difficulty-level/difficulty-level.co
 
 
 const routes: Routes = [
-        //{path: '', component: LoginComponent},
-        {path: '', component: SubjectComponent},
+        {path: '', component: LoginComponent},
+        //{path: '', component: SubjectComponent},
         {path: 'subject', component: SubjectComponent},
         {path: 'topic', component: TopicComponent},
         {path: 'question', component: QuestionComponent},

@@ -24,23 +24,23 @@ $chapters = $obj->selectRow('*', 'chapter', 'chapter_id > 0');
                                         <div class="topic_list_section">
                                             <div class="topic_list_position_left">
                                                 <i class="icon-caret-right"></i>
-                                                <a href="difficult_level"> 
+                                                <a href="quiz_page"> 
                                                     <?php echo $row['name']; ?>
                                                 </a>
                                             </div>
                                             <!--                                            <div class="topic_list_position_right">
                                             <?php if ($row['max_questions_answered'] == 0) { ?>
-                                                                                                    <a href="quiz_page?topic=<?php echo $row['name']; ?>" class="btn btn-green">Start</a>
+                                                                                                        <a href="quiz_page?topic=<?php echo $row['name']; ?>" class="btn btn-green">Start</a>
                                                 <?php
                                             }
                                             if ($row['max_questions_answered'] == $row['max_questions']) {
                                                 ?>
-                                                                                                    <a href="#" class="btn btn-green">Completed</a>
+                                                                                                        <a href="#" class="btn btn-green">Completed</a>
                                                 <?php
                                             }
                                             if ($row['max_questions_answered'] < $row['max_questions'] && $row['max_questions_answered'] != 0) {
                                                 ?>
-                                                                                                    <a href="#" class="btn btn-danger">Resume</a>
+                                                                                                        <a href="#" class="btn btn-danger">Resume</a>
                                             <?php }
                                             ?>
                                                                                         </div>-->
@@ -51,23 +51,19 @@ $chapters = $obj->selectRow('*', 'chapter', 'chapter_id > 0');
                                     ?>
                                     <p>Sorry no topics were found</p>
                                 <?php } ?>
-                                <?php if (count($topics) > 9) { ?>
-                                    <div class="pagenation-width">
-                                        <div class="bs-docs-example">
-                                            <div class="pagination">
-                                                <ul>
-                                                    <li class="disabled"><a href="#">Prev</a></li>
-                                                    <li class="active"><a href="#">1</a></li>
-                                                    <li><a href="#">2</a></li>
-                                                    <li><a href="#">3</a></li>
-                                                    <li><a href="#">Next</a></li>
-                                                </ul>
-                                            </div>
+<!--                                <div class="pagenation-width">
+                                    <div class="bs-docs-example">
+                                        <div class="pagination">
+                                            <ul>
+                                                <li class="disabled"><a href="#">Prev</a></li>
+                                                <li class="active"><a href="#">1</a></li>
+                                                <li><a href="#">2</a></li>
+                                                <li><a href="#">3</a></li>
+                                                <li><a href="#">Next</a></li>
+                                            </ul>
                                         </div>
                                     </div>
-                                <?php } else { ?>
-                                    <div>&nbsp;</div>
-                                <?php } ?>
+                                </div>-->
                             </div>
                         </div>
                     </div>
