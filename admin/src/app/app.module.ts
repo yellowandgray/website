@@ -35,7 +35,8 @@ import { TopicComponent, TopicForm, TopicDelete } from './topic/topic.component'
 import { ChapterComponent, ChapterForm, ChapterDelete } from './chapter/chapter.component';
 import { LoginComponent } from './login/login.component';
 import { DifficultyLevelComponent, DifficultForm, DifficultDelete } from './difficulty-level/difficulty-level.component';
-import { UserComponent, UserForm, PictureViewUser, BlockForm, ResultForm, UserDelete } from './user/user.component';
+import { UserComponent, UserForm, PictureViewUser, BlockForm, ResultForm, UserDelete, UserViewForm } from './user/user.component';
+import { filterUser } from './user/filter-user';
 
 
 
@@ -65,7 +66,9 @@ import { UserComponent, UserForm, PictureViewUser, BlockForm, ResultForm, UserDe
     PictureViewUser,
     BlockForm, 
     ResultForm, 
-    UserDelete
+    UserDelete,
+    UserViewForm,
+    filterUser
   ],
   imports: [
     BrowserModule,
@@ -95,7 +98,7 @@ import { UserComponent, UserForm, PictureViewUser, BlockForm, ResultForm, UserDe
     MatButtonToggleModule,
     MatCardModule
   ],
-  entryComponents: [SubjectComponent, SubjectForm, SubjectDelete, QuestionComponent, QuestionForm, QuestionDelete, TopicComponent, TopicForm, TopicDelete, ChapterComponent, ChapterForm, ChapterDelete, DifficultyLevelComponent, DifficultForm, DifficultDelete, UserComponent, UserForm, PictureViewUser, BlockForm, ResultForm, UserDelete],
+  entryComponents: [SubjectComponent, SubjectForm, SubjectDelete, QuestionComponent, QuestionForm, QuestionDelete, TopicComponent, TopicForm, TopicDelete, ChapterComponent, ChapterForm, ChapterDelete, DifficultyLevelComponent, DifficultForm, DifficultDelete, UserComponent, UserForm, PictureViewUser, BlockForm, ResultForm, UserDelete, UserViewForm],
   providers: [],
   bootstrap: [AppComponent]
 })

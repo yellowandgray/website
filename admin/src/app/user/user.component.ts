@@ -4,7 +4,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators, RequiredValidator } from '@angular/forms';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -13,9 +13,9 @@ import { Observable } from 'rxjs';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-
+  searchTerm: string = '';
   student = [];
-  image_url: string = '../api/v1/';
+  image_url: string = 'http://localhost/project/feringo/api/v1/';
 
   constructor(public dialog: MatDialog, private httpClient: HttpClient, private _snackBar: MatSnackBar) { }
 
@@ -23,7 +23,7 @@ export class UserComponent implements OnInit {
     this.getuser();
   }
   getuser(): void {
-    this.httpClient.get<any>('../api/v1/get_student')
+    this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_student')
       .subscribe(
         (res) => {
           this.student = res["result"]["data"];
@@ -117,6 +117,29 @@ export class UserComponent implements OnInit {
       }
     });
   }
+
+  openView(id, res): void {
+    var data = null;
+      if(id != 0) { 
+      this[res].forEach(val=> {
+           if(parseInt(val.student_register_id) === parseInt(id)) {
+                data = val;
+                return false;
+           }
+         });
+      }
+    const dialogRef = this.dialog.open(UserViewForm, {
+      minWidth: "40%",
+      maxWidth: "40%",
+      data: data
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if(result !== false && result !== 'false') {
+            }
+        });
+    }
+
 }
 
 @Component({
@@ -124,7 +147,7 @@ export class UserComponent implements OnInit {
   templateUrl: 'user-form.html',
 })
 export class UserForm {
-  image_url: string = '../api/v1/';
+  image_url: string = 'http://localhost/project/feringo/api/v1/';
   userForm: FormGroup;
   loading = false;
   student_register_id = 0;
@@ -207,7 +230,7 @@ export class UserForm {
       formData.append('email', this.userForm.value.email);
       url = 'insert_student';
     }
-    this.httpClient.post('../api/v1/' + url, formData).subscribe(
+    this.httpClient.post('http://localhost/project/feringo/api/v1/' + url, formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -233,7 +256,7 @@ export class UserForm {
     this.loading = true;
     var formData = new FormData();
     formData.append('file', fileData);
-    this.httpClient.post('../api/v1/upload_file', formData).subscribe(
+    this.httpClient.post('http://localhost/project/feringo/api/v1/upload_file', formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -283,7 +306,7 @@ export class UserDelete {
       return;
     }
     this.loading = true;
-    this.httpClient.get('../api/v1/delete_record/student_register/student_register_id=' + this.student_register_id).subscribe(
+    this.httpClient.get('http://localhost/project/feringo/api/v1/delete_record/student_register/student_register_id=' + this.student_register_id).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -340,7 +363,7 @@ export class ResultForm {
 })
 
 export class PictureViewUser {
-  image_url: string = '../api/v1/';
+  image_url: string = 'http://localhost/project/feringo/api/v1/';
   action: string = '';
   loading = false;
   student_register_id = 0;
@@ -358,4 +381,24 @@ export class PictureViewUser {
       }
     }
   }
+}
+
+@Component({
+  selector: 'user-view',
+  templateUrl: 'user-view.html',
+})
+
+export class UserViewForm {
+  image_url: string = 'http://localhost/project/feringo/api/v1/';
+  loading = false;
+  student = [];
+  student_register_id = 0;
+  data: any;
+  constructor(
+    public dialogRef: MatDialogRef<UserViewForm>,
+    @Inject(MAT_DIALOG_DATA) public datapopup: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) { 
+        this.data = this.datapopup;
+    }
 }

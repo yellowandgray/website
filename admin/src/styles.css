@@ -113,3 +113,20 @@ mat-sidenav-content {
 .search-input {
     padding: 10px;
 }
+
+.member-profile-view {
+    position: relative;
+}
+
+.member-profile-view img {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    border-radius: 50%;
+    box-shadow: 0 0 8px 1px #e3e3e3;
+    border: 2px solid #1c65bf;
+}
+
+.user-table th {
+    text-align: left;
+}
