@@ -4,7 +4,7 @@ require_once 'api/include/common.php';
 $obj = new Common();
 if (isset($_SESSION['student_register_id'])) {
     $student = $obj->selectrow('*', 'student_register', 'student_register_id = ' . $_SESSION['student_register_id']);
-    $student_answer = $obj->selectAll('sa.*, l.name AS language', 'student_answer AS sa LEFT JOIN language AS l ON l.language_id = sa.language_id', 'student_answer_id > 0');
+    $student_answer = $obj->selectAll('sa.*, s.name AS subject, c.name AS chapter, t.name AS topic', 'student_answer AS sa LEFT JOIN subject AS s ON s.subject_id = sa.subject_id LEFT JOIN chapter AS c ON c.chapter_id = sa.chapter_id LEFT JOIN topic AS t ON t.topic_id = sa.topic_id', 'student_answer_id > 0');
 }
 ?>
 <html lang = 'en'>
@@ -46,12 +46,12 @@ if (isset($_SESSION['student_register_id'])) {
                             <div class = 'accordion' id = 'accordion2'>
                                 <div class = 'accordion-group'>
                                     <div class = 'accordion-heading'>
-                                        <a class = 'accordion-toggle active' data-toggle = 'collapse' data-parent = '#accordion2' href = '#collapseOne'><i class = 'icon-minus'></i> With Topic</a>
+                                        <a class = 'accordion-toggle active' data-toggle = 'collapse' data-parent = '#accordion2' href = '#collapseOne'><i class = 'icon-minus'></i> Report</a>
                                     </div>
                                     <div id = 'collapseOne' class = 'accordion-body collapse in'>
                                         <div class = 'accordion-inner'>
                                             <?php foreach ($student_answer as $row) { ?>
-                                                <h2 class = 'titleContainer title'> <i class="font-icon-arrow-simple-right"></i> <?php echo $row['language']; ?> - <?php //echo $row['year']; ?> 2018-2019<span>Date: 10-01-2020</span></h2>
+                                                <h2 class = 'titleContainer title'> <i class="font-icon-arrow-simple-right"></i> <?php echo $row['subject']; ?><i class="font-icon-arrow-simple-right"></i> <?php echo $row['chapter']; ?> <i class="font-icon-arrow-simple-right"></i><?php echo $row['topic']; ?><span>Date: <?php echo $row['created_at']; ?></span></h2>
                                                 <table class = 'table table-striped result_table'>
                                                     <thead>
                                                         <tr>
@@ -75,7 +75,7 @@ if (isset($_SESSION['student_register_id'])) {
                                     </div>
                                 </div>
                             </div>
-                            <div class = 'accordion' id = 'accordion2'>
+<!--                            <div class = 'accordion' id = 'accordion2'>
                                 <div class = 'accordion-group'>
                                     <div class = 'accordion-heading'>
                                         <a class = 'accordion-toggle' data-toggle = 'collapse' data-parent = '#accordion2' href = '#collapseOne1'><i class = 'icon-minus'></i> Without Topic</a>
@@ -104,7 +104,7 @@ if (isset($_SESSION['student_register_id'])) {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div>-->
                             <!--end: Accordion -->
                         </div>
                     </div>
