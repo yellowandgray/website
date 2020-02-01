@@ -71,7 +71,7 @@ this.topic = [];
     }
     getQuestion(): void {
 this.question = [];
-        this.httpClient.get<any>('../api/v1/get_question_by_topic/'+this.selected_topic)
+        this.httpClient.get<any>('../api/v1/get_question_by_topic/'+this.selected_topic+'/'+this.selected_chapter)
         .subscribe(
                 (res)=>{
                     this.question = res["result"]["data"];

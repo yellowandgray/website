@@ -201,12 +201,14 @@ $app->get('/get_question', function() {
     echoRespnse(201, $res);
 });
 
-$app->get('/get_question_by_topic/:tid', function($tid) {
+$app->get('/get_question_by_topic/:tid', function($tid, $cid) {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
     $topic_fltr = '';
-    if ($tid == 0) {
+    if ($tid != 0) {
         $topic_fltr = ' AND topic_id = ' . $tid;
+    } else {
+        $topic_fltr = ' AND topic_id IN (SELECT topic_id chapter WHERE chapter_id = ' . $cid . ')';
     }
     $data = $com->selectAll('*', 'question', 'question_id > 0' . $topic_fltr . ' ORDER BY question_id ASC');
     if (count($data) > 0) {
