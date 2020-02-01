@@ -63,7 +63,7 @@
     <div fxFlex="50%">
         <mat-form-field appearance="outline" fxFlex="100%">
             <mat-label>Image Direction</mat-label>
-            <mat-select required formControlName="direction">
+            <mat-select formControlName="direction">
                 <mat-option value="top">Top</mat-option>
                 <mat-option value="bottom">Bottom</mat-option>
             </mat-select>
@@ -111,11 +111,11 @@
 <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
     <div fxFlex="50%">
             <mat-label>Option C</mat-label>
-            <angular-editor id="editor4" [config]="editorOptionConfig" matInput placeholder="" required formControlName="c"></angular-editor>
+            <angular-editor id="editor4" [config]="editorOptionConfig" matInput placeholder="" formControlName="c"></angular-editor>
     </div>
     <div fxFlex="50%">
             <mat-label>Option D</mat-label>
-        <angular-editor id="editor4" [config]="editorOptionConfig" matInput placeholder="" required formControlName="d"></angular-editor>
+        <angular-editor id="editor4" [config]="editorOptionConfig" matInput placeholder="" formControlName="d"></angular-editor>
     </div>
 </div>
 <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">

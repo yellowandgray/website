@@ -204,7 +204,11 @@ $app->get('/get_question', function() {
 $app->get('/get_question_by_topic/:tid', function($tid) {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
-    $data = $com->selectAll('*', 'question', 'question_id > 0 AND topic_id = ' . $tid . ' ORDER BY question_id ASC');
+    $topic_fltr = '';
+    if ($tid == 0) {
+        $topic_fltr = ' AND topic_id = ' . $tid;
+    }
+    $data = $com->selectAll('*', 'question', 'question_id > 0' . $topic_fltr . ' ORDER BY question_id ASC');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
