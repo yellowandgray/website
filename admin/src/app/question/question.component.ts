@@ -43,7 +43,7 @@ export class QuestionComponent implements OnInit {
   }
    getChapter(): void {
         this.chapter = [];
-        this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_chapter_by_subject/'+this.selected_subject)
+        this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_chapter_by_subject/'+this.selected_subject)
         .subscribe(
                 (res)=>{
                     this.chapter = res["result"]["data"];
@@ -57,7 +57,7 @@ export class QuestionComponent implements OnInit {
     }    
 getTopic(): void {
 this.topic = [];
-        this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_topic_by_chapter/'+this.selected_chapter)
+        this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_topic_by_chapter/'+this.selected_chapter)
         .subscribe(
                 (res)=>{
                     this.topic = res["result"]["data"];
@@ -71,7 +71,7 @@ this.topic = [];
     }
     getQuestion(): void {
 this.question = [];
-        this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_question_by_topic/'+this.selected_topic)
+        this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_question_by_topic/'+this.selected_topic)
         .subscribe(
                 (res)=>{
                     this.question = res["result"]["data"];

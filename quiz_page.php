@@ -120,7 +120,7 @@ if (count($questions) > 0) {
 
                             <!--resultTitleBlock-->
                             <h2 class="complete-title">
-                                You did {{ (score()>7?'an amazing':(score()<4?'improve':'a good')) }} knowledge!
+                                You did {{ (score()>7?'an amazing':(score()<4?'a good':'improve')) }} knowledge!
                             </h2>
                             <p class="subtitle">
                                 Total score: {{ score() }} / {{ quiz.questions.length }}
