@@ -81,7 +81,7 @@ if (count($questions) > 0) {
                                 <!-- quizOptions -->
                                 <div class="optionContainer">
                                     <div class="option" v-for="(response, index) in quiz.questions[questionIndex].responses" @click="selectOption(index)" :class="{ 'is-selected': userResponses[questionIndex] == index}" :key="index" v-if="response.text != ''">
-                                         {{ index | charIndex }}. {{ response.text }}
+                                         {{ index | charIndex }}. <span v-html="response.text"></span>
                                 </div>
                             </div>
                             <!--quizFooter: navigation and progress-->
