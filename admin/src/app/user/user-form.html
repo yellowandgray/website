@@ -31,7 +31,7 @@
             <div fxFlex="50%" fxLayoutAlign="center center">
                 <button *ngIf="profile_image == ''" type="button" mat-raised-button (click)="fileInput.click()">{{profile_picture}}</button>
                 <input hidden #fileInput type="file" id="file" (change)="fileProgress($event, 'profile_picture', 'profile_image')" />
-                <div class="preview-image" *ngIf="profile_image != ''">
+                       <div class="preview-image" *ngIf="profile_image != ''">
                     <img class="dialog-picture" mat-card-image src="{{image_url}}{{profile_image}}" alt="Photo" />
                     <button mat-icon-button aria-label="Close icon" (click)="removeMedia('profile_image')">
                         <mat-icon>close</mat-icon>
@@ -82,8 +82,10 @@
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Standard</mat-label>
-                    <input matInput placeholder="" required formControlName="standard" />
-                    <mat-error>Standard is required</mat-error>
+                    <mat-select appearance="outline" required formControlName="standard">
+                        <mat-option value='10th-State-Board'>10th State Board</mat-option>
+                        <mat-option value='10th-CBSC'>10th CBSC</mat-option>
+                    </mat-select>
                 </mat-form-field>
             </div>
             <div fxFlex="50%">
