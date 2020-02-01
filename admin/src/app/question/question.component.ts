@@ -90,6 +90,26 @@ if(typeof this.topic[ev.index] !== 'undefined') {
         );
     }
     }
+fileProgress(fileInput: any) {
+        var fileData = <File>fileInput.target.files[0];
+        this.file_name = fileData.name;
+        this.loading = true;
+        var formData = new FormData();
+        formData.append('file', fileData);
+        this.httpClient.post('http://localhost/project/feringo/api/v1/import_question', formData).subscribe(
+            (res) => {
+                this.loading = false;
+                this._snackBar.open(res["result"]["message"], '', {
+                    duration: 2000,
+                });
+            },
+            (error) => {
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+                    duration: 2000,
+                });
+            });
+    }
     openDialog(id, res): void {
         var data = null;
         if (id != 0) {

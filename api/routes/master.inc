@@ -258,29 +258,38 @@ $app->post('/import_question', function() use($app) {
         $first = true;
         $count = 0;
         $obj = new Common();
+        $difficult = $obj->selectAll('*', 'difficult', 'difficult_id > 0');
         while (($row = fgetcsv($handle, 1000, ',')) !== FALSE) {
             if (!$first) {
-                $language = $obj->selectRow('*', 'language', 'name=\'' . trim($row[0]) . '\'');
-                if (count($language) == 0) {
-                    $lid = $obj->insertRecord(array('name' => trim($row[0]), 'status' => 1, 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')), 'language');
+                $subject_id = 0;
+                $chapter_id = 0;
+                $topic_id = 0;
+                $subject = $obj->selectRow('*', 'subject', 'name = \'' . $row[0] . '\'');
+                $chapter = $obj->selectRow('*', 'chapter', 'name = \'' . $row[1] . '\'');
+                $topic = $obj->selectRow('*', 'topic', 'name = \'' . $row[2] . '\'');
+                if (count($subject) == 0) {
+                    $subject_id = $obj->insertRecord(array('name' => trim($row[0]), 'description' => '', 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'image_path' => ''), 'subject');
                 } else {
-                    $lid = $language['language_id'];
+                    $subject_id = $subject['subject_id'];
                 }
-                $year = $obj->selectRow('*', 'year', 'year=\'' . trim($row[1]) . '\'');
-                if (count($year) == 0) {
-                    $yid = $obj->insertRecord(array('year' => trim($row[1]), 'status' => 1, 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')), 'year');
+                if (count($chapter) == 0) {
+                    $chapter_id = $obj->insertRecord(array('name' => trim($row[1]), 'description' => '', 'status' => 1, 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'subject_id' => $subject_id), 'chapter');
                 } else {
-                    $yid = $year['year_id'];
+                    $chapter_id = $chapter['chapter_id'];
                 }
-                $topic = $obj->selectRow('*', 'topic', 'name=\'' . trim($row[2]) . '\' AND language_id = ' . $lid . ' AND year_id = ' . $yid);
                 if (count($topic) == 0) {
-                    $tid = $obj->insertRecord(array('name' => trim($row[2]), 'language_id' => $lid, 'year_id' => $yid, 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')), 'topic');
+                    $topic_id = $obj->insertRecord(array('name' => trim($row[2]), 'description' => '', 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'chapter_id' => $chapter_id), 'chapter');
                 } else {
-                    $tid = $topic['topic_id'];
+                    $topic_id = $topic['topic_id'];
                 }
-                $qnoqry = $obj->selectRow('IFNULL(MAX(question_no), 0) AS max_no', 'question', 'topic_id=' . $tid);
-                $qno = $qnoqry['max_no'];
-                $data = array('topic_id' => $tid, 'name' => $row[3], 'a' => $row[4], 'b' => $row[5], 'c' => $row[6], 'd' => $row[6], 'answer' => $row[7], 'question_no' => ($qno + 1), 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'));
+                $difficult_id = 0;
+                foreach ($difficult as $dif) {
+                    if ($dif['name'] == trim($row[4])) {
+                        $difficult_id = $dif['difficult_id'];
+                        break;
+                    }
+                }
+                $data = array('topic_id' => $topic_id, 'name' => trim($row[5]), 'a' => $row[6], 'b' => $row[7], 'c' => $row[8], 'd' => $row[9], 'answer' => $row[10], 'question_no' => $row[3], 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'image_path' => '', 'direction' => 'top', 'difficult_id' => $difficult_id);
                 $insert = $obj->insertRecord($data, 'question');
                 if ($insert > 0) {
                     $count++;
