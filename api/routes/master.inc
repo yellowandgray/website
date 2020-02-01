@@ -265,18 +265,18 @@ $app->post('/import_question', function() use($app) {
                 $chapter_id = 0;
                 $topic_id = 0;
                 $subject = $obj->selectRow('*', 'subject', 'name = \'' . $row[0] . '\'');
-                $chapter = $obj->selectRow('*', 'chapter', 'name = \'' . $row[1] . '\'');
-                $topic = $obj->selectRow('*', 'topic', 'name = \'' . $row[2] . '\'');
                 if (count($subject) == 0) {
                     $subject_id = $obj->insertRecord(array('name' => trim($row[0]), 'description' => '', 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'image_path' => ''), 'subject');
                 } else {
                     $subject_id = $subject['subject_id'];
                 }
+                $chapter = $obj->selectRow('*', 'chapter', 'name = \'' . $row[1] . '\' AND subject_id = ' . $subject_id);
                 if (count($chapter) == 0) {
                     $chapter_id = $obj->insertRecord(array('name' => trim($row[1]), 'description' => '', 'status' => 1, 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'subject_id' => $subject_id), 'chapter');
                 } else {
                     $chapter_id = $chapter['chapter_id'];
                 }
+                $topic = $obj->selectRow('*', 'topic', 'name = \'' . $row[2] . '\' AND chapter_id = ' . $chapter_id);
                 if (count($topic) == 0) {
                     $topic_id = $obj->insertRecord(array('name' => trim($row[2]), 'description' => '', 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'chapter_id' => $chapter_id), 'topic');
                 } else {
