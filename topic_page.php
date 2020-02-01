@@ -29,7 +29,7 @@ $_SESSION['selected_chapter_id'] = $chapter['chapter_id'];
                                         <div class="topic_list_section">
                                             <div class="topic_list_position_left">
                                                 <i class="icon-caret-right"></i>
-                                                <a href="difficult_level?topic=<?php echo $row['name']; ?>"> 
+                                                <a href="quiz_page?topic=<?php echo $row['name']; ?>"> 
                                                     <?php echo $row['name']; ?>
                                                 </a>
                                             </div>

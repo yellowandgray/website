@@ -16,7 +16,7 @@ $subjects = $obj->selectAll('*', 'subject', 'subject_id > 0');
                     </h4>
                     <div class="row margin-auto">
                         <?php foreach ($subjects as $row) { ?>
-                            <div class="span3 subject-section" onclick="window.location='select_chapter?sub=<?php echo $row['name']; ?>'">
+                            <div class="span3 subject-section" onclick="window.location='difficult_level?sub=<?php echo $row['name']; ?>'">
                                 <div class="price">Feringo</div>
                                 <div class="subject-1">
                                     <div class="subject-1-img" style="background: url(<?php echo BASE_URL . $row['image_path']; ?>)no-repeat;"></div>

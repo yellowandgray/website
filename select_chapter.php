@@ -2,12 +2,16 @@
 require_once 'api/include/common.php';
 session_start();
 $obj = new Common();
-if (!isset($_GET['sub'])) {
+if (!isset($_SESSION['selected_subject_id'])) {
     header('Location: home_subject');
 }
-$subject = $obj->selectRow('*', 'subject', 'name = \'' . $_GET['sub'] . '\'');
+$subject = $obj->selectRow('*', 'subject', 'subject_id=' . $_SESSION['selected_subject_id']);
+if (!isset($_GET['difficult'])) {
+    header('Location: difficult_level?sub=' . $subject['name']);
+}
+$difficult = $obj->selectRow('*', 'difficult', 'name=\'' . $_GET['difficult'] . '\'');
 $chapters = $obj->selectAll('*', 'chapter', 'subject_id = ' . $subject['subject_id']);
-$_SESSION['selected_subject_id'] = $subject['subject_id'];
+$_SESSION['selected_difficult_id'] = $difficult['difficult_id'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
