@@ -8,7 +8,7 @@ if (!isset($_GET['topic'])) {
     $chapter = $obj->selectRow('*', 'chapter', 'chapter_id = ' . $_SESSION['selected_chapter_id']);
     header('Location: topic_page?chapter=' . $chapter['name']);
 }
-$topic = $obj->selectRow('*', 'topic', 'name=\'' . $_GET['topic'] . '\'');
+$topic = $obj->selectRow('*', 'topic', 'name=\'' . $obj->escapeString($_GET['topic']) . '\'');
 $_SESSION['selected_topic_id'] = $topic['topic_id'];
 $questions = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer, image_path, direction', 'question', 'topic_id = ' . $_SESSION['selected_topic_id'] . ' AND difficult_id <= ' . $_SESSION['selected_difficult_id']);
 $questions_list = array();

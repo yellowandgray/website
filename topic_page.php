@@ -6,7 +6,7 @@ if (!isset($_GET['chapter'])) {
     $subject = $obj->selectRow('*', 'subject', 'subject_id = ' . $_SESSION['selected_subject_id']);
     header('Location: select_chapter?sub=' . $subject['name']);
 }
-$chapter = $obj->selectRow('*', 'chapter', 'name = \'' . $_GET['chapter'] . '\'');
+$chapter = $obj->selectRow('*', 'chapter', 'name = \'' . $obj->escapeString($_GET['chapter']) . '\'');
 $topics = $obj->selectAll('*', 'topic', 'chapter_id = ' . $chapter['chapter_id']);
 $_SESSION['selected_chapter_id'] = $chapter['chapter_id'];
 ?>
