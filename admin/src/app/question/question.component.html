@@ -19,11 +19,11 @@
                 <mat-icon>add</mat-icon> Question
             </button>
         </div>
-        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="2%" fxLayoutAlign="start center">
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Select Subject</mat-label>
-                    <mat-select (selectionChange)="getChapter($event)">
+                    <mat-select (selectionChange)="getChapter()" [(ngModel)]="selected_subject">
                         <mat-option [value]="sub.subject_id" *ngFor="let sub of subject">
                             {{sub.name}}
                     </mat-option>
@@ -34,7 +34,7 @@
         <div fxFlex="50%">
             <mat-form-field appearance="outline" fxFlex="100%">
                 <mat-label>Select Chapter</mat-label>
-                <mat-select (selectionChange)="getTopic($event)">
+                <mat-select (selectionChange)="getTopic()" [(ngModel)]="selected_chapter">
                     <mat-option [value]="chap.chapter_id" *ngFor="let chap of chapter">
                         {{chap.name}}
                 </mat-option>
@@ -45,7 +45,7 @@
     <div fxFlex="50%">
         <mat-form-field appearance="outline" fxFlex="100%">
             <mat-label>Select Topic</mat-label>
-            <mat-select (selectionChange)="getQuestion($event)">
+            <mat-select (selectionChange)="getQuestion()" [(ngModel)]="selected_topic">
                 <mat-option [value]="top.topic_id" *ngFor="let top of topic">
                     {{top.name}}
             </mat-option>

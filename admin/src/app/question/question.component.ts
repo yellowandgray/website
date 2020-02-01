@@ -21,9 +21,9 @@ export class QuestionComponent implements OnInit {
     difficult = [];
     loading = false;
     file_name: string = 'Select Picture';
-    selected_subject_index = 0;
-    selected_chapter_index = 0;
-    selected_topic_index = 0;
+    selected_subject = 0;
+    selected_chapter = 0;
+    selected_topic = 0;
     constructor(public dialog: MatDialog, private httpClient: HttpClient, private _snackBar: MatSnackBar) { }
     ngOnInit() {
         this.getSubject();
@@ -41,10 +41,9 @@ export class QuestionComponent implements OnInit {
         }
       );
   }
-   getChapter(ev): void {
+   getChapter(): void {
         this.chapter = [];
-        this.selected_subject_index = ev.index;
-        this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_chapter_by_subject/'+this.subject[ev.index].subject_id)
+        this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_chapter_by_subject/'+this.selected_subject)
         .subscribe(
                 (res)=>{
                     this.chapter = res["result"]["data"];
@@ -56,11 +55,9 @@ export class QuestionComponent implements OnInit {
             }
         );
     }    
-getTopic(ev): void {
+getTopic(): void {
 this.topic = [];
-this.selected_chapter_index = ev.index;
-if(typeof this.chapter[ev.index] !== 'undefined') {
-        this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_topic_by_chapter/'+this.chapter[ev.index].chapter_id)
+        this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_topic_by_chapter/'+this.selected_chapter)
         .subscribe(
                 (res)=>{
                     this.topic = res["result"]["data"];
@@ -72,12 +69,9 @@ if(typeof this.chapter[ev.index] !== 'undefined') {
             }
         );
     }
-    }
-    getQuestion(ev): void {
+    getQuestion(): void {
 this.question = [];
-this.selected_topic_index = ev.index;
-if(typeof this.topic[ev.index] !== 'undefined') {
-        this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_question_by_topic/'+this.topic[ev.index].topic_id)
+        this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_question_by_topic/'+this.selected_topic)
         .subscribe(
                 (res)=>{
                     this.question = res["result"]["data"];
@@ -88,7 +82,6 @@ if(typeof this.topic[ev.index] !== 'undefined') {
                 });
             }
         );
-    }
     }
 fileProgress(fileInput: any) {
         var fileData = <File>fileInput.target.files[0];
@@ -115,8 +108,8 @@ fileProgress(fileInput: any) {
         if (id != 0) {
             this[res].forEach(val => {
                 if (parseInt(val.question_id) === parseInt(id)) {
-                    val.subject_id = this.subject[this.selected_subject_index].subject_id;
-                    val.chapter_id = this.chapter[this.selected_chapter_index].chapter_id;
+                    val.subject_id = this.selected_subject;
+                    val.chapter_id = this.selected_chapter;
                     data = val;
                     return false;
                 }
@@ -130,7 +123,7 @@ fileProgress(fileInput: any) {
 
         dialogRef.afterClosed().subscribe(result => {
             if (typeof result !== 'undefined' && result !== false && result !== 'false') {
-                this.getQuestion({index: this.selected_topic_index});
+                this.getQuestion();
             }
         });
     }
@@ -146,29 +139,9 @@ fileProgress(fileInput: any) {
         });
         dialogRef.afterClosed().subscribe(result => {
             if (typeof result !== 'undefined' && result !== false && result !== 'false') {
-                this.getQuestion({index: this.selected_topic_index});
+                this.getQuestion();
             }
         });
-    }
-    fileProgress(fileInput: any) {
-        var fileData = <File>fileInput.target.files[0];
-        this.file_name = fileData.name;
-        this.loading = true;
-        var formData = new FormData();
-        formData.append('file', fileData);
-        this.httpClient.post('http://localhost/microview/feringo/api/v1import_question', formData).subscribe(
-            (res) => {
-                this.loading = false;
-                this._snackBar.open(res["result"]["message"], '', {
-                    duration: 2000,
-                });
-            },
-            (error) => {
-                this.loading = false;
-                this._snackBar.open(error["statusText"], '', {
-                    duration: 2000,
-                });
-            });
     }
 }
 
