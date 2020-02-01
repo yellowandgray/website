@@ -23,7 +23,7 @@ export class SubjectComponent implements OnInit {
   ngOnInit() {
     this.getsubject();
   }
-  image_url: string = 'http://localhost/microview/feringo/api/v1';
+  image_url: string = 'http://localhost/microview/feringo/api/v1/';
   getsubject(): void {
     this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_subject')
       .subscribe(
@@ -81,7 +81,7 @@ export class SubjectComponent implements OnInit {
   templateUrl: 'subject-form.html',
 })
 export class SubjectForm {
-  image_url: string = 'http://localhost/microview/feringo/api/v1';
+  image_url: string = 'http://localhost/microview/feringo/api/v1/';
   subjectForm: FormGroup;
   loading = false;
   subject_id = 0;

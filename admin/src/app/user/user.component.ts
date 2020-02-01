@@ -15,7 +15,7 @@ import { Observable } from 'rxjs';
 export class UserComponent implements OnInit {
   searchTerm: string = '';
   student = [];
-  image_url: string = 'http://localhost/microview/feringo/api/v1';
+  image_url: string = 'http://localhost/microview/feringo/api/v1/';
 
   constructor(public dialog: MatDialog, private httpClient: HttpClient, private _snackBar: MatSnackBar) { }
 
@@ -147,7 +147,7 @@ export class UserComponent implements OnInit {
   templateUrl: 'user-form.html',
 })
 export class UserForm {
-  image_url: string = 'http://localhost/microview/feringo/api/v1';
+  image_url: string = 'http://localhost/microview/feringo/api/v1/';
   userForm: FormGroup;
   loading = false;
   student_register_id = 0;
@@ -363,7 +363,7 @@ export class ResultForm {
 })
 
 export class PictureViewUser {
-  image_url: string = 'http://localhost/microview/feringo/api/v1';
+  image_url: string = 'http://localhost/microview/feringo/api/v1/';
   action: string = '';
   loading = false;
   student_register_id = 0;
@@ -389,7 +389,7 @@ export class PictureViewUser {
 })
 
 export class UserViewForm {
-  image_url: string = 'http://localhost/microview/feringo/api/v1';
+  image_url: string = 'http://localhost/microview/feringo/api/v1/';
   loading = false;
   student = [];
   student_register_id = 0;
