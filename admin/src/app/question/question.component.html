@@ -25,7 +25,7 @@
                     <mat-label>Select Subject</mat-label>
                     <mat-select (selectionChange)="getChapter($event)">
                         <mat-option [value]="sub.subject_id" *ngFor="let sub of subject">
-                            {{row.name}}
+                            {{sub.name}}
                     </mat-option>
                 </mat-select>
                 <mat-error>Subject is required</mat-error>
