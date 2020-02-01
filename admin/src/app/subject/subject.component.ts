@@ -124,7 +124,7 @@ export class SubjectForm {
       formData.append('subject_image', this.image_path);
       url = 'insert_subject';
     }
-    this.httpClient.post('http://localhost/project/feringo/api/v1' + url, formData).subscribe(
+    this.httpClient.post('http://localhost/project/feringo/api/v1/' + url, formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {

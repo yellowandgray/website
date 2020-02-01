@@ -230,7 +230,7 @@ export class UserForm {
       formData.append('email', this.userForm.value.email);
       url = 'insert_student';
     }
-    this.httpClient.post('http://localhost/project/feringo/api/v1' + url, formData).subscribe(
+    this.httpClient.post('http://localhost/project/feringo/api/v1/' + url, formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
