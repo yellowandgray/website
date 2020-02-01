@@ -380,6 +380,46 @@ getTopic(): void {
         sanitize: true,
         toolbarPosition: 'top',
     };
+    editorOptionConfig: AngularEditorConfig = {
+        editable: true,
+        spellcheck: true,
+        height: '20px',
+        minHeight: '20px',
+        maxHeight: '20px',
+        width: 'auto',
+        minWidth: '0',
+        translate: 'no',
+        enableToolbar: false,
+        showToolbar: false,
+        placeholder: 'Enter text here...',
+        defaultParagraphSeparator: '',
+        defaultFontName: 'Arial',
+        defaultFontSize: '3',
+        fonts: [
+            { class: 'arial', name: 'Arial' },
+            { class: 'times-new-roman', name: 'Times New Roman' },
+            { class: 'calibri', name: 'Calibri' },
+            { class: 'comic-sans-ms', name: 'Comic Sans MS' }
+        ],
+        customClasses: [
+            {
+                name: 'quote',
+                class: 'quote',
+            },
+            {
+                name: 'redText',
+                class: 'redText'
+            },
+            {
+                name: 'titleText',
+                class: 'titleText',
+                tag: 'h1',
+            },
+        ],
+        uploadUrl: 'http://localhost/microview/feringo/api/v1/upload_image',
+        sanitize: false,
+        toolbarPosition: 'top',
+    };
 }
 
 

@@ -80,18 +80,12 @@
 <br />
 <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
     <div fxFlex="50%">
-        <mat-form-field appearance="outline" fxFlex="100%">
-            <mat-label>Option A</mat-label>
-            <input matInput placeholder="" required formControlName="a" />
-            <mat-error>Option A is required</mat-error>
-        </mat-form-field>
+        <mat-label>Option A</mat-label>
+        <angular-editor id="editor2" [config]="editorOptionConfig" matInput placeholder="" required formControlName="a"></angular-editor>
     </div>
     <div fxFlex="50%">
-        <mat-form-field appearance="outline" fxFlex="100%">
             <mat-label>Option B</mat-label>
-            <input matInput placeholder="" required formControlName="b" />
-            <mat-error>Option B is required</mat-error>
-        </mat-form-field>
+            <angular-editor id="editor3" [config]="editorOptionConfig" matInput placeholder="" required formControlName="b"></angular-editor>
     </div>
 </div>
 <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
@@ -116,18 +110,12 @@
 <br/>
 <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
     <div fxFlex="50%">
-        <mat-form-field appearance="outline" fxFlex="100%">
             <mat-label>Option C</mat-label>
-            <input matInput placeholder="" formControlName="c" />
-            <mat-error>Option C is required</mat-error>
-        </mat-form-field>
+            <angular-editor id="editor4" [config]="editorOptionConfig" matInput placeholder="" required formControlName="c"></angular-editor>
     </div>
     <div fxFlex="50%">
-        <mat-form-field appearance="outline" fxFlex="100%">
             <mat-label>Option D</mat-label>
-            <input matInput placeholder="" formControlName="d" />
-            <mat-error>Option D is required</mat-error>
-        </mat-form-field>
+        <angular-editor id="editor4" [config]="editorOptionConfig" matInput placeholder="" required formControlName="d"></angular-editor>
     </div>
 </div>
 <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
