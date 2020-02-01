@@ -276,7 +276,7 @@ $app->post('/import_question', function() use($app) {
                 } else {
                     $chapter_id = $chapter['chapter_id'];
                 }
-                $topic = $obj->selectRow('*', 'topic', 'name = \'' . $row[2] . '\' AND chapter_id = ' . $chapter_id);
+                $topic = $obj->selectRow('*', 'topic', 'name = \'' . $obj->escapeString($row[2]) . '\' AND chapter_id = ' . $chapter_id);
                 if (count($topic) == 0) {
                     $topic_id = $obj->insertRecord(array('name' => trim($row[2]), 'description' => '', 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'chapter_id' => $chapter_id), 'topic');
                 } else {
