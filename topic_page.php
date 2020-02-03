@@ -7,7 +7,7 @@ if (!isset($_GET['chapter'])) {
     header('Location: select_chapter?sub=' . $subject['name']);
 }
 $chapter = $obj->selectRow('*', 'chapter', 'name = \'' . $obj->escapeString($_GET['chapter']) . '\'');
-$topics = $obj->selectAll('*', 'topic', 'chapter_id = ' . $chapter['chapter_id']);
+$topics = $obj->selectAll('*', 'topic', 'chapter_id = ' . $chapter['chapter_id'] . ' ORDER BY name ASC ');
 $_SESSION['selected_chapter_id'] = $chapter['chapter_id'];
 ?>
 <html lang="en">

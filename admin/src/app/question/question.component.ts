@@ -179,7 +179,7 @@ export class QuestionForm {
             'chapter_id': new FormControl('', Validators.required),
             'topic_id': new FormControl('', Validators.required),
             'difficult_id': new FormControl('', Validators.required),
-            'question': new FormControl('', Validators.required),
+            'question': new FormControl(''),
             'question_no': new FormControl('', Validators.required),
             'direction': new FormControl(''),
             'a': new FormControl('', Validators.required),

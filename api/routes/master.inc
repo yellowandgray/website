@@ -189,6 +189,18 @@ $app->get('/get_student', function() {
     echoRespnse(201, $res);
 });
 
+$app->get('/get_student_result/:sid', function() {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('*', 'student_answer', 'student_register_id = ' . $sid);
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
 $app->get('/get_question', function() {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
@@ -210,7 +222,7 @@ $app->get('/get_question_by_topic/:tid/:cid', function($tid, $cid) {
     } else {
         $topic_fltr = ' AND topic_id IN (SELECT topic_id FROM chapter WHERE chapter_id = ' . $cid . ')';
     }
-    $data = $com->selectAll('*', 'question', 'question_id > 0' . $topic_fltr . ' ORDER BY question_id ASC');
+    $data = $com->selectAll('q.*, d.name AS difficult', 'question AS q LEFT JOIN difficult AS d ON d.difficult_id = q.difficult_id', 'question_id > 0' . $topic_fltr . ' ORDER BY question_id ASC');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';

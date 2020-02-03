@@ -6,12 +6,12 @@
         <app-header></app-header>
         <div class="add-btn-container">
             <div class="searchdesign" fxFlex="80%">
-                <mat-form-field fxFlex="75%">
-                    <input matInput type="text" placeholder="Search by name" [(ngModel)]="searchTerm" />
+                <mat-form-field fxFlex="65%">
+                    <input matInput type="text" placeholder="Search by Name" [(ngModel)]="searchTerm" />
                 </mat-form-field>
                 <span fxFlex="5%"></span>
-                <mat-form-field fxFlex="20%">
-                    <input matInput type="text" placeholder="Question No" />
+                <mat-form-field fxFlex="30%">
+                    <input matInput type="text" placeholder="Search by Question No" />
                 </mat-form-field>
             </div>
             <div fxFlex="80%">
@@ -80,7 +80,7 @@
             <p mat-line>B. <span [innerHTML]="data.b"></span></p>
             <p mat-line>C. <span [innerHTML]="data.c"></span></p>
             <p mat-line>D. <span [innerHTML]="data.d"></span></p>
-            <h2 mat-line class="answer-font">Answer: ({{data.answer}})</h2>
+            <h2 mat-line class="answer-font">Answer: ({{data.answer}}) | <span class="category_color">Category: {{data.difficult}}</span></h2>
         </mat-list-item>
         <mat-divider></mat-divider>
     </ng-container>
