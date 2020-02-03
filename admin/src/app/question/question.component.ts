@@ -71,7 +71,7 @@ this.topic = [];
     }
     getQuestion(): void {
 this.question = [];
-        this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_question_by_topic/'+this.selected_topic)
+        this.httpClient.get<any>('../api/v1/get_question_by_topic/'+this.selected_topic+'/'+this.selected_chapter)
         .subscribe(
                 (res)=>{
                     this.question = res["result"]["data"];
@@ -181,7 +181,7 @@ export class QuestionForm {
             'difficult_id': new FormControl('', Validators.required),
             'question': new FormControl('', Validators.required),
             'question_no': new FormControl('', Validators.required),
-            'direction': new FormControl('', Validators.required),
+            'direction': new FormControl(''),
             'a': new FormControl('', Validators.required),
             'b': new FormControl('', Validators.required),
             'c': new FormControl(''),
@@ -389,7 +389,7 @@ getTopic(): void {
         width: 'auto',
         minWidth: '0',
         translate: 'no',
-        enableToolbar: false,
+        enableToolbar: true,
         showToolbar: false,
         placeholder: 'Enter text here...',
         defaultParagraphSeparator: '',
@@ -416,8 +416,8 @@ getTopic(): void {
                 tag: 'h1',
             },
         ],
-        uploadUrl: 'http://localhost/project/feringo/api/v1/upload_image',
-        sanitize: false,
+        uploadUrl: '../api/v1/upload_image',
+        sanitize: true,
         toolbarPosition: 'top',
     };
 }

@@ -168,7 +168,7 @@ $app->get('/get_topic', function() {
 $app->get('/get_topic_by_chapter/:cid', function($cid) {
     $res = array('error' => true, 'message' => 'No records found');
     $obj = new Common();
-    $data = $obj->selectAll('*', 'topic', 'chapter_id = ' . $cid);
+    $data = $obj->selectAll('*', 'topic', 'chapter_id = ' . $cid . ' ORDER BY name ASC');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
@@ -201,10 +201,16 @@ $app->get('/get_question', function() {
     echoRespnse(201, $res);
 });
 
-$app->get('/get_question_by_topic/:tid', function($tid) {
+$app->get('/get_question_by_topic/:tid/:cid', function($tid, $cid) {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
-    $data = $com->selectAll('*', 'question', 'question_id > 0 AND topic_id = ' . $tid . ' ORDER BY question_id ASC');
+    $topic_fltr = '';
+    if ($tid != 0) {
+        $topic_fltr = ' AND topic_id = ' . $tid;
+    } else {
+        $topic_fltr = ' AND topic_id IN (SELECT topic_id FROM chapter WHERE chapter_id = ' . $cid . ')';
+    }
+    $data = $com->selectAll('*', 'question', 'question_id > 0' . $topic_fltr . ' ORDER BY question_id ASC');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
@@ -228,7 +234,7 @@ $app->get('/get_year', function() {
 $app->get('/get_chapter_by_subject/:sid', function($sid) {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
-    $data = $com->selectAll('*', 'chapter', 'subject_id = ' . $sid);
+    $data = $com->selectAll('*', 'chapter', 'subject_id = ' . $sid . ' ORDER BY name ASC');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
@@ -270,7 +276,7 @@ $app->post('/import_question', function() use($app) {
                 } else {
                     $subject_id = $subject['subject_id'];
                 }
-                $chapter = $obj->selectRow('*', 'chapter', 'name = \'' . $row[1] . '\' AND subject_id = ' . $subject_id);
+                $chapter = $obj->selectRow('*', 'chapter', 'name = \'' . $obj->escapeString($row[1]) . '\' AND subject_id = ' . $subject_id);
                 if (count($chapter) == 0) {
                     $chapter_id = $obj->insertRecord(array('name' => trim($row[1]), 'description' => '', 'status' => 1, 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'subject_id' => $subject_id), 'chapter');
                 } else {
