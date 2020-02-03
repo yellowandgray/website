@@ -10,7 +10,7 @@ if (!isset($_GET['difficult'])) {
     header('Location: difficult_level?sub=' . $subject['name']);
 }
 $difficult = $obj->selectRow('*', 'difficult', 'name=\'' . $_GET['difficult'] . '\'');
-$chapters = $obj->selectAll('*', 'chapter', 'subject_id = ' . $subject['subject_id'] . ' ORDER BY name ASC ');
+$chapters = $obj->selectAll('*', 'chapter', 'subject_id = ' . $subject['subject_id'] . ' ORDER BY name ASC');
 $_SESSION['selected_difficult_id'] = $difficult['difficult_id'];
 ?>
 <!DOCTYPE html>
