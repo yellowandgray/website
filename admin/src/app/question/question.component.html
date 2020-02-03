@@ -5,19 +5,30 @@
     <mat-sidenav-content>
         <app-header></app-header>
         <div class="add-btn-container">
-            <button mat-raised-button color="primary" (click)="fileInput.click()">
-                <span *ngIf="!loading">Import</span>
-                <mat-progress-spinner
-                    *ngIf="loading"
-                    [mode]="'indeterminate'"
-                    [strokeWidth]="3"
-                    [diameter]="25">
-                </mat-progress-spinner>
-            </button>
-            <input hidden #fileInput type="file" id="file" (change)="fileProgress($event)" />
-                   <button mat-raised-button color="primary" (click)="openDialog(0, 'null')">
-                <mat-icon>add</mat-icon> Question
-            </button>
+            <div class="searchdesign" fxFlex="80%">
+                <mat-form-field fxFlex="75%">
+                    <input matInput type="text" placeholder="Search by name" [(ngModel)]="searchTerm" />
+                </mat-form-field>
+                <span fxFlex="5%"></span>
+                <mat-form-field fxFlex="20%">
+                    <input matInput type="text" placeholder="Question No" />
+                </mat-form-field>
+            </div>
+            <div fxFlex="80%">
+                <button mat-raised-button color="primary" (click)="fileInput.click()">
+                    <span *ngIf="!loading">Import</span>
+                    <mat-progress-spinner
+                        *ngIf="loading"
+                        [mode]="'indeterminate'"
+                        [strokeWidth]="3"
+                        [diameter]="25">
+                    </mat-progress-spinner>
+                </button>
+                <input hidden #fileInput type="file" id="file" (change)="fileProgress($event)" />
+                <button mat-raised-button color="primary" (click)="openDialog(0, 'null')">
+                    <mat-icon>add</mat-icon> Question
+                </button>
+            </div>
         </div>
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="2%" fxLayoutAlign="start center">
             <div fxFlex="50%">
@@ -63,8 +74,7 @@
             <button mat-icon-button aria-label="label" (click)="confirmDelete(data.question_id)">
                 <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
             </button>
-            <p class="float-left">{{data.question_no}}.</p>
-            <h4 class="question" mat-line [innerHTML]="data.name"></h4>
+            <p mat-line>{{data.question_no}}. <span class="question" [innerHTML]="data.name"></span></p>
             <p mat-line>A. <span [innerHTML]="data.a"></span></p>
             <p mat-line>B. <span [innerHTML]="data.b"></span></p>
             <p mat-line>C. <span [innerHTML]="data.c"></span></p>

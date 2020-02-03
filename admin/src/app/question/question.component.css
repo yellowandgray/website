@@ -3,14 +3,3 @@
     margin-top: 10px !important;
     color: #5cb85c;
 }
-
-.float-left {
-    position: absolute;
-    top: 0;
-    padding-right: 25px;
-}
-
-.question {
-    position: relative;
-    left: 25px;
-}
