@@ -71,7 +71,7 @@ this.topic = [];
     }
     getQuestion(): void {
 this.question = [];
-        this.httpClient.get<any>('../api/v1/get_question_by_topic/'+this.selected_topic+'/'+this.selected_chapter)
+        this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_question_by_topic/'+this.selected_topic+'/'+this.selected_chapter)
         .subscribe(
                 (res)=>{
                     this.question = res["result"]["data"];
@@ -416,7 +416,7 @@ getTopic(): void {
                 tag: 'h1',
             },
         ],
-        uploadUrl: '../api/v1/upload_image',
+        uploadUrl: 'http://localhost/project/feringo/api/v1/upload_image',
         sanitize: true,
         toolbarPosition: 'top',
     };
