@@ -220,7 +220,7 @@ $app->get('/get_question_by_topic/:tid/:cid', function($tid, $cid) {
     if ($tid != 0) {
         $topic_fltr = ' AND topic_id = ' . $tid;
     } else {
-        $topic_fltr = ' AND topic_id IN (SELECT topic_id FROM chapter WHERE chapter_id = ' . $cid . ')';
+        $topic_fltr = ' AND topic_id IN (SELECT topic_id FROM topic WHERE chapter_id = ' . $cid . ')';
     }
     $data = $com->selectAll('q.*, d.name AS difficult', 'question AS q LEFT JOIN difficult AS d ON d.difficult_id = q.difficult_id', 'question_id > 0' . $topic_fltr . ' ORDER BY question_id ASC');
     if (count($data) > 0) {
