@@ -55,16 +55,16 @@ if (isset($_SESSION['student_register_id'])) {
                                                 <table class = 'table table-striped result_table'>
                                                     <thead>
                                                         <tr>
+                                                            <th class="text-center">Category</th>
                                                             <th class="text-center">Total Questions</th>
-                                                            <th class="text-center">Attended</th>
                                                             <th class="text-center"><i class="icon-ok-sign"></i></th>
                                                             <th class="text-center"><i class="font-icon-remove-circle"></i></th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                         <tr>
+                                                            <td>40 Marks</td>
                                                             <td>100</td>
-                                                            <td>95</td>
                                                             <td>68</td>
                                                             <td>27</td>
                                                         </tr>
