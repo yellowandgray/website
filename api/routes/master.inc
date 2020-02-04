@@ -213,16 +213,23 @@ $app->get('/get_question', function() {
     echoRespnse(201, $res);
 });
 
-$app->get('/get_question_by_topic/:tid/:cid', function($tid, $cid) {
+$app->get('/get_question_by_topic/:tid/:cid/:searchtxt/:searchqno', function($tid, $cid, $stxt, $sqno) {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
     $topic_fltr = '';
+    $search_qry = '';
+    if ($stxt != null && $stxt != 'null') {
+        $search_qry = ' AND q.name LIKE %' . $stxt . '%';
+    }
+    if ($sqno != null && $sqno != 'null') {
+        $search_qry = $search_qry . ' AND q.question_no = ' . $sqno;
+    }
     if ($tid != 0) {
         $topic_fltr = ' AND topic_id = ' . $tid;
     } else {
         $topic_fltr = ' AND topic_id IN (SELECT topic_id FROM topic WHERE chapter_id = ' . $cid . ')';
     }
-    $data = $com->selectAll('q.*, d.name AS difficult', 'question AS q LEFT JOIN difficult AS d ON d.difficult_id = q.difficult_id', 'question_id > 0' . $topic_fltr . ' ORDER BY question_id ASC');
+    $data = $com->selectAll('q.*, d.name AS difficult', 'question AS q LEFT JOIN difficult AS d ON d.difficult_id = q.difficult_id', 'question_id > 0' . $topic_fltr . $search_qry . ' ORDER BY question_id ASC');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';

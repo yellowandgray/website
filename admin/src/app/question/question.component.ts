@@ -24,6 +24,8 @@ export class QuestionComponent implements OnInit {
     selected_subject = 0;
     selected_chapter = 0;
     selected_topic = 0;
+    searchQuestionNo = null;
+    searchTerm = null;
     constructor(public dialog: MatDialog, private httpClient: HttpClient, private _snackBar: MatSnackBar) { }
     ngOnInit() {
         this.getSubject();
@@ -70,8 +72,17 @@ this.topic = [];
         );
     }
     getQuestion(): void {
+if(this.selected_chapter && this.selected_chapter != 0 && this.selected_topic) {
 this.question = [];
-        this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_question_by_topic/'+this.selected_topic+'/'+this.selected_chapter)
+var filter_text = 'null';
+var filter_question = 'null';
+if(this.searchQuestionNo && this.searchQuestionNo != null && this.searchQuestionNo != '') {
+var filter_question = this.searchQuestionNo;
+}
+if(this.searchTerm && this.searchTerm != null && this.searchTerm != '') {
+var filter_text = this.searchTerm;
+}
+        this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_question_by_topic/'+this.selected_topic+'/'+this.selected_chapter+'/'+filter_text+'/'+filter_question+'/'+filter_text+'/'+filter_question)
         .subscribe(
                 (res)=>{
                     this.question = res["result"]["data"];
@@ -82,6 +93,7 @@ this.question = [];
                 });
             }
         );
+    }
     }
 fileProgress(fileInput: any) {
         var fileData = <File>fileInput.target.files[0];
