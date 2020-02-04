@@ -8,6 +8,9 @@ if (!isset($_GET['topic'])) {
     $chapter = $obj->selectRow('*', 'chapter', 'chapter_id = ' . $_SESSION['selected_chapter_id']);
     header('Location: topic_page?chapter=' . $chapter['name']);
 }
+$subject = $obj->selectRow('*', 'subject', 'subject_id=' . $_SESSION['selected_subject_id']);
+$difficult = $obj->selectRow('*', 'difficult', 'difficult_id=' . $_SESSION['selected_difficult_id']);
+$chapter = $obj->selectRow('*', 'chapter', 'chapter_id=' . $_SESSION['selected_chapter_id']);
 $topic = $obj->selectRow('*', 'topic', 'name=\'' . $obj->escapeString($_GET['topic']) . '\'');
 $_SESSION['selected_topic_id'] = $topic['topic_id'];
 $questions = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer, image_path, direction', 'question', 'topic_id = ' . $_SESSION['selected_topic_id'] . ' AND difficult_id <= ' . $_SESSION['selected_difficult_id']);
@@ -52,7 +55,7 @@ if (count($questions) > 0) {
                     <div class="span12">
                         <div class="quiz-question-section">
                             <a href = '#' onclick="goBack()"><i class = 'font-icon-arrow-simple-left'></i></a>
-                            <h2>Quiz Questions</h2>
+                            <h2><?php echo $subject['name'];?> &gt; <?php echo $difficult['name']; ?> &gt; <?php echo $chapter['name']; ?></h2>
                         </div>
                         <!--question Box-->
                         <div class="questionBox" id="app">
@@ -61,7 +64,7 @@ if (count($questions) > 0) {
                                 <div class="question-header">
                                     <!--progress-->
                                     <div class="progressContainer">
-                                        <h1 class="title is-6">Quiz</h1> 
+                                        <h1 class="title is-6"><?php echo $topic['name']; ?></h1> 
                                         <progress class="progress is-info is-small" :value="(questionIndex/quiz.questions.length)*100" max="100">{{(questionIndex/quiz.questions.length)*100}}%</progress>
                                         <div class="lenth_width">
                                             <span  class="label lable-blue">Total: {{quiz.questions.length}}</span>
