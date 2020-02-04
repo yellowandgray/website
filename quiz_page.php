@@ -15,6 +15,7 @@ $chapter = $obj->selectRow('*', 'chapter', 'chapter_id=' . $_SESSION['selected_c
 $topic = $obj->selectRow('*', 'topic', 'name=\'' . $obj->escapeString($_GET['topic']) . '\'');
 $_SESSION['selected_topic_id'] = $topic['topic_id'];
 $questions = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer, image_path, direction, question_id', 'question', 'topic_id = ' . $_SESSION['selected_topic_id'] . ' AND difficult_id <= ' . $_SESSION['selected_difficult_id']);
+$student_log = $obj->insertRecord(array('subject_id' => $_SESSION['selected_subject_id'], 'subject_name' => $subject['name'], 'difficult_id' => $_SESSION['selected_difficult_id'], 'difficult_name' => $difficult['name'], 'chapter_id' => $_SESSION['selected_chapter_id'], 'chapter_name' => $chapter['name'], 'topic_id' => $_SESSION['selected_topic_id'], 'topic_name' => $topic['name'], 'student_register_id' => $_SESSION['student_register_id'], 'total_questions' => count($questions), 'created_at' => date('Y-m-d'), 'created_by' => $_SESSION['student_register_id'], 'updated_at' => date('Y-m-d'), 'updated_by' => $_SESSION['student_register_id']), 'student_log');
 $questions_list = array();
 if (count($questions) > 0) {
     foreach ($questions as $q) {
@@ -174,23 +175,23 @@ if (count($questions) > 0) {
                         this.userResponses = Array(this.quiz.questions.length).fill(null);
                     },
                     selectOption: function (index) {
+                        setTimeout(() => {
+                            Vue.set(this.userResponses, this.questionIndex, index);
+                            if (this.questionIndex < this.quiz.questions.length) {
+                                this.questionIndex++;
+                            }
+                        }, 1000);
                         var questions = <?php echo json_encode($questions_list); ?>;
-                        var answers = ['a', 'b', 'c', 'd'];
-                        $.post("api/store_answer",
+                        var answers = ['A', 'B', 'C', 'D'];
+                        $.post("api/v1/store_answer",
                                 {
                                     question_id: questions[this.questionIndex].question_id,
                                     answer: answers[index],
                                     student_log_id: <?php echo $student_log; ?>
                                 },
                                 function (data, status) {
-                                    console.log(data);
                                     if (data.result.error === false) {
-                                        setTimeout(() => {
-                                            Vue.set(this.userResponses, this.questionIndex, index);
-                                            if (this.questionIndex < this.quiz.questions.length) {
-                                                this.questionIndex++;
-                                            }
-                                        }, 1000);
+
                                     }
                                 });
                     },
