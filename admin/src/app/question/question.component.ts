@@ -26,6 +26,8 @@ export class QuestionComponent implements OnInit {
     selected_topic = 0;
     searchQuestionNo = null;
     searchTerm = null;
+    filter_text = 'null';
+filter_question = 'null';
     constructor(public dialog: MatDialog, private httpClient: HttpClient, private _snackBar: MatSnackBar) { }
     ngOnInit() {
         this.getSubject();
@@ -74,8 +76,8 @@ this.topic = [];
     getQuestion(): void {
 if(this.selected_chapter && this.selected_chapter != 0 && this.selected_topic) {
 this.question = [];
-filter_text:string = 'null';
-filter_question:string = 'null';
+this.filter_text = 'null';
+this.filter_question = 'null';
 if(this.searchQuestionNo && this.searchQuestionNo != null && this.searchQuestionNo != '') {
 this.filter_question = this.searchQuestionNo;
 }
