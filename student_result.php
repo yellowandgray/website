@@ -3,8 +3,15 @@ session_start();
 require_once 'api/include/common.php';
 $obj = new Common();
 if (isset($_SESSION['student_register_id'])) {
-    $student = $obj->selectrow('*', 'student_register', 'student_register_id = ' . $_SESSION['student_register_id']);
-    $student_answer = $obj->selectAll('sa.*, s.name AS subject, c.name AS chapter, t.name AS topic', 'student_answer AS sa LEFT JOIN subject AS s ON s.subject_id = sa.subject_id LEFT JOIN chapter AS c ON c.chapter_id = sa.chapter_id LEFT JOIN topic AS t ON t.topic_id = sa.topic_id', 'student_answer_id > 0');
+    $login_student = $obj->selectRow('*', 'student_register', 'student_register_id=' . $_SESSION['student_register_id']);
+    $student_logs = $obj->selectAll('*', 'student_log', 'student_register_id = ' . $_SESSION['student_register_id']);
+    if (count($student_logs) > 0) {
+        foreach ($student_logs as $key => $log) {
+            $detail = $obj->selectRow('COUNT(student_log_detail_id) AS attended, IFNULL((SELECT COUNT(student_log_detail_id) FROM student_log_detail WHERE student_log_id=' . $log['student_log_id'] . ' AND UPPER(answer) = UPPER(student_answer)), 0) AS correct_answers', 'student_log_detail', 'student_log_id=' . $log['student_log_id']);
+            $student_logs[$key]['attended'] = $detail['attended'];
+            $student_logs[$key]['correct_answers'] = $detail['correct_answers'];
+        }
+    }
 }
 ?>
 <html lang = 'en'>
@@ -29,14 +36,14 @@ if (isset($_SESSION['student_register_id'])) {
                                 ?>
                             </div>
                             <div class = 'user_details'>
-                                <h2><?php echo $student['student_name'];
+                                <h2><?php echo $login_student['student_name'];
                                 ?></h2>
-                                <h4><?php echo $student['parent_name'];
-                                ?> <span><?php echo $student['mobile'] ?></span></h4>
-                                <h5><?php echo $student['school_name'];
+                                <h4><?php echo $login_student['parent_name'];
+                                ?> <span><?php echo $login_student['mobile'] ?></span></h4>
+                                <h5><?php echo $login_student['school_name'];
                                 ?> </h5>
-                                <p><?php echo $student['city'];
-                                ?> <?php echo $student['pin'];
+                                <p><?php echo $login_student['city'];
+                                ?> <?php echo $login_student['pin'];
                                 ?> </p>
                             </div>
                         </div>
@@ -50,23 +57,25 @@ if (isset($_SESSION['student_register_id'])) {
                                     </div>
                                     <div id = 'collapseOne' class = 'accordion-body collapse in'>
                                         <div class = 'accordion-inner'>
-                                            <?php foreach ($student_answer as $row) { ?>
-                                                <h2 class = 'titleContainer title'> <i class="font-icon-arrow-simple-right"></i> <?php echo $row['subject']; ?><i class="font-icon-arrow-simple-right"></i> <?php echo $row['chapter']; ?> <i class="font-icon-arrow-simple-right"></i><?php echo $row['topic']; ?><span>Date: <?php echo $row['created_at']; ?></span></h2>
+                                            <?php foreach ($student_logs as $row) { ?>
+                                                <h2 class = 'titleContainer title'> <i class="font-icon-arrow-simple-right"></i> <?php echo $row['subject_name']; ?><i class="font-icon-arrow-simple-right"></i> <?php echo $row['chapter_name']; ?> <i class="font-icon-arrow-simple-right"></i><?php echo $row['topic_name']; ?><span>Date: <?php echo date('d/M/Y h:iA', strtotime($row['created_at'])); ?></span></h2>
                                                 <table class = 'table table-striped result_table'>
                                                     <thead>
                                                         <tr>
                                                             <th class="text-center">Category</th>
                                                             <th class="text-center">Total Questions</th>
+                                                            <th class="text-center">Attand Questions</th>
                                                             <th class="text-center"><i class="icon-ok-sign"></i></th>
                                                             <th class="text-center"><i class="font-icon-remove-circle"></i></th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                         <tr>
-                                                            <td>40 Marks</td>
-                                                            <td>100</td>
-                                                            <td>68</td>
-                                                            <td>27</td>
+                                                            <td><?php echo $row['difficult_name'] ?> Marks</td>
+                                                            <td><?php echo $row['total_questions'] ?></td>
+                                                            <td><?php echo $row['attended'] ?></td>
+                                                            <td><?php echo $row['correct_answers'] ?></td>
+                                                            <td><?php echo ($row['attended'] - $row['correct_answers']) ?></td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -75,36 +84,6 @@ if (isset($_SESSION['student_register_id'])) {
                                     </div>
                                 </div>
                             </div>
-<!--                            <div class = 'accordion' id = 'accordion2'>
-                                <div class = 'accordion-group'>
-                                    <div class = 'accordion-heading'>
-                                        <a class = 'accordion-toggle' data-toggle = 'collapse' data-parent = '#accordion2' href = '#collapseOne1'><i class = 'icon-minus'></i> Without Topic</a>
-                                    </div>
-                                    <div id = 'collapseOne1' class = 'accordion-body collapse in'>
-                                        <div class = 'accordion-inner'>
-                                            <h2 class = 'titleContainer title'> <i class="font-icon-arrow-simple-right"></i> Language - Year <span>Date: 10-01-2020</span></h2>
-                                            <table class = 'table table-striped result_table'>
-                                                <thead>
-                                                    <tr>
-                                                        <th class="text-center">Total Questions</th>
-                                                        <th class="text-center">Attended</th>
-                                                        <th class="text-center"><i class="icon-ok-sign"></i></th>
-                                                        <th class="text-center"><i class="font-icon-remove-circle"></i></th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>100</td>
-                                                        <td>95</td>
-                                                        <td>68</td>
-                                                        <td>27</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>-->
                             <!--end: Accordion -->
                         </div>
                     </div>
