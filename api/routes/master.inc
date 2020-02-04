@@ -219,7 +219,7 @@ $app->get('/get_question_by_topic/:tid/:cid/:searchtxt/:searchqno', function($ti
     $topic_fltr = '';
     $search_qry = '';
     if ($stxt != null && $stxt != 'null') {
-        $search_qry = ' AND q.name LIKE %' . $stxt . '%';
+        $search_qry = ' AND q.name LIKE \'%' . $stxt . '%\'';
     }
     if ($sqno != null && $sqno != 'null') {
         $search_qry = $search_qry . ' AND q.question_no = ' . $sqno;
