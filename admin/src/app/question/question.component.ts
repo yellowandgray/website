@@ -74,15 +74,15 @@ this.topic = [];
     getQuestion(): void {
 if(this.selected_chapter && this.selected_chapter != 0 && this.selected_topic) {
 this.question = [];
-var filter_text = 'null';
-var filter_question = 'null';
+filter_text:string = 'null';
+filter_question:string = 'null';
 if(this.searchQuestionNo && this.searchQuestionNo != null && this.searchQuestionNo != '') {
-var filter_question = this.searchQuestionNo;
+this.filter_question = this.searchQuestionNo;
 }
 if(this.searchTerm && this.searchTerm != null && this.searchTerm != '') {
-var filter_text = this.searchTerm;
+this.filter_text = this.searchTerm;
 }
-        this.httpClient.get<any>('../api/v1/get_question_by_topic/'+this.selected_topic+'/'+this.selected_chapter+'/'+filter_text+'/'+filter_question+'/'+filter_text+'/'+filter_question)
+        this.httpClient.get<any>('../api/v1/get_question_by_topic/'+this.selected_topic+'/'+this.selected_chapter+'/'+this.filter_text+'/'+this.filter_question)
         .subscribe(
                 (res)=>{
                     this.question = res["result"]["data"];
