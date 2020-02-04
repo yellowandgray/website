@@ -41,7 +41,7 @@ if (isset($_SESSION['student_register_id'])) {
                     ?>
                     <div class="logout_position">
                         <div id="open-logout" class="logout_section">
-        <!--                        <img src='<?php //echo BASE_URL . $login_student['profile_image'];    ?>' alt=''>-->
+        <!--                        <img src='<?php //echo BASE_URL . $login_student['profile_image'];     ?>' alt=''>-->
                             <?php if (isset($login_student['profile_image']) && $login_student['profile_image'] == '') { ?>
                                 <img src="<?php echo BASE_URL . $login_student['gender']; ?>.jpg" alt="" />
                             <?php } else { ?>
@@ -170,6 +170,7 @@ if (isset($_SESSION['student_register_id'])) {
 <!--        <script src="js/bootstrap.js" type="text/javascript"></script>-->
         <script src="feringo-landing/js/bootstrap.min.js" type="text/javascript"></script>
         <script src="feringo-landing/js/wow.js" type="text/javascript"></script>
+        <script src="js/common.js" type="text/javascript"></script>
         <script type="text/javascript">
                                     $(document).ready(function () {
                                         var showHeaderAt = 150;
@@ -205,6 +206,19 @@ if (isset($_SESSION['student_register_id'])) {
                 section.className = 'section--purple wow fadeInDown';
                 this.parentNode.insertBefore(section, this);
             };
+        </script>
+
+        <script type="text/javascript">
+            $("#open-logout").click(function (e) {
+                //console.log("test");
+                e.stopPropagation();
+                $(".logout_dropdown").show("fast");
+            });
+            $(document).click(function (e) {
+                if (!(e.target.class === 'logout_dropdown')) {
+                    $(".logout_dropdown").hide("fast");
+                }
+            });
         </script>
     </body>
 </html>

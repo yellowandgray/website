@@ -3,7 +3,7 @@
 }
 
 .goto-here .title {
-/*    font-family: 'isMail_0', sans-serif;*/
+    /*    font-family: 'isMail_0', sans-serif;*/
     font-weight: normal;
     font-size: 18px;
 }
@@ -153,7 +153,7 @@
     color: rgba(0, 0, 0, 0.85);
     border: transparent 1px solid;
     font-size: 15px;
-/*    font-family: 'isMail_0', sans-serif;*/
+    /*    font-family: 'isMail_0', sans-serif;*/
 }
 
 .goto-here .questionBox .questionContainer .optionContainer .option.is-selected {
@@ -253,8 +253,17 @@
 
 @media screen and (max-width: 767px) {
     .goto-here .title {
-        font-size: 18px;
-        margin-bottom: 5px;
+        font-size: 18px !important;
+        margin-bottom: 5px !important;
+        float: none !important;
+    }
+    .goto-here .questionBox .question-header {
+        width: auto !important;
+    }
+    .goto-here .questionBox .question-header .progressContainer>progress {
+        width: 100% !important;
+        float: none !important;
+        margin: 0 auto !important;
     }
 }
 

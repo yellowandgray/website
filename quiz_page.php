@@ -91,28 +91,28 @@ if (count($questions) > 0) {
                                     </div>
                                 </div>
                                 <!--quizFooter: navigation and progress-->
-                                <footer class="questionFooter">
+<!--                                <footer class="questionFooter">
 
-                                    <!--pagination-->
+                                    pagination
                                     <nav class="pagination" role="navigation" aria-label="pagination">
 
-                                        <!-- back button -->
-                                        <!--                                    <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">
+                                         back button 
+                                                                            <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">
                                                                                Back
-                                                                        </a>-->
+                                                                        </a>
                                         <a class="btn btn-green" href="select_language">
                                             Home
                                         </a>
 
-                                        <!-- next button -->
+                                         next button 
                                         <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
                                             {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}
                                         </a>
 
                                     </nav>
-                                    <!--/pagination-->
+                                    /pagination
 
-                                </footer>
+                                </footer>-->
                                 <!--/quizFooter-->
                             </div>
                             <!--/questionContainer-->
