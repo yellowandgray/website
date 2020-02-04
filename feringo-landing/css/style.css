@@ -102,7 +102,8 @@ body.fixed .header-fixed .header-limiter nav {
 
     .header-fixed {
         padding: 20px 0;
-        height: 75px;
+        height: auto;
+        overflow: hidden;
     }
 
     .header-fixed .header-limiter h1 {
@@ -115,7 +116,8 @@ body.fixed .header-fixed .header-limiter nav {
 
     .header-fixed .header-limiter nav {
         line-height: 1;
-        float:none;
+        display: block;
+        z-index: 999999;
     }
 
     .header-fixed .header-limiter nav a {
