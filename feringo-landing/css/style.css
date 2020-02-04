@@ -101,7 +101,7 @@ body.fixed .header-fixed .header-limiter nav {
 @media all and (max-width: 600px) {
 
     .header-fixed {
-        padding: 20px 0;
+        padding: 20px 0 0;
         height: auto;
         overflow: hidden;
     }
@@ -125,7 +125,7 @@ body.fixed .header-fixed .header-limiter nav {
     }
 
     .header-fixed .header-limiter nav a {
-        font-size: 13px;
+        font-size: 14px;
     }
 
     body.fixed .header-fixed {

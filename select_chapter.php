@@ -41,7 +41,8 @@ $_SESSION['selected_difficult_id'] = $difficult['difficult_id'];
                 </div>
             </section>
             <!-- Reset Modal -->
-            <?php include 'reset_password.php'; ?>
+            <?php include 'footer.php'; ?>
+            <?php //include 'reset_password.php'; ?>
             <!-- end reset modal -->
         </div>
         <?php include 'script.php'; ?>

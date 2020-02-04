@@ -8,19 +8,19 @@
             <div class = 'control-group'>
                 <label class = 'control-label' for = 'user-name'>Username</label>
                 <div class = 'controls'>
-                    <input type = 'text' id = 'user-name1' placeholder = 'User Name'>
+                    <input type = 'text' id = 'user-name1' placeholder = ''>
                 </div>
             </div>
             <div class = 'control-group'>
-                <label class = 'control-label' for = 'password'>Password</label>
+                <label class = 'control-label' for = 'password'>New Password</label>
                 <div class = 'controls'>
-                    <input type = 'password' id = 'password2' placeholder = 'Password'>
+                    <input type = 'password' id = 'password2' placeholder = ''>
                 </div>
             </div>
             <div class = 'control-group'>
                 <label class = 'control-label' for = 'confirm-password'>Confirm Password</label>
                 <div class = 'controls'>
-                    <input type = 'password' id = 'confirm-password' placeholder = 'Confirm Password'>
+                    <input type = 'password' id = 'confirm-password' placeholder = ''>
                 </div>
             </div>
             <div class = 'control-group'>

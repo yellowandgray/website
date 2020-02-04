@@ -127,10 +127,10 @@ if (count($questions) > 0) {
 
                                 <!--resultTitleBlock-->
                                 <h2 class="complete-title">
-                                    You did {{ (score()>7?'an amazing':(score()<4?'a good':'improve')) }} knowledge!
+                                    Thanks for Completing!
                                 </h2>
                                 <p class="subtitle">
-                                    Total score: {{ score() }} / {{ quiz.questions.length }}
+                                    Total Score: <span class="score-clr">{{ score() }}</span> / {{ quiz.questions.length }}
                                 </p>
                                 <div class="">
                                     <a class="btn btn-theme btn-rounded" @click="restart()">Restart <i class="fa fa-refresh"></i></a>

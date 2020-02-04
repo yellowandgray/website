@@ -20,13 +20,13 @@
                                     <div class = 'control-group'>
                                         <label class = 'control-label' for = 'username'>User Name</label>
                                         <div class = 'controls'>
-                                            <input type = 'text' id = 'user_name' placeholder = 'User Name' required>
+                                            <input type = 'text' id = 'user_name' placeholder = '' required>
                                         </div>
                                     </div>
                                     <div class = 'control-group'>
                                         <label class = 'control-label' for = 'student-name'>Student Name</label>
                                         <div class = 'controls'>
-                                            <input type = 'text' id = 'student_name' placeholder = 'Student Name' required>
+                                            <input type = 'text' id = 'student_name' placeholder = '' required>
                                         </div>
                                     </div>
                                     <div class = 'control-group'>
@@ -53,7 +53,7 @@
                                     <div class = 'control-group'>
                                         <label class = 'control-label' for = 'parent_name'>Parent Name</label>
                                         <div class = 'controls'>
-                                            <input type = 'text' id = 'parent_name' placeholder = 'Parent Name' required>
+                                            <input type = 'text' id = 'parent_name' placeholder = '' required>
                                         </div>
                                     </div>
                                     <div class = 'control-group'>
@@ -65,19 +65,19 @@
                                     <div class = 'control-group'>
                                         <label class = 'control-label' for = 'city'>Town/City</label>
                                         <div class = 'controls'>
-                                            <input type = 'text' id = 'city' placeholder = 'Town/City' required>
+                                            <input type = 'text' id = 'city' placeholder = '' required>
                                         </div>
                                     </div>
                                     <div class = 'control-group'>
                                         <label class = 'control-label' for = 'pin'>Pin</label>
                                         <div class = 'controls'>
-                                            <input type = 'text' id = 'pin' placeholder = 'Pin' required>
+                                            <input type = 'text' id = 'pin' placeholder = '' required>
                                         </div>
                                     </div>
                                     <div class = 'control-group'>
                                         <label class = 'control-label' for = 'school_name'>School Name</label>
                                         <div class = 'controls'>
-                                            <input type = 'text' id = 'school_name' placeholder = 'School Name' required>
+                                            <input type = 'text' id = 'school_name' placeholder = '' required>
                                         </div>
                                     </div>
                                     <div class = 'control-group'>
@@ -92,19 +92,19 @@
                                     <div class = 'control-group'>
                                         <label class = 'control-label' for = 'password'>Password</label>
                                         <div class = 'controls'>
-                                            <input type = 'password' id = 'password' placeholder = 'Password' required>
+                                            <input type = 'password' id = 'password' placeholder = '' required>
                                         </div>
                                     </div>
                                     <div class = 'control-group'>
                                         <label class = 'control-label' for = 'confirm_password'>Confirm Password</label>
                                         <div class = 'controls'>
-                                            <input type = 'password' id = 'confirm_password' placeholder = 'Confirm Password' required>
+                                            <input type = 'password' id = 'confirm_password' placeholder = '' required>
                                         </div>
                                     </div>
                                     <div class = 'control-group'>
                                         <label class = 'control-label' for = 'email'>Email</label>
                                         <div class = 'controls'>
-                                            <input type = 'email' id = 'email' placeholder = 'Email (Option)'>
+                                            <input type = 'email' id = 'email' placeholder = ''>
                                         </div>
                                     </div>
                                     <div class = 'control-group'>
@@ -121,6 +121,7 @@
                     </div>
                 </div>
             </section>
+            <?php include 'footer.php'; ?>
         </div>
 
         <?php include 'script.php'; ?>

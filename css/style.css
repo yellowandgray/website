@@ -2558,7 +2558,7 @@ article .align-right {
     }
     .accordion-inner h2 span {
         float: left !important;
-        margin-top: 5px;
+        margin-top: 10px;
     }
     .login-section i {
         margin-left: 0 !important;
@@ -2683,10 +2683,10 @@ article .align-right {
         margin-bottom: 30px !important;
     }
     .topic_section {
-        padding: 90px 0 !important;
+        padding: 90px 0 0 !important;
     }
     .quiz-section {
-        padding: 95px 0 40px !important;
+        padding: 95px 0 0px !important;
     }
     /*    .side_section p {
             display: none !Important;
@@ -2719,7 +2719,7 @@ article .align-right {
         padding: 5px 20px !important;
     }
     .result_user_section .user_profile {
-        height: 150px !important;
+        height: 200px !important;
     }
     .signup-section {
         width: 90% !important;
@@ -3055,3 +3055,21 @@ article .align-right {
 /* Theme Styler :: End */
 
 .qes-img {}
+@media (min-width: 320px) and (max-width: 480px) {
+    table {
+        max-width: 320px !important;
+    }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+    table {
+        max-width: 100% !important;
+    }
+}
+@media (max-width: 767px) {
+
+}
+
+.login-modal  {
+    position: unset;
+    margin: 0 auto;
+}

@@ -63,8 +63,8 @@ if (isset($_SESSION['student_register_id'])) {
                                                     <thead>
                                                         <tr>
                                                             <th class="text-center">Category</th>
-                                                            <th class="text-center">Total Questions</th>
-                                                            <th class="text-center">Attand Questions</th>
+                                                            <th class="text-center">Total</th>
+<!--                                                            <th class="text-center">Attand Questions</th>-->
                                                             <th class="text-center"><i class="icon-ok-sign"></i></th>
                                                             <th class="text-center"><i class="font-icon-remove-circle"></i></th>
                                                         </tr>
@@ -73,7 +73,7 @@ if (isset($_SESSION['student_register_id'])) {
                                                         <tr>
                                                             <td><?php echo $row['difficult_name'] ?> Marks</td>
                                                             <td><?php echo $row['total_questions'] ?></td>
-                                                            <td><?php echo $row['attended'] ?></td>
+<!--                                                            <td><?php //echo $row['attended'] ?></td>-->
                                                             <td><?php echo $row['correct_answers'] ?></td>
                                                             <td><?php echo ($row['attended'] - $row['correct_answers']) ?></td>
                                                         </tr>

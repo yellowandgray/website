@@ -12,6 +12,11 @@
     font-family: sans-serif;
     font-weight: normal;
     font-size: 18px;
+    color: #82ae46;
+}
+
+.score-clr {
+    font-weight: bold;
 }
 
 .goto-here .subtitle {
@@ -40,19 +45,19 @@
 
 .goto-here .questionBox .question-header {
     background: rgba(0, 0, 0, 0.025);
-    padding: 1rem;
+    padding: 0.5rem 0;
     text-align: center;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     margin: 0 auto;
-    width: 100%;
+    width: 98%;
 }
 
 .goto-here .questionBox .question-header h1 {
     font-weight: 600;
     margin-bottom: 0rem !important;
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
-    float: left;
+    /* float: left; */
     font-family: sans-serif;
 }
 
@@ -68,15 +73,15 @@
 }
 
 .goto-here .questionBox .question-header .progressContainer>progress {
-    margin: 17px 0px 5px 15px;
+    margin: 0px auto 5px;
     border-radius: 5rem;
     overflow: hidden;
     border: none;
     color: #3d5afe;
     width: 50%;
-    height: 5px;
+    height: 4px;
     text-align: center;
-    float: left;
+/*    float: left;*/
 }
 
 .goto-here .questionBox .question-header .progressContainer>progress::-moz-progress-bar {
@@ -261,7 +266,7 @@
         width: auto !important;
     }
     .goto-here .questionBox .question-header .progressContainer>progress {
-        width: 100% !important;
+        width: 95% !important;
         float: none !important;
         margin: 0 auto !important;
     }

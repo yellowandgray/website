@@ -38,7 +38,8 @@ $_SESSION['selected_subject_id'] = $subject['subject_id'];
             </section>
 
             <!-- Reset Modal -->
-            <?php include 'reset_password.php'; ?>
+            <?php include 'footer.php'; ?>
+            //<?php //include 'reset_password.php'; ?>
             <!-- end reset modal -->
         </div>
         <?php include 'script.php'; ?>
