@@ -271,6 +271,8 @@ and open the template in the editor.
     margin-bottom: 5px;
     text-align: center;
     color: #fff;
+    width: 210px;
+    margin: 0px auto;
 }
 
 .side_section h4 {
@@ -654,13 +656,13 @@ and open the template in the editor.
     font-size: 22px;
     font-weight: 600;
     padding: 10px 0;
-/*    padding-left: 30px;*/
+    /*    padding-left: 30px;*/
     border-bottom: 1px solid #e3e3e3;
     color: #30445c;
 }
 
 .topic_option ul i {
-/*    position: absolute;*/
+    /*    position: absolute;*/
     margin-top: 11px;
     font-size: 22px;
     color: #477cff;
