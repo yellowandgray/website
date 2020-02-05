@@ -97,7 +97,7 @@ export class EnquiryForm {
       'date_of_birth': new FormControl(''),
       'gender': new FormControl(''),
       'admission': new FormControl(''),
-      'from': new FormControl(''),
+      'where_from': new FormControl(''),
       'address': new FormControl(''),
       'contact_no': new FormControl(''),
       'why_mekana': new FormControl(''),
@@ -121,7 +121,7 @@ export class EnquiryForm {
         gender: this.data.gender,
         date_of_birth: this.data.date_of_birth,
         admission: this.data.admission,
-        from: this.data.wfrom,
+        where_from: this.data.where_from,
         address: this.data.address,
         contact_no: this.data.contact_no,
         why_mekana: this.data.why_mekana,
@@ -160,7 +160,7 @@ export class EnquiryForm {
       formData.append('gender', this.enquiryform.value.gender);
       formData.append('date_of_birth', moment(this.enquiryform.value.date_of_birth).format('YYYY-MM-DD'));
       formData.append('admission', this.enquiryform.value.admission);
-      formData.append('wfrom', this.enquiryform.value.from);
+      formData.append('where_from', this.enquiryform.value.where_from);
       formData.append('address', this.enquiryform.value.address);
       formData.append('contact_no', this.enquiryform.value.contact_no);
       formData.append('why_mekana', this.enquiryform.value.why_mekana);
@@ -183,7 +183,7 @@ export class EnquiryForm {
       formData.append('gender', this.enquiryform.value.gender);
       formData.append('date_of_birth', moment(this.enquiryform.value.date_of_birth).format('YYYY-MM-DD'));
       formData.append('admission', this.enquiryform.value.admission);
-      formData.append('wfrom', this.enquiryform.value.from);
+      formData.append('where_from', this.enquiryform.value.where_from);
       formData.append('address', this.enquiryform.value.address);
       formData.append('contact_no', this.enquiryform.value.contact_no);
       formData.append('why_mekana', this.enquiryform.value.why_mekana);
