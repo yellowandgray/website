@@ -580,7 +580,7 @@ and open the template in the editor.
 
 .logo {
     width: 150px;
-    margin: 0 auto;
+    margin: 5px auto;
 }
 
 .register_section {
@@ -827,4 +827,3 @@ and open the template in the editor.
         top: 82px !Important;
     }
 }
-

@@ -25,7 +25,7 @@
                     </mat-progress-spinner>
                 </button>
                 <input hidden #fileInput type="file" id="file" (change)="fileProgress($event)" />
-                <button mat-raised-button color="primary" (click)="openDialog(0, 'null')">
+                       <button mat-raised-button color="primary" (click)="openDialog(0, 'null')">
                     <mat-icon>add</mat-icon> Question
                 </button>
             </div>
@@ -37,53 +37,53 @@
                     <mat-select (selectionChange)="getChapter()" [(ngModel)]="selected_subject">
                         <mat-option [value]="sub.subject_id" *ngFor="let sub of subject">
                             {{sub.name}}
-                        </mat-option>
-                    </mat-select>
-                    <mat-error>Subject is required</mat-error>
-                </mat-form-field>
-            </div>
-            <div fxFlex="50%">
-                <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Select Chapter</mat-label>
-                    <mat-select (selectionChange)="getTopic()" [(ngModel)]="selected_chapter">
-                        <mat-option [value]="chap.chapter_id" *ngFor="let chap of chapter">
-                            {{chap.name}}
-                        </mat-option>
-                    </mat-select>
-                    <mat-error>Chapter is required</mat-error>
-                </mat-form-field>
-            </div>
-            <div fxFlex="50%">
-                <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Select Topic</mat-label>
-                    <mat-select (selectionChange)="getQuestion()" [(ngModel)]="selected_topic">
-                        <mat-option value="0">All</mat-option>
-                        <mat-option [value]="top.topic_id" *ngFor="let top of topic">
-                            {{top.name}}
-                        </mat-option>
-                    </mat-select>
-                    <mat-error>Topic is required</mat-error>
-                </mat-form-field>
-            </div>
+                    </mat-option>
+                </mat-select>
+                <mat-error>Subject is required</mat-error>
+            </mat-form-field>
         </div>
-        <mat-list>
-            <ng-container *ngFor="let data of question">
-                <mat-list-item>
-                    <button mat-icon-button aria-label="label" (click)="openDialog(data.question_id, 'question')">
+        <div fxFlex="50%">
+            <mat-form-field appearance="outline" fxFlex="100%">
+                <mat-label>Select Chapter</mat-label>
+                <mat-select (selectionChange)="getTopic()" [(ngModel)]="selected_chapter">
+                    <mat-option [value]="chap.chapter_id" *ngFor="let chap of chapter">
+                        {{chap.name}}
+                </mat-option>
+            </mat-select>
+            <mat-error>Chapter is required</mat-error>
+        </mat-form-field>
+    </div>
+    <div fxFlex="50%">
+        <mat-form-field appearance="outline" fxFlex="100%">
+            <mat-label>Select Topic</mat-label>
+            <mat-select (selectionChange)="getQuestion()" [(ngModel)]="selected_topic">
+                <mat-option value="0">All</mat-option>
+                <mat-option [value]="top.topic_id" *ngFor="let top of topic">
+                    {{top.name}}
+            </mat-option>
+        </mat-select>
+        <mat-error>Topic is required</mat-error>
+    </mat-form-field>
+</div>
+</div>
+<mat-list>
+    <ng-container *ngFor="let data of question">
+        <mat-list-item>
+            <button mat-icon-button aria-label="label" (click)="openDialog(data.question_id, 'question')">
                 <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
             </button>
-                    <button mat-icon-button aria-label="label" (click)="confirmDelete(data.question_id)">
+            <button mat-icon-button aria-label="label" (click)="confirmDelete(data.question_id)">
                 <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
             </button>
-                    <p mat-line>{{data.question_no}}. <span class="question" [innerHTML]="data.name"></span></p>
-                    <p mat-line>A. <span [innerHTML]="data.a"></span></p>
-                    <p mat-line>B. <span [innerHTML]="data.b"></span></p>
-                    <p mat-line *ngIf="data.c != ''">C. <span [innerHTML]="data.c"></span></p>
-                    <p mat-line *ngIf="data.d != ''">D. <span [innerHTML]="data.d"></span></p>
-                    <h2 mat-line class="answer-font">Answer: ({{data.answer}}) | <span class="category_color">Category: {{data.difficult}}</span></h2>
-                </mat-list-item>
-                <mat-divider></mat-divider>
-            </ng-container>
-        </mat-list>
-    </mat-sidenav-content>
+            <p mat-line class='question-bottom'>{{data.question_no}}. <span class="question" [innerHTML]="data.name"></span></p>
+            <p mat-line>A. <span [innerHTML]="data.a"></span></p>
+            <p mat-line>B. <span [innerHTML]="data.b"></span></p>
+            <p mat-line *ngIf="data.c != ''">C. <span [innerHTML]="data.c"></span></p>
+            <p mat-line *ngIf="data.d != ''">D. <span [innerHTML]="data.d"></span></p>
+            <h2 mat-line class="answer-font">Answer: ({{data.answer}}) | <span class="category_color">Category: {{data.difficult}}</span></h2>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+    </ng-container>
+</mat-list>
+</mat-sidenav-content>
 </mat-sidenav-container>
