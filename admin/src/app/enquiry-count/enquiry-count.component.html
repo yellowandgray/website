@@ -13,38 +13,16 @@
                     <table>
                         <tr>
                             <th mat-header-cell> Date </th>
-                            <th mat-header-cell> PKG </th>
-                            <th mat-header-cell> LKG </th>
-                            <th mat-header-cell> UKG </th>
-                            <th mat-header-cell> I </th>
-                            <th mat-header-cell> II </th>
-                            <th mat-header-cell> III </th>
-                            <th mat-header-cell> IV </th>
-                            <th mat-header-cell> V </th>
-                            <th mat-header-cell> VI </th>
-                            <th mat-header-cell> VII </th>
-                            <th mat-header-cell> VIII </th>
-                            <th mat-header-cell> IX </th>
-                            <th mat-header-cell> X </th>
-                            <th mat-header-cell> Total </th>
+                            <th mat-header-cell *ngFor="let item of classes">{{item.name}}</th>
+                            <th mat-header-cell>Total</th>
                         </tr>
-                        <tr *ngFor="let data of result">
-                            <td mat-cell> {{data.date}} </td>
-                            <td mat-cell> 1 </td>
-                            <td mat-cell> 0 </td>
-                            <td mat-cell> 0 </td>
-                            <td mat-cell> 0 </td>
-                            <td mat-cell> 0 </td>
-                            <td mat-cell> 0 </td>
-                            <td mat-cell> 0 </td>
-                            <td mat-cell> 0 </td>
-                            <td mat-cell> 0 </td>
-                            <td mat-cell> 1 </td>
-                            <td mat-cell> 2 </td>
-                            <td mat-cell> 0 </td>
-                            <td mat-cell> 0 </td>
-                            <td mat-cell> 4 </td>
-                        </tr>
+                        <ng-container *ngIf="result != null">
+                            <tr *ngFor="let item of result | keyvalue">
+                                <th mat-header-cell>{{item.key | date:'d/M/y'}}</th>
+                                <th mat-header-cell *ngFor="let r of classes"><span *ngIf="result[item.key][r.name]">{{result[item.key][r.name]}}</span><span *ngIf="!result[item.key][r.name]">0</span></th>
+                                <th mat-header-cell>{{result[item.key]['total']}}</th>
+                            </tr>
+                        </ng-container>
                     </table>
                 </mat-card>
             </mat-tab>

@@ -11,7 +11,8 @@ import * as moment from 'moment';
   styleUrls: ['./enquiry-count.component.css']
 })
 export class EnquiryCountComponent implements OnInit {
-  result = [];
+  result = null;
+  classes = [];
   year = [];
   selectedyearind = 0;
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
@@ -39,7 +40,11 @@ export class EnquiryCountComponent implements OnInit {
     this.httpClient.get<any>('http://www.lemonandshadow.com/schoolrunner/api/v1/get_enquiry_count_by_year/'+this.year[ev.index].year_id)
       .subscribe(
         (res) => {
-          this.result = res["result"]["data"];
+          this.classes = res["result"]["classes"];
+            this.result = null;
+           if(res["result"]["error"] == false) {
+                this.result = res["result"]["data"];
+            }
         },
         (error) => {
           this._snackBar.open(error["statusText"], '', {
