@@ -1,0 +1,84 @@
+<h2 mat-dialog-title>Inquiry Count</h2>
+<mat-dialog-content class="mat-typography">
+    <form [formGroup]="enquirycountform" (ngSubmit)="onSubmit()">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Year</mat-label>
+                    <mat-select required formControlName="year_id">
+                        <mat-option [value]="row.year_id" *ngFor="let row of year">
+                            {{row.name}}
+                        </mat-option>
+                    </mat-select>
+                    <mat-error>Year is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Date</mat-label>
+                    <input matInput required formControlName="date" [matDatepicker]="picker" placeholder="Choose a date">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                    <mat-error>Date is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Standard</mat-label>
+                    <mat-select required formControlName="class_id">
+                        <mat-option [value]="row.class_id" *ngFor="let row of class">
+                            {{row.name}}
+                        </mat-option>
+                    </mat-select>
+                    <mat-error>Standard is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Count</mat-label>
+                    <mat-select required formControlName="count">
+                        <mat-option value="1">1</mat-option>
+                        <mat-option value="2">2</mat-option>
+                        <mat-option value="3">3</mat-option>
+                        <mat-option value="4">4</mat-option>
+                        <mat-option value="5">5</mat-option>
+                        <mat-option value="6">6</mat-option>
+                        <mat-option value="7">7</mat-option>
+                        <mat-option value="8">8</mat-option>
+                        <mat-option value="9">9</mat-option>
+                        <mat-option value="10">10</mat-option>
+                        <mat-option value="11">11</mat-option>
+                        <mat-option value="12">12</mat-option>
+                        <mat-option value="13">13</mat-option>
+                        <mat-option value="14">14</mat-option>
+                        <mat-option value="15">15</mat-option>
+                        <mat-option value="16">16</mat-option>
+                        <mat-option value="17">17</mat-option>
+                        <mat-option value="18">18</mat-option>
+                        <mat-option value="19">19</mat-option>
+                        <mat-option value="20">20</mat-option>
+                        <mat-option value="21">21</mat-option>
+                        <mat-option value="22">22</mat-option>
+                        <mat-option value="23">23</mat-option>
+                        <mat-option value="24">24</mat-option>
+                        <mat-option value="25">25</mat-option>
+                        <mat-option value="26">26</mat-option>
+                        <mat-option value="27">27</mat-option>
+                        <mat-option value="28">28</mat-option>
+                        <mat-option value="29">29</mat-option>
+                        <mat-option value="30">30</mat-option>
+                    </mat-select>
+                    <mat-error>Count is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
+            <button mat-button [mat-dialog-close]="false">Cancel</button>
+            <button mat-button type="submit" [disabled]="loading">Save</button>
+            <mat-progress-spinner class="example-margin" *ngIf="loading" [mode]="'indeterminate'" [strokeWidth]="3" [diameter]="25">
+            </mat-progress-spinner>
+        </div>
+    </form>
+</mat-dialog-content>

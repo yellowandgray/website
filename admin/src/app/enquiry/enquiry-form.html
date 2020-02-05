@@ -1,0 +1,221 @@
+<h2 mat-dialog-title>Inquiry</h2>
+<mat-dialog-content class="mat-typography">
+    <form [formGroup]="enquiryform" (ngSubmit)="onSubmit()">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Student Name</mat-label>
+                    <input matInput placeholder="" formControlName="name_student" />
+                    <mat-error>Student Name is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Father Name</mat-label>
+                    <input matInput placeholder="" formControlName="name_father" />
+                    <mat-error>Father Name is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Mother Name</mat-label>
+                    <input matInput placeholder="" formControlName="name_mother" />
+                    <mat-error>Mother Name is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Occupation</mat-label>
+                    <input matInput placeholder="" formControlName="occupation" />
+                    <mat-error>Occupation is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Gender</mat-label>
+                    <mat-select formControlName="gender">
+                        <mat-option value="male">Male</mat-option>
+                        <mat-option value="female">Female</mat-option>
+                    </mat-select>
+                    <mat-error>Gender is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Date of Birth</mat-label>
+                    <input matInput formControlName="date_of_birth" [matDatepicker]="picker" placeholder="Choose a date">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                    <mat-error>Date of Birth is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Admission</mat-label>
+                    <input matInput placeholder="" formControlName="admission" />
+                    <mat-error>Admission is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Where From</mat-label>
+                    <input matInput placeholder="" formControlName="from" />
+                    <mat-error>Where From is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="100%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Address</mat-label>
+                    <textarea matInput rows="6" placeholder="" formControlName="address"></textarea>
+                    <mat-error>Address is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Contact No</mat-label>
+                    <input matInput placeholder="" formControlName="contact_no" />
+                    <mat-error>Contact No is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Why Mekana</mat-label>
+                    <mat-select formControlName="why_mekana">
+                        <mat-option value="english-communication">English Communication</mat-option>
+                        <mat-option value="worksheets">Worksheets</mat-option>
+                        <mat-option value="education">Education</mat-option>
+                        <mat-option value="discipline">Discipline</mat-option>
+                        <mat-option value="family-member-studying">Family Member Studying</mat-option>
+                        <mat-option value="others">Others</mat-option>
+                    </mat-select>
+                    <mat-error>Contact No is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Type of Day</mat-label>
+                    <mat-select formControlName="type_day">
+                        <mat-option value="no-moon">No Moon</mat-option>
+                        <mat-option value="full-moon">Full Moon</mat-option>
+                        <mat-option value="ashtami">Ashtami</mat-option>
+                        <mat-option value="navami">Navami</mat-option>
+                    </mat-select>
+                    <mat-error>Type of Day is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>How Came to Know Mekana</mat-label>
+                    <mat-select formControlName="came_know_mekana">
+                        <mat-option value="friend_referral">Friend Referral</mat-option>
+                        <mat-option value="sibling">Sibling</mat-option>
+                        <mat-option value="parent_referral">Parent Referral</mat-option>
+                        <mat-option value="totally_new">Totally New</mat-option>
+                    </mat-select>
+                    <mat-error>Contact No is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="100%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>What do they expect from a good school</mat-label>
+                    <textarea matInput rows="6" placeholder="" formControlName="expect_school"></textarea>
+                    <mat-error>Address is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="100%">
+                <mat-label>Does Student(s) need van?</mat-label>
+                <mat-radio-group formControlName="student_van">
+                    <mat-radio-button value="no">No</mat-radio-button>
+                    <mat-radio-button value="yes">Yes</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+        <br/>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="100%">
+                <mat-label>Does Father have a Smart Phone?</mat-label>
+                <mat-radio-group formControlName="father_smart_phone">
+                    <mat-radio-button value="android">Android</mat-radio-button>
+                    <mat-radio-button value="ios">IOS</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+        <br/>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="100%">
+                <mat-label>Does he have net connection?</mat-label>
+                <mat-radio-group formControlName="father_net_connection">
+                    <mat-radio-button value="yes">Yes</mat-radio-button>
+                    <mat-radio-button value="no">No</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+        <br/>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="100%">
+                <mat-label>Does Mother have a Smart Phone?</mat-label>
+                <mat-radio-group formControlName="mother_smart_phone">
+                    <mat-radio-button value="android">Android</mat-radio-button>
+                    <mat-radio-button value="ios">IOS</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+        <br/>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="100%">
+                <mat-label>Does she have net connection?</mat-label>
+                <mat-radio-group formControlName="mother_net_connection">
+                    <mat-radio-button value="yes">Yes</mat-radio-button>
+                    <mat-radio-button value="no">No</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+        <br/>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="100%">
+                <mat-label>Does the Student use the cell phone?</mat-label>
+                <mat-radio-group formControlName="stuent_cell_phone">
+                    <mat-radio-button value="yes">Yes</mat-radio-button>
+                    <mat-radio-button value="no">No</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+        <br/>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="100%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>What Purpose</mat-label>
+                    <mat-select formControlName="what_purpose">
+                        <mat-option value="study">Study</mat-option>
+                        <mat-option value="paly">Play</mat-option>
+                        <mat-option value="watching_shows">Watching Shows</mat-option>
+                    </mat-select>
+                    <mat-error>What Purpose is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <br/>
+        <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
+            <button mat-button [mat-dialog-close]="false">Cancel</button>
+            <button mat-button type="submit" [disabled]="loading">Save</button>
+            <mat-progress-spinner class="example-margin" *ngIf="loading" [mode]="'indeterminate'" [strokeWidth]="3" [diameter]="25">
+            </mat-progress-spinner>
+        </div>
+    </form>
+</mat-dialog-content>

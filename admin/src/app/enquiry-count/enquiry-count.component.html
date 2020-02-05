@@ -1,0 +1,53 @@
+<mat-sidenav-container fullscreen>
+    <mat-sidenav mode="side" opened cdkScrollable class="primary">
+        <app-sidenav></app-sidenav>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <app-header></app-header>
+        <div class="add-btn-container">
+            <button mat-raised-button color="primary" (click)="openDialog(0, 'null')"><mat-icon>add</mat-icon> Inquiry Count</button>
+        </div>
+        <mat-tab-group (selectedTabChange)="getEnquiryCount($event);">
+            <mat-tab *ngFor="let row of year" label="{{row.name}}">
+                <mat-card>
+                    <table>
+                        <tr>
+                            <th mat-header-cell> Date </th>
+                            <th mat-header-cell> PKG </th>
+                            <th mat-header-cell> LKG </th>
+                            <th mat-header-cell> UKG </th>
+                            <th mat-header-cell> I </th>
+                            <th mat-header-cell> II </th>
+                            <th mat-header-cell> III </th>
+                            <th mat-header-cell> IV </th>
+                            <th mat-header-cell> V </th>
+                            <th mat-header-cell> VI </th>
+                            <th mat-header-cell> VII </th>
+                            <th mat-header-cell> VIII </th>
+                            <th mat-header-cell> IX </th>
+                            <th mat-header-cell> X </th>
+                            <th mat-header-cell> Total </th>
+                        </tr>
+                        <tr *ngFor="let data of result">
+                            <td mat-cell> {{data.date}} </td>
+                            <td mat-cell> 1 </td>
+                            <td mat-cell> 0 </td>
+                            <td mat-cell> 0 </td>
+                            <td mat-cell> 0 </td>
+                            <td mat-cell> 0 </td>
+                            <td mat-cell> 0 </td>
+                            <td mat-cell> 0 </td>
+                            <td mat-cell> 0 </td>
+                            <td mat-cell> 0 </td>
+                            <td mat-cell> 1 </td>
+                            <td mat-cell> 2 </td>
+                            <td mat-cell> 0 </td>
+                            <td mat-cell> 0 </td>
+                            <td mat-cell> 4 </td>
+                        </tr>
+                    </table>
+                </mat-card>
+            </mat-tab>
+        </mat-tab-group>
+    </mat-sidenav-content>
+</mat-sidenav-container>

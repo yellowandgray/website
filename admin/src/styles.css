@@ -1,0 +1,65 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+mat-sidenav {
+    min-width: 250px;
+    max-width: 250px;
+    background-color: #fd3d00 !important;
+}
+
+.mat-toolbar.mat-accent {
+    background-color: #4a94c5 !important;
+}
+
+.primary .mat-list-item {
+    color: #ffffff !important;
+}
+
+.primary .mat-list-item .mat-icon {
+    padding-right: 5px !important;
+}
+
+.add-btn-container {
+    margin: 10px;
+    text-align: right;
+}
+
+.active-nav {
+    background: rgba(0, 0, 0, .04);
+}
+
+.preview-image {
+    text-align: left;
+    position: relative;
+}
+
+.preview-image img {
+    width: 275px;
+}
+
+.preview-image button {
+    position: absolute;
+    right: 0;
+    background: #fff;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+mat-radio-group {
+    margin-left: 10px
+}
+
+mat-radio-button {
+    margin-left: 10px
+}
