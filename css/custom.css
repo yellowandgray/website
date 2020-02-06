@@ -827,3 +827,7 @@ and open the template in the editor.
         top: 82px !Important;
     }
 }
+
+.goto-here .questionBox .questionContainer .optionContainer .option span {
+    font-size: 15px !important;
+}
