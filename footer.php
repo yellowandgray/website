@@ -58,7 +58,7 @@
                     <div class="block-23 mb-3 footer-3">
                         <ul class="ftco-footer-social list-unstyled float-md-left float-lft">
                             <li class="ftco-animate"><a href="https://twitter.com/FrescheIndia" target="block"><span class="icon-twitter"></span></a></li>
-                            <li class="ftco-animate"><a href="https://www.facebook.com/frescheindia/" target="block"><span class="icon-facebook"></span></a></li>
+                            <li class="ftco-animate"><a href="https://www.facebook.com/FrescheGHMIndia/" target="block"><span class="icon-facebook"></span></a></li>
                             <li class="ftco-animate"><a href="https://www.instagram.com/p/B4jbAoupksk/" target="block"><span class="icon-instagram"></span></a></li>
                             <li class="ftco-animate"><a href="https://youtu.be/hL0eNG_99HM" target="block"><span class="icon-youtube"></span></a></li>
                         </ul>

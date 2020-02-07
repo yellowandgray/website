@@ -24,7 +24,7 @@
             </div>
         </div>
 
-        <section class="pad-tb-50" >
+        <section class="pad-tb-50 section-position" >
             <div class="pad-lr-80">
                 <div class="row pad-tb-50">
                     <div class=" col-lg-8 product-details pl-md-5 ftco-animate tech-test">

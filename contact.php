@@ -25,7 +25,7 @@
             </div>
         </div>
 
-        <section class="contact-section bg-light pad-tb-50">
+        <section class="contact-section bg-light pad-tb-50 section-position">
             <div class="container">
                 <div class="row d-flex mb-5 contact-info">
                     <div class="w-100"></div>

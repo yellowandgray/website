@@ -63,7 +63,7 @@
                                     <div class="check-login">
                                         <h4><span>2</span> ENTER YOUR DETAILS</h4>
                                     </div>
-                                    <form id="register_section" class="user-register" onsubmit="return makePayment();">
+                                    <form id="register_section" class="user-register" onsubmit="return makePayment();" method="post">
                                         <div class="form-group">
                                             <input type="text" name="name" class="form-control" id="fname" placeholder="First Name" onchange="checkValidation();" />
                                         </div>
@@ -80,7 +80,7 @@
                                             <textarea type="text" rows="4" name="address" class="form-control" id="address" placeholder="Delivery Address" onchange="checkValidation();"></textarea>
                                         </div>
                                         <div class="form-group">
-                                            <select id="state" onchange="checkValidation();">
+                                            <select name="category" id="state" onchange="checkValidation(); changeGSTLabel();">
                                                 <?php foreach ($states as $row) { ?>
                                                     <option value="<?php echo $row['state_id']; ?>"><?php echo $row['name']; ?></option>
                                                 <?php } ?>
@@ -109,7 +109,7 @@
                                             <div class="totals-value" id="cart-subtotal">8000</div>
                                         </div>
                                         <div class="totals-item">
-                                            <label>GST (18%)</label>
+                                            <span class="gst_label">CGST - 9% + SGST - 9% (18%)</span>
                                             <div class="totals-value" id="cart-tax">1440</div>
                                         </div>
                                         <div class="totals-item totals-item-total">
@@ -207,6 +207,15 @@
                                                 recalculateCart();
                                             });
                                         }
+                                        function changeGSTLabel() {
+                                            var state = $('#state').val();
+                                            if (state != 28) {
+                                                $('.gst_label').html('IGST-18%');
+                                            } else {
+                                                $('.gst_label').html('CGST-9% + SGST-9%');
+                                            }
+                                        }
+                                        changeGSTLabel();
         </script>
     </body>
 </html>
