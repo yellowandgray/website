@@ -1,4 +1,56 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+mat-sidenav {
+    max-width: 250px;
+    min-width: 250px;
+}
+
+.add-btn-container {
+    margin: 10px;
+    text-align: right;
+}
+
+.mat-drawer {
+    background: #1d94cd !important;
+}
+
+mat-sidenav .mat-list-item-content {
+    color: #fff;
+}
+
+.active-nav {
+    background: #75add0;
+}
+
+.preview-image {
+    text-align: left;
+    position: relative;
+}
+
+.preview-image img {
+    width: 275px;
+}
+
+.preview-image button {
+    position: absolute;
+    right: 0;
+    background: #fff;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.primary .mat-list-item .mat-icon {
+    padding-right: 5px !important;
+}

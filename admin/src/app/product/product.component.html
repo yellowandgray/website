@@ -1,0 +1,27 @@
+<mat-sidenav-container fullscreen>
+    <mat-sidenav mode="side" opened cdkScrollable class="primary">
+        <app-sidenav></app-sidenav>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <app-header></app-header>
+        <div class="add-btn-container">
+            <button mat-raised-button color="primary" (click)="openDialog(0, 'null')"><mat-icon>add</mat-icon> Product</button>
+        </div>
+        <mat-list>
+            <ng-container *ngFor="let data of product">
+                <mat-list-item>
+                    <button mat-icon-button aria-label="label" (click)="openDialog(data.product_id, 'product')">
+                        <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
+                    </button>
+                    <button mat-icon-button aria-label="label" (click)="confirmDelete(data.product_id)">
+                        <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
+                    </button>
+                    <img matListAvatar src="{{image_url}}{{data.image_path}}" *ngIf="data.image_path && data.image_path != ''" alt="image" (click)="imageView(data, 'preview')" />
+                    <h4 mat-line>{{data.title}}</h4>
+                    <p mat-line>{{data.tag}}</p>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+            </ng-container>
+        </mat-list>
+    </mat-sidenav-content>
+</mat-sidenav-container>
