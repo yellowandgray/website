@@ -831,3 +831,11 @@ and open the template in the editor.
 .goto-here .questionBox .questionContainer .optionContainer .option span {
     font-size: 15px !important;
 }
+
+.float-right {
+    float: right !important;
+}
+
+:focus {
+    outline: none !important;
+}

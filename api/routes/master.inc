@@ -99,7 +99,7 @@ $app->post('/insert_subject', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('name' => $data['name'], 'description' => $data['description'], 'image_path' => $data['subject_image']), 'subject');
+    $record = $com->insertRecord(array('name' => $data['name'], 'description' => $data['description'], 'image_path' => $data['subject_image'], 'status' => $data['status']), 'subject');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
@@ -380,3 +380,19 @@ $app->post('/loginadmin', function() use ($app) {
     echoRespnse(201, $res);
 });
 
+$app->post('/reset_password', function() use ($app) {
+    $data = $app->request->post();
+    $obj = new Common();
+    $res = array('error' => true, 'message' => 'Unable to update your password');
+    $user = $obj->selectRow('*', 'student_register', 'user_name=\'' . $data['user_name'] . '\'');
+    if (count($user) > 0) {
+        $update = $obj->updateRecordWithWhere(array('password' => $data['password'], 'confirm_password' => $data['confirm_password']), 'student_register', 'user_name=\'' . $data['user_name'] . '\'');
+        if ($update > 0) {
+            $res['error'] = false;
+            $res['message'] = 'Password updated successfully';
+        }
+    } else {
+        $res['message'] = 'Unable to Reset Password';
+    }
+    echoRespnse(201, $res);
+});

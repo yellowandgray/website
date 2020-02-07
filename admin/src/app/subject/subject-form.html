@@ -26,6 +26,17 @@
                 <angular-editor id="editor1" formControlName="description" [config]="editorConfig"></angular-editor>
             </div>
         </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Status</mat-label>
+                    <mat-select formControlName="status">
+                        <mat-option value="Active">Active</mat-option>
+                        <mat-option value="In-Active">In-Active</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+        </div>
         <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
             <button mat-button [mat-dialog-close]="false">Cancel</button>
             <button mat-button type="submit" [disabled]="loading">Save</button>

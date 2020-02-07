@@ -94,12 +94,14 @@ export class SubjectForm {
     private httpClient: HttpClient) {
     this.subjectForm = new FormGroup({
       'name': new FormControl('', Validators.required),
-      'description': new FormControl('', Validators.required)
+      'description': new FormControl('', Validators.required),
+      'status': new FormControl(''),
     });
     if (this.data != null) {
       this.subjectForm.patchValue({
         name: this.data.name,
         description: this.data.description,
+        status: this.data.status,
       });
       this.subject_id = this.data.subject_id;
       this.image_path = this.data.image_path;
@@ -116,11 +118,13 @@ export class SubjectForm {
     if (this.subject_id != 0) {
       formData.append('name', this.subjectForm.value.name);
       formData.append('description', this.subjectForm.value.description);
+      formData.append('status', this.subjectForm.value.status);
       formData.append('image_path', this.image_path);
       url = 'update_record/subject/subject_id = ' + this.subject_id;
     } else {
       formData.append('name', this.subjectForm.value.name);
       formData.append('description', this.subjectForm.value.description);
+      formData.append('status', this.subjectForm.value.status);
       formData.append('subject_image', this.image_path);
       url = 'insert_subject';
     }

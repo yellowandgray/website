@@ -8,7 +8,7 @@ if (isset($_SESSION['student_register_id'])) {
         <div class = 'row nomargin'>
             <div class = 'span4'>
                 <div class = 'logo'>
-                    <a href = 'index'>
+                    <a href = 'home_subject'>
                         <img src = 'img/logo.png' alt = '' class = 'logo' />
                     </a>
                 </div>
