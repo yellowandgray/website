@@ -5,7 +5,7 @@
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Student Name</mat-label>
-                    <input matInput placeholder="" formControlName="name_student" />
+                    <input matInput placeholder="" required formControlName="name_student" />
                     <mat-error>Student Name is required</mat-error>
                 </mat-form-field>
             </div>
@@ -58,7 +58,23 @@
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Admission</mat-label>
-                    <input matInput placeholder="" formControlName="admission" />
+                    <mat-select formControlName="admission">
+                        <mat-option value="PKG">PKG</mat-option>
+                        <mat-option value="LKG">LKG</mat-option>
+                        <mat-option value="UKG">UKG</mat-option>
+                        <mat-option value="I">I</mat-option>
+                        <mat-option value="II">II</mat-option>
+                        <mat-option value="III">III</mat-option>
+                        <mat-option value="IV">IV</mat-option>
+                        <mat-option value="V">V</mat-option>
+                        <mat-option value="VI">VI</mat-option>
+                        <mat-option value="VII">VII</mat-option>
+                        <mat-option value="VIII">VIII</mat-option>
+                        <mat-option value="IX">IX</mat-option>
+                        <mat-option value="X">X</mat-option>
+                        <mat-option value="XI">XI</mat-option>
+                        <mat-option value="XII">XII</mat-option>
+                    </mat-select>
                     <mat-error>Admission is required</mat-error>
                 </mat-form-field>
             </div>

@@ -1,0 +1,122 @@
+<h2 mat-dialog-title>Student Inquiry Information</h2>
+<mat-dialog-content class="mat-typography">
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+        <div fxFlex="50%">
+            <table mat-table class="inquiry-table">
+                <tr>
+                    <th mat-header-cell>Student Name</th>
+                    <td mat-cell> : </td>
+                    <td mat-cell> {{data.name_student}} </td>
+                </tr>
+                <tr>
+                    <th mat-header-cell> Father Name </th>
+                    <td mat-cell> : </td>
+                    <td mat-cell> {{data.name_father}} </td>
+                </tr>
+                <tr>
+                    <th mat-header-cell> Mother Name </th>
+                    <td mat-cell> : </td>
+                    <td mat-cell> {{data.name_mother}} </td>
+                </tr>
+                <tr>
+                    <th mat-header-cell> Occupation </th>
+                    <td mat-cell> : </td>
+                    <td mat-cell> {{data.occupation}} </td>
+                </tr>
+                <tr>
+                    <th mat-header-cell> Gender </th>
+                    <td mat-cell> : </td>
+                    <td mat-cell> {{data.gender}} </td>
+                </tr>
+                <tr>
+                    <th mat-header-cell> Date of Birth </th>
+                    <td mat-cell> : </td>
+                    <td mat-cell> {{ data.date_of_birth }} </td>
+                </tr>
+                <tr>
+                    <th mat-header-cell> Standard </th>
+                    <td mat-cell> : </td>
+                    <td mat-cell> {{data.admission}} </td>
+                </tr>
+                <tr>
+                    <th mat-header-cell> Where From </th>
+                    <td mat-cell> : </td>
+                    <td mat-cell> {{data.where_from}} </td>
+                </tr>
+                <tr>
+                    <th mat-header-cell> Address </th>
+                    <td mat-cell> : </td>
+                    <td mat-cell> {{data.address}} </td>
+                </tr>
+                <tr>
+                    <th mat-header-cell> Contact No </th>
+                    <td mat-cell> : </td>
+                    <td mat-cell> {{data.contact_no}} </td>
+                </tr>
+                <tr>
+                    <th mat-header-cell> Why Mekana </th>
+                    <td mat-cell> : </td>
+                    <td mat-cell> {{data.why_mekana}} </td>
+                </tr>
+            </table>
+        </div>
+        <div fxFlex="50%" fxLayoutAlign="start start">
+            <table mat-table class="inquiry-table">
+                <tr>
+                    <th mat-header-cell> Type fo Day </th>
+                    <td mat-cell> : </td>
+                    <td mat-cell> {{data.type_day}} </td>
+                </tr>
+                <tr>
+                    <th mat-header-cell>How Came to Know Mekana</th>
+                    <td mat-cell> : </td>
+                    <td mat-cell> {{data.came_know_mekana}} </td>
+                </tr>
+                <tr>
+                    <th mat-header-cell>What do they expect from a good school</th>
+                    <td mat-cell> : </td>
+                    <td mat-cell> {{data.expect_school}} </td>
+                </tr>
+                <tr>
+                    <th mat-header-cell>Does Student(s) need van?</th>
+                    <td mat-cell> : </td>
+                    <td mat-cell> {{data.student_van}} </td>
+                </tr>
+                <tr>
+                    <th mat-header-cell>Does Father have a Smart Phone?</th>
+                    <td mat-cell> : </td>
+                    <td mat-cell> {{data.father_smart_phone}} </td>
+                </tr>
+                <tr>
+                    <th mat-header-cell>Does he have net connection?</th>
+                    <td mat-cell> : </td>
+                    <td mat-cell> {{data.father_net_connection}} </td>
+                </tr>
+                <tr>
+                    <th mat-header-cell>Does Mother have a Smart Phone?</th>
+                    <td mat-cell> : </td>
+                    <td mat-cell> {{data.mother_smart_phone}} </td>
+                </tr>
+                <tr>
+                    <th mat-header-cell>Does she have net connection?</th>
+                    <td mat-cell> : </td>
+                    <td mat-cell> {{data.mother_net_connection}} </td>
+                </tr>
+                <tr>
+                    <th mat-header-cell>Does the Student use the cell phone?</th>
+                    <td mat-cell> : </td>
+                    <td mat-cell> {{data.stuent_cell_phone}} </td>
+                </tr>
+                <tr>
+                    <th mat-header-cell>What Purpose</th>
+                    <td mat-cell> : </td>
+                    <td mat-cell> {{data.what_purpose}} </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <br/>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
+        <button mat-button [mat-dialog-close]="false">Cancel</button>
+    </div>
+</mat-dialog-content>

@@ -38,7 +38,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatTabsModule} from '@angular/material/tabs';
-import { EnquiryComponent, EnquiryForm, EnquiryDelete } from './enquiry/enquiry.component';
+import { EnquiryComponent, EnquiryForm, EnquiryDelete, EnquiryViewForm } from './enquiry/enquiry.component';
 import { EnquiryCountComponent, EnquiryCountForm, EnquiryCountDelete } from './enquiry-count/enquiry-count.component';
 import { YearComponent, YearForm, YearDelete } from './year/year.component';
 
@@ -73,7 +73,9 @@ import { YearComponent, YearForm, YearDelete } from './year/year.component';
     EnquiryCountForm,
     EnquiryCountDelete,
     EnquiryForm, 
-    EnquiryDelete, YearComponent
+    EnquiryDelete, 
+    EnquiryViewForm,
+    YearComponent
   ],
   imports: [
     BrowserModule,
@@ -128,7 +130,8 @@ import { YearComponent, YearForm, YearDelete } from './year/year.component';
     EnquiryCountDelete,
     EnquiryCountForm,
     EnquiryForm, 
-    EnquiryDelete
+    EnquiryDelete,
+    EnquiryViewForm
   ],
   providers: [],
   bootstrap: [AppComponent]

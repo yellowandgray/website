@@ -72,6 +72,28 @@ export class EnquiryComponent implements OnInit {
     });
   }
 
+    openView(id, res): void {
+    var data = null;
+      if(id != 0) { 
+      this[res].forEach(val=> {
+           if(parseInt(val.id) === parseInt(id)) {
+                data = val;
+                return false;
+           }
+         });
+      }
+    const dialogRef = this.dialog.open(EnquiryViewForm, {
+      minWidth: "40%",
+      maxWidth: "40%",
+      data: data
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if(result !== false && result !== 'false') {
+            }
+        });
+    }
+
 }
 
 
@@ -90,7 +112,7 @@ export class EnquiryForm {
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
     this.enquiryform = new FormGroup({
-      'name_student': new FormControl(''),
+      'name_student': new FormControl('', Validators.required),
       'name_father': new FormControl(''),
       'name_mother': new FormControl(''),
       'occupation': new FormControl(''),
@@ -287,4 +309,23 @@ export class EnquiryDelete {
       }
     );
   }
+}
+
+
+@Component({
+  selector: 'enquiry-view',
+  templateUrl: 'enquiry-view.html',
+})
+
+export class EnquiryViewForm {
+  loading = false;
+  id = 0;
+  data: any;
+  constructor(
+    public dialogRef: MatDialogRef<EnquiryViewForm>,
+    @Inject(MAT_DIALOG_DATA) public datapopup: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) { 
+        this.data = this.datapopup;
+    }
 }

@@ -63,3 +63,7 @@ mat-radio-group {
 mat-radio-button {
     margin-left: 10px
 }
+
+.inquiry-table th {
+    text-align: left;
+}
