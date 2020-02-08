@@ -4,7 +4,7 @@ require_once 'api/include/common.php';
 $obj = new Common();
 if (isset($_SESSION['student_register_id'])) {
     $login_student = $obj->selectRow('*', 'student_register', 'student_register_id=' . $_SESSION['student_register_id']);
-    $student_logs = $obj->selectAll('*', 'student_log', 'student_register_id = ' . $_SESSION['student_register_id']. ' ORDER BY student_log_id DESC');
+    $student_logs = $obj->selectAll('*', 'student_log', 'student_register_id = ' . $_SESSION['student_register_id'] . ' ORDER BY student_log_id DESC');
     if (count($student_logs) > 0) {
         foreach ($student_logs as $key => $log) {
             $detail = $obj->selectRow('COUNT(student_log_detail_id) AS attended, IFNULL((SELECT COUNT(student_log_detail_id) FROM student_log_detail WHERE student_log_id=' . $log['student_log_id'] . ' AND UPPER(answer) = UPPER(student_answer)), 0) AS correct_answers', 'student_log_detail', 'student_log_id=' . $log['student_log_id']);
@@ -48,7 +48,13 @@ if (isset($_SESSION['student_register_id'])) {
                             </div>
                         </div>
                         <div class = 'span8'>
-                            <h4>My Completed Task</h4>
+                            <div class="result-title">
+                                <h4>My Completed Task</h4>
+                                <a href="home_subject">
+                                    <i class="icon-home"></i>
+                                </a>
+                            </div>
+                            <br/>
                             <!-- start: Accordion -->
                             <div class = 'accordion' id = 'accordion2'>
                                 <div class = 'accordion-group'>
@@ -64,7 +70,7 @@ if (isset($_SESSION['student_register_id'])) {
                                                         <tr>
                                                             <th class="text-center">Category</th>
                                                             <th class="text-center">Total</th>
-<!--                                                            <th class="text-center">Attand Questions</th>-->
+    <!--                                                            <th class="text-center">Attand Questions</th>-->
                                                             <th class="text-center"><i class="icon-ok-sign"></i></th>
                                                             <th class="text-center"><i class="font-icon-remove-circle"></i></th>
                                                         </tr>
@@ -73,7 +79,7 @@ if (isset($_SESSION['student_register_id'])) {
                                                         <tr>
                                                             <td><?php echo $row['difficult_name'] ?> Marks</td>
                                                             <td><?php echo $row['total_questions'] ?></td>
-<!--                                                            <td><?php //echo $row['attended'] ?></td>-->
+    <!--                                                            <td><?php //echo $row['attended']  ?></td>-->
                                                             <td><?php echo $row['correct_answers'] ?></td>
                                                             <td><?php echo ($row['attended'] - $row['correct_answers']) ?></td>
                                                         </tr>

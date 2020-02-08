@@ -59,7 +59,10 @@ if (count($questions) > 0) {
                     <div class="span12">
                         <div class="quiz-question-section">
                             <a href = '#' onclick="goBack()"><i class = 'font-icon-arrow-simple-left'></i></a>
-                            <h2><?php echo $subject['name']; ?> &gt; <?php echo $difficult['name']; ?> &gt; <?php echo $chapter['name']; ?></h2>
+                            <h2>Selected Subject: <strong><?php echo $subject['name']; ?></strong> <br/> Selected Mark Category: <strong><?php echo $difficult['name']; ?></strong> <br/>Selected Chapter: <strong><?php echo $chapter['name']; ?></strong> <!--<br/> Selected Topic: <?php //echo $topic['name'];  ?> <br/>--></h2>
+                            <a class="home_link" href="home_subject">
+                                <i class="icon-home"></i>
+                            </a>
                         </div>
                         <!--question Box-->
                         <div class="questionBox" id="app">
@@ -92,28 +95,28 @@ if (count($questions) > 0) {
                                     </div>
                                 </div>
                                 <!--quizFooter: navigation and progress-->
-<!--                                <footer class="questionFooter">
-
-                                    pagination
-                                    <nav class="pagination" role="navigation" aria-label="pagination">
-
-                                         back button 
-                                                                            <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">
-                                                                               Back
+                                <!--                                <footer class="questionFooter">
+                                
+                                                                    pagination
+                                                                    <nav class="pagination" role="navigation" aria-label="pagination">
+                                
+                                                                         back button 
+                                                                                                            <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">
+                                                                                                               Back
+                                                                                                        </a>
+                                                                        <a class="btn btn-green" href="select_language">
+                                                                            Home
                                                                         </a>
-                                        <a class="btn btn-green" href="select_language">
-                                            Home
-                                        </a>
-
-                                         next button 
-                                        <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
-                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}
-                                        </a>
-
-                                    </nav>
-                                    /pagination
-
-                                </footer>-->
+                                
+                                                                         next button 
+                                                                        <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
+                                                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}
+                                                                        </a>
+                                
+                                                                    </nav>
+                                                                    /pagination
+                                
+                                                                </footer>-->
                                 <!--/quizFooter-->
                             </div>
                             <!--/questionContainer-->

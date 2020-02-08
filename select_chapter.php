@@ -23,11 +23,15 @@ $_SESSION['selected_difficult_id'] = $difficult['difficult_id'];
                 <div id="mySignin" tabindex="-1" aria-labelledby="mySigninModalLabel" aria-hidden="true">
                     <div class="modal styled">
                         <div class="modal-header login-section">
-                            <a href="home_subject"><i class="font-icon-arrow-simple-left"></i></a>
-                            <h4 id="mySigninModalLabel"  class="text-center"><?php echo $subject['name']; ?> - Select <strong>Chapter</strong></h4>
+                            <a href="difficult_level?sub=<?php echo $subject['name']; ?>"><i class="font-icon-arrow-simple-left"></i></a>
+                            <h4 id="mySigninModalLabel"  class="text-center">Selected Subject: <strong><?php echo $subject['name']; ?></strong> <br/> Selected Mark Category: <strong><?php echo $difficult['name']; ?></strong> <!--<br/> Select <strong>Chapter</strong>--></h4>
+                            <a class="home_link" href="home_subject">
+                                <i class="icon-home"></i>
+                            </a>
                         </div>
                         <div class="modal-body">
                             <div class="language_section">
+                                <p class="m-b-0">Select Chapter</p>
                                 <ul>
                                     <?php foreach ($chapters as $row) { ?>
                                         <li><i class="icon-double-angle-right"></i> 

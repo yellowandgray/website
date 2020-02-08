@@ -266,8 +266,8 @@ and open the template in the editor.
 }
 
 .side_section h2 {
-    font-size: 25px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 400;
     margin-bottom: 5px;
     text-align: center;
     color: #fff;
@@ -709,6 +709,7 @@ and open the template in the editor.
     background: #30445c;
     width: 50%;
     margin: 0 auto;
+    position: relative;
     padding: 20px 0;
     border-top-right-radius: 0.5rem;
     border-top-left-radius: 0.5rem;
@@ -716,7 +717,7 @@ and open the template in the editor.
 }
 
 .quiz-question-section h2 {
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 400;
     margin-bottom: 5px;
     text-align: center;
@@ -724,7 +725,7 @@ and open the template in the editor.
 }
 
 .quiz-question-section h2 strong {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
     color: #fff;
 }
@@ -838,4 +839,38 @@ and open the template in the editor.
 
 :focus {
     outline: none !important;
+}
+
+.result-title {
+    margin: 0px 0px 10px;
+    padding: 20px 0;
+}
+
+.result-title h4 {
+    float: left;
+    margin: 0;
+}
+
+.result-title a {
+    float: right;
+    margin-top: 10px;
+    margin-right: 20px;
+    font-size: 25px;
+    color: #479c18;
+}
+
+.result-title a:hover {
+    text-decoration: none;
+}
+
+.home_link {
+    float: right;
+    position: absolute;
+    right: 45px;
+    top: 10px;
+    text-decoration: none;
+}
+
+.home_link:hover {
+    text-decoration: none;
 }

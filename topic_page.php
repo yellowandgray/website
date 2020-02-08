@@ -6,7 +6,9 @@ if (!isset($_GET['chapter'])) {
     $subject = $obj->selectRow('*', 'subject', 'subject_id = ' . $_SESSION['selected_subject_id']);
     header('Location: select_chapter?sub=' . $subject['name']);
 }
+$subject = $obj->selectRow('*', 'subject', 'subject_id > 0');
 $chapter = $obj->selectRow('*', 'chapter', 'name = \'' . $obj->escapeString($_GET['chapter']) . '\'');
+$difficult = $obj->selectRow('*', 'difficult', 'difficult_id=' . $_SESSION['selected_difficult_id']);
 $topics = $obj->selectAll('*', 'topic', 'chapter_id = ' . $chapter['chapter_id'] . ' ORDER BY name ASC ');
 $_SESSION['selected_chapter_id'] = $chapter['chapter_id'];
 ?>
@@ -20,10 +22,14 @@ $_SESSION['selected_chapter_id'] = $chapter['chapter_id'];
                     <div class="row">
                         <div class="span12">
                             <div class="side_section topic-head">
-                                <a href="select_chapter"><i class="font-icon-arrow-simple-left"></i></a>
-                                <h2><?php echo $chapter['name']; ?> - Select Topic</h2>
+                                <a href="select_chapter?difficult=<?php echo $difficult['name']; ?>"><i class="font-icon-arrow-simple-left"></i></a>
+                                                                                                                                                                                                        <h2>Selected Subject: <strong><?php echo $subject['name']; ?></strong> <br/> Selected Mark Category: <strong><?php echo $difficult['name']; ?></strong> <br/>Selected Chapter: <strong><?php echo $chapter['name']; ?></strong> <!--<br/> Select <strong>Topic</strong>--></h2>
+                                <a class="home_link" href="home_subject">
+                                    <i class="icon-home"></i>
+                                </a>
                             </div>
                             <div class="topic_section_1">
+                                <p class="m-b-0">Select Topic</p>
                                 <?php if (count($topics) > 0) { ?>
                                     <?php foreach ($topics as $row) { ?>
                                         <div class="topic_list_section">
@@ -34,7 +40,7 @@ $_SESSION['selected_chapter_id'] = $chapter['chapter_id'];
                                                 </a>
                                             </div>
                                         </div>
-                                    <?php
+                                        <?php
                                     }
                                 }
                                 ?>
@@ -43,8 +49,8 @@ $_SESSION['selected_chapter_id'] = $chapter['chapter_id'];
                     </div>
                 </div>
             </section>
-        <?php include 'footer.php'; ?>
+            <?php include 'footer.php'; ?>
         </div>
-<?php include 'script.php'; ?>
+        <?php include 'script.php'; ?>
     </body>
 </html>
