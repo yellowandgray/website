@@ -20,6 +20,7 @@ export class QuestionComponent implements OnInit {
     topic = [];
     difficult = [];
     loading = false;
+    image_url: string = 'http://localhost/mushak/feringo/api/v1/';
     file_name: string = 'Select Picture';
     selected_subject = 0;
     selected_chapter = 0;
