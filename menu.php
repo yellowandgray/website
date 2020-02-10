@@ -15,7 +15,7 @@
                                     <div class="width-100">
                                         <div class="s-icon-2 align-items-center">
                                             <div class="float-right">
-                                                <a href="https://www.facebook.com/frescheindia/" target="block"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                                                <a href="https://www.facebook.com/FrescheGHMIndia/" target="block"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
                                                 <a href="https://youtu.be/hL0eNG_99HM" target="block"><i class="fa fa-youtube" aria-hidden="true"></i></a>
                                                 <a class="whatsapp" href="https://api.whatsapp.com/send?phone=+918409012345" target="block"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
                                                 <a class="phone" href="tel:+917373387504" target="block"><i class="fa fa-phone-square" aria-hidden="true"></i><p>+91 8409 012345</p></a>
