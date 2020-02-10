@@ -138,6 +138,18 @@ if (isset($_SESSION['student_register_id'])) {
                                                 <div class="option">C. momentum</div>
                                             </div>
                                         </div>
+                                        <div class="question-title">
+                                            <h6>2. …………………….is the branch of physics that deals with the effect of force on bodies.</h6>
+                                            <div class="result-option">
+                                                <div class="option">A. Gravitation</div>
+                                            </div>
+                                            <div class="result-option wrng_clr">
+                                                <div class="option">B. Acceleration</div>
+                                            </div>
+                                            <div class="result-option crt_clr">
+                                                <div class="option">C. Mechanics</div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <hr/>
                                     <br/>

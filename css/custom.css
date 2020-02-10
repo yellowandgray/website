@@ -893,6 +893,7 @@ and open the template in the editor.
 .question-title h6 {
     font-size: 20px;
     margin-bottom: 0;
+    font-weight: 600;
 }
 
 #result-view {
@@ -904,6 +905,7 @@ and open the template in the editor.
     padding: 3px 20px;
     margin: 10px 0;
     border-radius: 25px;
+    width: 50%;
 }
 
 .result-option .option {
