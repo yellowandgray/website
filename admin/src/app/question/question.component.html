@@ -5,16 +5,7 @@
     <mat-sidenav-content>
         <app-header></app-header>
         <div class="add-btn-container">
-            <div class="searchdesign" fxFlex="80%">
-                <mat-form-field fxFlex="65%">
-                    <input matInput type="text" placeholder="Search by Name" [(ngModel)]="searchTerm" />
-                </mat-form-field>
-                <span fxFlex="5%"></span>
-                <mat-form-field fxFlex="30%">
-                    <input matInput type="text" placeholder="Search by Question No" [(ngModel)]="searchQuestionNo" />
-                </mat-form-field>
-            </div>
-            <div fxFlex="80%">
+            <div fxLayout="row" fxFlex="100%" fxLayoutAlign="end end">
                 <button mat-raised-button color="primary" (click)="fileInput.click()">
                     <span *ngIf="!loading">Import</span>
                     <mat-progress-spinner
@@ -65,6 +56,19 @@
         <mat-error>Topic is required</mat-error>
     </mat-form-field>
 </div>
+</div>
+<div fxLayout="row" fxLayoutAlign="start center">
+    <mat-form-field fxFlex="30%">
+        <input matInput type="text" placeholder="Search by Name" [(ngModel)]="searchTerm" />
+    </mat-form-field>
+    <span fxFlex="5%"></span>
+    <mat-form-field fxFlex="30%">
+        <input matInput type="text" placeholder="Search by Question No" [(ngModel)]="searchQuestionNo" />
+    </mat-form-field>
+    <span fxFlex="5%"></span>
+    <button mat-raised-button color="primary" (click)="getQuestion()">
+        Search
+    </button>
 </div>
 <mat-list>
     <ng-container *ngFor="let data of question">
