@@ -204,14 +204,19 @@ $app->get('/get_student', function() {
     echoRespnse(201, $res);
 });
 
-$app->get('/get_student_result/:sid', function() {
+$app->get('/get_student_result/:sid', function($sid) {
     $res = array('error' => true, 'message' => 'No records found');
-    $com = new Common();
-    $data = $com->selectAll('*', 'student_answer', 'student_register_id = ' . $sid);
-    if (count($data) > 0) {
+    $obj = new Common();
+    $student_logs = $obj->selectAll('*', 'student_log', 'student_register_id = ' . $sid . ' ORDER BY student_log_id DESC');
+    if (count($student_logs) > 0) {
+        foreach ($student_logs as $key => $log) {
+            $detail = $obj->selectRow('COUNT(student_log_detail_id) AS attended, IFNULL((SELECT COUNT(student_log_detail_id) FROM student_log_detail WHERE student_log_id=' . $log['student_log_id'] . ' AND UPPER(answer) = UPPER(student_answer)), 0) AS correct_answers', 'student_log_detail', 'student_log_id=' . $log['student_log_id']);
+            $student_logs[$key]['attended'] = $detail['attended'];
+            $student_logs[$key]['correct_answers'] = $detail['correct_answers'];
+        }
         $res['error'] = false;
-        $res['message'] = 'Records found';
-        $res['data'] = $data;
+        $res['message'] = 'Result found';
+        $res['data'] = $student_logs;
     }
     echoRespnse(201, $res);
 });
