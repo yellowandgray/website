@@ -79,7 +79,7 @@ if (isset($_SESSION['student_register_id'])) {
                                                         <tr>
                                                             <td><?php echo $row['difficult_name'] ?> Marks</td>
                                                             <td><?php echo $row['total_questions'] ?></td>
-    <!--                                                            <td><?php //echo $row['attended']  ?></td>-->
+    <!--                                                            <td><?php //echo $row['attended']   ?></td>-->
                                                             <td><?php echo $row['correct_answers'] ?></td>
                                                             <td><?php echo ($row['attended'] - $row['correct_answers']) ?></td>
                                                         </tr>
@@ -92,6 +92,49 @@ if (isset($_SESSION['student_register_id'])) {
                             </div>
                             <!--end: Accordion -->
                         </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class = 'span8'>
+                            <div class="result-title">
+                                <h4>My Completed Task</h4>
+                                <a href="home_subject">
+                                    <i class="icon-home"></i>
+                                </a>
+                            </div>
+                            <br/>
+                            <!-- start: Accordion -->
+                            <div class="result_section">
+                                <h6>Report</h6>
+                                <?php foreach ($student_logs as $row) { ?>
+                                    <h2 class = 'titleContainer title'> <i class="font-icon-arrow-simple-right"></i> <?php echo $row['subject_name']; ?><i class="font-icon-arrow-simple-right"></i> <?php echo $row['chapter_name']; ?> <i class="font-icon-arrow-simple-right"></i><?php echo $row['topic_name']; ?><span>Date: <?php echo date('d/M/Y h:iA', strtotime($row['created_at'])); ?></span></h2>
+                                    <table class = 'table table-striped result_table'>
+                                        <thead>
+                                            <tr>
+                                                <th class="text-center">Category</th>
+                                                <th class="text-center">Total</th>
+    <!--                                                            <th class="text-center">Attand Questions</th>-->
+                                                <th class="text-center"><i class="icon-ok-sign"></i></th>
+                                                <th class="text-center"><i class="font-icon-remove-circle"></i></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><?php echo $row['difficult_name'] ?> Marks</td>
+                                                <td><?php echo $row['total_questions'] ?></td>
+    <!--                                                            <td><?php //echo $row['attended']   ?></td>-->
+                                                <td><?php echo $row['correct_answers'] ?></td>
+                                                <td><?php echo ($row['attended'] - $row['correct_answers']) ?></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                <?php } ?>
+                            </div>
+                        </div>
+                        <!--end: Accordion -->
                     </div>
                 </div>
             </section>
