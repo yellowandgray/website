@@ -7,6 +7,7 @@
     $obj = new Common();
     $states = $obj->selectAll('*', 'state', 'state_id > 0');
     $members = $obj->selectAll('o.*, s.name AS state', 'orders AS o LEFT JOIN state AS s ON s.state_id = o.state_id', 'orders_id > 0');
+    $coupons = $obj->selectAll('*', 'coupon', 'coupon_id > 0 AND status = 1');
     ?>
     <body class="goto-here" onload="loadCartDetails();">
         <!-- END nav -->
@@ -21,7 +22,6 @@
                     <div class="col-md-9 ftco-animate text-center">
                         <h1 class="mb-0 bread">MY CART</h1>
                         <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home-</a></span> <span class="mr-2"></span> <span>My Cart</span></p>
-
                     </div>
                 </div>
             </div>
@@ -57,6 +57,23 @@
                                             <i class="fa fa-inr" aria-hidden="true"></i> 8000
                                         </div>
                                         <div class="col-md-1"></div>
+                                    </div>
+                                    <div class="row margin-lr-0">
+                                        <div class="coupon-section">
+                                            <div class="coupon-title">
+                                                <h4>Available Coupon Code</h4>
+                                                <p>Amount</p>
+                                            </div>
+                                            <?php foreach ($coupons as $row) { ?>
+                                                <div class="coloured">
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox" id="chkcoupon"><span class="checkbox-material"><span class="check"></span></span> <?php echo $row['coupon_name']; ?> <p><?php echo $row['reduce_amt']; ?></p>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            <?php } ?>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="bg-white m-b-10">
@@ -112,6 +129,12 @@
                                             <span class="gst_label">CGST - 9% + SGST - 9% (18%)</span>
                                             <div class="totals-value" id="cart-tax">1440</div>
                                         </div>
+                                        <?php foreach ($coupons as $row) { ?>
+                                            <div id="reduceamt" class="totals-item">
+                                                <span><?php echo $row['coupon_name']; ?></span>
+                                                <div class="totals-value" id="coupon-amt"><?php echo $row['reduce_amt']; ?></div>
+                                            </div>
+                                        <?php } ?>
                                         <div class="totals-item totals-item-total">
                                             <label>Grand Total</label>
                                             <div class="totals-value" id="cart-total">9440</div>
@@ -216,6 +239,18 @@
                                             }
                                         }
                                         changeGSTLabel();
+
+
+
+                                        $(function () {
+                                            $("#chkcoupon").click(function () {
+                                                if ($(this).is(":checked")) {
+                                                    $("#reduceamt").show();
+                                                } else {
+                                                    $("#reduceamt").hide();
+                                                }
+                                            });
+                                        });
         </script>
     </body>
 </html>

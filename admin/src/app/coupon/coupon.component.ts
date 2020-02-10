@@ -90,16 +90,16 @@ export class CouponForm {
     this.couponForm = new FormGroup({
       'coupon_name': new FormControl('', Validators.required),
       'reduce_amt': new FormControl('', Validators.required),
-      'start_date': new FormControl('', Validators.required),
-      'end_date': new FormControl('', Validators.required),
+      // 'start_date': new FormControl('', Validators.required),
+      // 'end_date': new FormControl('', Validators.required),
       'status': new FormControl('', Validators.required),
     });
     if (this.data != null) {
       this.couponForm.patchValue({
         coupon_name: this.data.coupon_name,
         reduce_amt: this.data.reduce_amt,
-        start_date: this.data.start_date,
-        end_date: this.data.end_date,
+        // start_date: this.data.start_date,
+        // end_date: this.data.end_date,
         status: this.data.status,
       });
       this.coupon_id = this.data.coupon_id;
@@ -116,15 +116,15 @@ export class CouponForm {
     if (this.coupon_id != 0) {
       formData.append('coupon_name', this.couponForm.value.coupon_name);
       formData.append('reduce_amt', this.couponForm.value.reduce_amt);
-      formData.append('start_date', moment(this.couponForm.value.start_date).format('YYYY-MM-DD'));
-      formData.append('end_date', moment(this.couponForm.value.end_date).format('YYYY-MM-DD'));
+      // formData.append('start_date', moment(this.couponForm.value.start_date).format('YYYY-MM-DD'));
+      // formData.append('end_date', moment(this.couponForm.value.end_date).format('YYYY-MM-DD'));
       formData.append('status', this.couponForm.value.status);
       url = 'update_record/coupon/coupon_id = ' + this.coupon_id;
     } else {
       formData.append('coupon_name', this.couponForm.value.coupon_name);
       formData.append('reduce_amt', this.couponForm.value.reduce_amt);
-      formData.append('start_date', moment(this.couponForm.value.start_date).format('YYYY-MM-DD'));
-      formData.append('end_date', moment(this.couponForm.value.end_date).format('YYYY-MM-DD'));
+      // formData.append('start_date', moment(this.couponForm.value.start_date).format('YYYY-MM-DD'));
+      // formData.append('end_date', moment(this.couponForm.value.end_date).format('YYYY-MM-DD'));
       formData.append('status', this.couponForm.value.status);
       url = 'insert_coupon';
     }

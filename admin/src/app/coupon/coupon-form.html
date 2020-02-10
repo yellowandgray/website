@@ -17,7 +17,7 @@
                 </mat-form-field>
             </div>
         </div>
-        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+        <!-- <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Start Date</mat-label>
@@ -36,14 +36,14 @@
                     <mat-error>End Date is required</mat-error>
                 </mat-form-field>
             </div>
-        </div>
+        </div> -->
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Status</mat-label>
                     <mat-select required formControlName="status">
-                        <mat-option [value]="1">Active</mat-option>
-                        <mat-option [value]="0">In-Active</mat-option>
+                        <mat-option value="1">Active</mat-option>
+                        <mat-option value="0">In-Active</mat-option>
                     </mat-select>
                     <mat-error>Status is required</mat-error>
                 </mat-form-field>
