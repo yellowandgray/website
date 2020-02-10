@@ -874,3 +874,18 @@ and open the template in the editor.
 .home_link:hover {
     text-decoration: none;
 }
+
+.result_section h2 {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    float: left;
+}
+
+.result_section span {
+    float: right;
+}
+
+.result_section table tbody td {
+    text-align: center;
+}
