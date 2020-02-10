@@ -1,16 +1,16 @@
 <h2 mat-dialog-title>User</h2>
 <mat-dialog-content class="mat-typography user-table-section">
     <mat-accordion>
-        <mat-expansion-panel>
+        <mat-expansion-panel *ngFor="let mark of data.data">
             <mat-expansion-panel-header>
-                <mat-panel-title>Report</mat-panel-title>
+                <mat-panel-title>{{mark.topic_name}}</mat-panel-title>
             </mat-expansion-panel-header>
             <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
                 <div fxFlex="70%">
-                    <h3>Subject > Chapter > Topic</h3>
+                    <h3>{{mark.subject_name}} > {{mark.chapter_name}} > {{mark.topic_name}}</h3>
                 </div>
                 <div fxFlex="30%">
-                    <p>Date: 03-02-2020</p>
+                    <p>Date: {{mark.created_at | date: 'd/M/y'}}</p>
                 </div>
             </div>
             <table mat-table class="mat-elevation-z8 table-padding">
@@ -19,42 +19,20 @@
                     <th mat-header-cell> Category </th>
                     <th mat-header-cell> Total Questions </th>
                     <th mat-header-cell>
-                        <mat-icon class="done_clr">done</mat-icon>
-                    </th>
-                    <th mat-header-cell>
-                        <mat-icon class="wrong_clr">close</mat-icon>
-                    </th>
+                <mat-icon class="done_clr">done</mat-icon>
+                </th>
+                <th mat-header-cell>
+                <mat-icon class="wrong_clr">close</mat-icon>
+                </th>
                 </tr>
                 <tr>
-                    <td mat-cell> 40 Marks </td>
-                    <td mat-cell> 100 </td>
-                    <td mat-cell> 76 </td>
-                    <td mat-cell> 24 </td>
+                    <td mat-cell>{{mark.difficult_name}} Mark</td>
+                    <td mat-cell>{{mark.total_questions}}</td>
+                    <td mat-cell>{{mark.correct_answers}}</td>
+                    <td mat-cell>{{mark.total_questions - mark.correct_answers}}</td>
                 </tr>
             </table>
 
-        </mat-expansion-panel>
-        <mat-expansion-panel>
-            <mat-expansion-panel-header>
-                <mat-panel-title>Topic 2</mat-panel-title>
-            </mat-expansion-panel-header>
-            <table mat-table>
-                <tr mat-row>
-                    <th mat-cell> Attend Questions </th>
-                    <td mat-cell> : </td>
-                    <td mat-cell> 20 </td>
-                </tr>
-                <tr mat-row>
-                    <th mat-cell> Correct </th>
-                    <td mat-cell> : </td>
-                    <td mat-cell> 15 </td>
-                </tr>
-                <tr mat-row>
-                    <th mat-cell> Wrong </th>
-                    <td mat-cell> : </td>
-                    <td mat-cell> 05 </td>
-                </tr>
-            </table>
         </mat-expansion-panel>
     </mat-accordion>
 </mat-dialog-content>

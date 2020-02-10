@@ -89,17 +89,35 @@ export class UserComponent implements OnInit {
       }
     });
   }
-  openResult(): void {
-    const dialogRef = this.dialog.open(ResultForm, {
+  openResult(sid): void {
+      this.httpClient.get<any>('http://localhost/mushak/feringo/api/v1/get_student_result/'+sid)
+      .subscribe(
+        (res) => {
+            if(res["result"]["error"] == false) {
+          const dialogRef = this.dialog.open(ResultForm, {
       minWidth: "40%",
-      maxWidth: "40%"
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      if (result !== false && result !== 'false') {
-
+      maxWidth: "40%",
+      data: {
+        data: res["result"]["data"]
       }
     });
+    dialogRef.afterClosed().subscribe(result => {
+      if (result !== false && result !== 'false') {
+        console.log('Result closed');
+      }
+    });
+            }else {
+             this._snackBar.open(res["result"]["message"], '', {
+            duration: 2000,
+          });   
+            }
+        },
+        (error) => {
+          this._snackBar.open(error["statusText"], '', {
+            duration: 2000,
+          });
+        }
+      );
   }
   confirmDelete(id): void {
     var data = null;
@@ -354,7 +372,9 @@ export class ResultForm {
     public dialogRef: MatDialogRef<ResultForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
-    private httpClient: HttpClient) { }
+    private httpClient: HttpClient) { 
+        console.log(data);
+    }
 }
 
 @Component({

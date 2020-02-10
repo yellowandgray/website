@@ -20,16 +20,16 @@
                     <button mat-icon-button aria-label="label " (click)="openView(data.student_register_id, 'student') ">
                         <mat-icon>remove_red_eye</mat-icon>
                     </button>
-                    <button mat-icon-button aria-label="label " (click)="openBlock() ">
+                    <button mat-icon-button aria-label="label" (click)="openBlock()">
                         <mat-icon>block</mat-icon>
                     </button>
-                    <button mat-icon-button aria-label="label " (click)="openResult() ">
+                    <button mat-icon-button aria-label="label" (click)="openResult(data.student_register_id)">
                         <mat-icon>insert_drive_file</mat-icon>
                     </button>
-                    <button mat-icon-button aria-label="label " (click)="openDialog(data.student_register_id, 'student') ">
+                    <button mat-icon-button aria-label="label" (click)="openDialog(data.student_register_id, 'student')">
                         <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
                     </button>
-                    <button mat-icon-button aria-label="label " (click)="confirmDelete(data.student_register_id) ">
+                    <button mat-icon-button aria-label="label" (click)="confirmDelete(data.student_register_id)">
                         <mat-icon>delete</mat-icon>
                     </button>
                     <img matListAvatar src="{{image_url}}{{data.profile_image}} " *ngIf="data.profile_image && data.profile_image !='' " alt="image " (click)="confirmDialog(data, 'preview') " />
