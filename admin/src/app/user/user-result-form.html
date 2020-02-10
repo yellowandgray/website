@@ -3,14 +3,14 @@
     <mat-accordion>
         <mat-expansion-panel *ngFor="let mark of data.data">
             <mat-expansion-panel-header>
-                <mat-panel-title>Report</mat-panel-title>
+                <mat-panel-title>{{mark.topic_name}}</mat-panel-title>
             </mat-expansion-panel-header>
             <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
                 <div fxFlex="70%">
-                    <h3>Subject > Chapter > Topic</h3>
+                    <h3>{{mark.subject_name}} > {{mark.chapter_name}} > {{mark.topic_name}}</h3>
                 </div>
                 <div fxFlex="30%">
-                    <p>Date: 03-02-2020</p>
+                    <p>Date: {{mark.created_at | date: 'd/M/y'}}</p>
                 </div>
             </div>
             <table mat-table class="mat-elevation-z8 table-padding">
@@ -26,10 +26,10 @@
                 </th>
                 </tr>
                 <tr>
-                    <td mat-cell> 40 Marks </td>
-                    <td mat-cell> 100 </td>
-                    <td mat-cell> 76 </td>
-                    <td mat-cell> 24 </td>
+                    <td mat-cell>{{mark.difficult_name}} Mark</td>
+                    <td mat-cell>{{mark.total_questions}}</td>
+                    <td mat-cell>{{mark.correct_answers}}</td>
+                    <td mat-cell>{{mark.total_questions - mark.correct_answers}}</td>
                 </tr>
             </table>
 
