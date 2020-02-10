@@ -3141,10 +3141,15 @@ select::placeholder {
 
 .coupon-title h4 {
     float: left;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 5px 0;
+    width: 50%;
 }
 
 .coupon-title p {
     float: right;
+    margin: 5px 0;
 }
 
 #reduceamt {
