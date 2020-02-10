@@ -79,7 +79,7 @@ if (isset($_SESSION['student_register_id'])) {
                                                         <tr>
                                                             <td><?php echo $row['difficult_name'] ?> Marks</td>
                                                             <td><?php echo $row['total_questions'] ?></td>
-    <!--                                                            <td><?php //echo $row['attended']   ?></td>-->
+    <!--                                                            <td><?php //echo $row['attended']     ?></td>-->
                                                             <td><?php echo $row['correct_answers'] ?></td>
                                                             <td><?php echo ($row['attended'] - $row['correct_answers']) ?></td>
                                                         </tr>
@@ -126,7 +126,7 @@ if (isset($_SESSION['student_register_id'])) {
                                             <tr>
                                                 <td><?php echo $row['difficult_name'] ?> Marks</td>
                                                 <td><?php echo $row['total_questions'] ?></td>
-    <!--                                                            <td><?php //echo $row['attended']   ?></td>-->
+    <!--                                                            <td><?php //echo $row['attended']     ?></td>-->
                                                 <td><?php echo $row['correct_answers'] ?></td>
                                                 <td><?php echo ($row['attended'] - $row['correct_answers']) ?></td>
                                             </tr>
@@ -134,6 +134,15 @@ if (isset($_SESSION['student_register_id'])) {
                                     </table>
                                     <center><button class="btn btn-brown">Get Result</button></center>
                                     <hr/>
+                                    <div class="full-result">
+                                        <div class="">
+                                            <h4>Question</h4>
+                                            <div class="">
+                                                <button>Option 1</button>
+                                                <button>Option 1</button>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <br/>
                                 <?php } ?>
                             </div>
