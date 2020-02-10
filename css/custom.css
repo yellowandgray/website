@@ -898,3 +898,30 @@ and open the template in the editor.
 #result-view {
     display: none;
 }
+
+.result-option {
+    background: #e3e3e3;
+    padding: 3px 20px;
+    margin: 10px 0;
+    border-radius: 25px;
+}
+
+.result-option .option {
+    font-size: 15px;
+}
+
+.crt_clr {
+    background: #479c18;
+}
+
+.crt_clr .option {
+    color: #fff;
+}
+
+.wrng_clr {
+    background: #F03C02;
+}
+
+.wrng_clr .option {
+    color: #fff;
+}
