@@ -110,7 +110,8 @@ if (isset($_SESSION['student_register_id'])) {
                             <div class="result_section">
                                 <h6>Report</h6>
                                 <?php foreach ($student_logs as $row) { ?>
-                                    <h2 class = 'titleContainer title'> <i class="font-icon-arrow-simple-right"></i> <?php echo $row['subject_name']; ?><i class="font-icon-arrow-simple-right"></i> <?php echo $row['chapter_name']; ?> <i class="font-icon-arrow-simple-right"></i><?php echo $row['topic_name']; ?><span>Date: <?php echo date('d/M/Y h:iA', strtotime($row['created_at'])); ?></span></h2>
+                                    <h2 class = 'titleContainer title'> <i class="font-icon-arrow-simple-right"></i> <?php echo $row['subject_name']; ?><i class="font-icon-arrow-simple-right"></i> <?php echo $row['chapter_name']; ?> <i class="font-icon-arrow-simple-right"></i><?php echo $row['topic_name']; ?></h2>
+                                    <span>Date: <?php echo date('d/M/Y h:iA', strtotime($row['created_at'])); ?></span>
                                     <table class = 'table table-striped result_table'>
                                         <thead>
                                             <tr>
@@ -131,6 +132,9 @@ if (isset($_SESSION['student_register_id'])) {
                                             </tr>
                                         </tbody>
                                     </table>
+                                    <center><button class="btn btn-brown">Get Result</button></center>
+                                    <hr/>
+                                    <br/>
                                 <?php } ?>
                             </div>
                         </div>
