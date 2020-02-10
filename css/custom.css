@@ -889,3 +889,12 @@ and open the template in the editor.
 .result_section table tbody td {
     text-align: center;
 }
+
+.question-title h6 {
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+#result-view {
+    display: none;
+}
