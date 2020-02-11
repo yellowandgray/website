@@ -124,7 +124,7 @@ if (isset($_SESSION['student_register_id'])) {
                                             </tr>
                                         </tbody>
                                     </table>
-                                    <center><button id="result-view-btn" class="btn btn-brown">Get Result</button></center>
+                                    <center><button id="result-view-btn" class="btn btn-brown">Show Result</button></center>
                                     <div id="result-view" class="full-result">
                                         <div class="question-title">
                                             <h6>1. Push or pull is called as ………………………………..</h6>

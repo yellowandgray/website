@@ -2585,6 +2585,15 @@ article .align-right {
     .box-shadow .box-text {
         height: auto !important;
     }
+    .result-option {
+        width: 100% !Important;
+    }
+}
+
+@media (max-width: 768px) {
+    .quiz-result {
+        width: 100% !important;
+    }
 }
 
 @media (max-width: 480px) {

@@ -891,9 +891,9 @@ and open the template in the editor.
 }
 
 .question-title h6 {
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 0;
-    font-weight: 600;
+    /*    font-weight: 600;*/
 }
 
 #result-view {
@@ -926,4 +926,11 @@ and open the template in the editor.
 
 .wrng_clr .option {
     color: #fff;
+}
+
+
+.quiz-result {
+    width: 50%;
+    margin: 30px auto;
+    transition: all .3s;
 }

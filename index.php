@@ -6,7 +6,7 @@ if (isset($_SESSION['student_register_id'])) {
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Mekana Feringo</title>
+        <title>Feringo | 10th STD State Board Quiz</title>
         <meta charset="UTF-8">
         <meta name="description" content="Mekana Feringo">
         <meta name="keywords" content="Mekana Feringo">

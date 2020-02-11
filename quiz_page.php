@@ -59,7 +59,7 @@ if (count($questions) > 0) {
                     <div class="span12">
                         <div class="quiz-question-section">
                             <a href = '#' onclick="goBack()"><i class = 'font-icon-arrow-simple-left'></i></a>
-                            <h2>Selected Subject: <strong><?php echo $subject['name']; ?></strong> <br/> Selected Mark Category: <strong><?php echo $difficult['name']; ?></strong> <br/>Selected Chapter: <strong><?php echo $chapter['name']; ?></strong> <!--<br/> Selected Topic: <?php //echo $topic['name'];  ?> <br/>--></h2>
+                            <h2>Selected Subject: <strong><?php echo $subject['name']; ?></strong> <br/> Selected Mark Category: <strong><?php echo $difficult['name']; ?></strong> <br/>Selected Chapter: <strong><?php echo $chapter['name']; ?></strong> <!--<br/> Selected Topic: <?php //echo $topic['name'];       ?> <br/>--></h2>
                             <a class="home_link" href="home_subject">
                                 <i class="icon-home"></i>
                             </a>
@@ -75,7 +75,7 @@ if (count($questions) > 0) {
                                         <progress class="progress is-info is-small" :value="(questionIndex/quiz.questions.length)*100" max="100">{{(questionIndex/quiz.questions.length)*100}}%</progress>
                                         <div class="lenth_width">
                                             <span  class="label lable-blue">Total: {{quiz.questions.length}}</span>
-                                            <span class="label label-success">Attend: {{((quiz.questions.length)-(quiz.questions.length-questionIndex))}}</span>
+                                            <span class="label label-success">Answered: {{((quiz.questions.length)-(quiz.questions.length-questionIndex))}}</span>
                                         </div>
                                     </div>
                                     <!--/progress-->
@@ -138,7 +138,7 @@ if (count($questions) > 0) {
                                 <div class="">
                                     <a class="btn btn-theme btn-rounded" @click="restart()">Restart <i class="fa fa-refresh"></i></a>
                                     <a class="btn btn-theme btn-rounded" onclick="window.location = 'home_subject'">Home <i class="fa fa-refresh"></i></a>
-                                    <a class="btn btn-theme btn-rounded" onclick="window.location = 'student_result'">Full Result <i class="fa fa-refresh"></i></a>
+                                    <a @click="divshow()" class="btn btn-theme btn-rounded">Full Result <i class="fa fa-refresh"></i></a>
                                     <!--/resultTitleBlock-->
 
                                 </div>
@@ -147,6 +147,33 @@ if (count($questions) > 0) {
                             <!-- 		</transition> -->
                         </div>
                         <!-- question Box -->
+                        <div id="create" class="quiz-result" style="display: none;">
+                            <h1 class="title is-6">Selected Topic: <?php echo $topic['name']; ?></h1>
+                            <div class="question-title">
+                                <h6>1. Push or pull is called as ………………………………..</h6>
+                                <div class="result-option crt_clr">
+                                    <div class="option">A. motion</div>
+                                </div>
+                                <div class="result-option">
+                                    <div class="option">B. force</div>
+                                </div>
+                                <div class="result-option wrng_clr">
+                                    <div class="option">C. momentum</div>
+                                </div>
+                            </div>
+                            <div class="question-title">
+                                <h6>2. …………………….is the branch of physics that deals with the effect of force on bodies.</h6>
+                                <div class="result-option">
+                                    <div class="option">A. Gravitation</div>
+                                </div>
+                                <div class="result-option wrng_clr">
+                                    <div class="option">B. Acceleration</div>
+                                </div>
+                                <div class="result-option crt_clr">
+                                    <div class="option">C. Mechanics</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -177,6 +204,9 @@ if (count($questions) > 0) {
                     restart: function () {
                         this.questionIndex = 0;
                         this.userResponses = Array(this.quiz.questions.length).fill(null);
+                    },
+                    divshow: function () {
+                        $("#create").toggle();
                     },
                     selectOption: function (index) {
                         setTimeout(() => {
@@ -226,6 +256,7 @@ if (count($questions) > 0) {
                     }
                 }
             });
+
         </script>
     </body>
 </html>
