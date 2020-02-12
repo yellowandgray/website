@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+
 $app->post('/update_record/:table/:where', function($table, $where) use ($app) {
     $res = array('error' => true, 'message' => 'Unable to update');
     $data = $app->request->post();
@@ -155,7 +156,6 @@ $app->post('/insert_difficult', function() use ($app) {
     echoRespnse(201, $res);
 });
 
-
 $app->get('/get_subject', function() {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
@@ -294,7 +294,6 @@ $app->get('/get_difficult', function() {
     echoRespnse(201, $res);
 });
 
-
 $app->post('/import_question', function() use($app) {
     $file = $_FILES;
     $res = array('error' => true, 'message' => 'Unable to upload');
@@ -398,6 +397,18 @@ $app->post('/reset_password', function() use ($app) {
         }
     } else {
         $res['message'] = 'Unable to Reset Password';
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_result_detail/:lid', function($lid) {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('*', 'student_log_detail', 'student_log_id = ' . $lid);
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
     }
     echoRespnse(201, $res);
 });

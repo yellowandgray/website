@@ -59,7 +59,7 @@ if (count($questions) > 0) {
                     <div class="span12">
                         <div class="quiz-question-section">
                             <a href = '#' onclick="goBack()"><i class = 'font-icon-arrow-simple-left'></i></a>
-                            <h2>Selected Subject: <strong><?php echo $subject['name']; ?></strong> <br/> Selected Mark Category: <strong><?php echo $difficult['name']; ?></strong> <br/>Selected Chapter: <strong><?php echo $chapter['name']; ?></strong> <!--<br/> Selected Topic: <?php //echo $topic['name'];       ?> <br/>--></h2>
+                            <h2>Selected Subject: <strong><?php echo $subject['name']; ?></strong> <br/> Selected Mark Category: <strong><?php echo $difficult['name']; ?></strong> <br/>Selected Chapter: <strong><?php echo $chapter['name']; ?></strong> <!--<br/> Selected Topic: <?php //echo $topic['name'];                           ?> <br/>--></h2>
                             <a class="home_link" href="home_subject">
                                 <i class="icon-home"></i>
                             </a>
@@ -149,30 +149,7 @@ if (count($questions) > 0) {
                         <!-- question Box -->
                         <div id="create" class="quiz-result" style="display: none;">
                             <h1 class="title is-6">Selected Topic: <?php echo $topic['name']; ?></h1>
-                            <div class="question-title">
-                                <h6>1. Push or pull is called as ………………………………..</h6>
-                                <div class="result-option crt_clr">
-                                    <div class="option">A. motion</div>
-                                </div>
-                                <div class="result-option">
-                                    <div class="option">B. force</div>
-                                </div>
-                                <div class="result-option wrng_clr">
-                                    <div class="option">C. momentum</div>
-                                </div>
-                            </div>
-                            <div class="question-title">
-                                <h6>2. …………………….is the branch of physics that deals with the effect of force on bodies.</h6>
-                                <div class="result-option">
-                                    <div class="option">A. Gravitation</div>
-                                </div>
-                                <div class="result-option wrng_clr">
-                                    <div class="option">B. Acceleration</div>
-                                </div>
-                                <div class="result-option crt_clr">
-                                    <div class="option">C. Mechanics</div>
-                                </div>
-                            </div>
+                            <div id="question_list"></div>
                         </div>
                     </div>
                 </div>
@@ -206,7 +183,72 @@ if (count($questions) > 0) {
                         this.userResponses = Array(this.quiz.questions.length).fill(null);
                     },
                     divshow: function () {
-                        $("#create").toggle();
+                        $.ajax({
+                            type: "GET",
+                            url: 'api/v1/get_result_detail/' +<?php echo $student_log; ?>,
+                            success: function (data) {
+                                if (data.result.error === false) {
+                                    var qlist = '';
+                                    var correct_ans = '';
+                                    var student_ans = '';
+                                    $.each(data.result.data, function (key, val) {
+                                        qlist = qlist + '<div class="question-title"><h6>' + (key + 1) + '. ' + val.name + '</h6>';
+                                        if (val.a !== '') {
+                                            correct_ans = '';
+                                            student_ans = '';
+                                            if ((val.answer).toUpperCase() === 'A') {
+                                                correct_ans = 'crt_clr';
+                                            }
+                                            if ((val.student_answer).toUpperCase() === 'A' && (val.answer).toUpperCase() !== 'A') {
+                                                student_ans = 'wrng_clr';
+                                            }
+                                            qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option">A. ' + val.a + '</div></div>';
+                                        }
+                                        if (val.b !== '') {
+                                            correct_ans = '';
+                                            student_ans = '';
+                                            if ((val.answer).toUpperCase() === 'B') {
+                                                correct_ans = 'crt_clr';
+                                            }
+                                            if ((val.student_answer).toUpperCase() === 'B' && (val.answer).toUpperCase() !== 'B') {
+                                                student_ans = 'wrng_clr';
+                                            }
+                                            qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option">B. ' + val.b + '</div></div>';
+                                        }
+                                        if (val.c !== '') {
+                                            correct_ans = '';
+                                            student_ans = '';
+                                            if ((val.answer).toUpperCase() === 'C') {
+                                                correct_ans = 'crt_clr';
+                                            }
+                                            if ((val.student_answer).toUpperCase() === 'C' && (val.answer).toUpperCase() !== 'C') {
+                                                student_ans = 'wrng_clr';
+                                            }
+                                            qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option">C. ' + val.c + '</div></div>';
+                                        }
+                                        if (val.d !== '') {
+                                            correct_ans = '';
+                                            student_ans = '';
+                                            if ((val.answer).toUpperCase() === 'D') {
+                                                correct_ans = 'crt_clr';
+                                            }
+                                            if ((val.student_answer).toUpperCase() === 'D' && (val.answer).toUpperCase() !== 'D') {
+                                                student_ans = 'wrng_clr';
+                                            }
+                                            qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option">D. ' + val.d + '</div></div>';
+                                        }
+                                        qlist = qlist + '</div>';
+                                    });
+                                    $('#question_list').html(qlist);
+                                    $("#create").toggle();
+                                } else {
+                                    swal('Information', data.result.message, 'info');
+                                }
+                            },
+                            error: function (err) {
+                                swal('Error', err.statusText, 'error');
+                            }
+                        });
                     },
                     selectOption: function (index) {
                         setTimeout(() => {
@@ -251,11 +293,11 @@ if (count($questions) > 0) {
                             }
                         }
                         return score;
-
                         //return this.userResponses.filter(function(val) { return val }).length;
                     }
                 }
-            });
+            }
+            );
 
         </script>
     </body>
