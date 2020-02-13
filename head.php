@@ -1,6 +1,6 @@
 <head>
     <meta charset="utf-8">
-    <title>Exam Horse | General Knowledge Quiz, GK Questions Answers, Online Test</title>
+    <title>Exam Horse</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="" />
     <meta name="author" content="" />
