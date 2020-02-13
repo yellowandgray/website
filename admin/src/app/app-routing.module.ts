@@ -6,6 +6,8 @@ import { ProductComponent } from './product/product.component';
 import { TrainComponent } from './train/train.component';
 import { FloorComponent } from './floor/floor.component';
 import { StaffComponent } from './staff/staff.component';
+import { CommandComponent } from './command/command.component';
+
 
 
 const routes: Routes = [
@@ -14,6 +16,7 @@ const routes: Routes = [
   {path: 'train', component: TrainComponent},
   {path: 'floor', component: FloorComponent},
   {path: 'staff', component: StaffComponent},
+  {path: 'command', component: CommandComponent},
 ];
 
 @NgModule({

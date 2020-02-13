@@ -37,7 +37,7 @@ export class TrainComponent implements OnInit {
     var data = null;
     if (id != 0) {
       this[res].forEach(val => {
-        if (parseInt(val.train_id) === parseInt(id)) {
+        if (parseInt(val.electromech_train_id) === parseInt(id)) {
           data = val;
           return false;
         }
@@ -83,22 +83,20 @@ export class TrainComponent implements OnInit {
 export class TrainForm {
   trainForm: FormGroup;
   loading = false;
-  train_id = 0;
+  electromech_train_id = 0;
   constructor(
     public dialogRef: MatDialogRef<TrainForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
     this.trainForm = new FormGroup({
-      'train_name': new FormControl('', Validators.required),
-      'status': new FormControl('', Validators.required)
+      'name': new FormControl('', Validators.required)
     });
     if (this.data != null) {
       this.trainForm.patchValue({
-        train_name: this.data.train_name,
-        status: this.data.status,
+        name: this.data.name,
       });
-      this.train_id = this.data.train_id;
+      this.electromech_train_id = this.data.electromech_train_id;
     }
   }
 
@@ -109,13 +107,11 @@ export class TrainForm {
     this.loading = true;
     var formData = new FormData();
     var url = '';
-    if (this.train_id != 0) {
-      formData.append('train_name', this.trainForm.value.train_name);
-      formData.append('status', this.trainForm.value.status);
-      url = 'update_record/train/train_id = ' + this.train_id;
+    if (this.electromech_train_id != 0) {
+      formData.append('name', this.trainForm.value.name);
+      url = 'update_record/electromech_train/electromech_train_id = ' + this.electromech_train_id;
     } else {
-      formData.append('train_name', this.trainForm.value.train_name);
-      formData.append('status', this.trainForm.value.status);
+      formData.append('name', this.trainForm.value.name);
       url = 'insert_train';
     }
     this.httpClient.post('http://www.lemonandshadow.com/electromech/api/v1/' + url, formData).subscribe(
@@ -146,23 +142,23 @@ export class TrainForm {
 })
 export class TrainDelete {
   loading = false;
-  train_id = 0;
+  electromech_train_id = 0;
   constructor(
     public dialogRef: MatDialogRef<TrainDelete>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
     if (this.data != null) {
-      this.train_id = this.data;
+      this.electromech_train_id = this.data;
     }
   }
 
   confirmDelete() {
-    if (this.train_id == null || this.train_id == 0) {
+    if (this.electromech_train_id == null || this.electromech_train_id == 0) {
       return;
     }
     this.loading = true;
-    this.httpClient.get('http://www.lemonandshadow.com/electromech/api/v1/delete_record/train/train_id=' + this.train_id).subscribe(
+    this.httpClient.get('http://www.lemonandshadow.com/electromech/api/v1/delete_record/electromech_train/electromech_train_id=' + this.electromech_train_id).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {

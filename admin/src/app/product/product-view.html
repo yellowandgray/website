@@ -1,0 +1,52 @@
+<h2 mat-dialog-title>Product Details</h2>
+<mat-dialog-content class="mat-typography">
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+        <div fxFlex="50%">
+            <table class="Product-table">
+                <tbody>
+                    <tr>
+                        <th>Product Name</th>
+                        <td> : </td>
+                        <td> {{data.name}} </td>
+                    </tr>
+                    <tr>
+                        <th>Manufacturing</th>
+                        <td> : </td>
+                        <td> {{data.manufacturing}} </td>
+                    </tr>
+                    <tr>
+                        <th>Name Plate Date</th>
+                        <td> : </td>
+                        <td> {{data.name_plate_date}} </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div fxFlex="50%">
+            <div fxFlex="100%" fxLayoutAlign="end start">
+                <div class="Product-table">
+                    <img src="{{image_url}}{{data.image_path}}" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2 mat-dialog-title>Product Tag Code</h2>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+        <div fxFlex="100%">
+            <table class="product-tag-table">
+                <tbody>
+                    <tr>
+                        <th mat-header-cell>product Code</th>
+                    </tr>
+                    <tr *ngFor="let data of tag">
+                        <td> {{data.code}} </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <br/>
+    <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
+        <button mat-button [mat-dialog-close]="false">Cancel</button>
+    </div>
+</mat-dialog-content>

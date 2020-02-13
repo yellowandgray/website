@@ -2,21 +2,11 @@
 <mat-dialog-content class="mat-typography">
     <form [formGroup]="trainForm" (ngSubmit)="onSubmit()">
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-            <div fxFlex="50%">
+            <div fxFlex="100%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Train Name</mat-label>
-                    <input matInput placeholder="" required formControlName="train_name" />
+                    <input matInput placeholder="" required formControlName="name" />
                     <mat-error>Train Name is required</mat-error>
-                </mat-form-field>
-            </div>
-            <div fxFlex="50%" fxLayoutAlign="center center">
-                <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Status</mat-label>
-                    <mat-select required formControlName="status">
-                        <mat-option value="active">Active</mat-option>
-                        <mat-option value="in-active">In-Active</mat-option>
-                    </mat-select>
-                    <mat-error>Status is required</mat-error>
                 </mat-form-field>
             </div>
         </div>

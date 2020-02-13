@@ -1,0 +1,29 @@
+<h2 mat-dialog-title>Product Code</h2>
+<mat-dialog-content class="mat-typography">
+    <form [formGroup]="tagForm" (ngSubmit)="onSubmit()">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Product Code</mat-label>
+                    <input matInput placeholder="" required formControlName="code" />
+                    <mat-error>Product Code is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Select Product Id</mat-label>
+                    <mat-select required formControlName="electromech_product_id">
+                        <mat-option [value]="row.electromech_product_id" *ngFor="let row of product">{{row.name}}</mat-option>
+                    </mat-select>
+                    <mat-error>Select Product Id is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
+            <button mat-button [mat-dialog-close]="false">Cancel</button>
+            <button mat-button type="submit" [disabled]="loading">Save</button>
+            <mat-progress-spinner class="example-margin" *ngIf="loading" [mode]="'indeterminate'" [strokeWidth]="3" [diameter]="25">
+            </mat-progress-spinner>
+        </div>
+    </form>
+</mat-dialog-content>

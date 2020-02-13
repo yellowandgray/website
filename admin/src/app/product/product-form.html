@@ -2,21 +2,10 @@
 <mat-dialog-content class="mat-typography">
     <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
-            <div fxFlex="100%">
-                <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Select Floor</mat-label>
-                    <mat-select required formControlName="floor_id">
-                        <mat-option [value]="row.floor_id" *ngFor="let row of floor">{{row.floor_name}}</mat-option>
-                    </mat-select>
-                    <mat-error>Tag is required</mat-error>
-                </mat-form-field>
-            </div>
-        </div>
-        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Title</mat-label>
-                    <input matInput placeholder="" required formControlName="title" />
+                    <mat-label>Product Equipment Item</mat-label>
+                    <input matInput placeholder="" required formControlName="name" />
                     <mat-error>Title is required</mat-error>
                 </mat-form-field>
             </div>
@@ -31,17 +20,18 @@
                 </div>
             </div>
         </div>
-        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Tag</mat-label>
-                    <input matInput placeholder="" required formControlName="tag" />
-                    <mat-error>Tag is required</mat-error>
+                    <mat-label>Manufacturing</mat-label>
+                    <input matInput placeholder="" required formControlName="manufacturing" />
+                    <mat-error>Manufacturing is required</mat-error>
                 </mat-form-field>
             </div>
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Name Plate Date</mat-label>
+                    <mat-label>Nameplate Date(kW, voltage, speed, etc.)</mat-label>
                     <input matInput placeholder="" required formControlName="name_plate_date" />
                     <mat-error>Name Plate Date is required</mat-error>
                 </mat-form-field>

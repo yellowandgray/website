@@ -10,14 +10,13 @@
         <mat-list>
             <ng-container *ngFor="let data of train">
                 <mat-list-item>
-                    <button mat-icon-button aria-label="label" (click)="openDialog(data.train_id, 'train')">
+                    <button mat-icon-button aria-label="label" (click)="openDialog(data.electromech_train_id, 'train')">
                         <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
                     </button>
-                    <button mat-icon-button aria-label="label" (click)="confirmDelete(data.train_id)">
+                    <button mat-icon-button aria-label="label" (click)="confirmDelete(data.electromech_train_id)">
                         <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                     </button>
-                    <h4 mat-line>{{data.train_name}}</h4>
-                    <p mat-line>{{data.status}}</p>
+                    <h4 mat-line>{{data.name}}</h4>
                 </mat-list-item>
                 <mat-divider></mat-divider>
             </ng-container>

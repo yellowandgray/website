@@ -33,7 +33,7 @@ export class FloorComponent implements OnInit {
     var data = null;
     if (id != 0) {
       this[res].forEach(val => {
-        if (parseInt(val.floor_id) === parseInt(id)) {
+        if (parseInt(val.electromech_floor_id) === parseInt(id)) {
           data = val;
           return false;
         }
@@ -79,42 +79,38 @@ export class FloorComponent implements OnInit {
 })
 export class FloorForm {
   floorForm: FormGroup;
-  floor_id = 0;
+  electromech_floor_id = 0;
   loading = false;
-  train: any[];
+  //train: any[];
   constructor(
     public dialogRef: MatDialogRef<FloorForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
       this.floorForm = new FormGroup ({
-        'floor_name': new FormControl('', Validators.required),
-        'train_id': new FormControl('', Validators.required),
-        'status': new FormControl('', Validators.required),
+        'name': new FormControl('', Validators.required)
       });
       if(this.data != null) {
         this.floorForm.patchValue({
-        floor_name: this.data.floor_name,
-        train_id: this.data.train_id,
-        status: this.data.status
+        name: this.data.name
      });
-        this.floor_id = this.data.topic_id;
+        this.electromech_floor_id = this.data.electromech_floor_id;
      }
-     this.httpClient.get('http://www.lemonandshadow.com/electromech/api/v1/get_train').subscribe(
-      (res) => {
-        if (res["result"]["error"] === false) {
-          this.train = res["result"]["data"];
-        } else {
-          this._snackBar.open(res["result"]["message"], '', {
-            duration: 2000,
-          });
-        }
-      },
-      (error) => {
-        this._snackBar.open(error["statusText"], '', {
-          duration: 2000,
-        });
-      });
+    //  this.httpClient.get('http://www.lemonandshadow.com/electromech/api/v1/get_train').subscribe(
+    //   (res) => {
+    //     if (res["result"]["error"] === false) {
+    //       this.train = res["result"]["data"];
+    //     } else {
+    //       this._snackBar.open(res["result"]["message"], '', {
+    //         duration: 2000,
+    //       });
+    //     }
+    //   },
+    //   (error) => {
+    //     this._snackBar.open(error["statusText"], '', {
+    //       duration: 2000,
+    //     });
+    //   });
     }
     
     onSubmit() {
@@ -124,15 +120,11 @@ export class FloorForm {
       this.loading = true;
       var formData = new FormData();
       var url = '';
-      if(this.floor_id != 0) {
-        formData.append('floor_name', this.floorForm.value.floor_name);
-        formData.append('train_id', this.floorForm.value.train_id);
-        formData.append('status', this.floorForm.value.status);
-        url = 'update_record/floor/floor_id = ' + this.floor_id;
+      if(this.electromech_floor_id != 0) {
+        formData.append('name', this.floorForm.value.name);
+        url = 'update_record/electromech_floor/electromech_floor_id = ' + this.electromech_floor_id;
       } else {
-        formData.append('floor_name', this.floorForm.value.floor_name);
-        formData.append('train_id', this.floorForm.value.train_id);
-        formData.append('status', this.floorForm.value.status);
+        formData.append('name', this.floorForm.value.name);
         url = 'insert_floor';
       }
       this.httpClient.post('http://www.lemonandshadow.com/electromech/api/v1/' + url, formData).subscribe(
@@ -163,23 +155,23 @@ export class FloorForm {
 })
 export class FloorDelete {
   loading = false;
-  floor_id = 0;
+  electromech_floor_id = 0;
   constructor(
     public dialogRef: MatDialogRef<FloorDelete>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
     if (this.data != null) {
-      this.floor_id = this.data;
+      this.electromech_floor_id = this.data;
     }
   }
 
   confirmDelete() {
-    if (this.floor_id == null || this.floor_id == 0) {
+    if (this.electromech_floor_id == null || this.electromech_floor_id == 0) {
       return;
     }
     this.loading = true;
-    this.httpClient.get('http://www.lemonandshadow.com/electromech/api/v1/delete_record/floor/floor_id=' + this.floor_id).subscribe(
+    this.httpClient.get('http://www.lemonandshadow.com/electromech/api/v1/delete_record/electromech_floor/electromech_floor_id=' + this.electromech_floor_id).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {

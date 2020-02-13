@@ -34,7 +34,7 @@ export class StaffComponent implements OnInit {
     var data = null;
     if (id != 0) {
       this[res].forEach(val => {
-        if (parseInt(val.user_id) === parseInt(id)) {
+        if (parseInt(val.electromech_staff_id) === parseInt(id)) {
           data = val;
           return false;
         }
@@ -102,7 +102,7 @@ export class StaffForm {
   image_url: string = 'http://www.lemonandshadow.com/electromech/api/v1/';
   staffForm: FormGroup;
   loading = false;
-  user_id = 0;
+  electromech_staff_id = 0;
   staff_image: string = 'Select Staff Profile';
   imageurl: string = '';
   constructor(
@@ -112,18 +112,20 @@ export class StaffForm {
     private httpClient: HttpClient) {
     this.staffForm = new FormGroup({
       'name': new FormControl('', Validators.required),
-      'phone_no': new FormControl(''),
+      'mobile': new FormControl(''),
       'username': new FormControl('', Validators.required),
-      'password': new FormControl('', Validators.required)
+      'password': new FormControl('', Validators.required),
+      'role': new FormControl('', Validators.required)
     });
     if (this.data != null) {
       this.staffForm.patchValue({
         name: this.data.name,
-        phone_no: this.data.phone_no,
+        mobile: this.data.mobile,
         username: this.data.username,
         password: this.data.password,
+        role: this.data.role,
       });
-      this.user_id = this.data.user_id;
+      this.electromech_staff_id = this.data.electromech_staff_id;
       this.imageurl = this.data.imageurl;
     }
   }
@@ -135,19 +137,21 @@ export class StaffForm {
     this.loading = true;
     var formData = new FormData();
     var url = '';
-    if (this.user_id != 0) {
+    if (this.electromech_staff_id != 0) {
       formData.append('name', this.staffForm.value.name);
-      formData.append('phone_no', this.staffForm.value.phone_no);
+      formData.append('mobile', this.staffForm.value.mobile);
       formData.append('username', this.staffForm.value.username);
       formData.append('password', this.staffForm.value.password);
+      formData.append('role', this.staffForm.value.role);
       formData.append('imageurl', this.imageurl);
-      url = 'update_record/staff/user_id = ' + this.user_id;
+      url = 'update_record/electromech_staff/electromech_staff_id = ' + this.electromech_staff_id;
      
     } else {
       formData.append('name', this.staffForm.value.name);
-      formData.append('phone_no', this.staffForm.value.phone_no);
+      formData.append('mobile', this.staffForm.value.mobile);
       formData.append('username', this.staffForm.value.username);
       formData.append('password', this.staffForm.value.password);
+      formData.append('role', this.staffForm.value.role);
       formData.append('staff_image', this.imageurl);
       url = 'insert_staff';
  
@@ -240,23 +244,23 @@ export class StaffImageView {
 })
 export class StaffDelete {
   loading = false;
-  user_id = 0;
+  electromech_staff_id = 0;
   constructor(
     public dialogRef: MatDialogRef<StaffDelete>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
     if (this.data != null) {
-      this.user_id = this.data;
+      this.electromech_staff_id = this.data;
     }
   }
 
   confirmDelete() {
-    if (this.user_id == null || this.user_id == 0) {
+    if (this.electromech_staff_id == null || this.electromech_staff_id == 0) {
       return;
     }
     this.loading = true;
-    this.httpClient.get('http://www.lemonandshadow.com/electromech/api/v1/delete_record/staff/user_id=' + this.user_id).subscribe(
+    this.httpClient.get('http://www.lemonandshadow.com/electromech/api/v1/delete_record/electromech_staff/electromech_staff_id=' + this.electromech_staff_id).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {

@@ -40,8 +40,18 @@
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Phone No</mat-label>
-                    <input matInput placeholder="" required formControlName="phone_no" />
+                    <input matInput placeholder="" required formControlName="mobile" />
                     <mat-error>Phone No is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Select Role</mat-label>
+                    <mat-select required formControlName="role">
+                        <mat-option value="Admin">Admin</mat-option>
+                        <mat-option value="Staff">Staff</mat-option>
+                    </mat-select>
+                    <mat-error>Select Role is required</mat-error>
                 </mat-form-field>
             </div>
         </div>

@@ -30,10 +30,11 @@ import {MatCardModule} from '@angular/material/card';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
-import { ProductComponent, ProductForm, ProductImageView, ProductDelete } from './product/product.component';
+import { ProductComponent, ProductForm, ProductImageView, ProductDelete, TagForm, ProductViewForm } from './product/product.component';
 import { TrainComponent, TrainForm, TrainDelete } from './train/train.component';
 import { FloorComponent, FloorForm, FloorDelete} from './floor/floor.component';
 import { StaffComponent, StaffForm, StaffImageView, StaffDelete } from './staff/staff.component';
+import { CommandComponent, CommandDialog } from './command/command.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,8 @@ import { StaffComponent, StaffForm, StaffImageView, StaffDelete } from './staff/
     ProductForm,
     ProductImageView,
     ProductDelete,
+    TagForm,
+    ProductViewForm,
     TrainComponent,
     TrainForm,
     TrainDelete,
@@ -54,7 +57,9 @@ import { StaffComponent, StaffForm, StaffImageView, StaffDelete } from './staff/
     StaffComponent,
     StaffForm,
     StaffImageView,
-    StaffDelete
+    StaffDelete,
+    CommandComponent,
+    CommandDialog
   ],
   imports: [
     BrowserModule,
@@ -88,6 +93,8 @@ import { StaffComponent, StaffForm, StaffImageView, StaffDelete } from './staff/
     ProductForm,
     ProductImageView,
     ProductDelete,
+    TagForm,
+    ProductViewForm,
     TrainComponent,
     TrainForm,
     TrainDelete,
@@ -97,7 +104,9 @@ import { StaffComponent, StaffForm, StaffImageView, StaffDelete } from './staff/
     StaffComponent,
     StaffForm,
     StaffImageView,
-    StaffDelete
+    StaffDelete,
+    CommandComponent,
+    CommandDialog
   ],
   providers: [],
   bootstrap: [AppComponent]

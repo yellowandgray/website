@@ -2,10 +2,10 @@
 <mat-dialog-content class="mat-typography">
     <form [formGroup]="floorForm" (ngSubmit)="onSubmit()">
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-            <div fxFlex="50%">
+            <div fxFlex="100%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Floor Name</mat-label>
-                    <mat-select required formControlName="floor_name">
+                    <mat-select required formControlName="name">
                         <mat-option value="1st Floor">1st Floor</mat-option>
                         <mat-option value="2nd Floor">2nt Floor</mat-option>
                         <mat-option value="3rd Floor">3rd Floor</mat-option>
@@ -18,27 +18,6 @@
                         <mat-option value="10th Floor">10th Floor</mat-option>
                     </mat-select>
                     <mat-error>Floor Name is required</mat-error>
-                </mat-form-field>
-            </div>
-            <div fxFlex="50%">
-                <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Select Train</mat-label>
-                    <mat-select required formControlName="train_id">
-                        <mat-option [value]="row.train_id" *ngFor="let row of train">{{row.train_name}}</mat-option>
-                    </mat-select>
-                    <mat-error>Tag is required</mat-error>
-                </mat-form-field>
-            </div>
-        </div>
-        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-            <div fxFlex="50%">
-                <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Status</mat-label>
-                    <mat-select formControlName="status">
-                        <mat-option value="active">Active</mat-option>
-                        <mat-option value="inactive">In-Active</mat-option>
-                    </mat-select>
-                    <mat-error>Status is required</mat-error>
                 </mat-form-field>
             </div>
         </div>
