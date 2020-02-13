@@ -32,8 +32,9 @@
                     <td mat-cell>{{mark.total_questions - mark.correct_answers}}</td>
                 </tr>
             </table>
-            <br/>
-            <button mat-raised-button color="primary" (click)="openFullResult()">Show Full Result</button>
+            <div class="add-btn-container">
+                <button mat-raised-button color="primary" (click)="openFullResult()">Show Full Result</button>
+            </div>
         </mat-expansion-panel>
     </mat-accordion>
 </mat-dialog-content>
