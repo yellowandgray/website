@@ -1,5 +1,5 @@
 var avatar = '';
-var BASE_IMAGE_URL = '../api/v1/';
+var BASE_IMAGE_URL = 'api/v1/';
 
 function attachFile(id) {
     var val = $('#' + id).val();
