@@ -4,9 +4,27 @@
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Select Floor</mat-label>
+                    <mat-select required formControlName="floor_id">
+                        <mat-option [value]="row.electromech_floor_id" *ngFor="let row of floor">{{row.name}}</mat-option>
+                    </mat-select>
+                    <mat-error>Floor is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Product Equipment Item</mat-label>
                     <input matInput placeholder="" required formControlName="name" />
                     <mat-error>Title is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Manufacturing</mat-label>
+                    <input matInput placeholder="" required formControlName="manufacturing" />
+                    <mat-error>Manufacturing is required</mat-error>
                 </mat-form-field>
             </div>
             <div fxFlex="50%" fxLayoutAlign="center center">
@@ -21,14 +39,6 @@
             </div>
         </div>
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-
-            <div fxFlex="50%">
-                <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Manufacturing</mat-label>
-                    <input matInput placeholder="" required formControlName="manufacturing" />
-                    <mat-error>Manufacturing is required</mat-error>
-                </mat-form-field>
-            </div>
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Nameplate Date(kW, voltage, speed, etc.)</mat-label>

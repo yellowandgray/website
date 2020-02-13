@@ -26,9 +26,7 @@
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Select Category</mat-label>
                     <mat-select required formControlName="category_id">
-                        <mat-option [value]="'test'">Test</mat-option>
-                        <mat-option [value]="'test1'">Test 1</mat-option>
-                        <mat-option [value]="'test2'">Test 2</mat-option>
+                        <mat-option [value]="row.electromech_category_id" *ngFor="let row of category">{{row.name}}</mat-option>
                     </mat-select>
                     <mat-error>Category is required</mat-error>
                 </mat-form-field>

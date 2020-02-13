@@ -34,7 +34,8 @@ import { ProductComponent, ProductForm, ProductImageView, ProductDelete, TagForm
 import { TrainComponent, TrainForm, TrainDelete } from './train/train.component';
 import { FloorComponent, FloorForm, FloorDelete} from './floor/floor.component';
 import { StaffComponent, StaffForm, StaffImageView, StaffDelete } from './staff/staff.component';
-import { CommandComponent, CommandDialog } from './command/command.component';
+import { CommandComponent, CommandDialog, CommandDelete } from './command/command.component';
+import { CategoryComponent, CategoryForm, CategoryDelete } from './category/category.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,11 @@ import { CommandComponent, CommandDialog } from './command/command.component';
     StaffImageView,
     StaffDelete,
     CommandComponent,
-    CommandDialog
+    CommandDialog,
+    CommandDelete,
+    CategoryComponent,
+    CategoryForm,
+    CategoryDelete
   ],
   imports: [
     BrowserModule,
@@ -106,7 +111,11 @@ import { CommandComponent, CommandDialog } from './command/command.component';
     StaffImageView,
     StaffDelete,
     CommandComponent,
-    CommandDialog
+    CommandDialog,
+    CommandDelete,
+    CategoryComponent,
+    CategoryForm,
+    CategoryDelete
   ],
   providers: [],
   bootstrap: [AppComponent]

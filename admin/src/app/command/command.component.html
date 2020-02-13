@@ -7,8 +7,8 @@
         <div class="add-btn-container">
             <button mat-raised-button color="primary" (click)="openDialog(0, 'null')"><mat-icon>add</mat-icon> Command</button>
         </div>
-        <mat-tab-group>
-            <mat-tab label="Dailly"> 
+        <mat-tab-group (selectedTabChange)="getCommand($event);">
+            <mat-tab *ngFor="let row of schedule" label="{{row.name}}">
                 <mat-list>
                     <ng-container *ngFor="let data of result">
                         <mat-list-item>
@@ -22,10 +22,8 @@
                         </mat-list-item>
                         <mat-divider></mat-divider>
                     </ng-container>
-                </mat-list> 
+                </mat-list>
             </mat-tab>
-            <mat-tab label="Weekly"> Content 2 </mat-tab>
-            <mat-tab label="Monthly"> Content 3 </mat-tab>
         </mat-tab-group>
     </mat-sidenav-content>
 </mat-sidenav-container>
