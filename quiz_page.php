@@ -138,7 +138,7 @@ if (count($questions) > 0) {
                                 <div class="">
                                     <a class="btn btn-theme btn-rounded" @click="restart()">Restart <i class="fa fa-refresh"></i></a>
                                     <a class="btn btn-theme btn-rounded" onclick="window.location = 'home_subject'">Home <i class="fa fa-refresh"></i></a>
-                                    <a @click="divshow()" class="btn btn-theme btn-rounded">Full Result <i class="fa fa-refresh"></i></a>
+                                    <a @click="divshow()" class="btn btn-theme btn-rounded">Show Full Result <i class="fa fa-refresh"></i></a>
                                     <!--/resultTitleBlock-->
 
                                 </div>

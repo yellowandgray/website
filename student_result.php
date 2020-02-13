@@ -100,7 +100,7 @@ if (isset($_SESSION['student_register_id'])) {
                             <br/>
                             <!-- start: Accordion -->
                             <div class="result_section">
-                                <h6>Report</h6>
+                                <h6>Test Report</h6>
                                 <?php foreach ($student_logs as $row) { ?>
                                     <h2 class = 'titleContainer title'> <i class="font-icon-arrow-simple-right"></i> <?php echo $row['subject_name']; ?><i class="font-icon-arrow-simple-right"></i> <?php echo $row['chapter_name']; ?> <i class="font-icon-arrow-simple-right"></i><?php echo $row['topic_name']; ?></h2>
                                     <span>Date: <?php echo date('d/M/Y h:iA', strtotime($row['created_at'])); ?></span>
@@ -124,7 +124,7 @@ if (isset($_SESSION['student_register_id'])) {
                                             </tr>
                                         </tbody>
                                     </table>
-                                    <center><button id="result-view-btn" class="btn btn-brown" onclick="showFullResult(<?php echo $row['student_log_id']; ?>);">Show Result</button></center>
+                                    <center><button id="result-view-btn" class="btn btn-brown" onclick="showFullResult(<?php echo $row['student_log_id']; ?>);">Show Details</button></center>
                                     <div id="result_view_<?php echo $row['student_log_id']; ?>" class="full-result"></div>
                                     <hr/>
                                     <br/>
