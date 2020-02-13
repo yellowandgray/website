@@ -15,7 +15,7 @@ import { Observable } from 'rxjs';
 export class UserComponent implements OnInit {
   searchTerm: string = '';
   student = [];
-  image_url: string = 'http://localhost/mushak/feringo/api/v1/';
+  image_url: string = 'http://localhost/project/feringo/api/v1/';
 
   constructor(public dialog: MatDialog, private httpClient: HttpClient, private _snackBar: MatSnackBar) { }
 
@@ -23,7 +23,7 @@ export class UserComponent implements OnInit {
     this.getuser();
   }
   getuser(): void {
-    this.httpClient.get<any>('http://localhost/mushak/feringo/api/v1/get_student')
+    this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_student')
       .subscribe(
         (res) => {
           this.student = res["result"]["data"];
@@ -90,7 +90,7 @@ export class UserComponent implements OnInit {
     });
   }
   openResult(sid): void {
-      this.httpClient.get<any>('http://localhost/mushak/feringo/api/v1/get_student_result/'+sid)
+      this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_student_result/'+sid)
       .subscribe(
         (res) => {
             if(res["result"]["error"] == false) {
@@ -165,7 +165,7 @@ export class UserComponent implements OnInit {
   templateUrl: 'user-form.html',
 })
 export class UserForm {
-  image_url: string = 'http://localhost/mushak/feringo/api/v1/';
+  image_url: string = 'http://localhost/project/feringo/api/v1/';
   userForm: FormGroup;
   loading = false;
   student_register_id = 0;
@@ -248,7 +248,7 @@ export class UserForm {
       formData.append('email', this.userForm.value.email);
       url = 'insert_student';
     }
-    this.httpClient.post('http://localhost/mushak/feringo/api/v1/' + url, formData).subscribe(
+    this.httpClient.post('http://localhost/project/feringo/api/v1/' + url, formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -274,7 +274,7 @@ export class UserForm {
     this.loading = true;
     var formData = new FormData();
     formData.append('file', fileData);
-    this.httpClient.post('http://localhost/mushak/feringo/api/v1/upload_file', formData).subscribe(
+    this.httpClient.post('http://localhost/project/feringo/api/v1/upload_file', formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -324,7 +324,7 @@ export class UserDelete {
       return;
     }
     this.loading = true;
-    this.httpClient.get('http://localhost/mushak/feringo/api/v1/delete_record/student_register/student_register_id=' + this.student_register_id).subscribe(
+    this.httpClient.get('http://localhost/project/feringo/api/v1/delete_record/student_register/student_register_id=' + this.student_register_id).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -369,12 +369,36 @@ export class ResultForm {
   resultForm: FormGroup;
   loading = false;
   constructor(
-    public dialogRef: MatDialogRef<ResultForm>,
+    public dialogRef: MatDialogRef<ResultForm>, public dialog: MatDialog,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) { 
         console.log(data);
     }
+    openFullResult(): void {
+      this.dialogRef.close();
+    const dialogRef = this.dialog.open(UserFullResultForm, {
+      minWidth: "40%",
+      maxWidth: "40%"
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      
+    });
+  }
+}
+
+@Component({
+  selector: 'user-full-result-view',
+  templateUrl: 'user-full-result-view.html',
+})
+
+export class UserFullResultForm {
+  loading = false;
+  constructor(
+    public dialogRef: MatDialogRef<UserFullResultForm>,
+    @Inject(MAT_DIALOG_DATA) public datapopup: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {}
 }
 
 @Component({
@@ -383,7 +407,7 @@ export class ResultForm {
 })
 
 export class PictureViewUser {
-  image_url: string = 'http://localhost/mushak/feringo/api/v1/';
+  image_url: string = 'http://localhost/project/feringo/api/v1/';
   action: string = '';
   loading = false;
   student_register_id = 0;
@@ -409,7 +433,7 @@ export class PictureViewUser {
 })
 
 export class UserViewForm {
-  image_url: string = 'http://localhost/mushak/feringo/api/v1/';
+  image_url: string = 'http://localhost/project/feringo/api/v1/';
   loading = false;
   student = [];
   student_register_id = 0;

@@ -17,7 +17,7 @@
                 <!-- Position Column -->
                 <tr>
                     <th mat-header-cell> Category </th>
-                    <th mat-header-cell> Total Questions </th>
+                    <th mat-header-cell> Total </th>
                     <th mat-header-cell>
                 <mat-icon class="done_clr">done</mat-icon>
                 </th>
@@ -32,7 +32,8 @@
                     <td mat-cell>{{mark.total_questions - mark.correct_answers}}</td>
                 </tr>
             </table>
-
+            <br/>
+            <button mat-raised-button color="primary" (click)="openFullResult()">Show Full Result</button>
         </mat-expansion-panel>
     </mat-accordion>
 </mat-dialog-content>
