@@ -23,13 +23,31 @@ $_SESSION['selected_chapter_id'] = $chapter['chapter_id'];
                         <div class="span12">
                             <div class="side_section topic-head">
                                 <a href="select_chapter?difficult=<?php echo $difficult['name']; ?>"><i class="font-icon-arrow-simple-left"></i></a>
-                                                                                                                                                                                                        <h2>Selected Subject: <strong><?php echo $subject['name']; ?></strong> <br/> Selected Mark Category: <strong><?php echo $difficult['name']; ?></strong> <br/>Selected Chapter: <strong><?php echo $chapter['name']; ?></strong> <!--<br/> Select <strong>Topic</strong>--></h2>
+                                <h2>
+                                    <table class="table-title">
+                                        <tr>
+                                            <td valign="top">Selected Subject</td>
+                                            <td valign="top">:</td>
+                                            <th valign="top"><?php echo $subject['name']; ?></th>
+                                        </tr>
+                                        <tr>
+                                            <td valign="top">Selected Mark Category</td>
+                                            <td valign="top">:</td>
+                                            <th valign="top"><?php echo $difficult['name']; ?></th>
+                                        </tr>
+                                        <tr>
+                                            <td valign="top">Selected Chapter</td>
+                                            <td valign="top">:</td>
+                                            <th valign="top"><?php echo $chapter['name']; ?></th>
+                                        </tr>
+                                    </table>
+                                </h2>
                                 <a class="home_link" href="home_subject">
                                     <i class="icon-home"></i>
                                 </a>
                             </div>
                             <div class="topic_section_1">
-                                <p class="m-b-0">Select Topic</p>
+                                <p class="m-b-0 f-s-18 clr-g">Select Topic</p>
                                 <?php if (count($topics) > 0) { ?>
                                     <?php foreach ($topics as $row) { ?>
                                         <div class="topic_list_section">

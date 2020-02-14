@@ -50,6 +50,7 @@ $app->post('/loginstudent', function() use ($app) {
     if (count($record) > 0) {
         if ($data['password'] == $record['password']) {
             $res['error'] = false;
+            $obj->insertRecord(array('student_register_id' => $record['student_register_id']), 'student_register_login');
             $_SESSION['student_register_id'] = $record['student_register_id'];
             $res['message'] = 'Welcome ' . $record['student_name'];
             $res['data'] = $record;
@@ -85,13 +86,19 @@ $app->post('/insert_student', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    if (!isset($data['profile_picture'])) {
-        $data['profile_image'] = '';
-    }
-    $record = $com->insertRecord(array('user_name' => $data['user_name'], 'student_name' => $data['student_name'], 'profile_image' => $data['profile_picture'], 'gender' => $data['gender'], 'parent_name' => $data['parent_name'], 'mobile' => $data['mobile'], 'city' => $data['city'], 'pin' => $data['pin'], 'school_name' => $data['school_name'], 'standard' => $data['standard'], 'email' => $data['email'], 'password' => $data['password'], 'confirm_password' => $data['confirm_password']), 'student_register');
-    if ($record > 0) {
-        $res['error'] = false;
-        $res['message'] = 'Record inserted successfully';
+    $exist = $com->selectRow('*', 'student_register', 'student_name=\'' . $data['student_name'] . '\' AND user_name=\'' . $data['user_name'] . '\'');
+    if (count($exist) == 0) {
+        if (!isset($data['profile_picture'])) {
+            $data['profile_image'] = '';
+        }
+        $record = $com->insertRecord(array('user_name' => $data['user_name'], 'student_name' => $data['student_name'], 'profile_image' => $data['profile_picture'], 'gender' => $data['gender'], 'parent_name' => $data['parent_name'], 'mobile' => $data['mobile'], 'city' => $data['city'], 'pin' => $data['pin'], 'school_name' => $data['school_name'], 'standard' => $data['standard'], 'email' => $data['email'], 'password' => $data['password'], 'confirm_password' => $data['confirm_password']), 'student_register');
+        if ($record > 0) {
+            $res['error'] = false;
+            $res['message'] = 'Record inserted successfully';
+        }
+    } else {
+        $res['error'] = true;
+        $res['message'] = 'User already exist';
     }
     echoRespnse(201, $res);
 });
@@ -196,10 +203,12 @@ $app->get('/get_student', function() {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
     $data = $com->selectAll('*', 'student_register', 'student_register_id > 0');
+   
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
         $res['data'] = $data;
+        $res['total'] = count($data);
     }
     echoRespnse(201, $res);
 });

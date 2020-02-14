@@ -24,14 +24,27 @@ $_SESSION['selected_difficult_id'] = $difficult['difficult_id'];
                     <div class="modal styled">
                         <div class="modal-header login-section">
                             <a href="difficult_level?sub=<?php echo $subject['name']; ?>"><i class="font-icon-arrow-simple-left"></i></a>
-                            <h4 id="mySigninModalLabel"  class="text-center">Selected Subject: <strong><?php echo $subject['name']; ?></strong> <br/> Selected Mark Category: <strong><?php echo $difficult['name']; ?></strong> <!--<br/> Select <strong>Chapter</strong>--></h4>
+                            <h4 id="mySigninModalLabel">
+                                <table class="table-title">
+                                    <tr>
+                                        <td valign="top">Selected Subject</td>
+                                        <td valign="top">:</td>
+                                        <th valign="top"><?php echo $subject['name']; ?></th>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">Selected Mark Category</td>
+                                        <td valign="top">:</td>
+                                        <th valign="top"><?php echo $difficult['name']; ?></th>
+                                    </tr>  
+                                </table>
+                            </h4>
                             <a class="home_link" href="home_subject">
                                 <i class="icon-home"></i>
                             </a>
                         </div>
                         <div class="modal-body">
                             <div class="language_section">
-                                <p class="m-b-0">Select Chapter</p>
+                                <p class="m-b-0 f-s-18 clr-g">Select Chapter</p>
                                 <ul>
                                     <?php foreach ($chapters as $row) { ?>
                                         <li><i class="icon-double-angle-right"></i> 

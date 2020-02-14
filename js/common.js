@@ -14,7 +14,7 @@ function attachFile(id) {
             processData: false,
             contentType: false,
             data: form,
-            success: function (data) {
+            success: function(data) {
                 $('.loader').removeClass('is-active');
                 if (data.result.error === false) {
                     if (id == 'profile_picture') {
@@ -27,7 +27,7 @@ function attachFile(id) {
                     swal('Information', data.result.message, 'info');
                 }
             },
-            error: function (err) {
+            error: function(err) {
                 $('.loader').removeClass('is-active');
                 swal('Error', err.statusText, 'error');
             }
@@ -44,8 +44,8 @@ function registerStudent() {
     $.ajax({
         type: "POST",
         url: 'api/v1/insert_student',
-        data: {user_name: $('#user_name').val(), student_name: $('#student_name').val(), parent_name: $('#parent_name').val(), profile_picture: avatar, gender: $('#gender').val(), mobile: $('#mobile').val(), city: $('#city').val(), pin: $('#pin').val(), school_name: $('#school_name').val(), standard: $('#standard').val(), email: $('#email').val(), password: $('#password').val(), confirm_password: $('#confirm_password').val()},
-        success: function (data) {
+        data: { user_name: $('#user_name').val(), student_name: $('#student_name').val(), parent_name: $('#parent_name').val(), profile_picture: avatar, gender: $('#gender').val(), mobile: $('#mobile').val(), city: $('#city').val(), pin: $('#pin').val(), school_name: $('#school_name').val(), standard: $('#standard').val(), email: $('#email').val(), password: $('#password').val(), confirm_password: $('#confirm_password').val() },
+        success: function(data) {
             $('.loader').removeClass('is-active');
             if (data.result.error === false) {
                 $('#user_name').val('');
@@ -62,13 +62,15 @@ function registerStudent() {
                 $('#email').val('');
                 $('#password').val('');
                 $('#confirm_password').val('');
-                swal("Thank you!", " Our Team will get in touch with you soon.", "success");
-                window.location = 'login-page';
+                swal("Thanks for Registration!", "Your Account Has been Created... Please wait, This page automatically go to the login page.", "success");
+                setTimeout(function() {
+                    window.location = 'login-page';
+                }, 5000);
             } else {
                 swal("Oops!", data.result.message, "info");
             }
         },
-        error: function (err) {
+        error: function(err) {
             $('.loader').removeClass('is-active');
             swal("Oops!", err.statusText, "error");
         }
@@ -81,8 +83,8 @@ function loginStudent() {
     $.ajax({
         type: "POST",
         url: 'api/v1/loginstudent',
-        data: {user_name: $('#user-name').val(), password: $('#password1').val()},
-        success: function (data) {
+        data: { user_name: $('#user-name').val(), password: $('#password1').val() },
+        success: function(data) {
             $('.loader').removeClass('is-active');
             if (data.result.error === false) {
                 window.location = 'home_subject';
@@ -90,7 +92,7 @@ function loginStudent() {
                 swal('Information', data.result.message, 'info');
             }
         },
-        error: function (err) {
+        error: function(err) {
             $('.loader').removeClass('is-active');
             swal('Error', err.statusText, 'error');
         }
@@ -105,7 +107,7 @@ function logoutUser() {
         type: "POST",
         url: 'api/v1/logout_student',
         data: {},
-        success: function (data) {
+        success: function(data) {
             $('.loader').removeClass('is-active');
             if (data.result.error === false) {
                 window.location = 'index';
@@ -113,7 +115,7 @@ function logoutUser() {
                 swal('Information', data.result.message, 'info');
             }
         },
-        error: function (err) {
+        error: function(err) {
             $('.loader').removeClass('is-active');
             swal('Error', err.statusText, 'error');
         }
@@ -131,15 +133,15 @@ function changePassword() {
     $.ajax({
         type: "POST",
         url: 'api/v1/reset_password',
-        data: {user_name: $('#user_name').val(), password: $('#password').val(), confirm_password: $('#confirm_password').val()},
-        success: function (data) {
+        data: { user_name: $('#user_name').val(), password: $('#password').val(), confirm_password: $('#confirm_password').val() },
+        success: function(data) {
             $('.loader').removeClass('is-active');
             swal('Information', data.result.message, 'info');
-//            setTimeout(function () {
-//                window.location = 'login-page';
-//            }, 2000);
+            //            setTimeout(function () {
+            //                window.location = 'login-page';
+            //            }, 2000);
         },
-        error: function (err) {
+        error: function(err) {
             $('.loader').removeClass('is-active');
             swal('Error', err.statusText, 'error');
         }

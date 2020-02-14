@@ -35,7 +35,8 @@ if (isset($_SESSION['student_register_id'])) {
                 if (!isset($_SESSION['student_register_id'])) {
                     ?>
                     <nav>
-                        <a href="login-page" class="btn btn-custom">Attend The Quiz</a>
+                        <a href="login-page" class="btn btn-custom">Login</a>
+                        <a href="register-page" class="btn btn-custom">Register</a>
                     </nav>
                 <?php } else {
                     ?>

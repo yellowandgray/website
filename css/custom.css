@@ -951,3 +951,36 @@ and open the template in the editor.
 .question-title h6 span {
     float: left;
 }
+
+.f-s-18 {
+    font-size: 18px;
+}
+
+.clr-g {
+    color: #21b707;
+}
+
+.table-title {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.table-title th, .table-title td {
+    color: #fff;
+    text-align: left;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .table-title th, .table-title td {
+        font-size: 18px !important;
+    }
+    .modal.styled .modal-header h4 {
+        width: 76% !important;
+    }
+    .table-title {
+        width: 100% !Important;
+    }
+    .quiz-btn a {
+        margin-bottom: 10px;
+    }
+}

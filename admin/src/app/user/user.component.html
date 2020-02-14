@@ -5,8 +5,11 @@
     <mat-sidenav-content>
         <app-header></app-header>
         <div class="add-btn-container">
-            <div class="searchdesign" fxFlex="80%">
-                <mat-form-field fxFlex="100%">
+            <div class="searchdesign" fxFlex="80%" fxLayoutAlign="start center">
+                <div fxFlex="30%" fxLayoutAlign="start center">
+                    <p>Total Students: {{student_count}}</p>
+                </div>
+                <mat-form-field fxFlex="70%">
                     <input matInput type="text" placeholder="Search by name" [(ngModel)]="searchTerm" />
                 </mat-form-field>
             </div>
@@ -35,6 +38,7 @@
                     <img matListAvatar src="{{image_url}}{{data.profile_image}} " *ngIf="data.profile_image && data.profile_image !='' " alt="image " (click)="confirmDialog(data, 'preview') " />
                     <h4 mat-line>{{data.student_name}} {{data.parent_name}}</h4>
                     <p mat-line>{{data.standard}}</p>
+                    <p mat-line>Total Login: 10 | Last Login: 14-02-2020 6:45PM</p>
                 </mat-list-item>
                 <mat-divider></mat-divider>
             </ng-container>

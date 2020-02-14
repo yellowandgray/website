@@ -59,7 +59,25 @@ if (count($questions) > 0) {
                     <div class="span12">
                         <div class="quiz-question-section">
                             <a href = '#' onclick="goBack()"><i class = 'font-icon-arrow-simple-left'></i></a>
-                            <h2>Selected Subject: <strong><?php echo $subject['name']; ?></strong> <br/> Selected Mark Category: <strong><?php echo $difficult['name']; ?></strong> <br/>Selected Chapter: <strong><?php echo $chapter['name']; ?></strong> <!--<br/> Selected Topic: <?php //echo $topic['name'];                           ?> <br/>--></h2>
+                            <h2>
+                                <table class="table-title">
+                                    <tr>
+                                        <td valign="top">Selected Subject</td>
+                                        <td valign="top">:</td>
+                                        <th valign="top"><?php echo $subject['name']; ?></th>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">Selected Mark Category</td>
+                                        <td valign="top">:</td>
+                                        <th valign="top"><?php echo $difficult['name']; ?></th>
+                                    </tr>     
+                                    <tr>
+                                        <td valign="top">Selected Chapter</td>
+                                        <td valign="top">:</td>
+                                        <th valign="top"><?php echo $chapter['name']; ?></th>
+                                    </tr>     
+                                </table>
+                            </h2>
                             <a class="home_link" href="home_subject">
                                 <i class="icon-home"></i>
                             </a>
@@ -130,12 +148,12 @@ if (count($questions) > 0) {
 
                                 <!--resultTitleBlock-->
                                 <h2 class="complete-title">
-                                    Thanks for Completing!
+                                    Congratulations! You have answered everything!!! 
                                 </h2>
                                 <p class="subtitle">
                                     Total Score: <span class="score-clr">{{ score() }}</span> / {{ quiz.questions.length }}
                                 </p>
-                                <div class="">
+                                <div class="quiz-btn">
                                     <a class="btn btn-theme btn-rounded" @click="restart()">Restart <i class="fa fa-refresh"></i></a>
                                     <a class="btn btn-theme btn-rounded" onclick="window.location = 'home_subject'">Home <i class="fa fa-refresh"></i></a>
                                     <a @click="divshow()" class="btn btn-theme btn-rounded">Show Full Result <i class="fa fa-refresh"></i></a>
@@ -256,7 +274,7 @@ if (count($questions) > 0) {
                             if (this.questionIndex < this.quiz.questions.length) {
                                 this.questionIndex++;
                             }
-                        }, 1000);
+                        }, 500);
                         var questions = <?php echo json_encode($questions_list); ?>;
                         var answers = ['A', 'B', 'C', 'D'];
                         $.post("api/v1/store_answer",

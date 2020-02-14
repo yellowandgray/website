@@ -29,7 +29,7 @@ $_SESSION['selected_subject_id'] = $subject['subject_id'];
                         </div>
                         <div class="modal-body">
                             <div class="topic_option">
-                                <p class="m-b-0">Select Mark's Category</p>
+                                <p class="m-b-0 f-s-18 clr-g">Select Mark Category</p>
                                 <ul>
                                     <?php foreach ($difficults as $row) { ?>
                                         <li><a href="select_chapter?difficult=<?php echo $row['name']; ?>"><i class="icon-angle-right"></i> <?php echo $row['name']; ?></a></li>
