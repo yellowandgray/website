@@ -1,16 +1,16 @@
-<h2 mat-dialog-title>Product Details</h2>
+<h2 mat-dialog-title>Equipment Details</h2>
 <mat-dialog-content class="mat-typography">
     <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
-        <div fxFlex="50%">
+        <div fxFlex="75%">
             <table class="Product-table">
                 <tbody>
                     <tr>
-                        <th>Product Name</th>
+                        <th>Name</th>
                         <td> : </td>
                         <td> {{data.name}} </td>
                     </tr>
                     <tr>
-                        <th>Manufacturing</th>
+                        <th>Manufacturer</th>
                         <td> : </td>
                         <td> {{data.manufacturing}} </td>
                     </tr>
@@ -22,7 +22,7 @@
                 </tbody>
             </table>
         </div>
-        <div fxFlex="50%">
+        <div fxFlex="25%">
             <div fxFlex="100%" fxLayoutAlign="end start">
                 <div class="Product-table">
                     <img src="{{image_url}}{{data.image_path}}" alt="" />
@@ -30,15 +30,13 @@
             </div>
         </div>
     </div>
-    <h2 mat-dialog-title>Product Tag Code</h2>
+    <h2 mat-dialog-title>Tag Number:</h2>
     <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
         <div fxFlex="100%">
             <table class="product-tag-table">
                 <tbody>
-                    <tr>
-                        <th mat-header-cell>product Code</th>
-                    </tr>
                     <tr *ngFor="let data of tag">
+                        <th mat-header-cell>{{data.electromech_train}}</th>
                         <td> {{data.code}} </td>
                     </tr>
                 </tbody>

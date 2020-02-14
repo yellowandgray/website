@@ -1,21 +1,32 @@
-<h2 mat-dialog-title>Product Code</h2>
+<h2 mat-dialog-title>Equipment Tag Number</h2>
 <mat-dialog-content class="mat-typography">
     <form [formGroup]="tagForm" (ngSubmit)="onSubmit()">
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Product Code</mat-label>
-                    <input matInput placeholder="" required formControlName="code" />
-                    <mat-error>Product Code is required</mat-error>
+                    <mat-label>Select Train</mat-label>
+                    <mat-select required formControlName="electromech_train_id">
+                        <mat-option [value]="row.electromech_train_id" *ngFor="let row of train">{{row.name}}</mat-option>
+                    </mat-select>
+                    <mat-error>Select Train is required</mat-error>
                 </mat-form-field>
             </div>
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Select Product Id</mat-label>
+                    <mat-label>Select Equipment</mat-label>
                     <mat-select required formControlName="electromech_product_id">
                         <mat-option [value]="row.electromech_product_id" *ngFor="let row of product">{{row.name}}</mat-option>
                     </mat-select>
-                    <mat-error>Select Product Id is required</mat-error>
+                    <mat-error>Select Equipment is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWarp fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Equipment Tag</mat-label>
+                    <input matInput placeholder="" required formControlName="code" />
+                    <mat-error>Equipment Tag is required</mat-error>
                 </mat-form-field>
             </div>
         </div>

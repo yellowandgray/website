@@ -13,12 +13,12 @@ import { CategoryComponent } from './category/category.component';
 
 const routes: Routes = [
   {path: '', component: LoginComponent},
-  {path: 'product', component: ProductComponent},
+  {path: 'equipment', component: ProductComponent},
   {path: 'train', component: TrainComponent},
   {path: 'floor', component: FloorComponent},
   {path: 'staff', component: StaffComponent},
-  {path: 'command', component: CommandComponent},
-  {path: 'category', component: CategoryComponent},
+  {path: 'equipment_points', component: CommandComponent},
+  {path: 'equipment_parts', component: CategoryComponent},
 ];
 
 @NgModule({

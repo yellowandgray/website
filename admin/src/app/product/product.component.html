@@ -5,13 +5,13 @@
     <mat-sidenav-content>
         <app-header></app-header>
         <div class="add-btn-container">
-            <button mat-raised-button color="primary" (click)="openDialog(0, 'null')"><mat-icon>add</mat-icon> Product</button>
+            <button mat-raised-button color="primary" (click)="openDialog(0, 'null')"><mat-icon>add</mat-icon> Equipment</button>
         </div>
         <mat-list>
             <ng-container *ngFor="let data of product">
                 <mat-list-item>
                     <button mat-icon-button aria-label="label" (click)="openTagDialog()">
-                        <mat-icon #tooltip="matTooltip" matTooltip="Add product Code">vertical_split</mat-icon>
+                        <mat-icon #tooltip="matTooltip" matTooltip="Add Tag Number">vertical_split</mat-icon>
                     </button>
                     <button mat-icon-button aria-label="label" (click)="openView(data.electromech_product_id, 'product')">
                         <mat-icon #tooltip="matTooltip" matTooltip="View">remove_red_eye</mat-icon>
