@@ -27,7 +27,7 @@
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Standard</mat-label>
-                    <mat-select required formControlName="class_id">
+                    <mat-select formControlName="class_id">
                         <mat-option [value]="row.class_id" *ngFor="let row of class">
                             {{row.name}}
                         </mat-option>

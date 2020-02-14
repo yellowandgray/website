@@ -116,7 +116,7 @@ export class EnquiryCountForm {
     this.enquirycountform = new FormGroup({
       'year_id': new FormControl('', Validators.required),
       'date': new FormControl('', Validators.required),
-      'class_id': new FormControl('', Validators.required),
+      'class_id': new FormControl(''),
       'count': new FormControl('', Validators.required),
     })
     if (this.data != null) {
