@@ -1,14 +1,14 @@
-<h2 mat-dialog-title>Eequipment Points</h2>
+<h2 mat-dialog-title>Inspection Checklist</h2>
 <mat-dialog-content class="mat-typography">
     <form [formGroup]="commandForm" (ngSubmit)="onSubmit()">
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Select Eequipment</mat-label>
+                    <mat-label>Select Equipment</mat-label>
                     <mat-select required formControlName="electromech_product_id">
                         <mat-option [value]="row.electromech_product_id" *ngFor="let row of product">{{row.name}}</mat-option>
                     </mat-select>
-                    <mat-error>Select Eequipment is required</mat-error>
+                    <mat-error>Select Equipment is required</mat-error>
                 </mat-form-field>
             </div>
             <div fxFlex="50%">
@@ -24,20 +24,20 @@
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center" *ngIf="commandForm.value.electromech_schedule_id == '2' || commandForm.value.electromech_schedule_id == '3'">
             <div fxFlex="100%">
                 <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Select Eequipment Parts</mat-label>
+                    <mat-label>Select Equipment Parts</mat-label>
                     <mat-select required formControlName="category_id">
                         <mat-option [value]="row.electromech_category_id" *ngFor="let row of category">{{row.name}}</mat-option>
                     </mat-select>
-                    <mat-error>Checklist Eequipment Parts is required</mat-error>
+                    <mat-error>Checklist Equipment Parts is required</mat-error>
                 </mat-form-field>
             </div>
         </div>
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
             <div fxFlex="100%">
                 <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Eequipment Points</mat-label>
+                    <mat-label>Inspection Checklist</mat-label>
                     <textarea matInput placeholder="" rows="6" required formControlName="enquiry_list"></textarea>
-                    <mat-error>Eequipment Points is required</mat-error>
+                    <mat-error>Inspection Checklist is required</mat-error>
                 </mat-form-field>
             </div>
         </div>

@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
       if (this.loginForm.invalid) {
           return;
       }
-      if(this.loginForm.value.username === 'admin' && this.loginForm.value.password === 'admin') {
+      if(this.loginForm.value.username === 'admin' && this.loginForm.value.password === 'ElectroM$') {
    this.router.navigateByUrl('/train');
       } else {
           this._snackBar.open('Invalid login details', '', {
