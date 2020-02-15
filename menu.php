@@ -60,7 +60,7 @@ if (isset($_SESSION['student_register_id'])) {
                             <ul class="logout_list">
                                 <li onclick="window.location = 'home_subject'">Subject</li>
                                 <li onclick="window.location = 'student_result'">Result</li>
-                                <li onclick="logoutUser('<?php echo $login_student['name']; ?>');">Logout</li>
+                                <li onclick="logoutUser('<?php echo $login_student['student_name']; ?>');">Logout</li>
                             </ul>
                         </div>
                     </div>
