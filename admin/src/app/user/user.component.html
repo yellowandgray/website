@@ -36,9 +36,9 @@
                         <mat-icon>delete</mat-icon>
                     </button>
                     <img matListAvatar src="{{image_url}}{{data.profile_image}} " *ngIf="data.profile_image && data.profile_image !='' " alt="image " (click)="confirmDialog(data, 'preview') " />
-                    <h4 mat-line>{{data.student_name}} {{data.parent_name}}</h4>
+                         <h4 mat-line>{{data.student_name}} {{data.parent_name}}</h4>
                     <p mat-line>{{data.standard}}</p>
-<!--                    <p mat-line>Total Login: 10 | Last Login: 14-02-2020 6:45PM</p>-->
+                    <p mat-line>Total Login: 10 | Last Login: 14-02-2020 6:45PM</p>
                 </mat-list-item>
                 <mat-divider></mat-divider>
             </ng-container>
