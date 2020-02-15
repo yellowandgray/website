@@ -45,12 +45,13 @@ $app->post('/upload_file', function() use ($app) {
 $app->post('/loginstudent', function() use ($app) {
     $res = array('error' => true, 'message' => 'Invalid login details');
     $data = $app->request->post();
+    date_default_timezone_set('Asia/Kolkata');
     $obj = new Common();
     $record = $obj->selectRow('*', 'student_register', 'user_name=\'' . $data['user_name'] . '\'');
     if (count($record) > 0) {
         if ($data['password'] == $record['password']) {
             $res['error'] = false;
-            $obj->insertRecord(array('student_register_id' => $record['student_register_id']), 'student_register_login');
+            $obj->insertRecord(array('student_register_id' => $record['student_register_id'], 'login_at' => date('Y-m-d'), 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')), 'student_register_login');
             $_SESSION['student_register_id'] = $record['student_register_id'];
             $res['message'] = 'Welcome ' . $record['student_name'];
             $res['data'] = $record;
@@ -202,8 +203,8 @@ $app->get('/get_topic_by_chapter/:cid', function($cid) {
 $app->get('/get_student', function() {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
-    $data = $com->selectAll('*', 'student_register', 'student_register_id > 0');
-   
+    $data = $com->selectAll('s.*, (SELECT COUNT(student_register_login_id) FROM student_register_login WHERE student_register_id = s.student_register_id) AS total_logins, (SELECT MAX(login_at) FROM student_register_login WHERE student_register_id = s.student_register_id) AS last_login', 'student_register AS s', 's.student_register_id > 0');
+
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
