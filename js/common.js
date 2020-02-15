@@ -101,7 +101,7 @@ function loginStudent() {
 }
 
 
-function logoutUser() {
+function logoutUser(name) {
     $('.loader').addClass('is-active');
     $.ajax({
         type: "POST",
