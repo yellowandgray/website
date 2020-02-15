@@ -65,7 +65,7 @@ $app->post('/add_user/:id', function($id) use ($app) {
                 $res['message'] = 'Unable to add user';
             }
         } else {
-            $res['message'] = 'NRI already exist';
+            $res['message'] = 'User already exist';
         }
     }
     echoRespnse(201, $res);
