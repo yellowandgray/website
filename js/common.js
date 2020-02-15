@@ -113,7 +113,7 @@ function logoutUser() {
         success: function(data) {
             $('.loader').removeClass('is-active');
             if (data.result.error === false) {
-//                swal('Thanks', 'Mr. XXXX for using Feringo to enrich your knowledge and score high marks', 'info');
+                swal('Thanks', 'Mr. XXXX for using Feringo to enrich your knowledge and score high marks', 'info');
                 setTimeout(function() {
                     window.location = 'index';
                 }, 3000);
