@@ -90,7 +90,7 @@ function loginStudent() {
                 swal('Yes!', 'You can, and You will', 'success');
                 setTimeout(function () {
                     window.location = 'home_subject';
-                }, 1000);
+                }, 3000);
             } else {
                 swal('Information', data.result.message, 'info');
             }
@@ -113,10 +113,10 @@ function logoutUser(name) {
         success: function (data) {
             $('.loader').removeClass('is-active');
             if (data.result.error === false) {
-                swal('Thanks', name + ' for using Feringo to enrich your knowledge and score high marks', 'info');
+                swal('', 'Thanks ' + name + ' for using Feringo to enrich your knowledge and score high marks', 'info');
                 setTimeout(function () {
                     window.location = 'index';
-                }, 3000);
+                }, 4000);
             } else {
                 swal('Information', data.result.message, 'info');
             }

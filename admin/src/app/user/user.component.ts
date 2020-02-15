@@ -91,7 +91,7 @@ export class UserComponent implements OnInit {
       }
     });
   }
-  openResult(sid): void {
+  openResult(sid. name): void {
       this.httpClient.get<any>('../api/v1/get_student_result/'+sid)
       .subscribe(
         (res) => {
@@ -100,7 +100,8 @@ export class UserComponent implements OnInit {
       minWidth: "40%",
       maxWidth: "40%",
       data: {
-        data: res["result"]["data"]
+        data: res["result"]["data"],
+        student_name: name
       }
     });
     dialogRef.afterClosed().subscribe(result => {
