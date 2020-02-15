@@ -147,8 +147,11 @@ if (count($questions) > 0) {
                                 </span>
 
                                 <!--resultTitleBlock-->
-                                <h2 class="complete-title">
+                                <!-- <h2 class="complete-title">
                                     Congratulations! You have answered everything!!! 
+                                </h2> -->
+                                <h2 class="complete-title">
+                                    Thank's for Completing!
                                 </h2>
                                 <p class="subtitle">
                                     Total Score: <span class="score-clr">{{ score() }}</span> / {{ quiz.questions.length }}
