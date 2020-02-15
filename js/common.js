@@ -87,7 +87,10 @@ function loginStudent() {
         success: function(data) {
             $('.loader').removeClass('is-active');
             if (data.result.error === false) {
-                window.location = 'home_subject';
+                swal('Yes!', 'You can, and You will', 'success');
+                setTimeout(function() {
+                    window.location = 'home_subject';
+                }, 1000);
             } else {
                 swal('Information', data.result.message, 'info');
             }
@@ -110,7 +113,10 @@ function logoutUser() {
         success: function(data) {
             $('.loader').removeClass('is-active');
             if (data.result.error === false) {
-                window.location = 'index';
+                swal('Thanks', 'Mr. XXXX for using Feringo to enrich your knowledge and score high marks', 'success');
+                setTimeout(function() {
+                    window.location = 'index';
+                }, 1000);
             } else {
                 swal('Information', data.result.message, 'info');
             }
