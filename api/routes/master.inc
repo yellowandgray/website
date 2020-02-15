@@ -203,7 +203,7 @@ $app->get('/get_topic_by_chapter/:cid', function($cid) {
 $app->get('/get_student', function() {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
-    $data = $com->selectAll('s.*, (SELECT COUNT(student_register_login_id) FROM student_register_login WHERE student_register_id = s.student_register_id) AS total_logins, (SELECT MAX(login_at) FROM student_register_login WHERE student_register_id = s.student_register_id) AS last_login', 'student_register AS s', 's.student_register_id > 0');
+    $data = $com->selectAll('s.*, (SELECT COUNT(student_register_login_id) FROM student_register_login WHERE student_register_id = s.student_register_id) AS total_logins, (SELECT MAX(login_at) FROM student_register_login WHERE student_register_id = s.student_register_id) AS last_login', 'student_register AS s', 's.student_register_id > 0 ORDER BY s.name ASC');
 
     if (count($data) > 0) {
         $res['error'] = false;
