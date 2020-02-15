@@ -86,7 +86,7 @@ $app->post('/insert_student', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $exist = $com->selectRow('*', 'student_register', 'student_name=\'' . $data['student_name'] . '\' AND user_name=\'' . $data['user_name'] . '\'');
+    $exist = $com->selectRow('*', 'student_register', 'user_name=\'' . $data['user_name'] . '\'');
     if (count($exist) == 0) {
         if (!isset($data['profile_picture'])) {
             $data['profile_image'] = '';

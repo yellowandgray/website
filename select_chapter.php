@@ -28,7 +28,7 @@ $_SESSION['selected_difficult_id'] = $difficult['difficult_id'];
                                 <table class="table-title">
                                     <tr>
                                         <td valign="top">Selected Subject</td>
-                                        <td valign="top">:</td>
+                                        <td valign="top" class="w-5">:</td>
                                         <th valign="top"><?php echo $subject['name']; ?></th>
                                     </tr>
                                     <tr>

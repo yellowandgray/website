@@ -984,3 +984,7 @@ and open the template in the editor.
         margin-bottom: 10px;
     }
 }
+
+.w-5 {
+    width: 5%;
+}

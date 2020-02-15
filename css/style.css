@@ -2586,7 +2586,7 @@ article .align-right {
         height: auto !important;
     }
     .result-option {
-        width: 100% !Important;
+        width: auto !Important;
     }
 }
 

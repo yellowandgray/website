@@ -63,7 +63,7 @@ if (count($questions) > 0) {
                                 <table class="table-title">
                                     <tr>
                                         <td valign="top">Selected Subject</td>
-                                        <td valign="top">:</td>
+                                        <td valign="top" class="w-5">:</td>
                                         <th valign="top"><?php echo $subject['name']; ?></th>
                                     </tr>
                                     <tr>
@@ -202,6 +202,7 @@ if (count($questions) > 0) {
                     restart: function () {
                         this.questionIndex = 0;
                         this.userResponses = Array(this.quiz.questions.length).fill(null);
+                        document.getElementById('create').style.display = "none";
                     },
                     divshow: function () {
                         $.ajax({
