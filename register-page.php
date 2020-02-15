@@ -85,7 +85,7 @@
                                         <div class = 'controls'>
                                             <select id = 'standard' required>
                                                 <option value = '10th-State-Board'>10th State Board</option>
-                                                <option value = '10th-CBSC'>10th CBSC</option>
+                                                <option value = '10th-CBSC'>10th CBSE</option>
                                             </select>
                                         </div>
                                     </div>
