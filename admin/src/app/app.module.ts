@@ -26,6 +26,7 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatSelectModule} from '@angular/material/select';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatCardModule} from '@angular/material/card';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { HeaderComponent } from './header/header.component';
@@ -36,6 +37,7 @@ import { FloorComponent, FloorForm, FloorDelete} from './floor/floor.component';
 import { StaffComponent, StaffForm, StaffImageView, StaffDelete } from './staff/staff.component';
 import { CommandComponent, CommandDialog, CommandDelete } from './command/command.component';
 import { CategoryComponent, CategoryForm, CategoryDelete } from './category/category.component';
+import { ReportComponent } from './report/report.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +66,8 @@ import { CategoryComponent, CategoryForm, CategoryDelete } from './category/cate
     CommandDelete,
     CategoryComponent,
     CategoryForm,
-    CategoryDelete
+    CategoryDelete,
+    ReportComponent
   ],
   imports: [
     BrowserModule,
@@ -91,7 +94,8 @@ import { CategoryComponent, CategoryForm, CategoryDelete } from './category/cate
     MatProgressSpinnerModule,
     MatSelectModule,
     MatButtonToggleModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatDatepickerModule
   ],
   entryComponents: [
     ProductComponent,
@@ -115,7 +119,8 @@ import { CategoryComponent, CategoryForm, CategoryDelete } from './category/cate
     CommandDelete,
     CategoryComponent,
     CategoryForm,
-    CategoryDelete
+    CategoryDelete,
+    ReportComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

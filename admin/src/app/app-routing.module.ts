@@ -8,6 +8,7 @@ import { FloorComponent } from './floor/floor.component';
 import { StaffComponent } from './staff/staff.component';
 import { CommandComponent } from './command/command.component';
 import { CategoryComponent } from './category/category.component';
+import { ReportComponent } from './report/report.component';
 
 
 
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path: 'staff', component: StaffComponent},
   {path: 'inspection_checklist', component: CommandComponent},
   {path: 'equipment_parts', component: CategoryComponent},
+  {path: 'report', component: ReportComponent},
 ];
 
 @NgModule({

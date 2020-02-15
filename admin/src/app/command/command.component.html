@@ -9,21 +9,29 @@
         </div>
         <mat-tab-group (selectedTabChange)="getCommand($event);">
             <mat-tab *ngFor="let row of schedule" label="{{row.name}}">
-                <mat-list>
-                    <ng-container *ngFor="let data of result">
-                        <mat-list-item>
-                            <button mat-icon-button aria-label="label" (click)="openDialog(data.electromech_product_enquiry_list_id, 'result')">
-                                <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
-                            </button>
-                            <button mat-icon-button aria-label="label" (click)="confirmDelete(data.electromech_product_enquiry_list_id)">
-                                <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
-                            </button>
-                            <h4 mat-line>Product Name: {{data.electromech_product}}</h4>
-                            <h4 mat-line>{{data.enquiry_list}}</h4>
-                        </mat-list-item>
-                        <mat-divider></mat-divider>
-                    </ng-container>
-                </mat-list>
+                <ng-container *ngFor="let data of result">
+                    <mat-accordion>
+                        <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    {{data.electromech_product}}
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <mat-list>
+                                <mat-list-item>
+                                    <button mat-icon-button aria-label="label" (click)="openDialog(data.electromech_product_enquiry_list_id, 'result')">
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
+                                    </button>
+                                    <button mat-icon-button aria-label="label" (click)="confirmDelete(data.electromech_product_enquiry_list_id)">
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
+                                    </button>
+                                    <h4 mat-line>{{data.enquiry_list}}</h4>
+                                </mat-list-item>
+                                <mat-divider></mat-divider>
+                            </mat-list>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </ng-container>
             </mat-tab>
         </mat-tab-group>
     </mat-sidenav-content>
