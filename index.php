@@ -335,25 +335,29 @@
                             <!--title end-->
                             <div class="event-posts wf100">
                                 <!--Blog Post Start-->
-                                <!--                                <div class="event-post">
-                                                                    <div class="event-thumb">
-                                                                        <a href="#"><i class="fas fa-link"></i></a> <img src="images/event-knowledge-innovation-excellence.jpg" alt="Knowledge Innovation Excellence - ENPEE International School" title="Knowledge Innovation Excellence - ENPEE International School">
-                                                                        <ul class="post-meta">
-                                                                            <li>28th September, 2019 </li>
-                                                                            <li> 11:00 am - 04:00 pm</li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="event-txt">
-                                                                        <h6><a href="news-events.php#upcome-event">First Annual Carnival Enpee 2019</a></h6>
-                                                                        <p><i class="fas fa-map-marker-alt"></i> Enpee Internatioal School, Karaikal </p>
-                                                                    </div>
-                                                                </div>-->
+                                <div class="event-post">
+                                    <div class="pic-link">
+                                        <a href="images/upcoming-img/001.jpg" target="blank">
+<!--                                            <i class="fas fa-link"></i>-->
+                                        
+                                        <img src="images/event-knowledge-innovation-excellence.jpg" alt="Upcoming Events - ENPEE International School" title="Upcoming Events - ENPEE International School"></a> 
+<!--                                        <ul class="post-meta">
+                                            <li>28th September, 2019 </li>
+                                            <li> 11:00 am - 04:00 pm</li>
+                                        </ul>-->
+                                    </div>
+                                    <div class="event-txt">
+                                        <h6><a href="#enquiry">Upcoming Events</a></h6>
+                                        <h6>Inter School Sports Competition, I'M A CHAMPION</h6>
+                                        <p><i class="fas fa-map-marker-alt"></i> 15<sup>th</sup> Saturday at 09.30 am <br/> ENPEE International School, Karaikal, U.T of Puducherry </p>
+                                    </div>
+                                </div>
                                 <!--Blog Post End-->
                                 <!--Blog Post Start-->
                                 <div class="event-post">
                                     <div class="pic-link">
 <!--                                        <i class="fas fa-link"></i> -->
-                                        <a href="http://enpeekkl.com/images/event-002.jpg" target="blank"><img src="images/event-001.jpg" alt="Upcoming Events - ENPEE International School" title="Upcoming Events - ENPEE International School"></a>
+                                        <a href="images/upcoming-img/002.jpg" target="blank"><img src="images/event-001.jpg" alt="Upcoming Events - ENPEE International School" title="Upcoming Events - ENPEE International School"></a>
                                         <!--                                        <ul class="post-meta">
                                                                                     <li>20 February, 2019 </li>
                                                                                     <li> 10:00 am - 05:00 pm</li>
@@ -361,8 +365,8 @@
                                     </div>
                                     <div class="event-txt">
                                         <h6><a href="#enquiry">Upcoming Events</a></h6>
-                                        <h5>Samathuva Pongal - 2020</h5>
-                                        <p><i class="fas fa-map-marker-alt"></i> 13<sup>th</sup> January at 10.30 am <br/>ENPEE International School, Karaikal, U.T of Puducherry </p>
+                                        <h5>ANNUAL SPORTS FEST 2020</h5>
+                                        <p><i class="fas fa-map-marker-alt"></i> 15<sup>th</sup> February at 03.00 pm <br/>ENPEE International School, Karaikal, U.T of Puducherry </p>
                                     </div>
                                 </div>
                                 <!--Blog Post End-->

@@ -41,9 +41,13 @@
                     <div class="footer-widget">
                         <h5>Upcoming Events</h5>
                         <ul class="lastest-products">
-                            <li> <img src="images/event-002.jpg"  alt="Samathuva Pongal-2020" title="Samathuva Pongal -2020 - ENPEE International School" style="width: 68px; height: 68px"> 
-                                <strong><a href="http://enpeekkl.com/images/event-002.jpg">Samathuva Pongal-2020</a></strong> 
-                                <span class="pdate"><i>Date:</i> 13<sup>th</sup> Jan 2020</span>
+                            <li> <img src="images/event-knowledge-innovation-excellence.jpg"  alt="Inter School Sports Competition" title="Inter School Sports Competition - ENPEE International School" style="width: 68px; height: 68px"> 
+                                <strong><a href="images/upcoming-img/001.jpg" target="blank">Inter School Sports Competition, I'M A CHAMPION</a></strong> 
+                                <span class="pdate"><i>Date:</i> 15<sup>th</sup> Saturday at 09.30 am</span>
+                            </li>
+                            <li> <img src="images/event-001.jpg"  alt="ANNUAL SPORTS FEST-2020" title="ANNUAL SPORTS FEST - 2020 - ENPEE International School" style="width: 68px; height: 68px"> 
+                                <strong><a href="images/upcoming-img/002.jpg" target="blank">ANNUAL SPORTS FEST 2020</a></strong> 
+                                <span class="pdate"><i>Date:</i> 15<sup>th</sup> February at 03.00 pm</span>
                             </li>
                             <li> 
                                 <a href="contact.php"><img src="images/pic-admission-open.jpg" alt="Admisstion open 2019-2020 - ENPEE International School" title="Admisstion open 2019-2020 - ENPEE International School" style="width: 68px; height: 68px"> </a>

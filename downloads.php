@@ -34,25 +34,33 @@
                 <div class="container contact-dropdown-from">
                     <div class="row" style="margin-bottom: 20px">
                         <div class="col-md-6 text-center">
+                            <a href="images/download/ENPEE-School-Invitation-2020.pdf" target="blank">
+                                <h5 title="ENPEE-School-Calendar-2019">1<sup>st</sup> Annual Day Celebration 2020</h5>
+                                <img src="images/download/thumb-img/annual-invitation.jpg" class="img-width download-box" alt="ENPEE-School-Annual day Invitation-2020" title="ENPEE-School-Annual day Invitation-2020">
+                            </a>
+                        </div>
+                        <div class="col-md-6 text-center">
                             <a href="images/calendar/ENPEE-School-Calendar-2019.pdf" target="blank">
                                 <h5 title="ENPEE-School-Calendar-2019">ENPEE International School Calendar - 2019</h5>
                                 <img src="images/ENPEE-School-Calendar-2019.jpg" class="img-width download-box" alt="ENPEE-School-Calendar-2019" title="ENPEE-School-Calendar-2019">
                             </a>
                         </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px">
                         <div class="col-md-6 text-center">
                             <a href="images/download/ENPEE-School-Flyer-ENG&TAM-2019.pdf" target="blank">
                                 <h5 title="ENPEE-School-Flyer-ENG&TAM-2019">ENPEE International School - Grand Launch, 10th February Sunday</h5>
                                 <img src="images/ENPEE-School-Flyer-2019.jpg" class="img-width download-box" alt="ENPEE-School-Flyer-ENG & TAMIL-2019" title="ENPEE-School-Flyer-ENG & TAMIL-2019">
                             </a>
                         </div>
-                    </div>
-                    <div class="row" style="margin-bottom: 20px">
                         <div class="col-md-6 text-center">
                             <a href="images/download/ENPEE-School-Invitation-Card-2019.pdf" target="blank">
                                 <h5 title="ENPEE-School-Invitation-Card-2019">ENPEE International School - Grand Launch Invitation</h5>
                                 <img src="images/ENPEE-School-Invitation-Card-2019.jpg" class="img-width download-box" alt="ENPEE-School-Invitation-Card-2019" title="ENPEE-School-Invitation-Card-2019">
                             </a>
                         </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px">
                         <div class="col-md-6 text-center">
                             <a href="images/download/brochure.pdf" target="blank">
                                 <h5 title="ENPEE-Brochure-2019">ENPEE-Brochure-2019</h5>
