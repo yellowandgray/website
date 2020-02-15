@@ -147,9 +147,9 @@ if (count($questions) > 0) {
                                 </span>
 
                                 <!--resultTitleBlock-->
-                                <!-- <h2 class="complete-title">
+                                <h2 class="complete-title" v-if="score() == quiz.questions.length">
                                     Congratulations! You have answered everything!!! 
-                                </h2> -->
+                                </h2>
                                 <h2 class="complete-title">
                                     Thank's for Completing!
                                 </h2>
@@ -200,9 +200,10 @@ if (count($questions) > 0) {
                 },
                 methods: {
                     restart: function () {
-                        this.questionIndex = 0;
-                        this.userResponses = Array(this.quiz.questions.length).fill(null);
-                        document.getElementById('create').style.display = "none";
+                        location.reload();
+                        /*this.questionIndex = 0;
+                         this.userResponses = Array(this.quiz.questions.length).fill(null);
+                         document.getElementById('create').style.display = "none"; */
                     },
                     divshow: function () {
                         $.ajax({
