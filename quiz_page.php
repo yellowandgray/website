@@ -148,10 +148,10 @@ if (count($questions) > 0) {
 
                                 <!--resultTitleBlock-->
                                 <h2 class="complete-title" v-if="score() == quiz.questions.length">
-                                    Congratulations! You have answered everything!!! 
+                                    Congratulations! You have answered everything right!!!
                                 </h2>
-                                <h2 class="complete-title">
-                                    Thank's for Completing!
+                                <h2 class="complete-title" v-if="score() != quiz.questions.length">
+                                    Test Completed
                                 </h2>
                                 <p class="subtitle">
                                     Total Score: <span class="score-clr">{{ score() }}</span> / {{ quiz.questions.length }}
