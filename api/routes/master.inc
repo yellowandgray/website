@@ -165,9 +165,9 @@ $app->post('/checklists_for_inspect', function() use ($app) {
         $products = $obj->selectAll('p.name, p.electromech_product_id, p.image_path, p.manufacturing, pc.code', 'electromech_product AS p LEFT JOIN electromech_product_code AS pc ON pc.electromech_product_id = p.electromech_product_id AND pc.electromech_train_id = ' . $data['electromech_train_id'], 'p.floor_id=' . $data['electromech_floor_id']);
         foreach ($products as $key => $row) {
             $categries = array();
-            $logs = $obj->selectAll('pel.enquiry_list, pel.electromech_category_id, pel.electromech_product_enquiry_list_id, ec.name AS category', 'electromech_product_enquiry_list AS pel LEFT JOIN electromech_category AS ec ON ec.electromech_category_id = pel.electromech_category_id', 'pel.electromech_product_id = ' . $row['electromech_product_id'] . ' AND pel.electromech_schedule_id = ' . $data['electromech_schedule_id']);
+            $logs = $obj->selectAll('pel.enquiry_list, pel.electromech_schedule_id, pel.electromech_category_id, pel.electromech_product_enquiry_list_id, ec.name AS category', 'electromech_product_enquiry_list AS pel LEFT JOIN electromech_category AS ec ON ec.electromech_category_id = pel.electromech_category_id', 'pel.electromech_product_id = ' . $row['electromech_product_id'] . ' AND pel.electromech_schedule_id = ' . $data['electromech_schedule_id']);
             foreach ($logs as $log) {
-                if (isset($log['electromech_category_id']) && $log['electromech_category_id'] != 0) {
+                if (isset($log['electromech_schedule_id']) && $log['electromech_schedule_id'] != 1) {
                     $categries[$log['electromech_category_id']]['name'] = $log['category'];
                     $categries[$log['electromech_category_id']]['category_id'] = $log['electromech_category_id'];
                     $categries[$log['electromech_category_id']]['checklist'][] = $log;
