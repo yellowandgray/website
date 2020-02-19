@@ -164,7 +164,7 @@ $app->post('/checklists_for_inspect', function() use ($app) {
     if ($insert > 0) {
         $products = $obj->selectAll('p.name, p.electromech_product_id, p.image_path, p.manufacturing, pc.code', 'electromech_product AS p LEFT JOIN electromech_product_code AS pc ON pc.electromech_product_id = p.electromech_product_id AND pc.electromech_train_id = ' . $data['electromech_train_id'], 'p.floor_id=' . $data['electromech_floor_id']);
         foreach ($products as $key => $row) {
-            $categries = array();
+            $categries = null;
             $logs = $obj->selectAll('pel.enquiry_list, pel.electromech_schedule_id, pel.electromech_category_id, pel.electromech_product_enquiry_list_id, ec.name AS category', 'electromech_product_enquiry_list AS pel LEFT JOIN electromech_category AS ec ON ec.electromech_category_id = pel.electromech_category_id', 'pel.electromech_product_id = ' . $row['electromech_product_id'] . ' AND pel.electromech_schedule_id = ' . $data['electromech_schedule_id']);
             foreach ($logs as $log) {
                 if (isset($log['electromech_schedule_id']) && $log['electromech_schedule_id'] != 1) {
@@ -180,7 +180,50 @@ $app->post('/checklists_for_inspect', function() use ($app) {
         $res['message'] = 'Products found';
         $res['data'] = $products;
     } else {
-        $res['message'] = 'Username or Password mismatch';
+        $res['message'] = 'Unable to fetch checklist';
+    }
+    echoRespnse(201, $res);
+});
+
+$app->post('/checklists_for_inspect_logs/:uid/:tid/:fid/:sid', function($uid, $tid, $fid, $sid) use ($app) {
+    $res = array('error' => true, 'message' => 'No checklist found');
+    date_default_timezone_set('Asia/Singapore');
+    $data = $app->request->post();
+    $obj = new Common();
+    $user = $obj->selectRow('*', 'electromech_staff', 'electromech_staff_id=' . $uid);
+    $train = $obj->selectRow('*', 'electromech_train', 'electromech_train_id=' . $tid);
+    $floor = $obj->selectRow('*', 'electromech_floor', 'electromech_floor_id=' . $fid);
+    $schedule = $obj->selectRow('*', 'electromech_schedule', 'electromech_schedule_id=' . $sid);
+    $insert = $obj->insertRecord(array('electromech_staff_name' => $user['name'], 'electromech_staff_id' => $uid, 'electromech_floor_id' => $fid, 'electromech_floor_name' => $floor['name'], 'electromech_schedule_id' => $sid, 'electromech_train_id' => $tid, 'electromech_schedule_name' => $schedule['name'], 'electromech_train_name' => $train['name'], 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'created_by' => $uid, 'updated_by' => $uid), 'electromech_product_enquiry_log');
+    if ($insert > 0) {
+        foreach ($data as $row) {
+            $checklist = array('electromech_product_id' => $row['electromech_product_id'], 'electromech_product_name' => $row['name'], 'electromech_product_code' => $row['code'], 'image_path' => $row['image_path'], 'electromech_product_enquiry_list_id' => '', 'electromech_product_enquiry_log_id' => $insert, 'enquiry_list' => '', 'electromech_category_id' => 0, 'electromech_category_name' => '', 'enquiry_status' => 0, 'enquiry_failure_comment' => '', 'general_comment' => $row['general_comment'], 'created_at' => date('Y-m-d H:i:s'), 'created_by' => $uid, 'updated_at' => date('Y-m-d H:i:s'), 'updated_by' => $uid);
+            if ($row['category'] != null && $row['category'] != 'null') {
+                foreach ($row['category'] as $key => $category) {
+                    foreach ($category['checklist'] as $check) {
+                        $checklist['electromech_product_enquiry_list_id'] = $check['electromech_product_enquiry_list_id'];
+                        $checklist['enquiry_list'] = $check['enquiry_list'];
+                        $checklist['electromech_category_id'] = $check['electromech_category_id'];
+                        $checklist['electromech_category_name'] = $check['category'];
+                        $checklist['enquiry_status'] = $check['enquiry_status'];
+                        $checklist['enquiry_failure_comment'] = $check['enquiry_failure_comment'];
+                        $obj->insertRecord($checklist, 'electromech_product_enquiry_log_detail');
+                    }
+                }
+            } else {
+                foreach ($row['checklist'] as $check) {
+                    $checklist['electromech_product_enquiry_list_id'] = $check['electromech_product_enquiry_list_id'];
+                    $checklist['enquiry_list'] = $check['enquiry_list'];
+                    $checklist['enquiry_status'] = $check['enquiry_status'];
+                    $checklist['enquiry_failure_comment'] = $check['enquiry_failure_comment'];
+                    $obj->insertRecord($checklist, 'electromech_product_enquiry_log_detail');
+                }
+            }
+        }
+        $res['error'] = false;
+        $res['message'] = 'Checklist added successfully';
+    } else {
+        $res['message'] = 'Unable to add checklist';
     }
     echoRespnse(201, $res);
 });
