@@ -353,5 +353,3 @@ $app->post('/get_trainfloor', function() use ($app) {
     }
     echoRespnse(201, $res);
 });
-
-
