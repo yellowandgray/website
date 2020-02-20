@@ -19,7 +19,7 @@ const routes: Routes = [
   {path: 'floor', component: FloorComponent},
   {path: 'staff', component: StaffComponent},
   {path: 'inspection_checklist', component: CommandComponent},
-  {path: 'equipment_parts', component: CategoryComponent},
+  {path: 'category', component: CategoryComponent},
   {path: 'report', component: ReportComponent},
 ];
 

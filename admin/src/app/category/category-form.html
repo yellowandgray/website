@@ -1,21 +1,12 @@
-<h2 mat-dialog-title>Equipment Parts</h2>
+<h2 mat-dialog-title>Category</h2>
 <mat-dialog-content class="mat-typography">
     <form [formGroup]="categoryForm" (ngSubmit)="onSubmit()">
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
-            <div fxFlex="50%">
+            <div fxFlex="100%">
                 <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Select Product</mat-label>
-                    <mat-select required formControlName="electromech_product_id">
-                        <mat-option [value]="row.electromech_product_id" *ngFor="let row of product">{{row.name}}</mat-option>
-                    </mat-select>
-                    <mat-error>Product is required</mat-error>
-                </mat-form-field>
-            </div>
-            <div fxFlex="50%">
-                <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Equipment Parts</mat-label>
+                    <mat-label>Category</mat-label>
                     <input matInput placeholder="" required formControlName="name" />
-                    <mat-error>Equipment Parts is required</mat-error>
+                    <mat-error>Categoru is required</mat-error>
                 </mat-form-field>
             </div>
         </div>

@@ -84,15 +84,13 @@ export class CategoryForm {
   categoryForm: FormGroup;
   loading = false;
   electromech_category_id = 0;
-  product: [];
   constructor(
     public dialogRef: MatDialogRef<CategoryForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
     this.categoryForm = new FormGroup({
-      'name': new FormControl('', Validators.required),
-      'electromech_product_id': new FormControl('', Validators.required),
+      'name': new FormControl('', Validators.required)
     });
     if (this.data != null) {
       this.categoryForm.patchValue({
@@ -101,21 +99,6 @@ export class CategoryForm {
       });
       this.electromech_category_id = this.data.electromech_category_id;
     }
-    this.httpClient.get('http://www.lemonandshadow.com/electromech/api/v1/get_product').subscribe(
-      (res) => {
-        if (res["result"]["error"] === false) {
-          this.product = res["result"]["data"];
-        } else {
-          this._snackBar.open(res["result"]["message"], '', {
-            duration: 2000,
-          });
-        }
-      },
-      (error) => {
-        this._snackBar.open(error["statusText"], '', {
-          duration: 2000,
-        });
-      });
   }
 
   onSubmit() {
@@ -127,11 +110,9 @@ export class CategoryForm {
     var url = '';
     if (this.electromech_category_id != 0) {
       formData.append('name', this.categoryForm.value.name);
-      formData.append('electromech_product_id', this.categoryForm.value.electromech_product_id);
       url = 'update_record/electromech_category/electromech_category_id = ' + this.electromech_category_id;
     } else {
       formData.append('name', this.categoryForm.value.name);
-      formData.append('electromech_product_id', this.categoryForm.value.electromech_product_id);
       url = 'insert_category';
     }
     this.httpClient.post('http://www.lemonandshadow.com/electromech/api/v1/' + url, formData).subscribe(

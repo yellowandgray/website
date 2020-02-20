@@ -117,7 +117,7 @@ $app->post('/insert_category', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('name' => $data['name'], 'electromech_product_id' => $data['electromech_product_id']), 'electromech_category');
+    $record = $com->insertRecord(array('name' => $data['name']), 'electromech_category');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
