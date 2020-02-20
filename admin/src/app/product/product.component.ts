@@ -139,6 +139,7 @@ export class ProductForm {
   loading = false;
   electromech_product_id = 0;
   floor: any[];
+  category: any[];
   product_image: string = 'Select Equipment Image';
   image_path: string = '';
   constructor(
@@ -149,15 +150,15 @@ export class ProductForm {
     this.productForm = new FormGroup({
       'name': new FormControl('', Validators.required),
       'manufacturing': new FormControl(''),
-      'name_plate_date': new FormControl(''),
+      'category_id': new FormControl('', Validators.required),
       'floor_id': new FormControl('', Validators.required),
     });
     if (this.data != null) {
       this.productForm.patchValue({
         name: this.data.name,
-        floor_id: this.data.floor_id,
+        floor_id: this.data.electromech_floor_id,
         manufacturing: this.data.manufacturing,
-        name_plate_date: this.data.name_plate_date,
+        category_id: this.data.electromech_category_id,
       });
       this.electromech_product_id = this.data.electromech_product_id;
       this.image_path = this.data.image_path;
@@ -166,6 +167,21 @@ export class ProductForm {
       (res) => {
         if (res["result"]["error"] === false) {
           this.floor = res["result"]["data"];
+        } else {
+          this._snackBar.open(res["result"]["message"], '', {
+            duration: 2000,
+          });
+        }
+      },
+      (error) => {
+        this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+        });
+      });
+    this.httpClient.get('http://www.lemonandshadow.com/electromech/api/v1/get_category').subscribe(
+      (res) => {
+        if (res["result"]["error"] === false) {
+          this.category = res["result"]["data"];
         } else {
           this._snackBar.open(res["result"]["message"], '', {
             duration: 2000,
@@ -188,16 +204,16 @@ export class ProductForm {
     var url = '';
     if (this.electromech_product_id != 0) {
       formData.append('name', this.productForm.value.name);
-      formData.append('floor_id', this.productForm.value.floor_id);
+      formData.append('electromech_floor_id', this.productForm.value.floor_id);
       formData.append('manufacturing', this.productForm.value.manufacturing);
-      formData.append('name_plate_date', this.productForm.value.name_plate_date);
+      formData.append('electromech_category_id', this.productForm.value.category_id);
       formData.append('image_path', this.image_path);
       url = 'update_record/electromech_product/electromech_product_id = ' + this.electromech_product_id;
     } else {
       formData.append('name', this.productForm.value.name);
       formData.append('floor_id', this.productForm.value.floor_id);
       formData.append('manufacturing', this.productForm.value.manufacturing);
-      formData.append('name_plate_date', this.productForm.value.name_plate_date);
+      formData.append('category_id', this.productForm.value.category_id);
       formData.append('product_image', this.image_path);
       url = 'insert_product';
     }

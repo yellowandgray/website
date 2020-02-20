@@ -15,9 +15,14 @@
                         <td> {{data.manufacturing}} </td>
                     </tr>
                     <tr>
-                        <th>Name Plate Date</th>
+                        <th>Floor</th>
                         <td> : </td>
-                        <td> {{data.name_plate_date}} </td>
+                        <td> {{data.floor}} </td>
+                    </tr>
+                    <tr>
+                        <th>Category</th>
+                        <td> : </td>
+                        <td> {{data.category}} </td>
                     </tr>
                 </tbody>
             </table>
@@ -45,6 +50,6 @@
     </div>
     <br/>
     <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
-        <button mat-button [mat-dialog-close]="false">Cancel</button>
+        <button mat-button [mat-dialog-close]="false">Close</button>
     </div>
 </mat-dialog-content>

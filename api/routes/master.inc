@@ -45,7 +45,7 @@ $app->post('/insert_product', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('name' => $data['name'], 'floor_id' => $data['floor_id'], 'manufacturing' => $data['manufacturing'], 'name_plate_date' => $data['name_plate_date'], 'image_path' => $data['product_image']), 'electromech_product');
+    $record = $com->insertRecord(array('name' => $data['name'], 'electromech_floor_id' => $data['floor_id'], 'manufacturing' => $data['manufacturing'], 'electromech_category_id' => $data['category_id'], 'image_path' => $data['product_image']), 'electromech_product');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
@@ -128,7 +128,7 @@ $app->post('/insert_category', function() use ($app) {
 $app->get('/get_product', function() {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
-    $data = $com->selectAll('*', 'electromech_product', 'electromech_product_id > 0');
+    $data = $com->selectAll('e.*, f.name AS floor, c.name AS category', 'electromech_product AS e LEFT JOIN electromech_floor AS f ON f.electromech_floor_id = e.electromech_floor_id LEFT JOIN electromech_category AS c ON c.electromech_category_id = e.electromech_category_id', 'e.electromech_product_id > 0');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
