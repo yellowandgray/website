@@ -44,4 +44,7 @@ export class ReportComponent implements OnInit {
         }
       );
   }
+  getCommand(): void {
+      
+  }
 }

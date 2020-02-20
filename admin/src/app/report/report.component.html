@@ -7,7 +7,7 @@
         <!-- <div class="add-btn-container">
             <button mat-raised-button color="primary" (click)="openDialog(0, 'null')"><mat-icon>add</mat-icon> Inspection Checklist</button>
         </div> -->
-        <mat-tab-group (selectedTabChange)="getCommand($event);">
+        <mat-tab-group (selectedTabChange)="getCommand();">
             <mat-tab *ngFor="let row of schedule" label="{{row.name}}">
                 <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
                     <div fxFlex="50%">
