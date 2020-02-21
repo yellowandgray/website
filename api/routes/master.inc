@@ -86,6 +86,7 @@ $app->post('/insert_memberscheck', function() use ($app) {
 
         $record = $com->insertRecord($array, 'inquiry_form');
         if ($record > 0) {
+            $com->insertRecord(array('year_id' => $data['year_id'], 'date' => $data['date'], 'date' => $data['date'], 'class_id' => $data['class_id'], 'count' => $data['count']), 'enquiry_count');
             $res['error'] = false;
             $res['message'] = 'Record inserted successfully';
         }
@@ -186,7 +187,7 @@ $app->get('/get_enquiry_count_by_year/:yid', function($yid) {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
     $classes = $com->selectAll('*', 'class', 'class_id > 0');
-    $data = $com->selectAll('IFNULL(SUM(ec.count), 0) AS enquiry, ec.date, c.name AS class', 'class AS c LEFT JOIN enquiry_count AS ec ON ec.class_id = c.class_id AND ec.year_id = ' . $yid, 'c.class_id > 0 GROUP BY ec.date, c.class_id ORDER BY ec.date DESC, c.class_id ASC');
+    $data = $com->selectAll('IFNULL(SUM(ec.count), 0) AS enquiry, ec.date, c.name AS class', 'class AS c LEFT JOIN enquiry_count AS ec ON ec.class_id = c.class_id AND ec.year_id = ' . $yid, ' AND c.class_id > 0 GROUP BY ec.date, c.class_id ORDER BY ec.date DESC, c.class_id ASC');
     if (count($data) > 0) {
         $records = array();
         foreach ($data as $row) {
@@ -205,6 +206,30 @@ $app->get('/get_enquiry_count_by_year/:yid', function($yid) {
         }
     }
     $res['classes'] = $classes;
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_enquiry_count_by_year_class/:year/:class', function($year, $class) {
+    $res = array('error' => true, 'message' => 'Unable to get records');
+    $com = new Common();
+    $data = $com->selectAll('IFNULL(SUM(ec.count), 0) AS enquiry, ec.date, c.name AS class', 'class AS c LEFT JOIN enquiry_count AS ec ON ec.class_id = c.class_id AND ec.year_id IN (' . $year, ') AND c.class_id = ' . $class . ' GROUP BY ec.date, c.class_id ORDER BY ec.date DESC, c.class_id ASC');
+    if (count($data) > 0) {
+        $records = array();
+        foreach ($data as $row) {
+            if (isset($row['date']) && $row['date'] != '' && $row['date'] != null && strtolower($row['date']) != 'null') {
+                if (!isset($records[$row['date']]['total'])) {
+                    $records[$row['date']]['total'] = 0;
+                }
+                $records[$row['date']][$row['class']] = $row['enquiry'];
+                $records[$row['date']]['total'] = $records[$row['date']]['total'] + $row['enquiry'];
+            }
+        }
+        $res['message'] = 'Records found';
+        $res['data'] = $records;
+        if (count($records) > 0) {
+            $res['error'] = false;
+        }
+    }
     echoRespnse(201, $res);
 });
 
