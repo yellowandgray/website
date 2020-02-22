@@ -33,6 +33,17 @@ filter_question = 'null';
     constructor(public dialog: MatDialog, private httpClient: HttpClient, private _snackBar: MatSnackBar) { }
     ngOnInit() {
         this.getSubject();
+        this.httpClient.get<any>('../api/v1/get_difficult')
+        .subscribe(
+                (res)=>{
+                    this.difficult = res["result"]["data"];
+              },
+              (error)=>{
+                this._snackBar.open(error["statusText"], '', {
+                    duration: 2000,
+                });
+            }
+        );
     }
     getSubject(): void {
     this.httpClient.get<any>('../api/v1/get_subject')
@@ -47,17 +58,6 @@ filter_question = 'null';
         }
       );
   }
-this.httpClient.get<any>('../api/v1/get_difficult')
-        .subscribe(
-                (res)=>{
-                    this.difficult = res["result"]["data"];
-              },
-              (error)=>{
-                this._snackBar.open(error["statusText"], '', {
-                    duration: 2000,
-                });
-            }
-        );
    getChapter(): void {
         this.chapter = [];
         this.httpClient.get<any>('../api/v1/get_chapter_by_subject/'+this.selected_subject)
