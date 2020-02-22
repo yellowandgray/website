@@ -82,11 +82,10 @@ $app->post('/insert_memberscheck', function() use ($app) {
     if (count($exist) == 0) {
         $array = array('name_student' => $data['name_student'], 'name_father' => $data['name_father'], 'name_mother' => $data['name_mother'],
             'occupation' => $data['occupation'], 'gender' => $data['gender'], 'date_of_birth' => $data['date_of_birth'],
-            'admission' => $data['admission'], 'wfrom' => $data['from'], 'address' => $data['address'], 'contact_no' => $data['contact_no'], 'why_mekana' => $data['why_mekana'], 'type_day' => $data['type_day'], 'came_know_mekana' => $data['came_know_mekana'], 'expect_school' => $data['expect_school'], 'student_van' => $data['student_van'], 'father_smart_phone' => $data['father_smart_phone'], 'father_net_connection' => $data['father_net_connection'], 'mother_smart_phone' => $data['mother_smart_phone'], 'mother_net_connection' => $data['mother_net_connection'], 'stuent_cell_phone' => $data['stuent_cell_phone'], 'what_purpose' => $data['what_purpose']);
-
+            'admission' => $data['admission'], 'wfrom' => $data['from'], 'address' => $data['address'], 'contact_no' => $data['contact_no'], 'why_mekana' => $data['why_mekana'], 'type_day' => $data['type_day'], 'came_know_mekana' => $data['came_know_mekana'], 'expect_school' => $data['expect_school'], 'student_van' => $data['student_van'], 'father_smart_phone' => $data['father_smart_phone'], 'father_net_connection' => $data['father_net_connection'], 'mother_smart_phone' => $data['mother_smart_phone'], 'mother_net_connection' => $data['mother_net_connection'], 'stuent_cell_phone' => $data['stuent_cell_phone'], 'what_purpose' => $data['what_purpose'], 'year_id' => $data['year_id'], 'date' => $data['date'], 'class_id' => $data['class_id']);
         $record = $com->insertRecord($array, 'inquiry_form');
         if ($record > 0) {
-            $com->insertRecord(array('year_id' => $data['year_id'], 'date' => $data['date'], 'date' => $data['date'], 'class_id' => $data['class_id'], 'count' => $data['count']), 'enquiry_count');
+            $com->insertRecord(array('year_id' => $data['year_id'], 'date' => $data['date'], 'class_id' => $data['class_id'], 'count' => 1), 'enquiry_count');
             $res['error'] = false;
             $res['message'] = 'Record inserted successfully';
         }
