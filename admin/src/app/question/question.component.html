@@ -69,6 +69,16 @@
     <button mat-raised-button color="primary" (click)="getQuestion()">
         Search
     </button>
+    <mat-form-field appearance="outline" fxFlex="100%">
+        <mat-label>Select Level</mat-label>
+        <mat-select (selectionChange)="getQuestion()" [(ngModel)]="selected_level">
+            <mat-option value="0">All</mat-option>
+            <mat-option [value]="lvl.difficult_id" *ngFor="let lvl of difficult">
+                {{lvl.name}}
+        </mat-option>
+    </mat-select>
+    <mat-error>Topic is required</mat-error>
+</mat-form-field>
 </div>
 <mat-list>
     <ng-container *ngFor="let data of question">
@@ -80,9 +90,9 @@
                 <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
             </button>
             <img [src]="image_url + data.image_path" alt="image" *ngIf="data.image_path != '' && data.direction == 'top'" />
-            <p mat-line class='question-bottom'>{{data.question_no}}. <span class="question" [innerHTML]="data.name"></span></p>
+                <p mat-line class='question-bottom'>{{data.question_no}}. <span class="question" [innerHTML]="data.name"></span></p>
             <img mat-line [src]="image_url + data.image_path" alt="image" *ngIf="data.image_path != '' && data.direction == 'bottom'" style="width: 15%" />
-            <p mat-line>A. <span [innerHTML]="data.a"></span></p>
+                 <p mat-line>A. <span [innerHTML]="data.a"></span></p>
             <p mat-line>B. <span [innerHTML]="data.b"></span></p>
             <p mat-line *ngIf="data.c != ''">C. <span [innerHTML]="data.c"></span></p>
             <p mat-line *ngIf="data.d != ''">D. <span [innerHTML]="data.d"></span></p>
