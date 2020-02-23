@@ -82,10 +82,12 @@ $app->post('/insert_memberscheck', function() use ($app) {
     if (count($exist) == 0) {
         $array = array('name_student' => $data['name_student'], 'name_father' => $data['name_father'], 'name_mother' => $data['name_mother'],
             'occupation' => $data['occupation'], 'gender' => $data['gender'], 'date_of_birth' => $data['date_of_birth'],
-            'admission' => $data['admission'], 'wfrom' => $data['from'], 'address' => $data['address'], 'contact_no' => $data['contact_no'], 'why_mekana' => $data['why_mekana'], 'type_day' => $data['type_day'], 'came_know_mekana' => $data['came_know_mekana'], 'expect_school' => $data['expect_school'], 'student_van' => $data['student_van'], 'father_smart_phone' => $data['father_smart_phone'], 'father_net_connection' => $data['father_net_connection'], 'mother_smart_phone' => $data['mother_smart_phone'], 'mother_net_connection' => $data['mother_net_connection'], 'stuent_cell_phone' => $data['stuent_cell_phone'], 'what_purpose' => $data['what_purpose'], 'year_id' => $data['year_id'], 'date' => $data['date'], 'class_id' => $data['class_id']);
+            'admission' => $data['admission'], 'where_from' => $data['where_from'], 'address' => $data['address'], 'contact_no' => $data['contact_no'], 'why_mekana' => $data['why_mekana'], 'type_day' => $data['type_day'], 'came_know_mekana' => $data['came_know_mekana'], 'expect_school' => $data['expect_school'], 'student_van' => $data['student_van'], 'father_smart_phone' => $data['father_smart_phone'], 'father_net_connection' => $data['father_net_connection'], 'mother_smart_phone' => $data['mother_smart_phone'], 'mother_net_connection' => $data['mother_net_connection'], 'stuent_cell_phone' => $data['stuent_cell_phone'], 'what_purpose' => $data['what_purpose'], 'year_id' => $data['year_id'], 'date' => $data['date'], 'class_id' => $data['class_id']);
         $record = $com->insertRecord($array, 'inquiry_form');
         if ($record > 0) {
-            $com->insertRecord(array('year_id' => $data['year_id'], 'date' => $data['date'], 'class_id' => $data['class_id'], 'count' => 1), 'enquiry_count');
+            if ($data['class_id'] != 0) {
+                $com->insertRecord(array('year_id' => $data['year_id'], 'date' => $data['date'], 'class_id' => $data['class_id'], 'count' => 1), 'enquiry_count');
+            }
             $res['error'] = false;
             $res['message'] = 'Record inserted successfully';
         }
@@ -186,7 +188,7 @@ $app->get('/get_enquiry_count_by_year/:yid', function($yid) {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
     $classes = $com->selectAll('*', 'class', 'class_id > 0');
-    $data = $com->selectAll('IFNULL(SUM(ec.count), 0) AS enquiry, ec.date, c.name AS class', 'class AS c LEFT JOIN enquiry_count AS ec ON ec.class_id = c.class_id AND ec.year_id = ' . $yid, ' c.class_id > 0 GROUP BY ec.date, c.class_id ORDER BY ec.date DESC, c.class_id ASC');
+    $data = $com->selectAll('IFNULL(SUM(ec.count), 0) AS enquiry, ec.date, c.name AS class', 'class AS c LEFT JOIN enquiry_count AS ec ON ec.class_id = c.class_id AND ec.year_id = ' . $yid, 'c.class_id > 0 GROUP BY ec.date, c.class_id ORDER BY ec.date DESC, c.class_id ASC');
     if (count($data) > 0) {
         $records = array();
         foreach ($data as $row) {
@@ -211,17 +213,23 @@ $app->get('/get_enquiry_count_by_year/:yid', function($yid) {
 $app->get('/get_enquiry_count_by_year_class/:year/:class/:date', function($year, $class, $date) {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
-    $classes = $com->selectAll('*', 'class', 'class_id > 0');
-    $data = $com->selectAll('IFNULL(SUM(ec.count), 0) AS enquiry, ec.date, c.name AS class', 'class AS c LEFT JOIN enquiry_count AS ec ON ec.class_id = c.class_id AND ec.year_id IN (' . $year . ')', 'c.class_id = ' . $class . ' AND ec.date < \'' . $date . '\' GROUP BY ec.date, c.class_id ORDER BY ec.date DESC, c.class_id ASC');
+    $class_qry = 'c.class_id > 0';
+    $class_qry2 = 'class_id > 0';
+    if ($class != 0) {
+        $class_qry = 'c.class_id = ' . $class;
+        $class_qry2 = 'class_id = ' . $class;
+    }
+    $classes = $com->selectAll('*', 'class', $class_qry2);
+    $data = $com->selectAll('IFNULL(SUM(ec.count), 0) AS enquiry, y.name AS acad_year, ec.date, c.name AS class', 'class AS c LEFT JOIN enquiry_count AS ec ON ec.class_id = c.class_id AND ec.year_id IN (' . $year . ') LEFT JOIN year AS y ON y.year_id = ec.year_id', $class_qry . ' AND ec.date < \'' . $date . '\' GROUP BY y.name, c.class_id ORDER BY ec.date DESC, c.class_id ASC');
     if (count($data) > 0) {
         $records = array();
         foreach ($data as $row) {
             if (isset($row['date']) && $row['date'] != '' && $row['date'] != null && strtolower($row['date']) != 'null') {
-                if (!isset($records[$row['date']]['total'])) {
-                    $records[$row['date']]['total'] = 0;
+                if (!isset($records[$row['acad_year']]['total'])) {
+                    $records[$row['acad_year']]['total'] = 0;
                 }
-                $records[$row['date']][$row['class']] = $row['enquiry'];
-                $records[$row['date']]['total'] = $records[$row['date']]['total'] + $row['enquiry'];
+                $records[$row['acad_year']][$row['class']] = $row['enquiry'];
+                $records[$row['acad_year']]['total'] = $records[$row['acad_year']]['total'] + $row['enquiry'];
             }
         }
         $res['message'] = 'Records found';
