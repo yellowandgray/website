@@ -45,7 +45,7 @@ $app->post('/insert_product', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('name' => $data['name'], 'electromech_floor_id' => $data['floor_id'], 'manufacturing' => $data['manufacturing'], 'electromech_category_id' => $data['category_id'], 'image_path' => $data['product_image']), 'electromech_product');
+    $record = $com->insertRecord(array('name' => $data['name'], 'electromech_floor_id' => $data['floor_id'], 'manufacturing' => $data['manufacturing'], 'electromech_category_id' => $data['category_id'], 'image_path' => $data['product_image'], 'name_plate_date' => $data['name_plate_date']), 'electromech_product');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';

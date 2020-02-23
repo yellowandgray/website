@@ -152,6 +152,7 @@ export class ProductForm {
       'manufacturing': new FormControl(''),
       'category_id': new FormControl('', Validators.required),
       'floor_id': new FormControl('', Validators.required),
+      'name_plate_date': new FormControl('', Validators.required)
     });
     if (this.data != null) {
       this.productForm.patchValue({
@@ -159,6 +160,7 @@ export class ProductForm {
         floor_id: this.data.electromech_floor_id,
         manufacturing: this.data.manufacturing,
         category_id: this.data.electromech_category_id,
+        name_plate_date: this.data.name_plate_date
       });
       this.electromech_product_id = this.data.electromech_product_id;
       this.image_path = this.data.image_path;
@@ -207,6 +209,7 @@ export class ProductForm {
       formData.append('electromech_floor_id', this.productForm.value.floor_id);
       formData.append('manufacturing', this.productForm.value.manufacturing);
       formData.append('electromech_category_id', this.productForm.value.category_id);
+      formData.append('name_plate_date', this.productForm.value.name_plate_date);
       formData.append('image_path', this.image_path);
       url = 'update_record/electromech_product/electromech_product_id = ' + this.electromech_product_id;
     } else {
@@ -214,6 +217,7 @@ export class ProductForm {
       formData.append('floor_id', this.productForm.value.floor_id);
       formData.append('manufacturing', this.productForm.value.manufacturing);
       formData.append('category_id', this.productForm.value.category_id);
+      formData.append('name_plate_date', this.productForm.value.name_plate_date);
       formData.append('product_image', this.image_path);
       url = 'insert_product';
     }

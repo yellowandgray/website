@@ -48,6 +48,13 @@
                     <mat-error>Category is required</mat-error>
                 </mat-form-field>
             </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Nameplate Date(kW, voltage, speed, etc.)</mat-label>
+                    <input matInput placeholder="" required formControlName="name_plate_date" />
+                    <mat-error>Name Plate Date is required</mat-error>
+                </mat-form-field>
+            </div>
         </div>
         <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
             <button mat-button [mat-dialog-close]="false">Cancel</button>
