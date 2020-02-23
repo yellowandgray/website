@@ -48,6 +48,11 @@
                     <tr *ngFor="let data of tag">
                         <th mat-header-cell>{{data.electromech_train}}</th>
                         <td> {{data.code}} </td>
+                        <td> 
+                            <button mat-icon-button aria-label="label" (click)="confirmDelete(data.electromech_product_code_id)">
+                                <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
+                            </button>
+                        </td>
                     </tr>
                 </tbody>
             </table>

@@ -53,10 +53,11 @@ export class ProductComponent implements OnInit {
       }
     });
   }
-  openTagDialog(): void {
+  openTagDialog(pid): void {
     const dialogRef = this.dialog.open(TagForm, {
       minWidth: "40%",
-      maxWidth: "40%"
+      maxWidth: "40%",
+      data: pid
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -111,7 +112,7 @@ export class ProductComponent implements OnInit {
   confirmDelete(id): void {
     var data = null;
     if (id != 0) {
-      data = id;
+      data = {id: id, from: 'product'};
     }
     const dialogRef = this.dialog.open(ProductDelete, {
       minWidth: "40%",
@@ -284,7 +285,7 @@ export class TagForm {
   loading = false;
   product: any[];
   train: any[];
-  electromech_product_code_id = 0;
+  electromech_product_id = 0;
   constructor(
     public dialogRef: MatDialogRef<TagForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -297,27 +298,9 @@ export class TagForm {
     });
     if (this.data != null) {
       this.tagForm.patchValue({
-        code: this.data.code,
-        electromech_product_id: this.data.electromech_product_id,
-        electromech_train_id: this.data.electromech_train_id,
+        electromech_product_id: this.data
       });
-      this.electromech_product_code_id = this.data.electromech_product_code_id;
     }
-      this.httpClient.get('http://www.lemonandshadow.com/electromech/api/v1/get_product').subscribe(
-       (res) => {
-         if (res["result"]["error"] === false) {
-           this.product = res["result"]["data"];
-         } else {
-           this._snackBar.open(res["result"]["message"], '', {
-             duration: 2000,
-           });
-         }
-       },
-       (error) => {
-         this._snackBar.open(error["statusText"], '', {
-           duration: 2000,
-         });
-       });
       this.httpClient.get('http://www.lemonandshadow.com/electromech/api/v1/get_train').subscribe(
        (res) => {
          if (res["result"]["error"] === false) {
@@ -342,17 +325,10 @@ export class TagForm {
     this.loading = true;
     var formData = new FormData();
     var url = '';
-    if (this.electromech_product_code_id != 0) {
-      formData.append('code', this.tagForm.value.code);
-      formData.append('electromech_product_id', this.tagForm.value.electromech_product_id);
-      formData.append('electromech_train_id', this.tagForm.value.electromech_train_id);
-      url = 'update_record/electromech_product_code/electromech_product_code_id = ' + this.electromech_product_code_id;
-    } else {
       formData.append('code', this.tagForm.value.code);
       formData.append('electromech_product_id', this.tagForm.value.electromech_product_id);
       formData.append('electromech_train_id', this.tagForm.value.electromech_train_id);
       url = 'insert_product_code';
-    }
     this.httpClient.post('http://www.lemonandshadow.com/electromech/api/v1/' + url, formData).subscribe(
       (res) => {
         this.loading = false;
@@ -409,22 +385,34 @@ export class ProductImageView {
 export class ProductDelete {
   loading = false;
   electromech_product_id = 0;
+  electromech_product_code_id = 0;
   constructor(
     public dialogRef: MatDialogRef<ProductDelete>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
     if (this.data != null) {
-      this.electromech_product_id = this.data;
+        if(this.data.from === 'product') {
+      this.electromech_product_id = this.data.id;
+      }
+        if(this.data.from === 'code') {
+      this.electromech_product_code_id = this.data.id;
+      }
     }
   }
 
   confirmDelete() {
-    if (this.electromech_product_id == null || this.electromech_product_id == 0) {
+    if ((this.electromech_product_id == null || this.electromech_product_id == 0) && (this.electromech_product_code_id == null || this.electromech_product_code_id == 0)) {
       return;
     }
     this.loading = true;
-    this.httpClient.get('http://www.lemonandshadow.com/electromech/api/v1/delete_record/electromech_product/electromech_product_id=' + this.electromech_product_id).subscribe(
+var table = 'electromech_product'
+var where = 'electromech_product_id='+this.electromech_product_id;
+if(this.data.from === 'code') {
+table = 'electromech_product_code'
+where = 'electromech_product_code_id='+this.electromech_product_code_id;
+}
+    this.httpClient.get('http://www.lemonandshadow.com/electromech/api/v1/delete_record/'+ table +'/' + where).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -457,6 +445,7 @@ export class ProductViewForm {
   data: any;
   tag = [];
   constructor(
+    public dialog: MatDialog,
     public dialogRef: MatDialogRef<ProductViewForm>,
     @Inject(MAT_DIALOG_DATA) public datapopup: any,
     private _snackBar: MatSnackBar,
@@ -480,4 +469,20 @@ export class ProductViewForm {
           }
         );
     }
+confirmDelete(id): void {
+    var data = null;
+    if (id != 0) {
+      data = {id: id, from: 'code'};
+    }
+    const dialogRef = this.dialog.open(ProductDelete, {
+      minWidth: "40%",
+      maxWidth: "40%",
+      data: data
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      if (result !== false && result !== 'false') {
+this.getTagCode();
+      }
+    });
+  }
 }
