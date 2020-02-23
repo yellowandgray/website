@@ -186,7 +186,7 @@ $app->get('/get_enquiry_count_by_year/:yid', function($yid) {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
     $classes = $com->selectAll('*', 'class', 'class_id > 0');
-    $data = $com->selectAll('IFNULL(SUM(ec.count), 0) AS enquiry, ec.date, c.name AS class', 'class AS c LEFT JOIN enquiry_count AS ec ON ec.class_id = c.class_id AND ec.year_id = ' . $yid, ' AND c.class_id > 0 GROUP BY ec.date, c.class_id ORDER BY ec.date DESC, c.class_id ASC');
+    $data = $com->selectAll('IFNULL(SUM(ec.count), 0) AS enquiry, ec.date, c.name AS class', 'class AS c LEFT JOIN enquiry_count AS ec ON ec.class_id = c.class_id AND ec.year_id = ' . $yid, ' c.class_id > 0 GROUP BY ec.date, c.class_id ORDER BY ec.date DESC, c.class_id ASC');
     if (count($data) > 0) {
         $records = array();
         foreach ($data as $row) {
@@ -208,10 +208,11 @@ $app->get('/get_enquiry_count_by_year/:yid', function($yid) {
     echoRespnse(201, $res);
 });
 
-$app->get('/get_enquiry_count_by_year_class/:year/:class', function($year, $class) {
+$app->get('/get_enquiry_count_by_year_class/:year/:class/:date', function($year, $class, $date) {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
-    $data = $com->selectAll('IFNULL(SUM(ec.count), 0) AS enquiry, ec.date, c.name AS class', 'class AS c LEFT JOIN enquiry_count AS ec ON ec.class_id = c.class_id AND ec.year_id IN (' . $year, ') AND c.class_id = ' . $class . ' GROUP BY ec.date, c.class_id ORDER BY ec.date DESC, c.class_id ASC');
+    $classes = $com->selectAll('*', 'class', 'class_id > 0');
+    $data = $com->selectAll('IFNULL(SUM(ec.count), 0) AS enquiry, ec.date, c.name AS class', 'class AS c LEFT JOIN enquiry_count AS ec ON ec.class_id = c.class_id AND ec.year_id IN (' . $year . ')', 'c.class_id = ' . $class . ' AND ec.date < \'' . $date . '\' GROUP BY ec.date, c.class_id ORDER BY ec.date DESC, c.class_id ASC');
     if (count($data) > 0) {
         $records = array();
         foreach ($data as $row) {
@@ -229,6 +230,7 @@ $app->get('/get_enquiry_count_by_year_class/:year/:class', function($year, $clas
             $res['error'] = false;
         }
     }
+    $res['classes'] = $classes;
     echoRespnse(201, $res);
 });
 
