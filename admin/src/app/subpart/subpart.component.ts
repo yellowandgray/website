@@ -6,12 +6,13 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-product',
-  templateUrl: './product.component.html',
-  styleUrls: ['./product.component.css']
+  selector: 'app-subpart',
+  templateUrl: './subpart.component.html',
+  styleUrls: ['./subpart.component.css']
 })
 export class SubpartComponent implements OnInit {
   data:any = null;
+  Object = Object;  
   image_url: string = 'http://www.lemonandshadow.com/electromech/api/v1/';
   constructor(public dialog: MatDialog, private httpClient: HttpClient, private _snackBar: MatSnackBar) { }
   ngOnInit() {
@@ -33,7 +34,7 @@ export class SubpartComponent implements OnInit {
   openDialog(id, res): void {
     var data = null;
     if (id != 0) {
-      this[res].forEach(val => {
+      this.data[res].forEach(val => {
         if (parseInt(val.electromech_subpart_id) === parseInt(id)) {
           data = val;
           return false;
@@ -154,7 +155,7 @@ export class SubpartForm {
       url = 'update_record/electromech_subpart/electromech_subpart_id = ' + this.electromech_subpart_id;
     } else {
       formData.append('name', this.subpartForm.value.name);
-      formData.append('electromech_product_id', this.subpartForm.value.product_id);
+      formData.append('product_id', this.subpartForm.value.product_id);
       formData.append('subpart_image', this.image_path);
       url = 'insert_subpart';
     }

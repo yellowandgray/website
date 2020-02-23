@@ -353,3 +353,32 @@ $app->post('/get_trainfloor', function() use ($app) {
     }
     echoRespnse(201, $res);
 });
+
+$app->get('/get_subpart', function() use ($app) {
+    $res = array('error' => true, 'message' => 'No records found');
+    $data = $app->request->post();
+    $obj = new Common();
+    $record = $obj->selectAll('s.*, p.name AS product', 'electromech_subpart AS s LEFT JOIN electromech_product AS p ON p.electromech_product_id = s.electromech_product_id', 'electromech_subpart_id > 0');
+    if (count($record) > 0) {
+        $data = null;
+        foreach ($record as $row) {
+            $data[$row['product']][] = $row;
+        }
+        $res['error'] = false;
+        $res['data'] = $data;
+        $res['message'] = 'Records found';
+    }
+    echoRespnse(201, $res);
+});
+
+$app->post('/insert_subpart', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to insert');
+    $data = $app->request->post();
+    $com = new Common();
+    $record = $com->insertRecord(array('name' => $data['name'], 'electromech_product_id' => $data['product_id'], 'image_path' => $data['subpart_image']), 'electromech_subpart');
+    if ($record > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Record inserted successfully';
+    }
+    echoRespnse(201, $res);
+});

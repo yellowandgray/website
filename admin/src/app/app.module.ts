@@ -32,6 +32,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
 import { ProductComponent, ProductForm, ProductImageView, ProductDelete, TagForm, ProductViewForm } from './product/product.component';
+import { SubpartComponent, SubpartForm, SubpartImageView, SubpartDelete } from './subpart/subpart.component';
 import { TrainComponent, TrainForm, TrainDelete } from './train/train.component';
 import { FloorComponent, FloorForm, FloorDelete} from './floor/floor.component';
 import { StaffComponent, StaffForm, StaffImageView, StaffDelete } from './staff/staff.component';
@@ -51,6 +52,10 @@ import { ReportComponent } from './report/report.component';
     ProductDelete,
     TagForm,
     ProductViewForm,
+    SubpartComponent,
+    SubpartForm,
+    SubpartImageView,
+    SubpartDelete,
     TrainComponent,
     TrainForm,
     TrainDelete,
@@ -104,6 +109,10 @@ import { ReportComponent } from './report/report.component';
     ProductDelete,
     TagForm,
     ProductViewForm,
+    SubpartComponent,
+    SubpartForm,
+    SubpartImageView,
+    SubpartDelete,
     TrainComponent,
     TrainForm,
     TrainDelete,

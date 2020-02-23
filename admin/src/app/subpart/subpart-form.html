@@ -1,59 +1,34 @@
-<h2 mat-dialog-title>Equipment</h2>
+<h2 mat-dialog-title>Sub Part</h2>
 <mat-dialog-content class="mat-typography">
-    <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="subpartForm" (ngSubmit)="onSubmit()">
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Select Floor</mat-label>
-                    <mat-select required formControlName="floor_id">
-                        <mat-option [value]="row.electromech_floor_id" *ngFor="let row of floor">{{row.name}}</mat-option>
+                    <mat-label>Select Product</mat-label>
+                    <mat-select required formControlName="product_id">
+                        <mat-option [value]="row.electromech_product_id" *ngFor="let row of product">{{row.name}}</mat-option>
                     </mat-select>
-                    <mat-error>Floor is required</mat-error>
+                    <mat-error>Product is required</mat-error>
                 </mat-form-field>
             </div>
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Equipment Name</mat-label>
+                    <mat-label>Sub Part Name</mat-label>
                     <input matInput placeholder="" required formControlName="name" />
-                    <mat-error>Equipment Name is required</mat-error>
+                    <mat-error>Sub Part Name is required</mat-error>
                 </mat-form-field>
             </div>
         </div>
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-            <div fxFlex="50%">
-                <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Manufacturer</mat-label>
-                    <input matInput placeholder="" formControlName="manufacturing" />
-                    <mat-error>Manufacturer is required</mat-error>
-                </mat-form-field>
-            </div>
             <div fxFlex="50%" fxLayoutAlign="center center">
-                <button *ngIf="image_path == ''" type="button" mat-raised-button (click)="fileInput.click()">{{product_image}}</button>
-                <input hidden #fileInput type="file" id="file" (change)="fileProgress($event, 'product_image', 'image_path')" />
+                <button *ngIf="image_path == ''" type="button" mat-raised-button (click)="fileInput.click()">{{subpart_image}}</button>
+                <input hidden #fileInput type="file" id="file" (change)="fileProgress($event, 'subpart_image', 'image_path')" />
                        <div class="preview-image" *ngIf="image_path != ''">
                     <img class="dialog-picture" mat-card-image src="{{image_url}}{{image_path}}" alt="Photo" />
                     <button mat-icon-button aria-label="Close icon" (click)="removeMedia('image_path')">
                         <mat-icon>close</mat-icon>
                     </button>
                 </div>
-            </div>
-        </div>
-        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-            <div fxFlex="50%">
-                <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Select Category</mat-label>
-                    <mat-select required formControlName="category_id">
-                        <mat-option [value]="row.electromech_category_id" *ngFor="let row of category">{{row.name}}</mat-option>
-                    </mat-select>
-                    <mat-error>Category is required</mat-error>
-                </mat-form-field>
-            </div>
-            <div fxFlex="50%">
-                <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Nameplate Date(kW, voltage, speed, etc.)</mat-label>
-                    <input matInput placeholder="" required formControlName="name_plate_date" />
-                    <mat-error>Name Plate Date is required</mat-error>
-                </mat-form-field>
             </div>
         </div>
         <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">

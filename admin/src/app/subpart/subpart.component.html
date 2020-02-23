@@ -5,29 +5,27 @@
     <mat-sidenav-content>
         <app-header></app-header>
         <div class="add-btn-container">
-            <button mat-raised-button color="primary" (click)="openDialog(0, 'null')"><mat-icon>add</mat-icon> Equipment</button>
+            <button mat-raised-button color="primary" (click)="openDialog(0, 'null')"><mat-icon>add</mat-icon> Sub part</button>
         </div>
-        <mat-list>
-            <ng-container *ngFor="let data of product">
-                <mat-list-item>
-                    <button mat-icon-button aria-label="label" (click)="openTagDialog(data.electromech_product_id)">
-                        <mat-icon #tooltip="matTooltip" matTooltip="Add Tag Number">vertical_split</mat-icon>
-                    </button>
-                    <button mat-icon-button aria-label="label" (click)="openView(data.electromech_product_id, 'product')">
-                        <mat-icon #tooltip="matTooltip" matTooltip="View">remove_red_eye</mat-icon>
-                    </button>
-                    <button mat-icon-button aria-label="label" (click)="openDialog(data.electromech_product_id, 'product')">
-                        <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
-                    </button>
-                    <button mat-icon-button aria-label="label" (click)="confirmDelete(data.electromech_product_id)">
-                        <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
-                    </button>
-                    <img matListAvatar src="{{image_url}}{{data.image_path}}" *ngIf="data.image_path && data.image_path != ''" alt="image" (click)="imageView(data, 'preview')" />
-                    <h4 mat-line>{{data.name}}</h4>
-                    <!-- <p mat-line>{{data.name_plate_date}}</p> -->
-                </mat-list-item>
-                <mat-divider></mat-divider>
-            </ng-container>
-        </mat-list>
+        <mat-accordion *ngIf="data != null">
+            <mat-expansion-panel *ngFor="let key of Object.keys(data)">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>{{key}}</mat-panel-title>
+                </mat-expansion-panel-header>
+                <mat-list>
+                    <mat-list-item *ngFor="let row of data[key]">
+                        <button mat-icon-button aria-label="label" (click)="openDialog(row.electromech_subpart_id, key)">
+                            <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label" (click)="confirmDelete(row.electromech_subpart_id)">
+                            <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
+                        </button>
+                        <img matListAvatar src="{{image_url}}{{row.image_path}}" *ngIf="row.image_path && data.image_path != ''" alt="image" (click)="imageView(row, 'preview')" />
+                             <h4 mat-line>{{row.name}}</h4>
+                        <mat-divider></mat-divider>
+                    </mat-list-item>
+                </mat-list>
+            </mat-expansion-panel>
+        </mat-accordion>
     </mat-sidenav-content>
 </mat-sidenav-container>
