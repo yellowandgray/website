@@ -42,7 +42,7 @@ if (isset($_SESSION['student_register_id'])) {
                     ?>
                     <div class="logout_position">
                         <div id="open-logout" class="logout_section">
-        <!--                        <img src='<?php //echo BASE_URL . $login_student['profile_image'];     ?>' alt=''>-->
+        <!--                        <img src='<?php //echo BASE_URL . $login_student['profile_image'];      ?>' alt=''>-->
                             <?php if (isset($login_student['profile_image']) && $login_student['profile_image'] == '') { ?>
                                 <img src="<?php echo BASE_URL . $login_student['gender']; ?>.jpg" alt="" />
                             <?php } else { ?>
@@ -113,9 +113,9 @@ if (isset($_SESSION['student_register_id'])) {
                     <div class="float-left">
                         <h3><span class="span-1 wow fadeInRight" data-wow-delay="0s">UNDERSTAND</span> <span class="span-2 wow fadeInRight" data-wow-delay="1s">LEARN</span> <span class="span-3 wow fadeInRight" data-wow-delay="2s">SCORE</span></h3>
                     </div>
-                    <div class="float-right register-now-btn wow fadeInRight" data-wow-delay="3s">
+                    <!--<div class="float-right register-now-btn wow fadeInRight" data-wow-delay="3s">
                         <a href='register-page' class="register-btn wow pulse" data-wow-iteration="infinite" data-wow-duration="1500ms">Register Now!</a>
-                    </div>
+                    </div>-->
                 </div>
             </div>
         </div>
@@ -128,7 +128,7 @@ if (isset($_SESSION['student_register_id'])) {
                                 <div class="box-img"></div>
                             </div>
                             <div class="box-text">
-                                <p>Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                                <h5>Scientifically proven method to study and practice in a more effective way!</h5>
                             </div>
                         </div>
                     </div>
@@ -138,7 +138,7 @@ if (isset($_SESSION['student_register_id'])) {
                                 <div class="box-img1"></div>
                             </div>
                             <div class="box-text">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                                <h5>Explore over thousands and thousands of questions and attain the benefits!</h5>
                             </div>
                         </div>
                     </div>
@@ -148,7 +148,7 @@ if (isset($_SESSION['student_register_id'])) {
                                 <div class="box-img2"></div>
                             </div>
                             <div class="box-text">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                                <h5>Questions are prepared very sensefully for the students to explore and excel maximum.</h5>
                             </div>
                         </div>
                     </div>
