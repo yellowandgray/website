@@ -27,6 +27,14 @@
             <!--Inner Header End--> 
             <section class="wf100 about">
                 <div class="container">
+                    <div class="row" style="padding:25px; width:60%;margin:0 auto">
+                        <h3 style="text-align:center;"><strong>CELEBRATION TIME</strong></h3>
+                        We take pleasure in inviting you with your family and children on the eve of our First Annual day program of our ENPEE INTERNATIONAL SCHOOL.
+                        We have learned a lot over the last year from every person we have interacted with. Give us the chance to continue learning and teaching as we go along on this journey with our students.
+                        We have an array of programs for both Adults and kids with guest performances from our Children and a special program by Internationally renowned and National Awardee. Shri. Ramachandra Pulavar and team's legendary Shadow Puppet show THOLPAVAKUTTHU from Kerala which is very unique and centuries old drama in puppetry show rich in Cultural and Traditional artistry including Muppets being practiced only by this team in this generation.
+                        <br><br> We have renowned  guests adoring the session with a special Orchestra by Vinayaka Missions Medical College, Karaikal  (VMMC)  medical students.  Students who had participated in the Interschool sports and cultural events shall be honoured by our special guests.
+                        We request your August presence with your Children to grace the occasion. <br><br><strong>Looking forward to meeting everyone on 22nd February 2020 at the ENPEE auditorium.</strong>
+                    </div>
                     <div class="row">
                         <div class="col-md-12 col-sm-12 col-xs-12 event-list-tap">
                             <div>
