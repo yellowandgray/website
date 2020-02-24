@@ -207,7 +207,7 @@ export class SubpartForm {
   removeMedia(url) {
     this[url] = '';
     if (url === 'image_path') {
-      this.product_image = 'Select Equipment Image';
+      this.subpart_image = 'Select Subpart Image';
     }
   }
 
