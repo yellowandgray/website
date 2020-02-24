@@ -243,7 +243,7 @@ $app->get('/get_question', function() {
     echoRespnse(201, $res);
 });
 
-$app->get('/get_question_by_topic/:tid/:cid/:searchtxt/:searchqno', function($tid, $cid, $stxt, $sqno) {
+$app->get('/get_question_by_topic/:tid/:cid/:searchtxt/:searchqno/:lvl', function($tid, $cid, $stxt, $sqno, $lvl) {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
     $topic_fltr = '';
@@ -253,6 +253,9 @@ $app->get('/get_question_by_topic/:tid/:cid/:searchtxt/:searchqno', function($ti
     }
     if ($sqno != null && $sqno != 'null') {
         $search_qry = $search_qry . ' AND q.question_no = ' . $sqno;
+    }
+    if ($lvl != 0) {
+        $search_qry = $search_qry . ' AND q.difficult_id = ' . $lvl;
     }
     if ($tid != 0) {
         $topic_fltr = ' AND topic_id = ' . $tid;

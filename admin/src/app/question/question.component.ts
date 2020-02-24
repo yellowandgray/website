@@ -25,6 +25,7 @@ export class QuestionComponent implements OnInit {
     selected_subject = 0;
     selected_chapter = 0;
     selected_topic = 0;
+    selected_level = 0;
     searchQuestionNo = null;
     searchTerm = null;
     filter_text = 'null';
@@ -32,6 +33,17 @@ filter_question = 'null';
     constructor(public dialog: MatDialog, private httpClient: HttpClient, private _snackBar: MatSnackBar) { }
     ngOnInit() {
         this.getSubject();
+        this.httpClient.get<any>('../api/v1/get_difficult')
+        .subscribe(
+                (res)=>{
+                    this.difficult = res["result"]["data"];
+              },
+              (error)=>{
+                this._snackBar.open(error["statusText"], '', {
+                    duration: 2000,
+                });
+            }
+        );
     }
     getSubject(): void {
     this.httpClient.get<any>('../api/v1/get_subject')
@@ -85,7 +97,7 @@ this.filter_question = this.searchQuestionNo;
 if(this.searchTerm && this.searchTerm != null && this.searchTerm != '') {
 this.filter_text = this.searchTerm;
 }
-        this.httpClient.get<any>('../api/v1/get_question_by_topic/'+this.selected_topic+'/'+this.selected_chapter+'/'+this.filter_text+'/'+this.filter_question)
+        this.httpClient.get<any>('../api/v1/get_question_by_topic/'+this.selected_topic+'/'+this.selected_chapter+'/'+this.filter_text+'/'+this.filter_question+'/'+this.selected_level)
         .subscribe(
                 (res)=>{
                     this.question = res["result"]["data"];

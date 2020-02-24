@@ -91,7 +91,7 @@ export class UserComponent implements OnInit {
       }
     });
   }
-  openResult(sid. name): void {
+  openResult(sid, name): void {
       this.httpClient.get<any>('../api/v1/get_student_result/'+sid)
       .subscribe(
         (res) => {
