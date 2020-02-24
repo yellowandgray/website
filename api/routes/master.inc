@@ -160,9 +160,9 @@ $app->post('/checklists_for_inspect', function() use ($app) {
     date_default_timezone_set('Asia/Singapore');
     $data = $app->request->post();
     $obj = new Common();
-    $insert = $obj->insertRecord(array('electromech_train_id' => $data['electromech_train_id'], 'electromech_floor_id' => $data['electromech_floor_id'], 'electromech_schedule_id' => $data['electromech_schedule_id'], 'electromech_staff_id' => $data['electromech_staff_id'], 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')), 'electromech_staff_login');
+    $insert = $obj->insertRecord(array('electromech_train_id' => $data['electromech_train_id'], 'electromech_category_id' => $data['electromech_category_id'], 'electromech_schedule_id' => $data['electromech_schedule_id'], 'electromech_staff_id' => $data['electromech_staff_id'], 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')), 'electromech_staff_login');
     if ($insert > 0) {
-        $products = $obj->selectAll('p.name, p.electromech_product_id, p.image_path, p.manufacturing, pc.code', 'electromech_product AS p LEFT JOIN electromech_product_code AS pc ON pc.electromech_product_id = p.electromech_product_id AND pc.electromech_train_id = ' . $data['electromech_train_id'], 'p.floor_id=' . $data['electromech_floor_id']);
+        $products = $obj->selectAll('p.name, p.electromech_product_id, p.image_path, p.manufacturing, pc.code', 'electromech_product AS p LEFT JOIN electromech_product_code AS pc ON pc.electromech_product_id = p.electromech_product_id AND pc.electromech_train_id = ' . $data['electromech_train_id'], 'p.electromech_category_id=' . $data['electromech_category_id']);
         foreach ($products as $key => $row) {
             $categries = null;
             $logs = $obj->selectAll('pel.enquiry_list, pel.electromech_schedule_id, pel.electromech_category_id, pel.electromech_product_enquiry_list_id, ec.name AS category', 'electromech_product_enquiry_list AS pel LEFT JOIN electromech_category AS ec ON ec.electromech_category_id = pel.electromech_category_id', 'pel.electromech_product_id = ' . $row['electromech_product_id'] . ' AND pel.electromech_schedule_id = ' . $data['electromech_schedule_id']);
@@ -232,12 +232,12 @@ $app->get('/get_checklist_options', function() {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
     $train = $com->selectAll('name, electromech_train_id', 'electromech_train', 'electromech_train_id > 0 ORDER BY name ASC');
-    $floor = $com->selectAll('name, electromech_floor_id', 'electromech_floor', 'electromech_floor_id > 0 ORDER BY name ASC');
+    $category = $com->selectAll('name, electromech_category_id', 'electromech_category', 'electromech_category_id > 0 ORDER BY name ASC');
     $schedule = $com->selectAll('name, electromech_schedule_id', 'electromech_schedule', 'electromech_schedule_id > 0');
-    if (count($train) > 0 || count($floor) > 0 || count($schedule) > 0) {
+    if (count($train) > 0 || count($category) > 0 || count($schedule) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
-        $res['data'] = array('train' => $train, 'floor' => $floor, 'schedule' => $schedule);
+        $res['data'] = array('train' => $train, 'category' => $category, 'schedule' => $schedule);
     }
     echoRespnse(201, $res);
 });
