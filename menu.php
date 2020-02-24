@@ -41,13 +41,16 @@ if (isset($_SESSION['student_register_id'])) {
             <?php } else {
                 ?>
                 <div class="logout_position">
+                    <a onclick="logoutUser('<?php echo $login_student['student_name']; ?>');" class="btn logout-btn">Logout</a>
                     <div id="open-logout" class="logout_section">
-    <!--                        <img src='<?php //echo BASE_URL . $login_student['profile_image'];     ?>' alt=''>-->
-                        <?php if (isset($login_student['profile_image']) && $login_student['profile_image'] == '') { ?>
-                            <img src="<?php echo BASE_URL . $login_student['gender']; ?>.jpg" alt="" />
-                        <?php } else { ?>
-                            <img src="<?php echo BASE_URL . $login_student['profile_image']; ?>" alt="" />
-                        <?php } ?>
+                        <span class="menu-bar">
+                            <i class="icon-reorder"></i>
+                        </span>
+                        <?php //if (isset($login_student['profile_image']) && $login_student['profile_image'] == '') { ?>
+                            <!--<img src="<?php //echo BASE_URL . $login_student['gender']; ?>.jpg" alt="" />-->
+                        <?php //} else { ?>
+                            <!--<img src="<?php //echo BASE_URL . $login_student['profile_image']; ?>" alt="" />-->
+                        <?php //} ?>
                         <div class="logout_dropdown">
                             <div class="user_profile">
                                 <?php if (isset($login_student['profile_image']) && $login_student['profile_image'] == '') { ?>
@@ -60,7 +63,7 @@ if (isset($_SESSION['student_register_id'])) {
                             <ul class="logout_list">
                                 <li onclick="window.location = 'home_subject'">Subject</li>
                                 <li onclick="window.location = 'student_result'">Result</li>
-                                <li onclick="logoutUser('<?php echo $login_student['student_name']; ?>');">Logout</li>
+    <!--                                <li onclick="logoutUser('<?php //echo $login_student['student_name'];   ?>');">Logout</li>-->
                             </ul>
                         </div>
                     </div>

@@ -63,27 +63,27 @@ if (isset($_SESSION['student_register_id'])) {
                                                             <div id = 'collapseOne' class = 'accordion-body collapse in'>
                                                                 <div class = 'accordion-inner'>
                         <?php foreach ($student_logs as $row) { ?>
-                                                                                        <h2 class = 'titleContainer title'> <i class="font-icon-arrow-simple-right"></i> <?php echo $row['subject_name']; ?><i class="font-icon-arrow-simple-right"></i> <?php echo $row['chapter_name']; ?> <i class="font-icon-arrow-simple-right"></i><?php echo $row['topic_name']; ?><span>Date: <?php echo date('d/M/Y h:iA', strtotime($row['created_at'])); ?></span></h2>
-                                                                                        <table class = 'table table-striped result_table'>
-                                                                                            <thead>
-                                                                                                <tr>
-                                                                                                    <th class="text-center">Category</th>
-                                                                                                    <th class="text-center">Total</th>
-                                                                                                        <th class="text-center">Attand Questions</th>
-                                                                                                    <th class="text-center"><i class="icon-ok-sign"></i></th>
-                                                                                                    <th class="text-center"><i class="font-icon-remove-circle"></i></th>
-                                                                                                </tr>
-                                                                                            </thead>
-                                                                                            <tbody>
-                                                                                                <tr>
-                                                                                                    <td><?php echo $row['difficult_name'] ?> Marks</td>
-                                                                                                    <td><?php echo $row['total_questions'] ?></td>
-                                                                                                        <td><?php //echo $row['attended']              ?></td>
-                                                                                                    <td><?php echo $row['correct_answers'] ?></td>
-                                                                                                    <td><?php echo ($row['attended'] - $row['correct_answers']) ?></td>
-                                                                                                </tr>
-                                                                                            </tbody>
-                                                                                        </table>
+                                                                                                <h2 class = 'titleContainer title'> <i class="font-icon-arrow-simple-right"></i> <?php echo $row['subject_name']; ?><i class="font-icon-arrow-simple-right"></i> <?php echo $row['chapter_name']; ?> <i class="font-icon-arrow-simple-right"></i><?php echo $row['topic_name']; ?><span>Date: <?php echo date('d/M/Y h:iA', strtotime($row['created_at'])); ?></span></h2>
+                                                                                                <table class = 'table table-striped result_table'>
+                                                                                                    <thead>
+                                                                                                        <tr>
+                                                                                                            <th class="text-center">Category</th>
+                                                                                                            <th class="text-center">Total</th>
+                                                                                                                <th class="text-center">Attand Questions</th>
+                                                                                                            <th class="text-center"><i class="icon-ok-sign"></i></th>
+                                                                                                            <th class="text-center"><i class="font-icon-remove-circle"></i></th>
+                                                                                                        </tr>
+                                                                                                    </thead>
+                                                                                                    <tbody>
+                                                                                                        <tr>
+                                                                                                            <td><?php echo $row['difficult_name'] ?> Marks</td>
+                                                                                                            <td><?php echo $row['total_questions'] ?></td>
+                                                                                                                <td><?php //echo $row['attended']                ?></td>
+                                                                                                            <td><?php echo $row['correct_answers'] ?></td>
+                                                                                                            <td><?php echo ($row['attended'] - $row['correct_answers']) ?></td>
+                                                                                                        </tr>
+                                                                                                    </tbody>
+                                                                                                </table>
                         <?php } ?>
                                                                 </div>
                                                             </div>
@@ -109,7 +109,7 @@ if (isset($_SESSION['student_register_id'])) {
                                             <tr>
                                                 <th class="text-center">Category</th>
                                                 <th class="text-center">Total</th>
-    <!--                                                            <th class="text-center">Attand Questions</th>-->
+                                                <th class="text-center">Attend</th>
                                                 <th class="text-center"><i class="icon-ok-sign"></i></th>
                                                 <th class="text-center"><i class="font-icon-remove-circle"></i></th>
                                             </tr>
@@ -118,7 +118,7 @@ if (isset($_SESSION['student_register_id'])) {
                                             <tr>
                                                 <td><?php echo $row['difficult_name'] ?> Marks</td>
                                                 <td><?php echo $row['total_questions'] ?></td>
-    <!--                                                            <td><?php //echo $row['attended']              ?></td>-->
+                                                <td><?php echo $row['attended'] ?></td>
                                                 <td><?php echo $row['correct_answers'] ?></td>
                                                 <td><?php echo ($row['attended'] - $row['correct_answers']) ?></td>
                                             </tr>

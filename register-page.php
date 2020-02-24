@@ -84,8 +84,8 @@
                                         <label class = 'control-label' for = 'slelct_standard'>Select Standard</label>
                                         <div class = 'controls'>
                                             <select id = 'standard' required>
-                                                <option value = '10th-State-Board'>10th State Board</option>
-                                                <option value = '10th-CBSC'>10th CBSE</option>
+                                                <option value = '10th STD State Board'>10th State Board</option>
+                                                <option value = '10th STD CBSC'>10th CBSE</option>
                                             </select>
                                         </div>
                                     </div>

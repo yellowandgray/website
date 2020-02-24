@@ -12,7 +12,8 @@ $subjects = $obj->selectAll('*', 'subject', 'subject_id > 0 AND status = 1');
             <section class="subject-content">
                 <div class="container-fluid">
                     <h4 class="heading text-center">
-                        <strong>10<sup>th</sup> STD State Board</strong>
+                        <!--<strong>10<sup>th</sup> STD State Board</strong>-->
+                        <strong><?php echo $login_student['standard']; ?></strong>
                     </h4>
                     <div class="row margin-auto">
                         <?php foreach ($subjects as $row) { ?>
