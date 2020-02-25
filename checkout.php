@@ -58,23 +58,25 @@
                                         </div>
                                         <div class="col-md-1"></div>
                                     </div>
-                                    <div class="row margin-lr-0">
-                                        <div class="coupon-section">
-                                            <div class="coupon-title">
-                                                <h4>Available Coupon Code</h4>
-                                                <p>Amount</p>
-                                            </div>
-                                            <?php foreach ($coupons as $row) { ?>
-                                                <div class="coloured">
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox" id="chkcoupon"><span class="checkbox-material"><span class="check"></span></span> <?php echo $row['coupon_name']; ?> <p><?php echo $row['reduce_amt']; ?></p>
-                                                        </label>
-                                                    </div>
+                                    <?php if (count($coupons) > 0) { ?>
+                                        <div class="row margin-lr-0">
+                                            <div class="coupon-section">
+                                                <div class="coupon-title">
+                                                    <h4>Available Coupon Code</h4>
+                                                    <p>Amount</p>
                                                 </div>
-                                            <?php } ?>
+                                                <?php foreach ($coupons as $row) { ?>
+                                                    <div class="coloured">
+                                                        <div class="checkbox">
+                                                            <label onclick="applyCoupon('<?php echo $row['coupon_name'] ?>', <?php echo $row['reduce_amt'] ?>)">
+                                                                <input type="checkbox" name="chkcoupon" id="chkcoupon" value="<?php echo $row['reduce_amt']; ?>" /><span class="checkbox-material"><span class="check"></span></span> <?php echo $row['coupon_name']; ?> <p><?php echo $row['reduce_amt']; ?></p>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                <?php } ?>
+                                            </div>
                                         </div>
-                                    </div>
+                                    <?php } ?>
                                 </div>
                                 <div class="bg-white m-b-10">
                                     <div class="check-login">
@@ -129,12 +131,10 @@
                                             <span class="gst_label">CGST - 9% + SGST - 9% (18%)</span>
                                             <div class="totals-value" id="cart-tax">1440</div>
                                         </div>
-                                        <?php foreach ($coupons as $row) { ?>
-                                            <div id="reduceamt" class="totals-item">
-                                                <span><?php echo $row['coupon_name']; ?></span>
-                                                <div class="totals-value" id="coupon-amt"><?php echo $row['reduce_amt']; ?></div>
-                                            </div>
-                                        <?php } ?>
+                                        <div id="reduceamt" class="totals-item">
+                                            <span id="coupon_name"></span>
+                                            <div class="totals-value" id="coupon_amt"></div>
+                                        </div>
                                         <div class="totals-item totals-item-total">
                                             <label>Grand Total</label>
                                             <div class="totals-value" id="cart-total">9440</div>
@@ -156,6 +156,7 @@
                                         /* Set rates + misc */
                                         var taxRate = 0.18;
                                         var shippingRate = 00;
+                                        var couponDiscount = 00;
                                         var fadeTime = 300;
 
 
@@ -170,8 +171,7 @@
 
 
                                         /* Recalculate cart */
-                                        function recalculateCart()
-                                        {
+                                        function recalculateCart() {
                                             var subtotal = 0;
 
                                             /* Sum up row totals */
@@ -181,8 +181,9 @@
 
                                             /* Calculate totals */
                                             var tax = subtotal * taxRate;
+                                            var discount = couponDiscount;
                                             var shipping = (subtotal > 0 ? shippingRate : 0);
-                                            var total = subtotal + tax + shipping;
+                                            var total = subtotal + tax + shipping - discount;
 
                                             /* Update totals display */
                                             $('.totals-value').fadeOut(fadeTime, function () {
@@ -239,18 +240,19 @@
                                             }
                                         }
                                         changeGSTLabel();
-
-
-
-                                        $(function () {
-                                            $("#chkcoupon").click(function () {
-                                                if ($(this).is(":checked")) {
-                                                    $("#reduceamt").show();
-                                                } else {
-                                                    $("#reduceamt").hide();
-                                                }
-                                            });
-                                        });
+                                        function applyCoupon(name, amt) {
+                                            var checked = $('#chkcoupon').is(':checked');
+                                            if (checked === true) {
+                                                $("#reduceamt").show();
+                                                $('#coupon_name').html(name);
+                                                $('#coupon_amt').html(parseFloat(amt).toFixed(2));
+                                                couponDiscount = amt;
+                                            } else {
+                                                $("#reduceamt").hide();
+                                                couponDiscount = 0;
+                                            }
+                                            recalculateCart();
+                                        }
         </script>
     </body>
 </html>
