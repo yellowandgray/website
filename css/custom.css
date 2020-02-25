@@ -217,15 +217,17 @@ and open the template in the editor.
 
 .logout_position {
     text-align: right;
+    display: flex;
+    height: 100%;
     float: right;
-    height: 100%
+    margin-top: 10px;
 }
 
 .logout_section {
     /*    padding-top: 20px;
         border-radius: 50%;
         width: 50px;*/
-    margin-top: 5px;
+    margin-top: 10px;
     /*    height: 30px;
         background-position: center;*/
     cursor: pointer;
@@ -564,7 +566,7 @@ and open the template in the editor.
 }
 
 .logo {
-    width: 200px;
+    width: auto;
     margin: 0 auto;
 }
 
@@ -750,6 +752,7 @@ and open the template in the editor.
     font-size: 18px;
     position: relative;
     top: 3px;
+    font-weight: 600;
 }
 
 .heading-custom {
@@ -803,4 +806,74 @@ and open the template in the editor.
 
 .title-section {
     font-size: 18px;
+}
+
+.headnav li a:hover {
+    color: transparent;
+}
+
+.btn-custom {
+    background: #003bb3;
+    color: #fff;
+    opacity: 0.9;
+}
+
+.btn-custom:hover {
+    background: #003bb3;
+    color: #fff;
+    opacity: 1;
+}
+
+.logout-btn {
+    text-decoration: none;
+    color: #ffffff;
+    background: #003bb3;
+    opacity: 0.9;
+    margin-top: 7px;
+    margin-right: 12px;
+    height: 20px;
+}
+
+.logout-btn:hover{
+    opacity: 1;
+    background: #003bb3;
+    color: #ffffff;
+}
+
+.menu-bar i {
+    font-size: 25px;
+}
+
+.no-header-logo {
+    width: 200px;
+    margin: 0 auto;
+}
+
+.table-title {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.table-title td {
+    color: #fff;
+    font-size: 20px;
+    text-align: left;
+}
+
+.table-title th {
+    color: #fff;
+    font-size: 20px;
+    text-align: left;
+    padding-left: 5px;
+}
+
+.sub-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.quiz-heading-width {
+    width: 75%;
+    margin: 0 auto;
 }

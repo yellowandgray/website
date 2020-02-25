@@ -1,5 +1,5 @@
 var avatar = '';
-var BASE_IMAGE_URL = 'http://localhost/project/mekana/api/v1/';
+var BASE_IMAGE_URL = 'api/v1/';
 
 function attachFile(id) {
     var val = $('#' + id).val();
@@ -14,7 +14,7 @@ function attachFile(id) {
             processData: false,
             contentType: false,
             data: form,
-            success: function(data) {
+            success: function (data) {
                 $('.loader').removeClass('is-active');
                 if (data.result.error === false) {
                     if (id == 'profile_picture') {
@@ -27,7 +27,7 @@ function attachFile(id) {
                     swal('Information', data.result.message, 'info');
                 }
             },
-            error: function(err) {
+            error: function (err) {
                 $('.loader').removeClass('is-active');
                 swal('Error', err.statusText, 'error');
             }
@@ -44,8 +44,8 @@ function registerStudent() {
     $.ajax({
         type: "POST",
         url: 'api/v1/insert_student',
-        data: { user_name: $('#user_name').val(), student_name: $('#student_name').val(), parent_name: $('#parent_name').val(), profile_picture: avatar, gender: $('#gender').val(), mobile: $('#mobile').val(), city: $('#city').val(), pin: $('#pin').val(), school_name: $('#school_name').val(), standard: $('#standard').val(), email: $('#email').val(), password: $('#password').val(), confirm_password: $('#confirm_password').val() },
-        success: function(data) {
+        data: {user_name: $('#user_name').val(), student_name: $('#student_name').val(), parent_name: $('#parent_name').val(), profile_picture: avatar, gender: $('#gender').val(), mobile: $('#mobile').val(), city: $('#city').val(), pin: $('#pin').val(), school_name: $('#school_name').val(), standard: $('#standard').val(), email: $('#email').val(), password: $('#password').val(), confirm_password: $('#confirm_password').val()},
+        success: function (data) {
             $('.loader').removeClass('is-active');
             if (data.result.error === false) {
                 window.location = 'login-page.php';
@@ -63,12 +63,15 @@ function registerStudent() {
                 $('#email').val('');
                 $('#password').val('');
                 $('#confirm_password').val('');
-                swal("Thank you!", " Our Team will get in touch with you soon.", "success");
+                swal("Thanks for Registration!", "Your Account Has been Created... Please wait, This page automatically go to the login page.", "success");
+                setTimeout(function () {
+                    window.location = 'login-page';
+                }, 3000);
             } else {
                 swal("Oops!", data.result.message, "info");
             }
         },
-        error: function(err) {
+        error: function (err) {
             $('.loader').removeClass('is-active');
             swal("Oops!", err.statusText, "error");
         }
@@ -81,16 +84,19 @@ function loginStudent() {
     $.ajax({
         type: "POST",
         url: 'api/v1/loginstudent',
-        data: { user_name: $('#user-name').val(), password: $('#password1').val() },
-        success: function(data) {
+        data: {user_name: $('#user-name').val(), password: $('#password1').val()},
+        success: function (data) {
             $('.loader').removeClass('is-active');
             if (data.result.error === false) {
-                window.location = 'select_language';
+                swal('Yes!', 'You can, and You will', 'success');
+                setTimeout(function () {
+                    window.location = 'select_language';
+                }, 3000);
             } else {
                 swal('Information', data.result.message, 'info');
             }
         },
-        error: function(err) {
+        error: function (err) {
             $('.loader').removeClass('is-active');
             swal('Error', err.statusText, 'error');
         }
@@ -99,21 +105,24 @@ function loginStudent() {
 }
 
 
-function logoutUser() {
+function logoutUser(name) {
     $('.loader').addClass('is-active');
     $.ajax({
         type: "POST",
         url: 'api/v1/logout_student',
         data: {},
-        success: function(data) {
+        success: function (data) {
             $('.loader').removeClass('is-active');
             if (data.result.error === false) {
-                window.location = 'index';
+                swal('', 'Thanks ' + name + ' for using Feringo to enrich your knowledge and score high marks', 'info');
+                setTimeout(function () {
+                    window.location = 'index';
+                }, 3000);
             } else {
                 swal('Information', data.result.message, 'info');
             }
         },
-        error: function(err) {
+        error: function (err) {
             $('.loader').removeClass('is-active');
             swal('Error', err.statusText, 'error');
         }
@@ -124,4 +133,32 @@ function closeProfilePic() {
     $("#profile_picture").val('');
     $("#preview_container").addClass('hidden');
     $("#upload_container").removeClass('hidden');
+}
+
+function changePassword() {
+    $('.loader').addClass('is-active');
+    $.ajax({
+        type: "POST",
+        url: 'api/v1/reset_password',
+        data: {user_name: $('#user_name').val(), password: $('#password').val(), confirm_password: $('#confirm_password').val()},
+        success: function (data) {
+            $('.loader').removeClass('is-active');
+            if (data.result.error === false) {
+                swal('Information', data.result.message, 'success');
+                $('#user_name').val('');
+                $('#password').val('');
+                $('#confirm_password').val('');
+                setTimeout(function () {
+                    window.location = 'login-page';
+                }, 2000);
+            } else {
+                swal('Information', data.result.message, 'info');
+            }
+        },
+        error: function (err) {
+            $('.loader').removeClass('is-active');
+            swal('Error', err.statusText, 'error');
+        }
+    });
+    return false;
 }

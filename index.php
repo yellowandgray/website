@@ -8,23 +8,46 @@ $obj = new Common();
     <?php include 'head.php'; ?>
     <body>
         <div id="wrapper">
-            <!-- toggle top area -->
-            <!--            <div class="hidden-top">
-                            <div class="hidden-top-inner container">
-                                <div class="row">
-                                    <div class="span12">
-                                        <ul>
-                                            <li><strong>We are available for any custom works this month</strong></li>
-                                            <li>Main office: Springville center X264, Park Ave S.01</li>
-                                            <li>Call us <i class="icon-phone"></i> (123) 456-7890 - (123) 555-7891</li>
-                                        </ul>
-                                    </div>
-                                </div>
+            <header>
+                <div class = 'container'>
+                    <div class = 'row nomargin'>
+                        <div class = 'span4 no-margin'>
+                            <div class = 'logo'>
+                                <a href = 'index'>
+                                    <img src = 'img/logo.png' alt = '' class = 'logo' />
+                                </a>
                             </div>
-                        </div>-->
-            <!-- end toggle top area -->
-            <!-- start header -->
-            <?php include 'menu.php'; ?>
+                        </div>
+                        <div class = 'span8'>
+                            <div class = 'headnav'>
+                                <ul>
+                                    <li>
+                                        <a href = 'register-page'>
+            <!--                                    <i class = 'icon-user'></i>-->
+                                            <button class="btn btn-custom">Register</button>
+                                        </a>
+                                        <a href = 'login-page'>
+                                            <button class="btn btn-custom">Login</button>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class = 'headnav-1'>
+                                <ul>
+                                    <li>
+                                        <a href = 'register-page'>
+                                            <i class = 'icon-user'></i>
+                                        </a>
+                                        <a href = 'login-page'>
+                                            <i class="icon-signin"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
             <!-- end header -->
             <section id="featured">
                 <!-- start slider -->

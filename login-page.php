@@ -6,9 +6,9 @@
             <section id="featured-1">
 
                 <div id="mySignin" tabindex="-1" role="dialog" aria-labelledby="mySigninModalLabel" aria-hidden="true">
-                    <div class = 'logo'>
+                    <div class="no-header-logo">
                         <a href='index'>
-                            <img src = 'img/logo.png' alt = '' class = 'logo' />
+                            <img src = 'img/logo.png' alt = '' />
                         </a>
 
                     </div>

@@ -24,17 +24,31 @@ $counter = 0;
                     <div class="modal styled">
                         <div class="modal-header login-section">
                             <a href="question-subject-order"><i class="font-icon-arrow-simple-left"></i></a>
-                            <h4 id="mySigninModalLabel" class="text-center"><?php echo $language['name']; ?> - Subject Order <br/> <strong class="title-section">Select Subject and Topic</strong></h4>
+                            <h4 id="mySigninModalLabel" class="text-center">
+                                <table class="table-title">
+                                    <tr>
+                                        <td valign="top">Selected Language</td>
+                                        <td valign="top" class="w-5">:</td>
+                                        <th valign="top"><?php echo $language['name']; ?></th>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">Selected Order</td>
+                                        <td valign="top" class="w-5">:</td>
+                                        <th valign="top">Subject Order</th>
+                                    </tr>
+                                </table>
+                            </h4>
                         </div>
                         <div class="modal-body">
                             <div class="language_section">
+                                <h6 class="sub-title">Selected subject and Topic</h6>
                                 <ul class="subject-section-order">
                                     <?php
                                     foreach ($alltopics as $key => $row) {
                                         $counter++;
                                         ?>
                                         <li>
-                                            <input type="checkbox" id="option<?php echo $counter; ?>"><label for="option<?php echo $counter; ?>" class="heading-custom"> <?php echo $key; ?></label>
+                                            <input type="checkbox" id="option<?php echo $counter; ?>"><label for="option<?php echo $counter; ?>" class=""> <?php echo $key; ?></label>
                                             <ul>
                                                 <?php foreach ($row as $r) { ?>
                                                     <li><label class="pl-0"><input type="checkbox" name="suboptions[]" value="<?php echo $r['topic_id']; ?>" class="subOption<?php echo $counter; ?> suboptions"> <span><?php echo $r['name']; ?></span></label></li>

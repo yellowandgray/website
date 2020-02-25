@@ -18,10 +18,20 @@ $_SESSION['student_selected_language_id'] = $language['language_id'];
                     <div class="modal styled">
                         <div class="modal-header login-section">
                             <a href="select_language"><i class="font-icon-arrow-simple-left"></i></a>
-                            <h4 id="mySigninModalLabel" class="text-center"><?php echo $language['name']; ?> <br/> <strong class="title-section">Select Types</strong></h4>
+                            <h4 id="mySigninModalLabel" class="text-center">
+                                <table class="table-title">
+                                    <tr>
+                                        <td valign="top">Selected Language</td>
+                                        <td valign="top" class="w-5">:</td>
+                                        <th valign="top"><?php echo $language['name']; ?></th>
+                                    </tr>
+                                </table>
+<!--                                 <br/> <strong class="title-section"></strong>-->
+                            </h4>
                         </div>
                         <div class="modal-body">
                             <div class="language_section">
+                                <h6 class="sub-title">Select Types</h6>
                                 <ul>
                                     <li>
                                         <i class="icon-double-angle-right"></i>

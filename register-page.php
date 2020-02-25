@@ -7,8 +7,11 @@
                 <div class="container">
                     <div class="row">
                         <div class="span12">
-                            <div class = 'logo'>
-                                <a href='index'><img src = 'img/logo.png' alt = '' class = 'logo' /></a>
+                            <div class="no-header-logo">
+                                <a href='index'>
+                                    <img src = 'img/logo.png' alt = '' />
+                                </a>
+
                             </div>
                             <br/>
                             <div class="signup-title">

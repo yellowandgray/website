@@ -42,6 +42,7 @@ if (isset($_SESSION['student_register_id'])) {
                         </div>
                         <div class = 'span8'>
                             <h4>My Completed Task</h4>
+                            <h6>Test Report</h6>
                             <!-- start: Accordion -->
                             <div class = 'accordion' id = 'accordion2'>
                                 <div class = 'accordion-group'>
@@ -55,8 +56,8 @@ if (isset($_SESSION['student_register_id'])) {
                                                 <table class = 'table table-striped result_table'>
                                                     <thead>
                                                         <tr>
-                                                            <th class="text-center">Total Questions</th>
-                                                            <th class="text-center">Attended</th>
+                                                            <th class="text-center">Total</th>
+                                                            <th class="text-center">Attend</th>
                                                             <th class="text-center"><i class="icon-ok-sign"></i></th>
                                                             <th class="text-center"><i class="font-icon-remove-circle"></i></th>
                                                         </tr>
@@ -86,8 +87,8 @@ if (isset($_SESSION['student_register_id'])) {
                                             <table class = 'table table-striped result_table'>
                                                 <thead>
                                                     <tr>
-                                                        <th class="text-center">Total Questions</th>
-                                                        <th class="text-center">Attended</th>
+                                                        <th class="text-center">Total</th>
+                                                        <th class="text-center">Attend</th>
                                                         <th class="text-center"><i class="icon-ok-sign"></i></th>
                                                         <th class="text-center"><i class="font-icon-remove-circle"></i></th>
                                                     </tr>

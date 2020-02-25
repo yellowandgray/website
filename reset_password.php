@@ -4,32 +4,32 @@
         <h4 id = 'myResetModalLabel'>Reset your <strong>password</strong></h4>
     </div>
     <div class = 'modal-body'>
-        <form class = 'form-horizontal'>
+        <form class = 'form-horizontal' onsubmit="return changePassword();">
             <div class = 'control-group'>
-                <label class = 'control-label' for = 'user-name'>Username</label>
+                <label class = 'control-label' for = 'user_name'>Username</label>
                 <div class = 'controls'>
-                    <input type = 'text' id = 'user-name1' placeholder = 'User Name'>
+                    <input type = 'text' id = 'user_name' placeholder = '' required>
                 </div>
             </div>
             <div class = 'control-group'>
-                <label class = 'control-label' for = 'password'>Password</label>
+                <label class = 'control-label' for = 'password'>New Password</label>
                 <div class = 'controls'>
-                    <input type = 'password' id = 'password2' placeholder = 'Password'>
+                    <input type = 'password' id = 'password' placeholder = '' required>
                 </div>
             </div>
             <div class = 'control-group'>
-                <label class = 'control-label' for = 'confirm-password'>Confirm Password</label>
+                <label class = 'control-label' for = 'confirm_password'>Confirm Password</label>
                 <div class = 'controls'>
-                    <input type = 'password' id = 'confirm-password' placeholder = 'Confirm Password'>
+                    <input type = 'password' id = 'confirm_password' placeholder = '' required>
                 </div>
             </div>
             <div class = 'control-group'>
                 <div class = 'controls'>
                     <button type = 'submit' class = 'btn'>Reset password</button>
                 </div>
-                <p class = 'aligncenter margintop20'>
+<!--                <p class = 'aligncenter margintop20'>
                     Please put your registered user name. you have reset the your password...
-                </p>
+                </p>-->
             </div>
         </form>
     </div>

@@ -6,6 +6,11 @@ if (!isset($_GET['topics'])) {
     header('Location: subject');
 }
 $_SESSION['student_selected_topics_id'] = $_GET['topics'];
+//$topics = $obj->selectAll('t.*, s.name AS subject', 'topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id', 's.language_id=' . $_SESSION['student_selected_language_id']);
+//$alltopics = array();
+//foreach ($topics as $row) {
+//    $alltopics[$row['subject']][] = $row;
+//}
 $years = $obj->selectAll('*', 'year', 'status = 1');
 $language = $obj->selectRow('*', 'language', 'language_id=' . $_SESSION['student_selected_language_id']);
 ?>
@@ -23,10 +28,29 @@ $language = $obj->selectRow('*', 'language', 'language_id=' . $_SESSION['student
                     <div class='modal styled'>
                         <div class='modal-header login-section'>
                             <a href='question-subject-order'><i class='font-icon-arrow-simple-left'></i></a>
-                            <h4 id='mySigninModalLabel' class='text-center'><?php echo $language['name']; ?> - Question Order <br/> <strong class="title-section">Choose Year</strong></h4>
+                            <h4 id='mySigninModalLabel' class='text-center'>
+                                <table class="table-title">
+                                    <tr>
+                                        <td valign="top">Selected Language</td>
+                                        <td valign="top" class="w-5">:</td>
+                                        <th valign="top"><?php echo $language['name']; ?></th>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">Selected Order</td>
+                                        <td valign="top" class="w-5">:</td>
+                                        <th valign="top">Subject Order</th>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">Selected Subject and Topic</td>
+                                        <td valign="top" class="w-5">:</td>
+                                        <th valign="top">Subject and Topic</th>
+                                    </tr>
+                                </table>
+                            </h4>
                         </div>
                         <div class='modal-body'>
                             <div class='year_select_section'>
+                                <h6 class="sub-title">Select Year</h6>
                                 <ul>
                                     <?php foreach ($years as $yr) { ?>
                                         <li>

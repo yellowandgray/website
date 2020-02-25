@@ -23,10 +23,24 @@ $years = $obj->selectAll('*', 'year', 'status = 1');
                     <div class='modal styled'>
                         <div class='modal-header login-section'>
                             <a href='question-subject-order'><i class='font-icon-arrow-simple-left'></i></a>
-                            <h4 id='mySigninModalLabel' class='text-center'><?php echo $language['name']; ?> - Question Order <br/> <strong class="title-section">Year</strong></h4>
+                            <h4 id='mySigninModalLabel' class='text-center'>
+                                <table class="table-title">
+                                    <tr>
+                                        <td valign="top">Selected Language</td>
+                                        <td valign="top" class="w-5">:</td>
+                                        <th valign="top"><?php echo $language['name']; ?></th>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">Selected Order</td>
+                                        <td valign="top" class="w-5">:</td>
+                                        <th valign="top">Question Order</th>
+                                    </tr>
+                                </table>
+                            </h4>
                         </div>
                         <div class='modal-body'>
                             <div class='year_select_section'>
+                                <h6 class="sub-title">Select Year</h6>
                                 <ul class="list-none">
                                     <?php foreach ($years as $row) { ?>
                                         <li>

@@ -67,7 +67,25 @@ if (count($questions) > 0) {
                     <div class="span12">
                         <div class="quiz-question-section">
                             <a href = '#' onclick="goBack()"><i class = 'font-icon-arrow-simple-left'></i></a>
-                            <h2><?php echo $language['name']; ?> - <?php echo $type; ?></h2>
+                            <h4 id="mySigninModalLabel" class="text-center quiz-heading-width">
+                                <table class="table-title">
+                                    <tr>
+                                        <td valign="top">Selected Language</td>
+                                        <td valign="top" class="w-5">:</td>
+                                        <th valign="top"><?php echo $language['name']; ?></th>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">Selected Order</td>
+                                        <td valign="top" class="w-5">:</td>
+                                        <th valign="top"><?php echo $type; ?></th>
+                                    </tr>
+<!--                                    <tr>
+                                        <td valign="top">Selected Year</td>
+                                        <td valign="top" class="w-5">:</td>
+                                        <th valign="top"><?php echo $selyear['year'] ?></th>
+                                    </tr>-->
+                                </table>
+                            </h4>
                         </div>
                         <!--question Box-->
                         <div class="questionBox" id="app">

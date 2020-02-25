@@ -264,7 +264,7 @@ img.img-polaroid {
 
 .modal.styled .modal-header h4 {
     color: #fff;
-    font-size: 25px;
+    font-size: 20px;
     width: 75%;
     margin: 10px auto;
 }
@@ -2090,7 +2090,7 @@ ul.social-network li {
     padding: 0;
     border-top: 1px solid #cacaca;
     padding-top: 30px;
-/*    margin: 20px 0 0 0;*/
+    /*    margin: 20px 0 0 0;*/
 }
 
 .m-b-0 {
@@ -2588,11 +2588,11 @@ article .align-right {
     header .logo {
         margin: 0 auto;
         /*text-align: center;*/
-        margin-top: 20px;
+        /*        margin-top: 20px;*/
         /*float: none;*/
     }
     header .logo img {
-        margin-bottom: 10px;
+        margin: 0px 0 0 -15px;
     }
     header .logo h1 {
         font-size: 14px;
@@ -2652,7 +2652,7 @@ article .align-right {
         font-size: 14px;
     }
     .logout_dropdown {
-        top: 85px !important;
+        top: 60px !important;
     }
     .headnav {
         display: none;
@@ -2660,19 +2660,21 @@ article .align-right {
     .headnav-1 {
         display: block !important;
         float: right;
-        margin: 15px 0 0 0;
-        border-bottom: 1px dotted #e6e6e6;
+        /* margin: 15px 0 0 0; */
+        /* border-bottom: 1px dotted #e6e6e6;*/
     }
     .headnav-1 ul {
         margin-left: 0;
         list-style: none;
+        margin-bottom: 0;
+        margin-top: 10px;
     }
     .headnav-1 ul li {
         display: inline;
         margin-left: 10px;
     }
     .headnav-1 ul li a {
-        font-size: 30px;
+        font-size: 25px;
     }
     .subject-section {
         width: 95% !important;
@@ -2716,7 +2718,7 @@ article .align-right {
         padding: 5px 20px !important;
     }
     .result_user_section .user_profile {
-        height: 150px !important;
+        height: 200px !important;
     }
     .signup-section {
         width: 90% !important;
@@ -2743,6 +2745,19 @@ article .align-right {
     }
     .topic_list_position_left a {
         font-size: 18px !important;
+    }
+    .no-margin {
+        margin: 0 !important
+    }
+    .logout_position {
+        text-align: right;
+        display: flex;
+        height: 100%;
+        float: none !important; 
+        margin-top: 0 !important;
+    }
+    header {
+        padding: 10px 0 !important;
     }
 }
 
