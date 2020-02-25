@@ -11,7 +11,16 @@ $app->post('/login', function() use ($app) {
     if (count($record) > 0) {
         $res['error'] = false;
         $res['message'] = 'Welcome, ' . $record['name'];
+        $record['role'] = 'admin';
         $res['data'] = $record;
+    } else {
+        $user = $obj->selectRow('*', 'user', 'BINARY username=\'' . $data['username'] . '\' AND BINARY password=\'' . $data['password'] . '\'');
+        if (count($user) > 0) {
+            $res['error'] = false;
+            $user['role'] = 'user';
+            $res['message'] = 'Welcome, ' . $user['name'];
+            $res['data'] = $user;
+        }
     }
     echoRespnse(201, $res);
 });
@@ -81,7 +90,7 @@ $app->post('/add_user_visit/:uid', function($uid) use ($app) {
     $res = array('error' => true);
     $com = new Common();
     date_default_timezone_set('Asia/Singapore');
-    if ($id > 0) {
+    if ($uid > 0) {
         $data['created_at'] = date('Y-m-d H:i:s');
         $data['updated_at'] = date('Y-m-d H:i:s');
         $data['user_id'] = $uid;
@@ -108,7 +117,7 @@ $app->post('/add_user_visit_out/:lid', function($lid) use ($app) {
     $res = array('error' => true);
     $com = new Common();
     date_default_timezone_set('Asia/Singapore');
-    if ($id > 0) {
+    if ($lid > 0) {
         $data['updated_at'] = date('Y-m-d H:i:s');
         $record = $com->updateRecordWithWhere($data, 'user_visit', 'user_visit_id=' . $lid);
         if ($record > 0) {
