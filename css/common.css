@@ -3155,3 +3155,8 @@ select::placeholder {
 #reduceamt {
     display: none;
 }
+
+#coupon_amt {
+    color: #15d015;
+    font-weight: 600;
+}

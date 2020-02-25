@@ -118,7 +118,7 @@ $app->post('/insert_coupon', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('coupon_name' => $data['coupon_name'], 'reduce_amt' => $data['reduce_amt'], 'start_date' => $data['start_date'], 'end_date' => $data['end_date'], 'status' => $data['status']), 'coupon');
+    $record = $com->insertRecord(array('coupon_name' => $data['coupon_name'], 'reduce_amt' => $data['reduce_amt'], 'status' => $data['status']), 'coupon');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
