@@ -10,8 +10,6 @@
     $product_2 = $obj->selectRow('*', 'product', 'product_id = 2');
     ?>
     <body class="goto-here">
-
-
         <!-- END nav -->
         <?php include 'enquiry.php'; ?>
         <section>
