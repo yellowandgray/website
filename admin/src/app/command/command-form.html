@@ -22,7 +22,7 @@
             </div>
         </div>
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center" *ngIf="commandForm.value.electromech_schedule_id == '2' || commandForm.value.electromech_schedule_id == '3'">
-             <div fxFlex="100%">
+            <div fxFlex="100%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Select Equipment Parts</mat-label>
                     <mat-select formControlName="category_id">
@@ -30,8 +30,8 @@
                     </mat-select>
                     <mat-error>Checklist Equipment Parts is required</mat-error>
                 </mat-form-field>
-            </div> 
-<!--            <div fxFlex="100%">
+            </div>
+            <!--            <div fxFlex="100%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Select Equipment Sub Parts</mat-label>
                     <mat-select required formControlName="subpart_id">
