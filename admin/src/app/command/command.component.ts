@@ -10,9 +10,10 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./command.component.css']
 })
 export class CommandComponent implements OnInit {
-  result = [];
+  result = null;
   schedule = [];
   selectedscheduleind = 0;
+  Object = Object;
   constructor(public dialog: MatDialog, private httpClient: HttpClient, private _snackBar: MatSnackBar) { }
 
   ngOnInit() {
@@ -32,11 +33,15 @@ export class CommandComponent implements OnInit {
       );
   }
   getCommand(ev): void {
+      this.result = null;
     this.selectedscheduleind = ev.index;
     this.httpClient.get<any>('http://www.lemonandshadow.com/electromech/api/v1/get_command_by_schedule/'+this.schedule[ev.index].electromech_schedule_id)
       .subscribe(
         (res) => {
-          this.result = res["result"]["data"];
+            if(res["result"]["error"] == false) {
+                this.result = res["result"]["data"];
+            }
+            console.log(this.result);
         },
         (error) => {
           this._snackBar.open(error["statusText"], '', {
@@ -96,7 +101,7 @@ export class CommandDialog {
   electromech_product_enquiry_list_id = 0;
   product: any[];
   schedule: any[];
-  category: any[];
+  subpart: any[];
   constructor(
     public dialogRef: MatDialogRef<CommandDialog>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -105,17 +110,18 @@ export class CommandDialog {
       this.commandForm = new FormGroup({
         'enquiry_list': new FormControl('', Validators.required),
         'electromech_product_id': new FormControl('', Validators.required),
-        'electromech_schedule_id': new FormControl('', Validators.required),
-        'category_id': new FormControl(''),
+        'electromech_schedule_id': new FormControl(1, Validators.required),
+        'subpart_id': new FormControl(0),
       });
       if (this.data != null) {
         this.commandForm.patchValue({
           enquiry_list: this.data.enquiry_list,
           electromech_product_id: this.data.electromech_product_id,
           electromech_schedule_id: this.data.electromech_schedule_id,
-          category_id: this.data.category_id,
+          subpart_id: this.data.electromech_subpart_id,
         });
         this.electromech_product_enquiry_list_id = this.data.electromech_product_enquiry_list_id;
+        this.getSubparts();
       }
       this.httpClient.get('http://www.lemonandshadow.com/electromech/api/v1/get_product').subscribe(
         (res) => {
@@ -147,10 +153,14 @@ export class CommandDialog {
             duration: 2000,
           });
         });
-       this.httpClient.get('http://www.lemonandshadow.com/electromech/api/v1/get_category').subscribe(
+    }
+    
+    getSubparts() {
+        if(this.commandForm.value.electromech_schedule_id && this.commandForm.value.electromech_schedule_id != 1) {
+            this.httpClient.get('http://www.lemonandshadow.com/electromech/api/v1/get_subpart_by_product/'+this.commandForm.value.electromech_product_id).subscribe(
          (res) => {
            if (res["result"]["error"] === false) {
-             this.category = res["result"]["data"];
+             this.subpart = res["result"]["data"];
            } else {
              this._snackBar.open(res["result"]["message"], '', {
                duration: 2000,
@@ -162,6 +172,7 @@ export class CommandDialog {
              duration: 2000,
            });
          });
+        }
     }
 
     onSubmit() {
@@ -175,13 +186,13 @@ export class CommandDialog {
         formData.append('enquiry_list', this.commandForm.value.enquiry_list);
         formData.append('electromech_product_id', this.commandForm.value.electromech_product_id);
         formData.append('electromech_schedule_id', this.commandForm.value.electromech_schedule_id);
-        formData.append('category_id', this.commandForm.value.category_id);
+        formData.append('electromech_subpart_id', this.commandForm.value.subpart_id);
         url = 'update_record/electromech_product_enquiry_list/electromech_product_enquiry_list_id = ' + this.electromech_product_enquiry_list_id;
       } else {
         formData.append('enquiry_list', this.commandForm.value.enquiry_list);
         formData.append('electromech_product_id', this.commandForm.value.electromech_product_id);
         formData.append('electromech_schedule_id', this.commandForm.value.electromech_schedule_id);
-        formData.append('category_id', this.commandForm.value.category_id);
+        formData.append('electromech_subpart_id', this.commandForm.value.subpart_id);
         url = 'insert_command';
       }
       this.httpClient.post('http://www.lemonandshadow.com/electromech/api/v1/' + url, formData).subscribe(
