@@ -170,6 +170,7 @@ $app->post('/checklists_for_inspect', function() use ($app) {
                 if (isset($log['electromech_schedule_id']) && $log['electromech_schedule_id'] != 1) {
                     $categries[$log['electromech_subpart_id']]['name'] = $log['subpart'];
                     $categries[$log['electromech_subpart_id']]['subpart_id'] = $log['electromech_subpart_id'];
+                    $categries[$log['electromech_subpart_id']]['image_path'] = $log['image_path'];
                     $categries[$log['electromech_subpart_id']]['checklist'][] = $log;
                 }
             }
@@ -185,26 +186,27 @@ $app->post('/checklists_for_inspect', function() use ($app) {
     echoRespnse(201, $res);
 });
 
-$app->post('/checklists_for_inspect_logs/:uid/:tid/:fid/:sid', function($uid, $tid, $fid, $sid) use ($app) {
+$app->post('/checklist_logs/:uid/:tid/:cid/:sid', function($uid, $tid, $cid, $sid) use ($app) {
     $res = array('error' => true, 'message' => 'No checklist found');
     date_default_timezone_set('Asia/Singapore');
     $data = $app->request->post();
     $obj = new Common();
     $user = $obj->selectRow('*', 'electromech_staff', 'electromech_staff_id=' . $uid);
     $train = $obj->selectRow('*', 'electromech_train', 'electromech_train_id=' . $tid);
-    $floor = $obj->selectRow('*', 'electromech_floor', 'electromech_floor_id=' . $fid);
+    $category = $obj->selectRow('*', 'electromech_category', 'electromech_category_id=' . $cid);
     $schedule = $obj->selectRow('*', 'electromech_schedule', 'electromech_schedule_id=' . $sid);
-    $insert = $obj->insertRecord(array('electromech_staff_name' => $user['name'], 'electromech_staff_id' => $uid, 'electromech_floor_id' => $fid, 'electromech_floor_name' => $floor['name'], 'electromech_schedule_id' => $sid, 'electromech_train_id' => $tid, 'electromech_schedule_name' => $schedule['name'], 'electromech_train_name' => $train['name'], 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'created_by' => $uid, 'updated_by' => $uid), 'electromech_product_enquiry_log');
+    $insert = $obj->insertRecord(array('electromech_staff_name' => $user['name'], 'electromech_staff_id' => $uid, 'electromech_category_id' => $cid, 'electromech_category_name' => $category['name'], 'electromech_schedule_id' => $sid, 'electromech_train_id' => $tid, 'electromech_schedule_name' => $schedule['name'], 'electromech_train_name' => $train['name'], 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'created_by' => $uid, 'updated_by' => $uid), 'electromech_product_enquiry_log');
     if ($insert > 0) {
         foreach ($data as $row) {
-            $checklist = array('electromech_product_id' => $row['electromech_product_id'], 'electromech_product_name' => $row['name'], 'electromech_product_code' => $row['code'], 'image_path' => $row['image_path'], 'electromech_product_enquiry_list_id' => '', 'electromech_product_enquiry_log_id' => $insert, 'enquiry_list' => '', 'electromech_category_id' => 0, 'electromech_category_name' => '', 'enquiry_status' => 0, 'enquiry_failure_comment' => '', 'general_comment' => $row['general_comment'], 'created_at' => date('Y-m-d H:i:s'), 'created_by' => $uid, 'updated_at' => date('Y-m-d H:i:s'), 'updated_by' => $uid);
-            if ($row['category'] != null && $row['category'] != 'null') {
-                foreach ($row['category'] as $key => $category) {
+            $checklist = array('electromech_product_id' => $row['electromech_product_id'], 'electromech_product_name' => $row['name'], 'electromech_product_code' => $row['code'], 'product_image_path' => $row['image_path'], 'electromech_product_enquiry_list_id' => '', 'electromech_product_enquiry_log_id' => $insert, 'enquiry_list' => '', 'electromech_subpart_id' => 0, 'electromech_subpart_name' => '', 'enquiry_status' => 0, 'enquiry_failure_comment' => '', 'general_comment' => $row['general_comment'], 'created_at' => date('Y-m-d H:i:s'), 'created_by' => $uid, 'updated_at' => date('Y-m-d H:i:s'), 'updated_by' => $uid);
+            if ($row['subpart'] != null && $row['subpart'] != 'null') {
+                foreach ($row['subpart'] as $key => $category) {
                     foreach ($category['checklist'] as $check) {
-                        $checklist['electromech_product_enquiry_list_id'] = $check['electromech_product_enquiry_list_id'];
+                        $checklist['electromech_product_enquiry_list_id'] = $check['enquiry_list'];
                         $checklist['enquiry_list'] = $check['enquiry_list'];
-                        $checklist['electromech_category_id'] = $check['electromech_category_id'];
-                        $checklist['electromech_category_name'] = $check['category'];
+                        $checklist['electromech_subpart_id'] = $category['subpart_id'];
+                        $checklist['electromech_subpart_name'] = $category['name'];
+                        $checklist['subpart_image_path'] = $category['image_path'];
                         $checklist['enquiry_status'] = $check['enquiry_status'];
                         $checklist['enquiry_failure_comment'] = $check['enquiry_failure_comment'];
                         $obj->insertRecord($checklist, 'electromech_product_enquiry_log_detail');
