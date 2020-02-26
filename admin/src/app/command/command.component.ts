@@ -106,7 +106,7 @@ export class CommandDialog {
         'enquiry_list': new FormControl('', Validators.required),
         'electromech_product_id': new FormControl('', Validators.required),
         'electromech_schedule_id': new FormControl('', Validators.required),
-        'category_id': new FormControl('', Validators.required),
+        'category_id': new FormControl(''),
       });
       if (this.data != null) {
         this.commandForm.patchValue({

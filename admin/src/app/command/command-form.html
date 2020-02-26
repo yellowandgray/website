@@ -25,7 +25,7 @@
              <div fxFlex="100%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Select Equipment Parts</mat-label>
-                    <mat-select required formControlName="category_id">
+                    <mat-select formControlName="category_id">
                         <mat-option [value]="row.electromech_category_id" *ngFor="let row of category">{{row.name}}</mat-option>
                     </mat-select>
                     <mat-error>Checklist Equipment Parts is required</mat-error>
