@@ -41,7 +41,6 @@ export class CommandComponent implements OnInit {
             if(res["result"]["error"] == false) {
                 this.result = res["result"]["data"];
             }
-            console.log(this.result);
         },
         (error) => {
           this._snackBar.open(error["statusText"], '', {
@@ -50,10 +49,10 @@ export class CommandComponent implements OnInit {
         }
       );
   }
-  openDialog(id, res): void {
+  openDialog(id, res, sub): void {
     var data = null;
     if (id != 0) {
-      this[res].forEach(val => {
+      this.result[res][sub].forEach(val => {
         if (parseInt(val.electromech_product_enquiry_list_id) === parseInt(id)) {
           data = val;
           return false;

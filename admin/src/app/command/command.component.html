@@ -33,6 +33,18 @@
                                 </mat-list>
                             </mat-expansion-panel>
                         </mat-accordion>
+                        <mat-list *ngIf="schedule[selectedscheduleind].electromech_schedule_id == 1">
+                            <mat-list-item *ngFor="let r of result[key]['']">
+                                <button mat-icon-button aria-label="label" (click)="openDialog(r.electromech_product_enquiry_list_id, key, '')">
+                                    <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
+                                </button>
+                                <button mat-icon-button aria-label="label" (click)="confirmDelete(r.electromech_product_enquiry_list_id)">
+                                    <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
+                                </button>
+                                <h4 mat-line>{{r.enquiry_list}}</h4>
+                                <mat-divider></mat-divider>
+                            </mat-list-item>
+                        </mat-list>
                     </mat-expansion-panel>
                 </mat-accordion>
             </mat-tab>
