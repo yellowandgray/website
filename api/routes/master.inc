@@ -105,7 +105,7 @@ $app->post('/insert_command', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('enquiry_list' => $data['enquiry_list'], 'electromech_product_id' => $data['electromech_product_id'], 'electromech_schedule_id' => $data['electromech_schedule_id']), 'electromech_product_enquiry_list');
+    $record = $com->insertRecord(array('enquiry_list' => $data['enquiry_list'], 'electromech_product_id' => $data['electromech_product_id'], 'electromech_schedule_id' => $data['electromech_schedule_id'], 'electromech_subpart_id' => $data['electromech_subpart_id']), 'electromech_product_enquiry_list');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
@@ -295,11 +295,15 @@ $app->get('/get_staff', function() {
 $app->get('/get_command_by_schedule/:sid', function($sid) {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
-    $data = $com->selectAll('c.*, p.name AS electromech_product', 'electromech_product_enquiry_list AS c LEFT JOIN electromech_product AS p ON p.electromech_product_id = c.electromech_product_id', 'electromech_schedule_id = ' . $sid);
+    $data = $com->selectAll('c.*, p.name AS electromech_product, s.name AS subpart', 'electromech_product_enquiry_list AS c LEFT JOIN electromech_product AS p ON p.electromech_product_id = c.electromech_product_id LEFT JOIN electromech_subpart AS s ON s.electromech_subpart_id = c.electromech_subpart_id', 'electromech_schedule_id = ' . $sid);
     if (count($data) > 0) {
+        $result = null;
         $res['error'] = false;
         $res['message'] = 'Records found';
-        $res['data'] = $data;
+        foreach ($data as $row) {
+            $result[$row['electromech_product']][$row['subpart']][] = $row;
+        }
+        $res['data'] = $result;
     }
     echoRespnse(201, $res);
 });
@@ -381,6 +385,18 @@ $app->post('/insert_subpart', function() use ($app) {
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_subpart_by_product/:pid', function($pid) {
+    $res = array('error' => true, 'message' => 'No records found');
+    $obj = new Common();
+    $record = $obj->selectAll('*', 'electromech_subpart', 'electromech_product_id = ' . $pid);
+    if (count($record) > 0) {
+        $res['error'] = false;
+        $res['data'] = $record;
+        $res['message'] = 'Records found';
     }
     echoRespnse(201, $res);
 });

@@ -5,7 +5,7 @@
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Select Equipment</mat-label>
-                    <mat-select required formControlName="electromech_product_id">
+                    <mat-select required formControlName="electromech_product_id" (selectionChange)="getSubparts()">
                         <mat-option [value]="row.electromech_product_id" *ngFor="let row of product">{{row.name}}</mat-option>
                     </mat-select>
                     <mat-error>Select Equipment is required</mat-error>
@@ -14,7 +14,7 @@
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Select Schedule</mat-label>
-                    <mat-select required formControlName="electromech_schedule_id">
+                    <mat-select required formControlName="electromech_schedule_id" (selectionChange)="getSubparts()">
                         <mat-option [value]="row.electromech_schedule_id" *ngFor="let row of schedule">{{row.name}}</mat-option>
                     </mat-select>
                     <mat-error>Schedule is required</mat-error>
@@ -22,24 +22,15 @@
             </div>
         </div>
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center" *ngIf="commandForm.value.electromech_schedule_id == '2' || commandForm.value.electromech_schedule_id == '3'">
-             <div fxFlex="100%">
+            <div fxFlex="100%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Select Equipment Parts</mat-label>
-                    <mat-select formControlName="category_id">
-                        <mat-option [value]="row.electromech_category_id" *ngFor="let row of category">{{row.name}}</mat-option>
+                    <mat-select formControlName="subpart_id">
+                        <mat-option [value]="row.electromech_subpart_id" *ngFor="let row of subpart">{{row.name}}</mat-option>
                     </mat-select>
                     <mat-error>Checklist Equipment Parts is required</mat-error>
                 </mat-form-field>
             </div> 
-<!--            <div fxFlex="100%">
-                <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Select Equipment Sub Parts</mat-label>
-                    <mat-select required formControlName="subpart_id">
-                        <mat-option [value]="row.electromech_subpart_id" *ngFor="let row of subpart">{{row.name}}</mat-option>
-                    </mat-select>
-                    <mat-error>Equipment Sub Parts is required</mat-error>
-                </mat-form-field>
-            </div>-->
         </div>
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
             <div fxFlex="100%">

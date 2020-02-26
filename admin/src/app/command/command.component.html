@@ -5,33 +5,36 @@
     <mat-sidenav-content>
         <app-header></app-header>
         <div class="add-btn-container">
-            <button mat-raised-button color="primary" (click)="openDialog(0, 'null')"><mat-icon>add</mat-icon> Inspection Checklist</button>
+            <button mat-raised-button color="primary" (click)="openDialog(0, 'null', 'null')"><mat-icon>add</mat-icon> Inspection Checklist</button>
         </div>
         <mat-tab-group (selectedTabChange)="getCommand($event);">
             <mat-tab *ngFor="let row of schedule" label="{{row.name}}">
-                <ng-container *ngFor="let data of result">
-                    <mat-accordion>
-                        <mat-expansion-panel>
-                            <mat-expansion-panel-header>
-                                <mat-panel-title>
-                                    {{data.electromech_product}}
-                                </mat-panel-title>
-                            </mat-expansion-panel-header>
-                            <mat-list>
-                                <mat-list-item>
-                                    <button mat-icon-button aria-label="label" (click)="openDialog(data.electromech_product_enquiry_list_id, 'result')">
-                                        <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
-                                    </button>
-                                    <button mat-icon-button aria-label="label" (click)="confirmDelete(data.electromech_product_enquiry_list_id)">
-                                        <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
-                                    </button>
-                                    <h4 mat-line>{{data.enquiry_list}}</h4>
-                                </mat-list-item>
-                                <mat-divider></mat-divider>
-                            </mat-list>
-                        </mat-expansion-panel>
-                    </mat-accordion>
-                </ng-container>
+                <mat-accordion *ngIf="result != null">
+                    <mat-expansion-panel *ngFor="let key of Object.keys(result)">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>{{key}}</mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <mat-accordion *ngIf="schedule[selectedscheduleind].electromech_schedule_id != 1">
+                            <mat-expansion-panel *ngFor="let row of Object.keys(result[key])">
+                                <mat-expansion-panel-header>
+                                    <mat-panel-title>{{row}}</mat-panel-title>
+                                </mat-expansion-panel-header>
+                                <mat-list>
+                                    <mat-list-item *ngFor="let r of result[key][row]">
+                                        <button mat-icon-button aria-label="label" (click)="openDialog(r.electromech_product_enquiry_list_id, key, row)">
+                                            <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
+                                        </button>
+                                        <button mat-icon-button aria-label="label" (click)="confirmDelete(r.electromech_product_enquiry_list_id)">
+                                            <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
+                                        </button>
+                                        <h4 mat-line>{{r.enquiry_list}}</h4>
+                                        <mat-divider></mat-divider>
+                                    </mat-list-item>
+                                </mat-list>
+                            </mat-expansion-panel>
+                        </mat-accordion>
+                    </mat-expansion-panel>
+                </mat-accordion>
             </mat-tab>
         </mat-tab-group>
     </mat-sidenav-content>

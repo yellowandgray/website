@@ -12,7 +12,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class SubpartComponent implements OnInit {
   data:any = null;
-  Object = Object;  
+  Object = Object;
   image_url: string = 'http://www.lemonandshadow.com/electromech/api/v1/';
   constructor(public dialog: MatDialog, private httpClient: HttpClient, private _snackBar: MatSnackBar) { }
   ngOnInit() {
