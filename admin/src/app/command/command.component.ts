@@ -147,21 +147,21 @@ export class CommandDialog {
             duration: 2000,
           });
         });
-      this.httpClient.get('http://www.lemonandshadow.com/electromech/api/v1/get_category').subscribe(
-        (res) => {
-          if (res["result"]["error"] === false) {
-            this.category = res["result"]["data"];
-          } else {
-            this._snackBar.open(res["result"]["message"], '', {
-              duration: 2000,
-            });
-          }
-        },
-        (error) => {
-          this._snackBar.open(error["statusText"], '', {
-            duration: 2000,
-          });
-        });
+       this.httpClient.get('http://www.lemonandshadow.com/electromech/api/v1/get_category').subscribe(
+         (res) => {
+           if (res["result"]["error"] === false) {
+             this.category = res["result"]["data"];
+           } else {
+             this._snackBar.open(res["result"]["message"], '', {
+               duration: 2000,
+             });
+           }
+         },
+         (error) => {
+           this._snackBar.open(error["statusText"], '', {
+             duration: 2000,
+           });
+         });
     }
 
     onSubmit() {
