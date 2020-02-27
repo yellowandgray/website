@@ -99,22 +99,22 @@ define ('PDF_PAGE_ORIENTATION', 'P');
 /**
  * Document creator.
  */
-define ('PDF_CREATOR', 'Agni');
+define ('PDF_CREATOR', 'Electromech Technologies Pte Ltd');
 
 /**
  * Document author.
  */
-define ('PDF_AUTHOR', 'Agni');
+define ('PDF_AUTHOR', 'Electromech Technologies Pte Ltd');
 
 /**
  * Header title.
  */
-define ('PDF_HEADER_TITLE', 'Ticket Detail');
+define ('PDF_HEADER_TITLE', 'Staff Report');
 
 /**
  * Header description string.
  */
-define ('PDF_HEADER_STRING', "by Agni - http://agnigold.com");
+define ('PDF_HEADER_STRING', "by Electromech Technologies Pte Ltd");
 
 /**
  * Document unit of measure [pt=point, mm=millimeter, cm=centimeter, in=inch].
