@@ -187,3 +187,7 @@ table {
 .option {
     font-size: 15px;
 }
+
+.user-table th {
+    text-align: left;
+}
