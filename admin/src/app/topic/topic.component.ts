@@ -14,13 +14,29 @@ import { Observable } from 'rxjs';
 })
 export class TopicComponent implements OnInit {
     topic = [];
+    subject = [];
+    selectedsubind = 0;
     constructor(public dialog: MatDialog, private httpClient: HttpClient, private _snackBar: MatSnackBar) { }
 
     ngOnInit() {
-        this.gettopic();
+        this.getsubject();
     }
-    gettopic(): void {
-        this.httpClient.get<any>('../api/v1/get_topic')
+    getsubject(): void {
+    this.httpClient.get<any>('http://localhost/project/exam-horse/api/v1/get_subject')
+      .subscribe(
+        (res) => {
+          this.subject = res["result"]["data"];
+        },
+        (error) => {
+          this._snackBar.open(error["statusText"], '', {
+            duration: 2000,
+          });
+        }
+      );
+  }
+    gettopic(ev): void {
+        this.selectedsubind = ev.index;
+        this.httpClient.get<any>('http://localhost/project/exam-horse/api/v1/get_topic_by_subject/'+this.subject[ev.index].subject_id)
         .subscribe(
                 (res)=>{
                     this.topic = res["result"]["data"];
@@ -50,7 +66,7 @@ export class TopicComponent implements OnInit {
 
         dialogRef.afterClosed().subscribe(result => {
           if(result !== false && result !== 'false') {
-                this.gettopic();
+                this.gettopic({index: this.selectedsubind});
             }
         });
     }
@@ -66,7 +82,7 @@ export class TopicComponent implements OnInit {
     });
    dialogRef.afterClosed().subscribe(result => {
        if(result !== false && result !== 'false') {
-          this.gettopic();
+          this.gettopic({index: this.selectedsubind});
        }
     });
     }
@@ -97,7 +113,7 @@ export class TopicForm {
         });
             this.topic_id = this.data.topic_id;
         }
-        this.httpClient.get('../api/v1/get_subject').subscribe(
+        this.httpClient.get('http://localhost/project/exam-horse/api/v1/get_subject').subscribe(
             (res) => {
                 if (res["result"]["error"] === false) {
                     this.subject = res["result"]["data"];
@@ -130,7 +146,7 @@ export class TopicForm {
         formData.append('subject_id', this.topicForm.value.subject_id);
         url = 'insert_topic';
       }
-      this.httpClient.post('../api/v1/'+url, formData).subscribe(
+      this.httpClient.post('http://localhost/project/exam-horse/api/v1/'+url, formData).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -174,7 +190,7 @@ export class TopicDelete {
             return;
       }
       this.loading = true;
-      this.httpClient.get('../api/v1/delete_record/topic/topic_id='+this.topic_id).subscribe(
+      this.httpClient.get('http://localhost/project/exam-horse/api/v1/delete_record/topic/topic_id='+this.topic_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {

@@ -140,10 +140,10 @@ $app->get('/get_subject', function() {
     echoRespnse(201, $res);
 });
 
-$app->get('/get_topic', function() {
+$app->get('/get_topic_by_subject/:sid', function($sid) {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
-    $data = $com->selectAll('*', 'topic', 'topic_id > 0');
+    $data = $com->selectAll('*', 'topic', 'subject_id = ' .$sid);
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
@@ -172,6 +172,7 @@ $app->get('/get_student', function() {
         $res['error'] = false;
         $res['message'] = 'Records found';
         $res['data'] = $data;
+        $res['total'] = count($data);
     }
     echoRespnse(201, $res);
 });

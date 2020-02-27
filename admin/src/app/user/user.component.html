@@ -5,11 +5,24 @@
     <mat-sidenav-content>
         <app-header></app-header>
         <div class="add-btn-container">
-            <button mat-raised-button color="primary" (click)="openDialog(0, 'null')"><mat-icon>add</mat-icon> User</button>
+            <div class="searchdesign" fxFlex="80%" fxLayoutAlign="start center">
+                <div fxFlex="30%" fxLayoutAlign="start center">
+                    <p>Total Students: {{student_count}}</p>
+                </div>
+                <mat-form-field fxFlex="70%">
+                    <input matInput type="text" placeholder="Search by name" [(ngModel)]="searchTerm" />
+                </mat-form-field>
+            </div>
+            <div fxFlex="80%">
+                <button mat-raised-button color="primary" (click)="openDialog(0, 'null')"><mat-icon>add</mat-icon> User</button>
+            </div>
         </div>
         <mat-list>
-            <ng-container *ngFor="let data of student">
+            <ng-container *ngFor="let data of student | filterUser:searchTerm">
                 <mat-list-item>
+                    <button mat-icon-button aria-label="label " (click)="openView(data.student_register_id, 'student') ">
+                        <mat-icon>remove_red_eye</mat-icon>
+                    </button>
                     <button mat-icon-button aria-label="label" (click)="openBlock()">
                         <mat-icon #tooltip="matTooltip" matTooltip="Block">block</mat-icon>
                     </button>

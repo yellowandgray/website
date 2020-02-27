@@ -32,9 +32,10 @@ import { HeaderComponent } from './header/header.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { QuestionComponent, QuestionForm, QuestionDelete } from './question/question.component';
 import { TopicComponent, TopicForm, TopicDelete } from './topic/topic.component';
-import { UserComponent, PictureViewUser, UserForm, UserDelete, BlockForm, ResultForm } from './user/user.component';
+import { UserComponent, PictureViewUser, UserForm, UserDelete, BlockForm, ResultForm, UserViewForm } from './user/user.component';
 import { YearComponent, YearForm, YearDelete } from './year/year.component';
 import { LoginComponent } from './login/login.component';
+import { filterUser } from './user/filter-user';
 
 
 
@@ -56,12 +57,14 @@ import { LoginComponent } from './login/login.component';
     PictureViewUser,
     UserForm,
     UserDelete,
+    UserViewForm,
     BlockForm,
     ResultForm,
     YearComponent,
     YearForm,
     YearDelete,
-    LoginComponent
+    LoginComponent,
+    filterUser,
   ],
   imports: [
     BrowserModule,
@@ -91,7 +94,7 @@ import { LoginComponent } from './login/login.component';
     MatButtonToggleModule,
     MatCardModule
   ],
-  entryComponents: [SubjectComponent, SubjectForm, SubjectDelete, QuestionComponent, QuestionForm, QuestionDelete, TopicComponent, TopicForm, TopicDelete, UserComponent, UserForm, PictureViewUser, UserDelete, BlockForm, ResultForm, YearComponent, YearForm, YearDelete],
+  entryComponents: [SubjectComponent, SubjectForm, SubjectDelete, QuestionComponent, QuestionForm, QuestionDelete, TopicComponent, TopicForm, TopicDelete, UserComponent, UserForm, PictureViewUser, UserDelete, BlockForm, ResultForm, UserViewForm, YearComponent, YearForm, YearDelete],
   providers: [],
   bootstrap: [AppComponent]
 })

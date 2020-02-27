@@ -22,11 +22,11 @@ export class SubjectComponent implements OnInit {
 
   ngOnInit() {
     this.getsubject();
-    this.gettopic();
+    // this.gettopic();
   }
-  image_url: string = '../api/v1/';
+  image_url: string = 'http://localhost/project/exam-horse/api/v1/';
   getsubject(): void {
-    this.httpClient.get<any>('../api/v1/get_subject')
+    this.httpClient.get<any>('http://localhost/project/exam-horse/api/v1/get_subject')
       .subscribe(
         (res) => {
           this.subject = res["result"]["data"];
@@ -38,19 +38,19 @@ export class SubjectComponent implements OnInit {
         }
       );
   }
-  gettopic(): void {
-    this.httpClient.get<any>('../api/v1/get_topic')
-      .subscribe(
-        (res) => {
-          this.topic = res["result"]["data"];
-        },
-        (error) => {
-          this._snackBar.open(error["statusText"], '', {
-            duration: 2000,
-          });
-        }
-      );
-  }
+  // gettopic(): void {
+  //   this.httpClient.get<any>('http://localhost/project/exam-horse/api/v1/get_topic')
+  //     .subscribe(
+  //       (res) => {
+  //         this.topic = res["result"]["data"];
+  //       },
+  //       (error) => {
+  //         this._snackBar.open(error["statusText"], '', {
+  //           duration: 2000,
+  //         });
+  //       }
+  //     );
+  // }
 
   openDialog(id, res): void {
     var data = null;
@@ -97,7 +97,7 @@ export class SubjectComponent implements OnInit {
   templateUrl: 'subject-form.html',
 })
 export class SubjectForm {
-  image_url: string = '../api/v1/';
+  image_url: string = 'http://localhost/project/exam-horse/api/v1/';
   subjectForm: FormGroup;
   loading = false;
   subject_id = 0;
@@ -124,7 +124,7 @@ export class SubjectForm {
       this.image_path = this.data.image_path;
     }
     
-    this.httpClient.get('../api/v1/get_language').subscribe(
+    this.httpClient.get('http://localhost/project/exam-horse/api/v1/get_language').subscribe(
       (res) => {
           if (res["result"]["error"] === false) {
               this.language = res["result"]["data"];
@@ -161,7 +161,7 @@ export class SubjectForm {
       formData.append('subject_image', this.image_path);
       url = 'insert_subject';
     }
-    this.httpClient.post('../api/v1/' + url, formData).subscribe(
+    this.httpClient.post('http://localhost/project/exam-horse/api/v1/' + url, formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -188,7 +188,7 @@ export class SubjectForm {
     this.loading = true;
     var formData = new FormData();
     formData.append('file', fileData);
-    this.httpClient.post('../api/v1/upload_file', formData).subscribe(
+    this.httpClient.post('http://localhost/project/exam-horse/api/v1/upload_file', formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -278,7 +278,7 @@ export class SubjectDelete {
       return;
     }
     this.loading = true;
-    this.httpClient.get('../api/v1/delete_record/subject/subject_id=' + this.subject_id).subscribe(
+    this.httpClient.get('http://localhost/project/exam-horse/api/v1/delete_record/subject/subject_id=' + this.subject_id).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
