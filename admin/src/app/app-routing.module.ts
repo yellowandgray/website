@@ -6,6 +6,7 @@ import { TopicComponent } from './topic/topic.component';
 import { UserComponent } from './user/user.component';
 import { YearComponent } from './year/year.component';
 import { LoginComponent } from './login/login.component';
+import { BookComponent } from './book/book.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
         {path: 'question', component: QuestionComponent},
         {path: 'user', component: UserComponent},
         {path: 'year', component: YearComponent},
+        {path: 'book', component: BookComponent},
     ];
 
 @NgModule({

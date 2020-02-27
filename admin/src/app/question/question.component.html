@@ -22,13 +22,13 @@
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="2%" fxLayoutAlign="start center">
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Select Subject</mat-label>
+                    <mat-label>Select Language</mat-label>
                     <mat-select [(ngModel)]="selected_language" (change)="getYearByLanguage()">
                         <mat-option [value]="row.language_id" *ngFor="let row of language">
                             {{row.name}}
                         </mat-option>
                     </mat-select>
-                    <mat-error>Subject is required</mat-error>
+                    <mat-error>Language is required</mat-error>
                 </mat-form-field>
             </div>
             <div fxFlex="50%">
@@ -40,6 +40,18 @@
                         </mat-option>
                     </mat-select>
                     <mat-error>Chapter is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Select Subject</mat-label>
+                    <mat-select>
+                        <!-- <mat-option value="0">All</mat-option> -->
+                        <mat-option [value]="data.subject_id" *ngFor="let data of subject">
+                            {{data.name}}
+                        </mat-option>
+                    </mat-select>
+                    <mat-error>Subject is required</mat-error>
                 </mat-form-field>
             </div>
             <div fxFlex="50%">

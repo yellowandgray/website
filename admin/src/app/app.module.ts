@@ -36,6 +36,7 @@ import { UserComponent, PictureViewUser, UserForm, UserDelete, BlockForm, Result
 import { YearComponent, YearForm, YearDelete } from './year/year.component';
 import { LoginComponent } from './login/login.component';
 import { filterUser } from './user/filter-user';
+import { BookComponent, BookForm, BookDelete } from './book/book.component';
 
 
 
@@ -65,6 +66,9 @@ import { filterUser } from './user/filter-user';
     YearDelete,
     LoginComponent,
     filterUser,
+    BookComponent,
+    BookForm, 
+    BookDelete
   ],
   imports: [
     BrowserModule,
@@ -94,7 +98,7 @@ import { filterUser } from './user/filter-user';
     MatButtonToggleModule,
     MatCardModule
   ],
-  entryComponents: [SubjectComponent, SubjectForm, SubjectDelete, QuestionComponent, QuestionForm, QuestionDelete, TopicComponent, TopicForm, TopicDelete, UserComponent, UserForm, PictureViewUser, UserDelete, BlockForm, ResultForm, UserViewForm, YearComponent, YearForm, YearDelete],
+  entryComponents: [SubjectComponent, SubjectForm, SubjectDelete, QuestionComponent, QuestionForm, QuestionDelete, TopicComponent, TopicForm, TopicDelete, UserComponent, UserForm, PictureViewUser, UserDelete, BlockForm, ResultForm, UserViewForm, YearComponent, YearForm, YearDelete, BookComponent, BookForm, BookDelete],
   providers: [],
   bootstrap: [AppComponent]
 })

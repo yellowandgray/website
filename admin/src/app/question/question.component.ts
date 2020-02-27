@@ -185,9 +185,18 @@ export class QuestionForm {
   loading = false;
   question_id = 0;
   question_image: string = "Select question Image";
+  option_a_image: string = "Option A Image";
+  option_b_image: string = "Option B Image";
+  option_c_image: string = "Option C Image";
+  option_d_image: string = "Option D Image";
   image_path: string = "";
   topic: any[];
   year: any[];
+  book: any[];
+  option_image_a: string = "";
+  option_image_b: string = "";
+  option_image_c: string = "";
+  option_image_d: string = "";
   constructor(
     public dialogRef: MatDialogRef<QuestionForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -202,24 +211,35 @@ export class QuestionForm {
       year_id: new FormControl("", Validators.required),
       a: new FormControl("", Validators.required),
       b: new FormControl("", Validators.required),
-      c: new FormControl("", Validators.required),
-      d: new FormControl("", Validators.required),
-      answer: new FormControl("", Validators.required)
+      c: new FormControl(""),
+      d: new FormControl(""),
+      answer: new FormControl("", Validators.required),
+      explanation: new FormControl(""),
+      data_dictionary: new FormControl(""),
+      book_id: new FormControl("", Validators.required),
+      page_no: new FormControl("", Validators.required),
+      notes: new FormControl("", Validators.required)
     });
     if (this.data != null) {
       this.questionForm.patchValue({
-        topic_id: this.data.topic_id,
-        question: this.data.name,
-        question_no: this.data.question_no,
-        direction: this.data.direction,
-        year_id: this.data.year_id,
-        a: this.data.a,
-        b: this.data.b,
-        c: this.data.c,
-        d: this.data.d,
-        answer: this.data.answer
+        topic_id: this.data.data.topic_id,
+        question: this.data.data.name,
+        question_no: this.data.data.question_no,
+        direction: this.data.data.direction,
+        year_id: this.data.data.year_id,
+        a: this.data.data.a,
+        b: this.data.data.b,
+        c: this.data.data.c,
+        d: this.data.data.d,
+        answer: this.data.data.answer,
+        explanation: this.data.data.explanation,
+        data_dictionary: this.data.data.data_dictionary,
+        book_id: this.data.data.book_id,
+        page_no: this.data.data.page_no,
+        notes: this.data.data.notes
       });
-      this.question_id = this.data.question_id;
+      this.question_id = this.data.data.question_id;
+      this.image_path = this.data.data.image_path;
     }
     this.httpClient
       .get("http://localhost/project/exam-horse/api/v1/get_topic_by_lng_year")
@@ -257,6 +277,18 @@ export class QuestionForm {
           });
         }
       );
+    this.httpClient
+      .get<any>("http://localhost/project/exam-horse/api/v1/get_book")
+      .subscribe(
+        res => {
+          this.book = res["result"]["data"];
+        },
+        error => {
+          this._snackBar.open(error["statusText"], "", {
+            duration: 2000
+          });
+        }
+      );
   }
 
   onSubmit() {
@@ -278,6 +310,14 @@ export class QuestionForm {
       formData.append("c", this.questionForm.value.c);
       formData.append("d", this.questionForm.value.d);
       formData.append("answer", this.questionForm.value.answer);
+      formData.append("explanation", this.questionForm.value.explanation);
+      formData.append(
+        "data_dictionary",
+        this.questionForm.value.data_dictionary
+      );
+      formData.append("page_no", this.questionForm.value.page_no);
+      formData.append("book_id", this.questionForm.value.book_id);
+      formData.append("notes", this.questionForm.value.notes);
       url = "update_record/question/question_id = " + this.question_id;
     } else {
       formData.append("topic_id", this.questionForm.value.topic_id);
@@ -291,6 +331,14 @@ export class QuestionForm {
       formData.append("c", this.questionForm.value.c);
       formData.append("d", this.questionForm.value.d);
       formData.append("answer", this.questionForm.value.answer);
+      formData.append("explanation", this.questionForm.value.explanation);
+      formData.append(
+        "data_dictionary",
+        this.questionForm.value.data_dictionary
+      );
+      formData.append("page_no", this.questionForm.value.page_no);
+      formData.append("book_id", this.questionForm.value.book_id);
+      formData.append("notes", this.questionForm.value.notes);
       url = "insert_question";
     }
     this.httpClient
@@ -328,6 +376,42 @@ export class QuestionForm {
           this.loading = false;
           if (res["result"]["error"] === false) {
             this[path] = res["result"]["data"];
+            if (path == "option_image_a") {
+              this.questionForm.patchValue({
+                a:
+                  '<img src="' +
+                  this.image_url +
+                  res["result"]["data"] +
+                  '" alt="option" />'
+              });
+            }
+            if (path == "option_image_b") {
+              this.questionForm.patchValue({
+                b:
+                  '<img src="' +
+                  this.image_url +
+                  res["result"]["data"] +
+                  '" alt="option" />'
+              });
+            }
+            if (path == "option_image_c") {
+              this.questionForm.patchValue({
+                c:
+                  '<img src="' +
+                  this.image_url +
+                  res["result"]["data"] +
+                  '" alt="option" />'
+              });
+            }
+            if (path == "option_image_d") {
+              this.questionForm.patchValue({
+                d:
+                  '<img src="' +
+                  this.image_url +
+                  res["result"]["data"] +
+                  '" alt="option" />'
+              });
+            }
           } else {
             this._snackBar.open(res["result"]["message"], "", {
               duration: 2000
@@ -342,14 +426,12 @@ export class QuestionForm {
         }
       );
   }
-
   removeMedia(url) {
     this[url] = "";
     if (url === "image_path") {
       this.question_image = "Select Question Image";
     }
   }
-
   editorConfig: AngularEditorConfig = {
     editable: true,
     spellcheck: true,
@@ -361,6 +443,46 @@ export class QuestionForm {
     translate: "no",
     enableToolbar: true,
     showToolbar: true,
+    placeholder: "Enter text here...",
+    defaultParagraphSeparator: "",
+    defaultFontName: "Arial",
+    defaultFontSize: "3",
+    fonts: [
+      { class: "arial", name: "Arial" },
+      { class: "times-new-roman", name: "Times New Roman" },
+      { class: "calibri", name: "Calibri" },
+      { class: "comic-sans-ms", name: "Comic Sans MS" }
+    ],
+    customClasses: [
+      {
+        name: "quote",
+        class: "quote"
+      },
+      {
+        name: "redText",
+        class: "redText"
+      },
+      {
+        name: "titleText",
+        class: "titleText",
+        tag: "h1"
+      }
+    ],
+    uploadUrl: "http://localhost/project/exam-horse/api/v1/upload_image",
+    sanitize: true,
+    toolbarPosition: "top"
+  };
+  editorOptionConfig: AngularEditorConfig = {
+    editable: true,
+    spellcheck: true,
+    height: "20px",
+    minHeight: "20px",
+    maxHeight: "20px",
+    width: "auto",
+    minWidth: "0",
+    translate: "no",
+    enableToolbar: true,
+    showToolbar: false,
     placeholder: "Enter text here...",
     defaultParagraphSeparator: "",
     defaultFontName: "Arial",

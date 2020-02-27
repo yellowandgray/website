@@ -128,6 +128,19 @@ $app->post('/insert_question', function() use ($app) {
     echoRespnse(201, $res);
 });
 
+$app->post('/insert_book', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to insert');
+    $data = $app->request->post();
+    $com = new Common();
+    $record = $com->insertRecord(array('book_name' => $data['book_name'], 'book_name_id' => $data['book_name_id']), 'book');
+    if ($record > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Record inserted successfully';
+    }
+    echoRespnse(201, $res);
+});
+
+
 $app->get('/get_subject', function() {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
@@ -331,6 +344,19 @@ $app->post('/reset_password', function() use ($app) {
         }
     } else {
         $res['message'] = 'User Name Incorrect';
+    }
+    echoRespnse(201, $res);
+});
+
+
+$app->get('/get_book', function() {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('*', 'book', 'book_id > 0');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
     }
     echoRespnse(201, $res);
 });
