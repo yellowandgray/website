@@ -5,22 +5,20 @@
     <mat-sidenav-content>
         <app-header></app-header>
         <div class="add-btn-container">
-            <button mat-raised-button color="primary" (click)="openDialog(0, 'null')"><mat-icon>add</mat-icon> Snacks</button>
+            <button mat-raised-button color="primary" (click)="openDialog(0, 'null')"><mat-icon>add</mat-icon> Delivery Boy</button>
         </div>
         <mat-list>
             <ng-container *ngFor="let data of result">
                 <mat-list-item>
-                    <mat-slide-toggle #tooltip="matTooltip" matTooltip="Active Banner"></mat-slide-toggle>
-                    <button mat-icon-button aria-label="label" (click)="openDialog(data.id, 'result')">
+                    <button mat-icon-button aria-label="label" (click)="openDialog(data.delivery_boy_id, 'result')">
                         <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
                     </button>
-                    <button mat-icon-button aria-label="label" (click)="confirmDelete(data.id)">
+                    <button mat-icon-button aria-label="label" (click)="confirmDelete(data.delivery_boy_id)">
                         <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                     </button>
                     <img matListAvatar class="cursor" src="{{image_url}}{{data.imageurl}}" *ngIf="data.imageurl && data.imageurl != ''" alt="image" (click)="imageView(data, 'preview')" />
-                    <h4 mat-line>{{data.name}}</h4>
-                    <span matLine>Qty - {{data.unit_no}} {{data.unit}}</span>
-                    <p mat-line>RS: {{data.amount}}</p>
+                    <h4 mat-line>{{data.first_name}} {{data.last_name}}</h4>
+                    <p mat-line>{{data.phone}}</p>
                 </mat-list-item>
                 <mat-divider></mat-divider>
             </ng-container>

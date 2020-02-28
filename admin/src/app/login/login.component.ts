@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
         (res) => {
           this.loading = false;
           if (res["result"]["error"] === false) {
-            this.router.navigateByUrl('/banner');
+            this.router.navigateByUrl('/snacks');
           } else {
             this._snackBar.open(res["result"]["message"], '', {
               duration: 2000,

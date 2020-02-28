@@ -7,6 +7,7 @@ import { UserComponent } from './user/user.component';
 import { OrderComponent } from './order/order.component';
 import { UnitComponent } from './unit/unit.component';
 import { BannerComponent } from './banner/banner.component';
+import { DeliveryBoyComponent } from './delivery-boy/delivery-boy.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: 'user', component: UserComponent},
   {path: 'order', component: OrderComponent},
   {path: 'unit', component: UnitComponent},
+  {path: 'delivery_boy', component: DeliveryBoyComponent},
 ];
 
 @NgModule({

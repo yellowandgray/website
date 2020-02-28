@@ -1,0 +1,62 @@
+<h2 mat-dialog-title>Delivery Boy</h2>
+<mat-dialog-content class="mat-typography">
+    <form [formGroup]="deliveryform" (ngSubmit)="onSubmit()">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>First Name</mat-label>
+                    <input matInput placeholder="" required formControlName="first_name" />
+                    <mat-error>First Name is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput placeholder="" required formControlName="last_name" />
+                    <mat-error>Last Name is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>User Name</mat-label>
+                    <input matInput placeholder="" required formControlName="user_name" />
+                    <mat-error>User Name is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Password</mat-label>
+                    <input matInput placeholder="" required formControlName="password" />
+                    <mat-error>Password is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="100%" fxLayoutAlign="center center">
+                <button *ngIf="imageurl == ''" type="button" mat-raised-button (click)="fileInput.click()">{{profile_image}}</button>
+                <input hidden #fileInput type="file" id="file" (change)="fileProgress($event, 'profile_image', 'imageurl')" />
+                <div class="preview-image" *ngIf="imageurl != ''">
+                    <img class="dialog-picture" mat-card-image src="{{image_url}}{{imageurl}}" alt="Photo" />
+                    <button mat-icon-button aria-label="Close icon" (click)="removeMedia('imageurl')">
+                    <mat-icon>close</mat-icon>
+                </button>
+                </div>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Phone Number</mat-label>
+                    <input matInput placeholder="" required formControlName="phone" />
+                    <mat-error>Phone Number is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
+            <button mat-button [mat-dialog-close]="false">Cancel</button>
+            <button mat-button type="submit" [disabled]="loading">Save</button>
+            <mat-progress-spinner class="example-margin" *ngIf="loading" [mode]="'indeterminate'" [strokeWidth]="3" [diameter]="25">
+            </mat-progress-spinner>
+        </div>
+    </form>
+</mat-dialog-content>

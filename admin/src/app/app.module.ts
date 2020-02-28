@@ -37,6 +37,7 @@ import {MatNativeDateModule} from '@angular/material/core';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { DeliveryBoyComponent, DeliveryBoyForm, DeliveryBoyDelete, PictureViewUser } from './delivery-boy/delivery-boy.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,11 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     BannerComponent,
     BannerForm,
     BannerDelete,
-    BannerImageView
+    BannerImageView,
+    DeliveryBoyComponent,
+    DeliveryBoyForm,
+    DeliveryBoyDelete,
+    PictureViewUser
   ],
   imports: [
     BrowserModule,
@@ -113,7 +118,12 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     BannerComponent, 
     BannerForm, 
     BannerDelete,
-    BannerImageView],
+    BannerImageView,
+    DeliveryBoyComponent,
+    DeliveryBoyForm,
+    DeliveryBoyDelete,
+    PictureViewUser
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

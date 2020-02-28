@@ -55,3 +55,9 @@ mat-sidenav {
 .width-100 {
     width: 100%;
 }
+
+.member-profile {
+    max-height: 100%!important;
+    height: auto!important;
+    width: 100%!important;
+}
