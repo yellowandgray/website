@@ -1,0 +1,58 @@
+<h2 mat-dialog-title>Student Information</h2>
+<mat-dialog-content class="mat-typography">
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+        <div class="member-profile-view" fxFlex="70%">
+            <table mat-table class="user-table">
+                <tr>
+                    <th mat-header-cell>Name</th>
+                    <td mat-cell> : </td>
+                    <td mat-cell> {{data.student_name}} </td>
+                </tr>
+                <tr>
+                    <th mat-header-cell> Parent Name </th>
+                    <td mat-cell> : </td>
+                    <td mat-cell> {{data.parent_name}} </td>
+                </tr>
+                <tr>
+                    <th mat-header-cell> Gender </th>
+                    <td mat-cell> : </td>
+                    <td mat-cell> {{data.gender}} </td>
+                </tr>
+                <tr>
+                    <th mat-header-cell> Contact Number </th>
+                    <td mat-cell> : </td>
+                    <td mat-cell> {{ data.mobile }} </td>
+                </tr>
+                <tr>
+                    <th mat-header-cell> Standard </th>
+                    <td mat-cell> : </td>
+                    <td mat-cell> {{data.standard}} </td>
+                </tr>
+                <tr>
+                    <th mat-header-cell> School Name </th>
+                    <td mat-cell> : </td>
+                    <td mat-cell> {{data.school_name}} </td>
+                </tr>
+                <tr>
+                    <th mat-header-cell> City </th>
+                    <td mat-cell> : </td>
+                    <td mat-cell> {{data.city}} - {{data.pin}} </td>
+                </tr>
+                <tr>
+                    <th mat-header-cell> Email Address </th>
+                    <td mat-cell> : </td>
+                    <td mat-cell> {{data.email}} </td>
+                </tr>
+            </table>
+        </div>
+        <div class="member-profile-view" fxFlex="30%" fxLayoutAlign="start start">
+            <div fxFlex="100%" fxLayoutAlign="end start">
+                <img src="{{image_url}}{{data.profile_image}}" alt="" />
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
+        <button mat-button [mat-dialog-close]="false">Cancel</button>
+    </div>
+</mat-dialog-content>

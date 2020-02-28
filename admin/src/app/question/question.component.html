@@ -1,0 +1,105 @@
+<mat-sidenav-container fullscreen>
+    <mat-sidenav mode="side" opened cdkScrollable class="primary">
+        <app-sidenav></app-sidenav>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <app-header></app-header>
+        <div class="add-btn-container">
+            <div fxLayout="row" fxFlex="100%" fxLayoutAlign="end end">
+                <button mat-raised-button color="primary" (click)="fileInput.click()">
+                    <span *ngIf="!loading">Import</span>
+                    <mat-progress-spinner
+                        *ngIf="loading"
+                        [mode]="'indeterminate'"
+                        [strokeWidth]="3"
+                        [diameter]="25">
+                    </mat-progress-spinner>
+                </button>
+                <input hidden #fileInput type="file" id="file" (change)="fileProgress($event)" />
+                <button mat-raised-button color="primary" (click)="openDialog(0, 'null')">
+                    <mat-icon>add</mat-icon> Question
+                </button>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="2%" fxLayoutAlign="start center">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Select Subject</mat-label>
+                    <mat-select (selectionChange)="getChapter()" [(ngModel)]="selected_subject">
+                        <mat-option [value]="sub.subject_id" *ngFor="let sub of subject">
+                            {{sub.name}}
+                        </mat-option>
+                    </mat-select>
+                    <mat-error>Subject is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Select Chapter</mat-label>
+                    <mat-select (selectionChange)="getTopic()" [(ngModel)]="selected_chapter">
+                        <mat-option [value]="chap.chapter_id" *ngFor="let chap of chapter">
+                            {{chap.name}}
+                        </mat-option>
+                    </mat-select>
+                    <mat-error>Chapter is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Select Topic</mat-label>
+                    <mat-select (selectionChange)="getQuestion()" [(ngModel)]="selected_topic">
+                        <mat-option value="0">All</mat-option>
+                        <mat-option [value]="top.topic_id" *ngFor="let top of topic">
+                            {{top.name}}
+                        </mat-option>
+                    </mat-select>
+                    <mat-error>Topic is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="start center">
+            <mat-form-field fxFlex="30%">
+                <input matInput type="text" placeholder="Search by Name" [(ngModel)]="searchTerm" />
+            </mat-form-field>
+            <span fxFlex="5%"></span>
+            <mat-form-field fxFlex="30%">
+                <input matInput type="text" placeholder="Search by Question No" [(ngModel)]="searchQuestionNo" />
+            </mat-form-field>
+            <span fxFlex="5%"></span>
+            <button mat-raised-button color="primary" (click)="getQuestion()">
+        Search
+    </button>
+            <mat-form-field appearance="outline" fxFlex="100%">
+                <mat-label>Select Level</mat-label>
+                <mat-select (selectionChange)="getQuestion()" [(ngModel)]="selected_level">
+                    <mat-option value="0">All</mat-option>
+                    <mat-option [value]="lvl.difficult_id" *ngFor="let lvl of difficult">
+                        {{lvl.name}}
+                    </mat-option>
+                </mat-select>
+                <mat-error>Topic is required</mat-error>
+            </mat-form-field>
+        </div>
+        <mat-list>
+            <ng-container *ngFor="let data of question">
+                <mat-list-item>
+                    <button mat-icon-button aria-label="label" (click)="openDialog(data.question_id, 'question')">
+                <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
+            </button>
+                    <button mat-icon-button aria-label="label" (click)="confirmDelete(data.question_id)">
+                <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
+            </button>
+                    <img mat-line [src]="image_url + data.image_path" alt="image" *ngIf="data.image_path != '' && data.direction == 'top'" />
+                    <p mat-line class='question-bottom'>{{data.question_no}}. <span class="question" [innerHTML]="data.name"></span></p>
+                    <img mat-line [src]="image_url + data.image_path" alt="image" *ngIf="data.image_path != '' && data.direction == 'bottom'" style="width: 15%" />
+                    <p mat-line>A. <span [innerHTML]="data.a"></span></p>
+                    <p mat-line>B. <span [innerHTML]="data.b"></span></p>
+                    <p mat-line *ngIf="data.c != ''">C. <span [innerHTML]="data.c"></span></p>
+                    <p mat-line *ngIf="data.d != ''">D. <span [innerHTML]="data.d"></span></p>
+                    <h2 mat-line class="answer-font">Answer: ({{data.answer}}) | <span class="category_color">Category: {{data.difficult}}</span></h2>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+            </ng-container>
+        </mat-list>
+    </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,40 @@
+<h2 mat-dialog-title>{{data.student_name}}</h2>
+<mat-dialog-content class="mat-typography user-table-section">
+    <mat-accordion>
+        <mat-expansion-panel *ngFor="let mark of data.data">
+            <mat-expansion-panel-header>
+                <mat-panel-title>{{mark.topic_name}}</mat-panel-title>
+            </mat-expansion-panel-header>
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+                <div fxFlex="70%">
+                    <h3>{{mark.subject_name}} > {{mark.chapter_name}} > {{mark.topic_name}}</h3>
+                </div>
+                <div fxFlex="30%">
+                    <p>Date: {{mark.created_at | date: 'd/M/y'}}</p>
+                </div>
+            </div>
+            <table mat-table class="mat-elevation-z8 table-padding">
+                <!-- Position Column -->
+                <tr>
+                    <th mat-header-cell> Category </th>
+                    <th mat-header-cell> Total </th>
+                    <th mat-header-cell>
+                <mat-icon class="done_clr">done</mat-icon>
+                </th>
+                <th mat-header-cell>
+                <mat-icon class="wrong_clr">close</mat-icon>
+                </th>
+                </tr>
+                <tr>
+                    <td mat-cell>{{mark.difficult_name}} Mark</td>
+                    <td mat-cell>{{mark.total_questions}}</td>
+                    <td mat-cell>{{mark.correct_answers}}</td>
+                    <td mat-cell>{{mark.total_questions - mark.correct_answers}}</td>
+                </tr>
+            </table>
+<!--            <div class="add-btn-container">
+                <button mat-raised-button color="primary" (click)="openFullResult()">Show Full Result</button>
+            </div>-->
+        </mat-expansion-panel>
+    </mat-accordion>
+</mat-dialog-content>

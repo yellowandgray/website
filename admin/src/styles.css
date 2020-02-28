@@ -1,0 +1,189 @@
+/* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family: 'isMail_0';
+    src: url('assets/fonts/ismail_0.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+mat-sidenav {
+    max-width: 250px;
+    min-width: 250px;
+}
+
+.mat-drawer {
+    background-color: #30445c !important;
+}
+
+mat-sidenav .mat-list-item-content {
+    color: #fff;
+}
+
+.active-nav {
+    background: #6b6969;
+}
+
+.logo-bg {
+    background-color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.mat-list-item .mat-icon {
+    padding-right: 5px!important;
+}
+
+mat-sidenav-content {
+    margin-left: 250px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.add-btn-container {
+    margin: 10px;
+    text-align: right;
+}
+
+
+/*.user-table-section table th,
+.user-table-section table td {
+    width: 47%;
+    text-align: left;
+} */
+
+.preview-image {
+    position: relative;
+}
+
+.preview-image button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #fff;
+    color: #000;
+}
+
+.preview-image .dialog-picture {
+    width: 100%;
+}
+
+.preview-image img {
+    max-width: 100%;
+    width: 250px;
+    height: auto;
+}
+
+.preview-image {
+    position: relative;
+}
+
+.preview-image button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #fff;
+    color: #000;
+}
+
+.member-profile {
+    max-height: 100%!important;
+    height: auto!important;
+    width: 100%!important;
+}
+
+.mat-fab.mat-primary,
+.mat-flat-button.mat-primary,
+.mat-mini-fab.mat-primary,
+.mat-raised-button.mat-primary {
+    margin-right: 5px !important;
+}
+
+.search-input {
+    padding: 10px;
+}
+
+.member-profile-view {
+    position: relative;
+}
+
+.member-profile-view img {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    border-radius: 50%;
+    box-shadow: 0 0 8px 1px #e3e3e3;
+    border: 2px solid #1c65bf;
+}
+
+
+/*
+.user-table th {
+    text-align: left;
+}
+*/
+
+table {
+    width: 100%;
+}
+
+.table-padding {
+    padding: 20px;
+}
+
+.table-padding th {
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.table-padding td {
+    text-align: center;
+}
+
+.done_clr {
+    color: #479c18;
+}
+
+.wrong_clr {
+    color: #F03C02;
+}
+
+.result-option {
+    background: #e3e3e3;
+    padding: 5px 15px;
+    border-radius: 25px;
+    margin: 10px 0px 10px 15px;
+}
+
+.wrng-clr {
+    background: #F03C02;
+}
+
+.wrng-clr .option {
+    color: #fff;
+}
+
+.crt-clr {
+    background: #479c18;
+}
+
+.crt-clr .option {
+    color: #fff;
+}
+
+.option {
+    font-size: 15px;
+}
