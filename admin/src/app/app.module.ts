@@ -9,9 +9,10 @@ import { LoginComponent } from './login/login.component';
 import { SnacksComponent, SnacksForm, SnacksDelete, SnacksImageView } from './snacks/snacks.component';
 import { CooldrinkComponent, CoolDrinkForm, CooldrinkDelete, CooldrinkImageView } from './cooldrink/cooldrink.component';
 import { UserComponent, UserForm, UserDelete, UserImageView } from './user/user.component';
-import { OrderComponent } from './order/order.component';
+import { OrderComponent, OrderView } from './order/order.component';
 import { UnitComponent, UnitForm, UnitDelete } from './unit/unit.component';
 import { BannerComponent, BannerForm, BannerDelete, BannerImageView } from './banner/banner.component';
+import { DeliveryBoyComponent, DeliveryBoyForm, DeliveryBoyDelete, PictureViewUser } from './delivery-boy/delivery-boy.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -37,7 +38,6 @@ import {MatNativeDateModule} from '@angular/material/core';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
-import { DeliveryBoyComponent, DeliveryBoyForm, DeliveryBoyDelete, PictureViewUser } from './delivery-boy/delivery-boy.component';
 
 @NgModule({
   declarations: [
@@ -68,7 +68,8 @@ import { DeliveryBoyComponent, DeliveryBoyForm, DeliveryBoyDelete, PictureViewUs
     DeliveryBoyComponent,
     DeliveryBoyForm,
     DeliveryBoyDelete,
-    PictureViewUser
+    PictureViewUser,
+    OrderView
   ],
   imports: [
     BrowserModule,
@@ -122,7 +123,8 @@ import { DeliveryBoyComponent, DeliveryBoyForm, DeliveryBoyDelete, PictureViewUs
     DeliveryBoyComponent,
     DeliveryBoyForm,
     DeliveryBoyDelete,
-    PictureViewUser
+    PictureViewUser,
+    OrderView
   ],
   providers: [],
   bootstrap: [AppComponent]

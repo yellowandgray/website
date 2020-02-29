@@ -61,3 +61,33 @@ mat-sidenav {
     height: auto!important;
     width: 100%!important;
 }
+
+.product-img {
+    padding-right: 5px;
+}
+
+.product-img img {
+    width: 100%;
+    margin-right: 5px;
+}
+
+.order-view-table table th {
+    text-align: left;
+}
+
+.m-b-10 {
+    margin-bottom: 10px;
+}
+
+.total-amt-table th {
+    text-align: right;
+}
+
+.bg-delivery {
+    background: #008600;
+    padding: 0 10px;
+}
+
+.bg-delivery p {
+    color: #fff;
+}

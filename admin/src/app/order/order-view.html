@@ -1,0 +1,159 @@
+<h2 mat-dialog-title>Order View</h2>
+<mat-dialog-content class="mat-typography">
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+        <div fxFlex="50%" fxLayoutAlign="start start">
+            <h4 mat-dialog-title>Date: 29-02-2020</h4>
+        </div>
+        <div fxFlex="50%" fxLayoutAlign="end end">
+            <h4 mat-dialog-title>Order Id: 1</h4>
+        </div>
+    </div>
+    <mat-divider></mat-divider>
+    <h3>Order Details</h3>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start" class="m-b-10">
+        <div fxFlex="70%">
+            <div fxFlex="40%" class="product-img">
+                <img src="assets/fruits.jpg" />
+            </div>
+            <div fxFlex="60%" class="order-view-table">
+                <table>
+                    <tr>
+                        <td>Name</td>
+                        <td> : </td>
+                        <td>Fruits</td>
+                    </tr>
+                    <tr>
+                        <td>Unit</td>
+                        <td> : </td>
+                        <td>1 KG</td>
+                    </tr>
+                    <tr>
+                        <td>Amount</td>
+                        <td> : </td>
+                        <td>₹ 35</td>
+                    </tr>
+                    <tr>
+                        <td>Qty</td>
+                        <td> : </td>
+                        <td>2</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div fxFlex="30%">
+            <div fxLayoutAlign="end center">
+                <p>₹ 70</p>
+            </div>
+        </div>
+    </div>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start" class="m-b-10">
+        <div fxFlex="70%">
+            <div fxFlex="40%" class="product-img">
+                <img src="assets/bizza.jpg" />
+            </div>
+            <div fxFlex="60%" class="order-view-table">
+                <table>
+                    <tr>
+                        <td>Name</td>
+                        <td> : </td>
+                        <td>Pizza</td>
+                    </tr>
+                    <tr>
+                        <td>Unit</td>
+                        <td> : </td>
+                        <td>1 No</td>
+                    </tr>
+                    <tr>
+                        <td>Amount</td>
+                        <td> : </td>
+                        <td>₹ 70</td>
+                    </tr>
+                    <tr>
+                        <td>Qty</td>
+                        <td> : </td>
+                        <td>1</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div fxFlex="30%">
+            <div fxLayoutAlign="end center">
+                <p>₹ 70</p>
+            </div>
+        </div>
+    </div>
+    <mat-divider></mat-divider>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+        <!-- <div fxFlex="45%"></div> -->
+        <div fxFlex="100%" fxLayoutAlign="end start">
+            <table class="total-amt-table">
+                <tr>
+                    <td>கூட்டுத்தொகை</td>
+                    <td> : </td>
+                    <th>140</th>
+                </tr>
+                <tr>
+                    <td>டெலிவரி கட்டணம்</td>
+                    <td> : </td>
+                    <th>10</th>
+                </tr>
+                <tr>
+                    <td>
+                <mat-divider></mat-divider>
+                </td>
+                <td>
+                <mat-divider></mat-divider>
+                </td>
+                <td>
+                <mat-divider></mat-divider>
+                </td>
+                </tr>
+                <tr>
+                    <td>மொத்தம்</td>
+                    <td> : </td>
+                    <th>150</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <mat-divider></mat-divider>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+        <div fxFlex="100%" class="bg-delivery">
+            <br/>
+            <p>டெலிவரி நிலை - நிறைவு பெற்றது</p>
+            <p>நபர் - அருள்</p>
+        </div>
+    </div>
+    <mat-divider></mat-divider>
+    <br/>
+    <p>வாடிக்கையாளர் விவரங்கள்</p>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+        <div fxFlex="100%" class="order-view-table">
+            <table>
+                <tr>
+                    <td>பெயர்</td>
+                    <td>:</td>
+                    <th>Umasekar</th>
+                </tr>
+                <tr>
+                    <td>கைபேசி எண்</td>
+                    <td>:</td>
+                    <th>7639600998</th>
+                </tr>
+                <tr>
+                    <td>முகவரி</td>
+                    <td>:</td>
+                    <th>Sembakkam, Chennai</th>
+                </tr>
+                <tr>
+                    <td>அஞ்சல் குறியீடு</td>
+                    <td>:</td>
+                    <th>600073</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
+        <button mat-button [mat-dialog-close]="false">Cancel</button>
+    </div>
+</mat-dialog-content>
