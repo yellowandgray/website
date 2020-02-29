@@ -18,10 +18,6 @@
             <section class="wf100 p100 inner-header" style="background: url(images/sub-banner/enpeekkl-news-events-banner.jpg) no-repeat; background-position: center;">
                 <div class="container">
                     <h1>News & Events</h1>
-                    <!--                    <ul>
-                                            <li><a href="#">Home</a></li>
-                                            <li><a href="#">Château Français</a></li>
-                                        </ul>-->
                 </div>
             </section>
             <!--Inner Header End--> 
@@ -46,6 +42,7 @@
                                 <p onclick="openCity('nov')">Nov 2019</p>
                                 <p onclick="openCity('dec')">Dec 2019</p>
                                 <p onclick="openCity('jan')">Jan 2020</p>
+                                <p onclick="openCity('feb_20')">Feb 2020</p>
                             </div>
                         </div>
                     </div>
@@ -480,84 +477,86 @@
                     </div>
                 </section>
                 <!--About Txt Video End-->
-            </section>
-            <section class="wf100 about month" id="jan" style="display: none">
-                <div class="about-video-section wf100 event-section" style="padding-bottom: 0;">
-                    <div class="container" style="padding-bottom: 10px; border-bottom: 2px dashed #eee ;">
-                        <h2 class="margin-bottom-0 text-center">The Investiture Ceremony and Samathuva Pongal Celebration.</h2> 
-                        <p class="text-center">(14th of Jan 2020)</p>
-                        <br/>
-<!--                        <center>(On Wednesday, the 10<sup>th</sup> of July 2019,.at 10 a.m in our School premises)</center>-->
-<!--                        <p class="text-center">(Feb 10, 2019 Sunday)</p>-->
-                        <div class="row events-margin padding-bottom-30">
-                            <div class="col-md-12">
-                                <div class="event-img-margin">
-                                    <img src="images/news-events/pongal/main-banner.jpg" alt=""/>
-                                    <p>The Investiture Ceremony and Samathuva Pongal celebration happened at ENPEE INTERNATIONAL SCHOOL on 13th January 2020. The Chief Guest Mr. S. KARTHIKESAN., M.Sc., B,Ed., Retired Deputy Inspector Of Schools Consultant - Samagraha Siksha inaugurated the Pongal Celebrations. The celebrations started with the prayer song after which the Principal of the school welcomed the gathering and the Investiture ceremony was carried on. Our School Pupil Leader (SPL), Assistant School Pupil Leader (ASPL), Sports Captain and Sports Vice Captain took oath of office. Cultural programs were conducted and the students had a good time. Traditional games like Uri, Bullock cart ride etc attracted children and parents to learn more about our rich culture .
-                                        Mr. Kumaravel, Sub-Inspector of Police, Kottucherry was invited as special guest and delivered his speech. Felicitation speech was given by Dr. L.S.P. Chozha Singarayar – President, Parents Teachers Association Mrs. Buwaneshwari, Mrs. Maheswari, Mrs. Madinathul Munavara were present as Guest of honor.
-                                        Chairman Rtn. Hajee. L. Kamal Batcha graced the occasion with his presence. The function ended with distribution of prizes and sweet pongal.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <a type="button" href="events-ponal.php" class="btn-custom" style="position:relative; left:44%;">Read More</a>
-                    </div>
-                </div>
-                <div class="about-video-section wf100 event-section" style="padding-bottom: 0;">
-                    <div class="container" style="padding-bottom: 10px; border-bottom: 2px dashed #eee ;">
-                        <h2 class="margin-bottom-0 text-center">School Election Day - in Karaikal, India.</h2> 
-                        <p class="text-center">(11th of Jan 2020)</p>
-                        <br/>
-<!--                        <center>(On Wednesday, the 10<sup>th</sup> of July 2019,.at 10 a.m in our School premises)</center>-->
-<!--                        <p class="text-center">(Feb 10, 2019 Sunday)</p>-->
-                        <div class="row events-margin padding-bottom-30">
-                            <div class="col-md-12">
-                                <div class="event-img-margin">
-                                    <img src="images/news-events/election/main-banner.jpg" alt=""/>
-                                    <p>Children are sent to school to learn various things. At this school we think one of these is to become good leaders and live as responsible leaders of the Nation. </p>
-                                    <p>This was demonstrated in school by conducting Election Day. We had four nominees for School Pupil leader,Assistant Pupil leader,Sports Captain,Assistant Sports Captain. The elections were held along the lines of a real election. The canvassing for votes started earlier this week where candidates made campaign promise to gain votes.</p> 
-                                    <p>Voting was conducted today where all children, educators and non teaching staff were allowed to vote. Counting happened after an hour of voting and candidates were pleased with the results.</p> 
-                                    <p>Everything is a teaching moment at ENPEE International School where life is the teacher.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <a type="button" href="events-election.php" class="btn-custom" style="position:relative; left:44%;">Read More</a>
-                    </div>
-                </div>
-                <div class="about-video-section wf100 event-section" style="padding-bottom: 0;">
-                    <div class="container" style="padding-bottom: 10px; border-bottom: 2px dashed #eee ;">
-                        <h2 class="margin-bottom-0 text-center">Fruits Day - ENPEE International School - 10-01-2020</h2> 
-                        <p class="text-center">(11th of Jan 2020)</p>
-                        <br/>
-<!--                        <center>(On Wednesday, the 10<sup>th</sup> of July 2019,.at 10 a.m in our School premises)</center>-->
-<!--                        <p class="text-center">(Feb 10, 2019 Sunday)</p>-->
-                        <div class="row events-margin padding-bottom-30">
-                            <div class="col-md-12">
-                                <div class="event-img-margin">
-                                    <img src="images/news-events/fruits-day/main-banner.jpg" alt=""/>
-                                    <p>ENPEE International School celebrated Fruits Day today for the kindergarten children.It was inaugurated by our special guest and educators and kindergarten children welcomed the rest of the school. The various fruits were displayed in the room for an interactive and fun way of learning.The champions of Junior and Senior KG demonstrated their knowledge about the various fruits which was interesting to listen to. The little children had fun and learnt about the fruits at the same time. Learning is made fun in ENPEE International School.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <a type="button" href="events-fruits-day.php" class="btn-custom" style="position:relative; left:44%;">Read More</a>
-                    </div>
-                </div>
-            </section>
-            <!--About Txt Video End-->
-        </section>
+                <section class="wf100 about month" id="feb_20" style="display: none">
+                    <div class="about-video-section wf100 event-section" style="padding-bottom: 0;">
+                        <div class="container" style="padding-bottom: 10px; border-bottom: 2px dashed #eee ;">
+                            <h2 class="margin-bottom-0 text-center">ENPEE ANNUAL DAY CELEBRATIONS</h2> 
+                            <p class="text-center">(22th of Feb 2020)</p>
+                            <br/>
+    <!--                        <center>(On Wednesday, the 10<sup>th</sup> of July 2019,.at 10 a.m in our School premises)</center>-->
+    <!--                        <p class="text-center">(Feb 10, 2019 Sunday)</p>-->
+                            <div class="row events-margin padding-bottom-30">
+                                <div class="col-md-12">
+                                    <div class="event-img-margin">
+                                        <img src="images/news-events/annual-day/banner.jpg" alt=""/>
 
-        <!--About End--> 
-        <!--Footer Start-->
-        <?php include 'footer.php'; ?>
-        <script>
-            function openCity(cityName) {
-                var i;
-                var x = document.getElementsByClassName("month");
-                for (i = 0; i < x.length; i++) {
-                    x[i].style.display = "none";
+                                    </div>
+                                    <p>It was a great day for ENPEE International School Karaikal ,as the core words of KNOWLEDGE INNOVATION & EXCELLENCE were evident as the children breezed into in our Annual Day function on 22-02-2020.
+                                        We started the programme with our Honourable Chief Guest Mrs. Chandira Priyanka MLA of Nedungadu, Karaikal and our Respected Special Guest Dr. Ambujam, MS.,FICS.,FAES , Dean of Vinayaka Missions Medical College ,Karaikal adorning the Dias along with Prof. DR .K .MUJIBUR RAHMAN., Managing Director and Prof. DR .K .MOHAMED ALI., Director and Principal Mrs. Sheela.
+
+                                        The fest started with our state Anthem. Our admin facilitator Mrs .Merzia welcomed the gathering which was followed by felicitation. Our school Principal Mrs .Sheela.S presented the Annual report . Prof .Dr Mohamed Ali delivered the Chairman's message to the gathering on his behalf.</p>
+                                </div>
+                            </div>
+                            <a type="button" href="events-annual.php" class="btn-custom" style="position:relative; left:44%;">Read More</a>
+                        </div>
+                    </div>
+                    <div class="about-video-section wf100 event-section" style="padding-bottom: 0;">
+                        <div class="container" style="padding-bottom: 10px; border-bottom: 2px dashed #eee ;">
+                            <h2 class="margin-bottom-0 text-center">National Science Day</h2> 
+                            <p class="text-center">(28th of Feb 2020)</p>
+                            <br/>
+    <!--                        <center>(On Wednesday, the 10<sup>th</sup> of July 2019,.at 10 a.m in our School premises)</center>-->
+    <!--                        <p class="text-center">(Feb 10, 2019 Sunday)</p>-->
+                            <div class="row events-margin padding-bottom-30">
+                                <div class="col-md-12">
+                                    <div class="event-img-margin">
+                                        <img src="images/news-events/science-day/banner.png" alt=""/>
+
+                                    </div>
+                                    <p>National Science Day is celebrated every year in India on 28 February to mark the discovery of the Raman Effect by the Indian physicist Sir Chandrasekhara Venkata Raman. He discovered the Raman Effect on 28 February, 1928 and for this discovery, he was honoured by the Nobel Prize in Physics subject in 1930.</p>
+                                </div>
+                            </div>
+                            <a type="button" href="events-science-day.php" class="btn-custom" style="position:relative; left:44%;">Read More</a>
+                        </div>
+                    </div>
+                    <div class="about-video-section wf100 event-section" style="padding-bottom: 0;">
+                        <div class="container" style="padding-bottom: 10px; border-bottom: 2px dashed #eee ;">
+                            <h2 class="margin-bottom-0 text-center">ENPEE Annual Sports Meet</h2> 
+                            <p class="text-center">(15th of Feb 2020)</p>
+                            <br/>
+    <!--                        <center>(On Wednesday, the 10<sup>th</sup> of July 2019,.at 10 a.m in our School premises)</center>-->
+    <!--                        <p class="text-center">(Feb 10, 2019 Sunday)</p>-->
+                            <div class="row events-margin padding-bottom-30">
+                                <div class="col-md-12">
+                                    <div class="event-img-margin">
+                                        <img src="images/news-events/annual-sport-meet/banner.png" alt=""/>
+
+                                    </div>
+                                    <p>On 15-2-2020 in the sprawling grounds of ENPEE International school, it was a day filled with fervour and exhilaration, amidst thrills and cheers.</p>
+                                    <p>The event commenced with the felicitation of the venerable Chief Guest, Mr. Ram Mohan Singh, PH.D., Assistant Professor ,Department of Physical Education and sports Pondicherry University and the Guest of Honour, Mr.Karuppasamy, Physical Education Director of TPHSS, Karaikal in the presence of our Director Prof Dr K Mohamed Ali and other distinguished guests.</p>
+                                </div>
+                            </div>
+                            <a type="button" href="event-annual-sports-meet.php" class="btn-custom" style="position:relative; left:44%;">Read More</a>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <!--About Txt Video End-->
+
+            <!--About End--> 
+            <!--Footer Start-->
+            <?php include 'footer.php'; ?>
+            <script>
+                function openCity(cityName) {
+                    var i;
+                    var x = document.getElementsByClassName("month");
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    document.getElementById(cityName).style.display = "block";
                 }
-                document.getElementById(cityName).style.display = "block";
-            }
-        </script>
-    </div>
-</body>
+            </script>
+        </div>
+    </body>
 </html>
