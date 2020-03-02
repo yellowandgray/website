@@ -92,9 +92,7 @@ if (isset($_SESSION['student_register_id'])) {
                                                 </div>-->
                         <div class = 'span8'>
                             <div class="result-title">
-                                <h4><!--My Completed Task --><div lang="latex">
-\frac{1+sin(x)}{y}
-</div></h4>
+                                <h4>My Completed Task</h4>
                                 <a href="home_subject">
                                     <i class="icon-home"></i>
                                 </a>
@@ -126,7 +124,9 @@ if (isset($_SESSION['student_register_id'])) {
                                             </tr>
                                         </tbody>
                                     </table>
-                                    <center><button id="result-view-btn" class="btn btn-brown" onclick="showFullResult(<?php echo $row['student_log_id']; ?>);">Show Details</button></center>
+                                    <center>
+                                        <button id="result-view-btn" class="btn btn-brown" onclick="showFullResult(<?php echo $row['student_log_id']; ?>);">Show Details</button>
+                                    </center>
                                     <div id="result_view_<?php echo $row['student_log_id']; ?>" class="full-result"></div>
                                     <hr/>
                                     <br/>
@@ -202,6 +202,7 @@ if (isset($_SESSION['student_register_id'])) {
                                     }
                                     qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option">D. ' + val.d + '</div></div>';
                                 }
+                                qlist = qlist + '<div class="explanation-section"> ' + val.explanation + ' </div>';
                                 qlist = qlist + '</div>';
                             });
                             $('#result_view_' + slid).html(qlist);
