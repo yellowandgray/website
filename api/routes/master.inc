@@ -109,10 +109,10 @@ $app->post('/validateaddress', function() use ($app) {
     $res = array('error' => true, 'message' => 'Delivery not available to this area');
     $data = $app->request->post();
     $obj = new Common();
-    $record = $obj->selectRow('*', 'delivery_pincode', 'pincode=\'' . $data['pincode'] . '\'');
+    $record = $obj->selectRow('*', 'delivery_pincode', 'pincode=\'' . trim($data['pincode']) . '\'');
     if (count($record) > 0) {
         date_default_timezone_set("Asia/Kuala_Lumpur");
-        $update = $obj->updateRecordWithWhere(array('name' => $data['name'], 'address' => $data['address'], 'pincode' => $data['pincode']), 'user', 'user_id=' . $data['user_id']);
+        $update = $obj->updateRecordWithWhere(array('name' => trim($data['name']), 'address' => trim($data['address']), 'pincode' => trim($data['pincode'])), 'user', 'user_id=' . $data['user_id']);
         if ($update > 0) {
             $res['error'] = false;
             $res['message'] = 'Delivery available';
