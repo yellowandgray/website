@@ -1004,3 +1004,15 @@ and open the template in the editor.
     background: #003bb3;
     color: #ffffff;
 }
+
+.explanation-section {
+    margin: 10px 0;
+}
+
+.explanation-section h6 {
+    font-weight: 600;
+}
+
+.explanation-section p {
+    
+}

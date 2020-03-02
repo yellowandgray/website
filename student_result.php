@@ -202,7 +202,7 @@ if (isset($_SESSION['student_register_id'])) {
                                     }
                                     qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option">D. ' + val.d + '</div></div>';
                                 }
-                                qlist = qlist + '<div class="explanation-section"> ' + val.explanation + ' </div>';
+                                qlist = qlist + '<div class="explanation-section"><h6>Explanation</h6> <p>' + val.explanation + '</p> </div>';
                                 qlist = qlist + '</div>';
                             });
                             $('#result_view_' + slid).html(qlist);
