@@ -266,6 +266,11 @@ if (count($questions) > 0) {
                                             }
                                             qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option">D. ' + val.d + '</div></div>';
                                         }
+                                        if (val.explanation !== '') {
+                                            qlist = qlist + '<div class="explanation-section"><strong>Explanation</strong> : ' + val.explanation + '</div>';
+                                        } else {
+                                            qlist = qlist + '<div class="explanation-section">No Explanation</div>';
+                                        }
                                         qlist = qlist + '</div>';
                                     });
                                     $('#question_list').html(qlist);
