@@ -93,16 +93,14 @@ $app->post('/loginprocess', function() use ($app) {
     $obj = new Common();
     $record = $obj->selectRow('*', 'user', 'phone_no=\'' . $data['phone_no'] . '\'');
     if (count($record) > 0) {
-        if ($data['phone_no'] == $record['phone_no']) {
-            date_default_timezone_set("Asia/Kuala_Lumpur");
-            $res['error'] = false;
-            $res['message'] = 'Welcome ' . $record['name'];
-            $res['data'] = $record;
-        } else {
-            $obj->insertRecord(array('phone_no' => $data['phone_no']), 'user');
-            $res['message'] = 'Registered successfully';
-            $res['data'] = array();
-        }
+        date_default_timezone_set("Asia/Kuala_Lumpur");
+        $res['error'] = false;
+        $res['message'] = 'Welcome ' . $record['name'];
+        $res['data'] = $record;
+    } else {
+        $obj->insertRecord(array('phone_no' => $data['phone_no']), 'user');
+        $res['message'] = 'Registered successfully';
+        $res['data'] = array();
     }
     echoRespnse(201, $res);
 });
