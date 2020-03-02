@@ -335,7 +335,9 @@ if (count($questions) > 0) {
                 }
             }
             );
-
+            MathJax.Hub.Config({
+                tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+            });
         </script>
     </body>
 </html>
