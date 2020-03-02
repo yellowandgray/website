@@ -333,10 +333,6 @@ if (count($questions) > 0) {
                         //return this.userResponses.filter(function(val) { return val }).length;
                     }
                 }
-            }
-            );
-            MathJax.Hub.Config({
-                tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
             });
         </script>
     </body>
