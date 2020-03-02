@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 28, 2020 at 03:08 PM
+-- Generation Time: Mar 02, 2020 at 08:28 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.2.26
 
@@ -155,9 +155,9 @@ CREATE TABLE `question` (
 --
 
 INSERT INTO `question` (`question_id`, `topic_id`, `name`, `image_path`, `direction`, `a`, `b`, `c`, `d`, `answer`, `question_no`, `difficult_id`, `explanation`, `data_dictionary`, `book_id`, `page_no`, `notes`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
-(1, 1, '<font face=\"Arial\" size=\"3\">$$\\varepsilon^{2} I=P$$</font>', 'uploads/13cd80dd048ca1b8decab28ca9ba818f.png', 'bottom', '$$\\varepsilon I=P$$<br>', 'only positive ions ', 'only negative ions', 'both negative and positive ions', 'D', 1, 1, '-', '-', 1, '2.7', '-', '2020-02-28 08:24:45', '2020-02-27 13:53:42', 1, 1),
+(1, 1, '<font face=\"Arial\" size=\"3\">$$\\varepsilon^{2} I=P$$</font>', 'uploads/13cd80dd048ca1b8decab28ca9ba818f.png', 'bottom', '$$\\varepsilon I=P$$<br>', 'only positive ions ', 'only negative ions', 'both negative and positive ions', 'D', 1, 1, 'Test', '-', 1, '2.7', '-', '2020-03-02 05:30:01', '2020-02-27 13:53:42', 1, 1),
 (2, 1, '$$<span>\\frac{1+sin(x)}{y}</span><font face=\"Arial\" size=\"3\">$$</font>', '', 'top', '$\\varepsilon I=P$', '$$\\varepsilon I^{2}=P$$', '<font face=\"Arial\" size=\"3\">$$\\varepsilo</font>n^{2} I=P$$', '$$ \\varepsilon I P=1$$', 'A', 2, 1, '-', '-', 1, '2.7', '-', '2020-02-28 06:47:33', '2020-02-27 13:53:42', 1, 1),
-(3, 1, '<div lang=\"latex\">\\frac{1+sin(x)}{y}</div>', '', 'top', 'sin ?', 'cos ?', 'tan ?', 'cot ?', 'D', 3, 1, '-', '-', 1, '2.7', '-', '2020-02-28 05:32:00', '2020-02-27 13:53:42', 1, 1),
+(3, 1, '<div lang=\"latex\">\\frac{1+sin(x)}{y}</div>', '', 'top', 'sin ?', 'cos ?', 'tan ?', 'cot ?', 'D', 3, 1, 'Test', '-', 1, '2.7', '-', '2020-03-02 06:12:15', '2020-02-27 13:53:42', 1, 1),
 (4, 1, 'In which of the following cells is polarization a major defect?', '', 'top', 'Daniel cell ', 'Leclanche cell', 'Voltaic cell', ' none of the above ', 'C', 4, 1, '-', '-', 1, '2.7', '-', '2020-02-27 13:53:42', '2020-02-27 13:53:42', 1, 1),
 (5, 1, 'The number of electrons that constitute 1 A of current is', '', 'top', '$$6.25 \\times 10^{16}$$', '$$6.25 \\times 10^{17}$$', '$$6.25 \\times 10^{18}$$', '$$ 6.25 \\times 10^{19}$$', 'C', 5, 1, '-', '-', 1, '2.7', '-', '2020-02-27 13:53:42', '2020-02-27 13:53:42', 1, 1),
 (6, 1, 'How many different resistances are possible with two equal resistors?', '', 'top', '2', '3', '4', '5', 'B', 6, 1, '-', '-', 1, '2.7', '-', '2020-02-27 13:53:42', '2020-02-27 13:53:42', 1, 1),
@@ -389,82 +389,7 @@ CREATE TABLE `student_log` (
 --
 
 INSERT INTO `student_log` (`student_log_id`, `subject_id`, `subject_name`, `difficult_id`, `difficult_name`, `chapter_id`, `chapter_name`, `topic_id`, `topic_name`, `student_register_id`, `total_questions`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES
-(1, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, 'Physical world and measurment', 1, 179, '2020-02-28 10:15:36', 1, '2020-02-28 00:00:00', 1),
-(2, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, 'Physical world and measurment', 1, 179, '2020-02-28 10:21:00', 1, '2020-02-28 00:00:00', 1),
-(3, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, 'Physical world and measurment', 1, 179, '2020-02-28 10:21:35', 1, '2020-02-28 00:00:00', 1),
-(4, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, 'Physical world and measurment', 1, 179, '2020-02-28 10:22:25', 1, '2020-02-28 00:00:00', 1),
-(5, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, 'Physical world and measurment', 1, 179, '2020-02-28 10:25:32', 1, '2020-02-28 00:00:00', 1),
-(6, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, 'Physical world and measurment', 1, 179, '2020-02-28 10:28:21', 1, '2020-02-28 00:00:00', 1),
-(7, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 0, '', 1, 0, '2020-02-28 10:29:33', 1, '2020-02-28 00:00:00', 1),
-(8, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 10:30:58', 1, '2020-02-28 00:00:00', 1),
-(9, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 10:32:23', 1, '2020-02-28 00:00:00', 1),
-(10, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 10:34:34', 1, '2020-02-28 00:00:00', 1),
-(11, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 10:35:22', 1, '2020-02-28 00:00:00', 1),
-(12, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 10:37:31', 1, '2020-02-28 00:00:00', 1),
-(13, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 10:38:19', 1, '2020-02-28 00:00:00', 1),
-(14, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 10:38:38', 1, '2020-02-28 00:00:00', 1),
-(15, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 10:39:00', 1, '2020-02-28 00:00:00', 1),
-(16, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 10:39:14', 1, '2020-02-28 00:00:00', 1),
-(17, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 10:40:09', 1, '2020-02-28 00:00:00', 1),
-(18, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 10:41:21', 1, '2020-02-28 00:00:00', 1),
-(19, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 10:52:25', 1, '2020-02-28 00:00:00', 1),
-(20, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 10:52:42', 1, '2020-02-28 00:00:00', 1),
-(21, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 10:54:52', 1, '2020-02-28 00:00:00', 1),
-(22, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 10:54:57', 1, '2020-02-28 00:00:00', 1),
-(23, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 10:55:40', 1, '2020-02-28 00:00:00', 1),
-(24, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 10:59:38', 1, '2020-02-28 00:00:00', 1),
-(25, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 11:00:38', 1, '2020-02-28 00:00:00', 1),
-(26, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 11:01:03', 1, '2020-02-28 00:00:00', 1),
-(27, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 11:01:33', 1, '2020-02-28 00:00:00', 1),
-(28, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 11:02:03', 1, '2020-02-28 00:00:00', 1),
-(29, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 11:03:11', 1, '2020-02-28 00:00:00', 1),
-(30, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 11:04:00', 1, '2020-02-28 00:00:00', 1),
-(31, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 11:12:43', 1, '2020-02-28 00:00:00', 1),
-(32, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 11:13:20', 1, '2020-02-28 00:00:00', 1),
-(33, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 11:13:36', 1, '2020-02-28 00:00:00', 1),
-(34, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 11:14:21', 1, '2020-02-28 00:00:00', 1),
-(35, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 11:17:10', 1, '2020-02-28 00:00:00', 1),
-(36, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 11:17:48', 1, '2020-02-28 00:00:00', 1),
-(37, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 11:18:40', 1, '2020-02-28 00:00:00', 1),
-(38, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 11:21:41', 1, '2020-02-28 00:00:00', 1),
-(39, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 11:42:40', 1, '2020-02-28 00:00:00', 1),
-(40, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 11:43:37', 1, '2020-02-28 00:00:00', 1),
-(41, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 11:46:42', 1, '2020-02-28 00:00:00', 1),
-(42, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 11:49:04', 1, '2020-02-28 00:00:00', 1),
-(43, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 11:49:35', 1, '2020-02-28 00:00:00', 1),
-(44, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 11:52:11', 1, '2020-02-28 00:00:00', 1),
-(45, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 11:52:22', 1, '2020-02-28 00:00:00', 1),
-(46, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 11:52:32', 1, '2020-02-28 00:00:00', 1),
-(47, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 11:56:57', 1, '2020-02-28 00:00:00', 1),
-(48, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 12:01:02', 1, '2020-02-28 00:00:00', 1),
-(49, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 12:01:20', 1, '2020-02-28 00:00:00', 1),
-(50, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 12:02:20', 1, '2020-02-28 00:00:00', 1),
-(51, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 12:02:38', 1, '2020-02-28 00:00:00', 1),
-(52, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 12:03:09', 1, '2020-02-28 00:00:00', 1),
-(53, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 12:03:29', 1, '2020-02-28 00:00:00', 1),
-(54, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 12:08:48', 1, '2020-02-28 00:00:00', 1),
-(55, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 12:09:37', 1, '2020-02-28 00:00:00', 1),
-(56, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 12:09:50', 1, '2020-02-28 00:00:00', 1),
-(57, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 12:10:08', 1, '2020-02-28 00:00:00', 1),
-(58, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 12:10:33', 1, '2020-02-28 00:00:00', 1),
-(59, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 12:11:12', 1, '2020-02-28 00:00:00', 1),
-(60, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 12:11:13', 1, '2020-02-28 00:00:00', 1),
-(61, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 12:11:15', 1, '2020-02-28 00:00:00', 1),
-(62, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 12:11:54', 1, '2020-02-28 00:00:00', 1),
-(63, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 12:12:22', 1, '2020-02-28 00:00:00', 1),
-(64, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 12:12:31', 1, '2020-02-28 00:00:00', 1),
-(65, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 12:12:48', 1, '2020-02-28 00:00:00', 1),
-(66, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 12:13:25', 1, '2020-02-28 00:00:00', 1),
-(67, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 12:13:41', 1, '2020-02-28 00:00:00', 1),
-(68, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 12:14:05', 1, '2020-02-28 00:00:00', 1),
-(69, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 12:15:05', 1, '2020-02-28 00:00:00', 1),
-(70, 1, 'Objective PHYSICS for NEET', 1, '40', 1, '$$\\varepsilon^{2} I=P$$', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 12:16:12', 1, '2020-02-28 00:00:00', 1),
-(71, 1, 'Objective PHYSICS for NEET', 1, '40', 1, '$$\\frac{1+sin(x)}{y}$$', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 12:16:58', 1, '2020-02-28 00:00:00', 1),
-(72, 1, 'Objective PHYSICS for NEET', 1, '40', 1, '$$\\frac{1+sin(x)}{y}$$', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 12:17:36', 1, '2020-02-28 00:00:00', 1),
-(73, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 12:19:19', 1, '2020-02-28 00:00:00', 1),
-(74, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 12:34:55', 1, '2020-02-28 00:00:00', 1),
-(75, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 12:35:11', 1, '2020-02-28 00:00:00', 1),
-(76, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-02-28 13:55:27', 1, '2020-02-28 00:00:00', 1);
+(1, 1, 'Objective PHYSICS for NEET', 1, '40', 1, 'National Eligability Entrance Test (NEET)', 1, '$$\\varepsilon^{2} I=P$$', 1, 179, '2020-03-02 12:33:50', 1, '2020-03-02 00:00:00', 1);
 
 -- --------------------------------------------------------
 
@@ -486,82 +411,11 @@ CREATE TABLE `student_log_detail` (
   `answer` varchar(5) NOT NULL DEFAULT '',
   `question_no` int(11) NOT NULL DEFAULT 0,
   `student_answer` varchar(5) NOT NULL DEFAULT '',
+  `explanation` varchar(255) NOT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   `difficult_id` int(11) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `student_log_detail`
---
-
-INSERT INTO `student_log_detail` (`student_log_detail_id`, `student_log_id`, `question_id`, `name`, `image_path`, `direction`, `a`, `b`, `c`, `d`, `answer`, `question_no`, `student_answer`, `created_at`, `updated_at`, `difficult_id`) VALUES
-(1, 1, 1, 'Within the electric cell, the charge is transported by', '', 'top', 'free electrons ', 'only positive ions ', 'only negative ions', 'both negative and positive ions', 'D', 1, 'A', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(2, 2, 1, 'Within the electric cell, the charge is transported by', '', 'top', 'free electrons ', 'only positive ions ', 'only negative ions', 'both negative and positive ions', 'D', 1, 'A', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(3, 3, 1, 'Within the electric cell, the charge is transported by', '', 'top', 'free electrons ', 'only positive ions ', 'only negative ions', 'both negative and positive ions', 'D', 1, 'A', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(4, 3, 2, 'If ', '', 'top', '$$\\varepsilon I=P$$', '$$\\varepsilon I^{2}=P$$', '$$\\varepsilon^{2} I=P$$', '$$ \\varepsilon I P=1$$', 'A', 2, 'B', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(5, 3, 3, 'The V-I graph for a conductor makes an angle ? with the V-axis, where V denotes voltage and I denotes current. The resistance of the conductor is given by', '', 'top', 'sin ?', 'cos ?', 'tan ?', 'cot ?', 'D', 3, 'A', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(6, 3, 4, 'In which of the following cells is polarization a major defect?', '', 'top', 'Daniel cell ', 'Leclanche cell', 'Voltaic cell', ' none of the above ', 'C', 4, 'A', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(7, 3, 5, 'The number of electrons that constitute 1 A of current is', '', 'top', '$$6.25 \\times 10^{16}$$', '$$6.25 \\times 10^{17}$$', '$$6.25 \\times 10^{18}$$', '$$ 6.25 \\times 10^{19}$$', 'C', 5, 'A', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(8, 3, 6, 'How many different resistances are possible with two equal resistors?', '', 'top', '2', '3', '4', '5', 'B', 6, 'A', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(9, 3, 7, 'Given three equal resistors, how many different combinations (taking all of them together) can be made?', '', 'top', '3', '4', '5', '6', 'B', 7, 'B', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(10, 5, 1, 'Within the electric cell, the charge is transported by', '', 'top', 'free electrons ', 'only positive ions ', 'only negative ions', 'both negative and positive ions', 'D', 1, 'B', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(11, 6, 1, 'Within the electric cell, the charge is transported by', '', 'top', 'free electrons ', 'only positive ions ', 'only negative ions', 'both negative and positive ions', 'D', 1, 'B', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(12, 8, 1, 'Within the electric cell, the charge is transported by', '', 'top', 'free electrons ', 'only positive ions ', 'only negative ions', 'both negative and positive ions', 'D', 1, 'B', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(13, 9, 1, 'Within the electric cell, the charge is transported by', '', 'top', 'free electrons ', 'only positive ions ', 'only negative ions', 'both negative and positive ions', 'D', 1, 'B', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(14, 10, 1, 'Within the electric cell, the charge is transported by', '', 'top', 'free electrons ', 'only positive ions ', 'only negative ions', 'both negative and positive ions', 'D', 1, 'B', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(15, 11, 1, 'Within the electric cell, the charge is transported by', '', 'top', 'free electrons ', 'only positive ions ', 'only negative ions', 'both negative and positive ions', 'D', 1, 'B', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(16, 12, 1, 'Within the electric cell, the charge is transported by', '', 'top', 'free electrons ', 'only positive ions ', 'only negative ions', 'both negative and positive ions', 'D', 1, 'B', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(17, 13, 1, 'Within the electric cell, the charge is transported by<font face=\"Arial\" size=\"3\">&#160;$$\\varepsilon I=P$$</font>', '', 'top', 'free electrons ', 'only positive ions ', 'only negative ions', 'both negative and positive ions', 'D', 1, 'B', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(18, 15, 1, 'Within the electric cell, the charge is transported by<font face=\"Arial\" size=\"3\">&#160;$$\\varepsilon I=P$$</font>', '', 'top', '$$\\varepsilon I=P$$<br>', 'only positive ions ', 'only negative ions', 'both negative and positive ions', 'D', 1, 'B', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(19, 17, 1, 'Within the electric cell, the charge is transported by<font face=\"Arial\" size=\"3\">&#160;$$\\varepsilon I=P$$</font>', '', 'top', '$$\\varepsilon I=P$$<br>', 'only positive ions ', 'only negative ions', 'both negative and positive ions', 'D', 1, 'A', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(20, 18, 1, 'Within the electric cell, the charge is transported by<font face=\"Arial\" size=\"3\">&#160;$$\\varepsilon I=P$$</font>', '', 'top', '$$\\varepsilon I=P$$<br>', 'only positive ions ', 'only negative ions', 'both negative and positive ions', 'D', 1, 'A', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(21, 26, 1, '<div lang=\"latex\">\\frac{1+sin(x)}{y}</div>', '', 'top', '$$\\varepsilon I=P$$<br>', 'only positive ions ', 'only negative ions', 'both negative and positive ions', 'D', 1, 'A', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(22, 26, 2, '\\frac{1+sin(x)}{y}<br>', '', 'top', '$$\\varepsilon I=P$$', '$$\\varepsilon I^{2}=P$$', '<font face=\"Arial\" size=\"3\">$$\\varepsilo</font>n^{2} I=P$$', '$$ \\varepsilon I P=1$$', 'A', 2, 'A', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(23, 27, 1, '<div lang=\"latex\">\\frac{1+sin(x)}{y}</div>', '', 'top', '$$\\varepsilon I=P$$<br>', 'only positive ions ', 'only negative ions', 'both negative and positive ions', 'D', 1, 'A', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(24, 28, 1, '<div lang=\"latex\">\\frac{1+sin(x)}{y}</div>', '', 'top', '$$\\varepsilon I=P$$<br>', 'only positive ions ', 'only negative ions', 'both negative and positive ions', 'D', 1, 'B', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(25, 28, 2, '<div lang=\"latex\">\\frac{1+sin(x)}{y}</div>', '', 'top', '$$\\varepsilon I=P$$', '$$\\varepsilon I^{2}=P$$', '<font face=\"Arial\" size=\"3\">$$\\varepsilo</font>n^{2} I=P$$', '$$ \\varepsilon I P=1$$', 'A', 2, 'A', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(26, 29, 1, '<div lang=\"latex\">\\frac{1+sin(x)}{y}</div>', '', 'top', '$$\\varepsilon I=P$$<br>', 'only positive ions ', 'only negative ions', 'both negative and positive ions', 'D', 1, 'C', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(27, 29, 2, '<div lang=\"latex\">\\frac{1+sin(x)}{y}</div>', '', 'top', '$$\\varepsilon I=P$$', '$$\\varepsilon I^{2}=P$$', '<font face=\"Arial\" size=\"3\">$$\\varepsilo</font>n^{2} I=P$$', '$$ \\varepsilon I P=1$$', 'A', 2, 'B', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(28, 30, 1, '<div lang=\"latex\">\\frac{1+sin(x)}{y}</div>', '', 'top', '$$\\varepsilon I=P$$<br>', 'only positive ions ', 'only negative ions', 'both negative and positive ions', 'D', 1, 'A', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(29, 30, 2, '<div lang=\"latex\">\\frac{1+sin(x)}{y}</div>', '', 'top', '$$\\varepsilon I=P$$', '$$\\varepsilon I^{2}=P$$', '<font face=\"Arial\" size=\"3\">$$\\varepsilo</font>n^{2} I=P$$', '$$ \\varepsilon I P=1$$', 'A', 2, 'A', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(30, 31, 1, '<div lang=\"latex\">\\frac{1+sin(x)}{y}</div>', '', 'top', '$$\\varepsilon I=P$$<br>', 'only positive ions ', 'only negative ions', 'both negative and positive ions', 'D', 1, 'A', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(31, 32, 1, '<div lang=\"latex\">\\frac{1+sin(x)}{y}</div>', '', 'top', '$$\\varepsilon I=P$$<br>', 'only positive ions ', 'only negative ions', 'both negative and positive ions', 'D', 1, 'A', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(32, 33, 1, '<div lang=\"latex\">\\frac{1+sin(x)}{y}</div>', '', 'top', '$$\\varepsilon I=P$$<br>', 'only positive ions ', 'only negative ions', 'both negative and positive ions', 'D', 1, 'A', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(33, 34, 1, '<div lang=\"latex\">\\frac{1+sin(x)}{y}</div>', '', 'top', '$$\\varepsilon I=P$$<br>', 'only positive ions ', 'only negative ions', 'both negative and positive ions', 'D', 1, 'A', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(34, 34, 2, '$$\\frac{1+sin(x)}{y}$$', '', 'top', '$\\varepsilon I=P$', '$$\\varepsilon I^{2}=P$$', '<font face=\"Arial\" size=\"3\">$$\\varepsilo</font>n^{2} I=P$$', '$$ \\varepsilon I P=1$$', 'A', 2, 'A', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(35, 35, 1, '<div lang=\"latex\">\\frac{1+sin(x)}{y}</div>', '', 'top', '$$\\varepsilon I=P$$<br>', 'only positive ions ', 'only negative ions', 'both negative and positive ions', 'D', 1, 'A', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(36, 36, 1, '<div lang=\"latex\">\\frac{1+sin(x)}{y}</div>', '', 'top', '$$\\varepsilon I=P$$<br>', 'only positive ions ', 'only negative ions', 'both negative and positive ions', 'D', 1, 'A', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(37, 37, 1, '<div lang=\"latex\">\\frac{1+sin(x)}{y}</div>', '', 'top', '$$\\varepsilon I=P$$<br>', 'only positive ions ', 'only negative ions', 'both negative and positive ions', 'D', 1, 'A', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(38, 38, 1, '<div lang=\"latex\">\\frac{1+sin(x)}{y}</div>', '', 'top', '$$\\varepsilon I=P$$<br>', 'only positive ions ', 'only negative ions', 'both negative and positive ions', 'D', 1, 'A', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(39, 39, 1, '<div lang=\"latex\">\\frac{1+sin(x)}{y}</div>', '', 'top', '$$\\varepsilon I=P$$<br>', 'only positive ions ', 'only negative ions', 'both negative and positive ions', 'D', 1, 'A', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(40, 39, 2, '$\\frac{1+sin(x)}{y}$', '', 'top', '$\\varepsilon I=P$', '$$\\varepsilon I^{2}=P$$', '<font face=\"Arial\" size=\"3\">$$\\varepsilo</font>n^{2} I=P$$', '$$ \\varepsilon I P=1$$', 'A', 2, 'A', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(41, 40, 1, '<div lang=\"latex\">\\frac{1+sin(x)}{y}</div>', '', 'top', '$$\\varepsilon I=P$$<br>', 'only positive ions ', 'only negative ions', 'both negative and positive ions', 'D', 1, 'B', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(42, 40, 2, '$\\frac{1+sin(x)}{y}$', '', 'top', '$\\varepsilon I=P$', '$$\\varepsilon I^{2}=P$$', '<font face=\"Arial\" size=\"3\">$$\\varepsilo</font>n^{2} I=P$$', '$$ \\varepsilon I P=1$$', 'A', 2, 'B', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(43, 41, 1, '<div lang=\"latex\">\\frac{1+sin(x)}{y}</div>', '', 'top', '$$\\varepsilon I=P$$<br>', 'only positive ions ', 'only negative ions', 'both negative and positive ions', 'D', 1, 'A', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(44, 41, 2, '$\\frac{1+sin(x)}{y}$', '', 'top', '$\\varepsilon I=P$', '$$\\varepsilon I^{2}=P$$', '<font face=\"Arial\" size=\"3\">$$\\varepsilo</font>n^{2} I=P$$', '$$ \\varepsilon I P=1$$', 'A', 2, 'B', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(45, 43, 1, '&#10;<div lang=\"latex\">\\frac{1+sin(x)}{y}</div>', '', 'top', '$$\\varepsilon I=P$$<br>', 'only positive ions ', 'only negative ions', 'both negative and positive ions', 'D', 1, 'B', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(46, 43, 2, '$\\frac{1+sin(x)}{y}$', '', 'top', '$\\varepsilon I=P$', '$$\\varepsilon I^{2}=P$$', '<font face=\"Arial\" size=\"3\">$$\\varepsilo</font>n^{2} I=P$$', '$$ \\varepsilon I P=1$$', 'A', 2, 'C', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(47, 43, 3, '<div lang=\"latex\">\\frac{1+sin(x)}{y}</div>', '', 'top', 'sin ?', 'cos ?', 'tan ?', 'cot ?', 'D', 3, 'B', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(48, 43, 4, 'In which of the following cells is polarization a major defect?', '', 'top', 'Daniel cell ', 'Leclanche cell', 'Voltaic cell', ' none of the above ', 'C', 4, 'C', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(49, 46, 1, '$$\\frac{1+sin(x)}{y}$$', '', 'top', '$$\\varepsilon I=P$$<br>', 'only positive ions ', 'only negative ions', 'both negative and positive ions', 'D', 1, 'A', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(50, 47, 1, '$$\\frac{1+sin(x)}{y}$$', '', 'top', '$$\\varepsilon I=P$$<br>', 'only positive ions ', 'only negative ions', 'both negative and positive ions', 'D', 1, 'B', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(51, 48, 1, '$$\\frac{1+sin(x)}{y}$$', '', 'top', '$$\\varepsilon I=P$$<br>', 'only positive ions ', 'only negative ions', 'both negative and positive ions', 'D', 1, 'A', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(52, 52, 1, '$$\\frac{1+sin(x)}{y}$$', '', 'top', '$$\\varepsilon I=P$$<br>', 'only positive ions ', 'only negative ions', 'both negative and positive ions', 'D', 1, 'A', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(53, 53, 1, '$$\\frac{1+sin(x)}{y}$$', '', 'top', '$$\\varepsilon I=P$$<br>', 'only positive ions ', 'only negative ions', 'both negative and positive ions', 'D', 1, 'A', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(54, 61, 1, '<font face=\"Arial\" size=\"3\">$</font>$\\frac{1+sin(x)}{y}$$', '', 'top', '$$\\varepsilon I=P$$<br>', 'only positive ions ', 'only negative ions', 'both negative and positive ions', 'D', 1, 'A', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(55, 66, 1, '<font face=\"Arial\" size=\"3\">$$\\varepsilon^{2} I=P$$</font>', '', 'top', '$$\\varepsilon I=P$$<br>', 'only positive ions ', 'only negative ions', 'both negative and positive ions', 'D', 1, 'A', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(56, 67, 1, '<font face=\"Arial\" size=\"3\">$$\\varepsilon^{2} I=P$$</font>', '', 'top', '$$\\varepsilon I=P$$<br>', 'only positive ions ', 'only negative ions', 'both negative and positive ions', 'D', 1, 'A', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(57, 68, 1, '<font face=\"Arial\" size=\"3\">$$\\varepsilon^{2} I=P$$</font>', '', 'top', '$$\\varepsilon I=P$$<br>', 'only positive ions ', 'only negative ions', 'both negative and positive ions', 'D', 1, 'B', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(58, 71, 1, '<font face=\"Arial\" size=\"3\">$$\\varepsilon^{2} I=P$$</font>', '', 'top', '$$\\varepsilon I=P$$<br>', 'only positive ions ', 'only negative ions', 'both negative and positive ions', 'D', 1, 'A', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(59, 71, 2, '$$\\varepsilon^{2} I=P$$', '', 'top', '$\\varepsilon I=P$', '$$\\varepsilon I^{2}=P$$', '<font face=\"Arial\" size=\"3\">$$\\varepsilo</font>n^{2} I=P$$', '$$ \\varepsilon I P=1$$', 'A', 2, 'A', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(60, 72, 1, '<font face=\"Arial\" size=\"3\">$$\\varepsilon^{2} I=P$$</font>', '', 'top', '$$\\varepsilon I=P$$<br>', 'only positive ions ', 'only negative ions', 'both negative and positive ions', 'D', 1, 'A', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(61, 73, 1, '<font face=\"Arial\" size=\"3\">$$\\varepsilon^{2} I=P$$</font>', '', 'top', '$$\\varepsilon I=P$$<br>', 'only positive ions ', 'only negative ions', 'both negative and positive ions', 'D', 1, 'A', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(62, 73, 2, '$$<span>\\frac{1+sin(x)}{y}</span><font face=\"Arial\" size=\"3\">$$</font>', '', 'top', '$\\varepsilon I=P$', '$$\\varepsilon I^{2}=P$$', '<font face=\"Arial\" size=\"3\">$$\\varepsilo</font>n^{2} I=P$$', '$$ \\varepsilon I P=1$$', 'A', 2, 'A', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(63, 73, 3, '<div lang=\"latex\">\\frac{1+sin(x)}{y}</div>', '', 'top', 'sin ?', 'cos ?', 'tan ?', 'cot ?', 'D', 3, 'A', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(64, 73, 4, 'In which of the following cells is polarization a major defect?', '', 'top', 'Daniel cell ', 'Leclanche cell', 'Voltaic cell', ' none of the above ', 'C', 4, 'B', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(65, 73, 5, 'The number of electrons that constitute 1 A of current is', '', 'top', '$$6.25 \\times 10^{16}$$', '$$6.25 \\times 10^{17}$$', '$$6.25 \\times 10^{18}$$', '$$ 6.25 \\times 10^{19}$$', 'C', 5, 'A', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1),
-(66, 76, 1, '<font face=\"Arial\" size=\"3\">$$\\varepsilon^{2} I=P$$</font>', 'uploads/13cd80dd048ca1b8decab28ca9ba818f.png', 'bottom', '$$\\varepsilon I=P$$<br>', 'only positive ions ', 'only negative ions', 'both negative and positive ions', 'D', 1, 'A', '2020-02-28 00:00:00', '2020-02-28 00:00:00', 1);
 
 -- --------------------------------------------------------
 
@@ -597,7 +451,7 @@ CREATE TABLE `student_register` (
 --
 
 INSERT INTO `student_register` (`student_register_id`, `user_name`, `student_name`, `profile_image`, `gender`, `parent_name`, `mobile`, `city`, `pin`, `school_name`, `standard`, `password`, `confirm_password`, `email`, `status`, `block_reason`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
-(1, 'aumak7639', 'Umasekar', 'uploads/e298188cd196bac383a8febb3e15c88d.png', 'male', 'Arumugam', '7639600998', 'Chennai', '600073', 'YG Studio', '10th STD State Board', '123456', '123456', 'umasekar098@gmail.com', 0, '', '0000-00-00', '0000-00-00', 0, 0);
+(1, 'aumak7639', 'Umaseakr', 'uploads/46d997ef4f485dd5465d4715c61c23cf.png', 'male', 'Arumugam', '7639600998', 'Chennai', '600073', 'Yg studio', '10th STD State Board', '123456', '123456', 'umasekar098@gmail.com', 0, '', '0000-00-00', '0000-00-00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -620,10 +474,8 @@ CREATE TABLE `student_register_login` (
 --
 
 INSERT INTO `student_register_login` (`student_register_login_id`, `student_register_id`, `login_at`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
-(1, 1, '2020-02-25', '2020-02-25 11:31:11', '2020-02-25 11:31:11', 0, 0),
-(2, 1, '2020-02-28', '2020-02-28 10:15:21', '2020-02-28 10:15:21', 0, 0),
-(3, 1, '2020-02-28', '2020-02-28 11:12:35', '2020-02-28 11:12:35', 0, 0),
-(4, 1, '2020-02-28', '2020-02-28 12:34:46', '2020-02-28 12:34:46', 0, 0);
+(1, 1, '2020-03-02', '2020-03-02 12:07:56', '2020-03-02 12:07:56', 0, 0),
+(2, 1, '2020-03-02', '2020-03-02 12:08:16', '2020-03-02 12:08:16', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -795,13 +647,13 @@ ALTER TABLE `student_answer`
 -- AUTO_INCREMENT for table `student_log`
 --
 ALTER TABLE `student_log`
-  MODIFY `student_log_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
+  MODIFY `student_log_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `student_log_detail`
 --
 ALTER TABLE `student_log_detail`
-  MODIFY `student_log_detail_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
+  MODIFY `student_log_detail_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `student_register`
@@ -813,7 +665,7 @@ ALTER TABLE `student_register`
 -- AUTO_INCREMENT for table `student_register_login`
 --
 ALTER TABLE `student_register_login`
-  MODIFY `student_register_login_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `student_register_login_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `subject`
