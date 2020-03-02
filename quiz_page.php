@@ -301,12 +301,20 @@ if (count($questions) > 0) {
                                 });
                     },
                     next: function () {
-                        if (this.questionIndex < this.quiz.questions.length)
+                        if (this.questionIndex < this.quiz.questions.length) {
                             this.questionIndex++;
+                            MathJax.Hub.Config({
+                                tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+                            });
+                        }
                     },
                     prev: function () {
-                        if (this.quiz.questions.length > 0)
+                        if (this.quiz.questions.length > 0) {
                             this.questionIndex--;
+                            MathJax.Hub.Config({
+                                tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+                            });
+                        }
                     },
                     // Return "true" count in userResponses
                     score: function () {
@@ -325,9 +333,7 @@ if (count($questions) > 0) {
                         //return this.userResponses.filter(function(val) { return val }).length;
                     }
                 }
-            }
-            );
-
+            });
         </script>
     </body>
 </html>
