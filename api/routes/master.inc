@@ -325,3 +325,19 @@ $app->get('/get_food_list', function() {
     }
     echoRespnse(201, $res);
 });
+
+$app->get('/get_app_config', function() {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('*', 'config', 'name IN (\'delivery_charge\')');
+    if (count($data) > 0) {
+        $response = array();
+        foreach ($data as $row) {
+            $response[$row['name']] = $row['value'];
+        }
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $response;
+    }
+    echoRespnse(201, $res);
+});
