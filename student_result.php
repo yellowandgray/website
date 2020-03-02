@@ -142,6 +142,7 @@ if (isset($_SESSION['student_register_id'])) {
         <?php include 'script.php';
         ?>
         <script type="text/javascript">
+            image_url = 'http://localhost/project/feringo-neet/api/v1/';
             $(document).ready(function () {
                 $("#result-view-btn").click(function () {
                     $("#result-view").fadeToggle();
@@ -206,6 +207,11 @@ if (isset($_SESSION['student_register_id'])) {
                                     qlist = qlist + '<div class="explanation-section"><strong>Explanation</strong> : ' + val.explanation + '</div>';
                                 } else {
                                     qlist = qlist + '<div class="explanation-section">No Explanation</div>';
+                                }
+                                if (val.image_path_explanation !== '') {
+                                    qlist = qlist + '<div class="explanation_image"><img src="' + image_url + val.image_path_explanation + '"></div>';
+                                } else {
+                                    qlist = qlist + '';
                                 }
                                 qlist = qlist + '</div>';
                             });

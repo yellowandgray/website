@@ -1,0 +1,46 @@
+<h2 mat-dialog-title>Question Number Alter</h2>
+<mat-dialog-content class="mat-typography">
+    <form [formGroup]="" (ngSubmit)="onSubmit()">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Select Increase/Decrease</mat-label>
+                    <mat-select>
+                        <mat-option value="increase">Increase</mat-option>
+                        <mat-option value="decrease">Decrease</mat-option>
+                    </mat-select>
+                    <mat-error>Subject is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Increase/Decrease Count</mat-label>
+                    <input matInput type="number" placeholder="" />
+                    <mat-error>Increase/Decrease Count is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>From Question No</mat-label>
+                    <input matInput type="number" placeholder="" />
+                    <mat-error>From Question No is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>To Question No</mat-label>
+                    <input matInput type="number" placeholder="" />
+                    <mat-error>To Question No is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
+            <button mat-button [mat-dialog-close]="false">Cancel</button>
+            <button mat-button type="submit" [disabled]="loading">Submit</button>
+            <mat-progress-spinner class="example-margin" *ngIf="loading" [mode]="'indeterminate'" [strokeWidth]="3" [diameter]="25">
+            </mat-progress-spinner>
+        </div>
+    </form>
+</mat-dialog-content>

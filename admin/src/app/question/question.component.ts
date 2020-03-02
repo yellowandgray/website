@@ -170,6 +170,18 @@ fileProgress(fileInput: any) {
             }
         });
     }
+    openQusNoAlt(): void {
+        const dialogRef = this.dialog.open(QuestionAltForm, {
+            minWidth: "40%",
+            maxWidth: "40%"
+        });
+
+        dialogRef.afterClosed().subscribe(result => {
+            if (typeof result !== 'undefined' && result !== false && result !== 'false') {
+                
+            }
+        });
+    }
 }
 
 
@@ -187,11 +199,13 @@ export class QuestionForm {
     option_b_image: string = 'Option B Image';
     option_c_image: string = 'Option C Image';
     option_d_image: string = 'Option D Image';
+    explanation_image: string = 'Select Explanation Image';
     image_path: string = '';
     option_image_a: string = '';
     option_image_b: string = '';
     option_image_c: string = '';
     option_image_d: string = '';
+    image_path_explanation: string = '';
     subject: any[];
     chapter: any[];
     topic: any[];
@@ -217,9 +231,9 @@ export class QuestionForm {
             'answer': new FormControl('', Validators.required),
             'explanation': new FormControl(''),
             'data_dictionary': new FormControl(''),
-            'book_id': new FormControl('', Validators.required),
-            'page_no': new FormControl('', Validators.required),
-            'notes': new FormControl('', Validators.required),
+            'book_id': new FormControl(''),
+            'page_no': new FormControl(''),
+            'notes': new FormControl(''),
         });
         if (this.data.data != null) {
             this.questionForm.patchValue({
@@ -243,6 +257,7 @@ export class QuestionForm {
             });
             this.question_id = this.data.data.question_id;
             this.image_path = this.data.data.image_path;
+            this.image_path_explanation = this.data.data.image_path_explanation;
             this.getChapter();
             this.getTopic();
         }
@@ -307,6 +322,7 @@ getTopic(): void {
             formData.append('difficult_id', this.questionForm.value.difficult_id);
             formData.append('name', this.questionForm.value.question);
             formData.append('image_path', this.image_path);
+            formData.append('image_path_explanation', this.image_path_explanation);
             formData.append('question_no', this.questionForm.value.question_no);
             formData.append('direction', this.questionForm.value.direction);
             formData.append('a', this.questionForm.value.a);
@@ -392,6 +408,12 @@ getTopic(): void {
         this[url] = '';
         if (url === 'image_path') {
             this.question_image = 'Select Question Image';
+        }
+    }
+    removeMedia1(url) {
+        this[url] = '';
+        if (url === 'image_path_explanation') {
+            this.explanation_image = 'Select Explanation Image';
         }
     }
     editorConfig: AngularEditorConfig = {
@@ -519,4 +541,21 @@ export class QuestionDelete {
             }
         );
     }
+}
+
+
+
+
+@Component({
+    selector: 'question-alt-form',
+    templateUrl: 'question-alt-form.html',
+})
+export class QuestionAltForm {
+    loading = false;
+    question_id = 0;
+    constructor(
+        public dialogRef: MatDialogRef<QuestionAltForm>,
+        @Inject(MAT_DIALOG_DATA) public data: any,
+        private _snackBar: MatSnackBar,
+        private httpClient: HttpClient) {}
 }

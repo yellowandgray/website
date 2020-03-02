@@ -163,16 +163,28 @@
             <div fxFlex="100%">
                 <mat-form-field fxFlex="100%">
                     <mat-label>Explanation</mat-label>
-                    <textarea matInput rows="6" placeholder="" required formControlName="explanation"></textarea>
+                    <textarea matInput rows="6" placeholder="" formControlName="explanation"></textarea>
                     <mat-error>Explanation is required</mat-error>
                 </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+            <div fxFlex="100%" fxLayoutAlign="center center">
+                <button *ngIf="image_path_explanation == ''" type="button" mat-raised-button (click)="fileInput.click()">{{explanation_image}}</button>
+                <input hidden #fileInput type="file" id="file" (change)="fileProgress($event, 'explanation_image', 'image_path_explanation')" />
+                <div class="preview-image" *ngIf="image_path_explanation != ''">
+                    <img class="dialog-picture" mat-card-image src="{{image_url}}{{image_path_explanation}}" alt="Photo" />
+                    <button mat-icon-button aria-label="Close icon" (click)="removeMedia1('image_path_explanation')">
+                <mat-icon>close</mat-icon>
+            </button>
+                </div>
             </div>
         </div>
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
             <div fxFlex="100%">
                 <mat-form-field fxFlex="100%">
                     <mat-label>Data Dictionary</mat-label>
-                    <textarea matInput rows="6" placeholder="" required formControlName="data_dictionary"></textarea>
+                    <textarea matInput rows="6" placeholder="" formControlName="data_dictionary"></textarea>
                     <mat-error>Data Dictionary is required</mat-error>
                 </mat-form-field>
             </div>
@@ -181,7 +193,7 @@
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Select Book</mat-label>
-                    <mat-select required formControlName="book_id">
+                    <mat-select formControlName="book_id">
                         <mat-option [value]="row.book_id" *ngFor="let row of book">
                             {{row.book_name}}
                         </mat-option>
@@ -192,7 +204,7 @@
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Page No</mat-label>
-                    <input matInput placeholder="" required formControlName="page_no" />
+                    <input matInput placeholder="" formControlName="page_no" />
                     <mat-error>Page No is required</mat-error>
                 </mat-form-field>
             </div>
@@ -201,7 +213,7 @@
             <div fxFlex="100%">
                 <mat-form-field fxFlex="100%">
                     <mat-label>Notes</mat-label>
-                    <textarea matInput placeholder="" rows="6" required formControlName="notes"></textarea>
+                    <textarea matInput placeholder="" rows="6" formControlName="notes"></textarea>
                     <mat-error>Notes is required</mat-error>
                 </mat-form-field>
             </div>
