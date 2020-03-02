@@ -70,7 +70,7 @@ $app->post('/store_answer', function() use ($app) {
     if (count($record) > 0) {
         $res['error'] = false;
         $res['message'] = 'Answer inserted successfully';
-        $obj->insertRecord(array('question_id' => $record['question_id'], 'student_log_id' => $data['student_log_id'], 'name' => $record['name'], 'image_path' => $record['image_path'], 'direction' => $record['direction'], 'a' => $record['a'], 'b' => $record['b'], 'c' => $record['c'], 'd' => $record['d'], 'answer' => $record['answer'], 'question_no' => $record['question_no'], 'student_answer' => $data['answer'], 'created_at' => date('Y-m-d'), 'updated_at' => date('Y-m-d'), 'difficult_id' => $record['difficult_id']), 'student_log_detail');
+        $obj->insertRecord(array('question_id' => $record['question_id'], 'student_log_id' => $data['student_log_id'], 'name' => $record['name'], 'image_path' => $record['image_path'], 'direction' => $record['direction'], 'a' => $record['a'], 'b' => $record['b'], 'c' => $record['c'], 'd' => $record['d'], 'answer' => $record['answer'], 'explanation' => $record['explanation'], 'question_no' => $record['question_no'], 'student_answer' => $data['answer'], 'created_at' => date('Y-m-d'), 'updated_at' => date('Y-m-d'), 'difficult_id' => $record['difficult_id']), 'student_log_detail');
     } else {
         $res['message'] = 'Unable to insert this answer';
     }
@@ -175,7 +175,6 @@ $app->post('/insert_book', function() use ($app) {
     }
     echoRespnse(201, $res);
 });
-
 
 $app->get('/get_subject', function() {
     $res = array('error' => true, 'message' => 'No records found');
