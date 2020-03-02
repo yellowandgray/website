@@ -111,15 +111,13 @@ $app->post('/validateaddress', function() use ($app) {
     $obj = new Common();
     $record = $obj->selectRow('*', 'delivery_pincode', 'pincode=\'' . $data['pincode'] . '\'');
     if (count($record) > 0) {
-        if ($data['phone_no'] == $record['phone_no']) {
-            date_default_timezone_set("Asia/Kuala_Lumpur");
-            $update = $obj->updateRecordWithWhere(array('name' => $data['name'], 'address' => $data['address'], 'pincode' => $data['pincode']), 'user', 'user_id=' . $data['user_id']);
-            if ($update > 0) {
-                $res['error'] = false;
-                $res['message'] = 'Delivery available';
-            } else {
-                $res['message'] = 'Unable to update address';
-            }
+        date_default_timezone_set("Asia/Kuala_Lumpur");
+        $update = $obj->updateRecordWithWhere(array('name' => $data['name'], 'address' => $data['address'], 'pincode' => $data['pincode']), 'user', 'user_id=' . $data['user_id']);
+        if ($update > 0) {
+            $res['error'] = false;
+            $res['message'] = 'Delivery available';
+        } else {
+            $res['message'] = 'Unable to update address';
         }
     }
     echoRespnse(201, $res);
@@ -308,6 +306,18 @@ $app->get('/get_delivery_boy', function() {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
     $data = $com->selectAll('*', 'delivery_boy', 'delivery_boy_id > 0');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_food_list', function() {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('fi.*, u.name AS unit', 'fooditem AS fi LEFT JOIN unit AS u ON u.unit_id = fi.unit_id', 'fi.status = 1');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
