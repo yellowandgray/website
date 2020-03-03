@@ -233,7 +233,7 @@ $app->post('/insert_delivery_boy', function() use ($app) {
 $app->get('/get_foods', function() {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
-    $data = $com->selectAll('f.*, u.name AS unit', 'fooditems AS f LEFT JOIN unit AS u ON u.unit_id = f.unit_id', 'id > 0');
+    $data = $com->selectAll('f.*, u.name AS unit', 'fooditems AS f LEFT JOIN unit AS u ON u.unit_id = f.unit_id', 'f.fooditem_id > 0');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
@@ -245,7 +245,7 @@ $app->get('/get_foods', function() {
 $app->get('/get_drinks', function() {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
-    $data = $com->selectAll('*', 'cooldrink', 'cooldrink_id > 0');
+    $data = $com->selectAll('c.*, u.name AS unit', 'cooldrink AS c LEFT JOIN unit AS u ON u.unit_id = c.unit_id', 'c.cooldrink_id > 0');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
@@ -338,6 +338,38 @@ $app->get('/get_app_config', function() {
         $res['error'] = false;
         $res['message'] = 'Records found';
         $res['data'] = $response;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->post('/place_order', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to create order');
+    $data = $app->request->post();
+    $com = new Common();
+    date_default_timezone_set('Asia/Kolkata');
+    $delivery_charge = $com->selectRow('value', 'config', 'name=\'delivery_charge\'');
+    $total = 0;
+    foreach ($data['items'] as $item) {
+        $total = $total + ($item['amount'] * $item['quantity']);
+    }
+    $total = $total + $delivery_charge['value'];
+    if ($data['total'] == $total) {
+        $order = $com->insertRecord(array('user_id' => $data['user_id'], 'status' => 1, 'delivery_charge' => $delivery_charge['value'], 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'created_by' => $data['user_id'], 'updated_by' => $data['user_id'], 'total' => $total), 'order');
+        if ($order > 0) {
+            foreach ($data['items'] as $item) {
+                if ($item['type'] == 'food') {
+                    $fooditem = $com->selectRow('*', 'fooditem', 'fooditem_id = ' . $item['id']);
+                }
+                if ($item['type'] == 'drink') {
+                    $fooditem = $com->selectRow('*', 'cooldrink', 'cooldrink_id = ' . $item['id']);
+                }
+                $com->insertRecord(array('order_id' => $order, 'item_id' => $item['id'], 'amount' => $item['amount'], 'unit_id' => $fooditem['unit_id'], 'unit_no' => $fooditem['unit_no'], 'type' => $item['type'], 'name' => $fooditem['name'], 'imageurl' => $fooditem['imageurl'], 'quantity' => $item['quantity'], 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'created_by' => $data['user_id'], 'updated_by' => $data['user_id']), 'order_item');
+            }
+            $res['error'] = false;
+            $res['message'] = 'Order created successfully! Order no. is #' . $order;
+        }
+    } else {
+        $res['message'] = 'Total value mismatch';
     }
     echoRespnse(201, $res);
 });
