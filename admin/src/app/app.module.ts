@@ -52,7 +52,6 @@ import { BookComponent, BookForm, BookDelete } from './book/book.component';
     QuestionComponent,
     QuestionForm,
     QuestionDelete,
-    QuestionAltForm,
     TopicComponent,
     TopicForm,
     TopicDelete,
@@ -104,7 +103,7 @@ import { BookComponent, BookForm, BookDelete } from './book/book.component';
     MatButtonToggleModule,
     MatCardModule
   ],
-  entryComponents: [SubjectComponent, SubjectForm, SubjectDelete, QuestionComponent, QuestionForm, QuestionDelete, QuestionAltForm, TopicComponent, TopicForm, TopicDelete, ChapterComponent, ChapterForm, ChapterDelete, DifficultyLevelComponent, DifficultForm, DifficultDelete, UserComponent, UserForm, PictureViewUser, BlockForm, ResultForm, UserDelete, UserViewForm, UserFullResultForm, BookComponent, BookForm, BookDelete],
+  entryComponents: [SubjectComponent, SubjectForm, SubjectDelete, QuestionComponent, QuestionForm, QuestionDelete, TopicComponent, TopicForm, TopicDelete, ChapterComponent, ChapterForm, ChapterDelete, DifficultyLevelComponent, DifficultForm, DifficultDelete, UserComponent, UserForm, PictureViewUser, BlockForm, ResultForm, UserDelete, UserViewForm, UserFullResultForm, BookComponent, BookForm, BookDelete],
   providers: [],
   bootstrap: [AppComponent]
 })
