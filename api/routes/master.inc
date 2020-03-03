@@ -24,7 +24,7 @@ $app->get('/delete_record/:table/:where', function($table, $where) {
     $data = $com->deleteRecordWithWhere($table, $where);
     if ($data > 0) {
         if ($table == 'question') {
-            $com->updateRecordWithWhere(array('question_no' => 'question_no - 1'), 'question', 'topic_id = \'' . $record['topic_id'] . '\' AND question_no >= ' . $record['question_no']);
+            $com->updateRecord('question_no = (question_no - 1)', 'question', 'topic_id = \'' . $record['topic_id'] . '\' AND question_no >= ' . $record['question_no']);
         }
         $res['error'] = false;
         $res['message'] = 'Record deleted successfully';
@@ -153,7 +153,7 @@ $app->post('/insert_question', function() use ($app) {
     $com = new Common();
     $record = $com->insertRecord(array('difficult_id' => $data['difficult_id'], 'topic_id' => $data['topic_id'], 'name' => $data['name'], 'question_no' => $data['question_no'], 'direction' => $data['direction'], 'explanation' => $data['explanation'], 'explanation_img_direction' => $data['explanation_img_direction'], 'data_dictionary' => $data['data_dictionary'], 'image_path' => $data['image_path'], 'image_path_explanation' => $data['image_path_explanation'], 'a' => $data['a'], 'b' => $data['b'], 'c' => $data['c'], 'd' => $data['d'], 'answer' => $data['answer'], 'book_id' => $data['book_id'], 'page_no' => $data['page_no'], 'notes' => $data['notes']), 'question');
     if ($record > 0) {
-        $com->updateRecordWithWhere(array('question_no' => 'question_no + 1'), 'question', 'topic_id = \'' . $data['topic_id'] . '\' AND question_id != ' . $record . ' AND question_no >= ' . $data['question_no']);
+        $com->updateRecord('question_no = (question_no - 1)', 'question', 'topic_id = \'' . $data['topic_id'] . '\' AND question_id != ' . $record . ' AND question_no >= ' . $data['question_no']);
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
     }
