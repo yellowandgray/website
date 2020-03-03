@@ -21,7 +21,7 @@ export class DifficultyLevelComponent implements OnInit {
     this.getDifficult();
   }
   getDifficult(): void {
-    this.httpClient.get<any>('http://2dotask.com/yellowandgray/feringo_beta/api/v1/get_difficult')
+    this.httpClient.get<any>('http://localhost/project/feringo-neet/api/v1/get_difficult')
       .subscribe(
         (res) => {
           this.difficult = res["result"]["data"];
@@ -117,7 +117,7 @@ export class DifficultForm {
       //formData.append('description', this.difficultForm.value.description);
       url = 'insert_difficult';
     }
-    this.httpClient.post('http://2dotask.com/yellowandgray/feringo_beta/api/v1/' + url, formData).subscribe(
+    this.httpClient.post('http://localhost/project/feringo-neet/api/v1/' + url, formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -202,7 +202,7 @@ export class DifficultDelete {
       return;
     }
     this.loading = true;
-    this.httpClient.get('http://2dotask.com/yellowandgray/feringo_beta/api/v1/delete_record/difficult/difficult_id=' + this.difficult_id).subscribe(
+    this.httpClient.get('http://localhost/project/feringo-neet/api/v1/delete_record/difficult/difficult_id=' + this.difficult_id).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
