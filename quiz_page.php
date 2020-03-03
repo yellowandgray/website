@@ -113,7 +113,7 @@ if (count($questions) > 0) {
 
                                 <!-- quizOptions -->
                                 <div class="optionContainer">
-                                    <div class="option" v-for="(response, index) in quiz.questions[questionIndex].responses" @click="selectOption(index)" :class="{ 'is-selected': userResponses[questionIndex] == index}" :key="index" v-if="response.text != ''">
+                                    <div class="option" v-for="(response, index) in quiz.questions[questionIndex].responses" @click="selectOption(index);" :class="{ 'is-selected': userResponses[questionIndex] == index}" :key="index" v-if="response.text != ''">
                                          {{ index | charIndex }}. <span v-html="response.text"></span>
                                     </div>
                                 </div>
@@ -302,6 +302,9 @@ if (count($questions) > 0) {
                                 this.questionIndex++;
                             }
                         }, 500);
+                        setTimeout(() => {
+                            test();
+                        }, 600);
                         var questions = <?php echo json_encode($questions_list); ?>;
                         var answers = ['A', 'B', 'C', 'D'];
                         $.post("api/v1/store_answer",
@@ -316,22 +319,23 @@ if (count($questions) > 0) {
                                     }
                                 });
                     },
-                    next: function () {
-                        if (this.questionIndex < this.quiz.questions.length) {
-                            this.questionIndex++;
-                            MathJax.Hub.Config({
-                                tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-                            });
-                        }
-                    },
-                    prev: function () {
-                        if (this.quiz.questions.length > 0) {
-                            this.questionIndex--;
-                            MathJax.Hub.Config({
-                                tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-                            });
-                        }
-                    },
+//                    next: function () {
+//                        
+//                        if (this.questionIndex < this.quiz.questions.length) {
+//                            this.questionIndex++;
+//                            MathJax.Hub.Config({
+//                                tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+//                            });
+//                        }
+//                    },
+//                    prev: function () {
+//                        if (this.quiz.questions.length > 0) {
+//                            this.questionIndex--;
+//                            MathJax.Hub.Config({
+//                                tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+//                            });
+//                        }
+//                    },
                     // Return "true" count in userResponses
                     score: function () {
                         var score = 0;

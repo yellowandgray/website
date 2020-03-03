@@ -19,18 +19,24 @@
 <script src="js/common.js" type="text/javascript"></script>
 <script src="js/vue.min.js" type="text/javascript"></script>
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<!--<script type="text/javascript">
-$("#open-logout").click(function (e) {
-    //console.log("test");
-    e.stopPropagation();
-    $(".logout_dropdown").show("fast");
-});
-$(document).click(function (e) {
-    if (!(e.target.class === 'logout_dropdown')) {
-        $(".logout_dropdown").hide("fast");
+<script type="text/javascript">
+    /*
+    MathJax.Hub.Config({
+           skipStartupTypeset: true,
+           tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    });
+     */
+    test();
+    function test() {
+        if(typeof MathJax !== 'undefined') {
+            MathJax.Hub.Queue(["Typeset",MathJax.Hub]);           
+        }
+        
+         MathJax.Hub.Config({
+            tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+     });
     }
-});
-</script>-->
+</script>
 <script type="text/javascript">
     var onevar = 1;
     function goBack() {

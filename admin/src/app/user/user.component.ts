@@ -15,7 +15,8 @@ import { Observable } from 'rxjs';
 export class UserComponent implements OnInit {
   searchTerm: string = '';
   student = [];
-  student_count = 0;
+  student_count = 0; 
+  sortdata: string = "";
   image_url: string = 'http://localhost/project/feringo-neet/api/v1/';
 
   constructor(public dialog: MatDialog, private httpClient: HttpClient, private _snackBar: MatSnackBar) { }
@@ -159,6 +160,19 @@ export class UserComponent implements OnInit {
       if(result !== false && result !== 'false') {
             }
         });
+    }
+
+    sortRecords(arr, sort): void {
+        switch(sort) {
+            case 'created_a_z':
+                (this[arr]).sort((a,b) => a.created_at.localeCompare(b.updated_at));
+            break;
+            case 'created_z_a':
+                (this[arr]).sort((a,b) => b.created_at.localeCompare(a.created_at));
+            break;
+            default:
+            break;
+        }
     }
 
 }

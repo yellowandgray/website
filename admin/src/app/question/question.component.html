@@ -64,14 +64,14 @@
             <mat-form-field fxFlex="30%">
                 <input matInput type="text" placeholder="Search by Name" [(ngModel)]="searchTerm" />
             </mat-form-field>
-            <span fxFlex="5%"></span>
+            <span fxFlex="2%"></span>
             <mat-form-field fxFlex="30%">
                 <input matInput type="text" placeholder="Search by Question No" [(ngModel)]="searchQuestionNo" />
             </mat-form-field>
-            <span fxFlex="5%"></span>
-            <button mat-raised-button color="primary" (click)="getQuestion()">
-        Search
-    </button>
+            <span fxFlex="2%"></span>
+            <button fxFlex="6%" mat-raised-button color="primary" (click)="getQuestion()">
+                Search
+            </button>
             <mat-form-field appearance="outline" fxFlex="100%">
                 <mat-label>Select Level</mat-label>
                 <mat-select (selectionChange)="getQuestion()" [(ngModel)]="selected_level">

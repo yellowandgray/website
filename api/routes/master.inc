@@ -144,6 +144,7 @@ $app->post('/insert_question', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
+//    $question_no = $com->updateRecordWithWhere(array('question_no = +1', 'question', 'subject_id'));
     $record = $com->insertRecord(array('difficult_id' => $data['difficult_id'], 'topic_id' => $data['topic_id'], 'name' => $data['name'], 'question_no' => $data['question_no'], 'direction' => $data['direction'], 'explanation' => $data['explanation'], 'explanation_img_direction' => $data['explanation_img_direction'], 'data_dictionary' => $data['data_dictionary'], 'image_path' => $data['image_path'], 'image_path_explanation' => $data['image_path_explanation'], 'a' => $data['a'], 'b' => $data['b'], 'c' => $data['c'], 'd' => $data['d'], 'answer' => $data['answer'], 'book_id' => $data['book_id'], 'page_no' => $data['page_no'], 'notes' => $data['notes']), 'question');
     if ($record > 0) {
         $res['error'] = false;
@@ -215,6 +216,17 @@ $app->get('/get_topic_by_chapter/:cid', function($cid) {
 $app->get('/get_student', function() {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
+    if (isset($_SESSION['student_register_id'])) {
+        $login_student = $obj->selectRow('*', 'student_register', 'student_register_id=' . $_SESSION['student_register_id']);
+        $student_logs = $obj->selectAll('*', 'student_log', 'student_register_id = ' . $_SESSION['student_register_id'] . ' ORDER BY student_log_id DESC');
+        if (count($student_logs) > 0) {
+            foreach ($student_logs as $key => $log) {
+                $detail = $obj->selectRow('COUNT(student_log_detail_id) AS attended, IFNULL((SELECT COUNT(student_log_detail_id) FROM student_log_detail WHERE student_log_id=' . $log['student_log_id'] . ' AND UPPER(answer) = UPPER(student_answer)), 0) AS correct_answers', 'student_log_detail', 'student_log_id=' . $log['student_log_id']);
+                $student_logs[$key]['attended'] = $detail['attended'];
+                $student_logs[$key]['correct_answers'] = $detail['correct_answers'];
+            }
+        }
+    }
     $data = $com->selectAll('s.*, (SELECT COUNT(student_register_login_id) FROM student_register_login WHERE student_register_id = s.student_register_id) AS total_logins, (SELECT MAX(login_at) FROM student_register_login WHERE student_register_id = s.student_register_id) AS last_login', 'student_register AS s', 's.student_register_id > 0 ORDER BY s.student_name ASC');
 
     if (count($data) > 0) {
