@@ -230,6 +230,7 @@ export class QuestionForm {
             'd': new FormControl(''),
             'answer': new FormControl('', Validators.required),
             'explanation': new FormControl(''),
+            'explanation_img_direction': new FormControl(''),
             'data_dictionary': new FormControl(''),
             'book_id': new FormControl(''),
             'page_no': new FormControl(''),
@@ -250,6 +251,7 @@ export class QuestionForm {
                 d: this.data.data.d,
                 answer: this.data.data.answer,
                 explanation: this.data.data.explanation,
+                explanation_img_direction: this.data.data.explanation_img_direction,
                 data_dictionary: this.data.data.data_dictionary,
                 book_id: this.data.data.book_id,
                 page_no: this.data.data.page_no,
@@ -331,6 +333,7 @@ getTopic(): void {
             formData.append('d', this.questionForm.value.d);
             formData.append('answer', this.questionForm.value.answer);
             formData.append('explanation', this.questionForm.value.explanation);
+            formData.append('explanation_img_direction', this.questionForm.value.explanation_img_direction);
             formData.append('data_dictionary', this.questionForm.value.data_dictionary);
             formData.append('page_no', this.questionForm.value.page_no);
             formData.append('book_id', this.questionForm.value.book_id);

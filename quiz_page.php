@@ -186,6 +186,7 @@ if (count($questions) > 0) {
         <?php include 'footer.php'; ?>
         <?php include 'script.php'; ?>
         <script>
+            image_url = 'http://localhost/project/feringo-neet/api/v1/';
             var quiz = {
                 user: "Feringo",
                 questions: <?php echo json_encode($questions_list); ?>
@@ -266,10 +267,20 @@ if (count($questions) > 0) {
                                             }
                                             qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option">D. ' + val.d + '</div></div>';
                                         }
+                                        if (val.image_path_explanation !== '' && val.explanation_img_direction !== 'bottom') {
+                                            qlist = qlist + '<div class="explanation_image"><img src="' + image_url + val.image_path_explanation + '"></div>';
+                                        } else {
+                                            qlist = qlist + '';
+                                        }
                                         if (val.explanation !== '') {
                                             qlist = qlist + '<div class="explanation-section"><strong>Explanation</strong> : ' + val.explanation + '</div>';
                                         } else {
                                             qlist = qlist + '<div class="explanation-section">No Explanation</div>';
+                                        }
+                                        if (val.image_path_explanation !== '' && val.explanation_img_direction !== 'top') {
+                                            qlist = qlist + '<div class="explanation_image"><img src="' + image_url + val.image_path_explanation + '"></div>';
+                                        } else {
+                                            qlist = qlist + '';
                                         }
                                         qlist = qlist + '</div>';
                                     });

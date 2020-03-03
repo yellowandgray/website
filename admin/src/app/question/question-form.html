@@ -169,15 +169,25 @@
             </div>
         </div>
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
-            <div fxFlex="100%" fxLayoutAlign="center center">
+            <div fxFlex="50%" fxLayoutAlign="center center">
                 <button *ngIf="image_path_explanation == ''" type="button" mat-raised-button (click)="fileInput.click()">{{explanation_image}}</button>
                 <input hidden #fileInput type="file" id="file" (change)="fileProgress($event, 'explanation_image', 'image_path_explanation')" />
                 <div class="preview-image" *ngIf="image_path_explanation != ''">
                     <img class="dialog-picture" mat-card-image src="{{image_url}}{{image_path_explanation}}" alt="Photo" />
                     <button mat-icon-button aria-label="Close icon" (click)="removeMedia1('image_path_explanation')">
-                <mat-icon>close</mat-icon>
-            </button>
+                        <mat-icon>close</mat-icon>
+                    </button>
                 </div>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Explanation Image Direction</mat-label>
+                    <mat-select formControlName="explanation_img_direction">
+                        <mat-option value="top">Top</mat-option>
+                        <mat-option value="bottom">Bottom</mat-option>
+                    </mat-select>
+                    <mat-error>Direction is required</mat-error>
+                </mat-form-field>
             </div>
         </div>
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">

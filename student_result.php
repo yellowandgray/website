@@ -203,12 +203,17 @@ if (isset($_SESSION['student_register_id'])) {
                                     }
                                     qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option">D. ' + val.d + '</div></div>';
                                 }
+                                if (val.image_path_explanation !== '' && val.explanation_img_direction === 'top') {
+                                    qlist = qlist + '<div class="explanation_image"><img src="' + image_url + val.image_path_explanation + '"></div>';
+                                } else {
+                                    qlist = qlist + '';
+                                }
                                 if (val.explanation !== '') {
                                     qlist = qlist + '<div class="explanation-section"><strong>Explanation</strong> : ' + val.explanation + '</div>';
                                 } else {
                                     qlist = qlist + '<div class="explanation-section">No Explanation</div>';
                                 }
-                                if (val.image_path_explanation !== '') {
+                                if (val.image_path_explanation !== '' && val.explanation_img_direction === 'bottom') {
                                     qlist = qlist + '<div class="explanation_image"><img src="' + image_url + val.image_path_explanation + '"></div>';
                                 } else {
                                     qlist = qlist + '';
