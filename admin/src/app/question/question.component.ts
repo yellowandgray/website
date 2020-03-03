@@ -170,18 +170,6 @@ fileProgress(fileInput: any) {
             }
         });
     }
-    openQusNoAlt(): void {
-        const dialogRef = this.dialog.open(QuestionAltForm, {
-            minWidth: "40%",
-            maxWidth: "40%"
-        });
-
-        dialogRef.afterClosed().subscribe(result => {
-            if (typeof result !== 'undefined' && result !== false && result !== 'false') {
-                
-            }
-        });
-    }
 }
 
 
@@ -544,21 +532,4 @@ export class QuestionDelete {
             }
         );
     }
-}
-
-
-
-
-@Component({
-    selector: 'question-alt-form',
-    templateUrl: 'question-alt-form.html',
-})
-export class QuestionAltForm {
-    loading = false;
-    question_id = 0;
-    constructor(
-        public dialogRef: MatDialogRef<QuestionAltForm>,
-        @Inject(MAT_DIALOG_DATA) public data: any,
-        private _snackBar: MatSnackBar,
-        private httpClient: HttpClient) {}
 }
