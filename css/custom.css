@@ -1017,19 +1017,30 @@ and open the template in the editor.
 }
 
 .MathJax_Display {
-    margin: 0 !important;
+    margin: 0 auto !important;
     text-align: left !important;
-    padding-left: 25px;
-}
-/*
-.result-title h6 span {
-    float: left !important;
-}
-
-.result-option .option span {
-    float: left !important;
+    /*    padding-left: 25px;*/
+    float: left;
+    width: auto !important;
+    height: auto;
 }
 
-.result-option .option .MathJax_Display {
-    float: left !important;
-}*/
+.option span.q-option {
+    float: left;
+}
+
+.option span img {
+    width: 50%;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .goto-here .questionBox .questionContainer .optionContainer .option {
+        width: 72% !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 980px) {
+    .goto-here .questionBox .questionContainer .optionContainer .option {
+        width: 83% !important;
+    }
+}
