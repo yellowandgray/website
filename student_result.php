@@ -110,6 +110,9 @@ if (isset($_SESSION['student_register_id'])) {
                 });
             });
             function showFullResult(slid) {
+                setTimeout(() => {
+                    test();
+                }, 1000);
                 $.ajax({
                     type: "GET",
                     url: 'api/v1/get_result_detail/' + slid,
@@ -119,7 +122,7 @@ if (isset($_SESSION['student_register_id'])) {
                             var correct_ans = '';
                             var student_ans = '';
                             $.each(data.result.data, function (key, val) {
-                                qlist = qlist + '<div class="question-title"><h6>' + (key + 1) + '. ' + val.name + '</h6>';
+                                qlist = qlist + '<div class="question-title result-title"><h6><span>' + (key + 1) + '</span>. ' + val.name + '</h6>';
                                 if (val.a !== '') {
                                     correct_ans = '';
                                     student_ans = '';
@@ -129,7 +132,7 @@ if (isset($_SESSION['student_register_id'])) {
                                     if ((val.student_answer).toUpperCase() === 'A' && (val.answer).toUpperCase() !== 'A') {
                                         student_ans = 'wrng_clr';
                                     }
-                                    qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option">A. ' + val.a + '</div></div>';
+                                    qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span>A.</span> ' + val.a + '</div></div>';
                                 }
                                 if (val.b !== '') {
                                     correct_ans = '';

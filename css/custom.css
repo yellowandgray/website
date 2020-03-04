@@ -1015,3 +1015,21 @@ and open the template in the editor.
     text-align: center;
     margin-bottom: 10px;
 }
+
+.MathJax_Display {
+    margin: 0 !important;
+    text-align: left !important;
+    padding-left: 25px;
+}
+/*
+.result-title h6 span {
+    float: left !important;
+}
+
+.result-option .option span {
+    float: left !important;
+}
+
+.result-option .option .MathJax_Display {
+    float: left !important;
+}*/
