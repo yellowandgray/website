@@ -103,6 +103,12 @@
     padding: 0.5rem;
 }
 
+.goto-here .questionBox .titleContainer span font {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+}
+
 .goto-here .questionBox .quizForm {
     display: block;
     white-space: normal;
