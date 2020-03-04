@@ -24,8 +24,10 @@
                 <mat-form-field fxFlex="70%">
                     <mat-label>Sort by</mat-label>
                     <mat-select [(ngModel)]="sortdata" (selectionChange)="sortRecords('result', sortdata)">
-                        <mat-option value="name_a_z">Name A-Z</mat-option>
+                        <mat-option value="recently_login">Sort By Recently Login</mat-option>
+                        <mat-option value="sort_by_name">Sort By Name</mat-option>
                         <mat-option value="total_login">Total Login</mat-option>
+                        <mat-option value="register_time">Register Time</mat-option>
                     </mat-select>
                 </mat-form-field>
             </div>
