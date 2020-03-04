@@ -354,7 +354,7 @@ $app->post('/place_order', function() use ($app) {
     }
     $total = $total + $delivery_charge['value'];
     if ($data['total'] == $total) {
-        $order = $com->insertRecord(array('user_id' => $data['user_id'], 'status' => 1, 'delivery_charge' => $delivery_charge['value'], 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'created_by' => $data['user_id'], 'updated_by' => $data['user_id'], 'total' => $total), 'order');
+        $order = $com->insertRecord(array('user_id' => $data['user_id'], 'status' => 1, 'delivery_charge' => $delivery_charge['value'], 'address' => $data['address'], 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'created_by' => $data['user_id'], 'updated_by' => $data['user_id'], 'total' => $total), 'order');
         if ($order > 0) {
             foreach ($data['items'] as $item) {
                 if ($item['type'] == 'food') {
@@ -370,6 +370,21 @@ $app->post('/place_order', function() use ($app) {
         }
     } else {
         $res['message'] = 'Total value mismatch';
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_user_orders/:uid', function($uid) {
+    $res = array('error' => true, 'message' => 'No orders found');
+    $com = new Common();
+    $data = $com->selectAll('*', '`order`', 'user_id=' . $uid);
+    if (count($data) > 0) {
+        foreach ($data as $key => $row) {
+            $data[$key]['items'] = $com->selectAll('*', 'order_item', 'order_id=' . $row['order_id']);
+        }
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
     }
     echoRespnse(201, $res);
 });
