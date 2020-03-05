@@ -16,6 +16,7 @@ export class UserComponent implements OnInit {
   searchTerm: string = '';
   student = [];
   student_count = 0;
+  sortdata: string = "login_at";
   image_url: string = '../api/v1/';
 
   constructor(public dialog: MatDialog, private httpClient: HttpClient, private _snackBar: MatSnackBar) { }
@@ -24,7 +25,7 @@ export class UserComponent implements OnInit {
     this.getuser();
   }
   getuser(): void {
-    this.httpClient.get<any>('../api/v1/get_student')
+    this.httpClient.get<any>('../api/v1/get_student/'+this.sortdata)
       .subscribe(
         (res) => {
           this.student = res["result"]["data"];
@@ -160,7 +161,18 @@ export class UserComponent implements OnInit {
             }
         });
     }
-
+    sortRecords(arr, sort): void {
+        switch(sort) {
+            case 'created_a_z':
+                (this[arr]).sort((a,b) => a.created_at.localeCompare(b.updated_at));
+            break;
+            case 'created_z_a':
+                (this[arr]).sort((a,b) => b.created_at.localeCompare(a.created_at));
+            break;
+            default:
+            break;
+        }
+    }
 }
 
 @Component({
