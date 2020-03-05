@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.2
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 04, 2020 at 06:47 AM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.2.26
+-- Generation Time: Mar 05, 2020 at 07:43 AM
+-- Server version: 10.1.38-MariaDB
+-- PHP Version: 7.3.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `feringo-neet`
+-- Database: `feringo_beta`
 --
 
 -- --------------------------------------------------------
@@ -28,12 +28,13 @@ SET time_zone = "+00:00";
 -- Table structure for table `admin_login`
 --
 
+DROP TABLE IF EXISTS `admin_login`;
 CREATE TABLE `admin_login` (
   `admin_id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `user_name` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `created_by` int(11) NOT NULL,
   `updated_by` int(11) NOT NULL
@@ -52,6 +53,7 @@ INSERT INTO `admin_login` (`admin_id`, `name`, `user_name`, `password`, `created
 -- Table structure for table `book`
 --
 
+DROP TABLE IF EXISTS `book`;
 CREATE TABLE `book` (
   `book_id` int(11) NOT NULL,
   `book_name` varchar(255) NOT NULL,
@@ -76,16 +78,17 @@ INSERT INTO `book` (`book_id`, `book_name`, `book_name_id`, `created_at`, `updat
 -- Table structure for table `chapter`
 --
 
+DROP TABLE IF EXISTS `chapter`;
 CREATE TABLE `chapter` (
   `chapter_id` int(11) NOT NULL,
   `subject_id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL DEFAULT '',
   `description` varchar(255) NOT NULL DEFAULT '',
-  `status` int(1) NOT NULL DEFAULT 1,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `status` int(1) NOT NULL DEFAULT '1',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `created_by` int(11) NOT NULL DEFAULT 1,
-  `updated_by` int(11) NOT NULL DEFAULT 1
+  `created_by` int(11) NOT NULL DEFAULT '1',
+  `updated_by` int(11) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -102,14 +105,15 @@ INSERT INTO `chapter` (`chapter_id`, `subject_id`, `name`, `description`, `statu
 -- Table structure for table `difficult`
 --
 
+DROP TABLE IF EXISTS `difficult`;
 CREATE TABLE `difficult` (
   `difficult_id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL DEFAULT '',
   `description` varchar(500) NOT NULL DEFAULT '',
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
-  `created_by` int(11) NOT NULL DEFAULT 1,
-  `updated_by` int(11) NOT NULL DEFAULT 1
+  `created_by` int(11) NOT NULL DEFAULT '1',
+  `updated_by` int(11) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -128,19 +132,20 @@ INSERT INTO `difficult` (`difficult_id`, `name`, `description`, `created_at`, `u
 -- Table structure for table `question`
 --
 
+DROP TABLE IF EXISTS `question`;
 CREATE TABLE `question` (
   `question_id` int(11) NOT NULL,
   `topic_id` int(11) NOT NULL,
   `name` text CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `image_path` varchar(500) NOT NULL DEFAULT '',
   `direction` varchar(10) NOT NULL DEFAULT '',
-  `a` text CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `b` text CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `c` text CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `d` text CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+  `a` text CHARACTER SET utf8 COLLATE utf8_bin,
+  `b` text CHARACTER SET utf8 COLLATE utf8_bin,
+  `c` text CHARACTER SET utf8 COLLATE utf8_bin,
+  `d` text CHARACTER SET utf8 COLLATE utf8_bin,
   `answer` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `question_no` int(11) NOT NULL,
-  `difficult_id` int(11) NOT NULL DEFAULT 0,
+  `difficult_id` int(11) NOT NULL DEFAULT '0',
   `explanation` text NOT NULL,
   `image_path_explanation` varchar(255) NOT NULL,
   `explanation_img_direction` varchar(255) NOT NULL,
@@ -148,7 +153,7 @@ CREATE TABLE `question` (
   `book_id` int(11) NOT NULL,
   `page_no` varchar(255) NOT NULL,
   `notes` text NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` datetime NOT NULL,
   `created_by` int(11) NOT NULL,
   `updated_by` int(11) NOT NULL
@@ -345,6 +350,7 @@ INSERT INTO `question` (`question_id`, `topic_id`, `name`, `image_path`, `direct
 -- Table structure for table `student_answer`
 --
 
+DROP TABLE IF EXISTS `student_answer`;
 CREATE TABLE `student_answer` (
   `student_answer_id` int(11) NOT NULL,
   `student_register_id` int(11) NOT NULL,
@@ -370,18 +376,19 @@ CREATE TABLE `student_answer` (
 -- Table structure for table `student_log`
 --
 
+DROP TABLE IF EXISTS `student_log`;
 CREATE TABLE `student_log` (
   `student_log_id` int(11) NOT NULL,
-  `subject_id` int(11) NOT NULL DEFAULT 1,
+  `subject_id` int(11) NOT NULL DEFAULT '1',
   `subject_name` varchar(255) NOT NULL DEFAULT '',
-  `difficult_id` int(11) NOT NULL DEFAULT 0,
+  `difficult_id` int(11) NOT NULL DEFAULT '0',
   `difficult_name` varchar(255) NOT NULL DEFAULT '',
-  `chapter_id` int(11) NOT NULL DEFAULT 0,
+  `chapter_id` int(11) NOT NULL DEFAULT '0',
   `chapter_name` varchar(255) NOT NULL DEFAULT '',
-  `topic_id` int(11) NOT NULL DEFAULT 1,
+  `topic_id` int(11) NOT NULL DEFAULT '1',
   `topic_name` varchar(255) NOT NULL DEFAULT '',
-  `student_register_id` int(11) NOT NULL DEFAULT 1,
-  `total_questions` int(11) NOT NULL DEFAULT 0,
+  `student_register_id` int(11) NOT NULL DEFAULT '1',
+  `total_questions` int(11) NOT NULL DEFAULT '0',
   `created_at` datetime DEFAULT NULL,
   `created_by` int(11) NOT NULL,
   `updated_at` datetime DEFAULT NULL,
@@ -479,26 +486,27 @@ INSERT INTO `student_log` (`student_log_id`, `subject_id`, `subject_name`, `diff
 -- Table structure for table `student_log_detail`
 --
 
+DROP TABLE IF EXISTS `student_log_detail`;
 CREATE TABLE `student_log_detail` (
   `student_log_detail_id` int(11) NOT NULL,
-  `student_log_id` int(11) NOT NULL DEFAULT 0,
+  `student_log_id` int(11) NOT NULL DEFAULT '0',
   `question_id` int(11) NOT NULL,
   `name` text NOT NULL,
   `image_path` varchar(500) NOT NULL DEFAULT '',
   `direction` varchar(15) NOT NULL DEFAULT '',
-  `a` text DEFAULT NULL,
-  `b` text DEFAULT NULL,
-  `c` text DEFAULT NULL,
-  `d` text DEFAULT NULL,
+  `a` text,
+  `b` text,
+  `c` text,
+  `d` text,
   `answer` varchar(5) NOT NULL DEFAULT '',
-  `question_no` int(11) NOT NULL DEFAULT 0,
+  `question_no` int(11) NOT NULL DEFAULT '0',
   `student_answer` varchar(5) NOT NULL DEFAULT '',
   `explanation` text NOT NULL,
   `image_path_explanation` varchar(255) NOT NULL,
   `explanation_img_direction` varchar(255) NOT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
-  `difficult_id` int(11) NOT NULL DEFAULT 1
+  `difficult_id` int(11) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -693,6 +701,7 @@ INSERT INTO `student_log_detail` (`student_log_detail_id`, `student_log_id`, `qu
 -- Table structure for table `student_register`
 --
 
+DROP TABLE IF EXISTS `student_register`;
 CREATE TABLE `student_register` (
   `student_register_id` int(11) NOT NULL,
   `user_name` varchar(255) NOT NULL,
@@ -709,6 +718,7 @@ CREATE TABLE `student_register` (
   `confirm_password` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `login_at` datetime NOT NULL,
+  `total_login` int(11) NOT NULL DEFAULT '0',
   `status` tinyint(4) NOT NULL,
   `block_reason` varchar(255) NOT NULL,
   `created_at` date NOT NULL,
@@ -721,9 +731,9 @@ CREATE TABLE `student_register` (
 -- Dumping data for table `student_register`
 --
 
-INSERT INTO `student_register` (`student_register_id`, `user_name`, `student_name`, `profile_image`, `gender`, `parent_name`, `mobile`, `city`, `pin`, `school_name`, `standard`, `password`, `confirm_password`, `email`, `login_at`, `status`, `block_reason`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
-(1, 'aumak7639', 'Umasekar', 'uploads/46d997ef4f485dd5465d4715c61c23cf.png', 'male', 'Arumugam', '7639600998', 'Chennai', '600073', 'Yg studio', '10th STD State Board', '123456', '123456', 'umasekar098@gmail.com', '0000-00-00 00:00:00', 0, '', '0000-00-00', '0000-00-00', 0, 0),
-(2, 'arul', 'Arul', 'uploads/1598673b0295190424ffc2350edddb5d.png', 'male', 'Parent Name', '9876543210', 'Chennai', '600073', 'YG', '10th STD State Board', '123456', '123456', 'arul@yg.com', '0000-00-00 00:00:00', 0, '', '0000-00-00', '0000-00-00', 0, 0);
+INSERT INTO `student_register` (`student_register_id`, `user_name`, `student_name`, `profile_image`, `gender`, `parent_name`, `mobile`, `city`, `pin`, `school_name`, `standard`, `password`, `confirm_password`, `email`, `login_at`, `total_login`, `status`, `block_reason`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
+(1, 'aumak7639', 'Umasekar', 'uploads/46d997ef4f485dd5465d4715c61c23cf.png', 'male', 'Arumugam', '7639600998', 'Chennai', '600073', 'Yg studio', '10th STD State Board', '123456', '123456', 'umasekar098@gmail.com', '2020-03-05 12:02:33', 8, 0, '', '0000-00-00', '0000-00-00', 0, 0),
+(2, 'arul', 'Arul', 'uploads/1598673b0295190424ffc2350edddb5d.png', 'male', 'Parent Name', '9876543210', 'Chennai', '600073', 'YG', '10th STD State Board', '123456', '123456', 'arul@yg.com', '0000-00-00 00:00:00', 0, 0, '', '0000-00-00', '0000-00-00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -731,10 +741,11 @@ INSERT INTO `student_register` (`student_register_id`, `user_name`, `student_nam
 -- Table structure for table `student_register_login`
 --
 
+DROP TABLE IF EXISTS `student_register_login`;
 CREATE TABLE `student_register_login` (
   `student_register_login_id` int(11) NOT NULL,
   `student_register_id` int(11) NOT NULL,
-  `login_at` date NOT NULL,
+  `login_at` datetime NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `created_by` int(11) NOT NULL,
@@ -746,14 +757,26 @@ CREATE TABLE `student_register_login` (
 --
 
 INSERT INTO `student_register_login` (`student_register_login_id`, `student_register_id`, `login_at`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
-(1, 1, '2020-03-02', '2020-03-02 12:07:56', '2020-03-02 12:07:56', 0, 0),
-(2, 1, '2020-03-02', '2020-03-02 12:08:16', '2020-03-02 12:08:16', 0, 0),
-(3, 1, '2020-03-03', '2020-03-03 10:45:49', '2020-03-03 10:45:49', 0, 0),
-(4, 1, '2020-03-03', '2020-03-03 10:45:49', '2020-03-03 10:45:49', 0, 0),
-(5, 2, '2020-03-03', '2020-03-03 15:28:35', '2020-03-03 15:28:35', 0, 0),
-(6, 1, '2020-03-03', '2020-03-03 16:01:29', '2020-03-03 16:01:29', 0, 0),
-(7, 1, '2020-03-04', '2020-03-04 09:45:54', '2020-03-04 09:45:54', 0, 0),
-(8, 1, '2020-03-04', '2020-03-04 10:32:41', '2020-03-04 10:32:41', 0, 0);
+(1, 1, '2020-03-02 00:00:00', '2020-03-02 12:07:56', '2020-03-02 12:07:56', 0, 0),
+(2, 1, '2020-03-02 00:00:00', '2020-03-02 12:08:16', '2020-03-02 12:08:16', 0, 0),
+(3, 1, '2020-03-03 00:00:00', '2020-03-03 10:45:49', '2020-03-03 10:45:49', 0, 0),
+(4, 1, '2020-03-03 00:00:00', '2020-03-03 10:45:49', '2020-03-03 10:45:49', 0, 0),
+(5, 2, '2020-03-03 00:00:00', '2020-03-03 15:28:35', '2020-03-03 15:28:35', 0, 0),
+(6, 1, '2020-03-03 00:00:00', '2020-03-03 16:01:29', '2020-03-03 16:01:29', 0, 0),
+(7, 1, '2020-03-04 00:00:00', '2020-03-04 09:45:54', '2020-03-04 09:45:54', 0, 0),
+(8, 1, '2020-03-04 00:00:00', '2020-03-04 10:32:41', '2020-03-04 10:32:41', 0, 0),
+(9, 1, '2020-03-05 12:02:33', '2020-03-05 12:02:33', '2020-03-05 12:02:33', 0, 0);
+
+--
+-- Triggers `student_register_login`
+--
+DROP TRIGGER IF EXISTS `update_user_login`;
+DELIMITER $$
+CREATE TRIGGER `update_user_login` AFTER INSERT ON `student_register_login` FOR EACH ROW BEGIN
+UPDATE student_register SET login_at = NEW.login_at, total_login = (SELECT COUNT(student_register_login_id) FROM student_register_login WHERE student_register_id = NEW.student_register_id) WHERE student_register_id = NEW.student_register_id;
+END
+$$
+DELIMITER ;
 
 -- --------------------------------------------------------
 
@@ -761,6 +784,7 @@ INSERT INTO `student_register_login` (`student_register_login_id`, `student_regi
 -- Table structure for table `subject`
 --
 
+DROP TABLE IF EXISTS `subject`;
 CREATE TABLE `subject` (
   `subject_id` int(11) NOT NULL,
   `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
@@ -770,8 +794,8 @@ CREATE TABLE `subject` (
   `status` tinyint(1) NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
-  `created_by` int(11) NOT NULL DEFAULT 1,
-  `updated_by` int(11) NOT NULL DEFAULT 1
+  `created_by` int(11) NOT NULL DEFAULT '1',
+  `updated_by` int(11) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -788,15 +812,16 @@ INSERT INTO `subject` (`subject_id`, `name`, `standard`, `image_path`, `descript
 -- Table structure for table `topic`
 --
 
+DROP TABLE IF EXISTS `topic`;
 CREATE TABLE `topic` (
   `topic_id` int(11) NOT NULL,
-  `chapter_id` int(11) NOT NULL DEFAULT 0,
+  `chapter_id` int(11) NOT NULL DEFAULT '0',
   `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `description` varchar(255) NOT NULL DEFAULT '',
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `created_by` int(11) NOT NULL DEFAULT 1,
-  `updated_by` int(11) DEFAULT 1
+  `created_by` int(11) NOT NULL DEFAULT '1',
+  `updated_by` int(11) DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -945,7 +970,7 @@ ALTER TABLE `student_register`
 -- AUTO_INCREMENT for table `student_register_login`
 --
 ALTER TABLE `student_register_login`
-  MODIFY `student_register_login_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `student_register_login_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `subject`

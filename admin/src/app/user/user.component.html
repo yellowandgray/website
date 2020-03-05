@@ -23,11 +23,11 @@
             <div fxFlex="30%">
                 <mat-form-field fxFlex="70%">
                     <mat-label>Sort by</mat-label>
-                    <mat-select [(ngModel)]="sortdata" (selectionChange)="sortRecords('result', sortdata)">
-                        <mat-option value="recently_login">Sort By Recently Login</mat-option>
-                        <mat-option value="sort_by_name">Sort By Name</mat-option>
+                    <mat-select [(ngModel)]="sortdata" (selectionChange)="getuser()">
+                        <mat-option value="login_at">Sort By Recently Login</mat-option>
+                        <mat-option value="student_name">Sort By Name</mat-option>
                         <mat-option value="total_login">Total Login</mat-option>
-                        <mat-option value="register_time">Register Time</mat-option>
+                        <mat-option value="created_at">Register Time</mat-option>
                     </mat-select>
                 </mat-form-field>
             </div>
@@ -52,7 +52,7 @@
                     </button>
                     <img matListAvatar src="{{image_url}}{{data.profile_image}} " *ngIf="data.profile_image && data.profile_image !='' " alt="image " (click)="confirmDialog(data, 'preview') " />
                          <h4 mat-line>{{data.student_name}} {{data.parent_name}}</h4>
-                    <p mat-line>Total Login: <span style="color: red;">{{data.total_logins}}</span> | Last Login: <span style="color: red;">{{data.last_login | date: 'dd/MM/yyyy'}}</span></p>
+                    <p mat-line>Total Login: <span style="color: red;">{{data.total_login}}</span> | Last Login: <span style="color: red;">{{data.login_at | date: 'dd/MM/yyyy'}}</span></p>
                 </mat-list-item>
                 <mat-divider></mat-divider>
             </ng-container>

@@ -58,7 +58,7 @@ $app->post('/loginstudent', function() use ($app) {
     if (count($record) > 0) {
         if ($data['password'] == $record['password']) {
             $res['error'] = false;
-            $obj->insertRecord(array('student_register_id' => $record['student_register_id'], 'login_at' => date('Y-m-d'), 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')), 'student_register_login');
+            $obj->insertRecord(array('student_register_id' => $record['student_register_id'], 'login_at' => date('Y-m-d H:i:s'), 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')), 'student_register_login');
             $_SESSION['student_register_id'] = $record['student_register_id'];
             $res['message'] = 'Welcome ' . $record['student_name'];
             $res['data'] = $record;
@@ -221,22 +221,14 @@ $app->get('/get_topic_by_chapter/:cid', function($cid) {
     echoRespnse(201, $res);
 });
 
-$app->get('/get_student', function() {
+$app->get('/get_student/:srt', function($str) {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
-    if (isset($_SESSION['student_register_id'])) {
-        $login_student = $obj->selectRow('*', 'student_register', 'student_register_id=' . $_SESSION['student_register_id']);
-        $student_logs = $obj->selectAll('*', 'student_log', 'student_register_id = ' . $_SESSION['student_register_id'] . ' ORDER BY student_log_id DESC');
-        if (count($student_logs) > 0) {
-            foreach ($student_logs as $key => $log) {
-                $detail = $obj->selectRow('COUNT(student_log_detail_id) AS attended, IFNULL((SELECT COUNT(student_log_detail_id) FROM student_log_detail WHERE student_log_id=' . $log['student_log_id'] . ' AND UPPER(answer) = UPPER(student_answer)), 0) AS correct_answers', 'student_log_detail', 'student_log_id=' . $log['student_log_id']);
-                $student_logs[$key]['attended'] = $detail['attended'];
-                $student_logs[$key]['correct_answers'] = $detail['correct_answers'];
-            }
-        }
+    $order = 'DESC';
+    if ($str == 'student_name') {
+        $order = 'ASC';
     }
-    $data = $com->selectAll('s.*, (SELECT COUNT(student_register_login_id) FROM student_register_login WHERE student_register_id = s.student_register_id) AS total_logins, (SELECT MAX(login_at) FROM student_register_login WHERE student_register_id = s.student_register_id) AS last_login', 'student_register AS s', 's.student_register_id > 0 ORDER BY s.student_name ASC');
-
+    $data = $com->selectAll('*', 'student_register', 'student_register_id > 0 ORDER BY ' . $str . ' ' . $order);
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
