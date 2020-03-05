@@ -209,7 +209,7 @@ if (isset($_SESSION['student_register_id'])) {
                                 if (val.explanation !== '') {
                                     qlist = qlist + '<div class="explanation-section"><strong>Explanation</strong> : ' + val.explanation + '</div>';
                                 } else {
-                                    qlist = qlist + '<div class="explanation-section">No Explanation</div>';
+                                    qlist = qlist + '<div class="explanation-section"> </div>';
                                 }
                                 if (val.image_path_explanation !== '' && val.explanation_img_direction === 'bottom') {
                                     qlist = qlist + '<div class="explanation_image"><img src="' + image_url + val.image_path_explanation + '"></div>';
