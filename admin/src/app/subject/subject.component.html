@@ -7,19 +7,23 @@
         <div class="add-btn-container">
             <button mat-raised-button color="primary" (click)="openDialog(0, 'null')"><mat-icon>add</mat-icon> Subject</button>
         </div>
-        <mat-list>
-            <ng-container *ngFor="let data of subject">
-                <mat-list-item>
-                    <button mat-icon-button aria-label="label" (click)="openDialog(data.subject_id, 'subject')">
+        <mat-tab-group (selectedTabChange)="getsubject($event);">
+            <mat-tab *ngFor="let sub of language" label="{{sub.name}}">
+                <mat-list>
+                    <ng-container *ngFor="let data of subject">
+                        <mat-list-item>
+                            <button mat-icon-button aria-label="label" (click)="openDialog(data.subject_id, 'subject')">
                         <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
                     </button>
-                    <button mat-icon-button aria-label="label" (click)="confirmDelete(data.subject_id)">
+                            <button mat-icon-button aria-label="label" (click)="confirmDelete(data.subject_id)">
                         <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                     </button>
-                    <h4 mat-line>{{data.name}}</h4>
-                </mat-list-item>
-                <mat-divider></mat-divider>
-            </ng-container>
-        </mat-list>
+                            <h4 mat-line>{{data.name}}</h4>
+                        </mat-list-item>
+                        <mat-divider></mat-divider>
+                    </ng-container>
+                </mat-list>
+            </mat-tab>
+        </mat-tab-group>
     </mat-sidenav-content>
 </mat-sidenav-container>

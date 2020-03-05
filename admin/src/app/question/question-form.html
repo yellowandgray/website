@@ -139,7 +139,7 @@
             <div fxFlex="100%">
                 <mat-form-field fxFlex="100%">
                     <mat-label>Explanation</mat-label>
-                    <textarea matInput rows="6" placeholder="" required formControlName="explanation"></textarea>
+                    <textarea matInput rows="6" placeholder="" formControlName="explanation"></textarea>
                     <mat-error>Explanation is required</mat-error>
                 </mat-form-field>
             </div>
@@ -148,7 +148,7 @@
             <div fxFlex="100%">
                 <mat-form-field fxFlex="100%">
                     <mat-label>Data Dictionary</mat-label>
-                    <textarea matInput rows="6" placeholder="" required formControlName="data_dictionary"></textarea>
+                    <textarea matInput rows="6" placeholder="" formControlName="data_dictionary"></textarea>
                     <mat-error>Data Dictionary is required</mat-error>
                 </mat-form-field>
             </div>
@@ -157,7 +157,7 @@
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Select Book</mat-label>
-                    <mat-select required formControlName="book_id">
+                    <mat-select formControlName="book_id">
                         <mat-option [value]="row.book_id" *ngFor="let row of book">
                             {{row.book_name}}
                         </mat-option>
@@ -168,7 +168,7 @@
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Page No</mat-label>
-                    <input matInput placeholder="" required formControlName="page_no" />
+                    <input matInput placeholder="" formControlName="page_no" />
                     <mat-error>Page No is required</mat-error>
                 </mat-form-field>
             </div>
@@ -177,7 +177,7 @@
             <div fxFlex="100%">
                 <mat-form-field fxFlex="100%">
                     <mat-label>Notes</mat-label>
-                    <textarea matInput placeholder="" rows="6" required formControlName="notes"></textarea>
+                    <textarea matInput placeholder="" rows="6" formControlName="notes"></textarea>
                     <mat-error>Notes is required</mat-error>
                 </mat-form-field>
             </div>

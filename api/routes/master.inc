@@ -120,7 +120,7 @@ $app->post('/insert_question', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('year_id' => $data['year_id'], 'topic_id' => $data['topic_id'], 'name' => $data['question'], 'question_no' => $data['question_no'], 'direction' => $data['direction'], 'image_path' => $data['question_image'], 'a' => $data['a'], 'b' => $data['b'], 'c' => $data['c'], 'd' => $data['d'], 'answer' => $data['answer']), 'question');
+    $record = $com->insertRecord(array('year_id' => $data['year_id'], 'topic_id' => $data['topic_id'], 'name' => $data['question'], 'question_no' => $data['question_no'], 'direction' => $data['direction'], 'image_path' => $data['question_image'], 'a' => $data['a'], 'b' => $data['b'], 'c' => $data['c'], 'd' => $data['d'], 'answer' => $data['answer'], 'explanation' => $data['explanation'], 'data_dictionary' => $data['data_dictionary'], 'book_id' => $data['book_id'], 'page_no' => $data['page_no'], 'notes' => $data['notes']), 'question');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
@@ -153,10 +153,34 @@ $app->get('/get_subject', function() {
     echoRespnse(201, $res);
 });
 
+$app->get('/get_subject_by_language/:lid', function($lid) {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('*', 'subject', 'language_id = ' .$lid);
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
 $app->get('/get_topic_by_subject/:sid', function($sid) {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
     $data = $com->selectAll('*', 'topic', 'subject_id = ' .$sid);
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_topic', function() {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('*', 'topic', 'topic_id > 0');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
@@ -280,7 +304,7 @@ $app->post('/import_question', function() use($app) {
                 }
                 $qnoqry = $obj->selectRow('IFNULL(MAX(question_no), 0) AS max_no', 'question', 'topic_id=' . $tid);
                 $qno = $qnoqry['max_no'];
-                $data = array('topic_id' => $tid, 'name' => $row[3], 'a' => $row[4], 'b' => $row[5], 'c' => $row[6], 'd' => $row[6], 'answer' => $row[7], 'question_no' => ($qno + 1), 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'));
+                $data = array('topic_id' => $tid, 'name' => $row[3], 'a' => $row[4], 'b' => $row[5], 'c' => $row[6], 'd' => $row[7], 'answer' => $row[8], 'question_no' => ($qno + 1), 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'));
                 $insert = $obj->insertRecord($data, 'question');
                 if ($insert > 0) {
                     $count++;

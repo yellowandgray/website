@@ -1,35 +1,38 @@
-import { Component, OnInit, Inject } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { MatSnackBar } from '@angular/material/snack-bar';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatDialogModule } from '@angular/material/dialog';
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { AngularEditorConfig } from '@kolkov/angular-editor';
-import { Observable } from 'rxjs';
+import { Component, OnInit, Inject } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
+import { MatSnackBar } from "@angular/material/snack-bar";
+import { MatPaginatorModule } from "@angular/material/paginator";
+import { MatDialogModule } from "@angular/material/dialog";
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from "@angular/material/dialog";
+import { FormControl, FormGroup, Validators } from "@angular/forms";
+import { AngularEditorConfig } from "@kolkov/angular-editor";
+import { Observable } from "rxjs";
 
 @Component({
-  selector: 'app-subject',
-  templateUrl: './subject.component.html',
-  styleUrls: ['./subject.component.css']
+  selector: "app-subject",
+  templateUrl: "./subject.component.html",
+  styleUrls: ["./subject.component.css"]
 })
 export class SubjectComponent implements OnInit {
-
   subject = [];
-  topic = [];
+  language = [];
+  selectedsubind = 0;
 
-  constructor(public dialog: MatDialog, private httpClient: HttpClient, private _snackBar: MatSnackBar) { }
+  constructor(
+    public dialog: MatDialog,
+    private httpClient: HttpClient,
+    private _snackBar: MatSnackBar
+  ) {}
 
   ngOnInit() {
-    this.getsubject();
-    // this.gettopic();
+    this.getlanguage();
   }
-  image_url: string = 'http://localhost/project/exam-horse/api/v1/';
-  getsubject(): void {
-    this.httpClient.get<any>('http://localhost/project/exam-horse/api/v1/get_subject')
+  image_url: string = "http://localhost/project/exam-horse/api/v1/";
+  getlanguage(): void {
+    this.httpClient.get<any>('http://localhost/project/exam-horse/api/v1/get_language')
       .subscribe(
         (res) => {
-          this.subject = res["result"]["data"];
+          this.language = res["result"]["data"];
         },
         (error) => {
           this._snackBar.open(error["statusText"], '', {
@@ -38,19 +41,21 @@ export class SubjectComponent implements OnInit {
         }
       );
   }
-  // gettopic(): void {
-  //   this.httpClient.get<any>('http://localhost/project/exam-horse/api/v1/get_topic')
-  //     .subscribe(
-  //       (res) => {
-  //         this.topic = res["result"]["data"];
-  //       },
-  //       (error) => {
-  //         this._snackBar.open(error["statusText"], '', {
-  //           duration: 2000,
-  //         });
-  //       }
-  //     );
-  // }
+  getsubject(ev): void {
+    this.selectedsubind = ev.index;
+    this.httpClient
+      .get<any>("http://localhost/project/exam-horse/api/v1/get_subject_by_language/"+this.language[ev.index].language_id)
+      .subscribe(
+        res => {
+          this.subject = res["result"]["data"];
+        },
+        error => {
+          this._snackBar.open(error["statusText"], "", {
+            duration: 2000
+          });
+        }
+      );
+  }
 
   openDialog(id, res): void {
     var data = null;
@@ -69,8 +74,8 @@ export class SubjectComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      if (result !== false && result !== 'false') {
-        this.getsubject();
+      if (result !== false && result !== "false") {
+        this.getsubject({index: this.selectedsubind});
       }
     });
   }
@@ -85,60 +90,64 @@ export class SubjectComponent implements OnInit {
       data: data
     });
     dialogRef.afterClosed().subscribe(result => {
-      if (result !== false && result !== 'false') {
-        this.getsubject();
+      if (result !== false && result !== "false") {
+        this.getsubject({index: this.selectedsubind});
       }
     });
   }
 }
 
 @Component({
-  selector: 'subject-form',
-  templateUrl: 'subject-form.html',
+  selector: "subject-form",
+  templateUrl: "subject-form.html"
 })
 export class SubjectForm {
-  image_url: string = 'http://localhost/project/exam-horse/api/v1/';
+  image_url: string = "http://localhost/project/exam-horse/api/v1/";
   subjectForm: FormGroup;
   loading = false;
   subject_id = 0;
-  subject_image: string = 'Select Subject Image';
-  image_path: string = '';
-  language:any[];
+  subject_image: string = "Select Subject Image";
+  image_path: string = "";
+  language: any[];
   constructor(
     public dialogRef: MatDialogRef<SubjectForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
-    private httpClient: HttpClient) {
+    private httpClient: HttpClient
+  ) {
     this.subjectForm = new FormGroup({
-      'name': new FormControl('', Validators.required),
-      'language_id': new FormControl('', Validators.required),
-      'description': new FormControl('', Validators.required),
+      name: new FormControl("", Validators.required),
+      language_id: new FormControl("", Validators.required),
+      description: new FormControl("")
     });
     if (this.data != null) {
       this.subjectForm.patchValue({
         name: this.data.name,
         language_id: this.data.language_id,
-        description: this.data.description,
+        description: this.data.description
       });
       this.subject_id = this.data.subject_id;
       this.image_path = this.data.image_path;
     }
-    
-    this.httpClient.get('http://localhost/project/exam-horse/api/v1/get_language').subscribe(
-      (res) => {
+
+    this.httpClient
+      .get("http://localhost/project/exam-horse/api/v1/get_language")
+      .subscribe(
+        res => {
           if (res["result"]["error"] === false) {
-              this.language = res["result"]["data"];
+            this.language = res["result"]["data"];
           } else {
-              this._snackBar.open(res["result"]["message"], '', {
-                  duration: 2000,
-              });
+            this._snackBar.open(res["result"]["message"], "", {
+              duration: 2000
+            });
           }
-      },
-      (error) => {
-          this._snackBar.open(error["statusText"], '', {
-              duration: 2000,
+        },
+        error => {
+          this._snackBar.open(error["statusText"], "", {
+            duration: 2000
           });
-      });
+        }
+      );
   }
 
   onSubmit() {
@@ -147,119 +156,122 @@ export class SubjectForm {
     }
     this.loading = true;
     var formData = new FormData();
-    var url = '';
+    var url = "";
     if (this.subject_id != 0) {
-      formData.append('name', this.subjectForm.value.name);
-      formData.append('language_id', this.subjectForm.value.language_id);
-      formData.append('description', this.subjectForm.value.description);
-      formData.append('image_path', this.image_path);
-      url = 'update_record/subject/subject_id = ' + this.subject_id;
+      formData.append("name", this.subjectForm.value.name);
+      formData.append("language_id", this.subjectForm.value.language_id);
+      formData.append("description", this.subjectForm.value.description);
+      formData.append("image_path", this.image_path);
+      url = "update_record/subject/subject_id = " + this.subject_id;
     } else {
-      formData.append('name', this.subjectForm.value.name);
-      formData.append('language_id', this.subjectForm.value.language_id);
-      formData.append('description', this.subjectForm.value.description);
-      formData.append('subject_image', this.image_path);
-      url = 'insert_subject';
+      formData.append("name", this.subjectForm.value.name);
+      formData.append("language_id", this.subjectForm.value.language_id);
+      formData.append("description", this.subjectForm.value.description);
+      formData.append("subject_image", this.image_path);
+      url = "insert_subject";
     }
-    this.httpClient.post('http://localhost/project/exam-horse/api/v1/' + url, formData).subscribe(
-      (res) => {
-        this.loading = false;
-        if (res["result"]["error"] === false) {
-          this.dialogRef.close(true);
-        } else {
-          this._snackBar.open(res["result"]["message"], '', {
-            duration: 2000,
+    this.httpClient
+      .post("http://localhost/project/exam-horse/api/v1/" + url, formData)
+      .subscribe(
+        res => {
+          this.loading = false;
+          if (res["result"]["error"] === false) {
+            this.dialogRef.close(true);
+          } else {
+            this._snackBar.open(res["result"]["message"], "", {
+              duration: 2000
+            });
+          }
+        },
+        error => {
+          this.loading = false;
+          this._snackBar.open(error["statusText"], "", {
+            duration: 2000
           });
         }
-      },
-      (error) => {
-        this.loading = false;
-        this._snackBar.open(error["statusText"], '', {
-          duration: 2000,
-        });
-      }
-    );
+      );
   }
-
 
   fileProgress(fileInput: any, name: string, path: string) {
     var fileData = <File>fileInput.target.files[0];
     this[name] = fileData.name;
     this.loading = true;
     var formData = new FormData();
-    formData.append('file', fileData);
-    this.httpClient.post('http://localhost/project/exam-horse/api/v1/upload_file', formData).subscribe(
-      (res) => {
-        this.loading = false;
-        if (res["result"]["error"] === false) {
-          this[path] = res["result"]["data"];
-        } else {
-          this._snackBar.open(res["result"]["message"], '', {
-            duration: 2000,
+    formData.append("file", fileData);
+    this.httpClient
+      .post("http://localhost/project/exam-horse/api/v1/upload_file", formData)
+      .subscribe(
+        res => {
+          this.loading = false;
+          if (res["result"]["error"] === false) {
+            this[path] = res["result"]["data"];
+          } else {
+            this._snackBar.open(res["result"]["message"], "", {
+              duration: 2000
+            });
+          }
+        },
+        error => {
+          this.loading = false;
+          this._snackBar.open(error["statusText"], "", {
+            duration: 2000
           });
         }
-      },
-      (error) => {
-        this.loading = false;
-        this._snackBar.open(error["statusText"], '', {
-          duration: 2000,
-        });
-      });
+      );
   }
 
   editorConfig: AngularEditorConfig = {
     editable: true,
     spellcheck: true,
-    height: '100px',
-    minHeight: '100px',
-    maxHeight: '100px',
-    width: 'auto',
-    minWidth: '0',
-    translate: 'yes',
+    height: "100px",
+    minHeight: "100px",
+    maxHeight: "100px",
+    width: "auto",
+    minWidth: "0",
+    translate: "yes",
     enableToolbar: true,
     showToolbar: true,
-    placeholder: 'Enter text here...',
-    defaultParagraphSeparator: '',
-    defaultFontName: '',
-    defaultFontSize: '',
+    placeholder: "Enter text here...",
+    defaultParagraphSeparator: "",
+    defaultFontName: "",
+    defaultFontSize: "",
     fonts: [
-      { class: 'arial', name: 'Arial' },
-      { class: 'times-new-roman', name: 'Times New Roman' },
-      { class: 'calibri', name: 'Calibri' },
-      { class: 'comic-sans-ms', name: 'Comic Sans MS' }
+      { class: "arial", name: "Arial" },
+      { class: "times-new-roman", name: "Times New Roman" },
+      { class: "calibri", name: "Calibri" },
+      { class: "comic-sans-ms", name: "Comic Sans MS" }
     ],
     customClasses: [
       {
-        name: 'quote',
-        class: 'quote',
+        name: "quote",
+        class: "quote"
       },
       {
-        name: 'redText',
-        class: 'redText'
+        name: "redText",
+        class: "redText"
       },
       {
-        name: 'titleText',
-        class: 'titleText',
-        tag: 'h1',
-      },
+        name: "titleText",
+        class: "titleText",
+        tag: "h1"
+      }
     ],
-    uploadUrl: 'v1/image',
+    uploadUrl: "v1/image",
     sanitize: true,
-    toolbarPosition: 'top',
+    toolbarPosition: "top"
   };
 
   removeMedia(url) {
-    this[url] = '';
-    if (url === 'image_path') {
-      this.subject_image = 'Select Subject Image';
+    this[url] = "";
+    if (url === "image_path") {
+      this.subject_image = "Select Subject Image";
     }
   }
-
 }
 
 @Component({
-  selector: 'subject-delete-confirmation',
-  templateUrl: 'subject-delete-confirmation.html',
+  selector: "subject-delete-confirmation",
+  templateUrl: "subject-delete-confirmation.html"
 })
 export class SubjectDelete {
   loading = false;
@@ -268,7 +280,8 @@ export class SubjectDelete {
     public dialogRef: MatDialogRef<SubjectDelete>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
-    private httpClient: HttpClient) {
+    private httpClient: HttpClient
+  ) {
     if (this.data != null) {
       this.subject_id = this.data;
     }
@@ -278,23 +291,28 @@ export class SubjectDelete {
       return;
     }
     this.loading = true;
-    this.httpClient.get('http://localhost/project/exam-horse/api/v1/delete_record/subject/subject_id=' + this.subject_id).subscribe(
-      (res) => {
-        this.loading = false;
-        if (res["result"]["error"] === false) {
-          this.dialogRef.close(true);
-        } else {
-          this._snackBar.open(res["result"]["message"], '', {
-            duration: 2000,
+    this.httpClient
+      .get(
+        "http://localhost/project/exam-horse/api/v1/delete_record/subject/subject_id=" +
+          this.subject_id
+      )
+      .subscribe(
+        res => {
+          this.loading = false;
+          if (res["result"]["error"] === false) {
+            this.dialogRef.close(true);
+          } else {
+            this._snackBar.open(res["result"]["message"], "", {
+              duration: 2000
+            });
+          }
+        },
+        error => {
+          this.loading = false;
+          this._snackBar.open(error["statusText"], "", {
+            duration: 2000
           });
         }
-      },
-      (error) => {
-        this.loading = false;
-        this._snackBar.open(error["statusText"], '', {
-          duration: 2000,
-        });
-      }
-    );
+      );
   }
 }

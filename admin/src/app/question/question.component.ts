@@ -216,9 +216,9 @@ export class QuestionForm {
       answer: new FormControl("", Validators.required),
       explanation: new FormControl(""),
       data_dictionary: new FormControl(""),
-      book_id: new FormControl("", Validators.required),
-      page_no: new FormControl("", Validators.required),
-      notes: new FormControl("", Validators.required)
+      book_id: new FormControl(""),
+      page_no: new FormControl(""),
+      notes: new FormControl("")
     });
     if (this.data != null) {
       this.questionForm.patchValue({
@@ -241,8 +241,26 @@ export class QuestionForm {
       this.question_id = this.data.data.question_id;
       this.image_path = this.data.data.image_path;
     }
+    // this.httpClient
+    //   .get("http://localhost/project/exam-horse/api/v1/get_topic_by_lng_year")
+    //   .subscribe(
+    //     res => {
+    //       if (res["result"]["error"] === false) {
+    //         this.topic = res["result"]["data"];
+    //       } else {
+    //         this._snackBar.open(res["result"]["message"], "", {
+    //           duration: 2000
+    //         });
+    //       }
+    //     },
+    //     error => {
+    //       this._snackBar.open(error["statusText"], "", {
+    //         duration: 2000
+    //       });
+    //     }
+    //   );
     this.httpClient
-      .get("http://localhost/project/exam-horse/api/v1/get_topic_by_lng_year")
+      .get("http://localhost/project/exam-horse/api/v1/get_topic")
       .subscribe(
         res => {
           if (res["result"]["error"] === false) {

@@ -9,21 +9,21 @@
         </div>
         <mat-tab-group (selectedTabChange)="gettopic($event);">
             <mat-tab *ngFor="let sub of subject" label="{{sub.name}}">
-        <mat-list>
-            <ng-container *ngFor="let data of topic">
-                <mat-list-item>
-                    <button mat-icon-button aria-label="label" (click)="openDialog(data.topic_id, 'topic')">
+                <mat-list>
+                    <ng-container *ngFor="let data of topic">
+                        <mat-list-item>
+                            <button mat-icon-button aria-label="label" (click)="openDialog(data.topic_id, 'topic')">
                         <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
                     </button>
-                    <button mat-icon-button aria-label="label" (click)="confirmDelete(data.topic_id)">
+                            <button mat-icon-button aria-label="label" (click)="confirmDelete(data.topic_id)">
                         <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                     </button>
-                    <h4 mat-line>{{data.name}}</h4>
-                </mat-list-item>
-                <mat-divider></mat-divider>
-            </ng-container>
-        </mat-list>
-        </mat-tab>
+                            <h4 mat-line>{{data.name}}</h4>
+                        </mat-list-item>
+                        <mat-divider></mat-divider>
+                    </ng-container>
+                </mat-list>
+            </mat-tab>
         </mat-tab-group>
     </mat-sidenav-content>
 </mat-sidenav-container>

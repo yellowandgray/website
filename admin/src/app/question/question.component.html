@@ -23,7 +23,7 @@
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Select Language</mat-label>
-                    <mat-select [(ngModel)]="selected_language" (change)="getYearByLanguage()">
+                    <mat-select [(ngModel)]="selected_language" (change)="getSubjectByLanguage()">
                         <mat-option [value]="row.language_id" *ngFor="let row of language">
                             {{row.name}}
                         </mat-option>
@@ -33,20 +33,8 @@
             </div>
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Select Year</mat-label>
-                    <mat-select (selectedTabChange)="getTopicByLngNYear($event);">
-                        <mat-option [value]="data.year_id" *ngFor="let data of year">
-                            {{data.year}}
-                        </mat-option>
-                    </mat-select>
-                    <mat-error>Chapter is required</mat-error>
-                </mat-form-field>
-            </div>
-            <div fxFlex="50%">
-                <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Select Subject</mat-label>
                     <mat-select>
-                        <!-- <mat-option value="0">All</mat-option> -->
                         <mat-option [value]="data.subject_id" *ngFor="let data of subject">
                             {{data.name}}
                         </mat-option>
@@ -58,7 +46,7 @@
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Select Topic</mat-label>
                     <mat-select (selectedTabChange)="getQuestionsByTopic($event);" [(ngModel)]="selected_language">
-                        <!-- <mat-option value="0">All</mat-option> -->
+                        <mat-option value="0">All</mat-option>
                         <mat-option [value]="top.topic_id" *ngFor="let data of topic">
                             {{data.name}}
                         </mat-option>

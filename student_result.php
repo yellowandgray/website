@@ -47,43 +47,12 @@ if (isset($_SESSION['student_register_id'])) {
                             <div class = 'accordion' id = 'accordion2'>
                                 <div class = 'accordion-group'>
                                     <div class = 'accordion-heading'>
-                                        <a class = 'accordion-toggle active' data-toggle = 'collapse' data-parent = '#accordion2' href = '#collapseOne'><i class = 'icon-minus'></i> With Topic</a>
+                                        <a class = 'accordion-toggle active' data-toggle = 'collapse' data-parent = '#accordion2' href = '#collapseOne'><i class = 'icon-minus'></i> Question Order</a>
                                     </div>
                                     <div id = 'collapseOne' class = 'accordion-body collapse in'>
                                         <div class = 'accordion-inner'>
-                                            <?php foreach ($student_answer as $row) { ?>
-                                                <h2 class = 'titleContainer title'> <i class="font-icon-arrow-simple-right"></i> <?php echo $row['language']; ?> - <?php //echo $row['year']; ?> 2018-2019<span>Date: 10-01-2020</span></h2>
-                                                <table class = 'table table-striped result_table'>
-                                                    <thead>
-                                                        <tr>
-                                                            <th class="text-center">Total</th>
-                                                            <th class="text-center">Attend</th>
-                                                            <th class="text-center"><i class="icon-ok-sign"></i></th>
-                                                            <th class="text-center"><i class="font-icon-remove-circle"></i></th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>100</td>
-                                                            <td>95</td>
-                                                            <td>68</td>
-                                                            <td>27</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            <?php } ?>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class = 'accordion' id = 'accordion2'>
-                                <div class = 'accordion-group'>
-                                    <div class = 'accordion-heading'>
-                                        <a class = 'accordion-toggle' data-toggle = 'collapse' data-parent = '#accordion2' href = '#collapseOne1'><i class = 'icon-minus'></i> Without Topic</a>
-                                    </div>
-                                    <div id = 'collapseOne1' class = 'accordion-body collapse in'>
-                                        <div class = 'accordion-inner'>
-                                            <h2 class = 'titleContainer title'> <i class="font-icon-arrow-simple-right"></i> Language - Year <span>Date: 10-01-2020</span></h2>
+
+                                            <h2 class = 'titleContainer title'> <i class="font-icon-arrow-simple-right"></i> Language - Question Order - 2010 <span>Date: 10-01-2020</span></h2>
                                             <table class = 'table table-striped result_table'>
                                                 <thead>
                                                     <tr>
@@ -99,6 +68,67 @@ if (isset($_SESSION['student_register_id'])) {
                                                         <td>95</td>
                                                         <td>68</td>
                                                         <td>27</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class = 'accordion' id = 'accordion2'>
+                                <div class = 'accordion-group'>
+                                    <div class = 'accordion-heading'>
+                                        <a class = 'accordion-toggle' data-toggle = 'collapse' data-parent = '#accordion2' href = '#collapseOne1'><i class = 'icon-minus'></i> Subject Order</a>
+                                    </div>
+                                    <div id = 'collapseOne1' class = 'accordion-body collapse in'>
+                                        <div class = 'accordion-inner'>
+                                            <h2 class = 'titleContainer title'> 
+                                                <i class="font-icon-arrow-simple-right"></i> Language - Subject Order - Subject-1 (Topic 1, Topic 2), Subject-2 (Topic-1, Topic-2).
+                                                <span>Date: 10-01-2020</span>
+                                            </h2>
+                                            <table class = 'table table-striped result_table'>
+                                                <thead>
+                                                    <tr>
+                                                        <th class="text-center">Year</th>
+                                                        <th class="text-center">Subject</th>
+                                                        <th class="text-center">Topic</th>
+                                                        <th class="text-center">Total</th>
+                                                        <th class="text-center">Attend</th>
+                                                        <th class="text-center">
+                                                            <i class="icon-ok-sign"></i>
+                                                        </th>
+                                                        <th class="text-center">
+                                                            <i class="font-icon-remove-circle"></i>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>2010</td>
+                                                        <td>Science</td>
+                                                        <td>Physics</td>
+                                                        <td>40</td>
+                                                        <td>40</td>
+                                                        <td>30</td>
+                                                        <td>10</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2010</td>
+                                                        <td>Science</td>
+                                                        <td>Chemistry</td>
+                                                        <td>30</td>
+                                                        <td>30</td>
+                                                        <td>25</td>
+                                                        <td>05</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2010</td>
+                                                        <td>General</td>
+                                                        <td>GS</td>
+                                                        <td>30</td>
+                                                        <td>30</td>
+                                                        <td>15</td>
+                                                        <td>15</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
