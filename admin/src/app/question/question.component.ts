@@ -20,7 +20,7 @@ export class QuestionComponent implements OnInit {
     topic = [];
     difficult = [];
     loading = false;
-    image_url: string = 'http://localhost/project/feringo/api/v1/';
+    image_url: string = '../api/v1/';
     file_name: string = 'Select Picture';
     selected_subject = 0;
     selected_chapter = 0;
@@ -33,7 +33,7 @@ filter_question = 'null';
     constructor(public dialog: MatDialog, private httpClient: HttpClient, private _snackBar: MatSnackBar) { }
     ngOnInit() {
         this.getSubject();
-        this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_difficult')
+        this.httpClient.get<any>('../api/v1/get_difficult')
         .subscribe(
                 (res)=>{
                     this.difficult = res["result"]["data"];
@@ -46,7 +46,7 @@ filter_question = 'null';
         );
     }
     getSubject(): void {
-    this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_subject')
+    this.httpClient.get<any>('../api/v1/get_subject')
       .subscribe(
         (res) => {
           this.subject = res["result"]["data"];
@@ -60,7 +60,7 @@ filter_question = 'null';
   }
    getChapter(): void {
         this.chapter = [];
-        this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_chapter_by_subject/'+this.selected_subject)
+        this.httpClient.get<any>('../api/v1/get_chapter_by_subject/'+this.selected_subject)
         .subscribe(
                 (res)=>{
                     this.chapter = res["result"]["data"];
@@ -74,7 +74,7 @@ filter_question = 'null';
     }    
 getTopic(): void {
 this.topic = [];
-        this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_topic_by_chapter/'+this.selected_chapter)
+        this.httpClient.get<any>('../api/v1/get_topic_by_chapter/'+this.selected_chapter)
         .subscribe(
                 (res)=>{
                     this.topic = res["result"]["data"];
@@ -97,7 +97,7 @@ this.filter_question = this.searchQuestionNo;
 if(this.searchTerm && this.searchTerm != null && this.searchTerm != '') {
 this.filter_text = this.searchTerm;
 }
-        this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_question_by_topic/'+this.selected_topic+'/'+this.selected_chapter+'/'+this.filter_text+'/'+this.filter_question+'/'+this.selected_level)
+        this.httpClient.get<any>('../api/v1/get_question_by_topic/'+this.selected_topic+'/'+this.selected_chapter+'/'+this.filter_text+'/'+this.filter_question+'/'+this.selected_level)
         .subscribe(
                 (res)=>{
                     this.question = res["result"]["data"];
@@ -116,7 +116,7 @@ fileProgress(fileInput: any) {
         this.loading = true;
         var formData = new FormData();
         formData.append('file', fileData);
-        this.httpClient.post('http://localhost/project/feringo/api/v1/import_question', formData).subscribe(
+        this.httpClient.post('../api/v1/import_question', formData).subscribe(
             (res) => {
                 this.loading = false;
                 this._snackBar.open(res["result"]["message"], '', {
@@ -178,7 +178,7 @@ fileProgress(fileInput: any) {
     templateUrl: 'question-form.html',
 })
 export class QuestionForm {
-    image_url: string = 'http://localhost/project/feringo/api/v1/';
+    image_url: string = '../api/v1/';
     questionForm: FormGroup;
     loading = false;
     question_id = 0;
@@ -187,15 +187,18 @@ export class QuestionForm {
     option_b_image: string = 'Option B Image';
     option_c_image: string = 'Option C Image';
     option_d_image: string = 'Option D Image';
+    explanation_image: string = 'Select Explanation Image';
     image_path: string = '';
     option_image_a: string = '';
     option_image_b: string = '';
     option_image_c: string = '';
     option_image_d: string = '';
+    image_path_explanation: string = '';
     subject: any[];
     chapter: any[];
     topic: any[];
     difficult: any[];
+    book: [];
     constructor(
         public dialogRef: MatDialogRef<QuestionForm>,
         @Inject(MAT_DIALOG_DATA) public data: any,
@@ -214,6 +217,12 @@ export class QuestionForm {
             'c': new FormControl(''),
             'd': new FormControl(''),
             'answer': new FormControl('', Validators.required),
+            'explanation': new FormControl(''),
+            'explanation_img_direction': new FormControl(''),
+            'data_dictionary': new FormControl(''),
+            'book_id': new FormControl(''),
+            'page_no': new FormControl(''),
+            'notes': new FormControl(''),
         });
         if (this.data.data != null) {
             this.questionForm.patchValue({
@@ -229,14 +238,21 @@ export class QuestionForm {
                 c: this.data.data.c,
                 d: this.data.data.d,
                 answer: this.data.data.answer,
+                explanation: this.data.data.explanation,
+                explanation_img_direction: this.data.data.explanation_img_direction,
+                data_dictionary: this.data.data.data_dictionary,
+                book_id: this.data.data.book_id,
+                page_no: this.data.data.page_no,
+                notes: this.data.data.notes,
             });
             this.question_id = this.data.data.question_id;
             this.image_path = this.data.data.image_path;
+            this.image_path_explanation = this.data.data.image_path_explanation;
             this.getChapter();
             this.getTopic();
         }
         this.subject = this.data.subject;
-        this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_difficult')
+        this.httpClient.get<any>('../api/v1/get_difficult')
         .subscribe(
                 (res)=>{
                     this.difficult = res["result"]["data"];
@@ -247,9 +263,20 @@ export class QuestionForm {
                 });
             }
         );
+        this.httpClient.get<any>('http://localhost/project/feringo-neet/api/v1/get_book')
+        .subscribe(
+                (res)=>{
+                    this.book = res["result"]["data"];
+              },
+              (error)=>{
+                this._snackBar.open(error["statusText"], '', {
+                    duration: 2000,
+                });
+            }
+        );
     }
     getChapter(): void {
-        this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_chapter_by_subject/'+this.questionForm.value.subject_id)
+        this.httpClient.get<any>('../api/v1/get_chapter_by_subject/'+this.questionForm.value.subject_id)
         .subscribe(
                 (res)=>{
                     this.chapter = res["result"]["data"];
@@ -262,7 +289,7 @@ export class QuestionForm {
         );
     }    
 getTopic(): void {
-        this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_topic_by_chapter/'+this.questionForm.value.chapter_id)
+        this.httpClient.get<any>('../api/v1/get_topic_by_chapter/'+this.questionForm.value.chapter_id)
         .subscribe(
                 (res)=>{
                     this.topic = res["result"]["data"];
@@ -281,10 +308,11 @@ getTopic(): void {
         this.loading = true;
         var formData = new FormData();
         var url = '';
-        formData.append('topic_id', this.questionForm.value.topic_id);
+            formData.append('topic_id', this.questionForm.value.topic_id);
             formData.append('difficult_id', this.questionForm.value.difficult_id);
             formData.append('name', this.questionForm.value.question);
             formData.append('image_path', this.image_path);
+            formData.append('image_path_explanation', this.image_path_explanation);
             formData.append('question_no', this.questionForm.value.question_no);
             formData.append('direction', this.questionForm.value.direction);
             formData.append('a', this.questionForm.value.a);
@@ -292,12 +320,18 @@ getTopic(): void {
             formData.append('c', this.questionForm.value.c);
             formData.append('d', this.questionForm.value.d);
             formData.append('answer', this.questionForm.value.answer);
+            formData.append('explanation', this.questionForm.value.explanation);
+            formData.append('explanation_img_direction', this.questionForm.value.explanation_img_direction);
+            formData.append('data_dictionary', this.questionForm.value.data_dictionary);
+            formData.append('page_no', this.questionForm.value.page_no);
+            formData.append('book_id', this.questionForm.value.book_id);
+            formData.append('notes', this.questionForm.value.notes);
         if (this.question_id != 0) {
             url = 'update_record/question/question_id = ' + this.question_id;
         } else {
             url = 'insert_question';
         }
-        this.httpClient.post('http://localhost/project/feringo/api/v1/' + url, formData).subscribe(
+        this.httpClient.post('../api/v1/' + url, formData).subscribe(
             (res) => {
                 this.loading = false;
                 if (res["result"]["error"] === false) {
@@ -323,7 +357,7 @@ getTopic(): void {
         this.loading = true;
         var formData = new FormData();
         formData.append('file', fileData);
-        this.httpClient.post('http://localhost/project/feringo/api/v1/upload_file', formData).subscribe(
+        this.httpClient.post('../api/v1/upload_file', formData).subscribe(
             (res) => {
                 this.loading = false;
                 if (res["result"]["error"] === false) {
@@ -367,6 +401,12 @@ getTopic(): void {
             this.question_image = 'Select Question Image';
         }
     }
+    removeMedia1(url) {
+        this[url] = '';
+        if (url === 'image_path_explanation') {
+            this.explanation_image = 'Select Explanation Image';
+        }
+    }
     editorConfig: AngularEditorConfig = {
         editable: true,
         spellcheck: true,
@@ -403,7 +443,7 @@ getTopic(): void {
                 tag: 'h1',
             },
         ],
-        uploadUrl: 'http://localhost/project/feringo/api/v1/upload_image',
+        uploadUrl: '../api/v1/upload_image',
         sanitize: true,
         toolbarPosition: 'top',
     };
@@ -443,7 +483,7 @@ getTopic(): void {
                 tag: 'h1',
             },
         ],
-        uploadUrl: 'http://localhost/project/feringo/api/v1/upload_image',
+        uploadUrl: '../api/v1/upload_image',
         sanitize: true,
         toolbarPosition: 'top',
     };
@@ -473,7 +513,7 @@ export class QuestionDelete {
             return;
         }
         this.loading = true;
-        this.httpClient.get('http://localhost/project/feringo/api/v1/delete_record/question/question_id=' + this.question_id).subscribe(
+        this.httpClient.get('../api/v1/delete_record/question/question_id=' + this.question_id).subscribe(
             (res) => {
                 this.loading = false;
                 if (res["result"]["error"] === false) {

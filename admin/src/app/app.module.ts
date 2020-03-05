@@ -37,6 +37,7 @@ import { LoginComponent } from './login/login.component';
 import { DifficultyLevelComponent, DifficultForm, DifficultDelete } from './difficulty-level/difficulty-level.component';
 import { UserComponent, UserForm, PictureViewUser, BlockForm, ResultForm, UserDelete, UserViewForm, UserFullResultForm } from './user/user.component';
 import { filterUser } from './user/filter-user';
+import { BookComponent, BookForm, BookDelete } from './book/book.component';
 
 
 
@@ -69,7 +70,10 @@ import { filterUser } from './user/filter-user';
     UserDelete,
     UserViewForm,
     filterUser,
-    UserFullResultForm
+    UserFullResultForm,
+    BookComponent,
+    BookForm,
+    BookDelete
   ],
   imports: [
     BrowserModule,
@@ -99,7 +103,7 @@ import { filterUser } from './user/filter-user';
     MatButtonToggleModule,
     MatCardModule
   ],
-  entryComponents: [SubjectComponent, SubjectForm, SubjectDelete, QuestionComponent, QuestionForm, QuestionDelete, TopicComponent, TopicForm, TopicDelete, ChapterComponent, ChapterForm, ChapterDelete, DifficultyLevelComponent, DifficultForm, DifficultDelete, UserComponent, UserForm, PictureViewUser, BlockForm, ResultForm, UserDelete, UserViewForm, UserFullResultForm],
+  entryComponents: [SubjectComponent, SubjectForm, SubjectDelete, QuestionComponent, QuestionForm, QuestionDelete, TopicComponent, TopicForm, TopicDelete, ChapterComponent, ChapterForm, ChapterDelete, DifficultyLevelComponent, DifficultForm, DifficultDelete, UserComponent, UserForm, PictureViewUser, BlockForm, ResultForm, UserDelete, UserViewForm, UserFullResultForm, BookComponent, BookForm, BookDelete],
   providers: [],
   bootstrap: [AppComponent]
 })

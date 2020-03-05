@@ -140,6 +140,7 @@ if (isset($_SESSION['student_register_id'])) {
         <?php include 'script.php';
         ?>
         <script type="text/javascript">
+            image_url = 'api/v1/';
             $(document).ready(function () {
                 $("#result-view-btn").click(function () {
                     $("#result-view").fadeToggle();
@@ -155,7 +156,7 @@ if (isset($_SESSION['student_register_id'])) {
                             var correct_ans = '';
                             var student_ans = '';
                             $.each(data.result.data, function (key, val) {
-                                qlist = qlist + '<div class="question-title"><h6>' + (key + 1) + '. ' + val.name + '</h6>';
+                                qlist = qlist + '<div class="question-title result-title"><h6><span>' + (key + 1) + '</span>. ' + val.name + '</h6>';
                                 if (val.a !== '') {
                                     correct_ans = '';
                                     student_ans = '';
@@ -165,7 +166,7 @@ if (isset($_SESSION['student_register_id'])) {
                                     if ((val.student_answer).toUpperCase() === 'A' && (val.answer).toUpperCase() !== 'A') {
                                         student_ans = 'wrng_clr';
                                     }
-                                    qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option">A. ' + val.a + '</div></div>';
+                                    qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="option-float">A.</span> ' + val.a + '</div></div>';
                                 }
                                 if (val.b !== '') {
                                     correct_ans = '';
@@ -176,7 +177,7 @@ if (isset($_SESSION['student_register_id'])) {
                                     if ((val.student_answer).toUpperCase() === 'B' && (val.answer).toUpperCase() !== 'B') {
                                         student_ans = 'wrng_clr';
                                     }
-                                    qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option">B. ' + val.b + '</div></div>';
+                                    qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="option-float">B.</span> ' + val.b + '</div></div>';
                                 }
                                 if (val.c !== '') {
                                     correct_ans = '';
@@ -187,7 +188,7 @@ if (isset($_SESSION['student_register_id'])) {
                                     if ((val.student_answer).toUpperCase() === 'C' && (val.answer).toUpperCase() !== 'C') {
                                         student_ans = 'wrng_clr';
                                     }
-                                    qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option">C. ' + val.c + '</div></div>';
+                                    qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="option-float">C.</span> ' + val.c + '</div></div>';
                                 }
                                 if (val.d !== '') {
                                     correct_ans = '';
@@ -198,7 +199,22 @@ if (isset($_SESSION['student_register_id'])) {
                                     if ((val.student_answer).toUpperCase() === 'D' && (val.answer).toUpperCase() !== 'D') {
                                         student_ans = 'wrng_clr';
                                     }
-                                    qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option">D. ' + val.d + '</div></div>';
+                                    qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="option-float">D.</span> ' + val.d + '</div></div>';
+                                }
+                                if (val.image_path_explanation !== '' && val.explanation_img_direction === 'top') {
+                                    qlist = qlist + '<div class="explanation_image"><img src="' + image_url + val.image_path_explanation + '"></div>';
+                                } else {
+                                    qlist = qlist + '';
+                                }
+                                if (val.explanation !== '') {
+                                    qlist = qlist + '<div class="explanation-section"><strong>Explanation</strong> : ' + val.explanation + '</div>';
+                                } else {
+                                    qlist = qlist + '<div class="explanation-section">No Explanation</div>';
+                                }
+                                if (val.image_path_explanation !== '' && val.explanation_img_direction === 'bottom') {
+                                    qlist = qlist + '<div class="explanation_image"><img src="' + image_url + val.image_path_explanation + '"></div>';
+                                } else {
+                                    qlist = qlist + '';
                                 }
                                 qlist = qlist + '</div>';
                             });

@@ -83,12 +83,15 @@ if (count($questions) > 0) {
                             </a>
                         </div>
                         <!--question Box-->
+                        
                         <div class="questionBox" id="app">
                             <!--qusetionContainer-->
                             <div class="questionContainer" v-if="questionIndex<quiz.questions.length" v-bind:key="questionIndex">
                                 <div class="question-header">
                                     <!--progress-->
                                     <div class="progressContainer">
+                                        
+                                        
                                         <h1 class="title is-6"><?php echo $topic['name']; ?></h1> 
                                         <progress class="progress is-info is-small" :value="(questionIndex/quiz.questions.length)*100" max="100">{{(questionIndex/quiz.questions.length)*100}}%</progress>
                                         <div class="lenth_width">
@@ -102,16 +105,19 @@ if (count($questions) > 0) {
                                 <div v-if="quiz.questions[questionIndex].show_image" class="text-center">
                                     <img v-if="quiz.questions[questionIndex].direction == 'top'" v-bind:src="'../api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />
                                 </div>
+                                
                                 <h2 class="titleContainer title">{{questionIndex + 1}}. <span v-html="quiz.questions[questionIndex].text"></span></h2>
                                 <div v-if="quiz.questions[questionIndex].show_image" class="text-center">
                                     <img v-if="quiz.questions[questionIndex].direction == 'bottom'" v-bind:src="'../api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />
                                 </div>
+                                
                                 <!-- quizOptions -->
                                 <div class="optionContainer">
                                     <div class="option" v-for="(response, index) in quiz.questions[questionIndex].responses" @click="selectOption(index)" :class="{ 'is-selected': userResponses[questionIndex] == index}" :key="index" v-if="response.text != ''">
-                                         {{ index | charIndex }}. <span v-html="response.text"></span>
+                                         <span class="q-option">{{ index | charIndex }}.</span> <span v-html="response.text"></span>
                                     </div>
                                 </div>
+                                
                                 <!--quizFooter: navigation and progress-->
                                 <!--                                <footer class="questionFooter">
                                 
@@ -180,6 +186,7 @@ if (count($questions) > 0) {
         <?php include 'footer.php'; ?>
         <?php include 'script.php'; ?>
         <script>
+            image_url = 'api/v1/';
             var quiz = {
                 user: "Feringo",
                 questions: <?php echo json_encode($questions_list); ?>
@@ -259,6 +266,20 @@ if (count($questions) > 0) {
                                                 student_ans = 'wrng_clr';
                                             }
                                             qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option">D. ' + val.d + '</div></div>';
+                                        }if (val.image_path_explanation !== '' && val.explanation_img_direction !== 'bottom') {
+                                            qlist = qlist + '<div class="explanation_image"><img src="' + image_url + val.image_path_explanation + '"></div>';
+                                        } else {
+                                            qlist = qlist + '';
+                                        }
+                                        if (val.explanation !== '') {
+                                            qlist = qlist + '<div class="explanation-section"><strong>Explanation</strong> : ' + val.explanation + '</div>';
+                                        } else {
+                                            qlist = qlist + '<div class="explanation-section">No Explanation</div>';
+                                        }
+                                        if (val.image_path_explanation !== '' && val.explanation_img_direction !== 'top') {
+                                            qlist = qlist + '<div class="explanation_image"><img src="' + image_url + val.image_path_explanation + '"></div>';
+                                        } else {
+                                            qlist = qlist + '';
                                         }
                                         qlist = qlist + '</div>';
                                     });

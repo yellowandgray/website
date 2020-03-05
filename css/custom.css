@@ -1004,3 +1004,51 @@ and open the template in the editor.
     background: #003bb3;
     color: #ffffff;
 }
+
+.explanation-section {
+    margin: 10px 0;
+}
+
+.explanation_image {
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.MathJax_Display {
+    margin: 0 auto !important;
+    text-align: left !important;
+    /*    padding-left: 25px;*/
+    float: left;
+    width: auto !important;
+    height: auto;
+}
+
+.option span.q-option {
+    float: left;
+}
+
+.option span img {
+    width: 50%;
+}
+
+.result-option .option img {
+    width: auto;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .goto-here .questionBox .questionContainer .optionContainer .option {
+        width: 72% !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 980px) {
+    .goto-here .questionBox .questionContainer .optionContainer .option {
+        width: 83% !important;
+    }
+}
+
+.result-option .option span.option-float {
+    float: left;
+}

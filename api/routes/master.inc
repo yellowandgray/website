@@ -17,8 +17,15 @@ $app->post('/update_record/:table/:where', function($table, $where) use ($app) {
 $app->get('/delete_record/:table/:where', function($table, $where) {
     $res = array('error' => true, 'message' => 'Unable to delete');
     $com = new Common();
+    $record = array();
+    if ($table == 'question') {
+        $record = $com->selectRow('*', $table, $where);
+    }
     $data = $com->deleteRecordWithWhere($table, $where);
     if ($data > 0) {
+        if ($table == 'question') {
+            $com->updateRecord('question_no = (question_no - 1)', 'question', 'topic_id = \'' . $record['topic_id'] . '\' AND question_no >= ' . $record['question_no']);
+        }
         $res['error'] = false;
         $res['message'] = 'Record deleted successfully';
         $res['data'] = $data;
@@ -70,7 +77,7 @@ $app->post('/store_answer', function() use ($app) {
     if (count($record) > 0) {
         $res['error'] = false;
         $res['message'] = 'Answer inserted successfully';
-        $obj->insertRecord(array('question_id' => $record['question_id'], 'student_log_id' => $data['student_log_id'], 'name' => $record['name'], 'image_path' => $record['image_path'], 'direction' => $record['direction'], 'a' => $record['a'], 'b' => $record['b'], 'c' => $record['c'], 'd' => $record['d'], 'answer' => $record['answer'], 'question_no' => $record['question_no'], 'student_answer' => $data['answer'], 'created_at' => date('Y-m-d'), 'updated_at' => date('Y-m-d'), 'difficult_id' => $record['difficult_id']), 'student_log_detail');
+        $obj->insertRecord(array('question_id' => $record['question_id'], 'student_log_id' => $data['student_log_id'], 'name' => $record['name'], 'image_path' => $record['image_path'], 'direction' => $record['direction'], 'a' => $record['a'], 'b' => $record['b'], 'c' => $record['c'], 'd' => $record['d'], 'answer' => $record['answer'], 'explanation' => $record['explanation'], 'image_path_explanation' => $record['image_path_explanation'], 'explanation_img_direction' => $record['explanation_img_direction'], 'question_no' => $record['question_no'], 'student_answer' => $data['answer'], 'created_at' => date('Y-m-d'), 'updated_at' => date('Y-m-d'), 'difficult_id' => $record['difficult_id']), 'student_log_detail');
     } else {
         $res['message'] = 'Unable to insert this answer';
     }
@@ -144,8 +151,10 @@ $app->post('/insert_question', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('difficult_id' => $data['difficult_id'], 'topic_id' => $data['topic_id'], 'name' => $data['name'], 'question_no' => $data['question_no'], 'direction' => $data['direction'], 'image_path' => $data['image_path'], 'a' => $data['a'], 'b' => $data['b'], 'c' => $data['c'], 'd' => $data['d'], 'answer' => $data['answer']), 'question');
+//    $question_no = $com->updateRecordWithWhere(array('question_no = +1', 'question', 'subject_id'));
+    $record = $com->insertRecord(array('difficult_id' => $data['difficult_id'], 'topic_id' => $data['topic_id'], 'name' => $data['name'], 'question_no' => $data['question_no'], 'direction' => $data['direction'], 'explanation' => $data['explanation'], 'explanation_img_direction' => $data['explanation_img_direction'], 'data_dictionary' => $data['data_dictionary'], 'image_path' => $data['image_path'], 'image_path_explanation' => $data['image_path_explanation'], 'a' => $data['a'], 'b' => $data['b'], 'c' => $data['c'], 'd' => $data['d'], 'answer' => $data['answer'], 'book_id' => $data['book_id'], 'page_no' => $data['page_no'], 'notes' => $data['notes']), 'question');
     if ($record > 0) {
+        $com->updateRecord('question_no = (question_no + 1)', 'question', 'topic_id = \'' . $data['topic_id'] . '\' AND question_id != ' . $record . ' AND question_no >= ' . $data['question_no']);
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
     }
@@ -163,6 +172,19 @@ $app->post('/insert_difficult', function() use ($app) {
     }
     echoRespnse(201, $res);
 });
+
+$app->post('/insert_book', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to insert');
+    $data = $app->request->post();
+    $com = new Common();
+    $record = $com->insertRecord(array('book_name' => $data['book_name'], 'book_name_id' => $data['book_name_id']), 'book');
+    if ($record > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Record inserted successfully';
+    }
+    echoRespnse(201, $res);
+});
+
 
 $app->get('/get_subject', function() {
     $res = array('error' => true, 'message' => 'No records found');
@@ -346,7 +368,13 @@ $app->post('/import_question', function() use($app) {
                         break;
                     }
                 }
-                $data = array('topic_id' => $topic_id, 'name' => trim($row[5]), 'a' => $row[6], 'b' => $row[7], 'c' => $row[8], 'd' => $row[9], 'answer' => $row[10], 'question_no' => $row[3], 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'image_path' => '', 'direction' => 'top', 'difficult_id' => $difficult_id);
+                $book = $obj->selectRow('*', 'book', 'book_name = \'' . $row[13] . '\'');
+                if (count($book) == 0) {
+                    $book_id = $obj->insertRecord(array('book_name' => trim($row[13]), 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')), 'book');
+                } else {
+                    $book_id = $book['book_id'];
+                }
+                $data = array('topic_id' => $topic_id, 'question_no' => $row[3], 'name' => trim($row[5]), 'a' => $row[6], 'b' => $row[7], 'c' => $row[8], 'd' => $row[9], 'answer' => $row[10], 'explanation' => $row[11], 'data_dictionary' => $row[12], 'book_id' => $book_id, 'page_no' => $row[14], 'notes' => $row[15], 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'image_path' => '', 'direction' => 'top', 'difficult_id' => $difficult_id);
                 $insert = $obj->insertRecord($data, 'question');
                 if ($insert > 0) {
                     $count++;
@@ -418,6 +446,18 @@ $app->get('/get_result_detail/:lid', function($lid) {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
     $data = $com->selectAll('*', 'student_log_detail', 'student_log_id = ' . $lid);
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_book', function() {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('*', 'book', 'book_id > 0');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
