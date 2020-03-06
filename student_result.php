@@ -147,6 +147,9 @@ if (isset($_SESSION['student_register_id'])) {
                 });
             });
             function showFullResult(slid) {
+                setTimeout(() => {
+                        test();
+                    }, 600);
                 $.ajax({
                     type: "GET",
                     url: 'api/v1/get_result_detail/' + slid,

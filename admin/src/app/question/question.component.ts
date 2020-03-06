@@ -263,7 +263,7 @@ export class QuestionForm {
                 });
             }
         );
-        this.httpClient.get<any>('http://localhost/project/feringo-neet/api/v1/get_book')
+        this.httpClient.get<any>('../api/v1/get_book')
         .subscribe(
                 (res)=>{
                     this.book = res["result"]["data"];

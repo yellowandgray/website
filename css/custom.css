@@ -913,7 +913,8 @@ and open the template in the editor.
     padding: 3px 20px;
     margin: 10px 0;
     border-radius: 25px;
-    width: 50%;
+    width: 100%;
+    float: left;
 }
 
 .result-option .option {
@@ -935,7 +936,6 @@ and open the template in the editor.
 .wrng_clr .option {
     color: #fff;
 }
-
 
 .quiz-result {
     width: 50%;
@@ -965,13 +965,15 @@ and open the template in the editor.
     margin: 0 auto;
 }
 
-.table-title th, .table-title td {
+.table-title th,
+.table-title td {
     color: #fff;
     text-align: left;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-    .table-title th, .table-title td {
+    .table-title th,
+    .table-title td {
         font-size: 18px !important;
     }
     .modal.styled .modal-header h4 {
@@ -999,7 +1001,7 @@ and open the template in the editor.
     height: 20px;
 }
 
-.logout-btn:hover{
+.logout-btn:hover {
     opacity: 1;
     background: #003bb3;
     color: #ffffff;
@@ -1035,6 +1037,10 @@ and open the template in the editor.
 
 .result-option .option img {
     width: auto;
+}
+
+.result-option .option .quiz-option-float {
+    float: left;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
