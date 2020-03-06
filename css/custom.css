@@ -1038,6 +1038,10 @@ and open the template in the editor.
     width: auto;
 }
 
+.result-option .option .quiz-option-float {
+    float: left;
+}
+
 @media (min-width: 320px) and (max-width: 767px) {
     .goto-here .questionBox .questionContainer .optionContainer .option {
         width: 72% !important;

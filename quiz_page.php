@@ -213,6 +213,9 @@ if (count($questions) > 0) {
                          document.getElementById('create').style.display = "none"; */
                     },
                     divshow: function () {
+                        setTimeout(() => {
+                            test();
+                        }, 600);
                         $.ajax({
                             type: "GET",
                             url: 'api/v1/get_result_detail/' +<?php echo $student_log; ?>,
@@ -232,7 +235,7 @@ if (count($questions) > 0) {
                                             if ((val.student_answer).toUpperCase() === 'A' && (val.answer).toUpperCase() !== 'A') {
                                                 student_ans = 'wrng_clr';
                                             }
-                                            qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option">A. ' + val.a + '</div></div>';
+                                            qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">A.</span> ' + val.a + '</div></div>';
                                         }
                                         if (val.b !== '') {
                                             correct_ans = '';
@@ -243,7 +246,7 @@ if (count($questions) > 0) {
                                             if ((val.student_answer).toUpperCase() === 'B' && (val.answer).toUpperCase() !== 'B') {
                                                 student_ans = 'wrng_clr';
                                             }
-                                            qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option">B. ' + val.b + '</div></div>';
+                                            qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">B.</span> ' + val.b + '</div></div>';
                                         }
                                         if (val.c !== '') {
                                             correct_ans = '';
@@ -254,7 +257,7 @@ if (count($questions) > 0) {
                                             if ((val.student_answer).toUpperCase() === 'C' && (val.answer).toUpperCase() !== 'C') {
                                                 student_ans = 'wrng_clr';
                                             }
-                                            qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option">C. ' + val.c + '</div></div>';
+                                            qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">C.</span> ' + val.c + '</div></div>';
                                         }
                                         if (val.d !== '') {
                                             correct_ans = '';
@@ -265,7 +268,7 @@ if (count($questions) > 0) {
                                             if ((val.student_answer).toUpperCase() === 'D' && (val.answer).toUpperCase() !== 'D') {
                                                 student_ans = 'wrng_clr';
                                             }
-                                            qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option">D. ' + val.d + '</div></div>';
+                                            qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">D.</span> ' + val.d + '</div></div>';
                                         }
                                         if (val.image_path_explanation !== '' && val.explanation_img_direction !== 'bottom') {
                                             qlist = qlist + '<div class="explanation_image"><img src="' + image_url + val.image_path_explanation + '"></div>';
