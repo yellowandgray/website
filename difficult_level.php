@@ -40,20 +40,42 @@ $_SESSION['selected_subject_id'] = $subject['subject_id'];
                                 <p class="m-b-0 f-s-18 clr-g">Select Mark Category</p>
                                 <ul>
                                     <?php foreach ($difficults as $row) { ?>
-                                        <li><a href="select_chapter?difficult=<?php echo $row['name']; ?>"><i class="icon-angle-right"></i> <?php echo $row['name']; ?></a></li>
-                                        <?php } ?>
+                                        <li><a href="#popup1" class="difficult-button"><i class="icon-angle-right"></i> <?php echo $row['name']; ?></a></li>
+                                    <?php } ?>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-
+            <div id="popup1" class="overlay">
+                <div class="popup">
+                    <h2>Select Type</h2>
+                    <a class="close" href="#">&times;</a>
+                    <div class="content">
+                        <ul class="radio-btn-section">
+                            <li>
+                                <input type="radio" name="method" value="learn"> Learning
+                                <ul id="checkbox-btn" class="checkbox-btn">
+                                    <li>
+                                        <input id='show-immediately' type="checkbox" value='show_answer_immediately'> Show Answer Immediately
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <input type="radio" name="method" value="test"> Live Test
+                            </li>
+                        </ul>
+                        <button class="btn btn-custom1" id='tets'>Let's Go</button>
+                    </div>
+                </div>
+            </div>
             <!-- Reset Modal -->
             <?php include 'footer.php'; ?>
-            //<?php //include 'reset_password.php';    ?>
+            //<?php //include 'reset_password.php';             ?>
             <!-- end reset modal -->
         </div>
         <?php include 'script.php'; ?>
+        
     </body>
 </html>

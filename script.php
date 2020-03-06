@@ -21,20 +21,20 @@
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/javascript">
     /*
-    MathJax.Hub.Config({
-           skipStartupTypeset: true,
-           tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-    });
+     MathJax.Hub.Config({
+     skipStartupTypeset: true,
+     tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+     });
      */
     test();
     function test() {
-        if(typeof MathJax !== 'undefined') {
-            MathJax.Hub.Queue(["Typeset",MathJax.Hub]);           
+        if (typeof MathJax !== 'undefined') {
+            MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
         }
-        
-         MathJax.Hub.Config({
+
+        MathJax.Hub.Config({
             tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-     });
+        });
     }
 </script>
 <script type="text/javascript">
@@ -54,15 +54,36 @@
         }
     });
 </script>
-<!--<script type="text/javascript">
-    $("#open-logout").click(function (e) {
-        //console.log("test");
-        e.stopPropagation();
-        $(".logout_dropdown").show("fast");
+<script>
+    $(".radio-btn-section input[name='method']").click(function () {
+        $('#checkbox-btn').css('display', ($(this).val() === 'learn') ? 'block' : 'none');
+        $('#tets').css('display', ($(this).val() !== 'learn && test') ? 'block' : '');
     });
-    $(document).click(function (e) {
-        if (!(e.target.class === 'logout_dropdown')) {
-            $(".logout_dropdown").hide("fast");
+    $("#tets").click(function () {
+        $("#testval").data("test", "1");
+    });
+</script>
+<script type="text/javascript">
+    $("#tets").click(function () {
+        var imm = 0;
+        if ($('#show-immediately').prop('checked')) {
+            imm = 1;
+        } else {
+           
         }
+        $.ajax({
+            url: "immediate.php",
+            type: "POST",
+            data: {immediate: imm},
+            success: function (response) {
+                // You will get response from your PHP page (what you echo or print)
+                window.location = 'select_chapter?difficult=<?php echo $row['name']; ?>'
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log(textStatus, errorThrown);
+            }
+        });
     });
-</script>-->
+
+
+</script>

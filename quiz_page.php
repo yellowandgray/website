@@ -1,5 +1,9 @@
 <?php
 session_start();
+$imm = 0;
+if (isset($_SESSION['immediate'])) {
+    $imm = $_SESSION['immediate'];
+}
 require_once 'api/include/common.php';
 $questions = array();
 date_default_timezone_set('Asia/Kolkata');
@@ -15,13 +19,14 @@ $difficult = $obj->selectRow('*', 'difficult', 'difficult_id=' . $_SESSION['sele
 $chapter = $obj->selectRow('*', 'chapter', 'chapter_id=' . $_SESSION['selected_chapter_id']);
 $topic = $obj->selectRow('*', 'topic', 'name=\'' . $obj->escapeString($_GET['topic']) . '\'');
 $_SESSION['selected_topic_id'] = $topic['topic_id'];
-$questions = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer, image_path, direction, question_id', 'question', 'topic_id = ' . $_SESSION['selected_topic_id'] . ' AND difficult_id <= ' . $_SESSION['selected_difficult_id']);
+$questions = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer, image_path, direction, question_id, explanation, image_path_explanation, explanation_img_direction', 'question', 'topic_id = ' . $_SESSION['selected_topic_id'] . ' AND difficult_id <= ' . $_SESSION['selected_difficult_id']);
 $student_log = $obj->insertRecord(array('subject_id' => $_SESSION['selected_subject_id'], 'subject_name' => $subject['name'], 'difficult_id' => $_SESSION['selected_difficult_id'], 'difficult_name' => $difficult['name'], 'chapter_id' => $_SESSION['selected_chapter_id'], 'chapter_name' => $chapter['name'], 'topic_id' => $_SESSION['selected_topic_id'], 'topic_name' => $topic['name'], 'student_register_id' => $_SESSION['student_register_id'], 'total_questions' => count($questions), 'created_at' => date('Y-m-d H:i:s'), 'created_by' => $_SESSION['student_register_id'], 'updated_at' => date('Y-m-d'), 'updated_by' => $_SESSION['student_register_id']), 'student_log');
 $questions_list = array();
 if (count($questions) > 0) {
     foreach ($questions as $q) {
         $options = array();
         $showimg = false;
+        $show_img = false;
         array_push($options, array('text' => $q['a'], 'correct' => ($q['answer'] == 'A' ? true : false)));
         array_push($options, array('text' => $q['b'], 'correct' => ($q['answer'] == 'B' ? true : false)));
         if (isset($q['c'])) {
@@ -33,13 +38,21 @@ if (count($questions) > 0) {
         if ($q['image_path'] != '') {
             $showimg = true;
         }
+        if ($q['image_path_explanation'] != '') {
+            $show_img = true;
+        }
         array_push($questions_list, array(
             'text' => $q['name'],
             'direction' => $q['direction'],
             'image_path' => $q['image_path'],
             'show_image' => $showimg,
+            'show_image_explanation' => $show_img,
             'question_id' => $q['question_id'],
-            'responses' => $options
+            'responses' => $options,
+            'answer' => $q['answer'],
+            'explanation' => $q['explanation'],
+            'image_path_explanation' => $q['image_path_explanation'],
+            'explanation_img_direction' => $q['explanation_img_direction']
         ));
     }
 }
@@ -103,12 +116,12 @@ if (count($questions) > 0) {
                                 </div>
                                 <!-- questionTitle -->
                                 <div v-if="quiz.questions[questionIndex].show_image" class="text-center">
-                                    <img v-if="quiz.questions[questionIndex].direction == 'top'" v-bind:src="'../api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />
+                                    <img v-if="quiz.questions[questionIndex].direction == 'top'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />
                                 </div>
 
                                 <h2 class="titleContainer title">{{questionIndex + 1}}. <span v-html="quiz.questions[questionIndex].text"></span></h2>
                                 <div v-if="quiz.questions[questionIndex].show_image" class="text-center">
-                                    <img v-if="quiz.questions[questionIndex].direction == 'bottom'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path"                                     alt="image" class="qes-img" />
+                                    <img v-if="quiz.questions[questionIndex].direction == 'bottom'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />
                                 </div>
 
                                 <!-- quizOptions -->
@@ -119,28 +132,36 @@ if (count($questions) > 0) {
                                 </div>
 
                                 <!--quizFooter: navigation and progress-->
-                                <!--                                <footer class="questionFooter">
-                                
-                                                                    pagination
-                                                                    <nav class="pagination" role="navigation" aria-label="pagination">
-                                
-                                                                         back button 
-                                                                                                            <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">
-                                                                                                               Back
-                                                                                                        </a>
-                                                                        <a class="btn btn-green" href="select_language">
-                                                                            Home
-                                                                        </a>
-                                
-                                                                         next button 
-                                                                        <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
-                                                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}
-                                                                        </a>
-                                
-                                                                    </nav>
-                                                                    /pagination
-                                
-                                                                </footer>-->
+                                <?php if ($imm == 1) { ?>
+                                    <footer class="questionFooter" id='quiz-footer'>
+                                        <div class="footer-explanation-section">
+                                            <strong v-html="quiz.questions[questionIndex].answer"></strong>
+                                            <br/>
+                                            <div v-if="quiz.questions[questionIndex].show_image_explanation" class="text-center">
+                                                <img v-if="quiz.questions[questionIndex].direction == 'top'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
+                                            </div>
+                                            <span v-html="quiz.questions[questionIndex].explanation"></span>
+                                            <div v-if="quiz.questions[questionIndex].show_image_explanation" class="text-center">
+                                                <img v-if="quiz.questions[questionIndex].direction == 'bottom'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
+                                            </div>
+                                        </div>
+                                        <!--                                    pagination-->
+                                        <nav class="pagination" role="navigation" aria-label="pagination">
+
+                                            <!--                                        back button -->
+                                            <!--                                        <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">Back</a>-->
+                                            <!--                                        <a class="btn btn-green" href="select_language">Home</a>-->
+
+                                            <!--                                    next button -->
+                                            <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
+                                                <!--                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}-->Next
+                                            </a>
+
+                                        </nav>
+                                        <!--                                    /pagination-->
+
+                                    </footer>
+                                <?php } ?>
                                 <!--/quizFooter-->
                             </div>
                             <!--/questionContainer-->
@@ -185,6 +206,29 @@ if (count($questions) > 0) {
         <!--/container-->
         <?php include 'footer.php'; ?>
         <?php include 'script.php'; ?>
+<!--        <script type="text/javascript">
+            $(document).ready(function () {
+                $.ajax({
+                    type: 'GET',
+                    url: 'sess.php',
+                    data: {
+                        user: 'guna',
+
+                    },
+                    success: function (data) {
+                        alert(data);
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown)
+                    {
+                        alert("Error Occured");
+                    }
+                });
+
+
+            });
+        </script>-->
+
+
         <script>
             image_url = 'http://localhost/project/feringo-neet/api/v1/';
             var quiz = {
@@ -299,38 +343,44 @@ if (count($questions) > 0) {
                         });
                     },
                     selectOption: function (index) {
-                        setTimeout(() => {
-                            Vue.set(this.userResponses, this.questionIndex, index);
-                            if (this.questionIndex < this.quiz.questions.length) {
-                                this.questionIndex++;
-                            }
-                        }, 500);
+                        <?php if ($imm == 0) { ?>
+                            setTimeout(() => {
+                                Vue.set(this.userResponses, this.questionIndex, index);
+                                if (this.questionIndex < this.quiz.questions.length) {
+                                    this.questionIndex++;
+                                }
+                            }, 500);
+                            setTimeout(() => {
+                                test();
+                            }, 600);
+
+                            var questions = <?php echo json_encode($questions_list); ?>;
+                            var answers = ['A', 'B', 'C', 'D'];
+                            $.post("api/v1/store_answer",
+                                    {
+                                        question_id: questions[this.questionIndex].question_id,
+                                        answer: answers[index],
+                                        student_log_id: <?php echo $student_log; ?>
+                                    },
+                                    function (data, status) {
+                                        if (data.result.error === false) {
+
+                                        }
+                                    });
+                        <?php } ?>
+                    },
+                    next: function () {
                         setTimeout(() => {
                             test();
                         }, 600);
-                        var questions = <?php echo json_encode($questions_list); ?>;
-                        var answers = ['A', 'B', 'C', 'D'];
-                        $.post("api/v1/store_answer",
-                                {
-                                    question_id: questions[this.questionIndex].question_id,
-                                    answer: answers[index],
-                                    student_log_id: <?php echo $student_log; ?>
-                                },
-                                function (data, status) {
-                                    if (data.result.error === false) {
+                        if (this.questionIndex < this.quiz.questions.length) {
+                            this.questionIndex++;
 
-                                    }
-                                });
-                    },
-//                    next: function () {
-//                        
-//                        if (this.questionIndex < this.quiz.questions.length) {
-//                            this.questionIndex++;
 //                            MathJax.Hub.Config({
 //                                tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
 //                            });
-//                        }
-//                    },
+                        }
+                    },
 //                    prev: function () {
 //                        if (this.quiz.questions.length > 0) {
 //                            this.questionIndex--;
