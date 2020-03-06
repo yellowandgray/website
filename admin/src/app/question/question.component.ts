@@ -22,9 +22,11 @@ export class QuestionComponent implements OnInit {
   question = [];
   year = [];
   language = [];
+  subject = [];
   loading = false;
   file_name: string = "Select Picture";
   selected_language = "";
+  selected_subject = "";
   selected_year = "";
   selected_topic_index = 0;
   constructor(
@@ -38,7 +40,7 @@ export class QuestionComponent implements OnInit {
   }
   getLanguage(): void {
     this.httpClient
-      .get<any>("http://localhost/project/exam-horse/api/v1/get_language")
+      .get<any>("../api/v1/get_language")
       .subscribe(
         res => {
           this.language = res["result"]["data"];
@@ -52,32 +54,59 @@ export class QuestionComponent implements OnInit {
         }
       );
   }
-  getQuestionsByTopic(ev): void {
-    var tid = this.topic[ev.index].topic_id;
-    this.selected_topic_index = ev.index;
-    this.httpClient
-      .get<any>(
-        "http://localhost/project/exam-horse/api/v1/get_question_by_topic_n_year/" +
-          tid +
-          "/" +
-          this.selected_year
-      )
-      .subscribe(
-        res => {
-          this.question = res["result"]["data"];
-        },
-        error => {
-          this._snackBar.open(error["statusText"], "", {
-            duration: 2000
-          });
+  getSubjectByLanguage(): void {
+    this.subject = [];
+    this.httpClient.get<any>('../api/v1/get_subject_by_language/'+this.selected_language)
+    .subscribe(
+            (res)=>{
+                this.subject = res["result"]["data"];
+          },
+          (error)=>{
+            this._snackBar.open(error["statusText"], '', {
+                duration: 2000,
+            });
         }
-      );
+    );
+}  
+getTopicBySubject(): void {
+  this.topic = [];
+          this.httpClient.get<any>('../api/v1/get_topic_by_subject/'+this.selected_subject)
+          .subscribe(
+                  (res)=>{
+                      this.topic = res["result"]["data"];
+                      console.log(this.topic);
+                },
+                (error)=>{
+                  this._snackBar.open(error["statusText"], '', {
+                      duration: 2000,
+                  });
+              }
+          );
+      }
+      getQuestionsByTopic(ev): void {
+     //var tid = this.topic[ev.index].topic_id;
+     var tid = ev.value;
+    // this.selected_topic_index = ev.index;
+     this.httpClient
+       .get<any>(
+        "../api/v1/get_question_by_topic_n_year/" +tid
+       )
+       .subscribe(
+         res => {
+           this.question = res["result"]["data"];
+         },
+         error => {
+           this._snackBar.open(error["statusText"], "", {
+            duration: 2000
+           });
+         }
+       );
   }
   getTopicByLngNYear(ev): void {
     this.selected_year = this.year[ev.index].year_id;
     this.httpClient
       .get<any>(
-        "http://localhost/project/exam-horse/api/v1/get_topic_by_lng_year/" +
+        "../api/v1/get_topic_by_lng_year/" +
           this.selected_language +
           "/" +
           this.year[ev.index].year_id
@@ -95,7 +124,7 @@ export class QuestionComponent implements OnInit {
   }
   getYearByLanguage(): void {
     this.httpClient
-      .get<any>("http://localhost/project/exam-horse/api/v1/get_year")
+      .get<any>("../api/v1/get_year")
       .subscribe(
         res => {
           this.year = res["result"]["data"];
@@ -155,7 +184,7 @@ export class QuestionComponent implements OnInit {
     formData.append("file", fileData);
     this.httpClient
       .post(
-        "http://localhost/project/exam-horse/api/v1/import_question",
+        "../api/v1/import_question",
         formData
       )
       .subscribe(
@@ -180,7 +209,7 @@ export class QuestionComponent implements OnInit {
   templateUrl: "question-form.html"
 })
 export class QuestionForm {
-  image_url: string = "http://localhost/project/exam-horse/api/v1/";
+  image_url: string = "../api/v1/";
   questionForm: FormGroup;
   loading = false;
   question_id = 0;
@@ -242,7 +271,7 @@ export class QuestionForm {
       this.image_path = this.data.data.image_path;
     }
     // this.httpClient
-    //   .get("http://localhost/project/exam-horse/api/v1/get_topic_by_lng_year")
+    //   .get("../api/v1/get_topic_by_lng_year")
     //   .subscribe(
     //     res => {
     //       if (res["result"]["error"] === false) {
@@ -260,7 +289,7 @@ export class QuestionForm {
     //     }
     //   );
     this.httpClient
-      .get("http://localhost/project/exam-horse/api/v1/get_topic")
+      .get("../api/v1/get_topic")
       .subscribe(
         res => {
           if (res["result"]["error"] === false) {
@@ -278,7 +307,7 @@ export class QuestionForm {
         }
       );
     this.httpClient
-      .get("http://localhost/project/exam-horse/api/v1/get_year")
+      .get("../api/v1/get_year")
       .subscribe(
         res => {
           if (res["result"]["error"] === false) {
@@ -296,7 +325,7 @@ export class QuestionForm {
         }
       );
     this.httpClient
-      .get<any>("http://localhost/project/exam-horse/api/v1/get_book")
+      .get<any>("../api/v1/get_book")
       .subscribe(
         res => {
           this.book = res["result"]["data"];
@@ -360,7 +389,7 @@ export class QuestionForm {
       url = "insert_question";
     }
     this.httpClient
-      .post("http://localhost/project/exam-horse/api/v1/" + url, formData)
+      .post("../api/v1/" + url, formData)
       .subscribe(
         res => {
           this.loading = false;
@@ -388,7 +417,7 @@ export class QuestionForm {
     var formData = new FormData();
     formData.append("file", fileData);
     this.httpClient
-      .post("http://localhost/project/exam-horse/api/v1/upload_file", formData)
+      .post("../api/v1/upload_file", formData)
       .subscribe(
         res => {
           this.loading = false;
@@ -486,7 +515,7 @@ export class QuestionForm {
         tag: "h1"
       }
     ],
-    uploadUrl: "http://localhost/project/exam-horse/api/v1/upload_image",
+    uploadUrl: "../api/v1/upload_image",
     sanitize: true,
     toolbarPosition: "top"
   };
@@ -526,7 +555,7 @@ export class QuestionForm {
         tag: "h1"
       }
     ],
-    uploadUrl: "http://localhost/project/exam-horse/api/v1/upload_image",
+    uploadUrl: "../api/v1/upload_image",
     sanitize: true,
     toolbarPosition: "top"
   };
@@ -557,7 +586,7 @@ export class QuestionDelete {
     this.loading = true;
     this.httpClient
       .get(
-        "http://localhost/project/exam-horse/api/v1/delete_record/question/question_id=" +
+        "../api/v1/delete_record/question/question_id=" +
           this.question_id
       )
       .subscribe(
