@@ -230,6 +230,9 @@ $app->get('/get_student/:srt', function($str) {
     }
     $data = $com->selectAll('*', 'student_register', 'student_register_id > 0 ORDER BY ' . $str . ' ' . $order);
     if (count($data) > 0) {
+        foreach ($data as $key => $row) {
+            $data[$key]['login_at'] = date('d/m/Y', strtotime($row['login_at']));
+        }
         $res['error'] = false;
         $res['message'] = 'Records found';
         $res['data'] = $data;
