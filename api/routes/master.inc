@@ -58,7 +58,7 @@ $app->post('/loginstudent', function() use ($app) {
     if (count($record) > 0) {
         if ($data['password'] == $record['password']) {
             $res['error'] = false;
-            $obj->insertRecord(array('student_register_id' => $record['student_register_id'], 'login_at' => date('Y-m-d'), 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')), 'student_register_login');
+            $obj->insertRecord(array('student_register_id' => $record['student_register_id'], 'login_at' => date('Y-m-d H:i:s'), 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')), 'student_register_login');
             $_SESSION['student_register_id'] = $record['student_register_id'];
             $res['message'] = 'Welcome ' . $record['student_name'];
             $res['data'] = $record;
@@ -231,6 +231,9 @@ $app->get('/get_student/:srt', function($str) {
     }
     $data = $com->selectAll('*', 'student_register', 'student_register_id > 0 ORDER BY ' . $str . ' ' . $order);
     if (count($data) > 0) {
+        foreach ($data as $key => $row) {
+            $data[$key]['login_at'] = date('d/m/Y h:iA', strtotime($row['login_at']));
+        }
         $res['error'] = false;
         $res['message'] = 'Records found';
         $res['data'] = $data;
