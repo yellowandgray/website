@@ -1058,3 +1058,8 @@ and open the template in the editor.
 .result-option .option span.option-float {
     float: left;
 }
+
+.kanoli-top-25 {
+    position: relative;
+    top: 25px;
+}

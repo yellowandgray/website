@@ -29,6 +29,17 @@ $subjects = $obj->selectAll('*', 'subject', 'subject_id > 0 AND status = 1');
                                 </div>
                             </div>
                         <?php } ?>
+                        <div class="span3 subject-section kanoli-top-25" onclick="window.location = 'thunaipaadam_kaanoli'">
+                            <!-- <div class="price">Feringo</div> -->
+                            <div class="subject-1">
+                                <div class="subject-1-img" style="background: url(img/thunaipaadam-thumb.png)no-repeat;"></div>
+                            </div>
+                            <div class="subject-1-text">
+                                <h2>பத்தாம் வகுப்பு தமிழ் துணைப்பாடம் -  காணொளிகள்</h2>
+                                <p>விரிவானம் இயல் 5,6,8,9 முதலிய கதைகளை அனிமேஷன் வடிவத்தில் கண்டு ரசித்து படிக்கலாம்...</p>
+                                <button class="btn btn-theme margintop10" onclick="window.location = 'thunaipaadam_kaanoli'">See Videos...</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
