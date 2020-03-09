@@ -333,13 +333,13 @@ $app->post('/import_question', function() use($app) {
                 }
                 $topic = $obj->selectRow('*', 'topic', 'name = \'' . $obj->escapeString($row[3]) . '\' AND subject_id = ' . $subject_id);
                 if (count($topic) == 0) {
-                    $topic_id = $obj->insertRecord(array('name' => trim($row[3]), 'description' => '', 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'subject_id' => $subject_id), 'topic');
+                    $topic_id = $obj->insertRecord(array('name' => $obj->escapeString(trim($row[3])), 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'subject_id' => $subject_id), 'topic');
                 } else {
                     $topic_id = $topic['topic_id'];
                 }
                 $book = $obj->selectRow('*', 'book', 'book_name = \'' . $obj->escapeString($row[13]) . '\'');
                 if (count($book) == 0) {
-                    $book_id = $obj->insertRecord(array('book_name' => trim($row[13]), 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'book_name_id' => ''), 'book');
+                    $book_id = $obj->insertRecord(array('book_name' => $obj->escapeString(trim($row[13])), 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'book_name_id' => ''), 'book');
                 } else {
                     $book_id = $book['book_id'];
                 }
