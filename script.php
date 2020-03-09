@@ -64,13 +64,15 @@
     });
 </script>
 <script type="text/javascript">
+    var imm = 0;
     $("#tets").click(function () {
-        var imm = 0;
+
         if ($('#show-immediately').prop('checked')) {
             imm = 1;
         } else {
-           
+            imm = 0;
         }
+        alert(imm)
         $.ajax({
             url: "immediate.php",
             type: "POST",

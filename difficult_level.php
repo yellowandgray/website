@@ -55,7 +55,7 @@ $_SESSION['selected_subject_id'] = $subject['subject_id'];
                     <div class="content">
                         <ul class="radio-btn-section">
                             <li>
-                                <input type="radio" name="method" value="learn"> Learning
+                                <input type="radio" name="method" value="learn"> Learning Mode
                                 <ul id="checkbox-btn" class="checkbox-btn">
                                     <li>
                                         <input id='show-immediately' type="checkbox" value='show_answer_immediately'> Show Answer Immediately
@@ -63,7 +63,7 @@ $_SESSION['selected_subject_id'] = $subject['subject_id'];
                                 </ul>
                             </li>
                             <li>
-                                <input type="radio" name="method" value="test"> Live Test
+                                <input type="radio" name="method" value="test"> Practice Test
                             </li>
                         </ul>
                         <button class="btn btn-custom1" id='tets'>Let's Go</button>

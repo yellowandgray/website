@@ -115,53 +115,59 @@ if (count($questions) > 0) {
                                     <!--/progress-->
                                 </div>
                                 <!-- questionTitle -->
-                                <div v-if="quiz.questions[questionIndex].show_image" class="text-center">
-                                    <img v-if="quiz.questions[questionIndex].direction == 'top'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />
-                                </div>
+                                <?php if ($imm != 0) { ?>
+                                    <div v-if="quiz.questions[questionIndex].show_image" class="text-center">
+                                        <img v-if="quiz.questions[questionIndex].direction == 'top'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />
+                                    </div>
+                                <?php } ?>
 
                                 <h2 class="titleContainer title">{{questionIndex + 1}}. <span v-html="quiz.questions[questionIndex].text"></span></h2>
-                                <div v-if="quiz.questions[questionIndex].show_image" class="text-center">
-                                    <img v-if="quiz.questions[questionIndex].direction == 'bottom'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />
-                                </div>
+                                <?php if ($imm != 0) { ?>
+                                    <div v-if="quiz.questions[questionIndex].show_image" class="text-center">
+                                        <img v-if="quiz.questions[questionIndex].direction == 'bottom'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />
+                                    </div>
+                                <?php } ?>
 
                                 <!-- quizOptions -->
                                 <div class="optionContainer">
                                     <div class="option" v-for="(response, index) in quiz.questions[questionIndex].responses" @click="selectOption(index);" :class="{ 'is-selected': userResponses[questionIndex] == index}" :key="index" v-if="response.text != ''">
-                                         <span class="q-option">{{ index | charIndex }}.</span> <span v-html="response.text"></span>
+                                         <span class="q-option">{{ index | charIndex }}.&nbsp; </span> <span v-html="response.text"></span>
                                     </div>
                                 </div>
 
                                 <!--quizFooter: navigation and progress-->
-                                <?php if ($imm == 1) { ?>
-                                    <footer class="questionFooter" id='quiz-footer'>
-                                        <div class="footer-explanation-section">
-                                            <strong v-html="quiz.questions[questionIndex].answer"></strong>
-                                            <br/>
-                                            <div v-if="quiz.questions[questionIndex].show_image_explanation" class="text-center">
-                                                <img v-if="quiz.questions[questionIndex].direction == 'top'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
-                                            </div>
-                                            <span v-html="quiz.questions[questionIndex].explanation"></span>
-                                            <div v-if="quiz.questions[questionIndex].show_image_explanation" class="text-center">
-                                                <img v-if="quiz.questions[questionIndex].direction == 'bottom'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
-                                            </div>
+
+                                <footer class="questionFooter" id='quiz-footer' style='display: none'>
+                                    <div class="footer-explanation-section">
+                                        <strong v-html="quiz.questions[questionIndex].answer"></strong>
+                                        <br/>
+
+                                        <div v-if="quiz.questions[questionIndex].show_image_explanation" class="text-center">
+                                            <img v-if="quiz.questions[questionIndex].direction == 'top'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
                                         </div>
-                                        <!--                                    pagination-->
-                                        <nav class="pagination" role="navigation" aria-label="pagination">
 
-                                            <!--                                        back button -->
-                                            <!--                                        <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">Back</a>-->
-                                            <!--                                        <a class="btn btn-green" href="select_language">Home</a>-->
+                                        <span v-html="quiz.questions[questionIndex].explanation"></span>
 
-                                            <!--                                    next button -->
-                                            <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
-                                                <!--                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}-->Next
-                                            </a>
+                                        <div v-if="quiz.questions[questionIndex].show_image_explanation" class="text-center">
+                                            <img v-if="quiz.questions[questionIndex].direction == 'bottom'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
+                                        </div>
+                                    </div>
+                                    <!--                                    pagination-->
+                                    <nav class="pagination" role="navigation" aria-label="pagination">
 
-                                        </nav>
-                                        <!--                                    /pagination-->
+                                        <!--                                        back button -->
+                                        <!--                                        <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">Back</a>-->
+                                        <!--                                        <a class="btn btn-green" href="select_language">Home</a>-->
 
-                                    </footer>
-                                <?php } ?>
+                                        <!--                                    next button -->
+                                        <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
+                                            <!--                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}-->Next
+                                        </a>
+
+                                    </nav>
+                                    <!--                                    /pagination-->
+
+                                </footer>
                                 <!--/quizFooter-->
                             </div>
                             <!--/questionContainer-->
@@ -343,7 +349,7 @@ if (count($questions) > 0) {
                         });
                     },
                     selectOption: function (index) {
-                        <?php if ($imm == 0) { ?>
+<?php if ($imm == 0) { ?>
                             setTimeout(() => {
                                 Vue.set(this.userResponses, this.questionIndex, index);
                                 if (this.questionIndex < this.quiz.questions.length) {
@@ -367,7 +373,10 @@ if (count($questions) > 0) {
 
                                         }
                                     });
-                        <?php } ?>
+<?php } ?>
+<?php if ($imm == 1) { ?>
+                            document.getElementById("quiz-footer").style.display = "block"
+<?php } ?>
                     },
                     next: function () {
                         setTimeout(() => {

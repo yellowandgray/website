@@ -66,7 +66,7 @@ if (isset($_SESSION['student_register_id'])) {
                                             <tr>
                                                 <th class="text-center">Category</th>
                                                 <th class="text-center">Total</th>
-                                                <th class="text-center">Attend</th>
+                                                <th class="text-center">Answered</th>
                                                 <th class="text-center">
                                                     <i class="icon-ok-sign"></i>
                                                 </th>
