@@ -57,7 +57,7 @@ if (isset($_SESSION['student_register_id'])) {
                                                 <thead>
                                                     <tr>
                                                         <th class="text-center">Total</th>
-                                                        <th class="text-center">Attend</th>
+                                                        <th class="text-center">Answered</th>
                                                         <th class="text-center"><i class="icon-ok-sign"></i></th>
                                                         <th class="text-center"><i class="font-icon-remove-circle"></i></th>
                                                     </tr>
