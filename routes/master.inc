@@ -415,6 +415,8 @@ $app->get('/get_student_by_id_for_tc/:sid', function($sid) {
         $data['emis14'] = '';
         $data['emis15'] = '';
         $data['emis16'] = '';
+        $data['emis17'] = '';
+        $data['emis18'] = '';
         $data['aadhar1'] = '';
         $data['aadhar2'] = '';
         $data['aadhar3'] = '';
