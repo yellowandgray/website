@@ -1,0 +1,227 @@
+<md-bottom-sheet class="md-grid" layout="column">
+    <div layout="row" layout-align="start center" ng-cloak>
+        <h4>Student</h4>
+    </div>
+    <div ng-cloak>
+        <div layout="row">
+            <form name="addForm" ng-submit="submitForm('students', 'Student');" flex layout="column" layout-align="start start">
+                <div layout="row" layout-align="start center" style="width: 100%;">
+                    <md-input-container flex="25" class="no-error-message">
+                        <label>Name</label>
+                        <input required ng-model="formFields.name" type="text" />
+                    </md-input-container>
+                    <md-input-container flex="25" class="no-error-message">
+                        <label>Application no</label>
+                        <input ng-model="formFields.application_no" type="text" />
+                    </md-input-container>
+                    <md-input-container flex="25" class="no-error-message">
+                        <label>Admission no</label>
+                        <input ng-model="formFields.admission_no" type="text" />
+                    </md-input-container>
+                    <md-input-container flex="25" class="no-error-message">
+                        <label>Date of Birth</label>
+                        <md-datepicker ng-model="formFields.dob" md-placeholder="DOB"></md-datepicker>
+                    </md-input-container>
+                    <md-input-container flex="25" class="no-error-message">
+                        <label>Community</label>
+                        <input ng-model="formFields.community" type="text" />
+                    </md-input-container>
+                    <md-input-container flex="25" class="no-error-message">
+                        <label>Nationality</label>
+                        <md-select ng-model="formFields.nationality" md-on-close="clearSearchTerm();" data-md-container-class="selectdemoSelectHeader">
+                            <md-select-header class="demo-select-header">
+                                <input ng-model="searchTerm.nationality" type="search" placeholder="Search for a Nationality..." class="demo-header-searchbox md-text" force-select-focus />
+                            </md-select-header>
+                            <md-optgroup label="label">
+                                <md-option ng-value="data.ID" ng-repeat="data in nationalities| filter:searchTerm.nationality">{{data.name}}</md-option>
+                            </md-optgroup>
+                        </md-select>
+                    </md-input-container>
+                </div>
+                <div layout="row" layout-align="start center" style="width: 100%;">
+                    <md-input-container flex="25" class="no-error-message">
+                        <label>Class</label>
+                        <md-select ng-model="formFields.class_id" md-on-close="clearSearchTerm();" data-md-container-class="selectdemoSelectHeader" ng-change="getSectionsByClass(formFields.class_id);">
+                            <md-select-header class="demo-select-header">
+                                <input ng-model="searchTerm.class" type="search" placeholder="Search for a class..." class="demo-header-searchbox md-text" force-select-focus />
+                            </md-select-header>
+                            <md-optgroup label="label">
+                                <md-option ng-value="data.ID" ng-repeat="data in $root.classes| filter:searchTerm.class">{{data.name}}</md-option>
+                            </md-optgroup>
+                        </md-select>
+                    </md-input-container>
+                    <md-input-container flex="25" class="no-error-message">
+                        <label>Section</label>
+                        <md-select ng-model="formFields.section_id" md-on-close="clearSearchTerm();" data-md-container-class="selectdemoSelectHeader">
+                            <md-select-header class="demo-select-header">
+                                <input ng-model="searchTerm.section" type="search" placeholder="Search for a section..." class="demo-header-searchbox md-text" force-select-focus />
+                            </md-select-header>
+                            <md-optgroup label="label">
+                                <md-option ng-value="data.section_id" ng-repeat="data in $root.sections| filter:searchTerm.section">{{data.name}}</md-option>
+                            </md-optgroup>
+                        </md-select>
+                    </md-input-container>
+                    <md-input-container flex="25" class="no-error-message">
+                        <label>Group</label>
+                        <md-select ng-model="formFields.group_id" md-on-close="clearSearchTerm();" data-md-container-class="selectdemoSelectHeader">
+                            <md-select-header class="demo-select-header">
+                                <input ng-model="searchTerm.group" type="search" placeholder="Search for a group..." class="demo-header-searchbox md-text" force-select-focus />
+                            </md-select-header>
+                            <md-optgroup label="label">
+                                <md-option value="0">None</md-option>
+                                <md-option ng-value="data.ID" ng-repeat="data in $root.groups| filter:searchTerm.group">{{data.name}}</md-option>
+                            </md-optgroup>
+                        </md-select>
+                    </md-input-container>
+                    <md-input-container flex="25" class="no-error-message">
+                        <label>Gender</label>
+                        <md-select ng-model="formFields.gender_id" md-on-close="clearSearchTerm();" data-md-container-class="selectdemoSelectHeader">
+                            <md-select-header class="demo-select-header">
+                                <input ng-model="searchTerm.gender" type="search" placeholder="Search for a gender..." class="demo-header-searchbox md-text" force-select-focus />
+                            </md-select-header>
+                            <md-optgroup label="label">
+                                <md-option ng-value="data.ID" ng-repeat="data in $root.genders| filter:searchTerm.gender">{{data.name}}</md-option>
+                            </md-optgroup>
+                        </md-select>
+                    </md-input-container>
+                    <md-input-container flex="25" class="no-error-message">
+                        <label>Religion</label>
+                        <md-select ng-model="formFields.religion_id" md-on-close="clearSearchTerm();" data-md-container-class="selectdemoSelectHeader">
+                            <md-select-header class="demo-select-header">
+                                <input ng-model="searchTerm.religion" type="search" placeholder="Search for a religion..." class="demo-header-searchbox md-text" force-select-focus />
+                            </md-select-header>
+                            <md-optgroup label="label">
+                                <md-option ng-value="data.ID" ng-repeat="data in $root.religions| filter:searchTerm.religion">{{data.name}}</md-option>
+                            </md-optgroup>
+                        </md-select>
+                    </md-input-container>
+                    <md-input-container flex="25" class="no-error-message">
+                        <label>Caste</label>
+                        <md-select ng-model="formFields.cast_id" md-on-close="clearSearchTerm();" data-md-container-class="selectdemoSelectHeader">
+                            <md-select-header class="demo-select-header">
+                                <input ng-model="searchTerm.cast" type="search" placeholder="Search for a cast..." class="demo-header-searchbox md-text" force-select-focus />
+                            </md-select-header>
+                            <md-optgroup label="label">
+                                <md-option ng-value="data.ID" ng-repeat="data in $root.casts| filter:searchTerm.cast">{{data.name}}</md-option>
+                            </md-optgroup>
+                        </md-select>
+                    </md-input-container>
+                </div>
+                <div layout="row" layout-align="start center" style="width: 100%;">
+                    <md-input-container flex="25" class="no-error-message">
+                        <label>Date of Join</label>
+                        <md-datepicker ng-model="formFields.doj" md-placeholder="DOJ"></md-datepicker>
+                    </md-input-container>
+                    <md-input-container flex="25" class="no-error-message">
+                        <label>Father Name</label>
+                        <input ng-model="formFields.father_name" type="text" />
+                    </md-input-container>
+                    <md-input-container flex="25" class="no-error-message">
+                        <label>Mother Name</label>
+                        <input ng-model="formFields.mother_name" type="text" />
+                    </md-input-container>
+                    <md-input-container flex="25" class="no-error-message">
+                        <label>Contact No.</label>
+                        <input ng-model="formFields.contact_no" type="text" />
+                    </md-input-container>
+                    <md-input-container flex="25" class="no-error-message">
+                        <label>Address 1</label>
+                        <input ng-model="formFields.address1" type="text" />
+                    </md-input-container>
+                    <md-input-container flex="25" class="no-error-message">
+                        <label>Address 2</label>
+                        <input ng-model="formFields.address2" type="text" />
+                    </md-input-container>                    
+                </div>
+                <div layout="row" layout-align="start center" style="width: 100%;">
+                    <md-input-container flex="25" class="no-error-message">
+                        <label>Country</label>
+                        <md-select ng-model="formFields.country_id" md-on-close="clearSearchTerm();" data-md-container-class="selectdemoSelectHeader" ng-change="getStatesByCountry(formFields.country_id);">
+                            <md-select-header class="demo-select-header">
+                                <input ng-model="searchTerm.country" type="search" placeholder="Search for a country..." class="demo-header-searchbox md-text" force-select-focus />
+                            </md-select-header>
+                            <md-optgroup label="label">
+                                <md-option ng-value="data.ID" ng-repeat="data in $root.countries| filter:searchTerm.country">{{data.name}}</md-option>
+                            </md-optgroup>
+                        </md-select>
+                    </md-input-container>
+                    <md-input-container flex="25" class="no-error-message">
+                        <label>State</label>
+                        <md-select ng-model="formFields.state_id" md-on-close="clearSearchTerm();" data-md-container-class="selectdemoSelectHeader" ng-change="getDistrictByState(formFields.state_id);">
+                            <md-select-header class="demo-select-header">
+                                <input ng-model="searchTerm.state" type="search" placeholder="Search for a state..." class="demo-header-searchbox md-text" force-select-focus />
+                            </md-select-header>
+                            <md-optgroup label="label">
+                                <md-option ng-value="data.ID" ng-repeat="data in $root.states| filter:searchTerm.state">{{data.name}}</md-option>
+                            </md-optgroup>
+                        </md-select>
+                    </md-input-container>
+                    <md-input-container flex="25" class="no-error-message">
+                        <label>District</label>
+                        <md-select ng-model="formFields.city_id" md-on-close="clearSearchTerm();" data-md-container-class="selectdemoSelectHeader">
+                            <md-select-header class="demo-select-header">
+                                <input ng-model="searchTerm.city" type="search" placeholder="Search for a district..." class="demo-header-searchbox md-text" force-select-focus />
+                            </md-select-header>
+                            <md-optgroup label="label">
+                                <md-option ng-value="data.ID" ng-repeat="data in $root.cities| filter:searchTerm.city">{{data.name}}</md-option>
+                            </md-optgroup>
+                        </md-select>
+                    </md-input-container>
+                    <md-input-container flex="25" class="no-error-message">
+                        <label>Blood Group</label>
+                        <md-select ng-model="formFields.blood_group" md-on-close="clearSearchTerm();" data-md-container-class="selectdemoSelectHeader">
+                            <md-select-header class="demo-select-header">
+                                <input ng-model="searchTerm.blood_group" type="search" placeholder="Search for a blood group..." class="demo-header-searchbox md-text" force-select-focus />
+                            </md-select-header>
+                            <md-optgroup label="label">
+                                <md-option value="0"></md-option>
+                                <md-option ng-value="data.ID" ng-repeat="data in $root.blood_groups| filter:searchTerm.blood_group">{{data.name}}</md-option>
+                            </md-optgroup>
+                        </md-select>
+                    </md-input-container>
+                    <md-input-container flex="25" class="no-error-message">
+                        <label>Hosteller</label>
+                        <md-select ng-model="formFields.hosteller" md-on-close="clearSearchTerm();" data-md-container-class="selectdemoSelectHeader">
+                            <md-select-header class="demo-select-header">
+                                <input ng-model="searchTerm.hosteller" type="search" placeholder="Search for a hosteller..." class="demo-header-searchbox md-text" force-select-focus />
+                            </md-select-header>
+                            <md-optgroup label="label">
+                                <md-option ng-value="data.ID" ng-repeat="data in $root.hostellers| filter:searchTerm.hosteller">{{data.name}}</md-option>
+                            </md-optgroup>
+                        </md-select>
+                    </md-input-container>
+                </div>
+                <div layout="row" layout-align="start center" style="width: 100%;">
+                    <md-input-container flex="25" class="no-error-message">
+                        <label>PIN Code</label>
+                        <input ng-model="formFields.pincode" type="text" />
+                    </md-input-container>
+                    <md-input-container flex="25" class="no-error-message">
+                        <label>Stopping Name</label>
+                        <input ng-model="formFields.stopping_name" type="text" />
+                    </md-input-container>
+                    <md-input-container flex="25" class="no-error-message">
+                        <label>Status</label>
+                        <md-select ng-model="formFields.status" md-on-close="clearSearchTerm();" data-md-container-class="selectdemoSelectHeader">
+                            <md-select-header class="demo-select-header">
+                                <input ng-model="searchTerm.status" type="search" placeholder="Search for a hosteller..." class="demo-header-searchbox md-text" force-select-focus />
+                            </md-select-header>
+                            <md-optgroup label="label">
+                                <md-option ng-value="data.ID" ng-repeat="data in status| filter:searchTerm.status">{{data.name}}</md-option>
+                            </md-optgroup>
+                        </md-select>
+                    </md-input-container>
+                    <md-input-container flex="25" class="no-error-message">
+                        <label>Image</label>
+                        <lf-ng-md-file-input name="image" lf-files="image" lf-api="imageapi" ng-change="uploadImage(image, 'avatar');"></lf-ng-md-file-input>
+                    </md-input-container>
+                </div>
+                <div layout="row" layout-align="end end" style="width: 100%;">
+                    <md-button class="md-primary md-raised" aria-label="Submit" type="submit" ng-disabled="addForm.$invalid || loading">
+                        Submit
+                    </md-button>                    
+                </div>
+            </form>
+        </div>
+    </div>
+</md-bottom-sheet>

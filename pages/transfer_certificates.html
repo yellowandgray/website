@@ -1,0 +1,105 @@
+<div layout="column" layout-align="center">
+    <md-tabs md-dynamic-height md-border-bottom>
+<!--        <md-tab label="Import">
+            <md-contnet class="md-padding">
+                <md-content layout="column" layout-align="center center">
+                    <div layout="row" layout-align="end end">
+                        <md-button ng-href="v1/students_import.csv" download><md-icon md-svg-icon="img/icons/ic_file_download_48px.svg"></md-icon> Download Sample Export File</md-button>
+                    </div>
+                    <form name="studentsForm" ng-submit="uploadStudents();" layout="column" class="md-padding">
+                        <lf-ng-md-file-input name="file" lf-files="students" lf-api="studentsapi" lf-required lf-mimetype="application/vnd.ms-excel" drag preview></lf-ng-md-file-input>
+                        <div ng-messages="studentsForm.file.$error" style="color:red;">
+                            <div ng-message="required">This is required.</div>
+                            <div ng-message="mimetype">Mimetype error.</div>
+                        </div>
+                        <md-button type="submit" ng-disabled="studentsForm.$invalid || loading" class="md-raised md-primary">Submit</md-button>
+                    </form>
+                    <md-progress-linear md-mode="indeterminate" ng-disabled="!loading"></md-progress-linear>
+                </md-content>
+            </md-contnet>
+        </md-tab>-->
+        <md-tab label="Students" md-on-select="getClasses();">
+            <div layout="row" layout-align="end end">
+                <md-button ng-click="openForm(0, 'students', 0, 1);" class="md-raised md-primary"><md-icon md-svg-icon="img/icons/ic_add_48px.svg"></md-icon> Student</md-button>
+            </div>
+            <md-tabs md-dynamic-height md-border-bottom>
+                <md-tab label="{{row.name}}" ng-repeat="row in classes" md-on-select="getSections(row.ID);">
+                    <md-content class="md-padding" ng-if="row.sections.length > 0">
+                        <div layout="row" layout-align="start end">
+                            <md-input-container md-no-float class="md-block no-error-message" flex="80">
+                                <md-icon md-svg-icon="img/icons/ic_search_48px.svg" aria-label="label"></md-icon>
+                                <input ng-model="row.searchtext" placeholder="Type text to search here" ng-change="getStudents(row.ID, row.section, 1);" />
+                            </md-input-container>
+                            <md-input-container class="md-block no-error-message">
+                                <label>Section</label>
+                                <md-select name="section" ng-model="row.section" md-on-close="clearSearchTerm(row.ID);" data-md-container-class="selectdemoSelectHeader" ng-change="getStudentsBySection(row.ID, row.section, 1);">
+                                    <md-select-header class="demo-select-header">
+                                        <input ng-model="row.searchTerm" type="search" placeholder="Search for a section..." class="demo-header-searchbox md-text" force-select-focus onkeydown="mdSelectOnKeyDownOverride(event)" />
+                                    </md-select-header>
+                                    <md-option value="{{val.section_id}}" ng-repeat="val in row.sections| filter: row.searchTerm">{{val.name}}</md-option>
+                                </md-select>
+                            </md-input-container>
+                        </div>
+                        <md-list flex>
+                            <md-list-item class="md-3-line" ng-repeat="item in row.data">
+                                <img ng-src="{{item.avatar| image_url}}" class="md-avatar pointer" alt="image" ng-click="preview(item.avatar);" />
+                                <div class="md-list-item-text" layout="column">
+                                    <h3 style="color: #3f51b5;">{{ item.name}}</h3>
+                                    <h4>{{ item.father_name}}</h4>
+                                    <p>{{ item.contact_no}}</p>
+                                </div>
+                                <md-button class="md-secondary md-icon-button" aria-label="call" ng-click="getTCDetails(item.ID);">
+                                    <md-tooltip md-direction="bottom">Issue TC</md-tooltip>
+                                    <md-icon md-svg-icon="img/icons/ic_insert_drive_file_48px.svg"></md-icon>
+                                </md-button>
+                                <md-button class="md-secondary md-icon-button" aria-label="call" ng-click="openForm(item.ID, 'students', row.ID, row.page);">
+                                    <md-tooltip md-direction="bottom">Edit</md-tooltip>
+                                    <md-icon md-svg-icon="img/icons/ic_edit_48px.svg"></md-icon>
+                                </md-button>
+                                <md-button class="md-secondary md-icon-button" aria-label="call" ng-click="deleteStudent($event, 'students', item.ID, 'Student', item.class_id, item.section_id, row.page);">
+                                    <md-tooltip md-direction="bottom">Delete</md-tooltip>
+                                    <md-icon md-svg-icon="img/icons/ic_delete_48px.svg"></md-icon>
+                                </md-button>
+                                <md-divider ng-if="!$last"></md-divider>
+                            </md-list-item>
+                        </md-list>
+                        <section layout="row" ng-if="row.data.length > 0">
+                            <cl-paging flex cl-pages="row.total" cl-steps="10" cl-page-changed="getStudents(row.ID, row.section, row.page)" cl-align="center center" cl-current-page="row.page"></cl-paging>
+                        </section>
+                    </md-content>
+                </md-tab>
+            </md-tabs>
+        </md-tab>
+        <md-tab label="Issued TC" md-on-select="getIssuedStudents(1);">
+            <md-content class="md-padding">
+                <div layout="row" layout-align="start end">
+                    <md-input-container md-no-float class="md-block no-error-message" flex="100">
+                        <md-icon md-svg-icon="img/icons/ic_search_48px.svg" aria-label="label"></md-icon>
+                        <input ng-model="searchtext.issued_tc" placeholder="Type text to search here" ng-change="getIssuedStudents(1);" />
+                    </md-input-container>
+                </div>
+                <md-list flex ng-if="issued_tc_data.length > 0">
+                    <md-list-item class="md-3-line" ng-repeat="item in issued_tc_data">
+                        <img ng-src="{{item.avatar| image_url}}" class="md-avatar pointer" alt="image" ng-click="preview(item.avatar);" />
+                        <div class="md-list-item-text" layout="column">
+                            <h3>{{ item.name}}</h3>
+                            <h4>{{ item.father_name}}</h4>
+                            <p>{{ item.contact_no}}</p>
+                        </div>
+                        <md-button class="md-secondary md-icon-button" aria-label="call" ng-click="getTCDetails(item.ID);">
+                            <md-tooltip md-direction="bottom">TC</md-tooltip>
+                            <md-icon md-svg-icon="img/icons/ic_insert_drive_file_48px.svg"></md-icon>
+                        </md-button>
+                        <md-divider ng-if="!$last"></md-divider>
+                    </md-list-item>
+                </md-list>
+                <section layout="row" ng-if="issued_tc_data.length > 0">
+                    <cl-paging flex cl-pages="issued_tc_total" cl-steps="10" cl-page-changed="getIssuedStudents(issued_tc_page)" cl-align="center center" cl-current-page="issued_tc_page"></cl-paging>
+                </section>
+                <div ng-if="issued_tc_data.length === 0">
+                    No TC were issued
+                </div>
+            </md-content>
+        </md-tab>
+    </md-tabs>
+</div>

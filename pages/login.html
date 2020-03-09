@@ -1,0 +1,22 @@
+<md-content layout="column" layout-align="center center" class="md-padding" flex>
+    <img src="img/logo.jpg" alt="logo" class="logo" />
+    <form name="loginForm" ng-submit="form.submit();" style="width: 50%;">
+        <md-input-container class="md-block">
+            <label>Username</label>
+            <input required name="username" ng-model="form.username" type="text" md-autofocus />
+            <div ng-messages="loginForm.username.$error">
+                <div ng-message="required">This is required.</div>
+            </div>
+        </md-input-container>
+        <md-input-container class="md-block">
+            <label>Password</label>
+            <input required type="password" name="password" ng-model="form.password" />
+            <div ng-messages="loginForm.password.$error">
+                <div ng-message="required">This is required.</div>
+            </div>
+        </md-input-container>
+        <md-button type="submit" ng-disabled="loginForm.$invalid || loading" class="md-raised md-primary">Submit</md-button>
+    </form>
+    <br/>
+    <md-progress-linear md-mode="indeterminate" ng-disabled="!loading"></md-progress-linear>
+</md-content>

@@ -1,0 +1,17 @@
+<md-dialog class="md-grid" layout="column" flex="60">
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h4>Transfer Certificate</h4>
+            <span flex></span>
+            <md-button class="md-icon-button" ng-click="cancel()">
+                <md-icon md-svg-src="img/icons/ic_close_48px.svg" aria-label="Close dialog"></md-icon>
+            </md-button>
+        </div>
+    </md-toolbar>
+    <md-dialog-content class="md-padding">
+        <div layout="row" layout-align="end end">
+            <md-button class="md-button md-warn md-raised" ng-click="deleteTC($event);">Delete</md-button>
+        </div>
+        <iframe style="width: 100%; min-height: 500px; height: auto;" ng-src="{{formFields.tc_path| trustAsResourceUrl}}"></iframe>
+    </md-dialog-content>
+</md-dialog>

@@ -1,0 +1,40 @@
+<md-bottom-sheet class="md-grid" layout="column">
+    <div layout="row" layout-align="start center" ng-cloak>
+        <h4>Working Days</h4>
+    </div>
+    <div ng-cloak>
+        <div layout="row">
+            <form name="addForm" ng-submit="submitForm('working_days', 'Working days');" flex layout="row" layout-align="start start">
+                <md-input-container flex="20">
+                    <label>Year</label>
+                    <md-select ng-model="formFields.year_id" md-on-close="clearSearchTerm();" data-md-container-class="selectdemoSelectHeader" ng-change="getMonths(formFields.year_id);">
+                        <md-select-header class="demo-select-header">
+                            <input ng-model="searchTerm.year" type="search" placeholder="Search for a year..." class="demo-header-searchbox md-text" force-select-focus />
+                        </md-select-header>
+                        <md-optgroup label="label">
+                            <md-option ng-value="data.ID" ng-repeat="data in years| filter:searchTerm.year">{{data.name}}</md-option>
+                        </md-optgroup>
+                    </md-select>
+                </md-input-container>
+                <md-input-container flex="20">
+                    <label>Month</label>
+                    <md-select ng-model="formFields.month_id" md-on-close="clearSearchTerm();" data-md-container-class="selectdemoSelectHeader">
+                        <md-select-header class="demo-select-header">
+                            <input ng-model="searchTerm.month" type="search" placeholder="Search for a month..." class="demo-header-searchbox md-text" force-select-focus />
+                        </md-select-header>
+                        <md-optgroup label="label">
+                            <md-option ng-value="data.ID" ng-repeat="data in months| filter:searchTerm.month">{{data.name}}</md-option>
+                        </md-optgroup>
+                    </md-select>
+                </md-input-container>
+                <md-input-container flex="10">
+                    <label>Days</label>
+                    <input required ng-model="formFields.working_days" type="number" />
+                </md-input-container>
+                <md-button class="md-primary md-raised" aria-label="Submit" type="submit" ng-disabled="addForm.$invalid || loading">
+                    Submit
+                </md-button>
+            </form>
+        </div>
+    </div>
+</md-bottom-sheet>

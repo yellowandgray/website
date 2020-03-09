@@ -1,0 +1,216 @@
+<div ng-cloak>
+    <md-tabs md-dynamic-height md-border-bottom>
+        <md-tab label="Generate">
+            <div layout="row" layout-align="start start" class="md-padding">
+                <md-input-container class="md-block" flex="50">
+                    <label>Year</label>
+                    <md-select ng-model="year_id" md-on-close="clearSearchTerm();" data-md-container-class="selectdemoSelectHeader">
+                        <md-select-header class="demo-select-header">
+                            <input ng-model="searchTerm.year" type="search" placeholder="Search for a year..." class="demo-header-searchbox md-text" force-select-focus onkeydown="mdSelectOnKeyDownOverride(event)" />
+                        </md-select-header>
+                        <md-optgroup label="label">
+                            <md-option ng-value="data.ID" ng-repeat="data in years| filter:searchTerm.year">{{data.name}}</md-option>
+                        </md-optgroup>
+                    </md-select>
+                </md-input-container>
+                <md-input-container class="md-block" flex="50">
+                    <label>Month</label>
+                    <md-select ng-model="month_id" md-on-close="clearSearchTerm();" data-md-container-class="selectdemoSelectHeader">
+                        <md-select-header class="demo-select-header">
+                            <input ng-model="searchTerm.month" type="search" placeholder="Search for a month..." class="demo-header-searchbox md-text" force-select-focus onkeydown="mdSelectOnKeyDownOverride(event)" />
+                        </md-select-header>
+                        <md-optgroup label="label">
+                            <md-option ng-value="data.ID" ng-repeat="data in months| filter:searchTerm.month">{{data.name}}</md-option>
+                        </md-optgroup>
+                    </md-select>
+                </md-input-container>
+            </div>
+            <md-content layout="column" layout-align="center center">
+                <form name="payrollForm" ng-submit="generatePayroll();" layout="column" class="md-padding">
+                    <lf-ng-md-file-input name="file" lf-files="timesheet" lf-api="timesheetapi" lf-required lf-mimetype="application/vnd.ms-excel" drag preview></lf-ng-md-file-input>
+                    <div ng-messages="payrollForm.file.$error" style="color:red;">
+                        <div ng-message="required">This is required.</div>
+                        <div ng-message="mimetype">Mimetype error.</div>
+                    </div>
+                    <md-button type="submit" ng-disabled="payrollForm.$invalid" class="md-raised md-primary">Submit</md-button>
+                </form>
+            </md-content>
+            <div layout="row" layout-align="start end" ng-if="data.length > 0" class="md-padding">
+                <md-input-container md-no-float class="md-block no-error-message" flex>
+                    <md-icon md-svg-icon="img/icons/ic_search_48px.svg" aria-label="label"></md-icon>
+                    <input ng-model="searchtext.text" placeholder="Type text to search here"/>
+                </md-input-container>
+            </div>
+            <div class="genrate-table md-padding" ng-if="data.length > 0">
+                <table>
+                    <thead>
+                        <tr>
+                            <th ng-click="searchtext.order = 'name'">Name</th>
+                            <th ng-click="searchtext.order = 'emp_code'">Code</th>
+                            <th ng-click="searchtext.order = 'designition'">Designation</th>
+                            <th ng-click="searchtext.order = 'monthly_salary'">Salary</th>
+                            <th ng-click="searchtext.order = 'working_days'">Working Days</th>
+                            <th ng-click="searchtext.order = 'present'">Presents</th>
+                            <th ng-click="searchtext.order = 'absent'">Absents</th>
+                            <th ng-click="searchtext.order = 'leave_allowable'">Allowable Leave</th>
+                            <th>LOP</th>
+                            <th ng-click="searchtext.order = 'late'">Late</th>
+                            <th>Adjustments</th>
+                            <th ng-click="searchtext.order = 'grand_total'">Payable</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="(key, row) in data | filter: searchtext.text | orderBy: searchtext.order">
+                            <td>{{row.name}}</td>
+                            <td class="align-right">{{row.emp_code}}</td>
+                            <td>{{row.designition}}</td>
+                            <td>{{row.monthly_salary|number:0}}</td>
+                            <td>{{row.working_days}}</td>
+                            <td>{{row.present}}</td>
+                            <td>{{row.absent}}</td>
+                            <td>{{row.leave_allowable}}</td>
+                            <td>{{getLOP(row)}}</td>
+                            <td>{{row.late}}</td>
+                            <td>
+                    <md-button ng-click="addAddons(row);" class="md-raised md-primary">Insert</md-button>
+                    <div ng-repeat="r in row.addons">{{r.type| type}} {{r.amt|number:0}} for {{r.reason}}</div>
+                    </td>
+                    <td>{{getGrandTotal(row)}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div layout="column" layout-align="end end" ng-if="data.length > 0">
+                <md-button class="md-warn md-raised" ng-click="savePayroll();" ng-disabled="loading">Save</md-button>       
+                <md-progress-linear md-mode="indeterminate" ng-disabled="!loading"></md-progress-linear>
+            </div>
+        </md-tab>
+        <md-tab label="History">
+            <md-content>
+                <div layout="row" layout-align="start start" class="md-padding">
+                    <md-input-container class="md-block" flex="40">
+                        <label>Year</label>
+                        <md-select ng-model="history_year_id" md-on-close="clearSearchTerm();" data-md-container-class="selectdemoSelectHeader">
+                            <md-select-header class="demo-select-header">
+                                <input ng-model="searchTerm.year" type="search" placeholder="Search for a year..." class="demo-header-searchbox md-text" force-select-focus onkeydown="mdSelectOnKeyDownOverride(event)" />
+                            </md-select-header>
+                            <md-optgroup label="label">
+                                <md-option ng-value="data.ID" ng-repeat="data in years| filter:searchTerm.year">{{data.name}}</md-option>
+                            </md-optgroup>
+                        </md-select>
+                    </md-input-container>
+                    <md-input-container class="md-block" flex="40">
+                        <label>Month</label>
+                        <md-select ng-model="history_month_id" md-on-close="clearSearchTerm();" data-md-container-class="selectdemoSelectHeader">
+                            <md-select-header class="demo-select-header">
+                                <input ng-model="searchTerm.month" type="search" placeholder="Search for a month..." class="demo-header-searchbox md-text" force-select-focus onkeydown="mdSelectOnKeyDownOverride(event)" />
+                            </md-select-header>
+                            <md-optgroup label="label">
+                                <md-option ng-value="data.ID" ng-repeat="data in months| filter:searchTerm.month">{{data.name}}</md-option>
+                            </md-optgroup>
+                        </md-select>
+                    </md-input-container>
+                    <md-button class="md-button md-raised" ng-click="getPayrollHistory();">
+                        Get History
+                    </md-button>
+                </div>
+                <div layout="row" layout-align="start end" ng-if="history_data.length > 0" class="md-padding">
+                    <md-input-container md-no-float class="md-block no-error-message" flex>
+                        <md-icon md-svg-icon="img/icons/ic_search_48px.svg" aria-label="label"></md-icon>
+                        <input ng-model="searchhistorytext.text" placeholder="Type text to search here"/>
+                    </md-input-container>
+                </div>
+                <div class="genrate-table md-padding" ng-if="history_data.length > 0">
+                    <md-button ng-click="csv.generate()" class="md-raised md-primary" ng-href="{{ csv.link()}}" download="payroll-{{history_year_name}}-{{history_month_name}}.csv">Export CSV</md-button>
+                    <md-button ng-click="printArea();" class="md-raised"><md-icon md-svg-src="img/icons/ic_print_48px.svg"></md-icon> Print</md-button>
+                    <table export-csv="csv" export-csv-ignore="ignore" id="print_area">
+                        <thead>
+                            <tr>
+                                <th ng-click="searchhistorytext.order = 'name'">Name</th>
+                                <th ng-click="searchhistorytext.order = 'emp_code'">Code</th>
+                                <th ng-click="searchhistorytext.order = 'designition'">Designation</th>
+                                <th ng-click="searchhistorytext.order = 'total'">Salary</th>
+                                <th ng-click="searchhistorytext.order = 'total_working_days'">Working Days</th>
+                                <th ng-click="searchhistorytext.order = 'presents'">Presents</th>
+                                <th ng-click="searchhistorytext.order = 'absents'">Absents</th>
+                                <th ng-click="searchhistorytext.order = 'lop'">LOP</th>
+                                <th ng-click="searchhistorytext.order = 'leave_allowable'">Allowable Leave</th>
+                                <th ng-click="searchhistorytext.order = 'late'">Late</th>
+                                <th>Adjustments</th>
+                                <th ng-click="searchhistorytext.order = 'payable'">Payable</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="row in history_data| filter: searchhistorytext.text | orderBy: searchhistorytext.order">
+                                <td>{{row.name}}</td>
+                                <td>{{row.emp_code}}</td>
+                                <td>{{row.designition}}</td>
+                                <td>{{row.total|number:0}}</td>
+                                <td>{{row.total_working_days}}</td>
+                                <td>{{row.presents}}</td>
+                                <td>{{row.absents}}</td>
+                                <td>{{row.lop}}</td>
+                                <td>{{row.leave_allowable}}</td>
+                                <td>{{row.late}}</td>
+                                <td>
+                        <md-button ng-click="updateAddons(row);" class="md-raised md-primary">Insert</md-button>
+                        <div ng-repeat="r in row.addons">{{r.type| type}} {{r.amt|number:0}} for {{r.reason}}</div>
+                        </td>
+                        <td>{{row.payable|number:0}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div ng-if="history_data.length === 0" class="md-padding">
+                    {{history_err_msg}}
+                </div>
+            </md-content>
+        </md-tab>
+        <md-tab label="Configs">
+            <div ng-cloak>
+                <md-tabs md-dynamic-height md-border-bottom>
+                    <md-tab label="{{row.name}}" ng-repeat="row in designations" md-on-select="getDesignationConfigs(row.ID);">
+                        <div layout="row" layout-align="end end">
+                            <md-button class="md-primary md-raised" ng-click="addWorkingDays(row.ID);">
+                                <md-icon md-svg-icon="img/icons/ic_add_48px.svg"></md-icon> Working Days
+                            </md-button>
+                            <md-button class="md-primary md-raised" ng-click="addOtherConfigs(row.ID);">
+                                <md-icon md-svg-icon="img/icons/ic_add_48px.svg"></md-icon> Other Configs
+                            </md-button>
+                        </div>
+                        <md-content>
+                            <h4 class="md-padding no-margin" ng-if="working_days.length > 0">Working days</h4>
+                            <md-list flex ng-if="working_days.length > 0">
+                                <md-list-item class="md-2-line" ng-repeat="r in working_days">
+                                    <div class="md-list-item-text" layout="column">
+                                        <h3>{{r.month_name}} {{r.year_name}} - {{r.working_days}} 
+                                            <md-button class="md-icon-button" aria-label="call" ng-click="removeWorkingDays(r.ID, row.ID);">
+                                                <md-tooltip md-direction="bottom">Remove</md-tooltip>
+                                                <md-icon md-svg-src="img/icons/ic_delete_48px.svg"></md-icon>
+                                            </md-button>
+                                        </h3>
+                                    </div>
+                                </md-list-item>
+                                <md-divider ></md-divider>
+                            </md-list>
+                            <h4 class="md-padding no-margin" ng-if="max_intime !== '' || allowable_leave !== ''">Other configs</h4>
+                            <md-list flex ng-if="max_intime !== '' || allowable_leave !== ''">
+                                <md-list-item class="md-2-line">
+                                    <div class="md-list-item-text" layout="column">
+                                        <h3>Max In-time - {{max_intime}}</h3>
+                                    </div>
+                                </md-list-item>
+                                <md-list-item class="md-2-line">
+                                    <div class="md-list-item-text" layout="column">
+                                        <h3>Leave allowable - {{allowable_leave}}</h3>
+                                    </div>
+                                </md-list-item>
+                                <md-divider ></md-divider>
+                            </md-list>
+                        </md-content>
+                    </md-tab>
+                </md-tabs>
+            </div>
+        </md-tab>
+    </md-tabs>
+</div>

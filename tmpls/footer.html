@@ -1,0 +1,17 @@
+<div layout="row" layout-align="center center" flex class="md-padding">
+    <div layout="column" flex layout-align="center center" flex="20">
+        <img class="logo" ng-src="images/{{$root.siteFootLogo}}" alt="" />
+    </div>
+    <div layout="row" flex="60" layout-align="center center">
+        <md-button class="md-primary" flex>{{$root.siteData.PRIVACY_POLICY}}</md-button>
+        <md-button class="md-primary" flex>{{$root.siteData.CANCELLATION_POLICY}}</md-button>
+        <md-button class="md-primary" flex>{{$root.siteData.TERMS_CONDITIONS}}</md-button>
+    </div>
+    <div layout="column" flex="20" layout-align="center center">
+        <div>{{$root.siteData.POWERED_BY}}</div>
+        <img class="logo" ng-src="images/{{$root.sitePoweredLogo}}" alt="" />
+    </div>
+</div>
+<div layout="row" layout-align="center center" flex class="md-padding">
+    {{$root.siteData.COPYRIGHT}} | {{$root.siteData.RIGHTS_RESERVED}}
+</div>

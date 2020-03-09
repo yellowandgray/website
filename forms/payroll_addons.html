@@ -1,0 +1,41 @@
+<md-bottom-sheet class="md-grid" layout="column">
+    <div layout="row" layout-align="start center" ng-cloak>
+        <h4>Adjustments</h4>
+    </div>
+    <div ng-cloak>
+        <div layout="row" layout-align="start start">
+            <md-input-container class="md-block" flex="30">
+                <label>Type</label>
+                <md-select ng-model="newaddon.type" md-on-close="clearSearchTerm();" data-md-container-class="selectdemoSelectHeader">
+                    <md-select-header class="demo-select-header">
+                        <input ng-model="searchTerm.type" type="search" placeholder="Search for a type..." class="demo-header-searchbox md-text" force-select-focus />
+                    </md-select-header>
+                    <md-optgroup label="label">
+                        <md-option ng-value="row.value" ng-repeat="row in types| filter:searchTerm.type">{{row.name}}</md-option>
+                    </md-optgroup>
+                </md-select>
+            </md-input-container>
+            <md-input-container class="md-block" flex="30">
+                <label>Amount</label>
+                <input ng-model="newaddon.amt" />
+            </md-input-container>
+            <md-input-container class="md-block" flex="30">
+                <label>Reason</label>
+                <input ng-model="newaddon.reason" />
+            </md-input-container>
+            <md-button class="md-raised md-primary" ng-click="addAddon();">Insert</md-button>
+        </div>
+        <div layout="row" ng-repeat="row in data">
+            <p>Rs. {{row.amt}} {{row.type|uppercase}}ED for {{row.reason}}</p>
+            <md-button class="md-icon-button" aria-label="call" ng-click="removeAddon($index);">
+                <md-tooltip md-direction="bottom">Remove</md-tooltip>
+                <md-icon md-svg-src="img/icons/ic_delete_48px.svg"></md-icon>
+            </md-button>
+        </div>
+        <div layout="row" ng-if="data.length > 0" layout-align="start end">
+            <md-button class="md-raised md-warn" aria-label="call" ng-click="done();">
+                Done
+            </md-button>
+        </div>
+    </div>
+</md-bottom-sheet>

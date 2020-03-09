@@ -1,0 +1,233 @@
+<md-dialog class="md-grid" layout="column" flex="80">
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h4>Transfer Certificate</h4>
+            <span flex></span>
+            <md-button class="md-icon-button" ng-click="cancel()">
+                <md-icon md-svg-src="img/icons/ic_close_48px.svg" aria-label="Close dialog"></md-icon>
+            </md-button>
+        </div>
+    </md-toolbar>
+    <md-dialog-content>
+        <table style="max-width: 750px; margin: 0 auto;" class="tc-table">
+            <tbody style="border-collapse: collapse;">
+                <tr>
+                    <td style="width: 13%;">
+                        <img src="img/tc-logo.png" alt="image" />
+                    </td>
+                    <td style="text-align: center;" colspan="5">
+                        <b style="font-size: 18px;color: #ec0127;">SRI SANKARA MATRICULATION HIGHER SECONDARY SCHOOL</b><br/>
+                        <b>Thiruvarur Main Road, Peralam - 609 405, Nannilam Tk., Thiruvarur D.T.</b><br/>
+                        <span style="width: 33.33%">TMR Code No.: <input style="width: 18%;" type="text" ng-model="formFields.school_no" /></span><span style="width: 33.33%"> Certificate No.: <input style="width: 18%;" type="text" ng-model="formFields.school_reg_no" /></span><span style="width: 33.33%">Date: <input style="width: 18%;" type="text" ng-model="formFields.date" /></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="6">
+                        EMIS No.: <input style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-bottom: 1px solid #000000; border-right: 0px; width: 20px; background: transparent; text-align: center;" type="text" ng-model="formFields.emis1" id="emis1" ng-keyup="changeFocus('emis1', 'emis2');" /><input style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-bottom: 1px solid #000000; border-right: 0px; width: 20px; background: transparent; text-align: center;" type="text" ng-model="formFields.emis2" id="emis2" ng-keyup="changeFocus('emis2', 'emis3');" /><input style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-bottom: 1px solid #000000; border-right: 0px; width: 20px; background: transparent; text-align: center;" type="text" ng-model="formFields.emis3" id="emis3" ng-keyup="changeFocus('emis3', 'emis4');" /><input style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-bottom: 1px solid #000000; border-right: 0px; width: 20px; background: transparent; text-align: center;" type="text" ng-model="formFields.emis4" id="emis4" ng-keyup="changeFocus('emis4', 'emis5');" /><input style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-bottom: 1px solid #000000; border-right: 0px; width: 20px; background: transparent; text-align: center;" type="text" ng-model="formFields.emis5" id="emis5" ng-keyup="changeFocus('emis5', 'emis6');" /><input style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-bottom: 1px solid #000000; border-right: 0px; width: 20px; background: transparent; text-align: center;" type="text" ng-model="formFields.emis6" id="emis6" ng-keyup="changeFocus('emis6', 'emis7');" /><input style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-bottom: 1px solid #000000; border-right: 0px; width: 20px; background: transparent; text-align: center;" type="text" ng-model="formFields.emis7" id="emis7" ng-keyup="changeFocus('emis7', 'emis8');" /><input style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-bottom: 1px solid #000000; border-right: 0px; width: 20px; background: transparent; text-align: center;" type="text" ng-model="formFields.emis8" id="emis8" ng-keyup="changeFocus('emis8', 'emis9');" /><input style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-bottom: 1px solid #000000; border-right: 0px; width: 20px; background: transparent; text-align: center;" type="text" ng-model="formFields.emis9" id="emis9" ng-keyup="changeFocus('emis9', 'emis10');" /><input style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-bottom: 1px solid #000000; border-right: 0px; width: 20px; background: transparent; text-align: center;" type="text" ng-model="formFields.emis10" id="emis10" ng-keyup="changeFocus('emis10', 'emis11');" /><input style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-bottom: 1px solid #000000; border-right: 0px; width: 20px; background: transparent; text-align: center;" type="text" ng-model="formFields.emis11" id="emis11" ng-keyup="changeFocus('emis11', 'emis12');" /><input style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-bottom: 1px solid #000000; border-right: 0px; width: 20px; background: transparent; text-align: center;" type="text" ng-model="formFields.emis12" id="emis12" ng-keyup="changeFocus('emis12', 'emis13');" /><input style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-bottom: 1px solid #000000; border-right: 0px; width: 20px; background: transparent; text-align: center;" type="text" ng-model="formFields.emis13" id="emis13" ng-keyup="changeFocus('emis13', 'emis14');" /><input style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-bottom: 1px solid #000000; border-right: 0px; width: 20px; background: transparent; text-align: center;" type="text" ng-model="formFields.emis14" id="emis14" ng-keyup="changeFocus('emis14', 'emis15');" /><input style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-bottom: 1px solid #000000; border-right: 0px; width: 20px; background: transparent; text-align: center;" type="text" ng-model="formFields.emis15" id="emis15" ng-keyup="changeFocus('emis15', 'emis16');" /><input style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-bottom: 1px solid #000000; border-right: 1px solid #000000; width: 20px; background: transparent; text-align: center;" type="text" ng-model="formFields.emis16" id="emis16" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="6">
+                        <span style="text-align: center; width: 15%; float: left;"> 
+                            Admission No.<br/>
+                            <input type="text" style="width: 100%; border: 1px solid #000000; border-radius: 10px; padding: 15px;" ng-model="formFields.admission_no" />
+                        </span>
+                        <span style="text-align: center;width: 54%;float: left;border: 1px solid #000000;border-radius: 10px;margin: 0px 25px 0 50px;"> 
+                            <b style="font-size: 20px;color: #0324af;">TRANSFER CERTIFICATE</b><br/>
+                            (Appendix 5, Chapter III Rule 34, T.N.E. Rules)<br/>
+                            Recognised by the Director of Matriculation Schools, Chennai - 6.
+                        </span>
+                        <span style="text-align: center; width: 15%; float: left;">
+                            Serial No.<br/>
+                            <input type="text" style="width: 100%; border: 1px solid #000000; border-radius: 10px; padding: 15px;" ng-model="formFields.sl_no" />
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">1. a. Name of the school</td>
+                    <td colspan="4">: Sri Sankara Matriculation Hr. Sec. School</td>
+                </tr>
+                <tr>
+                    <td colspan="2">&nbsp;&nbsp;&nbsp; b. Name of the Education District</td>
+                    <td colspan="4">: Thiruvarur.</td>
+                </tr>
+                <tr>
+                    <td colspan="2">&nbsp;&nbsp;&nbsp; c. Name of the Revenue District</td>
+                    <td colspan="4">: Thiruvarur.</td>
+                </tr>
+                <tr>
+                    <td colspan="2">2. Name of the Pupil (in Block Letters)</td>
+                    <td colspan="4">: <input style="width:96%" type="text" ng-model="formFields.name" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2">&nbsp;&nbsp;&nbsp;  மாணவர் பெயர் (தமிழில்)</td>
+                    <td colspan="4">: <input style="width:96%" type="text" ng-model="formFields.name_tamil" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2">3. Name of the Pupil's Father or Guardian</td>
+                    <td colspan="4">: <input style="width:96%" type="text" ng-model="formFields.father_name" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2">&nbsp;&nbsp;&nbsp; Name of the Pupil's Mother</td>
+                    <td colspan="4">: <input style="width:96%" type="text" ng-model="formFields.mother_name" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2">4. Nationality and Religion</td>
+                    <td colspan="4">: <input style="width:47.5%" type="text" ng-model="formFields.nationality" /><input style="width:47.5%" type="text" ng-model="formFields.religion" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2">5. Community : Whether he / she belongs to</td>
+                    <td colspan="4">: <input style="width:96%" type="text" ng-model="formFields.community" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2">&nbsp;&nbsp;&nbsp; a) Adi Dravidar (Scheduled Caste or Scheduled Tribe)</td>
+                    <td colspan="4">: <input style="width:96%" type="text" ng-model="formFields.SC" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2">&nbsp;&nbsp;&nbsp; b) Backward Class</td>
+                    <td colspan="4">: <input style="width:96%" type="text" ng-model="formFields.BC" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2">&nbsp;&nbsp;&nbsp; c) Most Backward Class</td>
+                    <td colspan="4">: <input style="width:96%" type="text" ng-model="formFields.MBC" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2">&nbsp;&nbsp;&nbsp; d) Convert to Christianity from Scheduled Caste or</td>
+                    <td colspan="4">: <input style="width:96%" type="text" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2">&nbsp;&nbsp;&nbsp; e) Denotified Communities</td>
+                    <td colspan="4">: <input style="width:96%" type="text" /></td>
+                </tr>
+                <tr>
+                    <td colspan="6">(If the pupil belongs to any of the five categories mentioned above, write "YES" against the relevant item & also indicate the particular community to which he / she belongs)</td>
+                </tr>
+                <tr>
+                    <td colspan="2">6. Sex</td>
+                    <td colspan="4">: {{formFields.gender}}</td>
+                </tr>
+                <tr>
+                    <td colspan="6">7. Date of birth as entered : <input style="width: 74.4%;" type="text" ng-model="formFields.dob" /></td>
+                </tr>
+                <tr>
+                    <td colspan="6">&nbsp;&nbsp; in the admission register:&nbsp; <input style="width: 74.2%;" type="text" ng-model="formFields.dob_figures" /><br/>
+                        &nbsp;&nbsp; (in figures and words)
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="6">8. Personal Marks (a).&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : <input style="width: 74.5%;" type="text" ng-model="formFields.personal_mark1" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="6">&nbsp;&nbsp;&nbsp;of identification (b).&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : <input style="width: 74.5%;" type="text" ng-model="formFields.personal_mark2" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">9. Date of admission and standard in which<br/>&nbsp;&nbsp;&nbsp;  he / she was admitted</td>
+                    <td colspan="4">: <input style="width:96%" type="text" ng-model="formFields.doj" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2">&nbsp;&nbsp;&nbsp; (Date of admission in words)</td>
+                    <td colspan="4">: <input style="width:96%" type="text" ng-model="formFields.doj_words" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="font-size: 15px;">10. Standard in which the pupil was studying at the time of leaving (in words)</td>
+                    <td colspan="4">: <input style="width:96%" type="text" ng-model="formFields.class_words" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2">11. Whether qualified for promotion to higher standard</td>
+                    <td colspan="4">: <input style="width:96%" type="text" ng-model="formFields.qualified_higher" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="width: 58%;">12. Whether the pupil has paid all the fees due to the school</td>
+                    <td colspan="4">: <input style="width:96%" type="text" ng-model="formFields.due_paid" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2">13. Whether the pupil was in receipt of any scholarship (nature of scholarship to be specified)</td>
+                    <td colspan="4">: <input style="width:96%" type="text" ng-model="formFields.scholoarship" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2">14. Whether the pupil has undergone Medical Inspection during the last academic year (First or Repeat to be specified)</td>
+                    <td colspan="4">: <input style="width:96%" type="text" ng-model="formFields.medical_inspection" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="width: 58%;">15. Date on which the pupil actually left the school</td>
+                    <td colspan="4">: <input style="width:96%" type="text" ng-model="formFields.left_date" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="width: 58%;">16. The Pupil's conduct and Character</td>
+                    <td colspan="4">: <input style="width:96%" type="text" ng-model="formFields.conduct" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2">17. Date on which application for Transfer Certificate was made on behalf of the pupil by the Parent or Guardian</td>
+                    <td colspan="4">: <input style="width:96%" type="text" ng-model="formFields.tc_made" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2">18. Date on the Transfer Certificate</td>
+                    <td colspan="4">: <input style="width:96%" type="text" ng-model="formFields.tc_made2" /></td>
+                </tr>
+                <tr>
+                    <td colspan="6">19. Course of Study</td>
+                </tr>
+                <tr>
+                    <th colspan="2" style="border: 1px solid black;">Name of the School</th>
+                    <th style="border: 1px solid black;">Academic Year (s)</th>
+                    <th style="border: 1px solid black;">Standard (s) Studied</th>
+                    <th style="border: 1px solid black;">First Language</th>
+                    <th style="border: 1px solid black;">Medium of Instruction</th>
+                </tr>
+                <tr style="text-align: center;">
+                    <td colspan="2" rowspan="3" style="border: 1px solid black;text-align: center">
+                        <b>Sri Sankara Matriculation<br/> Higher Secondary School<br/></b>Peralam-609 405, Nannilam Tk.,<br/> Thiruvarur Dt.
+                    </td>
+                    <td style="border: 1px solid black;"><input type="text" ng-model="formFields.academic_year" style="border: none;text-align: center;width: 100px;" /></td>
+                    <td style="border: 1px solid black;"><input type="text" ng-model="formFields.class" style="border: none;width: 70px;text-align: center;" /></td>
+                    <td style="border: 1px solid black;"><input type="text" ng-model="formFields.first_language" style="border: none;width: 70px;text-align: center;" /></td>
+                    <td style="border: 1px solid black;"><input type="text" ng-model="formFields.second_language" style="border: none;width: 70px;text-align: center;" /></td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid black;"><input type="text" ng-model="formFields.academic_year_row2" style="border: none;text-align: center;width: 100px;" /></td>
+                    <td style="border: 1px solid black;"><input type="text" ng-model="formFields.class_row2" style="border: none;text-align: center;width: 70px;" /></td>
+                    <td style="border: 1px solid black;"><input type="text" ng-model="formFields.first_language_row2" style="border: none;text-align: center;width: 70px;" /></td>
+                    <td style="border: 1px solid black;"><input type="text" ng-model="formFields.second_language_row2" style="border: none;text-align: center;width: 70px;" /></td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid black;"><input type="text" ng-model="formFields.academic_year_row3" style="border: none;text-align: center;width: 100px;" /></td>
+                    <td style="border: 1px solid black;"><input type="text" ng-model="formFields.class_row3" style="border: none;text-align: center;width: 70px;" /></td>
+                    <td style="border: 1px solid black;"><input type="text" ng-model="formFields.first_language_row3" style="border: none;text-align: center;width: 70px;" /></td>
+                    <td style="border: 1px solid black;"><input type="text" ng-model="formFields.second_language_row3" style="border: none;text-align: center;width: 70px;" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2">20. Signature of the Principal with Date and School Seal</td>
+                    <td colspan="4">:</td>
+                </tr>
+                <tr>
+                    <td colspan="6">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan="6">
+                        <b>Declaration by the Parent or Guardian:</b>
+                        <br>I hereby declare that the particulars recorded against items 2 to 7 are
+                        <br>correct and no change will be demanded by me in the future.
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="6">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan="3">Signature of the Pupil</td>
+                    <td colspan="3">Signature of the Parent / Guardian</td>
+                </tr>
+                <tr>
+                    <td colspan="6" style="border-bottom: 1px solid #000;"></td>
+                </tr>
+                <tr>
+                    <td colspan="6"><b>Note:</b> Erasures and unauthenticated or fraudulent alterations in the certificate will lead to its cancellation. Should be signed in ink by the Head of the Institution. who will be held responsible for the correctness of the entries.</td>
+                </tr>
+            </tbody>
+        </table>
+        <div layout="row" layout-align="center center">
+            <md-button class="md-warn md-raised" ng-click="issueTC();">Issue</md-button>
+        </div>
+    </md-dialog-content>
+</md-dialog>

@@ -1,0 +1,41 @@
+<div layout="column" layout-align="center">
+    <md-tabs md-dynamic-height md-border-bottom>
+        <md-tab label="Individual" md-on-select="getClasses();">
+            <md-tabs md-dynamic-height md-border-bottom>
+                <md-tab label="{{row.name}}" ng-repeat="row in classes" md-on-select="getSections(row.ID);" >
+                    <md-tabs md-dynamic-height md-border-bottom>
+                        <md-tab label="{{val.name}}" ng-repeat="val in sections" md-on-select="getStudents(val.class_id, val.section_id);" >
+                            <md-input-container>
+                                <label>More with Selected</label>
+                                <md-select ng-model="data">
+                                    <md-option value="Sent Notification">Sent Notification</md-option>
+                                    <md-option value="Change Section">Change Section</md-option>
+                                </md-select>
+                            </md-input-container>
+                            <md-content class="md-padding">
+                                <md-list flex>
+                                    <md-list-item class="md-2-line" ng-repeat="item in students">
+                                        <div class="md-list-item-text" layout="column">
+                                            <md-checkbox>
+                                                <h3>{{ item.name}}</h3>
+                                                <p>{{ item.parent_name}}</p>
+                                            </md-checkbox>
+                                        </div>
+                                        <md-button class="md-secondary md-icon-button" aria-label="call">
+                                            <md-tooltip md-direction="bottom">Issue TC</md-tooltip>
+                                            <md-icon md-svg-icon="img/icons/ic_message_48px.svg"></md-icon>
+                                        </md-button>
+                                        <md-divider ng-if="!$last"></md-divider>
+                                    </md-list-item>
+                                </md-list>
+                            </md-content>
+                        </md-tab>
+                    </md-tabs>
+                </md-tab>
+            </md-tabs>
+        </md-tab>
+        <md-tab label="Global">
+
+        </md-tab>
+    </md-tabs>
+</div>

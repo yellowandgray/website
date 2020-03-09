@@ -1,0 +1,38 @@
+<div layout="column" layout-align="center">
+    <div layout="row" layout-align="end end">
+        <md-button ng-click="openForm(0, 'staffs', 0, 1);" class="md-raised md-primary"><md-icon md-svg-icon="img/icons/ic_add_48px.svg"></md-icon> Staff</md-button>
+    </div>
+    <md-tabs md-dynamic-height md-border-bottom>
+        <md-tab label="{{row.name}}" ng-repeat="row in designations" md-on-select="getStaffs(row.ID, 1);">
+            <md-content class="md-padding">
+                <div layout="row" layout-align="start end">
+                    <md-input-container md-no-float class="md-block no-error-message" flex="80">
+                        <md-icon md-svg-icon="img/icons/ic_search_48px.svg" aria-label="label"></md-icon>
+                        <input ng-model="row.searchtext" placeholder="Type text to search here" ng-change="getStaffs(row.ID, 1);" />
+                    </md-input-container>
+                </div>
+                <md-list flex>
+                    <md-list-item class="md-2-line" ng-repeat="item in row.data">
+                        <img ng-src="{{item.avatar| image_url}}" class="md-avatar pointer" alt="image" ng-click="preview(item.avatar);" />
+                        <div class="md-list-item-text" layout="column">
+                            <h3 style="color:#3f51b5">{{ item.name}}</h3>
+                            <p>{{ item.mobile}} - {{item.email}}</p>
+                        </div>
+                        <md-button class="md-secondary md-icon-button" aria-label="call" ng-click="openForm(item.ID, 'staffs', row.ID, row.page);">
+                            <md-tooltip md-direction="bottom">Edit</md-tooltip>
+                            <md-icon md-svg-icon="img/icons/ic_edit_48px.svg"></md-icon>
+                        </md-button>
+                        <md-button class="md-secondary md-icon-button" aria-label="call" ng-click="deleteStaff($event, 'staffs', item.ID, 'Staff', row.ID, row.page);">
+                            <md-tooltip md-direction="bottom">Delete</md-tooltip>
+                            <md-icon md-svg-icon="img/icons/ic_delete_48px.svg"></md-icon>
+                        </md-button>
+                        <md-divider ng-if="!$last"></md-divider>
+                    </md-list-item>
+                </md-list>
+                <section layout="row" ng-if="row.data.length > 0">
+                    <cl-paging flex cl-pages="row.total" cl-steps="10" cl-page-changed="getStaffs(row.ID, row.page)" cl-align="center center" cl-current-page="row.page"></cl-paging>
+                </section>
+            </md-content>
+        </md-tab>
+    </md-tabs>
+</div>

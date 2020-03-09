@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sri Sankara Matriculation Higher Secondary School - Peralam</title>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+        <link rel="shortcut icon" href="favicon.png" />
+        <link href="css/libs/angular-material.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/libs/multipleDatePicker.css" rel="stylesheet" type="text/css" />
+        <link href="css/libs/ang-accordion.css" rel="stylesheet" type="text/css" />
+        <link href="css/libs/jk-carousel.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/libs/lf-ng-md-file-input.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/libs/md-time-picker.css" rel="stylesheet" type="text/css" />
+        <link href="css/libs/angular-moment-picker.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/libs/angular-material-sidemenu.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="css/common.css" rel="stylesheet" type="text/css"/>
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+
+        <script src="js/libs/jquery-2.1.1.min.js" type="text/javascript"></script>
+        <script src="js/libs/angular.min.js" type="text/javascript"></script>
+        <script src="js/libs/angular-material.min.js" type="text/javascript"></script>
+        <script src="js/libs/angular-aria.min.js" type="text/javascript"></script>
+        <script src="js/libs/angular-animate.min.js" type="text/javascript"></script>
+        <script src="js/libs/angular-route.min.js" type="text/javascript"></script>
+        <script src="js/libs/moment.js" type="text/javascript"></script>
+        <script src="js/libs/angular-messages.min.js" type="text/javascript"></script>
+        <script src="js/libs/angular-moment.min.js" type="text/javascript"></script>
+        <script src="js/libs/angular-sanitize.min.js" type="text/javascript"></script>
+        <script src="js/libs/multipleDatePicker.min.js" type="text/javascript"></script>
+        <script src="js/libs/ang-accordion.js" type="text/javascript"></script>
+        <script src="js/libs/jk-carousel.min.js" type="text/javascript"></script>
+        <script src="js/libs/lodash.min.js" type="text/javascript"></script>
+        <script src="js/libs/angular-simple-logger.js" type="text/javascript"></script>
+        <script src="js/libs/angular-google-maps.js" type="text/javascript"></script>
+        <script src="js/libs/lf-ng-md-file-input.js" type="text/javascript"></script>
+        <script src="js/libs/md-collection-pagination.min.js" type="text/javascript"></script>
+        <script src="js/libs/md-time-picker.js" type="text/javascript"></script>
+        <script src="js/libs/angular-moment-picker.min.js" type="text/javascript"></script>
+        <script src="js/libs/Chart.bundle.min.js" type="text/javascript"></script>
+        <script src="js/libs/angular-chart.min.js" type="text/javascript"></script>
+        <script src="js/libs/ng-table-export.js" type="text/javascript"></script>
+        <script src="js/libs/dist.min.js" type="text/javascript"></script>
+        <script src="js/libs/angular-material-sidemenu.js" type="text/javascript"></script>
+
+        <script src="js/router.js" type="text/javascript"></script>
+
+        <script src="js/service.js" type="text/javascript"></script>
+        <script src="js/filter.js" type="text/javascript"></script>
+        <script src="js/directive.js" type="text/javascript"></script>
+        <script src="js/controller/toolbar.js" type="text/javascript"></script>
+        <script src="js/controller/login.js" type="text/javascript"></script>
+        <script src="js/controller/notifications.js" type="text/javascript"></script>
+        <script src="js/controller/payroll.js" type="text/javascript"></script>
+        <script src="js/controller/transfer_certificates.js" type="text/javascript"></script>
+        <script src="js/controller/staff_profile.js" type="text/javascript"></script>
+    </head>
+    <body layout="row" ng-app="app">
+    <md-sidenav class="md-sidenav-left" md-is-locked-open="$mdMedia('gt-md')" md-component-id="left" md-whiteframe="4" ng-if="$root.menu !== 'login'">
+        <md-toolbar class="md-hue-2 md-padding">
+            <div layout-align="center center" layout="row">
+                <img src="img/tc-logo.png" style="width: 26%;height: 100%;" alt="Sankara School Logo" />SRI SANKARA Mat. Hr. Sec. SCHOOL, 
+            </div>
+            <div layout-align="center center" layout="row" style="padding-left: 30px;font-size: 15px;">Peralam</div>
+        </md-toolbar>
+        <md-sidemenu>
+            <md-sidemenu-group ng-if="$root.role === 'superadmin'">
+                <md-sidemenu-content collapse-other="false" md-heading="Staffs" md-arrow="true">
+                    <div ng-init="$parent.$mdSidemenuContent.visible = true" ng-hide></div>
+                    <md-sidemenu-button class="md-raised" ng-class="{
+                            'md-primary'
+                            : $root.menu === 'staff_profile'}" href="#!/staff_profile">Profile</md-sidemenu-button>
+                    <md-sidemenu-button class="md-raised" ng-class="{
+                            'md-primary'
+                            : $root.menu === 'payroll'}" href="#!/payroll">Payroll</md-sidemenu-button>
+                </md-sidemenu-content>
+            </md-sidemenu-group>
+            <md-sidemenu-group>
+                <md-sidemenu-content collapse-other="false" md-heading="Students" md-arrow="true">
+                    <div ng-init="$parent.$mdSidemenuContent.visible = true" ng-hide></div>
+                    <md-sidemenu-button class="md-raised" ng-class="{
+                            'md-primary'
+                            :$root.menu === 'transfer_certificates'}" href="#!/transfer_certificates">Profile</md-sidemenu-button>
+                </md-sidemenu-content>
+            </md-sidemenu-group>
+        </md-sidemenu>
+    </md-sidenav>
+    <div layout="column" flex>
+        <md-toolbar class="md-hue-2" layout="column" ng-controller="ToolbarController">
+            <div class="md-toolbar-tools" layout="row">
+                <h2 flex><md-button ng-click="toggleLeft();" class="md-icon-button no-margin" hide-gt-md><md-icon md-svg-icon="img/icons/ic_menu_48px.svg" aria-label="Logout" width="25" height="25"></md-icon></md-button> {{$root.title}}</h2>
+                <div flex="80" layout="row" layout-align="end center" ng-if="$root.title !== 'Login'">
+                    <md-list>
+                        <md-list-item class="md-3-line">
+                            <!--                            <div class="md-avatar" style="background-color: gray;"><img ng-src="$rootScope.user.image"</div>-->
+                            <div class="md-list-item-text" layout="column">
+                                <h3 class="white-font">Welcome {{$root.user.name}}</h3>
+                                <p class="white-font"><a class="pointer" ng-click="changePassword($event);">Change Password</a></p>
+                            </div>
+                        </md-list-item>
+                    </md-list>
+                    <md-button class="md-icon-button" ng-click="signout();"><md-icon md-svg-icon="img/icons/ic_power_settings_new_48px.svg" aria-label="Logout"></md-icon></md-button>
+                </div>
+            </div>
+        </md-toolbar>
+        <md-content layout="column">
+            <ng-view></ng-view>
+        </md-content>
+    </div>
+</body>
+</html>

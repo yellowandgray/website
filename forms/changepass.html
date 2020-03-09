@@ -1,0 +1,31 @@
+<md-dialog aria-label="Form" flex="40">
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h2>Change Password</h2>
+            <span flex></span>
+            <md-button class="md-icon-button" ng-click="cancel()">
+                <md-icon md-svg-src="img/icons/ic_close_48px.svg" aria-label="Close dialog"></md-icon>
+            </md-button>
+        </div>
+    </md-toolbar>
+    <md-dialog-content class="md-dialog-content no-padding">
+        <form name="changeForm" class="md-padding">
+            <md-input-container>
+                <label>New password</label>
+                <input type="password" required name="password" ng-model="password.pass" md-autofocus />
+                <div ng-messages="changeForm.password.$error">
+                    <div ng-message="required">Name is required.</div>
+                </div>
+            </md-input-container>
+            <md-input-container>
+                <label>Re type password</label>
+                <input type="password" required name="retype" ng-model="password.retype" />
+                <div ng-messages="changeForm.retype.$error">
+                    <div ng-message="required">Field is required.</div>
+                </div>
+            </md-input-container>
+            <md-button type="submit" ng-click="updatePassword();" class="md-raised md-primary" ng-disabled="changeForm.$invalid || loading">Change</md-button>
+        </form>
+        <md-progress-linear md-mode="indeterminate" ng-disabled="!loading"></md-progress-linear>
+    </md-dialog-content>
+</md-dialog>

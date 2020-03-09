@@ -1,0 +1,2 @@
+[01-Apr-2019 23:45:39 UTC] PHP Warning:  require_once(/home2/mypetcab/public_html/ygschoolapp/include/dompdf/autoload.inc.php): failed to open stream: No such file or directory in /home2/mypetcab/public_html/ygschoolapp/include/DbHandler.php on line 3
+[01-Apr-2019 23:45:39 UTC] PHP Fatal error:  require_once(): Failed opening required '/home2/mypetcab/public_html/ygschoolapp/include/dompdf/autoload.inc.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home2/mypetcab/public_html/ygschoolapp/include/DbHandler.php on line 3
