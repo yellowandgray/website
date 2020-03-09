@@ -238,6 +238,31 @@ $app->get('/get_question_by_topic_n_year/:tid', function($tid) {
     echoRespnse(201, $res);
 });
 
+$app->get('/get_question_by_topic/:tid/:sid/:searchtxt/:searchqno', function($tid, $sid, $stxt, $sqno) {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $topic_fltr = '';
+    $search_qry = '';
+    if ($stxt != null && $stxt != 'null') {
+        $search_qry = ' AND q.name LIKE \'%' . $stxt . '%\'';
+    }
+    if ($sqno != null && $sqno != 'null') {
+        $search_qry = $search_qry . ' AND q.question_no = ' . $sqno;
+    }
+    if ($tid != 0) {
+        $topic_fltr = ' AND topic_id = ' . $tid;
+    } else {
+        $topic_fltr = ' AND topic_id IN (SELECT topic_id FROM topic WHERE chapter_id = ' . $cid . ')';
+    }
+    $data = $com->selectAll('*', 'question', 'question_id > 0' . $topic_fltr . $search_qry . ' ORDER BY question_no ASC');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
 $app->get('/get_year', function() {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
