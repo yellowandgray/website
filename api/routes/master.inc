@@ -140,7 +140,6 @@ $app->post('/insert_book', function() use ($app) {
     echoRespnse(201, $res);
 });
 
-
 $app->get('/get_subject', function() {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
@@ -156,7 +155,7 @@ $app->get('/get_subject', function() {
 $app->get('/get_subject_by_language/:lid', function($lid) {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
-    $data = $com->selectAll('*', 'subject', 'language_id = ' .$lid);
+    $data = $com->selectAll('*', 'subject', 'language_id = ' . $lid);
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
@@ -168,7 +167,7 @@ $app->get('/get_subject_by_language/:lid', function($lid) {
 $app->get('/get_topic_by_subject/:sid', function($sid) {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
-    $data = $com->selectAll('*', 'topic', 'subject_id = ' .$sid);
+    $data = $com->selectAll('*', 'topic', 'subject_id = ' . $sid);
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
@@ -309,27 +308,42 @@ $app->post('/import_question', function() use($app) {
         $obj = new Common();
         while (($row = fgetcsv($handle, 1000, ',')) !== FALSE) {
             if (!$first) {
-                $language = $obj->selectRow('*', 'language', 'name=\'' . trim($row[0]) . '\'');
+                $subject_id = 0;
+                $topic_id = 0;
+                $year_id = 0;
+                $language_id = 0;
+                $book_id = 0;
+                $language = $obj->selectRow('*', 'language', 'name = \'' . trim($row[0]) . '\'');
                 if (count($language) == 0) {
-                    $lid = $obj->insertRecord(array('name' => trim($row[0]), 'status' => 1, 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')), 'language');
+                    $language_id = $obj->insertRecord(array('name' => trim($row[0]), 'status' => 1, 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')), 'language');
                 } else {
-                    $lid = $language['language_id'];
+                    $language_id = $language['language_id'];
                 }
-                $year = $obj->selectRow('*', 'year', 'year=\'' . trim($row[1]) . '\'');
+                $year = $obj->selectRow('*', 'year', 'year = \'' . trim($row[1]) . '\'');
                 if (count($year) == 0) {
-                    $yid = $obj->insertRecord(array('year' => trim($row[1]), 'status' => 1, 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')), 'year');
+                    $year_id = $obj->insertRecord(array('year' => trim($row[1]), 'status' => 1, 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')), 'year');
                 } else {
-                    $yid = $year['year_id'];
+                    $year_id = $year['year_id'];
                 }
-                $topic = $obj->selectRow('*', 'topic', 'name=\'' . trim($row[2]) . '\' AND language_id = ' . $lid . ' AND year_id = ' . $yid);
+                $subject = $obj->selectRow('*', 'subject', 'name = \'' . $row[2] . '\' AND language_id=' . $language_id);
+                if (count($subject) == 0) {
+                    $subject_id = $obj->insertRecord(array('name' => trim($row[2]), 'language_id' => $language_id, 'description' => '', 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'image_path' => ''), 'subject');
+                } else {
+                    $subject_id = $subject['subject_id'];
+                }
+                $topic = $obj->selectRow('*', 'topic', 'name = \'' . $obj->escapeString($row[3]) . '\' AND subject_id = ' . $subject_id);
                 if (count($topic) == 0) {
-                    $tid = $obj->insertRecord(array('name' => trim($row[2]), 'language_id' => $lid, 'year_id' => $yid, 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')), 'topic');
+                    $topic_id = $obj->insertRecord(array('name' => trim($row[3]), 'description' => '', 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'subject_id' => $subject_id), 'topic');
                 } else {
-                    $tid = $topic['topic_id'];
+                    $topic_id = $topic['topic_id'];
                 }
-                $qnoqry = $obj->selectRow('IFNULL(MAX(question_no), 0) AS max_no', 'question', 'topic_id=' . $tid);
-                $qno = $qnoqry['max_no'];
-                $data = array('topic_id' => $tid, 'name' => $row[3], 'a' => $row[4], 'b' => $row[5], 'c' => $row[6], 'd' => $row[7], 'answer' => $row[8], 'question_no' => ($qno + 1), 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'));
+                $book = $obj->selectRow('*', 'book', 'book_name = \'' . $obj->escapeString($row[13]) . '\'');
+                if (count($book) == 0) {
+                    $book_id = $obj->insertRecord(array('book_name' => trim($row[13]), 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'book_name_id' => ''), 'book');
+                } else {
+                    $book_id = $book['book_id'];
+                }
+                $data = array('year_id' => $year_id, 'topic_id' => $topic_id, 'name' => trim($row[5]), 'a' => $row[6], 'b' => $row[7], 'c' => $row[8], 'd' => $row[9], 'answer' => $row[10], 'question_no' => $row[4], 'explanation' => $obj->escapeString($row[11]), 'data_dictionary' => $obj->escapeString($row[12]), 'book_id' => $book_id, 'page_no' => $row[14], 'notes' => $row[15], 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'image_path' => '', 'direction' => 'top');
                 $insert = $obj->insertRecord($data, 'question');
                 if ($insert > 0) {
                     $count++;
@@ -368,8 +382,8 @@ $app->post('/loginadmin', function() use ($app) {
     $data = $app->request->post();
     $obj = new Common();
     $record = $obj->selectRow('*', 'admin_login', 'user_name=\'' . $data['user_name'] . '\'');
-    if (count($record) > 0) {        
-        if ($data['password'] == $record['password']) {           
+    if (count($record) > 0) {
+        if ($data['password'] == $record['password']) {
             $res['error'] = false;
             $res['message'] = 'Welcome ' . $record['name'];
             $res['data'] = $record;
@@ -396,7 +410,6 @@ $app->post('/reset_password', function() use ($app) {
     }
     echoRespnse(201, $res);
 });
-
 
 $app->get('/get_book', function() {
     $res = array('error' => true, 'message' => 'No records found');
