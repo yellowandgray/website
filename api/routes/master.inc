@@ -318,7 +318,7 @@ $app->post('/login_delivery_boy', function() use ($app) {
     $res = array('error' => true, 'message' => 'Invalid login details');
     $com = new Common();
     $data = $app->request->post();
-    $record = $com->selectAll('*', 'delivery_boy', 'user_name = \'' . $data['user_name'] . '\' AND password = \'' . $data['password'] . '\'');
+    $record = $com->selectRow('*', 'delivery_boy', 'user_name = \'' . $data['user_name'] . '\' AND password = \'' . $data['password'] . '\'');
     if (count($record) > 0) {
         $res['error'] = false;
         $res['message'] = 'Welcome ' . $record['first_name'] . ' ' . $record['last_name'];
