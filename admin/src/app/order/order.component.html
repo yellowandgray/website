@@ -8,19 +8,19 @@
             <button mat-raised-button color="primary"><mat-icon>add</mat-icon> Order</button>
         </div> -->
         <mat-list>
-            <!-- <ng-container *ngFor="let data of result"> -->
-            <mat-list-item>
-                <button mat-icon-button aria-label="label" (click)="OrderView() ">
+            <ng-container *ngFor="let data of result">
+                <mat-list-item>
+                    <button mat-icon-button aria-label="label" (click)="OrderView() ">
                     <mat-icon #tooltip="matTooltip" matTooltip="Order View">visibility</mat-icon>
                 </button>
-                <!-- <img matListAvatar class="cursor" src="{{image_url}}{{data.imageurl}}" *ngIf="data.imageurl && data.imageurl != ''" alt="image" (click)="imageView(data, 'preview')" /> -->
-                <h4 mat-line>ஆர்டர் ஐடி : 1</h4>
-                <span matLine>ஆர்டர் மதிப்பு : ₹ 200</span>
-                <p mat-line>டெலிவரி நிலை : நிறைவு பெற்றது</p>
-                <p mat-line>வாடிக்கையாளர் பெயர் : Umasekar</p>
-            </mat-list-item>
-            <mat-divider></mat-divider>
-            <!-- </ng-container> -->
+                    <!-- <img matListAvatar class="cursor" src="{{image_url}}{{data.imageurl}}" *ngIf="data.imageurl && data.imageurl != ''" alt="image" (click)="imageView(data, 'preview')" /> -->
+                    <h4 mat-line>ஆர்டர் ஐடி : {{data.order_id}}</h4>
+                    <span matLine>ஆர்டர் மதிப்பு : ₹ 200</span>
+                    <p mat-line>டெலிவரி நிலை : {{data.status}}</p>
+                    <p mat-line>வாடிக்கையாளர் பெயர் : {{data.user}}</p>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+            </ng-container>
         </mat-list>
     </mat-sidenav-content>
 </mat-sidenav-container>

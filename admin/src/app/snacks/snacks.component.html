@@ -11,10 +11,10 @@
             <ng-container *ngFor="let data of result">
                 <mat-list-item>
                     <mat-slide-toggle #tooltip="matTooltip" matTooltip="Active Banner"></mat-slide-toggle>
-                    <button mat-icon-button aria-label="label" (click)="openDialog(data.id, 'result')">
+                    <button mat-icon-button aria-label="label" (click)="openDialog(data.fooditem_id, 'result')">
                         <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
                     </button>
-                    <button mat-icon-button aria-label="label" (click)="confirmDelete(data.id)">
+                    <button mat-icon-button aria-label="label" (click)="confirmDelete(data.fooditem_id)">
                         <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                     </button>
                     <img matListAvatar class="cursor" src="{{image_url}}{{data.imageurl}}" *ngIf="data.imageurl && data.imageurl != ''" alt="image" (click)="imageView(data, 'preview')" />

@@ -18,8 +18,7 @@
                     </button>
                     <img matListAvatar class="cursor" src="{{image_url}}{{data.imageurl}}" *ngIf="data.imageurl && data.imageurl != ''" alt="image" (click)="imageView(data, 'preview')" />
                     <h4 mat-line>{{data.name}}</h4>
-                    <span matLine>{{data.drink_size}} - RS: {{data.amount}}</span>
-                    <p mat-line>{{data.status}}</p>
+                    <span matLine>{{data.unit_no}}{{data.unit}} - ₹{{data.amount}}</span>
                 </mat-list-item>
                 <mat-divider></mat-divider>
             </ng-container>

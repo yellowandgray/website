@@ -114,14 +114,16 @@ export class CoolDrinkForm {
     this.drinksform = new FormGroup({
       'name': new FormControl('', Validators.required),
       'amount': new FormControl('', Validators.required),
-      'drink_size': new FormControl('', Validators.required),
+      'unit_id': new FormControl('', Validators.required),
+      'unit_no': new FormControl('', Validators.required),
       'status': new FormControl('', Validators.required),
     })
     if (this.data != null) {
       this.drinksform.patchValue({
         name: this.data.name,
         amount: this.data.amount,
-        drink_size: this.data.drink_size,
+        unit_id: this.data.unit_id,
+        unit_no: this.data.unit_no,
         status: this.data.status,
       });
       this.cooldrink_id = this.data.cooldrink_id;
@@ -155,14 +157,16 @@ export class CoolDrinkForm {
     if (this.cooldrink_id != 0) {
       formData.append('name', this.drinksform.value.name);
       formData.append('amount', this.drinksform.value.amount);
-      formData.append('drink_size', this.drinksform.value.drink_size);
+      formData.append('unit_id', this.drinksform.value.unit_id);
+      formData.append('unit_no', this.drinksform.value.unit_no);
       formData.append('status', this.drinksform.value.status);
       formData.append('imageurl', this.imageurl);
       url = 'update_record/cooldrink/cooldrink_id = ' + this.cooldrink_id;
     } else {
-      formData.append('name', this.drinksform.value.fname);
-      formData.append('amount', this.drinksform.value.lname);
-      formData.append('drink_size', this.drinksform.value.drink_size);
+      formData.append('name', this.drinksform.value.name);
+      formData.append('amount', this.drinksform.value.amount);
+      formData.append('unit_id', this.drinksform.value.unit_id);
+      formData.append('unit_no', this.drinksform.value.unit_no);
       formData.append('status', this.drinksform.value.status);
       formData.append('product_image', this.imageurl);
       url = 'insert_drinks';

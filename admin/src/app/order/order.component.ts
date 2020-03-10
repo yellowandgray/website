@@ -18,7 +18,7 @@ export class OrderComponent implements OnInit {
   }
   image_url: string = 'http://www.lemonandshadow.com/threelevel/api/v1/';
   getOrder(): void {
-    this.httpClient.get<any>('http://www.lemonandshadow.com/threelevel/api/v1/get_order')
+    this.httpClient.get<any>('http://www.lemonandshadow.com/threelevel/api/v1/get_orders_for_all')
       .subscribe(
         (res) => {
           this.result = res["result"]["data"];
