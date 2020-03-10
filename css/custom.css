@@ -922,7 +922,8 @@ and open the template in the editor.
 }
 
 .crt_clr {
-    background: #479c18;
+    background: #479c18 !important;
+    color: #fff !Important;
 }
 
 .crt_clr .option {
@@ -930,7 +931,8 @@ and open the template in the editor.
 }
 
 .wrng_clr {
-    background: #F03C02;
+    background: #F03C02 !Important;
+    color: #fff !Important;
 }
 
 .wrng_clr .option {
@@ -1180,10 +1182,22 @@ and open the template in the editor.
 }
 
 .footer-explanation-section strong {
-    color: #044;
+    color: rgb(71, 156, 24);
     margin-bottom: 10px;
 }
 .footer-explanation-section span {
-    color: #044;
+    color: rgba(0, 0, 0, 0.85);
     margin: 10px 0;
+}
+
+.footer-explanation-section .quiz-explanation-view{
+    text-align: left;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.85);
+    margin-bottom: 5px;
+    padding: 5px 0;
+}
+
+.footer-explanation-section .border-b {
+    border-bottom: 1px solid #1c75bc;
 }

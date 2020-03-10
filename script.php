@@ -26,8 +26,8 @@
      tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
      });
      */
-    test();
-    function test() {
+    applyMathAjax();
+    function applyMathAjax() {
         if (typeof MathJax !== 'undefined') {
             MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
         }
@@ -72,7 +72,7 @@
         } else {
             imm = 0;
         }
-        alert(imm)
+       //alert(imm)
         $.ajax({
             url: "immediate.php",
             type: "POST",
