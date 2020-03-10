@@ -314,6 +314,19 @@ $app->get('/get_delivery_boy', function() {
     echoRespnse(201, $res);
 });
 
+$app->post('/login_delivery_boy', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Invalid login details');
+    $com = new Common();
+    $data = $app->request->post();
+    $record = $com->selectAll('*', 'delivery_boy', 'user_name = \'' . $data['user_name'] . '\' AND password = \'' . $data['password'] . '\'');
+    if (count($record) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Welcome ' . $record['first_name'] . ' ' . $record['last_name'];
+        $res['data'] = $record;
+    }
+    echoRespnse(201, $res);
+});
+
 $app->get('/get_food_list', function() {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
@@ -377,10 +390,25 @@ $app->post('/place_order', function() use ($app) {
 $app->get('/get_user_orders/:uid', function($uid) {
     $res = array('error' => true, 'message' => 'No orders found');
     $com = new Common();
-    $data = $com->selectAll('*', '`order`', 'user_id=' . $uid);
+    $data = $com->selectAll('*', '`order`', 'user_id=' . $uid . ' ORDER BY order_id DESC');
     if (count($data) > 0) {
         foreach ($data as $key => $row) {
-            $data[$key]['items'] = $com->selectAll('*', 'order_item', 'order_id=' . $row['order_id']);
+            $data[$key]['items'] = $com->selectAll('oi.*, u.name AS unit_name', 'order_item AS oi LEFT JOIN unit AS u ON u.unit_id = oi.unit_id', 'oi.order_id=' . $row['order_id']);
+        }
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_open_orders_for_develivery_boys', function() {
+    $res = array('error' => true, 'message' => 'No orders found');
+    $com = new Common();
+    $data = $com->selectAll('*', '`order`', 'status=1 ORDER BY order_id ASC');
+    if (count($data) > 0) {
+        foreach ($data as $key => $row) {
+            $data[$key]['items'] = $com->selectAll('oi.*, u.name AS unit_name', 'order_item AS oi LEFT JOIN unit AS u ON u.unit_id = oi.unit_id', 'oi.order_id=' . $row['order_id']);
         }
         $res['error'] = false;
         $res['message'] = 'Records found';
