@@ -98,9 +98,9 @@ $app->post('/loginprocess', function() use ($app) {
         $res['message'] = 'Welcome ' . $record['name'];
         $res['data'] = $record;
     } else {
-        $insert = $obj->insertRecord(array('phone_no' => $data['phone_no']), 'user');
+        $insert = $obj->insertRecord(array('phone_no' => $data['phone_no'], 'name' => $data['name']), 'user');
         $res['message'] = 'Registered successfully';
-        $res['data'] = array('user_id' => $insert);
+        $res['data'] = array('user_id' => $insert, 'name' => $data['name']);
     }
     echoRespnse(201, $res);
 });
@@ -156,7 +156,7 @@ $app->post('/insert_drinks', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('name' => $data['name'], 'amount' => $data['amount'], 'imageurl' => $data['product_image'], 'drink_size' => $data['drink_size'], 'status' => $data['status']), 'cooldrink');
+    $record = $com->insertRecord(array('name' => $data['name'], 'amount' => $data['amount'], 'imageurl' => $data['product_image'], 'unit_id' => $data['unit_id'], 'unit_no' => $data['unit_no'], 'status' => $data['status']), 'cooldrink');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
@@ -192,7 +192,7 @@ $app->post('/insert_user', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('name' => $data['name'], 'phone_no' => $data['phone_no'], 'password' => $data['password'], 'address' => $data['address'], 'pincode' => $data['pincode'], 'imageurl' => $data['user_image']), 'user');
+    $record = $com->insertRecord(array('name' => $data['name'], 'phone_no' => $data['phone_no'], 'address' => $data['address'], 'pincode' => $data['pincode'], 'imageurl' => $data['user_image']), 'user');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
@@ -230,6 +230,18 @@ $app->post('/insert_delivery_boy', function() use ($app) {
     echoRespnse(201, $res);
 });
 
+$app->post('/insert_pincode', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to insert');
+    $data = $app->request->post();
+    $com = new Common();
+    $record = $com->insertRecord(array('pincode' => $data['pincode'], 'status' => $data['status']), 'delivery_pincode');
+    if ($record > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Record inserted successfully';
+    }
+    echoRespnse(201, $res);
+});
+
 $app->get('/get_foods', function() {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
@@ -257,7 +269,7 @@ $app->get('/get_drinks', function() {
 $app->get('/get_user', function() {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
-    $data = $com->selectAll('*', 'user', 'id > 0');
+    $data = $com->selectAll('*', 'user', 'user_id > 0');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
@@ -416,3 +428,56 @@ $app->get('/get_open_orders_for_develivery_boys', function() {
     }
     echoRespnse(201, $res);
 });
+
+$app->get('/get_orders_for_all', function() {
+    $res = array('error' => true, 'message' => 'No orders found');
+    $com = new Common();
+    $data = $com->selectAll('o.*, u.name AS user, u.phone_no, u.pincode, u.imageurl', '`order` AS o LEFT JOIN user AS u ON u.user_id = o.user_id', 'o.order_id ORDER BY o.order_id ASC');
+    if (count($data) > 0) {
+        foreach ($data as $key => $row) {
+            $data[$key]['items'] = $com->selectAll('oi.*, u.name AS unit_name', 'order_item AS oi LEFT JOIN unit AS u ON u.unit_id = oi.unit_id', 'oi.order_id=' . $row['order_id']);
+        }
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_delivery_pincode', function() {
+    $res = array('error' => true, 'message' => 'Unable to get records');
+    $com = new Common();
+    $data = $com->selectAll('*', 'delivery_pincode', 'delivery_pincode_id > 0');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+
+//
+//$app->get('/get_orders_for_all', function() {
+//    $res = array('error' => true, 'message' => 'No orders found');
+//    $com = new Common();
+//    $data = $com->selectAll('o.*, u.name AS user, u.phone_no, u.pincode, u.imageurl', '`order` AS o LEFT JOIN user AS u ON u.user_id = o.user_id', 'ORDER BY o.order_id DES');
+//    if (count($data) > 0) {
+//        foreach ($data as $key => $row) {
+//            $data[$key]['items'] = $com->selectAll('oi.*, u.name AS unit_name', 'order_item AS oi LEFT JOIN unit AS u ON u.unit_id = oi.unit_id', 'oi.order_id=' . $row['order_id']);
+//            if ($row['status'] == '1') {
+//                $data[$key]['status'] = 'New Order';
+//            }
+//            if ($row['status'] == '2') {
+//                $data[$key]['status'] = 'New Order';
+//            }
+//            if ($row['status'] == '3') {
+//                $data[$key]['status'] = 'New Order';
+//            }
+//        }
+//        $res['error'] = false;
+//        $res['message'] = 'Records found';
+//        $res['data'] = $data;
+//    }
+//    echoRespnse(201, $res);
+//});

@@ -13,6 +13,7 @@ import { OrderComponent, OrderView } from './order/order.component';
 import { UnitComponent, UnitForm, UnitDelete } from './unit/unit.component';
 import { BannerComponent, BannerForm, BannerDelete, BannerImageView } from './banner/banner.component';
 import { DeliveryBoyComponent, DeliveryBoyForm, DeliveryBoyDelete, PictureViewUser } from './delivery-boy/delivery-boy.component';
+import { PincodeComponent, PincodeForm, PincodeDelete } from './pincode/pincode.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -69,7 +70,10 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     DeliveryBoyForm,
     DeliveryBoyDelete,
     PictureViewUser,
-    OrderView
+    OrderView,
+    PincodeComponent,
+    PincodeForm,
+    PincodeDelete
   ],
   imports: [
     BrowserModule,
@@ -124,7 +128,10 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     DeliveryBoyForm,
     DeliveryBoyDelete,
     PictureViewUser,
-    OrderView
+    OrderView,
+    PincodeComponent,
+    PincodeForm,
+    PincodeDelete
   ],
   providers: [],
   bootstrap: [AppComponent]
