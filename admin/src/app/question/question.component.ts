@@ -40,7 +40,7 @@ export class QuestionComponent implements OnInit {
   }
   getLanguage(): void {
     this.httpClient
-      .get<any>("http://localhost/project/exam-horse/api/v1/get_language")
+      .get<any>("http://localhost/mushak/mekana/api/v1/get_language")
       .subscribe(
         res => {
           this.language = res["result"]["data"];
@@ -56,7 +56,7 @@ export class QuestionComponent implements OnInit {
   }
   getSubjectByLanguage(): void {
     this.subject = [];
-    this.httpClient.get<any>('http://localhost/project/exam-horse/api/v1/get_subject_by_language/'+this.selected_language)
+    this.httpClient.get<any>('http://localhost/mushak/mekana/api/v1/get_subject_by_language/'+this.selected_language)
     .subscribe(
             (res)=>{
                 this.subject = res["result"]["data"];
@@ -70,11 +70,10 @@ export class QuestionComponent implements OnInit {
 }  
 getTopicBySubject(): void {
   this.topic = [];
-          this.httpClient.get<any>('http://localhost/project/exam-horse/api/v1/get_topic_by_subject/'+this.selected_subject)
+          this.httpClient.get<any>('http://localhost/mushak/mekana/api/v1/get_topic_by_subject/'+this.selected_subject)
           .subscribe(
                   (res)=>{
                       this.topic = res["result"]["data"];
-                      console.log(this.topic);
                 },
                 (error)=>{
                   this._snackBar.open(error["statusText"], '', {
@@ -89,7 +88,7 @@ getTopicBySubject(): void {
     // this.selected_topic_index = ev.index;
      this.httpClient
        .get<any>(
-        "http://localhost/project/exam-horse/api/v1/get_question_by_topic_n_year/" +tid
+        "http://localhost/mushak/mekana/api/v1/get_question_by_topic_n_year/" +tid
        )
        .subscribe(
          res => {
@@ -106,7 +105,7 @@ getTopicBySubject(): void {
     this.selected_year = this.year[ev.index].year_id;
     this.httpClient
       .get<any>(
-        "http://localhost/project/exam-horse/api/v1/get_topic_by_lng_year/" +
+        "http://localhost/mushak/mekana/api/v1/get_topic_by_lng_year/" +
           this.selected_language +
           "/" +
           this.year[ev.index].year_id
@@ -124,7 +123,7 @@ getTopicBySubject(): void {
   }
   getYearByLanguage(): void {
     this.httpClient
-      .get<any>("http://localhost/project/exam-horse/api/v1/get_year")
+      .get<any>("http://localhost/mushak/mekana/api/v1/get_year")
       .subscribe(
         res => {
           this.year = res["result"]["data"];
@@ -184,7 +183,7 @@ getTopicBySubject(): void {
     formData.append("file", fileData);
     this.httpClient
       .post(
-        "http://localhost/project/exam-horse/api/v1/import_question",
+        "http://localhost/mushak/mekana/api/v1/import_question",
         formData
       )
       .subscribe(
@@ -209,7 +208,7 @@ getTopicBySubject(): void {
   templateUrl: "question-form.html"
 })
 export class QuestionForm {
-  image_url: string = "http://localhost/project/exam-horse/api/v1/";
+  image_url: string = "http://localhost/mushak/mekana/api/v1/";
   questionForm: FormGroup;
   loading = false;
   question_id = 0;
@@ -251,27 +250,27 @@ export class QuestionForm {
     });
     if (this.data != null) {
       this.questionForm.patchValue({
-        topic_id: this.data.data.topic_id,
-        question: this.data.data.name,
-        question_no: this.data.data.question_no,
-        direction: this.data.data.direction,
-        year_id: this.data.data.year_id,
-        a: this.data.data.a,
-        b: this.data.data.b,
-        c: this.data.data.c,
-        d: this.data.data.d,
-        answer: this.data.data.answer,
-        explanation: this.data.data.explanation,
-        data_dictionary: this.data.data.data_dictionary,
-        book_id: this.data.data.book_id,
-        page_no: this.data.data.page_no,
-        notes: this.data.data.notes
+        topic_id: this.data.topic_id,
+        question: this.data.name,
+        question_no: this.data.question_no,
+        direction: this.data.direction,
+        year_id: this.data.year_id,
+        a: this.data.a,
+        b: this.data.b,
+        c: this.data.c,
+        d: this.data.d,
+        answer: this.data.answer,
+        explanation: this.data.explanation,
+        data_dictionary: this.data.data_dictionary,
+        book_id: this.data.book_id,
+        page_no: this.data.page_no,
+        notes: this.data.notes
       });
-      this.question_id = this.data.data.question_id;
-      this.image_path = this.data.data.image_path;
+      this.question_id = this.data.question_id;
+      this.image_path = this.data.image_path;
     }
     // this.httpClient
-    //   .get("http://localhost/project/exam-horse/api/v1/get_topic_by_lng_year")
+    //   .get("http://localhost/mushak/mekana/api/v1/get_topic_by_lng_year")
     //   .subscribe(
     //     res => {
     //       if (res["result"]["error"] === false) {
@@ -289,7 +288,7 @@ export class QuestionForm {
     //     }
     //   );
     this.httpClient
-      .get("http://localhost/project/exam-horse/api/v1/get_topic")
+      .get("http://localhost/mushak/mekana/api/v1/get_topic")
       .subscribe(
         res => {
           if (res["result"]["error"] === false) {
@@ -307,7 +306,7 @@ export class QuestionForm {
         }
       );
     this.httpClient
-      .get("http://localhost/project/exam-horse/api/v1/get_year")
+      .get("http://localhost/mushak/mekana/api/v1/get_year")
       .subscribe(
         res => {
           if (res["result"]["error"] === false) {
@@ -325,7 +324,7 @@ export class QuestionForm {
         }
       );
     this.httpClient
-      .get<any>("http://localhost/project/exam-horse/api/v1/get_book")
+      .get<any>("http://localhost/mushak/mekana/api/v1/get_book")
       .subscribe(
         res => {
           this.book = res["result"]["data"];
@@ -389,7 +388,7 @@ export class QuestionForm {
       url = "insert_question";
     }
     this.httpClient
-      .post("http://localhost/project/exam-horse/api/v1/" + url, formData)
+      .post("http://localhost/mushak/mekana/api/v1/" + url, formData)
       .subscribe(
         res => {
           this.loading = false;
@@ -417,7 +416,7 @@ export class QuestionForm {
     var formData = new FormData();
     formData.append("file", fileData);
     this.httpClient
-      .post("http://localhost/project/exam-horse/api/v1/upload_file", formData)
+      .post("http://localhost/mushak/mekana/api/v1/upload_file", formData)
       .subscribe(
         res => {
           this.loading = false;
@@ -515,7 +514,7 @@ export class QuestionForm {
         tag: "h1"
       }
     ],
-    uploadUrl: "http://localhost/project/exam-horse/api/v1/upload_image",
+    uploadUrl: "http://localhost/mushak/mekana/api/v1/upload_image",
     sanitize: true,
     toolbarPosition: "top"
   };
@@ -555,7 +554,7 @@ export class QuestionForm {
         tag: "h1"
       }
     ],
-    uploadUrl: "http://localhost/project/exam-horse/api/v1/upload_image",
+    uploadUrl: "http://localhost/mushak/mekana/api/v1/upload_image",
     sanitize: true,
     toolbarPosition: "top"
   };
@@ -586,7 +585,7 @@ export class QuestionDelete {
     this.loading = true;
     this.httpClient
       .get(
-        "http://localhost/project/exam-horse/api/v1/delete_record/question/question_id=" +
+        "http://localhost/mushak/mekana/api/v1/delete_record/question/question_id=" +
           this.question_id
       )
       .subscribe(

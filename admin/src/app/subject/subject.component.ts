@@ -27,9 +27,9 @@ export class SubjectComponent implements OnInit {
   ngOnInit() {
     this.getlanguage();
   }
-  image_url: string = "http://localhost/project/exam-horse/api/v1/";
+  image_url: string = "http://localhost/mushak/mekana/api/v1/";
   getlanguage(): void {
-    this.httpClient.get<any>('http://localhost/project/exam-horse/api/v1/get_language')
+    this.httpClient.get<any>('http://localhost/mushak/mekana/api/v1/get_language')
       .subscribe(
         (res) => {
           this.language = res["result"]["data"];
@@ -44,7 +44,7 @@ export class SubjectComponent implements OnInit {
   getsubject(ev): void {
     this.selectedsubind = ev.index;
     this.httpClient
-      .get<any>("http://localhost/project/exam-horse/api/v1/get_subject_by_language/"+this.language[ev.index].language_id)
+      .get<any>("http://localhost/mushak/mekana/api/v1/get_subject_by_language/"+this.language[ev.index].language_id)
       .subscribe(
         res => {
           this.subject = res["result"]["data"];
@@ -102,7 +102,7 @@ export class SubjectComponent implements OnInit {
   templateUrl: "subject-form.html"
 })
 export class SubjectForm {
-  image_url: string = "http://localhost/project/exam-horse/api/v1/";
+  image_url: string = "http://localhost/mushak/mekana/api/v1/";
   subjectForm: FormGroup;
   loading = false;
   subject_id = 0;
@@ -131,7 +131,7 @@ export class SubjectForm {
     }
 
     this.httpClient
-      .get("http://localhost/project/exam-horse/api/v1/get_language")
+      .get("http://localhost/mushak/mekana/api/v1/get_language")
       .subscribe(
         res => {
           if (res["result"]["error"] === false) {
@@ -171,7 +171,7 @@ export class SubjectForm {
       url = "insert_subject";
     }
     this.httpClient
-      .post("http://localhost/project/exam-horse/api/v1/" + url, formData)
+      .post("http://localhost/mushak/mekana/api/v1/" + url, formData)
       .subscribe(
         res => {
           this.loading = false;
@@ -199,7 +199,7 @@ export class SubjectForm {
     var formData = new FormData();
     formData.append("file", fileData);
     this.httpClient
-      .post("http://localhost/project/exam-horse/api/v1/upload_file", formData)
+      .post("http://localhost/mushak/mekana/api/v1/upload_file", formData)
       .subscribe(
         res => {
           this.loading = false;
@@ -293,7 +293,7 @@ export class SubjectDelete {
     this.loading = true;
     this.httpClient
       .get(
-        "http://localhost/project/exam-horse/api/v1/delete_record/subject/subject_id=" +
+        "http://localhost/mushak/mekana/api/v1/delete_record/subject/subject_id=" +
           this.subject_id
       )
       .subscribe(

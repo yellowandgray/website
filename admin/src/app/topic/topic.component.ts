@@ -22,7 +22,7 @@ export class TopicComponent implements OnInit {
         this.getsubject();
     }
     getsubject(): void {
-    this.httpClient.get<any>('http://localhost/project/exam-horse/api/v1/get_subject')
+    this.httpClient.get<any>('http://localhost/mushak/mekana/api/v1/get_subject')
       .subscribe(
         (res) => {
           this.subject = res["result"]["data"];
@@ -36,7 +36,7 @@ export class TopicComponent implements OnInit {
   }
     gettopic(ev): void {
         this.selectedsubind = ev.index;
-        this.httpClient.get<any>('http://localhost/project/exam-horse/api/v1/get_topic_by_subject/'+this.subject[ev.index].subject_id)
+        this.httpClient.get<any>('http://localhost/mushak/mekana/api/v1/get_topic_by_subject/'+this.subject[ev.index].subject_id)
         .subscribe(
                 (res)=>{
                     this.topic = res["result"]["data"];
@@ -113,7 +113,7 @@ export class TopicForm {
         });
             this.topic_id = this.data.topic_id;
         }
-        this.httpClient.get('http://localhost/project/exam-horse/api/v1/get_subject').subscribe(
+        this.httpClient.get('http://localhost/mushak/mekana/api/v1/get_subject').subscribe(
             (res) => {
                 if (res["result"]["error"] === false) {
                     this.subject = res["result"]["data"];
@@ -146,7 +146,7 @@ export class TopicForm {
         formData.append('subject_id', this.topicForm.value.subject_id);
         url = 'insert_topic';
       }
-      this.httpClient.post('http://localhost/project/exam-horse/api/v1/'+url, formData).subscribe(
+      this.httpClient.post('http://localhost/mushak/mekana/api/v1/'+url, formData).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -190,7 +190,7 @@ export class TopicDelete {
             return;
       }
       this.loading = true;
-      this.httpClient.get('http://localhost/project/exam-horse/api/v1/delete_record/topic/topic_id='+this.topic_id).subscribe(
+      this.httpClient.get('http://localhost/mushak/mekana/api/v1/delete_record/topic/topic_id='+this.topic_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
