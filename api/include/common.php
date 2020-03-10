@@ -1,14 +1,8 @@
 <?php
 
-
-
 class Common {
 
-
-
     private $conn;
-
-
 
     function __construct() {
 
@@ -19,32 +13,18 @@ class Common {
         $db = new DbConnect();
 
         $this->conn = $db->connect();
-
     }
-
-
 
     public function selectAll($fields, $table, $where) {
-
         $data = array();
-
         $result = $this->conn->query('SELECT ' . $fields . ' FROM ' . $table . ' WHERE ' . $where);
-
         if ($result->num_rows > 0) {
-
             while ($row = $result->fetch_assoc()) {
-
                 $data[] = $row;
-
             }
-
         }
-
         return $data;
-
     }
-
-
 
     public function selectRow($fields, $table, $where) {
 
@@ -57,35 +37,26 @@ class Common {
             $row = $result->fetch_assoc();
 
             $data = $row;
-
         }
 
         return $data;
-
     }
 
-
-
-  public function updateRecordWithWhere($fields, $table, $where) {
+    public function updateRecordWithWhere($fields, $table, $where) {
         $records = array();
         foreach ($fields as $key => $val) {
             array_push($records, $key . ' = \'' . mysqli_real_escape_string($this->conn, $val) . '\'');
         }
         $this->conn->query('UPDATE `' . $table . '` SET ' . implode(',', $records) . ' WHERE ' . $where);
         return $this->conn->affected_rows;
-    } 
-
-
+    }
 
     public function deleteRecordWithWhere($table, $where) {
 
         $this->conn->query('DELETE FROM `' . $table . '` WHERE ' . $where);
 
         return $this->conn->affected_rows;
-
     }
-
-
 
     public function insertRecord($fields, $table) {
 
@@ -96,24 +67,16 @@ class Common {
         if ($this->conn->affected_rows > 0) {
 
             return $this->conn->insert_id;
-
         } else {
 
             return 0;
-
         }
-
     }
-
-
 
     public function escapeString($val) {
 
         return mysqli_real_escape_string($this->conn, $val);
-
     }
-
-
 
     public function saveFile($file, $path) {
 
@@ -132,7 +95,6 @@ class Common {
         if (!file_exists($dir)) {
 
             mkdir($dir);
-
         }
 
         $temp_file_path = $path . '/' . $temp_file_name;
@@ -140,10 +102,7 @@ class Common {
         move_uploaded_file($temp_name, $temp_file_path);
 
         return $temp_file_path;
-
     }
-
-
 
     public function getExtension($str) {
 
@@ -152,7 +111,6 @@ class Common {
         if (!$i) {
 
             return "";
-
         }
 
         $l = strlen($str) - $i;
@@ -160,24 +118,17 @@ class Common {
         $ext = substr($str, $i + 1, $l);
 
         return $ext;
-
     }
-
-
 
     public function getReplacedString($str, $replaces) {
 
         foreach ($replaces as $key => $val) {
 
             $str = str_replace('[' . $key . ']', $val, $str);
-
         }
 
         return $str;
-
     }
-
-
 
     public function getLandingDetails() {
 
@@ -188,14 +139,10 @@ class Common {
         foreach ($data as $row) {
 
             $return[$row['name']] = $row['value'];
-
         }
 
         return $return;
-
     }
-
-
 
     public function getHomeDetails() {
 
@@ -206,14 +153,10 @@ class Common {
         foreach ($data as $row) {
 
             $return[$row['name']] = $row['value'];
-
         }
 
         return $return;
-
     }
-
-
 
     public function charLimit($str, $len) {
 
@@ -222,44 +165,31 @@ class Common {
             if (strlen($str) <= $len) {
 
                 return $str;
-
             } else {
 
                 $y = substr($str, 0, $len) . '...';
 
                 return $y;
-
             }
-
         } else {
 
             return '-';
-
         }
-
     }
-
-
 
     public function encryptPassword($pass) {
 
         $encrypt = password_hash($pass, PASSWORD_DEFAULT);
 
         return $encrypt;
-
     }
-
-
 
     public function decryptPassword($pass, $hash) {
 
         $encrypt = password_verify($pass, $hash);
 
         return $encrypt;
-
     }
-
-
 
     public function randomStringGenerator($n) {
 
@@ -268,9 +198,7 @@ class Common {
         $generated_string = "";
 
         // Create a string with the help of  
-
         // small letters, capital letters and 
-
         // digits. 
 
         $domain = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
@@ -284,26 +212,19 @@ class Common {
         for ($i = 0; $i < $n; $i++) {
 
             // Generate a random index to pick 
-
             // characters 
 
             $index = rand(0, $len - 1);
 
             // Concatenating the character  
-
             // in resultant string 
 
             $generated_string = $generated_string . $domain[$index];
-
         }
 
         // Return the random generated string 
 
         return $generated_string;
-
     }
 
-
-
 }
-
