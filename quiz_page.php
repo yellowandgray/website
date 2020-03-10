@@ -375,7 +375,21 @@ if (count($questions) > 0) {
                                     });
 <?php } ?>
 <?php if ($imm == 1) { ?>
-                            document.getElementById("quiz-footer").style.display = "block"
+                            var questions = <?php echo json_encode($questions_list); ?>;
+                            var qid       = questions[this.questionIndex].question_id;
+                            var answers   = ['A', 'B', 'C', 'D'];
+                            var ansid       = answers[index];
+                            $.get("api/v1/get_question_answer/"+qid,
+                                    function (data, status) {
+                                        if (data.result.error === false) {
+                                              
+                                              if(data.result.data == ansid) {
+                                                  
+                                               }
+                                        }
+                                    });
+                                 
+                            document.getElementById("quiz-footer").style.display = "block";
 <?php } ?>
                     },
                     next: function () {

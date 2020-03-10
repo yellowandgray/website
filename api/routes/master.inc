@@ -84,6 +84,21 @@ $app->post('/store_answer', function() use ($app) {
     echoRespnse(201, $res);
 });
 
+
+$app->get('/get_question_answer/:qid', function($qid) {
+    $res = array('error' => true, 'message' => 'No records found');
+    $obj = new Common();
+    $question_ans = $obj->selectRow('*', 'question', 'question_id = ' . $qid );
+     if (count($question_ans) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $question_ans['answer'];
+    }
+    echoRespnse(201, $res);
+});
+
+
+
 $app->post('/logout_student', function() use ($app) {
     $res = array('error' => false, 'message' => 'No user found in this email id');
     session_destroy();
