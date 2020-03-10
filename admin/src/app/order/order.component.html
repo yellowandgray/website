@@ -11,7 +11,7 @@
             <ng-container *ngFor="let data of result">
 
                 <mat-list-item>
-                    <button mat-icon-button aria-label="label" (click)="OrderView() ">
+                    <button mat-icon-button aria-label="label" (click)="OrderView(data.order_id, 'result') ">
                     <mat-icon #tooltip="matTooltip" matTooltip="Order View">visibility</mat-icon>
                 </button>
                     <!-- <img matListAvatar class="cursor" src="{{image_url}}{{data.imageurl}}" *ngIf="data.imageurl && data.imageurl != ''" alt="image" (click)="imageView(data, 'preview')" /> -->

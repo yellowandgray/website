@@ -432,10 +432,25 @@ $app->get('/get_open_orders_for_develivery_boys', function() {
 $app->get('/get_orders_for_all', function() {
     $res = array('error' => true, 'message' => 'No orders found');
     $com = new Common();
-    $data = $com->selectAll('o.*, u.name AS user, u.phone_no, u.pincode, u.imageurl', '`order` AS o LEFT JOIN user AS u ON u.user_id = o.user_id', 'o.order_id ORDER BY o.order_id ASC');
+    $data = $com->selectAll('o.*, u.name AS user, u.phone_no, u.pincode, u.imageurl', '`order` AS o LEFT JOIN user AS u ON u.user_id = o.user_id', 'o.order_id ORDER BY o.order_id DESC');
     if (count($data) > 0) {
         foreach ($data as $key => $row) {
             $data[$key]['items'] = $com->selectAll('oi.*, u.name AS unit_name', 'order_item AS oi LEFT JOIN unit AS u ON u.unit_id = oi.unit_id', 'oi.order_id=' . $row['order_id']);
+            if ($row['status'] == '1') {
+                $data[$key]['status'] = 'பெண்டிங்';
+            }
+            if ($row['status'] == '2') {
+                $data[$key]['status'] = 'ஏற்கப்படுகிறது';
+            }
+            if ($row['status'] == '3') {
+                $data[$key]['status'] = 'தயாராகிறது';
+            }
+            if ($row['status'] == '4') {
+                $data[$key]['status'] = 'வருகிறது';
+            }
+            if ($row['status'] == '5') {
+                $data[$key]['status'] = 'வழங்கப்பட்டது';
+            }
         }
         $res['error'] = false;
         $res['message'] = 'Records found';
