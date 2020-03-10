@@ -455,29 +455,3 @@ $app->get('/get_delivery_pincode', function() {
     }
     echoRespnse(201, $res);
 });
-
-
-//
-//$app->get('/get_orders_for_all', function() {
-//    $res = array('error' => true, 'message' => 'No orders found');
-//    $com = new Common();
-//    $data = $com->selectAll('o.*, u.name AS user, u.phone_no, u.pincode, u.imageurl', '`order` AS o LEFT JOIN user AS u ON u.user_id = o.user_id', 'ORDER BY o.order_id DES');
-//    if (count($data) > 0) {
-//        foreach ($data as $key => $row) {
-//            $data[$key]['items'] = $com->selectAll('oi.*, u.name AS unit_name', 'order_item AS oi LEFT JOIN unit AS u ON u.unit_id = oi.unit_id', 'oi.order_id=' . $row['order_id']);
-//            if ($row['status'] == '1') {
-//                $data[$key]['status'] = 'New Order';
-//            }
-//            if ($row['status'] == '2') {
-//                $data[$key]['status'] = 'New Order';
-//            }
-//            if ($row['status'] == '3') {
-//                $data[$key]['status'] = 'New Order';
-//            }
-//        }
-//        $res['error'] = false;
-//        $res['message'] = 'Records found';
-//        $res['data'] = $data;
-//    }
-//    echoRespnse(201, $res);
-//});
