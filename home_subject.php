@@ -32,7 +32,7 @@ $subjects = $obj->selectAll('*', 'subject', 'subject_id > 0 AND status = 1');
                         <div class="span3 subject-section kanoli-top-25" onclick="window.location = 'thunaipaadam_kaanoli'">
                             <!-- <div class="price">Feringo</div> -->
                             <div class="subject-1">
-                                <div class="subject-1-img" style="background: url(img/thunaipaadam-thumb.png)no-repeat;"></div>
+                                <div class="subject-1-img" style="background: url(img/thunaipaadam-thumb.jpg)no-repeat;"></div>
                             </div>
                             <div class="subject-1-text">
                                 <h2>பத்தாம் வகுப்பு தமிழ் துணைப்பாடம் -  காணொளிகள்</h2>
