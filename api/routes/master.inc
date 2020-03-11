@@ -478,8 +478,8 @@ $app->post('/update_delivery_status', function() use ($app) {
     date_default_timezone_set('Asia/Kolkata');
     $update = $com->updateRecordWithWhere(array('delivery_boy_id' => $data['delivery_boy_id'], 'status' => $data['status'], 'updated_at' => date('Y-m-d H:i:s')), 'order', 'order_id=' . $data['order_id']);
     if ($update > 0) {
-        $data['error'] = false;
-        $data['message'] = 'Status updated successfully';
+        $res['error'] = false;
+        $res['message'] = 'Status updated successfully';
     }
     echoRespnse(201, $res);
 });
