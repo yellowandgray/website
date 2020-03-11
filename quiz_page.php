@@ -109,13 +109,12 @@ if (count($questions) > 0) {
                                 <div class="question-header">
                                     <!--progress-->
                                     <div class="progressContainer">
-
-                                        <!-- show answer immediate -->
-                                        <div class="row" v-if="showimmediatedisplay">
-                                            <div>
-                                            <input id="show-immediately" type="checkbox" value="show_answer_immediately" @change="immChange" v-model="showimmediate">Show Answer Immediately
-                                            </div>
-                                            <div></div>
+                                        
+                                                                            <!-- show answer immediate -->
+                                        <div class="row">
+                                            <div v-if="showimmediatedisplay">
+                                                <input id="show-immediately" type="checkbox" value="show_answer_immediately" @change="immChange" v-model="showimmediate">Show Answer Immediately
+                                            </div>                                           
                                         </div>   
                                         <!-- show answer immediate -->
                                         
