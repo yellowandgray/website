@@ -24,10 +24,10 @@ export class SnacksComponent implements OnInit {
   ngOnInit() {
     this.getSnacks();
   }
-  image_url: string = "http://www.lemonandshadow.com/threelevel/api/v1/";
+  image_url: string = "http://lemonandshadow.com/threelevel/api/v1/";
   getSnacks(): void {
     this.httpClient
-      .get<any>("http://www.lemonandshadow.com/threelevel/api/v1/get_food_list")
+      .get<any>("http://lemonandshadow.com/threelevel/api/v1/get_food_list")
       .subscribe(
         res => {
           this.result = res["result"]["data"];
@@ -103,7 +103,7 @@ export class SnacksComponent implements OnInit {
   templateUrl: "snacks-form.html"
 })
 export class SnacksForm {
-  image_url: string = "http://www.lemonandshadow.com/threelevel/api/v1/";
+  image_url: string = "http://lemonandshadow.com/threelevel/api/v1/";
   snacksform: FormGroup;
   loading = false;
   fooditem_id = 0;
@@ -135,7 +135,7 @@ export class SnacksForm {
       this.imageurl = this.data.imageurl;
     }
     this.httpClient
-      .get("http://www.lemonandshadow.com/threelevel/api/v1/get_unit")
+      .get("http://lemonandshadow.com/threelevel/api/v1/get_unit")
       .subscribe(
         res => {
           if (res["result"]["error"] === false) {
@@ -179,7 +179,7 @@ export class SnacksForm {
       url = "insert_snacks";
     }
     this.httpClient
-      .post("http://www.lemonandshadow.com/threelevel/api/v1/" + url, formData)
+      .post("http://lemonandshadow.com/threelevel/api/v1/" + url, formData)
       .subscribe(
         res => {
           this.loading = false;
@@ -215,7 +215,7 @@ export class SnacksForm {
     formData.append("file", fileData);
     this.httpClient
       .post(
-        "http://www.lemonandshadow.com/threelevel/api/v1/upload_file",
+        "http://lemonandshadow.com/threelevel/api/v1/upload_file",
         formData
       )
       .subscribe(
@@ -264,7 +264,7 @@ export class SnacksDelete {
     this.loading = true;
     this.httpClient
       .get(
-        "http://www.lemonandshadow.com/threelevel/api/v1/delete_record/fooditems/fooditem_id=" +
+        "http://lemonandshadow.com/threelevel/api/v1/delete_record/fooditems/fooditem_id=" +
           this.fooditem_id
       )
       .subscribe(
@@ -293,7 +293,7 @@ export class SnacksDelete {
   templateUrl: "picture-view.html"
 })
 export class SnacksImageView {
-  image_url: string = "http://www.lemonandshadow.com/threelevel/api/v1/";
+  image_url: string = "http://lemonandshadow.com/threelevel/api/v1/";
   action: string = "";
   loading = false;
   fooditem_id = 0;

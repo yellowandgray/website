@@ -9,7 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { SnacksComponent, SnacksForm, SnacksDelete, SnacksImageView } from './snacks/snacks.component';
 import { CooldrinkComponent, CoolDrinkForm, CooldrinkDelete, CooldrinkImageView } from './cooldrink/cooldrink.component';
 import { UserComponent, UserForm, UserDelete, UserImageView } from './user/user.component';
-import { OrderComponent, OrderView } from './order/order.component';
+import { OrderComponent, OrderView, OrderDeliveryBoyPopup } from './order/order.component';
 import { UnitComponent, UnitForm, UnitDelete } from './unit/unit.component';
 import { BannerComponent, BannerForm, BannerDelete, BannerImageView } from './banner/banner.component';
 import { DeliveryBoyComponent, DeliveryBoyForm, DeliveryBoyDelete, PictureViewUser } from './delivery-boy/delivery-boy.component';
@@ -59,6 +59,8 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     UserDelete,
     UserImageView,
     OrderComponent,
+    OrderView,
+    OrderDeliveryBoyPopup,
     UnitComponent,
     UnitForm,
     UnitDelete,
@@ -70,7 +72,6 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     DeliveryBoyForm,
     DeliveryBoyDelete,
     PictureViewUser,
-    OrderView,
     PincodeComponent,
     PincodeForm,
     PincodeDelete
@@ -128,7 +129,9 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     DeliveryBoyForm,
     DeliveryBoyDelete,
     PictureViewUser,
+    OrderComponent,
     OrderView,
+    OrderDeliveryBoyPopup,
     PincodeComponent,
     PincodeForm,
     PincodeDelete

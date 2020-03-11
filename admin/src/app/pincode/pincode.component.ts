@@ -22,7 +22,7 @@ export class PincodeComponent implements OnInit {
   }
   getPincode(): void {
     this.httpClient
-      .get<any>("http://www.lemonandshadow.com/threelevel/api/v1/get_delivery_pincode")
+      .get<any>("http://lemonandshadow.com/threelevel/api/v1/get_delivery_pincode")
       .subscribe(
         res => {
           this.result = res["result"]["data"];
@@ -119,7 +119,7 @@ export class PincodeForm {
       url = "insert_pincode";
     }
     this.httpClient
-      .post("http://www.lemonandshadow.com/threelevel/api/v1/" + url, formData)
+      .post("http://lemonandshadow.com/threelevel/api/v1/" + url, formData)
       .subscribe(
         res => {
           this.loading = false;
@@ -166,7 +166,7 @@ export class PincodeDelete {
     this.loading = true;
     this.httpClient
       .get(
-        "http://www.lemonandshadow.com/threelevel/api/v1/delete_record/delivery_pincode/delivery_pincode_id=" + this.delivery_pincode_id
+        "http://lemonandshadow.com/threelevel/api/v1/delete_record/delivery_pincode/delivery_pincode_id=" + this.delivery_pincode_id
       )
       .subscribe(
         res => {

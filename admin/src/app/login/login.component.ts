@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
     var formData = new FormData();
     formData.append('user_name', this.loginForm.value.user_name);
     formData.append('password', this.loginForm.value.password);
-    this.httpClient.post('http://www.lemonandshadow.com/threelevel/api/v1/loginadmin', formData)
+    this.httpClient.post('http://lemonandshadow.com/threelevel/api/v1/loginadmin', formData)
       .subscribe(
         (res) => {
           this.loading = false;

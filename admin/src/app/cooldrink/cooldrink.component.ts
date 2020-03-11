@@ -16,9 +16,9 @@ export class CooldrinkComponent implements OnInit {
   ngOnInit() {
     this.getDrinks();
   }
-  image_url: string = 'http://www.lemonandshadow.com/threelevel/api/v1/';
+  image_url: string = 'http://lemonandshadow.com/threelevel/api/v1/';
   getDrinks(): void {
-    this.httpClient.get<any>('http://www.lemonandshadow.com/threelevel/api/v1/get_drinks')
+    this.httpClient.get<any>('http://lemonandshadow.com/threelevel/api/v1/get_drinks')
       .subscribe(
         (res) => {
           this.result = res["result"]["data"];
@@ -99,7 +99,7 @@ export class CooldrinkComponent implements OnInit {
   templateUrl: 'cooldrink-form.html',
 })
 export class CoolDrinkForm {
-  image_url: string = 'http://www.lemonandshadow.com/threelevel/api/v1/';
+  image_url: string = 'http://lemonandshadow.com/threelevel/api/v1/';
   drinksform: FormGroup;
   loading = false;
   cooldrink_id = 0;
@@ -129,7 +129,7 @@ export class CoolDrinkForm {
       this.cooldrink_id = this.data.cooldrink_id;
       this.imageurl = this.data.imageurl;
     }
-    this.httpClient.get('http://www.lemonandshadow.com/threelevel/api/v1/get_unit').subscribe(
+    this.httpClient.get('http://lemonandshadow.com/threelevel/api/v1/get_unit').subscribe(
       (res) => {
         if (res["result"]["error"] === false) {
           this.unit = res["result"]["data"];
@@ -171,7 +171,7 @@ export class CoolDrinkForm {
       formData.append('product_image', this.imageurl);
       url = 'insert_drinks';
     }
-    this.httpClient.post('http://www.lemonandshadow.com/threelevel/api/v1/' + url, formData).subscribe(
+    this.httpClient.post('http://lemonandshadow.com/threelevel/api/v1/' + url, formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -204,7 +204,7 @@ export class CoolDrinkForm {
     this.loading = true;
     var formData = new FormData();
     formData.append('file', fileData);
-    this.httpClient.post('http://www.lemonandshadow.com/threelevel/api/v1/upload_file', formData).subscribe(
+    this.httpClient.post('http://lemonandshadow.com/threelevel/api/v1/upload_file', formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -248,7 +248,7 @@ export class CooldrinkDelete {
       return;
     }
     this.loading = true;
-    this.httpClient.get('http://www.lemonandshadow.com/threelevel/api/v1/delete_record/cooldrink/cooldrink_id=' + this.cooldrink_id).subscribe(
+    this.httpClient.get('http://lemonandshadow.com/threelevel/api/v1/delete_record/cooldrink/cooldrink_id=' + this.cooldrink_id).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -275,7 +275,7 @@ export class CooldrinkDelete {
 })
 
 export class CooldrinkImageView {
-  image_url: string = 'http://www.lemonandshadow.com/threelevel/api/v1/';
+  image_url: string = 'http://lemonandshadow.com/threelevel/api/v1/';
   action: string = '';
   loading = false;
   cooldrink_id = 0;
