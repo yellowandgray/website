@@ -41,6 +41,11 @@ class Common {
         return $this->conn->affected_rows;
     }
 
+    public function updateRecord($fields, $table, $where) {
+        $this->conn->query('UPDATE `' . $table . ' SET ' . $fields . ' WHERE ' . $where);
+        return $this->conn->affected_rows;
+    }
+
     public function deleteRecordWithWhere($table, $where) {
         $this->conn->query('DELETE FROM `' . $table . '` WHERE ' . $where);
         return $this->conn->affected_rows;
