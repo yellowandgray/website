@@ -18,7 +18,7 @@ export class OrderComponent implements OnInit {
   }
   image_url: string = 'http://www.lemonandshadow.com/threelevel/api/v1/';
   getOrder(): void {
-    this.httpClient.get<any>('http://www.lemonandshadow.com/threelevel/api/v1/get_order')
+    this.httpClient.get<any>('http://www.lemonandshadow.com/threelevel/api/v1/get_orders_for_all')
       .subscribe(
         (res) => {
           this.result = res["result"]["data"];
@@ -31,8 +31,16 @@ export class OrderComponent implements OnInit {
       );
   }
   
-  OrderView(): void {
-    
+  OrderView(id, res): void {
+    var data = null;
+      if(id != 0) { 
+      this[res].forEach(val=> {
+           if(parseInt(val.student_register_id) === parseInt(id)) {
+                data = val;
+                return false;
+           }
+        });
+    }
     const dialogRef = this.dialog.open(OrderView, {
       minWidth: "40%",
       maxWidth: "40%",
@@ -54,6 +62,8 @@ export class OrderComponent implements OnInit {
 export class OrderView {
   image_url: string = 'http://www.lemonandshadow.com/threelevel/api/v1/';
   loading = false;
+  result = [];
+  order_id = 0;
   data: any;
   constructor(
     public dialogRef: MatDialogRef<OrderView>,

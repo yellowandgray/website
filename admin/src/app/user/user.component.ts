@@ -35,7 +35,7 @@ export class UserComponent implements OnInit {
     var data = null;
     if (id != 0) {
       this[res].forEach(val => {
-        if (parseInt(val.id) === parseInt(id)) {
+        if (parseInt(val.user_id) === parseInt(id)) {
           data = val;
           return false;
         }
@@ -102,7 +102,7 @@ export class UserForm {
   image_url: string = 'http://www.lemonandshadow.com/threelevel/api/v1/';
   userform: FormGroup;
   loading = false;
-  id = 0;
+  user_id = 0;
   user_image: string = 'Select User Image';
   imageurl: string = '';
   constructor(
@@ -112,7 +112,6 @@ export class UserForm {
     private httpClient: HttpClient) {
     this.userform = new FormGroup({
       'name': new FormControl('', Validators.required),
-      'password': new FormControl('', Validators.required),
       'phone_no': new FormControl('', Validators.required),
       'address': new FormControl('', Validators.required),
       'pincode': new FormControl('', Validators.required),
@@ -120,12 +119,11 @@ export class UserForm {
     if (this.data != null) {
       this.userform.patchValue({
         name: this.data.name,
-        password: this.data.password,
         phone_no: this.data.phone_no,
         address: this.data.address,
         pincode: this.data.pincode,
       });
-      this.id = this.data.id;
+      this.user_id = this.data.user_id;
       this.imageurl = this.data.imageurl;
     }
   }
@@ -138,17 +136,15 @@ export class UserForm {
     this.loading = true;
     var formData = new FormData();
     var url = '';
-    if (this.id != 0) {
+    if (this.user_id != 0) {
       formData.append('name', this.userform.value.name);
-      formData.append('password', this.userform.value.password);
       formData.append('phone_no', this.userform.value.phone_no);
       formData.append('address', this.userform.value.address);
       formData.append('pincode', this.userform.value.pincode);
       formData.append('imageurl', this.imageurl);
-      url = 'update_record/user/id = ' + this.id;
+      url = 'update_record/user/user_id = ' + this.user_id;
     } else {
       formData.append('name', this.userform.value.name);
-      formData.append('password', this.userform.value.password);
       formData.append('phone_no', this.userform.value.phone_no);
       formData.append('address', this.userform.value.address);
       formData.append('pincode', this.userform.value.pincode);
@@ -214,23 +210,23 @@ export class UserForm {
 })
 export class UserDelete {
   loading = false;
-  id = 0;
+  user_id = 0;
   constructor(
     public dialogRef: MatDialogRef<UserDelete>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
     if (this.data != null) {
-      this.id = this.data;
+      this.user_id = this.data;
     }
   }
 
   confirmDelete() {
-    if (this.id == null || this.id == 0) {
+    if (this.user_id == null || this.user_id == 0) {
       return;
     }
     this.loading = true;
-    this.httpClient.get('http://www.lemonandshadow.com/threelevel/api/v1/delete_record/user/id=' + this.id).subscribe(
+    this.httpClient.get('http://www.lemonandshadow.com/threelevel/api/v1/delete_record/user/user_id=' + this.user_id).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {

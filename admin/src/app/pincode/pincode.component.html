@@ -5,20 +5,18 @@
     <mat-sidenav-content>
         <app-header></app-header>
         <div class="add-btn-container">
-            <button mat-raised-button color="primary" (click)="openDialog(0, 'null')"><mat-icon>add</mat-icon> Cooldrink</button>
+            <button mat-raised-button color="primary" (click)="openDialog(0, 'null')"><mat-icon>add</mat-icon> Snacks</button>
         </div>
         <mat-list>
             <ng-container *ngFor="let data of result">
                 <mat-list-item>
-                    <button mat-icon-button aria-label="label" (click)="openDialog(data.cooldrink_id, 'result')">
+                    <button mat-icon-button aria-label="label" (click)="openDialog(data.delivery_pincode_id, 'result')">
                         <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
                     </button>
-                    <button mat-icon-button aria-label="label" (click)="confirmDelete(data.cooldrink_id)">
+                    <button mat-icon-button aria-label="label" (click)="confirmDelete(data.delivery_pincode_id)">
                         <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                     </button>
-                    <img matListAvatar class="cursor" src="{{image_url}}{{data.imageurl}}" *ngIf="data.imageurl && data.imageurl != ''" alt="image" (click)="imageView(data, 'preview')" />
-                    <h4 mat-line>{{data.name}}</h4>
-                    <span matLine>{{data.unit_no}}{{data.unit}} - ₹{{data.amount}}</span>
+                    <h4 mat-line>{{data.pincode}}</h4>
                 </mat-list-item>
                 <mat-divider></mat-divider>
             </ng-container>
