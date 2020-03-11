@@ -439,6 +439,18 @@ $app->get('/get_user_orders/:uid', function($uid) {
     echoRespnse(201, $res);
 });
 
+$app->get('/get_user_ordersstatus/:uid', function($uid) {
+    $res = array('error' => true, 'message' => 'No orders found');
+    $com = new Common();
+    $data = $com->selectAll('o.*, d.first_name, d.last_name, d.phone', '`order` AS o LEFT JOIN delivery_boy AS d ON d.delivery_boy_id = o.delivery_boy_id', 'o.order_id=' . $uid . ' ORDER BY o.order_id DESC');
+    if (count($data) > 0) {        
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
 $app->get('/get_open_orders_for_develivery_boys', function() {
     $res = array('error' => true, 'message' => 'No orders found');
     $com = new Common();
