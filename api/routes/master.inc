@@ -476,7 +476,7 @@ $app->post('/update_delivery_status', function() use ($app) {
     $data = $app->request->post();
     $com = new Common();
     date_default_timezone_set('Asia/Kolkata');
-    $update = $com->updateRecordWithWhere(array('delivery_boy_id' => $data['delivery_boy_id'], 'status' => $data['status'], 'updated_at' => date('Y-m-d H:i:s')), '`order`', 'order_id=' . $data['order_id']);
+    $update = $com->updateRecordWithWhere(array('delivery_boy_id' => $data['delivery_boy_id'], 'status' => $data['status'], 'updated_at' => date('Y-m-d H:i:s')), 'order', 'order_id=' . $data['order_id']);
     if ($update > 0) {
         $data['error'] = false;
         $data['message'] = 'Status updated successfully';
