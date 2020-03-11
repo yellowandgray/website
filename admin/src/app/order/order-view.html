@@ -2,86 +2,52 @@
 <mat-dialog-content class="mat-typography">
     <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
         <div fxFlex="50%" fxLayoutAlign="start start">
-            <h4 mat-dialog-title>Date: 29-02-2020</h4>
+            <h4 mat-dialog-title>Date: {{data.created_at | date:'dd-MM-yyyy hh:mm a'}}</h4>
         </div>
         <div fxFlex="50%" fxLayoutAlign="end end">
-            <h4 mat-dialog-title>Order Id: 1</h4>
+            <h4 mat-dialog-title>Order Id: {{data.order_id}}</h4>
         </div>
     </div>
     <mat-divider></mat-divider>
     <h3>Order Details</h3>
-    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start" class="m-b-10">
-        <div fxFlex="70%">
-            <div fxFlex="40%" class="product-img">
-                <img src="assets/fruits.jpg" />
+    <ng-container *ngFor="let data of data.items">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start" class="m-b-10">
+            <div fxFlex="90%">
+                <div fxFlex="40%" class="product-img">
+                    <img src="{{image_url}}{{data.imageurl}}" />
+                </div>
+                <div fxFlex="70%" class="order-view-table">
+                    <table>
+                        <tr>
+                            <td>Name</td>
+                            <td> : </td>
+                            <td>{{data.name}}</td>
+                        </tr>
+                        <tr>
+                            <td>Unit</td>
+                            <td> : </td>
+                            <td>{{data.unit_name}}</td>
+                        </tr>
+                        <tr>
+                            <td>Amount</td>
+                            <td> : </td>
+                            <td>₹{{data.amount}}</td>
+                        </tr>
+                        <tr>
+                            <td>Qty</td>
+                            <td> : </td>
+                            <td>{{data.quantity}}</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
-            <div fxFlex="60%" class="order-view-table">
-                <table>
-                    <tr>
-                        <td>Name</td>
-                        <td> : </td>
-                        <td>Fruits</td>
-                    </tr>
-                    <tr>
-                        <td>Unit</td>
-                        <td> : </td>
-                        <td>1 KG</td>
-                    </tr>
-                    <tr>
-                        <td>Amount</td>
-                        <td> : </td>
-                        <td>₹ 35</td>
-                    </tr>
-                    <tr>
-                        <td>Qty</td>
-                        <td> : </td>
-                        <td>2</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-        <div fxFlex="30%">
-            <div fxLayoutAlign="end center">
-                <p>₹ 70</p>
-            </div>
-        </div>
-    </div>
-    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start" class="m-b-10">
-        <div fxFlex="70%">
-            <div fxFlex="40%" class="product-img">
-                <img src="assets/bizza.jpg" />
-            </div>
-            <div fxFlex="60%" class="order-view-table">
-                <table>
-                    <tr>
-                        <td>Name</td>
-                        <td> : </td>
-                        <td>Pizza</td>
-                    </tr>
-                    <tr>
-                        <td>Unit</td>
-                        <td> : </td>
-                        <td>1 No</td>
-                    </tr>
-                    <tr>
-                        <td>Amount</td>
-                        <td> : </td>
-                        <td>₹ 70</td>
-                    </tr>
-                    <tr>
-                        <td>Qty</td>
-                        <td> : </td>
-                        <td>1</td>
-                    </tr>
-                </table>
+            <div fxFlex="10%">
+                <div fxLayoutAlign="end center">
+                    <p>₹ {{data.quantity * data.amount}}.00</p>
+                </div>
             </div>
         </div>
-        <div fxFlex="30%">
-            <div fxLayoutAlign="end center">
-                <p>₹ 70</p>
-            </div>
-        </div>
-    </div>
+    </ng-container>
     <mat-divider></mat-divider>
     <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
         <!-- <div fxFlex="45%"></div> -->
@@ -90,28 +56,28 @@
                 <tr>
                     <td>கூட்டுத்தொகை</td>
                     <td> : </td>
-                    <th>140</th>
+                    <th>{{data.total - data.delivery_charge}}.00</th>
                 </tr>
                 <tr>
                     <td>டெலிவரி கட்டணம்</td>
                     <td> : </td>
-                    <th>10</th>
+                    <th>{{data.delivery_charge}}</th>
                 </tr>
                 <tr>
                     <td>
-                <mat-divider></mat-divider>
-                </td>
-                <td>
-                <mat-divider></mat-divider>
-                </td>
-                <td>
-                <mat-divider></mat-divider>
-                </td>
+                        <mat-divider></mat-divider>
+                    </td>
+                    <td>
+                        <mat-divider></mat-divider>
+                    </td>
+                    <td>
+                        <mat-divider></mat-divider>
+                    </td>
                 </tr>
                 <tr>
                     <td>மொத்தம்</td>
                     <td> : </td>
-                    <th>150</th>
+                    <th>{{data.total}}</th>
                 </tr>
             </table>
         </div>
@@ -119,9 +85,18 @@
     <mat-divider></mat-divider>
     <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
         <div fxFlex="100%" class="bg-delivery">
-            <br/>
-            <p>டெலிவரி நிலை - நிறைவு பெற்றது</p>
-            <p>நபர் - அருள்</p>
+            <table>
+                <tr>
+                    <td>டெலிவரி நிலை</td>
+                    <td> - </td>
+                    <td> {{data.status}} </td>
+                </tr>
+                <tr>
+                    <td>டெலிவரி செய்த நபர்</td>
+                    <td> - </td>
+                    <td> {{data.delivery_boy}} </td>
+                </tr>
+            </table>
         </div>
     </div>
     <mat-divider></mat-divider>
@@ -133,22 +108,22 @@
                 <tr>
                     <td>பெயர்</td>
                     <td>:</td>
-                    <th>Umasekar</th>
+                    <th>{{data.user}}</th>
                 </tr>
                 <tr>
                     <td>கைபேசி எண்</td>
                     <td>:</td>
-                    <th>7639600998</th>
+                    <th>{{data.phone_no}}</th>
                 </tr>
                 <tr>
                     <td>முகவரி</td>
                     <td>:</td>
-                    <th>Sembakkam, Chennai</th>
+                    <th>{{data.address}}</th>
                 </tr>
                 <tr>
                     <td>அஞ்சல் குறியீடு</td>
                     <td>:</td>
-                    <th>600073</th>
+                    <th>{{data.pincode}}</th>
                 </tr>
             </table>
         </div>

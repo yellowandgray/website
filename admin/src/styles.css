@@ -85,9 +85,9 @@ mat-sidenav {
 
 .bg-delivery {
     background: #008600;
-    padding: 0 10px;
+    padding: 10px 5px;
 }
 
-.bg-delivery p {
+.bg-delivery td {
     color: #fff;
 }

@@ -168,7 +168,7 @@ export class SnacksForm {
       formData.append("amount", this.snacksform.value.amount);
       formData.append("status", this.snacksform.value.status);
       formData.append("imageurl", this.imageurl);
-      url = "update_record/fooditems/fooditem_id = " + this.fooditem_id;
+      url = "update_record/fooditem/fooditem_id = " + this.fooditem_id;
     } else {
       formData.append("name", this.snacksform.value.name);
       formData.append("unit_no", this.snacksform.value.unit_no);

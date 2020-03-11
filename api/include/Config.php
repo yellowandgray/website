@@ -1,8 +1,8 @@
 <?php
 
-define('DB_USERNAME', 'threelevel');
-define('DB_PASSWORD', 'Panipuri@123');
-define('DB_NAME', 'threelevel');
-define('DB_HOST', '166.62.8.3');
-define('BASE_URL', 'http://www.lemonandshadow.com/threelevel/api/v1/');
-define('FILES_PATH', 'http://www.lemonandshadow.com/threelevel/');
+define('DB_USERNAME', 'root');
+define('DB_PASSWORD', '');
+define('DB_NAME', 'threelevan');
+define('DB_HOST', 'localhost');
+define('BASE_URL', 'http://localhost/project/three-levan/api/v1/');
+define('FILES_PATH', 'http://localhost/project/three-levan/');

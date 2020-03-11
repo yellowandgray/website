@@ -35,7 +35,7 @@ export class OrderComponent implements OnInit {
     var data = null;
       if(id != 0) { 
       this[res].forEach(val=> {
-           if(parseInt(val.student_register_id) === parseInt(id)) {
+           if(parseInt(val.order_id) === parseInt(id)) {
                 data = val;
                 return false;
            }
@@ -44,11 +44,12 @@ export class OrderComponent implements OnInit {
     const dialogRef = this.dialog.open(OrderView, {
       minWidth: "40%",
       maxWidth: "40%",
+      data: data
     });
 
     dialogRef.afterClosed().subscribe(result => {
       if (result !== false && result !== 'false') {
-        
+        //this.getOrder();
       }
     });
   }
@@ -64,12 +65,10 @@ export class OrderView {
   loading = false;
   result = [];
   order_id = 0;
-  data: any;
   constructor(
     public dialogRef: MatDialogRef<OrderView>,
-    @Inject(MAT_DIALOG_DATA) public datapopup: any,
+    @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) { 
-        this.data = this.datapopup;
     }
 }
