@@ -390,7 +390,7 @@ $app->post('/place_order', function() use ($app) {
 $app->get('/get_user_orders/:uid', function($uid) {
     $res = array('error' => true, 'message' => 'No orders found');
     $com = new Common();
-    $data = $com->selectAll('*', '`order`', 'user_id=' . $uid . ' ORDER BY order_id DESC');
+    $data = $com->selectAll('o.*, d.first_name, d.last_name, d.phone', '`order` AS s LEFT JOIN delivery_boy AS d ON d.delivery_boy_id = o.delivery_boy_id', 'o.user_id=' . $uid . ' ORDER BY o.order_id DESC');
     if (count($data) > 0) {
         foreach ($data as $key => $row) {
             $data[$key]['items'] = $com->selectAll('oi.*, u.name AS unit_name', 'order_item AS oi LEFT JOIN unit AS u ON u.unit_id = oi.unit_id', 'oi.order_id=' . $row['order_id']);
@@ -405,7 +405,7 @@ $app->get('/get_user_orders/:uid', function($uid) {
 $app->get('/get_open_orders_for_develivery_boys', function() {
     $res = array('error' => true, 'message' => 'No orders found');
     $com = new Common();
-    $data = $com->selectAll('o.*, u.name AS user, u.phone_no, u.pincode, u.imageurl', '`order` AS o LEFT JOIN user AS u ON u.user_id = o.user_id', 'o.status=1 ORDER BY o.order_id ASC');
+    $data = $com->selectAll('o.*, u.name AS user, u.phone_no, u.pincode, u.imageurl', '`order` AS o LEFT JOIN user AS u ON u.user_id = o.user_id', 'o.status != 3 ORDER BY o.order_id ASC');
     if (count($data) > 0) {
         foreach ($data as $key => $row) {
             $data[$key]['items'] = $com->selectAll('oi.*, u.name AS unit_name', 'order_item AS oi LEFT JOIN unit AS u ON u.unit_id = oi.unit_id', 'oi.order_id=' . $row['order_id']);
@@ -413,6 +413,19 @@ $app->get('/get_open_orders_for_develivery_boys', function() {
         $res['error'] = false;
         $res['message'] = 'Records found';
         $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->post('/update_delivery_status', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to update status');
+    $data = $app->request->post();
+    $com = new Common();
+    date_default_timezone_set('Asia/Kolkata');
+    $update = $com->updateRecordWithWhere(array('delivery_boy_id' => $data['delivery_boy_id'], 'status' => $data['status'], 'updated_at' => date('Y-m-d H:i:s')), '`order`', 'order_id=' . $data['order_id']);
+    if ($update > 0) {
+        $data['error'] = false;
+        $data['message'] = 'Status updated successfully';
     }
     echoRespnse(201, $res);
 });
