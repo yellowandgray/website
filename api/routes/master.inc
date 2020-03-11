@@ -429,6 +429,21 @@ $app->get('/get_open_orders_for_develivery_boys', function() {
     echoRespnse(201, $res);
 });
 
+$app->get('/get_develivery_boys_history/:dbid', function($dbid) {
+    $res = array('error' => true, 'message' => 'No orders found');
+    $com = new Common();
+    $data = $com->selectAll('o.*, u.name AS user, u.phone_no, u.pincode, u.imageurl', '`order` AS o LEFT JOIN user AS u ON u.user_id = o.user_id', 'o.delivery_boy_id =' .$dbid . ' AND o.status = 5' );
+    if (count($data) > 0) {
+        foreach ($data as $key => $row) {
+            $data[$key]['items'] = $com->selectAll('oi.*, u.name AS unit_name', 'order_item AS oi LEFT JOIN unit AS u ON u.unit_id = oi.unit_id', 'oi.order_id=' . $row['order_id']);
+        }
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
 $app->get('/get_orders_for_all', function() {
     $res = array('error' => true, 'message' => 'No orders found');
     $com = new Common();
@@ -437,19 +452,19 @@ $app->get('/get_orders_for_all', function() {
         foreach ($data as $key => $row) {
             $data[$key]['items'] = $com->selectAll('oi.*, u.name AS unit_name', 'order_item AS oi LEFT JOIN unit AS u ON u.unit_id = oi.unit_id', 'oi.order_id=' . $row['order_id']);
             if ($row['status'] == '1') {
-                $data[$key]['status'] = 'பெண்டிங்';
+                $data[$key]['status'] = 'à®ªà¯†à®£à¯�à®Ÿà®¿à®™à¯�';
             }
             if ($row['status'] == '2') {
-                $data[$key]['status'] = 'ஏற்கப்படுகிறது';
+                $data[$key]['status'] = 'à®�à®±à¯�à®•à®ªà¯�à®ªà®Ÿà¯�à®•à®¿à®±à®¤à¯�';
             }
             if ($row['status'] == '3') {
-                $data[$key]['status'] = 'தயாராகிறது';
+                $data[$key]['status'] = 'à®¤à®¯à®¾à®°à®¾à®•à®¿à®±à®¤à¯�';
             }
             if ($row['status'] == '4') {
-                $data[$key]['status'] = 'வருகிறது';
+                $data[$key]['status'] = 'à®µà®°à¯�à®•à®¿à®±à®¤à¯�';
             }
             if ($row['status'] == '5') {
-                $data[$key]['status'] = 'வழங்கப்பட்டது';
+                $data[$key]['status'] = 'à®µà®´à®™à¯�à®•à®ªà¯�à®ªà®Ÿà¯�à®Ÿà®¤à¯�';
             }
         }
         $res['error'] = false;
