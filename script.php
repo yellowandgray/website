@@ -58,25 +58,33 @@
     $(".radio-btn-section input[name='method']").click(function () {
         $('#checkbox-btn').css('display', ($(this).val() === 'learn') ? 'block' : 'none');
         $('#tets').css('display', ($(this).val() !== 'learn && test') ? 'block' : '');
-    });
-    $("#tets").click(function () {
-        $("#testval").data("test", "1");
-    });
+    });    
 </script>
 <script type="text/javascript">
-    var imm = 0;
+    var imm         = 0;
+    var testmode    = 0;
+    
     $("#tets").click(function () {
+            
+         //alert(' val1 '+$("input[name='method']:checked").val());   
+         
+        if($("input[name='method']:checked").val()=='learn') {
+            testmode = 1;
+        }else {
+            testmode = 0;
+        }
 
         if ($('#show-immediately').prop('checked')) {
             imm = 1;
         } else {
             imm = 0;
         }
-       //alert(imm)
+        
+        //alert(imm)
         $.ajax({
             url: "immediate.php",
             type: "POST",
-            data: {immediate: imm},
+            data: {immediate: imm, testmode: testmode},
             success: function (response) {
                 // You will get response from your PHP page (what you echo or print)
                 window.location = 'select_chapter?difficult=<?php echo $row['name']; ?>'

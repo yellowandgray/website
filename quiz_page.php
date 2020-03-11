@@ -1,9 +1,15 @@
 <?php
 session_start();
-$imm = 0;
+$imm        = 0;
+$testmode   = 0;
+
 if (isset($_SESSION['immediate'])) {
     $imm = $_SESSION['immediate'];
 }
+if (isset($_SESSION['testmode'])) {
+    $testmode = $_SESSION['testmode'];
+}
+
 require_once 'api/include/common.php';
 $questions = array();
 date_default_timezone_set('Asia/Kolkata');
@@ -104,7 +110,15 @@ if (count($questions) > 0) {
                                     <!--progress-->
                                     <div class="progressContainer">
 
-
+                                        <!-- show answer immediate -->
+                                        <div class="row" v-if="showimmediatedisplay">
+                                            <div>
+                                            <input id="show-immediately" type="checkbox" value="show_answer_immediately" @change="immChange" v-model="showimmediate">Show Answer Immediately
+                                            </div>
+                                            <div></div>
+                                        </div>   
+                                        <!-- show answer immediate -->
+                                        
                                         <h1 class="title is-6"><?php echo $topic['name']; ?></h1> 
                                         <progress class="progress is-info is-small" :value="(questionIndex/quiz.questions.length)*100" max="100">{{(questionIndex/quiz.questions.length)*100}}%</progress>
                                         <div class="lenth_width">
@@ -115,7 +129,7 @@ if (count($questions) > 0) {
                                     <!--/progress-->
                                 </div>
                                 <!-- questionTitle -->
-                                <?php if ($imm != 0) { ?>
+                                <?php if ($testmode == 1) { ?>
                                     <div v-if="quiz.questions[questionIndex].show_image" class="text-center">
                                         <img v-if="quiz.questions[questionIndex].direction == 'top'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />
                                     </div>
@@ -137,8 +151,37 @@ if (count($questions) > 0) {
                                 </div>
 
                                 <!--quizFooter: navigation and progress-->
+                                <?php
+                                /*
+<footer class="questionFooter" id='quiz-footer' style='display: none'>
+                                 * 
+                                 * 
+                                 */
+                                ?>
+                                
+                                <footer class="questionFooter" id='quiz-nxt-footer'  v-if="shownotimmdnxt">
+                                   <!--                                    pagination-->
+                                    <nav class="pagination" role="navigation" aria-label="pagination">
 
-                                <footer class="questionFooter" id='quiz-footer' style='display: none'>
+                                        <!--                                        back button -->
+                                        <!--                                        <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">Back</a>-->
+                                        <!--                                        <a class="btn btn-green" href="select_language">Home</a>-->
+
+                                        <!--                                    next button -->
+                                        <div style="margin: 0 auto; text-align: center">
+                                        <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
+                                            <!--                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}-->Next
+                                        </a>
+                                        </div> 
+
+                                    </nav>
+                                    <!--                                    /pagination-->
+
+                                </footer>
+                                
+                                
+                                
+                                <footer class="questionFooter" id='quiz-footer'  v-if="showimmediateblk">
                                     <div class="footer-explanation-section">
                                         <div class="quiz-explanation-view border-b">Correct Answer - <strong>{{quiz.questions[questionIndex].answer}}</strong></div>
 <!--                                        <hr>-->
@@ -252,6 +295,20 @@ if (count($questions) > 0) {
                 questions: <?php echo json_encode($questions_list); ?>
             },
                     userResponseSkelaton = Array(quiz.questions.length).fill(null);
+            
+           <?php  if($imm==1) { ?>
+                var shimm = true;
+           <?php  }else {    ?>
+                var shimm = false;
+           <?php } ?>   
+               
+               
+            <?php  if($testmode==1) { ?>
+                var shimmd = true;
+           <?php  }else {    ?>
+                var shimmd = false;
+           <?php } ?>   
+         
             var app = new Vue({
                 el: "#app",
                 data: {
@@ -259,7 +316,11 @@ if (count($questions) > 0) {
                     questionIndex: 0,
                     userResponses: userResponseSkelaton,
                     isActive: false,
-                    isDisabled: false
+                    isDisabled: false,
+                    showimmediate: shimm,
+                    showimmediateblk: false,
+                    shownotimmdnxt: false,
+                    showimmediatedisplay : shimmd
                 },
                 filters: {
                     charIndex: function (i) {
@@ -368,9 +429,10 @@ if (count($questions) > 0) {
                     selectOption: function (index) {
                        
                                 
-                            
+                            //alert(app.showimmediate);
                                 
-<?php if ($imm == 0) { ?>
+<?php // if ($imm == 0) { ?>
+                            if(!app.showimmediate) {
                                 var questions = <?php echo json_encode($questions_list); ?>;
                             var answers = ['A', 'B', 'C', 'D'];
                             $.post("api/v1/store_answer",
@@ -388,19 +450,23 @@ if (count($questions) > 0) {
                             setTimeout(() => {
                                 Vue.set(this.userResponses, this.questionIndex, index);
                                 if (this.questionIndex < this.quiz.questions.length) {
-                                    this.questionIndex++;
+                                    this.questionIndex++; 
+                                    app.isDisabled = false;
+                                    app.showimmediateblk = false;
+                                    app.shownotimmdnxt      = false;
                                 }
                             }, 500);
                             setTimeout(() => {
                                 applyMathAjax();
                             }, 600);
 
-                           
-<?php } ?>
-<?php if ($imm == 1) { ?>
-                        
-                          if(!app.isDisabled) {
-                         var questions = <?php echo json_encode($questions_list); ?>;
+                }
+<?php // } ?>
+<?php // if ($imm == 1) { ?>
+                    if(app.showimmediate) {
+                            //alert(app.isDisabled);
+                         if(!app.isDisabled) {
+                            var questions = <?php echo json_encode($questions_list); ?>;
                             var answers = ['A', 'B', 'C', 'D'];
                             $.post("api/v1/store_answer",
                                     {
@@ -433,11 +499,13 @@ if (count($questions) > 0) {
                                                }
                                         }
                                     });
-                                    document.getElementById("quiz-footer").style.display = "block";
+                                    //document.getElementById("quiz-footer").style.display = "block";
+                                     app.showimmediateblk = true;
                                      app.isDisabled = true;
                                      }  
+                                     }
                               
-<?php } ?>
+<?php // } ?>
                            
                          
                             
@@ -445,7 +513,10 @@ if (count($questions) > 0) {
                            
                     },
                     next: function () {
-                        app.isDisabled = false;
+                        app.isDisabled          = false;
+                        app.showimmediateblk    = false;
+                        app.shownotimmdnxt      = false;
+                        
                         setTimeout(() => {
                             applyMathAjax();
                         }, 600);
@@ -466,6 +537,23 @@ if (count($questions) > 0) {
 //                        }
 //                    },
                     // Return "true" count in userResponses
+                    immChange: function() {
+                        if(app.showimmediate) {
+                            app.shownotimmdnxt = false;
+                            if(!app.isDisabled) {
+                                app.showimmediateblk = false;
+                            }else {
+                                app.showimmediateblk = true;
+                            }    
+                        }else {
+                            app.showimmediateblk = false;
+                            
+                            if(app.isDisabled) {
+                                app.shownotimmdnxt = true;
+                            }   
+                        }
+                        
+                    },    
                     score: function () {
                         var score = 0;
                         for (let i = 0; i < this.userResponses.length; i++) {
