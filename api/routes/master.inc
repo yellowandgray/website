@@ -402,7 +402,7 @@ $app->post('/place_order', function() use ($app) {
 $app->get('/get_user_orders/:uid', function($uid) {
     $res = array('error' => true, 'message' => 'No orders found');
     $com = new Common();
-    $data = $com->selectAll('o.*, d.first_name, d.last_name, d.phone', '`order` AS s LEFT JOIN delivery_boy AS d ON d.delivery_boy_id = o.delivery_boy_id', 'o.user_id=' . $uid . ' ORDER BY o.order_id DESC');
+    $data = $com->selectAll('o.*, d.first_name, d.last_name, d.phone', '`order` AS o LEFT JOIN delivery_boy AS d ON d.delivery_boy_id = o.delivery_boy_id', 'o.user_id=' . $uid . ' ORDER BY o.order_id DESC');
     if (count($data) > 0) {
         foreach ($data as $key => $row) {
             $data[$key]['items'] = $com->selectAll('oi.*, u.name AS unit_name', 'order_item AS oi LEFT JOIN unit AS u ON u.unit_id = oi.unit_id', 'oi.order_id=' . $row['order_id']);
