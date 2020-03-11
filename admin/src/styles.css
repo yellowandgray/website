@@ -91,3 +91,12 @@ mat-sidenav {
 .bg-delivery td {
     color: #fff;
 }
+
+.clr-blue {
+    color: #3F51B5;
+}
+
+.icon-position {
+    position: relative;
+    top: 5px;
+}

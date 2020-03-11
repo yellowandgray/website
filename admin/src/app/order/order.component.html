@@ -18,10 +18,9 @@
                         <mat-icon #tooltip="matTooltip" matTooltip="Order View">visibility</mat-icon>
                     </button>
                     <!-- <img matListAvatar class="cursor" src="{{image_url}}{{data.imageurl}}" *ngIf="data.imageurl && data.imageurl != ''" alt="image" (click)="imageView(data, 'preview')" /> -->
-                    <h4 mat-line>ஆர்டர் நம்பர் : {{data.order_id}}</h4>
-                    <span matLine>ஆர்டர் மதிப்பு : ₹{{data.total}}</span>
-                    <p mat-line>டெலிவரி நிலை : {{data.status}} </p>
-                    <p mat-line>வாடிக்கையாளர் பெயர் : {{data.user}}</p>
+                    <h4 mat-line>ஆர்டர் நம்பர் : <strong class="clr-blue">{{data.order_id}}  (₹{{data.total}})</strong></h4>
+                    <p mat-line>டெலிவரி நிலை : <strong class="clr-blue">{{data.status}}</strong></p>
+                    <p mat-line><mat-icon class="icon-position">person</mat-icon> : <strong class="clr-blue">{{data.user}}</strong></p>
                 </mat-list-item>
                 <mat-divider></mat-divider>
             </ng-container>
