@@ -827,6 +827,12 @@ and open the template in the editor.
     .subject-content {
         top: 82px !Important;
     }
+    .quiz-pause .float-left {
+        width: 100% !important;
+    }
+    .span-position {
+        margin: 0 0 0 20px !important;
+    }
 }
 
 .goto-here .questionBox .questionContainer .optionContainer .option span {
@@ -1154,7 +1160,7 @@ and open the template in the editor.
 .btn-custom1 {
     background: #477cff;
     color: #fff;
-/*    border-radius: 18px;*/
+    /*    border-radius: 18px;*/
     opacity: 0.8;
     transition: all 0.3s;
 }
@@ -1200,4 +1206,46 @@ and open the template in the editor.
 
 .footer-explanation-section .border-b {
     border-bottom: 1px solid #1c75bc;
+}
+
+.quiz-pause {
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+.quiz-pause .float-left {
+    float: left;
+    width: 50%;
+    text-align: left;
+}
+
+.quiz-pause .float-right {
+    float: right;
+    /*    width: 50%;*/
+    text-align: right;
+    /*    padding-right: 20px;*/
+}
+
+.pause-right {
+    margin-right: 10px;
+    border: 1px solid #468847;
+    border-radius: 50%;
+    width: 78%;
+}
+
+.pause-right i {
+    color: #468847;
+}
+
+.quiz-pause input {
+    width: 20px;
+    height: 20px;
+}
+
+.span-position {
+    position: absolute;
+    top: 20px;
+    margin: 0 0px 0px 5px;
+    font-weight: 600;
 }
