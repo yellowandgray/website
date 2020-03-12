@@ -1,6 +1,6 @@
 <?php
-require_once 'api/include/common.php';
 session_start();
+require_once 'api/include/common.php';
 $obj = new Common();
 $languages = $obj->selectAll('*', 'language', 'status = 1');
 ?>
@@ -10,46 +10,33 @@ $languages = $obj->selectAll('*', 'language', 'status = 1');
     <body>
         <div id="wrapper">
             <?php include 'menu.php'; ?>
-            <section id="featured-1">
-                <div id="mySignin" tabindex="-1" aria-labelledby="mySigninModalLabel" aria-hidden="true">
-                    <div class="modal styled">
-                        <div class="modal-header login-section">
-                            <a href="index"><i class="font-icon-arrow-simple-left"></i></a>
-                            <h4 id="mySigninModalLabel"  class="text-center">
-                                <table class="table-title">
-                                    <tr>
-                                        <td valign="top">Select</td>
-                                        <td valign="top" class="w-5">:</td>
-                                        <th valign="top">Language</th>
-                                    </tr>
-                                </table>
-                            </h4>
-                        </div>
-                        <div class="modal-body">
-                            <div class="language_section">
-                                <ul>
-                                    <?php foreach ($languages as $val) { ?>
-                                       <li><i class="icon-double-angle-right"></i> 
-                                            <a href="question-subject-order?lan=<?php echo $val['name'];  ?>"><?php echo $val['name'];  ?></a>
-                                        </li>
-                                    <?php } ?>
-                                    <!-- <li>
-                                        <i class="icon-check"></i> 
-                                        <a href="question-subject-order">தமிழ் </a>
-                                    </li>
-                                    <li>
-                                        <i class="icon-check"></i> 
-                                        <a href="question-subject-order">English</a>
-                                    </li> -->
-                                </ul>
-                            </div>
+            <section class="language-section">
+                <div class="container">
+                    <div class="language-width">
+                        <div class="row">
+                            <?php foreach ($languages as $val) { ?>
+                                <div class="span3">
+                                    <div class="language-box">
+                                        <div class="language-img" style="background: url(<?php echo BASE_URL . $val['imageurl']; ?>)no-repeat;"></div>
+                                        <div class="language-title">
+                                            <h3>
+                                                <a href="question-subject-order?lan=<?php echo $val['name']; ?>"><?php echo $val['name']; ?></a>
+                                            </h3>
+                                        </div>
+                                        <div class="language-description">
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                                            <button class="btn btn-theme margintop10" onclick="window.location = 'question-subject-order?lan=<?php echo $val['name']; ?>'">START QUIZ</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>
             </section>
 
             <!-- Reset Modal -->
-            <?php include 'reset_password.php'; ?>
+            <?php include 'footer.php'; ?>
             <!-- end reset modal -->
         </div>
         <?php include 'script.php'; ?>

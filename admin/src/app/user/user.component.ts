@@ -16,7 +16,7 @@ export class UserComponent implements OnInit {
   searchTerm: string = '';
   student = [];
   student_count = 0;
-  image_url: string = 'http://localhost/mushak/mekana/api/v1/';
+  image_url: string = 'http://localhost/project/exam-horse/api/v1/';
 
   constructor(public dialog: MatDialog, private httpClient: HttpClient, private _snackBar: MatSnackBar) { }
 
@@ -24,7 +24,7 @@ export class UserComponent implements OnInit {
     this.getuser();
   }
   getuser(): void {
-    this.httpClient.get<any>('http://localhost/mushak/mekana/api/v1/get_student')
+    this.httpClient.get<any>('http://localhost/project/exam-horse/api/v1/get_student')
       .subscribe(
         (res) => {
           this.student = res["result"]["data"];
@@ -150,7 +150,7 @@ export class UserComponent implements OnInit {
   templateUrl: 'user-form.html',
 })
 export class UserForm {
-  image_url: string = 'http://localhost/mushak/mekana/api/v1/';
+  image_url: string = 'http://localhost/project/exam-horse/api/v1/';
   userForm: FormGroup;
   loading = false;
   student_register_id = 0;
@@ -233,7 +233,7 @@ export class UserForm {
       formData.append('email', this.userForm.value.email);
       url = 'insert_student';
     }
-    this.httpClient.post('http://localhost/mushak/mekana/api/v1/' + url, formData).subscribe(
+    this.httpClient.post('http://localhost/project/exam-horse/api/v1/' + url, formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -259,7 +259,7 @@ export class UserForm {
     this.loading = true;
     var formData = new FormData();
     formData.append('file', fileData);
-    this.httpClient.post('http://localhost/mushak/mekana/api/v1/upload_file', formData).subscribe(
+    this.httpClient.post('http://localhost/project/exam-horse/api/v1/upload_file', formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -309,7 +309,7 @@ export class UserDelete {
       return;
     }
     this.loading = true;
-    this.httpClient.get('http://localhost/mushak/mekana/api/v1/delete_record/student_register/student_register_id=' + this.student_register_id).subscribe(
+    this.httpClient.get('http://localhost/project/exam-horse/api/v1/delete_record/student_register/student_register_id=' + this.student_register_id).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -366,7 +366,7 @@ export class ResultForm {
 })
 
 export class PictureViewUser {
-  image_url: string = 'http://localhost/mushak/mekana/api/v1/';
+  image_url: string = 'http://localhost/project/exam-horse/api/v1/';
   action: string = '';
   loading = false;
   student_register_id = 0;
@@ -393,7 +393,7 @@ export class PictureViewUser {
 })
 
 export class UserViewForm {
-  image_url: string = 'http://localhost/mushak/mekana/api/v1/';
+  image_url: string = 'http://localhost/project/exam-horse/api/v1/';
   loading = false;
   student = [];
   student_register_id = 0;

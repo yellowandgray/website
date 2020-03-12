@@ -79,13 +79,21 @@ if (count($questions) > 0) {
                                         <td valign="top" class="w-5">:</td>
                                         <th valign="top"><?php echo $type; ?></th>
                                     </tr>
-<!--                                    <tr>
+                                    <tr>
+                                        <td valign="top">Selected Subject and Topics</td>
+                                        <td valign="top" class="w-5">:</td>
+                                        <th valign="top"><?php echo $type; ?></th>
+                                    </tr>
+                                    <tr>
                                         <td valign="top">Selected Year</td>
                                         <td valign="top" class="w-5">:</td>
                                         <th valign="top"><?php echo $selyear['year'] ?></th>
-                                    </tr>-->
+                                    </tr>
                                 </table>
                             </h4>
+                            <a class="home_link" href="select_language">
+                                <i class="icon-home"></i>
+                            </a>
                         </div>
                         <!--question Box-->
                         <div class="questionBox" id="app">
@@ -117,32 +125,20 @@ if (count($questions) > 0) {
                                          {{ index | charIndex }}. {{ response.text }} {{response.show_image}}
                                 </div>
                             </div>
-                            <!--quizFooter: navigation and progress-->
-                            <footer class="questionFooter">
-
-                                <!--pagination-->
+<!--                            <footer class="questionFooter">
                                 <nav class="pagination" role="navigation" aria-label="pagination">
-
-                                    <!-- back button -->
-                                    <!--                                    <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">
+                                                                        <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">
                                                                            Back
-                                                                    </a>-->
+                                                                    </a>
                                     <a class="btn btn-green" href="select_language">
                                         Home
                                     </a>
-
-                                    <!-- next button -->
                                     <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
                                         {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}
                                     </a>
-
                                 </nav>
-                                <!--/pagination-->
-
-                            </footer>
-                            <!--/quizFooter-->
+                            </footer>-->
                         </div>
-                        <!--/questionContainer-->
                         <!--quizCompletedResult-->
                         <div v-if="questionIndex >= quiz.questions.length" v-bind:key="questionIndex" class="quizCompleted has-text-centered">
 

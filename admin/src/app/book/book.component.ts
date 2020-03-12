@@ -17,7 +17,7 @@ export class BookComponent implements OnInit {
     this.getBook();
   }
   getBook(): void {
-    this.httpClient.get<any>('http://localhost/mushak/mekana/api/v1/get_book')
+    this.httpClient.get<any>('http://localhost/project/exam-horse/api/v1/get_book')
       .subscribe(
         (res) => {
           this.book = res["result"]["data"];
@@ -112,7 +112,7 @@ export class BookForm {
       } else {
         url = 'insert_book';
       }
-      this.httpClient.post('http://localhost/mushak/mekana/api/v1/'+url, formData).subscribe(
+      this.httpClient.post('http://localhost/project/exam-horse/api/v1/'+url, formData).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -155,7 +155,7 @@ export class BookDelete {
             return;
       }
       this.loading = true;
-      this.httpClient.get('http://localhost/mushak/mekana/api/v1/delete_record/book/book_id='+this.book_id).subscribe(
+      this.httpClient.get('http://localhost/project/exam-horse/api/v1/delete_record/book/book_id='+this.book_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {

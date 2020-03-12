@@ -37,6 +37,9 @@ $years = $obj->selectAll('*', 'year', 'status = 1');
                                     </tr>
                                 </table>
                             </h4>
+                            <a class="home_link" href="select_language">
+                                <i class="icon-home"></i>
+                            </a>
                         </div>
                         <div class='modal-body'>
                             <div class='year_select_section'>
