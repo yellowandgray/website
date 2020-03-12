@@ -114,7 +114,7 @@ function logoutUser(name) {
         success: function (data) {
             $('.loader').removeClass('is-active');
             if (data.result.error === false) {
-                swal('', 'Thanks ' + name + ' for using Feringo to enrich your knowledge and score high marks', 'info');
+                swal('', 'Thanks ' + name + ' for using Exam Horse to enrich your knowledge and score high marks', 'info');
                 setTimeout(function () {
                     window.location = 'index';
                 }, 3000);

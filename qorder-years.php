@@ -22,7 +22,7 @@ $years = $obj->selectAll('*', 'year', 'status = 1');
                 <div id='mySignin' tabindex='-1' aria-labelledby='mySigninModalLabel' aria-hidden='true'>
                     <div class='modal styled'>
                         <div class='modal-header login-section'>
-                            <a href='question-subject-order'><i class='font-icon-arrow-simple-left'></i></a>
+                            <a href="question-subject-order?lan=<?php echo $language['name']; ?>"><i class='font-icon-arrow-simple-left'></i></a>
                             <h4 id='mySigninModalLabel' class='text-center'>
                                 <table class="table-title">
                                     <tr>
@@ -58,7 +58,7 @@ $years = $obj->selectAll('*', 'year', 'status = 1');
             </section>
 
             <!-- Reset Modal -->
-            <?php include 'reset_password.php';
+            <?php include 'footer.php'; ?>
             ?>
             <!-- end reset modal -->
         </div>

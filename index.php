@@ -6,10 +6,10 @@ if (isset($_SESSION['student_register_id'])) {
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Feringo | 10th STD State Board Quiz</title>
+        <title>Exam Horse | Group Exams</title>
         <meta charset="UTF-8">
-        <meta name="description" content="Mekana Feringo">
-        <meta name="keywords" content="Mekana Feringo">
+        <meta name="description" content="Exam Horse">
+        <meta name="keywords" content="Exam Horse">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="icon" href="img/favicon.png" type="image/gif">
@@ -160,7 +160,7 @@ if (isset($_SESSION['student_register_id'])) {
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 copy">
-                            <p class="text-center">&copy; Copyright 2020 - Feringo.  All rights reserved.</p>
+                            <p class="text-center">&copy; Copyright 2020 - Exam Horse - All Rights Reserved.</p>
                         </div>
                     </div>
                 </div>

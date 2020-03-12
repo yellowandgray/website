@@ -113,31 +113,31 @@ if (count($questions) > 0) {
                                 </div>
                                 <!-- questionTitle -->
                                 <div v-if="quiz.questions[questionIndex].show_image" class="text-center">
-                                    <img v-if="quiz.questions[questionIndex].direction == 'top'" v-bind:src="'../api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />
+                                    <img style="width: 50%" v-if="quiz.questions[questionIndex].direction == 'top'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />
                                 </div>
                                 <h2 class="titleContainer title">{{questionIndex + 1}}. <span v-html="quiz.questions[questionIndex].text"></span></h2>
                                 <div v-if="quiz.questions[questionIndex].show_image" class="text-center">
-                                    <img v-if="quiz.questions[questionIndex].direction == 'bottom'" v-bind:src="'../api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />
+                                    <img style="width: 50%" v-if="quiz.questions[questionIndex].direction == 'bottom'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />
                                 </div>
                                 <!-- quizOptions -->
                                 <div class="optionContainer">
                                     <div id="two" class="option" v-for="(response, index) in quiz.questions[questionIndex].responses" @click="selectOption(index)" :class="{ 'is-selected': userResponses[questionIndex] == index}" :key="index">
-                                         {{ index | charIndex }}. {{ response.text }} {{response.show_image}}
+                                         <span class="q-option">{{ index | charIndex }}.</span> {{ response.text }} {{response.show_image}}
                                 </div>
                             </div>
-<!--                            <footer class="questionFooter">
-                                <nav class="pagination" role="navigation" aria-label="pagination">
-                                                                        <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">
-                                                                           Back
-                                                                    </a>
-                                    <a class="btn btn-green" href="select_language">
-                                        Home
-                                    </a>
-                                    <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
-                                        {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}
-                                    </a>
-                                </nav>
-                            </footer>-->
+                            <!--                            <footer class="questionFooter">
+                                                            <nav class="pagination" role="navigation" aria-label="pagination">
+                                                                                                    <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">
+                                                                                                       Back
+                                                                                                </a>
+                                                                <a class="btn btn-green" href="select_language">
+                                                                    Home
+                                                                </a>
+                                                                <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
+                                                                    {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}
+                                                                </a>
+                                                            </nav>
+                                                        </footer>-->
                         </div>
                         <!--quizCompletedResult-->
                         <div v-if="questionIndex >= quiz.questions.length" v-bind:key="questionIndex" class="quizCompleted has-text-centered">
@@ -204,7 +204,10 @@ if (count($questions) > 0) {
                         if (this.questionIndex < this.quiz.questions.length) {
                             this.questionIndex++;
                         }
-                    }, 1000);
+                    }, 500);
+                    setTimeout(() => {
+                        test();
+                    }, 600);
                 },
                 next: function () {
                     if (this.questionIndex < this.quiz.questions.length)

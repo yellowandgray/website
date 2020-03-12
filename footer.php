@@ -5,7 +5,7 @@
                 <div class="span6">
                     <div class="copyright">
                         <p>
-                            <span>&copy; 2020 - Feringo - All right reserved.</span>
+                            <span>&copy; 2020 - Exam Horse - All Rights Reserved.</span>
                         </p>
                     </div>
                 </div>

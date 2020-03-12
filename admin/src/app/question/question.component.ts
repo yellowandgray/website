@@ -18,6 +18,7 @@ import { Observable } from "rxjs";
   styleUrls: ["./question.component.css"]
 })
 export class QuestionComponent implements OnInit {
+  image_url: string = "http://localhost/project/exam-horse/api/v1/";
   topic = [];
   question = [];
   year = [];
@@ -217,6 +218,7 @@ export class QuestionForm {
   option_b_image: string = "Option B Image";
   option_c_image: string = "Option C Image";
   option_d_image: string = "Option D Image";
+  explanation_image: string = 'Select Explanation Image';
   image_path: string = "";
   topic: any[];
   year: any[];
@@ -225,6 +227,7 @@ export class QuestionForm {
   option_image_b: string = "";
   option_image_c: string = "";
   option_image_d: string = "";
+  image_path_explanation: string = '';
   constructor(
     public dialogRef: MatDialogRef<QuestionForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -243,6 +246,7 @@ export class QuestionForm {
       d: new FormControl(""),
       answer: new FormControl("", Validators.required),
       explanation: new FormControl(""),
+      explanation_img_direction: new FormControl(""),
       data_dictionary: new FormControl(""),
       book_id: new FormControl(""),
       page_no: new FormControl(""),
@@ -261,6 +265,7 @@ export class QuestionForm {
         d: this.data.d,
         answer: this.data.answer,
         explanation: this.data.explanation,
+        explanation_img_direction: this.data.explanation_img_direction,
         data_dictionary: this.data.data_dictionary,
         book_id: this.data.book_id,
         page_no: this.data.page_no,
@@ -268,6 +273,7 @@ export class QuestionForm {
       });
       this.question_id = this.data.question_id;
       this.image_path = this.data.image_path;
+      this.image_path_explanation = this.data.image_path_explanation;
     }
     // this.httpClient
     //   .get("http://localhost/project/exam-horse/api/v1/get_topic_by_lng_year")
@@ -348,6 +354,7 @@ export class QuestionForm {
       formData.append("topic_id", this.questionForm.value.topic_id);
       formData.append("name", this.questionForm.value.question);
       formData.append("image_path", this.image_path);
+      formData.append('image_path_explanation', this.image_path_explanation);
       formData.append("question_no", this.questionForm.value.question_no);
       formData.append("direction", this.questionForm.value.direction);
       formData.append("year_id", this.questionForm.value.year_id);
@@ -357,6 +364,7 @@ export class QuestionForm {
       formData.append("d", this.questionForm.value.d);
       formData.append("answer", this.questionForm.value.answer);
       formData.append("explanation", this.questionForm.value.explanation);
+      formData.append('explanation_img_direction', this.questionForm.value.explanation_img_direction);
       formData.append(
         "data_dictionary",
         this.questionForm.value.data_dictionary
@@ -369,6 +377,7 @@ export class QuestionForm {
       formData.append("topic_id", this.questionForm.value.topic_id);
       formData.append("question", this.questionForm.value.question);
       formData.append("question_image", this.image_path);
+      formData.append('explanation_image', this.image_path_explanation);
       formData.append("question_no", this.questionForm.value.question_no);
       formData.append("direction", this.questionForm.value.direction);
       formData.append("year_id", this.questionForm.value.year_id);
@@ -378,6 +387,7 @@ export class QuestionForm {
       formData.append("d", this.questionForm.value.d);
       formData.append("answer", this.questionForm.value.answer);
       formData.append("explanation", this.questionForm.value.explanation);
+      formData.append('explanation_img_direction', this.questionForm.value.explanation_img_direction);
       formData.append(
         "data_dictionary",
         this.questionForm.value.data_dictionary
@@ -478,6 +488,12 @@ export class QuestionForm {
       this.question_image = "Select Question Image";
     }
   }
+removeMedia1(url) {
+    this[url] = '';
+    if (url === 'image_path_explanation') {
+        this.explanation_image = 'Select Explanation Image';
+    }
+}
   editorConfig: AngularEditorConfig = {
     editable: true,
     spellcheck: true,

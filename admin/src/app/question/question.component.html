@@ -15,7 +15,7 @@
                 </mat-progress-spinner>
             </button>
             <input hidden #fileInput type="file" id="file" (change)="fileProgress($event)" />
-            <button mat-raised-button color="primary" (click)="openDialog(0, 'null')">
+                   <button mat-raised-button color="primary" (click)="openDialog(0, 'null')">
                 <mat-icon>add</mat-icon> Question
             </button>
         </div>
@@ -26,84 +26,85 @@
                     <mat-select [(ngModel)]="selected_language" (selectionChange)="getSubjectByLanguage()">
                         <mat-option [value]="row.language_id" *ngFor="let row of language">
                             {{row.name}}
-                        </mat-option>
-                    </mat-select>
-                    <mat-error>Language is required</mat-error>
-                </mat-form-field>
-            </div>
-            <div fxFlex="50%">
-                <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Select Subject</mat-label>
-                    <mat-select [(ngModel)]="selected_subject" (selectionChange)="getTopicBySubject()">
-                        <mat-option [value]="data.subject_id" *ngFor="let data of subject">
-                            {{data.name}}
-                        </mat-option>
-                    </mat-select>
-                    <mat-error>Subject is required</mat-error>
-                </mat-form-field>
-            </div>
-            <div fxFlex="50%">
-                <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Select Topic</mat-label>
-                    <mat-select (selectionChange)="getQuestionsByTopic($event);">
-                        <!--                        <mat-option value="0">All</mat-option>-->
-                        <mat-option [value]="top.topic_id" *ngFor="let top of topic">
-                            {{top.name}}
-                        </mat-option>
-                    </mat-select>
-                    <mat-error>Topic is required</mat-error>
-                </mat-form-field>
-            </div>
+                    </mat-option>
+                </mat-select>
+                <mat-error>Language is required</mat-error>
+            </mat-form-field>
         </div>
-        <!-- <mat-button-toggle-group name="fontStyle" [(ngModel)]="selected_language" aria-label="Font Style" (change)="getYearByLanguage()">
-            <mat-button-toggle [value]="row.language_id" *ngFor="let row of language">{{row.name}}</mat-button-toggle>
-        </mat-button-toggle-group> -->
-        <!-- <mat-tab-group (selectedTabChange)="getTopicByLngNYear($event);">
-            <mat-tab *ngFor="let data of year" label="{{data.year}}">
-                <mat-tab-group (selectedTabChange)="getQuestionsByTopic($event);">
-                    <mat-tab *ngFor="let data of topic" label="{{data.subject}} - {{data.name}}">
-                        <div class="add-btn-container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-                            <div class="search-input" fxFlex="50%">
-                                <mat-form-field fxFlex="100%">
-                                    <input matInput type="text" placeholder="Search by name" [(ngModel)]="searchTerm" />
-                                </mat-form-field>
-                            </div>
-                            <div fxFlex="20%">
-                                <mat-form-field fxFlex="100%">
-                                    <mat-label>Sort by</mat-label>
-                                    <mat-select [(ngModel)]="sortdata" (selectionChange)="sortRecords()">
-                                        <mat-option value="title_a_z">Title A-Z</mat-option>
-                                        <mat-option value="title_z_a">Title Z-A</mat-option>
-                                        <mat-option value="created_a_z">Created Date ASC</mat-option>
-                                        <mat-option value="created_z_a">Created Date DESC</mat-option>
-                                    </mat-select>
-                                </mat-form-field>
-                            </div>
-                        </div>
-                        
-                    </mat-tab>
-                </mat-tab-group>
+        <div fxFlex="50%">
+            <mat-form-field appearance="outline" fxFlex="100%">
+                <mat-label>Select Subject</mat-label>
+                <mat-select [(ngModel)]="selected_subject" (selectionChange)="getTopicBySubject()">
+                    <mat-option [value]="data.subject_id" *ngFor="let data of subject">
+                        {{data.name}}
+                </mat-option>
+            </mat-select>
+            <mat-error>Subject is required</mat-error>
+        </mat-form-field>
+    </div>
+    <div fxFlex="50%">
+        <mat-form-field appearance="outline" fxFlex="100%">
+            <mat-label>Select Topic</mat-label>
+            <mat-select (selectionChange)="getQuestionsByTopic($event);">
+                <!--                        <mat-option value="0">All</mat-option>-->
+                <mat-option [value]="top.topic_id" *ngFor="let top of topic">
+                    {{top.name}}
+            </mat-option>
+        </mat-select>
+        <mat-error>Topic is required</mat-error>
+    </mat-form-field>
+</div>
+</div>
+<!-- <mat-button-toggle-group name="fontStyle" [(ngModel)]="selected_language" aria-label="Font Style" (change)="getYearByLanguage()">
+    <mat-button-toggle [value]="row.language_id" *ngFor="let row of language">{{row.name}}</mat-button-toggle>
+</mat-button-toggle-group> -->
+<!-- <mat-tab-group (selectedTabChange)="getTopicByLngNYear($event);">
+    <mat-tab *ngFor="let data of year" label="{{data.year}}">
+        <mat-tab-group (selectedTabChange)="getQuestionsByTopic($event);">
+            <mat-tab *ngFor="let data of topic" label="{{data.subject}} - {{data.name}}">
+                <div class="add-btn-container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+                    <div class="search-input" fxFlex="50%">
+                        <mat-form-field fxFlex="100%">
+                            <input matInput type="text" placeholder="Search by name" [(ngModel)]="searchTerm" />
+                        </mat-form-field>
+                    </div>
+                    <div fxFlex="20%">
+                        <mat-form-field fxFlex="100%">
+                            <mat-label>Sort by</mat-label>
+                            <mat-select [(ngModel)]="sortdata" (selectionChange)="sortRecords()">
+                                <mat-option value="title_a_z">Title A-Z</mat-option>
+                                <mat-option value="title_z_a">Title Z-A</mat-option>
+                                <mat-option value="created_a_z">Created Date ASC</mat-option>
+                                <mat-option value="created_z_a">Created Date DESC</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+                
             </mat-tab>
-        </mat-tab-group> -->
-        <mat-list>
-            <ng-container *ngFor="let data of question">
-                <mat-list-item>
-                    <button mat-icon-button aria-label="label" (click)="openDialog(data.question_id, 'question')">
-                        <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
-                    </button>
-                    <button mat-icon-button aria-label="label" (click)="confirmDelete(data.question_id)">
-                        <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
-                    </button>
-                    <p class="float-left">{{data.question_no}}.</p>
-                    <h4 class="question" mat-line [innerHTML]="data.name"></h4>
-                    <p mat-line>A.<span [innerHTML]="data.a"></span></p>
-                    <p mat-line>B.<span [innerHTML]="data.b"></span></p>
-                    <p mat-line><span [innerHTML]="data.c"></span></p>
-                    <p mat-line [innerHTML]="data.d"></p>
-                    <h2 mat-line class="answer-font">Answer: ({{data.answer}})</h2>
-                </mat-list-item>
-                <mat-divider></mat-divider>
-            </ng-container>
-        </mat-list>
-    </mat-sidenav-content>
+        </mat-tab-group>
+    </mat-tab>
+</mat-tab-group> -->
+<mat-list>
+    <ng-container *ngFor="let data of question">
+        <mat-list-item>
+            <button mat-icon-button aria-label="label" (click)="openDialog(data.question_id, 'question')">
+                <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
+            </button>
+            <button mat-icon-button aria-label="label" (click)="confirmDelete(data.question_id)">
+                <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
+            </button>
+            <img mat-line [src]="image_url + data.image_path" alt="image" *ngIf="data.image_path != '' && data.direction == 'top'" class="question-img" />
+            <p mat-line class='question-bottom'>{{data.question_no}}. <span class="question" [innerHTML]="data.name"></span></p>
+            <img mat-line [src]="image_url + data.image_path" alt="image" *ngIf="data.image_path != '' && data.direction == 'bottom'" class="question-img" />
+                 <p mat-line>A. <span [innerHTML]="data.a"></span></p>
+            <p mat-line>B. <span [innerHTML]="data.b"></span></p>
+            <p mat-line *ngIf="data.c != ''">C. <span [innerHTML]="data.c"></span></p>
+            <p mat-line *ngIf="data.d != ''">D. <span [innerHTML]="data.d"></span></p>
+            <h2 mat-line class="answer-font">Answer: ({{data.answer}})</h2>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+    </ng-container>
+</mat-list>
+</mat-sidenav-content>
 </mat-sidenav-container>

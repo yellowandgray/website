@@ -23,7 +23,7 @@ $counter = 0;
                 <div id="mySignin" tabindex="-1" aria-labelledby="mySigninModalLabel" aria-hidden="true">
                     <div class="modal styled">
                         <div class="modal-header login-section">
-                            <a href="question-subject-order"><i class="font-icon-arrow-simple-left"></i></a>
+                            <a href="question-subject-order?lan=<?php echo $language['name']; ?>"><i class="font-icon-arrow-simple-left"></i></a>
                             <h4 id="mySigninModalLabel" class="text-center">
                                 <table class="table-title">
                                     <tr>
@@ -38,6 +38,9 @@ $counter = 0;
                                     </tr>
                                 </table>
                             </h4>
+                            <a class="home_link" href="select_language">
+                                <i class="icon-home"></i>
+                            </a>
                         </div>
                         <div class="modal-body">
                             <div class="language_section">
@@ -66,6 +69,7 @@ $counter = 0;
                 </div>
             </section>
         </div>
+        <?php include 'footer.php'; ?>
         <?php include 'script.php'; ?>
         <script type="text/javascript">
             var counter = <?php echo $counter; ?>;

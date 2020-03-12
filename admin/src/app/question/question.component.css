@@ -10,7 +10,11 @@
     padding-right: 25px;
 }
 
-.question {
-    position: relative;
-    left: 25px;
+.question-bottom {
+    margin-bottom: 10px !important;
+}
+
+.question-img {
+    width: 15%;
+    margin: 10px 0 !important;
 }

@@ -51,6 +51,7 @@ $_SESSION['student_selected_language_id'] = $language['language_id'];
                 </div>
             </section>
         </div>
+        <?php include 'footer.php'; ?>
         <?php include 'script.php'; ?>
     </body>
 

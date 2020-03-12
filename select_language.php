@@ -35,7 +35,6 @@ $languages = $obj->selectAll('*', 'language', 'status = 1');
                 </div>
             </section>
 
-            <!-- Reset Modal -->
             <?php include 'footer.php'; ?>
             <!-- end reset modal -->
         </div>
