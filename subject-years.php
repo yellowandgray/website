@@ -6,11 +6,32 @@ if (!isset($_GET['topics'])) {
     header('Location: subject');
 }
 $_SESSION['student_selected_topics_id'] = $_GET['topics'];
+$subj_topic = $obj->selectAll('t.*,s.name As subject',' topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id',' t.topic_id IN (' . $_SESSION['student_selected_topics_id'] . ')  ORDER BY subject_id, topic_id ASC');
 //$topics = $obj->selectAll('t.*, s.name AS subject', 'topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id', 's.language_id=' . $_SESSION['student_selected_language_id']);
 //$alltopics = array();
 //foreach ($topics as $row) {
 //    $alltopics[$row['subject']][] = $row;
 //}
+
+
+$sub_topic_val = '';
+if(count($subj_topic)>0) {
+   $sub_topic_arr = array();
+    foreach($subj_topic as $val) {
+            $sub_topic_arr[$val['subject']][] = $val['name'];
+    }
+    
+    foreach($sub_topic_arr as $stak=>$stav) {
+        if($sub_topic_val != '') {
+            $sub_topic_val .= ', ';
+        }
+        $sub_topic_val .= $stak;
+        $sub_topic_val .= ' ('.implode(', ',$stav).') ';
+    }
+ }
+
+ 
+
 $years = $obj->selectAll('*', 'year', 'status = 1');
 $language = $obj->selectRow('*', 'language', 'language_id=' . $_SESSION['student_selected_language_id']);
 ?>
@@ -43,7 +64,7 @@ $language = $obj->selectRow('*', 'language', 'language_id=' . $_SESSION['student
                                     <tr>
                                         <td valign="top">Selected Subject and Topic</td>
                                         <td valign="top" class="w-5">:</td>
-                                        <th valign="top">Subject and Topic</th>
+                                        <th valign="top"><?php echo $sub_topic_val; ?></th>
                                     </tr>
                                 </table>
                             </h4>
