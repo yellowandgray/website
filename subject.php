@@ -41,17 +41,17 @@ $counter = 0;
                         </div>
                         <div class="modal-body">
                             <div class="language_section">
-                                <h6 class="sub-title">Selected subject and Topic</h6>
+                                <h6 class="sub-title">Select subject and Topic</h6>
                                 <ul class="subject-section-order">
                                     <?php
                                     foreach ($alltopics as $key => $row) {
                                         $counter++;
                                         ?>
                                         <li>
-                                            <input type="checkbox" id="option<?php echo $counter; ?>"><label for="option<?php echo $counter; ?>" class=""> <?php echo $key; ?></label>
+                                            <input type="checkbox" id="option<?php echo $counter; ?>" data-chkgroup="option<?php echo $counter; ?>" class="selectallchk"><label for="option<?php echo $counter; ?>" class=""> <?php echo $key; ?></label>
                                             <ul>
                                                 <?php foreach ($row as $r) { ?>
-                                                    <li><label class="pl-0"><input type="checkbox" name="suboptions[]" value="<?php echo $r['topic_id']; ?>" class="subOption<?php echo $counter; ?> suboptions"> <span><?php echo $r['name']; ?></span></label></li>
+                                                    <li><label class="pl-0"><input type="checkbox" data-chkgroup="option<?php echo $counter; ?>"  name="suboptions[]" value="<?php echo $r['topic_id']; ?>" class="subOption<?php echo $counter; ?> suboptions childchk"> <span><?php echo $r['name']; ?></span></label></li>
                                                 <?php } ?>
                                             </ul>
                                         </li>
@@ -69,6 +69,7 @@ $counter = 0;
         <?php include 'script.php'; ?>
         <script type="text/javascript">
             var counter = <?php echo $counter; ?>;
+            /*
             for (var j = 1; j <= counter; j++) {
                 var option = j;
                 window['checkboxes' + option] = document.querySelectorAll('input.subOption' + option),
@@ -87,6 +88,32 @@ $counter = 0;
                     }
                 }
             }
+     * 
+             */
+            
+            $('.childchk').change(function(){
+                // create var for parent .checkall and group
+                var group = $(this).data('chkgroup'),                
+                 checkall = $('.selectallchk[data-chkgroup="'+group+'"]');
+                        
+                // do we have some checked? Some unchecked? Store as boolean variables
+                var someChecked = $('.childchk[data-chkgroup="'+group+'"]:checkbox:checked').length > 0;
+                var someUnchecked = $('.childchk[data-chkgroup="'+group+'"]:checkbox:not(:checked)').length > 0;
+
+                // if we have some checked and unchecked, set .checkall, of the correct group, to indeterminate. 
+                // If all are checked, set .checkall to checked
+                checkall.prop("indeterminate", someChecked && someUnchecked);
+                checkall.prop("checked", someChecked || !someUnchecked);
+
+            // fire change() when this loads to ensure states are updated on page load
+            }).change();
+
+            // clicking .checkall will check all children in the same group.
+            $('.selectallchk').click(function() {
+                var group = $(this).data('chkgroup');
+                $('.childchk[data-chkgroup="'+group+'"]').prop('checked', this.checked).change(); 
+            });
+            
 
             function goToYears() {
                 var topics = [];
@@ -96,7 +123,7 @@ $counter = 0;
                     }
                 });
                 if (topics.length > 0) {
-                    window.location = 'subject-years?topics=' + topics.join(',');
+                   window.location = 'subject-years?topics=' + topics.join(',');
                 } else {
                     alert('Please select atleast one topic');
                 }
