@@ -98,9 +98,9 @@ $app->post('/loginprocess', function() use ($app) {
         $res['message'] = 'Welcome ' . $record['name'];
         $res['data'] = $record;
     } else {
-        $insert = $obj->insertRecord(array('phone_no' => $data['phone_no'], 'name' => $data['name']), 'user');
+        $insert = $obj->insertRecord(array('phone_no' => $data['phone_no']), 'user');
         $res['message'] = 'Registered successfully';
-        $res['data'] = array('user_id' => $insert, 'name' => $data['name']);
+        $res['data'] = array('user_id' => $insert);
     }
     echoRespnse(201, $res);
 });
