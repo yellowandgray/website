@@ -422,3 +422,53 @@ $app->get('/get_book', function() {
     }
     echoRespnse(201, $res);
 });
+
+
+$app->post('/store_answer', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Invalid login details');
+    $data = $app->request->post();
+    $obj = new Common();
+    $record = $obj->selectRow('*', 'question', 'question_id=' . $data['question_id']);
+    if (count($record) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Answer inserted successfully';
+        
+        
+        $obj->insertRecord(array('question_id' => $record['question_id'], 'student_log_id' => $data['student_log_id'], 
+            'name' => $record['name'], 'image_path' => $record['image_path'], 'direction' => $record['direction'], 
+            'a' => $record['a'], 'b' => $record['b'], 'c' => $record['c'], 'd' => $record['d'], 'answer' => $record['answer'], 
+            'explanation' => $record['explanation'], 'image_path_explanation' => $record['image_path_explanation'], 
+            'explanation_img_direction' => $record['explanation_img_direction'], 'question_no' => $record['question_no'], 
+            'student_answer' => $data['answer'], 'created_at' => date('Y-m-d'), 'updated_at' => date('Y-m-d')), 'student_log_detail');
+        // exit;
+        
+    } else {
+        $res['message'] = 'Unable to insert this answer';
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_result_detail/:lid', function($lid) {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('*', 'student_log_detail', 'student_log_id = ' . $lid);
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+
+$app->get('/get_question_answer/:qid', function($qid) {
+    $res = array('error' => true, 'message' => 'No records found');
+    $obj = new Common();
+    $question_ans = $obj->selectRow('*', 'question', 'question_id = ' . $qid );
+     if (count($question_ans) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $question_ans['answer'];
+    }
+    echoRespnse(201, $res);
+});
