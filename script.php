@@ -21,19 +21,19 @@
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/javascript">
     /*
-    MathJax.Hub.Config({
-           skipStartupTypeset: true,
-           tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-    });
+     MathJax.Hub.Config({
+     skipStartupTypeset: true,
+     tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+     });
      */
     /*
     test();
     function test() {
-        if(typeof MathJax !== 'undefined') {
-            MathJax.Hub.Queue(["Typeset",MathJax.Hub]);           
+        if (typeof MathJax !== 'undefined') {
+            MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
         }
-        
-         MathJax.Hub.Config({
+
+        MathJax.Hub.Config({
             tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
      });     
     }

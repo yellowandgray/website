@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+
 $app->post('/update_record/:table/:where', function($table, $where) use ($app) {
     $res = array('error' => true, 'message' => 'Unable to update');
     $data = $app->request->post();
@@ -16,8 +17,15 @@ $app->post('/update_record/:table/:where', function($table, $where) use ($app) {
 $app->get('/delete_record/:table/:where', function($table, $where) {
     $res = array('error' => true, 'message' => 'Unable to delete');
     $com = new Common();
+    $record = array();
+    if ($table == 'question') {
+        $record = $com->selectRow('*', $table, $where);
+    }
     $data = $com->deleteRecordWithWhere($table, $where);
     if ($data > 0) {
+        if ($table == 'question') {
+            $com->updateRecord('question_no = (question_no - 1)', 'question', 'topic_id = \'' . $record['topic_id'] . '\' AND question_no >= ' . $record['question_no']);
+        }
         $res['error'] = false;
         $res['message'] = 'Record deleted successfully';
         $res['data'] = $data;
@@ -120,8 +128,9 @@ $app->post('/insert_question', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('year_id' => $data['year_id'], 'topic_id' => $data['topic_id'], 'name' => $data['question'], 'question_no' => $data['question_no'], 'direction' => $data['direction'], 'image_path' => $data['question_image'], 'a' => $data['a'], 'b' => $data['b'], 'c' => $data['c'], 'd' => $data['d'], 'answer' => $data['answer'], 'explanation' => $data['explanation'], 'image_path_explanation' => $data['image_path_explanation'], 'explanation_img_direction' => $data['explanation_img_direction'], 'data_dictionary' => $data['data_dictionary'], 'book_id' => $data['book_id'], 'page_no' => $data['page_no'], 'notes' => $data['notes']), 'question');
+    $record = $com->insertRecord(array('year_id' => $data['year_id'], 'topic_id' => $data['topic_id'], 'name' => $data['question'], 'question_no' => $data['question_no'], 'direction' => $data['direction'], 'image_path' => $data['question_image'], 'a' => $data['a'], 'b' => $data['b'], 'c' => $data['c'], 'd' => $data['d'], 'answer' => $data['answer'], 'explanation' => $data['explanation'], 'image_path_explanation' => $data['explanation_image'], 'explanation_img_direction' => $data['explanation_img_direction'], 'data_dictionary' => $data['data_dictionary'], 'book_id' => $data['book_id'], 'page_no' => $data['page_no'], 'notes' => $data['notes']), 'question');
     if ($record > 0) {
+        $com->updateRecord('question_no = (question_no + 1)', 'question', 'topic_id = \'' . $data['topic_id'] . '\' AND question_id != ' . $record . ' AND question_no >= ' . $data['question_no']);
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
     }
@@ -228,7 +237,7 @@ $app->get('/get_question', function() {
 $app->get('/get_question_by_topic_n_year/:tid', function($tid) {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
-    $data = $com->selectAll('*', 'question', 'question_id > 0 AND topic_id = ' . $tid);
+    $data = $com->selectAll('*', 'question', 'question_id > 0 AND topic_id = ' . $tid . ' ORDER BY question_no ASC');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';

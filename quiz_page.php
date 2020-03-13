@@ -92,6 +92,10 @@ if (count($questions) > 0) {
             'direction' => $q['direction'],
             'image_path' => $q['image_path'],
             'show_image' => $showimg,
+            'show_image_explanation' => $show_img,
+            'explanation' => $q['explanation'],
+            'image_path_explanation' => $q['image_path_explanation'],
+            'explanation_img_direction' => $q['explanation_img_direction'],
             'responses' => $options
         ));
          * 
@@ -236,23 +240,33 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                 </div>
                                 <!-- quizOptions -->
                                 <div class="optionContainer">
-                                    <div id="two" class="option" v-for="(response, index) in quiz.questions[questionIndex].responses" @click="selectOption(index)" :class="{ 'is-selected': userResponses[questionIndex] == index}" :key="index">
-                                         <span class="q-option">{{ index | charIndex }}.</span> {{ response.text }} {{response.show_image}}
+                                    <div id="two" class="option" v-for="(response, index) in quiz.questions[questionIndex].responses" @click="selectOption(index)" :class="{ 'is-selected': userResponses[questionIndex] == index}" :key="index" v-if="response.text != ''">
+                                         <span class="q-option">{{ index | charIndex }}.&nbsp;</span> <span v-html="response.text"></span>
                                     </div>
                                 </div>
-                                <!--                            <footer class="questionFooter">
-                                                                <nav class="pagination" role="navigation" aria-label="pagination">
-                                                                                                        <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">
-                                                                                                           Back
-                                                                                                    </a>
-                                                                    <a class="btn btn-green" href="select_language">
-                                                                        Home
-                                                                    </a>
-                                                                    <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
-                                                                        {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}
-                                                                    </a>
-                                                                </nav>
-                                                            </footer>-->
+                                <footer class="questionFooter">
+                                    <div class="question-explanation">
+                                        <h4>Explanation:</h4>
+                                        <div v-if="quiz.questions[questionIndex].show_image_explanation" class="text-center">
+                                            <img v-if="quiz.questions[questionIndex].explanation_img_direction == 'top'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
+                                        </div>
+                                        <span v-html="quiz.questions[questionIndex].explanation"></span>
+                                        <div v-if="quiz.questions[questionIndex].show_image_explanation" class="text-center">
+                                            <img v-if="quiz.questions[questionIndex].explanation_img_direction == 'buttom'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
+                                        </div>
+                                    </div>
+<!--                                    <nav class="pagination" role="navigation" aria-label="pagination">
+                                        <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">
+                                           Back
+                                    </a>
+                                    <a class="btn btn-green" href="select_language">
+                                        Home
+                                    </a>
+                                    <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
+                                        {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}
+                                    </a>
+                                    </nav>-->
+                                </footer>
                             </div>
                             <!--quizCompletedResult-->
                             <div v-if="questionIndex >= quiz.questions.length" v-bind:key="questionIndex" class="quizCompleted has-text-centered">

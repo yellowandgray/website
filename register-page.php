@@ -112,7 +112,7 @@
                                     </div>
                                     <div class = 'control-group'>
                                         <div class = 'controls'>
-                                            <button name = 'submit' type = 'submit' id = 'contact-submit' class = 'btn'>Sign up</button>
+                                            <button name = 'submit' type = 'submit' id = 'contact-submit' class = 'btn btn-custom'>Sign up</button>
                                         </div>
                                         <p class = 'aligncenter margintop20'>
                                             Already have an account? <a href = 'login-page'>Sign in</a>
