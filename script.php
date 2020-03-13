@@ -26,8 +26,20 @@
      tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
      });
      */
+    /*
     test();
     function test() {
+        if (typeof MathJax !== 'undefined') {
+            MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+        }
+
+        MathJax.Hub.Config({
+            tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+     });     
+    }
+    */
+     applyMathAjax();
+    function applyMathAjax() {
         if (typeof MathJax !== 'undefined') {
             MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
         }
