@@ -144,7 +144,7 @@ $app->post('/insert_snacks', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('name' => $data['name'], 'amount' => $data['amount'], 'imageurl' => $data['product_image'], 'unit_id' => $data['unit_id'], 'unit_no' => $data['unit_no'], 'status' => $data['status']), 'fooditems');
+    $record = $com->insertRecord(array('name' => $data['name'], 'amount' => $data['amount'], 'imageurl' => $data['product_image'], 'unit_id' => $data['unit_id'], 'unit_no' => $data['unit_no']), 'fooditems');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
@@ -267,6 +267,28 @@ $app->post('//:dbid/:oid', function() use ($app) {
     echoRespnse(201, $res);
 });
 
+$app->get('/update_banner_status/:fid/:bid', function($fid,$bid){
+    $res = array('error' => true, 'message' => 'Unable to Update');
+    $com = new Common();
+    $record = $com->updateRecordWithWhere(array('banner_status' => $bid), 'fooditem', 'fooditem_id ='. $fid);
+    if ($record > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Update inserted successfully';
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/update_food_status/:fid/:fsid', function($fid,$fsid){
+    $res = array('error' => true, 'message' => 'Unable to Update');
+    $com = new Common();
+    $record = $com->updateRecordWithWhere(array('status' => $fsid), 'fooditem', 'fooditem_id ='. $fid);
+    if ($record > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Update inserted successfully';
+    }
+    echoRespnse(201, $res);
+});
+
 $app->get('/get_foods', function() {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
@@ -368,6 +390,18 @@ $app->get('/get_food_list', function() {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
     $data = $com->selectAll('fi.*, u.name AS unit', 'fooditem AS fi LEFT JOIN unit AS u ON u.unit_id = fi.unit_id', 'fi.status = 1');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_snacks', function() {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('fi.*, u.name AS unit', 'fooditem AS fi LEFT JOIN unit AS u ON u.unit_id = fi.unit_id', 'fi.fooditem_id > 0');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';

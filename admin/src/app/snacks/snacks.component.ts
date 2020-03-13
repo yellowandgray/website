@@ -15,6 +15,7 @@ import { HttpClient } from "@angular/common/http";
 })
 export class SnacksComponent implements OnInit {
   result = [];
+  loading = false;
   constructor(
     public dialog: MatDialog,
     private _snackBar: MatSnackBar,
@@ -27,12 +28,65 @@ export class SnacksComponent implements OnInit {
   image_url: string = "http://lemonandshadow.com/threelevel/api/v1/";
   getSnacks(): void {
     this.httpClient
-      .get<any>("http://lemonandshadow.com/threelevel/api/v1/get_food_list")
+      .get<any>("http://lemonandshadow.com/threelevel/api/v1/get_snacks")
       .subscribe(
         res => {
           this.result = res["result"]["data"];
         },
         error => {
+          this._snackBar.open(error["statusText"], "", {
+            duration: 2000
+          });
+        }
+      );
+  }
+  changeFoodStatus(ev, fid, statusid): void {
+    //console.log(fid);
+    var status_id = 0;
+     if (ev.checked == true) {
+       status_id = 1;
+    }
+    statusid.status = status_id;
+    this.httpClient.get('http://lemonandshadow.com/threelevel/api/v1/update_food_status/' + fid + '/' + status_id)
+      .subscribe(
+        res => {
+          this.loading = false;
+          if (res["result"]["error"] === false) {
+            //this.dialogRef.close(true);
+          } else {
+            this._snackBar.open(res["result"]["message"], "", {
+              duration: 2000
+            });
+          }
+        },
+        error => {
+          this.loading = false;
+          this._snackBar.open(error["statusText"], "", {
+            duration: 2000
+          });
+        }
+      );
+  }
+  changeFoodBannerStatus(ev, fid): void {
+    //console.log(fid);
+    var banner_id = 0;
+     if (ev.checked == true) {
+       banner_id = 1;
+    }
+    this.httpClient.get('http://lemonandshadow.com/threelevel/api/v1/update_banner_status/' + fid +'/' + banner_id )
+      .subscribe(
+        res => {
+          this.loading = false;
+          if (res["result"]["error"] === false) {
+            //this.dialogRef.close(true);
+          } else {
+            this._snackBar.open(res["result"]["message"], "", {
+              duration: 2000
+            });
+          }
+        },
+        error => {
+          this.loading = false;
           this._snackBar.open(error["statusText"], "", {
             duration: 2000
           });
@@ -120,7 +174,7 @@ export class SnacksForm {
       name: new FormControl("", Validators.required),
       unit_no: new FormControl("", Validators.required),
       unit_id: new FormControl("", Validators.required),
-      status: new FormControl("", Validators.required),
+      //status: new FormControl("", Validators.required),
       amount: new FormControl("", Validators.required)
     });
     if (this.data != null) {
@@ -129,7 +183,7 @@ export class SnacksForm {
         amount: this.data.amount,
         unit_no: this.data.unit_no,
         unit_id: this.data.unit_id,
-        status: this.data.status
+        //status: this.data.status
       });
       this.fooditem_id = this.data.fooditem_id;
       this.imageurl = this.data.imageurl;
@@ -166,7 +220,7 @@ export class SnacksForm {
       formData.append("unit_no", this.snacksform.value.unit_no);
       formData.append("unit_id", this.snacksform.value.unit_id);
       formData.append("amount", this.snacksform.value.amount);
-      formData.append("status", this.snacksform.value.status);
+      //formData.append("status", this.snacksform.value.status);
       formData.append("imageurl", this.imageurl);
       url = "update_record/fooditem/fooditem_id = " + this.fooditem_id;
     } else {
@@ -175,7 +229,7 @@ export class SnacksForm {
       formData.append("unit_id", this.snacksform.value.unit_id);
       formData.append("product_image", this.imageurl);
       formData.append("amount", this.snacksform.value.amount);
-      formData.append("status", this.snacksform.value.status);
+      //formData.append("status", this.snacksform.value.status);
       url = "insert_snacks";
     }
     this.httpClient
@@ -214,10 +268,7 @@ export class SnacksForm {
     var formData = new FormData();
     formData.append("file", fileData);
     this.httpClient
-      .post(
-        "http://lemonandshadow.com/threelevel/api/v1/upload_file",
-        formData
-      )
+      .post("http://lemonandshadow.com/threelevel/api/v1/upload_file", formData)
       .subscribe(
         res => {
           this.loading = false;

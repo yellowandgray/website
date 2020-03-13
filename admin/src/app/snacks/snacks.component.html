@@ -10,7 +10,12 @@
         <mat-list>
             <ng-container *ngFor="let data of result">
                 <mat-list-item>
-                    <mat-slide-toggle #tooltip="matTooltip" matTooltip="Active Banner"></mat-slide-toggle>
+                    <section class="margin-right" fxLayoutAlign="start center" fxFlex="10%">
+                        <mat-checkbox #tooltip="matTooltip" matTooltip="Active Food" [checked]="data.status === '0' || data.status === 0 ? false : true" (change)="changeFoodStatus($event, data.fooditem_id,data)"></mat-checkbox>&nbsp;
+                        <mat-label *ngIf="data.status == 0">Active Food</mat-label>
+                        <mat-label *ngIf="data.status == 1">Deactive Food</mat-label>
+                    </section>
+                    <mat-slide-toggle [checked]="data.banner_status === '0' || data.banner_status === 0 ? false : true" #tooltip="matTooltip" matTooltip="Active Banner" (change)="changeFoodBannerStatus($event, data.fooditem_id)"></mat-slide-toggle>
                     <button mat-icon-button aria-label="label" (click)="openDialog(data.fooditem_id, 'result')">
                         <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
                     </button>
