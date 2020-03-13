@@ -16,7 +16,7 @@ $languages = $obj->selectAll('*', 'language', 'status = 1');
                         <div class="row">
                             <?php foreach ($languages as $val) { ?>
                                 <div class="span3">
-                                    <div class="language-box">
+                                    <div class="language-box" onclick="window.location = 'question-subject-order?lan=<?php echo $val['name']; ?>'">
                                         <div class="language-img" style="background: url(<?php echo BASE_URL . $val['imageurl']; ?>)no-repeat;"></div>
                                         <div class="language-title">
                                             <h3>

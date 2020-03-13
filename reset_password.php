@@ -25,7 +25,7 @@
             </div>
             <div class = 'control-group'>
                 <div class = 'controls'>
-                    <button type = 'submit' class = 'btn'>Reset password</button>
+                    <button type = 'submit' class = 'btn btn-custom'>Reset password</button>
                 </div>
 <!--                <p class = 'aligncenter margintop20'>
                     Please put your registered user name. you have reset the your password...

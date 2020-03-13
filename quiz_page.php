@@ -14,7 +14,7 @@ if ($_SESSION['student_selected_type'] == 'order') {
     $type = 'Question Order';
     $selyear = $obj->selectRow('*', 'year', 'year=\'' . $_GET['year'] . '\'');
     $_SESSION['student_selected_year_id'] = $selyear['year_id'];
-    $questions = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer, image_path, direction', 'question', 'topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $_SESSION['student_selected_language_id'] . ') AND year_id = ' . $_SESSION['student_selected_year_id'] . ' ORDER BY year_id ASC, topic_id ASC');
+//    $questions = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer, image_path, direction', 'question', 'topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $_SESSION['student_selected_language_id'] . ') AND year_id = ' . $_SESSION['student_selected_year_id'] . ' ORDER BY year_id ASC, topic_id ASC');
 }
 if ($_SESSION['student_selected_type'] == 'subject') {
     if (!isset($_GET['years'])) {
@@ -23,7 +23,7 @@ if ($_SESSION['student_selected_type'] == 'subject') {
     $type = 'Subject Order';
     $_SESSION['student_selected_years_id'] = $_GET['years'];
     //$questions = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer, image_path, direction', 'question', 'topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $_SESSION['student_selected_language_id'] . ' AND t.topic_id IN (' . $_SESSION['student_selected_topics_id'] . ') ORDER BY t.subject_id ASC) AND year_id IN (' . $_SESSION['student_selected_years_id'] . ') ORDER BY year_id ASC, topic_id ASC');
-    $questions = $obj->selectAll('question.name As name, a, b, c, d, UPPER(answer) AS answer, image_path, direction', 'question LEFT JOIN topic ON question.topic_id=topic.topic_id', 'question.topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $_SESSION['student_selected_language_id'] . ' AND t.topic_id IN (' . $_SESSION['student_selected_topics_id'] . ') ORDER BY t.subject_id ASC) AND year_id IN (' . $_SESSION['student_selected_years_id'] . ') ORDER BY subject_id ASC,question.topic_id ASC,year_id ASC');
+    $questions = $obj->selectAll('question.name As name, a, b, c, d, UPPER(answer) AS answer, image_path, direction, explanation, image_path_explanation, explanation_img_direction', 'question LEFT JOIN topic ON question.topic_id=topic.topic_id', 'question.topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $_SESSION['student_selected_language_id'] . ' AND t.topic_id IN (' . $_SESSION['student_selected_topics_id'] . ') ORDER BY t.subject_id ASC) AND year_id IN (' . $_SESSION['student_selected_years_id'] . ') ORDER BY subject_id ASC,question.topic_id ASC,year_id ASC');
 }
 
 $student = $obj->selectRow('*', 'student_register', 'student_register_id = ' . $_SESSION['student_register_id']);
@@ -33,6 +33,7 @@ if (count($questions) > 0) {
     foreach ($questions as $q) {
         $options = array();
         $showimg = false;
+        $show_img = false;
         array_push($options, array('text' => $q['a'], 'correct' => ($q['answer'] == 'A' ? true : false)));
         array_push($options, array('text' => $q['b'], 'correct' => ($q['answer'] == 'B' ? true : false)));
         if (isset($q['c'])) {
@@ -44,11 +45,18 @@ if (count($questions) > 0) {
         if ($q['image_path'] != '') {
             $showimg = true;
         }
+        if ($q['image_path_explanation'] != '') {
+            $show_img = true;
+        }
         array_push($questions_list, array(
             'text' => $q['name'],
             'direction' => $q['direction'],
             'image_path' => $q['image_path'],
             'show_image' => $showimg,
+            'show_image_explanation' => $show_img,
+            'explanation' => $q['explanation'],
+            'image_path_explanation' => $q['image_path_explanation'],
+            'explanation_img_direction' => $q['explanation_img_direction'],
             'responses' => $options
         ));
     }
@@ -152,23 +160,33 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                 </div>
                                 <!-- quizOptions -->
                                 <div class="optionContainer">
-                                    <div id="two" class="option" v-for="(response, index) in quiz.questions[questionIndex].responses" @click="selectOption(index)" :class="{ 'is-selected': userResponses[questionIndex] == index}" :key="index">
-                                         <span class="q-option">{{ index | charIndex }}.</span> {{ response.text }} {{response.show_image}}
+                                    <div id="two" class="option" v-for="(response, index) in quiz.questions[questionIndex].responses" @click="selectOption(index)" :class="{ 'is-selected': userResponses[questionIndex] == index}" :key="index" v-if="response.text != ''">
+                                         <span class="q-option">{{ index | charIndex }}.&nbsp;</span> <span v-html="response.text"></span>
                                     </div>
                                 </div>
-                                <!--                            <footer class="questionFooter">
-                                                                <nav class="pagination" role="navigation" aria-label="pagination">
-                                                                                                        <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">
-                                                                                                           Back
-                                                                                                    </a>
-                                                                    <a class="btn btn-green" href="select_language">
-                                                                        Home
-                                                                    </a>
-                                                                    <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
-                                                                        {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}
-                                                                    </a>
-                                                                </nav>
-                                                            </footer>-->
+                                <footer class="questionFooter">
+                                    <div class="question-explanation">
+                                        <h4>Explanation:</h4>
+                                        <div v-if="quiz.questions[questionIndex].show_image_explanation" class="text-center">
+                                            <img v-if="quiz.questions[questionIndex].explanation_img_direction == 'top'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
+                                        </div>
+                                        <span v-html="quiz.questions[questionIndex].explanation"></span>
+                                        <div v-if="quiz.questions[questionIndex].show_image_explanation" class="text-center">
+                                            <img v-if="quiz.questions[questionIndex].explanation_img_direction == 'buttom'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
+                                        </div>
+                                    </div>
+<!--                                    <nav class="pagination" role="navigation" aria-label="pagination">
+                                        <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">
+                                           Back
+                                    </a>
+                                    <a class="btn btn-green" href="select_language">
+                                        Home
+                                    </a>
+                                    <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
+                                        {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}
+                                    </a>
+                                    </nav>-->
+                                </footer>
                             </div>
                             <!--quizCompletedResult-->
                             <div v-if="questionIndex >= quiz.questions.length" v-bind:key="questionIndex" class="quizCompleted has-text-centered">

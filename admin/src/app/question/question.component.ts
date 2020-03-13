@@ -84,9 +84,9 @@ getTopicBySubject(): void {
           );
       }
       getQuestionsByTopic(ev): void {
-     //var tid = this.topic[ev.index].topic_id;
+     //var tid = this.topic[ev.value].topic_id;
      var tid = ev.value;
-    // this.selected_topic_index = ev.index;
+    this.selected_topic_index = ev.value;
      this.httpClient
        .get<any>(
         "http://localhost/project/exam-horse/api/v1/get_question_by_topic_n_year/" +tid
@@ -155,7 +155,7 @@ getTopicBySubject(): void {
 
     dialogRef.afterClosed().subscribe(result => {
       if (result !== false && result !== "false") {
-        //this.getQuestionsByTopic();
+        this.getQuestionsByTopic({ value: this.selected_topic_index });
       }
     });
   }
@@ -172,7 +172,7 @@ getTopicBySubject(): void {
     });
     dialogRef.afterClosed().subscribe(result => {
       if (result !== false && result !== "false") {
-        this.getQuestionsByTopic({ index: this.selected_topic_index });
+        this.getQuestionsByTopic({ value: this.selected_topic_index });
       }
     });
   }
@@ -238,7 +238,7 @@ export class QuestionForm {
       topic_id: new FormControl("", Validators.required),
       question: new FormControl("", Validators.required),
       question_no: new FormControl("", Validators.required),
-      direction: new FormControl("", Validators.required),
+      direction: new FormControl(""),
       year_id: new FormControl("", Validators.required),
       a: new FormControl("", Validators.required),
       b: new FormControl("", Validators.required),
@@ -275,24 +275,6 @@ export class QuestionForm {
       this.image_path = this.data.image_path;
       this.image_path_explanation = this.data.image_path_explanation;
     }
-    // this.httpClient
-    //   .get("http://localhost/project/exam-horse/api/v1/get_topic_by_lng_year")
-    //   .subscribe(
-    //     res => {
-    //       if (res["result"]["error"] === false) {
-    //         this.topic = res["result"]["data"];
-    //       } else {
-    //         this._snackBar.open(res["result"]["message"], "", {
-    //           duration: 2000
-    //         });
-    //       }
-    //     },
-    //     error => {
-    //       this._snackBar.open(error["statusText"], "", {
-    //         duration: 2000
-    //       });
-    //     }
-    //   );
     this.httpClient
       .get("http://localhost/project/exam-horse/api/v1/get_topic")
       .subscribe(
@@ -365,10 +347,7 @@ export class QuestionForm {
       formData.append("answer", this.questionForm.value.answer);
       formData.append("explanation", this.questionForm.value.explanation);
       formData.append('explanation_img_direction', this.questionForm.value.explanation_img_direction);
-      formData.append(
-        "data_dictionary",
-        this.questionForm.value.data_dictionary
-      );
+      formData.append("data_dictionary", this.questionForm.value.data_dictionary);
       formData.append("page_no", this.questionForm.value.page_no);
       formData.append("book_id", this.questionForm.value.book_id);
       formData.append("notes", this.questionForm.value.notes);
@@ -388,10 +367,7 @@ export class QuestionForm {
       formData.append("answer", this.questionForm.value.answer);
       formData.append("explanation", this.questionForm.value.explanation);
       formData.append('explanation_img_direction', this.questionForm.value.explanation_img_direction);
-      formData.append(
-        "data_dictionary",
-        this.questionForm.value.data_dictionary
-      );
+      formData.append("data_dictionary", this.questionForm.value.data_dictionary);
       formData.append("page_no", this.questionForm.value.page_no);
       formData.append("book_id", this.questionForm.value.book_id);
       formData.append("notes", this.questionForm.value.notes);
@@ -535,45 +511,85 @@ removeMedia1(url) {
     toolbarPosition: "top"
   };
   editorOptionConfig: AngularEditorConfig = {
-    editable: true,
-    spellcheck: true,
-    height: "20px",
-    minHeight: "20px",
-    maxHeight: "20px",
-    width: "auto",
-    minWidth: "0",
-    translate: "no",
-    enableToolbar: true,
-    showToolbar: false,
-    placeholder: "Enter text here...",
-    defaultParagraphSeparator: "",
-    defaultFontName: "Arial",
-    defaultFontSize: "3",
-    fonts: [
-      { class: "arial", name: "Arial" },
-      { class: "times-new-roman", name: "Times New Roman" },
-      { class: "calibri", name: "Calibri" },
-      { class: "comic-sans-ms", name: "Comic Sans MS" }
-    ],
-    customClasses: [
-      {
-        name: "quote",
-        class: "quote"
-      },
-      {
-        name: "redText",
-        class: "redText"
-      },
-      {
-        name: "titleText",
-        class: "titleText",
-        tag: "h1"
-      }
-    ],
-    uploadUrl: "http://localhost/project/exam-horse/api/v1/upload_image",
-    sanitize: true,
-    toolbarPosition: "top"
-  };
+        editable: true,
+        spellcheck: true,
+        height: '20px',
+        minHeight: '20px',
+        maxHeight: '20px',
+        width: 'auto',
+        minWidth: '0',
+        translate: 'no',
+        enableToolbar: true,
+        showToolbar: false,
+        placeholder: 'Enter text here...',
+        defaultParagraphSeparator: '',
+        defaultFontName: 'Arial',
+        defaultFontSize: '3',
+        fonts: [
+            { class: 'arial', name: 'Arial' },
+            { class: 'times-new-roman', name: 'Times New Roman' },
+            { class: 'calibri', name: 'Calibri' },
+            { class: 'comic-sans-ms', name: 'Comic Sans MS' }
+        ],
+        customClasses: [
+            {
+                name: 'quote',
+                class: 'quote',
+            },
+            {
+                name: 'redText',
+                class: 'redText'
+            },
+            {
+                name: 'titleText',
+                class: 'titleText',
+                tag: 'h1',
+            },
+        ],
+        uploadUrl: 'http://localhost/project/exam-horse/api/v1/upload_image',
+        sanitize: true,
+        toolbarPosition: 'top',
+    };
+  editorExplanationConfig: AngularEditorConfig = {
+        editable: true,
+        spellcheck: true,
+        height: '100px',
+        minHeight: '100px',
+        maxHeight: '100px',
+        width: 'auto',
+        minWidth: '0',
+        translate: 'no',
+        enableToolbar: true,
+        showToolbar: true,
+        placeholder: 'Enter text here...',
+        defaultParagraphSeparator: '',
+        defaultFontName: 'Arial',
+        defaultFontSize: '3',
+        fonts: [
+            { class: 'arial', name: 'Arial' },
+            { class: 'times-new-roman', name: 'Times New Roman' },
+            { class: 'calibri', name: 'Calibri' },
+            { class: 'comic-sans-ms', name: 'Comic Sans MS' }
+        ],
+        customClasses: [
+            {
+                name: 'quote',
+                class: 'quote',
+            },
+            {
+                name: 'redText',
+                class: 'redText'
+            },
+            {
+                name: 'titleText',
+                class: 'titleText',
+                tag: 'h1',
+            },
+        ],
+        uploadUrl: 'http://localhost/project/exam-horse/api/v1/upload_image',
+        sanitize: true,
+        toolbarPosition: 'top',
+    };
 }
 
 @Component({
