@@ -314,7 +314,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
         <?php include 'footer.php'; ?>
         <?php include 'script.php'; ?>
         <script>
-            image_url = 'http://localhost/project/examhorse/api/v1/';
+            image_url = 'http://localhost/project/exam-horse/api/v1/';
             console.log(<?php echo json_encode($questions_list); ?>);
             var quiz = {
                 user: "<?php echo $student['student_name']; ?>",
