@@ -144,7 +144,7 @@ $app->post('/insert_snacks', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('name' => $data['name'], 'amount' => $data['amount'], 'imageurl' => $data['product_image'], 'unit_id' => $data['unit_id'], 'unit_no' => $data['unit_no']), 'fooditems');
+    $record = $com->insertRecord(array('name' => $data['name'], 'amount' => $data['amount'], 'imageurl' => $data['product_image'], 'unit_id' => $data['unit_id'], 'unit_no' => $data['unit_no']), 'fooditem');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';

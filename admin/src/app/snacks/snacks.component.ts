@@ -315,7 +315,7 @@ export class SnacksDelete {
     this.loading = true;
     this.httpClient
       .get(
-        "http://lemonandshadow.com/threelevel/api/v1/delete_record/fooditems/fooditem_id=" +
+        "http://lemonandshadow.com/threelevel/api/v1/delete_record/fooditem/fooditem_id=" +
           this.fooditem_id
       )
       .subscribe(
