@@ -8,6 +8,13 @@ if (!isset($_SESSION['student_selected_type']) || !isset($_SESSION['student_regi
     header('Location: qorder-years');
 }
 if ($_SESSION['student_selected_type'] == 'order') {
+    if(isset($_SESSION['student_selected_topics_id'])) { 
+        unset($_SESSION['student_selected_topics_id']);
+    }
+    if(isset($_SESSION['student_selected_years_id'])) { 
+        unset($_SESSION['student_selected_years_id']);
+    }
+    
     if (!isset($_GET['year'])) {
         header('Location: qorder-years');
     }
@@ -17,6 +24,9 @@ if ($_SESSION['student_selected_type'] == 'order') {
     $questions = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer, image_path, direction', 'question', 'topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $_SESSION['student_selected_language_id'] . ') AND year_id = ' . $_SESSION['student_selected_year_id'] . ' ORDER BY year_id ASC, topic_id ASC');
 }
 if ($_SESSION['student_selected_type'] == 'subject') {
+    if(isset($_SESSION['student_selected_year_id'])) { 
+        unset($_SESSION['student_selected_year_id']);
+    }
     if (!isset($_GET['years'])) {
         header('Location: subject-years?topics=' . $_SESSION['student_selected_topics_id']);
     }
@@ -54,22 +64,27 @@ if (count($questions) > 0) {
     }
 }
 
-$subj_topic = $obj->selectAll('t.*,s.name As subject', ' topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id', ' t.topic_id IN (' . $_SESSION['student_selected_topics_id'] . ')  ORDER BY subject_id, topic_id ASC');
-$sub_topic_val = '';
-if (count($subj_topic) > 0) {
-    $sub_topic_arr = array();
-    foreach ($subj_topic as $val) {
-        $sub_topic_arr[$val['subject']][] = $val['name'];
-    }
-
-    foreach ($sub_topic_arr as $stak => $stav) {
-        if ($sub_topic_val != '') {
-            $sub_topic_val .= ', ';
+if(isset($_SESSION['student_selected_topics_id']) && ($_SESSION['student_selected_topics_id']!='')) {
+    $subj_topic = $obj->selectAll('t.*,s.name As subject', ' topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id', ' t.topic_id IN (' . $_SESSION['student_selected_topics_id'] . ')  ORDER BY subject_id, topic_id ASC');
+    $sub_topic_val = '';
+    if (count($subj_topic) > 0) {
+        $sub_topic_arr = array();
+        foreach ($subj_topic as $val) {
+            $sub_topic_arr[$val['subject']][] = $val['name'];
         }
-        $sub_topic_val .= $stak;
-        $sub_topic_val .= ' (' . implode(', ', $stav) . ') ';
+
+        foreach ($sub_topic_arr as $stak => $stav) {
+            if ($sub_topic_val != '') {
+                $sub_topic_val .= ', ';
+            }
+            $sub_topic_val .= $stak;
+            $sub_topic_val .= ' (' . implode(', ', $stav) . ') ';
+        }
     }
 }
+
+
+
 
 $sel_year_val = '';
 if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selected_years_id'] != '')) {
@@ -81,6 +96,9 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
         }
         $sel_year_val = implode(', ', $selyearr);
     }
+}else if(isset($_SESSION['student_selected_year_id']) && ($_SESSION['student_selected_year_id'] != '')) {
+    $yearres        = $obj->selectRow('year', 'year', ' year_id = ' . $_SESSION['student_selected_year_id']);
+    $sel_year_val    = $yearres['year'];
 }
 ?>
 <!DOCTYPE html>
@@ -110,11 +128,13 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                         <td valign="top" class="w-5">:</td>
                                         <th valign="top"><?php echo $type; ?></th>
                                     </tr>
+                                    <?php if(isset($_SESSION['student_selected_topics_id']) && ($_SESSION['student_selected_topics_id']!='')) { ?>
                                     <tr>
                                         <td valign="top">Selected Subject and Topics</td>
                                         <td valign="top" class="w-5">:</td>
                                         <th valign="top"><?php echo $sub_topic_val; ?></th>
                                     </tr>
+                                    <?php } ?>
                                     <tr>
                                         <td valign="top">Selected Year</td>
                                         <td valign="top" class="w-5">:</td>
