@@ -83,97 +83,87 @@ if (count($questions) > 0) {
                             </a>
                         </div>
                         <!--question Box-->
-                        
+
                         <div class="questionBox" id="app">
-                            <!--qusetionContainer-->
-                            <div class="questionContainer" v-if="questionIndex<quiz.questions.length" v-bind:key="questionIndex">
-                                <div class="question-header">
-                                    <!--progress-->
-                                    <div class="progressContainer">
-                                        
-                                        
-                                        <h1 class="title is-6"><?php echo $topic['name']; ?></h1> 
-                                        <progress class="progress is-info is-small" :value="(questionIndex/quiz.questions.length)*100" max="100">{{(questionIndex/quiz.questions.length)*100}}%</progress>
-                                        <div class="lenth_width">
-                                            <span  class="label lable-blue">Total: {{quiz.questions.length}}</span>
-                                            <span class="label label-success">Answered: {{((quiz.questions.length)-(quiz.questions.length-questionIndex))}}</span>
+                            <?php if (count($questions) > 0) { ?>
+                                <div class="questionContainer" v-if="questionIndex<quiz.questions.length" v-bind:key="questionIndex">
+                                    <div class="question-header">
+                                        <!--progress-->
+                                        <div class="progressContainer">
+                                            <h1 class="title is-6"><?php echo $topic['name']; ?></h1>
+                                            <progress class="progress is-info is-small" :value="(questionIndex/quiz.questions.length)*100" max="100">{{(questionIndex/quiz.questions.length)*100}}%</progress>
+                                            <div class="lenth_width">
+                                                <span  class="label lable-blue">Total: {{quiz.questions.length}}</span>
+                                                <span class="label label-success">Answered: {{((quiz.questions.length)-(quiz.questions.length-questionIndex))}}</span>
+                                            </div>
                                         </div>
                                     </div>
-                                    <!--/progress-->
+                                    <div v-if="quiz.questions[questionIndex].show_image" class="text-center">
+                                        <img v-if="quiz.questions[questionIndex].direction == 'top'" v-bind:src="'../api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />
+                                    </div>
+
+                                    <h2 class="titleContainer title">{{questionIndex + 1}}. <span v-html="quiz.questions[questionIndex].text"></span></h2>
+                                    <div v-if="quiz.questions[questionIndex].show_image" class="text-center">
+                                        <img v-if="quiz.questions[questionIndex].direction == 'bottom'" v-bind:src="'../api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />
+                                    </div>
+                                    <div class="optionContainer">
+                                        <div class="option" v-for="(response, index) in quiz.questions[questionIndex].responses" @click="selectOption(index)" :class="{ 'is-selected': userResponses[questionIndex] == index}" :key="index" v-if="response.text != ''">
+                                             <span class="q-option">{{ index | charIndex }}.&nbsp; </span> <span v-html="response.text"></span>
+                                        </div>
+                                    </div>
+                                    <!--                                <footer class="questionFooter">
+                                    
+                                                                        pagination
+                                                                        <nav class="pagination" role="navigation" aria-label="pagination">
+                                    
+                                                                             back button 
+                                                                                                                <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">
+                                                                                                                   Back
+                                                                                                            </a>
+                                                                            <a class="btn btn-green" href="select_language">
+                                                                                Home
+                                                                            </a>
+                                    
+                                                                             next button 
+                                                                            <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
+                                                                                {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}
+                                                                            </a>
+                                    
+                                                                        </nav>
+                                                                        /pagination
+                                    
+                                                                    </footer>-->
                                 </div>
-                                <!-- questionTitle -->
-                                <div v-if="quiz.questions[questionIndex].show_image" class="text-center">
-                                    <img v-if="quiz.questions[questionIndex].direction == 'top'" v-bind:src="'../api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />
-                                </div>
-                                
-                                <h2 class="titleContainer title">{{questionIndex + 1}}. <span v-html="quiz.questions[questionIndex].text"></span></h2>
-                                <div v-if="quiz.questions[questionIndex].show_image" class="text-center">
-                                    <img v-if="quiz.questions[questionIndex].direction == 'bottom'" v-bind:src="'../api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />
-                                </div>
-                                
-                                <!-- quizOptions -->
-                                <div class="optionContainer">
-                                    <div class="option" v-for="(response, index) in quiz.questions[questionIndex].responses" @click="selectOption(index)" :class="{ 'is-selected': userResponses[questionIndex] == index}" :key="index" v-if="response.text != ''">
-                                         <span class="q-option">{{ index | charIndex }}.&nbsp; </span> <span v-html="response.text"></span>
+                                <div v-if="questionIndex >= quiz.questions.length" v-bind:key="questionIndex" class="quizCompleted has-text-centered">
+
+                                    <!-- quizCompletedIcon: Achievement Icon -->
+                                    <span class="icon">
+                                        <i class="fa" :class="score()>3?'fa-check-circle-o is-active':'fa-times-circle'"></i>
+                                    </span>
+
+                                    <!--resultTitleBlock-->
+                                    <h2 class="complete-title" v-if="score() == quiz.questions.length">
+                                        Congratulations! You have answered everything right!!!
+                                    </h2>
+                                    <h2 class="complete-title" v-if="score() != quiz.questions.length">
+                                        Test Completed
+                                    </h2>
+                                    <p class="subtitle">
+                                        Total Score: <span class="score-clr">{{ score() }}</span> / {{ quiz.questions.length }}
+                                    </p>
+                                    <div class="quiz-btn">
+                                        <a class="btn btn-theme btn-rounded" @click="restart()">Restart <i class="fa fa-refresh"></i></a>
+                                        <a class="btn btn-theme btn-rounded" onclick="window.location = 'home_subject'">Home <i class="fa fa-refresh"></i></a>
+                                        <a @click="divshow()" class="btn btn-theme btn-rounded">Show Full Result <i class="fa fa-refresh"></i></a>
                                     </div>
                                 </div>
-                                
-                                <!--quizFooter: navigation and progress-->
-                                <!--                                <footer class="questionFooter">
-                                
-                                                                    pagination
-                                                                    <nav class="pagination" role="navigation" aria-label="pagination">
-                                
-                                                                         back button 
-                                                                                                            <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">
-                                                                                                               Back
-                                                                                                        </a>
-                                                                        <a class="btn btn-green" href="select_language">
-                                                                            Home
-                                                                        </a>
-                                
-                                                                         next button 
-                                                                        <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
-                                                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}
-                                                                        </a>
-                                
-                                                                    </nav>
-                                                                    /pagination
-                                
-                                                                </footer>-->
-                                <!--/quizFooter-->
-                            </div>
-                            <!--/questionContainer-->
-                            <!--quizCompletedResult-->
-                            <div v-if="questionIndex >= quiz.questions.length" v-bind:key="questionIndex" class="quizCompleted has-text-centered">
-
-                                <!-- quizCompletedIcon: Achievement Icon -->
-                                <span class="icon">
-                                    <i class="fa" :class="score()>3?'fa-check-circle-o is-active':'fa-times-circle'"></i>
-                                </span>
-
-                                <!--resultTitleBlock-->
-                                <h2 class="complete-title" v-if="score() == quiz.questions.length">
-                                    Congratulations! You have answered everything right!!!
-                                </h2>
-                                <h2 class="complete-title" v-if="score() != quiz.questions.length">
-                                    Test Completed
-                                </h2>
-                                <p class="subtitle">
-                                    Total Score: <span class="score-clr">{{ score() }}</span> / {{ quiz.questions.length }}
-                                </p>
-                                <div class="quiz-btn">
-                                    <a class="btn btn-theme btn-rounded" @click="restart()">Restart <i class="fa fa-refresh"></i></a>
-                                    <a class="btn btn-theme btn-rounded" onclick="window.location = 'home_subject'">Home <i class="fa fa-refresh"></i></a>
-                                    <a @click="divshow()" class="btn btn-theme btn-rounded">Show Full Result <i class="fa fa-refresh"></i></a>
-                                    <!--/resultTitleBlock-->
-
+                            <?php } else { ?>
+                                <div class="text-center no-count-page">
+                                    <h6>No Questions on This Topics</h6>
+                                    <span onclick="window.location = 'home_subject'">Back to Home</span>
                                 </div>
-                            </div>
-                            <!--/quizCompetedResult-->
-                            <!-- 		</transition> -->
+                            <?php } ?>
                         </div>
-                        <!-- question Box -->
                         <div id="create" class="quiz-result" style="display: none;">
                             <h1 class="title is-6">Selected Topic: <?php echo $topic['name']; ?></h1>
                             <div id="question_list"></div>
@@ -269,7 +259,8 @@ if (count($questions) > 0) {
                                                 student_ans = 'wrng_clr';
                                             }
                                             qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">D.</span> ' + val.d + '</div></div>';
-                                        }if (val.image_path_explanation !== '' && val.explanation_img_direction !== 'bottom') {
+                                        }
+                                        if (val.image_path_explanation !== '' && val.explanation_img_direction !== 'bottom') {
                                             qlist = qlist + '<div class="explanation_image"><img src="' + image_url + val.image_path_explanation + '"></div>';
                                         } else {
                                             qlist = qlist + '';

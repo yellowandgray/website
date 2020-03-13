@@ -47,8 +47,8 @@ $_SESSION['selected_chapter_id'] = $chapter['chapter_id'];
                                 </a>
                             </div>
                             <div class="topic_section_1">
-                                <p class="m-b-0 f-s-18 clr-g">Select Topic</p>
                                 <?php if (count($topics) > 0) { ?>
+                                <p class="m-b-0 f-s-18 clr-g">Select Topic</p>
                                     <?php foreach ($topics as $row) { ?>
                                         <div class="topic_list_section">
                                             <div class="topic_list_position_left">
@@ -60,8 +60,13 @@ $_SESSION['selected_chapter_id'] = $chapter['chapter_id'];
                                         </div>
                                         <?php
                                     }
-                                }
+                                } else {
                                 ?>
+                                    <div class="text-center no-count-page">
+                                        <h6>No Topics on This Chapter</h6>
+                                        <span onclick="window.location = 'home_subject'">Back to Home</span>
+                                    </div>
+                                <?php } ?>
                             </div>
                         </div>
                     </div>

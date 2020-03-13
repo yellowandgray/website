@@ -89,10 +89,10 @@
             <button mat-icon-button aria-label="label" (click)="confirmDelete(data.question_id)">
                 <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
             </button>
-            <img [src]="image_url + data.image_path" alt="image" *ngIf="data.image_path != '' && data.direction == 'top'" />
-                <p mat-line class='question-bottom'>{{data.question_no}}. <span class="question" [innerHTML]="data.name"></span></p>
+            <img mat-line [src]="image_url + data.image_path" alt="image" *ngIf="data.image_path != '' && data.direction == 'top'" />
+                <p mat-line class='question-bottom'>{{data.question_no}}. <span [innerHTML]="data.name"></span></p>
             <img mat-line [src]="image_url + data.image_path" alt="image" *ngIf="data.image_path != '' && data.direction == 'bottom'" style="width: 15%" />
-                 <p mat-line>A. <span [innerHTML]="data.a"></span></p>
+            <p mat-line>A. <span [innerHTML]="data.a"></span></p>
             <p mat-line>B. <span [innerHTML]="data.b"></span></p>
             <p mat-line *ngIf="data.c != ''">C. <span [innerHTML]="data.c"></span></p>
             <p mat-line *ngIf="data.d != ''">D. <span [innerHTML]="data.d"></span></p>

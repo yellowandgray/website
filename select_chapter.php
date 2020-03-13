@@ -44,14 +44,21 @@ $_SESSION['selected_difficult_id'] = $difficult['difficult_id'];
                         </div>
                         <div class="modal-body">
                             <div class="language_section">
-                                <p class="m-b-0 f-s-18 clr-g">Select Chapter</p>
-                                <ul>
-                                    <?php foreach ($chapters as $row) { ?>
-                                        <li><i class="icon-double-angle-right"></i> 
-                                            <a href="topic_page?chapter=<?php echo $row['name']; ?>"><?php echo $row['name']; ?></a>
-                                        </li>
-                                    <?php } ?>
-                                </ul>
+                                <?php if (count($chapters) > 0) { ?>
+                                    <p class="m-b-0 f-s-18 clr-g">Select Chapter</p>
+                                    <ul>
+                                        <?php foreach ($chapters as $row) { ?>
+                                            <li><i class="icon-double-angle-right"></i> 
+                                                <a href="topic_page?chapter=<?php echo $row['name']; ?>"><?php echo $row['name']; ?></a>
+                                            </li>
+                                        <?php } ?>
+                                    </ul>                                
+                                <?php } else { ?>
+                                    <div class="text-center no-count-page">
+                                        <h6>No Chpter on This Subject</h6>
+                                        <span onclick="window.location = 'home_subject'">Back to Home</span>
+                                    </div>
+                                <?php } ?>
                             </div>
                         </div>
                     </div>

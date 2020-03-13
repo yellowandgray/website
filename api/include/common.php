@@ -42,7 +42,7 @@ class Common {
     }
 
     public function updateRecord($fields, $table, $where) {
-        $this->conn->query('UPDATE ' . $table . ' SET ' . $fields . ' WHERE ' . $where);
+        $this->conn->query('UPDATE `' . $table . '` SET ' . $fields . ' WHERE ' . $where);
         return $this->conn->affected_rows;
     }
 

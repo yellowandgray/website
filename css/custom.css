@@ -1063,3 +1063,14 @@ and open the template in the editor.
     position: relative;
     top: 25px;
 }
+
+.no-count-page h6 {
+    margin: 5px 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.no-count-page span {
+    cursor: pointer;
+    color: #F03C02;
+}
