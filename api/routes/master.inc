@@ -283,6 +283,18 @@ $app->get('/get_year', function() {
     echoRespnse(201, $res);
 });
 
+$app->get('/get_year_by_question/:qid', function($qid) {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('*', 'year', 'question_id = ' . $qid);
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
 $app->get('/get_year_by_language/:lid', function($lid) {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
