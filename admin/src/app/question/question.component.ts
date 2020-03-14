@@ -45,7 +45,7 @@ export class QuestionComponent implements OnInit {
       .subscribe(
         res => {
           this.language = res["result"]["data"];
-          this.selected_language = res["result"]["data"][0]["language_id"];
+          //this.selected_language = res["result"]["data"][0]["language_id"];
           this.getYearByLanguage();
         },
         error => {

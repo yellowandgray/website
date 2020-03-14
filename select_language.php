@@ -13,7 +13,7 @@ $languages = $obj->selectAll('*', 'language', 'status = 1');
             <section class="language-section">
                 <div class="container">
                     <div class="language-main-title">
-                        <h4>Group-1 Exam</h4>
+                        <h4>Group-I Exams</h4>
                     </div>
                     <div class="language-width">
                         <div class="row">
