@@ -241,7 +241,7 @@ if (isset($_SESSION['student_register_id'])) {
                                     if ((val.student_answer).toUpperCase() === 'A' && (val.answer).toUpperCase() !== 'A') {
                                         student_ans = 'wrng_clr';
                                     }
-                                    qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="option-float">A.</span> <span class="float-left">' + val.a + '</span></div></div>';
+                                    qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="option-float">A. </span> <span class="float-left">' + val.a + '</span></div></div>';
                                 }
                                 if (val.b !== '') {
                                     correct_ans = '';
@@ -252,7 +252,7 @@ if (isset($_SESSION['student_register_id'])) {
                                     if ((val.student_answer).toUpperCase() === 'B' && (val.answer).toUpperCase() !== 'B') {
                                         student_ans = 'wrng_clr';
                                     }
-                                    qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="option-float">B.</span> ' + val.b + '</div></div>';
+                                    qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="option-float">B. </span> ' + val.b + '</div></div>';
                                 }
                                 if (val.c !== '') {
                                     correct_ans = '';
@@ -263,7 +263,7 @@ if (isset($_SESSION['student_register_id'])) {
                                     if ((val.student_answer).toUpperCase() === 'C' && (val.answer).toUpperCase() !== 'C') {
                                         student_ans = 'wrng_clr';
                                     }
-                                    qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="option-float">C.</span> ' + val.c + '</div></div>';
+                                    qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="option-float">C. </span> ' + val.c + '</div></div>';
                                 }
                                 if (val.d !== '') {
                                     correct_ans = '';
@@ -274,7 +274,7 @@ if (isset($_SESSION['student_register_id'])) {
                                     if ((val.student_answer).toUpperCase() === 'D' && (val.answer).toUpperCase() !== 'D') {
                                         student_ans = 'wrng_clr';
                                     }
-                                    qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="option-float">D.</span> ' + val.d + '</div></div>';
+                                    qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="option-float">D. </span> ' + val.d + '</div></div>';
                                 }
                                 if (val.image_path_explanation !== '' && val.explanation_img_direction === 'top') {
                                     qlist = qlist + '<div class="explanation_image"><img src="' + image_url + val.image_path_explanation + '"></div>';
