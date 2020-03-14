@@ -17,7 +17,6 @@ $app->post('/login', function() use ($app) {
         $user = $obj->selectRow('*', 'user', 'BINARY username=\'' . $data['username'] . '\' AND BINARY password=\'' . $data['password'] . '\'');
         if (count($user) > 0) {
             $res['error'] = false;
-            $user['role'] = 'user';
             $res['message'] = 'Welcome, ' . $user['name'];
             $res['data'] = $user;
         }
@@ -43,6 +42,33 @@ $app->get('/get_users', function() {
 });
 
 // Get user list end
+//
+//
+// Get user list by role start
+
+$app->get('/get_users_by_role/:role/:uid', function($role, $uid) {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = null;
+    if ($role == 'supervisor') {
+        $data = $com->selectAll('*', 'user', 'user_id > 0 AND supervisor_id = ' . $uid);
+    } else {
+        $records = $com->selectAll('u.*, IFNULL(sr.name, \'Other\') AS supervisor', 'user AS u LEFT JOIN user AS sr ON sr.user_id = u.supervisor_id', 'u.user_id > 0 AND u.role != \'supervisor\'');
+        if (count($records) > 0) {
+            foreach ($records as $row) {
+                $data[$row['supervisor']][] = $row;
+            }
+        }
+    }
+    if ($data != null) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+// Get user list by role end
 //
 //
 // Add user start
@@ -230,38 +256,46 @@ $app->get('/get_visit_report/:from/:to', function($from, $to) {
 // Set some content to print
         $html = '<table style="width: 100%; font-size: 12px;" cellspacing="5">'
                 . '<tr>'
-                . '<th>Sl. No.</th>'
-                . '<th>Name</th>'
-                . '<th>Image</th>'
-                . '<th>NRI No.</th>'
-                . '<th>Phone</th>'
-                . '<th>Company</th>'
-                . '<th>In</th>'
-                . '<th>In Temperature</th>'
-                . '<th>In Remark</th>'
-                . '<th>Out</th>'
-                . '<th>Out Temperature</th>'
-                . '<th>Out Remark</th>'
+                . '<th color="#FF0000">Sl. No.</th>'
+                . '<th color="#FF0000">Name</th>'
+                . '<th color="#FF0000">NRIC No.</th>'
+                . '<th color="#FF0000">Phone</th>'
+                . '<th color="#FF0000">Company</th>'
+                . '<th color="#FF0000">In-Time Temperature</th>'
+                . '<th color="#FF0000">In Remark</th>'
+                . '<th color="#FF0000">Out-Time Temperature</th>'
+                . '<th color="#FF0000">Out Remark</th>'
                 . '</tr>';
         foreach ($data as $index => $row) {
             $path = '1.jpg';
             if ($row['image_path'] != '') {
                 $path = $row['image_path'];
             }
-            $html = $html . '<tr>'
-                    . '<td>' . ($index + 1) . '</td>'
-                    . '<td>' . $row['name'] . '</td>'
-                    . '<td><img src="' . BASE_URL . $path . '" alt="image" style="width: 30px; height: 30px;" /></td>'
-                    . '<th>' . $row['nri_no'] . '</th>'
-                    . '<td>' . $row['phone_no'] . '</td>'
-                    . '<td>' . $row['company_name'] . '</td>'
-                    . '<td>' . date('d-M-Y h:iA', strtotime($row['in_datetime'])) . '</td>'
-                    . '<td>' . $row['in_temperature'] . '</td>'
-                    . '<td>' . $row['user_remarksin'] . '</td>'
-                    . '<td>' . date('d-M-Y h:iA', strtotime($row['out_datetime'])) . '</td>'
-                    . '<td>' . $row['out_temperature'] . '</td>'
-                    . '<td>' . $row['user_remarksout'] . '</td>'
-                    . '</tr>';
+            if ($row['out_temperature'] == '' || $row['out_temperature'] == null) {
+                $html = $html . '<tr>'
+                        . '<td>' . ($index + 1) . '</td>'
+                        . '<td>' . $row['name'] . '</td>'
+                        . '<th>' . $row['nri_no'] . '</th>'
+                        . '<td>' . $row['phone_no'] . '</td>'
+                        . '<td>' . $row['company_name'] . '</td>'
+                        . '<td>' . "<b>" . $row['in_temperature'] . "째C" . "</b>" . "<br/>" . date('d-M-Y H:i:s', strtotime($row['in_datetime'])) . '</td>'
+                        . '<td>' . $row['user_remarksin'] . '</td>'
+                        . '<td>' . "<b>" . "----" . "</b>" . "<br/>" . "----" . '</td>'
+                        . '<td>' . $row['user_remarksout'] . '</td>'
+                        . '</tr>';
+            } else {
+                $html = $html . '<tr>'
+                        . '<td>' . ($index + 1) . '</td>'
+                        . '<td>' . $row['name'] . '</td>'
+                        . '<th>' . $row['nri_no'] . '</th>'
+                        . '<td>' . $row['phone_no'] . '</td>'
+                        . '<td>' . $row['company_name'] . '</td>'
+                        . '<td>' . "<b>" . $row['in_temperature'] . "째C" . "</b>" . "<br/>" . date('d-M-Y H:i:s', strtotime($row['in_datetime'])) . '</td>'
+                        . '<td>' . $row['user_remarksin'] . '</td>'
+                        . '<td>' . "<b>" . $row['out_temperature'] . "째C" . "</b>" . "<br/>" . date('d-M-Y H:i:s', strtotime($row['out_datetime'])) . '</td>'
+                        . '<td>' . $row['user_remarksout'] . '</td>'
+                        . '</tr>';
+            }
         }
         $html = $html . '</table>';
 // Print text using writeHTMLCell()
