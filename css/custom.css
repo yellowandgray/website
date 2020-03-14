@@ -837,8 +837,9 @@ and open the template in the editor.
 
 .logout-btn:hover{
     opacity: 1;
-    background: #003bb3;
+    background: #f03c02;
     color: #ffffff;
+    opacity: 1;
 }
 
 .menu-bar i {
