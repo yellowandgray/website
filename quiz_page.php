@@ -33,6 +33,8 @@ if ($_SESSION['student_selected_type'] == 'order') {
     'updated_by' => $_SESSION['student_register_id']), 'student_log');    
     
      $student_log_order = $obj->insertRecord(array('student_log_id' => $student_log,'student_log_order'=>1),'student_log_order');
+     
+     $student_log_year = $obj->insertRecord(array('student_log_id' => $student_log,'year_id'=>$_SESSION['student_selected_year_id']),'student_log_year');
 }
 if ($_SESSION['student_selected_type'] == 'subject') {
     if(isset($_SESSION['student_selected_year_id'])) { 
@@ -54,12 +56,23 @@ if ($_SESSION['student_selected_type'] == 'subject') {
     
     $student_log_order = $obj->insertRecord(array('student_log_id' => $student_log,'student_log_order'=>2),'student_log_order');
     
+    
+    if(isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selected_years_id']!='')) {
+        $student_selected_years_id_arr = explode(',',$_SESSION['student_selected_years_id']);
+        foreach($student_selected_years_id_arr as $student_selected_years_id_val) {
+            $student_log_year = $obj->insertRecord(array('student_log_id' => $student_log,'year_id'=>$student_selected_years_id_val),'student_log_year');
+        }
+    }
+    
     if(isset($_SESSION['student_selected_topics_id']) && ($_SESSION['student_selected_topics_id']!='')) {
         $student_selected_topics_id_arr = explode(',',$_SESSION['student_selected_topics_id']);
         foreach($student_selected_topics_id_arr as $student_selected_topics_id_val) {
             $student_log_topic = $obj->insertRecord(array('student_log_id' => $student_log,'topic_id'=>$student_selected_topics_id_val),'student_log_topic');
         }
     }
+    
+    
+    
 }
 
 
