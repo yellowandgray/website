@@ -71,7 +71,9 @@ if (isset($_SESSION['student_register_id'])) {
                                                     </tr>
                                                 </tbody>
                                             </table>
-                                            <center><button id="result-view-btn" class="btn btn-brown">Show Details</button></center>
+                                            <center>
+                                                <button class="btn btn-brown">Show Details</button>
+                                            </center>
                                             <br/>
                                             <h2 class = 'titleContainer title'> 
                                                 <i class="font-icon-arrow-simple-right"></i> Language - Subject Order - Subject-1 (Topic 1, Topic 2), Subject-2 (Topic-1, Topic-2).
@@ -123,6 +125,10 @@ if (isset($_SESSION['student_register_id'])) {
                                                     </tr>
                                                 </tbody>
                                             </table>
+                                            <center>
+                                                <button class="btn btn-brown">Show Details</button>
+                                            </center>
+                                            <br/>
                                         </div>
                                     </div>
 <!--                                </div>
