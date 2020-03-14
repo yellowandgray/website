@@ -50,7 +50,7 @@ if (isset($_SESSION['student_register_id'])) {
                                         <a class = 'accordion-toggle active'> Test Report</a>
                                     </div>
                                     <div class = 'accordion-body collapse in'>
-                                        <div class = 'accordion-inner'>
+                                        <div class = 'accordion-inner border-none'>
 
                                             <h2 class = 'titleContainer title'> <i class="font-icon-arrow-simple-right"></i> Language - Question Order - 2010 <span>Date: 10-01-2020</span></h2>
                                             <table class = 'table table-striped result_table'>
@@ -71,6 +71,8 @@ if (isset($_SESSION['student_register_id'])) {
                                                     </tr>
                                                 </tbody>
                                             </table>
+                                            <center><button id="result-view-btn" class="btn btn-brown">Show Details</button></center>
+                                            <br/>
                                             <h2 class = 'titleContainer title'> 
                                                 <i class="font-icon-arrow-simple-right"></i> Language - Subject Order - Subject-1 (Topic 1, Topic 2), Subject-2 (Topic-1, Topic-2).
                                                 <span>Date: 10-01-2020</span>
