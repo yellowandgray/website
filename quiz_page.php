@@ -336,8 +336,10 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                 },
                 methods: {
                     restart: function () {
+                        $('#create').hide();
                         this.questionIndex = 0;
                         this.userResponses = Array(this.quiz.questions.length).fill(null);
+                        //document.getElementById('#create').style.display = 'none';
                     },
                     divshow: function () {
                         setTimeout(() => {

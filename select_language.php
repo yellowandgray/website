@@ -12,6 +12,9 @@ $languages = $obj->selectAll('*', 'language', 'status = 1');
             <?php include 'menu.php'; ?>
             <section class="language-section">
                 <div class="container">
+                    <div class="language-main-title">
+                        <h4>Group-1 Exam</h4>
+                    </div>
                     <div class="language-width">
                         <div class="row">
                             <?php foreach ($languages as $val) { ?>

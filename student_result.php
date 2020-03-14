@@ -42,14 +42,14 @@ if (isset($_SESSION['student_register_id'])) {
                         </div>
                         <div class = 'span8'>
                             <h4>My Completed Task</h4>
-                            <h6>Test Report</h6>
+<!--                            <h6></h6>-->
                             <!-- start: Accordion -->
-                            <div class = 'accordion' id = 'accordion2'>
-                                <div class = 'accordion-group'>
+<!--                            <div class = 'accordion' id = 'accordion2'>
+                                <div class = 'accordion-group'>-->
                                     <div class = 'accordion-heading'>
-                                        <a class = 'accordion-toggle active' data-toggle = 'collapse' data-parent = '#accordion2' href = '#collapseOne'><i class = 'icon-minus'></i> Question Order</a>
+                                        <a class = 'accordion-toggle active'> Test Report</a>
                                     </div>
-                                    <div id = 'collapseOne' class = 'accordion-body collapse in'>
+                                    <div class = 'accordion-body collapse in'>
                                         <div class = 'accordion-inner'>
 
                                             <h2 class = 'titleContainer title'> <i class="font-icon-arrow-simple-right"></i> Language - Question Order - 2010 <span>Date: 10-01-2020</span></h2>
@@ -71,17 +71,6 @@ if (isset($_SESSION['student_register_id'])) {
                                                     </tr>
                                                 </tbody>
                                             </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class = 'accordion' id = 'accordion2'>
-                                <div class = 'accordion-group'>
-                                    <div class = 'accordion-heading'>
-                                        <a class = 'accordion-toggle' data-toggle = 'collapse' data-parent = '#accordion2' href = '#collapseOne1'><i class = 'icon-minus'></i> Subject Order</a>
-                                    </div>
-                                    <div id = 'collapseOne1' class = 'accordion-body collapse in'>
-                                        <div class = 'accordion-inner'>
                                             <h2 class = 'titleContainer title'> 
                                                 <i class="font-icon-arrow-simple-right"></i> Language - Subject Order - Subject-1 (Topic 1, Topic 2), Subject-2 (Topic-1, Topic-2).
                                                 <span>Date: 10-01-2020</span>
@@ -93,7 +82,7 @@ if (isset($_SESSION['student_register_id'])) {
                                                         <th class="text-center">Subject</th>
                                                         <th class="text-center">Topic</th>
                                                         <th class="text-center">Total</th>
-                                                        <th class="text-center">Attend</th>
+                                                        <th class="text-center">Answered</th>
                                                         <th class="text-center">
                                                             <i class="icon-ok-sign"></i>
                                                         </th>
@@ -134,8 +123,8 @@ if (isset($_SESSION['student_register_id'])) {
                                             </table>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
+<!--                                </div>
+                            </div>-->
                             <!--end: Accordion -->
                         </div>
                     </div>
