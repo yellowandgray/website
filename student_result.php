@@ -217,6 +217,7 @@ if (isset($_SESSION['student_register_id'])) {
         <?php include 'script.php';
         ?>
         <script type="text/javascript">
+            image_url = 'api/v1/';
             function showFullResult(slid) {
                 setTimeout(() => {
                         applyMathAjax();
