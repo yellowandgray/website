@@ -119,7 +119,7 @@ if (isset($_SESSION['student_register_id'])) {
                                             <center>
                                                 <button class="btn btn-brown" onclick="showFullResult(<?php echo $student_log_detail['student_log_id']; ?>);">Show Details</button>
                                             </center>
-                                            <div id="result_view_<?php echo $student_log_detail['student_log_id']; ?>" class="full-result"></div>
+                                            <div id="result_view_<?php echo $student_log_detail['student_log_id']; ?>" class="student-full-result"></div>
                                             <br/>
                                             
                                             <?php } else {
@@ -231,7 +231,7 @@ if (isset($_SESSION['student_register_id'])) {
                             var correct_ans = '';
                             var student_ans = '';
                             $.each(data.result.data, function (key, val) {
-                                qlist = qlist + '<div class="question-title result-title"><h6><span>' + (key + 1) + '</span>. ' + val.name + '</h6>';
+                                qlist = qlist + '<div class="question-title result-title"><h6><span class="no_question">' + (key + 1) + '</span>. <span class="question_title"> ' + val.name + '</span></h6>';
                                 if (val.a !== '') {
                                     correct_ans = '';
                                     student_ans = '';
@@ -241,7 +241,7 @@ if (isset($_SESSION['student_register_id'])) {
                                     if ((val.student_answer).toUpperCase() === 'A' && (val.answer).toUpperCase() !== 'A') {
                                         student_ans = 'wrng_clr';
                                     }
-                                    qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="option-float">A.</span> ' + val.a + '</div></div>';
+                                    qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="option-float">A.</span> <span class="float-left">' + val.a + '</span></div></div>';
                                 }
                                 if (val.b !== '') {
                                     correct_ans = '';
