@@ -173,10 +173,34 @@ $app->get('/get_subject_by_language/:lid', function($lid) {
     echoRespnse(201, $res);
 });
 
+$app->get('/get_subject_by_language_n_year/:lid/:yid', function($lid, $yid) {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('s.*', 'subject AS s LEFT JOIN topic AS t ON t.subject_id = s.subject_id LEFT JOIN question AS q ON q.topic_id = t.topic_id', 's.language_id = ' . $lid . ' AND q.year_id = ' . $yid . ' GROUP BY s.subject_id');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
 $app->get('/get_topic_by_subject/:sid', function($sid) {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
     $data = $com->selectAll('*', 'topic', 'subject_id = ' . $sid);
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_topic_by_subject_n_year/:sid/:yid', function($sid, $yid) {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('t.*', 'topic AS t LEFT JOIN subject AS s ON s.subject_id = ' . $sid . ' LEFT JOIN question AS q ON q.topic_id = t.topic_id', 'q.year_id = ' . $yid . ' GROUP BY t.topic_id');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
@@ -298,7 +322,7 @@ $app->get('/get_year_by_question/:qid', function($qid) {
 $app->get('/get_year_by_language/:lid', function($lid) {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
-    $data = $com->selectAll('y.year, y.year_id', 'topic AS t LEFT JOIN year AS y ON y.year_id = t.year_id', 't.language_id = ' . $lid . ' GROUP BY y.year_id');
+    $data = $com->selectAll('y.year, y.year_id', 'subject AS s LEFT JOIN topic AS t ON t.subject_id = s.subject_id LEFT JOIN question AS q ON q.topic_id = t.topic_id LEFT JOIN year AS y ON y.year_id = q.year_id', 's.language_id = ' . $lid . ' GROUP BY y.year_id');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
@@ -453,16 +477,15 @@ $app->post('/store_answer', function() use ($app) {
     if (count($record) > 0) {
         $res['error'] = false;
         $res['message'] = 'Answer inserted successfully';
-        
-        
-        $obj->insertRecord(array('question_id' => $record['question_id'], 'student_log_id' => $data['student_log_id'], 
-            'name' => $record['name'], 'image_path' => $record['image_path'], 'direction' => $record['direction'], 
-            'a' => $record['a'], 'b' => $record['b'], 'c' => $record['c'], 'd' => $record['d'], 'answer' => $record['answer'], 
-            'explanation' => $record['explanation'], 'image_path_explanation' => $record['image_path_explanation'], 
-            'explanation_img_direction' => $record['explanation_img_direction'], 'question_no' => $record['question_no'], 
+
+
+        $obj->insertRecord(array('question_id' => $record['question_id'], 'student_log_id' => $data['student_log_id'],
+            'name' => $record['name'], 'image_path' => $record['image_path'], 'direction' => $record['direction'],
+            'a' => $record['a'], 'b' => $record['b'], 'c' => $record['c'], 'd' => $record['d'], 'answer' => $record['answer'],
+            'explanation' => $record['explanation'], 'image_path_explanation' => $record['image_path_explanation'],
+            'explanation_img_direction' => $record['explanation_img_direction'], 'question_no' => $record['question_no'],
             'student_answer' => $data['answer'], 'created_at' => date('Y-m-d'), 'updated_at' => date('Y-m-d')), 'student_log_detail');
         // exit;
-        
     } else {
         $res['message'] = 'Unable to insert this answer';
     }
@@ -485,8 +508,8 @@ $app->get('/get_result_detail/:lid', function($lid) {
 $app->get('/get_question_answer/:qid', function($qid) {
     $res = array('error' => true, 'message' => 'No records found');
     $obj = new Common();
-    $question_ans = $obj->selectRow('*', 'question', 'question_id = ' . $qid );
-     if (count($question_ans) > 0) {
+    $question_ans = $obj->selectRow('*', 'question', 'question_id = ' . $qid);
+    if (count($question_ans) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
         $res['data'] = $question_ans['answer'];

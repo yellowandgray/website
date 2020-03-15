@@ -23,7 +23,7 @@
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Select Language</mat-label>
-                    <mat-select [(ngModel)]="selected_language" (selectionChange)="getSubjectByLanguage()">
+                    <mat-select [(ngModel)]="selected_language" (selectionChange)="getYearByLanguage()">
                         <mat-option [value]="row.language_id" *ngFor="let row of language">
                             {{row.name}}
                         </mat-option>
@@ -34,7 +34,7 @@
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Select Year</mat-label>
-                    <mat-select [(ngModel)]="selected_language">
+                    <mat-select [(ngModel)]="selected_year" (selectionChange)="getSubjectByYearnLanguage()">
                         <mat-option [value]="row.year_id" *ngFor="let row of year">
                             {{row.year}}
                         </mat-option>
