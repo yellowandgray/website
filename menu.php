@@ -2,7 +2,7 @@
     <div class="upper-menu">
         <div class="" style="padding: 0px 15px;">
             <div class="row">
-                <div class="col-xs-8">
+                <div class="col-md-8 col-sm-12">
                     <p>
                         <i class="fa fa-phone"></i>&nbsp;<a href="tel:+04368 265 265"> 04368 265 265</a>&nbsp;&nbsp;
                         <i class="fa fa-envelope"></i>&nbsp;<a href="mailto:info@enpeekkl.com">info@enpeekkl.com</a>
@@ -11,7 +11,7 @@
                         <!--                        <a href="application-form.php" type="button" class="btn-custom-1">Download Application</a>-->
                     </p>
                 </div>
-                <div class="col-xs-4 text-right line-height-35">
+                <div class="col-md-4 col-sm-12 text-right line-height-35">
                     <ul class="colorlib-social-icons">
                         <li><a href="https://www.facebook.com/ENPEEInternationalSchool" target="blank"><i
                                     class="fa fa-facebook-official" style="color:#1c61ab"></i></a></li>&nbsp;

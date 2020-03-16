@@ -41,8 +41,9 @@
                                 <p onclick="openCity('oct')">Oct 2019</p>
                                 <p onclick="openCity('nov')">Nov 2019</p>
                                 <p onclick="openCity('dec')">Dec 2019</p>
-                                <p onclick="openCity('jan')">Jan 2020</p>
+                                <p onclick="openCity('jan_20')">Jan 2020</p>
                                 <p onclick="openCity('feb_20')">Feb 2020</p>
+                                <p onclick="openCity('mar_20')">Mar 2020</p>
                             </div>
                         </div>
                     </div>
@@ -477,6 +478,67 @@
                     </div>
                 </section>
                 <!--About Txt Video End-->
+                <section class="wf100 about month" id="jan_20" style="display: none">
+                    <div class="about-video-section wf100 event-section" style="padding-bottom: 0;">
+                        <div class="container" style="padding-bottom: 10px; border-bottom: 2px dashed #eee ;">
+                            <h2 class="margin-bottom-0 text-center">Fruits Day ENPEE International School</h2> 
+                            <p class="text-center">(16th of Jan 2020)</p>
+                            <br/>
+    <!--                        <center>(On Wednesday, the 10<sup>th</sup> of July 2019,.at 10 a.m in our School premises)</center>-->
+    <!--                        <p class="text-center">(Feb 10, 2019 Sunday)</p>-->
+                            <div class="row events-margin padding-bottom-30">
+                                <div class="col-md-12">
+                                    <div class="event-img-margin">
+                                        <img src="images/news-events/fruits-day/main-banner.jpg" alt=""/>
+
+                                    </div>
+                                    <p>ENPEE International School celebrated Fruits Day today for the kindergarten children.It was inaugurated by our special guest and educators and kindergarten children welcomed the rest of the school.
+The various fruits were displayed in the room for an interactive and fun way of learning.The champions of Junior and Senior KG demonstrated their knowledge about the various fruits which was interesting to listen to.
+The little children had fun and learnt about the fruits at the same time. Learning is made fun in ENPEE International School.</p>
+                                </div>
+                            </div>
+                            <a type="button" href="events-fruits-day.php" class="btn-custom" style="position:relative; left:44%;">Read More</a>
+                        </div>
+                    </div>
+                    <div class="about-video-section wf100 event-section" style="padding-bottom: 0;">
+                        <div class="container" style="padding-bottom: 10px; border-bottom: 2px dashed #eee ;">
+                            <h2 class="margin-bottom-0 text-center">ENPEE SCHOOL The Investiture Ceremony and Samathuva Pongal Celebration</h2> 
+                            <p class="text-center">(14th of Jan 2020)</p>
+                            <br/>
+    <!--                        <center>(On Wednesday, the 10<sup>th</sup> of July 2019,.at 10 a.m in our School premises)</center>-->
+    <!--                        <p class="text-center">(Feb 10, 2019 Sunday)</p>-->
+                            <div class="row events-margin padding-bottom-30">
+                                <div class="col-md-12">
+                                    <div class="event-img-margin">
+                                        <img src="images/news-events/pongal/main-banner.jpg" alt=""/>
+
+                                    </div>
+                                    <p>The Investiture Ceremony and Samathuva Pongal celebration happened at ENPEE INTERNATIONAL SCHOOL on 13th January 2020. The Chief Guest Mr. S. KARTHIKESAN., M.Sc., B,Ed., Retired Deputy Inspector Of Schools Consultant - Samagraha Siksha inaugurated the Pongal Celebrations. The celebrations started with the prayer song after which the Principal of the school welcomed the gathering and the Investiture ceremony was carried on.</p>
+                                </div>
+                            </div>
+                            <a type="button" href="events-ponal.php" class="btn-custom" style="position:relative; left:44%;">Read More</a>
+                        </div>
+                    </div>
+                    <div class="about-video-section wf100 event-section" style="padding-bottom: 0;">
+                        <div class="container" style="padding-bottom: 10px; border-bottom: 2px dashed #eee ;">
+                            <h2 class="margin-bottom-0 text-center">ENPEE SCHOOL ELECTION DAY</h2> 
+                            <p class="text-center">(11th of Jan 2020)</p>
+                            <br/>
+    <!--                        <center>(On Wednesday, the 10<sup>th</sup> of July 2019,.at 10 a.m in our School premises)</center>-->
+    <!--                        <p class="text-center">(Feb 10, 2019 Sunday)</p>-->
+                            <div class="row events-margin padding-bottom-30">
+                                <div class="col-md-12">
+                                    <div class="event-img-margin">
+                                        <img src="images/news-events/election/main-banner.jpg" alt=""/>
+
+                                    </div>
+                                    <p>Children are sent to school to learn various things. At this school we think one of these is to become good leaders and live as responsible leaders of the Nation. This was demonstrated in school by conducting Election Day. We had four nominees for School Pupil leader,Assistant Pupil leader,Sports Captain,Assistant Sports Captain.The elections were held along the lines of a real election.The canvassing for votes started earlier this week where candidates made campaign promise to gain votes. Voting was conducted today where all children, educators and non teaching staff were allowed to vote. Counting happened after an hour of voting and candidates were pleased with the results. Everything is a teaching moment at ENPEE International School where life is the teacher.</p>
+                                </div>
+                            </div>
+                            <a type="button" href="events-election.php" class="btn-custom" style="position:relative; left:44%;">Read More</a>
+                        </div>
+                    </div>
+                </section>
                 <section class="wf100 about month" id="feb_20" style="display: none">
                     <div class="about-video-section wf100 event-section" style="padding-bottom: 0;">
                         <div class="container" style="padding-bottom: 10px; border-bottom: 2px dashed #eee ;">
@@ -537,6 +599,28 @@
                                 </div>
                             </div>
                             <a type="button" href="event-annual-sports-meet.php" class="btn-custom" style="position:relative; left:44%;">Read More</a>
+                        </div>
+                    </div>
+                </section>
+                <section class="wf100 about month" id="mar_20" style="display: none">
+                    <div class="about-video-section wf100 event-section" style="padding-bottom: 0;">
+                        <div class="container" style="padding-bottom: 10px; border-bottom: 2px dashed #eee ;">
+                            <h2 class="margin-bottom-0 text-center">ENPEE Inter School Cultural Fest.</h2> 
+                            <p class="text-center">(10th of Mar 2020)</p>
+                            <br/>
+    <!--                        <center>(On Wednesday, the 10<sup>th</sup> of July 2019,.at 10 a.m in our School premises)</center>-->
+    <!--                        <p class="text-center">(Feb 10, 2019 Sunday)</p>-->
+                            <div class="row events-margin padding-bottom-30">
+                                <div class="col-md-12">
+                                    <div class="event-img-margin">
+                                        <img src="images/news-events/cultural-fest/main-banner.jpg" alt=""/>
+
+                                    </div>
+                                    <p>On February 16th 2020, ENPEE International school campus was decorated for the cultural event, getting the students in the mood for a huge celebration with a host of co-curricular activities. These activities will help the students take interest in the arts, such as dance, music, drama and help them learn the importance of team-work.</p>
+                                    <p>More than 27 schools in and around Karaikal participated enthusiastically in the interschool cultural programme showcasing the talent of the students through various cultural performances.</p>
+                                </div>
+                            </div>
+                            <a type="button" href="events-cultural-fest.php" class="btn-custom" style="position:relative; left:44%;">Read More</a>
                         </div>
                     </div>
                 </section>
