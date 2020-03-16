@@ -15,7 +15,12 @@
                         <!--<strong>10<sup>th</sup> STD State Board</strong>-->
                         <strong>பத்தாம் வகுப்பு தமிழ் துணைப்பாடம் -  காணொளிகள்</strong>
                     </h4>
-                    <div class="row margin-auto">
+                    <div class="row margin-auto">                        
+                        <div class="span5">
+                            <div class="subject-section">
+                            <iframe style="width: 100%; height: 300px" src="https://www.youtube.com/embed/5dymJAzzW2c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div> 
+                        </div>
                         <div class="span5">
                             <div class="subject-section">
                             <iframe style="width: 100%; height: 300px" src="https://www.youtube.com/embed/S9PfkaWMTW8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -25,7 +30,12 @@
                             <div class="subject-section">
                             <iframe style="width: 100%; height: 300px" src="https://www.youtube.com/embed/Z4cL76haCyw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div> 
-                        </div>  
+                        </div>
+                        <div class="span5">
+                            <div class="subject-section">
+                            <iframe style="width: 100%; height: 300px" src="https://www.youtube.com/embed/r4Vm58O-VJw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div> 
+                        </div> 
                         <div class="span5">
                             <div class="subject-section">
                             <iframe style="width: 100%; height: 300px" src="https://www.youtube.com/embed/VKMoPRul8Xs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
