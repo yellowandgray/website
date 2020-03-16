@@ -33,9 +33,11 @@ if (isset($_SESSION['student_register_id'])) {
     if(count($student_log_year)>0) {
         foreach($student_log_year as $student_log_year_v) {
             $ans_log_year[$student_log_year_v['student_log_id']][] = $student_log_year_v['year'];
-            if(!in_array($student_log_year_v['year_id'], $stud_all_sel_year)) {
-                $stud_all_sel_year[] = $student_log_year_v['year_id'];
-            }            
+			if($student_log_year_v['year_id']!=''){
+				if(!in_array($student_log_year_v['year_id'], $stud_all_sel_year)) {
+					$stud_all_sel_year[] = $student_log_year_v['year_id'];
+				}
+			}	
         }
     }
   
@@ -71,7 +73,8 @@ if (isset($_SESSION['student_register_id'])) {
      if(count($stud_all_sel_topic)>0) {
         $stud_all_sel_topic_id_val = implode(',',$stud_all_sel_topic);
     }
-    
+	
+	    
     
     if($stud_all_sel_year_id_val != '' && $stud_all_sel_topic_id_val!='') {
         //total questions year , topic 
@@ -90,8 +93,10 @@ if (isset($_SESSION['student_register_id'])) {
          
             }   
         }
+		
+		
         
-        
+	       
         
         //answered,correct answer count year,topic
         $student_log_answer = $obj->selectAll('student_log_detail.*,year.year,question.topic_id',' student_log LEFT JOIN student_log_detail ON student_log.student_log_id=student_log_detail.student_log_id '
@@ -281,8 +286,8 @@ if (isset($_SESSION['student_register_id'])) {
                                                         $tot_topic_question = 0;
                                                         if(isset($ques_year_cnt[$ans_log_year_v][$student_log_subj_topic_id]['count'])) {
                                                             $tot_topic_question = $ques_year_cnt[$ans_log_year_v][$student_log_subj_topic_id]['count'];
-                                                            echo $tot_topic_question;
                                                         }
+														echo $tot_topic_question;
                                                         ?>
                                                         </td>
                                                         <td>
@@ -355,7 +360,7 @@ if (isset($_SESSION['student_register_id'])) {
         <script type="text/javascript">
             image_url = 'api/v1/';
             function showFullResult(slid) {
-                setTimeout(() => {
+				setTimeout(() => {
                         applyMathAjax();
                     }, 600);
                 $.ajax({
