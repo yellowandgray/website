@@ -143,7 +143,7 @@ if (count($questions) > 0) {
 
                                     <!--resultTitleBlock-->
                                     <h2 class="complete-title" v-if="score() == quiz.questions.length">
-                                        Congratulations! You have answered everything right!!!
+                                        Congratulations! You have answered everything right!!! <img style="width: 12%" src="img/thumbs-up.gif">
                                     </h2>
                                     <h2 class="complete-title" v-if="score() != quiz.questions.length">
                                         Test Completed
