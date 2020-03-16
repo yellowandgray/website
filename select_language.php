@@ -20,7 +20,9 @@ $languages = $obj->selectAll('*', 'language', 'status = 1');
                             <?php foreach ($languages as $val) { ?>
                                 <div class="span3">
                                     <div class="language-box" onclick="window.location = 'question-subject-order?lan=<?php echo $val['name']; ?>'">
-                                        <div class="language-img" style="background: url(<?php echo BASE_URL . $val['imageurl']; ?>)no-repeat;"></div>
+                                        <div class="language-img-zoom">
+                                            <div class="language-img" style="background: url(<?php echo BASE_URL . $val['imageurl']; ?>)no-repeat;"></div>
+                                        </div>
                                         <div class="language-title">
                                             <h3>
                                                 <a href="question-subject-order?lan=<?php echo $val['name']; ?>"><?php echo $val['name']; ?></a>
