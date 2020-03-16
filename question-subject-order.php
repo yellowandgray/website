@@ -26,7 +26,6 @@ $_SESSION['student_selected_language_id'] = $language['language_id'];
                                         <th valign="top"><?php echo $language['name']; ?></th>
                                     </tr>
                                 </table>
-<!--                                 <br/> <strong class="title-section"></strong>-->
                             </h4>
                             <a class="home_link" href="select_language">
                                 <i class="icon-home"></i>

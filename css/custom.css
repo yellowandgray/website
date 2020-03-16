@@ -896,7 +896,7 @@ and open the template in the editor.
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
-.language-section .language-img {
+.language-section .language-img-zoom .language-img {
     background-size: cover !important;
     background-position: center;
     width: 100%;
@@ -908,6 +908,19 @@ and open the template in the editor.
     transition: all .3s ease-out;
     -webkit-backface-visibility: hidden;
     -webkit-perspective: 1000;
+}
+
+.language-box .language-img-zoom {
+    overflow: hidden;
+    position: relative;
+}
+
+.language-box:hover .language-img-zoom .language-img {
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+    -ms-transform: scale(1.2);
 }
 
 .language-title {
@@ -1052,4 +1065,59 @@ and open the template in the editor.
 .MathJax_Display {
     margin: 0 !important;
     text-align: left !important;
+}
+
+.quiz-question-no {
+    float: left;
+    margin-right: 5px;
+}
+
+@media (max-width: 767px) {
+    .quiz-pause .float-left {
+        width: 100% !important;
+    }
+}
+
+
+.quiz-pause {
+    width: 95%;
+    padding: 10px 0;
+    margin-bottom: 30px;
+}
+
+.quiz-pause .float-left {
+    float: left;
+    width: 50%;
+    text-align: left;
+}
+
+.quiz-pause .float-right {
+    float: right;
+    /*    width: 50%;*/
+    text-align: right;
+    /*    padding-right: 20px;*/
+}
+
+.pause-right {
+    margin-right: 10px;
+    border: 1px solid #468847;
+    border-radius: 50%;
+    width: 78%;
+    padding: 1px 2px 1px 0px;
+}
+
+.pause-right i {
+    color: #468847;
+}
+
+.quiz-pause input {
+    width: 20px;
+    height: 20px;
+}
+
+.span-position {
+    position: absolute;
+    top: 30px;
+    margin: 0 0px 0px 5px;
+    font-weight: 600;
 }
