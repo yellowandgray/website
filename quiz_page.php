@@ -247,7 +247,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                 <div v-if="quiz.questions[questionIndex].show_image" class="text-center">
                                     <img style="width: 50%" v-if="quiz.questions[questionIndex].direction == 'top'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />
                                 </div>
-                                <h2 class="titleContainer title">{{questionIndex + 1}}. <span v-html="quiz.questions[questionIndex].text"></span></h2>
+                                <h2 class="titleContainer title"><span class="quiz-question-no">{{questionIndex + 1}}.</span> <span class="quiz-question-title" v-html="quiz.questions[questionIndex].text"></span></h2>
                                 <div v-if="quiz.questions[questionIndex].show_image" class="text-center">
                                     <img style="width: 50%" v-if="quiz.questions[questionIndex].direction == 'bottom'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />
                                 </div>

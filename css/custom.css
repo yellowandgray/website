@@ -1053,3 +1053,8 @@ and open the template in the editor.
     margin: 0 !important;
     text-align: left !important;
 }
+
+.quiz-question-no {
+    float: left;
+    margin-right: 5px;
+}
