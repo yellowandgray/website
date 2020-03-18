@@ -29,6 +29,7 @@ export class QuestionComponent implements OnInit {
   selected_language = "";
   selected_subject = "";
   selected_year = "";
+  selected_topic = "";
   selected_topic_index = 0;
   constructor(
     public dialog: MatDialog,
@@ -69,12 +70,16 @@ export class QuestionComponent implements OnInit {
         }
     );
 }  
-  getSubjectByYearnLanguage(): void {
+  getSubjectByYearnLanguage(): void {    
     this.subject = [];
     this.httpClient.get<any>('../api/v1/get_subject_by_language_n_year/'+this.selected_language+'/'+this.selected_year)
     .subscribe(
             (res)=>{
-                this.subject = res["result"]["data"];
+                this.subject = res["result"]["data"];   
+                   if(this.selected_topic!='') {
+                     //alert(this.selected_topic);
+                     this.getQuestionsByTopicYear();
+                  } 
           },
           (error)=>{
             this._snackBar.open(error["statusText"], '', {
@@ -97,6 +102,27 @@ getTopicBySubject(): void {
               }
           );
       }
+      getQuestionsByTopicYear(): void {
+     //var tid = this.topic[ev.value].topic_id;
+     //var tid = ev.value;
+    //this.selected_topic_index = ev.value;
+     var tid = this.selected_topic;
+     var sel_year = this.selected_year;
+     this.httpClient
+       .get<any>(
+        "../api/v1/get_question_by_topic_and_year/" +tid+"/"+sel_year
+       )
+       .subscribe(
+         res => {
+           this.question = res["result"]["data"];
+         },
+         error => {
+           this._snackBar.open(error["statusText"], "", {
+            duration: 2000
+           });
+         }
+       );
+  }
       getQuestionsByTopic(ev): void {
      //var tid = this.topic[ev.value].topic_id;
      var tid = ev.value;

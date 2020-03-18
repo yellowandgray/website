@@ -55,7 +55,7 @@
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Select Topic</mat-label>
-                    <mat-select (selectionChange)="getQuestionsByTopic($event);">
+                    <mat-select [(ngModel)]="selected_topic" (selectionChange)="getQuestionsByTopicYear();">
                         <!--                        <mat-option value="0">All</mat-option>-->
                         <mat-option [value]="top.topic_id" *ngFor="let top of topic">
                             {{top.name}}
