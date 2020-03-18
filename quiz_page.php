@@ -234,7 +234,7 @@ include 'head.php';
                                         <!-- show answer immediate -->
                                         <div class="quiz-pause">
                                             <div class="float-left">
-                                                <input id="show-immediately" type="checkbox" value="show_answer_immediately"> <span class="span-position">Show Answer Immediately</span>
+                                                <input id="show-immediately" type="checkbox" value="show_answer_immediately" @change="immChange" v-model="showimmediate"> <span class="span-position">Show Answer Immediately</span>
                                             </div> 
                                             <div class="float-right">
                                                 <div class="pause-right">
@@ -263,11 +263,76 @@ include 'head.php';
                                 </div>
                                 <!-- quizOptions -->
                                 <div class="optionContainer">
-                                    <div id="two" class="option" v-for="(response, index) in quiz.questions[questionIndex].responses" @click="selectOption(index)" :class="{ 'is-selected': userResponses[questionIndex] == index}" :key="index" v-if="response.text != ''">
+                                    <div class="option" :id="index | charIndex | AddPrefix('ansopt_')" v-for="(response, index) in quiz.questions[questionIndex].responses" @click="selectOption(index)" :class="{ 'is-selected': userResponses[questionIndex] == index}" :key="index" v-if="response.text != ''">
                                          <span class="q-option">{{ index | charIndex }}.&nbsp;</span> <span v-html="response.text"></span>
                                     </div>
                                 </div>
-                                <footer class="questionFooter">
+                                
+                                <footer class="questionFooter" id='quiz-nxt-footer'  v-if="shownotimmdnxt">
+                                    <!--                                    pagination-->
+                                    <nav class="pagination" role="navigation" aria-label="pagination">
+
+                                        <!--                                        back button -->
+                                        <!--                                        <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">Back</a>-->
+                                        <!--                                        <a class="btn btn-green" href="select_language">Home</a>-->
+
+                                        <!--                                    next button -->
+                                        <div style="margin: 0 auto; text-align: center">
+                                            <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
+                                                <!--                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}-->Next
+                                            </a>
+                                        </div> 
+
+                                    </nav>
+                                    <!--                                    /pagination-->
+
+                                </footer>
+
+                                
+                                <footer class="questionFooter" id='quiz-footer'  v-if="showimmediateblk">
+                                    <div class="footer-explanation-section">
+                                        <div class="quiz-explanation-view border-b">Correct Answer - <strong>{{quiz.questions[questionIndex].answer}}</strong></div>
+                                        <!--                                        <hr>-->
+                                        <div class="quiz-explanation-view">Explanation:</div>
+                                        <div v-if="quiz.questions[questionIndex].show_image_explanation" class="text-center">
+                                            <img v-if="quiz.questions[questionIndex].direction == 'top'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
+                                        </div>
+
+                                        <!--span v-html="quiz.questions[questionIndex].explanation"></span-->
+                                        <br/>
+                                        <div style="text-align: left;">
+                                            <span> 
+                                                {{quiz.questions[questionIndex].explanation}}
+                                            </span>
+                                        </div>    
+
+
+                                        <div v-if="quiz.questions[questionIndex].show_image_explanation" class="text-center">
+                                            <img v-if="quiz.questions[questionIndex].direction == 'bottom'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
+                                        </div>
+                                    </div>
+                                    <!--                                    pagination-->
+                                    <nav class="pagination" role="navigation" aria-label="pagination">
+
+                                        <!--                                        back button -->
+                                        <!--                                        <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">Back</a>-->
+                                        <!--                                        <a class="btn btn-green" href="select_language">Home</a>-->
+
+                                        <!--                                    next button -->
+                                        <div style="margin: 0 auto; text-align: center">
+                                            <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
+                                                <!--                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}-->Next
+                                            </a>
+                                        </div> 
+
+                                    </nav>
+                                    <!--                                    /pagination-->
+
+                                </footer>
+                                
+                                <?php 
+                                /*
+                                <footer class="questionFooter"  v-if="showimmediateblk">
                                     <div class="question-explanation">
                                         <h4>Explanation:</h4>
                                         <div v-if="quiz.questions[questionIndex].show_image_explanation" class="text-center">
@@ -290,6 +355,8 @@ include 'head.php';
                                                                         </a>
                                                                         </nav>-->
                                 </footer>
+                                  */                                          
+                                ?>                                           
                             </div>
                             <!--quizCompletedResult-->
                             <div v-if="questionIndex >= quiz.questions.length" v-bind:key="questionIndex" class="quizCompleted has-text-centered">
@@ -353,19 +420,29 @@ include 'head.php';
                     quiz: quiz,
                     questionIndex: 0,
                     userResponses: userResponseSkelaton,
+                    showimmediate: false,
+                    showimmediateblk: false,
+                    isDisabled:false,
+                    shownotimmdnxt: false,
                     isActive: false
                 },
                 filters: {
                     charIndex: function (i) {
                         return String.fromCharCode(97 + i);
+                    },
+                    AddPrefix: function (value, prefix) {
+                        return prefix + value;
                     }
-                },
+                  },
                 methods: {
                     restart: function () {
                         $('#create').hide();
                         this.questionIndex = 0;
                         this.userResponses = Array(this.quiz.questions.length).fill(null);
                         //document.getElementById('#create').style.display = 'none';
+                    },
+                    convertLower: function (strval) {
+                        return strval.toLowerCase().trim();
                     },
                     divshow: function () {
                         setTimeout(() => {
@@ -454,32 +531,78 @@ include 'head.php';
                         });
                     },
                     selectOption: function (index) {
+                        if (!app.showimmediate) {
+                            var questions = <?php echo json_encode($questions_list); ?>;
+                            var answers = ['A', 'B', 'C', 'D'];
+                            $.post("api/v1/store_answer",
+                                    {
+                                        question_id: questions[this.questionIndex].question_id,
+                                        answer: answers[index],
+                                        student_log_id: <?php echo $student_log; ?>
+                                    },
+                                    function (data, status) {
+                                        if (data.result.error === false) {
 
-                        var questions = <?php echo json_encode($questions_list); ?>;
-                        var answers = ['A', 'B', 'C', 'D'];
-                        $.post("api/v1/store_answer",
-                                {
-                                    question_id: questions[this.questionIndex].question_id,
-                                    answer: answers[index],
-                                    student_log_id: <?php echo $student_log; ?>
-                                },
-                                function (data, status) {
-                                    if (data.result.error === false) {
+                                        }
+                                    });
 
-                                    }
-                                });
+                            setTimeout(() => {
+                                Vue.set(this.userResponses, this.questionIndex, index);
+                                if (this.questionIndex < this.quiz.questions.length) {
+                                    this.questionIndex++;
+                                }
+                            }, 500);
+                            setTimeout(() => {
+                                applyMathAjax();
+                            }, 600);
+                        }
+                        
+                        if (app.showimmediate) {
+                            if (!app.isDisabled) {
+                                var questions = <?php echo json_encode($questions_list); ?>;
+                                var answers = ['A', 'B', 'C', 'D'];
+                                $.post("api/v1/store_answer",
+                                        {
+                                            question_id: questions[this.questionIndex].question_id,
+                                            answer: answers[index],
+                                            student_log_id: <?php echo $student_log; ?>
+                                        },
+                                        function (data, status) {
+                                            if (data.result.error === false) {
 
-                        setTimeout(() => {
-                            Vue.set(this.userResponses, this.questionIndex, index);
-                            if (this.questionIndex < this.quiz.questions.length) {
-                                this.questionIndex++;
+                                            }
+                                        });
+
+                                // var questions = <?php echo json_encode($questions_list); ?>;
+                                var qid = questions[this.questionIndex].question_id;
+                                //var answers   = ['A', 'B', 'C', 'D'];
+                                var ansid = answers[index];
+                                $.get("api/v1/get_question_answer/" + qid,
+                                        function (data, status) {
+                                            if (data.result.error === false) {
+
+                                                var corransid = app.convertLower(data.result.data);
+                                                var studansid = app.convertLower(ansid);
+
+                                                if (data.result.data == ansid) {
+                                                    $('#ansopt_' + corransid).addClass('crt_clr');
+                                                } else {
+                                                    $('#ansopt_' + corransid).addClass('crt_clr');
+                                                    $('#ansopt_' + studansid).addClass('wrng_clr');
+                                                }
+                                            }
+                                        });
+                                //document.getElementById("quiz-footer").style.display = "block";
+                                app.showimmediateblk = true;
+                                app.isDisabled = true;
                             }
-                        }, 500);
-                        setTimeout(() => {
-                            applyMathAjax();
-                        }, 600);
+                        }
                     },
                     next: function () {
+                        app.isDisabled = false;
+                        app.showimmediateblk = false;
+                        app.shownotimmdnxt = false;
+                        
                         if (this.questionIndex < this.quiz.questions.length)
                             this.questionIndex++;
                     },
@@ -488,6 +611,24 @@ include 'head.php';
                             this.questionIndex--;
                     },
                     // Return "true" count in userResponses
+                    
+                    immChange: function () {
+                        if (app.showimmediate) {
+                            app.shownotimmdnxt = false;
+                            if (!app.isDisabled) {
+                                app.showimmediateblk = false;
+                            } else {
+                                app.showimmediateblk = true;
+                            }
+                        } else {
+                            app.showimmediateblk = false;
+
+                            if (app.isDisabled) {
+                                app.shownotimmdnxt = true;
+                            }
+                        }
+
+                    },
                     score: function () {
                         var score = 0;
                         for (let i = 0; i < this.userResponses.length; i++) {

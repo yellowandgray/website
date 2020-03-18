@@ -15,6 +15,7 @@ if (isset($_SESSION['student_register_id'])) {
        
     
     
+    
     $ans_log_order =  array();
     if(count($student_log_order)>0) {
         foreach($student_log_order as $student_log_order_v) {
@@ -24,19 +25,120 @@ if (isset($_SESSION['student_register_id'])) {
     }     
     
    
+    $stud_all_sel_year      =  Array();
+    $stud_all_sel_topic     =  Array();
+    
     
     $ans_log_year      = array();    
     if(count($student_log_year)>0) {
         foreach($student_log_year as $student_log_year_v) {
             $ans_log_year[$student_log_year_v['student_log_id']][] = $student_log_year_v['year'];
+			if($student_log_year_v['year_id']!=''){
+				if(!in_array($student_log_year_v['year_id'], $stud_all_sel_year)) {
+					$stud_all_sel_year[] = $student_log_year_v['year_id'];
+				}
+			}	
+        }
+    }
+  
+     
+    $student_log_topic = $obj->selectAll('slt.*,t.name As topic_name,subject.subject_id As subject_id,subject.name As subject_name','student_log As sl'
+            . ' LEFT JOIN student_log_topic slt ON sl.student_log_id=slt.student_log_id LEFT JOIN topic As t ON slt.topic_id=t.topic_id LEFT JOIN subject ON '
+            . 't.subject_id=subject.subject_id','sl.student_register_id = '.$_SESSION['student_register_id'].' AND sl.student_log_id IS NOT NULL AND sl.student_log_id<>\'\' ORDER BY student_log_id,subject.subject_id,t.topic_id ASC');
+    
+
+    $stud_log_topic_by_log = array();
+    if(count($student_log_topic)>0) {
+        foreach ($student_log_topic as $student_log_topic) {
+            if($student_log_topic['student_log_id']!=''){
+                $stud_log_topic_by_log[$student_log_topic['student_log_id']][$student_log_topic['subject_name']][$student_log_topic['topic_id']] =  $student_log_topic['topic_name'];
+                 if(!in_array($student_log_topic['topic_id'], $stud_all_sel_topic)) {
+                        $stud_all_sel_topic[] = $student_log_topic['topic_id'];
+                 }
+            }        
         }
     }
     
-     
-  
-  
-  
-  
+    
+    $stud_all_sel_year_id_val  = '';
+    $stud_all_sel_topic_id_val = '';
+    
+    $ques_year_cnt      = array();
+    $ques_cor_ans_cnt   = array();
+    
+    if(count($stud_all_sel_year)>0) {
+        $stud_all_sel_year_id_val = implode(',',$stud_all_sel_year);
+    }
+    
+     if(count($stud_all_sel_topic)>0) {
+        $stud_all_sel_topic_id_val = implode(',',$stud_all_sel_topic);
+    }
+	
+	    
+    
+    if($stud_all_sel_year_id_val != '' && $stud_all_sel_topic_id_val!='') {
+        //total questions year , topic 
+        $student_log_question  = $obj->selectAll('q.*,year.year,subject.name As subject_name,t.name As topic_name',' question As q LEFT JOIN year ON q.year_id=year.year_id '
+            . 'LEFT JOIN topic As t ON q.topic_id=t.topic_id LEFT JOIN subject ON t.subject_id=subject.subject_id',' q.year_id IN ('.$stud_all_sel_year_id_val.') AND q.topic_id IN ('.$stud_all_sel_topic_id_val.')'); 
+    
+        
+        if(count($student_log_question)>0) {
+            foreach($student_log_question as $student_log_question_val) {
+                if(!isset($ques_year_cnt[$student_log_question_val['year']][$student_log_question_val['topic_id']]['count'])){
+                    $ques_year_cnt[$student_log_question_val['year']][$student_log_question_val['topic_id']]['count'] = 0;
+                }
+                $ques_year_cnt[$student_log_question_val['year']][$student_log_question_val['topic_id']]['count']              =  $ques_year_cnt[$student_log_question_val['year']][$student_log_question_val['topic_id']]['count'] + 1;
+                $ques_year_cnt[$student_log_question_val['year']][$student_log_question_val['topic_id']]['topic_name']         =  $student_log_question_val['topic_name'];
+                $ques_year_cnt[$student_log_question_val['year']][$student_log_question_val['topic_id']]['subject_name']       =  $student_log_question_val['subject_name'];
+         
+            }   
+        }
+		
+		
+        
+	       
+        
+        //answered,correct answer count year,topic
+        $student_log_answer = $obj->selectAll('student_log_detail.*,year.year,question.topic_id',' student_log LEFT JOIN student_log_detail ON student_log.student_log_id=student_log_detail.student_log_id '
+                . 'LEFT JOIN question ON student_log_detail.question_id=question.question_id LEFT JOIN year ON question.year_id=year.year_id','student_log.student_register_id='.$_SESSION['student_register_id'].' ORDER BY student_log_id,student_log_detail_id ASC');
+        
+       
+        
+        $tmp_stud_log_queston_id = array(); //rmv mul question  in student log details
+        foreach($student_log_answer as $student_log_answer_val) {
+            if($student_log_answer_val['student_log_id']!='') {
+                if(!isset($tmp_stud_log_queston_id[$student_log_answer_val['student_log_id']]) || !in_array($student_log_answer_val['question_id'], $tmp_stud_log_queston_id[$student_log_answer_val['student_log_id']]))
+                {        
+                    $tmp_stud_log_queston_id[$student_log_answer_val['student_log_id']][] = $student_log_answer_val['question_id'];
+                    if(!isset($ques_cor_ans_cnt[$student_log_answer_val['student_log_id']][$student_log_answer_val['year']][$student_log_answer_val['topic_id']]['correct_cnt']))
+                    { 
+                        $ques_cor_ans_cnt[$student_log_answer_val['student_log_id']][$student_log_answer_val['year']][$student_log_answer_val['topic_id']]['correct_cnt'] = 0;
+                    }       
+
+                    if(!isset($ques_cor_ans_cnt[$student_log_answer_val['student_log_id']][$student_log_answer_val['year']][$student_log_answer_val['topic_id']]['answerd_cnt']))
+                    { 
+                        $ques_cor_ans_cnt[$student_log_answer_val['student_log_id']][$student_log_answer_val['year']][$student_log_answer_val['topic_id']]['answerd_cnt'] = 0;
+                    }
+
+                    if($student_log_answer_val['student_answer']!=''){
+                 
+                        $ques_cor_ans_cnt[$student_log_answer_val['student_log_id']][$student_log_answer_val['year']][$student_log_answer_val['topic_id']]['answerd_cnt'] = $ques_cor_ans_cnt[$student_log_answer_val['student_log_id']][$student_log_answer_val['year']][$student_log_answer_val['topic_id']]['answerd_cnt']+1;
+                       
+                    } 
+
+                    if($student_log_answer_val['answer']==$student_log_answer_val['student_answer']){
+                        $ques_cor_ans_cnt[$student_log_answer_val['student_log_id']][$student_log_answer_val['year']][$student_log_answer_val['topic_id']]['correct_cnt'] = $ques_cor_ans_cnt[$student_log_answer_val['student_log_id']][$student_log_answer_val['year']][$student_log_answer_val['topic_id']]['correct_cnt']+1;
+                    }
+
+                    } 
+            } 
+        }
+        
+              
+    }    
+    
+      
+   
 }   
 ?>
 <html lang = 'en'>
@@ -122,27 +224,26 @@ if (isset($_SESSION['student_register_id'])) {
                                             <div id="result_view_<?php echo $student_log_detail['student_log_id']; ?>" class="student-full-result"></div>
                                             <br/>
                                             
-                                            <?php } else {
+                                            <?php } if(isset($ans_log_order[$student_log_detail['student_log_id']]) && ($ans_log_order[$student_log_detail['student_log_id']]==2))   {
                                                 
-                                                /*
-                                                $student_log_topic = $obj->selectAll('slt.*,s.name as subject_name,t.name As topic_name','student_log AS sl LEFT JOIN student_log_topic As slt ON sl.student_log_id=slt.student_log_id '
-                                                        . 'LEFT JOIN topic t ON slt.topic_id=t.topic_id LEFT JOIN subject As s ON t.subject_id=s.subject_id',
-                                                        ' sl.student_log_id='.$student_log_detail['student_log_id'].' ORDER BY s.subject_id,t.topic_id');
-    
-                                               
                                                 
-                                                $student_log_details = $obj->selectAll('sld.*,y.year,t.name As topic_name,s.name As subject_name','student_log_detail As sld INNER JOIN student_log As sl ON sl.student_log_id=sld.student_log_id LEFT JOIN question As q ON sld.question_id=q.question_id 
-                                                                                        LEFT JOIN year as y ON q.year_id=y.year_id LEFT JOIN topic as t ON q.topic_id=t.topic_id LEFT JOIN subject AS s ON t.subject_id=s.subject_id',' sl.student_log_id='.$student_log_detail['student_log_id'].' ORDER BY student_log_detail_id ASC');
-                                                                                            
                                                
-                                                */
-                                                /*
+                                                $log_subj_topic = '';
+                                                if(isset($stud_log_topic_by_log[$student_log_detail['student_log_id']])) {
+                                                   foreach($stud_log_topic_by_log[$student_log_detail['student_log_id']] as $subj=>$topic) {
+                                                       if($log_subj_topic!='') {
+                                                           $log_subj_topic .= ', ';
+                                                       }
+                                                       $log_subj_topic .= $subj.' ( '.implode(', ',$topic).')';
+                                                   }
+                                                }
+                                               
                                                 ?>
                                             
                                             
                                             <h2 class = 'titleContainer title'> 
-                                                <i class="font-icon-arrow-simple-right"></i> <?php echo $student_log_detail['language_name']; ?> - Subject Order - Subject-1 (Topic 1, Topic 2), Subject-2 (Topic-1, Topic-2).
-                                                <span>Date: 10-01-2020</span>
+                                                <i class="font-icon-arrow-simple-right"></i> <?php echo $student_log_detail['language_name']; ?> - Subject Order - <?php echo $log_subj_topic; ?>.
+                                                <span>Date: <?php echo date('d/M/Y h:iA', strtotime($student_log_detail['created_at'])); ?></span>
                                             </h2>
                                             <table class = 'table table-striped result_table'>
                                                 <thead>
@@ -161,43 +262,83 @@ if (isset($_SESSION['student_register_id'])) {
                                                     </tr>
                                                 </thead>
                                                 <tbody>
+                                                    <?php 
+                                                    if(isset($ans_log_year[$student_log_detail['student_log_id']]))
+                                                    {
+                                                        //year
+                                                        foreach($ans_log_year[$student_log_detail['student_log_id']] as $ans_log_year_v)
+                                                        {    
+                                                            if(isset($stud_log_topic_by_log[$student_log_detail['student_log_id']])) {
+                                                            {
+                                                                //subject
+                                                                foreach($stud_log_topic_by_log[$student_log_detail['student_log_id']] as $student_log_subj_subj=>$student_log_subj)
+                                                                {    
+                                                                    //topic
+                                                                    {
+                                                                         foreach($student_log_subj as $student_log_subj_topic_id=>$student_log_subj_topic){
+                                                    ?>                                    
                                                     <tr>
-                                                        <td>2010</td>
-                                                        <td>Science</td>
-                                                        <td>Physics</td>
-                                                        <td>40</td>
-                                                        <td>40</td>
-                                                        <td>30</td>
-                                                        <td>10</td>
+                                                        <td><?php echo $ans_log_year_v; ?></td>
+                                                        <td><?php echo $student_log_subj_subj; ?></td>
+                                                        <td><?php echo $student_log_subj_topic; ?></td>
+                                                        <td><?php 
+                                                        //total question
+                                                        $tot_topic_question = 0;
+                                                        if(isset($ques_year_cnt[$ans_log_year_v][$student_log_subj_topic_id]['count'])) {
+                                                            $tot_topic_question = $ques_year_cnt[$ans_log_year_v][$student_log_subj_topic_id]['count'];
+                                                        }
+														echo $tot_topic_question;
+                                                        ?>
+                                                        </td>
+                                                        <td>
+                                                        <?php
+                                                        //answered question
+                                                        $answerd_topic_question = 0;
+                                                        if(isset($ques_cor_ans_cnt[$student_log_detail['student_log_id']][$ans_log_year_v][$student_log_subj_topic_id]['answerd_cnt'])) {
+                                                            $answerd_topic_question = $ques_cor_ans_cnt[$student_log_detail['student_log_id']][$ans_log_year_v][$student_log_subj_topic_id]['answerd_cnt'];
+                                                        }
+                                                        echo $answerd_topic_question;
+                                                        ?>
+                                                        </td>
+                                                        <td>
+                                                            <?php
+                                                             //correct answer
+                                                             $correct_topic_question = 0;
+                                                             if(isset($ques_cor_ans_cnt[$student_log_detail['student_log_id']][$ans_log_year_v][$student_log_subj_topic_id]['correct_cnt'])) {
+                                                                 $correct_topic_question = $ques_cor_ans_cnt[$student_log_detail['student_log_id']][$ans_log_year_v][$student_log_subj_topic_id]['correct_cnt'];
+                                                             }
+                                                              echo $correct_topic_question;
+                                                            ?>
+                                                        </td>
+                                                        <td>
+                                                            <?php
+                                                            //wrong answer
+                                                            $wrng_topic_question = 0;
+                                                            $wrng_topic_question = $answerd_topic_question - $correct_topic_question;
+                                                            echo $wrng_topic_question;
+                                                            ?>
+                                                        </td>
                                                     </tr>
-                                                    <tr>
-                                                        <td>2010</td>
-                                                        <td>Science</td>
-                                                        <td>Chemistry</td>
-                                                        <td>30</td>
-                                                        <td>30</td>
-                                                        <td>25</td>
-                                                        <td>05</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2010</td>
-                                                        <td>General</td>
-                                                        <td>GS</td>
-                                                        <td>30</td>
-                                                        <td>30</td>
-                                                        <td>15</td>
-                                                        <td>15</td>
-                                                    </tr>
+                                                    <?php
+                                                                    }
+                                                             }
+                                                        }
+                                                    }
+                                                        }
+                                                    } 
+                                                    }                                                   
+                                                    ?>
                                                 </tbody>
                                             </table>
                                             <center>
-                                                <button class="btn btn-brown">Show Details</button>
+                                                <button class="btn btn-brown" onClick="showFullResult(<?php echo $student_log_detail['student_log_id']; ?>)";>Show Details</button>
                                             </center>
+                                            <br/>
+                                            <div id="result_view_<?php echo $student_log_detail['student_log_id']; ?>" class="student-full-result"></div>
                                             <br/>
                                             
                                             <?php 
-                                                 * 
-                                                 *   */ }
+                                                 }
                                                 
                                                 
                                             }
@@ -219,7 +360,7 @@ if (isset($_SESSION['student_register_id'])) {
         <script type="text/javascript">
             image_url = 'api/v1/';
             function showFullResult(slid) {
-                setTimeout(() => {
+				setTimeout(() => {
                         applyMathAjax();
                     }, 600);
                 $.ajax({
