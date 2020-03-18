@@ -270,6 +270,19 @@ $app->get('/get_question_by_topic_n_year/:tid', function($tid) {
     echoRespnse(201, $res);
 });
 
+
+$app->get('/get_question_by_topic_and_year/:tid/:yid', function($tid,$yid) {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('*', 'question', 'question_id > 0 AND topic_id = ' . $tid . ' AND year_id='.$yid.' ORDER BY question_no ASC');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
 $app->get('/get_question_by_topic/:tid/:sid/:searchtxt/:searchqno', function($tid, $sid, $stxt, $sqno) {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
