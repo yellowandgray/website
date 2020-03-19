@@ -12,7 +12,7 @@ import { UserComponent, UserForm, UserDelete, UserImageView } from './user/user.
 import { OrderComponent, OrderView, OrderDeliveryBoyPopup } from './order/order.component';
 import { UnitComponent, UnitForm, UnitDelete } from './unit/unit.component';
 import { BannerComponent, BannerForm, BannerDelete, BannerImageView } from './banner/banner.component';
-import { DeliveryBoyComponent, DeliveryBoyForm, DeliveryBoyDelete, PictureViewUser } from './delivery-boy/delivery-boy.component';
+import { DeliveryBoyComponent, DeliveryBoyForm, DeliveryBoyDelete, PictureViewUser, DeliveryHistory } from './delivery-boy/delivery-boy.component';
 import { PincodeComponent, PincodeForm, PincodeDelete } from './pincode/pincode.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -72,6 +72,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     DeliveryBoyComponent,
     DeliveryBoyForm,
     DeliveryBoyDelete,
+    DeliveryHistory,
     PictureViewUser,
     PincodeComponent,
     PincodeForm,
@@ -130,6 +131,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     DeliveryBoyComponent,
     DeliveryBoyForm,
     DeliveryBoyDelete,
+    DeliveryHistory,
     PictureViewUser,
     OrderComponent,
     OrderView,

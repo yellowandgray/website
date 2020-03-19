@@ -24,11 +24,11 @@ export class OrderComponent implements OnInit {
   ngOnInit() {
     this.getOrder();
   }
-  image_url: string = "http://lemonandshadow.com/threelevel/api/v1/";
+  image_url: string = "http://localhost/project/three-levan/api/v1/";
   getOrder(): void {
     this.httpClient
       .get<any>(
-        "http://lemonandshadow.com/threelevel/api/v1/get_orders_for_all"
+        "http://localhost/project/three-levan/api/v1/get_orders_for_all"
       )
       .subscribe(
         res => {
@@ -93,7 +93,7 @@ export class OrderComponent implements OnInit {
   templateUrl: "delivery-boy-popup.html"
 })
 export class OrderDeliveryBoyPopup {
-  image_url: string = "http://lemonandshadow.com/threelevel/api/v1/";
+  image_url: string = "http://localhost/project/three-levan/api/v1/";
   deliveryboyform: FormGroup;
   delivery_boy = [];
   order_id = 0;
@@ -114,7 +114,7 @@ export class OrderDeliveryBoyPopup {
       this.order_id = this.data.order_id;
     }
     this.httpClient
-      .get("http://lemonandshadow.com/threelevel/api/v1/get_delivery_boy")
+      .get("http://localhost/project/three-levan/api/v1/get_delivery_boy")
       .subscribe(
         res => {
           if (res["result"]["error"] === false) {
@@ -148,7 +148,7 @@ export class OrderDeliveryBoyPopup {
       url = "insert_delivery_boy_status";
     }
     this.httpClient
-      .post("http://lemonandshadow.com/threelevel/api/v1/" + url, formData)
+      .post("http://localhost/project/three-levan/api/v1/" + url, formData)
       .subscribe(
         res => {
           this.loading = false;
@@ -175,7 +175,7 @@ export class OrderDeliveryBoyPopup {
   templateUrl: "order-view.html"
 })
 export class OrderView {
-  image_url: string = "http://lemonandshadow.com/threelevel/api/v1/";
+  image_url: string = "http://localhost/project/three-levan/api/v1/";
   loading = false;
   result = [];
   order_id = 0;
@@ -185,4 +185,23 @@ export class OrderView {
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient
   ) {}
+  ngOnInit() {
+    this.getOrder();
+  }
+  getOrder(): void {
+    this.httpClient
+      .get<any>(
+        "http://localhost/project/three-levan/api/v1/get_orders_for_all"
+      )
+      .subscribe(
+        res => {
+          this.result = res["result"]["data"];
+        },
+        error => {
+          this._snackBar.open(error["statusText"], "", {
+            duration: 2000
+          });
+        }
+      );
+  }
 }

@@ -23,11 +23,11 @@ export class DeliveryBoyComponent implements OnInit {
   ngOnInit() {
     this.getDeliveryBoy();
   }
-  image_url: string = "http://lemonandshadow.com/threelevel/api/v1/";
+  image_url: string = "http://localhost/project/three-levan/api/v1/";
   getDeliveryBoy(): void {
     this.httpClient
       .get<any>(
-        "http://lemonandshadow.com/threelevel/api/v1/get_delivery_boy"
+        "http://localhost/project/three-levan/api/v1/get_delivery_boy"
       )
       .subscribe(
         res => {
@@ -96,6 +96,16 @@ export class DeliveryBoyComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
     });
   }
+
+  openDeliveryHistory(): void {
+    const dialogRef = this.dialog.open(DeliveryHistory, {
+      minWidth: "40%",
+      maxWidth: "40%",
+    });
+    dialogRef.afterClosed().subscribe(result => {
+
+    });
+  }
 }
 
 @Component({
@@ -103,7 +113,7 @@ export class DeliveryBoyComponent implements OnInit {
   templateUrl: "delivery-boy-form.html"
 })
 export class DeliveryBoyForm {
-  image_url: string = "http://lemonandshadow.com/threelevel/api/v1/";
+  image_url: string = "http://localhost/project/three-levan/api/v1/";
   deliveryform: FormGroup;
   loading = false;
   delivery_boy_id = 0;
@@ -161,7 +171,7 @@ export class DeliveryBoyForm {
       url = "insert_delivery_boy";
     }
     this.httpClient
-      .post("http://lemonandshadow.com/threelevel/api/v1/" + url, formData)
+      .post("http://localhost/project/three-levan/api/v1/" + url, formData)
       .subscribe(
         res => {
           this.loading = false;
@@ -197,7 +207,7 @@ export class DeliveryBoyForm {
     formData.append("file", fileData);
     this.httpClient
       .post(
-        "http://lemonandshadow.com/threelevel/api/v1/upload_file",
+        "http://localhost/project/three-levan/api/v1/upload_file",
         formData
       )
       .subscribe(
@@ -245,7 +255,7 @@ export class DeliveryBoyDelete {
     this.loading = true;
     this.httpClient
       .get(
-        "http://lemonandshadow.com/threelevel/api/v1/delete_record/delivery_boy/delivery_boy_id=" +
+        "http://localhost/project/three-levan/api/v1/delete_record/delivery_boy/delivery_boy_id=" +
           this.delivery_boy_id
       )
       .subscribe(
@@ -276,7 +286,7 @@ export class DeliveryBoyDelete {
 })
 
 export class PictureViewUser {
-  image_url: string = 'http://lemonandshadow.com/threelevel/api/v1/';
+  image_url: string = 'http://localhost/project/three-levan/api/v1/';
   action: string = '';
   loading = false;
   delivery_boy_id = 0;
@@ -294,4 +304,20 @@ export class PictureViewUser {
       }
     }
   }
+}
+
+@Component({
+  selector: 'delivery-history',
+  templateUrl: 'delivery-history.html',
+})
+
+export class DeliveryHistory {
+  image_url: string = 'http://localhost/project/three-levan/api/v1/';
+  action: string = '';
+  loading = false;
+  constructor(
+    public dialogRef: MatDialogRef<DeliveryHistory>,
+    @Inject(MAT_DIALOG_DATA) public datapopup: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {}
 }
