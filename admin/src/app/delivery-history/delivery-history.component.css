@@ -1,0 +1,39 @@
+.mat-elevation-z8 {
+    width: 100%;
+}
+
+.mat-elevation-z8 td {
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table th {
+    border: 1px solid #e3e3e3;
+    padding: 10px;
+}
+
+table td {
+    border: 1px solid #e3e3e3;
+    padding: 5px;
+}
+
+.md-padding {
+    padding: 20px;
+}
+
+.sub-table {
+    border: none;
+    width: 100%;
+}
+
+.sub-table td {
+    border: none;
+}
+
+.cursor {
+    cursor: pointer;
+    color: #fd3d00;
+}

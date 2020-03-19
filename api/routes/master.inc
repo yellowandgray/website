@@ -533,7 +533,7 @@ $app->get('/get_develivery_boys_order/:dbid', function($dbid) {
 $app->get('/get_orders_for_all', function() {
     $res = array('error' => true, 'message' => 'No orders found');
     $com = new Common();
-    $data = $com->selectAll('o.*, d.first_name AS delivery_boy, u.name AS user, u.phone_no, u.pincode, u.imageurl, u.address', '`order` AS o LEFT JOIN user AS u ON u.user_id = o.user_id LEFT JOIN delivery_boy AS d ON d.delivery_boy_id = o.delivery_boy_id', 'o.order_id > 0 ORDER BY o.order_id DESC');
+    $data = $com->selectAll('o.*, d.first_name AS delivery_boy, d.phone AS phone, u.name AS user, u.phone_no, u.pincode, u.imageurl, u.address', '`order` AS o LEFT JOIN user AS u ON u.user_id = o.user_id LEFT JOIN delivery_boy AS d ON d.delivery_boy_id = o.delivery_boy_id', 'o.order_id > 0 ORDER BY o.order_id DESC');
     if (count($data) > 0) {
         foreach ($data as $key => $row) {
             $data[$key]['items'] = $com->selectAll('oi.*, u.name AS unit_name', 'order_item AS oi LEFT JOIN unit AS u ON u.unit_id = oi.unit_id', 'oi.order_id=' . $row['order_id']);

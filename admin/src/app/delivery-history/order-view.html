@@ -1,0 +1,134 @@
+<h2 mat-dialog-title>Order View</h2>
+<mat-dialog-content class="mat-typography">
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+        <div fxFlex="50%" fxLayoutAlign="start start">
+            <h4 mat-dialog-title>Date: {{data.created_at | date:'dd/MM/yyyy hh:mm a'}}</h4>
+        </div>
+        <div fxFlex="50%" fxLayoutAlign="end end">
+            <h4 mat-dialog-title>Order Id: {{data.order_id}}</h4>
+        </div>
+    </div>
+    <mat-divider></mat-divider>
+    <h3>Order Details</h3>
+    <ng-container *ngFor="let data of data.items">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start" class="m-b-10">
+            <div fxFlex="90%">
+                <div fxFlex="40%" class="product-img">
+                    <img src="{{image_url}}{{data.imageurl}}" />
+                </div>
+                <div fxFlex="70%" class="order-view-table">
+                    <table>
+                        <tr>
+                            <td>Name</td>
+                            <td> : </td>
+                            <td>{{data.name}}</td>
+                        </tr>
+                        <tr>
+                            <td>Unit</td>
+                            <td> : </td>
+                            <td>{{data.unit_name}}</td>
+                        </tr>
+                        <tr>
+                            <td>Amount</td>
+                            <td> : </td>
+                            <td>₹{{data.amount}}</td>
+                        </tr>
+                        <tr>
+                            <td>Qty</td>
+                            <td> : </td>
+                            <td>{{data.quantity}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div fxFlex="10%">
+                <div fxLayoutAlign="end center">
+                    <p>₹ {{data.quantity * data.amount}}.00</p>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+    <mat-divider></mat-divider>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+        <!-- <div fxFlex="45%"></div> -->
+        <div fxFlex="100%" fxLayoutAlign="end start">
+            <table class="total-amt-table">
+                <tr>
+                    <td>கூட்டுத்தொகை</td>
+                    <td> : </td>
+                    <th>{{data.total - data.delivery_charge}}.00</th>
+                </tr>
+                <tr>
+                    <td>டெலிவரி கட்டணம்</td>
+                    <td> : </td>
+                    <th>{{data.delivery_charge}}</th>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-divider></mat-divider>
+                    </td>
+                    <td>
+                        <mat-divider></mat-divider>
+                    </td>
+                    <td>
+                        <mat-divider></mat-divider>
+                    </td>
+                </tr>
+                <tr>
+                    <td>மொத்தம்</td>
+                    <td> : </td>
+                    <th>{{data.total}}</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <mat-divider></mat-divider>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+        <div fxFlex="100%" class="bg-delivery">
+            <table>
+                <tr>
+                    <td>டெலிவரி நிலை</td>
+                    <td> - </td>
+                    <td> {{data.status}} </td>
+                </tr>
+                <tr>
+                    <td>டெலிவரி செய்த நபர்</td>
+                    <td> - </td>
+                    <td> {{data.delivery_boy}} - {{data.phone}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <mat-divider></mat-divider>
+    <br/>
+    <p>வாடிக்கையாளர் விவரங்கள்</p>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+        <div fxFlex="100%" class="order-view-table">
+            <table>
+                <tr>
+                    <td>பெயர்</td>
+                    <td>:</td>
+                    <th>{{data.user}}</th>
+                </tr>
+                <tr>
+                    <td>கைபேசி எண்</td>
+                    <td>:</td>
+                    <th>{{data.phone_no}}</th>
+                </tr>
+                <tr>
+                    <td>முகவரி</td>
+                    <td>:</td>
+                    <th>{{data.address}}</th>
+                </tr>
+                <tr>
+                    <td>அஞ்சல் குறியீடு</td>
+                    <td>:</td>
+                    <th>{{data.pincode}}</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
+        <button mat-button [mat-dialog-close]="false">Cancel</button>
+    </div>
+</mat-dialog-content>

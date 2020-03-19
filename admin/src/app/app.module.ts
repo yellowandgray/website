@@ -12,9 +12,10 @@ import { UserComponent, UserForm, UserDelete, UserImageView } from './user/user.
 import { OrderComponent, OrderView, OrderDeliveryBoyPopup } from './order/order.component';
 import { UnitComponent, UnitForm, UnitDelete } from './unit/unit.component';
 import { BannerComponent, BannerForm, BannerDelete, BannerImageView } from './banner/banner.component';
-import { DeliveryBoyComponent, DeliveryBoyForm, DeliveryBoyDelete, PictureViewUser, DeliveryHistory } from './delivery-boy/delivery-boy.component';
+import { DeliveryBoyComponent, DeliveryBoyForm, DeliveryBoyDelete, PictureViewUser } from './delivery-boy/delivery-boy.component';
 import { PincodeComponent, PincodeForm, PincodeDelete } from './pincode/pincode.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DeliveryHistoryComponent, OrderViewHistory } from './delivery-history/delivery-history.component';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
@@ -40,6 +41,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -72,11 +74,12 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     DeliveryBoyComponent,
     DeliveryBoyForm,
     DeliveryBoyDelete,
-    DeliveryHistory,
     PictureViewUser,
     PincodeComponent,
     PincodeForm,
-    PincodeDelete
+    PincodeDelete,
+    DeliveryHistoryComponent,
+    OrderViewHistory
   ],
   imports: [
     BrowserModule,
@@ -106,7 +109,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatBadgeModule,
     FlexLayoutModule,
     MatSlideToggleModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    //MatTableModule
   ],
   entryComponents: [
     SnacksComponent, 
@@ -131,14 +135,15 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     DeliveryBoyComponent,
     DeliveryBoyForm,
     DeliveryBoyDelete,
-    DeliveryHistory,
     PictureViewUser,
     OrderComponent,
     OrderView,
     OrderDeliveryBoyPopup,
     PincodeComponent,
     PincodeForm,
-    PincodeDelete
+    PincodeDelete,
+    DeliveryHistoryComponent,
+    OrderViewHistory
   ],
   providers: [],
   bootstrap: [AppComponent]

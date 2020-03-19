@@ -9,6 +9,7 @@ import { UnitComponent } from './unit/unit.component';
 import { BannerComponent } from './banner/banner.component';
 import { DeliveryBoyComponent } from './delivery-boy/delivery-boy.component';
 import { PincodeComponent } from './pincode/pincode.component';
+import { DeliveryHistoryComponent } from './delivery-history/delivery-history.component';
 
 
 const routes: Routes = [
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path: 'unit', component: UnitComponent},
   {path: 'delivery_boy', component: DeliveryBoyComponent},
   {path: 'pincode', component: PincodeComponent},
+  {path: 'delivery_history', component: DeliveryHistoryComponent},
 ];
 
 @NgModule({

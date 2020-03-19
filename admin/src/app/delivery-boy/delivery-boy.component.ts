@@ -15,14 +15,12 @@ import { HttpClient } from "@angular/common/http";
 })
 export class DeliveryBoyComponent implements OnInit {
   result = [];
-  constructor(
-    public dialog: MatDialog,
-    private _snackBar: MatSnackBar,
-    private httpClient: HttpClient
-  ) {}
+  constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) {}
+  
   ngOnInit() {
     this.getDeliveryBoy();
   }
+  
   image_url: string = "http://localhost/project/three-levan/api/v1/";
   getDeliveryBoy(): void {
     this.httpClient
@@ -94,16 +92,6 @@ export class DeliveryBoyComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-    });
-  }
-
-  openDeliveryHistory(): void {
-    const dialogRef = this.dialog.open(DeliveryHistory, {
-      minWidth: "40%",
-      maxWidth: "40%",
-    });
-    dialogRef.afterClosed().subscribe(result => {
-
     });
   }
 }
@@ -304,20 +292,4 @@ export class PictureViewUser {
       }
     }
   }
-}
-
-@Component({
-  selector: 'delivery-history',
-  templateUrl: 'delivery-history.html',
-})
-
-export class DeliveryHistory {
-  image_url: string = 'http://localhost/project/three-levan/api/v1/';
-  action: string = '';
-  loading = false;
-  constructor(
-    public dialogRef: MatDialogRef<DeliveryHistory>,
-    @Inject(MAT_DIALOG_DATA) public datapopup: any,
-    private _snackBar: MatSnackBar,
-    private httpClient: HttpClient) {}
 }
