@@ -8,6 +8,27 @@ if (!isset($_SESSION['student_selected_language_id'])) {
 $language = $obj->selectRow('*', 'language', 'language_id=' . $_SESSION['student_selected_language_id']);
 $_SESSION['student_selected_type'] = 'order';
 $years = $obj->selectAll('*', 'year', 'status = 1');
+
+$student_log_order_year        = $obj->selectAll('sl.*,year.year','student_log sl LEFT JOIN student_log_order slo ON sl.student_log_id=slo.student_log_id LEFT JOIN student_log_year sly ON sly.student_log_id=sl.student_log_id LEFT JOIN year ON sly.year_id=year.year_id',
+                                  'student_register_id='.$_SESSION['student_register_id'].' AND sl.language_id='.$_SESSION['student_selected_language_id'].' AND student_log_order=1 ORDER BY updated_at DESC');
+
+$student_log_year              = array();
+        
+if(count($student_log_order_year)>0){
+    foreach ($student_log_order_year as $log_v) {
+        $log_detail             = $obj->selectRow('COUNT(student_log_detail_id) AS attended, IFNULL((SELECT COUNT(student_log_detail_id) FROM student_log_detail WHERE student_log_id=' . $log_v['student_log_id'] . ' AND UPPER(answer) = UPPER(student_answer)), 0) AS correct_answers', 'student_log_detail', 'student_log_id=' . $log_v['student_log_id']);
+        $total_questions        = $log_v['total_questions'];
+        $attended               = $log_detail['attended'];
+        $log_id                 = $log_v['student_log_id'];
+        $created_at             = $log_v['created_at'];
+        $updated_at             = $log_v['updated_at'];
+
+        if($attended<$total_questions){
+            
+            $student_log_year[$log_v['year']][$log_id] =  array('total_qustions'=>$total_questions,'attended'=>$attended,'created_at'=>$created_at,'updated_at'=>$updated_at);
+        }   
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang='en'>
@@ -49,7 +70,21 @@ $years = $obj->selectAll('*', 'year', 'status = 1');
                                         <li>
                                             <i class="icon-double-angle-right"></i> <a href="quiz_page?year=<?php echo $row['year']; ?>"><?php echo $row['year']; ?></a>
                                         </li>
-                                    <?php } ?>
+                                        <?php
+   
+                                        if(isset($student_log_year[$row['year']]))
+                                        {    
+                                            foreach($student_log_year[$row['year']] as $stud_log_id_val=>$student_log_year_v) {     
+                                        ?>
+                                        <li>
+                                            <i class="font-italic">Paused On <?php echo date('d/M/Y h:iA', strtotime($student_log_year_v['updated_at'])).' - '; ?> </i> <a href="quiz_page?year=<?php echo $row['year']; ?>&from_log=<?php echo $stud_log_id_val; ?>">Resume</a>
+                                        </li>
+                                        <?php 
+                                                                            
+                                                }
+                                            }  
+                                    }
+                                         ?>
                                 </ul>
                             </div>
                         </div>
@@ -59,7 +94,7 @@ $years = $obj->selectAll('*', 'year', 'status = 1');
 
             <!-- Reset Modal -->
             <?php include 'footer.php'; ?>
-            ?>
+
             <!-- end reset modal -->
         </div>
         <?php include 'script.php';

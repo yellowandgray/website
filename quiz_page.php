@@ -9,6 +9,7 @@ if (!isset($_SESSION['student_selected_type']) || !isset($_SESSION['student_regi
 }
 
 
+$attended_questions  = 0;
 if ($_SESSION['student_selected_type'] == 'order') {
     if (isset($_SESSION['student_selected_topics_id'])) {
         unset($_SESSION['student_selected_topics_id']);
@@ -20,21 +21,42 @@ if ($_SESSION['student_selected_type'] == 'order') {
     if (!isset($_GET['year'])) {
         header('Location: qorder-years');
     }
+    
     $type = 'Question Order';
     $selyear = $obj->selectRow('*', 'year', 'year=\'' . $_GET['year'] . '\'');
     $_SESSION['student_selected_year_id'] = $selyear['year_id'];
 
     $questions = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer, image_path, direction,question_id,explanation,image_path_explanation,explanation_img_direction', 'question', 'topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $_SESSION['student_selected_language_id'] . ') AND year_id = ' . $_SESSION['student_selected_year_id'] . ' ORDER BY year_id ASC, topic_id ASC');
 
+    //resume log
+    $student_log_v = '';
+    if(isset($_REQUEST['from_log']) && ($_REQUEST['from_log']!='')) {
+        $check_log = $obj->selectRow('*', 'student_log', 'student_log_id='.$_REQUEST['from_log'].' AND student_register_id='.$_SESSION['student_register_id']);
+        if(count($check_log)<1) {
+            header('Location: qorder-years');
+        }
+        else {
+            $student_log_v = $_REQUEST['from_log'];
+        }
+    }
+    
+    if($student_log_v=='') {
+        $student_log = $obj->insertRecord(array('language_id' => $_SESSION['student_selected_language_id'],'student_register_id' => $_SESSION['student_register_id'], 'total_questions' => count($questions),'created_at' => date('Y-m-d H:i:s'), 'created_by' => $_SESSION['student_register_id'], 'updated_at' => date('Y-m-d H:i:s'),'updated_by' => $_SESSION['student_register_id']), 'student_log');
+        $student_log_order = $obj->insertRecord(array('student_log_id' => $student_log, 'student_log_order' => 1), 'student_log_order');
 
-    $student_log = $obj->insertRecord(array('language_id' => $_SESSION['student_selected_language_id'],
-        'student_register_id' => $_SESSION['student_register_id'], 'total_questions' => count($questions),
-        'created_at' => date('Y-m-d H:i:s'), 'created_by' => $_SESSION['student_register_id'], 'updated_at' => date('Y-m-d'),
-        'updated_by' => $_SESSION['student_register_id']), 'student_log');
-
-    $student_log_order = $obj->insertRecord(array('student_log_id' => $student_log, 'student_log_order' => 1), 'student_log_order');
-
-    $student_log_year = $obj->insertRecord(array('student_log_id' => $student_log, 'year_id' => $_SESSION['student_selected_year_id']), 'student_log_year');
+        $student_log_year = $obj->insertRecord(array('student_log_id' => $student_log, 'year_id' => $_SESSION['student_selected_year_id']), 'student_log_year');
+    }else {
+        //update log
+        $student_log        = $student_log_v;
+        $student_log_update = $obj->updateRecordWithWhere(array('updated_at' => date('Y-m-d H:i:s'),'student_register_id' => $_SESSION['student_register_id']), 'student_log',' student_log_id='.$student_log);
+        $log_details         = $obj->selectRow('COUNT(student_log_detail_id) AS attended, IFNULL((SELECT COUNT(student_log_detail_id) FROM student_log_detail '
+                                    . '  WHERE student_log_id=' . $student_log . ' AND UPPER(answer) = UPPER(student_answer)), 0) AS correct_answers', 
+                                    'student_log_detail', 'student_log_id=' . $student_log);       
+        
+        if(count($log_details)>0){
+            $attended_questions = $log_details['attended'];
+        }
+    }
 }
 if ($_SESSION['student_selected_type'] == 'subject') {
     if (isset($_SESSION['student_selected_year_id'])) {
@@ -51,7 +73,7 @@ if ($_SESSION['student_selected_type'] == 'subject') {
 
     $student_log = $obj->insertRecord(array('language_id' => $_SESSION['student_selected_language_id'],
         'student_register_id' => $_SESSION['student_register_id'], 'total_questions' => count($questions),
-        'created_at' => date('Y-m-d H:i:s'), 'created_by' => $_SESSION['student_register_id'], 'updated_at' => date('Y-m-d'),
+        'created_at' => date('Y-m-d H:i:s'), 'created_by' => $_SESSION['student_register_id'], 'updated_at' => date('Y-m-d H:i:s'),
         'updated_by' => $_SESSION['student_register_id']), 'student_log');
 
     $student_log_order = $obj->insertRecord(array('student_log_id' => $student_log, 'student_log_order' => 2), 'student_log_order');
@@ -234,11 +256,11 @@ include 'head.php';
                                         <!-- show answer immediate -->
                                         <div class="quiz-pause">
                                             <div class="float-left">
-                                                <input id="show-immediately" type="checkbox" value="show_answer_immediately" @change="immChange" v-model="showimmediate"> <span class="span-position">Show Answer Immediately</span>
+                                                <input id="show-immediately" type="checkbox" value="show_answer_immediately" @change="immChange" v-model="showimmediate"> <span class="span-position">Show Answer</span>
                                             </div> 
                                             <div class="float-right">
                                                 <div class="pause-right">
-                                                    <i class="icon-pause"></i>
+                                                    <i class="icon-pause" @click="clickPause"></i>
                                                 </div>
                                             </div>
                                         </div>   
@@ -418,7 +440,8 @@ include 'head.php';
                 el: "#app",
                 data: {
                     quiz: quiz,
-                    questionIndex: 0,
+                    questionIndex: <?php echo $attended_questions; 
+                                //echo 0; ?>,
                     userResponses: userResponseSkelaton,
                     showimmediate: false,
                     showimmediateblk: false,
@@ -529,6 +552,11 @@ include 'head.php';
                                 swal('Error', err.statusText, 'error');
                             }
                         });
+                    },
+                    clickPause:function() {
+                        if(confirm("Do you want to Pause Test?")){
+                                window.location = './select_language';
+                       }
                     },
                     selectOption: function (index) {
                         if (!app.showimmediate) {
