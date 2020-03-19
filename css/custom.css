@@ -1149,3 +1149,15 @@ and open the template in the editor.
 .footer-explanation-section .border-b {
     border-bottom: 1px solid #1c75bc;
 }
+
+.pause-content {
+    font-size: 14px !important;
+    color: #b7b7b7 !important;
+    font-style: italic;
+}
+
+.nmlfont {
+    font-style: normal;
+    font-size: 12px !important;
+    margin-left: 10px;
+}
