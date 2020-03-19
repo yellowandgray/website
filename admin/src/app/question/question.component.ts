@@ -58,89 +58,109 @@ export class QuestionComponent implements OnInit {
   }
   getYearByLanguage(): void {
     this.subject = [];
-    this.httpClient.get<any>('../api/v1/get_year_by_language/'+this.selected_language)
-    .subscribe(
-            (res)=>{
-                this.year = res["result"]["data"];
-          },
-          (error)=>{
-            this._snackBar.open(error["statusText"], '', {
-                duration: 2000,
-            });
-        }
-    );
-}  
-  getSubjectByYearnLanguage(): void {    
-    this.subject = [];
-    this.httpClient.get<any>('../api/v1/get_subject_by_language_n_year/'+this.selected_language+'/'+this.selected_year)
-    .subscribe(
-            (res)=>{
-                this.subject = res["result"]["data"];   
-                   if(this.selected_topic!='') {
-                     //alert(this.selected_topic);
-                     this.getQuestionsByTopicYear();
-                  } 
-          },
-          (error)=>{
-            this._snackBar.open(error["statusText"], '', {
-                duration: 2000,
-            });
-        }
-    );
-}  
-getTopicBySubject(): void {
-  this.topic = [];
-          this.httpClient.get<any>('../api/v1/get_topic_by_subject_n_year/'+this.selected_subject+'/'+this.selected_year)
-          .subscribe(
-                  (res)=>{
-                      this.topic = res["result"]["data"];
-                },
-                (error)=>{
-                  this._snackBar.open(error["statusText"], '', {
-                      duration: 2000,
-                  });
-              }
-          );
-      }
-      getQuestionsByTopicYear(): void {
-     //var tid = this.topic[ev.value].topic_id;
-     //var tid = ev.value;
-    //this.selected_topic_index = ev.value;
-     var tid = this.selected_topic;
-     var sel_year = this.selected_year;
-     this.httpClient
-       .get<any>(
-        "../api/v1/get_question_by_topic_and_year/" +tid+"/"+sel_year
-       )
-       .subscribe(
-         res => {
-           this.question = res["result"]["data"];
-         },
-         error => {
-           this._snackBar.open(error["statusText"], "", {
+    this.httpClient
+      .get<any>(
+        "../api/v1/get_year_by_language/" +
+          this.selected_language
+      )
+      .subscribe(
+        res => {
+          this.year = res["result"]["data"];
+        },
+        error => {
+          this._snackBar.open(error["statusText"], "", {
             duration: 2000
-           });
-         }
-       );
+          });
+        }
+      );
   }
-      getQuestionsByTopic(ev): void {
-     //var tid = this.topic[ev.value].topic_id;
-     var tid = ev.value;
-    this.selected_topic_index = ev.value;
-     this.httpClient
-       .get<any>(
-        "../api/v1/get_question_by_topic_n_year/" +tid
-       )
-       .subscribe(
-         res => {
-           this.question = res["result"]["data"];
-         },
-         error => {
-           this._snackBar.open(error["statusText"], "", {
+  getSubjectByYearnLanguage(): void {
+    this.subject = [];
+    this.httpClient
+      .get<any>(
+        "../api/v1/get_subject_by_language_n_year/" +
+          this.selected_language +
+          "/" +
+          this.selected_year
+      )
+      .subscribe(
+        res => {
+          this.subject = res["result"]["data"];
+          if (this.selected_topic != "") {
+            //alert(this.selected_topic);
+            this.getQuestionsByTopicYear();
+          }
+        },
+        error => {
+          this._snackBar.open(error["statusText"], "", {
             duration: 2000
-           });
-         }
-       );
+          });
+        }
+      );
+  }
+  getTopicBySubject(): void {
+    this.topic = [];
+    this.httpClient
+      .get<any>(
+        "../api/v1/get_topic_by_subject_n_year/" +
+          this.selected_subject +
+          "/" +
+          this.selected_year
+      )
+      .subscribe(
+        res => {
+          this.topic = res["result"]["data"];
+        },
+        error => {
+          this._snackBar.open(error["statusText"], "", {
+            duration: 2000
+          });
+        }
+      );
+  }
+  getQuestionsByTopicYear(): void {
+    //var tid = this.topic[ev.value].topic_id;
+    //var tid = ev.value;
+    //this.selected_topic_index = ev.value;
+    var tid = this.selected_topic;
+    var sel_year = this.selected_year;
+    this.httpClient
+      .get<any>(
+        "../api/v1/get_question_by_topic_and_year/" +
+          tid +
+          "/" +
+          sel_year
+      )
+      .subscribe(
+        res => {
+          this.question = res["result"]["data"];
+        },
+        error => {
+          this._snackBar.open(error["statusText"], "", {
+            duration: 2000
+          });
+        }
+      );
+  }
+  getQuestionsByTopic(ev): void {
+    //var tid = this.topic[ev.value].topic_id;
+    var tid = ev.value;
+    this.selected_topic_index = ev.value;
+    this.httpClient
+      .get<any>(
+        "../api/v1/get_question_by_topic_n_year/" +
+          tid
+      )
+      .subscribe(
+        res => {
+          this.question = res["result"]["data"];
+        },
+        error => {
+          this._snackBar.open(error["statusText"], "", {
+            duration: 2000
+          });
+        }
+      );
   }
   getTopicByLngNYear(ev): void {
     this.selected_year = this.year[ev.index].year_id;
@@ -180,7 +200,8 @@ getTopicBySubject(): void {
 
     dialogRef.afterClosed().subscribe(result => {
       if (result !== false && result !== "false") {
-        this.getQuestionsByTopic({ value: this.selected_topic_index });
+        //this.getQuestionsByTopic({ value: this.selected_topic_index });
+        this.getQuestionsByTopicYear();
       }
     });
   }
@@ -197,7 +218,8 @@ getTopicBySubject(): void {
     });
     dialogRef.afterClosed().subscribe(result => {
       if (result !== false && result !== "false") {
-        this.getQuestionsByTopic({ value: this.selected_topic_index });
+        //this.getQuestionsByTopic({ value: this.selected_topic_index });
+        this.getQuestionsByTopicYear();
       }
     });
   }
@@ -243,7 +265,7 @@ export class QuestionForm {
   option_b_image: string = "Option B Image";
   option_c_image: string = "Option C Image";
   option_d_image: string = "Option D Image";
-  explanation_image: string = 'Select Explanation Image';
+  explanation_image: string = "Select Explanation Image";
   image_path: string = "";
   topic: any[];
   year: any[];
@@ -252,7 +274,7 @@ export class QuestionForm {
   option_image_b: string = "";
   option_image_c: string = "";
   option_image_d: string = "";
-  image_path_explanation: string = '';
+  image_path_explanation: string = "";
   constructor(
     public dialogRef: MatDialogRef<QuestionForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -361,7 +383,7 @@ export class QuestionForm {
       formData.append("topic_id", this.questionForm.value.topic_id);
       formData.append("name", this.questionForm.value.question);
       formData.append("image_path", this.image_path);
-      formData.append('image_path_explanation', this.image_path_explanation);
+      formData.append("image_path_explanation", this.image_path_explanation);
       formData.append("question_no", this.questionForm.value.question_no);
       formData.append("direction", this.questionForm.value.direction);
       formData.append("year_id", this.questionForm.value.year_id);
@@ -371,8 +393,14 @@ export class QuestionForm {
       formData.append("d", this.questionForm.value.d);
       formData.append("answer", this.questionForm.value.answer);
       formData.append("explanation", this.questionForm.value.explanation);
-      formData.append('explanation_img_direction', this.questionForm.value.explanation_img_direction);
-      formData.append("data_dictionary", this.questionForm.value.data_dictionary);
+      formData.append(
+        "explanation_img_direction",
+        this.questionForm.value.explanation_img_direction
+      );
+      formData.append(
+        "data_dictionary",
+        this.questionForm.value.data_dictionary
+      );
       formData.append("page_no", this.questionForm.value.page_no);
       formData.append("book_id", this.questionForm.value.book_id);
       formData.append("notes", this.questionForm.value.notes);
@@ -381,7 +409,7 @@ export class QuestionForm {
       formData.append("topic_id", this.questionForm.value.topic_id);
       formData.append("question", this.questionForm.value.question);
       formData.append("question_image", this.image_path);
-      formData.append('explanation_image', this.image_path_explanation);
+      formData.append("explanation_image", this.image_path_explanation);
       formData.append("question_no", this.questionForm.value.question_no);
       formData.append("direction", this.questionForm.value.direction);
       formData.append("year_id", this.questionForm.value.year_id);
@@ -391,8 +419,14 @@ export class QuestionForm {
       formData.append("d", this.questionForm.value.d);
       formData.append("answer", this.questionForm.value.answer);
       formData.append("explanation", this.questionForm.value.explanation);
-      formData.append('explanation_img_direction', this.questionForm.value.explanation_img_direction);
-      formData.append("data_dictionary", this.questionForm.value.data_dictionary);
+      formData.append(
+        "explanation_img_direction",
+        this.questionForm.value.explanation_img_direction
+      );
+      formData.append(
+        "data_dictionary",
+        this.questionForm.value.data_dictionary
+      );
       formData.append("page_no", this.questionForm.value.page_no);
       formData.append("book_id", this.questionForm.value.book_id);
       formData.append("notes", this.questionForm.value.notes);
@@ -489,12 +523,12 @@ export class QuestionForm {
       this.question_image = "Select Question Image";
     }
   }
-removeMedia1(url) {
-    this[url] = '';
-    if (url === 'image_path_explanation') {
-        this.explanation_image = 'Select Explanation Image';
+  removeMedia1(url) {
+    this[url] = "";
+    if (url === "image_path_explanation") {
+      this.explanation_image = "Select Explanation Image";
     }
-}
+  }
   editorConfig: AngularEditorConfig = {
     editable: true,
     spellcheck: true,
@@ -536,85 +570,85 @@ removeMedia1(url) {
     toolbarPosition: "top"
   };
   editorOptionConfig: AngularEditorConfig = {
-        editable: true,
-        spellcheck: true,
-        height: '20px',
-        minHeight: '20px',
-        maxHeight: '20px',
-        width: 'auto',
-        minWidth: '0',
-        translate: 'no',
-        enableToolbar: true,
-        showToolbar: false,
-        placeholder: 'Enter text here...',
-        defaultParagraphSeparator: '',
-        defaultFontName: 'Arial',
-        defaultFontSize: '3',
-        fonts: [
-            { class: 'arial', name: 'Arial' },
-            { class: 'times-new-roman', name: 'Times New Roman' },
-            { class: 'calibri', name: 'Calibri' },
-            { class: 'comic-sans-ms', name: 'Comic Sans MS' }
-        ],
-        customClasses: [
-            {
-                name: 'quote',
-                class: 'quote',
-            },
-            {
-                name: 'redText',
-                class: 'redText'
-            },
-            {
-                name: 'titleText',
-                class: 'titleText',
-                tag: 'h1',
-            },
-        ],
-        uploadUrl: '../api/v1/upload_image',
-        sanitize: true,
-        toolbarPosition: 'top',
-    };
+    editable: true,
+    spellcheck: true,
+    height: "20px",
+    minHeight: "20px",
+    maxHeight: "20px",
+    width: "auto",
+    minWidth: "0",
+    translate: "no",
+    enableToolbar: true,
+    showToolbar: false,
+    placeholder: "Enter text here...",
+    defaultParagraphSeparator: "",
+    defaultFontName: "Arial",
+    defaultFontSize: "3",
+    fonts: [
+      { class: "arial", name: "Arial" },
+      { class: "times-new-roman", name: "Times New Roman" },
+      { class: "calibri", name: "Calibri" },
+      { class: "comic-sans-ms", name: "Comic Sans MS" }
+    ],
+    customClasses: [
+      {
+        name: "quote",
+        class: "quote"
+      },
+      {
+        name: "redText",
+        class: "redText"
+      },
+      {
+        name: "titleText",
+        class: "titleText",
+        tag: "h1"
+      }
+    ],
+    uploadUrl: "../api/v1/upload_image",
+    sanitize: true,
+    toolbarPosition: "top"
+  };
   editorExplanationConfig: AngularEditorConfig = {
-        editable: true,
-        spellcheck: true,
-        height: '100px',
-        minHeight: '100px',
-        maxHeight: '100px',
-        width: 'auto',
-        minWidth: '0',
-        translate: 'no',
-        enableToolbar: true,
-        showToolbar: true,
-        placeholder: 'Enter text here...',
-        defaultParagraphSeparator: '',
-        defaultFontName: 'Arial',
-        defaultFontSize: '3',
-        fonts: [
-            { class: 'arial', name: 'Arial' },
-            { class: 'times-new-roman', name: 'Times New Roman' },
-            { class: 'calibri', name: 'Calibri' },
-            { class: 'comic-sans-ms', name: 'Comic Sans MS' }
-        ],
-        customClasses: [
-            {
-                name: 'quote',
-                class: 'quote',
-            },
-            {
-                name: 'redText',
-                class: 'redText'
-            },
-            {
-                name: 'titleText',
-                class: 'titleText',
-                tag: 'h1',
-            },
-        ],
-        uploadUrl: '../api/v1/upload_image',
-        sanitize: true,
-        toolbarPosition: 'top',
-    };
+    editable: true,
+    spellcheck: true,
+    height: "100px",
+    minHeight: "100px",
+    maxHeight: "100px",
+    width: "auto",
+    minWidth: "0",
+    translate: "no",
+    enableToolbar: true,
+    showToolbar: true,
+    placeholder: "Enter text here...",
+    defaultParagraphSeparator: "",
+    defaultFontName: "Arial",
+    defaultFontSize: "3",
+    fonts: [
+      { class: "arial", name: "Arial" },
+      { class: "times-new-roman", name: "Times New Roman" },
+      { class: "calibri", name: "Calibri" },
+      { class: "comic-sans-ms", name: "Comic Sans MS" }
+    ],
+    customClasses: [
+      {
+        name: "quote",
+        class: "quote"
+      },
+      {
+        name: "redText",
+        class: "redText"
+      },
+      {
+        name: "titleText",
+        class: "titleText",
+        tag: "h1"
+      }
+    ],
+    uploadUrl: "../api/v1/upload_image",
+    sanitize: true,
+    toolbarPosition: "top"
+  };
 }
 
 @Component({

@@ -331,7 +331,7 @@ if (isset($_SESSION['student_register_id'])) {
                                                 </tbody>
                                             </table>
                                             <center>
-                                                <button class="btn btn-brown" onClick="showFullResult(<?php echo $student_log_detail['student_log_id']; ?>)";>Show Details</button>
+                                                <button class="btn btn-brown" onClick="showFullResult(<?php echo $student_log_detail['student_log_id']; ?>)">Show Details</button>
                                             </center>
                                             <br/>
                                             <div id="result_view_<?php echo $student_log_detail['student_log_id']; ?>" class="student-full-result"></div>
@@ -372,7 +372,7 @@ if (isset($_SESSION['student_register_id'])) {
                             var correct_ans = '';
                             var student_ans = '';
                             $.each(data.result.data, function (key, val) {
-                                qlist = qlist + '<div class="question-title result-title"><h6><span class="no_question">' + (key + 1) + '</span>. <span class="question_title"> ' + val.name + '</span></h6>';
+                                qlist = qlist + '<div class="question-title result-title"><h6><span class="no_question">' + (key + 1) + '.</span> <span class="question_title"> ' + val.name + '</span></h6>';
                                 if (val.a !== '') {
                                     correct_ans = '';
                                     student_ans = '';

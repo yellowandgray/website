@@ -18,3 +18,7 @@
     width: 15%;
     margin: 10px 0 !important;
 }
+
+.mat-list-base .mat-list-item .mat-line {
+    white-space: normal !important;
+}

@@ -279,7 +279,8 @@ include 'head.php';
                                 <div v-if="quiz.questions[questionIndex].show_image" class="text-center">
                                     <img style="width: 50%" v-if="quiz.questions[questionIndex].direction == 'top'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />
                                 </div>
-                                <h2 class="titleContainer title"><span class="quiz-question-no">{{questionIndex + 1}}.</span> <span class="quiz-question-title" v-html="quiz.questions[questionIndex].text"></span></h2>
+                                <h2 class="titleContainer title"><span class="quiz-question-no">{{questionIndex + 1}}.</span> <span class="quiz-question-title" v-html="quiz.questions[questionIndex].text"></span>
+                                </h2>
                                 <div v-if="quiz.questions[questionIndex].show_image" class="text-center">
                                     <img style="width: 50%" v-if="quiz.questions[questionIndex].direction == 'bottom'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />
                                 </div>
@@ -313,7 +314,8 @@ include 'head.php';
                                 
                                 <footer class="questionFooter" id='quiz-footer'  v-if="showimmediateblk">
                                     <div class="footer-explanation-section">
-                                        <div class="quiz-explanation-view border-b">Correct Answer - <strong>{{quiz.questions[questionIndex].answer}}</strong></div>
+                                        <div class="quiz-explanation-view border-b">Correct Answer - <strong>{{quiz.questions[questionIndex].answer}}</strong>
+                                        </div>
                                         <!--                                        <hr>-->
                                         <div class="quiz-explanation-view">Explanation:</div>
                                         <div v-if="quiz.questions[questionIndex].show_image_explanation" class="text-center">
@@ -323,8 +325,7 @@ include 'head.php';
                                         <!--span v-html="quiz.questions[questionIndex].explanation"></span-->
                                         <br/>
                                         <div style="text-align: left;">
-                                            <span> 
-                                                {{quiz.questions[questionIndex].explanation}}
+                                            <span v-html="quiz.questions[questionIndex].explanation">
                                             </span>
                                         </div>    
 
