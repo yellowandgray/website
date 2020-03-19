@@ -125,7 +125,7 @@ if (isset($_SESSION['student_register_id'])) {
                                         </tbody>
                                     </table>
                                     <center><button id="result-view-btn" class="btn btn-brown" onclick="showFullResult(<?php echo $row['student_log_id']; ?>);">Show Details</button></center>
-                                    <div id="result_view_<?php echo $row['student_log_id']; ?>" class="full-result"></div>
+                                    <div id="result_view_<?php echo $row['student_log_id']; ?>" class="full-result result_view_chk"></div>
                                     <hr/>
                                     <br/>
                                 <?php } ?>
@@ -147,6 +147,14 @@ if (isset($_SESSION['student_register_id'])) {
                 });
             });
             function showFullResult(slid) {
+                var showres = false;
+                if($('#result_view_'+slid).is(':empty')) {
+                    showres = true;
+                }
+                
+                $('.result_view_chk').empty();
+                
+                if(showres) {
                 setTimeout(() => {
                         test();
                     }, 600);
@@ -230,6 +238,7 @@ if (isset($_SESSION['student_register_id'])) {
                         swal('Error', err.statusText, 'error');
                     }
                 });
+                } 
             }
         </script>
     </body>
