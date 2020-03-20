@@ -9,7 +9,7 @@ if (!isset($_SESSION['student_selected_type']) || !isset($_SESSION['student_regi
 }
 
 
-$attended_questions  = 0;
+$attended_questions = 0;
 if ($_SESSION['student_selected_type'] == 'order') {
     if (isset($_SESSION['student_selected_topics_id'])) {
         unset($_SESSION['student_selected_topics_id']);
@@ -21,7 +21,7 @@ if ($_SESSION['student_selected_type'] == 'order') {
     if (!isset($_GET['year'])) {
         header('Location: qorder-years');
     }
-    
+
     $type = 'Question Order';
     $selyear = $obj->selectRow('*', 'year', 'year=\'' . $_GET['year'] . '\'');
     $_SESSION['student_selected_year_id'] = $selyear['year_id'];
@@ -30,30 +30,29 @@ if ($_SESSION['student_selected_type'] == 'order') {
 
     //resume log
     $student_log_v = '';
-    if(isset($_REQUEST['from_log']) && ($_REQUEST['from_log']!='')) {
-        $check_log = $obj->selectRow('*', 'student_log', 'student_log_id='.$_REQUEST['from_log'].' AND student_register_id='.$_SESSION['student_register_id']);
-        if(count($check_log)<1) {
+    if (isset($_REQUEST['from_log']) && ($_REQUEST['from_log'] != '')) {
+        $check_log = $obj->selectRow('*', 'student_log', 'student_log_id=' . $_REQUEST['from_log'] . ' AND student_register_id=' . $_SESSION['student_register_id']);
+        if (count($check_log) < 1) {
             header('Location: qorder-years');
-        }
-        else {
+        } else {
             $student_log_v = $_REQUEST['from_log'];
         }
     }
-    
-    if($student_log_v=='') {
-        $student_log = $obj->insertRecord(array('language_id' => $_SESSION['student_selected_language_id'],'student_register_id' => $_SESSION['student_register_id'], 'total_questions' => count($questions),'created_at' => date('Y-m-d H:i:s'), 'created_by' => $_SESSION['student_register_id'], 'updated_at' => date('Y-m-d H:i:s'),'updated_by' => $_SESSION['student_register_id']), 'student_log');
+
+    if ($student_log_v == '') {
+        $student_log = $obj->insertRecord(array('language_id' => $_SESSION['student_selected_language_id'], 'student_register_id' => $_SESSION['student_register_id'], 'total_questions' => count($questions), 'created_at' => date('Y-m-d H:i:s'), 'created_by' => $_SESSION['student_register_id'], 'updated_at' => date('Y-m-d H:i:s'), 'updated_by' => $_SESSION['student_register_id']), 'student_log');
         $student_log_order = $obj->insertRecord(array('student_log_id' => $student_log, 'student_log_order' => 1), 'student_log_order');
 
         $student_log_year = $obj->insertRecord(array('student_log_id' => $student_log, 'year_id' => $_SESSION['student_selected_year_id']), 'student_log_year');
-    }else {
+    } else {
         //update log
-        $student_log        = $student_log_v;
-        $student_log_update = $obj->updateRecordWithWhere(array('updated_at' => date('Y-m-d H:i:s'),'student_register_id' => $_SESSION['student_register_id']), 'student_log',' student_log_id='.$student_log);
-        $log_details         = $obj->selectRow('COUNT(student_log_detail_id) AS attended, IFNULL((SELECT COUNT(student_log_detail_id) FROM student_log_detail '
-                                    . '  WHERE student_log_id=' . $student_log . ' AND UPPER(answer) = UPPER(student_answer)), 0) AS correct_answers', 
-                                    'student_log_detail', 'student_log_id=' . $student_log);       
-        
-        if(count($log_details)>0){
+        $student_log = $student_log_v;
+        $student_log_update = $obj->updateRecordWithWhere(array('updated_at' => date('Y-m-d H:i:s'), 'student_register_id' => $_SESSION['student_register_id']), 'student_log', ' student_log_id=' . $student_log);
+        $log_details = $obj->selectRow('COUNT(student_log_detail_id) AS attended, IFNULL((SELECT COUNT(student_log_detail_id) FROM student_log_detail '
+                . '  WHERE student_log_id=' . $student_log . ' AND UPPER(answer) = UPPER(student_answer)), 0) AS correct_answers',
+                'student_log_detail', 'student_log_id=' . $student_log);
+
+        if (count($log_details) > 0) {
             $attended_questions = $log_details['attended'];
         }
     }
@@ -203,13 +202,13 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<?php
-$page = 'about';
-include 'head.php';
-?>
+    <?php
+    $page = 'about';
+    include 'head.php';
+    ?>
     <body class="goto-here">
         <!--container-->
-    <?php include 'menu.php'; ?>
+        <?php include 'menu.php'; ?>
         <div class="quiz-section">
             <section class="container">
                 <div class="row">
@@ -228,13 +227,13 @@ include 'head.php';
                                         <td valign="top" class="w-5">:</td>
                                         <th valign="top"><?php echo $type; ?></th>
                                     </tr>
-<?php if (isset($_SESSION['student_selected_topics_id']) && ($_SESSION['student_selected_topics_id'] != '')) { ?>
+                                    <?php if (isset($_SESSION['student_selected_topics_id']) && ($_SESSION['student_selected_topics_id'] != '')) { ?>
                                         <tr>
                                             <td valign="top">Selected Subject and Topics</td>
                                             <td valign="top" class="w-5">:</td>
                                             <th valign="top"><?php echo $sub_topic_val; ?></th>
                                         </tr>
-<?php } ?>
+                                    <?php } ?>
                                     <tr>
                                         <td valign="top">Selected Year</td>
                                         <td valign="top" class="w-5">:</td>
@@ -265,7 +264,7 @@ include 'head.php';
                                             </div>
                                         </div>   
                                         <!-- show answer immediate -->
-                                        
+
                                         <h1 class="title is-6">Quiz</h1> 
                                         <progress class="progress is-info is-small" :value="(questionIndex/quiz.questions.length)*100" max="100">{{(questionIndex/quiz.questions.length)*100}}%</progress>
                                         <div class="lenth_width">
@@ -290,7 +289,7 @@ include 'head.php';
                                          <span class="q-option">{{ index | charIndex }}.&nbsp;</span> <span v-html="response.text"></span>
                                     </div>
                                 </div>
-                                
+
                                 <footer class="questionFooter" id='quiz-nxt-footer'  v-if="shownotimmdnxt">
                                     <!--                                    pagination-->
                                     <nav class="pagination" role="navigation" aria-label="pagination">
@@ -311,7 +310,7 @@ include 'head.php';
 
                                 </footer>
 
-                                
+
                                 <footer class="questionFooter" id='quiz-footer'  v-if="showimmediateblk">
                                     <div class="footer-explanation-section">
                                         <div class="quiz-explanation-view border-b">Correct Answer - <strong>{{quiz.questions[questionIndex].answer}}</strong>
@@ -352,33 +351,33 @@ include 'head.php';
                                     <!--                                    /pagination-->
 
                                 </footer>
-                                
-                                <?php 
+
+                                <?php
                                 /*
-                                <footer class="questionFooter"  v-if="showimmediateblk">
-                                    <div class="question-explanation">
-                                        <h4>Explanation:</h4>
-                                        <div v-if="quiz.questions[questionIndex].show_image_explanation" class="text-center">
-                                            <img v-if="quiz.questions[questionIndex].explanation_img_direction == 'top'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
-                                        </div>
-                                        <span v-html="quiz.questions[questionIndex].explanation"></span>
-                                        <div v-if="quiz.questions[questionIndex].show_image_explanation" class="text-center">
-                                            <img v-if="quiz.questions[questionIndex].explanation_img_direction == 'buttom'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
-                                        </div>
-                                    </div>
-                                    <!--                                    <nav class="pagination" role="navigation" aria-label="pagination">
-                                                                            <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">
-                                                                               Back
-                                                                        </a>
-                                                                        <a class="btn btn-green" href="select_language">
-                                                                            Home
-                                                                        </a>
-                                                                        <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
-                                                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}
-                                                                        </a>
-                                                                        </nav>-->
-                                </footer>
-                                  */                                          
+                                  <footer class="questionFooter"  v-if="showimmediateblk">
+                                  <div class="question-explanation">
+                                  <h4>Explanation:</h4>
+                                  <div v-if="quiz.questions[questionIndex].show_image_explanation" class="text-center">
+                                  <img v-if="quiz.questions[questionIndex].explanation_img_direction == 'top'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
+                                  </div>
+                                  <span v-html="quiz.questions[questionIndex].explanation"></span>
+                                  <div v-if="quiz.questions[questionIndex].show_image_explanation" class="text-center">
+                                  <img v-if="quiz.questions[questionIndex].explanation_img_direction == 'buttom'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
+                                  </div>
+                                  </div>
+                                  <!--                                    <nav class="pagination" role="navigation" aria-label="pagination">
+                                  <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">
+                                  Back
+                                  </a>
+                                  <a class="btn btn-green" href="select_language">
+                                  Home
+                                  </a>
+                                  <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
+                                  {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}
+                                  </a>
+                                  </nav>-->
+                                  </footer>
+                                 */
                                 ?>                                           
                             </div>
                             <!--quizCompletedResult-->
@@ -417,7 +416,7 @@ include 'head.php';
 
 
                         <div id="create" class="quiz-result" style="display: none;">
-                            <h1 class="title is-6">Selected Topic: <?php // echo $topic['name'];  ?></h1>
+                            <h1 class="title is-6">Selected Topic: <?php // echo $topic['name'];   ?></h1>
                             <div id="question_list"></div>
                         </div>
 
@@ -427,8 +426,8 @@ include 'head.php';
             </section>
         </div>
         <!--/container-->
-<?php include 'footer.php'; ?>
-<?php include 'script.php'; ?>
+        <?php include 'footer.php'; ?>
+        <?php include 'script.php'; ?>
         <script>
             image_url = 'http://localhost/project/exam-horse/api/v1/';
             console.log(<?php echo json_encode($questions_list); ?>);
@@ -441,12 +440,13 @@ include 'head.php';
                 el: "#app",
                 data: {
                     quiz: quiz,
-                    questionIndex: <?php echo $attended_questions; 
-                                //echo 0; ?>,
+                    questionIndex: <?php echo $attended_questions;
+        //echo 0; 
+        ?>,
                     userResponses: userResponseSkelaton,
                     showimmediate: false,
                     showimmediateblk: false,
-                    isDisabled:false,
+                    isDisabled: false,
                     shownotimmdnxt: false,
                     isActive: false
                 },
@@ -457,7 +457,7 @@ include 'head.php';
                     AddPrefix: function (value, prefix) {
                         return prefix + value;
                     }
-                  },
+                },
                 methods: {
                     restart: function () {
                         $('#create').hide();
@@ -554,10 +554,10 @@ include 'head.php';
                             }
                         });
                     },
-                    clickPause:function() {
-                        if(confirm("Do you want to Pause Test?")){
-                                window.location = './select_language';
-                       }
+                    clickPause: function () {
+                        if (confirm("Do you want to Pause Test?")) {
+                            window.location = './select_language';
+                        }
                     },
                     selectOption: function (index) {
                         if (!app.showimmediate) {
@@ -585,7 +585,7 @@ include 'head.php';
                                 applyMathAjax();
                             }, 600);
                         }
-                        
+
                         if (app.showimmediate) {
                             if (!app.isDisabled) {
                                 var questions = <?php echo json_encode($questions_list); ?>;
@@ -626,12 +626,15 @@ include 'head.php';
                                 app.isDisabled = true;
                             }
                         }
+                        setTimeout(() => {
+                            applyMathAjax();
+                        }, 600);
                     },
                     next: function () {
                         app.isDisabled = false;
                         app.showimmediateblk = false;
                         app.shownotimmdnxt = false;
-                        
+
                         if (this.questionIndex < this.quiz.questions.length)
                             this.questionIndex++;
                     },
@@ -640,7 +643,7 @@ include 'head.php';
                             this.questionIndex--;
                     },
                     // Return "true" count in userResponses
-                    
+
                     immChange: function () {
                         if (app.showimmediate) {
                             app.shownotimmdnxt = false;
