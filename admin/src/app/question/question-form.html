@@ -51,8 +51,8 @@
         </div>
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
             <div fxFlex="50%" fxLayoutAlign="center center">
-                <button *ngIf="image_path == ''" type="button" mat-raised-button (click)="fileInput.click()">{{question_image}}</button>
-                <input hidden #fileInput type="file" id="file" (change)="fileProgress($event, 'question_image', 'image_path')" />
+                <button *ngIf="image_path == ''" type="button" mat-raised-button (click)="fileInput1.click()">{{question_image}}</button>
+                <input hidden #fileInput1 type="file" id="file" (change)="fileProgress($event, 'question_image', 'image_path')" />
                 <div class="preview-image" *ngIf="image_path != ''">
                     <img class="dialog-picture" mat-card-image src="{{image_url}}{{image_path}}" alt="Photo" />
                     <button mat-icon-button aria-label="Close icon" (click)="removeMedia('image_path')">

@@ -1133,6 +1133,8 @@ and open the template in the editor.
 
 .radio-btn-section li {
     font-size: 20px;
+    border-bottom: 1px solid #1c75bc;
+    padding: 10px 0;
 }
 
 .radio-btn-section input {

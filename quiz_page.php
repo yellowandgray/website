@@ -140,6 +140,7 @@ if (count($questions) > 0) {
                                 <?php } ?>
 
                                 <h2 class="titleContainer title">{{questionIndex + 1}}. <span v-html="quiz.questions[questionIndex].text"></span></h2>
+                                
                                 <?php if ($imm != 0) { ?>
                                     <div v-if="quiz.questions[questionIndex].show_image" class="text-center">
                                         <img v-if="quiz.questions[questionIndex].direction == 'bottom'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />
@@ -153,17 +154,13 @@ if (count($questions) > 0) {
                                          <span class="q-option">{{ index | charIndex }}.&nbsp; </span> <span  v-html="response.text"></span>
                                     </div>
                                 </div>
-
-                                <!--quizFooter: navigation and progress-->
                                 <?php
                                 /*
                                   <footer class="questionFooter" id='quiz-footer' style='display: none'>
-                                 * 
-                                 * 
                                  */
                                 ?>
 
-                                <footer class="questionFooter" id='quiz-nxt-footer'  v-if="shownotimmdnxt">
+                                <footer class="questionFooter" id='quiz-nxt-footer' v-if="shownotimmdnxt">
                                     <!--                                    pagination-->
                                     <nav class="pagination" role="navigation" aria-label="pagination">
 
