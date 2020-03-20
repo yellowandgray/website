@@ -1089,6 +1089,12 @@ and open the template in the editor.
     .quiz-pause .float-left {
         width: 100% !important;
     }
+    .language-width {
+        width: 100% !important;
+    }
+    .span-position {
+        margin: 0 0px 0px 25px !important;
+    }
 }
 
 
@@ -1117,10 +1123,23 @@ and open the template in the editor.
     border-radius: 50%;
     width: 78%;
     padding: 1px 2px 1px 0px;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+.pause-right:hover {
+    background: #468847;
+    border: 1px solid #fff;
+    box-shadow: 0 0 4px 2px #468847;
+    padding: 1px 2px 1px 0px;
 }
 
 .pause-right i {
     color: #468847;
+}
+
+.pause-right:hover i {
+    color: #fff;
 }
 
 .quiz-pause input {
@@ -1173,4 +1192,14 @@ and open the template in the editor.
     font-style: normal;
     font-size: 12px !important;
     margin-left: 10px;
+}
+
+.quiz-timer {
+    text-align: center;
+    margin-top: 10px;
+    color: #fff;
+}
+
+.quiz-timer span {
+    color: #fff;
 }

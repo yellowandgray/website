@@ -66,15 +66,3 @@
         window.history.back();
     }
 </script>
-<script type="text/javascript">
-    $("#open-logout").click(function (e) {
-        //console.log("test");
-        e.stopPropagation();
-        $(".logout_dropdown").show("fast");
-    });
-    $(document).click(function (e) {
-        if (!(e.target.class === 'logout_dropdown')) {
-            $(".logout_dropdown").hide("fast");
-        }
-    });
-</script>

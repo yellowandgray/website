@@ -244,6 +244,9 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                             <a class="home_link" href="select_language">
                                 <i class="icon-home"></i>
                             </a>
+                            <div class="quiz-timer">
+                                <span id="minutes">00</span> : <span id="seconds">00</span>
+                            </div>
                         </div>
                         <!--question Box-->
                         <div class="questionBox" id="app">
@@ -258,8 +261,8 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                                 <input id="show-immediately" type="checkbox" value="show_answer_immediately" @change="immChange" v-model="showimmediate"> <span class="span-position">Show Answer</span>
                                             </div> 
                                             <div class="float-right">
-                                                <div class="pause-right">
-                                                    <i class="icon-pause" @click="clickPause"></i>
+                                                <div class="pause-right" @click="clickPause">
+                                                    <i class="icon-pause"></i>
                                                 </div>
                                             </div>
                                         </div>   
@@ -318,19 +321,18 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                         <!--                                        <hr>-->
                                         <div class="quiz-explanation-view">Explanation:</div>
                                         <div v-if="quiz.questions[questionIndex].show_image_explanation" class="text-center">
-                                            <img v-if="quiz.questions[questionIndex].direction == 'top'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
+                                            <img v-if="quiz.questions[questionIndex].explanation_img_direction == 'top'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
                                         </div>
 
                                         <!--span v-html="quiz.questions[questionIndex].explanation"></span-->
                                         <br/>
                                         <div style="text-align: left;">
-                                            <span v-html="quiz.questions[questionIndex].explanation">
-                                            </span>
+                                            <span v-html="quiz.questions[questionIndex].explanation"></span>
                                         </div>    
 
 
                                         <div v-if="quiz.questions[questionIndex].show_image_explanation" class="text-center">
-                                            <img v-if="quiz.questions[questionIndex].direction == 'bottom'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
+                                            <img v-if="quiz.questions[questionIndex].explanation_img_direction == 'bottom'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
                                         </div>
                                     </div>
                                     <!--                                    pagination-->
@@ -416,7 +418,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
 
 
                         <div id="create" class="quiz-result" style="display: none;">
-                            <h1 class="title is-6">Selected Topic: <?php // echo $topic['name'];    ?></h1>
+                            <h1 class="title is-6">Selected Topic: <?php // echo $topic['name'];           ?></h1>
                             <div id="question_list"></div>
                         </div>
 
@@ -556,9 +558,20 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                         });
                     },
                     clickPause: function () {
-                        if (confirm("Do you want to Pause Test?")) {
-                            window.location = './select_language';
-                        }
+                        $('.loader').removeClass('is-active');
+                        swal({
+                            title: "Are you sure?",
+                            text: "Do you want to Pause Test?",
+                            type: "warning",
+                            showCancelButton: true,
+                            confirmButtonClass: "btn-danger",
+                            confirmButtonText: "Yes",
+                            closeOnConfirm: false
+                        },
+                                function () {
+                                    window.location = './select_language';
+                                    //swal("Deleted!", "Your imaginary file has been deleted.", "success");
+                                });
                     },
                     selectOption: function (index) {
                         if (!app.showimmediate) {
@@ -683,6 +696,27 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                     }
                 }
             });
+        </script>
+        <script>
+            var minutesLabel = document.getElementById("minutes");
+            var secondsLabel = document.getElementById("seconds");
+            var totalSeconds = 0;
+            setInterval(setTime, 1000);
+
+            function setTime() {
+                ++totalSeconds;
+                secondsLabel.innerHTML = pad(totalSeconds % 60);
+                minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
+            }
+
+            function pad(val) {
+                var valString = val + "";
+                if (valString.length < 2) {
+                    return "0" + valString;
+                } else {
+                    return valString;
+                }
+            }
         </script>
     </body>
 </html>
