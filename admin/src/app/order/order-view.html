@@ -90,6 +90,7 @@
                     <td>டெலிவரி நிலை</td>
                     <td> - </td>
                     <td> {{data.status}} </td>
+                    <td *ngIf="data.status == 'வழங்கப்பட்டது'"> | Received Amount: {{data.received_amt}}</td>
                 </tr>
                 <tr>
                     <td>டெலிவரி செய்த நபர்</td>

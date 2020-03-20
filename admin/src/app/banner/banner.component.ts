@@ -16,9 +16,9 @@ export class BannerComponent implements OnInit {
   ngOnInit() {
     this.getBanner();
   }
-  image_url: string = 'http://localhost/project/three-levan/api/v1/';
+  image_url: string = '../api/v1/';
   getBanner(): void {
-    this.httpClient.get<any>('http://localhost/project/three-levan/api/v1/get_banner')
+    this.httpClient.get<any>('../api/v1/get_banner')
       .subscribe(
         (res) => {
           this.result = res["result"]["data"];
@@ -98,7 +98,7 @@ export class BannerComponent implements OnInit {
   templateUrl: 'banner-form.html',
 })
 export class BannerForm {
-  image_url: string = 'http://localhost/project/three-levan/api/v1/';
+  image_url: string = '../api/v1/';
   bannerform: FormGroup;
   loading = false;
   banner_id = 0;
@@ -147,7 +147,7 @@ export class BannerForm {
       formData.append('banner_image', this.image_path);
       url = 'insert_banner';
     }
-    this.httpClient.post('http://localhost/project/three-levan/api/v1/' + url, formData).subscribe(
+    this.httpClient.post('../api/v1/' + url, formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -180,7 +180,7 @@ export class BannerForm {
     this.loading = true;
     var formData = new FormData();
     formData.append('file', fileData);
-    this.httpClient.post('http://localhost/project/three-levan/api/v1/upload_file', formData).subscribe(
+    this.httpClient.post('../api/v1/upload_file', formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -223,7 +223,7 @@ export class BannerDelete {
       return;
     }
     this.loading = true;
-    this.httpClient.get('http://localhost/project/three-levan/api/v1/delete_record/banner/banner_id=' + this.banner_id).subscribe(
+    this.httpClient.get('../api/v1/delete_record/banner/banner_id=' + this.banner_id).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -250,7 +250,7 @@ export class BannerDelete {
 })
 
 export class BannerImageView {
-  image_url: string = 'http://localhost/project/three-levan/api/v1/';
+  image_url: string = '../api/v1/';
   action: string = '';
   loading = false;
   banner_id = 0;
