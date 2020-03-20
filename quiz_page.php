@@ -416,7 +416,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
 
 
                         <div id="create" class="quiz-result" style="display: none;">
-                            <h1 class="title is-6">Selected Topic: <?php // echo $topic['name'];   ?></h1>
+                            <h1 class="title is-6">Selected Topic: <?php // echo $topic['name'];    ?></h1>
                             <div id="question_list"></div>
                         </div>
 
@@ -440,7 +440,8 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                 el: "#app",
                 data: {
                     quiz: quiz,
-                    questionIndex: <?php echo $attended_questions;
+                    questionIndex: <?php
+        echo $attended_questions;
         //echo 0; 
         ?>,
                     userResponses: userResponseSkelaton,
@@ -631,6 +632,9 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                         }, 600);
                     },
                     next: function () {
+                        setTimeout(() => {
+                            applyMathAjax();
+                        }, 600);
                         app.isDisabled = false;
                         app.showimmediateblk = false;
                         app.shownotimmdnxt = false;
