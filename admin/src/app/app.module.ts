@@ -68,7 +68,7 @@ import { BookComponent, BookForm, BookDelete } from './book/book.component';
     filterUser,
     BookComponent,
     BookForm, 
-    BookDelete
+    BookDelete    
   ],
   imports: [
     BrowserModule,
