@@ -138,3 +138,8 @@ mat-sidenav-content {
 .wrong_clr {
     color: #F03C02;
 }
+
+.MJXc-display {
+    text-align: left !important;
+    margin: 5px 0 !important;
+}
