@@ -529,3 +529,17 @@ $app->get('/get_question_answer/:qid', function($qid) {
     }
     echoRespnse(201, $res);
 });
+
+
+$app->get('/get_student_answer/:qid/:logid', function($qid,$log_id) {
+    $res = array('error' => true, 'message' => 'No records found');
+    $obj = new Common();
+    $question_ans = $obj->selectRow('*', 'student_log_detail', 'question_id = ' . $qid.' AND student_log_id='.$log_id);
+    if (count($question_ans) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $question_ans['student_answer'];
+    }
+    echoRespnse(201, $res);
+});
+
