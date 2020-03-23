@@ -4,6 +4,7 @@ import { MatSnackBar } from "@angular/material/snack-bar";
 import { MatPaginatorModule } from "@angular/material/paginator";
 import { MatDialogModule } from "@angular/material/dialog";
 
+
 import {
   MatDialog,
   MatDialogRef,
@@ -12,6 +13,7 @@ import {
 import { FormControl, FormGroup, Validators } from "@angular/forms";
 import { AngularEditorConfig } from "@kolkov/angular-editor";
 import { Observable } from "rxjs";
+declare const applyMathAjax: any;
 
 @Component({
   selector: "app-question",
@@ -84,16 +86,6 @@ export class QuestionComponent implements OnInit {
       );
   }
 
- applyMathAjax(): void{
-        if (typeof MathJax !== 'undefined') {
-            MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
-        }
-
-        MathJax.Hub.Config({
-            tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-        });
-
-  }      
 
 
   getSubjectByYearnLanguage(): void {
@@ -157,7 +149,7 @@ export class QuestionComponent implements OnInit {
         res => {
           this.question = res["result"]["data"];
           setTimeout(() => {
-                            this.applyMathAjax();
+                            applyMathAjax();
                         }, 600);
         },
         error => {
