@@ -27,7 +27,9 @@
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+               "src/assets/js/mathjax.js"                 
+            ]
           },
           "configurations": {
             "production": {
@@ -124,5 +126,8 @@
       }
     }
   },
-  "defaultProject": "admin"
+  "defaultProject": "admin",
+  "cli": {
+    "analytics": "b2a17cd3-6cd7-47f3-b8ac-77811db73935"
+  }
 }
