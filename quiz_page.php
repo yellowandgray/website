@@ -4,6 +4,12 @@ require_once 'api/include/common.php';
 $questions = array();
 $obj = new Common();
 $type = '';
+$testmode = 0;
+
+if(isset($_SESSION['testmode'])){
+    $testmode = $_SESSION['testmode'];  
+}
+
 if (!isset($_SESSION['student_selected_type']) || !isset($_SESSION['student_register_id'])) {
     header('Location: qorder-years');
 }
@@ -256,6 +262,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     <!--progress-->
                                     <div class="progressContainer">
                                         <!-- show answer immediate -->
+                                        <?php if($testmode==1) { ?>
                                         <div class="quiz-pause">
                                             <div class="float-left">
                                                 <input id="show-immediately" type="checkbox" value="show_answer_immediately" @change="immChange" v-model="showimmediate"> <span class="span-position">Show Answer</span>
@@ -266,6 +273,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                                 </div>
                                             </div>
                                         </div>   
+                                        <?php } ?>
                                         <!-- show answer immediate -->
 
                                         <h1 class="title is-6">Quiz</h1> 
@@ -292,14 +300,14 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                          <span class="q-option">{{ index | charIndex }}.&nbsp;</span> <span v-html="response.text"></span>
                                     </div>
                                     
-                                    <div style="margin: 0 auto; text-align: center" v-if="questionIndex>0">
+                                    <!--div style="margin: 0 auto; text-align: center" v-if="questionIndex>0">
                                             <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="prev();" :disabled="questionIndex>=quiz.questions.length">
-                                                <!--                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}-->Back
+                                                Back
                                             </a>
-                                        </div> 
+                                        </div--> 
                                 </div>
-
-                                <footer class="questionFooter" id='quiz-nxt-footer'  v-if="shownotimmdnxt">
+                                
+                                <footer class="questionFooter" id='quiz-nxt-footer' v-if="showimmediate && !showimmediateblk">
                                     <!--                                    pagination-->
                                     <nav class="pagination" role="navigation" aria-label="pagination">
 
@@ -308,7 +316,15 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                         <!--                                        <a class="btn btn-green" href="select_language">Home</a>-->
 
                                         <!--                                    next button -->
-                                        <div style="margin: 0 auto; text-align: center">
+                                        <div style="margin: 0 auto; text-align: center" v-if="questionIndex>0">
+                                            <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="prev();" :disabled="questionIndex>=quiz.questions.length">
+                                                <!--                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}-->Back
+                                            </a>
+                                        </div> 
+                                        
+                                        
+                                        
+                                        <div style="margin: 0 auto; text-align: center" v-if="shownotimmdnxt">
                                             <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
                                                 <!--                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}-->Next
                                             </a>
@@ -320,7 +336,39 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                 </footer>
 
 
-                                <footer class="questionFooter" id='quiz-footer'  v-if="showimmediateblk">
+                                <!--footer class="questionFooter" id='quiz-nxt-footer'  v-if="shownotimmdnxt"-->
+                                <footer class="questionFooter" id='quiz-nxt-footer' v-if="!showimmediate">
+                                    <!--                                    pagination-->
+                                    <nav class="pagination" role="navigation" aria-label="pagination">
+
+                                        <!--                                        back button -->
+                                        <!--                                        <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">Back</a>-->
+                                        <!--                                        <a class="btn btn-green" href="select_language">Home</a>-->
+
+                                        <!--                                    next button -->
+                                        <div style="margin: 0 auto; text-align: center" v-if="questionIndex>0">
+                                            <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="prev();" :disabled="questionIndex>=quiz.questions.length">
+                                                <!--                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}-->Back
+                                            </a>
+                                        </div> 
+                                        
+                                        
+                                        
+                                        <div style="margin: 0 auto; text-align: center" v-if="shownotimmdnxt">
+                                            <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
+                                                <!--                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}-->Next
+                                            </a>
+                                        </div> 
+
+                                    </nav>
+                                    <!--                                    /pagination-->
+
+                                </footer>
+
+
+                                <!--footer class="questionFooter" id='quiz-footer'  v-if="showimmediateblk"-->
+                                    
+                                     <footer class="questionFooter" id='quiz-footer'  v-if="showimmediateblk">
                                     <div class="footer-explanation-section">
                                         <div class="quiz-explanation-view border-b">Correct Answer - <strong>{{quiz.questions[questionIndex].answer}}</strong>
                                         </div>
@@ -349,6 +397,11 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                         <!--                                        <a class="btn btn-green" href="select_language">Home</a>-->
 
                                         <!--                                    next button -->
+                                         <div style="margin: 0 auto; text-align: center" v-if="questionIndex>0">
+                                            <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="prev();" :disabled="questionIndex>=quiz.questions.length">
+                                                <!--                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}-->Back
+                                            </a>
+                                        </div> 
                                         <div style="margin: 0 auto; text-align: center">
                                             <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
                                                 <!--                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}-->Next
@@ -600,6 +653,39 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                 Vue.set(this.userResponses, this.questionIndex, index);
                                 if (this.questionIndex < this.quiz.questions.length) {
                                     this.questionIndex++;
+                                    
+                                    
+                                    
+                                     var nqid = this.questionIndex  + 1;
+                           
+                                      if(!app.showimmediate)  {
+                                        $.get("api/v1/get_student_answer/" + nqid+"/<?php echo $student_log; ?>",
+                                        function (data, status) {
+                                                
+                                            if (data.result.error === false) {
+                                                
+                                                 ansid = data.result.data; 
+                                                                                                                                            
+                                                var studansid = app.convertLower(ansid);
+                                                $('#ansopt_' + studansid).addClass('crt_clr');
+                                                      
+                                                   
+                                                app.isDisabled = false;
+                                                app.showimmediateblk = false;
+                                                //app.shownotimmdnxt = false;
+                                                app.shownotimmdnxt = true;
+
+                                                
+                                                                                          
+                                                
+                                            }else {
+                                                
+                                                app.shownotimmdnxt = false;
+                                            }    
+                                        });  
+                                    
+                                    }
+                                    
                                 }
                             }, 500);
                             setTimeout(() => {
@@ -647,11 +733,13 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                 app.isDisabled = true;
                             }
                         }
+                        
                         setTimeout(() => {
                             applyMathAjax();
                         }, 600);
                     },
                     next: function () {
+                        
                         setTimeout(() => {
                             applyMathAjax();
                         }, 600);
@@ -659,8 +747,70 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                         app.showimmediateblk = false;
                         app.shownotimmdnxt = false;
 
-                        if (this.questionIndex < this.quiz.questions.length)
+                        if (this.questionIndex < this.quiz.questions.length) {
                             this.questionIndex++;
+                        }    
+                        
+                        var questions = <?php echo json_encode($questions_list); ?>;
+                         var qid = questions[this.questionIndex].question_id;
+                        
+                        
+                        if (app.showimmediate) {
+                                              
+                               
+                                $.get("api/v1/get_student_answer/" + qid+"/<?php echo $student_log; ?>",
+                                        function (data, status) {
+                                            if (data.result.error === false) {
+                                                 ansid = data.result.data; 
+                                                 
+                                                  $.get("api/v1/get_question_answer/" + qid,
+                                                    function (data, status) {
+                                                        if (data.result.error === false) {
+
+                                                            var corransid = app.convertLower(data.result.data);
+                                                            var studansid = app.convertLower(ansid);
+
+                                                            if (data.result.data == ansid) {
+                                                                $('#ansopt_' + corransid).addClass('crt_clr');
+                                                            } else {
+                                                                $('#ansopt_' + corransid).addClass('crt_clr');
+                                                                $('#ansopt_' + studansid).addClass('wrng_clr');
+                                                            }
+                                                            
+                                                        }
+                                                    });
+                                                app.showimmediateblk = true;
+                                                app.isDisabled = false;                                                
+                                                app.shownotimmdnxt = false;
+                                            }
+                                        });
+                                   
+                        }else {
+                            
+                          
+                            $.get("api/v1/get_student_answer/" + qid+"/<?php echo $student_log; ?>",
+                                        function (data, status) {
+                                            if (data.result.error === false) {
+                                                 ansid = data.result.data; 
+                                                 
+                                                                                            
+                                                var studansid = app.convertLower(ansid);
+                                                $('#ansopt_' + studansid).addClass('crt_clr');
+                                                      
+                                                   
+                                                app.isDisabled = false;
+                                                app.showimmediateblk = false;
+                                                //app.shownotimmdnxt = false;
+                                                app.shownotimmdnxt = true;
+
+                                                
+                                                
+                                                
+                                                
+                                            }
+                                        });  
+                                    }  
+                        
                     },
                     prev: function () {
                         if (this.quiz.questions.length > 0)
@@ -716,7 +866,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                                    
                                                 app.isDisabled = false;
                                                 app.showimmediateblk = false;
-                                                app.shownotimmdnxt = false;
+                                                app.shownotimmdnxt = true;
 
                                                 
                                                 
@@ -728,6 +878,8 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                     // Return "true" count in userResponses
 
                     immChange: function () {
+                    
+                        
                         if (app.showimmediate) {
                             app.shownotimmdnxt = false;
                             if (!app.isDisabled) {
@@ -742,6 +894,69 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                 app.shownotimmdnxt = true;
                             }
                         }
+                        
+                        
+                        
+                        var questions = <?php echo json_encode($questions_list); ?>;
+                        var qid = questions[this.questionIndex].question_id;
+                        var answers   = ['A', 'B', 'C', 'D'];
+                        
+                        if (app.showimmediate) {
+                                              
+                               
+                                $.get("api/v1/get_student_answer/" + qid+"/<?php echo $student_log; ?>",
+                                        function (data, status) {
+                                            if (data.result.error === false) {
+                                                 ansid = data.result.data; 
+                                                 
+                                                  $.get("api/v1/get_question_answer/" + qid,
+                                                    function (data, status) {
+                                                        if (data.result.error === false) {
+
+                                                            var corransid = app.convertLower(data.result.data);
+                                                            var studansid = app.convertLower(ansid);
+
+                                                            if (data.result.data == ansid) {
+                                                                $('#ansopt_' + corransid).addClass('crt_clr');
+                                                            } else {
+                                                                $('#ansopt_' + corransid).addClass('crt_clr');
+                                                                $('#ansopt_' + studansid).addClass('wrng_clr');
+                                                            }
+                                                            
+                                                        }
+                                                    });
+                                                app.showimmediateblk = true;
+                                                app.isDisabled = false;                                                
+                                                app.shownotimmdnxt = false;
+                                            }
+                                        });
+                                   
+                        }else {
+                            
+                          
+                            $.get("api/v1/get_student_answer/" + qid+"/<?php echo $student_log; ?>",
+                                        function (data, status) {
+                                            if (data.result.error === false) {
+                                                 ansid = data.result.data; 
+                                                 
+                                                                                            
+                                                var studansid = app.convertLower(ansid);
+                                                $('#ansopt_' + studansid).addClass('crt_clr');
+                                                      
+                                                   
+                                                app.isDisabled = false;
+                                                app.showimmediateblk = false;
+                                                //app.shownotimmdnxt = false;
+                                                app.shownotimmdnxt = true;
+
+                                                
+                                                
+                                                
+                                                
+                                            }
+                                        });  
+                                    }
+                        
 
                     },
                     score: function () {

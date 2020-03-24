@@ -491,13 +491,24 @@ $app->post('/store_answer', function() use ($app) {
         $res['error'] = false;
         $res['message'] = 'Answer inserted successfully';
 
-
-        $obj->insertRecord(array('question_id' => $record['question_id'], 'student_log_id' => $data['student_log_id'],
-            'name' => $record['name'], 'image_path' => $record['image_path'], 'direction' => $record['direction'],
-            'a' => $record['a'], 'b' => $record['b'], 'c' => $record['c'], 'd' => $record['d'], 'answer' => $record['answer'],
-            'explanation' => $record['explanation'], 'image_path_explanation' => $record['image_path_explanation'],
-            'explanation_img_direction' => $record['explanation_img_direction'], 'question_no' => $record['question_no'],
-            'student_answer' => $data['answer'], 'created_at' => date('Y-m-d'), 'updated_at' => date('Y-m-d')), 'student_log_detail');
+                
+        $record_log_detail = $obj->selectRow('*', 'student_log_detail', 'question_id=' . $data['question_id'] .' AND student_log_id='.$data['student_log_id']);
+        if (count($record_log_detail) == 0) {
+        
+            $obj->insertRecord(array('question_id' => $record['question_id'], 'student_log_id' => $data['student_log_id'],
+                'name' => $record['name'], 'image_path' => $record['image_path'], 'direction' => $record['direction'],
+                'a' => $record['a'], 'b' => $record['b'], 'c' => $record['c'], 'd' => $record['d'], 'answer' => $record['answer'],
+                'explanation' => $record['explanation'], 'image_path_explanation' => $record['image_path_explanation'],
+                'explanation_img_direction' => $record['explanation_img_direction'], 'question_no' => $record['question_no'],
+                'student_answer' => $data['answer'], 'created_at' => date('Y-m-d'), 'updated_at' => date('Y-m-d')), 'student_log_detail');
+        }else {
+            
+             $obj->updateRecordWithWhere(array('name' => $record['name'], 'image_path' => $record['image_path'], 'direction' => $record['direction'],
+                'a' => $record['a'], 'b' => $record['b'], 'c' => $record['c'], 'd' => $record['d'], 'answer' => $record['answer'],
+                'explanation' => $record['explanation'], 'image_path_explanation' => $record['image_path_explanation'],
+                'explanation_img_direction' => $record['explanation_img_direction'], 'question_no' => $record['question_no'],
+                'student_answer' => $data['answer'], 'created_at' => date('Y-m-d'), 'updated_at' => date('Y-m-d')), 'student_log_detail','question_id=' . $data['question_id'] .' AND student_log_id='.$data['student_log_id']);
+        }     
         // exit;
     } else {
         $res['message'] = 'Unable to insert this answer';

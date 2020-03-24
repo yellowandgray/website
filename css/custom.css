@@ -1178,6 +1178,28 @@ and open the template in the editor.
     padding: 5px 0;
 }
 
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    z-index: 1050;
+    visibility: hidden;
+    opacity: 0;
+}
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+#tets {
+    display: none;
+}
+
 .footer-explanation-section .border-b {
     border-bottom: 1px solid #1c75bc;
 }

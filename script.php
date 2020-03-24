@@ -65,4 +65,52 @@
     function goBack() {
         window.history.back();
     }
+    
+    $(".radio-btn-section input[name='method']").click(function () {
+        $('#tets').css('display', ($(this).val() !== 'learn && test') ? 'block' : '');
+    });  
+    
+    function selmode(lang) {
+        window.location = '#popup1'; 
+        $('#tets').data('lang',lang);
+    }
+    
+    $("#tets").click(function () {            
+         //alert(' val1 '+$("input[name='method']:checked").val());   
+         
+        if($("input[name='method']:checked").val()=='learn') {
+            testmode = 1;
+        }else {
+            testmode = 0;
+        }
+        
+         var lang = $('#tets').data('lang');
+
+        if(lang!='') {
+        
+            $.ajax({
+                url: "immediate.php",
+                type: "POST",
+                data: {testmode: testmode},
+                success: function (response) {
+                    // You will get response from your PHP page (what you echo or print)
+
+                            window.location = 'question-subject-order?lan='+lang;        
+
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.log(textStatus, errorThrown);
+                }
+            });
+
+         }else {
+                    window.location = 'select_language';
+            } 
+       
+        
+ 
+    });
+    
+    
+
 </script>
