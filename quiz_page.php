@@ -552,8 +552,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                          $('.loadingoverlay').show();
                         setTimeout(() => {
                             applyMathAjax();
-                             $('.loadingoverlay').hide();
-                             alert('1234');
+                             $('.loadingoverlay').hide();                             
                         }, 600);
                         $.ajax({
                             type: "GET",
