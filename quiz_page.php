@@ -487,6 +487,17 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
             </section>
         </div>
         <!--/container-->
+        
+        
+        
+        
+        <div class="loadingoverlay" style="display: none">
+        <div class="loadingoverlay-spinner">
+            <img alt="" src="img/loader.gif" />
+        </div>
+        </div>
+        
+        
         <?php include 'footer.php'; ?>
         <?php include 'script.php'; ?>
         <script>
@@ -531,9 +542,18 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                     convertLower: function (strval) {
                         return strval.toLowerCase().trim();
                     },
+                    showOverlay:function() {
+                        $('.loadingoverlay').show();
+                    },    
+                    hideOverlay:function() {
+                        $('.loadingoverlay').hide();
+                    },
                     divshow: function () {
+                         $('.loadingoverlay').show();
                         setTimeout(() => {
                             applyMathAjax();
+                             $('.loadingoverlay').hide();
+                             alert('1234');
                         }, 600);
                         $.ajax({
                             type: "GET",
@@ -634,6 +654,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                 });
                     },
                     selectOption: function (index) {
+                         $('.loadingoverlay').show();
                         if (!app.showimmediate) {
                             var questions = <?php echo json_encode($questions_list); ?>;
                             var answers = ['A', 'B', 'C', 'D'];
@@ -690,6 +711,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                             }, 500);
                             setTimeout(() => {
                                 applyMathAjax();
+                                 $('.loadingoverlay').hide();
                             }, 600);
                         }
 
@@ -736,12 +758,15 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                         
                         setTimeout(() => {
                             applyMathAjax();
+                            $('.loadingoverlay').hide();
                         }, 600);
                     },
                     next: function () {
                         
+                       $('.loadingoverlay').show();
                         setTimeout(() => {
                             applyMathAjax();
+                             $('.loadingoverlay').hide();
                         }, 600);
                         app.isDisabled = false;
                         app.showimmediateblk = false;
@@ -813,16 +838,15 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                         
                     },
                     prev: function () {
+                        $('.loadingoverlay').show();
                         if (this.quiz.questions.length > 0)
-                            this.questionIndex--;
-                        
-                        
+                            this.questionIndex--;                         
+                                              
                         var questions = <?php echo json_encode($questions_list); ?>;
                         var qid = questions[this.questionIndex].question_id;
                         var answers   = ['A', 'B', 'C', 'D'];
                          var ansid = '';
-                        if (app.showimmediate) {
-                                              
+                        if (app.showimmediate) {                                              
                                
                                 $.get("api/v1/get_student_answer/" + qid+"/<?php echo $student_log; ?>",
                                         function (data, status) {
@@ -848,6 +872,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                                 app.showimmediateblk = true;
                                                 app.isDisabled = false;                                                
                                                 app.shownotimmdnxt = false;
+                                               
                                             }
                                         });
                                    
@@ -868,12 +893,16 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                                 app.showimmediateblk = false;
                                                 app.shownotimmdnxt = true;
 
-                                                
+                                               
                                                 
                                             }
                                         });
                         
-                        }    
+                        }
+                        setTimeout(() => {
+                            applyMathAjax();
+                            $('.loadingoverlay').hide();
+                        }, 600);
                     },
                     // Return "true" count in userResponses
 
