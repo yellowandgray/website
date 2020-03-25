@@ -331,7 +331,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                         <!--                                        <a class="btn btn-green" href="select_language">Home</a>-->
 
                                         <!--                                    next button -->
-                                        <div style="margin: 0 auto; text-align: center" v-if="questionIndex>0">
+                                        <div style="text-align: left" v-if="questionIndex>0">
                                             <a class="button"  v-on:click="prev();" :disabled="questionIndex>=quiz.questions.length">
                                                 <!--                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}-->Back
                                             </a>
@@ -339,7 +339,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                         
                                         
                                         
-                                        <div style="margin: 0 auto; text-align: center" v-if="shownotimmdnxt">
+                                        <div style="text-align: right" v-if="shownotimmdnxt">
                                             <a class="button"  v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
                                                 <!--                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}-->Next
                                             </a>
@@ -361,7 +361,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                         <!--                                        <a class="btn btn-green" href="select_language">Home</a>-->
 
                                         <!--                                    next button -->
-                                        <div style="margin: 0 auto; text-align: center" v-if="questionIndex>0">
+                                        <div style="text-align: left" v-if="questionIndex>0">
                                             <a class="button"  v-on:click="prev();" :disabled="questionIndex>=quiz.questions.length">
                                                 <!--                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}-->Back
                                             </a>
@@ -369,7 +369,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                         
                                         
                                         
-                                        <div style="margin: 0 auto; text-align: center" v-if="shownotimmdnxt">
+                                        <div style="text-align: right" v-if="shownotimmdnxt">
                                             <a class="button"  v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
                                                 <!--                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}-->Next
                                             </a>

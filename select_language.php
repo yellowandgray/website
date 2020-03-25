@@ -19,13 +19,13 @@ $languages = $obj->selectAll('*', 'language', 'status = 1');
                         <div class="row">
                             <?php foreach ($languages as $val) { ?>
                                 <div class="span3">
-                                    <div class="language-box">
+                                    <div class="language-box" onClick="selmode('<?php echo $val['name']; ?>');"  data-lang="<?php echo $val['name']; ?>">
                                         <div class="language-img-zoom">
                                             <div class="language-img" style="background: url(<?php echo BASE_URL . $val['imageurl']; ?>)no-repeat;"></div>
                                         </div>
                                         <div class="language-title">
                                             <h3>
-                                                <a href="question-subject-order?lan=<?php echo $val['name']; ?>"><?php echo $val['name']; ?></a>
+                                                <a href="#" onClick="selmode('<?php echo $val['name']; ?>');"  data-lang="<?php echo $val['name']; ?>"><?php echo $val['name']; ?></a>
                                             </h3>
                                         </div>
                                         <div class="language-description">
@@ -45,7 +45,7 @@ $languages = $obj->selectAll('*', 'language', 'status = 1');
                 </div>
             </section>
             <div id="popup1" class="overlay">
-                <div class="popup">
+                <div class="popup custom-title">
                     <h2>Select Type</h2>
                     <a class="close" href="#">&times;</a>
                     <div class="content">
