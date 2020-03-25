@@ -1305,3 +1305,9 @@ and open the template in the editor.
         -moz-opacity: 1;
     }  
     
+    
+.radio-btn-section li {
+    font-size: 20px;
+    border-bottom: 1px solid #1c75bc;
+    padding: 10px 0;
+}

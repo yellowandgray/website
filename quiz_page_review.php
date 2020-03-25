@@ -6,6 +6,7 @@ $obj = new Common();
 $type = '';
 $testmode = 0;
 
+/*
 if(isset($_SESSION['testmode'])){
     $testmode = $_SESSION['testmode'];  
 }
@@ -13,7 +14,7 @@ if(isset($_SESSION['testmode'])){
 if (!isset($_SESSION['student_selected_type']) || !isset($_SESSION['student_register_id'])) {
     header('Location: qorder-years');
 }
-
+*/
 
 $attended_questions = 0;
 if ($_SESSION['student_selected_type'] == 'order') {
@@ -275,6 +276,9 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                         </div>   
                                         <?php } ?>
                                         <!-- show answer immediate -->
+                                        
+                                        
+                                        
 
                                         <h1 class="title is-6">Quiz</h1> 
                                         <progress class="progress is-info is-small" :value="(questionIndex/quiz.questions.length)*100" max="100">{{(questionIndex/quiz.questions.length)*100}}%</progress>
@@ -317,7 +321,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
 
                                         <!--                                    next button -->
                                         <div style="margin: 0 auto; text-align: center" v-if="questionIndex>0">
-                                            <a class="button"  v-on:click="prev();" :disabled="questionIndex>=quiz.questions.length">
+                                            <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="prev();" :disabled="questionIndex>=quiz.questions.length">
                                                 <!--                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}-->Back
                                             </a>
                                         </div> 
@@ -325,7 +329,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                         
                                         
                                         <div style="margin: 0 auto; text-align: center" v-if="shownotimmdnxt">
-                                            <a class="button"  v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
+                                            <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
                                                 <!--                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}-->Next
                                             </a>
                                         </div> 
@@ -347,7 +351,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
 
                                         <!--                                    next button -->
                                         <div style="margin: 0 auto; text-align: center" v-if="questionIndex>0">
-                                            <a class="button"  v-on:click="prev();" :disabled="questionIndex>=quiz.questions.length">
+                                            <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="prev();" :disabled="questionIndex>=quiz.questions.length">
                                                 <!--                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}-->Back
                                             </a>
                                         </div> 
@@ -355,7 +359,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                         
                                         
                                         <div style="margin: 0 auto; text-align: center" v-if="shownotimmdnxt">
-                                            <a class="button"  v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
+                                            <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
                                                 <!--                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}-->Next
                                             </a>
                                         </div> 
@@ -398,12 +402,12 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
 
                                         <!--                                    next button -->
                                          <div style="margin: 0 auto; text-align: center" v-if="questionIndex>0">
-                                            <a class="button"  v-on:click="prev();" :disabled="questionIndex>=quiz.questions.length">
+                                            <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="prev();" :disabled="questionIndex>=quiz.questions.length">
                                                 <!--                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}-->Back
                                             </a>
                                         </div> 
                                         <div style="margin: 0 auto; text-align: center">
-                                            <a class="button"  v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
+                                            <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
                                                 <!--                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}-->Next
                                             </a>
                                         </div> 
