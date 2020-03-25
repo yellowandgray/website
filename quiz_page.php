@@ -575,18 +575,23 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
 
                     },    
                     revAns:function() {
-                        this.revShow =true;
+                        
 
-                        $('.loadingoverlay').show();
-                        setTimeout(() => {
-                            applyMathAjax();
-                             $('.loadingoverlay').hide();                             
-                        }, 600);
+                      
                         $.ajax({
                             type: "GET",
                             url: 'api/v1/get_result_detail/' +<?php echo $student_log; ?>,
                             success: function (data) {
                                 if (data.result.error === false) {
+                                    
+                                    app.revShow =true;
+                                    
+                                    $('.loadingoverlay').show();
+                                    setTimeout(() => {
+                                        applyMathAjax();
+                                         $('.loadingoverlay').hide();                             
+                                    }, 600);
+                                    
                                     var qlist = '';
                                     var correct_ans = '';
                                     var student_ans = '';
