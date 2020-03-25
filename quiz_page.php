@@ -276,6 +276,19 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                         <?php } ?>
                                         <!-- show answer immediate -->
 
+                                        
+                                          <!-- show review -->
+                                        <?php if($testmode==0) { ?>
+                                        <div class="quiz-review">
+                                            <div class="float-left">
+                                                <a v-on:click="revAns();" class="btn btn-theme" v-if="!revShow">Review Answer</a>
+                                                <a v-on:click="revcontAns();" class="btn btn-theme" v-if="revShow">Continue Quiz</a>
+                                            </div> 
+                                          
+                                        </div>   
+                                        <?php } ?>
+                                        <!-- show review -->
+                                        
                                         <h1 class="title is-6">Quiz</h1> 
                                         <progress class="progress is-info is-small" :value="(questionIndex/quiz.questions.length)*100" max="100">{{(questionIndex/quiz.questions.length)*100}}%</progress>
                                         <div class="lenth_width">
@@ -285,6 +298,8 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     </div>
                                     <!--/progress-->
                                 </div>
+                                
+                                <div v-if="!revShow">
                                 <!-- questionTitle -->
                                 <div v-if="quiz.questions[questionIndex].show_image" class="text-center">
                                     <img style="width: 50%" v-if="quiz.questions[questionIndex].direction == 'top'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />
@@ -441,6 +456,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                  */
                                 ?>                                           
                             </div>
+                            </div>   
                             <!--quizCompletedResult-->
                             <div v-if="questionIndex >= quiz.questions.length" v-bind:key="questionIndex" class="quizCompleted has-text-centered">
 
@@ -477,7 +493,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
 
 
                         <div id="create" class="quiz-result" style="display: none;">
-                            <h1 class="title is-6">Selected Topic: <?php // echo $topic['name'];           ?></h1>
+                           
                             <div id="question_list"></div>
                         </div>
 
@@ -522,7 +538,8 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                     isDisabled: false,
                     shownotimmdnxt: false,
                     studans:false,
-                    isActive: false
+                    isActive: false,
+                    revShow : false
                 },
                 filters: {
                     charIndex: function (i) {
@@ -547,6 +564,74 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                     },    
                     hideOverlay:function() {
                         $('.loadingoverlay').hide();
+                    },
+                    revcontAns:function() {
+                         
+                        this.questionIndex = 0;
+                        app.revShow = false;
+                        $('#question_list').empty();
+                        $("#create").toggle();
+                                            
+
+                    },    
+                    revAns:function() {
+                        this.revShow =true;
+
+                        $('.loadingoverlay').show();
+                        setTimeout(() => {
+                            applyMathAjax();
+                             $('.loadingoverlay').hide();                             
+                        }, 600);
+                        $.ajax({
+                            type: "GET",
+                            url: 'api/v1/get_result_detail/' +<?php echo $student_log; ?>,
+                            success: function (data) {
+                                if (data.result.error === false) {
+                                    var qlist = '';
+                                    var correct_ans = '';
+                                    var student_ans = '';
+                                    $.each(data.result.data, function (key, val) {
+                                        qlist = qlist + '<div class="question-title"><h6>' + (key + 1) + '. ' + val.name + '</h6>';
+                                        if (val.a !== '') {
+                                            student_ans = '';
+                                            if ((val.student_answer).toUpperCase() === 'A') {
+                                                student_ans = 'crt_clr';
+                                            }
+                                            qlist = qlist + '<div class="result-option '+ student_ans + '"><div class="option"><span class="quiz-option-float">A.</span> ' + val.a + '</div></div>';
+                                        }
+                                        if (val.b !== '') {
+                                            student_ans = '';
+                                            if ((val.student_answer).toUpperCase() === 'B') {
+                                                student_ans = 'crt_clr';
+                                            }
+                                            qlist = qlist + '<div class="result-option ' + student_ans + '"><div class="option"><span class="quiz-option-float">B.</span> ' + val.b + '</div></div>';
+                                        }
+                                        if (val.c !== '') {
+                                            student_ans = '';
+                                            if ((val.student_answer).toUpperCase() === 'C') {
+                                                student_ans = 'crt_clr';
+                                            }
+                                            qlist = qlist + '<div class="result-option '+ student_ans + '"><div class="option"><span class="quiz-option-float">C.</span> ' + val.c + '</div></div>';
+                                        }
+                                        if (val.d !== '') {
+                                            student_ans = '';
+                                            if ((val.student_answer).toUpperCase() === 'D') {
+                                                student_ans = 'crt_clr';
+                                            }
+                                            qlist = qlist + '<div class="result-option '+ student_ans + '"><div class="option"><span class="quiz-option-float">D.</span> ' + val.d + '</div></div>';
+                                        }                
+                                        qlist = qlist + '</div>';
+                                    });
+                                    $('#question_list').html(qlist);
+                                    $("#create").toggle();
+                                } else {
+                                    swal('Information', data.result.message, 'info');
+                                }
+                            },
+                            error: function (err) {
+                                swal('Error', err.statusText, 'error');
+                            }
+                        });
                     },
                     divshow: function () {
                          $('.loadingoverlay').show();
