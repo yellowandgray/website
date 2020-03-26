@@ -149,6 +149,18 @@ $app->post('/insert_book', function() use ($app) {
     echoRespnse(201, $res);
 });
 
+$app->post('/insert_feedback', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to insert');
+    $data = $app->request->post();
+    $com = new Common();
+    $record = $com->insertRecord(array('name' => $data['name']), 'feedback');
+    if ($record > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Record inserted successfully';
+    }
+    echoRespnse(201, $res);
+});
+
 $app->get('/get_subject', function() {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
@@ -554,3 +566,14 @@ $app->get('/get_student_answer/:qid/:logid', function($qid,$log_id) {
     echoRespnse(201, $res);
 });
 
+$app->get('/get_feedback', function() {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('*', 'feedback', 'feedback_id > 0');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});

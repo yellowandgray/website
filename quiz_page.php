@@ -6,8 +6,8 @@ $obj = new Common();
 $type = '';
 $testmode = 0;
 
-if(isset($_SESSION['testmode'])){
-    $testmode = $_SESSION['testmode'];  
+if (isset($_SESSION['testmode'])) {
+    $testmode = $_SESSION['testmode'];
 }
 
 if (!isset($_SESSION['student_selected_type']) || !isset($_SESSION['student_register_id'])) {
@@ -262,33 +262,33 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     <!--progress-->
                                     <div class="progressContainer">
                                         <!-- show answer immediate -->
-                                        <?php if($testmode==1) { ?>
-                                        <div class="quiz-pause">
-                                            <div class="float-left">
-                                                <input id="show-immediately" type="checkbox" value="show_answer_immediately" @change="immChange" v-model="showimmediate"> <span class="span-position">Show Answer</span>
-                                            </div> 
-                                            <div class="float-right">
-                                                <div class="pause-right" @click="clickPause">
-                                                    <i class="icon-pause"></i>
+                                        <?php if ($testmode == 1) { ?>
+                                            <div class="quiz-pause">
+                                                <div class="float-left">
+                                                    <input id="show-immediately" type="checkbox" value="show_answer_immediately" @change="immChange" v-model="showimmediate"> <span class="span-position">Show Answer</span>
+                                                </div> 
+                                                <div class="float-right">
+                                                    <div class="pause-right" @click="clickPause">
+                                                        <i class="icon-pause"></i>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </div>   
+                                            </div>   
                                         <?php } ?>
                                         <!-- show answer immediate -->
 
-                                        
-                                          <!-- show review -->
-                                        <?php if($testmode==0) { ?>
-                                        <div class="quiz-review">
-                                            <div class="float-left">
-                                                <a v-on:click="revAns();" class="btn btn-theme" v-if="!revShow">Review Answer</a>
-                                                <a v-on:click="revcontAns();" class="btn btn-theme" v-if="revShow">Continue Quiz</a>
-                                            </div> 
-                                          
-                                        </div>   
+
+                                        <!-- show review -->
+                                        <?php if ($testmode == 0) { ?>
+                                            <div class="quiz-review">
+                                                <div class="float-left">
+                                                    <a v-on:click="revAns();" class="btn btn-theme" v-if="!revShow">Review Answer</a>
+                                                    <a v-on:click="revcontAns();" class="btn btn-theme" v-if="revShow">Continue Quiz</a>
+                                                </div> 
+
+                                            </div>   
                                         <?php } ?>
                                         <!-- show review -->
-                                        
+
                                         <h1 class="title is-6">Quiz</h1> 
                                         <progress class="progress is-info is-small" :value="(questionIndex/quiz.questions.length)*100" max="100">{{(questionIndex/quiz.questions.length)*100}}%</progress>
                                         <div class="lenth_width">
@@ -298,164 +298,164 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     </div>
                                     <!--/progress-->
                                 </div>
-                                
+
                                 <div v-if="!revShow">
-                                <!-- questionTitle -->
-                                <div v-if="quiz.questions[questionIndex].show_image" class="text-center">
-                                    <img style="width: 50%" v-if="quiz.questions[questionIndex].direction == 'top'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />
-                                </div>
-                                <h2 class="titleContainer title"><span class="quiz-question-no">{{questionIndex + 1}}.</span> <span class="quiz-question-title" v-html="quiz.questions[questionIndex].text"></span>
-                                </h2>
-                                <div v-if="quiz.questions[questionIndex].show_image" class="text-center">
-                                    <img style="width: 50%" v-if="quiz.questions[questionIndex].direction == 'bottom'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />
-                                </div>
-                                <!-- quizOptions -->
-                                <div class="optionContainer">
-                                    <div class="option" :id="index | charIndex | AddPrefix('ansopt_')" v-for="(response, index) in quiz.questions[questionIndex].responses" @click="selectOption(index)" :class="{ 'is-selected': userResponses[questionIndex] == index}" :key="index" v-if="response.text != ''">
-                                         <span class="q-option">{{ index | charIndex }}.&nbsp;</span> <span v-html="response.text"></span>
+                                    <!-- questionTitle -->
+                                    <div v-if="quiz.questions[questionIndex].show_image" class="text-center">
+                                        <img style="width: 50%" v-if="quiz.questions[questionIndex].direction == 'top'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />
                                     </div>
-                                    
-                                    <!--div style="margin: 0 auto; text-align: center" v-if="questionIndex>0">
-                                            <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="prev();" :disabled="questionIndex>=quiz.questions.length">
-                                                Back
-                                            </a>
-                                        </div--> 
-                                </div>
-                                
-                                <footer class="questionFooter" id='quiz-nxt-footer' v-if="showimmediate && !showimmediateblk">
-                                    <!--                                    pagination-->
-                                    <nav class="pagination" role="navigation" aria-label="pagination">
-
-                                        <!--                                        back button -->
-                                        <!--                                        <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">Back</a>-->
-                                        <!--                                        <a class="btn btn-green" href="select_language">Home</a>-->
-
-                                        <!--                                    next button -->
-                                        <div style="text-align: left" v-if="questionIndex>0">
-                                            <a class="button"  v-on:click="prev();" :disabled="questionIndex>=quiz.questions.length">
-                                                <!--                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}-->Back
-                                            </a>
-                                        </div> 
-                                        
-                                        
-                                        
-                                        <div style="text-align: right" v-if="shownotimmdnxt">
-                                            <a class="button"  v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
-                                                <!--                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}-->Next
-                                            </a>
-                                        </div> 
-
-                                    </nav>
-                                    <!--                                    /pagination-->
-
-                                </footer>
-
-
-                                <!--footer class="questionFooter" id='quiz-nxt-footer'  v-if="shownotimmdnxt"-->
-                                <footer class="questionFooter" id='quiz-nxt-footer' v-if="!showimmediate">
-                                    <!--                                    pagination-->
-                                    <nav class="pagination" role="navigation" aria-label="pagination">
-
-                                        <!--                                        back button -->
-                                        <!--                                        <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">Back</a>-->
-                                        <!--                                        <a class="btn btn-green" href="select_language">Home</a>-->
-
-                                        <!--                                    next button -->
-                                        <div style="text-align: left" v-if="questionIndex>0">
-                                            <a class="button"  v-on:click="prev();" :disabled="questionIndex>=quiz.questions.length">
-                                                <!--                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}-->Back
-                                            </a>
-                                        </div> 
-                                        
-                                        
-                                        
-                                        <div style="text-align: right" v-if="shownotimmdnxt">
-                                            <a class="button"  v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
-                                                <!--                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}-->Next
-                                            </a>
-                                        </div> 
-
-                                    </nav>
-                                    <!--                                    /pagination-->
-
-                                </footer>
-
-
-                                <!--footer class="questionFooter" id='quiz-footer'  v-if="showimmediateblk"-->
-                                    
-                                     <footer class="questionFooter" id='quiz-footer'  v-if="showimmediateblk">
-                                    <div class="footer-explanation-section">
-                                        <div class="quiz-explanation-view border-b">Correct Answer - <strong>{{quiz.questions[questionIndex].answer}}</strong>
-                                        </div>
-                                        <!--                                        <hr>-->
-                                        <div class="quiz-explanation-view">Explanation:</div>
-                                        <div v-if="quiz.questions[questionIndex].show_image_explanation" class="text-center">
-                                            <img v-if="quiz.questions[questionIndex].explanation_img_direction == 'top'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
-                                        </div>
-
-                                        <!--span v-html="quiz.questions[questionIndex].explanation"></span-->
-                                        <br/>
-                                        <div style="text-align: left;">
-                                            <span v-html="quiz.questions[questionIndex].explanation"></span>
-                                        </div>    
-
-
-                                        <div v-if="quiz.questions[questionIndex].show_image_explanation" class="text-center">
-                                            <img v-if="quiz.questions[questionIndex].explanation_img_direction == 'bottom'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
-                                        </div>
+                                    <h2 class="titleContainer title"><span class="quiz-question-no">{{questionIndex + 1}}.</span> <span class="quiz-question-title" v-html="quiz.questions[questionIndex].text"></span>
+                                    </h2>
+                                    <div v-if="quiz.questions[questionIndex].show_image" class="text-center">
+                                        <img style="width: 50%" v-if="quiz.questions[questionIndex].direction == 'bottom'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />
                                     </div>
-                                    <!--                                    pagination-->
-                                    <nav class="pagination" role="navigation" aria-label="pagination">
+                                    <!-- quizOptions -->
+                                    <div class="optionContainer">
+                                        <div class="option" :id="index | charIndex | AddPrefix('ansopt_')" v-for="(response, index) in quiz.questions[questionIndex].responses" @click="selectOption(index)" :class="{ 'is-selected': userResponses[questionIndex] == index}" :key="index" v-if="response.text != ''">
+                                             <span class="q-option">{{ index | charIndex }}.&nbsp;</span> <span v-html="response.text"></span>
+                                        </div>
 
-                                        <!--                                        back button -->
-                                        <!--                                        <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">Back</a>-->
-                                        <!--                                        <a class="btn btn-green" href="select_language">Home</a>-->
+                                        <!--div style="margin: 0 auto; text-align: center" v-if="questionIndex>0">
+                                                <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="prev();" :disabled="questionIndex>=quiz.questions.length">
+                                                    Back
+                                                </a>
+                                            </div--> 
+                                    </div>
 
-                                        <!--                                    next button -->
-                                         <div style="margin: 0 auto; text-align: center" v-if="questionIndex>0">
-                                            <a class="button"  v-on:click="prev();" :disabled="questionIndex>=quiz.questions.length">
-                                                <!--                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}-->Back
-                                            </a>
-                                        </div> 
-                                        <div style="margin: 0 auto; text-align: center">
-                                            <a class="button"  v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
-                                                <!--                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}-->Next
-                                            </a>
-                                        </div> 
+                                    <footer class="questionFooter" id='quiz-nxt-footer' v-if="showimmediate && !showimmediateblk">
+                                        <!--                                    pagination-->
+                                        <nav class="pagination" role="navigation" aria-label="pagination">
 
-                                    </nav>
-                                    <!--                                    /pagination-->
+                                            <!--                                        back button -->
+                                            <!--                                        <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">Back</a>-->
+                                            <!--                                        <a class="btn btn-green" href="select_language">Home</a>-->
 
-                                </footer>
+                                            <!--                                    next button -->
+                                            <div style="text-align: left" v-if="questionIndex>0">
+                                                <a class="button"  v-on:click="prev();" :disabled="questionIndex>=quiz.questions.length">
+                                                    <!--                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}-->Back
+                                                </a>
+                                            </div> 
 
-                                <?php
-                                /*
-                                  <footer class="questionFooter"  v-if="showimmediateblk">
-                                  <div class="question-explanation">
-                                  <h4>Explanation:</h4>
-                                  <div v-if="quiz.questions[questionIndex].show_image_explanation" class="text-center">
-                                  <img v-if="quiz.questions[questionIndex].explanation_img_direction == 'top'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
-                                  </div>
-                                  <span v-html="quiz.questions[questionIndex].explanation"></span>
-                                  <div v-if="quiz.questions[questionIndex].show_image_explanation" class="text-center">
-                                  <img v-if="quiz.questions[questionIndex].explanation_img_direction == 'buttom'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
-                                  </div>
-                                  </div>
-                                  <!--                                    <nav class="pagination" role="navigation" aria-label="pagination">
-                                  <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">
-                                  Back
-                                  </a>
-                                  <a class="btn btn-green" href="select_language">
-                                  Home
-                                  </a>
-                                  <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
-                                  {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}
-                                  </a>
-                                  </nav>-->
-                                  </footer>
-                                 */
-                                ?>                                           
-                            </div>
+
+
+                                            <div style="text-align: right" v-if="shownotimmdnxt">
+                                                <a class="button"  v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
+                                                    <!--                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}-->Next
+                                                </a>
+                                            </div> 
+
+                                        </nav>
+                                        <!--                                    /pagination-->
+
+                                    </footer>
+
+
+                                    <!--footer class="questionFooter" id='quiz-nxt-footer'  v-if="shownotimmdnxt"-->
+                                    <footer class="questionFooter" id='quiz-nxt-footer' v-if="!showimmediate">
+                                        <!--                                    pagination-->
+                                        <nav class="pagination" role="navigation" aria-label="pagination">
+
+                                            <!--                                        back button -->
+                                            <!--                                        <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">Back</a>-->
+                                            <!--                                        <a class="btn btn-green" href="select_language">Home</a>-->
+
+                                            <!--                                    next button -->
+                                            <div style="text-align: left" v-if="questionIndex>0">
+                                                <a class="button"  v-on:click="prev();" :disabled="questionIndex>=quiz.questions.length">
+                                                    <!--                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}-->Back
+                                                </a>
+                                            </div> 
+
+
+
+                                            <div style="text-align: right" v-if="shownotimmdnxt">
+                                                <a class="button"  v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
+                                                    <!--                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}-->Next
+                                                </a>
+                                            </div> 
+
+                                        </nav>
+                                        <!--                                    /pagination-->
+
+                                    </footer>
+
+
+                                    <!--footer class="questionFooter" id='quiz-footer'  v-if="showimmediateblk"-->
+
+                                    <footer class="questionFooter" id='quiz-footer'  v-if="showimmediateblk">
+                                        <div class="footer-explanation-section">
+                                            <div class="quiz-explanation-view border-b">Correct Answer - <strong>{{quiz.questions[questionIndex].answer}}</strong>
+                                            </div>
+                                            <!--                                        <hr>-->
+                                            <div class="quiz-explanation-view">Explanation:</div>
+                                            <div v-if="quiz.questions[questionIndex].show_image_explanation" class="text-center">
+                                                <img v-if="quiz.questions[questionIndex].explanation_img_direction == 'top'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
+                                            </div>
+
+                                            <!--span v-html="quiz.questions[questionIndex].explanation"></span-->
+                                            <br/>
+                                            <div style="text-align: left;">
+                                                <span v-html="quiz.questions[questionIndex].explanation"></span>
+                                            </div>    
+
+
+                                            <div v-if="quiz.questions[questionIndex].show_image_explanation" class="text-center">
+                                                <img v-if="quiz.questions[questionIndex].explanation_img_direction == 'bottom'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
+                                            </div>
+                                        </div>
+                                        <!--                                    pagination-->
+                                        <nav class="pagination" role="navigation" aria-label="pagination">
+
+                                            <!--                                        back button -->
+                                            <!--                                        <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">Back</a>-->
+                                            <!--                                        <a class="btn btn-green" href="select_language">Home</a>-->
+
+                                            <!--                                    next button -->
+                                            <div style="margin: 0 auto; text-align: center" v-if="questionIndex>0">
+                                                <a class="button"  v-on:click="prev();" :disabled="questionIndex>=quiz.questions.length">
+                                                    <!--                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}-->Back
+                                                </a>
+                                            </div> 
+                                            <div style="margin: 0 auto; text-align: center">
+                                                <a class="button"  v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
+                                                    <!--                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}-->Next
+                                                </a>
+                                            </div> 
+
+                                        </nav>
+                                        <!--                                    /pagination-->
+
+                                    </footer>
+
+                                    <?php
+                                    /*
+                                      <footer class="questionFooter"  v-if="showimmediateblk">
+                                      <div class="question-explanation">
+                                      <h4>Explanation:</h4>
+                                      <div v-if="quiz.questions[questionIndex].show_image_explanation" class="text-center">
+                                      <img v-if="quiz.questions[questionIndex].explanation_img_direction == 'top'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
+                                      </div>
+                                      <span v-html="quiz.questions[questionIndex].explanation"></span>
+                                      <div v-if="quiz.questions[questionIndex].show_image_explanation" class="text-center">
+                                      <img v-if="quiz.questions[questionIndex].explanation_img_direction == 'buttom'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
+                                      </div>
+                                      </div>
+                                      <!--                                    <nav class="pagination" role="navigation" aria-label="pagination">
+                                      <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">
+                                      Back
+                                      </a>
+                                      <a class="btn btn-green" href="select_language">
+                                      Home
+                                      </a>
+                                      <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
+                                      {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}
+                                      </a>
+                                      </nav>-->
+                                      </footer>
+                                     */
+                                    ?>                                           
+                                </div>
                             </div>   
                             <!--quizCompletedResult-->
                             <div v-if="questionIndex >= quiz.questions.length" v-bind:key="questionIndex" class="quizCompleted has-text-centered">
@@ -485,6 +485,15 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     <!--/resultTitleBlock-->
 
                                 </div>
+
+                                <div  id="feedback-popup" class="feedback-popup" style="display: none;" v-if="score() == quiz.questions.length">
+                                    <div class="container">
+                                        <div class="feedback-popup-box">
+                                            test
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                             <!--/quizCompetedResult-->
                             <!-- 		</transition> -->
@@ -493,7 +502,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
 
 
                         <div id="create" class="quiz-result" style="display: none;">
-                           
+
                             <div id="question_list"></div>
                         </div>
 
@@ -503,17 +512,16 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
             </section>
         </div>
         <!--/container-->
-        
-        
-        
-        
+
+
+
+
         <div class="loadingoverlay" style="display: none">
-        <div class="loadingoverlay-spinner">
-            <img alt="" src="img/loader.gif" />
+            <div class="loadingoverlay-spinner">
+                <img alt="" src="img/loader.gif" />
+            </div>
         </div>
-        </div>
-        
-        
+
         <?php include 'footer.php'; ?>
         <?php include 'script.php'; ?>
         <script>
@@ -537,9 +545,9 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                     showimmediateblk: false,
                     isDisabled: false,
                     shownotimmdnxt: false,
-                    studans:false,
+                    studans: false,
                     isActive: false,
-                    revShow : false
+                    revShow: false
                 },
                 filters: {
                     charIndex: function (i) {
@@ -559,39 +567,39 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                     convertLower: function (strval) {
                         return strval.toLowerCase().trim();
                     },
-                    showOverlay:function() {
+                    showOverlay: function () {
                         $('.loadingoverlay').show();
-                    },    
-                    hideOverlay:function() {
+                    },
+                    hideOverlay: function () {
                         $('.loadingoverlay').hide();
                     },
-                    revcontAns:function() {
-                         
+                    revcontAns: function () {
+
                         this.questionIndex = 0;
                         app.revShow = false;
                         $('#question_list').empty();
                         $("#create").toggle();
-                                            
 
-                    },    
-                    revAns:function() {
-                        
 
-                      
+                    },
+                    revAns: function () {
+
+
+
                         $.ajax({
                             type: "GET",
                             url: 'api/v1/get_result_detail/' +<?php echo $student_log; ?>,
                             success: function (data) {
                                 if (data.result.error === false) {
-                                    
-                                    app.revShow =true;
-                                    
+
+                                    app.revShow = true;
+
                                     $('.loadingoverlay').show();
                                     setTimeout(() => {
                                         applyMathAjax();
-                                         $('.loadingoverlay').hide();                             
+                                        $('.loadingoverlay').hide();
                                     }, 600);
-                                    
+
                                     var qlist = '';
                                     var correct_ans = '';
                                     var student_ans = '';
@@ -602,7 +610,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                             if ((val.student_answer).toUpperCase() === 'A') {
                                                 student_ans = 'crt_clr';
                                             }
-                                            qlist = qlist + '<div class="result-option '+ student_ans + '"><div class="option"><span class="quiz-option-float">A.</span> ' + val.a + '</div></div>';
+                                            qlist = qlist + '<div class="result-option ' + student_ans + '"><div class="option"><span class="quiz-option-float">A.</span> ' + val.a + '</div></div>';
                                         }
                                         if (val.b !== '') {
                                             student_ans = '';
@@ -616,15 +624,15 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                             if ((val.student_answer).toUpperCase() === 'C') {
                                                 student_ans = 'crt_clr';
                                             }
-                                            qlist = qlist + '<div class="result-option '+ student_ans + '"><div class="option"><span class="quiz-option-float">C.</span> ' + val.c + '</div></div>';
+                                            qlist = qlist + '<div class="result-option ' + student_ans + '"><div class="option"><span class="quiz-option-float">C.</span> ' + val.c + '</div></div>';
                                         }
                                         if (val.d !== '') {
                                             student_ans = '';
                                             if ((val.student_answer).toUpperCase() === 'D') {
                                                 student_ans = 'crt_clr';
                                             }
-                                            qlist = qlist + '<div class="result-option '+ student_ans + '"><div class="option"><span class="quiz-option-float">D.</span> ' + val.d + '</div></div>';
-                                        }                
+                                            qlist = qlist + '<div class="result-option ' + student_ans + '"><div class="option"><span class="quiz-option-float">D.</span> ' + val.d + '</div></div>';
+                                        }
                                         qlist = qlist + '</div>';
                                     });
                                     $('#question_list').html(qlist);
@@ -639,10 +647,10 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                         });
                     },
                     divshow: function () {
-                         $('.loadingoverlay').show();
+                        $('.loadingoverlay').show();
                         setTimeout(() => {
                             applyMathAjax();
-                             $('.loadingoverlay').hide();                             
+                            $('.loadingoverlay').hide();
                         }, 600);
                         $.ajax({
                             type: "GET",
@@ -743,7 +751,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                 });
                     },
                     selectOption: function (index) {
-                         $('.loadingoverlay').show();
+                        $('.loadingoverlay').show();
                         if (!app.showimmediate) {
                             var questions = <?php echo json_encode($questions_list); ?>;
                             var answers = ['A', 'B', 'C', 'D'];
@@ -763,44 +771,44 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                 Vue.set(this.userResponses, this.questionIndex, index);
                                 if (this.questionIndex < this.quiz.questions.length) {
                                     this.questionIndex++;
-                                    
-                                    
-                                    
-                                     var nqid = this.questionIndex  + 1;
-                           
-                                      if(!app.showimmediate)  {
-                                        $.get("api/v1/get_student_answer/" + nqid+"/<?php echo $student_log; ?>",
-                                        function (data, status) {
-                                                
-                                            if (data.result.error === false) {
-                                                
-                                                 ansid = data.result.data; 
-                                                                                                                                            
-                                                var studansid = app.convertLower(ansid);
-                                                $('#ansopt_' + studansid).addClass('crt_clr');
-                                                      
-                                                   
-                                                app.isDisabled = false;
-                                                app.showimmediateblk = false;
-                                                //app.shownotimmdnxt = false;
-                                                app.shownotimmdnxt = true;
 
-                                                
-                                                                                          
-                                                
-                                            }else {
-                                                
-                                                app.shownotimmdnxt = false;
-                                            }    
-                                        });  
-                                    
+
+
+                                    var nqid = this.questionIndex + 1;
+
+                                    if (!app.showimmediate) {
+                                        $.get("api/v1/get_student_answer/" + nqid + "/<?php echo $student_log; ?>",
+                                                function (data, status) {
+
+                                                    if (data.result.error === false) {
+
+                                                        ansid = data.result.data;
+
+                                                        var studansid = app.convertLower(ansid);
+                                                        $('#ansopt_' + studansid).addClass('crt_clr');
+
+
+                                                        app.isDisabled = false;
+                                                        app.showimmediateblk = false;
+                                                        //app.shownotimmdnxt = false;
+                                                        app.shownotimmdnxt = true;
+
+
+
+
+                                                    } else {
+
+                                                        app.shownotimmdnxt = false;
+                                                    }
+                                                });
+
                                     }
-                                    
+
                                 }
                             }, 500);
                             setTimeout(() => {
                                 applyMathAjax();
-                                 $('.loadingoverlay').hide();
+                                $('.loadingoverlay').hide();
                             }, 600);
                         }
 
@@ -844,18 +852,18 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                 app.isDisabled = true;
                             }
                         }
-                        
+
                         setTimeout(() => {
                             applyMathAjax();
                             $('.loadingoverlay').hide();
                         }, 600);
                     },
                     next: function () {
-                        
-                       $('.loadingoverlay').show();
+
+                        $('.loadingoverlay').show();
                         setTimeout(() => {
                             applyMathAjax();
-                             $('.loadingoverlay').hide();
+                            $('.loadingoverlay').hide();
                         }, 600);
                         app.isDisabled = false;
                         app.showimmediateblk = false;
@@ -863,21 +871,21 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
 
                         if (this.questionIndex < this.quiz.questions.length) {
                             this.questionIndex++;
-                        }    
-                        
+                        }
+
                         var questions = <?php echo json_encode($questions_list); ?>;
-                         var qid = questions[this.questionIndex].question_id;
-                        
-                        
+                        var qid = questions[this.questionIndex].question_id;
+
+
                         if (app.showimmediate) {
-                                              
-                               
-                                $.get("api/v1/get_student_answer/" + qid+"/<?php echo $student_log; ?>",
-                                        function (data, status) {
-                                            if (data.result.error === false) {
-                                                 ansid = data.result.data; 
-                                                 
-                                                  $.get("api/v1/get_question_answer/" + qid,
+
+
+                            $.get("api/v1/get_student_answer/" + qid + "/<?php echo $student_log; ?>",
+                                    function (data, status) {
+                                        if (data.result.error === false) {
+                                            ansid = data.result.data;
+
+                                            $.get("api/v1/get_question_answer/" + qid,
                                                     function (data, status) {
                                                         if (data.result.error === false) {
 
@@ -890,59 +898,59 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                                                 $('#ansopt_' + corransid).addClass('crt_clr');
                                                                 $('#ansopt_' + studansid).addClass('wrng_clr');
                                                             }
-                                                            
+
                                                         }
                                                     });
-                                                app.showimmediateblk = true;
-                                                app.isDisabled = false;                                                
-                                                app.shownotimmdnxt = false;
-                                            }
-                                        });
-                                   
-                        }else {
-                            
-                          
-                            $.get("api/v1/get_student_answer/" + qid+"/<?php echo $student_log; ?>",
-                                        function (data, status) {
-                                            if (data.result.error === false) {
-                                                 ansid = data.result.data; 
-                                                 
-                                                                                            
-                                                var studansid = app.convertLower(ansid);
-                                                $('#ansopt_' + studansid).addClass('crt_clr');
-                                                      
-                                                   
-                                                app.isDisabled = false;
-                                                app.showimmediateblk = false;
-                                                //app.shownotimmdnxt = false;
-                                                app.shownotimmdnxt = true;
+                                            app.showimmediateblk = true;
+                                            app.isDisabled = false;
+                                            app.shownotimmdnxt = false;
+                                        }
+                                    });
 
-                                                
-                                                
-                                                
-                                                
-                                            }
-                                        });  
-                                    }  
-                        
+                        } else {
+
+
+                            $.get("api/v1/get_student_answer/" + qid + "/<?php echo $student_log; ?>",
+                                    function (data, status) {
+                                        if (data.result.error === false) {
+                                            ansid = data.result.data;
+
+
+                                            var studansid = app.convertLower(ansid);
+                                            $('#ansopt_' + studansid).addClass('crt_clr');
+
+
+                                            app.isDisabled = false;
+                                            app.showimmediateblk = false;
+                                            //app.shownotimmdnxt = false;
+                                            app.shownotimmdnxt = true;
+
+
+
+
+
+                                        }
+                                    });
+                        }
+
                     },
                     prev: function () {
                         $('.loadingoverlay').show();
                         if (this.quiz.questions.length > 0)
-                            this.questionIndex--;                         
-                                              
+                            this.questionIndex--;
+
                         var questions = <?php echo json_encode($questions_list); ?>;
                         var qid = questions[this.questionIndex].question_id;
-                        var answers   = ['A', 'B', 'C', 'D'];
-                         var ansid = '';
-                        if (app.showimmediate) {                                              
-                               
-                                $.get("api/v1/get_student_answer/" + qid+"/<?php echo $student_log; ?>",
-                                        function (data, status) {
-                                            if (data.result.error === false) {
-                                                 ansid = data.result.data; 
-                                                 
-                                                  $.get("api/v1/get_question_answer/" + qid,
+                        var answers = ['A', 'B', 'C', 'D'];
+                        var ansid = '';
+                        if (app.showimmediate) {
+
+                            $.get("api/v1/get_student_answer/" + qid + "/<?php echo $student_log; ?>",
+                                    function (data, status) {
+                                        if (data.result.error === false) {
+                                            ansid = data.result.data;
+
+                                            $.get("api/v1/get_question_answer/" + qid,
                                                     function (data, status) {
                                                         if (data.result.error === false) {
 
@@ -955,38 +963,38 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                                                 $('#ansopt_' + corransid).addClass('crt_clr');
                                                                 $('#ansopt_' + studansid).addClass('wrng_clr');
                                                             }
-                                                            
+
                                                         }
                                                     });
-                                                app.showimmediateblk = true;
-                                                app.isDisabled = false;                                                
-                                                app.shownotimmdnxt = false;
-                                               
-                                            }
-                                        });
-                                   
-                        }else {
-                            
-                            
-                            $.get("api/v1/get_student_answer/" + qid+"/<?php echo $student_log; ?>",
-                                        function (data, status) {
-                                            if (data.result.error === false) {
-                                                 ansid = data.result.data; 
-                                                 
-                                                                                            
-                                                var studansid = app.convertLower(ansid);
-                                                $('#ansopt_' + studansid).addClass('crt_clr');
-                                                      
-                                                   
-                                                app.isDisabled = false;
-                                                app.showimmediateblk = false;
-                                                app.shownotimmdnxt = true;
+                                            app.showimmediateblk = true;
+                                            app.isDisabled = false;
+                                            app.shownotimmdnxt = false;
 
-                                               
-                                                
-                                            }
-                                        });
-                        
+                                        }
+                                    });
+
+                        } else {
+
+
+                            $.get("api/v1/get_student_answer/" + qid + "/<?php echo $student_log; ?>",
+                                    function (data, status) {
+                                        if (data.result.error === false) {
+                                            ansid = data.result.data;
+
+
+                                            var studansid = app.convertLower(ansid);
+                                            $('#ansopt_' + studansid).addClass('crt_clr');
+
+
+                                            app.isDisabled = false;
+                                            app.showimmediateblk = false;
+                                            app.shownotimmdnxt = true;
+
+
+
+                                        }
+                                    });
+
                         }
                         setTimeout(() => {
                             applyMathAjax();
@@ -996,8 +1004,8 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                     // Return "true" count in userResponses
 
                     immChange: function () {
-                    
-                        
+
+
                         if (app.showimmediate) {
                             app.shownotimmdnxt = false;
                             if (!app.isDisabled) {
@@ -1012,22 +1020,22 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                 app.shownotimmdnxt = true;
                             }
                         }
-                        
-                        
-                        
+
+
+
                         var questions = <?php echo json_encode($questions_list); ?>;
                         var qid = questions[this.questionIndex].question_id;
-                        var answers   = ['A', 'B', 'C', 'D'];
-                        
+                        var answers = ['A', 'B', 'C', 'D'];
+
                         if (app.showimmediate) {
-                                              
-                               
-                                $.get("api/v1/get_student_answer/" + qid+"/<?php echo $student_log; ?>",
-                                        function (data, status) {
-                                            if (data.result.error === false) {
-                                                 ansid = data.result.data; 
-                                                 
-                                                  $.get("api/v1/get_question_answer/" + qid,
+
+
+                            $.get("api/v1/get_student_answer/" + qid + "/<?php echo $student_log; ?>",
+                                    function (data, status) {
+                                        if (data.result.error === false) {
+                                            ansid = data.result.data;
+
+                                            $.get("api/v1/get_question_answer/" + qid,
                                                     function (data, status) {
                                                         if (data.result.error === false) {
 
@@ -1040,41 +1048,41 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                                                 $('#ansopt_' + corransid).addClass('crt_clr');
                                                                 $('#ansopt_' + studansid).addClass('wrng_clr');
                                                             }
-                                                            
+
                                                         }
                                                     });
-                                                app.showimmediateblk = true;
-                                                app.isDisabled = false;                                                
-                                                app.shownotimmdnxt = false;
-                                            }
-                                        });
-                                   
-                        }else {
-                            
-                          
-                            $.get("api/v1/get_student_answer/" + qid+"/<?php echo $student_log; ?>",
-                                        function (data, status) {
-                                            if (data.result.error === false) {
-                                                 ansid = data.result.data; 
-                                                 
-                                                                                            
-                                                var studansid = app.convertLower(ansid);
-                                                $('#ansopt_' + studansid).addClass('crt_clr');
-                                                      
-                                                   
-                                                app.isDisabled = false;
-                                                app.showimmediateblk = false;
-                                                //app.shownotimmdnxt = false;
-                                                app.shownotimmdnxt = true;
+                                            app.showimmediateblk = true;
+                                            app.isDisabled = false;
+                                            app.shownotimmdnxt = false;
+                                        }
+                                    });
 
-                                                
-                                                
-                                                
-                                                
-                                            }
-                                        });  
-                                    }
-                        
+                        } else {
+
+
+                            $.get("api/v1/get_student_answer/" + qid + "/<?php echo $student_log; ?>",
+                                    function (data, status) {
+                                        if (data.result.error === false) {
+                                            ansid = data.result.data;
+
+
+                                            var studansid = app.convertLower(ansid);
+                                            $('#ansopt_' + studansid).addClass('crt_clr');
+
+
+                                            app.isDisabled = false;
+                                            app.showimmediateblk = false;
+                                            //app.shownotimmdnxt = false;
+                                            app.shownotimmdnxt = true;
+
+
+
+
+
+                                        }
+                                    });
+                        }
+
 
                     },
                     score: function () {
@@ -1095,6 +1103,9 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                     }
                 }
             });
+            setTimeout(() => {
+                $("#feedback-popup").show();
+            }, 500);
         </script>
         <script>
             var minutesLabel = document.getElementById("minutes");
@@ -1116,6 +1127,8 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                     return valString;
                 }
             }
+
+
         </script>
     </body>
 </html>

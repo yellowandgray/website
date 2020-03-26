@@ -7,6 +7,7 @@ import { UserComponent } from './user/user.component';
 import { YearComponent } from './year/year.component';
 import { LoginComponent } from './login/login.component';
 import { BookComponent } from './book/book.component';
+import { FeedbackComponent } from './feedback/feedback.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
         {path: 'user', component: UserComponent},
         {path: 'year', component: YearComponent},
         {path: 'book', component: BookComponent},
+        {path: 'feedback', component: FeedbackComponent},
     ];
 
 @NgModule({

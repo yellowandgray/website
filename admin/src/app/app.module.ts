@@ -37,6 +37,7 @@ import { YearComponent, YearForm, YearDelete } from './year/year.component';
 import { LoginComponent } from './login/login.component';
 import { filterUser } from './user/filter-user';
 import { BookComponent, BookForm, BookDelete } from './book/book.component';
+import { FeedbackComponent, FeedbackForm, FeedbackDelete } from './feedback/feedback.component';
 
 
 
@@ -68,7 +69,10 @@ import { BookComponent, BookForm, BookDelete } from './book/book.component';
     filterUser,
     BookComponent,
     BookForm, 
-    BookDelete    
+    BookDelete, 
+    FeedbackComponent,
+    FeedbackForm,
+    FeedbackDelete
   ],
   imports: [
     BrowserModule,
@@ -98,7 +102,7 @@ import { BookComponent, BookForm, BookDelete } from './book/book.component';
     MatButtonToggleModule,
     MatCardModule
   ],
-  entryComponents: [SubjectComponent, SubjectForm, SubjectDelete, QuestionComponent, QuestionForm, QuestionDelete, TopicComponent, TopicForm, TopicDelete, UserComponent, UserForm, PictureViewUser, UserDelete, BlockForm, ResultForm, UserViewForm, YearComponent, YearForm, YearDelete, BookComponent, BookForm, BookDelete],
+  entryComponents: [SubjectComponent, SubjectForm, SubjectDelete, QuestionComponent, QuestionForm, QuestionDelete, TopicComponent, TopicForm, TopicDelete, UserComponent, UserForm, PictureViewUser, UserDelete, BlockForm, ResultForm, UserViewForm, YearComponent, YearForm, YearDelete, BookComponent, BookForm, BookDelete, FeedbackComponent, FeedbackForm, FeedbackDelete],
   providers: [],
   bootstrap: [AppComponent]
 })
