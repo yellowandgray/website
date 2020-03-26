@@ -492,7 +492,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                         <!-- question Box -->
 
 
-                        <div id="create" class="quiz-result" style="display: none;">
+                        <div id="create" class="quiz-result questionBox" style="display: none;">
                            
                             <div id="question_list"></div>
                         </div>
@@ -576,7 +576,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                     },    
                     revAns:function() {
                         
-
+                        
                       
                         $.ajax({
                             type: "GET",
@@ -592,40 +592,82 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                          $('.loadingoverlay').hide();                             
                                     }, 600);
                                     
+                                    
+                                    /*
+                                    <div><!----> 
+                                    <h2 class="titleContainer title">
+                                    <span class="quiz-question-no">1.</span> <span class="quiz-question-title">In vaccum all objects fall with</span></h2>
+           <div class="optionContainer">
+           
+           <div id="ansopt_a" class="option is-selected"><span class="q-option">a.&nbsp;</span> <span>same acceleration and heavy bodies reach ground first 
+ * </span></div>
+ * 
+ * <div id="ansopt_b" class="option"><span class="q-option">b.&nbsp;</span> <span>same acceleration and reach the ground at the same time </span></div>
+ * <div id="ansopt_c" class="option"><span class="q-option">c.&nbsp;</span> <span>different acceleration and reach the ground at different time </span></div>
+ * <div id="ansopt_d" class="option"><span class="q-option">d.&nbsp;</span> <span>different acceleration and heavy bodies reach ground first
+</span></div></div> <!----> <footer id="quiz-nxt-footer" class="questionFooter"><nav role="navigation" aria-label="pagination" class="pagination">
+<!----> <!----></nav></footer> <!----></div>
+                                    */
+                                    
+                                    /*
+                                    <div class="optionContainer">
+                                    <div class="option" :id="index | charIndex | AddPrefix('ansopt_')" v-for="(response, index) in quiz.questions[questionIndex].responses" @click="selectOption(index)" :class="{ 'is-selected': userResponses[questionIndex] == index}" :key="index" v-if="response.text != ''">
+                                         <span class="q-option">{{ index | charIndex }}.&nbsp;</span> <span v-html="response.text"></span>
+                                    </div>
+                                    */
+                                                                                
                                     var qlist = '';
                                     var correct_ans = '';
                                     var student_ans = '';
-                                    $.each(data.result.data, function (key, val) {
-                                        qlist = qlist + '<div class="question-title"><h6>' + (key + 1) + '. ' + val.name + '</h6>';
+                                    $.each(data.result.data, function (key, val) {  
+                                        qlist = qlist +'<div class="questionContainer">';
+                                        qlist = qlist + '<h2 class="titleContainer title"><span class="quiz-question-no">' + (key + 1) + '. '+'</span> <span class="quiz-question-title">'+ val.name + '</h2>';
                                         if (val.a !== '') {
                                             student_ans = '';
                                             if ((val.student_answer).toUpperCase() === 'A') {
-                                                student_ans = 'crt_clr';
+                                                student_ans = 'crt_clr';                                               
                                             }
-                                            qlist = qlist + '<div class="result-option '+ student_ans + '"><div class="option"><span class="quiz-option-float">A.</span> ' + val.a + '</div></div>';
+                                            //qlist = qlist + '<div class="result-option '+ student_ans + '" onClick=selRevQopt();"><div class="option"><span class="quiz-option-float">A.</span> ' + val.a + '</div></div>';
+                                           qlist = qlist+'<div class="optionContainer">';
+                                           qlist = qlist + '<div class="option '+student_ans+'"  onClick="selRevQopt(\'A\','+val.question_id+',<?php echo $student_log; ?>);">';
+                                           qlist = qlist + '<span class="q-option">A.&nbsp;</span> <span>'+val.a+'</span>';
+                                           qlist = qlist + '</div>';
+                                          
                                         }
                                         if (val.b !== '') {
                                             student_ans = '';
                                             if ((val.student_answer).toUpperCase() === 'B') {
                                                 student_ans = 'crt_clr';
                                             }
-                                            qlist = qlist + '<div class="result-option ' + student_ans + '"><div class="option"><span class="quiz-option-float">B.</span> ' + val.b + '</div></div>';
+                                            //qlist = qlist + '<div class="result-option ' + student_ans + '"><div class="option"><span class="quiz-option-float">B.</span> ' + val.b + '</div></div>';
+                                           qlist = qlist + '<div class="option '+student_ans+'"  onClick="selRevQopt(\'B\','+val.question_id+',<?php echo $student_log; ?>);">';
+                                           qlist = qlist + '<span class="q-option">B.&nbsp;</span> <span>'+val.a+'</span>';
+                                           qlist = qlist + '</div>';
                                         }
                                         if (val.c !== '') {
                                             student_ans = '';
                                             if ((val.student_answer).toUpperCase() === 'C') {
                                                 student_ans = 'crt_clr';
                                             }
-                                            qlist = qlist + '<div class="result-option '+ student_ans + '"><div class="option"><span class="quiz-option-float">C.</span> ' + val.c + '</div></div>';
+                                            //qlist = qlist + '<div class="result-option '+ student_ans + '"><div class="option"><span class="quiz-option-float">C.</span> ' + val.c + '</div></div>';
+                                           qlist = qlist+'<div class="optionContainer">';
+                                           qlist = qlist + '<div class="option '+student_ans+'"  onClick="selRevQopt(\'C\','+val.question_id+',<?php echo $student_log; ?>);">';
+                                           qlist = qlist + '<span class="q-option">C.&nbsp;</span> <span>'+val.a+'</span>';
+                                           qlist = qlist + '</div>';
                                         }
                                         if (val.d !== '') {
                                             student_ans = '';
                                             if ((val.student_answer).toUpperCase() === 'D') {
                                                 student_ans = 'crt_clr';
                                             }
-                                            qlist = qlist + '<div class="result-option '+ student_ans + '"><div class="option"><span class="quiz-option-float">D.</span> ' + val.d + '</div></div>';
+                                            //qlist = qlist + '<div class="result-option '+ student_ans + '"><div class="option"><span class="quiz-option-float">D.</span> ' + val.d + '</div></div>';
+                                           qlist = qlist + '<div class="option '+student_ans+'"  onClick="selRevQopt(\'D\','+val.question_id+',<?php echo $student_log; ?>);">';
+                                           qlist = qlist + '<span class="q-option">D.&nbsp;</span> <span>'+val.a+'</span>';
+                                           qlist = qlist + '</div>';
                                         }                
-                                        qlist = qlist + '</div>';
+                                        
+                                       qlist = qlist + '</div>';     
+                                       qlist = qlist + '</div>';
                                     });
                                     $('#question_list').html(qlist);
                                     $("#create").toggle();
@@ -649,6 +691,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                             url: 'api/v1/get_result_detail/' +<?php echo $student_log; ?>,
                             success: function (data) {
                                 if (data.result.error === false) {
+                                    console.log(data);
                                     var qlist = '';
                                     var correct_ans = '';
                                     var student_ans = '';
@@ -770,6 +813,137 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                            
                                       if(!app.showimmediate)  {
                                         $.get("api/v1/get_student_answer/" + nqid+"/<?php echo $student_log; ?>",
+                                        function (data, status) {
+                                                
+                                            if (data.result.error === false) {
+                                                
+                                                 ansid = data.result.data; 
+                                                                                                                                            
+                                                var studansid = app.convertLower(ansid);
+                                                $('#ansopt_' + studansid).addClass('crt_clr');
+                                                      
+                                                   
+                                                app.isDisabled = false;
+                                                app.showimmediateblk = false;
+                                                //app.shownotimmdnxt = false;
+                                                app.shownotimmdnxt = true;
+
+                                                
+                                                                                          
+                                                
+                                            }else {
+                                                
+                                                app.shownotimmdnxt = false;
+                                            }    
+                                        });  
+                                    
+                                    }
+                                    
+                                }
+                            }, 500);
+                            setTimeout(() => {
+                                applyMathAjax();
+                                 $('.loadingoverlay').hide();
+                            }, 600);
+                        }
+
+                        if (app.showimmediate) {
+                            if (!app.isDisabled) {
+                                var questions = <?php echo json_encode($questions_list); ?>;
+                                var answers = ['A', 'B', 'C', 'D'];
+                                $.post("api/v1/store_answer",
+                                        {
+                                            question_id: questions[this.questionIndex].question_id,
+                                            answer: answers[index],
+                                            student_log_id: <?php echo $student_log; ?>
+                                        },
+                                        function (data, status) {
+                                            if (data.result.error === false) {
+
+                                            }
+                                        });
+
+                                // var questions = <?php echo json_encode($questions_list); ?>;
+                                var qid = questions[this.questionIndex].question_id;
+                                //var answers   = ['A', 'B', 'C', 'D'];
+                                var ansid = answers[index];
+                                $.get("api/v1/get_question_answer/" + qid,
+                                        function (data, status) {
+                                            if (data.result.error === false) {
+
+                                                var corransid = app.convertLower(data.result.data);
+                                                var studansid = app.convertLower(ansid);
+
+                                                if (data.result.data == ansid) {
+                                                    $('#ansopt_' + corransid).addClass('crt_clr');
+                                                } else {
+                                                    $('#ansopt_' + corransid).addClass('crt_clr');
+                                                    $('#ansopt_' + studansid).addClass('wrng_clr');
+                                                }
+                                            }
+                                        });
+                                //document.getElementById("quiz-footer").style.display = "block";
+                                app.showimmediateblk = true;
+                                app.isDisabled = true;
+                            }
+                        }
+                        
+                        setTimeout(() => {
+                            applyMathAjax();
+                            $('.loadingoverlay').hide();
+                        }, 600);
+                    },
+                    selectOptionReview : function(ans,q,sl) {
+                        
+                        
+                        $('.loadingoverlay').show();  
+                        
+                        //alert(' ans '+ans);
+                        $.post("api/v1/store_answer",
+                                {
+                                    question_id: q,
+                                    answer: ans,
+                                    student_log_id: sl
+                                },
+                                function (data, status) {
+                                    if (data.result.error === false) {
+                                            //alert('here');
+                                             $("#create").toggle();
+                                            app.revAns();                                               
+                                    }
+                                });
+                        
+                    },    
+                    selectOption: function (index) {
+                         $('.loadingoverlay').show();
+                        if (!app.showimmediate) {
+                            var questions = <?php echo json_encode($questions_list); ?>;
+                            var answers = ['A', 'B', 'C', 'D'];
+                            $.post("api/v1/store_answer",
+                                    {
+                                        question_id: questions[this.questionIndex].question_id,
+                                        answer: answers[index],
+                                        student_log_id: <?php echo $student_log; ?>
+                                    },
+                                    function (data, status) {
+                                        if (data.result.error === false) {
+                                             
+                                        }
+                                    });
+
+                            setTimeout(() => {
+                                Vue.set(this.userResponses, this.questionIndex, index);
+                                if (this.questionIndex < this.quiz.questions.length) {
+                                    this.questionIndex++;
+                                    
+                                    
+                                    
+                                     var nqid = this.questionIndex  + 1;
+                                     var nxqid = questions[nqid].question_id;
+                                     //alert(nqid);
+                           
+                                      if(!app.showimmediate)  {
+                                        $.get("api/v1/get_student_answer/" + nxqid+"/<?php echo $student_log; ?>",
                                         function (data, status) {
                                                 
                                             if (data.result.error === false) {
@@ -1106,6 +1280,10 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                 ++totalSeconds;
                 secondsLabel.innerHTML = pad(totalSeconds % 60);
                 minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
+            }
+            
+            function selRevQopt(ans,q,sl){
+                 app.selectOptionReview(ans,q,sl);
             }
 
             function pad(val) {
