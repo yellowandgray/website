@@ -85,7 +85,24 @@ export class QuestionComponent implements OnInit {
       );
   }
 
-
+  getSubjectByLanguage(): void {
+    this.subject = [];
+    this.httpClient
+      .get<any>(
+        "http://localhost/project/examhorse/api/v1/get_subject_by_language/" +
+          this.selected_language         
+      )
+      .subscribe(
+        res => {
+          this.subject = res["result"]["data"];          
+        },
+        error => {
+          this._snackBar.open(error["statusText"], "", {
+            duration: 2000
+          });
+        }
+      );
+  }
 
   getSubjectByYearnLanguage(): void {
     this.subject = [];
@@ -111,6 +128,7 @@ export class QuestionComponent implements OnInit {
         }
       );
   }
+      
   getTopicBySubject(): void {
     this.topic = [];
     this.httpClient
@@ -199,7 +217,7 @@ export class QuestionComponent implements OnInit {
       );
   }
   openDialog(id, res): void {
-    var data = null;
+   var data = null;
     if (id != 0) {
       this[res].forEach(val => {
         if (parseInt(val.question_id) === parseInt(id)) {
@@ -207,6 +225,13 @@ export class QuestionComponent implements OnInit {
           return false;
         }
       });
+      if(this.selected_subject) {
+         data.subject_id = this.selected_subject;
+     }
+     if(this.selected_language) {
+         data.language_id = this.selected_language;
+     }
+     console.log(data);
     }
     const dialogRef = this.dialog.open(QuestionForm, {
       minWidth: "40%",
@@ -283,6 +308,8 @@ export class QuestionForm {
   option_d_image: string = "Option D Image";
   explanation_image: string = "Select Explanation Image";
   image_path: string = "";
+  language:any[];
+  subject: any[];
   topic: any[];
   year: any[];
   book: any[];
@@ -298,6 +325,8 @@ export class QuestionForm {
     private httpClient: HttpClient
   ) {
     this.questionForm = new FormGroup({
+      language_id: new FormControl("", Validators.required),    
+      subject_id: new FormControl("", Validators.required),  
       topic_id: new FormControl("", Validators.required),
       question: new FormControl("", Validators.required),
       question_no: new FormControl("", Validators.required),
@@ -317,6 +346,8 @@ export class QuestionForm {
     });
     if (this.data != null) {
       this.questionForm.patchValue({
+        language_id:this.data.language_id,
+        subject_id: this.data.subject_id,
         topic_id: this.data.topic_id,
         question: this.data.name,
         question_no: this.data.question_no,
@@ -338,8 +369,47 @@ export class QuestionForm {
       this.image_path = this.data.image_path;
       this.image_path_explanation = this.data.image_path_explanation;
     }
+    
     this.httpClient
-      .get("http://localhost/project/examhorse/api/v1/get_topic")
+      .get("http://localhost/project/examhorse/api/v1/get_language")
+      .subscribe(
+        res => {
+          if (res["result"]["error"] === false) {
+            this.language = res["result"]["data"];
+          } else {
+            this._snackBar.open(res["result"]["message"], "", {
+              duration: 2000
+            });
+          }
+        },
+        error => {
+          this._snackBar.open(error["statusText"], "", {
+            duration: 2000
+          });
+        }
+      );
+    
+    this.httpClient
+      .get("http://localhost/project/examhorse/api/v1/get_subject_by_language/"+this.data.language_id)
+      .subscribe(
+        res => {
+          if (res["result"]["error"] === false) {
+            this.subject = res["result"]["data"];
+          } else {
+            this._snackBar.open(res["result"]["message"], "", {
+              duration: 2000
+            });
+          }
+        },
+        error => {
+          this._snackBar.open(error["statusText"], "", {
+            duration: 2000
+          });
+        }
+      );
+
+    this.httpClient
+      .get("http://localhost/project/examhorse/api/v1/get_topic_by_subject/"+this.data.subject_id)
       .subscribe(
         res => {
           if (res["result"]["error"] === false) {
@@ -355,7 +425,7 @@ export class QuestionForm {
             duration: 2000
           });
         }
-      );
+      );  
     this.httpClient
       .get("http://localhost/project/examhorse/api/v1/get_year")
       .subscribe(
@@ -386,6 +456,55 @@ export class QuestionForm {
           });
         }
       );
+  }
+
+
+   getSubjectByLanguageEdit(ev): void {
+     this.subject = [];
+    if(ev) {
+
+    var lang = ev.value;
+   
+
+        this.httpClient
+          .get<any>(
+            "http://localhost/project/examhorse/api/v1/get_subject_by_language/" +
+              lang     
+          )
+          .subscribe(
+            res => {
+              this.subject = res["result"]["data"];          
+            },
+            error => {
+              this._snackBar.open(error["statusText"], "", {
+                duration: 2000
+              });
+            }
+          );
+    }
+    this.getTopicBySelSubjectEdit(null);
+  }
+
+  getTopicBySelSubjectEdit(ev): void {
+   this.topic = [];
+    if(ev) {
+    var subj = ev.value;   
+        this.httpClient
+          .get<any>(
+            "http://localhost/project/examhorse/api/v1/get_topic_by_subject/" +
+              subj
+          )
+          .subscribe(
+            res => {
+              this.topic = res["result"]["data"];
+            },
+            error => {
+              this._snackBar.open(error["statusText"], "", {
+                duration: 2000
+              });
+            }
+          );
+    }
   }
 
   onSubmit() {
