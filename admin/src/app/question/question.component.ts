@@ -389,6 +389,7 @@ export class QuestionForm {
         }
       );
     
+    if(this.data) {  
     this.httpClient
       .get("http://localhost/project/examhorse/api/v1/get_subject_by_language/"+this.data.language_id)
       .subscribe(
@@ -407,7 +408,8 @@ export class QuestionForm {
           });
         }
       );
-
+   }
+    if(this.data) {  
     this.httpClient
       .get("http://localhost/project/examhorse/api/v1/get_topic_by_subject/"+this.data.subject_id)
        .subscribe(
@@ -426,6 +428,7 @@ export class QuestionForm {
           });
         }
       );  
+    }
     this.httpClient
       .get("http://localhost/project/examhorse/api/v1/get_year")
       .subscribe(
@@ -509,6 +512,7 @@ export class QuestionForm {
 
   onSubmit() {
     if (this.questionForm.invalid) {
+      alert('ttt');
       return;
     }
     this.loading = true;

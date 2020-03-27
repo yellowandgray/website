@@ -21,6 +21,7 @@ export class FeedbackComponent implements OnInit {
     this.getfeedback();
     this.getstudent();
   }
+    image_url: string = 'http://localhost/project/examhorse/api/v1/';
     getfeedback(): void {
     this.httpClient.get<any>('http://localhost/project/examhorse/api/v1/get_feedback')
       .subscribe(
