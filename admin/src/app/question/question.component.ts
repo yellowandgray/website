@@ -410,7 +410,7 @@ export class QuestionForm {
 
     this.httpClient
       .get("http://localhost/project/examhorse/api/v1/get_topic_by_subject/"+this.data.subject_id)
-      .subscribe(
+       .subscribe(
         res => {
           if (res["result"]["error"] === false) {
             this.topic = res["result"]["data"];
