@@ -212,7 +212,7 @@ $app->get('/get_topic_by_subject/:sid', function($sid) {
 $app->get('/get_topic_by_subject_n_year/:sid/:yid', function($sid, $yid) {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
-    $data = $com->selectAll('t.*', 'topic AS t LEFT JOIN subject AS s ON s.subject_id = ' . $sid . ' LEFT JOIN question AS q ON q.topic_id = t.topic_id', 'q.year_id = ' . $yid . ' GROUP BY t.topic_id');
+    $data = $com->selectAll('t.*', 'topic AS t LEFT JOIN question AS q ON q.topic_id = t.topic_id', 'q.year_id = ' . $yid . ' AND t.subject_id ='.$sid.' GROUP BY t.topic_id');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
