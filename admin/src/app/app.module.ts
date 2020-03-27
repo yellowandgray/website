@@ -24,6 +24,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { AngularEditorModule } from '@kolkov/angular-editor';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatCardModule} from '@angular/material/card';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -37,7 +38,7 @@ import { YearComponent, YearForm, YearDelete } from './year/year.component';
 import { LoginComponent } from './login/login.component';
 import { filterUser } from './user/filter-user';
 import { BookComponent, BookForm, BookDelete } from './book/book.component';
-import { FeedbackComponent, FeedbackForm, FeedbackDelete } from './feedback/feedback.component';
+import { FeedbackComponent, FeedbackForm, FeedbackDelete, AssignFeedbackForm } from './feedback/feedback.component';
 
 
 
@@ -72,7 +73,8 @@ import { FeedbackComponent, FeedbackForm, FeedbackDelete } from './feedback/feed
     BookDelete, 
     FeedbackComponent,
     FeedbackForm,
-    FeedbackDelete
+    FeedbackDelete,
+    AssignFeedbackForm
   ],
   imports: [
     BrowserModule,
@@ -100,9 +102,10 @@ import { FeedbackComponent, FeedbackForm, FeedbackDelete } from './feedback/feed
     AngularEditorModule,
     MatExpansionModule,
     MatButtonToggleModule,
-    MatCardModule
+    MatCardModule,
+    MatCheckboxModule
   ],
-  entryComponents: [SubjectComponent, SubjectForm, SubjectDelete, QuestionComponent, QuestionForm, QuestionDelete, TopicComponent, TopicForm, TopicDelete, UserComponent, UserForm, PictureViewUser, UserDelete, BlockForm, ResultForm, UserViewForm, YearComponent, YearForm, YearDelete, BookComponent, BookForm, BookDelete, FeedbackComponent, FeedbackForm, FeedbackDelete],
+  entryComponents: [SubjectComponent, SubjectForm, SubjectDelete, QuestionComponent, QuestionForm, QuestionDelete, TopicComponent, TopicForm, TopicDelete, UserComponent, UserForm, PictureViewUser, UserDelete, BlockForm, ResultForm, UserViewForm, YearComponent, YearForm, YearDelete, BookComponent, BookForm, BookDelete, FeedbackComponent, FeedbackForm, FeedbackDelete, AssignFeedbackForm],
   providers: [],
   bootstrap: [AppComponent]
 })

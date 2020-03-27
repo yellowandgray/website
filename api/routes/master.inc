@@ -153,7 +153,7 @@ $app->post('/insert_feedback', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('name' => $data['name']), 'feedback');
+    $record = $com->insertRecord(array('name' => $data['name'], 'feedback_type' => $data['feedback_type'], 'option_1' => $data['option_1'], 'option_2' => $data['option_2'], 'option_3' => $data['option_3']), 'feedback');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';

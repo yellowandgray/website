@@ -69,6 +69,18 @@ export class FeedbackComponent implements OnInit {
             }
         });
     }
+    AssignFeedback(id, res): void {
+        const dialogRef = this.dialog.open(AssignFeedbackForm, {
+          minWidth: "40%",
+          maxWidth: "40%"
+        });
+
+        dialogRef.afterClosed().subscribe(result => {
+          if(result !== false && result !== 'false') {
+                this.getfeedback();
+            }
+        });
+    }
     confirmDelete(id): void  {
         var data = null;
           if(id != 0) { 
@@ -103,10 +115,18 @@ export class FeedbackForm {
     private httpClient: HttpClient) {
         this.feedbackForm = new FormGroup ({
             'name': new FormControl('', Validators.required),
+            'feedback_type': new FormControl('', Validators.required),
+            'option_1': new FormControl(''),
+            'option_2': new FormControl(''),
+            'option_3': new FormControl(''),
         });
         if(this.data != null) {
            this.feedbackForm.patchValue({
            name: this.data.name,
+           feedback_type: this.data.feedback_type,
+           option_1: this.data.option_1,
+           option_2: this.data.option_2,
+           option_3: this.data.option_3,
         });
             this.feedback_id = this.data.feedback_id;
         }
@@ -121,9 +141,17 @@ export class FeedbackForm {
       var url = '';
           if(this.feedback_id != 0) {
         formData.append('name', this.feedbackForm.value.name);
+        formData.append('feedback_type', this.feedbackForm.value.feedback_type);
+        formData.append('option_1', this.feedbackForm.value.option_1);
+        formData.append('option_2', this.feedbackForm.value.option_2);
+        formData.append('option_3', this.feedbackForm.value.option_3);
         url = 'update_record/feedback/feedback_id = '+this.feedback_id;
       } else {
         formData.append('name', this.feedbackForm.value.name);
+        formData.append('feedback_type', this.feedbackForm.value.feedback_type);
+        formData.append('option_1', this.feedbackForm.value.option_1);
+        formData.append('option_2', this.feedbackForm.value.option_2);
+        formData.append('option_3', this.feedbackForm.value.option_3);
         url = 'insert_feedback';
       }
       this.httpClient.post('http://localhost/project/exam-horse/api/v1/'+url, formData).subscribe(
@@ -189,4 +217,31 @@ export class FeedbackDelete {
             }
         );
   }
+}
+
+@Component({
+  selector: 'assign-feedback-form',
+  templateUrl: 'assign-feedback-form.html',
+})
+export class AssignFeedbackForm {
+    //assignfeedbackForm: FormGroup;
+    loading = false;
+    feedback = [];
+    constructor(
+    public dialogRef: MatDialogRef<AssignFeedbackForm>,
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {
+        this.httpClient.get<any>('http://localhost/project/exam-horse/api/v1/get_feedback')
+          .subscribe(
+            (res) => {
+              this.feedback = res["result"]["data"];
+            },
+            (error) => {
+              this._snackBar.open(error["statusText"], '', {
+                duration: 2000,
+              });
+            }
+          );
+    }
 }
