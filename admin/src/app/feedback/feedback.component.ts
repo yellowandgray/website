@@ -70,7 +70,7 @@ export class FeedbackComponent implements OnInit {
             }
         });
     }
-    AssignFeedback(id, res): void {
+    AssignFeedback(): void {
         const dialogRef = this.dialog.open(AssignFeedbackForm, {
           minWidth: "40%",
           maxWidth: "40%"

@@ -512,7 +512,6 @@ export class QuestionForm {
 
   onSubmit() {
     if (this.questionForm.invalid) {
-      alert('ttt');
       return;
     }
     this.loading = true;
