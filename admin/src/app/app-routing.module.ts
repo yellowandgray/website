@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { DifficultyLevelComponent } from './difficulty-level/difficulty-level.component';
 import { UserComponent } from './user/user.component';
 import { BookComponent } from './book/book.component';
+import { FeedbackComponent } from './feedback/feedback.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
         {path: 'chapter', component: ChapterComponent},
         {path: 'difficulty', component: DifficultyLevelComponent},
         {path: 'book', component: BookComponent},
+        {path: 'feedback', component: FeedbackComponent},
     ];
 
 @NgModule({
