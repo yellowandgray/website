@@ -390,15 +390,41 @@ export class ResultForm {
     private httpClient: HttpClient) { 
         console.log(data);
     }
-    openFullResult(): void {
+    openFullResult(logid): void {        
       this.dialogRef.close();
-    const dialogRef = this.dialog.open(UserFullResultForm, {
+
+ this.httpClient.get('../api/v1/get_result_detail/' +logid).subscribe(
+        (res) => {
+            this.loading = false;
+            if(res["result"]["error"] == false) {
+            
+          const dialogRef = this.dialog.open(UserFullResultForm, {
       minWidth: "40%",
-      maxWidth: "40%"
+      maxWidth: "40%",
+      data: {
+        data: res["result"]["data"]
+        
+      }
     });
     dialogRef.afterClosed().subscribe(result => {
-      
+      if (result !== false && result !== 'false') {
+        console.log('Result closed');
+      }
     });
+            }else {
+             this._snackBar.open(res["result"]["message"], '', {
+            duration: 2000,
+          });   
+            }
+        },
+        (error) => {
+          this._snackBar.open(error["statusText"], '', {
+            duration: 2000,
+          });
+        }
+      );
+
+
   }
 }
 
@@ -411,7 +437,7 @@ export class UserFullResultForm {
   loading = false;
   constructor(
     public dialogRef: MatDialogRef<UserFullResultForm>,
-    @Inject(MAT_DIALOG_DATA) public datapopup: any,
+    @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {}
 }
