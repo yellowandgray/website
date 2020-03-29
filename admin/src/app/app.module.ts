@@ -38,6 +38,7 @@ import { DifficultyLevelComponent, DifficultForm, DifficultDelete } from './diff
 import { UserComponent, UserForm, PictureViewUser, BlockForm, ResultForm, UserDelete, UserViewForm, UserFullResultForm } from './user/user.component';
 import { filterUser } from './user/filter-user';
 import { BookComponent, BookForm, BookDelete } from './book/book.component';
+import { FeedbackComponent, FeedbackForm, FeedbackDelete, AssignFeedbackForm } from './feedback/feedback.component';
 
 
 
@@ -73,7 +74,11 @@ import { BookComponent, BookForm, BookDelete } from './book/book.component';
     UserFullResultForm,
     BookComponent,
     BookForm,
-    BookDelete
+    BookDelete,
+    FeedbackComponent, 
+    FeedbackForm, 
+    FeedbackDelete, 
+    AssignFeedbackForm
   ],
   imports: [
     BrowserModule,
@@ -103,7 +108,7 @@ import { BookComponent, BookForm, BookDelete } from './book/book.component';
     MatButtonToggleModule,
     MatCardModule
   ],
-  entryComponents: [SubjectComponent, SubjectForm, SubjectDelete, QuestionComponent, QuestionForm, QuestionDelete, TopicComponent, TopicForm, TopicDelete, ChapterComponent, ChapterForm, ChapterDelete, DifficultyLevelComponent, DifficultForm, DifficultDelete, UserComponent, UserForm, PictureViewUser, BlockForm, ResultForm, UserDelete, UserViewForm, UserFullResultForm, BookComponent, BookForm, BookDelete],
+  entryComponents: [SubjectComponent, SubjectForm, SubjectDelete, QuestionComponent, QuestionForm, QuestionDelete, TopicComponent, TopicForm, TopicDelete, ChapterComponent, ChapterForm, ChapterDelete, DifficultyLevelComponent, DifficultForm, DifficultDelete, UserComponent, UserForm, PictureViewUser, BlockForm, ResultForm, UserDelete, UserViewForm, UserFullResultForm, BookComponent, BookForm, BookDelete, FeedbackComponent, FeedbackForm, FeedbackDelete, AssignFeedbackForm],
   providers: [],
   bootstrap: [AppComponent]
 })
