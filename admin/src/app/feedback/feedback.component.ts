@@ -71,7 +71,7 @@ image_url: string = '../api/v1/';
             }
         });
     }
-    AssignFeedback(id, res): void {
+    AssignFeedback(): void {
         const dialogRef = this.dialog.open(AssignFeedbackForm, {
           minWidth: "40%",
           maxWidth: "40%"
