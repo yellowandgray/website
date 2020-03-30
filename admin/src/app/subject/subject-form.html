@@ -1,6 +1,25 @@
 <h2 mat-dialog-title>Subject</h2>
 <mat-dialog-content class="mat-typography">
     <form [formGroup]="subjectForm" (ngSubmit)="onSubmit()">
+        
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Standard</mat-label>
+                     <mat-select required formControlName="standard_id">
+                        <mat-option [value]="row.standard_id" *ngFor="let row of standard">
+                            {{row.name}}
+                        </mat-option>
+                    </mat-select>
+                    <mat-error>Standard is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%" fxLayoutAlign="center center">
+            </div>    
+            
+        </div>
+        <br>
+        
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
@@ -21,6 +40,7 @@
             </div>
         </div>
         <br/>
+         
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
             <div fxFlex="100%">
                 <angular-editor id="editor1" formControlName="description" [config]="editorConfig"></angular-editor>

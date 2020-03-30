@@ -22,9 +22,9 @@ export class FeedbackComponent implements OnInit {
     this.getfeedback();
     this.getstudent();
   }
-image_url: string = '../api/v1/';
+image_url: string = 'http://localhost/project/feringo/api/v1/';
     getfeedback(): void {
-    this.httpClient.get<any>('../api/v1/get_feedback')
+    this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_feedback')
       .subscribe(
         (res) => {
           this.feedback = res["result"]["data"];
@@ -37,7 +37,7 @@ image_url: string = '../api/v1/';
       );
   }
     getstudent(): void {
-    this.httpClient.get<any>('../api/v1/get_student/'+this.sortdata)
+    this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_student/'+this.sortdata)
       .subscribe(
         (res) => {
           this.student = res["result"]["data"];
@@ -156,7 +156,7 @@ export class FeedbackForm {
         formData.append('option_3', this.feedbackForm.value.option_3);
         url = 'insert_feedback';
       }
-      this.httpClient.post('../api/v1/'+url, formData).subscribe(
+      this.httpClient.post('http://localhost/project/feringo/api/v1/'+url, formData).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -200,7 +200,7 @@ export class FeedbackDelete {
             return;
       }
       this.loading = true;
-      this.httpClient.get('../api/v1/delete_record/feedback/feedback_id='+this.feedback_id).subscribe(
+      this.httpClient.get('http://localhost/project/feringo/api/v1/delete_record/feedback/feedback_id='+this.feedback_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -234,7 +234,7 @@ export class AssignFeedbackForm {
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
-        this.httpClient.get<any>('../api/v1/get_feedback')
+        this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_feedback')
           .subscribe(
             (res) => {
               this.feedback = res["result"]["data"];

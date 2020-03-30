@@ -1,0 +1,42 @@
+<h2 mat-dialog-title>Standard</h2>
+<mat-dialog-content class="mat-typography">
+    <form [formGroup]="standardForm" (ngSubmit)="onSubmit()">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Standard Title</mat-label>
+                    <input matInput placeholder="" required formControlName="name" />
+                    <a href="standard-form.html"></a>
+                    <mat-error>Standard Title is required</mat-error>
+                </mat-form-field>
+            </div>
+       
+        </div>
+        <br/>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="100%">
+                <angular-editor id="editor1" formControlName="description" [config]="editorConfig"></angular-editor>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <a href="standard-form.html"></a>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Status</mat-label>
+                    <mat-select formControlName="status">
+                        <mat-option value="1">Active</mat-option>
+                        <a href="standard-form.html"></a>
+                        <a href="standard-form.html"></a>
+                        <mat-option value="0">In-Active</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
+            <button mat-button [mat-dialog-close]="false">Cancel</button>
+            <button mat-button type="submit" [disabled]="loading">Save</button>
+            <mat-progress-spinner class="example-margin" *ngIf="loading" [mode]="'indeterminate'" [strokeWidth]="3" [diameter]="25">
+            </mat-progress-spinner>
+        </div>
+    </form>
+</mat-dialog-content>

@@ -17,15 +17,34 @@ export class SubjectComponent implements OnInit {
 
   subject = [];
   topic = [];
+  standard = [];
+
 
   constructor(public dialog: MatDialog, private httpClient: HttpClient, private _snackBar: MatSnackBar) { }
 
   ngOnInit() {
+    
     this.getsubject();
+    this.getstandard();
   }
-  image_url: string = '../api/v1/';
+  image_url: string = 'http://localhost/project/feringo/api/v1/';
+
+  getstandard(): void {
+      this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_standard')
+      .subscribe(
+        (res) => {
+          this.standard = res["result"]["data"];
+        },
+        (error) => {
+          this._snackBar.open(error["statusText"], '', {
+            duration: 2000,
+          });
+        }
+      );
+  }
+
   getsubject(): void {
-    this.httpClient.get<any>('../api/v1/get_subject')
+    this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_subject')
       .subscribe(
         (res) => {
           this.subject = res["result"]["data"];
@@ -50,7 +69,7 @@ export class SubjectComponent implements OnInit {
     const dialogRef = this.dialog.open(SubjectForm, {
       minWidth: "40%",
       maxWidth: "40%",
-      data: data
+      data: {data: data, standard: this.standard}
     });
     dialogRef.afterClosed().subscribe(result => {
       if (typeof result != 'undefined' && result !== false && result !== 'false') {
@@ -81,10 +100,11 @@ export class SubjectComponent implements OnInit {
   templateUrl: 'subject-form.html',
 })
 export class SubjectForm {
-  image_url: string = '../api/v1/';
+  image_url: string = 'http://localhost/project/feringo/api/v1/';
   subjectForm: FormGroup;
   loading = false;
   subject_id = 0;
+  standard : any[];
   subject_image: string = 'Select Subject Image';
   image_path: string = '';
   constructor(
@@ -94,14 +114,17 @@ export class SubjectForm {
     private httpClient: HttpClient) {
     this.subjectForm = new FormGroup({
       'name': new FormControl('', Validators.required),
+      'standard_id': new FormControl('', Validators.required),
       'description': new FormControl('', Validators.required),
-      'status': new FormControl(''),
+      'status': new FormControl('')
     });
+    this.standard = this.data.standard;
     if (this.data != null) {
       this.subjectForm.patchValue({
         name: this.data.name,
         description: this.data.description,
         status: this.data.status,
+        standard_id: this.data.standard_id,
       });
       this.subject_id = this.data.subject_id;
       this.image_path = this.data.image_path;
@@ -128,7 +151,7 @@ export class SubjectForm {
       formData.append('subject_image', this.image_path);
       url = 'insert_subject';
     }
-    this.httpClient.post('../api/v1/' + url, formData).subscribe(
+    this.httpClient.post('http://localhost/project/feringo/api/v1/' + url, formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -155,7 +178,7 @@ export class SubjectForm {
     this.loading = true;
     var formData = new FormData();
     formData.append('file', fileData);
-    this.httpClient.post('../api/v1/upload_file', formData).subscribe(
+    this.httpClient.post('http://localhost/project/feringo/api/v1/upload_file', formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -245,7 +268,7 @@ export class SubjectDelete {
       return;
     }
     this.loading = true;
-    this.httpClient.get('../api/v1/delete_record/subject/subject_id=' + this.subject_id).subscribe(
+    this.httpClient.get('http://localhost/project/feringo/api/v1/delete_record/subject/subject_id=' + this.subject_id).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
