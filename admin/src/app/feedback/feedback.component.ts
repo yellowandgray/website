@@ -176,6 +176,10 @@ export class FeedbackForm {
             );
   }
 
+
+
+    
+
 }
 
 @Component({
@@ -246,4 +250,25 @@ export class AssignFeedbackForm {
             }
           );
     }
+
+
+    getFeedbackbyType(ev): void {    
+    var ftype = ev.value;
+    this.httpClient
+      .get<any>(
+        "http://localhost/project/feringo/api/v1/get_feedback_by_type/" +ftype 
+      )
+      .subscribe(
+        res => {
+          this.feedback= res["result"]["data"];
+        },
+        error => {
+          this._snackBar.open(error["statusText"], "", {
+            duration: 2000
+          });
+        }
+      );
+
+  }
+
 }

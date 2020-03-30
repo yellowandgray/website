@@ -5,8 +5,8 @@
             <div fxFlex="100%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Select Feedback Type</mat-label>
-                    <mat-select>
-                        <mat-option *ngFor="let row of feedback" [value]="row.feedback_id">{{row.feedback_type}}</mat-option>
+                    <mat-select (selectionChange)="getFeedbackbyType($event);">
+                        <mat-option *ngFor="let row of feedback" [value]="row.feedback_type">{{row.feedback_type}}</mat-option>
                     </mat-select>
                     <mat-error>Feedback Type is required</mat-error>
                 </mat-form-field>

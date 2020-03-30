@@ -22,6 +22,7 @@ const routes: Routes = [
         {path: 'difficulty', component: DifficultyLevelComponent},
         {path: 'book', component: BookComponent},
         {path: 'standard', component: StandardComponent},
+        {path: 'feedback', component: FeedbackComponent},
     ];
 
 @NgModule({
