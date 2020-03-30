@@ -29,7 +29,6 @@ export class StandardComponent implements OnInit {
       .subscribe(
         (res) => {
            this.standard = res["result"]["data"];
-           console.log(this.standard);
         },
         (error) => {
           this._snackBar.open(error["statusText"], '', {
@@ -62,6 +61,22 @@ export class StandardComponent implements OnInit {
       }
     });
   } 
+    confirmDelete(id): void  {
+        var data = null;
+          if(id != 0) { 
+            data = id;
+          }
+    const dialogRef = this.dialog.open(StandardDelete, {
+        minWidth: "40%",
+        maxWidth: "40%",
+        data: data
+    });
+   dialogRef.afterClosed().subscribe(result => {
+       if(typeof result !== 'undefined' && result !== false && result !== 'false') {
+          this.getstandard();
+       }
+    });
+    }
 
 }
 
@@ -183,4 +198,47 @@ export class StandardForm {
     toolbarPosition: 'top',
   };  
 
+}
+
+@Component({
+  selector: 'standard-delete-confirmation',
+  templateUrl: 'standard-delete-confirmation.html',
+})
+export class StandardDelete {
+    loading = false;
+    standard_id = 0;
+    constructor(
+    public dialogRef: MatDialogRef<StandardDelete>,
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {
+    if(this.data != null) { 
+        this.standard_id = this.data;
+    }
+}
+
+  confirmDelete() {
+      if (this.standard_id == null || this.standard_id == 0) {
+            return;
+      }
+      this.loading = true;
+      this.httpClient.get('http://localhost/project/feringo/api/v1/delete_record/standard/standard_id='+this.standard_id).subscribe(
+          (res)=>{
+                this.loading = false;
+                if(res["result"]["error"] === false) {
+                    this.dialogRef.close(true);
+                }else{
+            this._snackBar.open(res["result"]["message"], '', {
+          duration: 2000,
+        });
+                }
+            },
+            (error)=>{
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+        });
+            }
+        );
+  }
 }

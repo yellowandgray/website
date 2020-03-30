@@ -39,7 +39,7 @@ import { UserComponent, UserForm, PictureViewUser, BlockForm, ResultForm, UserDe
 import { filterUser } from './user/filter-user';
 import { BookComponent, BookForm, BookDelete } from './book/book.component';
 import { FeedbackComponent, FeedbackForm, FeedbackDelete, AssignFeedbackForm } from './feedback/feedback.component';
-import { StandardComponent, StandardForm } from './standard/standard.component';
+import { StandardComponent, StandardForm, StandardDelete } from './standard/standard.component';
 
 
 
@@ -81,7 +81,8 @@ import { StandardComponent, StandardForm } from './standard/standard.component';
     FeedbackDelete, 
     AssignFeedbackForm, 
     StandardComponent,
-    StandardForm
+    StandardForm,
+    StandardDelete
   ],
   imports: [
     BrowserModule,
@@ -111,8 +112,7 @@ import { StandardComponent, StandardForm } from './standard/standard.component';
     MatButtonToggleModule,
     MatCardModule
   ],
-  entryComponents: [SubjectComponent, SubjectForm, SubjectDelete, QuestionComponent, QuestionForm, QuestionDelete, TopicComponent, TopicForm, TopicDelete, ChapterComponent, ChapterForm, ChapterDelete, DifficultyLevelComponent, DifficultForm, DifficultDelete, UserComponent, UserForm, PictureViewUser, BlockForm, ResultForm, UserDelete, UserViewForm, UserFullResultForm, BookComponent, BookForm, BookDelete, FeedbackComponent, FeedbackForm, FeedbackDelete, AssignFeedbackForm,StandardComponent,
-    StandardForm],
+  entryComponents: [SubjectComponent, SubjectForm, SubjectDelete, QuestionComponent, QuestionForm, QuestionDelete, TopicComponent, TopicForm, TopicDelete, ChapterComponent, ChapterForm, ChapterDelete, DifficultyLevelComponent, DifficultForm, DifficultDelete, UserComponent, UserForm, PictureViewUser, BlockForm, ResultForm, UserDelete, UserViewForm, UserFullResultForm, BookComponent, BookForm, BookDelete, FeedbackComponent, FeedbackForm, FeedbackDelete, AssignFeedbackForm,StandardComponent, StandardForm, StandardDelete],
   providers: [],
   bootstrap: [AppComponent]
 })

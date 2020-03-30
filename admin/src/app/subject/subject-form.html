@@ -3,22 +3,16 @@
     <form [formGroup]="subjectForm" (ngSubmit)="onSubmit()">
         
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
-            <div fxFlex="50%">
+            <div fxFlex="100%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Standard</mat-label>
                      <mat-select required formControlName="standard_id">
-                        <mat-option [value]="row.standard_id" *ngFor="let row of standard">
-                            {{row.name}}
-                        </mat-option>
+                        <mat-option [value]="row.standard_id" *ngFor="let row of standard">{{row.name}}</mat-option>
                     </mat-select>
                     <mat-error>Standard is required</mat-error>
                 </mat-form-field>
-            </div>
-            <div fxFlex="50%" fxLayoutAlign="center center">
-            </div>    
-            
+            </div>   
         </div>
-        <br>
         
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
             <div fxFlex="50%">

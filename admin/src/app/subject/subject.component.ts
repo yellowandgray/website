@@ -69,7 +69,7 @@ export class SubjectComponent implements OnInit {
     const dialogRef = this.dialog.open(SubjectForm, {
       minWidth: "40%",
       maxWidth: "40%",
-      data: {data: data, standard: this.standard}
+      data: data
     });
     dialogRef.afterClosed().subscribe(result => {
       if (typeof result != 'undefined' && result !== false && result !== 'false') {
@@ -104,7 +104,7 @@ export class SubjectForm {
   subjectForm: FormGroup;
   loading = false;
   subject_id = 0;
-  standard : any[];
+  standard = [];
   subject_image: string = 'Select Subject Image';
   image_path: string = '';
   constructor(
@@ -139,12 +139,14 @@ export class SubjectForm {
     var formData = new FormData();
     var url = '';
     if (this.subject_id != 0) {
+      formData.append('standard_id', this.subjectForm.value.standard_id);
       formData.append('name', this.subjectForm.value.name);
       formData.append('description', this.subjectForm.value.description);
       formData.append('status', this.subjectForm.value.status);
       formData.append('image_path', this.image_path);
       url = 'update_record/subject/subject_id = ' + this.subject_id;
     } else {
+      formData.append('standard_id', this.subjectForm.value.standard_id);
       formData.append('name', this.subjectForm.value.name);
       formData.append('description', this.subjectForm.value.description);
       formData.append('status', this.subjectForm.value.status);
