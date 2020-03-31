@@ -16,7 +16,6 @@ import { Observable } from 'rxjs';
 export class SubjectComponent implements OnInit {
 
   subject = [];
-  topic = [];
   standard = [];
 
 
@@ -69,7 +68,7 @@ export class SubjectComponent implements OnInit {
     const dialogRef = this.dialog.open(SubjectForm, {
       minWidth: "40%",
       maxWidth: "40%",
-      data: data
+      data: {data: data, standard: this.standard}
     });
     dialogRef.afterClosed().subscribe(result => {
       if (typeof result != 'undefined' && result !== false && result !== 'false') {
