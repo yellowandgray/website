@@ -202,7 +202,7 @@ $app->post('/insert_feedback', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('name' => $data['name'], 'feedback_type' => $data['feedback_type'], 'option_1' => $data['option_1'], 'option_2' => $data['option_2'], 'option_3' => $data['option_3']), 'feedback');
+    $record = $com->insertRecord(array('name' => $data['name'], 'feedback_type' => $data['feedback_type'],'feedback_timing' => $data['feedback_timing'], 'option_1' => $data['option_1'], 'option_2' => $data['option_2'], 'option_3' => $data['option_3']), 'feedback');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
@@ -514,10 +514,48 @@ $app->get('/get_book', function() {
     echoRespnse(201, $res);
 });
 
+
+$app->get('/get_feedback_type_master', function() {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('*', 'feedback_type_master', 'feedback_type_id > 0');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+
+$app->get('/get_feedback_timing_master', function() {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('*', 'feedback_timing_master', 'feedback_timing_id > 0');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
 $app->get('/get_feedback', function() {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
     $data = $com->selectAll('*', 'feedback', 'feedback_id > 0');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_feedback_by_type/:ftype', function($ftype) {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('*', 'feedback', 'feedback_type =\''.$ftype.'\'');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';

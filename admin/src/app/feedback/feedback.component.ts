@@ -109,6 +109,8 @@ export class FeedbackForm {
     feedbackForm: FormGroup;
     loading = false;
     feedback_id = 0;
+    feedback_type = [];
+    feedback_timing = [];
     subject:any[];
     constructor(
     public dialogRef: MatDialogRef<FeedbackForm>,
@@ -118,6 +120,7 @@ export class FeedbackForm {
         this.feedbackForm = new FormGroup ({
             'name': new FormControl('', Validators.required),
             'feedback_type': new FormControl('', Validators.required),
+            'feedback_timing': new FormControl('', Validators.required),
             'option_1': new FormControl(''),
             'option_2': new FormControl(''),
             'option_3': new FormControl(''),
@@ -126,12 +129,38 @@ export class FeedbackForm {
            this.feedbackForm.patchValue({
            name: this.data.name,
            feedback_type: this.data.feedback_type,
+           feedback_timing: this.data.feedback_timing,
            option_1: this.data.option_1,
            option_2: this.data.option_2,
            option_3: this.data.option_3,
         });
             this.feedback_id = this.data.feedback_id;
         }
+
+        this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_feedback_type_master')
+          .subscribe(
+            (res) => {
+              this.feedback_type = res["result"]["data"];              
+            },
+            (error) => {
+              this._snackBar.open(error["statusText"], '', {
+                duration: 2000,
+              });
+            }
+          );
+
+          
+         this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_feedback_timing_master')
+          .subscribe(
+            (res) => {
+              this.feedback_timing = res["result"]["data"];              
+            },
+            (error) => {
+              this._snackBar.open(error["statusText"], '', {
+                duration: 2000,
+              });
+            }
+          );  
     }
 
     onSubmit() {
@@ -144,6 +173,7 @@ export class FeedbackForm {
           if(this.feedback_id != 0) {
         formData.append('name', this.feedbackForm.value.name);
         formData.append('feedback_type', this.feedbackForm.value.feedback_type);
+        formData.append('feedback_timing', this.feedbackForm.value.feedback_timing);
         formData.append('option_1', this.feedbackForm.value.option_1);
         formData.append('option_2', this.feedbackForm.value.option_2);
         formData.append('option_3', this.feedbackForm.value.option_3);
@@ -151,6 +181,7 @@ export class FeedbackForm {
       } else {
         formData.append('name', this.feedbackForm.value.name);
         formData.append('feedback_type', this.feedbackForm.value.feedback_type);
+        formData.append('feedback_timing', this.feedbackForm.value.feedback_timing);
         formData.append('option_1', this.feedbackForm.value.option_1);
         formData.append('option_2', this.feedbackForm.value.option_2);
         formData.append('option_3', this.feedbackForm.value.option_3);
@@ -233,6 +264,10 @@ export class AssignFeedbackForm {
     //assignfeedbackForm: FormGroup;
     loading = false;
     feedback = [];
+    feeback_type = [];
+    feedabck_timing = [];
+    selected_type : any;
+    selected_timing : any;
     constructor(
     public dialogRef: MatDialogRef<AssignFeedbackForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -249,26 +284,37 @@ export class AssignFeedbackForm {
               });
             }
           );
+
+
+          this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_feedback_type_master')
+          .subscribe(
+            (res) => {
+              this.feedback_type = res["result"]["data"];              
+            },
+            (error) => {
+              this._snackBar.open(error["statusText"], '', {
+                duration: 2000,
+              });
+            }
+          );
+
+          
+         this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_feedback_timing_master')
+          .subscribe(
+            (res) => {
+              this.feedback_timing = res["result"]["data"];              
+            },
+            (error) => {
+              this._snackBar.open(error["statusText"], '', {
+                duration: 2000,
+              });
+            }
+          );
+
     }
 
 
-    getFeedbackbyType(ev): void {    
-    var ftype = ev.value;
-    this.httpClient
-      .get<any>(
-        "http://localhost/project/feringo/api/v1/get_feedback_by_type/" +ftype 
-      )
-      .subscribe(
-        res => {
-          this.feedback= res["result"]["data"];
-        },
-        error => {
-          this._snackBar.open(error["statusText"], "", {
-            duration: 2000
-          });
-        }
-      );
-
-  }
+    
+   
 
 }
