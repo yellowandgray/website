@@ -191,3 +191,7 @@ table {
 .user-table th {
     text-align: left;
 }
+
+.cdk-overlay-pane {
+    overflow: auto !important;
+}
