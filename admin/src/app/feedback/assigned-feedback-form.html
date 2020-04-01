@@ -1,0 +1,27 @@
+<h2 mat-dialog-title>Assgined Feedback</h2>
+
+<div class="" *ngFor="let row of data">
+<div  class="">
+        <p><span [innerHTML]="row.name"></span><button mat-icon-button aria-label="label" (click)="confirmAssignedDelete(row.user_assign_feedback_id)">
+                                <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
+                            </button></p>
+ </div>
+    
+ <div class="result-option" *ngIf="row.feedback_type==2">
+        <div class="option"><span [innerHTML]="row.option_1"></span></div>
+ </div>
+    
+ <div class="result-option" *ngIf="row.feedback_type==2">
+         <div class="option"><span [innerHTML]="row.option_2"></span></div>
+ </div>
+ 
+ <div class="result-option" *ngIf="row.feedback_type==2">
+         <div class="option"><span [innerHTML]="row.option_3"></span></div>
+ </div>
+    
+ <div  class="">
+        <p>Feedback Timing : <span [innerHTML]="row.fb_timing"></span></p>
+ </div>   
+    
+  <br/>  
+</div>  

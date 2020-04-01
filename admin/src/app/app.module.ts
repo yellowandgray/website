@@ -38,7 +38,7 @@ import { DifficultyLevelComponent, DifficultForm, DifficultDelete } from './diff
 import { UserComponent, UserForm, PictureViewUser, BlockForm, ResultForm, UserDelete, UserViewForm, UserFullResultForm } from './user/user.component';
 import { filterUser } from './user/filter-user';
 import { BookComponent, BookForm, BookDelete } from './book/book.component';
-import { FeedbackComponent, FeedbackForm, FeedbackDelete, AssignFeedbackForm } from './feedback/feedback.component';
+import { FeedbackComponent, FeedbackForm, FeedbackDelete, AssignFeedbackForm,AssignedFeedbackForm } from './feedback/feedback.component';
 import { StandardComponent, StandardForm, StandardDelete } from './standard/standard.component';
 
 
@@ -80,6 +80,7 @@ import { StandardComponent, StandardForm, StandardDelete } from './standard/stan
     FeedbackForm, 
     FeedbackDelete, 
     AssignFeedbackForm, 
+    AssignedFeedbackForm,
     StandardComponent,
     StandardForm,
     StandardDelete
@@ -112,7 +113,7 @@ import { StandardComponent, StandardForm, StandardDelete } from './standard/stan
     MatButtonToggleModule,
     MatCardModule
   ],
-  entryComponents: [SubjectComponent, SubjectForm, SubjectDelete, QuestionComponent, QuestionForm, QuestionDelete, TopicComponent, TopicForm, TopicDelete, ChapterComponent, ChapterForm, ChapterDelete, DifficultyLevelComponent, DifficultForm, DifficultDelete, UserComponent, UserForm, PictureViewUser, BlockForm, ResultForm, UserDelete, UserViewForm, UserFullResultForm, BookComponent, BookForm, BookDelete, FeedbackComponent, FeedbackForm, FeedbackDelete, AssignFeedbackForm,StandardComponent, StandardForm, StandardDelete],
+  entryComponents: [SubjectComponent, SubjectForm, SubjectDelete, QuestionComponent, QuestionForm, QuestionDelete, TopicComponent, TopicForm, TopicDelete, ChapterComponent, ChapterForm, ChapterDelete, DifficultyLevelComponent, DifficultForm, DifficultDelete, UserComponent, UserForm, PictureViewUser, BlockForm, ResultForm, UserDelete, UserViewForm, UserFullResultForm, BookComponent, BookForm, BookDelete, FeedbackComponent, FeedbackForm, FeedbackDelete, AssignFeedbackForm,AssignedFeedbackForm,StandardComponent, StandardForm, StandardDelete],
   providers: [],
   bootstrap: [AppComponent]
 })
