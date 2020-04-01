@@ -31,10 +31,10 @@
                 <mat-list>
                     <ng-container *ngFor="let data of student">
                         <mat-list-item>
-                            <button mat-icon-button aria-label="label" (click)="AssignFeedback();">
+                            <button mat-icon-button aria-label="label" (click)="AssignFeedback(data.student_register_id);">
                                 <mat-icon #tooltip="matTooltip" matTooltip="Assign Feedback">assignment</mat-icon>
                             </button>
-                            <button mat-icon-button aria-label="label">
+                            <button mat-icon-button aria-label="label" (click)="openAssignedDialog(data.student_register_id);">
                                 <mat-icon #tooltip="matTooltip" matTooltip="View Assign Feedback">assignment_turned_in</mat-icon>
                             </button>
                             <img matListAvatar src="{{image_url}}{{data.profile_image}}"/>
