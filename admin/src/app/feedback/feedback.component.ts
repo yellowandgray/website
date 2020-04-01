@@ -264,8 +264,8 @@ export class AssignFeedbackForm {
     //assignfeedbackForm: FormGroup;
     loading = false;
     feedback = [];
-    feeback_type = [];
-    feedabck_timing = [];
+    feedback_type = [];
+    feedback_timing = [];
     selected_type : any;
     selected_timing : any;
     constructor(

@@ -30,7 +30,7 @@ import { AppComponent } from './app.component';
 import { SubjectComponent, SubjectForm, SubjectDelete } from './subject/subject.component';
 import { HeaderComponent } from './header/header.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
-import { QuestionComponent, QuestionForm, QuestionDelete } from './question/question.component';
+import { QuestionComponent, QuestionForm, QuestionDelete, NeetQuestionForm } from './question/question.component';
 import { TopicComponent, TopicForm, TopicDelete } from './topic/topic.component';
 import { ChapterComponent, ChapterForm, ChapterDelete } from './chapter/chapter.component';
 import { LoginComponent } from './login/login.component';
@@ -40,6 +40,7 @@ import { filterUser } from './user/filter-user';
 import { BookComponent, BookForm, BookDelete } from './book/book.component';
 import { FeedbackComponent, FeedbackForm, FeedbackDelete, AssignFeedbackForm } from './feedback/feedback.component';
 import { StandardComponent, StandardForm, StandardDelete } from './standard/standard.component';
+import { SubTopicComponent, SubtopicForm, SubtopicDelete } from './sub-topic/sub-topic.component';
 
 
 
@@ -54,6 +55,7 @@ import { StandardComponent, StandardForm, StandardDelete } from './standard/stan
     QuestionComponent,
     QuestionForm,
     QuestionDelete,
+    NeetQuestionForm,
     TopicComponent,
     TopicForm,
     TopicDelete,
@@ -82,7 +84,10 @@ import { StandardComponent, StandardForm, StandardDelete } from './standard/stan
     AssignFeedbackForm, 
     StandardComponent,
     StandardForm,
-    StandardDelete
+    StandardDelete,
+    SubTopicComponent,
+    SubtopicForm,
+    SubtopicDelete
   ],
   imports: [
     BrowserModule,
@@ -112,7 +117,7 @@ import { StandardComponent, StandardForm, StandardDelete } from './standard/stan
     MatButtonToggleModule,
     MatCardModule
   ],
-  entryComponents: [SubjectComponent, SubjectForm, SubjectDelete, QuestionComponent, QuestionForm, QuestionDelete, TopicComponent, TopicForm, TopicDelete, ChapterComponent, ChapterForm, ChapterDelete, DifficultyLevelComponent, DifficultForm, DifficultDelete, UserComponent, UserForm, PictureViewUser, BlockForm, ResultForm, UserDelete, UserViewForm, UserFullResultForm, BookComponent, BookForm, BookDelete, FeedbackComponent, FeedbackForm, FeedbackDelete, AssignFeedbackForm,StandardComponent, StandardForm, StandardDelete],
+  entryComponents: [SubjectComponent, SubjectForm, SubjectDelete, QuestionComponent, QuestionForm, QuestionDelete, NeetQuestionForm, TopicComponent, TopicForm, TopicDelete, ChapterComponent, ChapterForm, ChapterDelete, DifficultyLevelComponent, DifficultForm, DifficultDelete, UserComponent, UserForm, PictureViewUser, BlockForm, ResultForm, UserDelete, UserViewForm, UserFullResultForm, BookComponent, BookForm, BookDelete, FeedbackComponent, FeedbackForm, FeedbackDelete, AssignFeedbackForm,StandardComponent, StandardForm, StandardDelete, SubTopicComponent, SubtopicForm, SubtopicDelete],
   providers: [],
   bootstrap: [AppComponent]
 })
