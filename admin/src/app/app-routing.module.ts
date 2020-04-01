@@ -10,6 +10,7 @@ import { UserComponent } from './user/user.component';
 import { BookComponent } from './book/book.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { StandardComponent } from './standard/standard.component';
+import { SubTopicComponent } from './sub-topic/sub-topic.component';
 
 
 const routes: Routes = [
@@ -23,6 +24,7 @@ const routes: Routes = [
         {path: 'book', component: BookComponent},
         {path: 'standard', component: StandardComponent},
         {path: 'feedback', component: FeedbackComponent},
+        {path: 'sub-topic', component: SubTopicComponent},
     ];
 
 @NgModule({

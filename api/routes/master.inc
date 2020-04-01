@@ -115,7 +115,7 @@ $app->post('/insert_subject', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('name' => $data['name'], 'description' => $data['description'], 'image_path' => $data['subject_image'], 'status' => $data['status']), 'subject');
+    $record = $com->insertRecord(array('name' => $data['name'], 'standard_id' => $data['standard_id'], 'description' => $data['description'], 'image_path' => $data['subject_image'], 'status' => $data['status']), 'subject');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
@@ -174,6 +174,20 @@ $app->post('/insert_question', function() use ($app) {
     echoRespnse(201, $res);
 });
 
+$app->post('/insert_neet_question', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to insert');
+    $data = $app->request->post();
+    $com = new Common();
+//    $question_no = $com->updateRecordWithWhere(array('question_no = +1', 'question', 'subject_id'));
+    $record = $com->insertRecord(array('sub_topic_id' => $data['sub_topic_id'], 'topic_id' => $data['topic_id'], 'name' => $data['name'], 'question_no' => $data['question_no'], 'direction' => $data['direction'], 'explanation' => $data['explanation'], 'explanation_img_direction' => $data['explanation_img_direction'], 'data_dictionary' => $data['data_dictionary'], 'image_path' => $data['image_path'], 'image_path_explanation' => $data['image_path_explanation'], 'a' => $data['a'], 'b' => $data['b'], 'c' => $data['c'], 'd' => $data['d'], 'answer' => $data['answer'], 'book_id' => $data['book_id'], 'page_no' => $data['page_no'], 'notes' => $data['notes']), 'neet_question');
+    if ($record > 0) {
+        $com->updateRecord('question_no = (question_no + 1)', 'question', 'topic_id = \'' . $data['topic_id'] . '\' AND neet_question_id != ' . $record . ' AND question_no >= ' . $data['question_no']);
+        $res['error'] = false;
+        $res['message'] = 'Record inserted successfully';
+    }
+    echoRespnse(201, $res);
+});
+
 $app->post('/insert_difficult', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
@@ -210,11 +224,35 @@ $app->post('/insert_feedback', function() use ($app) {
     echoRespnse(201, $res);
 });
 
+$app->post('/insert_sub_topic', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to insert');
+    $data = $app->request->post();
+    $com = new Common();
+    $record = $com->insertRecord(array('name' => $data['name'], 'topic_id' => $data['topic_id']), 'sub_topic');
+    if ($record > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Record inserted successfully';
+    }
+    echoRespnse(201, $res);
+});
+
 
 $app->get('/get_subject', function() {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
     $data = $com->selectAll('*', 'subject', 'subject_id > 0');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_subject_by_standard/:stid', function($stid) {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('*', 'subject', 'standard_id =' . $stid);
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
@@ -341,6 +379,18 @@ $app->get('/get_question_by_topic/:tid/:cid/:searchtxt/:searchqno/:lvl', functio
     echoRespnse(201, $res);
 });
 
+$app->get('/get_neet_question_by_sub_topic/:stid', function($stid) {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('*', 'neet_question', 'sub_topic_id = '. $stid . 'ORDER BY question_no ASC');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
 $app->get('/get_year', function() {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
@@ -357,6 +407,18 @@ $app->get('/get_chapter_by_subject/:sid', function($sid) {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
     $data = $com->selectAll('*', 'chapter', 'subject_id = ' . $sid . ' ORDER BY name ASC');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_sub_topic_by_topic/:tid', function($tid) {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('*', 'sub_topic', 'topic_id = ' . $tid . ' ORDER BY name ASC');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
@@ -424,6 +486,76 @@ $app->post('/import_question', function() use($app) {
                 }
                 $data = array('topic_id' => $topic_id, 'question_no' => $row[3], 'name' => trim($row[5]), 'a' => $row[6], 'b' => $row[7], 'c' => $row[8], 'd' => $row[9], 'answer' => $row[10], 'explanation' => $row[11], 'data_dictionary' => $row[12], 'book_id' => $book_id, 'page_no' => $row[14], 'notes' => $row[15], 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'image_path' => '', 'direction' => 'top', 'difficult_id' => $difficult_id);
                 $insert = $obj->insertRecord($data, 'question');
+                if ($insert > 0) {
+                    $count++;
+                }
+            } else {
+                $first = false;
+            }
+        }
+        if ($count > 0) {
+            $res = array('error' => false, 'message' => $count . ' records uploaded');
+        }
+    } else {
+        $res['message'] = 'File format mismatch';
+    }
+    echoRespnse(201, $res);
+});
+
+$app->post('/import_neet_question', function() use($app) {
+    $file = $_FILES;
+    $res = array('error' => true, 'message' => 'Unable to upload');
+    $handle = fopen($file['file']['tmp_name'], "r");
+    if (in_array($file['file']['type'], array('application/vnd.ms-excel', 'text/plain', 'text/csv', 'text/tsv', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'))) {
+        $first = true;
+        $count = 0;
+        $obj = new Common();
+        //$difficult = $obj->selectAll('*', 'difficult', 'difficult_id > 0');
+        while (($row = fgetcsv($handle, 1000, ',')) !== FALSE) {
+            if (!$first) {
+                $standard_id = 0;
+                $subject_id = 0;
+                $chapter_id = 0;
+                $topic_id = 0;
+                $sub_topic_id = 0;
+                $standard = $obj->selectRow('*', 'standard', 'name = \'' . $row[0] . '\'');
+                if (count($standard) == 0) {
+                    $standard_id = $obj->insertRecord(array('name' => trim($row[0]), 'description' => '', 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')), 'standard');
+                } else {
+                    $standard_id = $standard['standard_id'];
+                }
+                $subject = $obj->selectRow('*', 'subject', 'name = \'' . $obj->escapeString($row[1]) . '\' AND standard_id = ' . $standard_id);
+                if (count($subject) == 0) {
+                    $subject_id = $obj->insertRecord(array('name' => trim($row[1]), 'description' => '', 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'image_path' => '', 'standard_id' => $standard_id), 'subject');
+                } else {
+                    $subject_id = $subject['subject_id'];
+                }
+                $chapter = $obj->selectRow('*', 'chapter', 'name = \'' . $obj->escapeString($row[2]) . '\' AND subject_id = ' . $subject_id);
+                if (count($chapter) == 0) {
+                    $chapter_id = $obj->insertRecord(array('name' => trim($row[2]), 'description' => '', 'status' => 1, 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'subject_id' => $subject_id), 'chapter');
+                } else {
+                    $chapter_id = $chapter['chapter_id'];
+                }
+                $topic = $obj->selectRow('*', 'topic', 'name = \'' . $obj->escapeString($row[3]) . '\' AND chapter_id = ' . $chapter_id);
+                if (count($topic) == 0) {
+                    $topic_id = $obj->insertRecord(array('name' => trim($row[3]), 'description' => '', 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'chapter_id' => $chapter_id), 'topic');
+                } else {
+                    $topic_id = $topic['topic_id'];
+                }
+                $sub_topic = $obj->selectRow('*', 'sub_topic', 'name = \'' . $obj->escapeString($row[4]) . '\' AND topic_id = ' . $topic_id);
+                if (count($sub_topic) == 0) {
+                    $sub_topic_id = $obj->insertRecord(array('name' => trim($row[4]), 'description' => '', 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'topic_id' => $topic_id), 'sub_topic');
+                } else {
+                    $sub_topic_id = $sub_topic['sub_topic_id'];
+                }
+                $book = $obj->selectRow('*', 'book', 'book_name = \'' . $row[14] . '\'');
+                if (count($book) == 0) {
+                    $book_id = $obj->insertRecord(array('book_name' => trim($row[14]), 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')), 'book');
+                } else {
+                    $book_id = $book['book_id'];
+                }
+                $data = array('topic_id' => $topic_id, 'question_no' => $row[5], 'name' => trim($row[6]), 'a' => $row[7], 'b' => $row[8], 'c' => $row[9], 'd' => $row[10], 'answer' => $row[11], 'explanation' => $row[12], 'data_dictionary' => $row[13], 'book_id' => $book_id, 'page_no' => $row[15], 'notes' => $row[16], 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'image_path' => '', 'direction' => 'top', 'sub_topic_id' => $sub_topic_id);
+                $insert = $obj->insertRecord($data, 'neet_question');
                 if ($insert > 0) {
                     $count++;
                 }
@@ -612,3 +744,50 @@ $app->post('/insert_user_assign_feedback', function() use ($app) {
 
 
 
+$app->get('/get_subtopic', function() {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('*', 'sub_topic', 'sub_topic_id > 0');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_subtopic_by_topic/:tid', function($tid) {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('*', 'sub_topic', 'topic_id =' . $tid);
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_subject_by_standard/:stdid', function($stdid) {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('*', 'subject', 'standard_id =' . $stdid);
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_sub_topic_by_topic/:topid', function($topid) {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('*', 'sub_topic', 'topic_id =' . $topid);
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
