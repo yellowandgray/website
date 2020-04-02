@@ -74,7 +74,7 @@ image_url: string = 'http://localhost/project/feringo/api/v1/';
 
 
      
-    openAssignedDialog(id, res): void {
+    openAssignedDialog(id): void {
 
  this.httpClient.get('http://localhost/project/feringo/api/v1/get_assigned_feedback/' +id).subscribe(
         (res) => {
@@ -385,7 +385,7 @@ export class AssignFeedbackForm {
     private httpClient: HttpClient) {
 
         this.assignfeedbackForm = new FormGroup ({
-            'feedback_type': new FormControl('', Validators.required),
+            'feedback_type': new FormControl(''),
             'feedback_timing': new FormControl('', Validators.required),
             'selectfeedback': new FormControl('') ,   
         });

@@ -224,7 +224,7 @@ fileProgress1(fileInput1: any) {
             }
         });
     }
-    openNeetForm(id, res): void {
+    openNeetForm(): void {
         const dialogRef = this.dialog.open(NeetQuestionForm, {
             minWidth: "40%",
             maxWidth: "40%",
