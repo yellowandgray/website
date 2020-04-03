@@ -16,48 +16,35 @@ import { Observable } from 'rxjs';
 export class SubjectComponent implements OnInit {
 
   subject = [];
-  //standard = [];
-  //selectedsubind = 0;
+  standard = [];
+  selectedsubind = 0;
 
   constructor(public dialog: MatDialog, private httpClient: HttpClient, private _snackBar: MatSnackBar) { }
 
   ngOnInit() {
     
-    this.getsubject();
-    //this.getstandard();
+    //this.getsubject();
+    this.getstandard();
   }
   image_url: string = 'http://localhost/project/feringo/api/v1/';
 
-  //getstandard(): void {
-    //  this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_standard')
-      //.subscribe(
-        //(res) => {
-          //this.standard = res["result"]["data"];
-        //},
-        //(error) => {
-          //this._snackBar.open(error["statusText"], '', {
-            //duration: 2000,
-         // });
-        //}
-      //);
-  //}
+  getstandard(): void {
+      this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_standard')
+      .subscribe(
+        (res) => {
+          this.standard = res["result"]["data"];
+        },
+        (error) => {
+          this._snackBar.open(error["statusText"], '', {
+            duration: 2000,
+          });
+        }
+      );
+  }
 
-  //getsubject(ev): void {
-    //this.selectedsubind = ev.index;
-    //this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_subject_by_standard/'+this.standard[ev.index].standard_id)
-      //.subscribe(
-        //(res) => {
-          //this.subject = res["result"]["data"];
-        //},
-        //(error) => {
-          //this._snackBar.open(error["statusText"], '', {
-            //duration: 2000,
-          //});
-        //}
-      //);
-  //}
-  getsubject(): void {
-    this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_subject')
+  getsubject(ev): void {
+    this.selectedsubind = ev.index;
+    this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_subject_by_standard/'+this.standard[ev.index].standard_id)
       .subscribe(
         (res) => {
           this.subject = res["result"]["data"];
@@ -86,8 +73,7 @@ export class SubjectComponent implements OnInit {
     });
     dialogRef.afterClosed().subscribe(result => {
       if (typeof result != 'undefined' && result !== false && result !== 'false') {
-        //this.getsubject({index: this.selectedsubind});
-        this.getsubject();
+        this.getsubject({index: this.selectedsubind});
       }
     });
   }
@@ -103,8 +89,7 @@ export class SubjectComponent implements OnInit {
     });
     dialogRef.afterClosed().subscribe(result => {
       if (typeof result !== 'undefined' && result !== false && result !== 'false') {
-        this.getsubject();
-        //this.getsubject({index: this.selectedsubind});
+        this.getsubject({index: this.selectedsubind});
       }
     });
   }
@@ -129,7 +114,7 @@ export class SubjectForm {
     private httpClient: HttpClient) {
     this.subjectForm = new FormGroup({
       'name': new FormControl('', Validators.required),
-      //'standard_id': new FormControl('', Validators.required),
+      'standard_id': new FormControl('', Validators.required),
       'description': new FormControl('', Validators.required),
       'status': new FormControl('')
     });
@@ -138,7 +123,7 @@ export class SubjectForm {
         name: this.data.name,
         description: this.data.description,
         status: this.data.status,
-        //standard_id: this.data.standard_id,
+        standard_id: this.data.standard_id,
       });
       this.subject_id = this.data.subject_id;
       this.image_path = this.data.image_path;
@@ -164,14 +149,14 @@ export class SubjectForm {
     var formData = new FormData();
     var url = '';
     if (this.subject_id != 0) {
-        //formData.append('standard_id', this.subjectForm.value.standard_id);
+        formData.append('standard_id', this.subjectForm.value.standard_id);
         formData.append('name', this.subjectForm.value.name);
         formData.append('description', this.subjectForm.value.description);
         formData.append('status', this.subjectForm.value.status);
         formData.append('image_path', this.image_path);
       url = 'update_record/subject/subject_id = ' + this.subject_id;
     } else {
-        //formData.append('standard_id', this.subjectForm.value.standard_id);
+        formData.append('standard_id', this.subjectForm.value.standard_id);
         formData.append('name', this.subjectForm.value.name);
         formData.append('description', this.subjectForm.value.description);
         formData.append('status', this.subjectForm.value.status);
