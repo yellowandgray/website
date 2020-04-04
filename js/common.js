@@ -89,7 +89,7 @@ function loginStudent() {
             if (data.result.error === false) {
                 swal('Yes!', 'You can, and You will', 'success');
                 setTimeout(function() {
-                    window.location = 'home_subject';
+                    window.location = 'home_subject?from=login';
                 }, 3000);
             } else {
                 swal('Information', data.result.message, 'info');

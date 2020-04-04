@@ -43,6 +43,24 @@ if (count($questions) > 0) {
         ));
     }
 }
+
+
+
+
+$student_register_id = $_SESSION['student_register_id'];
+
+$data1 = $obj->selectAll('sf.*', 'student_feedback As sf', 'sf.student_id ='.$student_register_id);
+$sfeed = '';
+if(count($data1)>0) {
+            foreach($data1 as $sf) {
+                 $sflist[] = $sf['feedback_id'];
+            }
+            $sfeed = implode(',',$sflist);
+            $sfeed = ' AND f.feedback_id NOT IN ('.$sfeed.')';
+}
+
+$student_feedbacks = array();
+$student_feedbacks = $obj->selectAll('f.*,ftm.feedback_timing As fb_timing,fe.*,fty.feedback_type as feedback_type,fe.name as fback,fe.feedback_type as feedback_type_id,fe.option_1,fe.option_2,fe.option_3', 'user_assign_feedback As f LEFT JOIN feedback_timing_master As ftm ON f.timing_id=ftm.feedback_timing_id LEFT JOIN feedback As fe ON f.feedback_id=fe.feedback_id LEFT JOIN feedback_type_master As fty ON fe.feedback_type=fty.feedback_type_id', 'f.student_id ='.$student_register_id.'  AND f.timing_id=2'.$sfeed.'  ORDER BY fe.feedback_id');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -168,6 +186,53 @@ if (count($questions) > 0) {
                             <h1 class="title is-6">Selected Topic: <?php echo $topic['name']; ?></h1>
                             <div id="question_list"></div>
                         </div>
+                        
+                          <?php if (count($student_feedbacks) > 0) { ?>
+                    <div class="feedbackBox fbackModal modal hide fade" id="feedbackapp">
+                            
+                                <div class="feedbackContainer" v-if="feedbackIndex<quiz.feedbacks.length" v-bind:key="feedbackIndex">
+                                    
+                                    
+
+                                    <h2 class="titleContainer title">{{/* feedbackIndex + 1 */}} <span v-html="quiz.feedbacks[feedbackIndex].fback"></span></h2>
+                                    
+                                    <div class="optionContainer" v-if="quiz.feedbacks[feedbackIndex].feedback_type_id == 2">          
+                                         <div class="radio">
+                                            <label><input type="radio" :name="quiz.feedbacks[feedbackIndex].feedback_id|AddPrefix('fbak_')" value="option_1">{{quiz.feedbacks[feedbackIndex].option_1}}</label>
+                                          </div>
+                                          <div class="radio">
+                                            <label><input type="radio" :name="quiz.feedbacks[feedbackIndex].feedback_id|AddPrefix('fbak_')" value="option_2">{{quiz.feedbacks[feedbackIndex].option_2}}</label>
+                                          </div>
+                                          <div class="radio disabled">
+                                            <label><input type="radio" :name="quiz.feedbacks[feedbackIndex].feedback_id|AddPrefix('fbak_')" value="option_3">{{quiz.feedbacks[feedbackIndex].option_3}}</label>
+                                          </div> 
+                                    </div>
+                                    
+                                    
+                                    <div class="optionContainer" v-if="quiz.feedbacks[feedbackIndex].feedback_type_id == 1">
+                                         <textarea class="form-control" rows="5" :name="quiz.feedbacks[feedbackIndex].feedback_id|AddPrefix('fbak_')"></textarea>
+                                    </div>
+                                    
+                                    
+                                     <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" v-on:click="skipFeedback(quiz.feedbacks[feedbackIndex].feedback_id);">Skip</button>
+                                                <button type="button" class="btn btn-default" v-on:click="nextFeedback(quiz.feedbacks[feedbackIndex].feedback_id);">Next</button>
+                                    </div>
+                                                               
+                                </div>
+                        
+                        
+                                <div v-if="feedbackIndex >= quiz.feedbacks.length" v-bind:key="feedbackIndex" class="quizCompleted has-text-centered">
+                                    <h2 class="titleContainer title">{{/* feedbackIndex + 1 */}} <span>Thanks For your Feedback</span></h2>
+                                    
+                                     <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" v-on:click="closeFeedback();">Close</button>
+                                    </div>
+                                </div>
+                                
+                               
+                        </div>
+                    <?php } ?>
                     </div>
                 </div>
             </section>
@@ -293,6 +358,9 @@ if (count($questions) > 0) {
                             Vue.set(this.userResponses, this.questionIndex, index);
                             if (this.questionIndex < this.quiz.questions.length) {
                                 this.questionIndex++;
+                                if(this.questionIndex >= this.quiz.questions.length) {
+                                    $('.fbackModal').modal('show');
+                                }
                             }
                         }, 500);
                         setTimeout(() => {
@@ -340,6 +408,98 @@ if (count($questions) > 0) {
             }
             );
 
+
+
+
+
+
+            var feedback = {
+                user: "Feringo",
+                feedbacks: <?php echo json_encode($student_feedbacks); ?>
+            },
+            feedbackuserResponseSkelaton = Array(feedback.feedbacks.length).fill(null);
+            var feedbackapp = new Vue({
+                el: "#feedbackapp",
+                data: {
+                    quiz: feedback,
+                    feedbackIndex: 0,
+                    feedbackuserResponses: feedbackuserResponseSkelaton,
+                    isActive: false
+                },
+                filters: {
+                    charIndex: function (i) {
+                        return String.fromCharCode(97 + i);
+                    },
+                    AddPrefix: function (value, prefix) {
+                        return prefix + value;
+                    }
+                },
+                methods: {
+                    restart: function () {
+                        location.reload();
+                        /*this.feedbackIndex = 0;
+                         this.feedbackuserResponses = Array(this.quiz.feedbacks.length).fill(null);
+                         document.getElementById('create').style.display = "none"; */
+                    },                    
+                    nextFeedback: function () {
+                        var sel_ans = '';
+                        if(this.quiz.feedbacks[this.feedbackIndex].feedback_type_id==2){
+                           sel_ans = $('input[name=fbak_'+this.quiz.feedbacks[this.feedbackIndex].feedback_id+']:checked').val();                            
+                         } 
+                         
+                         if(this.quiz.feedbacks[this.feedbackIndex].feedback_type_id==1){
+                             sel_ans = $('textarea:input[name=fbak_'+this.quiz.feedbacks[this.feedbackIndex].feedback_id+']').val();                             
+                         }
+                         
+                         if(sel_ans!='' && sel_ans!=undefined) {
+                         $.post("api/v1/store_student_feedback",
+                        {
+                            feedback: this.quiz.feedbacks[this.feedbackIndex].feedback_id,
+                            answer: sel_ans,
+                            student: <?php echo $student_register_id; ?>
+                        },
+                        function (data, status) {
+                            if (data.result.error === false) {
+                                     if (feedbackapp.feedbackIndex < feedbackapp.quiz.feedbacks.length)                            
+                                     feedbackapp.feedbackIndex++;
+                            }
+                        });
+                        }else{
+                            this.feedbackIndex++;
+                        }
+                        
+                       
+                    },
+                    skipFeedback: function () {
+                        if (feedbackapp.feedbackIndex < feedbackapp.quiz.feedbacks.length)                            
+                             feedbackapp.feedbackIndex++;
+                    },
+                    closeFeedback: function () {
+                        $('.fbackModal').modal('hide'); 
+                    },
+                    prev: function () {
+                        if (this.quiz.feedbacks.length > 0)
+                            this.feedbackIndex--;
+                    },
+                    // Return "true" count in feedbackuserResponses
+                    score: function () {
+                        var score = 0;
+                        for (let i = 0; i < this.feedbackuserResponses.length; i++) {
+                            if (
+                                    typeof this.quiz.feedbacks[i].responses[
+                                    this.feedbackuserResponses[i]
+                            ] !== "undefined" &&
+                                    this.quiz.feedbacks[i].responses[this.feedbackuserResponses[i]].correct
+                                    ) {
+                                score = score + 1;
+                            }
+                        }
+                        return score;
+                        //return this.feedbackuserResponses.filter(function(val) { return val }).length;
+                    }
+                }
+            }
+            );    
         </script>
     </body>
 </html>
