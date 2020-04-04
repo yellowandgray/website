@@ -120,9 +120,8 @@ if($from!='' && $from=='login') {
             </section>
             <?php include 'footer.php'; ?>
         </div>
+         <?php include 'script.php'; ?>
          <?php if (count($student_feedbacks) > 0) { ?>
-        <?php include 'script.php'; ?>
-        
             <script type="text/javascript">
              $(document).ready(function() {  
                 $('.fbackModal').modal('show');                 
