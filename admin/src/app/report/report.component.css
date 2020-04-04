@@ -1,0 +1,16 @@
+.equipment-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.equipment-table th {
+    border: 1px solid #e3e3e3;
+    padding: 5px;
+    text-align: left !Important;
+}
+
+.equipment-table td {
+    border: 1px solid #e3e3e3;
+    padding: 5px;
+    text-align: left !Important;
+}
