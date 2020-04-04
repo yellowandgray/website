@@ -179,7 +179,7 @@ $app->post('/insert_neet_question', function() use ($app) {
     $data = $app->request->post();
     $com = new Common();
 //    $question_no = $com->updateRecordWithWhere(array('question_no = +1', 'question', 'subject_id'));
-    $record = $com->insertRecord(array('sub_topic_id' => $data['sub_topic_id'], 'topic_id' => $data['topic_id'], 'name' => $data['name'], 'question_no' => $data['question_no'], 'direction' => $data['direction'], 'explanation' => $data['explanation'], 'explanation_img_direction' => $data['explanation_img_direction'], 'data_dictionary' => $data['data_dictionary'], 'image_path' => $data['image_path'], 'image_path_explanation' => $data['image_path_explanation'], 'a' => $data['a'], 'b' => $data['b'], 'c' => $data['c'], 'd' => $data['d'], 'answer' => $data['answer'], 'book_id' => $data['book_id'], 'page_no' => $data['page_no'], 'notes' => $data['notes']), 'neet_question');
+    $record = $com->insertRecord(array('standard_id' => $data['standard_id'], 'sub_topic_id' => $data['sub_topic_id'], 'topic_id' => $data['topic_id'], 'name' => $data['name'], 'question_no' => $data['question_no'], 'direction' => $data['direction'], 'explanation' => $data['explanation'], 'explanation_img_direction' => $data['explanation_img_direction'], 'data_dictionary' => $data['data_dictionary'], 'image_path' => $data['image_path'], 'image_path_explanation' => $data['image_path_explanation'], 'a' => $data['a'], 'b' => $data['b'], 'c' => $data['c'], 'd' => $data['d'], 'answer' => $data['answer'], 'book_id' => $data['book_id'], 'page_no' => $data['page_no'], 'notes' => $data['notes']), 'neet_question');
     if ($record > 0) {
         $com->updateRecord('question_no = (question_no + 1)', 'question', 'topic_id = \'' . $data['topic_id'] . '\' AND neet_question_id != ' . $record . ' AND question_no >= ' . $data['question_no']);
         $res['error'] = false;
@@ -520,7 +520,7 @@ $app->post('/import_neet_question', function() use($app) {
                 $sub_topic_id = 0;
                 $standard = $obj->selectRow('*', 'standard', 'name = \'' . $row[0] . '\'');
                 if (count($standard) == 0) {
-                    $standard_id = $obj->insertRecord(array('name' => trim($row[0]), 'description' => '', 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')), 'standard');
+                    $standard_id = $obj->insertRecord(array('name' => trim($row[0]), 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')), 'standard');
                 } else {
                     $standard_id = $standard['standard_id'];
                 }
@@ -532,19 +532,19 @@ $app->post('/import_neet_question', function() use($app) {
                 }
                 $chapter = $obj->selectRow('*', 'chapter', 'name = \'' . $obj->escapeString($row[2]) . '\' AND subject_id = ' . $subject_id);
                 if (count($chapter) == 0) {
-                    $chapter_id = $obj->insertRecord(array('name' => trim($row[2]), 'description' => '', 'status' => 1, 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'subject_id' => $subject_id), 'chapter');
+                    $chapter_id = $obj->insertRecord(array('name' => trim($row[2]), 'status' => 1, 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'subject_id' => $subject_id), 'chapter');
                 } else {
                     $chapter_id = $chapter['chapter_id'];
                 }
                 $topic = $obj->selectRow('*', 'topic', 'name = \'' . $obj->escapeString($row[3]) . '\' AND chapter_id = ' . $chapter_id);
                 if (count($topic) == 0) {
-                    $topic_id = $obj->insertRecord(array('name' => trim($row[3]), 'description' => '', 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'chapter_id' => $chapter_id), 'topic');
+                    $topic_id = $obj->insertRecord(array('name' => trim($row[3]), 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'chapter_id' => $chapter_id), 'topic');
                 } else {
                     $topic_id = $topic['topic_id'];
                 }
                 $sub_topic = $obj->selectRow('*', 'sub_topic', 'name = \'' . $obj->escapeString($row[4]) . '\' AND topic_id = ' . $topic_id);
                 if (count($sub_topic) == 0) {
-                    $sub_topic_id = $obj->insertRecord(array('name' => trim($row[4]), 'description' => '', 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'topic_id' => $topic_id), 'sub_topic');
+                    $sub_topic_id = $obj->insertRecord(array('name' => trim($row[4]), 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'topic_id' => $topic_id), 'sub_topic');
                 } else {
                     $sub_topic_id = $sub_topic['sub_topic_id'];
                 }
@@ -554,7 +554,7 @@ $app->post('/import_neet_question', function() use($app) {
                 } else {
                     $book_id = $book['book_id'];
                 }
-                $data = array('topic_id' => $topic_id, 'question_no' => $row[5], 'name' => trim($row[6]), 'a' => $row[7], 'b' => $row[8], 'c' => $row[9], 'd' => $row[10], 'answer' => $row[11], 'explanation' => $row[12], 'data_dictionary' => $row[13], 'book_id' => $book_id, 'page_no' => $row[15], 'notes' => $row[16], 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'image_path' => '', 'direction' => 'top', 'sub_topic_id' => $sub_topic_id);
+                $data = array('topic_id' => $topic_id, 'sub_topic_id' => $sub_topic_id, 'question_no' => $row[5], 'name' => trim($row[6]), 'a' => $row[7], 'b' => $row[8], 'c' => $row[9], 'd' => $row[10], 'answer' => $row[11], 'explanation' => $row[12], 'data_dictionary' => $row[13], 'book_id' => $book_id, 'page_no' => $row[15], 'notes' => $row[16], 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'image_path' => '', 'direction' => 'top');
                 $insert = $obj->insertRecord($data, 'neet_question');
                 if ($insert > 0) {
                     $count++;

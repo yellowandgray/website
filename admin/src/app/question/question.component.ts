@@ -15,7 +15,7 @@ import { Observable } from 'rxjs';
 })
 export class QuestionComponent implements OnInit {
     question = [];
-    neetquestion = [];
+    neet_question = [];
     standard = [];
     subject = [];
     chapter = [];
@@ -157,7 +157,21 @@ this.filter_text = this.searchTerm;
         );
     }
     }
-    
+    getNeetQuestion(): void {
+        this.neet_question = [];
+        this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_neet_question_by_sub_topic/'+this.selected_subtopic)
+        .subscribe(
+                (res)=>{
+                    this.neet_question = res["result"]["data"];
+              },
+              (error)=>{
+                this._snackBar.open(error["statusText"], '', {
+                    duration: 2000,
+                });
+            }
+        );
+    }
+        
 fileProgress(fileInput: any) {
         var fileData = <File>fileInput.target.files[0];
         this.file_name = fileData.name;
@@ -640,6 +654,7 @@ export class NeetQuestionForm {
     option_image_c: string = '';
     option_image_d: string = '';
     image_path_explanation: string = '';
+    standard: any[];
     subject: any[];
     chapter: any[];
     topic: any[];
@@ -651,7 +666,7 @@ export class NeetQuestionForm {
         private _snackBar: MatSnackBar,
         private httpClient: HttpClient) {
         this.neetquestionForm = new FormGroup({
-            //'standard_id': new FormControl('', Validators.required),
+            'standard_id': new FormControl('', Validators.required),
             'subject_id': new FormControl('', Validators.required),
             'chapter_id': new FormControl('', Validators.required),
             'topic_id': new FormControl('', Validators.required),
@@ -673,6 +688,7 @@ export class NeetQuestionForm {
         });
         if (this.data != null) {
             this.neetquestionForm.patchValue({
+                standard_id: this.data.standard_id,
                 subject_id: this.data.subject_id,
                 chapter_id: this.data.chapter_id,
                 topic_id: this.data.topic_id,
@@ -695,15 +711,16 @@ export class NeetQuestionForm {
             this.neet_question_id = this.data.data.neet_question_id;
             this.image_path = this.data.data.image_path;
             this.image_path_explanation = this.data.data.image_path_explanation;
+            this.getSubjectByStandard();
             this.getChapter();
             this.getTopic();
             this.getSubTopic();
         }
         //this.subject = this.data.subject;
-        this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_subject')
+        this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_standard')
         .subscribe(
                 (res)=>{
-                    this.subject = res["result"]["data"];
+                    this.standard = res["result"]["data"];
               },
               (error)=>{
                 this._snackBar.open(error["statusText"], '', {
@@ -715,6 +732,19 @@ export class NeetQuestionForm {
         .subscribe(
                 (res)=>{
                     this.book = res["result"]["data"];
+              },
+              (error)=>{
+                this._snackBar.open(error["statusText"], '', {
+                    duration: 2000,
+                });
+            }
+        );
+    }
+    getSubjectByStandard(): void {
+        this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_subject_by_standard/'+this.neetquestionForm.value.standard_id)
+        .subscribe(
+                (res)=>{
+                    this.subject = res["result"]["data"];
               },
               (error)=>{
                 this._snackBar.open(error["statusText"], '', {
@@ -769,6 +799,7 @@ getSubTopic(): void {
         this.loading = true;
         var formData = new FormData();
         var url = '';
+            formData.append('topic_id', this.neetquestionForm.value.topic_id);
             formData.append('topic_id', this.neetquestionForm.value.topic_id);
             formData.append('sub_topic_id', this.neetquestionForm.value.sub_topic_id);
             formData.append('name', this.neetquestionForm.value.question);
