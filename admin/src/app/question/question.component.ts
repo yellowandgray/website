@@ -799,7 +799,7 @@ getSubTopic(): void {
         this.loading = true;
         var formData = new FormData();
         var url = '';
-            formData.append('topic_id', this.neetquestionForm.value.topic_id);
+            formData.append('standard_id', this.neetquestionForm.value.standard_id);
             formData.append('topic_id', this.neetquestionForm.value.topic_id);
             formData.append('sub_topic_id', this.neetquestionForm.value.sub_topic_id);
             formData.append('name', this.neetquestionForm.value.question);

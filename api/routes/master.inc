@@ -382,7 +382,7 @@ $app->get('/get_question_by_topic/:tid/:cid/:searchtxt/:searchqno/:lvl', functio
 $app->get('/get_neet_question_by_sub_topic/:stid', function($stid) {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
-    $data = $com->selectAll('*', 'neet_question', 'sub_topic_id = '. $stid . 'ORDER BY question_no ASC');
+    $data = $com->selectAll('*', 'neet_question', 'sub_topic_id = '. $stid . ' ORDER BY question_no ASC');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
