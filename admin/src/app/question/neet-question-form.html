@@ -2,6 +2,19 @@
 <mat-dialog-content class="mat-typography">
     <form [formGroup]="neetquestionForm" (ngSubmit)="onSubmit()">
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <div fxFlex="100%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Select Type</mat-label>
+                    <mat-select required formControlName="standard_id" (selectionChange)="getSubjectByStandard()">
+                        <mat-option [value]="std.standard_id" *ngFor="let std of standard">
+                            {{std.name}}
+                        </mat-option>
+                    </mat-select>
+                    <mat-error>Type is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Select Subject</mat-label>

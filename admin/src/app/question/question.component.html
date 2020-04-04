@@ -110,7 +110,7 @@
             <mat-tab label="Neet">
                 <div class="add-btn-container">
                     <div fxLayout="row" fxFlex="100%" fxLayoutAlign="end end">
-<!--                        <button mat-raised-button color="primary" (click)="fileInput1.click()">
+                        <button mat-raised-button color="primary" (click)="fileInput1.click()">
                             <span *ngIf="!loading">Import</span>
                             <mat-progress-spinner
                                 *ngIf="loading"
@@ -119,14 +119,14 @@
                                 [diameter]="25">
                             </mat-progress-spinner>
                         </button>
-                        <input hidden #fileInput1 type="file" id="file" (change)="fileProgress1($event)" />-->
+                        <input hidden #fileInput1 type="file" id="file" (change)="fileProgress1($event)" />
                         <button mat-raised-button color="primary" (click)="openNeetForm()">
                             <mat-icon>add</mat-icon> Neet Question
                         </button>
                     </div>
                 </div>
                 <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="2%" fxLayoutAlign="start center">
-                    <div fxFlex="50%">
+<!--                    <div fxFlex="50%">
                         <mat-form-field appearance="outline" fxFlex="100%">
                             <mat-label>Select Standard</mat-label>
                             <mat-select (selectionChange)="getSubjectByStandard()" [(ngModel)]="selected_standard">
@@ -136,7 +136,7 @@
                             </mat-select>
                             <mat-error>Subject is required</mat-error>
                         </mat-form-field>
-                    </div>
+                    </div>-->
                     <div fxFlex="50%">
                         <mat-form-field appearance="outline" fxFlex="100%">
                             <mat-label>Select Subject</mat-label>
@@ -173,7 +173,7 @@
                 <div fxFlex="50%">
                     <mat-form-field appearance="outline" fxFlex="100%">
                         <mat-label>Select Sub Topic</mat-label>
-                        <mat-select>
+                        <mat-select (selectionChange)="getNeetQuestion()" [(ngModel)]="selected_subtopic">
                             <mat-option [value]="subtop.sub_topic_id" *ngFor="let subtop of subtopic">
                                 {{subtop.name}}
                             </mat-option>
@@ -183,7 +183,7 @@
                 </div>
             </div>
             <mat-list>
-                <ng-container *ngFor="let data of neetquestion">
+                <ng-container *ngFor="let data of neet_question">
                     <mat-list-item>
                         <button mat-icon-button aria-label="label" (click)="openDialog(data.neet_question_id, 'neetquestion')">
                             <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
