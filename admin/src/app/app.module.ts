@@ -40,7 +40,7 @@ import { StaffComponent, StaffForm, StaffImageView, StaffDelete } from './staff/
 import { CommandComponent, CommandDialog, CommandDelete } from './command/command.component';
 import { CategoryComponent, CategoryForm, CategoryDelete } from './category/category.component';
 import { ReportComponent } from './report/report.component';
-
+import { DatePipe } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
@@ -133,7 +133,7 @@ import { ReportComponent } from './report/report.component';
     CategoryDelete,
     ReportComponent
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
