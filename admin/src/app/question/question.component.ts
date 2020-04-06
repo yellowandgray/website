@@ -71,11 +71,14 @@ export class QuestionComponent implements OnInit {
     this.httpClient
       .get<any>(
         "http://localhost/project/examhorse/api/v1/get_year_by_language/" +
-          this.selected_language
+          this.selected_language          
       )
       .subscribe(
         res => {
           this.year = res["result"]["data"];
+          this.selected_subject = 0;
+          this.selected_topic   = 0;
+          this.getSubjectByYearnLanguage();
         },
         error => {
           this._snackBar.open(error["statusText"], "", {
@@ -116,10 +119,23 @@ export class QuestionComponent implements OnInit {
       .subscribe(
         res => {
           this.subject = res["result"]["data"];
+          this.selected_subject = 0;
+          this.selected_topic   = 0;
+           this.getQuestionsByYearAndLang();
+          /*
           if (this.selected_topic != "") {
-            //alert(this.selected_topic);
-            this.getQuestionsByTopicYear();
+            this.getQuestionsByTopicYear();                
           }
+          else if(this.selected_subject == "") {
+             this.getQuestionsByYearAndLang();
+          }
+          else if(this.selected_subject == 0) {
+              this.getQuestionsByYearAndLang();
+          }
+          else if(this.selected_subject != "ALL" && this.selected_subject != "") {
+              this.getQuestionsByYearAndLangAndSubj();
+          }
+           */
         },
         error => {
           this._snackBar.open(error["statusText"], "", {
@@ -128,39 +144,17 @@ export class QuestionComponent implements OnInit {
         }
       );
   }
-      
-  getTopicBySubject(): void {
-    this.topic = [];
-    this.httpClient
-      .get<any>(
-        "http://localhost/project/examhorse/api/v1/get_topic_by_subject_n_year/" +
-          this.selected_subject +
-          "/" +
-          this.selected_year
-      )
-      .subscribe(
-        res => {
-          this.topic = res["result"]["data"];
-        },
-        error => {
-          this._snackBar.open(error["statusText"], "", {
-            duration: 2000
-          });
-        }
-      );
-  }
-  getQuestionsByTopicYear(): void {
+
+    getQuestionsByYearAndLangAndSubj(): void {
     //var tid = this.topic[ev.value].topic_id;
     //var tid = ev.value;
     //this.selected_topic_index = ev.value;
-    var tid = this.selected_topic;
+    var lid = this.selected_language;
     var sel_year = this.selected_year;
+    var subj     = this.selected_subject;
     this.httpClient
       .get<any>(
-        "http://localhost/project/examhorse/api/v1/get_question_by_topic_and_year/" +
-          tid +
-          "/" +
-          sel_year
+        "http://localhost/project/examhorse/api/v1/get_question_by_year_n_lang_n_subj/"+lid+"/"+sel_year+"/"+subj
       )
       .subscribe(
         res => {
@@ -175,6 +169,101 @@ export class QuestionComponent implements OnInit {
           });
         }
       );
+  }   
+
+   getQuestionsByYearAndLang(): void {
+    //var tid = this.topic[ev.value].topic_id;
+    //var tid = ev.value;
+    //this.selected_topic_index = ev.value;
+    var lid = this.selected_language;
+    var sel_year = this.selected_year;
+    this.httpClient
+      .get<any>(
+        "http://localhost/project/examhorse/api/v1/get_question_by_year_n_lang/"+lid+"/"+sel_year
+      )
+      .subscribe(
+        res => {
+          this.question = res["result"]["data"];
+          setTimeout(() => {
+                            applyMathAjax();
+                        }, 600);
+        },
+        error => {
+          this._snackBar.open(error["statusText"], "", {
+            duration: 2000
+          });
+        }
+      );
+  }  
+      
+  getTopicBySubject(): void {
+    this.topic = [];
+    if(this.selected_subject == 0 && this.selected_language != '' && this.selected_year != '') {
+              //alert('1234');  
+              this.getQuestionsByYearAndLang();
+              this.selected_topic = 0;
+     } 
+    else { 
+    if(this.selected_subject != 0 && this.selected_subject!='' && this.selected_language != '' && this.selected_year != '') {
+        this.getQuestionsByYearAndLangAndSubj();
+        this.selected_topic = 0;
+    }
+    this.httpClient
+      .get<any>(
+        "http://localhost/project/examhorse/api/v1/get_topic_by_subject_n_year/" +
+          this.selected_subject +
+          "/" +
+          this.selected_year
+      )
+      .subscribe(
+        res => {
+          this.topic = res["result"]["data"]; 
+        },
+        error => {
+          this._snackBar.open(error["statusText"], "", {
+            duration: 2000
+          });
+        }
+      );
+     } 
+  }
+  getQuestionsByTopicYear(): void {
+    //var tid = this.topic[ev.value].topic_id;
+    //var tid = ev.value;
+    //this.selected_topic_index = ev.value;
+    var tid = this.selected_topic;
+    var sid = this.selected_subject;
+    var sel_year = this.selected_year;
+
+     if(tid==0 && sid!='' && sel_year != ''){
+            this.getQuestionsByYearAndLangAndSubj();
+         }
+    else 
+        {
+    this.httpClient
+      .get<any>(
+        
+       
+            "http://localhost/project/examhorse/api/v1/get_question_by_topic_and_year/" +
+              tid +
+              "/" +
+              sel_year
+           
+      )
+      .subscribe(
+        res => {
+          this.question = res["result"]["data"];
+          setTimeout(() => {
+                            applyMathAjax();
+                        }, 600);
+        },
+        error => {
+          this._snackBar.open(error["statusText"], "", {
+            duration: 2000
+          });
+        }
+      );
+      }   
   }
   getQuestionsByTopic(ev): void {
     //var tid = this.topic[ev.value].topic_id;

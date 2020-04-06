@@ -45,6 +45,7 @@
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Select Subject</mat-label>
                     <mat-select [(ngModel)]="selected_subject" (selectionChange)="getTopicBySubject()">
+                        <mat-option [value]=0>All</mat-option>
                         <mat-option [value]="data.subject_id" *ngFor="let data of subject">
                             {{data.name}}
                         </mat-option>
@@ -54,8 +55,9 @@
             </div>
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Select Topic</mat-label>
+                    <mat-label>Select Topic</mat-label>                    
                     <mat-select [(ngModel)]="selected_topic" (selectionChange)="getQuestionsByTopicYear();">
+                        <mat-option [value]=0>All</mat-option>
                         <!--                        <mat-option value="0">All</mat-option>-->
                         <mat-option [value]="top.topic_id" *ngFor="let top of topic">
                             {{top.name}}

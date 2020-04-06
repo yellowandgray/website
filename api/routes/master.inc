@@ -283,6 +283,62 @@ $app->get('/get_question_by_topic_n_year/:tid', function($tid) {
 });
 
 
+$app->get('/get_question_by_year_n_lang/:lid/:yid', function($lid,$yid) {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    
+    
+    $topic_ids = [];
+    
+    $data_topic = $com->selectAll('t.*, s.name AS subject', 'topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id', 's.language_id = ' . $lid . ' GROUP BY t.topic_id');
+    if (count($data_topic) > 0) {
+        foreach($data_topic as $topic){ 
+            $topic_ids[] = $topic['topic_id'];
+        }    
+    }
+    
+    if (count($data_topic) > 0) {
+         $topic = implode(',',$topic_ids);
+         $data = $com->selectAll('*', 'question', 'question_id > 0 AND year_id='.$yid.' AND topic_id IN ('.$topic.') ORDER BY question_no ASC');
+        if (count($data) > 0) {
+            $res['error'] = false;
+            $res['message'] = 'Records found';
+            $res['data'] = $data;
+        }
+        
+    }   
+    echoRespnse(201, $res);
+});
+
+
+$app->get('/get_question_by_year_n_lang_n_subj/:lid/:yid/:sid', function($lid,$yid,$sid) {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    
+    
+    $topic_ids = [];
+    
+    $data_topic = $com->selectAll('t.*', 'topic AS t', 't.subject_id = ' . $sid . ' GROUP BY t.topic_id');
+    if (count($data_topic) > 0) {
+        foreach($data_topic as $topic){ 
+            $topic_ids[] = $topic['topic_id'];
+        }    
+    }
+    
+    if (count($data_topic) > 0) {
+         $topic = implode(',',$topic_ids);
+         $data = $com->selectAll('*', 'question', 'question_id > 0 AND year_id='.$yid.' AND topic_id IN ('.$topic.') ORDER BY question_no ASC');
+        if (count($data) > 0) {
+            $res['error'] = false;
+            $res['message'] = 'Records found';
+            $res['data'] = $data;
+        }
+        
+    }   
+    echoRespnse(201, $res);
+});
+
+
 $app->get('/get_question_by_topic_and_year/:tid/:yid', function($tid,$yid) {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
