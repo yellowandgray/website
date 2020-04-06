@@ -30,9 +30,11 @@ export class QuestionComponent implements OnInit {
   loading = false;
   file_name: string = "Select Picture";
   selected_language = "";
-  selected_subject = "";
+  //selected_subject = "";
+  selected_subject = 0;
   selected_year = "";
-  selected_topic = "";
+  //selected_topic = "";
+  selected_topic = 0;
   selected_topic_index = 0;
    
 
@@ -204,7 +206,7 @@ export class QuestionComponent implements OnInit {
               this.selected_topic = 0;
      } 
     else { 
-    if(this.selected_subject != 0 && this.selected_subject!='' && this.selected_language != '' && this.selected_year != '') {
+    if(this.selected_subject != 0 &&  this.selected_language != '' && this.selected_year != '') {
         this.getQuestionsByYearAndLangAndSubj();
         this.selected_topic = 0;
     }
@@ -235,7 +237,7 @@ export class QuestionComponent implements OnInit {
     var sid = this.selected_subject;
     var sel_year = this.selected_year;
 
-     if(tid==0 && sid!='' && sel_year != ''){
+     if(tid==0 && sid!=0 && sel_year != ''){
             this.getQuestionsByYearAndLangAndSubj();
          }
     else 
