@@ -120,7 +120,7 @@
                             </mat-progress-spinner>
                         </button>
                         <input hidden #fileInput1 type="file" id="file" (change)="fileProgress1($event)" />
-                        <button mat-raised-button color="primary" (click)="openNeetForm()">
+                        <button mat-raised-button color="primary" (click)="openNeetForm(0, 'null')">
                             <mat-icon>add</mat-icon> Neet Question
                         </button>
                     </div>
@@ -185,10 +185,10 @@
             <mat-list>
                 <ng-container *ngFor="let data of neet_question">
                     <mat-list-item>
-                        <button mat-icon-button aria-label="label" (click)="openDialog(data.neet_question_id, 'neetquestion')">
+                        <button mat-icon-button aria-label="label" (click)="openDialog(data.neet_question_id, 'neet_question')">
                             <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
                         </button>
-                        <button mat-icon-button aria-label="label" (click)="confirmDelete(data.neet_question_id)">
+                        <button mat-icon-button aria-label="label" (click)="confirmNeetQuestionDelete(data.neet_question_id)">
                             <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                         </button>
                         <img mat-line [src]="image_url + data.image_path" alt="image" *ngIf="data.image_path != '' && data.direction == 'top'" style="width: 15%" />

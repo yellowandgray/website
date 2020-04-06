@@ -30,7 +30,7 @@ import { AppComponent } from './app.component';
 import { SubjectComponent, SubjectForm, SubjectDelete } from './subject/subject.component';
 import { HeaderComponent } from './header/header.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
-import { QuestionComponent, QuestionForm, QuestionDelete, NeetQuestionForm } from './question/question.component';
+import { QuestionComponent, QuestionForm, QuestionDelete, NeetQuestionForm, NeetQuestionDelete } from './question/question.component';
 import { TopicComponent, TopicForm, TopicDelete } from './topic/topic.component';
 import { ChapterComponent, ChapterForm, ChapterDelete } from './chapter/chapter.component';
 import { LoginComponent } from './login/login.component';
@@ -56,6 +56,7 @@ import { SubTopicComponent, SubtopicForm, SubtopicDelete } from './sub-topic/sub
     QuestionForm,
     QuestionDelete,
     NeetQuestionForm,
+    NeetQuestionDelete,
     TopicComponent,
     TopicForm,
     TopicDelete,
@@ -119,7 +120,7 @@ import { SubTopicComponent, SubtopicForm, SubtopicDelete } from './sub-topic/sub
     MatButtonToggleModule,
     MatCardModule
   ],
-  entryComponents: [SubjectComponent, SubjectForm, SubjectDelete, QuestionComponent, QuestionForm, QuestionDelete, NeetQuestionForm, TopicComponent, TopicForm, TopicDelete, ChapterComponent, ChapterForm, ChapterDelete, DifficultyLevelComponent, DifficultForm, DifficultDelete, UserComponent, UserForm, PictureViewUser, BlockForm, ResultForm, UserDelete, UserViewForm, UserFullResultForm, BookComponent, BookForm, BookDelete, FeedbackComponent, FeedbackForm, FeedbackDelete,AssignedFeedbackDelete, AssignFeedbackForm,AssignedFeedbackForm,StandardComponent, StandardForm, StandardDelete, SubTopicComponent, SubtopicForm, SubtopicDelete],
+  entryComponents: [SubjectComponent, SubjectForm, SubjectDelete, QuestionComponent, QuestionForm, QuestionDelete, NeetQuestionForm, NeetQuestionDelete, TopicComponent, TopicForm, TopicDelete, ChapterComponent, ChapterForm, ChapterDelete, DifficultyLevelComponent, DifficultForm, DifficultDelete, UserComponent, UserForm, PictureViewUser, BlockForm, ResultForm, UserDelete, UserViewForm, UserFullResultForm, BookComponent, BookForm, BookDelete, FeedbackComponent, FeedbackForm, FeedbackDelete,AssignedFeedbackDelete, AssignFeedbackForm,AssignedFeedbackForm,StandardComponent, StandardForm, StandardDelete, SubTopicComponent, SubtopicForm, SubtopicDelete],
   providers: [],
   bootstrap: [AppComponent]
 })

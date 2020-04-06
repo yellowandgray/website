@@ -238,16 +238,25 @@ fileProgress1(fileInput1: any) {
             }
         });
     }
-    openNeetForm(): void {
+    openNeetForm(id, res): void {
+        var data = null;
+        if (id != 0) {
+            this[res].forEach(val => {
+                if (parseInt(val.neet_question_id) === parseInt(id)) {
+                    data = val;
+                    return false;
+                }
+            });
+        }
         const dialogRef = this.dialog.open(NeetQuestionForm, {
             minWidth: "40%",
             maxWidth: "40%",
-            //data: data,
+            data: data,
         });
 
         dialogRef.afterClosed().subscribe(result => {
             if (typeof result !== 'undefined' && result !== false && result !== 'false') {
-                //this.getQuestion();
+                this.getNeetQuestion();
             }
         });
     }
@@ -265,6 +274,22 @@ fileProgress1(fileInput1: any) {
         dialogRef.afterClosed().subscribe(result => {
             if (typeof result !== 'undefined' && result !== false && result !== 'false') {
                 this.getQuestion();
+            }
+        });
+    }
+    confirmNeetQuestionDelete(id): void {
+        var data = null;
+        if (id != 0) {
+            data = id;
+        }
+        const dialogRef = this.dialog.open(NeetQuestionDelete, {
+            minWidth: "40%",
+            maxWidth: "40%",
+            data: data
+        });
+        dialogRef.afterClosed().subscribe(result => {
+            if (typeof result !== 'undefined' && result !== false && result !== 'false') {
+                this.getNeetQuestion();
             }
         });
     }
@@ -978,4 +1003,48 @@ getSubTopic(): void {
         sanitize: true,
         toolbarPosition: 'top',
     };
+}
+
+
+@Component({
+    selector: 'neet-question-delete-confirmation',
+    templateUrl: 'neet-question-delete-confirmation.html',
+})
+export class NeetQuestionDelete {
+    loading = false;
+    neet_question_id = 0;
+    constructor(
+        public dialogRef: MatDialogRef<NeetQuestionDelete>,
+        @Inject(MAT_DIALOG_DATA) public data: any,
+        private _snackBar: MatSnackBar,
+        private httpClient: HttpClient) {
+        if (this.data != null) {
+            this.neet_question_id = this.data;
+        }
+    }
+
+    confirmDelete() {
+        if (this.neet_question_id == null || this.neet_question_id == 0) {
+            return;
+        }
+        this.loading = true;
+        this.httpClient.get('http://localhost/project/feringo/api/v1/delete_record/neet_question/neet_question_id=' + this.neet_question_id).subscribe(
+            (res) => {
+                this.loading = false;
+                if (res["result"]["error"] === false) {
+                    this.dialogRef.close(true);
+                } else {
+                    this._snackBar.open(res["result"]["message"], '', {
+                        duration: 2000,
+                    });
+                }
+            },
+            (error) => {
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+                    duration: 2000,
+                });
+            }
+        );
+    }
 }
