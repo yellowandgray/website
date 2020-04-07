@@ -687,7 +687,7 @@ $app->get('/get_feedback', function() {
 $app->get('/get_assigned_feedback/:stud_id', function($stud_id) {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
-    $data = $com->selectAll('f.*,ftm.feedback_timing As fb_timing,fe.*', 'user_assign_feedback As f LEFT JOIN feedback_timing_master As ftm ON f.timing_id=ftm.feedback_timing_id LEFT JOIN feedback As fe ON f.feedback_id=fe.feedback_id', 'f.student_id ='.$stud_id );
+    $data = $com->selectAll('f.*,ftm.feedback_timing As fb_timing,fe.*,f.created_at As created_at', 'user_assign_feedback As f LEFT JOIN feedback_timing_master As ftm ON f.timing_id=ftm.feedback_timing_id LEFT JOIN feedback As fe ON f.feedback_id=fe.feedback_id', 'f.student_id ='.$stud_id );
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
