@@ -29,13 +29,16 @@ export class QuestionComponent implements OnInit {
   subject = [];
   loading = false;
   file_name: string = "Select Picture";
-  selected_language = "";
+  //selected_language = "";
+  selected_language = 0;
   //selected_subject = "";
   selected_subject = 0;
-  selected_year = "";
+  //selected_year = "";
+  selected_year =0;
   //selected_topic = "";
   selected_topic = 0;
   selected_topic_index = 0;
+  questionloader = false;
    
 
   constructor(
@@ -47,11 +50,27 @@ export class QuestionComponent implements OnInit {
 
     
   ngOnInit() {
-       this.getLanguage();  
+       this.getLanguageInit();  
   
   }
 
   
+ getLanguageInit(): void {
+    this.httpClient
+      .get<any>("http://localhost/project/examhorse/api/v1/get_language")
+      .subscribe(
+        res => {
+          this.language = res["result"]["data"];
+          //this.selected_language = res["result"]["data"][0]["language_id"];
+          //this.getYearByLanguage();
+        },
+        error => {
+          this._snackBar.open(error["statusText"], "", {
+            duration: 2000
+          });
+        }
+      );
+  }
   getLanguage(): void {
     this.httpClient
       .get<any>("http://localhost/project/examhorse/api/v1/get_language")
@@ -78,6 +97,7 @@ export class QuestionComponent implements OnInit {
       .subscribe(
         res => {
           this.year = res["result"]["data"];
+          this.selected_year = 0;
           this.selected_subject = 0;
           this.selected_topic   = 0;
           this.getSubjectByYearnLanguage();
@@ -154,6 +174,7 @@ export class QuestionComponent implements OnInit {
     var lid = this.selected_language;
     var sel_year = this.selected_year;
     var subj     = this.selected_subject;
+   this.questionloader = true;
     this.httpClient
       .get<any>(
         "http://localhost/project/examhorse/api/v1/get_question_by_year_n_lang_n_subj/"+lid+"/"+sel_year+"/"+subj
@@ -164,6 +185,7 @@ export class QuestionComponent implements OnInit {
           setTimeout(() => {
                             applyMathAjax();
                         }, 600);
+                        this.questionloader = false;
         },
         error => {
           this._snackBar.open(error["statusText"], "", {
@@ -179,6 +201,7 @@ export class QuestionComponent implements OnInit {
     //this.selected_topic_index = ev.value;
     var lid = this.selected_language;
     var sel_year = this.selected_year;
+    this.questionloader = true;
     this.httpClient
       .get<any>(
         "http://localhost/project/examhorse/api/v1/get_question_by_year_n_lang/"+lid+"/"+sel_year
@@ -187,8 +210,9 @@ export class QuestionComponent implements OnInit {
         res => {
           this.question = res["result"]["data"];
           setTimeout(() => {
-                            applyMathAjax();
+                            applyMathAjax();                             
                         }, 600);
+                        this.questionloader = false;
         },
         error => {
           this._snackBar.open(error["statusText"], "", {
@@ -200,13 +224,13 @@ export class QuestionComponent implements OnInit {
       
   getTopicBySubject(): void {
     this.topic = [];
-    if(this.selected_subject == 0 && this.selected_language != '' && this.selected_year != '') {
+    if(this.selected_subject == 0 && this.selected_language != 0 && this.selected_year != 0) {
               //alert('1234');  
               this.getQuestionsByYearAndLang();
               this.selected_topic = 0;
      } 
     else { 
-    if(this.selected_subject != 0 &&  this.selected_language != '' && this.selected_year != '') {
+    if(this.selected_subject != 0 &&  this.selected_language != 0 && this.selected_year != 0) {
         this.getQuestionsByYearAndLangAndSubj();
         this.selected_topic = 0;
     }
@@ -237,11 +261,12 @@ export class QuestionComponent implements OnInit {
     var sid = this.selected_subject;
     var sel_year = this.selected_year;
 
-     if(tid==0 && sid!=0 && sel_year != ''){
+     if(tid==0 && sid!=0 && sel_year != 0){
             this.getQuestionsByYearAndLangAndSubj();
          }
     else 
         {
+        this.questionloader = true;
     this.httpClient
       .get<any>(
         
@@ -256,8 +281,10 @@ export class QuestionComponent implements OnInit {
         res => {
           this.question = res["result"]["data"];
           setTimeout(() => {
-                            applyMathAjax();
+                            applyMathAjax();                             
+                             
                         }, 600);
+                        this.questionloader = false;   
         },
         error => {
           this._snackBar.open(error["statusText"], "", {
@@ -271,6 +298,7 @@ export class QuestionComponent implements OnInit {
     //var tid = this.topic[ev.value].topic_id;
     var tid = ev.value;
     this.selected_topic_index = ev.value;
+    this.questionloader = true;
     this.httpClient
       .get<any>(
         "http://localhost/project/examhorse/api/v1/get_question_by_topic_n_year/" +
@@ -279,6 +307,10 @@ export class QuestionComponent implements OnInit {
       .subscribe(
         res => {
           this.question = res["result"]["data"];
+          setTimeout(() => {
+                            applyMathAjax();                            
+                        }, 600);
+                        this.questionloader = false;   
         },
         error => {
           this._snackBar.open(error["statusText"], "", {
@@ -316,9 +348,12 @@ export class QuestionComponent implements OnInit {
           return false;
         }
       });
+      //alert(data.topic_id);
+     
       if(this.selected_subject) {
-         data.subject_id = this.selected_subject;
+           data.subject_id = this.selected_subject;
      }
+
      if(this.selected_language) {
          data.language_id = this.selected_language;
      }
@@ -333,7 +368,8 @@ export class QuestionComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       if (result !== false && result !== "false") {
         //this.getQuestionsByTopic({ value: this.selected_topic_index });
-        this.getQuestionsByTopicYear();
+        //this.getQuestionsByTopicYear();
+        this.getSubjectByYearnLanguage();
       }
     });
   }
@@ -500,7 +536,51 @@ export class QuestionForm {
         }
       );
    }
-    if(this.data) {  
+
+    if(this.data) {       
+     if(!this.data.subject_id) {
+     this.httpClient
+            .get("http://localhost/project/examhorse/api/v1/get_topic_details/"+this.data.topic_id)
+            .subscribe(
+              res => {
+                if (res["result"]["error"] === false) {
+                    this.data.subject_id = res["result"]["data"]["subject_id"];  
+                     this.questionForm.patchValue({
+                        subject_id : this.data.subject_id
+                    });
+
+                    this.httpClient
+                  .get("http://localhost/project/examhorse/api/v1/get_topic_by_subject/"+this.data.subject_id)
+                   .subscribe(
+                    res => {
+                      if (res["result"]["error"] === false) {
+                        this.topic = res["result"]["data"];
+                      } else {
+                        this._snackBar.open(res["result"]["message"], "", {
+                          duration: 2000
+                        });
+                      }
+                    },
+                    error => {
+                      this._snackBar.open(error["statusText"], "", {
+                        duration: 2000
+                      });
+                    }
+                  );  
+                } else {
+                  this._snackBar.open(res["result"]["message"], "", {
+                    duration: 2000
+                  });
+                }
+              },
+              error => {
+                this._snackBar.open(error["statusText"], "", {
+                  duration: 2000
+                });
+              }
+            );
+     }
+    else {
     this.httpClient
       .get("http://localhost/project/examhorse/api/v1/get_topic_by_subject/"+this.data.subject_id)
        .subscribe(
@@ -519,7 +599,9 @@ export class QuestionForm {
           });
         }
       );  
-    }
+   }
+  }
+
     this.httpClient
       .get("http://localhost/project/examhorse/api/v1/get_year")
       .subscribe(

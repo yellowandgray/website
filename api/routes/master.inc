@@ -161,6 +161,18 @@ $app->post('/insert_feedback', function() use ($app) {
     echoRespnse(201, $res);
 });
 
+$app->get('/get_topic_details/:tid', function($tid) {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectRow('*', 'topic', 'topic_id = '.$tid);
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
 $app->get('/get_subject', function() {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
@@ -403,8 +415,13 @@ $app->get('/get_year_by_question/:qid', function($qid) {
 $app->get('/get_year_by_language/:lid', function($lid) {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
-    $data = $com->selectAll('y.year, y.year_id', 'subject AS s LEFT JOIN topic AS t ON t.subject_id = s.subject_id LEFT JOIN question AS q ON q.topic_id = t.topic_id LEFT JOIN year AS y ON y.year_id = q.year_id', 's.language_id = ' . $lid . ' GROUP BY y.year_id');
+    $data = $com->selectAll('y.year, y.year_id', 'subject AS s LEFT JOIN topic AS t ON t.subject_id = s.subject_id LEFT JOIN question AS q ON q.topic_id = t.topic_id LEFT JOIN year AS y ON y.year_id = q.year_id', 's.language_id = ' . $lid . ' AND q.year_id GROUP BY y.year_id');
     if (count($data) > 0) {
+        foreach($data as $dai=>$dat){
+            if($dat['year_id'] == null) {
+                unset($data[$dai]);
+            }
+        }
         $res['error'] = false;
         $res['message'] = 'Records found';
         $res['data'] = $data;
