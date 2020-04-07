@@ -1,4 +1,4 @@
-<h2 mat-dialog-title>Assgin Feedback</h2>
+<h2 mat-dialog-title>Assign Feedback</h2>
 <mat-dialog-content class="mat-typography">
     <form [formGroup]="assignfeedbackForm" (ngSubmit)="onSubmit()">
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
@@ -12,7 +12,21 @@
                 </mat-form-field>
             </div>
         </div>
-         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="100%">
+                <mat-selection-list formControlName="selectfeedback">
+                    <mat-list-option class='feedback-list-section' [value]="row.feedback_id" *ngFor="let row of feedback">
+                        <h4 mat-line>{{row.name}}</h4>
+                        <span mat-line class='feeedback-option'>{{row.option_1}}</span>
+                        <span mat-line class='feeedback-option'>{{row.option_2}}</span>
+                        <span mat-line class='feeedback-option'>{{row.option_3}}</span>
+                        <mat-divider></mat-divider>
+                    </mat-list-option>
+                </mat-selection-list>
+                <mat-divider></mat-divider>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
             <div fxFlex="100%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Select Feedback Timing</mat-label>
@@ -21,20 +35,6 @@
                     </mat-select>
                     <mat-error>Feedback Type is required</mat-error>
                 </mat-form-field>
-            </div>
-        </div>
-        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
-            <div fxFlex="100%">
-                <mat-selection-list formControlName="selectfeedback">
-                    <mat-list-option [value]="row.feedback_id" *ngFor="let row of feedback">
-                        {{row.name}}
-                        <span>{{row.option_1}}</span>
-                        <span>{{row.option_2}}</span>
-                        <span>{{row.option_3}}</span>
-                        <br>
-                    </mat-list-option>
-                </mat-selection-list>
-                <mat-divider></mat-divider>
             </div>
         </div>
         <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">

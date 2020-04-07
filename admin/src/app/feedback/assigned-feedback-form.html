@@ -1,27 +1,43 @@
-<h2 mat-dialog-title>Assgined Feedback</h2>
+<h2 mat-dialog-title>Assigned Feedback</h2>
+<mat-dialog-content class="mat-typography">
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+        <div fxFlex="50%" fxLayoutAlign="start start">
+            <p>Feedback Date : <span>{{data.created_at}}</span></p>
+        </div>
+        <div fxFlex="50%" fxLayoutAlign="end end">
+            <p>Feedback Timing : <span [innerHTML]="data.fb_timing"></span></p>
+        </div>
+    </div>
+    <div class="" *ngFor="let row of data">
+         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <mat-list>
+                <mat-list-item>
+                    <button mat-icon-button aria-label="label" (click)="confirmAssignedDelete(row.user_assign_feedback_id)">
+                        <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
+                    </button>
 
-<div class="" *ngFor="let row of data">
-<div  class="">
-        <p><span [innerHTML]="row.name"></span><button mat-icon-button aria-label="label" (click)="confirmAssignedDelete(row.user_assign_feedback_id)">
-                                <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
-                            </button></p>
- </div>
-    
- <div class="result-option" *ngIf="row.feedback_type==2">
-        <div class="option"><span [innerHTML]="row.option_1"></span></div>
- </div>
-    
- <div class="result-option" *ngIf="row.feedback_type==2">
-         <div class="option"><span [innerHTML]="row.option_2"></span></div>
- </div>
- 
- <div class="result-option" *ngIf="row.feedback_type==2">
-         <div class="option"><span [innerHTML]="row.option_3"></span></div>
- </div>
-    
- <div  class="">
-        <p>Feedback Timing : <span [innerHTML]="row.fb_timing"></span></p>
- </div>   
-    
-  <br/>  
-</div>  
+                    <h4 mat-line [innerHTML]="row.name"></h4>
+                </mat-list-item>
+            </mat-list>
+
+        </div>
+
+        <div class="result-option" *ngIf="row.feedback_type==2">
+            <div class="option"><span [innerHTML]="row.option_1"></span></div>
+        </div>
+
+        <div class="result-option" *ngIf="row.feedback_type==2">
+            <div class="option"><span [innerHTML]="row.option_2"></span></div>
+        </div>
+
+        <div class="result-option" *ngIf="row.feedback_type==2">
+            <div class="option"><span [innerHTML]="row.option_3"></span></div>
+        </div>
+
+        <div  class="">
+
+        </div>   
+
+        <br/>  
+    </div>
+</mat-dialog-content>

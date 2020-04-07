@@ -26,6 +26,17 @@
                 <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="2%" fxLayoutAlign="start center">
                     <div fxFlex="50%">
                         <mat-form-field appearance="outline" fxFlex="100%">
+                            <mat-label>Select Standard</mat-label>
+                            <mat-select (selectionChange)="getSubjectByStandard()" [(ngModel)]="selected_standard">
+                                <mat-option [value]="std.standard_id" *ngFor="let std of standard">
+                                    {{std.name}}
+                                </mat-option>
+                            </mat-select>
+                            <mat-error>Subject is required</mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div fxFlex="50%">
+                        <mat-form-field appearance="outline" fxFlex="100%">
                             <mat-label>Select Subject</mat-label>
                             <mat-select (selectionChange)="getChapter()" [(ngModel)]="selected_subject">
                                 <mat-option [value]="sub.subject_id" *ngFor="let sub of subject">
@@ -126,21 +137,21 @@
                     </div>
                 </div>
                 <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="2%" fxLayoutAlign="start center">
-<!--                    <div fxFlex="50%">
+                    <div fxFlex="50%">
                         <mat-form-field appearance="outline" fxFlex="100%">
                             <mat-label>Select Standard</mat-label>
-                            <mat-select (selectionChange)="getSubjectByStandard()" [(ngModel)]="selected_standard">
+                            <mat-select (selectionChange)="getNeetSubjectByStandard()" [(ngModel)]="selected_neet_standard">
                                 <mat-option [value]="std.standard_id" *ngFor="let std of standard">
                                     {{std.name}}
                                 </mat-option>
                             </mat-select>
                             <mat-error>Subject is required</mat-error>
                         </mat-form-field>
-                    </div>-->
+                    </div>
                     <div fxFlex="50%">
                         <mat-form-field appearance="outline" fxFlex="100%">
                             <mat-label>Select Subject</mat-label>
-                            <mat-select (selectionChange)="getChapter()" [(ngModel)]="selected_subject">
+                            <mat-select (selectionChange)="getNeetChapter()" [(ngModel)]="selected_neet_subject">
                                 <mat-option [value]="sub.subject_id" *ngFor="let sub of subject">
                                     {{sub.name}}
                                 </mat-option>
@@ -151,7 +162,7 @@
                     <div fxFlex="50%">
                         <mat-form-field appearance="outline" fxFlex="100%">
                             <mat-label>Select Chapter</mat-label>
-                            <mat-select (selectionChange)="getTopic()" [(ngModel)]="selected_chapter">
+                            <mat-select (selectionChange)="getNeetTopic()" [(ngModel)]="selected_neet_chapter">
                                 <mat-option [value]="chap.chapter_id" *ngFor="let chap of chapter">
                                     {{chap.name}}
                             </mat-option>
@@ -162,7 +173,7 @@
                 <div fxFlex="50%">
                     <mat-form-field appearance="outline" fxFlex="100%">
                         <mat-label>Select Topic</mat-label>
-                        <mat-select (selectionChange)="getSubTopic()" [(ngModel)]="selected_topic">
+                        <mat-select (selectionChange)="getNeetSubTopic()" [(ngModel)]="selected_neet_topic">
                             <mat-option [value]="top.topic_id" *ngFor="let top of topic">
                                 {{top.name}}
                             </mat-option>
@@ -173,7 +184,7 @@
                 <div fxFlex="50%">
                     <mat-form-field appearance="outline" fxFlex="100%">
                         <mat-label>Select Sub Topic</mat-label>
-                        <mat-select (selectionChange)="getNeetQuestion()" [(ngModel)]="selected_subtopic">
+                        <mat-select (selectionChange)="getNeetQuestion()" [(ngModel)]="selected_neet_subtopic">
                             <mat-option [value]="subtop.sub_topic_id" *ngFor="let subtop of subtopic">
                                 {{subtop.name}}
                             </mat-option>

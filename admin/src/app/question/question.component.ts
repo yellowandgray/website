@@ -31,6 +31,11 @@ export class QuestionComponent implements OnInit {
     selected_topic = 0;
     selected_subtopic = 0;
     selected_level = 0;
+    selected_neet_standard = 0;
+    selected_neet_subject = 0;
+    selected_neet_chapter = 0;
+    selected_neet_topic = 0;
+    selected_neet_subtopic = 0;
     searchQuestionNo = null;
     searchTerm = null;
     filter_text = 'null';
@@ -78,6 +83,20 @@ filter_question = 'null';
         }
       );
   }
+    getNeetSubjectByStandard(): void {
+    this.subject = [];
+    this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_subject_by_standard/'+this.selected_neet_standard)
+      .subscribe(
+        (res) => {
+          this.subject = res["result"]["data"];
+        },
+        (error) => {
+          this._snackBar.open(error["statusText"], '', {
+            duration: 2000,
+          });
+        }
+      );
+  }
     getSubject(): void {
     this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_subject')
       .subscribe(
@@ -105,6 +124,20 @@ filter_question = 'null';
             }
         );
     }    
+   getNeetChapter(): void {
+        this.chapter = [];
+        this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_chapter_by_subject/'+this.selected_neet_subject)
+        .subscribe(
+                (res)=>{
+                    this.chapter = res["result"]["data"];
+              },
+              (error)=>{
+                this._snackBar.open(error["statusText"], '', {
+                    duration: 2000,
+                });
+            }
+        );
+    }    
 getTopic(): void {
 this.topic = [];
         this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_topic_by_chapter/'+this.selected_chapter)
@@ -119,9 +152,37 @@ this.topic = [];
             }
         );
     }
+getNeetTopic(): void {
+this.topic = [];
+        this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_topic_by_chapter/'+this.selected_neet_chapter)
+        .subscribe(
+                (res)=>{
+                    this.topic = res["result"]["data"];
+              },
+              (error)=>{
+                this._snackBar.open(error["statusText"], '', {
+                    duration: 2000,
+                });
+            }
+        );
+    }
 getSubTopic(): void {
 this.subtopic = [];
         this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_sub_topic_by_topic/'+this.selected_topic)
+        .subscribe(
+                (res)=>{
+                    this.subtopic = res["result"]["data"];
+              },
+              (error)=>{
+                this._snackBar.open(error["statusText"], '', {
+                    duration: 2000,
+                });
+            }
+        );
+    }
+getNeetSubTopic(): void {
+this.subtopic = [];
+        this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_sub_topic_by_topic/'+this.selected_neet_topic)
         .subscribe(
                 (res)=>{
                     this.subtopic = res["result"]["data"];
@@ -159,7 +220,7 @@ this.filter_text = this.searchTerm;
     }
     getNeetQuestion(): void {
         this.neet_question = [];
-        this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_neet_question_by_sub_topic/'+this.selected_subtopic)
+        this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_neet_question_by_sub_topic/'+this.selected_neet_subtopic)
         .subscribe(
                 (res)=>{
                     this.neet_question = res["result"]["data"];
@@ -243,6 +304,10 @@ fileProgress1(fileInput1: any) {
         if (id != 0) {
             this[res].forEach(val => {
                 if (parseInt(val.neet_question_id) === parseInt(id)) {
+                    val.subject_id = this.selected_neet_subject;
+                    val.chapter_id = this.selected_neet_chapter;
+                    val.topic_id = this.selected_neet_topic;
+                    val.sub_topic_id = this.selected_neet_subtopic;
                     data = val;
                     return false;
                 }
