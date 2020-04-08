@@ -27,6 +27,7 @@
                         </mat-form-field>
                     </div>
                     <button mat-raised-button color="primary"(click)="onSubmit(row.electromech_schedule_id)"> Submit</button>
+                    <button mat-raised-button color="primary" (click)="openDialog();"> Print</button>
                 </div>
                 <div  fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
                     <h4 mat-line>Inspector: </h4>
@@ -45,9 +46,11 @@
                             <td mat-cell >{{i+1}}</td>
                             <td mat-cell >{{row.name}}</td>
                             <td mat-cell >{{row.code}}</td>
-                            <td mat-cell *ngFor="let data of row.checklist">
-                                <table mat-table class="equipment-table">
-                                    <tr><td mat-cell>{{data.enquiry_list}}{{data.enquiry_status}}{{data.enquiry_failure_comment}}</td></tr>
+                            <td mat-cell>
+                                <table mat-table >
+                                    <tr>
+                                        <td mat-cell *ngFor="let data of row.checklist">{{data.enquiry_list}}{{data.enquiry_status}}{{data.enquiry_failure_comment}}</td>
+                                    </tr>
                                 </table>
                             </td>
 
