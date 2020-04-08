@@ -192,6 +192,7 @@ $student_feedbacks = $obj->selectAll('f.*,ftm.feedback_timing As fb_timing,fe.*,
                             
                                 <div class="feedbackContainer" v-if="feedbackIndex<quiz.feedbacks.length" v-bind:key="feedbackIndex">
                                     
+                                    <h3 style="font-size: 20px;color: rgb(95, 95, 95); font-weight: 500; margin-bottom: 5px;">Your Feedback.</h3>
                                     
 
                                     <h2 class="titleContainer title">{{/* feedbackIndex + 1 */}} <span v-html="quiz.feedbacks[feedbackIndex].fback"></span></h2>
@@ -214,9 +215,9 @@ $student_feedbacks = $obj->selectAll('f.*,ftm.feedback_timing As fb_timing,fe.*,
                                     </div>
                                     
                                     
-                                     <div class="modal-footer">
-                                                <button type="button" class="btn btn-default" v-on:click="skipFeedback(quiz.feedbacks[feedbackIndex].feedback_id);">Skip</button>
-                                                <button type="button" class="btn btn-default" v-on:click="nextFeedback(quiz.feedbacks[feedbackIndex].feedback_id);">Next</button>
+                                     <div class="modal-footer text-center">
+                                                <button type="button" class="btn logout-btn" v-on:click="nextFeedback(quiz.feedbacks[feedbackIndex].feedback_id);">Skip</button>
+<!--                                                <button type="button" class="btn btn-default" v-on:click="nextFeedback(quiz.feedbacks[feedbackIndex].feedback_id);">Next</button>-->
                                     </div>
                                                                
                                 </div>

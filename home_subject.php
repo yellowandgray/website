@@ -72,7 +72,7 @@ if($from!='' && $from=='login') {
                             
                                 <div class="feedbackContainer" v-if="feedbackIndex<quiz.feedbacks.length" v-bind:key="feedbackIndex">
                                     
-                                    
+                                    <h3 style="font-size: 20px;color: rgb(95, 95, 95); font-weight: 500; margin-bottom: 5px;">Your Feedback.</h3>
 
                                     <h2 class="titleContainer title">{{/* feedbackIndex + 1 */}} <span v-html="quiz.feedbacks[feedbackIndex].fback"></span></h2>
                                     
@@ -83,9 +83,11 @@ if($from!='' && $from=='login') {
                                           <div class="radio">
                                             <label><input type="radio" :name="quiz.feedbacks[feedbackIndex].feedback_id|AddPrefix('fbak_')" value="option_2">{{quiz.feedbacks[feedbackIndex].option_2}}</label>
                                           </div>
+                                        <?php //if (count($studnet_feedbacks.option_3) > 0) { ?>
                                           <div class="radio disabled">
                                             <label><input type="radio" :name="quiz.feedbacks[feedbackIndex].feedback_id|AddPrefix('fbak_')" value="option_3">{{quiz.feedbacks[feedbackIndex].option_3}}</label>
                                           </div> 
+                                        <?php //} ?>
                                     </div>
                                     
                                     
@@ -94,9 +96,9 @@ if($from!='' && $from=='login') {
                                     </div>
                                     
                                     
-                                     <div class="modal-footer">
-                                                <button type="button" class="btn btn-default" v-on:click="skipFeedback(quiz.feedbacks[feedbackIndex].feedback_id);">Skip</button>
-                                                <button type="button" class="btn btn-default" v-on:click="nextFeedback(quiz.feedbacks[feedbackIndex].feedback_id);">Next</button>
+                                     <div class="modal-footer text-center">
+                                                <button type="button" class="btn logout-btn" v-on:click="nextFeedback(quiz.feedbacks[feedbackIndex].feedback_id);">Skip</button>
+<!--                                                <button type="button" class="btn btn-default" v-on:click="nextFeedback(quiz.feedbacks[feedbackIndex].feedback_id);">Next</button>-->
                                     </div>
                                                                
                                 </div>
