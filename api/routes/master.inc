@@ -768,6 +768,18 @@ $app->get('/get_subtopic_by_topic/:tid', function($tid) {
     echoRespnse(201, $res);
 });
 
+$app->get('/get_topicifsub', function() {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('*', 'topic AS t RIGHT JOIN sub_topic AS s ON s.topic_id = t.topic_id', 't.topic_id > 0');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
 $app->get('/get_subject_by_standard/:stdid', function($stdid) {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
