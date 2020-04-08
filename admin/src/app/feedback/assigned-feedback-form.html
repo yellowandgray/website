@@ -1,14 +1,18 @@
 <h2 mat-dialog-title>Assigned Feedback</h2>
 <mat-dialog-content class="mat-typography">
-    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+    
+    <div class="" *ngFor="let row of data; let i=index">
+        
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start" *ngIf="i==0">
         <div fxFlex="50%" fxLayoutAlign="start start">
-            <p>Feedback Date : <span>{{data.created_at}}</span></p>
+            <p>Feedback Date : <span [innerHTML]="row.created_at"></span></p>
         </div>
         <div fxFlex="50%" fxLayoutAlign="end end">
-            <p>Feedback Timing : <span [innerHTML]="data.fb_timing"></span></p>
+            <p>Feedback Timing : <span [innerHTML]="row.fb_timing"></span></p>
         </div>
     </div>
-    <div class="" *ngFor="let row of data">
+        
+        
          <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
             <mat-list>
                 <mat-list-item>
