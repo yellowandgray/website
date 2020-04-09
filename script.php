@@ -38,7 +38,7 @@
      });     
     }
     */
-     applyMathAjax();
+    applyMathAjax();                    
     function applyMathAjax() {
         if (typeof MathJax !== 'undefined') {
             MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
