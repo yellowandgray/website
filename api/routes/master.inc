@@ -771,7 +771,7 @@ $app->get('/get_subtopic_by_topic/:tid', function($tid) {
 $app->get('/get_topicifsub', function() {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
-    $data = $com->selectAll('*', 'topic AS t RIGHT JOIN sub_topic AS s ON s.topic_id = t.topic_id', 't.topic_id > 0');
+    $data = $com->selectAll('DISTINCT t.*', 'topic AS t RIGHT JOIN sub_topic AS s ON s.topic_id = t.topic_id', 't.topic_id > 0');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
