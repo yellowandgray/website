@@ -9,55 +9,175 @@
         </div> -->
         <mat-tab-group (selectedTabChange)="getCommand();">
             <mat-tab *ngFor="let row of schedule" label="{{row.name}}">
-                <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
-                    <div fxFlex="50%">
-                        <mat-form-field appearance="outline" fxFlex="100%">
-                            <mat-label>Choose a date</mat-label>
-                            <input matInput [matDatepicker]="picker" (dateChange)="changeFunc($event.value)">
-                                   <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                            <mat-datepicker #picker></mat-datepicker>
-                        </mat-form-field>
+                <div *ngIf="row.electromech_schedule_id == '1'">
+                    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+                        <div fxFlex="50%">
+                            <mat-form-field appearance="outline" fxFlex="100%">
+                                <mat-label>Choose a date</mat-label>
+                                <input matInput [matDatepicker]="picker" (dateChange)="changeFunc($event.value)">
+                                       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+                        <div fxFlex="50%">
+                            <mat-form-field appearance="outline" fxFlex="100%">
+                                <mat-label>Select Train</mat-label>
+                                <mat-select>
+                                    <mat-option [value]="data.electromech_train_id" *ngFor="let data of train" (click)="changeTrain(data.electromech_train_id)">{{data.name}}</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <button mat-raised-button color="primary"(click)="onSubmit(row.electromech_schedule_id)"> Submit</button>
+                        <button mat-raised-button color="primary" (click)="openDialog();"> Print</button>
                     </div>
-                    <div fxFlex="50%">
-                        <mat-form-field appearance="outline" fxFlex="100%">
-                            <mat-label>Select Train</mat-label>
-                            <mat-select>
-                                <mat-option [value]="data.electromech_train_id" *ngFor="let data of train" (click)="changeTrain(data.electromech_train_id)">{{data.name}}</mat-option>
-                            </mat-select>
-                        </mat-form-field>
+                    <div  fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+                        <h4 mat-line>Inspector: </h4>
                     </div>
-                    <button mat-raised-button color="primary"(click)="onSubmit(row.electromech_schedule_id)"> Submit</button>
-                    <button mat-raised-button color="primary" (click)="openDialog();"> Print</button>
-                </div>
-                <div  fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
-                    <h4 mat-line>Inspector: </h4>
-                </div>
-                <table mat-table class="equipment-table">
-                    <tr>
-                        <th mat-header-cell>No</th>
-                        <th mat-header-cell>Equipment</th>
-                        <th mat-header-cell>Tag Number</th>
-                        <th mat-header-cell>Inspection Check List</th>
-                        <th mat-header-cell>Feedback</th>
-                    </tr>  
-                    <ng-container *ngFor="let row of report; let i = index">
-                        <tr *ngIf="row.checklist.length > 0 && row.checklist[0].electromech_product_enquiry_log_detail_id>0">
+                    <table mat-table class="equipment-table">
+                        <tr>
+                            <th mat-header-cell>No</th>
+                            <th mat-header-cell>Equipment</th>
+                            <th mat-header-cell>Tag Number</th>
+                            <th mat-header-cell>Inspection Check List</th>
+                            <th mat-header-cell>Feedback</th>
+                        </tr>  
+                        <ng-container *ngFor="let row of report; let i = index">
+                            <tr *ngIf="row.checklist.length > 0 && row.checklist[0].electromech_product_enquiry_log_detail_id>0">
 
-                            <td mat-cell >{{i+1}}</td>
-                            <td mat-cell >{{row.name}}</td>
-                            <td mat-cell >{{row.code}}</td>
-                            <td mat-cell>
-                                <table mat-table >
-                                    <tr>
-                                        <td mat-cell *ngFor="let data of row.checklist">{{data.enquiry_list}}{{data.enquiry_status}}{{data.enquiry_failure_comment}}</td>
-                                    </tr>
-                                </table>
-                            </td>
+                                <td mat-cell >{{i+1}}</td>
+                                <td mat-cell >{{row.name}}</td>
+                                <td mat-cell >{{row.code}}</td>
+                                <td mat-cell>
+                                    <table mat-table >
+                                        <tr>
+                                            <td mat-cell *ngFor="let data of row.checklist">{{data.enquiry_list}}{{data.enquiry_status}}{{data.enquiry_failure_comment}}</td>
+                                        </tr>
+                                    </table>
+                                </td>
 
-                            <td mat-cell>{{row.checklist[0].enquiry_status}}</td>
-                        </tr> 
-                    </ng-container>
-                </table>
+                                <td mat-cell>{{row.checklist[0].enquiry_status}}</td>
+                            </tr> 
+                        </ng-container>
+                    </table>
+                </div>
+                <div *ngIf="row.electromech_schedule_id == '2'">
+                    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+                        <div fxFlex="50%">
+                            <mat-form-field appearance="outline" fxFlex="100%">
+                                <mat-label>Choose a Week</mat-label>
+                                <input matInput [matDatepicker]="picker" (dateChange)="changeFunc($event.value)">
+                                       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+                        <div fxFlex="50%">
+                            <mat-form-field appearance="outline" fxFlex="100%">
+                                <mat-label>Select Train</mat-label>
+                                <mat-select>
+                                    <mat-option [value]="data.electromech_train_id" *ngFor="let data of train" (click)="changeTrain(data.electromech_train_id)">{{data.name}}</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <button mat-raised-button color="primary"(click)="onSubmit(row.electromech_schedule_id)"> Submit</button>
+                        <button mat-raised-button color="primary" (click)="openDialog();"> Print</button>
+                    </div>
+                    <div  fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+                        <h4 mat-line>Inspector: </h4>
+                    </div>
+                    <table mat-table class="equipment-table">
+                        <tr>
+                            <th mat-header-cell>No</th>
+                            <th mat-header-cell>Equipment</th>
+                            <th mat-header-cell>Tag Number</th>
+                            <th mat-header-cell>Sub Parts</th>
+                            <th mat-header-cell>Inspection Check List</th>
+                            <th mat-header-cell>Feedback</th>
+                        </tr>  
+                        <ng-container *ngFor="let row of report; let i = index">
+                            <tr *ngIf="row.checklist.length > 0 && row.checklist[0].electromech_product_enquiry_log_detail_id>0">
+
+                                <td mat-cell >{{i+1}}</td>
+                                <td mat-cell >{{row.name}}</td>
+                                <td mat-cell >{{row.code}}</td>
+                                <td mat-cell >
+                                    <table mat-table>
+                                        <tr>
+                                            <td>Sub Parts</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td mat-cell>
+                                    <table mat-table >
+                                        <tr>
+                                            <td mat-cell *ngFor="let data of row.checklist">{{data.enquiry_list}}{{data.enquiry_status}}{{data.enquiry_failure_comment}}</td>
+                                        </tr>
+                                    </table>
+                                </td>
+
+                                <td mat-cell>{{row.checklist[0].enquiry_status}}</td>
+                            </tr> 
+                        </ng-container>
+                    </table>
+                </div>
+                <div *ngIf="row.electromech_schedule_id == '3'">
+                    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+                        <div fxFlex="50%">
+                            <mat-form-field appearance="outline" fxFlex="100%">
+                                <mat-label>Choose a Year</mat-label>
+                                <input matInput [matDatepicker]="picker" (dateChange)="changeFunc($event.value)">
+                                       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+                        <div fxFlex="50%">
+                            <mat-form-field appearance="outline" fxFlex="100%">
+                                <mat-label>Select Train</mat-label>
+                                <mat-select>
+                                    <mat-option [value]="data.electromech_train_id" *ngFor="let data of train" (click)="changeTrain(data.electromech_train_id)">{{data.name}}</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <button mat-raised-button color="primary"(click)="onSubmit(row.electromech_schedule_id)"> Submit</button>
+                        <button mat-raised-button color="primary" (click)="openDialog();"> Print</button>
+                    </div>
+                    <div  fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+                        <h4 mat-line>Inspector: </h4>
+                    </div>
+                    <table mat-table class="equipment-table">
+                        <tr>
+                            <th mat-header-cell>No</th>
+                            <th mat-header-cell>Equipment</th>
+                            <th mat-header-cell>Tag Number</th>
+                            <th mat-header-cell>Sub Parts</th>
+                            <th mat-header-cell>Inspection Check List</th>
+                            <th mat-header-cell>Feedback</th>
+                        </tr>  
+                        <ng-container *ngFor="let row of report; let i = index">
+                            <tr *ngIf="row.checklist.length > 0 && row.checklist[0].electromech_product_enquiry_log_detail_id>0">
+
+                                <td mat-cell >{{i+1}}</td>
+                                <td mat-cell >{{row.name}}</td>
+                                <td mat-cell >{{row.code}}</td>
+                                <td mat-cell >
+                                    <table mat-table>
+                                        <tr>
+                                            <td>Sub Parts</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td mat-cell>
+                                    <table mat-table >
+                                        <tr>
+                                            <td mat-cell *ngFor="let data of row.checklist">{{data.enquiry_list}}{{data.enquiry_status}}{{data.enquiry_failure_comment}}</td>
+                                        </tr>
+                                    </table>
+                                </td>
+
+                                <td mat-cell>{{row.checklist[0].enquiry_status}}</td>
+                            </tr> 
+                        </ng-container>
+                    </table>
+                </div>
             </mat-tab>
         </mat-tab-group>
     </mat-sidenav-content>
