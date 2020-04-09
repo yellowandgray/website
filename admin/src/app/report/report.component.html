@@ -39,6 +39,7 @@
                             <th mat-header-cell>Equipment</th>
                             <th mat-header-cell>Tag Number</th>
                             <th mat-header-cell>Inspection Check List</th>
+                            <th mat-header-cell>Check</th>
                             <th mat-header-cell>Feedback</th>
                         </tr>  
                         <ng-container *ngFor="let row of report; let i = index">
@@ -49,12 +50,12 @@
                                 <td mat-cell >{{row.code}}</td>
                                 <td mat-cell>
                                     <table mat-table >
-                                        <tr>
-                                            <td mat-cell *ngFor="let data of row.checklist">{{data.enquiry_list}}{{data.enquiry_status}}{{data.enquiry_failure_comment}}</td>
+                                        <tr *ngFor="let data of row.checklist">
+                                            <td mat-cell>{{data.enquiry_list}}{{data.enquiry_status}}{{data.enquiry_failure_comment}}</td>
                                         </tr>
                                     </table>
                                 </td>
-
+                                <td mat-cell>Check</td>
                                 <td mat-cell>{{row.checklist[0].enquiry_status}}</td>
                             </tr> 
                         </ng-container>
@@ -91,6 +92,7 @@
                             <th mat-header-cell>Tag Number</th>
                             <th mat-header-cell>Sub Parts</th>
                             <th mat-header-cell>Inspection Check List</th>
+                            <th mat-header-cell>Check</th>
                             <th mat-header-cell>Feedback</th>
                         </tr>  
                         <ng-container *ngFor="let row of report; let i = index">
@@ -113,7 +115,7 @@
                                         </tr>
                                     </table>
                                 </td>
-
+                                <td mat-cell>Check</td>
                                 <td mat-cell>{{row.checklist[0].enquiry_status}}</td>
                             </tr> 
                         </ng-container>
@@ -150,6 +152,7 @@
                             <th mat-header-cell>Tag Number</th>
                             <th mat-header-cell>Sub Parts</th>
                             <th mat-header-cell>Inspection Check List</th>
+                            <th mat-header-cell>Check</th>
                             <th mat-header-cell>Feedback</th>
                         </tr>  
                         <ng-container *ngFor="let row of report; let i = index">
@@ -172,7 +175,7 @@
                                         </tr>
                                     </table>
                                 </td>
-
+                                <td mat-cell>Check</td>
                                 <td mat-cell>{{row.checklist[0].enquiry_status}}</td>
                             </tr> 
                         </ng-container>
