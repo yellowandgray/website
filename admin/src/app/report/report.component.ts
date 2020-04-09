@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { HttpClient } from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
@@ -16,11 +18,12 @@ export class ReportComponent implements OnInit {
   train = [];
   report=[];
   loading = false;
+  
   electromech_train_id="0";
   electromech_schedule_id="0";
   date_check="0";
   
-  constructor(private httpClient: HttpClient, private _snackBar: MatSnackBar,private datePipe : DatePipe) { }
+  constructor(public dialog: MatDialog, private httpClient: HttpClient, private _snackBar: MatSnackBar,private datePipe : DatePipe) { }
 
   ngOnInit() {
     this.getSchedule();
@@ -55,7 +58,19 @@ export class ReportComponent implements OnInit {
   getCommand(): void {
       
   }
+  openDialog(id, res): void {
+    const dialogRef = this.dialog.open(ReportForm, {
+      minWidth: "40%",
+      maxWidth: "40%",
+      //data: data
+    });
 
+    dialogRef.afterClosed().subscribe(result => {
+      if (result !== false && result !== 'false') {
+        //this.getCategory();
+      }
+    });
+  }
 
 changeFunc(event: any) {
     const data = event;
@@ -111,4 +126,18 @@ if (this.electromech_schedule_id=="0" || this.electromech_train_id=="0" || this.
 
 }
 
+}
+
+@Component({
+  selector: 'report-form',
+  templateUrl: 'report-form.html',
+})
+export class ReportForm {
+  loading = false;
+  electromech_category_id = 0;
+  constructor(
+    public dialogRef: MatDialogRef<ReportForm>,
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {}
 }
