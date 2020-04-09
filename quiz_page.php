@@ -891,7 +891,13 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                             setTimeout(() => {
                                 Vue.set(this.userResponses, this.questionIndex, index);
                                 if (this.questionIndex < this.quiz.questions.length) {
-                                    this.questionIndex++;                                       
+                                    this.questionIndex++;      
+                                    
+                                     <?php  if($testmode==1){        ?>  
+                         if(this.olqshow) {
+                            this.showQuestionOtherLang();
+                         }  
+                         <?php } ?>  
 
                                     var nqid = this.questionIndex + 1;
 
@@ -924,14 +930,9 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     }
 
                                 }
-                            }, 500);
+                            }, 500);                            
                             
-                            
-                               <?php  if($testmode==1){        ?>  
-                         if(this.olqshow) {
-                            this.showQuestionOtherLang();
-                         }  
-                         <?php } ?>  
+                              
                             
                             setTimeout(() => {
                                 applyMathAjax();
