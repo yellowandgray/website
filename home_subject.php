@@ -84,7 +84,7 @@ if($from!='' && $from=='login') {
                                             <label><input type="radio" :name="quiz.feedbacks[feedbackIndex].feedback_id|AddPrefix('fbak_')" value="option_2">{{quiz.feedbacks[feedbackIndex].option_2}}</label>
                                           </div>
                                         <?php //if (count($studnet_feedbacks.option_3) > 0) { ?>
-                                          <div class="radio disabled">
+                                          <div class="radio disabled" v-if="quiz.feedbacks[feedbackIndex].option_3">
                                             <label><input type="radio" :name="quiz.feedbacks[feedbackIndex].feedback_id|AddPrefix('fbak_')" value="option_3">{{quiz.feedbacks[feedbackIndex].option_3}}</label>
                                           </div> 
                                         <?php //} ?>

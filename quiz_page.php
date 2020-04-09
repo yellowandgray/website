@@ -204,7 +204,7 @@ $student_feedbacks = $obj->selectAll('f.*,ftm.feedback_timing As fb_timing,fe.*,
                                           <div class="radio">
                                             <label><input type="radio" :name="quiz.feedbacks[feedbackIndex].feedback_id|AddPrefix('fbak_')" value="option_2">{{quiz.feedbacks[feedbackIndex].option_2}}</label>
                                           </div>
-                                          <div class="radio disabled">
+                                          <div class="radio disabled" v-if="quiz.feedbacks[feedbackIndex].option_3">
                                             <label><input type="radio" :name="quiz.feedbacks[feedbackIndex].feedback_id|AddPrefix('fbak_')" value="option_3">{{quiz.feedbacks[feedbackIndex].option_3}}</label>
                                           </div> 
                                     </div>
