@@ -15,7 +15,7 @@ export class ReportComponent implements OnInit {
   schedule = [];
   train = [];
   report=[];
-  
+  loading = false;
   electromech_train_id="0";
   electromech_schedule_id="0";
   date_check="0";
@@ -76,7 +76,7 @@ onSubmit(sid): void {
 this.electromech_schedule_id=sid
 console.log("hello-->"+sid+"Trainid-->"+this.electromech_train_id+"date-->"+this.date_check);
 
-if (this.electromech_schedule_id==0 || this.electromech_train_id==0 || this.date_check==0 ) {
+if (this.electromech_schedule_id=="0" || this.electromech_train_id=="0" || this.date_check=="0" ) {
 
      this.loading = false;
         this._snackBar.open("Please Select Train And Date", '', {
