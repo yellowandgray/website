@@ -268,7 +268,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
     <body class="goto-here">
         <!--container-->
         <?php include 'menu.php'; ?>
-        <div class="quiz-section">
+        <div class="quiz-section" style="display:none;">
             <section class="container">
                 <div class="row">
                     <div class="span12">
@@ -329,7 +329,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                                     </div>
                                                 </div>
                                                 <div class="float-left">
-                                                    <input id="show-olq" type="checkbox" value="show_olq" @change="showolqChange" v-model="olqshow"> <span>Show Other Lanaguage Question</span>
+                                                    <input id="show-olq" type="checkbox" value="show_olq" @change="showolqChange" v-model="olqshow"> <span>Show Question in <?php echo $other_language['name']; ?></span>
                                                 </div> 
                                             </div>   
                                         <?php } ?>
@@ -410,38 +410,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     
                                     
                                     
-                                    <div v-if="olqshow">
-                                        
-                                        <div v-if="olqd">
-                                        <div v-if="olqd.show_image" class="text-center">
-                                        <img style="width: 50%" v-if="olqd.direction == 'top'" v-bind:src="'api/v1/'+olqd.image_path" alt="image" class="qes-img" />
-                                    </div>
-                                    <h2 class="titleContainer title"><span class="quiz-question-no">{{questionIndex + 1}}.</span> <span class="quiz-question-title" v-html="olqd.text"></span>
-                                    </h2>
-                                    <div v-if="olqd.show_image" class="text-center">
-                                        <img style="width: 50%" v-if="olqd.direction == 'bottom'" v-bind:src="'api/v1/'+olqd.image_path" alt="image" class="qes-img" />
-                                    </div>
-                                    <!-- quizOptions -->
-                                    <div class="optionContainer">
-                                        <div class="option" :id="olqdindex | charIndex | AddPrefix('olqdansopt_')" v-for="(olqdresponse, olqdindex) in olqd.responses" >
-                                             <span class="q-option">{{ olqdindex | charIndex }}.&nbsp;</span> <span v-html="olqdresponse.text"></span>
-                                        </div>
-
-                                        <!--div style="margin: 0 auto; text-align: center" v-if="questionIndex>0">
-                                                <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="prev();" :disabled="questionIndex>=quiz.questions.length">
-                                                    Back
-                                                </a>
-                                            </div--> 
-                                        
-                                         
-                                    </div>
-                                        
-                                        </div> 
-                                        
-                                         <div v-if="!olqd">
-                                             <h2 class="titleContainer title"><span class="quiz-question-title">Question Not Available in Other Language</span></h2>
-                                         </div>  
-                                    </div>
+                                    
                                     
 
                                     <footer class="questionFooter" id='quiz-nxt-footer' v-if="showimmediate && !showimmediateblk">
@@ -549,6 +518,39 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                         <!--                                    /pagination-->
 
                                     </footer>
+                                    
+                                    <div v-if="olqshow">
+                                        
+                                        <div v-if="olqd">
+                                        <div v-if="olqd.show_image" class="text-center">
+                                        <img style="width: 50%" v-if="olqd.direction == 'top'" v-bind:src="'api/v1/'+olqd.image_path" alt="image" class="qes-img" />
+                                    </div>
+                                    <h2 class="titleContainer title"><span class="quiz-question-no">{{questionIndex + 1}}.</span> <span class="quiz-question-title" v-html="olqd.text"></span>
+                                    </h2>
+                                    <div v-if="olqd.show_image" class="text-center">
+                                        <img style="width: 50%" v-if="olqd.direction == 'bottom'" v-bind:src="'api/v1/'+olqd.image_path" alt="image" class="qes-img" />
+                                    </div>
+                                    <!-- quizOptions -->
+                                    <div class="optionContainer">
+                                        <div class="option" :id="olqdindex | charIndex | AddPrefix('olqdansopt_')" v-for="(olqdresponse, olqdindex) in olqd.responses" >
+                                             <span class="q-option">{{ olqdindex | charIndex }}.&nbsp;</span> <span v-html="olqdresponse.text"></span>
+                                        </div>
+
+                                        <!--div style="margin: 0 auto; text-align: center" v-if="questionIndex>0">
+                                                <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="prev();" :disabled="questionIndex>=quiz.questions.length">
+                                                    Back
+                                                </a>
+                                            </div--> 
+                                        
+                                         
+                                    </div>
+                                        
+                                        </div> 
+                                        
+                                         <div v-if="!olqd">
+                                             <h2 class="titleContainer title"><span class="quiz-question-title">Question Not Available in <?php echo $other_language['name'] ?></span></h2>
+                                         </div>  
+                                    </div>
 
                                     <?php
                                     /*
@@ -1328,6 +1330,14 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                 }
             }
 
+            $(document).ready(function(){
+               $('.loadingoverlay').show();
+               setTimeout(() => {                            
+                            applyMathAjax();  
+                            $('.quiz-section').show();
+                            $('.loadingoverlay').hide();
+                        }, 600);    
+            });
         </script>
     </body>
 </html>
