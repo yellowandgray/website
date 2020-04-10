@@ -1332,3 +1332,63 @@ and open the template in the editor.
     width: 50%;
     margin: 0 auto;
 }
+
+.btn-answerd-clr {
+    background: #1c75bc;
+    color: #fff;
+}
+
+.btn-answerd-clr:hover {
+    background: #1c75bc;
+    color: #fff;
+}
+
+.btn-not-sure-clr {
+    background: yellow;
+    color: #fff;
+}
+
+.btn-not-sure-clr:hover {
+    background: yellow;
+    color: #fff;
+}
+
+.btn-unanswered-clr {
+    background: #000;
+    color: #fff;
+}
+
+.btn-unanswered-clr:hover {
+    background: #000;
+    color: #fff;
+}
+
+.admin-panel-btns {
+    width: 70%;
+    margin: 20px auto 0px;
+}
+
+.admin-panel-btns .row {
+    margin-bottom: 0;
+}
+
+.clr-blue {
+    color: #1c75bc;
+    font-weight: 600;
+}
+
+.clr-yellow {
+    color: yellow;
+    font-weight: 600;
+}
+
+.question-number-title h3 {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    color: #f14812;
+}
+
+.showqus {
+    cursor: pointer;
+}

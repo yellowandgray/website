@@ -314,7 +314,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                         <div class="questionBox" id="app">
                             <!--qusetionContainer-->
                             <div class="questionContainer" v-if="questionIndex<quiz.questions.length" v-bind:key="questionIndex">
-                                <div class="question-header">
+                                <div class="question-header" id="header-hidden">
                                     <!--progress-->
                                     <div class="progressContainer">
                                         <!-- show answer immediate -->
@@ -340,8 +340,9 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                          <!-- show Go Question testing purpose -->
                                 <?php if ($testmode == 1) { ?>  
                                          <div class="quiz-review">
-                                 <div class="float-left">
-                                          <input type="text" id="goques" name="goquestion" style="width:30px;">
+                                 <div class="float-left" style="padding: 20px 0;">
+                                          <a href="#" onclick="showqno();" class="btn logout-btn">Question Admin Panel</a>
+                                                    <input type="text" id="goques" name="goquestion" style="width:30px;margin-bottom: 0px;">
                                             <a v-on:click="goquestion();" class="btn btn-primary">Go</a>
                                         </div>
                                          </div>   
@@ -373,6 +374,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
 
                                 <div v-if="!revShow">
                                     <!-- questionTitle -->
+                                    <div id="quiz-hidden">
                                     <div v-if="quiz.questions[questionIndex].show_image" class="text-center">
                                         <img style="width: 50%" v-if="quiz.questions[questionIndex].direction == 'top'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />
                                     </div>
@@ -404,6 +406,88 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                          </div>  
                                 <?php }*/  ?>
                                         
+                                    </div>
+                                    </div>
+                                    <div class="question-admin-panel" style="width: 100%; padding: 20px; display: none;">
+                                        <div class="question-number-title">
+                                            <span class="showqus" onclick="showqus();"><i class="icon-angle-left"></i> back</span>
+                                            <h3>Question Apmin Panel</h3>
+                                        </div>
+                                        <table style="width: 100%;">
+                                            <tr>
+                                                <td class="clr-blue">1</td>
+                                                <td class="clr-yellow">2</td>
+                                                <td>3</td>
+                                                <td>4</td>
+                                                <td>5</td>
+                                                <td>6</td>
+                                                <td>7</td>
+                                                <td>8</td>
+                                                <td>9</td>
+                                                <td>10</td>
+                                            </tr>
+                                            <tr>
+                                                <td>11</td>
+                                                <td>12</td>
+                                                <td>13</td>
+                                                <td>14</td>
+                                                <td>15</td>
+                                                <td>16</td>
+                                                <td>17</td>
+                                                <td>18</td>
+                                                <td>19</td>
+                                                <td>20</td>
+                                            </tr>
+                                            <tr>
+                                                <td>21</td>
+                                                <td>22</td>
+                                                <td>23</td>
+                                                <td>24</td>
+                                                <td>25</td>
+                                                <td>26</td>
+                                                <td>27</td>
+                                                <td>28</td>
+                                                <td>29</td>
+                                                <td>30</td>
+                                            </tr>
+                                            <tr>
+                                                <td>31</td>
+                                                <td>32</td>
+                                                <td>33</td>
+                                                <td>34</td>
+                                                <td>35</td>
+                                                <td>36</td>
+                                                <td>37</td>
+                                                <td>38</td>
+                                                <td>39</td>
+                                                <td>40</td>
+                                            </tr>
+                                            <tr>
+                                                <td>41</td>
+                                                <td>42</td>
+                                                <td>43</td>
+                                                <td>44</td>
+                                                <td>45</td>
+                                                <td>46</td>
+                                                <td>47</td>
+                                                <td>48</td>
+                                                <td>49</td>
+                                                <td>50</td>
+                                            </tr>
+                                        </table>
+                                        <div class="admin-panel-btns">
+                                            <div class="row">
+                                                <div class="span-4">
+                                                    <a href="#" class="btn btn-answerd-clr">Answered</a>
+                                                </div>
+                                                <div class="span-4">
+                                                    <a href="#" class="btn btn-not-sure-clr">Not Sure</a>
+                                                </div>
+                                                <div class="span-4">
+                                                    <a href="#" class="btn btn-unanswered-clr">Unanswered</a>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     
                                     
@@ -1338,6 +1422,18 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                             $('.loadingoverlay').hide();
                         }, 600);    
             });
+        </script>
+        <script>
+            function showqno() {
+                $('#header-hidden').hide();
+                $('#quiz-hidden').hide();
+                $('.question-admin-panel').show();
+            }
+            function showqus() {
+                $('#header-hidden').show();
+                $('#quiz-hidden').show();
+                $('.question-admin-panel').hide();
+            }
         </script>
     </body>
 </html>
