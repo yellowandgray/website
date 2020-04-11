@@ -43,6 +43,7 @@ this.chapter = [];
         .subscribe(
                 (res)=>{
                     this.chapter = res["result"]["data"];
+                    console.log(this.chapter);
               },
               (error)=>{
                 this._snackBar.open(error["statusText"], '', {
@@ -68,11 +69,20 @@ if(typeof this.chapter[ev.index] !== 'undefined') {
     }
     }
     openDialog(id, res): void {
+
+      console.log(this.selectedchapind);
+      
         var data = null;
           if(id != 0) {
           this[res].forEach(val=> {
                if(parseInt(val.topic_id) === parseInt(id)) {
-val.subject_id = this.chapter[this.selectedchapind].subject_id;
+                   console.log(val.topic_id);
+                    console.log(this.chapter[0].subject_id);
+                    
+                    //val.subject_id = this.chapter[this.selectedchapind].subject_id;
+
+                    val.subject_id = this.chapter[0].subject_id;
+
                     data = val;
                     return false;
                 }
