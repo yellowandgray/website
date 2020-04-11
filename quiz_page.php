@@ -323,14 +323,14 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                                 <div class="float-left">
                                                     <input id="show-immediately" type="checkbox" value="show_answer_immediately" @change="immChange" v-model="showimmediate"> <span class="span-position">Show Answer</span>
                                                 </div> 
+                                                <div class="float-left">
+                                                    <input id="show-olq" type="checkbox" value="show_olq" @change="showolqChange" v-model="olqshow"> <span>Show Question in <?php echo $other_language['name']; ?></span>
+                                                </div> 
                                                 <div class="float-right">
                                                     <div class="pause-right" @click="clickPause">
                                                         <i class="icon-pause"></i>
                                                     </div>
                                                 </div>
-                                                <div class="float-left">
-                                                    <input id="show-olq" type="checkbox" value="show_olq" @change="showolqChange" v-model="olqshow"> <span>Show Question in <?php echo $other_language['name']; ?></span>
-                                                </div> 
                                             </div>   
                                         <?php } ?>
                                         <!-- show answer immediate -->
@@ -410,7 +410,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     </div>
                                     <div class="question-admin-panel" style="width: 100%; padding: 20px; display: none;">
                                         <div class="question-number-title">
-                                            <span class="showqus" onclick="showqus();"><i class="icon-angle-left"></i> back</span>
+                                            <span class="showqus" onclick="showqus();"><i class="icon-angle-left"></i> Back</span>
                                             <h3>Question Admin Panel</h3>
                                         </div>
                                         <table style="width: 100%;">
@@ -478,13 +478,13 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                         <div class="admin-panel-btns">
                                             <div class="row">
                                                 <div class="span-4">
-                                                    <a href="#" class="btn btn-answerd-clr">Answered</a>
+                                                    <span class="answered-clr"></span> Answered
                                                 </div>
                                                 <div class="span-4">
-                                                    <a href="#" class="btn btn-not-sure-clr">Not Sure</a>
+                                                    <span class="notsure-clr"></span> Not Sure
                                                 </div>
                                                 <div class="span-4">
-                                                    <a href="#" class="btn btn-unanswered-clr">Unanswered</a>
+                                                    <span class="unanswered-clr"></span> Unanswered
                                                 </div>
                                             </div>
                                         </div>

@@ -1106,7 +1106,7 @@ and open the template in the editor.
 
 .quiz-pause .float-left {
     float: left;
-    width: 50%;
+    width: 45%;
     text-align: left;
 }
 
@@ -1364,7 +1364,7 @@ and open the template in the editor.
 }
 
 .admin-panel-btns {
-    width: 70%;
+/*    width: 70%;*/
     margin: 20px auto 0px;
 }
 
@@ -1373,12 +1373,12 @@ and open the template in the editor.
 }
 
 .clr-blue {
-    color: #1c75bc;
+    color: #000099;
     font-weight: 600;
 }
 
 .clr-yellow {
-    color: yellow;
+    color: #ffcc00;
     font-weight: 600;
 }
 
@@ -1391,4 +1391,22 @@ and open the template in the editor.
 
 .showqus {
     cursor: pointer;
+}
+
+.answered-clr {
+    padding: 0px 10px;
+    background: #000099;
+    margin-right: 6px;
+}
+
+.notsure-clr {
+    padding: 0px 10px;
+    background: #ffcc00;
+    margin-right: 6px;
+}
+
+.unanswered-clr {
+    padding: 0px 10px;
+    background: #000;
+    margin-right: 6px;
 }
