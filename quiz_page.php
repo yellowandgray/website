@@ -411,7 +411,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     <div class="question-admin-panel" style="width: 100%; padding: 20px; display: none;">
                                         <div class="question-number-title">
                                             <span class="showqus" onclick="showqus();"><i class="icon-angle-left"></i> back</span>
-                                            <h3>Question Apmin Panel</h3>
+                                            <h3>Question Admin Panel</h3>
                                         </div>
                                         <table style="width: 100%;">
                                             <tr>

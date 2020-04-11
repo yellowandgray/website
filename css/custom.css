@@ -1334,22 +1334,22 @@ and open the template in the editor.
 }
 
 .btn-answerd-clr {
-    background: #1c75bc;
+    background: #000099;
     color: #fff;
 }
 
 .btn-answerd-clr:hover {
-    background: #1c75bc;
+    background: #000099;
     color: #fff;
 }
 
 .btn-not-sure-clr {
-    background: yellow;
+    background: #ffcc00;
     color: #fff;
 }
 
 .btn-not-sure-clr:hover {
-    background: yellow;
+    background: #ffcc00;
     color: #fff;
 }
 
