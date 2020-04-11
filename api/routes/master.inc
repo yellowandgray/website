@@ -566,7 +566,7 @@ $app->post('/import_neet_question', function() use($app) {
                 } else {
                     $book_id = $book['book_id'];
                 }
-                $data = array('topic_id' => $topic_id, 'sub_topic_id' => $sub_topic_id, 'question_no' => $row[5], 'name' => trim($row[6]), 'a' => $row[7], 'b' => $row[8], 'c' => $row[9], 'd' => $row[10], 'answer' => $row[11], 'explanation' => $row[12], 'data_dictionary' => $row[13], 'book_id' => $book_id, 'page_no' => $row[15], 'notes' => $row[16], 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'image_path' => '', 'direction' => 'top');
+                $data = array('topic_id' => $topic_id, 'sub_topic_id' => $sub_topic_id, 'question_no' => $row[5], 'name' => trim($row[6]), 'a' => $row[7], 'b' => $row[8], 'c' => $row[9], 'd' => $row[10], 'answer' => $row[11], 'explanation' => $row[12], 'data_dictionary' => $row[13], 'book_id' => $book_id, 'page_no' => $row[15], 'notes' => $row[16], 'standard_id' => $standard_id, 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'image_path' => '', 'direction' => 'top');
                 $insert = $obj->insertRecord($data, 'neet_question');
                 if ($insert > 0) {
                     $count++;

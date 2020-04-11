@@ -38,7 +38,7 @@ export class SubTopicComponent implements OnInit {
       }
       getsubtopic(ev): void {
     this.selectedsubtopind = ev.index;
-        this.httpClient.get<any>('http://localhost/Projects/Feringo/website/api/v1/get_subtopic_by_topic/'+this.topic[ev.index].topic_id)
+        this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_subtopic_by_topic/'+this.topic[ev.index].topic_id)
         .subscribe(
                 (res)=>{
                     this.subtopic = res["result"]["data"];
@@ -116,7 +116,7 @@ export class SubtopicForm {
         });
             this.sub_topic_id = this.data.sub_topic_id;
         }
-        this.httpClient.get<any>('http://localhost/Projects/Feringo/website/api/v1/get_topic')
+        this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_topic')
           .subscribe(
             (res) => {
               this.topic = res["result"]["data"];              
@@ -143,7 +143,7 @@ export class SubtopicForm {
       } else {
         url = 'insert_sub_topic';
       }
-      this.httpClient.post('http://localhost/Projects/Feringo/website/api/v1/'+url, formData).subscribe(
+      this.httpClient.post('http://localhost/project/feringo/api/v1/'+url, formData).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -185,7 +185,7 @@ export class SubtopicDelete {
       return;
     }
     this.loading = true;
-    this.httpClient.get('http://localhost/Projects/Feringo/website/api/v1/delete_record/sub_topic/sub_topic_id=' + this.sub_topic_id).subscribe(
+    this.httpClient.get('http://localhost/project/feringo/api/v1/delete_record/sub_topic/sub_topic_id=' + this.sub_topic_id).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {

@@ -25,7 +25,7 @@ export class StandardComponent implements OnInit {
   }
 
  getstandard(): void {
-      this.httpClient.get<any>('http://localhost/Projects/Feringo/website/api/v1/get_standard')
+      this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_standard')
       .subscribe(
         (res) => {
            this.standard = res["result"]["data"];
@@ -91,7 +91,7 @@ export class StandardComponent implements OnInit {
 
 
 export class StandardForm {
-  //image_url: string = 'http://localhost/Projects/Feringo/website/api/v1/';
+  //image_url: string = 'http://localhost/project/feringo/api/v1/';
   standardForm: FormGroup;
   loading = false;
   standard_id = 0;  
@@ -136,7 +136,7 @@ export class StandardForm {
       formData.append('status', this.standardForm.value.status);
       url = 'insert_standard';
     }
-    this.httpClient.post('http://localhost/Projects/Feringo/website/api/v1/' + url, formData).subscribe(
+    this.httpClient.post('http://localhost/project/feringo/api/v1/' + url, formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -222,7 +222,7 @@ export class StandardDelete {
             return;
       }
       this.loading = true;
-      this.httpClient.get('http://localhost/Projects/Feringo/website/api/v1/delete_record/standard/standard_id='+this.standard_id).subscribe(
+      this.httpClient.get('http://localhost/project/feringo/api/v1/delete_record/standard/standard_id='+this.standard_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {

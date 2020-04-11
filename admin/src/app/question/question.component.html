@@ -196,7 +196,7 @@
             <mat-list>
                 <ng-container *ngFor="let data of neet_question">
                     <mat-list-item>
-                        <button mat-icon-button aria-label="label" (click)="openDialog(data.neet_question_id, 'neet_question')">
+                        <button mat-icon-button aria-label="label" (click)="openNeetForm(data.neet_question_id, 'neet_question')">
                             <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
                         </button>
                         <button mat-icon-button aria-label="label" (click)="confirmNeetQuestionDelete(data.neet_question_id)">

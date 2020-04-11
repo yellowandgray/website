@@ -22,9 +22,9 @@ export class FeedbackComponent implements OnInit {
     this.getfeedback();
     this.getstudent();
   }
-image_url: string = 'http://localhost/Projects/Feringo/website/api/v1/';
+image_url: string = 'http://localhost/project/feringo/api/v1/';
     getfeedback(): void {
-    this.httpClient.get<any>('http://localhost/Projects/Feringo/website/api/v1/get_feedback')
+    this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_feedback')
       .subscribe(
         (res) => {
           this.feedback = res["result"]["data"];
@@ -37,7 +37,7 @@ image_url: string = 'http://localhost/Projects/Feringo/website/api/v1/';
       );
   }
     getstudent(): void {
-    this.httpClient.get<any>('http://localhost/Projects/Feringo/website/api/v1/get_student/'+this.sortdata)
+    this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_student/'+this.sortdata)
       .subscribe(
         (res) => {
           this.student = res["result"]["data"];
@@ -76,7 +76,7 @@ image_url: string = 'http://localhost/Projects/Feringo/website/api/v1/';
      
     openAssignedDialog(id): void {
 
- this.httpClient.get('http://localhost/Projects/Feringo/website/api/v1/get_assigned_feedback/' +id).subscribe(
+ this.httpClient.get('http://localhost/project/feringo/api/v1/get_assigned_feedback/' +id).subscribe(
         (res) => {
             //this.loading = false;
             
@@ -219,7 +219,7 @@ export class FeedbackForm {
             this.feedback_id = this.data.feedback_id;
         }
 
-        this.httpClient.get<any>('http://localhost/Projects/Feringo/website/api/v1/get_feedback_type_master')
+        this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_feedback_type_master')
           .subscribe(
             (res) => {
               this.feedback_type = res["result"]["data"];              
@@ -257,7 +257,7 @@ export class FeedbackForm {
         formData.append('option_3', this.feedbackForm.value.option_3);
         url = 'insert_feedback';
       }
-      this.httpClient.post('http://localhost/Projects/Feringo/website/api/v1/'+url, formData).subscribe(
+      this.httpClient.post('http://localhost/project/feringo/api/v1/'+url, formData).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -300,7 +300,7 @@ export class FeedbackDelete {
             return;
       }
       this.loading = true;
-      this.httpClient.get('http://localhost/Projects/Feringo/website/api/v1/delete_record/feedback/feedback_id='+this.feedback_id).subscribe(
+      this.httpClient.get('http://localhost/project/feringo/api/v1/delete_record/feedback/feedback_id='+this.feedback_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -343,7 +343,7 @@ export class AssignedFeedbackDelete {
             return;
       }
       this.loading = true;
-      this.httpClient.get('http://localhost/Projects/Feringo/website/api/v1/delete_record/user_assign_feedback/user_assign_feedback_id='+this.user_assign_feedback_id).subscribe(
+      this.httpClient.get('http://localhost/project/feringo/api/v1/delete_record/user_assign_feedback/user_assign_feedback_id='+this.user_assign_feedback_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -398,7 +398,7 @@ export class AssignFeedbackForm {
             this.student_id   = this.data.student_id; 
         }
         
-        this.httpClient.get<any>('http://localhost/Projects/Feringo/website/api/v1/get_feedback')
+        this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_feedback')
           .subscribe(
             (res) => {
               this.feedback = res["result"]["data"];
@@ -411,7 +411,7 @@ export class AssignFeedbackForm {
           );
 
 
-          this.httpClient.get<any>('http://localhost/Projects/Feringo/website/api/v1/get_feedback_type_master')
+          this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_feedback_type_master')
           .subscribe(
             (res) => {
               this.feedback_type = res["result"]["data"];              
@@ -424,7 +424,7 @@ export class AssignFeedbackForm {
           );
 
           
-         this.httpClient.get<any>('http://localhost/Projects/Feringo/website/api/v1/get_feedback_timing_master')
+         this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_feedback_timing_master')
           .subscribe(
             (res) => {
               this.feedback_timing = res["result"]["data"];              
@@ -446,7 +446,7 @@ export class AssignFeedbackForm {
     var ftype = ev.value;
     this.httpClient
       .get<any>(
-        "http://localhost/Projects/Feringo/website/api/v1/get_feedback_by_type/" +ftype 
+        "http://localhost/project/feringo/api/v1/get_feedback_by_type/" +ftype 
       )
       .subscribe(
         res => {
@@ -482,7 +482,7 @@ export class AssignFeedbackForm {
            formData.append('feedback', selectfeedback);       
 
             url = 'insert_user_assign_feedback';
-            this.httpClient.post('http://localhost/Projects/Feringo/website/api/v1/'+url, formData).subscribe(
+            this.httpClient.post('http://localhost/project/feringo/api/v1/'+url, formData).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
