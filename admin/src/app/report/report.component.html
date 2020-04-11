@@ -7,19 +7,19 @@
         <!-- <div class="add-btn-container">
             <button mat-raised-button color="primary" (click)="openDialog(0, 'null')"><mat-icon>add</mat-icon> Inspection Checklist</button>
         </div> -->
-        <mat-tab-group (selectedTabChange)="getCommand();">
+        <mat-tab-group (selectedTabChange)="getsid();">
             <mat-tab *ngFor="let row of schedule" label="{{row.name}}">
                 <div *ngIf="row.electromech_schedule_id == '1'">
-                    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
-                        <div fxFlex="50%">
+                    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="space-between center" >
+                        <div fxFlex="25%">
                             <mat-form-field appearance="outline" fxFlex="100%">
-                                <mat-label>Choose a date</mat-label>
-                                <input matInput [matDatepicker]="picker" (dateChange)="changeFunc($event.value)">
+                                <mat-label>Choose Date</mat-label>
+                                <input matInput [(ngModel)]="filterName" [matDatepicker]="picker" (dateChange)="changeFunc($event.value)">
                                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                                 <mat-datepicker #picker></mat-datepicker>
                             </mat-form-field>
                         </div>
-                        <div fxFlex="50%">
+                        <div fxFlex="25%">
                             <mat-form-field appearance="outline" fxFlex="100%">
                                 <mat-label>Select Train</mat-label>
                                 <mat-select>
@@ -28,98 +28,202 @@
                             </mat-form-field>
                         </div>
                         <button mat-raised-button color="primary"(click)="onSubmit(row.electromech_schedule_id)"> Submit</button>
-                        <button mat-raised-button color="primary" (click)="openDialog();"> Print</button>
+                        <!--<button mat-raised-button color="primary" (click)="openDialog();"> Print</button>-->
+                    </div>                
+                    <div  fxLayout="column" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="bottom center">
+                        <div fxFlex="25%">
+                       <mat-progress-spinner class="example-margin" *ngIf="loading" [mode]="'indeterminate'" [strokeWidth]="3" [diameter]="25">
+                       </mat-progress-spinner>
+                       </div>
                     </div>
                     <div  fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
-                        <h4 mat-line>Inspector: </h4>
+                        <h4 mat-line *ngIf="date_var!='' ">{{date_var}}</h4>
                     </div>
                     <table mat-table class="equipment-table">
                         <tr>
-                            <th mat-header-cell>No</th>
+                            <th mat-header-cell>No</th>                            
                             <th mat-header-cell>Equipment</th>
                             <th mat-header-cell>Tag Number</th>
                             <th mat-header-cell>Inspection Check List</th>
                             <th mat-header-cell>Feedback</th>
+                            <th mat-header-cell>General Comments-Image</th>
+                            
                         </tr>  
-                        <ng-container *ngFor="let row of report; let i = index">
-                            <tr *ngIf="row.checklist.length > 0 && row.checklist[0].electromech_product_enquiry_log_detail_id>0">
-
+                        <ng-container *ngFor="let row of reportwithchecklist; let i = index">
+                            <tr *ngIf="row.checklist[0].electromech_product_enquiry_log_detail_id>0">
+                                
                                 <td mat-cell >{{i+1}}</td>
-                                <td mat-cell >{{row.name}}</td>
-                                <td mat-cell >{{row.code}}</td>
-                                <td mat-cell>
-                                    <table mat-table >
-                                        <tr>
-                                            <td mat-cell *ngFor="let data of row.checklist">{{data.enquiry_list}}{{data.enquiry_status}}{{data.enquiry_failure_comment}}</td>
-                                        </tr>
-                                    </table>
-                                </td>
-
-                                <td mat-cell>{{row.checklist[0].enquiry_status}}</td>
-                            </tr> 
-                        </ng-container>
-                    </table>
-                </div>
-                <div *ngIf="row.electromech_schedule_id == '2'">
-                    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
-                        <div fxFlex="50%">
-                            <mat-form-field appearance="outline" fxFlex="100%">
-                                <mat-label>Choose a Week</mat-label>
-                                <input matInput [matDatepicker]="picker" (dateChange)="changeFunc($event.value)">
-                                       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                                <mat-datepicker #picker></mat-datepicker>
-                            </mat-form-field>
-                        </div>
-                        <div fxFlex="50%">
-                            <mat-form-field appearance="outline" fxFlex="100%">
-                                <mat-label>Select Train</mat-label>
-                                <mat-select>
-                                    <mat-option [value]="data.electromech_train_id" *ngFor="let data of train" (click)="changeTrain(data.electromech_train_id)">{{data.name}}</mat-option>
-                                </mat-select>
-                            </mat-form-field>
-                        </div>
-                        <button mat-raised-button color="primary"(click)="onSubmit(row.electromech_schedule_id)"> Submit</button>
-                        <button mat-raised-button color="primary" (click)="openDialog();"> Print</button>
-                    </div>
-                    <div  fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
-                        <h4 mat-line>Inspector: </h4>
-                    </div>
-                    <table mat-table class="equipment-table">
-                        <tr>
-                            <th mat-header-cell>No</th>
-                            <th mat-header-cell>Equipment</th>
-                            <th mat-header-cell>Tag Number</th>
-                            <th mat-header-cell>Sub Parts</th>
-                            <th mat-header-cell>Inspection Check List</th>
-                            <th mat-header-cell>Feedback</th>
-                        </tr>  
-                        <ng-container *ngFor="let row of report; let i = index">
-                            <tr *ngIf="row.checklist.length > 0 && row.checklist[0].electromech_product_enquiry_log_detail_id>0">
-
-                                <td mat-cell >{{i+1}}</td>
+                                
+                                
                                 <td mat-cell >{{row.name}}</td>
                                 <td mat-cell >{{row.code}}</td>
                                 <td mat-cell >
-                                    <table mat-table>
-                                        <tr>
-                                            <td>Sub Parts</td>
-                                        </tr>
-                                    </table>
-                                </td>
-                                <td mat-cell>
-                                    <table mat-table >
-                                        <tr>
-                                            <td mat-cell *ngFor="let data of row.checklist">{{data.enquiry_list}}{{data.enquiry_status}}{{data.enquiry_failure_comment}}</td>
+                                    <table mat-table class="size-table">
+                                        <tr *ngFor="let data of row.checklist">
+                                            <td mat-cell >{{data.enquiry_list}}</td>
+                                           <!-- <td mat-cell *ngIf="data.enquiry_status==1">DONE</td>
+                                            <td mat-cell *ngIf="data.enquiry_failure_comment!='' ">{{data.enquiry_failure_comment}}</td>-->
                                         </tr>
                                     </table>
                                 </td>
 
-                                <td mat-cell>{{row.checklist[0].enquiry_status}}</td>
+                                <td mat-cell >
+                                    <table mat-table class="size-table" >
+                                        <tr *ngFor="let data of row.checklist">
+                                            <!--<td mat-cell *ngIf="data.enquiry_status==1">Done</td>-->
+                                            <span style='font-size:20px;' *ngIf="data.enquiry_status==1">&#9989;</span>
+                                            <!--<span style="float:right;" *ngIf="data.enquiry_status==1">&emsp;&emsp;Sun Jun 4 23:52:31 2017</span>-->
+                                            <td mat-cell *ngIf="data.enquiry_failure_comment!='' ">{{data.enquiry_failure_comment}}</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td mat-cell >
+                                    <table mat-table class="size-table" >
+                                        <tr mat-cell *ngIf="row.general_comment!=''">{{row.general_comment}}</tr>
+                                        <tr mat-cell *ngIf="row.general_image!='' ">
+                                        <img matListAvatar src="{{image_url}}{{row.general_image}}"  alt="..."  (click)="confirmDialog(row, 'preview')" height="80" width="80"/>                           
+                                        </tr>
+                                        <tr mat-cell *ngIf="row.general_image=='' && row.general_comment=='' ">---</tr>
+                                    </table>
+                                </td>
+                            </tr> 
+                        </ng-container>
+                    </table>                    
+                </div>
+                <div *ngIf="row.electromech_schedule_id == '2' || row.electromech_schedule_id == '3'">
+                    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="space-between center">
+                        <div fxFlex="25%">
+                            <mat-form-field appearance="outline" fxFlex="100%">
+                                <mat-label *ngIf="row.electromech_schedule_id == '2' ">Choose Week</mat-label>
+                                <mat-label *ngIf="row.electromech_schedule_id == '3' ">Choose Month</mat-label>
+                                <input matInput [(ngModel)]="filterName" [matDatepicker]="picker" (dateChange)="changeFunc($event.value)">
+                                       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+                        <div fxFlex="25%">
+                            <mat-form-field appearance="outline" fxFlex="100%">
+                                <mat-label>Select Train</mat-label>
+                                <mat-select>
+                                    <mat-option [value]="data.electromech_train_id" *ngFor="let data of train" (click)="changeTrain(data.electromech_train_id)">{{data.name}}</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <button mat-raised-button color="primary"(click)="onSubmit(row.electromech_schedule_id)"> Submit</button>
+                        <!--<button mat-raised-button color="primary" (click)="openDialog();"> Print</button>-->
+                    </div>
+                    <div  fxLayout="column" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="bottom center">
+                        <div fxFlex="25%">
+                       <mat-progress-spinner class="example-margin" *ngIf="loading" [mode]="'indeterminate'" [strokeWidth]="3" [diameter]="25">
+                       </mat-progress-spinner>
+                       </div>
+                    </div>
+                    <div  fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+                        <h4 mat-line *ngIf="date_var!='' ">{{date_var}}</h4>
+                    </div>
+                    <table mat-table class="equipment-table">
+                        <tr>
+                            <th mat-header-cell>No</th>                            
+                            <th mat-header-cell>Equipment</th>
+                            <th mat-header-cell>Tag Number</th>
+                            <!--<th mat-header-cell>Sub Parts</th>-->
+                            <th mat-header-cell>Inspection Check List</th>
+                            <th mat-header-cell>Feedback</th>      
+                            <th mat-header-cell>General Comments-Image</th>
+                        </tr>  
+                        <ng-container *ngFor="let row of reportwithchecklist; let i = index">
+                            <tr *ngIf="row.checklistonly!=null && row.checklistonly.length > 0 && row.checklistonly[0].electromech_product_enquiry_log_detail_id>0">
+
+                                <td mat-cell >{{i+1}}</td>                                
+                                <td mat-cell >{{row.name}}</td>
+                                <td mat-cell >{{row.code}}</td>
+                                <td mat-cell>
+                                    <table mat-table class="size-table">
+                                        <tr *ngFor="let data of row.checklistonly">
+                                            <td mat-cell >{{data.enquiry_list}}</td>
+                                           <!-- <td mat-cell *ngIf="data.enquiry_status==1">DONE</td>
+                                            <td mat-cell *ngIf="data.enquiry_failure_comment!='' ">{{data.enquiry_failure_comment}}</td>-->
+                                        </tr>
+                                    </table>
+                                </td>
+
+                                <td mat-cell >
+                                    <table mat-table class="size-table" >
+                                        <tr *ngFor="let data of row.checklistonly">
+                                           <!-- <td mat-cell *ngIf="data.enquiry_status==1">DONE</td>-->
+                                            <span style='font-size:22px;' *ngIf="data.enquiry_status==1">&#9989;</span>
+                                            <td mat-cell *ngIf="data.enquiry_failure_comment!='' ">{{data.enquiry_failure_comment}}</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td mat-cell >
+                                    <table mat-table class="size-table" >
+                                        <tr mat-cell *ngIf="row.general_comment!=''">{{row.general_comment}}</tr>
+                                        <tr mat-cell *ngIf="row.general_image!='' ">
+                                        <img matListAvatar src="{{image_url}}{{row.general_image}}"  alt="..."  (click)="confirmDialog(row, 'preview')" height="80" width="80"/>                           
+                                        </tr>
+                                        <tr mat-cell *ngIf="row.general_image=='' && row.general_comment=='' ">---</tr>
+                                    </table>
+                                </td>
+                            </tr> 
+                            <!--<tr *ngIf="row.subpart!=null && row.subpart.length > 0 && row.subpart[0][checklist][0].electromech_product_enquiry_log_detail_id>0">-->
+                             <tr *ngIf="row.subpart!=null && row.subpart.length > 0 && row.subpart[0].checklist[0].electromech_product_enquiry_log_detail_id>0 ">
+                                <td mat-cell >{{i+1}}</td>                                
+                                <td mat-cell >{{row.name}}</td>
+                                <td mat-cell >{{row.code}}</td>
+                                <td mat-cell>
+                                    <table mat-table class="size-table">
+                                        <tr *ngFor="let data of row.subpart">
+                                            
+                                            
+                                            <td mat-cell > <strong>{{data.name}}</strong>
+                                            <table mat-table class="size-table">
+                                             <tr *ngFor="let data1 of data.checklist">
+                                                 
+                                               <td mat-cell >{{data1.enquiry_list}}</td>  
+                                            </tr>
+                                                
+                                            </table>
+                                            </td>
+                                           
+                                        </tr>
+                                    </table>
+                                </td>
+
+                                <td mat-cell>
+                                    <table mat-table class="size-table">
+                                        <tr *ngFor="let data of row.subpart">
+                                            
+                                            
+                                            <td mat-cell > <strong>{{data.name}}</strong>
+                                            <table mat-table class="size-table">
+                                             <tr *ngFor="let data1 of data.checklist">
+                                                 
+                                               <!--<td mat-cell *ngIf="data1.enquiry_status==1">DONE</td> --> 
+                                                 <span style='font-size:22px;' *ngIf="data1.enquiry_status==1">&#9989;</span>
+                                               <td mat-cell *ngIf="data1.enquiry_failure_comment!='' ">{{data.enquiry_failure_comment}}</td>  
+                                            </tr>
+                                                
+                                            </table>
+                                            </td>
+                                          
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td mat-cell >
+                                    <table mat-table class="size-table" >
+                                        <tr mat-cell *ngIf="row.general_comment!=''">{{row.general_comment}}</tr>
+                                        <tr mat-cell *ngIf="row.general_image!='' ">
+                                        <img matListAvatar src="{{image_url}}{{row.general_image}}"  alt="..."  (click)="confirmDialog(row, 'preview')" height="80" width="80"/>                           
+                                        </tr>
+                                        <tr mat-cell *ngIf="row.general_image=='' && row.general_comment=='' ">---</tr>
+                                    </table>
+                                </td>
                             </tr> 
                         </ng-container>
                     </table>
                 </div>
-                <div *ngIf="row.electromech_schedule_id == '3'">
+                <!--<div *ngIf="row.electromech_schedule_id == '3'">
                     <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
                         <div fxFlex="50%">
                             <mat-form-field appearance="outline" fxFlex="100%">
@@ -177,8 +281,9 @@
                             </tr> 
                         </ng-container>
                     </table>
-                </div>
+                </div>-->
             </mat-tab>
+            
         </mat-tab-group>
     </mat-sidenav-content>
 </mat-sidenav-container>

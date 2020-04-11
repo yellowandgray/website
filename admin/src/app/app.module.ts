@@ -39,7 +39,7 @@ import { FloorComponent, FloorForm, FloorDelete} from './floor/floor.component';
 import { StaffComponent, StaffForm, StaffImageView, StaffDelete } from './staff/staff.component';
 import { CommandComponent, CommandDialog, CommandDelete } from './command/command.component';
 import { CategoryComponent, CategoryForm, CategoryDelete } from './category/category.component';
-import { ReportComponent } from './report/report.component';
+import { ReportComponent,PictureView } from './report/report.component';
 import { DatePipe } from '@angular/common';
 @NgModule({
   declarations: [
@@ -73,7 +73,8 @@ import { DatePipe } from '@angular/common';
     CategoryComponent,
     CategoryForm,
     CategoryDelete,
-    ReportComponent
+    ReportComponent,
+    PictureView
   ],
   imports: [
     BrowserModule,
@@ -131,7 +132,8 @@ import { DatePipe } from '@angular/common';
     CategoryComponent,
     CategoryForm,
     CategoryDelete,
-    ReportComponent
+    ReportComponent,
+    PictureView
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent]

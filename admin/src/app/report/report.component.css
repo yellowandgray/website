@@ -14,3 +14,9 @@
     padding: 5px;
     text-align: left !Important;
 }
+
+
+.size-table td{
+    border: none !important;
+    
+}
