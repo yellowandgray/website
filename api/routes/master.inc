@@ -285,6 +285,18 @@ $app->get('/get_topic', function() {
     echoRespnse(201, $res);
 });
 
+$app->get('/get_topicifsub', function() {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('DISTINCT t.*', 'topic AS t RIGHT JOIN sub_topic AS s ON t.topic_id = s.topic_id', 't.topic_id > 0');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
 $app->get('/get_topic_by_chapter/:cid', function($cid) {
     $res = array('error' => true, 'message' => 'No records found');
     $obj = new Common();
