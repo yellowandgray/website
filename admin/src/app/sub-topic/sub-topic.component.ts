@@ -23,8 +23,8 @@ export class SubTopicComponent implements OnInit {
     this.gettopic();
   }
     gettopic(): void {
-        //this.httpClient.get<any>('http://localhost/Projects/Feringo/website/api/v1/get_topic')
-        this.httpClient.get<any>('http://localhost/Projects/Feringo/website/api/v1/get_topicifsub')
+        //this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_topic')
+        this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_topicifsub')
           .subscribe(
             (res) => {
               this.topic = res["result"]["data"];
