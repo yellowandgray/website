@@ -324,7 +324,7 @@ include 'head.php';
                                                 <div class="float-left">
                                                     <input id="show-olq" type="checkbox" value="show_olq" @change="showolqChange" v-model="olqshow"> <span>Show Question in <?php echo $other_language['name']; ?></span>
                                                 </div> 
-                                                <div class="float-right">
+                                                <div class="float-right pause-responsive">
                                                     <div class="pause-right" @click="clickPause">
                                                         <i class="icon-pause"></i>
                                                     </div>
@@ -338,7 +338,7 @@ include 'head.php';
                                         <!-- show Go Question testing purpose -->
 <?php if ($testmode == 1) { ?>  
                                             <div class="quiz-review">
-                                                <div class="float-left" style="padding: 20px 0;">
+                                                <div class="float-left admin-panel-section">
                                                     <a href="#" onclick="showqno();" class="btn logout-btn">Question Admin Panel</a>
                                                     <input type="text" id="goques" name="goquestion" style="width:30px;margin-bottom: 0px;">
                                                     <a v-on:click="goquestion();" class="btn btn-primary">Go</a>
