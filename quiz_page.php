@@ -32,11 +32,11 @@ if ($_SESSION['student_selected_type'] == 'order') {
     $selyear = $obj->selectRow('*', 'year', 'year=\'' . $_GET['year'] . '\'');
     $_SESSION['student_selected_year_id'] = $selyear['year_id'];
 
-    $questions              = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer, image_path, direction,question_id,explanation,image_path_explanation,explanation_img_direction,question_no', 'question', 'topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $_SESSION['student_selected_language_id'] . ') AND year_id = ' . $_SESSION['student_selected_year_id'] . ' ORDER BY question_no ASC,year_id ASC, topic_id ASC');
-    if($testmode==1){
-        $other_lang_questions   = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer, image_path, direction,question_id,explanation,image_path_explanation,explanation_img_direction,question_no', 'question', 'topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $other_language['language_id'] . ') AND year_id = ' . $_SESSION['student_selected_year_id'] . ' ORDER BY question_no ASC,year_id ASC, topic_id ASC');
+    $questions = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer, image_path, direction,question_id,explanation,image_path_explanation,explanation_img_direction,question_no', 'question', 'topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $_SESSION['student_selected_language_id'] . ') AND year_id = ' . $_SESSION['student_selected_year_id'] . ' ORDER BY question_no ASC,year_id ASC, topic_id ASC');
+    if ($testmode == 1) {
+        $other_lang_questions = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer, image_path, direction,question_id,explanation,image_path_explanation,explanation_img_direction,question_no', 'question', 'topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $other_language['language_id'] . ') AND year_id = ' . $_SESSION['student_selected_year_id'] . ' ORDER BY question_no ASC,year_id ASC, topic_id ASC');
     }
-    
+
     //resume log
     $student_log_v = '';
     if (isset($_REQUEST['from_log']) && ($_REQUEST['from_log'] != '')) {
@@ -77,8 +77,8 @@ if ($_SESSION['student_selected_type'] == 'subject') {
     $_SESSION['student_selected_years_id'] = $_GET['years'];
     //$questions = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer, image_path, direction', 'question', 'topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $_SESSION['student_selected_language_id'] . ' AND t.topic_id IN (' . $_SESSION['student_selected_topics_id'] . ') ORDER BY t.subject_id ASC) AND year_id IN (' . $_SESSION['student_selected_years_id'] . ') ORDER BY year_id ASC, topic_id ASC');
     $questions = $obj->selectAll('question.name As name, a, b, c, d, UPPER(answer) AS answer, image_path, direction,question_id,explanation,image_path_explanation,explanation_img_direction,question_no', 'question LEFT JOIN topic ON question.topic_id=topic.topic_id', 'question.topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $_SESSION['student_selected_language_id'] . ' AND t.topic_id IN (' . $_SESSION['student_selected_topics_id'] . ') ORDER BY t.subject_id ASC) AND year_id IN (' . $_SESSION['student_selected_years_id'] . ') ORDER BY question_no ASC,subject_id ASC,question.topic_id ASC,year_id ASC');
-    if($testmode==1){
-        $other_lang_questions   = $obj->selectAll('question.name As name, a, b, c, d, UPPER(answer) AS answer, image_path, direction,question_id,explanation,image_path_explanation,explanation_img_direction,question_no', 'question LEFT JOIN topic ON question.topic_id=topic.topic_id', 'question.topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $other_language['language_id'] . ' AND t.topic_id IN (' . $_SESSION['student_selected_topics_id'] . ') ORDER BY t.subject_id ASC) AND year_id IN (' . $_SESSION['student_selected_years_id'] . ') ORDER BY question_no ASC,subject_id ASC,question.topic_id ASC,year_id ASC');
+    if ($testmode == 1) {
+        $other_lang_questions = $obj->selectAll('question.name As name, a, b, c, d, UPPER(answer) AS answer, image_path, direction,question_id,explanation,image_path_explanation,explanation_img_direction,question_no', 'question LEFT JOIN topic ON question.topic_id=topic.topic_id', 'question.topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $other_language['language_id'] . ' AND t.topic_id IN (' . $_SESSION['student_selected_topics_id'] . ') ORDER BY t.subject_id ASC) AND year_id IN (' . $_SESSION['student_selected_years_id'] . ') ORDER BY question_no ASC,subject_id ASC,question.topic_id ASC,year_id ASC');
     }
     $student_log = $obj->insertRecord(array('language_id' => $_SESSION['student_selected_language_id'],
         'student_register_id' => $_SESSION['student_register_id'], 'total_questions' => count($questions),
@@ -155,7 +155,7 @@ if (count($questions) > 0) {
             'explanation' => $q['explanation'],
             'image_path_explanation' => $q['image_path_explanation'],
             'explanation_img_direction' => $q['explanation_img_direction'],
-            'question_no'=>$q['question_no'],
+            'question_no' => $q['question_no'],
         ));
 
         /*
@@ -176,7 +176,7 @@ if (count($questions) > 0) {
 }
 
 
-if($testmode==1){
+if ($testmode == 1) {
     $otherlang_questions_list = array();
     if (count($other_lang_questions) > 0) {
         foreach ($other_lang_questions as $oq) {
@@ -212,10 +212,8 @@ if($testmode==1){
                 'explanation' => $oq['explanation'],
                 'image_path_explanation' => $oq['image_path_explanation'],
                 'explanation_img_direction' => $oq['explanation_img_direction'],
-                'question_no'=>$oq['question_no'],
+                'question_no' => $oq['question_no'],
             ));
-
-
         }
     }
 }
@@ -261,13 +259,13 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
 ?>
 <!DOCTYPE html>
 <html lang="en">
-    <?php
-    $page = 'about';
-    include 'head.php';
-    ?>
+<?php
+$page = 'about';
+include 'head.php';
+?>
     <body class="goto-here">
         <!--container-->
-        <?php include 'menu.php'; ?>
+<?php include 'menu.php'; ?>
         <div class="quiz-section" style="display:none;">
             <section class="container">
                 <div class="row">
@@ -286,13 +284,13 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                         <td valign="top" class="w-5">:</td>
                                         <th valign="top"><?php echo $type; ?></th>
                                     </tr>
-                                    <?php if (isset($_SESSION['student_selected_topics_id']) && ($_SESSION['student_selected_topics_id'] != '')) { ?>
+<?php if (isset($_SESSION['student_selected_topics_id']) && ($_SESSION['student_selected_topics_id'] != '')) { ?>
                                         <tr>
                                             <td valign="top">Selected Subject and Topics</td>
                                             <td valign="top" class="w-5">:</td>
                                             <th valign="top"><?php echo $sub_topic_val; ?></th>
                                         </tr>
-                                    <?php } ?>
+<?php } ?>
                                     <tr>
                                         <td valign="top">Selected Year</td>
                                         <td valign="top" class="w-5">:</td>
@@ -305,9 +303,9 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                             </a>
                             <div class="quiz-timer">
                                 <span id="minutes">00</span> : <span id="seconds">00</span>
-                                
-                               
-                                
+
+
+
                             </div>
                         </div>
                         <!--question Box-->
@@ -318,7 +316,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     <!--progress-->
                                     <div class="progressContainer">
                                         <!-- show answer immediate -->
-                                        <?php if ($testmode == 1) { ?>
+<?php if ($testmode == 1) { ?>
                                             <div class="quiz-pause">
                                                 <div class="float-left">
                                                     <input id="show-immediately" type="checkbox" value="show_answer_immediately" @change="immChange" v-model="showimmediate"> <span class="span-position">Show Answer</span>
@@ -332,26 +330,26 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                                     </div>
                                                 </div>
                                             </div>   
-                                        <?php } ?>
+<?php } ?>
                                         <!-- show answer immediate -->
 
 
-                                        
-                                         <!-- show Go Question testing purpose -->
-                                <?php if ($testmode == 1) { ?>  
-                                         <div class="quiz-review">
-                                 <div class="float-left" style="padding: 20px 0;">
-                                          <a href="#" onclick="showqno();" class="btn logout-btn">Question Admin Panel</a>
+
+                                        <!-- show Go Question testing purpose -->
+<?php if ($testmode == 1) { ?>  
+                                            <div class="quiz-review">
+                                                <div class="float-left" style="padding: 20px 0;">
+                                                    <a href="#" onclick="showqno();" class="btn logout-btn">Question Admin Panel</a>
                                                     <input type="text" id="goques" name="goquestion" style="width:30px;margin-bottom: 0px;">
-                                            <a v-on:click="goquestion();" class="btn btn-primary">Go</a>
-                                        </div>
-                                         </div>   
-                                <?php } ?>
-                                <!-- show Go Question testing purpose -->
-                                        
-                                        
+                                                    <a v-on:click="goquestion();" class="btn btn-primary">Go</a>
+                                                </div>
+                                            </div>   
+<?php } ?>
+                                        <!-- show Go Question testing purpose -->
+
+
                                         <!-- show review -->
-                                        <?php if ($testmode == 0) { ?>
+<?php if ($testmode == 0) { ?>
                                             <div class="quiz-review">
                                                 <div class="float-left">
                                                     <a v-on:click="revAns();" class="btn btn-theme" v-if="!revShow">Review Answer</a>
@@ -359,7 +357,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                                 </div> 
 
                                             </div>   
-                                        <?php } ?>
+<?php } ?>
                                         <!-- show review -->
 
                                         <h1 class="title is-6">Quiz</h1> 
@@ -375,39 +373,39 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                 <div v-if="!revShow">
                                     <!-- questionTitle -->
                                     <div id="quiz-hidden">
-                                    <div v-if="quiz.questions[questionIndex].show_image" class="text-center">
-                                        <img style="width: 50%" v-if="quiz.questions[questionIndex].direction == 'top'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />
-                                    </div>
-                                    <h2 class="titleContainer title"><span class="quiz-question-no">{{questionIndex + 1}}.</span> <span class="quiz-question-title" v-html="quiz.questions[questionIndex].text"></span>
-                                    </h2>
-                                    <div v-if="quiz.questions[questionIndex].show_image" class="text-center">
-                                        <img style="width: 50%" v-if="quiz.questions[questionIndex].direction == 'bottom'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />
-                                    </div>
-                                    <!-- quizOptions -->
-                                    <div class="optionContainer">
-                                        <div class="option" :id="index | charIndex | AddPrefix('ansopt_')" v-for="(response, index) in quiz.questions[questionIndex].responses" @click="selectOption(index)" :class="{ 'is-selected': userResponses[questionIndex] == index}" :key="index" v-if="response.text != ''">
-                                             <span class="q-option">{{ index | charIndex }}.&nbsp;</span> <span v-html="response.text"></span>
+                                        <div v-if="quiz.questions[questionIndex].show_image" class="text-center">
+                                            <img style="width: 50%" v-if="quiz.questions[questionIndex].direction == 'top'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />
                                         </div>
+                                        <h2 class="titleContainer title"><span class="quiz-question-no">{{questionIndex + 1}}.</span> <span class="quiz-question-title" v-html="quiz.questions[questionIndex].text"></span>
+                                        </h2>
+                                        <div v-if="quiz.questions[questionIndex].show_image" class="text-center">
+                                            <img style="width: 50%" v-if="quiz.questions[questionIndex].direction == 'bottom'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />
+                                        </div>
+                                        <!-- quizOptions -->
+                                        <div class="optionContainer">
+                                            <div class="option" :id="index | charIndex | AddPrefix('ansopt_')" v-for="(response, index) in quiz.questions[questionIndex].responses" @click="selectOption(index)" :class="{ 'is-selected': userResponses[questionIndex] == index}" :key="index" v-if="response.text != ''">
+                                                 <span class="q-option">{{ index | charIndex }}.&nbsp;</span> <span v-html="response.text"></span>
+                                            </div>
 
-                                        <!--div style="margin: 0 auto; text-align: center" v-if="questionIndex>0">
-                                                <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="prev();" :disabled="questionIndex>=quiz.questions.length">
-                                                    Back
-                                                </a>
-                                            </div--> 
-                                        
-                                         <?php 
-                                         /*
-                                         if ($testmode == 1) {  ?>  
-                                        <div class="text-center">
-                                                <div class="float-left">
-                                                    <a v-on:click="showQuestionOtherLang();" class="btn btn-theme">Show Question In <?php echo $other_language['name']; ?></a>
-                                                </div> 
+                                            <!--div style="margin: 0 auto; text-align: center" v-if="questionIndex>0">
+                                                    <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="prev();" :disabled="questionIndex>=quiz.questions.length">
+                                                        Back
+                                                    </a>
+                                                </div--> 
 
-                                         </div>  
-                                <?php }*/  ?>
-                                        
+<?php /*
+  if ($testmode == 1) {  ?>
+  <div class="text-center">
+  <div class="float-left">
+  <a v-on:click="showQuestionOtherLang();" class="btn btn-theme">Show Question In <?php echo $other_language['name']; ?></a>
+  </div>
+
+  </div>
+  <?php } */ ?>
+
+                                        </div>
                                     </div>
-                                    </div>
+
                                     <div class="question-admin-panel" style="width: 100%; padding: 20px; display: none;">
                                         <div class="question-number-title">
                                             <span class="showqus" onclick="showqus();"><i class="icon-angle-left"></i> Back</span>
@@ -489,13 +487,57 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                             </div>
                                         </div>
                                     </div>
+                                    <!-- Start subject Result Filter Section -->
+                                    <div class="result-filter-section" style="display: none;">
+                                        <table>
+                                            <tr>
+                                                <th>Subject</th>
+                                                <th>Topic</th>
+                                                <th>Total</th>
+                                                <th>Answered</th>
+                                                <th><i class="icon-ok"></i></th>
+                                                <th><i class="icon-remove"></i></th>
+                                                <th>&nbsp;</th>
+                                            </tr>
+                                            <tr>
+                                                <td>History and Culture of India</td>
+                                                <td>Indus Valley Civilization</td>
+                                                <td>12</td>
+                                                <td>12</td>
+                                                <td>9</td>
+                                                <td>3</td>
+                                                <td>
+                                                    <button class="btn btn-answerd-clr">Show Details</button>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <!-- End Subject Result Filter Section -->
                                     
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
+                                    <!-- Start Year Result Filter Section -->
+                                    <div class="result-filter-section" style="display: none;">
+                                        <table>
+                                            <tr>
+                                                <th>Year</th>
+                                                <th>Total</th>
+                                                <th>Answered</th>
+                                                <th><i class="icon-ok"></i></th>
+                                                <th><i class="icon-remove"></i></th>
+                                                <th>&nbsp;</th>
+                                            </tr>
+                                            <tr>
+                                                <td>2019</td>
+                                                <td>12</td>
+                                                <td>12</td>
+                                                <td>9</td>
+                                                <td>3</td>
+                                                <td>
+                                                    <button class="btn btn-answerd-clr">Show Details</button>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <!-- End Subject Result Filter Section -->
 
                                     <footer class="questionFooter" id='quiz-nxt-footer' v-if="showimmediate && !showimmediateblk">
                                         <!--                                    pagination-->
@@ -602,67 +644,67 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                         <!--                                    /pagination-->
 
                                     </footer>
-                                    
+
                                     <div v-if="olqshow">
-                                        
+
                                         <div v-if="olqd">
-                                        <div v-if="olqd.show_image" class="text-center">
-                                        <img style="width: 50%" v-if="olqd.direction == 'top'" v-bind:src="'api/v1/'+olqd.image_path" alt="image" class="qes-img" />
-                                    </div>
-                                    <h2 class="titleContainer title"><span class="quiz-question-no">{{questionIndex + 1}}.</span> <span class="quiz-question-title" v-html="olqd.text"></span>
-                                    </h2>
-                                    <div v-if="olqd.show_image" class="text-center">
-                                        <img style="width: 50%" v-if="olqd.direction == 'bottom'" v-bind:src="'api/v1/'+olqd.image_path" alt="image" class="qes-img" />
-                                    </div>
-                                    <!-- quizOptions -->
-                                    <div class="optionContainer">
-                                        <div class="option" :id="olqdindex | charIndex | AddPrefix('olqdansopt_')" v-for="(olqdresponse, olqdindex) in olqd.responses" >
-                                             <span class="q-option">{{ olqdindex | charIndex }}.&nbsp;</span> <span v-html="olqdresponse.text"></span>
-                                        </div>
+                                            <div v-if="olqd.show_image" class="text-center">
+                                                <img style="width: 50%" v-if="olqd.direction == 'top'" v-bind:src="'api/v1/'+olqd.image_path" alt="image" class="qes-img" />
+                                            </div>
+                                            <h2 class="titleContainer title"><span class="quiz-question-no">{{questionIndex + 1}}.</span> <span class="quiz-question-title" v-html="olqd.text"></span>
+                                            </h2>
+                                            <div v-if="olqd.show_image" class="text-center">
+                                                <img style="width: 50%" v-if="olqd.direction == 'bottom'" v-bind:src="'api/v1/'+olqd.image_path" alt="image" class="qes-img" />
+                                            </div>
+                                            <!-- quizOptions -->
+                                            <div class="optionContainer">
+                                                <div class="option" :id="olqdindex | charIndex | AddPrefix('olqdansopt_')" v-for="(olqdresponse, olqdindex) in olqd.responses" >
+                                                     <span class="q-option">{{ olqdindex | charIndex }}.&nbsp;</span> <span v-html="olqdresponse.text"></span>
+                                                </div>
 
-                                        <!--div style="margin: 0 auto; text-align: center" v-if="questionIndex>0">
-                                                <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="prev();" :disabled="questionIndex>=quiz.questions.length">
-                                                    Back
-                                                </a>
-                                            </div--> 
-                                        
-                                         
-                                    </div>
-                                        
+                                                <!--div style="margin: 0 auto; text-align: center" v-if="questionIndex>0">
+                                                        <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="prev();" :disabled="questionIndex>=quiz.questions.length">
+                                                            Back
+                                                        </a>
+                                                    </div--> 
+
+
+                                            </div>
+
                                         </div> 
-                                        
-                                         <div v-if="!olqd">
-                                             <h2 class="titleContainer title"><span class="quiz-question-title">Question Not Available in <?php echo $other_language['name'] ?></span></h2>
-                                         </div>  
+
+                                        <div v-if="!olqd">
+                                            <h2 class="titleContainer title"><span class="quiz-question-title">Question Not Available in <?php echo $other_language['name'] ?></span></h2>
+                                        </div>  
                                     </div>
 
-                                    <?php
-                                    /*
-                                      <footer class="questionFooter"  v-if="showimmediateblk">
-                                      <div class="question-explanation">
-                                      <h4>Explanation:</h4>
-                                      <div v-if="quiz.questions[questionIndex].show_image_explanation" class="text-center">
-                                      <img v-if="quiz.questions[questionIndex].explanation_img_direction == 'top'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
-                                      </div>
-                                      <span v-html="quiz.questions[questionIndex].explanation"></span>
-                                      <div v-if="quiz.questions[questionIndex].show_image_explanation" class="text-center">
-                                      <img v-if="quiz.questions[questionIndex].explanation_img_direction == 'buttom'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
-                                      </div>
-                                      </div>
-                                      <!--                                    <nav class="pagination" role="navigation" aria-label="pagination">
-                                      <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">
-                                      Back
-                                      </a>
-                                      <a class="btn btn-green" href="select_language">
-                                      Home
-                                      </a>
-                                      <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
-                                      {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}
-                                      </a>
-                                      </nav>-->
-                                      </footer>
-                                     */
-                                    ?>                                           
+<?php
+/*
+  <footer class="questionFooter"  v-if="showimmediateblk">
+  <div class="question-explanation">
+  <h4>Explanation:</h4>
+  <div v-if="quiz.questions[questionIndex].show_image_explanation" class="text-center">
+  <img v-if="quiz.questions[questionIndex].explanation_img_direction == 'top'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
+  </div>
+  <span v-html="quiz.questions[questionIndex].explanation"></span>
+  <div v-if="quiz.questions[questionIndex].show_image_explanation" class="text-center">
+  <img v-if="quiz.questions[questionIndex].explanation_img_direction == 'buttom'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
+  </div>
+  </div>
+  <!--                                    <nav class="pagination" role="navigation" aria-label="pagination">
+  <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">
+  Back
+  </a>
+  <a class="btn btn-green" href="select_language">
+  Home
+  </a>
+  <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
+  {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}
+  </a>
+  </nav>-->
+  </footer>
+ */
+?>                                           
                                 </div>
                             </div>   
                             <!--quizCompletedResult-->
@@ -708,7 +750,6 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                         </div>
                         <!-- question Box -->
 
-
                         <div id="create" class="quiz-result" style="display: none;">
 
                             <div id="question_list"></div>
@@ -721,17 +762,14 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
         </div>
         <!--/container-->
 
-
-
-
         <div class="loadingoverlay" style="display: none">
             <div class="loadingoverlay-spinner">
                 <img alt="" src="img/loader.gif" />
             </div>
         </div>
 
-        <?php include 'footer.php'; ?>
-        <?php include 'script.php'; ?>
+<?php include 'footer.php'; ?>
+<?php include 'script.php'; ?>
         <script>
             image_url = 'http://localhost/project/exam-horse/api/v1/';
             console.log(<?php echo json_encode($questions_list); ?>);
@@ -747,7 +785,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                     questionIndex: <?php
         echo $attended_questions;
         //echo 0; 
-        ?>,
+?>,
                     userResponses: userResponseSkelaton,
                     showimmediate: false,
                     showimmediateblk: false,
@@ -756,8 +794,8 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                     studans: false,
                     isActive: false,
                     revShow: false,
-                    olqshow:false,
-                    olqd:null
+                    olqshow: false,
+                    olqd: null
                 },
                 filters: {
                     charIndex: function (i) {
@@ -977,13 +1015,13 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                             setTimeout(() => {
                                 Vue.set(this.userResponses, this.questionIndex, index);
                                 if (this.questionIndex < this.quiz.questions.length) {
-                                    this.questionIndex++;      
-                                    
-                                     <?php  if($testmode==1){        ?>  
-                         if(this.olqshow) {
-                            this.showQuestionOtherLang();
-                         }  
-                         <?php } ?>  
+                                    this.questionIndex++;
+
+<?php if ($testmode == 1) { ?>
+                                        if (this.olqshow) {
+                                            this.showQuestionOtherLang();
+                                        }
+<?php } ?>
 
                                     var nqid = this.questionIndex + 1;
 
@@ -1016,10 +1054,10 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     }
 
                                 }
-                            }, 500);                            
-                            
-                              
-                            
+                            }, 500);
+
+
+
                             setTimeout(() => {
                                 applyMathAjax();
                                 $('.loadingoverlay').hide();
@@ -1067,13 +1105,13 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                             }
                         }
 
-                        
+
                         setTimeout(() => {
                             applyMathAjax();
                             $('.loadingoverlay').hide();
                         }, 600);
-                        
-                         
+
+
                     },
                     next: function () {
 
@@ -1149,14 +1187,14 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                         }
                                     });
                         }
-                        
-                        
-                         <?php  if($testmode==1){        ?>  
-                         if(this.olqshow) {
-                            this.showQuestionOtherLang();
-                         }  
-                         <?php } ?>
-       
+
+
+<?php if ($testmode == 1) { ?>
+                            if (this.olqshow) {
+                                this.showQuestionOtherLang();
+                            }
+<?php } ?>
+
                     },
                     prev: function () {
                         $('.loadingoverlay').show();
@@ -1220,20 +1258,20 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     });
 
                         }
-                        
-                         <?php  if($testmode==1){        ?>  
-                         if(this.olqshow) {
-                            this.showQuestionOtherLang();
-                         }  
-                         <?php } ?>
-                        
+
+<?php if ($testmode == 1) { ?>
+                            if (this.olqshow) {
+                                this.showQuestionOtherLang();
+                            }
+<?php } ?>
+
                         setTimeout(() => {
                             applyMathAjax();
                             $('.loadingoverlay').hide();
                         }, 600);
-                        
-                        
-                        
+
+
+
                     },
                     // Return "true" count in userResponses
 
@@ -1319,58 +1357,58 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
 
 
                     },
-                    goquestion: function () {    
+                    goquestion: function () {
                         var goquestion = parseInt($("#goques").val());
-      
-                        this.questionIndex = goquestion-1;
-                                
-                         $('.loadingoverlay').show();
-                         
-                         
-                          <?php  if($testmode==1){        ?>  
-                         if(this.olqshow) {
-                            this.showQuestionOtherLang();
-                         }  
-                         <?php } ?>
-                         
-                        setTimeout(() => {                            
-                            applyMathAjax();   
-                            $('.loadingoverlay').hide();
-                        }, 600);      
-                        
-                        
 
-                    },   
+                        this.questionIndex = goquestion - 1;
+
+                        $('.loadingoverlay').show();
+
+
+<?php if ($testmode == 1) { ?>
+                            if (this.olqshow) {
+                                this.showQuestionOtherLang();
+                            }
+<?php } ?>
+
+                        setTimeout(() => {
+                            applyMathAjax();
+                            $('.loadingoverlay').hide();
+                        }, 600);
+
+
+
+                    },
                     showolqChange: function () {
-                        
-                       !this.olqshow;
-                       if(this.olqshow) {         
-                           this.showQuestionOtherLang();  
-                       }   
-                    },   
-                    showQuestionOtherLang: function() {
-                      
-                       <?php  if($testmode==1){        ?>      
-                            this.olqd = null;   
-                            var other_language = '<?php  echo $other_language['language_id']; ?>';
+
+                        !this.olqshow;
+                        if (this.olqshow) {
+                            this.showQuestionOtherLang();
+                        }
+                    },
+                    showQuestionOtherLang: function () {
+
+<?php if ($testmode == 1) { ?>
+                            this.olqd = null;
+                            var other_language = '<?php echo $other_language['language_id']; ?>';
                             var questions = <?php echo json_encode($questions_list); ?>;
                             var otherlang_questions = <?php echo json_encode($otherlang_questions_list); ?>;
                             var qno = questions[this.questionIndex].question_no;
-                            
-                           if(otherlang_questions) {
-                               for (let i = 0; i < otherlang_questions.length; i++) {                               
-                                    if(otherlang_questions[i].question_no==qno){
+
+                            if (otherlang_questions) {
+                                for (let i = 0; i < otherlang_questions.length; i++) {
+                                    if (otherlang_questions[i].question_no == qno) {
                                         this.olqd = otherlang_questions[i];
                                         //this.olqshow = true;
-                                        
-                                         
+
+
+                                    }
                                 }
-                                }
-                            }else {
+                            } else {
                                 this.olqd = null;
-                            }    
-                       <?php } ?>
-                    },    
+                            }
+<?php } ?>
+                    },
                     score: function () {
                         var score = 0;
                         for (let i = 0; i < this.userResponses.length; i++) {
@@ -1414,13 +1452,13 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                 }
             }
 
-            $(document).ready(function(){
-               $('.loadingoverlay').show();
-               setTimeout(() => {                            
-                            applyMathAjax();  
-                            $('.quiz-section').show();
-                            $('.loadingoverlay').hide();
-                        }, 600);    
+            $(document).ready(function () {
+                $('.loadingoverlay').show();
+                setTimeout(() => {
+                    applyMathAjax();
+                    $('.quiz-section').show();
+                    $('.loadingoverlay').hide();
+                }, 600);
             });
         </script>
         <script>

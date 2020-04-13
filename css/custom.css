@@ -1410,3 +1410,22 @@ and open the template in the editor.
     background: #000;
     margin-right: 6px;
 }
+
+.result-filter-section table th {
+    padding: 5px;
+}
+
+.result-filter-section table td {
+    padding: 5px;
+}
+
+.result-filter-section table th  {
+    padding: 5px;
+    text-align: left;
+    color: #f53c00;
+}
+
+.result-filter-section table th i {
+    color: #f53c00;
+    text-align: center;
+}
