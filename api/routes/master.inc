@@ -708,6 +708,30 @@ $app->get('/get_assigned_feedback/:stud_id', function($stud_id) {
     echoRespnse(201, $res);
 });
 
+$app->get('/get_assigned_answered_feedback/:stud_id', function($stud_id) {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('f.*,ftm.feedback_timing As fb_timing,fe.*,f.created_at As created_at,sf.student_answer,sf.created_at As answered_at', 'user_assign_feedback As f LEFT JOIN feedback_timing_master As ftm ON f.timing_id=ftm.feedback_timing_id LEFT JOIN feedback As fe ON f.feedback_id=fe.feedback_id LEFT JOIN student_feedback As sf ON fe.feedback_id=sf.feedback_id AND sf.student_id='.$stud_id, 'f.student_id ='.$stud_id );
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_answered_feedback_student/:stud_id', function($stud_id) {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('sf.*,f.option_1,f.option_2,f.option_3,ft.feedback_type', 'student_feedback As sf LEFT JOIN feedback As f ON f.feedback_id=sf.feedback_id LEFT JOIN feedback_type_master As ft ON f.feedback_type=ft.feedback_type_id', 'sf.student_id ='.$stud_id );
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
 $app->get('/get_feedback_by_type/:ftype', function($ftype) {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();

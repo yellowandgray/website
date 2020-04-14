@@ -76,11 +76,12 @@ image_url: string = 'http://localhost/project/feringo/api/v1/';
      
     openAssignedDialog(id): void {
 
- this.httpClient.get('http://localhost/project/feringo/api/v1/get_assigned_feedback/' +id).subscribe(
+this.httpClient.get('http://localhost/project/feringo/api/v1/get_assigned_answered_feedback/' +id).subscribe(
         (res) => {
             //this.loading = false;
             
-            if(res["result"]["error"] == false) {
+            if(res["result"]["error"] == false) {               
+        
             
           const dialogRef = this.dialog.open(AssignedFeedbackForm, {
       minWidth: "40%",

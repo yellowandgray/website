@@ -34,13 +34,30 @@
             <div class="option"><span [innerHTML]="row.option_2"></span></div>
         </div>
 
-        <div class="result-option" *ngIf="row.feedback_type==2">
+        <div class="result-option" *ngIf="row.feedback_type==2 && row.option_3!=''">
             <div class="option"><span [innerHTML]="row.option_3"></span></div>
         </div>
 
-        <div  class="">
-
+        <div  class="student_ans" *ngIf="row.answered_at!=''">
+                <div *ngIf="row.feedback_type==1"><span [innerHTML]="row.student_answer"></span>-<span [innerHTML]="row.answered_at"></span></div>    
+                
+                <div *ngIf="row.feedback_type==2 && row.student_answer=='option_1'">
+                    <span [innerHTML]="row.option_1"></span>-<span [innerHTML]="row.answered_at">              
+                    </span>
+                </div>  
+                
+                 <div *ngIf="row.feedback_type==2 && row.student_answer=='option_2'">
+                    <span [innerHTML]="row.option_2"></span>-<span [innerHTML]="row.answered_at">              
+                    </span>
+                </div>  
+                
+                <div *ngIf="row.feedback_type==2 && row.student_answer=='option_3'">
+                    <span [innerHTML]="row.option_3"></span>-<span [innerHTML]="row.answered_at">              
+                    </span>
+                </div>  
         </div>   
+        
+       
 
         <br/>  
     </div>
