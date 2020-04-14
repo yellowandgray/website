@@ -592,7 +592,42 @@ $app->post('/store_answer', function() use ($app) {
                 'a' => $record['a'], 'b' => $record['b'], 'c' => $record['c'], 'd' => $record['d'], 'answer' => $record['answer'],
                 'explanation' => $record['explanation'], 'image_path_explanation' => $record['image_path_explanation'],
                 'explanation_img_direction' => $record['explanation_img_direction'], 'question_no' => $record['question_no'],
-                'student_answer' => $data['answer'], 'created_at' => date('Y-m-d'), 'updated_at' => date('Y-m-d')), 'student_log_detail','question_id=' . $data['question_id'] .' AND student_log_id='.$data['student_log_id']);
+                'student_answer' => $data['answer'],  'updated_at' => date('Y-m-d')), 'student_log_detail','question_id=' . $data['question_id'] .' AND student_log_id='.$data['student_log_id']);
+        }     
+        // exit;
+    } else {
+        $res['message'] = 'Unable to insert this answer';
+    }
+    echoRespnse(201, $res);
+});
+
+
+$app->post('/store_notsure_answer', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Invalid login details');
+    $data = $app->request->post();
+    $obj = new Common();
+    $record = $obj->selectRow('*', 'question', 'question_id=' . $data['question_id']);
+    if (count($record) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Answer inserted successfully';
+
+                
+        $record_log_detail = $obj->selectRow('*', 'student_log_detail', 'question_id=' . $data['question_id'] .' AND student_log_id='.$data['student_log_id']);
+        if (count($record_log_detail) == 0) {
+        
+            $obj->insertRecord(array('question_id' => $record['question_id'], 'student_log_id' => $data['student_log_id'],
+                'name' => $record['name'], 'image_path' => $record['image_path'], 'direction' => $record['direction'],
+                'a' => $record['a'], 'b' => $record['b'], 'c' => $record['c'], 'd' => $record['d'], 'answer' => $record['answer'],
+                'explanation' => $record['explanation'], 'image_path_explanation' => $record['image_path_explanation'],
+                'explanation_img_direction' => $record['explanation_img_direction'], 'question_no' => $record['question_no'],
+                'student_answer' => $data['answer'],'student_notsure_answer' => $data['notsure_answer'], 'created_at' => date('Y-m-d'), 'updated_at' => date('Y-m-d')), 'student_log_detail');
+        }else {
+            
+             $obj->updateRecordWithWhere(array('name' => $record['name'], 'image_path' => $record['image_path'], 'direction' => $record['direction'],
+                'a' => $record['a'], 'b' => $record['b'], 'c' => $record['c'], 'd' => $record['d'], 'answer' => $record['answer'],
+                'explanation' => $record['explanation'], 'image_path_explanation' => $record['image_path_explanation'],
+                'explanation_img_direction' => $record['explanation_img_direction'], 'question_no' => $record['question_no'],
+                'student_answer' => $data['answer'],'student_notsure_answer' => $data['notsure_answer'],  'updated_at' => date('Y-m-d')), 'student_log_detail','question_id=' . $data['question_id'] .' AND student_log_id='.$data['student_log_id']);
         }     
         // exit;
     } else {
@@ -635,6 +670,19 @@ $app->get('/get_student_answer/:qid/:logid', function($qid,$log_id) {
         $res['error'] = false;
         $res['message'] = 'Records found';
         $res['data'] = $question_ans['student_answer'];
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_student_notsure_answer/:qid/:logid', function($qid,$log_id) {
+    $res = array('error' => true, 'message' => 'No records found');
+    $obj = new Common();
+    $question_ans = $obj->selectRow('*', 'student_log_detail', 'question_id = ' . $qid.' AND student_log_id='.$log_id);
+    if (count($question_ans) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $question_ans['student_answer'];
+        $res['data_notsure'] = $question_ans['student_notsure_answer'];
     }
     echoRespnse(201, $res);
 });

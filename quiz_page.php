@@ -340,14 +340,24 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                          <!-- show Go Question testing purpose -->
                                 <?php if ($testmode == 1) { ?>  
                                          <div class="quiz-review">
-                                 <div class="float-left" style="padding: 20px 0;">
-                                          <a href="#" onclick="showqno();" class="btn logout-btn">Question Admin Panel</a>
+                                 <div class="float-left" style="padding: 20px 0;">                                          
                                                     <input type="text" id="goques" name="goquestion" style="width:30px;margin-bottom: 0px;">
                                             <a v-on:click="goquestion();" class="btn btn-primary">Go</a>
                                         </div>
                                          </div>   
-                                <?php } ?>
+                                <?php } ?>                                         
                                 <!-- show Go Question testing purpose -->
+                                
+                                
+                                <!-- show question admin panel -->
+                                 <?php if ($testmode == 0) { ?>  
+                                <div class="quiz-review">
+                                    <div class="float-left" style="padding: 20px 0;">
+                                        <a href="#" onclick="showqno();" class="btn logout-btn">Question Admin Panel</a>
+                                    </div>
+                                </div>    
+                                <?php } ?>        
+                                <!-- show question admin panel -->
                                         
                                         
                                         <!-- show review -->
@@ -384,6 +394,22 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                         <img style="width: 50%" v-if="quiz.questions[questionIndex].direction == 'bottom'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />
                                     </div>
                                     <!-- quizOptions -->
+                                    
+                                    <?php if($testmode==0) {  //testmode  ?>
+                                        
+                                        <div class="optionContainer">
+                                        <div class="option" :id="index | charIndex | AddPrefix('ansopt_')" v-for="(response, index) in quiz.questions[questionIndex].responses" @click="selectOptionNoSave(index)" :class="{ 'is-selected': userResponses[questionIndex] == index}" :key="index" v-if="response.text != ''">
+                                             <span class="q-option">{{ index | charIndex }}.&nbsp;</span> <span v-html="response.text"></span>
+                                        </div>
+
+                                        <!--div style="margin: 0 auto; text-align: center" v-if="questionIndex>0">
+                                                <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="prev();" :disabled="questionIndex>=quiz.questions.length">
+                                                    Back
+                                                </a>
+                                            </div-->                                         
+                                    </div>
+                                        
+                                   <?php  }else { //learning mode  ?>
                                     <div class="optionContainer">
                                         <div class="option" :id="index | charIndex | AddPrefix('ansopt_')" v-for="(response, index) in quiz.questions[questionIndex].responses" @click="selectOption(index)" :class="{ 'is-selected': userResponses[questionIndex] == index}" :key="index" v-if="response.text != ''">
                                              <span class="q-option">{{ index | charIndex }}.&nbsp;</span> <span v-html="response.text"></span>
@@ -393,20 +419,10 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                                 <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="prev();" :disabled="questionIndex>=quiz.questions.length">
                                                     Back
                                                 </a>
-                                            </div--> 
-                                        
-                                         <?php 
-                                         /*
-                                         if ($testmode == 1) {  ?>  
-                                        <div class="text-center">
-                                                <div class="float-left">
-                                                    <a v-on:click="showQuestionOtherLang();" class="btn btn-theme">Show Question In <?php echo $other_language['name']; ?></a>
-                                                </div> 
-
-                                         </div>  
-                                <?php }*/  ?>
-                                        
+                                            </div-->                                         
                                     </div>
+                                    <?php } ?>
+                                    
                                     </div>
                                     <div class="question-admin-panel" style="width: 100%; padding: 20px; display: none;">
                                         <div class="question-number-title">
@@ -493,8 +509,57 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     
                                     
                                     
+                                    <?php  if($testmode==0){     //test mode   ?> 
+                                    
+                                    <footer class="questionFooter" id='quiz-nxt-footer'>
+                                        <!--                                    pagination-->
+                                        <nav class="pagination" role="navigation" aria-label="pagination">
+
+                                            <!--                                        back button -->
+                                            <!--                                        <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">Back</a>-->
+                                            <!--                                        <a class="btn btn-green" href="select_language">Home</a>-->
+
+                                            <!--                                    next button -->
+                                            <div style="text-align: left" >
+                                                <a class="button"  v-on:click="prevNoSave();" v-if="questionIndex>0" :disabled="questionIndex>=quiz.questions.length">
+                                                    Back
+                                                </a>
+                                            </div> 
+
+
+                                            
+                                            <div style="text-align: right" v-if="showsurebtnans">
+                                                <a class="button"  v-on:click="confirmSave();" :disabled="questionIndex>=quiz.questions.length">
+                                                    Sure
+                                                </a>
+                                            </div> 
+
+                                            <div style="text-align: center" v-if="shownotsureaftersel">
+                                                <a class="button"  v-on:click="notSureSave();" :disabled="questionIndex>=quiz.questions.length">
+                                                    Not Sure
+                                                </a>
+                                            </div> 
+
+              
+                                             <div style="text-align: right" v-if="shownextnosave">
+                                                <a class="button"  v-on:click="nextNoSave();" :disabled="questionIndex>=quiz.questions.length">
+                                                    Next
+                                                </a>
+                                            </div> 
+                                            
+                                             <div style="text-align: right" v-if="showcnfrmaftersel">
+                                                <a class="button"  v-on:click="confirmSave();" :disabled="questionIndex>=quiz.questions.length">
+                                                    Confirm
+                                                </a>
+                                            </div> 
+                                            
+                                        </nav>
+                                        <!--                                    /pagination-->
+
+                                    </footer>
                                     
                                     
+                                    <?php }else { //learning mode ?>
                                     
 
                                     <footer class="questionFooter" id='quiz-nxt-footer' v-if="showimmediate && !showimmediateblk">
@@ -525,6 +590,9 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
 
                                     </footer>
 
+                                    
+                                    
+                                    
 
                                     <!--footer class="questionFooter" id='quiz-nxt-footer'  v-if="shownotimmdnxt"-->
                                     <footer class="questionFooter" id='quiz-nxt-footer' v-if="!showimmediate">
@@ -602,6 +670,8 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                         <!--                                    /pagination-->
 
                                     </footer>
+                                    
+                                    <?php } ?>
                                     
                                     <div v-if="olqshow">
                                         
@@ -757,7 +827,14 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                     isActive: false,
                     revShow: false,
                     olqshow:false,
-                    olqd:null
+                    olqd:null,
+                    showcnfrmaftersel:false,
+                    shownotsureaftersel : false,
+                    shownextnosave : true,
+                    showsurebtnans:false,
+                    questionprevanswered:false,
+                    selected_answer: ''
+            
                 },
                 filters: {
                     charIndex: function (i) {
@@ -957,6 +1034,354 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     //swal("Deleted!", "Your imaginary file has been deleted.", "success");
                                 });
                     },
+                    selectOptionNoSave: function (index) {
+                        
+                        
+                        if(!this.questionprevanswered) {
+                            this.showsurebtnans         = false;
+                            this.shownotsureaftersel    = true;
+                            this.showcnfrmaftersel      = true;
+                            this.shownextnosave         = false;
+                        }    
+                        
+                                               
+                        var answers = ['A', 'B', 'C', 'D'];
+                        $.each(answers, function (key, val) {
+                            var optval = app.convertLower(val);
+                            //alert(' tostr '+answers[val].toString());
+                            $('#ansopt_' + optval).removeClass('crt_clr');
+                        }); 
+                         var selopt = app.convertLower(answers[index]);
+                        $('#ansopt_' + selopt).addClass('crt_clr');
+                        
+                          
+                        
+                        this.selected_answer = answers[index];
+                        
+                    },    
+                    notSureSave:function() {
+                        
+                        this.showsurebtnans  = false;
+                        this.shownextnosave   = true;
+                        this.shownotsureaftersel = false;
+                        this.showcnfrmaftersel = false;
+                        this.questionprevanswered = false;
+                        
+                        $('.loadingoverlay').show();
+                        
+                         setTimeout(() => {
+                                applyMathAjax();
+                                $('.loadingoverlay').hide();
+                            }, 600);
+                            
+                            
+                            
+                        if(this.selected_answer){
+                         var questions = <?php echo json_encode($questions_list); ?>;
+                         $.post("api/v1/store_notsure_answer",
+                                    {
+                                        question_id: questions[this.questionIndex].question_id,
+                                        answer: '',
+                                        notsure_answer : this.selected_answer,
+                                        student_log_id: <?php echo $student_log; ?>
+                                    },
+                                    function (data, status) {
+                                        if (data.result.error === false) {
+
+                                        }
+                                    });
+                         }
+                         
+                         
+                          setTimeout(() => {
+                                if (this.questionIndex < this.quiz.questions.length) {
+                                    this.questionIndex++;  
+                                    
+                                    this.selected_answer = '';                             
+                                    var qid = questions[this.questionIndex].question_id;
+                                    
+                                    $.get("api/v1/get_student_notsure_answer/" + qid + "/<?php echo $student_log; ?>",
+                                    function (data, status) {
+                                        if (data.result.error === false) {
+                                            ansid = data.result.data;
+                                            notsure_ansid = data.result.data_notsure;
+                                            
+
+                                            if(ansid!='')
+                                            {   
+                                                 var studansid = app.convertLower(ansid);
+                                                $('#ansopt_' + studansid).addClass('crt_clr');                                             
+                                                
+                                                
+                                                app.selected_answer = ansid;
+                                                app.shownotsureaftersel = true;
+                                                app.showcnfrmaftersel = false;    
+                                                app.questionprevanswered = true;
+                                                
+                                                app.showsurebtnans  = false;
+                                            } 
+                                            else if(notsure_ansid!='')
+                                            {   
+                                                var studansid = app.convertLower(notsure_ansid);
+                                                $('#ansopt_' + studansid).addClass('notsure_clr');                                                
+                                                
+                                                app.selected_answer = notsure_ansid;
+                                                app.shownotsureaftersel = false;
+                                                app.showcnfrmaftersel = false;    
+                                                app.questionprevanswered = true;
+                                                app.showsurebtnans  = true;
+                                            }
+
+                                            else {
+                                                
+                                                app.selected_answer = '';
+                                                app.shownotsureaftersel = false;
+                                                app.showcnfrmaftersel = false;
+                                                app.questionprevanswered = false;
+                                                app.showsurebtnans  = false;
+                                            }  
+                                        }
+                                    });
+
+                                }   
+                           }, 500);    
+                         
+                         
+                        
+                    },    
+                    confirmSave:function (){
+                    
+                        this.showsurebtnans  = false;
+                        this.shownextnosave = true;
+                        this.shownotsureaftersel = false;
+                        this.showcnfrmaftersel = false;
+                        this.questionprevanswered = false;
+                        
+                        $('.loadingoverlay').show();
+                        
+                         setTimeout(() => {
+                                applyMathAjax();
+                                $('.loadingoverlay').hide();
+                            }, 600);
+                            
+                            
+                        if(this.selected_answer){
+                         var questions = <?php echo json_encode($questions_list); ?>;
+                         $.post("api/v1/store_notsure_answer",
+                                    {
+                                        question_id: questions[this.questionIndex].question_id,
+                                        answer: this.selected_answer,
+                                        notsure_answer : '',
+                                        student_log_id: <?php echo $student_log; ?>
+                                    },
+                                    function (data, status) {
+                                        if (data.result.error === false) {
+
+                                        }
+                                    });
+                         }          
+                                    
+                           setTimeout(() => {
+                                if (this.questionIndex < this.quiz.questions.length) {
+                                    this.questionIndex++;  
+                                    this.selected_answer = '';
+                                                                 
+                                    var qid = questions[this.questionIndex].question_id;
+                                    
+                                    $.get("api/v1/get_student_notsure_answer/" + qid + "/<?php echo $student_log; ?>",
+                                    function (data, status) {
+                                        if (data.result.error === false) {
+                                           ansid = data.result.data;
+                                           notsure_ansid = data.result.data_notsure;
+                                            
+
+                                            if(ansid!='')
+                                            {   
+                                                 var studansid = app.convertLower(ansid);
+                                                $('#ansopt_' + studansid).addClass('crt_clr');                                             
+                                                
+                                                
+                                                app.selected_answer = ansid;
+                                                app.shownotsureaftersel = true;
+                                                app.showcnfrmaftersel = false;    
+                                                app.questionprevanswered = true;
+                                                
+                                                app.showsurebtnans  = false;
+                                            } 
+                                            else if(notsure_ansid!='')
+                                            {   
+                                                var studansid = app.convertLower(notsure_ansid);
+                                                $('#ansopt_' + studansid).addClass('notsure_clr');                                                
+                                                
+                                                app.selected_answer = notsure_ansid;
+                                                app.shownotsureaftersel = false;
+                                                app.showcnfrmaftersel = false;    
+                                                app.questionprevanswered = true;
+                                                app.showsurebtnans  = true;
+                                            }
+
+                                            else {
+                                                
+                                                app.selected_answer = '';
+                                                app.shownotsureaftersel = false;
+                                                app.showcnfrmaftersel = false;
+                                                app.questionprevanswered = false;
+                                                app.showsurebtnans  = false;
+                                            }   
+                                        }
+                                    });
+
+                                }   
+                           }, 500);    
+                           
+                          
+                    },    
+                    prevNoSave: function () {
+                    
+                       this.selected_answer = '';
+                       
+                       this.showsurebtnans  = false;
+                       this.shownextnosave = true;
+                       this.shownotsureaftersel = false;
+                       this.showcnfrmaftersel = false;   
+                       this.questionprevanswered = false;
+                                         
+                      
+                        $('.loadingoverlay').show();
+                        
+                         setTimeout(() => {
+                            applyMathAjax();
+                            $('.loadingoverlay').hide();
+                        }, 600);
+                        
+                        if (this.quiz.questions.length > 0)
+                            this.questionIndex--;
+
+                        var questions = <?php  echo json_encode($questions_list); ?>;
+                        var qid = questions[this.questionIndex].question_id;
+                        var answers = ['A', 'B', 'C', 'D'];
+                        var ansid = '';
+                 
+
+                        $.get("api/v1/get_student_notsure_answer/" + qid + "/<?php  echo $student_log; ?>",
+                                function (data, status) {
+                                    if (data.result.error === false) {
+                                       ansid = data.result.data;
+                                       notsure_ansid = data.result.data_notsure;
+                                            
+
+                                            if(ansid!='')
+                                            {   
+                                                var studansid = app.convertLower(ansid);
+                                                $('#ansopt_' + studansid).addClass('crt_clr'); 
+                                                
+                                                
+                                                app.selected_answer = ansid;
+                                                app.shownotsureaftersel = true;
+                                                app.showcnfrmaftersel = false;    
+                                                app.questionprevanswered = true;
+                                                
+                                                app.showsurebtnans  = false;
+                                            } 
+                                            else if(notsure_ansid!='')
+                                            {   
+                                                
+                                                var studansid = app.convertLower(notsure_ansid);
+                                                $('#ansopt_' + studansid).addClass('notsure_clr');   
+                                                
+                                                
+                                                app.selected_answer = notsure_ansid;
+                                                app.shownotsureaftersel = false;
+                                                app.showcnfrmaftersel = false;    
+                                                app.questionprevanswered = true;
+                                                app.showsurebtnans  = true;
+                                            }
+
+                                            else {
+                                                
+                                                app.selected_answer = '';
+                                                app.shownotsureaftersel = false;
+                                                app.showcnfrmaftersel = false;
+                                                app.questionprevanswered = false;
+                                                app.showsurebtnans  = false;
+                                            }   
+
+
+                                    }
+                                });
+
+                        
+                    },
+                    nextNoSave : function () {
+                        
+                        this.selected_answer = '';
+                        
+                        this.showsurebtnans = false;
+                        this.shownextnosave = true;
+                        this.shownotsureaftersel = false;
+                        this.showcnfrmaftersel = false;     
+                        this.questionprevanswered = false;
+                        
+                        
+                        $('.loadingoverlay').show();
+                        setTimeout(() => {
+                            applyMathAjax();
+                            $('.loadingoverlay').hide();
+                        }, 600);
+                       
+
+                        if (this.questionIndex < this.quiz.questions.length) {
+                            this.questionIndex++;
+                        }
+
+                        var questions = <?php echo json_encode($questions_list); ?>;
+                        var qid = questions[this.questionIndex].question_id;
+                         var answers = ['A', 'B', 'C', 'D'];
+                        var ansid = '';
+                        
+                           $.get("api/v1/get_student_notsure_answer/" + qid + "/<?php echo $student_log; ?>",
+                                    function (data, status) {
+                                        if (data.result.error === false) {
+                                            ansid = data.result.data;
+                                            notsure_ansid = data.result.data_notsure;
+                                            
+
+                                            if(ansid!='')
+                                            {   
+                                                 var studansid = app.convertLower(ansid);
+                                                $('#ansopt_' + studansid).addClass('crt_clr');
+                                                
+                                                app.selected_answer = ansid;
+                                                app.shownotsureaftersel = true;
+                                                app.showcnfrmaftersel = false;    
+                                                app.questionprevanswered = true;
+                                                
+                                                app.showsurebtnans  = false;
+                                            } 
+                                            else if(notsure_ansid!='')
+                                            {   
+                                                var studansid = app.convertLower(notsure_ansid);
+                                                $('#ansopt_' + studansid).addClass('notsure_clr');    
+                                                
+                                                app.selected_answer = notsure_ansid;
+                                                app.shownotsureaftersel = false;
+                                                app.showcnfrmaftersel = false;    
+                                                app.questionprevanswered = true;
+                                                app.showsurebtnans  = true;   
+                                            }
+                                            
+                                            else {
+                                                
+                                                app.selected_answer = '';
+                                                app.shownotsureaftersel = false;
+                                                app.showcnfrmaftersel = false;
+                                                app.questionprevanswered = false;
+                                                app.showsurebtnans  = false;
+                                            }
+                                        }
+                                    });
+                        
+                    },    
                     selectOption: function (index) {
                         $('.loadingoverlay').show();
                         if (!app.showimmediate) {
