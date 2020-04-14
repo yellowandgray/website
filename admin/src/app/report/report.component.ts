@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit,Output,Input,Inject,ElementRef,ViewChild } from '@angular/core';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { HttpClient } from '@angular/common/http';
@@ -7,6 +7,10 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import * as moment from 'moment';
 import { DatePipe } from '@angular/common';
+
+import * as jsPDF from 'jspdf'; 
+import html2canvas from 'html2canvas';
+ 
 
 @Component({
   selector: 'app-report',
@@ -25,6 +29,10 @@ export class ReportComponent implements OnInit {
   electromech_schedule_id="0";
   date_check="0";
   date_var="";
+  
+  date_varform="";
+
+
   weekNum;
    count=0;
 
@@ -39,6 +47,8 @@ image_url: string = 'http://www.lemonandshadow.com/electromech/api/v1/uploads/';
     this.getSchedule();
     this.getTrain();
   }
+
+
   getSchedule(): void {
     this.httpClient.get<any>('http://www.lemonandshadow.com/electromech/api/v1/get_schedule')
       .subscribe(
@@ -236,12 +246,15 @@ if (this.electromech_schedule_id=="0" || this.electromech_train_id=="0" || this.
          if (this.electromech_schedule_id=="1") {
 
            this.date_var="Date : "+this.datePipe.transform(this.date_check, 'dd-MM-yyyy');
+           this.date_varform="DAILY MAINTENANCE FORM";
          }
         if (this.electromech_schedule_id=="2") {
            this.date_var="Week :"+this.weekNum+" Week In "+this.datePipe.transform(this.date_check, 'MMMM , y');
+           this.date_varform="WEEKLY MAINTENANCE FORM";
          }
         if (this.electromech_schedule_id=="3") {
            this.date_var="Month : "+this.datePipe.transform(this.date_check, 'MMMM , y');
+           this.date_varform="MONTHLY MAINTENANCE FORM";
          }
 
         if (this.reportwithchecklist.length<=0) {
@@ -274,13 +287,34 @@ if (this.electromech_schedule_id=="0" || this.electromech_train_id=="0" || this.
         data: {
             data: data,
             action: action
-        }
+         }
     });
 
    dialogRef.afterClosed().subscribe(result => {
     });
 }
 
+openDialog(id, action): void  {
+    var data = null;
+
+      if(id != 0) { 
+        data = id;
+      }
+    const dialogRef = this.dialog.open(ElectromechFormview, {
+        minWidth: "70%",
+        maxWidth: "70%",
+       
+        data: {
+            data: data,
+            action: action,
+            date_var:this.date_var,
+            date_varform:this.date_varform
+        }
+    });
+
+   dialogRef.afterClosed().subscribe(result => {
+    });
+}
 
 
 }
@@ -312,20 +346,166 @@ export class PictureView {
         }  
 
 
-
-
-
-
-/*@Component({
-  selector: 'report-form',
-  templateUrl: 'report-form.html',
+@Component({
+  selector: 'electromech-form',
+  templateUrl: 'electromech-form.html',
+  styleUrls: ['./report.component.css'],
+  
 })
-export class ReportForm {
-  loading = false;
-  electromech_category_id = 0;
-  constructor(
-    public dialogRef: MatDialogRef<ReportForm>,
-    @Inject(MAT_DIALOG_DATA) public data: any,
-    private _snackBar: MatSnackBar,
-    private httpClient: HttpClient) {}
-}*/
+ 
+export class ElectromechFormview {
+
+                date_var= '';
+                date_varform='';
+                image_url: string = 'http://www.lemonandshadow.com/electromech/api/v1/uploads/';
+                action: string = '';
+                loading = false;
+                member_id = 0;
+                //date_var='';
+                reportwithchecklist: any;
+                base64='';
+                constructor(
+                public dialogRef: MatDialogRef<ElectromechFormview>,
+                @Inject(MAT_DIALOG_DATA) public datapopup: any,
+                private _snackBar: MatSnackBar,
+                private httpClient: HttpClient) {
+                    if(this.datapopup != null) { 
+                        
+                        
+                        this.date_varform=this.datapopup.date_varform;
+                        this.date_var=this.datapopup.date_var;
+                        this.action = this.datapopup.action;
+                        this.reportwithchecklist = this.datapopup.data;   
+                        //this.base64 =btoa(this.image_url+this.reportwithchecklist.general_image) 
+                        //this.base64 =atob(this.base64) 
+                        //this.base64 = this.getBase64Image(this.image_url+this.reportwithchecklist.general_image);       
+                        console.log("gggg-->"+this.base64);             
+                }
+            }
+
+
+
+
+
+                    getBase64Image(img) {
+                    var canvas = document.createElement("canvas");
+                    canvas.width = img.width;
+                    canvas.height = img.height;
+                    var ctx = canvas.getContext("2d");
+                   // ctx.drawImage(img, 0, 0);
+                    var dataURL = img;
+                    return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
+                  }
+ PrintPDF1()
+                {
+ var divContents = document.getElementById("content").innerHTML; 
+            var a = window.open('', '', 'height=100%, width=auto'); 
+            a.document.write('<html>'); 
+            a.document.write('<body > <br>'); 
+            a.document.write(divContents); 
+            a.document.write('</body></html>'); 
+            a.document.close(); 
+            a.print();
+}
+                PrintPDF()
+                {
+                      console.log("vijay-->"); 
+                      let printContents, popupWin;
+                        printContents = document.getElementById('content').innerHTML;
+                        popupWin = window.open('', '_blank', 'top=0,left=0,height=100%,width=auto');
+                        popupWin.document.open();
+                        popupWin.document.write(`
+                          <html>
+                            <head>
+                              <title>Print tab</title>
+                              <style>
+                              //........Customized style.......
+                              </style>
+                            </head>
+                        <body onload="window.print();window.close()">${printContents}</body>
+                          </html>`
+                        );
+                       // popupWin.document.close();
+                }
+
+  /*@ViewChild('content') content: ElementRef; 
+ SavePDF(): void {  
+    let content=this.content.nativeElement;  
+    let doc = new jsPDF();  
+    let _elementHandlers =  
+    {  
+      '#editor':function(element,renderer){  
+        return true;  
+      }  
+    };  
+    doc.fromHTML(content.innerHTML,15,15,{  
+  
+      'width':500,  
+      'elementHandlers':_elementHandlers  
+    }
+);  
+  doc.setFontSize(22);
+doc.setTextColor(255, 0, 0);
+    doc.save('test.pdf');  
+  } */
+
+ SavePDF(): void { 
+                var data = document.getElementById('content');
+
+
+                html2canvas(data).then(canvas => {
+                useCORS: true;
+                allowTaint : true;
+                // Few necessary setting options
+                /*var imgWidth = 208;
+                var pageHeight = 295;
+                var imgHeight = canvas.height * imgWidth / canvas.width;
+                var heightLeft = imgHeight;
+
+                const contentDataURL = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+                let pdf = new jsPDF('p', 'mm', 'a4'); // A4 size page of PDF
+                var position = 0;
+                pdf.addImage(contentDataURL, 'PNG', 0, position, imgWidth, imgHeight);
+                pdf.save('Changi Water Reclamation Plant.pdf'); // Generated PDF*/
+
+                var imgWidth = 210; 
+                var pageHeight = 295;  
+                var imgHeight = canvas.height * imgWidth / canvas.width;
+                var heightLeft = imgHeight;
+
+                var doc = new jsPDF('p', 'mm');
+                var position = 0;
+
+               
+
+                const imgData = canvas.toDataURL('image/png');
+                doc.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+                heightLeft -= pageHeight;
+
+                while (heightLeft >= 0) {
+                  position = heightLeft - imgHeight;
+                  doc.addPage();
+                  doc.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+                  heightLeft -= pageHeight;
+                }
+                doc.save( 'Changi Water Reclamation Plant.pdf');
+
+                         
+
+
+        });  
+
+
+
+
+ 
+        }
+
+
+       
+
+
+
+
+      }
+  

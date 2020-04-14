@@ -39,8 +39,9 @@ import { FloorComponent, FloorForm, FloorDelete} from './floor/floor.component';
 import { StaffComponent, StaffForm, StaffImageView, StaffDelete } from './staff/staff.component';
 import { CommandComponent, CommandDialog, CommandDelete } from './command/command.component';
 import { CategoryComponent, CategoryForm, CategoryDelete } from './category/category.component';
-import { ReportComponent,PictureView } from './report/report.component';
+import { ReportComponent,PictureView,ElectromechFormview } from './report/report.component';
 import { DatePipe } from '@angular/common';
+import { StorageServiceModule} from 'angular-webstorage-service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -74,7 +75,8 @@ import { DatePipe } from '@angular/common';
     CategoryForm,
     CategoryDelete,
     ReportComponent,
-    PictureView
+    PictureView,
+ElectromechFormview
   ],
   imports: [
     BrowserModule,
@@ -103,7 +105,8 @@ import { DatePipe } from '@angular/common';
     MatButtonToggleModule,
     MatExpansionModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    StorageServiceModule
   ],
   entryComponents: [
     ProductComponent,
@@ -133,7 +136,8 @@ import { DatePipe } from '@angular/common';
     CategoryForm,
     CategoryDelete,
     ReportComponent,
-    PictureView
+    PictureView,
+ElectromechFormview
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent]
