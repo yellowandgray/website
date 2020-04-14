@@ -2582,6 +2582,25 @@ article .align-right {
     .box-shadow .box-text {
         height: auto !important;
     }
+    .popup {
+        width: 85% !important;
+    }
+    .pause-responsive {
+        width: 100% !important;
+        float: none !important;
+        height: 0 !important;
+        border: none !important;
+        text-align: center !important;
+    }
+    .pause-responsive .pause-right {
+        width: 100% !important;
+        height: 0 !important;
+        border: none !important;
+        text-align: center !important;
+    }
+    .admin-panel-section {
+        padding: 40px 0 20px !important;
+    }
 }
 
 @media (max-width: 480px) {
@@ -2753,7 +2772,7 @@ article .align-right {
         text-align: right;
         display: flex;
         height: 100%;
-        float: none !important; 
+        /*        float: none !important; */
         margin-top: 0 !important;
     }
     header {
@@ -2761,7 +2780,15 @@ article .align-right {
     }
 }
 
-@media (max-width: 360px) {}
+@media (max-width: 340px) {
+    .logout_position {
+        text-align: right;
+        display: flex;
+        height: 100%;
+        float: none !important; 
+        margin-top: 0 !important;
+    }
+}
 
 
 /* ============== options panel for live preview ======================= */
@@ -3067,3 +3094,7 @@ article .align-right {
 /* Theme Styler :: End */
 
 .qes-img {}
+
+.admin-panel-section {
+    padding: 20px 0;
+}
