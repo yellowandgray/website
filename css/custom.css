@@ -1023,7 +1023,7 @@ and open the template in the editor.
 
 .notsure_clr {
     background: yellow !important;
-    color: #fff !important;
+    color: #000 !important;
 }
 
 .wrng_clr {

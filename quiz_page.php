@@ -353,7 +353,8 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                  <?php if ($testmode == 0) { ?>  
                                 <div class="quiz-review">
                                     <div class="float-left" style="padding: 20px 0;">
-                                        <a href="#" onclick="showqno();" class="btn logout-btn">Question Admin Panel</a>
+                                        <!--a href="#" onclick="showqno();" class="btn logout-btn">Question Admin Panel</a-->
+                                         <a href="#" @click="showQuesPanel();" class="btn logout-btn">Question Admin Panel</a>
                                     </div>
                                 </div>    
                                 <?php } ?>        
@@ -429,7 +430,8 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                             <span class="showqus" onclick="showqus();"><i class="icon-angle-left"></i> back</span>
                                             <h3>Question Admin Panel</h3>
                                         </div>
-                                        <table style="width: 100%;">
+                                        <div id="questionpanel">
+                                        <!--table style="width: 100%;">
                                             <tr>
                                                 <td class="clr-blue">1</td>
                                                 <td class="clr-yellow">2</td>
@@ -490,7 +492,8 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                                 <td>49</td>
                                                 <td>50</td>
                                             </tr>
-                                        </table>
+                                        </table-->
+                                        </div>
                                         <div class="admin-panel-btns">
                                             <div class="row">
                                                 <div class="span-4">
@@ -535,7 +538,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                             </div> 
 
                                             <div style="text-align: center" v-if="shownotsureaftersel">
-                                                <a class="button"  v-on:click="notSureSave();" :disabled="questionIndex>=quiz.questions.length">
+                                                <a class="not-sure-button"  v-on:click="notSureSave();" :disabled="questionIndex>=quiz.questions.length">
                                                     Not Sure
                                                 </a>
                                             </div> 
@@ -929,6 +932,156 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                 swal('Error', err.statusText, 'error');
                             }
                         });
+                    },
+                    showQuesPanel: function() {
+                         
+                        var stud_ans = []; 
+                    
+                        $.ajax({
+                            type: "GET",
+                            url: 'api/v1/get_result_detail/' +<?php echo $student_log; ?>,
+                            success: function (data) {
+                                if (data.result.error === false) {  
+                                    if(data.result.data) {
+                                    $.each(data.result.data, function (key, val) {
+                                        stud_ans[val.question_no]= {'student_answer':val.student_answer,'student_notsure_answer':val.student_notsure_answer};
+                                    });   
+                                }
+                            } 
+                            }
+                        });
+                        //console.log(stud_ans);              
+                    
+                    setTimeout(() => {                        
+                        
+                        
+                        var questionslist = <?php echo  json_encode($questions_list); ?>;
+                       var  qTable = '<table style="width: 100%;"><tr>';
+                        $.each(questionslist, function (key, val) {
+                            var qn = key+1;
+                                                    
+                            if(qn!=1 && (key%10==0)) {                                                                
+                                 if(qn<questionslist.length) {
+                                    qTable += '<tr>';
+                                 }   
+                              }   
+                                
+                                var tdval = '<td onClick=goQuesFrPanel('+key+');>'+qn+'</td>';
+                                if(typeof val.question_no !== 'undefined') {                                    
+                                    if(typeof stud_ans[val.question_no] !== 'undefined'){
+                                        if(stud_ans[val.question_no].student_answer!='') {
+                                            tdval =  '<td onClick=goQuesFrPanel('+key+'); class="clr-blue">'+qn+'</td>';                                           
+                                         }
+                                         else if(stud_ans[val.question_no].student_notsure_answer!='') {
+                                             tdval = '<td onClick=goQuesFrPanel('+key+'); class="clr-yellow">'+qn+'</td>'
+                                         }    
+                                    }   
+                                }
+                                qTable += tdval;
+                              
+                              
+                               if(qn!=1 && (qn%10==0)) {
+                                                                
+                                 if(qn<=questionslist.length) {
+                                    qTable += '</tr>';
+                                 }   
+                              }else if(qn==questionslist.length) {
+                                  var rtd = 10-(qn%10);
+                                  for(i=1;i<=rtd;i++) {
+                                    qTable += '<td></td>';
+                                  }
+                                  qTable += '</tr>';
+                               }   
+                              
+                              
+                                
+                                /*
+                                  <table style="width: 100%;">
+                                            <tr>
+                                                <td class="clr-blue">1</td>
+                                                <td class="clr-yellow">2</td>
+                                                <td>3</td>
+                                                <td>4</td>
+                                                <td>5</td>
+                                                <td>6</td>
+                                                <td>7</td>
+                                                <td>8</td>
+                                                <td>9</td>
+                                                <td>10</td>
+                                            </tr>
+                                            <tr>
+                                                <td>11</td>
+                                                <td>12</td>
+                                                <td>13</td>
+                                                <td>14</td>
+                                                <td>15</td>
+                                                <td>16</td>
+                                                <td>17</td>
+                                                <td>18</td>
+                                                <td>19</td>
+                                                <td>20</td>
+                                            </tr>
+                                            <tr>
+                                                <td>21</td>
+                                                <td>22</td>
+                                                <td>23</td>
+                                                <td>24</td>
+                                                <td>25</td>
+                                                <td>26</td>
+                                                <td>27</td>
+                                                <td>28</td>
+                                                <td>29</td>
+                                                <td>30</td>
+                                            </tr>
+                                            <tr>
+                                                <td>31</td>
+                                                <td>32</td>
+                                                <td>33</td>
+                                                <td>34</td>
+                                                <td>35</td>
+                                                <td>36</td>
+                                                <td>37</td>
+                                                <td>38</td>
+                                                <td>39</td>
+                                                <td>40</td>
+                                            </tr>
+                                            <tr>
+                                                <td>41</td>
+                                                <td>42</td>
+                                                <td>43</td>
+                                                <td>44</td>
+                                                <td>45</td>
+                                                <td>46</td>
+                                                <td>47</td>
+                                                <td>48</td>
+                                                <td>49</td>
+                                                <td>50</td>
+                                            </tr>
+                                        </table>
+                                 */
+                                
+                               // console.log(key);
+                               // console.log(val);
+                                                    
+                        });    
+                        qTable += '</table>';
+                        //console.log(qTable);
+                        
+                        $('#header-hidden').hide();
+                        $('#quiz-hidden').hide();
+                        $('.questionFooter').hide();
+                        $('#questionpanel').html(qTable);
+                        $('.question-admin-panel').show();   
+                          
+
+
+                        }, 500);
+                    
+                    
+                    
+                    
+                        
+                       
                     },
                     divshow: function () {
                         $('.loadingoverlay').show();
@@ -1744,6 +1897,83 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
 
 
                     },
+                    goQuesAns: function (val) {   
+                        
+                        
+                        
+                         $('#header-hidden').show();
+                         $('#quiz-hidden').show();
+                         $('.question-admin-panel').hide();
+      
+                        this.questionIndex = val;
+                                
+                         $('.loadingoverlay').show();  
+                         
+                        setTimeout(() => {                            
+                            applyMathAjax();   
+                            $('.loadingoverlay').hide();
+                        }, 600);      
+                        
+                        
+                        this.selected_answer = '';
+                        
+                        this.showsurebtnans = false;
+                        this.shownextnosave = true;
+                        this.shownotsureaftersel = false;
+                        this.showcnfrmaftersel = false;     
+                        this.questionprevanswered = false;
+                        
+                        
+                        var questions = <?php echo json_encode($questions_list); ?>;
+                        var qid = questions[this.questionIndex].question_id;
+                         var answers = ['A', 'B', 'C', 'D'];
+                        var ansid = '';
+                        
+                           $.get("api/v1/get_student_notsure_answer/" + qid + "/<?php echo $student_log; ?>",
+                                    function (data, status) {
+                                        if (data.result.error === false) {
+                                            ansid = data.result.data;
+                                            notsure_ansid = data.result.data_notsure;
+                                            
+
+                                            if(ansid!='')
+                                            {   
+                                                 var studansid = app.convertLower(ansid);
+                                                $('#ansopt_' + studansid).addClass('crt_clr');
+                                                
+                                                app.selected_answer = ansid;
+                                                app.shownotsureaftersel = true;
+                                                app.showcnfrmaftersel = false;    
+                                                app.questionprevanswered = true;
+                                                
+                                                app.showsurebtnans  = false;
+                                            } 
+                                            else if(notsure_ansid!='')
+                                            {   
+                                                var studansid = app.convertLower(notsure_ansid);
+                                                $('#ansopt_' + studansid).addClass('notsure_clr');    
+                                                
+                                                app.selected_answer = notsure_ansid;
+                                                app.shownotsureaftersel = false;
+                                                app.showcnfrmaftersel = false;    
+                                                app.questionprevanswered = true;
+                                                app.showsurebtnans  = true;   
+                                            }
+                                            
+                                            else {
+                                                
+                                                app.selected_answer = '';
+                                                app.shownotsureaftersel = false;
+                                                app.showcnfrmaftersel = false;
+                                                app.questionprevanswered = false;
+                                                app.showsurebtnans  = false;
+                                            }
+                                        }
+                                    });
+                        
+                        
+
+                    },
                     goquestion: function () {    
                         var goquestion = parseInt($("#goques").val());
       
@@ -1852,12 +2082,16 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
             function showqno() {
                 $('#header-hidden').hide();
                 $('#quiz-hidden').hide();
-                $('.question-admin-panel').show();
+                $('.question-admin-panel').show();                
             }
             function showqus() {
                 $('#header-hidden').show();
                 $('#quiz-hidden').show();
                 $('.question-admin-panel').hide();
+                $('.questionFooter').show();
+            }
+            function goQuesFrPanel(val) {
+                app.goQuesAns(val);                
             }
         </script>
     </body>
