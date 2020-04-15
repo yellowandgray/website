@@ -5,15 +5,15 @@ $obj = new Common();
 if (!isset($_SESSION['selected_subject_id'])) {
     header('Location: home_subject');
 }
+
+if (!isset($_SESSION['selected_chapter_id'])) {
+    header('Location: home_subject');
+}
 $subject = $obj->selectRow('*', 'subject', 'subject_id=' . $_SESSION['selected_subject_id']);
-//if (!isset($_GET['difficult'])) {
-//    header('Location: difficult_level?sub=' . $subject['name']);
-//}
-//$difficult = $obj->selectRow('*', 'difficult', 'name=\'' . $_GET['difficult'] . '\'');
-$chapters = $obj->selectAll('*', 'chapter', 'subject_id = ' . $subject['subject_id'] . ' ORDER BY name ASC');
-$topic = $obj->selectAll('*', 'topic', 'topic_id = ' . $subject['subject_id'] . ' ORDER BY name ASC');
+$chapter = $obj->selectRow('*', 'chapter', 'chapter_id = ' . $_SESSION['selected_chapter_id'] );
+$topic = $obj->selectRow('*', 'topic', 'name = \'' . $obj->escapeString($_GET['topic']) . '\' ORDER BY name ASC');
 $subtopic = $obj->selectAll('*', 'sub_topic', 'sub_topic_id = ' . $subject['subject_id'] . ' ORDER BY name ASC');
-//$_SESSION['selected_difficult_id'] = $difficult['difficult_id'];
+//print_r($topic);
 ?>
 <!DOCTYPE html>
 <html lang="en">

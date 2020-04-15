@@ -39,9 +39,9 @@ if ($from != '' && $from == 'login') {
                     </h4>
                     <div class="row margin-auto">
                         <?php foreach ($subjects as $row) { ?>
-                            <?php if($row['standard_id']==1) { ?>
+                            <?php if ($row['standard_id'] == 1) { ?>
                                 <div class="span3 subject-section" onclick="window.location = 'difficult_level?sub=<?php echo $row['name']; ?>'">
-                                    <div class="price">Feringo1</div>
+                                    <div class="price">Feringo</div>
                                     <div class="subject-1">
                                         <div class="subject-1-img" style="background: url(<?php echo BASE_URL . $row['image_path']; ?>)no-repeat;"></div>
                                     </div>
@@ -52,15 +52,15 @@ if ($from != '' && $from == 'login') {
                                     </div>
                                 </div>
                             <?php } else { ?>
-                                <div class="span3 subject-section" onclick="window.location = 'empty_space?sub=<?php echo $row['name']; ?>'">
-                                    <div class="price">Feringo2</div>
+                                <div class="span3 subject-section" onclick="window.location = 'neet_chapter?sub=<?php echo $row['name']; ?>'">
+                                    <div class="price">Feringo Neet</div>
                                     <div class="subject-1">
                                         <div class="subject-1-img" style="background: url(<?php echo BASE_URL . $row['image_path']; ?>)no-repeat;"></div>
                                     </div>
                                     <div class="subject-1-text">
                                         <h2><?php echo $row['name']; ?></h2>
                                         <p><?php echo $obj->charLimit($row['description'], 200); ?></p>
-                                        <button class="btn btn-theme margintop10" onclick="window.location = 'empty_space?sub=<?php echo $row['name']; ?>'">Start Quiz...</button>
+                                        <button class="btn btn-theme margintop10" onclick="window.location = 'neet_chapter?sub=<?php echo $row['name']; ?>'">Start Quiz...</button>
                                     </div>
                                 </div>
                             <?php } ?>
