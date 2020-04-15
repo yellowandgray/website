@@ -13,6 +13,7 @@ $subject = $obj->selectRow('*', 'subject', 'subject_id=' . $_SESSION['selected_s
 $chapter = $obj->selectRow('*', 'chapter', 'chapter_id = ' . $_SESSION['selected_chapter_id'] );
 $topic = $obj->selectRow('*', 'topic', 'name = \'' . $obj->escapeString($_GET['topic']) . '\' ORDER BY name ASC');
 $subtopic = $obj->selectAll('*', 'sub_topic', 'sub_topic_id = ' . $subject['subject_id'] . ' ORDER BY name ASC');
+$_SESSION['selected_topic_id'] = $topic['topic_id'];
 //print_r($topic);
 ?>
 <!DOCTYPE html>
@@ -56,7 +57,7 @@ $subtopic = $obj->selectAll('*', 'sub_topic', 'sub_topic_id = ' . $subject['subj
                                     <ul>
                                         <?php foreach ($subtopic as $row) { ?>
                                             <li><i class="icon-double-angle-right"></i> 
-                                                <a href="topic_page?chapter=<?php echo $row['name']; ?>"><?php echo $row['name']; ?></a>
+                                                <a href="neet_quiz_page?neetquestions=<?php echo $row['name']; ?>"><?php echo $row['name']; ?></a>
                                             </li>
                                         <?php } ?>
                                     </ul>                                

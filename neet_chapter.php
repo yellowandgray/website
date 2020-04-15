@@ -2,11 +2,13 @@
 require_once 'api/include/common.php';
 session_start();
 $obj = new Common();
-if (!isset($_SESSION['selected_subject_id'])) {
+if (!isset($_GET['sub'])) {
     header('Location: home_subject');
 }
-$subject = $obj->selectRow('*', 'subject', 'subject_id=' . $_SESSION['selected_subject_id']);
+$subject = $obj->selectRow('*', 'subject', 'name = \'' . $_GET['sub'] . '\'');
 $chapters = $obj->selectAll('*', 'chapter', 'subject_id = ' . $subject['subject_id'] . ' ORDER BY name ASC');
+$_SESSION['selected_subject_id'] = $subject['subject_id'];
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
