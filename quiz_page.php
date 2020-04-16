@@ -354,7 +354,7 @@ include 'head.php';
                                                 <div class="float-left" style="padding: 20px 0;">
                                                     <!--a href="#" onclick="showqno();" class="btn logout-btn">Question Admin Panel</a-->
                                                     <a href="#" @click="showQuesPanel();" class="btn logout-btn">Question Admin Panel</a>
-                                                    <a v-on:click="revAns();" class="btn btn-theme" v-if="!revShow">Review Answer</a>
+                                                    <a v-on:click="revAns();" class="btn logout-btn" v-if="!revShow">Review Answer</a>
                                                     <a v-on:click="revcontAns();" class="btn btn-theme" v-if="revShow">Continue Quiz</a>
                                                 </div>
                                             </div>    
@@ -1006,7 +1006,7 @@ include 'head.php';
 
 
                             var questionslist = <?php echo json_encode($questions_list); ?>;
-                            var qTable = '<table style="width: 100%;"><tr>';
+                            var qTable = '<table class="question-number-table"><tr>';
                             $.each(questionslist, function (key, val) {
                                 var qn = key + 1;
 

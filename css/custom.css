@@ -837,7 +837,8 @@ and open the template in the editor.
 
 .logout-btn:hover{
     opacity: 1;
-    background: #f03c02;
+    /*background: #f03c02;*/
+    background: #18191a;
     color: #ffffff;
     opacity: 1;
 }
@@ -1389,6 +1390,7 @@ and open the template in the editor.
 
 .question-number-title h3 {
     text-align: center;
+    width: 85%;
     font-size: 22px;
     font-weight: 600;
     color: #f14812;
@@ -1441,4 +1443,6 @@ and open the template in the editor.
 
 .question-number-table td {
     text-align: center;
+    cursor: pointer;
+    font-weight: bold;
 }
