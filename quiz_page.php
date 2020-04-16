@@ -427,11 +427,11 @@ include 'head.php';
                                     </div>
                                     <div class="question-admin-panel" style="width: 100%; padding: 20px; display: none;">
                                         <div class="question-number-title">
-                                            <span class="showqus" onclick="showqus();"><i class="icon-angle-left"></i> Back</span>
+                                            <span class="showqus" style="float: left;" onclick="showqus();"><i class="icon-angle-left"></i> Back</span>
                                             <h3>Question Admin Panel</h3>
                                         </div>
                                         <div id="questionpanel">
-                                            <table style="width: 100%;">
+                                            <table class="question-number-table">
                                                 <tr>
                                                     <td class="clr-blue">1</td>
                                                     <td class="clr-yellow">2</td>

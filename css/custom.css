@@ -1434,3 +1434,11 @@ and open the template in the editor.
     color: #f53c00;
     text-align: center;
 }
+
+.question-number-table {
+    width: 93%;
+}
+
+.question-number-table td {
+    text-align: center;
+}
