@@ -16,36 +16,34 @@ $chapter = $obj->selectRow('*', 'chapter', 'chapter_id=' . $_SESSION['selected_c
 $topic = $obj->selectRow('*', 'topic', 'topic_id=' . $_SESSION['selected_topic_id'] );
 $subtopic = $obj->selectRow('*', 'sub_topic', 'name = \'' . $obj->escapeString($_GET['neetquestions']) . '\'');
 $_SESSION['selected_topic_id'] = $topic['topic_id'];
-$neetquestions = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer, image_path, direction, neet_question_id', 'neet_question', 'sub_topic_id = ' . $subtopic['sub_topic_id']);
-//$student_log = $obj->insertRecord(array('subject_id' => $_SESSION['selected_subject_id'], 'subject_name' => $subject['name'], 'difficult_id' => $_SESSION['selected_difficult_id'], 'difficult_name' => $difficult['name'], 'chapter_id' => $_SESSION['selected_chapter_id'], 'chapter_name' => $chapter['name'], 'topic_id' => $_SESSION['selected_topic_id'], 'topic_name' => $topic['name'], 'student_register_id' => $_SESSION['student_register_id'], 'total_questions' => count($questions), 'created_at' => date('Y-m-d H:i:s'), 'created_by' => $_SESSION['student_register_id'], 'updated_at' => date('Y-m-d'), 'updated_by' => $_SESSION['student_register_id']), 'student_log');
+$neetquestions = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer, image_path, direction, neet_question_id', 'neet_question', 'sub_topic_id = ' . $subtopic['sub_topic_id'].' ORDER BY question_no ASC');
+$student_log_neet = $obj->insertRecord(array('subject_id' => $_SESSION['selected_subject_id'], 'subject_name' => $subject['name'], 'sub_topic_id' => $subtopic['sub_topic_id'], 'sub_topic_name' => $subtopic['name'], 'chapter_id' => $_SESSION['selected_chapter_id'], 'chapter_name' => $chapter['name'], 'topic_id' => $_SESSION['selected_topic_id'], 'topic_name' => $topic['name'], 'student_register_id' => $_SESSION['student_register_id'], 'total_questions' => count($neetquestions), 'created_at' => date('Y-m-d H:i:s'), 'created_by' => $_SESSION['student_register_id'], 'updated_at' => date('Y-m-d'), 'updated_by' => $_SESSION['student_register_id']), 'student_log_neet');
 $questions_list = array();
-//if (count($questions) > 0) {
-//    foreach ($questions as $q) {
-//        $options = array();
-//        $showimg = false;
-//        array_push($options, array('text' => $q['a'], 'correct' => ($q['answer'] == 'A' ? true : false)));
-//        array_push($options, array('text' => $q['b'], 'correct' => ($q['answer'] == 'B' ? true : false)));
-//        if (isset($q['c'])) {
-//            array_push($options, array('text' => $q['c'], 'correct' => ($q['answer'] == 'C' ? true : false)));
-//        }
-//        if (isset($q['d'])) {
-//            array_push($options, array('text' => $q['d'], 'correct' => ($q['answer'] == 'D' ? true : false)));
-//        }
-//        if ($q['image_path'] != '') {
-//            $showimg = true;
-//        }
-//        array_push($questions_list, array(
-//            'text' => $q['name'],
-//            'direction' => $q['direction'],
-//            'image_path' => $q['image_path'],
-//            'show_image' => $showimg,
-//            'question_id' => $q['question_id'],
-//            'responses' => $options
-//        ));
-//    }
-//}
-
-
+if (count($neetquestions) > 0) {
+    foreach ($neetquestions as $q) {
+        $options = array();
+        $showimg = false;
+        array_push($options, array('text' => $q['a'], 'correct' => ($q['answer'] == 'A' ? true : false)));
+        array_push($options, array('text' => $q['b'], 'correct' => ($q['answer'] == 'B' ? true : false)));
+        if (isset($q['c'])) {
+            array_push($options, array('text' => $q['c'], 'correct' => ($q['answer'] == 'C' ? true : false)));
+        }
+        if (isset($q['d'])) {
+            array_push($options, array('text' => $q['d'], 'correct' => ($q['answer'] == 'D' ? true : false)));
+        }
+        if ($q['image_path'] != '') {
+            $showimg = true;
+        }
+        array_push($questions_list, array(
+            'text' => $q['name'],
+            'direction' => $q['direction'],
+            'image_path' => $q['image_path'],
+            'show_image' => $showimg,
+            'neet_question_id' => $q['neet_question_id'],
+            'responses' => $options
+        ));
+    }
+}
 
 
 $student_register_id = $_SESSION['student_register_id'];
@@ -190,6 +188,7 @@ $student_feedbacks = $obj->selectAll('f.*,ftm.feedback_timing As fb_timing,fe.*,
                         </div>
                         <div id="create" class="quiz-result" style="display: none;">
                             <h1 class="title is-6">Selected Topic: <?php echo $topic['name']; ?></h1>
+                            <h1 class="title is-6">Selected Sub Topic: <?php echo $subtopic['name']; ?></h1>
                             <div id="question_list"></div>
                         </div>
                         
@@ -251,7 +250,7 @@ $student_feedbacks = $obj->selectAll('f.*,ftm.feedback_timing As fb_timing,fe.*,
             image_url = 'api/v1/';
             var quiz = {
                 user: "Feringo",
-                questions: <?php echo json_encode($questions_list); ?>
+                neetquestions: <?php echo json_encode($questions_list); ?>
             },
                     userResponseSkelaton = Array(quiz.neetquestions.length).fill(null);
             var app = new Vue({
@@ -280,7 +279,7 @@ $student_feedbacks = $obj->selectAll('f.*,ftm.feedback_timing As fb_timing,fe.*,
                         }, 600);
                         $.ajax({
                             type: "GET",
-                            url: 'api/v1/get_result_detail/' +<?php echo $student_log; ?>,
+                            url: 'api/v1/get_result_detail_neet/' +<?php echo $student_log_neet; ?>,
                             success: function (data) {
                                 if (data.result.error === false) {
                                     var qlist = '';
@@ -373,13 +372,13 @@ $student_feedbacks = $obj->selectAll('f.*,ftm.feedback_timing As fb_timing,fe.*,
                         setTimeout(() => {
                             test();
                         }, 600);
-                        var questions = <?php echo json_encode($questions_list); ?>;
+                        var neetquestions = <?php echo json_encode($questions_list); ?>;
                         var answers = ['A', 'B', 'C', 'D'];
-                        $.post("api/v1/store_answer",
+                        $.post("api/v1/store_neet_answer",
                                 {
-                                    neet_question_id: meetquestions[this.questionIndex].question_id,
+                                    neet_question_id: neetquestions[this.questionIndex].neet_question_id,
                                     answer: answers[index],
-                                    student_log_id: <?php echo $student_log; ?>
+                                    student_log_id: <?php echo $student_log_neet; ?>
                                 },
                                 function (data, status) {
                                     if (data.result.error === false) {

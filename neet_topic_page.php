@@ -25,7 +25,7 @@ $_SESSION['selected_chapter_id'] = $chapter['chapter_id'];
                     <div class="row">
                         <div class="span12">
                             <div class="side_section topic-head">
-                                <a href="select_chapter?difficult=<?php echo $difficult['name']; ?>"><i class="font-icon-arrow-simple-left"></i></a>
+                                <a href="neet_chapter?sub=<?php echo $subject['name']; ?>"><i class="font-icon-arrow-simple-left"></i></a>
                                 <h2>
                                     <table class="table-title">
                                         <tr>
