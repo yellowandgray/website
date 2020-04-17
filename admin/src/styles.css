@@ -142,4 +142,5 @@ mat-sidenav-content {
 .MJXc-display {
     text-align: left !important;
     margin: 5px 0 !important;
+    display: inline !important;
 }
