@@ -5,16 +5,17 @@ $obj = new Common();
 if (!isset($_SESSION['student_selected_language_id'])) {
     header('Location: select_language');
 }
+
+if (!isset($_GET['subjects'])) {
+    header('Location: subject');
+}
+
 $_SESSION['student_selected_type'] = 'subject';
-/*
-$topics = $obj->selectAll('t.*, s.name AS subject', 'topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id', 's.language_id=' . $_SESSION['student_selected_language_id']);
+$topics = $obj->selectAll('t.*, s.name AS subject', 'topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id', 's.subject_id IN (' . $_GET['subjects'].') ORDER BY s.subject_id ASC');
 $alltopics = array();
 foreach ($topics as $row) {
     $alltopics[$row['subject']][] = $row;
 }
- * 
- */
-$subjects = $obj->selectAll('s.*','subject As s', 's.language_id=' . $_SESSION['student_selected_language_id']);
 $language = $obj->selectRow('*', 'language', 'language_id=' . $_SESSION['student_selected_language_id']);
 $counter = 0;
 ?>
@@ -48,15 +49,19 @@ $counter = 0;
                         </div>
                         <div class="modal-body">
                             <div class="language_section">
-                                <h6 class="sub-title">Select subject</h6>
+                                <h6 class="sub-title">Select subject and Topic</h6>
                                 <ul class="subject-section-order">
                                     <?php
-                                    foreach ($subjects as $key => $row) {
+                                    foreach ($alltopics as $key => $row) {
                                         $counter++;
                                         ?>
                                         <li>
-                                            <input type="checkbox" class="subjects" data-chkgroup="option<?php echo $counter; ?>" value="<?php echo $row['subject_id']; ?>"><span class=""> <?php echo $row['name']; ?></span>
-                                            
+                                            <input type="checkbox" id="option<?php echo $counter; ?>" data-chkgroup="option<?php echo $counter; ?>" class="selectallchk"><label for="option<?php echo $counter; ?>" class=""> <?php echo $key; ?></label>
+                                            <ul>
+                                                <?php foreach ($row as $r) { ?>
+                                                    <li><label class="pl-0"><input type="checkbox" data-chkgroup="option<?php echo $counter; ?>"  name="suboptions[]" value="<?php echo $r['topic_id']; ?>" class="subOption<?php echo $counter; ?> suboptions childchk"> <span><?php echo $r['name']; ?></span></label></li>
+                                                <?php } ?>
+                                            </ul>
                                         </li>
                                     <?php } ?>
                                 </ul>
@@ -95,7 +100,6 @@ $counter = 0;
      * 
              */
             
-            /*
             $('.childchk').change(function(){
                 // create var for parent .checkall and group
                 var group = $(this).data('chkgroup'),                
@@ -118,19 +122,19 @@ $counter = 0;
                 var group = $(this).data('chkgroup');
                 $('.childchk[data-chkgroup="'+group+'"]').prop('checked', this.checked).change(); 
             });
-            */
             
+
             function goToYears() {
-                var subjects = [];
-                $('.subjects').each(function (key, ele) {
+                var topics = [];
+                $('.suboptions').each(function (key, ele) {
                     if (ele.checked === true) {
-                        subjects.push(ele.value);
+                        topics.push(ele.value);
                     }
                 });
-                if (subjects.length > 0) {
-                   window.location = 'subject-topic?subjects=' + subjects.join(',');
+                if (topics.length > 0) {
+                   window.location = 'subject-years?topics=' + topics.join(',');
                 } else {
-                    alert('Please select atleast one Subject');
+                    alert('Please select atleast one topic');
                 }
             }
         </script>

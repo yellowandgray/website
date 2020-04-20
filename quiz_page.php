@@ -76,7 +76,7 @@ if ($_SESSION['student_selected_type'] == 'subject') {
     $type = 'Subject Order';
     $_SESSION['student_selected_years_id'] = $_GET['years'];
     //$questions = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer, image_path, direction', 'question', 'topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $_SESSION['student_selected_language_id'] . ' AND t.topic_id IN (' . $_SESSION['student_selected_topics_id'] . ') ORDER BY t.subject_id ASC) AND year_id IN (' . $_SESSION['student_selected_years_id'] . ') ORDER BY year_id ASC, topic_id ASC');
-    $questions = $obj->selectAll('question.name As name, a, b, c, d, UPPER(answer) AS answer, image_path, direction,question_id,explanation,image_path_explanation,explanation_img_direction,question_no', 'question LEFT JOIN topic ON question.topic_id=topic.topic_id', 'question.topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $_SESSION['student_selected_language_id'] . ' AND t.topic_id IN (' . $_SESSION['student_selected_topics_id'] . ') ORDER BY t.subject_id ASC) AND year_id IN (' . $_SESSION['student_selected_years_id'] . ') ORDER BY question_no ASC,subject_id ASC,question.topic_id ASC,year_id ASC');
+    $questions = $obj->selectAll('question.name As name, a, b, c, d, UPPER(answer) AS answer, image_path, direction,question_id,explanation,image_path_explanation,explanation_img_direction,question_no', 'question LEFT JOIN topic ON question.topic_id=topic.topic_id', 'question.topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $_SESSION['student_selected_language_id'] . ' AND t.topic_id IN (' . $_SESSION['student_selected_topics_id'] . ') ORDER BY t.subject_id ASC) AND year_id IN (' . $_SESSION['student_selected_years_id'] . ') ORDER BY subject_id ASC,question.topic_id ASC,year_id ASC,question_no ASC');
     if($testmode==1){
         $other_lang_questions   = $obj->selectAll('question.name As name, a, b, c, d, UPPER(answer) AS answer, image_path, direction,question_id,explanation,image_path_explanation,explanation_img_direction,question_no', 'question LEFT JOIN topic ON question.topic_id=topic.topic_id', 'question.topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $other_language['language_id'] . ' AND t.topic_id IN (' . $_SESSION['student_selected_topics_id'] . ') ORDER BY t.subject_id ASC) AND year_id IN (' . $_SESSION['student_selected_years_id'] . ') ORDER BY question_no ASC,subject_id ASC,question.topic_id ASC,year_id ASC');
     }
@@ -162,7 +162,8 @@ if (count($questions) > 0) {
             'explanation' => $q['explanation'],
             'image_path_explanation' => $q['image_path_explanation'],
             'explanation_img_direction' => $q['explanation_img_direction'],
-            'question_no'=>$q['question_no'],
+            'question_no'=>$q['question_no']
+            
         ));
 
         /*
@@ -398,7 +399,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     <div v-if="quiz.questions[questionIndex].show_image" class="text-center">
                                         <img style="width: 50%" v-if="quiz.questions[questionIndex].direction == 'top'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />
                                     </div>
-                                    <h2 class="titleContainer title"><span class="quiz-question-no">{{questionIndex + 1}}.</span> <span class="quiz-question-title" v-html="quiz.questions[questionIndex].text"></span>
+                                    <h2 class="titleContainer title"><span class="quiz-question-no">{{questionIndex + 1}}</span> <span class="quiz-question-title" v-html="quiz.questions[questionIndex].text"></span>
                                     </h2>
                                     <div v-if="quiz.questions[questionIndex].show_image" class="text-center">
                                         <img style="width: 50%" v-if="quiz.questions[questionIndex].direction == 'bottom'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />
@@ -849,7 +850,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                         <!-- question Box -->
 
 
-                        <div id="create" class="quiz-result" style="display: none;">
+                        <div id="create" class="quiz-result" style="display: none;" tabindex='1'>
 
                             <div id="question_list"></div>
                             <div id="question_list_det"></div>
@@ -874,7 +875,8 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
         <?php include 'footer.php'; ?>
         <?php include 'script.php'; ?>
         <script>
-            image_url = 'http://localhost/project/exam-horse/api/v1/';
+            //image_url = 'http://localhost/project/exam-horse/api/v1/';
+            image_url ='http://examhorse.com/beta/api/v1/';
             console.log(<?php echo json_encode($questions_list); ?>);
             var quiz = {
                 user: "<?php echo $student['student_name']; ?>",
@@ -1165,7 +1167,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     var qlist = '';
                                     var correct_ans = '';
                                     var student_ans = '';
-                                    $.each(data.result.data, function (key, val) {
+                                    $.each(data.result.data, function (key, val) {                                            
                                         qlist = qlist + '<div class="question-title"><h6>' + (key + 1) + '. ' + val.name + '</h6>';
                                         if (val.a !== '') {
                                             correct_ans = '';
@@ -1219,7 +1221,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                         if (val.explanation !== '') {
                                             qlist = qlist + '<div class="explanation-section"><strong>Explanation</strong> : ' + val.explanation + '</div>';
                                         } else {
-                                            qlist = qlist + '<div class="explanation-section">No Explanation</div>';
+                                            //qlist = qlist + '<div class="explanation-section">No Explanation</div>';
                                         }
                                         if (val.image_path_explanation !== '' && val.explanation_img_direction !== 'top') {
                                             qlist = qlist + '<div class="explanation_image"><img src="' + image_url + val.image_path_explanation + '"></div>';
@@ -1229,7 +1231,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                         qlist = qlist + '</div>';
                                     });
                                     $('#question_list').html(qlist);
-                                    $("#create").toggle();
+                                    $("#create").toggle();                                    
                                 } else {
                                     swal('Information', data.result.message, 'info');
                                 }
@@ -1304,8 +1306,8 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     });
                                     
                                     $('#question_list').html(res);
-                                    $("#create").toggle();
-                                    $('.loadingoverlay').hide();
+                                    $("#create").toggle();                                    
+                                    $('.loadingoverlay').hide();          
                                 }
                             }
                         });  
@@ -1419,7 +1421,11 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     var correct_ans = '';
                                     var student_ans = '';
                                     $.each(data.result.data, function (key, val) {
-                                        qlist = qlist + '<div class="question-title"><h6>' + (key + 1) + '. ' + val.name + '</h6>';
+                                        var foc = '';
+                                        if(key==0) {
+                                            foc = " id='ansdetfocus' tabindex='1' style='outline: none;'";
+                                        }
+                                        qlist = qlist + '<div class="question-title"'+foc+'><h6>' + (key + 1) + '. ' + val.name + '</h6>';
                                         if (val.a !== '') {
                                             correct_ans = '';
                                             student_ans = '';
@@ -1472,7 +1478,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                         if (val.explanation !== '') {
                                             qlist = qlist + '<div class="explanation-section"><strong>Explanation</strong> : ' + val.explanation + '</div>';
                                         } else {
-                                            qlist = qlist + '<div class="explanation-section">No Explanation</div>';
+                                            //qlist = qlist + '<div class="explanation-section">No Explanation</div>';
                                         }
                                         if (val.image_path_explanation !== '' && val.explanation_img_direction !== 'top') {
                                             qlist = qlist + '<div class="explanation_image"><img src="' + image_url + val.image_path_explanation + '"></div>';
@@ -1483,6 +1489,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     });
                                     $('#question_list_det').html(qlist);
                                     //$("#create").toggle();
+                                    $('#ansdetfocus').focus();
                                 } else {
                                     swal('Information', data.result.message, 'info');
                                 }
@@ -1650,9 +1657,25 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     },
                                     function (data, status) {
                                         if (data.result.error === false) {
-
+                                              
+                                             
                                         }
                                     });
+                                    
+                                  
+                                 
+                                 //show score save
+                                  var answers = ['A', 'B', 'C', 'D'];   
+                                  var answersidx = -1;
+                                  $.each(answers, function (key, val) {                                      
+                                      if(app.selected_answer==val){
+                                          answersidx = key;
+                                      }    
+                                  });    
+
+                                  if(answersidx!=-1) {
+                                      Vue.set(this.userResponses, this.questionIndex, answersidx); 
+                                  }   
                          }          
                                     
                            setTimeout(() => {
