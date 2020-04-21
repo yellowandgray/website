@@ -229,7 +229,6 @@ if($testmode==1){
 }
 
 
-
 if (isset($_SESSION['student_selected_topics_id']) && ($_SESSION['student_selected_topics_id'] != '')) {
     $subj_topic = $obj->selectAll('t.*,s.name As subject', ' topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id', ' t.topic_id IN (' . $_SESSION['student_selected_topics_id'] . ')  ORDER BY subject_id, topic_id ASC');
     $sub_topic_val = '';
@@ -345,11 +344,11 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
 
 
                                         
-                                         <!-- show Go Question testing purpose -->
+                                <!-- show Go Question testing purpose -->
                                 <?php if ($testmode == 1) { ?>  
                                          <div class="quiz-review">
                                                 <div class="float-left admin-panel-section">
-                                                    <a href="#" onclick="showqno();" class="btn logout-btn">Question Admin Panel</a>
+                                                    <!--a href="#" onclick="showQuesPanel();" class="btn logout-btn">Question Admin Panel</a-->
                                                     <input type="text" id="goques" name="goquestion" style="width:30px;margin-bottom: 0px;">
                                                     <a v-on:click="goquestion();" class="btn btn-primary">Go</a>
                                                 </div>
@@ -374,8 +373,10 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                         <?php if ($testmode == 0) { ?>
                                             <div class="quiz-review">
                                                 <div class="float-left" style="padding: 20px 0;">
+                                                    <?php if($type == 'Question Order') { ?>
                                                     <!--a href="#" onclick="showqno();" class="btn logout-btn">Question Admin Panel</a-->
                                                     <a href="#" @click="showQuesPanel();" class="btn logout-btn">Question Admin Panel</a>
+                                                    <?php } ?>
                                                     <a v-on:click="revAns();" class="btn logout-btn" v-if="!revShow">Review Answer</a>
                                                     <a v-on:click="revcontAns();" class="btn btn-theme" v-if="revShow">Continue Quiz</a>
                                                 </div>
@@ -436,12 +437,14 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     
                                     </div>
                                     
+                                   
                                     <div class="question-admin-panel" style="width: 100%; padding: 20px; display: none;">
                                         <div class="question-number-title">
                                             <span class="showqus" style="float: left;" onclick="showqus();"><i class="icon-angle-left"></i> Back</span>
                                             <h3>Question Admin Panel</h3>
                                         </div>
                                         <div id="questionpanel">
+                                            <?php /*
                                             <table class="question-number-table">
                                                 <tr>
                                                     <td class="clr-blue">1</td>
@@ -504,6 +507,9 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                                     <td>50</td>
                                                 </tr>
                                             </table>
+                                             * 
+                                             */ 
+                                            ?>
                                         </div>
                                         <div class="admin-panel-btns">
                                             <div class="row">
@@ -699,9 +705,17 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                             </div>
                                             <!--                                        <hr>-->
                                             <div class="quiz-explanation-view">Explanation:</div>
+                                            
                                             <div v-if="quiz.questions[questionIndex].show_image_explanation" class="text-center">
                                                 <img v-if="quiz.questions[questionIndex].explanation_img_direction == 'top'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
                                             </div>
+                                            
+
+                                            <?php if($testmode==1){ ?>
+                                            <div v-if="!quiz.questions[questionIndex].show_image_explanation && otherlangquiz[quiz.questions[questionIndex].question_no] && otherlangquiz[quiz.questions[questionIndex].question_no].show_image_explanation" class="text-center">
+                                                <img v-if="otherlangquiz[quiz.questions[questionIndex].explanation_img_direction] == 'top'" v-bind:src="'api/v1/'+otherlangquiz[quiz.questions[questionIndex].image_path_explanation]" alt="image" class="qes-img" />
+                                            </div>
+                                            <?php } ?>
 
                                             <!--span v-html="quiz.questions[questionIndex].explanation"></span-->
                                             <br/>
@@ -709,10 +723,24 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                                 <span v-html="quiz.questions[questionIndex].explanation"></span>
                                             </div>    
 
-
+                                            <?php if($testmode==1){ ?>
+                                            <div style="text-align: left;" v-if="!quiz.questions[questionIndex].explanation && otherlangquiz[quiz.questions[questionIndex].question_no] && otherlangquiz[quiz.questions[questionIndex].question_no].explanation">
+                                                <span v-html="otherlangquiz[quiz.questions[questionIndex].question_no].explanation"></span>
+                                            </div>
+                                            <?php } ?>
+                                           
+                                            
                                             <div v-if="quiz.questions[questionIndex].show_image_explanation" class="text-center">
                                                 <img v-if="quiz.questions[questionIndex].explanation_img_direction == 'bottom'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
+                                            </div>          
+                                            
+                                           
+                                            <?php if($testmode==1){ ?>
+                                            <div v-if="!quiz.questions[questionIndex].show_image_explanation && otherlangquiz[quiz.questions[questionIndex].question_no] && otherlangquiz[quiz.questions[questionIndex].question_no].show_image_explanation" class="text-center">
+                                                <img v-if="otherlangquiz[quiz.questions[questionIndex].explanation_img_direction] == 'bottom'" v-bind:src="'api/v1/'+otherlangquiz[quiz.questions[questionIndex].image_path_explanation]" alt="image" class="qes-img" />
                                             </div>
+                                            <?php } ?>
+                                            
                                         </div>
                                         <!--                                    pagination-->
                                         <nav class="pagination" role="navigation" aria-label="pagination">
@@ -906,7 +934,8 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                     shownextnosave : true,
                     showsurebtnans:false,
                     questionprevanswered:false,
-                    selected_answer: ''
+                    selected_answer: '',
+                    otherlangquiz: null
             
                 },
                 filters: {
@@ -1014,18 +1043,78 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                 if (data.result.error === false) {  
                                     if(data.result.data) {
                                     $.each(data.result.data, function (key, val) {
-                                        stud_ans[val.question_no]= {'student_answer':val.student_answer,'student_notsure_answer':val.student_notsure_answer};
+                                        //stud_ans[val.question_no]= {'student_answer':val.student_answer,'student_notsure_answer':val.student_notsure_answer};
+                                        stud_ans[val.question_id]= {'student_answer':val.student_answer,'student_notsure_answer':val.student_notsure_answer};
                                     });   
                                 }
+                                
+                                
+                                
+                                
+                       var questionslist = <?php echo  json_encode($questions_list); ?>;
+                       var  qTable = '<table class="question-number-table"><tr>';
+                        $.each(questionslist, function (key, val) {
+                            var qn = key+1;
+                                                    
+                            if(qn!=1 && (key%10==0)) {                                                                
+                                 if(qn<questionslist.length) {
+                                    qTable += '<tr>';
+                                 }   
+                              }   
+                                
+                                var tdval = '<td onClick=goQuesFrPanel('+key+');>'+qn+'</td>';
+                                if(typeof val.question_no !== 'undefined') {                                    
+                                    if(typeof stud_ans[val.question_id] !== 'undefined'){
+                                        if(stud_ans[val.question_id].student_answer!='') {
+                                            tdval =  '<td onClick=goQuesFrPanel('+key+'); class="clr-blue">'+qn+'</td>';                                           
+                                         }
+                                         else if(stud_ans[val.question_id].student_notsure_answer!='') {
+                                             tdval = '<td onClick=goQuesFrPanel('+key+'); class="clr-yellow">'+qn+'</td>';
+                                         }    
+                                    }   
+                                }
+                                qTable += tdval;
+                              
+                              
+                               if(qn!=1 && (qn%10==0)) {
+                                                                
+                                 if(qn<=questionslist.length) {
+                                    qTable += '</tr>';
+                                 }   
+                              }else if(qn==questionslist.length) {
+                                  var rtd = 10-(qn%10);
+                                  for(i=1;i<=rtd;i++) {
+                                    qTable += '<td></td>';
+                                  }
+                                  qTable += '</tr>';
+                               }   
+                              
+                              
+                                
+                                
+                                                    
+                        });    
+                        qTable += '</table>';
+                        //console.log(qTable);
+                        
+                        $('#header-hidden').hide();
+                        $('#quiz-hidden').hide();
+                        $('.questionFooter').hide();
+                        $('#questionpanel').html(qTable);
+                        $('.question-admin-panel').show();   
+                        
                             } 
                             }
                         });
-                        //console.log(stud_ans);              
+                        //console.log(stud_ans);       
+                        
+                        
+                        /*
                     
                     setTimeout(() => {                        
                         
                         
-                        var questionslist = <?php echo  json_encode($questions_list); ?>;
+                        var questionslist = <?php // echo  json_encode($questions_list); ?>;
                        var  qTable = '<table class="question-number-table"><tr>';
                         $.each(questionslist, function (key, val) {
                             var qn = key+1;
@@ -1065,73 +1154,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                               
                               
                                 
-                                /*
-                                  <table style="width: 100%;">
-                                            <tr>
-                                                <td class="clr-blue">1</td>
-                                                <td class="clr-yellow">2</td>
-                                                <td>3</td>
-                                                <td>4</td>
-                                                <td>5</td>
-                                                <td>6</td>
-                                                <td>7</td>
-                                                <td>8</td>
-                                                <td>9</td>
-                                                <td>10</td>
-                                            </tr>
-                                            <tr>
-                                                <td>11</td>
-                                                <td>12</td>
-                                                <td>13</td>
-                                                <td>14</td>
-                                                <td>15</td>
-                                                <td>16</td>
-                                                <td>17</td>
-                                                <td>18</td>
-                                                <td>19</td>
-                                                <td>20</td>
-                                            </tr>
-                                            <tr>
-                                                <td>21</td>
-                                                <td>22</td>
-                                                <td>23</td>
-                                                <td>24</td>
-                                                <td>25</td>
-                                                <td>26</td>
-                                                <td>27</td>
-                                                <td>28</td>
-                                                <td>29</td>
-                                                <td>30</td>
-                                            </tr>
-                                            <tr>
-                                                <td>31</td>
-                                                <td>32</td>
-                                                <td>33</td>
-                                                <td>34</td>
-                                                <td>35</td>
-                                                <td>36</td>
-                                                <td>37</td>
-                                                <td>38</td>
-                                                <td>39</td>
-                                                <td>40</td>
-                                            </tr>
-                                            <tr>
-                                                <td>41</td>
-                                                <td>42</td>
-                                                <td>43</td>
-                                                <td>44</td>
-                                                <td>45</td>
-                                                <td>46</td>
-                                                <td>47</td>
-                                                <td>48</td>
-                                                <td>49</td>
-                                                <td>50</td>
-                                            </tr>
-                                        </table>
-                                 */
                                 
-                               // console.log(key);
-                               // console.log(val);
                                                     
                         });    
                         qTable += '</table>';
@@ -1145,11 +1168,11 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                           
 
 
-                        }, 500);
+                        }, 1000);
                     
                     
                     
-                    
+                    */
                         
                        
                     },
@@ -2370,6 +2393,29 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                             }    
                        <?php } ?>
                     },    
+                    showExplanationOtherLang: function() {
+                      //display other langauage explaination
+                       <?php  if($testmode==1){        ?>   
+                               
+                            
+                            var other_language = '<?php  echo $other_language['language_id']; ?>';
+                            var questions = <?php echo json_encode($questions_list); ?>;
+                            var otherlang_questions = <?php echo json_encode($otherlang_questions_list); ?>;                            
+                          
+                           if(otherlang_questions) {
+                               //alert(otherlang_questions.length);
+                               var sample = new Array();    
+                               
+                               for (let il = 0; il < otherlang_questions.length; il++) { 
+                                   sample[otherlang_questions[il].question_no] = {'explanation_img_direction':otherlang_questions[il].explanation_img_direction,'explanation':otherlang_questions[il].explanation,'show_image_explanation':otherlang_questions[il].show_image_explanation,'image_path_explanation':otherlang_questions[il].image_path_explanation};
+                                       
+                                }   
+                           
+                            this.otherlangquiz = sample;
+                            //console.log(sample);
+                        }
+                       <?php } ?>
+                    },          
                     score: function () {
                         var score = 0;
                         for (let i = 0; i < this.userResponses.length; i++) {
@@ -2418,8 +2464,13 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                setTimeout(() => {                            
                             applyMathAjax();  
                             $('.quiz-section').show();
+                             <?php  if($testmode==1){        ?>   
+                            //display other lanaguage explanation           
+                            app.showExplanationOtherLang();
+                             <?php } ?>
                             $('.loadingoverlay').hide();
-                        }, 600);    
+                        }, 600);                         
+                        
             });
         </script>
         <script>
