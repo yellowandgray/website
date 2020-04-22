@@ -708,14 +708,15 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                             
                                             <div v-if="quiz.questions[questionIndex].show_image_explanation" class="text-center">
                                                 <img v-if="quiz.questions[questionIndex].explanation_img_direction == 'top'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
+                                            
                                             </div>
                                             
-
-                                            <?php if($testmode==1){ ?>
+                                                                                          
+                                            <?php  if($testmode==1){ ?>
                                             <div v-if="!quiz.questions[questionIndex].show_image_explanation && otherlangquiz[quiz.questions[questionIndex].question_no] && otherlangquiz[quiz.questions[questionIndex].question_no].show_image_explanation" class="text-center">
-                                                <img v-if="otherlangquiz[quiz.questions[questionIndex].explanation_img_direction] == 'top'" v-bind:src="'api/v1/'+otherlangquiz[quiz.questions[questionIndex].image_path_explanation]" alt="image" class="qes-img" />
+                                                <img v-if="otherlangquiz[quiz.questions[questionIndex].question_no].explanation_img_direction == 'top'" v-bind:src="'api/v1/'+otherlangquiz[quiz.questions[questionIndex].question_no].image_path_explanation" alt="image" class="qes-img" />
                                             </div>
-                                            <?php } ?>
+                                            <?php }  ?>
 
                                             <!--span v-html="quiz.questions[questionIndex].explanation"></span-->
                                             <br/>
@@ -737,7 +738,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                            
                                             <?php if($testmode==1){ ?>
                                             <div v-if="!quiz.questions[questionIndex].show_image_explanation && otherlangquiz[quiz.questions[questionIndex].question_no] && otherlangquiz[quiz.questions[questionIndex].question_no].show_image_explanation" class="text-center">
-                                                <img v-if="otherlangquiz[quiz.questions[questionIndex].explanation_img_direction] == 'bottom'" v-bind:src="'api/v1/'+otherlangquiz[quiz.questions[questionIndex].image_path_explanation]" alt="image" class="qes-img" />
+                                                <img v-if="otherlangquiz[quiz.questions[questionIndex].question_no].explanation_img_direction == 'bottom'" v-bind:src="'api/v1/'+otherlangquiz[quiz.questions[questionIndex].question_no].image_path_explanation" alt="image" class="qes-img" />
                                             </div>
                                             <?php } ?>
                                             
@@ -903,7 +904,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
         <?php include 'footer.php'; ?>
         <?php include 'script.php'; ?>
         <script>
-            //image_url = 'http://localhost/project/exam-horse/api/v1/';
+            //image_url = 'http://localhost/project/examhorse/api/v1/';
             image_url ='http://examhorse.com/beta/api/v1/';
             console.log(<?php echo json_encode($questions_list); ?>);
             var quiz = {
@@ -2270,6 +2271,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                         
                          $('#header-hidden').show();
                          $('#quiz-hidden').show();
+                         $('.questionFooter').show();
                          $('.question-admin-panel').hide();
       
                         this.questionIndex = val;
