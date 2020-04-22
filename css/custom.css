@@ -726,9 +726,11 @@ and open the template in the editor.
 }
 
 .subject-section-order li input {
-    position: absolute;
+    position: relative;
     height: 19px;
     width: 19px;
+    float: left;
+    margin-right: 10px;
 }
 
 .subject-section-order li label {
