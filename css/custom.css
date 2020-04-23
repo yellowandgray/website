@@ -1420,21 +1420,21 @@ and open the template in the editor.
     margin-right: 6px;
 }
 
-.result-filter-section table th {
+#question_list table th {
     padding: 5px;
 }
 
-.result-filter-section table td {
+#question_list table td {
     padding: 5px;
 }
 
-.result-filter-section table th  {
+#question_list table th  {
     padding: 5px;
     text-align: left;
     color: #f53c00;
 }
 
-.result-filter-section table th i {
+#question_list table th i {
     color: #f53c00;
     text-align: center;
 }
@@ -1447,4 +1447,10 @@ and open the template in the editor.
     text-align: center;
     cursor: pointer;
     font-weight: bold;
+}
+
+#question_list_det .question-title {
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #f53c00;
+    margin-bottom: 10px;
 }

@@ -55,7 +55,7 @@ $counter = 0;
                                         $counter++;
                                         ?>
                                         <li>
-                                            <input type="checkbox" class="subjects" data-chkgroup="option<?php echo $counter; ?>" value="<?php echo $row['subject_id']; ?>"><span class=""> <?php echo $row['name']; ?></span>
+                                            <label class="pl-0"><input type="checkbox" class="subjects" data-chkgroup="option<?php echo $counter; ?>" value="<?php echo $row['subject_id']; ?>"><span class=""> <?php echo $row['name']; ?></span></label>
                                             
                                         </li>
                                     <?php } ?>
