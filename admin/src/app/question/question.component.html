@@ -139,7 +139,7 @@
                 <mat-list-item>
                     <img mat-line [src]="image_url + otherlangquestion[data.question_no].image_path" alt="image" *ngIf="otherlangquestion[data.question_no].image_path != '' && otherlangquestion[data.question_no].direction == 'top'" class="question-img" />
                     <p mat-line class='question-bottom'>{{otherlangquestion[data.question_no].question_no}}. <span class="question" [innerHTML]="otherlangquestion[data.question_no].name"></span></p>
-                    <img mat-line [src]="image_url + otherlangquestion[data.question_no].image_path" alt="image" *ngIf="otherlangquestion[data.question_no].image_path != '' && dataother.direction == 'bottom'" class="question-img" />
+                    <img mat-line [src]="image_url + otherlangquestion[data.question_no].image_path" alt="image" *ngIf="otherlangquestion[data.question_no].image_path != '' && otherlangquestion[data.question_no].direction == 'bottom'" class="question-img" />
                     <p mat-line>A. <span [innerHTML]="otherlangquestion[data.question_no].a"></span></p>
                     <p mat-line>B. <span [innerHTML]="otherlangquestion[data.question_no].b"></span></p>
                     <p mat-line *ngIf="data.c != ''">C. <span [innerHTML]="otherlangquestion[data.question_no].c"></span></p>
