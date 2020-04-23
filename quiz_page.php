@@ -1319,8 +1319,8 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                                 res +='<tr>';
                                                 res +='<td>'+val.subject_name+'</td>';
                                                 res +='<td>'+val.topic_name+'</td>';
-                                                res +='<td>'+val.totalcnt+'</td>';
-                                                res +='<td>'+val.answerdcnt+'</td>';
+                                                res +='<td class="q-center">'+val.totalcnt+'</td>';
+                                                res +='<td class="q-center">'+val.answerdcnt+'</td>';
                                                 res +='<td>'+val.correctcnt+'</td>';
                                                 res +='<td>'+val.wrongcnt+'</td>';
                                                 res +='<td>';
