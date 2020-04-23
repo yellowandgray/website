@@ -26,6 +26,7 @@ export class QuestionComponent implements OnInit {
   question = [];
   year = [];
   language = [];
+  otherlangquestion = [];
   subject = [];
   loading = false;
   file_name: string = "Select Picture";
@@ -39,7 +40,8 @@ export class QuestionComponent implements OnInit {
   selected_topic = 0;
   selected_topic_index = 0;
   questionloader = false;
-   
+  showotherlang = false; 
+  alllang_checked = false;
 
   constructor(
     public dialog: MatDialog,
@@ -88,6 +90,7 @@ export class QuestionComponent implements OnInit {
       );
   }
   getYearByLanguage(): void {
+    this.alllang_checked = false;
     this.subject = [];
     this.httpClient
       .get<any>(
@@ -339,6 +342,86 @@ export class QuestionComponent implements OnInit {
         }
       );
   }
+ getAlllangquestions(ev):void {
+
+var lid                     = this.selected_language;
+var sel_year                = this.selected_year;
+var selected_subject        = this.selected_subject;
+var selected_topic          = this.selected_topic;
+
+
+
+this.showotherlang = false;
+if(ev) {
+    this.showotherlang = true;
+this.httpClient
+      .get<any>(
+        "http://localhost/project/examhorse/api/v1/get_question_by_year_n_otherlang/"+lid+"/"+sel_year
+      )
+      .subscribe(
+        res => {
+          var res     = res["result"]["data"];
+          var datares = [];
+          if(res){
+                res.forEach(function (value) {
+                        console.log(value.question_no);
+                        
+                       if(value.question_no){
+                            datares[value.question_no] = value;     
+                       } 
+                      
+                });
+                
+          }
+
+          
+          
+        if(lid!=0 && sel_year!=0 && selected_subject!=0 && selected_topic!=0)
+        {
+            this.getQuestionsByTopicYear();
+            this.otherlangquestion = datares;
+        }else if(lid!=0 && sel_year!=0 && selected_subject!=0) {
+            this.getQuestionsByYearAndLangAndSubj();
+            this.otherlangquestion = datares;
+        }else if(lid!=0 && sel_year!=0) {
+            this.getQuestionsByYearAndLang();
+            this.otherlangquestion = datares;
+        }
+
+          setTimeout(() => {
+                            
+                            applyMathAjax();                             
+                        }, 600);
+                        this.questionloader = false;
+        },
+        error => {
+          this._snackBar.open(error["statusText"], "", {
+            duration: 2000
+          });
+        }
+      );
+}
+else
+{
+    if(lid!=0 && sel_year!=0 && selected_subject!=0 && selected_topic!=0)
+    {
+        this.getQuestionsByTopicYear();
+       
+    }
+    else if(lid!=0 && sel_year!=0 && selected_subject!=0) {
+        this.getQuestionsByYearAndLangAndSubj();
+    }
+    else if(lid!=0 && sel_year!=0) {
+            this.getQuestionsByYearAndLang();            
+     }
+    setTimeout(() => {
+                            
+                            applyMathAjax();                             
+                        }, 600);
+                        this.questionloader = false;
+}
+   
+ }
   openDialog(id, res): void {
    var data = null;
     if (id != 0) {
