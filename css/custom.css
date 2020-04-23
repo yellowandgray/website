@@ -1454,3 +1454,7 @@ and open the template in the editor.
     border-bottom: 1px dashed #f53c00;
     margin-bottom: 10px;
 }
+
+.q-center {
+    text-align: center;
+}
