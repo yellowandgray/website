@@ -128,9 +128,9 @@
                     <p mat-line *ngIf="data.c != ''">C. <span [innerHTML]="data.c"></span></p>
                     <p mat-line *ngIf="data.d != ''">D. <span [innerHTML]="data.d"></span></p>
                     <h2 mat-line class="answer-font">Answer: ({{data.answer}})</h2>
-                    <img mat-line [src]="image_url + data.image_path_explanation" alt="image" *ngIf="data.image_path_explanation != '' && data.direction == 'top'" style="width: 15%" />
+                    <img mat-line [src]="image_url + data.image_path_explanation" alt="image" *ngIf="data.image_path_explanation != '' && data.explanation_img_direction == 'top'" style="width: 15%" />
                     <p mat-line class='question-bottom'><span [innerHTML]="data.explanation"></span></p>
-                    <img mat-line [src]="image_url + data.image_path_explanation" alt="image" *ngIf="data.image_path_explanation != '' && data.direction == 'bottom'" style="width: 15%" />
+                    <img mat-line [src]="image_url + data.image_path_explanation" alt="image" *ngIf="data.image_path_explanation != '' && data.explanation_img_direction == 'bottom'" style="width: 15%" />
                 </mat-list-item>
                 <mat-divider></mat-divider>
                 </ng-container>
@@ -145,9 +145,9 @@
                     <p mat-line *ngIf="data.c != ''">C. <span [innerHTML]="otherlangquestion[data.question_no].c"></span></p>
                     <p mat-line *ngIf="data.d != ''">D. <span [innerHTML]="otherlangquestion[data.question_no].d"></span></p>
                     <h2 mat-line class="answer-font">Answer: ({{otherlangquestion[data.question_no].answer}})</h2>
-                    <img mat-line [src]="image_url + otherlangquestion[data.question_no].image_path_explanation" alt="image" *ngIf="otherlangquestion[data.question_no].image_path_explanation != '' && otherlangquestion[data.question_no].direction == 'top'" style="width: 15%" />
+                    <img mat-line [src]="image_url + otherlangquestion[data.question_no].image_path_explanation" alt="image" *ngIf="otherlangquestion[data.question_no].image_path_explanation != '' && otherlangquestion[data.question_no].explanation_img_direction == 'top'" style="width: 15%" />
                     <p mat-line class='question-bottom'><span [innerHTML]="otherlangquestion[data.question_no].explanation"></span></p>
-                    <img mat-line [src]="image_url + otherlangquestion[data.question_no].image_path_explanation" alt="image" *ngIf="otherlangquestion[data.question_no].image_path_explanation != '' && otherlangquestion[data.question_no].direction == 'bottom'" style="width: 15%" />
+                    <img mat-line [src]="image_url + otherlangquestion[data.question_no].image_path_explanation" alt="image" *ngIf="otherlangquestion[data.question_no].image_path_explanation != '' && otherlangquestion[data.question_no].explanation_img_direction == 'bottom'" style="width: 15%" />
                 </mat-list-item>
                     
                 <mat-divider></mat-divider>
