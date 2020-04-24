@@ -881,8 +881,8 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
 
                         <div id="create" class="quiz-result" style="display: none;" tabindex='1'>
 
-                            <div id="question_list"></div>
-                            <div id="question_list_det"></div>
+                            <div id="question_list" style="display: none;"></div>
+                            <div id="question_list_det" style="display: none;"></div>
                         </div>
 
 
@@ -1023,6 +1023,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                         qlist = qlist + '</div>';
                                     });
                                     $('#question_list').html(qlist);
+                                    $('#question_list').show();
                                     $("#create").toggle();
                                 } else {
                                     swal('Information', data.result.message, 'info');
@@ -1191,16 +1192,22 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     var qlist = '';
                                     var correct_ans = '';
                                     var student_ans = '';
-                                    $.each(data.result.data, function (key, val) {                                            
+                                    var cor_cnt     = 0;
+                                    var ans_cnt     = 0;
+                                    var wrong_cnt   = 0;
+                                    
+                                    $.each(data.result.data, function (key, val) {                  
+                                        ans_cnt = ans_cnt +1 ;
                                         qlist = qlist + '<div class="question-title"><h6>' + (key + 1) + '. ' + val.name + '</h6>';
                                         if (val.a !== '') {
                                             correct_ans = '';
                                             student_ans = '';
                                             if ((val.answer).toUpperCase() === 'A') {
-                                                correct_ans = 'crt_clr';
+                                                correct_ans = 'crt_clr';                                                
                                             }
                                             if ((val.student_answer).toUpperCase() === 'A' && (val.answer).toUpperCase() !== 'A') {
                                                 student_ans = 'wrng_clr';
+                                                wrong_cnt = wrong_cnt+1;
                                             }
                                             qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">A.</span> ' + val.a + '</div></div>';
                                         }
@@ -1208,10 +1215,11 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                             correct_ans = '';
                                             student_ans = '';
                                             if ((val.answer).toUpperCase() === 'B') {
-                                                correct_ans = 'crt_clr';
+                                                correct_ans = 'crt_clr';                                               
                                             }
                                             if ((val.student_answer).toUpperCase() === 'B' && (val.answer).toUpperCase() !== 'B') {
                                                 student_ans = 'wrng_clr';
+                                                wrong_cnt = wrong_cnt+1;
                                             }
                                             qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">B.</span> ' + val.b + '</div></div>';
                                         }
@@ -1219,10 +1227,11 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                             correct_ans = '';
                                             student_ans = '';
                                             if ((val.answer).toUpperCase() === 'C') {
-                                                correct_ans = 'crt_clr';
+                                                correct_ans = 'crt_clr';                                                
                                             }
                                             if ((val.student_answer).toUpperCase() === 'C' && (val.answer).toUpperCase() !== 'C') {
                                                 student_ans = 'wrng_clr';
+                                                wrong_cnt = wrong_cnt+1;
                                             }
                                             qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">C.</span> ' + val.c + '</div></div>';
                                         }
@@ -1230,10 +1239,11 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                             correct_ans = '';
                                             student_ans = '';
                                             if ((val.answer).toUpperCase() === 'D') {
-                                                correct_ans = 'crt_clr';
+                                                correct_ans = 'crt_clr';                                                
                                             }
                                             if ((val.student_answer).toUpperCase() === 'D' && (val.answer).toUpperCase() !== 'D') {
                                                 student_ans = 'wrng_clr';
+                                                wrong_cnt = wrong_cnt+1;
                                             }
                                             qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">D.</span> ' + val.d + '</div></div>';
                                         }
@@ -1254,7 +1264,31 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                         }
                                         qlist = qlist + '</div>';
                                     });
-                                    $('#question_list').html(qlist);
+                                     $('#question_list_det').html(qlist);
+                                                                          
+                                      cor_cnt = ans_cnt -  wrong_cnt;
+                                      var res ='<table style="width:100%">';
+                                      res +='<tr>';
+                                                res +='<th>Year</th>';
+                                                res +='<th>Total</th>';
+                                                res +='<th>Answered</th>';
+                                                res +='<th><i class="icon-ok"></i></th>';
+                                                res +='<th><i class="icon-remove"></i></th>';
+                                                res +='<th>&nbsp;</th>';
+                                            res +='</tr>';
+                                       res +='<tr>';
+                                                res +='<td><?php echo $sel_year_val; ?></td>';
+                                                res +='<td>'+quiz.questions.length+'</td>';
+                                                res +='<td>'+ans_cnt+'</td>';
+                                                res +='<td>'+cor_cnt+'</td>';
+                                                res +='<td>'+wrong_cnt+'</td>';
+                                                 res +='<td>';
+                                                res +='<button class="btn btn-answerd-clr" onClick=yordershowdetail();>Show Details</button>';
+                                                res +='</td>';
+                                                res +='</tr>';    
+                                    //$('#question_list').html(qlist);
+                                    $('#question_list').html(res);
+                                     $('#question_list').show();
                                     $("#create").toggle();                                    
                                 } else {
                                     swal('Information', data.result.message, 'info');
@@ -1330,6 +1364,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     });
                                     
                                     $('#question_list').html(res);
+                                     $('#question_list').show();
                                     $("#create").toggle();                                    
                                     $('.loadingoverlay').hide();          
                                 }
@@ -1512,6 +1547,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                         qlist = qlist + '</div>';
                                     });
                                     $('#question_list_det').html(qlist);
+                                    $('#question_list_det').show();
                                     //$("#create").toggle();
                                     $('#ansdetfocus').focus();
                                 } else {
@@ -1598,7 +1634,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                          }
                          
                          
-                          setTimeout(() => {
+                          setTimeout(() => {                                
                                 if (this.questionIndex < this.quiz.questions.length) {
                                     this.questionIndex++;  
                                     
@@ -1703,10 +1739,12 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                          }          
                                     
                            setTimeout(() => {
+                                                      
                                 if (this.questionIndex < this.quiz.questions.length) {
                                     this.questionIndex++;  
                                     this.selected_answer = '';
-                                                                 
+                                    
+                                    if(questions[this.questionIndex]) {
                                     var qid = questions[this.questionIndex].question_id;
                                     
                                     $.get("api/v1/get_student_notsure_answer/" + qid + "/<?php echo $student_log; ?>",
@@ -1751,7 +1789,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                             }   
                                         }
                                     });
-
+                                  }
                                 }   
                            }, 500);    
                            
@@ -2492,6 +2530,9 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
             }
             function topicShowDetail(tid) {
                app.divshowsorderdetail(tid,<?php echo $student_log; ?>);
+            }
+            function yordershowdetail(){
+                $('#question_list_det').show();
             }
         </script>
     </body>

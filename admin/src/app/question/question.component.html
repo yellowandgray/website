@@ -5,7 +5,7 @@
     <mat-sidenav-content>
         <app-header></app-header>
         <div class="add-btn-container">
-            <mat-checkbox #showalllang [(ngModel)]="selected_topic" (change)='getAlllangquestions(showalllang.checked)' value=''>
+            <mat-checkbox #showalllang [(ngModel)]="showotherlang" (change)='getAlllangquestions(showalllang.checked)' value=''>
                 <label>Show All language</label> 
             </mat-checkbox>
             <button mat-raised-button color="primary" (click)="fileInput.click()">

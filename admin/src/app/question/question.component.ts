@@ -40,8 +40,8 @@ export class QuestionComponent implements OnInit {
   selected_topic = 0;
   selected_topic_index = 0;
   questionloader = false;
-  showotherlang = false; 
-  alllang_checked = false;
+  showotherlang = false;
+  
 
   constructor(
     public dialog: MatDialog,
@@ -90,7 +90,7 @@ export class QuestionComponent implements OnInit {
       );
   }
   getYearByLanguage(): void {
-    this.alllang_checked = false;
+    this.showotherlang = false;    
     this.subject = [];
     this.httpClient
       .get<any>(
