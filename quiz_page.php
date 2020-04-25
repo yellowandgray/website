@@ -996,28 +996,38 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                             student_ans = '';
                                             if ((val.student_answer).toUpperCase() === 'A') {
                                                 student_ans = 'crt_clr';
-                                            }
+                                            }else if((val.student_notsure_answer).toUpperCase() === 'A') {
+                                                student_ans = 'notsure_clr';
+                                             }   
+                                                                                        
                                             qlist = qlist + '<div class="result-option ' + student_ans + '"><div class="option"><span class="quiz-option-float">A.</span> ' + val.a + '</div></div>';
                                         }
                                         if (val.b !== '') {
                                             student_ans = '';
                                             if ((val.student_answer).toUpperCase() === 'B') {
                                                 student_ans = 'crt_clr';
-                                            }
+                                            }else if((val.student_notsure_answer).toUpperCase() === 'B') {
+                                                student_ans = 'notsure_clr';
+                                             } 
                                             qlist = qlist + '<div class="result-option ' + student_ans + '"><div class="option"><span class="quiz-option-float">B.</span> ' + val.b + '</div></div>';
                                         }
                                         if (val.c !== '') {
                                             student_ans = '';
                                             if ((val.student_answer).toUpperCase() === 'C') {
                                                 student_ans = 'crt_clr';
-                                            }
+                                            }else if((val.student_notsure_answer).toUpperCase() === 'C') {
+                                                student_ans = 'notsure_clr';
+                                             } 
+                                             
                                             qlist = qlist + '<div class="result-option ' + student_ans + '"><div class="option"><span class="quiz-option-float">C.</span> ' + val.c + '</div></div>';
                                         }
                                         if (val.d !== '') {
                                             student_ans = '';
                                             if ((val.student_answer).toUpperCase() === 'D') {
                                                 student_ans = 'crt_clr';
-                                            }
+                                            }else if((val.student_notsure_answer).toUpperCase() === 'D') {
+                                                student_ans = 'notsure_clr';
+                                             } 
                                             qlist = qlist + '<div class="result-option ' + student_ans + '"><div class="option"><span class="quiz-option-float">D.</span> ' + val.d + '</div></div>';
                                         }
                                         qlist = qlist + '</div>';
@@ -2383,24 +2393,31 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                     },
                     goquestion: function () {    
                         var goquestion = parseInt($("#goques").val());
-      
-                        this.questionIndex = goquestion-1;
-                                
-                         $('.loadingoverlay').show();
-                         
-                         
-                          <?php  if($testmode==1){        ?>  
-                         if(this.olqshow) {
-                            this.showQuestionOtherLang();
-                         }  
-                         <?php } ?>
-                         
-                        setTimeout(() => {                            
-                            applyMathAjax();   
-                            $('.loadingoverlay').hide();
-                        }, 600);      
                         
+                        if(goquestion>this.quiz.questions.length)   {
+                            var maxnum = this.quiz.questions.length+1
+                           swal("Error!", "Number Should be Less than "+maxnum, "error");
+                            return;
+                        }  
+                        else 
+                        {
+                            this.questionIndex = goquestion-1;
+
+                             $('.loadingoverlay').show();
+
+
+                              <?php  if($testmode==1){        ?>  
+                             if(this.olqshow) {
+                                this.showQuestionOtherLang();
+                             }  
+                             <?php } ?>
+
+                            setTimeout(() => {                            
+                                applyMathAjax();   
+                                $('.loadingoverlay').hide();
+                            }, 600);      
                         
+                        }
 
                     },   
                     showolqChange: function () {
