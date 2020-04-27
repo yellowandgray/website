@@ -1383,11 +1383,17 @@ and open the template in the editor.
 .clr-blue {
     color: #000099;
     font-weight: 600;
+    border: 1px solid #000099;
+    padding: 3px 8px;
+    border-radius: 50%;
 }
 
 .clr-yellow {
     color: #ffcc00;
     font-weight: 600;
+    border: 1px solid #ffcc00;
+    padding: 3px 8px;
+    border-radius: 50%;
 }
 
 .question-number-title h3 {
@@ -1444,9 +1450,15 @@ and open the template in the editor.
 }
 
 .question-number-table td {
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.question-number-table td .q-a-n {
     text-align: center;
     cursor: pointer;
     font-weight: bold;
+    padding: 3px 8px;
 }
 
 #question_list_det .question-title {
