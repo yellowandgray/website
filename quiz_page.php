@@ -1074,14 +1074,14 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                  }   
                               }   
                                 
-                                var tdval = '<td onClick=goQuesFrPanel('+key+');>'+qn+'</td>';
+                                var tdval = '<td onClick=goQuesFrPanel('+key+');><span class="q-a-n">'+qn+'</span></td>';
                                 if(typeof val.question_no !== 'undefined') {                                    
                                     if(typeof stud_ans[val.question_id] !== 'undefined'){
                                         if(stud_ans[val.question_id].student_answer!='') {
-                                            tdval =  '<td onClick=goQuesFrPanel('+key+'); class="clr-blue">'+qn+'</td>';                                           
+                                            tdval =  '<td onClick=goQuesFrPanel('+key+'); class=""><span class="q-a-n clr-blue">'+qn+'</span></td>';                                           
                                          }
                                          else if(stud_ans[val.question_id].student_notsure_answer!='') {
-                                             tdval = '<td onClick=goQuesFrPanel('+key+'); class="clr-yellow">'+qn+'</td>';
+                                             tdval = '<td onClick=goQuesFrPanel('+key+'); class=""><span class="q-a-n clr-yellow">'+qn+'</span></td>';
                                          }    
                                     }   
                                 }
