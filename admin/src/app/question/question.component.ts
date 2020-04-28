@@ -342,6 +342,38 @@ export class QuestionComponent implements OnInit {
         }
       );
   }
+
+
+getAlllangquestions_edit():void {
+
+    var lid                     = this.selected_language;
+    var sel_year                = this.selected_year;
+    var selected_subject        = this.selected_subject;
+    var selected_topic          = this.selected_topic;
+
+
+    this.showotherlang = false;
+    if(lid!=0 && sel_year!=0 && selected_subject!=0 && selected_topic!=0)
+    {
+        this.getQuestionsByTopicYear();
+       
+    }
+    else if(lid!=0 && sel_year!=0 && selected_subject!=0) {
+        this.getQuestionsByYearAndLangAndSubj();
+    }
+    else if(lid!=0 && sel_year!=0) {
+            this.getQuestionsByYearAndLang();            
+     }
+    setTimeout(() => {
+                            
+                            applyMathAjax();                             
+                        }, 600);
+                        this.questionloader = false;
+   
+}
+
+
+
  getAlllangquestions(ev):void {
 
 var lid                     = this.selected_language;
@@ -452,7 +484,8 @@ else
       if (result !== false && result !== "false") {
         //this.getQuestionsByTopic({ value: this.selected_topic_index });
         //this.getQuestionsByTopicYear();
-        this.getSubjectByYearnLanguage();
+        //this.getSubjectByYearnLanguage();
+        this.getAlllangquestions_edit();
       }
     });
   }
