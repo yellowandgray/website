@@ -278,7 +278,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
         <div class="quiz-section" style="display:none;">
             <section class="container">
                 <div class="row">
-                    <div class="span12">
+                    <div class="span12" id="app">
                         <div class="quiz-question-section">
                             <a href = '#' onclick="goBack()"><i class = 'font-icon-arrow-simple-left'></i></a>
                             <h4 id="mySigninModalLabel" class="text-center quiz-heading-width">
@@ -310,15 +310,22 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                             <a class="home_link" href="select_language">
                                 <i class="icon-home"></i>
                             </a>
+                            <?php if($testmode == 0) {  ?>
                             <div class="quiz-timer">
-                                <span id="minutes">00</span> : <span id="seconds">00</span>
-                                
-                               
-                                
+                                <span id="minutes">{{minuteslabel}}</span> : <span id="seconds">{{secondslabel}}</span>                             
+                                <i class="icon-pause" v-if="!isTimerPaused" @click="pauseTimer()"></i>
+                                <i class="icon-play" v-if="isTimerPaused" @click="continueTimer()"></i>
                             </div>
+                            <?php  } ?>
                         </div>
-                        <!--question Box-->
+                       
+                         <!--question Box-->
+                        <?php /*
                         <div class="questionBox" id="app">
+                         * 
+                         */?>
+                          <!--question Box-->
+                          <div class="questionBox">
                             <!--qusetionContainer-->
                             <div class="questionContainer" v-if="questionIndex<quiz.questions.length" v-bind:key="questionIndex">
                                 <div class="question-header" id="header-hidden">
@@ -855,6 +862,11 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                 <h2 class="complete-title" v-if="score() != quiz.questions.length">
                                     Test Completed
                                 </h2>
+                                <?php if($testmode==0) { ?>
+                                <p class="subtitledur">
+                                    <span class="stotdur">At {{data_ques_duration}} Minutes You have completed the Quiz <br v-if="data_ques_answered!=0"> <span class="stotques" v-if="data_ques_answered!=0">At {{totalquizduration}} Minutes you have completed {{data_ques_answered}} Questions</span>
+                                </p>
+                                <?php } ?>
                                 <p class="subtitle">
                                     Total Score: <span class="score-clr">{{ score() }}</span> / {{ quiz.questions.length }}
                                 </p>
@@ -876,7 +888,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                 <div  id="feedback-popup" class="feedback-popup" style="display: none;" v-if="score() == quiz.questions.length">
                                     <div class="container">
                                         <div class="feedback-popup-box">
-                                            test
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -945,8 +957,15 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                     showsurebtnans:false,
                     questionprevanswered:false,
                     selected_answer: '',
-                    otherlangquiz: null
-            
+                    otherlangquiz: null,
+                    totseconds : 0,
+                    secondslabel : 0,
+                    minuteslabel : 0,
+                    isTimerPaused : false,
+                    totalquizduration : 180,
+                    quizalertbeforemins: 10,
+                    data_ques_answered : 0,
+                    data_ques_duration : 0
                 },
                 filters: {
                     charIndex: function (i) {
@@ -1617,6 +1636,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                           
                         
                         this.selected_answer = answers[index];
+                        this.continueTimer();
                         
                     },    
                     notSureSave:function() {
@@ -1652,6 +1672,10 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     });
                          }
                          
+                         if(this.questionIndex == this.quiz.questions.length-1)   {
+                                    this.savetimetaken();
+                                    this.quizdurtext();
+                                }
                          
                           setTimeout(() => {                                
                                 if (this.questionIndex < this.quiz.questions.length) {
@@ -1704,6 +1728,8 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     });
 
                                 }   
+                                
+                                
                            }, 500);    
                          
                          
@@ -1756,6 +1782,11 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                       Vue.set(this.userResponses, this.questionIndex, answersidx); 
                                   }   
                          }          
+                         
+                          if(this.questionIndex == this.quiz.questions.length-1)   {
+                                    this.savetimetaken();
+                                    this.quizdurtext();
+                          }
                                     
                            setTimeout(() => {
                                                       
@@ -1809,7 +1840,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                         }
                                     });
                                   }
-                                }   
+                                }                               
                            }, 500);    
                            
                           
@@ -1908,9 +1939,17 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                         }, 600);
                        
 
+                         if(this.questionIndex == this.quiz.questions.length-1)   {
+                                    this.savetimetaken();
+                                    this.quizdurtext();
+                                }
+                        
+
                         if (this.questionIndex < this.quiz.questions.length) {
                             this.questionIndex++;
                         }
+                        
+                       
 
                         var questions = <?php echo json_encode($questions_list); ?>;
                         var qid = questions[this.questionIndex].question_id;
@@ -2494,10 +2533,81 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                 score = score + 1;
                             }
                         }
+                         
                         return score;
 
                         //return this.userResponses.filter(function(val) { return val }).length;
-                    }
+                      
+                       
+                    },
+                    startTimer:function() {  
+                        if(!this.isTimerPaused) {
+                            this.totseconds++;
+                            this.secondslabel = pad(this.totseconds % 60);
+                            this.minuteslabel = pad(parseInt(this.totseconds / 60));
+                        }   
+                        var alertduration = this.totalquizduration - this.quizalertbeforemins;
+                        if(this.minuteslabel==alertduration && this.secondslabel==0) {
+                            this.quizTimerAlert();
+                        }
+                        if(this.minuteslabel==this.totalquizduration && this.secondslabel==0) {
+                            this.savenoquesdur();
+                            this.quizTimertotdurAlert();
+                        }    
+                    }, 
+                    pauseTimer:function() {
+                        this.isTimerPaused = true;
+                    },    
+                    continueTimer:function() {
+                        this.isTimerPaused = false;
+                    },
+                    savenoquesdur:function() {
+                         $.post("api/v1/store_duration_question",
+                                        {
+                                            student_log: <?php echo $student_log; ?>
+                                        },
+                                        function (data, status) {
+                                            if (data.result.error === false) {
+
+                                            }
+                                        });
+                    },
+                    savetimetaken:function() {                       
+                        $.post("api/v1/store_stud_duration",
+                                        {
+                                            stud_duration : this.totseconds,
+                                            student_log: <?php echo $student_log; ?>
+                                        },
+                                        function (data, status) {
+                                            if (data.result.error === false) {
+
+                                            }
+                                        });
+                    },
+                    quizTimerAlert:function() {
+                        swal('Only '+this.quizalertbeforemins+' Minutes Left');
+                    },
+                    quizTimertotdurAlert:function() {
+                        swal(this.totalquizduration+' Minutes Completed. But you can answer and complete the pending questions');
+                    },
+                    quizdurtext:function() {
+                         $('.loadingoverlay').show();
+                         $.get("api/v1/get_student_log_time_info/<?php echo $student_log; ?>",
+                                                    function (data, status) {
+                                                        if (data.result.error === false) {
+                                                           var qt = 0;  
+                                                           var qta= 0;
+                                                           app.data_ques_answered = data.result.ques_answered;
+                                                           qt = data.result.ques_duration;
+                                                           qta = qt/60;
+                                                           app.data_ques_duration = parseInt(qta);
+                                                               
+                                                               
+                                                           $('.loadingoverlay').hide();
+                                                        }
+                                                    });
+                                                    //return true; 
+                    }    
                 }
             });
             setTimeout(() => {
@@ -2505,6 +2615,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
             }, 500);
         </script>
         <script>
+            /*
             var minutesLabel = document.getElementById("minutes");
             var secondsLabel = document.getElementById("seconds");
             var totalSeconds = 0;
@@ -2515,7 +2626,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                 secondsLabel.innerHTML = pad(totalSeconds % 60);
                 minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
             }
-
+            */
             function pad(val) {
                 var valString = val + "";
                 if (valString.length < 2) {
@@ -2534,6 +2645,9 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                             //display other lanaguage explanation           
                             app.showExplanationOtherLang();
                              <?php } ?>
+                            <?php if($testmode == 0) {  ?>     
+                            setInterval(app.startTimer, 1000);
+                            <?php } ?>    
                             $('.loadingoverlay').hide();
                         }, 600);                         
                         

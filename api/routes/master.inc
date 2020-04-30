@@ -917,3 +917,61 @@ $app->get('/get_feedback', function() {
     }
     echoRespnse(201, $res);
 });
+
+
+
+$app->post('/store_duration_question', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Invalid login details');
+    $data = $app->request->post();
+    $obj = new Common();
+    $record = $obj->selectRow('*', 'student_log', 'student_log_id=' . $data['student_log']);
+    if (count($record) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'studnet log updated successfully';
+         
+        
+        //get answered count from student_answer table
+        $question_ans = $obj->selectAll('*', 'student_log_detail', 'student_log_id='.$data['student_log']);
+        $cnt_question_ans = count($question_ans);
+        //update
+        $obj->updateRecordWithWhere(array('no_ques_duration' => $cnt_question_ans), 'student_log','student_log_id=' . $data['student_log']);
+        
+        // exit;
+    } else {
+        $res['message'] = 'Unable to update studnet log';
+    }
+    echoRespnse(201, $res);
+});
+
+$app->post('/store_stud_duration', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Invalid login details');
+    $data = $app->request->post();
+    $obj = new Common();
+    $record = $obj->selectRow('*', 'student_log', 'student_log_id=' . $data['student_log']);
+    if (count($record) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'studnet log updated successfully';
+     
+         //update
+        $obj->updateRecordWithWhere(array('stud_time_taken_sec' => $data['stud_duration']), 'student_log','student_log_id=' . $data['student_log']);
+        
+        // exit;
+    } else {
+        $res['message'] = 'Unable to update studnet log';
+    }
+    echoRespnse(201, $res);
+});
+
+
+$app->get('/get_student_log_time_info/:logid', function($log_id) {
+    $res = array('error' => true, 'message' => 'No records found');
+    $obj = new Common();
+    $question_ans = $obj->selectRow('*', 'student_log', 'student_log_id = ' . $log_id);
+    if (count($question_ans) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['ques_answered'] =  $question_ans['no_ques_duration'];
+        $res['ques_duration'] =  $question_ans['stud_time_taken_sec'];
+    }
+    echoRespnse(201, $res);
+});
