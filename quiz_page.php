@@ -962,8 +962,8 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                     secondslabel : 0,
                     minuteslabel : 0,
                     isTimerPaused : false,
-                    totalquizduration : 180,
-                    quizalertbeforemins: 10,
+                    totalquizduration : 18,
+                    quizalertbeforemins: 1,
                     data_ques_answered : 0,
                     data_ques_duration : 0
                 },
