@@ -113,7 +113,7 @@
 <mat-list *ngIf="!questionloader">
     <ng-container *ngFor="let data of question">
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-            <div fxFlex="50%">
+            <div fxFlex="100%" *ngIf="!showotherlang">
                 <ng-container>
                     <mat-list-item>
                         <button mat-icon-button aria-label="label" (click)="openDialog(data.question_id, 'question')">
@@ -137,8 +137,32 @@
                     <mat-divider></mat-divider>
                 </ng-container>
             </div>
-            <div fxFlex="50%">
-                <ng-container *ngIf="showotherlang && otherlangquestion[data.question_no]">
+            <div fxFlex="50%" *ngIf="showotherlang">
+                <ng-container>
+                    <mat-list-item>
+                        <button mat-icon-button aria-label="label" (click)="openDialog(data.question_id, 'question')">
+                            <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="label" (click)="confirmDelete(data.question_id)">
+                            <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
+                        </button>
+                        <img mat-line [src]="image_url + data.image_path" alt="image" *ngIf="data.image_path != '' && data.direction == 'top'" class="question-img" />
+                             <p mat-line class='question-bottom'>{{data.question_no}}. <span class="question" [innerHTML]="data.name"></span></p>
+                        <img mat-line [src]="image_url + data.image_path" alt="image" *ngIf="data.image_path != '' && data.direction == 'bottom'" class="question-img" />
+                             <p mat-line>A. <span [innerHTML]="data.a"></span></p>
+                        <p mat-line>B. <span [innerHTML]="data.b"></span></p>
+                        <p mat-line *ngIf="data.c != ''">C. <span [innerHTML]="data.c"></span></p>
+                        <p mat-line *ngIf="data.d != ''">D. <span [innerHTML]="data.d"></span></p>
+                        <h2 mat-line class="answer-font">Answer: ({{data.answer}})</h2>
+                        <img mat-line [src]="image_url + data.image_path_explanation" alt="image" *ngIf="data.image_path_explanation != '' && data.explanation_img_direction == 'top'" style="width: 15%" />
+                             <p mat-line class='question-bottom'><span [innerHTML]="data.explanation"></span></p>
+                        <img mat-line [src]="image_url + data.image_path_explanation" alt="image" *ngIf="data.image_path_explanation != '' && data.explanation_img_direction == 'bottom'" style="width: 15%" />
+                    </mat-list-item>
+                    <mat-divider></mat-divider>
+                </ng-container>
+            </div>
+            <div fxFlex="50%" *ngIf="showotherlang && otherlangquestion[data.question_no]">
+                <ng-container>
                     <mat-list-item>
                         <img mat-line [src]="image_url + otherlangquestion[data.question_no].image_path" alt="image" *ngIf="otherlangquestion[data.question_no].image_path != '' && otherlangquestion[data.question_no].direction == 'top'" class="question-img" />
                              <p mat-line class='question-bottom'>{{otherlangquestion[data.question_no].question_no}}. <span class="question" [innerHTML]="otherlangquestion[data.question_no].name"></span></p>
