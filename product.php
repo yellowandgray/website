@@ -70,7 +70,8 @@
                                             <p>Fresche EF 3851– 1 Litre</p>
                                             <p>Bz 1 Binder – 1.5 Litre </p>
                                             <p><span><i class="fa fa-inr" aria-hidden="true"></i></span><span>8000/-</span></p>
-                                            <a href="tel:+91 8409 012345" data-name="combo" data-price="8000" class="add-to-cart">
+                                            <!--<a href="tel:+91 8409 012345" data-name="combo" data-price="8000" class="add-to-cart">-->
+                                            <a href="tel:+91 8409 012345">
 <!--                                                <button class="button-03">
                                                         <i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart ( <i class="fa fa-inr" aria-hidden="true"></i> 8000 )
                                                 </button>-->
