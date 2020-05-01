@@ -51,10 +51,10 @@ $languages = $obj->selectAll('*', 'language', 'status = 1');
                     <div class="content">
                         <ul class="radio-btn-section">
                             <li>
-                                <img src="img/learn.gif" style="width: 15%"><input type="radio"  name="method" value="learn"> Learning Mode                           
+                                <img src="img/learn.gif" style="width: 15%"><!--input type="radio"  name="method" value="learn"--><span class="testmodetxt" onClick="chooseTestmode(1);">Learning Mode</span>                          
                             </li>
                             <li>
-                                <img src="img/test.gif" style="width: 15%"><input type="radio" name="method" value="test"> Practice Test
+                                <img src="img/test.gif" style="width: 15%"><!--input type="radio" name="method" value="test"--><span class="testmodetxt" onClick="chooseTestmode(0);">Practice Test</span>
                             </li>
                         </ul>
                         <div style="display:none;"><button class="btn btn-custom1" data-lang="" id='tets'>Let's Go</button></div>

@@ -1470,3 +1470,7 @@ and open the template in the editor.
 .q-center {
     text-align: center;
 }
+
+.testmodetxt {
+    cursor: pointer;
+}

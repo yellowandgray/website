@@ -113,7 +113,33 @@
     });
      
      */
+    function chooseTestmode(testmode) {
+         var lang = $('#tets').data('lang');
+
+        if(lang!='') {
+        
+            $.ajax({
+                url: "immediate.php",
+                type: "POST",
+                data: {testmode: testmode},
+                success: function (response) {
+                    // You will get response from your PHP page (what you echo or print)
+
+                            window.location = 'question-subject-order?lan='+lang;        
+
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.log(textStatus, errorThrown);
+                }
+            });
+
+         }else {
+                    window.location = 'select_language';
+            } 
+    }
     
+    
+    /*
     $("input[name='method']").change(function () {            
          //alert(' val1 '+$("input[name='method']:checked").val());   
          
@@ -149,7 +175,7 @@
         
  
     });
-    
+    */
     
 
 </script>
