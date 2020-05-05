@@ -2,6 +2,7 @@
 session_start();
 require_once 'api/include/common.php';
 $obj = new Common();
+/*
 if (isset($_SESSION['student_register_id'])) {
     $student = $obj->selectrow('*', 'student_register', 'student_register_id = ' . $_SESSION['student_register_id']);
     $student_answer = $obj->selectAll('sa.*, l.name AS language', 'student_answer AS sa LEFT JOIN language AS l ON l.language_id = sa.language_id', 'student_answer_id > 0');
@@ -140,6 +141,8 @@ if (isset($_SESSION['student_register_id'])) {
       
    
 }   
+ * 
+ */
 ?>
 <html lang = 'en'>
     <?php include 'head.php';
@@ -150,6 +153,8 @@ if (isset($_SESSION['student_register_id'])) {
             ?>
             <section class = 'topic_section'>
                 <div class = 'container'>
+                     <?php
+                        /*
                     <div class = 'row'>
                         <div class = 'span4'>
                             <div class = 'result_user_section'>
@@ -174,6 +179,7 @@ if (isset($_SESSION['student_register_id'])) {
                                 ?> </p>
                             </div>
                         </div>
+                       
                         <div class = 'span8'>
                             <h4>My Completed Task</h4>
 <!--                            <h6></h6>-->
@@ -349,7 +355,11 @@ if (isset($_SESSION['student_register_id'])) {
                             </div>-->
                             <!--end: Accordion -->
                         </div>
+                        
                     </div>
+                         * */
+                        ?>
+                        
                 </div>
             </section>
             <?php include 'footer.php';

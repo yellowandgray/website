@@ -359,7 +359,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
 
                                         
                                 <!-- show Go Question testing purpose -->
-                                <?php if ($testmode == 1) { ?>  
+                                <?php if ($testmode == 1) { /* ?>  
                                          <div class="quiz-review">
                                                 <div class="float-left admin-panel-section">
                                                     <!--a href="#" onclick="showQuesPanel();" class="btn logout-btn">Question Admin Panel</a-->
@@ -369,7 +369,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                              <a v-on:click="revAns();" class="btn logout-btn" v-if="!revShow">Review Answer</a>
                                              <a v-on:click="revcontAns();" class="btn btn-theme" v-if="revShow">Continue Quiz</a>
                                             </div>     
-                                <?php } ?>                                         
+                                <?php */ } ?>                                         
                                 <!-- show Go Question testing purpose -->
                                 
                                 
@@ -393,8 +393,10 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                                     <!--a href="#" onclick="showqno();" class="btn logout-btn">Question Admin Panel</a-->
                                                     <a href="#" @click="showQuesPanel();" class="btn logout-btn">Question Admin Panel</a>
                                                     <?php } ?>
+                                                    <?php /*
                                                     <a v-on:click="revAns();" class="btn logout-btn" v-if="!revShow">Review Answer</a>
                                                     <a v-on:click="revcontAns();" class="btn btn-theme" v-if="revShow">Continue Quiz</a>
+                                                     * */ ?>
                                                 </div>
                                             </div>  
                                         <?php } ?>

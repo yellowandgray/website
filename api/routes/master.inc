@@ -608,19 +608,28 @@ $app->post('/store_answer', function() use ($app) {
         $record_log_detail = $obj->selectRow('*', 'student_log_detail', 'question_id=' . $data['question_id'] .' AND student_log_id='.$data['student_log_id']);
         if (count($record_log_detail) == 0) {
         
+             $obj->insertRecord(array('question_id' => $record['question_id'], 'student_log_id' => $data['student_log_id'],                
+                'student_answer' => $data['answer'], 'created_at' => date('Y-m-d'), 'updated_at' => date('Y-m-d')), 'student_log_detail');
+            
+            /*
             $obj->insertRecord(array('question_id' => $record['question_id'], 'student_log_id' => $data['student_log_id'],
                 'name' => $record['name'], 'image_path' => $record['image_path'], 'direction' => $record['direction'],
                 'a' => $record['a'], 'b' => $record['b'], 'c' => $record['c'], 'd' => $record['d'], 'answer' => $record['answer'],
                 'explanation' => $record['explanation'], 'image_path_explanation' => $record['image_path_explanation'],
                 'explanation_img_direction' => $record['explanation_img_direction'], 'question_no' => $record['question_no'],
                 'student_answer' => $data['answer'], 'created_at' => date('Y-m-d'), 'updated_at' => date('Y-m-d')), 'student_log_detail');
+             * */
+
         }else {
             
+            $obj->updateRecordWithWhere(array('student_answer' => $data['answer'],  'updated_at' => date('Y-m-d')), 'student_log_detail','question_id=' . $data['question_id'] .' AND student_log_id='.$data['student_log_id']);
+            /*
              $obj->updateRecordWithWhere(array('name' => $record['name'], 'image_path' => $record['image_path'], 'direction' => $record['direction'],
                 'a' => $record['a'], 'b' => $record['b'], 'c' => $record['c'], 'd' => $record['d'], 'answer' => $record['answer'],
                 'explanation' => $record['explanation'], 'image_path_explanation' => $record['image_path_explanation'],
                 'explanation_img_direction' => $record['explanation_img_direction'], 'question_no' => $record['question_no'],
                 'student_answer' => $data['answer'],  'updated_at' => date('Y-m-d')), 'student_log_detail','question_id=' . $data['question_id'] .' AND student_log_id='.$data['student_log_id']);
+            */
         }     
         // exit;
     } else {
@@ -642,20 +651,27 @@ $app->post('/store_notsure_answer', function() use ($app) {
                 
         $record_log_detail = $obj->selectRow('*', 'student_log_detail', 'question_id=' . $data['question_id'] .' AND student_log_id='.$data['student_log_id']);
         if (count($record_log_detail) == 0) {
-        
+            $obj->insertRecord(array('question_id' => $record['question_id'], 'student_log_id' => $data['student_log_id'],
+                 'student_answer' => $data['answer'],'student_notsure_answer' => $data['notsure_answer'], 'created_at' => date('Y-m-d'), 'updated_at' => date('Y-m-d')), 'student_log_detail');
+            /*
             $obj->insertRecord(array('question_id' => $record['question_id'], 'student_log_id' => $data['student_log_id'],
                 'name' => $record['name'], 'image_path' => $record['image_path'], 'direction' => $record['direction'],
                 'a' => $record['a'], 'b' => $record['b'], 'c' => $record['c'], 'd' => $record['d'], 'answer' => $record['answer'],
                 'explanation' => $record['explanation'], 'image_path_explanation' => $record['image_path_explanation'],
                 'explanation_img_direction' => $record['explanation_img_direction'], 'question_no' => $record['question_no'],
-                'student_answer' => $data['answer'],'student_notsure_answer' => $data['notsure_answer'], 'created_at' => date('Y-m-d'), 'updated_at' => date('Y-m-d')), 'student_log_detail');
-        }else {
+               'student_answer' => $data['answer'],'student_notsure_answer' => $data['notsure_answer'], 'created_at' => date('Y-m-d'), 'updated_at' => date('Y-m-d')), 'student_log_detail');
+             */
             
+        }else {
+            /*
              $obj->updateRecordWithWhere(array('name' => $record['name'], 'image_path' => $record['image_path'], 'direction' => $record['direction'],
                 'a' => $record['a'], 'b' => $record['b'], 'c' => $record['c'], 'd' => $record['d'], 'answer' => $record['answer'],
                 'explanation' => $record['explanation'], 'image_path_explanation' => $record['image_path_explanation'],
                 'explanation_img_direction' => $record['explanation_img_direction'], 'question_no' => $record['question_no'],
                 'student_answer' => $data['answer'],'student_notsure_answer' => $data['notsure_answer'],  'updated_at' => date('Y-m-d')), 'student_log_detail','question_id=' . $data['question_id'] .' AND student_log_id='.$data['student_log_id']);
+             * 
+             */
+            $obj->updateRecordWithWhere(array('student_answer' => $data['answer'],'student_notsure_answer' => $data['notsure_answer'],  'updated_at' => date('Y-m-d')), 'student_log_detail','question_id=' . $data['question_id'] .' AND student_log_id='.$data['student_log_id']);
         }     
         // exit;
     } else {
@@ -667,7 +683,8 @@ $app->post('/store_notsure_answer', function() use ($app) {
 $app->get('/get_result_detail/:lid', function($lid) {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
-    $data = $com->selectAll('*', 'student_log_detail', 'student_log_id = ' . $lid);
+    //$data = $com->selectAll('*', 'student_log_detail', 'student_log_id = ' . $lid);
+    $data = $com->selectAll('sld.*,q.*', 'student_log_detail As sld INNER JOIN question As q ON sld.question_id=q.question_id', 'student_log_id = ' . $lid);
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
@@ -680,7 +697,8 @@ $app->get('/get_result_detail/:lid', function($lid) {
 $app->get('/get_result_detail_by_topic/:lid/:tid', function($lid,$tid) {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
-    $data = $com->selectAll('sld.*', 'student_log_detail As sld LEFT JOIN question As q ON sld.question_id=q.question_id', 'student_log_id = ' . $lid.' AND topic_id='.$tid);
+    //$data = $com->selectAll('sld.*', 'student_log_detail As sld LEFT JOIN question As q ON sld.question_id=q.question_id', 'student_log_id = ' . $lid.' AND topic_id='.$tid);
+    $data = $com->selectAll('sld.*,q.*', 'student_log_detail As sld LEFT JOIN question As q ON sld.question_id=q.question_id', 'student_log_id = ' . $lid.' AND topic_id='.$tid);
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
@@ -773,9 +791,12 @@ $app->get('/get_student_result_count_by_topic/:lid', function($lid) {
 		
         
         //answered,correct answer count year,topic
+        /*
         $student_log_answer = $com->selectAll('student_log_detail.*,year.year,question.topic_id',' student_log LEFT JOIN student_log_detail ON student_log.student_log_id=student_log_detail.student_log_id '
                 . 'LEFT JOIN question ON student_log_detail.question_id=question.question_id LEFT JOIN year ON question.year_id=year.year_id','student_log_detail.student_log_id='.$lid.' ORDER BY student_log_id,student_log_detail_id ASC');
-        
+        */
+        $student_log_answer = $com->selectAll('student_log_detail.*,question.answer,year.year,question.topic_id',' student_log LEFT JOIN student_log_detail ON student_log.student_log_id=student_log_detail.student_log_id '
+                . 'LEFT JOIN question ON student_log_detail.question_id=question.question_id LEFT JOIN year ON question.year_id=year.year_id','student_log_detail.student_log_id='.$lid.' ORDER BY student_log_id,student_log_detail_id ASC');
        
         
         $tmp_stud_log_queston_id = array(); //rmv mul question  in student log details
