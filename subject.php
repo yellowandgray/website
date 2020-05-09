@@ -14,7 +14,9 @@ foreach ($topics as $row) {
 }
  * 
  */
-$subjects = $obj->selectAll('s.*','subject As s', 's.language_id=' . $_SESSION['student_selected_language_id']);
+
+//$subjects = $obj->selectAll('s.*','subject As s', 's.language_id=' . $_SESSION['student_selected_language_id']);
+$subjects = $obj->selectAll('s.*,(select count(question_id) FROM question As q INNER JOIN topic As t ON q.topic_id=t.topic_id INNER JOIN subject As s1 ON s1.subject_id=t.subject_id WHERE s1.subject_id=s.subject_id) As ques_cnt','subject As s', 's.language_id=' . $_SESSION['student_selected_language_id']);
 $language = $obj->selectRow('*', 'language', 'language_id=' . $_SESSION['student_selected_language_id']);
 $counter = 0;
 ?>
@@ -49,21 +51,43 @@ $counter = 0;
                         <div class="modal-body">
                             <div class="language_section">
                                 <h6 class="sub-title">Select subject</h6>
+                                <?php 
+                                /*
                                 <ul class="subject-section-order">
                                     <?php
                                     foreach ($subjects as $key => $row) {
                                         $counter++;
                                         ?>
                                         <li>
-                                            <label class="pl-0"><input type="checkbox" class="subjects" data-chkgroup="option<?php echo $counter; ?>" value="<?php echo $row['subject_id']; ?>"><span class=""> <?php echo $row['name']; ?></span></label>
+                                            <label class="pl-0"><input type="checkbox" class="subjects" data-chkgroup="option<?php echo $counter; ?>" value="<?php echo $row['subject_id']; ?>"><span class=""> <?php echo $row['name']; ?></span>(<?php echo $row['ques_cnt']; ?> Questions)</label>
                                             
                                         </li>
                                     <?php } ?>
                                 </ul>
+                                 * 
+                                 */
+                                ?>
+                                <ul class="subject-section-order">
+                                     <?php  foreach ($subjects as $key => $row) { ?>                                     
+
+                                    <li>
+                                        <i class="icon-double-angle-right"></i>
+                                        <a href="#" onclick="goToTopics(<?php echo $row['subject_id']; ?>);"><?php echo $row['name']; ?></span>(<?php echo $row['ques_cnt']; ?> Questions)</a>
+                                    </li>         
+                                   
+                                    <?php } ?>
+                                </ul>
+                                
+                                
                             </div>
+                            <?php 
+                            /*
                             <div class="text-right">
                                 <a href="#" onclick="goToYears();" class="btn btn-danger">Next</a>
                             </div>
+                             * */
+                             
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -132,6 +156,11 @@ $counter = 0;
                 } else {
                     alert('Please select atleast one Subject');
                 }
+            }
+            
+            
+            function goToTopics(sub) {
+               window.location = 'subject-topic?subjects=' + sub;                 
             }
         </script>
     </body>

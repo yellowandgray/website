@@ -71,8 +71,11 @@
     });  
     
     function selmode(lang) {
+        /*
         window.location = '#popup1'; 
         $('#tets').data('lang',lang);
+        */
+       window.location = 'question-subject-order?lan='+lang;
     }
     
     /*

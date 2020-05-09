@@ -7,7 +7,7 @@ if (!isset($_SESSION['student_selected_language_id'])) {
 }
 $language = $obj->selectRow('*', 'language', 'language_id=' . $_SESSION['student_selected_language_id']);
 $_SESSION['student_selected_type'] = 'order';
-$years = $obj->selectAll('*', 'year', 'status = 1');
+$years = $obj->selectAll('y.*,(select count(question_id) FROM question As q INNER JOIN topic As t ON q.topic_id=t.topic_id INNER JOIN subject As s ON s.subject_id=t.subject_id WHERE q.year_id=y.year_id AND s.language_id='.$_SESSION['student_selected_language_id'].') As ques_cnt', 'year As y', 'status = 1');
 
 $student_log_order_year = $obj->selectAll('sl.*,year.year', 'student_log sl LEFT JOIN student_log_order slo ON sl.student_log_id=slo.student_log_id LEFT JOIN student_log_year sly ON sly.student_log_id=sl.student_log_id LEFT JOIN year ON sly.year_id=year.year_id',
         'student_register_id=' . $_SESSION['student_register_id'] . ' AND sl.language_id=' . $_SESSION['student_selected_language_id'] . ' AND student_log_order=1  ORDER BY updated_at  DESC LIMIT 1');
@@ -63,7 +63,7 @@ if (count($student_log_order_year) > 0) {
                                     <tr>
                                         <td valign="top">Selected Order</td>
                                         <td valign="top" class="w-5">:</td>
-                                        <th valign="top">Question Order</th>
+                                        <th valign="top">Year Order</th>
                                     </tr>
                                 </table>
                             </h4>
@@ -77,7 +77,7 @@ if (count($student_log_order_year) > 0) {
                                 <ul class="list-none">
                                     <?php foreach ($years as $row) { ?>
                                         <li>
-                                            <i class="icon-double-angle-right"></i> <a href="quiz_page?year=<?php echo $row['year']; ?>"><?php echo $row['year']; ?></a>
+                                            <i class="icon-double-angle-right"></i> <a href="quiz_page?year=<?php echo $row['year']; ?>"><?php echo $row['year']; ?> (<?php echo $row['ques_cnt']; ?> Questions)</a>
                                         </li>
     <?php
     /*
@@ -96,13 +96,17 @@ if (count($student_log_order_year) > 0) {
      */
 }
 
-if (!empty($student_log_year)) {
+/*
+if (!empty($student_log_year)) { 
     ?>
                                         <li class="pause-content">
                                             Paused On <?php echo date('d/M/Y h:iA', strtotime($student_log_year['updated_at'])) . ' - '; ?>
                                             <a class="btn logout-btn nmlfont" href="quiz_page?year=<?php echo $student_log_year['year']; ?>&from_log=<?php echo $student_log_year['log_id']; ?>">Resume</a>
                                         </li>
-                                    <?php } ?>
+                                    <?php } 
+ * */ 
+?>
+
                                 </ul>
                             </div>
                         </div>

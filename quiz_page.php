@@ -28,7 +28,7 @@ if ($_SESSION['student_selected_type'] == 'order') {
         header('Location: qorder-years');
     }
 
-    $type = 'Question Order';
+    $type = 'Year Order';
     $selyear = $obj->selectRow('*', 'year', 'year=\'' . $_GET['year'] . '\'');
     $_SESSION['student_selected_year_id'] = $selyear['year_id'];
 
@@ -310,13 +310,13 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                             <a class="home_link" href="select_language">
                                 <i class="icon-home"></i>
                             </a>
-                            <?php if($testmode == 0) {  ?>
+                            <?php  if($type == 'Year Order') {  ?>
                             <div class="quiz-timer">
                                 <span id="minutes">{{minuteslabel}}</span> : <span id="seconds">{{secondslabel}}</span>                             
                                 <i class="icon-pause" v-if="!isTimerPaused" @click="pauseTimer()"></i>
                                 <i class="icon-play" v-if="isTimerPaused" @click="continueTimer()"></i>
                             </div>
-                            <?php  } ?>
+                            <?php  }  ?>
                         </div>
                        
                          <!--question Box-->
@@ -332,7 +332,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     <!--progress-->
                                     <div class="progressContainer">
                                        
-                                        <?php if ($testmode == 1) { ?> <!-- show answer immediate -->
+                                        <?php /* if ($testmode == 1) { ?> <!-- show answer immediate -->
                                             <div class="quiz-pause">
                                                 <div class="float-left">
                                                     <input id="show-immediately" type="checkbox" value="show_answer_immediately" @change="immChange" v-model="showimmediate"> <span class="span-position">Show Answer</span>
@@ -353,9 +353,18 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                                 </div> 
                                             </div>    <!-- show answer immediate -->
                                         
-                                        <?php } ?> <!-- show other language only -->
+                                        <?php } */ ?> <!-- show other language only -->
                                        
-
+                                          <?php if ($type == 'Year Order') { ?>  
+                                          <div class="quiz-pause">
+                                           <div class="float-left">
+                                                    <input id="show-immediately" type="checkbox" value="show_answer_immediately" @change="immChange" v-model="showimmediate"> <span class="span-position">Show Answer</span>
+                                                </div> 
+                                         <div class="float-right">
+                                                    <input id="show-olq" type="checkbox" value="show_olq" @change="showolqChange" v-model="olqshow"> <span>Show Question in <?php echo $other_language['name']; ?></span>
+                                                </div> 
+                                          </div>    
+                                          <?php } ?>
 
                                         
                                 <!-- show Go Question testing purpose -->
@@ -374,32 +383,32 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                 
                                 
                                 <!-- show question admin panel -->
-                                 <?php if ($testmode == 0) { ?>  
-<!--                                <div class="quiz-review">
+                                 <?php if($type == 'Year Order') { ?>  
+                                <div class="quiz-review">
                                     <div class="float-left" style="padding: 20px 0;">
-                                        a href="#" onclick="showqno();" class="btn logout-btn">Question Admin Panel</a
+                                        <!--a href="#" onclick="showqno();" class="btn logout-btn">Question Admin Panel</a  -->
                                          <a href="#" @click="showQuesPanel();" class="btn logout-btn">Question Admin Panel</a>
                                     </div>
-                                </div>    -->
+                                </div>  
                                 <?php } ?>        
                                 <!-- show question admin panel -->
                                         
                                         
                                         <!-- show review -->
-                                        <?php if ($testmode == 0) { ?>
+                                        <?php  /*  if ($testmode == 0) { ?>
                                             <div class="quiz-review">
                                                 <div class="float-left" style="padding: 20px 0;">
-                                                    <?php if($type == 'Question Order') { ?>
+                                                    <?php if($type == 'Year Order') { ?>
                                                     <!--a href="#" onclick="showqno();" class="btn logout-btn">Question Admin Panel</a-->
                                                     <a href="#" @click="showQuesPanel();" class="btn logout-btn">Question Admin Panel</a>
                                                     <?php } ?>
-                                                    <?php /*
+                                                    <?php 
                                                     <a v-on:click="revAns();" class="btn logout-btn" v-if="!revShow">Review Answer</a>
                                                     <a v-on:click="revcontAns();" class="btn btn-theme" v-if="revShow">Continue Quiz</a>
-                                                     * */ ?>
+                                                   ?>
                                                 </div>
                                             </div>  
-                                        <?php } ?>
+                                        <?php } */ ?>
                                         <!-- show review -->
 
                                         <h1 class="title is-6">Quiz</h1> 
@@ -425,7 +434,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     </div>
                                     <!-- quizOptions -->
                                     
-                                    <?php if($testmode==0) {  //testmode  ?>
+                                    <?php /* if($testmode==0) {  //testmode  ?>
                                         
                                         <div class="optionContainer">
                                         <div class="option" :id="index | charIndex | AddPrefix('ansopt_')" v-for="(response, index) in quiz.questions[questionIndex].responses" @click="selectOptionNoSave(index)" :class="{ 'is-selected': userResponses[questionIndex] == index}" :key="index" v-if="response.text != ''">
@@ -439,7 +448,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                             </div-->                                         
                                     </div>
                                         
-                                   <?php  }else { //learning mode  ?>
+                                   <?php  }else { //learning mode */ ?>
                                     <div class="optionContainer">
                                         <div class="option" :id="index | charIndex | AddPrefix('ansopt_')" v-for="(response, index) in quiz.questions[questionIndex].responses" @click="selectOption(index)" :class="{ 'is-selected': userResponses[questionIndex] == index}" :key="index" v-if="response.text != ''">
                                              <span class="q-option">{{ index | charIndex }}.&nbsp;</span> <span v-html="response.text"></span>
@@ -451,7 +460,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                                 </a>
                                             </div-->                                         
                                     </div>
-                                    <?php } ?>
+                                    <?php // } ?>
                                     
                                     </div>
                                     
@@ -534,9 +543,13 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                                 <div class="span-4">
                                                     <span class="answered-clr"></span> Answered
                                                 </div>
+                                                <?php /*
                                                 <div class="span-4">
                                                     <span class="notsure-clr"></span> Not Sure
                                                 </div>
+                                                 * 
+                                                 */
+                                                ?>
                                                 <div class="span-4">
                                                     <span class="unanswered-clr"></span> Unanswered
                                                 </div>
@@ -599,7 +612,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     
                                     
                                     
-                                    <?php  if($testmode==0){     //test mode   ?> 
+                                    <?php /* if($testmode==0){     //test mode   ?> 
                                     
                                     <footer class="questionFooter" id='quiz-nxt-footer'>
                                         <!--                                    pagination-->
@@ -650,7 +663,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     </footer>
                                     
                                     
-                                    <?php }else { //learning mode ?>
+                                    <?php }else {  */   //learning mode ?>
                                     
 
                                     <footer class="questionFooter" id='quiz-nxt-footer' v-if="showimmediate && !showimmediateblk">
@@ -785,7 +798,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
 
                                     </footer>
                                     
-                                    <?php } ?>
+                                    <?php // } ?>
                                     
                                     <div v-if="olqshow">
                                         
@@ -850,52 +863,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                 </div>
                             </div>   
                             <!--quizCompletedResult-->
-                            <div v-if="questionIndex >= quiz.questions.length" v-bind:key="questionIndex" class="quizCompleted has-text-centered">
-
-                                <!-- quizCompletedIcon: Achievement Icon -->
-                                <span class="icon">
-                                    <i class="fa" :class="score()>3?'fa-check-circle-o is-active':'fa-times-circle'"></i>
-                                </span>
-
-                                <!--resultTitleBlock-->
-                                <h2 class="complete-title" v-if="score() == quiz.questions.length">
-                                    Congratulations! You have answered everything right!!! <img style="width: 12%" src="img/thumbs-up.gif">
-                                </h2>
-                                <h2 class="complete-title" v-if="score() != quiz.questions.length">
-                                    Test Completed
-                                </h2>
-                                <?php if($testmode==0) { ?>
-                                <p class="subtitledur">
-                                    <span class="stotdur">At {{data_ques_duration}} Minutes You have completed the Quiz <br v-if="data_ques_answered!=0"> <span class="stotques" v-if="data_ques_answered!=0">At {{totalquizduration}} Minutes you have completed {{data_ques_answered}} Questions</span>
-                                </p>
-                                <?php } ?>
-                                <p class="subtitle">
-                                    Total Score: <span class="score-clr">{{ score() }}</span> / {{ quiz.questions.length }}
-                                </p>
-                            <!-- <p class="subtitle">
-                                Total score: {{ score() }} / {{ quiz.questions.length }}
-                            </p> -->
-                                <div class="">
-                                    <a class="btn btn-theme btn-rounded" @click="restart()">Restart <i class="fa fa-refresh"></i></a>
-                                    <a class="btn btn-theme btn-rounded" onclick="window.location = 'select_language'">Home <i class="fa fa-refresh"></i></a>
-                                    <?php if ($type=='Subject Order') { ?>
-                                    <a @click="divshowsorder()" class="btn btn-theme btn-rounded">Show Full Result <i class="fa fa-refresh"></i></a>
-                                    <?php }else { ?>
-                                    <a @click="divshow()" class="btn btn-theme btn-rounded">Show Full Result <i class="fa fa-refresh"></i></a>
-                                    <?php } ?>
-                                    <!--/resultTitleBlock-->
-
-                                </div>
-
-                                <div  id="feedback-popup" class="feedback-popup" style="display: none;" v-if="score() == quiz.questions.length">
-                                    <div class="container">
-                                        <div class="feedback-popup-box">
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
+                            
                             <!--/quizCompetedResult-->
                             <!-- 		</transition> -->
                         </div>
@@ -2063,7 +2031,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                             }, 500);                            
                             
                               
-                            
+                            this.continueTimer();
                             setTimeout(() => {
                                 applyMathAjax();
                                 $('.loadingoverlay').hide();
@@ -2561,54 +2529,22 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                         this.isTimerPaused = true;
                     },    
                     continueTimer:function() {
-                        this.isTimerPaused = false;
+                        
                     },
                     savenoquesdur:function() {
-                         $.post("api/v1/store_duration_question",
-                                        {
-                                            student_log: <?php echo $student_log; ?>
-                                        },
-                                        function (data, status) {
-                                            if (data.result.error === false) {
-
-                                            }
-                                        });
+                        
                     },
                     savetimetaken:function() {                       
-                        $.post("api/v1/store_stud_duration",
-                                        {
-                                            stud_duration : this.totseconds,
-                                            student_log: <?php echo $student_log; ?>
-                                        },
-                                        function (data, status) {
-                                            if (data.result.error === false) {
-
-                                            }
-                                        });
+                       
                     },
                     quizTimerAlert:function() {
-                        swal('Only '+this.quizalertbeforemins+' Minutes Left');
+                        
                     },
                     quizTimertotdurAlert:function() {
-                        swal(this.totalquizduration+' Minutes Completed. But you can answer and complete the pending questions');
+                        
                     },
                     quizdurtext:function() {
-                         $('.loadingoverlay').show();
-                         $.get("api/v1/get_student_log_time_info/<?php echo $student_log; ?>",
-                                                    function (data, status) {
-                                                        if (data.result.error === false) {
-                                                           var qt = 0;  
-                                                           var qta= 0;
-                                                           app.data_ques_answered = data.result.ques_answered;
-                                                           qt = data.result.ques_duration;
-                                                           qta = qt/60;
-                                                           app.data_ques_duration = parseInt(qta);
-                                                               
-                                                               
-                                                           $('.loadingoverlay').hide();
-                                                        }
-                                                    });
-                                                    //return true; 
+                        
                     }    
                 }
             });

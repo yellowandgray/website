@@ -11,7 +11,8 @@ if (!isset($_GET['subjects'])) {
 }
 
 $_SESSION['student_selected_type'] = 'subject';
-$topics = $obj->selectAll('t.*, s.name AS subject', 'topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id', 's.subject_id IN (' . $_GET['subjects'].') ORDER BY s.subject_id ASC');
+//$topics = $obj->selectAll('t.*, s.name AS subject', 'topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id', 's.subject_id IN (' . $_GET['subjects'].') ORDER BY s.subject_id ASC');
+$topics = $obj->selectAll('t.*, s.name AS subject,(select count(question_id) FROM question As q WHERE q.topic_id=t.topic_id) As ques_cnt', 'topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id', 's.subject_id IN (' . $_GET['subjects'].') ORDER BY s.subject_id ASC');
 $alltopics = array();
 foreach ($topics as $row) {
     $alltopics[$row['subject']][] = $row;
@@ -59,7 +60,7 @@ $counter = 0;
                                             <input type="checkbox" id="option<?php echo $counter; ?>" data-chkgroup="option<?php echo $counter; ?>" class="selectallchk"><label for="option<?php echo $counter; ?>" class=""> <?php echo $key; ?></label>
                                             <ul>
                                                 <?php foreach ($row as $r) { ?>
-                                                    <li><label class="pl-0"><input type="checkbox" data-chkgroup="option<?php echo $counter; ?>"  name="suboptions[]" value="<?php echo $r['topic_id']; ?>" class="subOption<?php echo $counter; ?> suboptions childchk"> <span><?php echo $r['name']; ?></span></label></li>
+                                                    <li><label class="pl-0"><input type="checkbox" data-chkgroup="option<?php echo $counter; ?>"  name="suboptions[]" value="<?php echo $r['topic_id']; ?>" class="subOption<?php echo $counter; ?> suboptions childchk"> <span><?php echo $r['name']; ?> (<?php echo $r['ques_cnt']; ?> Questions)</span></label></li>
                                                 <?php } ?>
                                             </ul>
                                         </li>
@@ -125,6 +126,8 @@ $counter = 0;
             
 
             function goToYears() {
+                return false
+                /*
                 var topics = [];
                 $('.suboptions').each(function (key, ele) {
                     if (ele.checked === true) {
@@ -136,6 +139,7 @@ $counter = 0;
                 } else {
                     alert('Please select atleast one topic');
                 }
+                */
             }
         </script>
     </body>

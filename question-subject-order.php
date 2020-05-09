@@ -6,9 +6,11 @@ if (!isset($_GET['lan'])) {
     header('Location: select_language');
 }
 
+/*
 if (isset($_SESSION['testmode'])) {
     $testmode = $_SESSION['testmode'];
 }
+*/
 
 $language = $obj->selectRow('*', 'language', 'name = \'' . $_GET['lan'] . '\'');
 $_SESSION['student_selected_language_id'] = $language['language_id'];
@@ -42,14 +44,14 @@ $_SESSION['student_selected_language_id'] = $language['language_id'];
                                 <ul>
                                     <li>
                                         <i class="icon-double-angle-right"></i>
-                                        <a href="qorder-years">Question Order</a>
+                                        <a href="qorder-years">Year Order</a>                             
                                     </li>         
-                                    <?php if($testmode!=0) { //subject order in learning mode  ?>
+                                    <?php // if($testmode!=0) { //subject order in learning mode   ?>
                                     <li>
                                         <i class="icon-double-angle-right"></i>
                                         <a href="subject">Subject Order</a>
                                     </li>
-                                    <?php } ?>
+                                    <?php // } ?>
                                 </ul>
                             </div>
                         </div>
