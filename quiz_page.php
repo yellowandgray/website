@@ -863,7 +863,52 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                 </div>
                             </div>   
                             <!--quizCompletedResult-->
-                            
+                            <div v-if="questionIndex >= quiz.questions.length" v-bind:key="questionIndex" class="quizCompleted has-text-centered">
+
+                                <!-- quizCompletedIcon: Achievement Icon -->
+                                <span class="icon">
+                                    <i class="fa" :class="score()>3?'fa-check-circle-o is-active':'fa-times-circle'"></i>
+                                </span>
+
+                                <!--resultTitleBlock-->
+                                <h2 class="complete-title" v-if="score() == quiz.questions.length">
+                                    Congratulations! You have answered everything right!!! <img style="width: 12%" src="img/thumbs-up.gif">
+                                </h2>
+                                <h2 class="complete-title" v-if="score() != quiz.questions.length">
+                                    Test Completed
+                                </h2>
+                                <?php  if($type=='Year Order') { ?>
+                                <p class="subtitledur">
+                                    <span class="stotdur">At {{data_ques_duration}} Minutes You have completed the Quiz <br v-if="data_ques_answered!=0"> <span class="stotques" v-if="data_ques_answered!=0">At {{totalquizduration}} Minutes you have completed {{data_ques_answered}} Questions</span>
+                                </p>
+                                <?php }  ?>
+                                <p class="subtitle">
+                                    Total Score: <span class="score-clr">{{ score() }}</span> / {{ quiz.questions.length }}
+                                </p>
+                            <!-- <p class="subtitle">
+                                Total score: {{ score() }} / {{ quiz.questions.length }}
+                            </p> -->
+                                <div class="">
+                                    <a class="btn btn-theme btn-rounded" @click="restart()">Restart <i class="fa fa-refresh"></i></a>
+                                    <a class="btn btn-theme btn-rounded" onclick="window.location = 'select_language'">Home <i class="fa fa-refresh"></i></a>
+                                    <?php if ($type=='Subject Order') { ?>
+                                    <a @click="divshowsorder()" class="btn btn-theme btn-rounded">Show Full Result <i class="fa fa-refresh"></i></a>
+                                    <?php }else { ?>
+                                    <a @click="divshow()" class="btn btn-theme btn-rounded">Show Full Result <i class="fa fa-refresh"></i></a>
+                                    <?php } ?>
+                                    <!--/resultTitleBlock-->
+
+                                </div>
+
+                                <div  id="feedback-popup" class="feedback-popup" style="display: none;" v-if="score() == quiz.questions.length">
+                                    <div class="container">
+                                        <div class="feedback-popup-box">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
                             <!--/quizCompetedResult-->
                             <!-- 		</transition> -->
                         </div>
@@ -1971,6 +2016,12 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                     },    
                     selectOption: function (index) {
                         $('.loadingoverlay').show();
+                        
+                        if(this.questionIndex == this.quiz.questions.length-1)   {
+                                    this.savetimetaken();
+                                    this.quizdurtext();
+                                }
+                                
                         if (!app.showimmediate) {
                             var questions = <?php echo json_encode($questions_list); ?>;
                             var answers = ['A', 'B', 'C', 'D'];
@@ -2529,22 +2580,55 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                         this.isTimerPaused = true;
                     },    
                     continueTimer:function() {
-                        
+                        //this.isTimerPaused = false;
                     },
                     savenoquesdur:function() {
-                        
+                         $.post("api/v1/store_duration_question",
+                                        {
+                                            student_log: <?php echo $student_log; ?>
+                                        },
+                                        function (data, status) {
+                                            if (data.result.error === false) {
+
+                                            }
+                                        });
                     },
                     savetimetaken:function() {                       
-                       
+                        $.post("api/v1/store_stud_duration",
+                                        {
+                                            stud_duration : this.totseconds,
+                                            student_log: <?php echo $student_log; ?>
+                                        },
+                                        function (data, status) {
+                                            if (data.result.error === false) {
+
+                                            }
+                                        });
                     },
                     quizTimerAlert:function() {
-                        
+                        swal('Only '+this.quizalertbeforemins+' Minutes Left');
                     },
                     quizTimertotdurAlert:function() {
-                        
+                        swal(this.totalquizduration+' Minutes Completed. But you can answer and complete the pending questions');
                     },
                     quizdurtext:function() {
-                        
+                         $('.loadingoverlay').show();
+                         $.get("api/v1/get_student_log_time_info/<?php echo $student_log; ?>",
+                                                    function (data, status) {
+                                                        if (data.result.error === false) {
+                                                           var qt = 0;  
+                                                           var qta= 0;
+                                                           app.data_ques_answered = data.result.ques_answered;
+                                                           qt = data.result.ques_duration;
+                                                           qta = qt/60;
+                                                           app.data_ques_duration = parseInt(qta);
+                                                               
+                                                               
+                                                           $('.loadingoverlay').hide();
+                                                        }
+                                                    });
+                                                    //return true; 
+
                     }    
                 }
             });
