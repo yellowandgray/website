@@ -68,7 +68,8 @@ $counter = 0;
                                 </ul>
                             </div>
                             <div class="text-right">
-                                <a href="#" onclick="goToYears();" class="btn btn-danger">Next</a>
+                               <?php /*  <a href="#" onclick="goToYears();" class="btn btn-danger">Next</a> */?>
+                                <a href="#" onclick="goToQuestions();" class="btn btn-danger">Next</a>
                             </div>
                         </div>
                     </div>
@@ -125,9 +126,7 @@ $counter = 0;
             });
             
 
-            function goToYears() {
-                return false
-                /*
+            function goToYears() {               
                 var topics = [];
                 $('.suboptions').each(function (key, ele) {
                     if (ele.checked === true) {
@@ -138,8 +137,21 @@ $counter = 0;
                    window.location = 'subject-years?topics=' + topics.join(',');
                 } else {
                     alert('Please select atleast one topic');
-                }
-                */
+                }               
+            }
+            
+            function goToQuestions() {
+                var topics = [];
+                $('.suboptions').each(function (key, ele) {
+                    if (ele.checked === true) {
+                        topics.push(ele.value);
+                    }
+                });
+                 if (topics.length > 0) {
+                   window.location = 'quiz_page?topics=' + topics.join(',');
+                } else {
+                    alert('Please select atleast one topic');
+                }                
             }
         </script>
     </body>

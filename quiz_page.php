@@ -70,15 +70,42 @@ if ($_SESSION['student_selected_type'] == 'subject') {
     if (isset($_SESSION['student_selected_year_id'])) {
         unset($_SESSION['student_selected_year_id']);
     }
+    /*
     if (!isset($_GET['years'])) {
         header('Location: subject-years?topics=' . $_SESSION['student_selected_topics_id']);
     }
+    */
+    
+    if (!isset($_GET['topics'])) {
+        header('Location: subject');
+    }
+    $_SESSION['student_selected_topics_id'] = $_GET['topics'];
+    
+    
+    $years = $obj->selectAll('*', 'year', 'status = 1');
+    foreach ($years as $yr) {
+        $sel_year_id[] =    $yr['year_id']; 
+    }
+    $sel_year_ids = implode(',',$sel_year_id);
+    
+    
     $type = 'Subject Order';
-    $_SESSION['student_selected_years_id'] = $_GET['years'];
+    //$_SESSION['student_selected_years_id'] = $_GET['years'];
     //$questions = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer, image_path, direction', 'question', 'topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $_SESSION['student_selected_language_id'] . ' AND t.topic_id IN (' . $_SESSION['student_selected_topics_id'] . ') ORDER BY t.subject_id ASC) AND year_id IN (' . $_SESSION['student_selected_years_id'] . ') ORDER BY year_id ASC, topic_id ASC');
-    $questions = $obj->selectAll('question.name As name, a, b, c, d, UPPER(answer) AS answer, image_path, direction,question_id,explanation,image_path_explanation,explanation_img_direction,question_no', 'question LEFT JOIN topic ON question.topic_id=topic.topic_id', 'question.topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $_SESSION['student_selected_language_id'] . ' AND t.topic_id IN (' . $_SESSION['student_selected_topics_id'] . ') ORDER BY t.subject_id ASC) AND year_id IN (' . $_SESSION['student_selected_years_id'] . ') ORDER BY subject_id ASC,question.topic_id ASC,year_id ASC,question_no ASC');
+    //$questions = $obj->selectAll('question.name As name, a, b, c, d, UPPER(answer) AS answer, image_path, direction,question_id,explanation,image_path_explanation,explanation_img_direction,question_no', 'question LEFT JOIN topic ON question.topic_id=topic.topic_id', 'question.topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $_SESSION['student_selected_language_id'] . ' AND t.topic_id IN (' . $_SESSION['student_selected_topics_id'] . ') ORDER BY t.subject_id ASC) AND year_id IN (' . $_SESSION['student_selected_years_id'] . ') ORDER BY subject_id ASC,question.topic_id ASC,year_id ASC,question_no ASC');
+    $questions = $obj->selectAll('question.name As name, a, b, c, d, UPPER(answer) AS answer, image_path, direction,question_id,explanation,image_path_explanation,explanation_img_direction,question_no', 'question LEFT JOIN topic ON question.topic_id=topic.topic_id', 'question.topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $_SESSION['student_selected_language_id'] . ' AND t.topic_id IN (' . $_SESSION['student_selected_topics_id'] . ') ORDER BY t.subject_id ASC) ORDER BY subject_id ASC,question.topic_id ASC,year_id ASC,question_no ASC');
+    
+   
     //if($testmode==1){
-        $other_lang_questions   = $obj->selectAll('question.name As name, a, b, c, d, UPPER(answer) AS answer, image_path, direction,question_id,explanation,image_path_explanation,explanation_img_direction,question_no', 'question LEFT JOIN topic ON question.topic_id=topic.topic_id', 'question.topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $other_language['language_id'] . ' AND t.topic_id IN (' . $_SESSION['student_selected_topics_id'] . ') ORDER BY t.subject_id ASC) AND year_id IN (' . $_SESSION['student_selected_years_id'] . ') ORDER BY question_no ASC,subject_id ASC,question.topic_id ASC,year_id ASC');
+        //$other_lang_questions   = $obj->selectAll('question.name As name, a, b, c, d, UPPER(answer) AS answer, image_path, direction,question_id,explanation,image_path_explanation,explanation_img_direction,question_no', 'question LEFT JOIN topic ON question.topic_id=topic.topic_id', 'question.topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $other_language['language_id'] . ' AND t.topic_id IN (' . $_SESSION['student_selected_topics_id'] . ') ORDER BY t.subject_id ASC) AND year_id IN (' . $_SESSION['student_selected_years_id'] . ') ORDER BY question_no ASC,subject_id ASC,question.topic_id ASC,year_id ASC');
+        $other_lang_questions   = $obj->selectAll('question.name As name, a, b, c, d, UPPER(answer) AS answer, image_path, direction,question_id,explanation,image_path_explanation,explanation_img_direction,question_no', 'question LEFT JOIN topic ON question.topic_id=topic.topic_id', 'question.topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $other_language['language_id'] . ' AND t.topic_id IN (' . $_SESSION['student_selected_topics_id'] . ') ORDER BY t.subject_id ASC) AND year_id IN (' . $sel_year_ids. ')  ORDER BY question_no ASC,subject_id ASC,question.topic_id ASC,year_id ASC');
+        /*
+        echo 'SELECT question.name As name, a, b, c, d, UPPER(answer) AS answer, image_path, direction,question_id,explanation,image_path_explanation,explanation_img_direction,question_no FROM question LEFT JOIN topic ON question.topic_id=topic.topic_id WHERE question.topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $other_language['language_id'] . ' AND t.topic_id IN (' . $_SESSION['student_selected_topics_id'] . ') ORDER BY t.subject_id ASC) AND year_id IN (' . $sel_year_ids. ')  ORDER BY question_no ASC,subject_id ASC,question.topic_id ASC,year_id ASC';
+        echo "<pre>";
+        print_r($other_lang_questions);
+        exit;
+         * */
+        
     //}
     $student_log = $obj->insertRecord(array('language_id' => $_SESSION['student_selected_language_id'],
         'student_register_id' => $_SESSION['student_register_id'], 'total_questions' => count($questions),
@@ -355,7 +382,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                         
                                         <?php } */ ?> <!-- show other language only -->
                                        
-                                          <?php if ($type == 'Year Order') { ?>  
+                                          <?php if ($type == 'Year Order' || $type == 'Subject Order') { ?>  
                                           <div class="quiz-pause">
                                            <div class="float-left">
                                                     <input id="show-immediately" type="checkbox" value="show_answer_immediately" @change="immChange" v-model="showimmediate"> <span class="span-position">Show Answer</span>
@@ -800,6 +827,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     
                                     <?php // } ?>
                                     
+                                    <?php if($type=='Year Order') { ?>
                                     <div v-if="olqshow">
                                         
                                         <div v-if="olqd">
@@ -832,7 +860,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                              <h2 class="titleContainer title"><span class="quiz-question-title">Question Not Available in <?php echo $other_language['name'] ?></span></h2>
                                          </div>  
                                     </div>
-
+                                    <?php } ?>    
                                     <?php
                                     /*
                                       <footer class="questionFooter"  v-if="showimmediateblk">
@@ -863,6 +891,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                 </div>
                             </div>   
                             <!--quizCompletedResult-->
+                           
                             <div v-if="questionIndex >= quiz.questions.length" v-bind:key="questionIndex" class="quizCompleted has-text-centered">
 
                                 <!-- quizCompletedIcon: Achievement Icon -->
@@ -909,7 +938,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                 </div>
 
                             </div>
-                            <!--/quizCompetedResult-->
+                          <!--/quizCompetedResult-->
                             <!-- 		</transition> -->
                         </div>
                         <!-- question Box -->
@@ -2017,10 +2046,12 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                     selectOption: function (index) {
                         $('.loadingoverlay').show();
                         
+                        <?php if ($type=='Year Order') { ?>
                         if(this.questionIndex == this.quiz.questions.length-1)   {
                                     this.savetimetaken();
                                     this.quizdurtext();
                                 }
+                        <?php } ?>        
                                 
                         if (!app.showimmediate) {
                             var questions = <?php echo json_encode($questions_list); ?>;
@@ -2140,6 +2171,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                     },
                     next: function () {
 
+                      
                         $('.loadingoverlay').show();
                         setTimeout(() => {
                             applyMathAjax();
@@ -2156,7 +2188,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                         var questions = <?php echo json_encode($questions_list); ?>;
                         var qid = questions[this.questionIndex].question_id;
 
-
+                       
                         if (app.showimmediate) {
 
 
@@ -2222,14 +2254,17 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
        
                     },
                     prev: function () {
-                        $('.loadingoverlay').show();
+                           
+                        $('.loadingoverlay').show();                       
                         if (this.quiz.questions.length > 0)
                             this.questionIndex--;
 
+                             
                         var questions = <?php echo json_encode($questions_list); ?>;
                         var qid = questions[this.questionIndex].question_id;
                         var answers = ['A', 'B', 'C', 'D'];
                         var ansid = '';
+                        
                         if (app.showimmediate) {
 
                             $.get("api/v1/get_student_answer/" + qid + "/<?php echo $student_log; ?>",
@@ -2561,7 +2596,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                       
                        
                     },
-                    startTimer:function() {  
+                    startTimer:function() {                       
                         if(!this.isTimerPaused) {
                             this.totseconds++;
                             this.secondslabel = pad(this.totseconds % 60);
@@ -2667,7 +2702,8 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                             //display other lanaguage explanation           
                             app.showExplanationOtherLang();
                              <?php } ?>
-                            <?php if($testmode == 0) {  ?>     
+                            <?php // if($testmode == 0) {  ?>     
+                            <?php if ($type=='Year Order') { ?>    
                             setInterval(app.startTimer, 1000);
                             <?php } ?>    
                             $('.loadingoverlay').hide();

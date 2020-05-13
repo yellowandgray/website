@@ -707,7 +707,7 @@ $app->get('/get_result_detail_by_topic/:lid/:tid', function($lid,$tid) {
     echoRespnse(201, $res);
 });
 
-
+/*
 $app->get('/get_student_result_count_by_topic/:lid', function($lid) {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
@@ -776,6 +776,197 @@ $app->get('/get_student_result_count_by_topic/:lid', function($lid) {
         $student_log_question  = $com->selectAll('q.*,year.year,subject.name As subject_name,t.name As topic_name',' question As q LEFT JOIN year ON q.year_id=year.year_id '
             . 'LEFT JOIN topic As t ON q.topic_id=t.topic_id LEFT JOIN subject ON t.subject_id=subject.subject_id',' q.year_id IN ('.$stud_all_sel_year_id_val.') AND q.topic_id IN ('.$stud_all_sel_topic_id_val.')'); 
     
+        
+        if(count($student_log_question)>0) {
+            foreach($student_log_question as $student_log_question_val) {
+                if(!isset($ques_topic_cnt[$student_log_question_val['topic_id']]['count'])){
+                    $ques_topic_cnt[$student_log_question_val['topic_id']]['count'] = 0;
+                }
+                $ques_topic_cnt[$student_log_question_val['topic_id']]['count']              =  $ques_topic_cnt[$student_log_question_val['topic_id']]['count'] + 1;
+                $ques_topic_cnt[$student_log_question_val['topic_id']]['topic_name']         =  $student_log_question_val['topic_name'];
+                $ques_topic_cnt[$student_log_question_val['topic_id']]['subject_name']       =  $student_log_question_val['subject_name'];
+         
+            }   
+        }		
+		
+        
+        //answered,correct answer count year,topic
+        
+       // $student_log_answer = $com->selectAll('student_log_detail.*,year.year,question.topic_id',' student_log LEFT JOIN student_log_detail ON student_log.student_log_id=student_log_detail.student_log_id '
+                . 'LEFT JOIN question ON student_log_detail.question_id=question.question_id LEFT JOIN year ON question.year_id=year.year_id','student_log_detail.student_log_id='.$lid.' ORDER BY student_log_id,student_log_detail_id ASC');
+        
+        
+        $student_log_answer = $com->selectAll('student_log_detail.*,question.answer,year.year,question.topic_id',' student_log LEFT JOIN student_log_detail ON student_log.student_log_id=student_log_detail.student_log_id '
+                . 'LEFT JOIN question ON student_log_detail.question_id=question.question_id LEFT JOIN year ON question.year_id=year.year_id','student_log_detail.student_log_id='.$lid.' ORDER BY student_log_id,student_log_detail_id ASC');
+       
+        
+        $tmp_stud_log_queston_id = array(); //rmv mul question  in student log details
+        foreach($student_log_answer as $student_log_answer_val) {
+            if($student_log_answer_val['student_log_id']!='') {
+                if(!isset($tmp_stud_log_queston_id[$student_log_answer_val['student_log_id']]) || !in_array($student_log_answer_val['question_id'], $tmp_stud_log_queston_id[$student_log_answer_val['student_log_id']]))
+                {        
+                    $tmp_stud_log_queston_id[$student_log_answer_val['student_log_id']][] = $student_log_answer_val['question_id'];
+                    if(!isset($ques_cor_ans_cnt[$student_log_answer_val['student_log_id']][$student_log_answer_val['topic_id']]['correct_cnt']))
+                    { 
+                        $ques_cor_ans_cnt[$student_log_answer_val['student_log_id']][$student_log_answer_val['topic_id']]['correct_cnt'] = 0;
+                    }       
+
+                    if(!isset($ques_cor_ans_cnt[$student_log_answer_val['student_log_id']][$student_log_answer_val['topic_id']]['answerd_cnt']))
+                    { 
+                        $ques_cor_ans_cnt[$student_log_answer_val['student_log_id']][$student_log_answer_val['topic_id']]['answerd_cnt'] = 0;
+                    }
+
+                    
+                    if($student_log_answer_val['student_answer']!=''){                        
+                 
+                        $ques_cor_ans_cnt[$student_log_answer_val['student_log_id']][$student_log_answer_val['topic_id']]['answerd_cnt'] = $ques_cor_ans_cnt[$student_log_answer_val['student_log_id']][$student_log_answer_val['topic_id']]['answerd_cnt']+1;
+                       
+                    } 
+
+                    if($student_log_answer_val['answer']==$student_log_answer_val['student_answer']){
+                        $ques_cor_ans_cnt[$student_log_answer_val['student_log_id']][$student_log_answer_val['topic_id']]['correct_cnt'] = $ques_cor_ans_cnt[$student_log_answer_val['student_log_id']][$student_log_answer_val['topic_id']]['correct_cnt']+1;
+                    }
+
+                    } 
+            } 
+        }
+        
+        
+        
+         foreach($stud_log_topic_by_log[$lid] as $student_log_subj_subj=>$student_log_subj)
+         {    
+            //topic
+            {
+                 foreach($student_log_subj as $student_log_subj_topic_id=>$student_log_subj_topic)
+                 {
+                     $data[$student_log_subj_topic_id]['topic_id']      = $student_log_subj_topic_id;
+                     $data[$student_log_subj_topic_id]['subject_name']  = $student_log_subj_subj;
+                     $data[$student_log_subj_topic_id]['topic_name']    = $student_log_subj_topic;
+                     
+                     
+                     $tot_topic_question = 0;
+                     if(isset($ques_topic_cnt[$student_log_subj_topic_id]['count'])) {
+                            $tot_topic_question = $ques_topic_cnt[$student_log_subj_topic_id]['count'];
+                     }                     
+                     $data[$student_log_subj_topic_id]['totalcnt'] = $tot_topic_question;                     
+                     
+                     
+                    $answerd_topic_question = 0;
+                    if(isset($ques_cor_ans_cnt[$lid][$student_log_subj_topic_id]['answerd_cnt'])) {
+                        $answerd_topic_question = $ques_cor_ans_cnt[$lid][$student_log_subj_topic_id]['answerd_cnt'];
+                    }
+                    $data[$student_log_subj_topic_id]['answerdcnt'] = $answerd_topic_question;
+                    
+                    
+                    $correct_topic_question = 0;
+                    if(isset($ques_cor_ans_cnt[$lid][$student_log_subj_topic_id]['correct_cnt'])) {
+                        $correct_topic_question = $ques_cor_ans_cnt[$lid][$student_log_subj_topic_id]['correct_cnt'];
+                    }
+                    $data[$student_log_subj_topic_id]['correctcnt'] = $correct_topic_question;           
+                    
+                    $data[$student_log_subj_topic_id]['wrongcnt'] =  $data[$student_log_subj_topic_id]['answerdcnt'] - $data[$student_log_subj_topic_id]['correctcnt'];
+                     
+                 }
+            }
+         }
+         
+         
+         
+         
+    }  
+    
+    
+    
+    
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+    
+
+});
+*/
+
+$app->get('/get_student_result_count_by_topic/:lid', function($lid) {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('*', 'student_log_detail', 'student_log_id = ' . $lid);
+    
+    
+    
+    
+    
+    $student_log_year  = $com->selectAll('sly.*,y.year As year','student_log AS sl LEFT JOIN student_log_year As sly ON sl.student_log_id=sly.student_log_id LEFT JOIN year As y ON y.year_id=sly.year_id',' sl.student_log_id='.$lid);
+  
+   
+    //$stud_all_sel_year      =  Array();
+    $stud_all_sel_topic     =  Array();
+    
+    
+    /*
+    $ans_log_year      = array();    
+    if(count($student_log_year)>0) {
+        foreach($student_log_year as $student_log_year_v) {
+            $ans_log_year[$student_log_year_v['student_log_id']][] = $student_log_year_v['year'];
+			if($student_log_year_v['year_id']!=''){
+				if(!in_array($student_log_year_v['year_id'], $stud_all_sel_year)) {
+					$stud_all_sel_year[] = $student_log_year_v['year_id'];
+				}
+			}	
+        }
+    }
+    */
+    
+     
+    $student_log_topic = $com->selectAll('slt.*,t.name As topic_name,subject.subject_id As subject_id,subject.name As subject_name','student_log As sl'
+            . ' LEFT JOIN student_log_topic slt ON sl.student_log_id=slt.student_log_id LEFT JOIN topic As t ON slt.topic_id=t.topic_id LEFT JOIN subject ON '
+            . 't.subject_id=subject.subject_id','sl.student_log_id = '.$lid.' ORDER BY student_log_id,subject.subject_id,t.topic_id ASC');
+    
+
+    $stud_log_topic_by_log = array();
+    if(count($student_log_topic)>0) {
+        foreach ($student_log_topic as $student_log_topic) {
+            if($student_log_topic['student_log_id']!=''){
+                $stud_log_topic_by_log[$student_log_topic['student_log_id']][$student_log_topic['subject_name']][$student_log_topic['topic_id']] =  $student_log_topic['topic_name'];
+                 if(!in_array($student_log_topic['topic_id'], $stud_all_sel_topic)) {
+                        $stud_all_sel_topic[] = $student_log_topic['topic_id'];
+                 }
+            }        
+        }
+    }
+    
+ 
+    //$stud_all_sel_year_id_val  = '';
+    $stud_all_sel_topic_id_val = '';
+    
+    $ques_topic_cnt      = array();
+    $ques_cor_ans_cnt   = array();
+    
+    /*
+    if(count($stud_all_sel_year)>0) {
+        $stud_all_sel_year_id_val = implode(',',$stud_all_sel_year);
+    }
+    */
+    
+     if(count($stud_all_sel_topic)>0) {
+        $stud_all_sel_topic_id_val = implode(',',$stud_all_sel_topic);
+    }
+	
+	    
+    $data = array();
+    //if($stud_all_sel_year_id_val != '' && $stud_all_sel_topic_id_val!='') {
+   if($stud_all_sel_topic_id_val!='') {
+        //total questions year , topic 
+       /* 
+       $student_log_question  = $com->selectAll('q.*,year.year,subject.name As subject_name,t.name As topic_name',' question As q LEFT JOIN year ON q.year_id=year.year_id '
+            . 'LEFT JOIN topic As t ON q.topic_id=t.topic_id LEFT JOIN subject ON t.subject_id=subject.subject_id',' q.year_id IN ('.$stud_all_sel_year_id_val.') AND q.topic_id IN ('.$stud_all_sel_topic_id_val.')'); 
+        */
+		
+       //total questions  topic 
+       $student_log_question  = $com->selectAll('q.*,year.year,subject.name As subject_name,t.name As topic_name',' question As q LEFT JOIN year ON q.year_id=year.year_id '
+            . 'LEFT JOIN topic As t ON q.topic_id=t.topic_id LEFT JOIN subject ON t.subject_id=subject.subject_id',' q.topic_id IN ('.$stud_all_sel_topic_id_val.')'); 
         
         if(count($student_log_question)>0) {
             foreach($student_log_question as $student_log_question_val) {
@@ -868,15 +1059,7 @@ $app->get('/get_student_result_count_by_topic/:lid', function($lid) {
                  }
             }
          }
-         
-         
-         
-         
-    }  
-    
-    
-    
-    
+   }
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
@@ -886,8 +1069,6 @@ $app->get('/get_student_result_count_by_topic/:lid', function($lid) {
     
 
 });
-
-
 
 $app->get('/get_question_answer/:qid', function($qid) {
     $res = array('error' => true, 'message' => 'No records found');
