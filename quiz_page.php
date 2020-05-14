@@ -32,9 +32,9 @@ if ($_SESSION['student_selected_type'] == 'order') {
     $selyear = $obj->selectRow('*', 'year', 'year=\'' . $_GET['year'] . '\'');
     $_SESSION['student_selected_year_id'] = $selyear['year_id'];
 
-    $questions              = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer, image_path, direction,question_id,explanation,image_path_explanation,explanation_img_direction,question_no', 'question', 'topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $_SESSION['student_selected_language_id'] . ') AND year_id = ' . $_SESSION['student_selected_year_id'] . ' ORDER BY question_no ASC,year_id ASC, topic_id ASC');
+    $questions              = $obj->selectAll('name,year_id, a, b, c, d, UPPER(answer) AS answer, image_path, direction,question_id,explanation,image_path_explanation,explanation_img_direction,question_no', 'question', 'topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $_SESSION['student_selected_language_id'] . ') AND year_id = ' . $_SESSION['student_selected_year_id'] . ' ORDER BY question_no ASC,year_id ASC, topic_id ASC');
     //if($testmode==1){
-        $other_lang_questions   = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer, image_path, direction,question_id,explanation,image_path_explanation,explanation_img_direction,question_no', 'question', 'topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $other_language['language_id'] . ') AND year_id = ' . $_SESSION['student_selected_year_id'] . ' ORDER BY question_no ASC,year_id ASC, topic_id ASC');
+        $other_lang_questions   = $obj->selectAll('name,year_id, a, b, c, d, UPPER(answer) AS answer, image_path, direction,question_id,explanation,image_path_explanation,explanation_img_direction,question_no', 'question', 'topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $other_language['language_id'] . ') AND year_id = ' . $_SESSION['student_selected_year_id'] . ' ORDER BY question_no ASC,year_id ASC, topic_id ASC');
     //}
     
     //resume log
@@ -93,18 +93,26 @@ if ($_SESSION['student_selected_type'] == 'subject') {
     //$_SESSION['student_selected_years_id'] = $_GET['years'];
     //$questions = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer, image_path, direction', 'question', 'topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $_SESSION['student_selected_language_id'] . ' AND t.topic_id IN (' . $_SESSION['student_selected_topics_id'] . ') ORDER BY t.subject_id ASC) AND year_id IN (' . $_SESSION['student_selected_years_id'] . ') ORDER BY year_id ASC, topic_id ASC');
     //$questions = $obj->selectAll('question.name As name, a, b, c, d, UPPER(answer) AS answer, image_path, direction,question_id,explanation,image_path_explanation,explanation_img_direction,question_no', 'question LEFT JOIN topic ON question.topic_id=topic.topic_id', 'question.topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $_SESSION['student_selected_language_id'] . ' AND t.topic_id IN (' . $_SESSION['student_selected_topics_id'] . ') ORDER BY t.subject_id ASC) AND year_id IN (' . $_SESSION['student_selected_years_id'] . ') ORDER BY subject_id ASC,question.topic_id ASC,year_id ASC,question_no ASC');
-    $questions = $obj->selectAll('question.name As name, a, b, c, d, UPPER(answer) AS answer, image_path, direction,question_id,explanation,image_path_explanation,explanation_img_direction,question_no', 'question LEFT JOIN topic ON question.topic_id=topic.topic_id', 'question.topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $_SESSION['student_selected_language_id'] . ' AND t.topic_id IN (' . $_SESSION['student_selected_topics_id'] . ') ORDER BY t.subject_id ASC) ORDER BY subject_id ASC,question.topic_id ASC,year_id ASC,question_no ASC');
+    $questions = $obj->selectAll('question.year_id,question.name As name, a, b, c, d, UPPER(answer) AS answer, image_path, direction,question_id,explanation,image_path_explanation,explanation_img_direction,question_no', 'question LEFT JOIN topic ON question.topic_id=topic.topic_id', 'question.topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $_SESSION['student_selected_language_id'] . ' AND t.topic_id IN (' . $_SESSION['student_selected_topics_id'] . ') ORDER BY t.subject_id ASC) ORDER BY subject_id ASC,question.topic_id ASC,year_id ASC,question_no ASC');
     
    
+    
+    $qu_cond = array();
+   if (count($questions) > 0) {
+    foreach ($questions as $qu) { 
+        $qu_cond[] = '(year_id='.$qu['year_id'].' AND question_no='.$qu['question_no'].')';
+    }
+   }  
+   
+   $qu_conds = '';
+   if(count($qu_cond)>0){
+       $qu_conds = ' AND ('.implode(' OR ',$qu_cond).')';
+   }
+    
     //if($testmode==1){
         //$other_lang_questions   = $obj->selectAll('question.name As name, a, b, c, d, UPPER(answer) AS answer, image_path, direction,question_id,explanation,image_path_explanation,explanation_img_direction,question_no', 'question LEFT JOIN topic ON question.topic_id=topic.topic_id', 'question.topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $other_language['language_id'] . ' AND t.topic_id IN (' . $_SESSION['student_selected_topics_id'] . ') ORDER BY t.subject_id ASC) AND year_id IN (' . $_SESSION['student_selected_years_id'] . ') ORDER BY question_no ASC,subject_id ASC,question.topic_id ASC,year_id ASC');
-        $other_lang_questions   = $obj->selectAll('question.name As name, a, b, c, d, UPPER(answer) AS answer, image_path, direction,question_id,explanation,image_path_explanation,explanation_img_direction,question_no', 'question LEFT JOIN topic ON question.topic_id=topic.topic_id', 'question.topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $other_language['language_id'] . ' AND t.topic_id IN (' . $_SESSION['student_selected_topics_id'] . ') ORDER BY t.subject_id ASC) AND year_id IN (' . $sel_year_ids. ')  ORDER BY question_no ASC,subject_id ASC,question.topic_id ASC,year_id ASC');
-        /*
-        echo 'SELECT question.name As name, a, b, c, d, UPPER(answer) AS answer, image_path, direction,question_id,explanation,image_path_explanation,explanation_img_direction,question_no FROM question LEFT JOIN topic ON question.topic_id=topic.topic_id WHERE question.topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $other_language['language_id'] . ' AND t.topic_id IN (' . $_SESSION['student_selected_topics_id'] . ') ORDER BY t.subject_id ASC) AND year_id IN (' . $sel_year_ids. ')  ORDER BY question_no ASC,subject_id ASC,question.topic_id ASC,year_id ASC';
-        echo "<pre>";
-        print_r($other_lang_questions);
-        exit;
-         * */
+        //$other_lang_questions   = $obj->selectAll('question.name As name, a, b, c, d, UPPER(answer) AS answer, image_path, direction,question_id,explanation,image_path_explanation,explanation_img_direction,question_no', 'question LEFT JOIN topic ON question.topic_id=topic.topic_id', 'question.topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $other_language['language_id'] . ' AND t.topic_id IN (' . $_SESSION['student_selected_topics_id'] . ') ORDER BY t.subject_id ASC) AND year_id IN (' . $sel_year_ids. ')  ORDER BY question_no ASC,subject_id ASC,question.topic_id ASC,year_id ASC');
+       $other_lang_questions = $obj->selectAll('question.name As name, a, b, c, d, UPPER(answer) AS answer, image_path, direction,question_id,explanation,image_path_explanation,explanation_img_direction,question_no,year_id', 'question LEFT JOIN topic ON question.topic_id=topic.topic_id', 'question.topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $other_language['language_id'] .') '.$qu_conds.'  ORDER BY question_no ASC,subject_id ASC,question.topic_id ASC,year_id ASC');       
         
     //}
     $student_log = $obj->insertRecord(array('language_id' => $_SESSION['student_selected_language_id'],
@@ -189,7 +197,8 @@ if (count($questions) > 0) {
             'explanation' => $q['explanation'],
             'image_path_explanation' => $q['image_path_explanation'],
             'explanation_img_direction' => $q['explanation_img_direction'],
-            'question_no'=>$q['question_no']
+            'question_no'=>$q['question_no'],
+            'year_id'=>$q['year_id']
             
         ));
 
@@ -248,6 +257,7 @@ if (count($questions) > 0) {
                 'image_path_explanation' => $oq['image_path_explanation'],
                 'explanation_img_direction' => $oq['explanation_img_direction'],
                 'question_no'=>$oq['question_no'],
+                'year_id'=>$oq['year_id']
             ));
 
 
@@ -327,11 +337,13 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                             <th valign="top"><?php echo $sub_topic_val; ?></th>
                                         </tr>
                                     <?php } ?>
+                                    <?php if($type=='Year Order') { ?>   
                                     <tr>
                                         <td valign="top">Selected Year</td>
                                         <td valign="top" class="w-5">:</td>
                                         <th valign="top"><?php echo $sel_year_val; ?></th>
                                     </tr>
+                                    <?php } ?>
                                 </table>
                             </h4>
                             <a class="home_link" href="select_language">
@@ -827,7 +839,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     
                                     <?php // } ?>
                                     
-                                    <?php if($type=='Year Order') { ?>
+                                    <?php  // if($type=='Year Order') { ?>
                                     <div v-if="olqshow">
                                         
                                         <div v-if="olqd">
@@ -860,7 +872,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                              <h2 class="titleContainer title"><span class="quiz-question-title">Question Not Available in <?php echo $other_language['name'] ?></span></h2>
                                          </div>  
                                     </div>
-                                    <?php } ?>    
+                                    <?php // } ?>    
                                     <?php
                                     /*
                                       <footer class="questionFooter"  v-if="showimmediateblk">
@@ -2539,10 +2551,11 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                             var questions = <?php echo json_encode($questions_list); ?>;
                             var otherlang_questions = <?php echo json_encode($otherlang_questions_list); ?>;
                             var qno = questions[this.questionIndex].question_no;
+                            var ye = questions[this.questionIndex].year_id;
                             
                            if(otherlang_questions) {
                                for (let i = 0; i < otherlang_questions.length; i++) {                               
-                                    if(otherlang_questions[i].question_no==qno){
+                                    if(otherlang_questions[i].question_no==qno && otherlang_questions[i].year_id==ye){
                                         this.olqd = otherlang_questions[i];
                                         //this.olqshow = true;
                                         
