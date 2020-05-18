@@ -103,13 +103,18 @@ if (isset($_SESSION['student_register_id'])) {
         print_r($ques_year_cnt);
         exit;
          */
+        
+        
+        
 	       
         
        
         $student_log_answer = $obj->selectAll('student_log_detail.*,year.year,question.answer,question.topic_id',' student_log LEFT JOIN student_log_detail ON student_log.student_log_id=student_log_detail.student_log_id '
-                . 'LEFT JOIN question ON student_log_detail.question_id=question.question_id LEFT JOIN year ON question.year_id=year.year_id','student_log.student_register_id='.$_SESSION['student_register_id'].' ORDER BY student_log_id,student_log_detail_id ASC');
+                . 'LEFT JOIN question ON student_log_detail.question_id=question.question_id LEFT JOIN year ON question.year_id=year.year_id','student_log.student_register_id='.$_SESSION['student_register_id'].' ORDER BY student_log_id DESC,student_log_detail_id DESC');
        
         
+         $stud_topic_order = array();
+       $stud_topic_logs   = array();       
        
         
         $tmp_stud_log_queston_id = array(); //rmv mul question  in student log details
@@ -119,6 +124,15 @@ if (isset($_SESSION['student_register_id'])) {
                 {        
                     
                     $ques_cor_ans_cnt[$student_log_answer_val['student_log_id']][$student_log_answer_val['topic_id']]['date'] = date('d/m/Y',strtotime($student_log_answer_val['created_at']));
+                    
+                    if(!in_array($student_log_answer_val['topic_id'],$stud_topic_order)) {
+                        $stud_topic_order[] = $student_log_answer_val['topic_id'];
+                    }
+                    
+                     if(!isset($stud_topic_logs[$student_log_answer_val['topic_id']]) || !in_array($student_log_answer_val['student_log_id'],$stud_topic_logs[$student_log_answer_val['topic_id']])) {
+                         $stud_topic_logs[$student_log_answer_val['topic_id']][] = $student_log_answer_val['student_log_id'];
+                    }
+                    
                     $tmp_stud_log_queston_id[$student_log_answer_val['student_log_id']][] = $student_log_answer_val['question_id'];
                     if(!isset($ques_cor_ans_cnt[$student_log_answer_val['student_log_id']][$student_log_answer_val['topic_id']]['correct_cnt']))
                     { 
@@ -151,6 +165,16 @@ if (isset($_SESSION['student_register_id'])) {
         print_r($ques_cor_ans_cnt);
         exit;
           */
+        
+        /*
+        echo "<pre>";
+        print_r($stud_topic_order);
+      
+        echo "<pre>";
+        print_r($stud_topic_logs);
+        exit;
+         * 
+         */
        
     }    
     
@@ -293,55 +317,70 @@ if (isset($_SESSION['student_register_id'])) {
       
           
                                           
-                                                <tbody>
-                                                      <?php
-          foreach($student_log as $student_log_detail) { 
-                                             if(isset($ans_log_order[$student_log_detail['student_log_id']]) && ($ans_log_order[$student_log_detail['student_log_id']]==2))   { //subject order
+                                              <tbody>
+                                                    <?php  
                                                 
-                                                 if(isset($ques_cor_ans_cnt[$student_log_detail['student_log_id']])) {
-                                                                                            
-                                             
-                                                   foreach($ques_cor_ans_cnt[$student_log_detail['student_log_id']] as $topic_id=>$log_topic)  {
-                                                  
-                                                    
+                                                    foreach($stud_topic_order as $stud_topic) {
+                                                        foreach($stud_topic_logs[$stud_topic] as $log_id) { 
+                                                            if(isset($ques_year_cnt[$stud_topic])) {
+                                                            ?>
+                                                        <tr>                 
+                                                        <td><?php echo $ques_cor_ans_cnt[$log_id][$stud_topic]['date']; ?></td>
+                                                        <td><?php 
+                                                        
+                                                        echo $ques_year_cnt[$stud_topic]['subject_name']; ?></td>
+                                                        <td><?php echo $ques_year_cnt[$stud_topic]['topic_name']; ?></td>
+                                                        <td><?php if(isset($ques_year_cnt[$stud_topic]['count']))
+                                                        {
+                                                        echo $ques_year_cnt[$stud_topic]['count'];
+                                                        }
+                                                        else
+                                                        {
+                                                            echo '0';
+                                                        }?></td>
+                                                        <td><?php if(isset($ques_cor_ans_cnt[$log_id][$stud_topic]['answerd_cnt']))
+                                                        {
+                                                            echo $ques_cor_ans_cnt[$log_id][$stud_topic]['answerd_cnt'];
+                                                            $answered = $ques_cor_ans_cnt[$log_id][$stud_topic]['answerd_cnt'];
+                                                        }
+                                                        else
+                                                        {
+                                                            echo '0';
+                                                            $answered = 0;
+                                                        }
+                                                        
+         ?></td>    
+                                                            
                                                           
-                                                           $date = $log_topic['date'];
-                                                    $answerd_cnt = $log_topic['answerd_cnt']; 
-                                                    $correct_cnt = $log_topic['correct_cnt']; 
-                                                
-                                                
-                  
-                
-                                                    $subject_name = $ques_year_cnt[$topic_id]['subject_name']; 
-                                                    $topic_name = $ques_year_cnt[$topic_id]['topic_name']; 
-                                                    $topic_ques_cnt = $ques_year_cnt[$topic_id]['count']; 
-        
-        
-        ?>
-                                                    <tr>                 
-                                                        <td><?php echo $date; ?></td>
-                                                        <td><?php echo $subject_name; ?></td>
-                                                        <td><?php echo $topic_name; ?></td>
-                                                        <td><?php echo $topic_ques_cnt; ?></td>
-                                                        <td><?php echo $answerd_cnt; ?></td>
-                                                        <td><?php echo $correct_cnt; ?></td>
-                                                        <td><?php echo $answerd_cnt - $correct_cnt;   ?></td>
-                                                        <td><button class="btn btn-answerd-clr" onClick="topicShowDetail(<?php echo $topic_id; ?>,<?php echo $student_log_detail['student_log_id']; ?>);">Show Details</button>                                                        </td>
-                                                    </tr>
+                                                         <td><?php
+                                                         
+                                                        if(isset($ques_cor_ans_cnt[$log_id][$stud_topic]['correct_cnt']))
+                                                        {
+                                                            echo $ques_cor_ans_cnt[$log_id][$stud_topic]['correct_cnt'];
+                                                            $correct_cnt = $ques_cor_ans_cnt[$log_id][$stud_topic]['correct_cnt'];
+                                                        }
+                                                        else
+                                                        {
+                                                            echo '0';
+                                                            $correct_cnt = 0;
+                                                        }
+         ?></td>
+                                                        <td><?php echo $answered - $correct_cnt; ?></td>
+                                                        <td><button class="btn btn-answerd-clr" onClick=topicShowDetail(<?php echo $stud_topic ?>,<?php echo $log_id; ?>);>Show Details</button>                                                        </td>
                                                     
-                                                    <tr>
+                                                        <tr>
                                                         <td colspan="8">
-                                                            <div id="result_view_<?php echo $topic_id; ?>_<?php echo $student_log_detail['student_log_id']; ?>" class="student-full-result"></div>
+                                                            <div id="result_view_<?php echo $stud_topic; ?>_<?php echo $log_id; ?>" class="student-full-result"></div>
                                                         </td>
                                                     </tr>
-                                             <?php
-                                                       }
-                                                   }
-                                             }
-                                             
-                             
-                                                 } ?>
-                                                </tbody>
+                                                        
+                                                        </tr>
+                                                    <?php
+                                                            }
+                                                        } 
+                                                    }
+                                                    ?>
+                                                </tbody>   
                                             </table>
                                             <!--center>
                                                 <button class="btn btn-brown" onclick="showFullResult(<?php // echo $student_log_detail['student_log_id']; ?>);">Show Details</button>
