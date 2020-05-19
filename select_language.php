@@ -18,7 +18,7 @@ $languages = $obj->selectAll('*', 'language', 'status = 1');
                     <div class="language-width">
                         <div class="row">
                             <?php foreach ($languages as $val) { ?>
-                                <div class="span3">
+                                <div class="span2">
                                     <div class="language-box" onClick="selmode('<?php echo $val['name']; ?>');"  data-lang="<?php echo $val['name']; ?>">
                                         <div class="language-img-zoom">
                                             <div class="language-img" style="background: url(<?php echo BASE_URL . $val['imageurl']; ?>)no-repeat;"></div>
@@ -40,6 +40,27 @@ $languages = $obj->selectAll('*', 'language', 'status = 1');
                             onclick="window.location = 'question-subject-order?lan=<?php echo $val['name']; ?>'"                             
                              */
                             } ?>
+                            
+                            
+                              <div class="span2">
+                                    <div class="language-box" onClick="selfreequiz();">
+                                        <div class="language-img-zoom">
+                                            <div class="language-img" style="background: url(<?php echo BASE_URL . $val['imageurl']; ?>)no-repeat;"></div>
+                                        </div>
+                                        <div class="language-title">
+                                            <h3>
+                                                <a href="#" onClick="selfreequiz();">Free Quiz</a>
+                                            </h3>
+                                        </div>
+                                        <div class="language-description">
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                                            <a class="btn btn-theme margintop10 difficult-button" onClick="selfreequiz();">START QUIZ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            
+                            
                         </div>
                     </div>
                 </div>

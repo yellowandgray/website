@@ -78,6 +78,15 @@
        window.location = 'question-subject-order?lan='+lang;
     }
     
+    
+     function selfreequiz() {
+        /*
+        window.location = '#popup1'; 
+        $('#tets').data('lang',lang);
+        */
+       window.location = 'question-subject-order-freesample';
+    }
+    
     /*
     $("#tets").click(function () {            
          //alert(' val1 '+$("input[name='method']:checked").val());   
