@@ -2,25 +2,17 @@
 session_start();
 require_once 'api/include/common.php';
 $obj = new Common();
-
-
-if (!isset($_GET['lan'])) {
-    header('Location: question-subject-order_freesample');
+if (!isset($_SESSION['student_selected_language_id'])) {
+    header('Location: select_language');
 }
 
-$language = $obj->selectRow('*', 'language', 'name = \'' . $_GET['lan'] . '\'');
-$_SESSION['student_selected_language_id'] = $language['language_id'];
-
+if (!isset($_GET['subjects'])) {
+    header('Location: subject');
+}
 
 $_SESSION['student_selected_type'] = 'subject';
-/*
-$topics = $obj->selectAll('t.*, s.name AS subject', 'topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id', 's.language_id=' . $_SESSION['student_selected_language_id']);
-$alltopics = array();
-foreach ($topics as $row) {
-    $alltopics[$row['subject']][] = $row;
-}
- * 
- */
+//$topics = $obj->selectAll('t.*, s.name AS subject', 'topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id', 's.subject_id IN (' . $_GET['subjects'].') ORDER BY s.subject_id ASC');
+
 
 $yid = array();
 $years = $obj->selectAll('y.*', 'year As y', 'status = 1 ORDER BY y.year ASC LIMIT 3');
@@ -38,8 +30,11 @@ if(count($yid)>0) {
 
 
 
-//$subjects = $obj->selectAll('s.*','subject As s', 's.language_id=' . $_SESSION['student_selected_language_id']);
-$subjects = $obj->selectAll('s.*,(select count(question_id) FROM question As q INNER JOIN topic As t ON q.topic_id=t.topic_id INNER JOIN subject As s1 ON s1.subject_id=t.subject_id WHERE s1.subject_id=s.subject_id AND q.year_id IN ('.$yids.')) As ques_cnt','subject As s', 's.language_id=' . $_SESSION['student_selected_language_id']);
+$topics = $obj->selectAll('t.*, s.name AS subject,(select count(question_id) FROM question As q WHERE q.topic_id=t.topic_id AND q.year_id IN ('.$yids.')) As ques_cnt', 'topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id', 's.subject_id IN (' . $_GET['subjects'].') ORDER BY s.subject_id ASC');
+$alltopics = array();
+foreach ($topics as $row) {
+    $alltopics[$row['subject']][] = $row;
+}
 $language = $obj->selectRow('*', 'language', 'language_id=' . $_SESSION['student_selected_language_id']);
 $counter = 0;
 ?>
@@ -52,7 +47,7 @@ $counter = 0;
                 <div id="mySignin" tabindex="-1" aria-labelledby="mySigninModalLabel" aria-hidden="true">
                     <div class="modal styled">
                         <div class="modal-header login-section">
-                            <a href="question-subject-order-freesample?lan=<?php echo $language['name']; ?>"><i class="font-icon-arrow-simple-left"></i></a>
+                            <a href="question-subject-order?lan=<?php echo $language['name']; ?>"><i class="font-icon-arrow-simple-left"></i></a>
                             <h4 id="mySigninModalLabel" class="text-center">
                                 <table class="table-title">
                                     <tr>
@@ -73,44 +68,27 @@ $counter = 0;
                         </div>
                         <div class="modal-body">
                             <div class="language_section">
-                                <h6 class="sub-title">Select subject</h6>
-                                <?php 
-                                /*
+                                <h6 class="sub-title">Select subject and Topic</h6>
                                 <ul class="subject-section-order">
                                     <?php
-                                    foreach ($subjects as $key => $row) {
+                                    foreach ($alltopics as $key => $row) {
                                         $counter++;
                                         ?>
                                         <li>
-                                            <label class="pl-0"><input type="checkbox" class="subjects" data-chkgroup="option<?php echo $counter; ?>" value="<?php echo $row['subject_id']; ?>"><span class=""> <?php echo $row['name']; ?></span>(<?php echo $row['ques_cnt']; ?> Questions)</label>
-                                            
+                                            <input type="checkbox" id="option<?php echo $counter; ?>" data-chkgroup="option<?php echo $counter; ?>" class="selectallchk"><label for="option<?php echo $counter; ?>" class=""> <?php echo $key; ?></label>
+                                            <ul>
+                                                <?php foreach ($row as $r) { ?>
+                                                    <li><label class="pl-0"><input type="checkbox" data-chkgroup="option<?php echo $counter; ?>"  name="suboptions[]" value="<?php echo $r['topic_id']; ?>" class="subOption<?php echo $counter; ?> suboptions childchk"> <span><?php echo $r['name']; ?> (<?php echo $r['ques_cnt']; ?> Questions)</span></label></li>
+                                                <?php } ?>
+                                            </ul>
                                         </li>
                                     <?php } ?>
                                 </ul>
-                                 * 
-                                 */
-                                ?>
-                                <ul class="subject-section-order">
-                                     <?php  foreach ($subjects as $key => $row) { ?>                                     
-
-                                    <li>
-                                        <i class="icon-double-angle-right"></i>
-                                        <a href="#" onclick="goToTopics(<?php echo $row['subject_id']; ?>);"><?php echo $row['name']; ?></span>(<?php echo $row['ques_cnt']; ?> Questions)</a>
-                                    </li>         
-                                   
-                                    <?php } ?>
-                                </ul>
-                                
-                                
                             </div>
-                            <?php 
-                            /*
                             <div class="text-right">
-                                <a href="#" onclick="goToYears();" class="btn btn-danger">Next</a>
+                               <?php /*  <a href="#" onclick="goToYears();" class="btn btn-danger">Next</a> */?>
+                                <a href="#" onclick="goToQuestions();" class="btn btn-danger">Next</a>
                             </div>
-                             * */
-                             
-                            ?>
                         </div>
                     </div>
                 </div>
@@ -142,7 +120,6 @@ $counter = 0;
      * 
              */
             
-            /*
             $('.childchk').change(function(){
                 // create var for parent .checkall and group
                 var group = $(this).data('chkgroup'),                
@@ -165,25 +142,34 @@ $counter = 0;
                 var group = $(this).data('chkgroup');
                 $('.childchk[data-chkgroup="'+group+'"]').prop('checked', this.checked).change(); 
             });
-            */
             
-            function goToYears() {
-                var subjects = [];
-                $('.subjects').each(function (key, ele) {
+
+            function goToYears() {               
+                var topics = [];
+                $('.suboptions').each(function (key, ele) {
                     if (ele.checked === true) {
-                        subjects.push(ele.value);
+                        topics.push(ele.value);
                     }
                 });
-                if (subjects.length > 0) {
-                   window.location = 'subject-topic?subjects=' + subjects.join(',');
+                if (topics.length > 0) {
+                   window.location = 'subject-years?topics=' + topics.join(',');
                 } else {
-                    alert('Please select atleast one Subject');
-                }
+                    alert('Please select atleast one topic');
+                }               
             }
             
-            
-            function goToTopics(sub) {
-               window.location = 'subject-topic-freesample?subjects=' + sub;                 
+            function goToQuestions() {
+                var topics = [];
+                $('.suboptions').each(function (key, ele) {
+                    if (ele.checked === true) {
+                        topics.push(ele.value);
+                    }
+                });
+                 if (topics.length > 0) {
+                   window.location = 'quiz_page_freesample?topics=' + topics.join(',');
+                } else {
+                    alert('Please select atleast one topic');
+                }                
             }
         </script>
     </body>
