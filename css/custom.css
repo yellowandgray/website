@@ -1474,3 +1474,22 @@ and open the template in the editor.
 .testmodetxt {
     cursor: pointer;
 }
+
+
+
+.quiz-year {
+    width: 95%;
+    padding: 10px 0;
+    margin-bottom: 30px;
+}
+
+
+.quiz-year .float-right {
+    float: right;
+    text-align: right;
+}
+
+.label-quiz-year {
+    Color: #fff;
+    background : #f03c02;
+}

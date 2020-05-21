@@ -91,9 +91,7 @@ if ($_SESSION['student_selected_type'] == 'subject') {
     
     $type = 'Subject Order';
     //$_SESSION['student_selected_years_id'] = $_GET['years'];
-    //$questions = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer, image_path, direction', 'question', 'topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $_SESSION['student_selected_language_id'] . ' AND t.topic_id IN (' . $_SESSION['student_selected_topics_id'] . ') ORDER BY t.subject_id ASC) AND year_id IN (' . $_SESSION['student_selected_years_id'] . ') ORDER BY year_id ASC, topic_id ASC');
-    //$questions = $obj->selectAll('question.name As name, a, b, c, d, UPPER(answer) AS answer, image_path, direction,question_id,explanation,image_path_explanation,explanation_img_direction,question_no', 'question LEFT JOIN topic ON question.topic_id=topic.topic_id', 'question.topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $_SESSION['student_selected_language_id'] . ' AND t.topic_id IN (' . $_SESSION['student_selected_topics_id'] . ') ORDER BY t.subject_id ASC) AND year_id IN (' . $_SESSION['student_selected_years_id'] . ') ORDER BY subject_id ASC,question.topic_id ASC,year_id ASC,question_no ASC');
-    $questions = $obj->selectAll('question.year_id,question.name As name, a, b, c, d, UPPER(answer) AS answer, image_path, direction,question_id,explanation,image_path_explanation,explanation_img_direction,question_no', 'question LEFT JOIN topic ON question.topic_id=topic.topic_id', 'question.topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $_SESSION['student_selected_language_id'] . ' AND t.topic_id IN (' . $_SESSION['student_selected_topics_id'] . ') ORDER BY t.subject_id ASC) ORDER BY subject_id ASC,question_no ASC');
+     $questions = $obj->selectAll('question.year_id,year.year,question.name As name, a, b, c, d, UPPER(answer) AS answer, image_path, direction,question_id,explanation,image_path_explanation,explanation_img_direction,question_no', 'question LEFT JOIN topic ON question.topic_id=topic.topic_id LEFT JOIN year ON question.year_id=year.year_id', 'question.topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $_SESSION['student_selected_language_id'] . ' AND t.topic_id IN (' . $_SESSION['student_selected_topics_id'] . ') ORDER BY t.subject_id ASC) ORDER BY subject_id ASC,question.topic_id ASC,year.year DESC,question_no ASC');
     
    
     
@@ -185,6 +183,10 @@ if (count($questions) > 0) {
          * 
          */
 
+        $qyear = '';
+        if(isset($q['year'])) {
+            $qyear = $q['year'];
+        }
         array_push($questions_list, array(
             'text' => $q['name'],
             'direction' => $q['direction'],
@@ -198,8 +200,8 @@ if (count($questions) > 0) {
             'image_path_explanation' => $q['image_path_explanation'],
             'explanation_img_direction' => $q['explanation_img_direction'],
             'question_no'=>$q['question_no'],
-            'year_id'=>$q['year_id']
-            
+            'year_id'=>$q['year_id'],
+            'year'=>$qyear
         ));
 
         /*
@@ -462,11 +464,16 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
 
                                 <div v-if="!revShow">
                                     <!-- questionTitle -->
+                                    <div class="quiz-year" v-if="quiz.questions[questionIndex].year">
+                                        <div class="float-right">
+                                            <span class="label label-quiz-year">Year : {{quiz.questions[questionIndex].year}}</span>
+                                        </div>
+                                    </div>
                                     <div id="quiz-hidden">
                                     <div v-if="quiz.questions[questionIndex].show_image" class="text-center">
                                         <img style="width: 50%" v-if="quiz.questions[questionIndex].direction == 'top'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />
                                     </div>
-                                    <h2 class="titleContainer title"><span class="quiz-question-no">{{questionIndex + 1}}</span> <span class="quiz-question-title" v-html="quiz.questions[questionIndex].text"></span>
+                                    <h2 class="titleContainer title"><span class="quiz-question-no">{{questionIndex + 1}}.</span><span class="quiz-question-title" v-html="quiz.questions[questionIndex].text"></span>
                                     </h2>
                                     <div v-if="quiz.questions[questionIndex].show_image" class="text-center">
                                         <img style="width: 50%" v-if="quiz.questions[questionIndex].direction == 'bottom'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />
