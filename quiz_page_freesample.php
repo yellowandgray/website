@@ -357,6 +357,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                             <a class="home_link" href="select_language">
                                 <i class="icon-home"></i>
                             </a>
+                            
                             <?php  if($type == 'Year Order') {  ?>
                             <div class="quiz-timer">
                                 <span id="minutes">{{minuteslabel}}</span> : <span id="seconds">{{secondslabel}}</span>                             
