@@ -7,14 +7,12 @@ if (isset($_SESSION['student_register_id'])) {
     $student_answer = $obj->selectAll('sa.*, l.name AS language', 'student_answer AS sa LEFT JOIN language AS l ON l.language_id = sa.language_id', 'student_answer_id > 0');
 
     $student_log        = $obj->selectAll('sl.*,l.name As language_name','student_log sl LEFT JOIN language l ON sl.language_id=l.language_id','student_register_id='.$_SESSION['student_register_id'].' ORDER BY student_log_id DESC');
-    
-    
+        
     
     $student_log_order = $obj->selectAll('slo.*','student_log AS sl LEFT JOIN student_log_order As slo  ON sl.student_log_id=slo.student_log_id',' sl.student_register_id='.$_SESSION['student_register_id']);
     $student_log_year  = $obj->selectAll('sly.*,y.year As year','student_log AS sl LEFT JOIN student_log_year As sly ON sl.student_log_id=sly.student_log_id LEFT JOIN year As y ON y.year_id=sly.year_id',' sl.student_register_id='.$_SESSION['student_register_id']);
        
-    
-    
+        
     
     $ans_log_order =  array();
     if(count($student_log_order)>0) {
@@ -40,6 +38,7 @@ if (isset($_SESSION['student_register_id'])) {
 			}	
         }
     }
+    
   
      
     $student_log_topic = $obj->selectAll('slt.*,t.name As topic_name,subject.subject_id As subject_id,subject.name As subject_name','student_log As sl'
@@ -47,6 +46,7 @@ if (isset($_SESSION['student_register_id'])) {
             . 't.subject_id=subject.subject_id','sl.student_register_id = '.$_SESSION['student_register_id'].' AND sl.student_log_id IS NOT NULL AND sl.student_log_id<>\'\' ORDER BY student_log_id,subject.subject_id,t.topic_id ASC');
     
 
+    
     $stud_log_topic_by_log = array();
     if(count($student_log_topic)>0) {
         foreach ($student_log_topic as $student_log_topic) {
@@ -96,7 +96,7 @@ if (isset($_SESSION['student_register_id'])) {
             }   
         }
 
-            
+           
        
         /*
 	echo "<pre>";
@@ -105,8 +105,7 @@ if (isset($_SESSION['student_register_id'])) {
          */
         
         
-        
-	       
+              
         
        
         $student_log_answer = $obj->selectAll('student_log_detail.*,year.year,question.answer,question.topic_id',' student_log LEFT JOIN student_log_detail ON student_log.student_log_id=student_log_detail.student_log_id '
@@ -279,12 +278,12 @@ if (isset($_SESSION['student_register_id'])) {
                                                         <td><?php echo $log_attended; ?></td>
                                                         <td><?php echo $log_correct_answers; ?></td>
                                                         <td><?php echo $log_attended - $log_correct_answers?></td>
-                                                        <td><button class="btn btn-answerd-clr" onClick=showFullResult(<?php echo $student_log_detail['student_log_id']; ?>);>Show Details</button>                                                        </td>
+                                                        <td><button class="btn btn-answerd-clr" id="showbtn_<?php echo $student_log_detail['student_log_id']; ?>" onClick=showFullResult(<?php echo $student_log_detail['student_log_id']; ?>);>Show Details</button>                                                        </td>
                                                     </tr>
                                                     
                                                     <tr>
                                                         <td colspan="7">
-                                                            <div id="result_view_<?php echo $student_log_detail['student_log_id']; ?>" class="student-full-result"></div>
+                                                            <div id="result_view_<?php echo $student_log_detail['student_log_id']; ?>" style="display:none;" class="student-full-result"></div>
                                                         </td>
                                                     </tr>
                                              <?php
@@ -366,11 +365,11 @@ if (isset($_SESSION['student_register_id'])) {
                                                         }
          ?></td>
                                                         <td><?php echo $answered - $correct_cnt; ?></td>
-                                                        <td><button class="btn btn-answerd-clr" onClick=topicShowDetail(<?php echo $stud_topic ?>,<?php echo $log_id; ?>);>Show Details</button>                                                        </td>
+                                                        <td><button class="btn btn-answerd-clr" id="showbtn_<?php echo $stud_topic ?>_<?php echo $log_id; ?>" onClick=topicShowDetail(<?php echo $stud_topic ?>,<?php echo $log_id; ?>);>Show Details</button>                                                        </td>
                                                     
                                                         <tr>
                                                         <td colspan="8">
-                                                            <div id="result_view_<?php echo $stud_topic; ?>_<?php echo $log_id; ?>" class="student-full-result"></div>
+                                                            <div id="result_view_<?php echo $stud_topic; ?>_<?php echo $log_id; ?>" style="display:none;" class="student-full-result"></div>
                                                         </td>
                                                     </tr>
                                                         
@@ -621,7 +620,16 @@ if (isset($_SESSION['student_register_id'])) {
         ?>
         <script type="text/javascript">
             image_url = 'api/v1/';
-            function topicShowDetail(topicid,slid) {
+            function topicShowDetail(topicid,slid) {                
+                
+                
+                $('#result_view_'+topicid+'_'+slid).toggle();
+                    
+                    if($('#result_view_'+topicid+'_'+slid).css('display') == 'none'){ 
+                        $('#showbtn_'+topicid+'_'+slid).html('Show Details');
+                     } else { 
+                        $('#showbtn_'+topicid+'_'+slid).html('Hide Details');
+                
                 
                 setTimeout(() => {
                         applyMathAjax();
@@ -710,13 +718,24 @@ if (isset($_SESSION['student_register_id'])) {
                         swal('Error', err.statusText, 'error');
                     }
                 });
+                
+                }
             }
         
             
             
            
             function showFullResult(slid) {
-				setTimeout(() => {
+            
+                    $('#result_view_' + slid).toggle();
+                    
+                    if($('#result_view_' + slid).css('display') == 'none'){ 
+                        $('#showbtn_'+slid).html('Show Details');
+                     } else { 
+                        $('#showbtn_'+slid).html('Hide Details');
+                        
+                        
+                        		setTimeout(() => {
                         applyMathAjax();
                     }, 600);
                 $.ajax({
@@ -799,6 +818,8 @@ if (isset($_SESSION['student_register_id'])) {
                         swal('Error', err.statusText, 'error');
                     }
                 });
+                        
+                     }       
             }
 
                

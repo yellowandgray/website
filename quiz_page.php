@@ -790,11 +790,18 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                             </div>
                                             
                                                                                           
-                                            <?php  if($testmode==1){ ?>
+                                            <?php /* // if($testmode==1){ ?>
                                             <div v-if="!quiz.questions[questionIndex].show_image_explanation && otherlangquiz[quiz.questions[questionIndex].question_no] && otherlangquiz[quiz.questions[questionIndex].question_no].show_image_explanation" class="text-center">
                                                 <img v-if="otherlangquiz[quiz.questions[questionIndex].question_no].explanation_img_direction == 'top'" v-bind:src="'api/v1/'+otherlangquiz[quiz.questions[questionIndex].question_no].image_path_explanation" alt="image" class="qes-img" />
                                             </div>
-                                            <?php }  ?>
+                                            <?php // } */ ?>
+                                            
+                                             <?php                                             
+                                            // if($testmode==1){ ?>
+                                            <div v-if="!quiz.questions[questionIndex].show_image_explanation && otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no] && otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].show_image_explanation" class="text-center">
+                                                <img v-if="otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].explanation_img_direction == 'top'" v-bind:src="'api/v1/'+otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].image_path_explanation" alt="image" class="qes-img" />
+                                            </div>
+                                            <?php // }  ?>
 
                                             <!--span v-html="quiz.questions[questionIndex].explanation"></span-->
                                             <br/>
@@ -802,23 +809,39 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                                 <span v-html="quiz.questions[questionIndex].explanation"></span>
                                             </div>    
 
-                                            <?php if($testmode==1){ ?>
+                                            <?php /* // if($testmode==1){ ?>
                                             <div style="text-align: left;" v-if="!quiz.questions[questionIndex].explanation && otherlangquiz[quiz.questions[questionIndex].question_no] && otherlangquiz[quiz.questions[questionIndex].question_no].explanation">
                                                 <span v-html="otherlangquiz[quiz.questions[questionIndex].question_no].explanation"></span>
                                             </div>
-                                            <?php } ?>
+                                            <?php // } */ ?>
                                            
+                                            
+                                            <?php   // if($testmode==1){ ?>
+                                            <div style="text-align: left;" v-if="!quiz.questions[questionIndex].explanation && otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no] && otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].explanation">
+                                                <span v-html="otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].explanation"></span>
+                                            </div>
+                                            <?php // }  ?>
+                                            
+                                            
                                             
                                             <div v-if="quiz.questions[questionIndex].show_image_explanation" class="text-center">
                                                 <img v-if="quiz.questions[questionIndex].explanation_img_direction == 'bottom'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
                                             </div>          
                                             
                                            
-                                            <?php if($testmode==1){ ?>
+                                            <?php /* // if($testmode==1){ ?>
                                             <div v-if="!quiz.questions[questionIndex].show_image_explanation && otherlangquiz[quiz.questions[questionIndex].question_no] && otherlangquiz[quiz.questions[questionIndex].question_no].show_image_explanation" class="text-center">
                                                 <img v-if="otherlangquiz[quiz.questions[questionIndex].question_no].explanation_img_direction == 'bottom'" v-bind:src="'api/v1/'+otherlangquiz[quiz.questions[questionIndex].question_no].image_path_explanation" alt="image" class="qes-img" />
                                             </div>
-                                            <?php } ?>
+                                            <?php // }  */  ?>
+                                            
+                                            <?php // if($testmode==1){ ?>
+                                            <div v-if="!quiz.questions[questionIndex].show_image_explanation && otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no] && otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].show_image_explanation" class="text-center">
+                                                <img v-if="otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].explanation_img_direction == 'bottom'" v-bind:src="'api/v1/'+otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].image_path_explanation" alt="image" class="qes-img" />
+                                            </div>
+                                            <?php // }?>
+                                            
+                                            
                                             
                                         </div>
                                         <!--                                    pagination-->
@@ -843,12 +866,11 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                         </nav>
                                         <!--                                    /pagination-->
 
-                                    </footer>
-                                    
+                                    </footer>                                    
                                     <?php // } ?>
                                     
                                     <?php  // if($type=='Year Order') { ?>
-                                    <div v-if="olqshow">
+                                    <div v-if="olqshow" id="olqhidden">
                                         
                                         <div v-if="olqd">
                                         <div v-if="olqd.show_image" class="text-center">
@@ -1204,6 +1226,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                         $('#header-hidden').hide();
                         $('#quiz-hidden').hide();
                         $('.questionFooter').hide();
+                        $('#olqhidden').hide();
                         $('#questionpanel').html(qTable);
                         $('.question-admin-panel').show();   
                         
@@ -2577,7 +2600,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                     },    
                     showExplanationOtherLang: function() {
                       //display other langauage explaination
-                       <?php  if($testmode==1){        ?>   
+                       <?php // if($testmode==1){        ?>   
                                
                             
                             var other_language = '<?php  echo $other_language['language_id']; ?>';
@@ -2589,14 +2612,14 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                var sample = new Array();    
                                
                                for (let il = 0; il < otherlang_questions.length; il++) { 
-                                   sample[otherlang_questions[il].question_no] = {'explanation_img_direction':otherlang_questions[il].explanation_img_direction,'explanation':otherlang_questions[il].explanation,'show_image_explanation':otherlang_questions[il].show_image_explanation,'image_path_explanation':otherlang_questions[il].image_path_explanation};
-                                       
+                                   //sample[otherlang_questions[il].question_no] = {'explanation_img_direction':otherlang_questions[il].explanation_img_direction,'explanation':otherlang_questions[il].explanation,'show_image_explanation':otherlang_questions[il].show_image_explanation,'image_path_explanation':otherlang_questions[il].image_path_explanation};
+                                    sample[otherlang_questions[il].year_id+otherlang_questions[il].question_no] = {'explanation_img_direction':otherlang_questions[il].explanation_img_direction,'explanation':otherlang_questions[il].explanation,'show_image_explanation':otherlang_questions[il].show_image_explanation,'image_path_explanation':otherlang_questions[il].image_path_explanation};   
                                 }   
                            
                             this.otherlangquiz = sample;
-                            //console.log(sample);
+                           console.log(sample);
                         }
-                       <?php } ?>
+                       <?php // } ?>
                     },          
                     score: function () {
                         var score = 0;
@@ -2719,10 +2742,10 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                setTimeout(() => {                            
                             applyMathAjax();  
                             $('.quiz-section').show();
-                             <?php  if($testmode==1){        ?>   
+                             <?php  // if($testmode==1){        ?>   
                             //display other lanaguage explanation           
                             app.showExplanationOtherLang();
-                             <?php } ?>
+                             <?php // } ?>
                             <?php // if($testmode == 0) {  ?>     
                             <?php if ($type=='Year Order') { ?>    
                             setInterval(app.startTimer, 1000);
@@ -2741,6 +2764,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
             function showqus() {
                 $('#header-hidden').show();
                 $('#quiz-hidden').show();
+                $('#olqhidden').show();
                 $('.question-admin-panel').hide();
                 $('.questionFooter').show();
             }

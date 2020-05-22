@@ -14,6 +14,7 @@ if (!isset($_SESSION['student_selected_type']) || !isset($_SESSION['student_regi
     header('Location: qorder-years');
 }
 
+
 $other_language = $obj->selectRow('*', 'language', 'language_id <> ' . $_SESSION['student_selected_language_id']);
 $attended_questions = 0;
 if ($_SESSION['student_selected_type'] == 'order') {
@@ -325,6 +326,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                 <div class="row">
                     <div class="span12" id="app">
                         <div class="quiz-question-section">
+                            
                             <a href = '#' onclick="goBack()"><i class = 'font-icon-arrow-simple-left'></i></a>
                             <h4 id="mySigninModalLabel" class="text-center quiz-heading-width">
                                 <table class="table-title">
@@ -797,11 +799,18 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                             </div>
                                             
                                                                                           
-                                            <?php  if($testmode==1){ ?>
+                                            <?php /* // if($testmode==1){ ?>
                                             <div v-if="!quiz.questions[questionIndex].show_image_explanation && otherlangquiz[quiz.questions[questionIndex].question_no] && otherlangquiz[quiz.questions[questionIndex].question_no].show_image_explanation" class="text-center">
                                                 <img v-if="otherlangquiz[quiz.questions[questionIndex].question_no].explanation_img_direction == 'top'" v-bind:src="'api/v1/'+otherlangquiz[quiz.questions[questionIndex].question_no].image_path_explanation" alt="image" class="qes-img" />
                                             </div>
-                                            <?php }  ?>
+                                            <?php // } */ ?>
+                                            
+                                             <?php                                             
+                                            // if($testmode==1){ ?>
+                                            <div v-if="!quiz.questions[questionIndex].show_image_explanation && otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no] && otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].show_image_explanation" class="text-center">
+                                                <img v-if="otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].explanation_img_direction == 'top'" v-bind:src="'api/v1/'+otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].image_path_explanation" alt="image" class="qes-img" />
+                                            </div>
+                                            <?php // }  ?>
 
                                             <!--span v-html="quiz.questions[questionIndex].explanation"></span-->
                                             <br/>
@@ -809,23 +818,38 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                                 <span v-html="quiz.questions[questionIndex].explanation"></span>
                                             </div>    
 
-                                            <?php if($testmode==1){ ?>
+                                            <?php /* // if($testmode==1){ ?>
                                             <div style="text-align: left;" v-if="!quiz.questions[questionIndex].explanation && otherlangquiz[quiz.questions[questionIndex].question_no] && otherlangquiz[quiz.questions[questionIndex].question_no].explanation">
                                                 <span v-html="otherlangquiz[quiz.questions[questionIndex].question_no].explanation"></span>
                                             </div>
-                                            <?php } ?>
+                                            <?php // } */ ?>
                                            
+                                             <?php   // if($testmode==1){ ?>
+                                            <div style="text-align: left;" v-if="!quiz.questions[questionIndex].explanation && otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no] && otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].explanation">
+                                                <span v-html="otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].explanation"></span>
+                                            </div>
+                                            <?php // }  ?>
+                                            
+                                            
                                             
                                             <div v-if="quiz.questions[questionIndex].show_image_explanation" class="text-center">
                                                 <img v-if="quiz.questions[questionIndex].explanation_img_direction == 'bottom'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
                                             </div>          
                                             
                                            
-                                            <?php if($testmode==1){ ?>
+                                            <?php /* // if($testmode==1){ ?>
                                             <div v-if="!quiz.questions[questionIndex].show_image_explanation && otherlangquiz[quiz.questions[questionIndex].question_no] && otherlangquiz[quiz.questions[questionIndex].question_no].show_image_explanation" class="text-center">
                                                 <img v-if="otherlangquiz[quiz.questions[questionIndex].question_no].explanation_img_direction == 'bottom'" v-bind:src="'api/v1/'+otherlangquiz[quiz.questions[questionIndex].question_no].image_path_explanation" alt="image" class="qes-img" />
                                             </div>
-                                            <?php } ?>
+                                            <?php // }  */  ?>
+                                            
+                                            <?php // if($testmode==1){ ?>
+                                            <div v-if="!quiz.questions[questionIndex].show_image_explanation && otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no] && otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].show_image_explanation" class="text-center">
+                                                <img v-if="otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].explanation_img_direction == 'bottom'" v-bind:src="'api/v1/'+otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].image_path_explanation" alt="image" class="qes-img" />
+                                            </div>
+                                            <?php // }?>
+                                            
+                                            
                                             
                                         </div>
                                         <!--                                    pagination-->
@@ -2586,7 +2610,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                     },    
                     showExplanationOtherLang: function() {
                       //display other langauage explaination
-                       <?php  if($testmode==1){        ?>   
+                       <?php  // if($testmode==1){        ?>   
                                
                             
                             var other_language = '<?php  echo $other_language['language_id']; ?>';
@@ -2598,14 +2622,14 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                var sample = new Array();    
                                
                                for (let il = 0; il < otherlang_questions.length; il++) { 
-                                   sample[otherlang_questions[il].question_no] = {'explanation_img_direction':otherlang_questions[il].explanation_img_direction,'explanation':otherlang_questions[il].explanation,'show_image_explanation':otherlang_questions[il].show_image_explanation,'image_path_explanation':otherlang_questions[il].image_path_explanation};
+                                   sample[otherlang_questions[il].year_id+otherlang_questions[il].question_no] = {'explanation_img_direction':otherlang_questions[il].explanation_img_direction,'explanation':otherlang_questions[il].explanation,'show_image_explanation':otherlang_questions[il].show_image_explanation,'image_path_explanation':otherlang_questions[il].image_path_explanation};
                                        
                                 }   
                            
                             this.otherlangquiz = sample;
-                            //console.log(sample);
+                            console.log(sample);
                         }
-                       <?php } ?>
+                       <?php // } ?>
                     },          
                     score: function () {
                         var score = 0;
@@ -2728,10 +2752,10 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                setTimeout(() => {                            
                             applyMathAjax();  
                             $('.quiz-section').show();
-                             <?php  if($testmode==1){        ?>   
+                             <?php // if($testmode==1){        ?>   
                             //display other lanaguage explanation           
                             app.showExplanationOtherLang();
-                             <?php } ?>
+                             <?php // } ?>
                             <?php // if($testmode == 0) {  ?>     
                             <?php if ($type=='Year Order') { ?>    
                             setInterval(app.startTimer, 1000);
