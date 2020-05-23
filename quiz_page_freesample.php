@@ -2470,6 +2470,97 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
 
 
                     },
+                     goQuesAns: function (val) {
+
+                       
+                        $('.loadingoverlay').show();
+                        setTimeout(() => {
+                            applyMathAjax();
+                            $('.loadingoverlay').hide();
+                        }, 600);
+                        
+                        app.isDisabled = false;
+                        app.showimmediateblk = false;
+                        app.shownotimmdnxt = false;
+                        
+                        
+                        $('#header-hidden').show();
+                         $('#quiz-hidden').show();
+                         $('.questionFooter').show();
+                         $('#olqhidden').show();
+                         $('.question-admin-panel').hide();
+
+                       this.questionIndex = val;
+
+                        var questions = <?php echo json_encode($questions_list); ?>;
+                        var qid = questions[this.questionIndex].question_id;
+
+                       
+                        if (app.showimmediate) {
+
+
+                            $.get("api/v1/get_student_answer/" + qid + "/<?php echo $student_log; ?>",
+                                    function (data, status) {
+                                        if (data.result.error === false) {
+                                            ansid = data.result.data;
+
+                                            $.get("api/v1/get_question_answer/" + qid,
+                                                    function (data, status) {
+                                                        if (data.result.error === false) {
+
+                                                            var corransid = app.convertLower(data.result.data);
+                                                            var studansid = app.convertLower(ansid);
+
+                                                            if (data.result.data == ansid) {
+                                                                $('#ansopt_' + corransid).addClass('crt_clr');
+                                                            } else {
+                                                                $('#ansopt_' + corransid).addClass('crt_clr');
+                                                                $('#ansopt_' + studansid).addClass('wrng_clr');
+                                                            }
+
+                                                        }
+                                                    });
+                                            app.showimmediateblk = true;
+                                            app.isDisabled = false;
+                                            app.shownotimmdnxt = false;
+                                        }
+                                    });
+
+                        } else {
+
+
+                            $.get("api/v1/get_student_answer/" + qid + "/<?php echo $student_log; ?>",
+                                    function (data, status) {
+                                        if (data.result.error === false) {
+                                            ansid = data.result.data;
+
+
+                                            var studansid = app.convertLower(ansid);
+                                            $('#ansopt_' + studansid).addClass('crt_clr');
+
+
+                                            app.isDisabled = false;
+                                            app.showimmediateblk = false;
+                                            //app.shownotimmdnxt = false;
+                                            app.shownotimmdnxt = true;
+
+
+
+
+
+                                        }
+                                    });
+                        }
+                        
+                        
+                         <?php // if($testmode==1){        ?>  
+                         if(this.olqshow) {
+                            this.showQuestionOtherLang();
+                         }  
+                         <?php // } ?>
+       
+                    },    
+                    /*    
                     goQuesAns: function (val) {   
                         
                         
@@ -2498,12 +2589,12 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                         this.questionprevanswered = false;
                         
                         
-                        var questions = <?php echo json_encode($questions_list); ?>;
+                        var questions = <?php // echo json_encode($questions_list); ?>;
                         var qid = questions[this.questionIndex].question_id;
                          var answers = ['A', 'B', 'C', 'D'];
                         var ansid = '';
                         
-                           $.get("api/v1/get_student_notsure_answer/" + qid + "/<?php echo $student_log; ?>",
+                           $.get("api/v1/get_student_notsure_answer/" + qid + "/<?php // echo $student_log; ?>",
                                     function (data, status) {
                                         if (data.result.error === false) {
                                             ansid = data.result.data;
@@ -2548,6 +2639,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                         
 
                     },
+                                     */
                     goquestion: function () {    
                         var goquestion = parseInt($("#goques").val());
                         
@@ -2606,6 +2698,11 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                             }else {
                                 this.olqd = null;
                             }    
+                            
+                             setTimeout(() => {                            
+                                applyMathAjax();   
+                                $('.loadingoverlay').hide();
+                            }, 600);    
                        <?php // } ?>
                     },    
                     showExplanationOtherLang: function() {
