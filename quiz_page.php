@@ -10,6 +10,36 @@ if (isset($_SESSION['testmode'])) {
     $testmode = $_SESSION['testmode'];
 }
 
+
+//resume log
+$student_log_v = '';
+$pause_quiz    = false;
+if (isset($_REQUEST['from']) && ($_REQUEST['from'] == 'pausequiz')) {
+    $check_pause = $obj->selectRow('student_log.*,student_log_pause.pause_question', 'student_log INNER JOIN student_log_pause ON student_log.student_log_id=student_log_pause.student_log_id', 'student_log_pause.student_id=' . $_SESSION['student_register_id']);
+    
+    if (count($check_pause) < 1) {
+        header('Location: select_language');
+    } else {
+        $pause_quiz = true;
+        //$student_log_v = $_REQUEST['from_log'];
+        $student_log_v = $check_pause['student_log_id'];
+                
+        $student_log_order = $obj->selectRow('slo.*','student_log_order As slo','student_log_id ='.$student_log_v);
+        if($student_log_order==1) {
+            $_SESSION['student_selected_type'] = 'order'; 
+            $student_log_year  = $obj->selectRow('sly.*,y.year As year','student_log_year As sly LEFT JOIN year As y ON y.year_id=sly.year_id',' sly.student_log_id='.$student_pause_log_id);
+            $_SESSION['student_selected_year_id'] = $student_log_year['year_id'];
+            
+        }else if($student_log_order==2) { 
+            $_SESSION['student_selected_type'] = 'subject';  
+        }
+        
+        
+        
+    }
+}
+
+
 if (!isset($_SESSION['student_selected_type']) || !isset($_SESSION['student_register_id'])) {
     header('Location: qorder-years');
 }
@@ -24,13 +54,15 @@ if ($_SESSION['student_selected_type'] == 'order') {
         unset($_SESSION['student_selected_years_id']);
     }
 
-    if (!isset($_GET['year'])) {
+    if (!isset($_GET['year']) && ($student_log_v=='')) {
         header('Location: qorder-years');
     }
 
     $type = 'Year Order';
-    $selyear = $obj->selectRow('*', 'year', 'year=\'' . $_GET['year'] . '\'');
-    $_SESSION['student_selected_year_id'] = $selyear['year_id'];
+    if(isset($_GET['year'])) {
+        $selyear = $obj->selectRow('*', 'year', 'year=\'' . $_GET['year'] . '\'');
+        $_SESSION['student_selected_year_id'] = $selyear['year_id'];
+    }
 
     $questions              = $obj->selectAll('name,year_id, a, b, c, d, UPPER(answer) AS answer, image_path, direction,question_id,explanation,image_path_explanation,explanation_img_direction,question_no', 'question', 'topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $_SESSION['student_selected_language_id'] . ') AND year_id = ' . $_SESSION['student_selected_year_id'] . ' ORDER BY question_no ASC,year_id ASC, topic_id ASC');
     //if($testmode==1){
@@ -65,6 +97,13 @@ if ($_SESSION['student_selected_type'] == 'order') {
             $attended_questions = $log_details['attended'];
         }
     }
+    
+    
+    if($pause_quiz) {
+        $attended_questions = $check_pause['pause_question'];
+    }
+    
+
 }
 if ($_SESSION['student_selected_type'] == 'subject') {
     if (isset($_SESSION['student_selected_year_id'])) {
@@ -429,6 +468,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     <div class="float-left" style="padding: 20px 0;">
                                         <!--a href="#" onclick="showqno();" class="btn logout-btn">Question Admin Panel</a  -->
                                          <a href="#" @click="showQuesPanel();" class="btn logout-btn">Question Admin Panel</a>
+                                         <a href="#" @click="clickPause();" class="btn logout-btn">Pause Quiz</a>                                         
                                     </div>
                                 </div>  
                                 <?php } ?>    
@@ -1698,8 +1738,22 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                             closeOnConfirm: false
                         },
                                 function () {
-                                    window.location = './select_language';
-                                    //swal("Deleted!", "Your imaginary file has been deleted.", "success");
+                                    
+                                    $.post("api/v1/store_student_pause",
+                                    {
+                                        student: <?php echo $student['student_register_id']; ?>,
+                                        log: <?php  echo  $student_log; ?>,
+                                        ques :app.questionIndex,
+                                    },
+                                    function (data, status) {
+                                        if (data.result.error === false) {
+                                            window.location = './select_language';
+                                            //swal("Deleted!", "Your imaginary file has been deleted.", "success");    
+                                        }
+                                    });
+                                    
+                                    
+
                                 });
                     },
                     selectOptionNoSave: function (index) {

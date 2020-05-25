@@ -98,7 +98,7 @@ if (count($student_log_order_year) > 0) {
                                         if($y<3) {
                                         ?>
                                         <li>
-                                            <i class="icon-double-angle-right"></i> <a href="quiz_page?year=<?php echo $row['year']; ?>"><?php echo $row['year']; ?> (<?php echo $row['ques_cnt']; ?> Questions)</a>
+                                            <i class="icon-double-angle-right"></i> <a href="quiz_page_freesample?year=<?php echo $row['year']; ?>"><?php echo $row['year']; ?> (<?php echo $row['ques_cnt']; ?> Questions)</a>
                                         </li>
     <?php
                                         }

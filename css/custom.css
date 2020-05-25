@@ -948,7 +948,8 @@ and open the template in the editor.
 }
 
 .language-width {
-    width: 50%;
+    /* width: 50%; */
+    width: 68%;
     margin: 0 auto;
 }
 

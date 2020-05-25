@@ -87,6 +87,15 @@
        window.location = 'question-subject-order-freesample';
     }
     
+    
+    function selpausequiz() {
+        /*
+        window.location = '#popup1'; 
+        $('#tets').data('lang',lang);
+        */
+       window.location = 'quiz_page?from=pausequiz';
+    }
+    
     /*
     $("#tets").click(function () {            
          //alert(' val1 '+$("input[name='method']:checked").val());   

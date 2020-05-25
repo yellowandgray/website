@@ -473,12 +473,11 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
 
                                 <div v-if="!revShow">
                                     <!-- questionTitle -->
-                                    <div class="quiz-year">
+                                   <div class="quiz-year" v-if="quiz.questions[questionIndex].year">
                                         <div class="float-right">
                                             <span class="label label-quiz-year">Year : {{quiz.questions[questionIndex].year}}</span>
                                         </div>
                                     </div>
-                                    
                                     <div id="quiz-hidden">
                                     <div v-if="quiz.questions[questionIndex].show_image" class="text-center">
                                         <img style="width: 50%" v-if="quiz.questions[questionIndex].direction == 'top'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />

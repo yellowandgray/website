@@ -1177,3 +1177,31 @@ $app->get('/get_student_log_time_info/:logid', function($log_id) {
     }
     echoRespnse(201, $res);
 });
+
+
+$app->post('/store_student_pause', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Invalid login details');
+    $data = $app->request->post();
+    $obj = new Common();
+    $record = $obj->selectRow('*', 'student_log_pause', 'student_id=' . $data['student']);
+    if (count($record) == 0) {
+        $res['error'] = false;
+        $res['message'] = 'Pause inserted successfully';      
+            /*
+             echo "<pre>";
+             print_r($data);
+             exit;
+             * 
+             */
+             $obj->insertRecord(array('student_id' => $data['student'], 'student_log_id' => $data['log'],'pause_question' => $data['ques'], 'pause_date' => date('Y-m-d H:i:s')), 'student_log_pause');
+            
+         
+        }else {
+           $res['error'] = false;
+           $res['message'] = 'Pause inserted successfully';      
+           $obj->updateRecordWithWhere(array('student_id' => $data['student'],  'student_log_id' => $data['log'], 'pause_question'=>$data['ques'],'pause_date'=>date('Y-m-d H:i:s')), 'student_log_pause','student_id='. $data['student']);
+           
+        }     
+        // exit;
+       echoRespnse(201, $res);
+});
