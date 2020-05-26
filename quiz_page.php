@@ -22,16 +22,53 @@ if (isset($_REQUEST['from']) && ($_REQUEST['from'] == 'pausequiz')) {
     } else {
         $pause_quiz = true;
         //$student_log_v = $_REQUEST['from_log'];
-        $student_log_v = $check_pause['student_log_id'];
+        $student_log_v                              = $check_pause['student_log_id'];
+        $_SESSION['student_selected_language_id']   = $check_pause['language_id'];
                 
         $student_log_order = $obj->selectRow('slo.*','student_log_order As slo','student_log_id ='.$student_log_v);
-        if($student_log_order==1) {
+        if($student_log_order['student_log_order']==1) {
+            
             $_SESSION['student_selected_type'] = 'order'; 
-            $student_log_year  = $obj->selectRow('sly.*,y.year As year','student_log_year As sly LEFT JOIN year As y ON y.year_id=sly.year_id',' sly.student_log_id='.$student_pause_log_id);
+            $student_log_year  = $obj->selectRow('sly.*,y.year As year','student_log_year As sly LEFT JOIN year As y ON y.year_id=sly.year_id',' sly.student_log_id='.$student_log_v);
             $_SESSION['student_selected_year_id'] = $student_log_year['year_id'];
             
-        }else if($student_log_order==2) { 
+        }else if($student_log_order['student_log_order']==2) { 
             $_SESSION['student_selected_type'] = 'subject';  
+            
+            
+            
+            $student_log_topic = $obj->selectAll('slt.*,t.name As topic_name,subject.subject_id As subject_id,subject.name As subject_name','student_log As sl'
+            . ' LEFT JOIN student_log_topic slt ON sl.student_log_id=slt.student_log_id LEFT JOIN topic As t ON slt.topic_id=t.topic_id LEFT JOIN subject ON '
+            . 't.subject_id=subject.subject_id','sl.student_log_id = '.$student_log_v.' ORDER BY student_log_id,subject.subject_id,t.topic_id ASC');
+    
+
+    $stud_log_topic_by_log = array();
+    $stud_all_sel_topic     =  Array();
+    if(count($student_log_topic)>0) {
+        foreach ($student_log_topic as $student_log_topic) {
+            if($student_log_topic['student_log_id']!=''){
+                $stud_log_topic_by_log[$student_log_topic['student_log_id']][$student_log_topic['subject_name']][$student_log_topic['topic_id']] =  $student_log_topic['topic_name'];
+                 if(!in_array($student_log_topic['topic_id'], $stud_all_sel_topic)) {
+                        $stud_all_sel_topic[] = $student_log_topic['topic_id'];
+                 }
+            }        
+        }
+    }
+    
+   
+    $stud_all_sel_topic_id_val = '';
+    
+   
+       
+    
+    if(count($stud_all_sel_topic)>0) {
+        $stud_all_sel_topic_id_val = implode(',',$stud_all_sel_topic);
+    }
+            
+    
+    
+    $_SESSION['student_selected_topics_id'] = $stud_all_sel_topic_id_val;
+    
         }
         
         
@@ -69,7 +106,9 @@ if ($_SESSION['student_selected_type'] == 'order') {
         $other_lang_questions   = $obj->selectAll('name,year_id, a, b, c, d, UPPER(answer) AS answer, image_path, direction,question_id,explanation,image_path_explanation,explanation_img_direction,question_no', 'question', 'topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $other_language['language_id'] . ') AND year_id = ' . $_SESSION['student_selected_year_id'] . ' ORDER BY question_no ASC,year_id ASC, topic_id ASC');
     //}
     
+        
     //resume log
+    /*
     $student_log_v = '';
     if (isset($_REQUEST['from_log']) && ($_REQUEST['from_log'] != '')) {
         $check_log = $obj->selectRow('*', 'student_log', 'student_log_id=' . $_REQUEST['from_log'] . ' AND student_register_id=' . $_SESSION['student_register_id']);
@@ -79,6 +118,7 @@ if ($_SESSION['student_selected_type'] == 'order') {
             $student_log_v = $_REQUEST['from_log'];
         }
     }
+    */
 
     if ($student_log_v == '') {
         $student_log = $obj->insertRecord(array('language_id' => $_SESSION['student_selected_language_id'], 'student_register_id' => $_SESSION['student_register_id'], 'total_questions' => count($questions), 'created_at' => date('Y-m-d H:i:s'), 'created_by' => $_SESSION['student_register_id'], 'updated_at' => date('Y-m-d H:i:s'), 'updated_by' => $_SESSION['student_register_id']), 'student_log');
@@ -89,13 +129,18 @@ if ($_SESSION['student_selected_type'] == 'order') {
         //update log
         $student_log = $student_log_v;
         $student_log_update = $obj->updateRecordWithWhere(array('updated_at' => date('Y-m-d H:i:s'), 'student_register_id' => $_SESSION['student_register_id']), 'student_log', ' student_log_id=' . $student_log);
+        /*
         $log_details = $obj->selectRow('COUNT(student_log_detail_id) AS attended, IFNULL((SELECT COUNT(student_log_detail_id) FROM student_log_detail '
                 . '  WHERE student_log_id=' . $student_log . ' AND UPPER(answer) = UPPER(student_answer)), 0) AS correct_answers',
                 'student_log_detail', 'student_log_id=' . $student_log);
+         * 
+         */
 
+        /*
         if (count($log_details) > 0) {
             $attended_questions = $log_details['attended'];
         }
+        */
     }
     
     
@@ -115,11 +160,12 @@ if ($_SESSION['student_selected_type'] == 'subject') {
     }
     */
     
-    if (!isset($_GET['topics'])) {
+    if (!isset($_GET['topics']) && ($student_log_v=='')) {
         header('Location: subject');
     }
-    $_SESSION['student_selected_topics_id'] = $_GET['topics'];
-    
+     if ($student_log_v == '') {
+        $_SESSION['student_selected_topics_id'] = $_GET['topics'];
+     }
     
     $years = $obj->selectAll('*', 'year', 'status = 1');
     foreach ($years as $yr) {
@@ -152,6 +198,8 @@ if ($_SESSION['student_selected_type'] == 'subject') {
        $other_lang_questions = $obj->selectAll('question.name As name, a, b, c, d, UPPER(answer) AS answer, image_path, direction,question_id,explanation,image_path_explanation,explanation_img_direction,question_no,year_id', 'question LEFT JOIN topic ON question.topic_id=topic.topic_id', 'question.topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $other_language['language_id'] .') '.$qu_conds.'  ORDER BY question_no ASC,subject_id ASC,question.topic_id ASC,year_id ASC');       
         
     //}
+       
+    if ($student_log_v == '') {   
     $student_log = $obj->insertRecord(array('language_id' => $_SESSION['student_selected_language_id'],
         'student_register_id' => $_SESSION['student_register_id'], 'total_questions' => count($questions),
         'created_at' => date('Y-m-d H:i:s'), 'created_by' => $_SESSION['student_register_id'], 'updated_at' => date('Y-m-d H:i:s'),
@@ -172,6 +220,17 @@ if ($_SESSION['student_selected_type'] == 'subject') {
         foreach ($student_selected_topics_id_arr as $student_selected_topics_id_val) {
             $student_log_topic = $obj->insertRecord(array('student_log_id' => $student_log, 'topic_id' => $student_selected_topics_id_val), 'student_log_topic');
         }
+    }
+    
+    }else {
+        
+        $student_log = $student_log_v;
+        $student_log_update = $obj->updateRecordWithWhere(array('updated_at' => date('Y-m-d H:i:s'), 'student_register_id' => $_SESSION['student_register_id']), 'student_log', ' student_log_id=' . $student_log);
+        
+    }
+    
+    if($pause_quiz) {
+        $attended_questions = $check_pause['pause_question'];
     }
 }
 
@@ -475,6 +534,18 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                 
                                 <!-- show question admin panel -->
                                         
+                                
+                                 <!-- show question admin panel -->
+                                 <?php if($type == 'Subject Order') { ?>  
+                                <div class="quiz-review">
+                                    <div class="float-left" style="padding: 20px 0;">
+                                        <!--a href="#" onclick="showqno();" class="btn logout-btn">Question Admin Panel</a  -->
+                                        <a href="#" @click="clickPause();" class="btn logout-btn">Pause Quiz</a>                                         
+                                    </div>
+                                </div>  
+                                <?php } ?>    
+                                
+                                <!-- show question admin panel -->
                                         
                                         <!-- show review -->
                                         <?php  /*  if ($testmode == 0) { ?>
@@ -1088,7 +1159,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                     secondslabel : 0,
                     minuteslabel : 0,
                     isTimerPaused : false,
-                    totalquizduration : 18,
+                    totalquizduration : 8,
                     quizalertbeforemins: 1,
                     data_ques_answered : 0,
                     data_ques_duration : 0
