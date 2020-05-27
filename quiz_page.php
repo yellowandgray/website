@@ -2216,8 +2216,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                         
                     },    
                     selectOption: function (index) {
-                        $('.loadingoverlay').show();
-                        
+                        $('.loadingoverlay').show();                        
                          
                                 
                         if (!app.showimmediate) {
