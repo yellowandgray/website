@@ -1205,3 +1205,17 @@ $app->post('/store_student_pause', function() use ($app) {
         // exit;
        echoRespnse(201, $res);
 });
+
+
+$app->get('/get_result_detail_ans_cnt/:lid', function($lid) {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    //$data = $com->selectAll('*', 'student_log_detail', 'student_log_id = ' . $lid);
+    $data = $com->selectRow('count(sld.student_log_detail_id) As ans_cnt', 'student_log_detail As sld INNER JOIN question As q ON sld.question_id=q.question_id', 'student_log_id = ' . $lid);
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['ans_cnt'] = $data['ans_cnt'];
+    }
+    echoRespnse(201, $res);
+});
