@@ -156,6 +156,22 @@
 /*    font-family: 'isMail_0', sans-serif;*/
 }
 
+
+.goto-here .questionBox .questionContainer .optionContainerolq .option {
+    border-radius: 290486px;
+    padding: 5px 20px;
+    margin: 0 18px;
+    margin-bottom: 12px;
+    transition: 0.3s;
+   /* cursor: pointer; */
+    background-color: rgba(0, 0, 0, 0.05);
+    color: rgba(0, 0, 0, 0.85);
+    border: transparent 1px solid;
+    font-size: 15px;
+/*    font-family: 'isMail_0', sans-serif;*/
+}
+
+
 .goto-here .questionBox .questionContainer .optionContainer .option.is-selected {
     border-color: rgb(130, 174, 70);
     background-color: rgb(130, 174, 70);
@@ -166,6 +182,8 @@
     background-color: rgb(70, 136, 71);
     color: #fff;
 }
+
+
 
 .goto-here .questionBox .questionContainer .optionContainer .option:active {
     transform: scaleX(0.9);

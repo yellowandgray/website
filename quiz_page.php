@@ -450,7 +450,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                 <i class="icon-home"></i>
                             </a>
                             <?php  if($type == 'Year Order') {  ?>
-                            <div class="quiz-timer">
+                            <div class="quiz-timer" v-if="showTimer">
                                 <span id="minutes">{{minuteslabel}}</span> : <span id="seconds">{{secondslabel}}</span>                             
                                 <i class="icon-pause" v-if="!isTimerPaused" @click="pauseTimer()"></i>
                                 <i class="icon-play" v-if="isTimerPaused" @click="playTimer()"></i>
@@ -993,7 +993,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                         <img style="width: 50%" v-if="olqd.direction == 'bottom'" v-bind:src="'api/v1/'+olqd.image_path" alt="image" class="qes-img" />
                                     </div>
                                     <!-- quizOptions -->
-                                    <div class="optionContainer">
+                                    <div class="optionContainerolq">
                                         <div class="option" :id="olqdindex | charIndex | AddPrefix('olqdansopt_')" v-for="(olqdresponse, olqdindex) in olqd.responses" >
                                              <span class="q-option">{{ olqdindex | charIndex }}.&nbsp;</span> <span v-html="olqdresponse.text"></span>
                                         </div>
@@ -1155,12 +1155,14 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                     questionprevanswered:false,
                     selected_answer: '',
                     otherlangquiz: null,
+                    timerId : 0,
                     totseconds : 0,
                     secondslabel : 0,
                     minuteslabel : 0,
                     isTimerPaused : true,
                     isTimerStart: false,
                     isAllQAnsed: false,
+                    showTimer: true,
                     totalquizduration : 8,
                     quizalertbeforemins: 1,
                     data_ques_answered : 0,
@@ -1180,6 +1182,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                         this.questionIndex = 0;
                         this.userResponses = Array(this.quiz.questions.length).fill(null);
                         //document.getElementById('#create').style.display = 'none';
+                        this.showTimer = true;
                     },
                     convertLower: function (strval) {
                         return strval.toLowerCase().trim();
@@ -1288,7 +1291,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                         stud_ans[val.question_id]= {'student_answer':val.student_answer,'student_notsure_answer':val.student_notsure_answer};
                                     });   
                                 }
-                                
+                           }      
                                 
                                 
                                 
@@ -1343,9 +1346,8 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                         $('.questionFooter').hide();
                         $('#olqhidden').hide();
                         $('#questionpanel').html(qTable);
-                        $('.question-admin-panel').show();   
-                        
-                            } 
+                        $('.question-admin-panel').show();  
+                            //} 
                             }
                         });
                         //console.log(stud_ans);       
@@ -2230,7 +2232,9 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     },
                                     function (data, status) {
                                         if (data.result.error === false) {
-                                                
+                                                if(app.questionIndex == app.quiz.questions.length-1){
+                                                    app.chkAllquesAnswered()
+                                                }
                                         }
                                     });
 
@@ -2239,30 +2243,20 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                 if (this.questionIndex < this.quiz.questions.length) {
                                     if(this.questionIndex == this.quiz.questions.length-1){
                                         
-                                        
-                                           <?php  if ($type=='Year Order') { ?>
+                                        if(this.isAllQAnsed) {         
+                                            
+                                      <?php if ($type=='Year Order') { ?>
                                         //if(this.questionIndex == this.quiz.questions.length-1)   {
                                     this.savetimetaken();
                                     this.quizdurtext();
                               //   }
-                                         <?php } ?>  
-                                          this.questionIndex++;   
-                                                                               
-                                       
-                                        /*
-                                        if(app.chkAllquesAnswered()) {         
-                                            
-                                      <?php // if ($type=='Year Order') { ?>
-                                     
-                                    this.savetimetaken();
-                                    this.quizdurtext();
-                            
-                                         <?php // }  ?>      
+                                         <?php } ?>      
                                             
                                             
                                             this.questionIndex++;
-                                        }   
-                                             */                            
+                                            this.stopTimer();
+                                            this.showTimer = false;
+                                        }       
                                                                          
                                     }
                                     else
@@ -2973,10 +2967,14 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                     playTimer:function() {
                          if(!this.isTimerStart){
                             this.isTimerStart = true; 
-                            setInterval(this.startTimer, 1000);
+                            this.timerId = setInterval(this.startTimer, 1000);
                         }
                         this.continueTimer();
-                    },        
+                    }, 
+                    stopTimer:function() {
+                        this.pauseTimer();
+                        clearInterval(this.timerId);
+                    },    
                     continueTimer:function() {
                         if(this.isTimerStart){
                             this.isTimerPaused = false;
@@ -3018,10 +3016,12 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                                         if (data.result.error === false) {
                                                            var qt = 0;  
                                                            var qta= 0;
+                                                           var qtmi = 0;
                                                            app.data_ques_answered = data.result.ques_answered;
                                                            qt = data.result.ques_duration;
                                                            qta = qt/60;
-                                                           app.data_ques_duration = parseInt(qta);
+                                                           qtmi = qt%60;
+                                                           app.data_ques_duration = pad(parseInt(qta))+'.'+pad(parseInt(qtmi));
                                                                
                                                                
                                                            $('.loadingoverlay').hide();
@@ -3035,11 +3035,11 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                                     function (data, status) {
                                                         if (data.result.error === false) {
                                                            if(data.result.ans_cnt == app.quiz.questions.length ) {
-                                                               return true;
+                                                               app.isAllQAnsed = true;
                                                               
                                                             }else {
-                                                                return false;
-                                                               
+                                                                app.isAllQAnsed = false;
+                                                               //app.isAllQAnsed = true;
                                                             }
                                                              
                                                         }
