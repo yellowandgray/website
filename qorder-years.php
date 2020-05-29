@@ -7,7 +7,7 @@ if (!isset($_SESSION['student_selected_language_id'])) {
 }
 $language = $obj->selectRow('*', 'language', 'language_id=' . $_SESSION['student_selected_language_id']);
 $_SESSION['student_selected_type'] = 'order';
-$years = $obj->selectAll('y.*,(select count(question_id) FROM question As q INNER JOIN topic As t ON q.topic_id=t.topic_id INNER JOIN subject As s ON s.subject_id=t.subject_id WHERE q.year_id=y.year_id AND s.language_id='.$_SESSION['student_selected_language_id'].') As ques_cnt', 'year As y', 'status = 1');
+$years = $obj->selectAll('y.*,(select count(question_id) FROM question As q INNER JOIN topic As t ON q.topic_id=t.topic_id INNER JOIN subject As s ON s.subject_id=t.subject_id WHERE q.year_id=y.year_id AND s.language_id='.$_SESSION['student_selected_language_id'].') As ques_cnt', 'year As y', 'status = 1 ORDER BY y.year DESC');
 
 $student_log_order_year = $obj->selectAll('sl.*,year.year', 'student_log sl LEFT JOIN student_log_order slo ON sl.student_log_id=slo.student_log_id LEFT JOIN student_log_year sly ON sly.student_log_id=sl.student_log_id LEFT JOIN year ON sly.year_id=year.year_id',
         'student_register_id=' . $_SESSION['student_register_id'] . ' AND sl.language_id=' . $_SESSION['student_selected_language_id'] . ' AND student_log_order=1  ORDER BY updated_at  DESC LIMIT 1');

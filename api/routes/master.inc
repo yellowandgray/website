@@ -1,6 +1,6 @@
 <?php
-
 session_start();
+ini_set('date.timezone', 'Asia/Kolkata');
 
 $app->post('/update_record/:table/:where', function($table, $where) use ($app) {
     $res = array('error' => true, 'message' => 'Unable to update');

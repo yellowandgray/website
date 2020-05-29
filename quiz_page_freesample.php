@@ -5,6 +5,7 @@ $questions = array();
 $obj = new Common();
 $type = '';
 $testmode = 0;
+ini_set('date.timezone', 'Asia/Kolkata');
 
 if (isset($_SESSION['testmode'])) {
     $testmode = $_SESSION['testmode'];
