@@ -1113,16 +1113,11 @@ include 'head.php';
       <div class="modal-content"  >   
           <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel">Image preview</h4>
+        <h4 class="modal-title" id="myModalLabel"></h4>
       </div>
         <div class="modal-body">            
              <img src="" class="explimagepreview">
-        </div> 
-     <div class="modal-footer">
-       <div class="col-xs-12">
-           <p class="text-left">1. line of description<br>2. line of description <br>3. line of description</p>
-       </div>
-     </div>         
+        </div>           
    </div>
  </div>
 
