@@ -1,4 +1,7 @@
 <?php
+session_start();
+require_once 'api/include/common.php';
+$obj = new Common();
 if (isset($_SESSION['student_register_id'])) {
     $login_student = $obj->selectRow('*', 'student_register', 'student_register_id = ' . $_SESSION["student_register_id"]);
 }

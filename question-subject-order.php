@@ -1,16 +1,10 @@
 <?php
-//session_start();
+session_start();
 require_once 'api/include/common.php';
 $obj = new Common();
-$languages = $obj->selectAll('*', 'language', 'status = 1');
-
-
-/*
 if (!isset($_GET['lan'])) {
     header('Location: select_language');
 }
- * */
-
 
 /*
 if (isset($_SESSION['testmode'])) {
@@ -18,10 +12,8 @@ if (isset($_SESSION['testmode'])) {
 }
 */
 
-/*
 $language = $obj->selectRow('*', 'language', 'name = \'' . $_GET['lan'] . '\'');
 $_SESSION['student_selected_language_id'] = $language['language_id'];
-* */
 ?>
 <html lang="en">
     <?php include 'head.php'; ?>
@@ -32,34 +24,36 @@ $_SESSION['student_selected_language_id'] = $language['language_id'];
                 <div id="mySignin" tabindex="-1" aria-labelledby="mySigninModalLabel" aria-hidden="true">
                     <div class="modal styled">
                         <div class="modal-header login-section">
-                            <a href="sample-intro"><i class="font-icon-arrow-simple-left"></i></a>
-                            <h4 id="mySigninModalLabel" class="text-center" style='font-weight: 600'>Select your choice</h4>
-                            <a class="home_link" href="index">
+                            <a href="select_language"><i class="font-icon-arrow-simple-left"></i></a>
+                            <h4 id="mySigninModalLabel" class="text-center">
+                                <table class="table-title">
+                                    <tr>
+                                        <td valign="top">Selected Language</td>
+                                        <td valign="top" class="w-5">:</td>
+                                        <th valign="top"><?php echo $language['name']; ?></th>
+                                    </tr>
+                                </table>
+                            </h4>
+                            <a class="home_link" href="select_language">
                                 <i class="icon-home"></i>
                             </a>
                         </div>
                         <div class="modal-body">
-                            
-                            <?php foreach ($languages as $val) { ?>
                             <div class="language_section">
-                                <h6 class="sub-title"><?php echo $val['name']; ?></h6>
+                                <h6 class="sub-title">Select Types</h6>
                                 <ul>
                                     <li>
                                         <i class="icon-double-angle-right"></i>
-                                        <a href="qorder-years-freesample?lan=<?php echo $val['name']; ?>"><i class="icon-calendar"></i> Year Wise</a>                             
+                                        <a href="qorder-years"><i class="icon-calendar"></i> Year Order</a>                             
                                     </li>         
                                     <?php // if($testmode!=0) { //subject order in learning mode   ?>
                                     <li>
                                         <i class="icon-double-angle-right"></i>
-                                        <a href="subject_freesample?lan=<?php echo $val['name']; ?>"><i class="icon-book"></i> Subject Wise</a>
+                                        <a href="subject"><i class="icon-book"></i> Subject Order</a>
                                     </li>
                                     <?php // } ?>
                                 </ul>
                             </div>
-                            <?php } ?>
-                            
-                            
-                           
                         </div>
                     </div>
                 </div>

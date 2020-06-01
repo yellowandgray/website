@@ -8,27 +8,37 @@ if (isset($_SESSION['student_register_id'])) {
         <div class = 'row nomargin'>
             <div class = 'span4 no-margin'>
                 <div class = 'logo'>
+                     <?php
+            if (!isset($_SESSION['student_register_id'])) {
+                ?>
                     <a href = 'index'>
                         <img src = 'img/logo.png' alt = '' class = 'logo' />
                     </a>
+            <?php }else { ?>   
+                    <a href = 'select_language'>
+                        <img src = 'img/logo.png' alt = '' class = 'logo' />
+                    </a>
+                 <?php } ?>   
                 </div>
             </div>
             <?php
             if (!isset($_SESSION['student_register_id'])) {
+                
                 ?>
+                <?php /* 
                 <div class = 'span8'>
                     <div class = 'headnav'>
                         <ul>
                             <li class="menu-cus-clr">
-                                <a href="premium/about" class="menu-nav">About Us</a>
-                                <a href="premium/contact" class="menu-nav">Contact Us</a>
+                                <a href="about" class="menu-nav">About Us</a>
+                                <a href="contact" class="menu-nav">Contact Us</a>
                             </li>
                             <li>
-                                <a href = 'register_user'>
+                                <a href = '../register_user'>
     <!--                                    <i class = 'icon-user'></i>-->
-                                    <button class="btn btn-green">Buy Full Version</button>
+                                    <button class="btn btn-custom" style="background: green">Buy Full Version</button>
                                 </a>
-                                <a href = 'login-page'>
+                                <a href = '../login-page'>
                                     <button class="btn btn-custom">Login</button>
                                 </a>
                             </li>
@@ -44,63 +54,40 @@ if (isset($_SESSION['student_register_id'])) {
                         </ul>
                     </div>
                 </div>
-            <?php } else {
+                 * 
+                 */ ?>
+            <?php } else {                
                 ?>
-                <div class = 'span8'>
-                    <div class = 'headnav'>
-                        <ul>
-                            <li class="menu-cus-clr">
-                                <a href="premium/about" class="menu-nav">About Us</a>
-                                <a href="premium/contact" class="menu-nav">Contact Us</a>
-                            </li>
-                            <li>
-                                <a href = 'register_user'>
-    <!--                                    <i class = 'icon-user'></i>-->
-                                    <button class="btn btn-green">Buy Full Version</button>
-                                </a>
-                                <a href = 'login-page'>
-                                    <button class="btn btn-custom">Login</button>
-                                </a>
-                            </li>
-                        </ul>
+                <div class="logout_position" style="display:block !important;">
+                    <a class="user-menu-btn" href="about">About Us</a>
+                    <a class="user-menu-btn" href="contact">Contact Us</a>
+                    <a onclick="logoutUser('<?php echo $login_student['student_name']; ?>');" class="btn logout-btn">Logout</a>
+                    <div id="open-logout" class="logout_section">
+                        <span class="menu-bar">
+                            <i class="icon-reorder"></i>
+                        </span>
+                        <?php //if (isset($login_student['profile_image']) && $login_student['profile_image'] == '') { ?>
+                        <!--<img src="<?php //echo BASE_URL . $login_student['gender'];    ?>.jpg" alt="" />-->
+                        <?php //} else { ?>
+                        <!--<img src="<?php //echo BASE_URL . $login_student['profile_image'];    ?>" alt="" />-->
+                        <?php //} ?>
+                        <div class="logout_dropdown">
+                            <div class="user_profile">
+                                <?php if (isset($login_student['profile_image']) && $login_student['profile_image'] == '') { ?>
+                                    <img src="<?php echo BASE_URL . $login_student['gender']; ?>.jpg" alt="" />
+                                <?php } else { ?>
+                                    <img src="<?php echo BASE_URL . $login_student['profile_image']; ?>" alt="" />
+                                <?php } ?>
+                                <h5><?php echo $login_student['student_name']; ?></h5>
+                            </div>
+                            <ul class="logout_list">
+                                <li onclick="window.location = 'select_language'">Quiz</li>
+                                <li onclick="window.location = 'student_result'">Result</li>
+                                <li onclick="window.location = 'account'">Account</li>
+                                <!--                                <li onclick="logoutUser();">Logout</li>-->
+                            </ul>
+                        </div>
                     </div>
-                    <div class = 'headnav-1'>
-                        <ul>
-                            <li>
-                                <a href = 'login-page'>
-                                    <i class = 'icon-user'></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!--                    <div class = 'headnav m-t-0'>
-                                            <div class="logout_position">
-                                                <a href="about" class="menu-nav">About Us</a>
-                                                <a href="contact" class="menu-nav">Contact Us</a>
-                                                <a onclick="logoutUser('<?php echo $login_student['student_name']; ?>');" class="btn logout-btn">Logout</a>
-                                                <div id="open-logout" class="logout_section">
-                                                    <span class="menu-bar">
-                                                        <i class="icon-reorder"></i>
-                                                    </span>
-                                                    <div class="logout_dropdown">
-                                                        <div class="user_profile">
-                    <?php if (isset($login_student['profile_image']) && $login_student['profile_image'] == '') { ?>
-                                                                                    <img src="<?php echo BASE_URL . $login_student['gender']; ?>.jpg" alt="" />
-                    <?php } else { ?>
-                                                                                    <img src="<?php echo BASE_URL . $login_student['profile_image']; ?>" alt="" />
-                    <?php } ?>
-                                                            <h5><?php echo $login_student['student_name']; ?></h5>
-                                                        </div>
-                                                        <ul class="logout_list">
-                                                            <li onclick="window.location = 'premium/select_language'">Quiz</li>
-                                                            <li onclick="window.location = 'premium/student_result'">Result</li>
-                                                            <li onclick="window.location = ''">Account</li>
-                                                                                            <li onclick="logoutUser();">Logout</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>-->
                 </div>
             <?php }
             ?>

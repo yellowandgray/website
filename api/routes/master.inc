@@ -1,6 +1,6 @@
 <?php
-
 session_start();
+ini_set('date.timezone', 'Asia/Kolkata');
 
 $app->post('/update_record/:table/:where', function($table, $where) use ($app) {
     $res = array('error' => true, 'message' => 'Unable to update');
@@ -80,7 +80,8 @@ $app->post('/insert_student', function() use ($app) {
     if (!isset($data['profile_picture'])) {
         $data['profile_image'] = '';
     }
-    $record = $com->insertRecord(array('student_name' => $data['student_name'], 'user_name' => $data['user_name'], 'password' => $data['password'], 'confirm_password' => $data['confirm_password'], 'mobile' => $data['mobile'], 'email' => $data['email'], 'profile_image' => $data['profile_picture'], 'gender' => $data['gender'], 'city' => $data['city'], 'pin' => $data['pin'], 'graduation' => $data['graduation'], 'street' => $data['street'], 'district' => $data['district'], 'nearcity' => $data['nearcity'], 'selectgroup' => $data['selectgroup']), 'student_register');
+    $record = $com->insertRecord(array('student_name' => $data['student_name'], 'user_name' => $data['user_name'], 'password' => $data['password'], 'confirm_password' => $data['confirm_password'], 'mobile' => $data['mobile'], 'email' => $data['email'], 'profile_image' => $data['profile_picture'], 'gender' => $data['gender'], 'city' => $data['city'], 'pin' => $data['pin'], 'graduation' => $data['graduation'], 'street' => $data['street'], 'district' => $data['district'], 'nearcity' => $data['nearcity'], 'created_at'=>date('Y-m-d H:i:S')), 'student_register');
+    
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
@@ -1183,7 +1184,7 @@ $app->post('/samplelogin', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('name' => $data['name'], 'phone' => $data['phone'], 'email' => $data['email']), 'free_user_login');
+    $record = $com->insertRecord(array('name' => $data['name'], 'phone' => $data['phone'], 'email' => $data['email'],'created_at'=>date('Y-m-d H:i:s')), 'free_user_login');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
@@ -1231,4 +1232,33 @@ $app->post('/buy_user_register', function() use ($app) {
         $res['message'] = 'User already exist';
     }
     echoRespnse(201, $res);
+});
+
+
+
+$app->post('/store_student_pause', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Invalid login details');
+    $data = $app->request->post();
+    $obj = new Common();
+    $record = $obj->selectRow('*', 'student_log_pause', 'student_id=' . $data['student']);
+    if (count($record) == 0) {
+        $res['error'] = false;
+        $res['message'] = 'Pause inserted successfully';      
+            /*
+             echo "<pre>";
+             print_r($data);
+             exit;
+             * 
+             */
+             $obj->insertRecord(array('student_id' => $data['student'], 'student_log_id' => $data['log'],'pause_question' => $data['ques'], 'pause_date' => date('Y-m-d H:i:s')), 'student_log_pause');
+            
+         
+        }else {
+           $res['error'] = false;
+           $res['message'] = 'Pause inserted successfully';      
+           $obj->updateRecordWithWhere(array('student_id' => $data['student'],  'student_log_id' => $data['log'], 'pause_question'=>$data['ques'],'pause_date'=>date('Y-m-d H:i:s')), 'student_log_pause','student_id='. $data['student']);
+           
+        }     
+        // exit;
+       echoRespnse(201, $res);
 });

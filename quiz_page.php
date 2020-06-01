@@ -5,14 +5,77 @@ $questions = array();
 $obj = new Common();
 $type = '';
 $testmode = 0;
+ini_set('date.timezone', 'Asia/Kolkata');
 
 if (isset($_SESSION['testmode'])) {
     $testmode = $_SESSION['testmode'];
 }
 
-//if (!isset($_SESSION['student_selected_type']) || !isset($_SESSION['student_register_id'])) {
-//    header('Location: qorder-years');
-//}
+
+//resume log
+$student_log_v = '';
+$pause_quiz = false;
+if (isset($_REQUEST['from']) && ($_REQUEST['from'] == 'pausequiz')) {
+    $check_pause = $obj->selectRow('student_log.*,student_log_pause.pause_question', 'student_log INNER JOIN student_log_pause ON student_log.student_log_id=student_log_pause.student_log_id', 'student_log_pause.student_id=' . $_SESSION['student_register_id']);
+
+    if (count($check_pause) < 1) {
+        header('Location: select_language');
+    } else {
+        $pause_quiz = true;
+        //$student_log_v = $_REQUEST['from_log'];
+        $student_log_v = $check_pause['student_log_id'];
+        $_SESSION['student_selected_language_id'] = $check_pause['language_id'];
+
+        $student_log_order = $obj->selectRow('slo.*', 'student_log_order As slo', 'student_log_id =' . $student_log_v);
+        if ($student_log_order['student_log_order'] == 1) {
+
+            $_SESSION['student_selected_type'] = 'order';
+            $student_log_year = $obj->selectRow('sly.*,y.year As year', 'student_log_year As sly LEFT JOIN year As y ON y.year_id=sly.year_id', ' sly.student_log_id=' . $student_log_v);
+            $_SESSION['student_selected_year_id'] = $student_log_year['year_id'];
+        } else if ($student_log_order['student_log_order'] == 2) {
+            $_SESSION['student_selected_type'] = 'subject';
+
+
+
+            $student_log_topic = $obj->selectAll('slt.*,t.name As topic_name,subject.subject_id As subject_id,subject.name As subject_name', 'student_log As sl'
+                    . ' LEFT JOIN student_log_topic slt ON sl.student_log_id=slt.student_log_id LEFT JOIN topic As t ON slt.topic_id=t.topic_id LEFT JOIN subject ON '
+                    . 't.subject_id=subject.subject_id', 'sl.student_log_id = ' . $student_log_v . ' ORDER BY student_log_id,subject.subject_id,t.topic_id ASC');
+
+
+            $stud_log_topic_by_log = array();
+            $stud_all_sel_topic = Array();
+            if (count($student_log_topic) > 0) {
+                foreach ($student_log_topic as $student_log_topic) {
+                    if ($student_log_topic['student_log_id'] != '') {
+                        $stud_log_topic_by_log[$student_log_topic['student_log_id']][$student_log_topic['subject_name']][$student_log_topic['topic_id']] = $student_log_topic['topic_name'];
+                        if (!in_array($student_log_topic['topic_id'], $stud_all_sel_topic)) {
+                            $stud_all_sel_topic[] = $student_log_topic['topic_id'];
+                        }
+                    }
+                }
+            }
+
+
+            $stud_all_sel_topic_id_val = '';
+
+
+
+
+            if (count($stud_all_sel_topic) > 0) {
+                $stud_all_sel_topic_id_val = implode(',', $stud_all_sel_topic);
+            }
+
+
+
+            $_SESSION['student_selected_topics_id'] = $stud_all_sel_topic_id_val;
+        }
+    }
+}
+
+
+if (!isset($_SESSION['student_selected_type']) || !isset($_SESSION['student_register_id'])) {
+    header('Location: qorder-years');
+}
 
 $other_language = $obj->selectRow('*', 'language', 'language_id <> ' . $_SESSION['student_selected_language_id']);
 $attended_questions = 0;
@@ -24,47 +87,59 @@ if ($_SESSION['student_selected_type'] == 'order') {
         unset($_SESSION['student_selected_years_id']);
     }
 
-    if (!isset($_GET['year'])) {
+    if (!isset($_GET['year']) && ($student_log_v == '')) {
         header('Location: qorder-years');
     }
 
     $type = 'Year Order';
-    $selyear = $obj->selectRow('*', 'year', 'year=\'' . $_GET['year'] . '\'');
-    $_SESSION['student_selected_year_id'] = $selyear['year_id'];
+    if (isset($_GET['year'])) {
+        $selyear = $obj->selectRow('*', 'year', 'year=\'' . $_GET['year'] . '\'');
+        $_SESSION['student_selected_year_id'] = $selyear['year_id'];
+    }
 
     $questions = $obj->selectAll('name,year_id, a, b, c, d, UPPER(answer) AS answer, image_path, direction,question_id,explanation,image_path_explanation,explanation_img_direction,question_no', 'question', 'topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $_SESSION['student_selected_language_id'] . ') AND year_id = ' . $_SESSION['student_selected_year_id'] . ' ORDER BY question_no ASC,year_id ASC, topic_id ASC');
     //if($testmode==1){
     $other_lang_questions = $obj->selectAll('name,year_id, a, b, c, d, UPPER(answer) AS answer, image_path, direction,question_id,explanation,image_path_explanation,explanation_img_direction,question_no', 'question', 'topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $other_language['language_id'] . ') AND year_id = ' . $_SESSION['student_selected_year_id'] . ' ORDER BY question_no ASC,year_id ASC, topic_id ASC');
     //}
     //resume log
-    $student_log_v = '';
-    if (isset($_REQUEST['from_log']) && ($_REQUEST['from_log'] != '')) {
-        $check_log = $obj->selectRow('*', 'student_log', 'student_log_id=' . $_REQUEST['from_log'] . ' AND student_register_id=' . $_SESSION['student_register_id']);
-        if (count($check_log) < 1) {
-            header('Location: qorder-years');
-        } else {
-            $student_log_v = $_REQUEST['from_log'];
-        }
+    /*
+      $student_log_v = '';
+      if (isset($_REQUEST['from_log']) && ($_REQUEST['from_log'] != '')) {
+      $check_log = $obj->selectRow('*', 'student_log', 'student_log_id=' . $_REQUEST['from_log'] . ' AND student_register_id=' . $_SESSION['student_register_id']);
+      if (count($check_log) < 1) {
+      header('Location: qorder-years');
+      } else {
+      $student_log_v = $_REQUEST['from_log'];
+      }
+      }
+     */
+
+    if ($student_log_v == '') {
+        $student_log = $obj->insertRecord(array('language_id' => $_SESSION['student_selected_language_id'], 'student_register_id' => $_SESSION['student_register_id'], 'total_questions' => count($questions), 'created_at' => date('Y-m-d H:i:s'), 'created_by' => $_SESSION['student_register_id'], 'updated_at' => date('Y-m-d H:i:s'), 'updated_by' => $_SESSION['student_register_id']), 'student_log');
+        $student_log_order = $obj->insertRecord(array('student_log_id' => $student_log, 'student_log_order' => 1), 'student_log_order');
+
+        $student_log_year = $obj->insertRecord(array('student_log_id' => $student_log, 'year_id' => $_SESSION['student_selected_year_id']), 'student_log_year');
+    } else {
+        //update log
+        $student_log = $student_log_v;
+        $student_log_update = $obj->updateRecordWithWhere(array('updated_at' => date('Y-m-d H:i:s'), 'student_register_id' => $_SESSION['student_register_id']), 'student_log', ' student_log_id=' . $student_log);
+        /*
+          $log_details = $obj->selectRow('COUNT(student_log_detail_id) AS attended, IFNULL((SELECT COUNT(student_log_detail_id) FROM student_log_detail '
+          . '  WHERE student_log_id=' . $student_log . ' AND UPPER(answer) = UPPER(student_answer)), 0) AS correct_answers',
+          'student_log_detail', 'student_log_id=' . $student_log);
+         * 
+         */
+
+        /*
+          if (count($log_details) > 0) {
+          $attended_questions = $log_details['attended'];
+          }
+         */
     }
-    $student_log = 0;
-    if (isset($_SESSION['student_register_id'])) {
-        if ($student_log_v == '') {
-            $student_log = $obj->insertRecord(array('language_id' => $_SESSION['student_selected_language_id'], 'student_register_id' => $_SESSION['student_register_id'], 'total_questions' => count($questions), 'created_at' => date('Y-m-d H:i:s'), 'created_by' => $_SESSION['student_register_id'], 'updated_at' => date('Y-m-d H:i:s'), 'updated_by' => $_SESSION['student_register_id']), 'student_log');
-            $student_log_order = $obj->insertRecord(array('student_log_id' => $student_log, 'student_log_order' => 1), 'student_log_order');
 
-            $student_log_year = $obj->insertRecord(array('student_log_id' => $student_log, 'year_id' => $_SESSION['student_selected_year_id']), 'student_log_year');
-        } else {
-            //update log
-            $student_log = $student_log_v;
-            $student_log_update = $obj->updateRecordWithWhere(array('updated_at' => date('Y-m-d H:i:s'), 'student_register_id' => $_SESSION['student_register_id']), 'student_log', ' student_log_id=' . $student_log);
-            $log_details = $obj->selectRow('COUNT(student_log_detail_id) AS attended, IFNULL((SELECT COUNT(student_log_detail_id) FROM student_log_detail '
-                    . '  WHERE student_log_id=' . $student_log . ' AND UPPER(answer) = UPPER(student_answer)), 0) AS correct_answers',
-                    'student_log_detail', 'student_log_id=' . $student_log);
 
-            if (count($log_details) > 0) {
-                $attended_questions = $log_details['attended'];
-            }
-        }
+    if ($pause_quiz) {
+        $attended_questions = $check_pause['pause_question'];
     }
 }
 if ($_SESSION['student_selected_type'] == 'subject') {
@@ -77,11 +152,12 @@ if ($_SESSION['student_selected_type'] == 'subject') {
       }
      */
 
-    if (!isset($_GET['topics'])) {
+    if (!isset($_GET['topics']) && ($student_log_v == '')) {
         header('Location: subject');
     }
-    $_SESSION['student_selected_topics_id'] = $_GET['topics'];
-
+    if ($student_log_v == '') {
+        $_SESSION['student_selected_topics_id'] = $_GET['topics'];
+    }
 
     $years = $obj->selectAll('*', 'year', 'status = 1');
     foreach ($years as $yr) {
@@ -114,26 +190,37 @@ if ($_SESSION['student_selected_type'] == 'subject') {
     $other_lang_questions = $obj->selectAll('question.name As name, a, b, c, d, UPPER(answer) AS answer, image_path, direction,question_id,explanation,image_path_explanation,explanation_img_direction,question_no,year_id', 'question LEFT JOIN topic ON question.topic_id=topic.topic_id', 'question.topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $other_language['language_id'] . ') ' . $qu_conds . '  ORDER BY question_no ASC,subject_id ASC,question.topic_id ASC,year_id ASC');
 
     //}
-    $student_log = $obj->insertRecord(array('language_id' => $_SESSION['student_selected_language_id'],
-        'student_register_id' => $_SESSION['student_register_id'], 'total_questions' => count($questions),
-        'created_at' => date('Y-m-d H:i:s'), 'created_by' => $_SESSION['student_register_id'], 'updated_at' => date('Y-m-d H:i:s'),
-        'updated_by' => $_SESSION['student_register_id']), 'student_log');
 
-    $student_log_order = $obj->insertRecord(array('student_log_id' => $student_log, 'student_log_order' => 2), 'student_log_order');
+    if ($student_log_v == '') {
+        $student_log = $obj->insertRecord(array('language_id' => $_SESSION['student_selected_language_id'],
+            'student_register_id' => $_SESSION['student_register_id'], 'total_questions' => count($questions),
+            'created_at' => date('Y-m-d H:i:s'), 'created_by' => $_SESSION['student_register_id'], 'updated_at' => date('Y-m-d H:i:s'),
+            'updated_by' => $_SESSION['student_register_id']), 'student_log');
+
+        $student_log_order = $obj->insertRecord(array('student_log_id' => $student_log, 'student_log_order' => 2), 'student_log_order');
 
 
-    if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selected_years_id'] != '')) {
-        $student_selected_years_id_arr = explode(',', $_SESSION['student_selected_years_id']);
-        foreach ($student_selected_years_id_arr as $student_selected_years_id_val) {
-            $student_log_year = $obj->insertRecord(array('student_log_id' => $student_log, 'year_id' => $student_selected_years_id_val), 'student_log_year');
+        if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selected_years_id'] != '')) {
+            $student_selected_years_id_arr = explode(',', $_SESSION['student_selected_years_id']);
+            foreach ($student_selected_years_id_arr as $student_selected_years_id_val) {
+                $student_log_year = $obj->insertRecord(array('student_log_id' => $student_log, 'year_id' => $student_selected_years_id_val), 'student_log_year');
+            }
         }
+
+        if (isset($_SESSION['student_selected_topics_id']) && ($_SESSION['student_selected_topics_id'] != '')) {
+            $student_selected_topics_id_arr = explode(',', $_SESSION['student_selected_topics_id']);
+            foreach ($student_selected_topics_id_arr as $student_selected_topics_id_val) {
+                $student_log_topic = $obj->insertRecord(array('student_log_id' => $student_log, 'topic_id' => $student_selected_topics_id_val), 'student_log_topic');
+            }
+        }
+    } else {
+
+        $student_log = $student_log_v;
+        $student_log_update = $obj->updateRecordWithWhere(array('updated_at' => date('Y-m-d H:i:s'), 'student_register_id' => $_SESSION['student_register_id']), 'student_log', ' student_log_id=' . $student_log);
     }
 
-    if (isset($_SESSION['student_selected_topics_id']) && ($_SESSION['student_selected_topics_id'] != '')) {
-        $student_selected_topics_id_arr = explode(',', $_SESSION['student_selected_topics_id']);
-        foreach ($student_selected_topics_id_arr as $student_selected_topics_id_val) {
-            $student_log_topic = $obj->insertRecord(array('student_log_id' => $student_log, 'topic_id' => $student_selected_topics_id_val), 'student_log_topic');
-        }
+    if ($pause_quiz) {
+        $attended_questions = $check_pause['pause_question'];
     }
 }
 
@@ -144,10 +231,10 @@ if ($_SESSION['student_selected_type'] == 'subject') {
   exit;
  */
 
-if (isset($_SESSION['student_register_id'])) {
-    $student = $obj->selectRow('*', 'student_register', 'student_register_id = ' . $_SESSION['student_register_id']);
-}
+
+$student = $obj->selectRow('*', 'student_register', 'student_register_id = ' . $_SESSION['student_register_id']);
 $language = $obj->selectRow('*', 'language', 'language_id = ' . $_SESSION['student_selected_language_id']);
+
 $questions_list = array();
 if (count($questions) > 0) {
     foreach ($questions as $q) {
@@ -306,13 +393,13 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
 ?>
 <!DOCTYPE html>
 <html lang="en">
-    <?php
-    $page = 'about';
-    include 'head.php';
-    ?>
+<?php
+$page = 'about';
+include 'head.php';
+?>
     <body class="goto-here">
         <!--container-->
-        <?php include 'menu.php'; ?>
+<?php include 'menu.php'; ?>
         <div class="quiz-section" style="display:none;">
             <section class="container">
                 <div class="row">
@@ -331,14 +418,14 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                         <td valign="top" class="w-5">:</td>
                                         <th valign="top"><?php echo $type; ?></th>
                                     </tr>
-                                    <?php if (isset($_SESSION['student_selected_topics_id']) && ($_SESSION['student_selected_topics_id'] != '')) { ?>
+<?php if (isset($_SESSION['student_selected_topics_id']) && ($_SESSION['student_selected_topics_id'] != '')) { ?>
                                         <tr>
                                             <td valign="top">Selected Subject and Topics</td>
                                             <td valign="top" class="w-5">:</td>
                                             <th valign="top"><?php echo $sub_topic_val; ?></th>
                                         </tr>
-                                    <?php } ?>
-                                    <?php if ($type == 'Year Order') { ?>   
+<?php } ?>
+<?php if ($type == 'Year Order') { ?>   
                                         <tr>
                                             <td valign="top">Selected Year</td>
                                             <td valign="top" class="w-5">:</td>
@@ -350,14 +437,22 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                             <a class="home_link" href="select_language">
                                 <i class="icon-home"></i>
                             </a>
-
+                                    <?php 
+                                    /*
+                                    if ($type == 'Year Order') {  ?>
+                                <div class="quiz-timer" v-if="showTimer">
+                                    <span id="minutes">{{minuteslabel}}</span> : <span id="seconds">{{secondslabel}}</span>                             
+                                    <i class="icon-pause" v-if="!isTimerPaused" @click="pauseTimer()"></i>
+                                    <i class="icon-play" v-if="isTimerPaused" @click="playTimer()"></i>
+                                </div>
+                                    <?php } */ ?>
                         </div>
 
                         <!--question Box-->
-                        <?php /*
-                          <div class="questionBox" id="app">
-                         * 
-                         */ ?>
+<?php /*
+  <div class="questionBox" id="app">
+ * 
+ */ ?>
                         <!--question Box-->
                         <div class="questionBox">
                             <!--qusetionContainer-->
@@ -366,28 +461,29 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     <!--progress-->
                                     <div class="progressContainer">
 
-                                        <?php /* if ($testmode == 1) { ?> <!-- show answer immediate -->
-                                          <div class="quiz-pause">
-                                          <div class="float-left">
-                                          <input id="show-immediately" type="checkbox" value="show_answer_immediately" @change="immChange" v-model="showimmediate"> <span class="span-position">Show Answer</span>
-                                          </div>
-                                          <div class="float-right">
-                                          <div class="pause-right" @click="clickPause">
-                                          <i class="icon-pause"></i>
-                                          </div>
-                                          </div>
-                                          <div class="float-left">
-                                          <input id="show-olq" type="checkbox" value="show_olq" @change="showolqChange" v-model="olqshow"> <span>Show Question in <?php echo $other_language['name']; ?></span>
-                                          </div>
-                                          </div>    <!-- show answer immediate -->
-                                          <?php }else { ?> <!-- show other language only -->
-                                          <div class="quiz-pause">
-                                          <div class="float-left">
-                                          <input id="show-olq" type="checkbox" value="show_olq" @change="showolqChange" v-model="olqshow"> <span>Show Question in <?php echo $other_language['name']; ?></span>
-                                          </div>
-                                          </div>    <!-- show answer immediate -->
+                        <?php /* if ($testmode == 1) { ?> <!-- show answer immediate -->
+                          <div class="quiz-pause">
+                          <div class="float-left">
+                          <input id="show-immediately" type="checkbox" value="show_answer_immediately" @change="immChange" v-model="showimmediate"> <span class="span-position">Show Answer</span>
+                          </div>
+                          <div class="float-right">
+                          <div class="pause-right" @click="clickPause">
+                          <i class="icon-pause"></i>
+                          </div>
+                          </div>
+                          <div class="float-left">
+                          <input id="show-olq" type="checkbox" value="show_olq" @change="showolqChange" v-model="olqshow"> <span>Show Question in <?php echo $other_language['name']; ?></span>
+                          </div>
+                          </div>    <!-- show answer immediate -->
+                          <?php }else { ?> <!-- show other language only -->
+                          <div class="quiz-pause">
+                          <div class="float-left">
+                          <input id="show-olq" type="checkbox" value="show_olq" @change="showolqChange" v-model="olqshow"> <span>Show Question in <?php echo $other_language['name']; ?></span>
+                          </div>
+                          </div>    <!-- show answer immediate -->
 
-                                          <?php } */ ?> <!-- show other language only -->
+                          <?php } */ ?> <!-- show other language only -->
+
                                         <div class="quiz-div">
                                             <?php if ($type == 'Year Order' || $type == 'Subject Order') { ?>  
                                                 <div class="quiz-pause">
@@ -403,15 +499,14 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                                 <div class="quiz-timer">
                                                     <span id="minutes">{{minuteslabel}}</span> : <span id="seconds">{{secondslabel}}</span>                             
                                                     <i class="icon-pause" v-if="!isTimerPaused" @click="pauseTimer()"></i>
-                                                    <i class="icon-play" v-if="isTimerPaused" @click="continueTimer()"></i>
+                                                    <i class="icon-play" v-if="isTimerPaused" @click="playTimer()"></i>
                                                 </div>
                                             <?php } ?>
                                         </div>
 
 
                                         <!-- show Go Question testing purpose -->
-                                        <?php
-                                        if ($testmode == 1) { /* ?>  
+                                        <?php if ($testmode == 1) { /* ?>  
                                           <div class="quiz-review">
                                           <div class="float-left admin-panel-section">
                                           <!--a href="#" onclick="showQuesPanel();" class="btn logout-btn">Question Admin Panel</a-->
@@ -422,23 +517,35 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                           <a v-on:click="revcontAns();" class="btn btn-theme" v-if="revShow">Continue Quiz</a>
                                           </div>
                                           <?php */
-                                        }
-                                        ?>                                         
+                                        } ?>                                         
                                         <!-- show Go Question testing purpose -->
 
 
                                         <!-- show question admin panel -->
-<?php if ($type == 'Year Order') { ?>  
+                                        <?php if ($type == 'Year Order') { ?>  
                                             <div class="quiz-review">
                                                 <div class="float-left" style="padding: 20px 0;">
                                                     <!--a href="#" onclick="showqno();" class="btn logout-btn">Question Admin Panel</a  -->
                                                     <a href="#" @click="showQuesPanel();" class="btn logout-btn">Question Admin Panel</a>
+                                                    <a href="#" @click="clickPause();" class="btn logout-btn">Pause Quiz</a>                                         
                                                 </div>
                                             </div>  
 <?php } ?>    
 
                                         <!-- show question admin panel -->
 
+
+                                        <!-- show question admin panel -->
+<?php if ($type == 'Subject Order') { ?>  
+                                            <div class="quiz-review">
+                                                <div class="float-left" style="padding: 20px 0;">
+                                                    <!--a href="#" onclick="showqno();" class="btn logout-btn">Question Admin Panel</a  -->
+                                                    <a href="#" @click="clickPause();" class="btn logout-btn">Pause Quiz</a>                                         
+                                                </div>
+                                            </div>  
+<?php } ?>    
+
+                                        <!-- show question admin panel -->
 
                                         <!-- show review -->
                                         <?php /*  if ($testmode == 0) { ?>
@@ -485,24 +592,24 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                         </div>
                                         <!-- quizOptions -->
 
-                                        <?php /* if($testmode==0) {  //testmode  ?>
+<?php /* if($testmode==0) {  //testmode  ?>
 
-                                          <div class="optionContainer">
-                                          <div class="option" :id="index | charIndex | AddPrefix('ansopt_')" v-for="(response, index) in quiz.questions[questionIndex].responses" @click="selectOptionNoSave(index)" :class="{ 'is-selected': userResponses[questionIndex] == index}" :key="index" v-if="response.text != ''">
-                                          <span class="q-option">{{ index | charIndex }}.&nbsp;</span> <span v-html="response.text"></span>
-                                          </div>
+  <div class="optionContainer">
+  <div class="option" :id="index | charIndex | AddPrefix('ansopt_')" v-for="(response, index) in quiz.questions[questionIndex].responses" @click="selectOptionNoSave(index)" :class="{ 'is-selected': userResponses[questionIndex] == index}" :key="index" v-if="response.text != ''">
+  <span class="q-option">{{ index | charIndex }}.&nbsp;</span> <span v-html="response.text"></span>
+  </div>
 
-                                          <!--div style="margin: 0 auto; text-align: center" v-if="questionIndex>0">
-                                          <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="prev();" :disabled="questionIndex>=quiz.questions.length">
-                                          Back
-                                          </a>
-                                          </div-->
-                                          </div>
+  <!--div style="margin: 0 auto; text-align: center" v-if="questionIndex>0">
+  <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="prev();" :disabled="questionIndex>=quiz.questions.length">
+  Back
+  </a>
+  </div-->
+  </div>
 
-                                          <?php  }else { //learning mode */ ?>
+  <?php  }else { //learning mode */ ?>
                                         <div class="optionContainer">
                                             <div class="option" :id="index | charIndex | AddPrefix('ansopt_')" v-for="(response, index) in quiz.questions[questionIndex].responses" @click="selectOption(index)" :class="{ 'is-selected': userResponses[questionIndex] == index}" :key="index" v-if="response.text != ''">
-                                                 <span class="q-option">{{ index | charIndex }}.&nbsp;</span> <span v-html="response.text"></span>
+                                                <span class="q-option">{{ index | charIndex }}.&nbsp;</span> <span v-html="response.text"></span>
                                             </div>
 
                                             <!--div style="margin: 0 auto; text-align: center" v-if="questionIndex>0">
@@ -511,7 +618,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                                     </a>
                                                 </div-->                                         
                                         </div>
-<?php // }    ?>
+                                        <?php // } ?>
 
                                     </div>
 
@@ -522,85 +629,85 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                             <h3>Question Admin Panel</h3>
                                         </div>
                                         <div id="questionpanel">
-                                            <?php /*
-                                              <table class="question-number-table">
-                                              <tr>
-                                              <td class="clr-blue">1</td>
-                                              <td class="clr-yellow">2</td>
-                                              <td>3</td>
-                                              <td>4</td>
-                                              <td>5</td>
-                                              <td>6</td>
-                                              <td>7</td>
-                                              <td>8</td>
-                                              <td>9</td>
-                                              <td>10</td>
-                                              </tr>
-                                              <tr>
-                                              <td>11</td>
-                                              <td>12</td>
-                                              <td>13</td>
-                                              <td>14</td>
-                                              <td>15</td>
-                                              <td>16</td>
-                                              <td>17</td>
-                                              <td>18</td>
-                                              <td>19</td>
-                                              <td>20</td>
-                                              </tr>
-                                              <tr>
-                                              <td>21</td>
-                                              <td>22</td>
-                                              <td>23</td>
-                                              <td>24</td>
-                                              <td>25</td>
-                                              <td>26</td>
-                                              <td>27</td>
-                                              <td>28</td>
-                                              <td>29</td>
-                                              <td>30</td>
-                                              </tr>
-                                              <tr>
-                                              <td>31</td>
-                                              <td>32</td>
-                                              <td>33</td>
-                                              <td>34</td>
-                                              <td>35</td>
-                                              <td>36</td>
-                                              <td>37</td>
-                                              <td>38</td>
-                                              <td>39</td>
-                                              <td>40</td>
-                                              </tr>
-                                              <tr>
-                                              <td>41</td>
-                                              <td>42</td>
-                                              <td>43</td>
-                                              <td>44</td>
-                                              <td>45</td>
-                                              <td>46</td>
-                                              <td>47</td>
-                                              <td>48</td>
-                                              <td>49</td>
-                                              <td>50</td>
-                                              </tr>
-                                              </table>
-                                             * 
-                                             */
-                                            ?>
+                                        <?php /*
+                                          <table class="question-number-table">
+                                          <tr>
+                                          <td class="clr-blue">1</td>
+                                          <td class="clr-yellow">2</td>
+                                          <td>3</td>
+                                          <td>4</td>
+                                          <td>5</td>
+                                          <td>6</td>
+                                          <td>7</td>
+                                          <td>8</td>
+                                          <td>9</td>
+                                          <td>10</td>
+                                          </tr>
+                                          <tr>
+                                          <td>11</td>
+                                          <td>12</td>
+                                          <td>13</td>
+                                          <td>14</td>
+                                          <td>15</td>
+                                          <td>16</td>
+                                          <td>17</td>
+                                          <td>18</td>
+                                          <td>19</td>
+                                          <td>20</td>
+                                          </tr>
+                                          <tr>
+                                          <td>21</td>
+                                          <td>22</td>
+                                          <td>23</td>
+                                          <td>24</td>
+                                          <td>25</td>
+                                          <td>26</td>
+                                          <td>27</td>
+                                          <td>28</td>
+                                          <td>29</td>
+                                          <td>30</td>
+                                          </tr>
+                                          <tr>
+                                          <td>31</td>
+                                          <td>32</td>
+                                          <td>33</td>
+                                          <td>34</td>
+                                          <td>35</td>
+                                          <td>36</td>
+                                          <td>37</td>
+                                          <td>38</td>
+                                          <td>39</td>
+                                          <td>40</td>
+                                          </tr>
+                                          <tr>
+                                          <td>41</td>
+                                          <td>42</td>
+                                          <td>43</td>
+                                          <td>44</td>
+                                          <td>45</td>
+                                          <td>46</td>
+                                          <td>47</td>
+                                          <td>48</td>
+                                          <td>49</td>
+                                          <td>50</td>
+                                          </tr>
+                                          </table>
+                                         * 
+                                         */
+                                        ?>
                                         </div>
                                         <div class="admin-panel-btns">
                                             <div class="row">
                                                 <div class="span-4">
                                                     <span class="answered-clr"></span> Answered
                                                 </div>
-                                                <?php /*
-                                                  <div class="span-4">
-                                                  <span class="notsure-clr"></span> Not Sure
-                                                  </div>
-                                                 * 
-                                                 */
-                                                ?>
+                                            <?php /*
+                                              <div class="span-4">
+                                              <span class="notsure-clr"></span> Not Sure
+                                              </div>
+                                             * 
+                                             */
+                                            ?>
                                                 <div class="span-4">
                                                     <span class="unanswered-clr"></span> Unanswered
                                                 </div>
@@ -663,58 +770,58 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
 
 
 
-                                    <?php /* if($testmode==0){     //test mode   ?> 
+<?php /* if($testmode==0){     //test mode   ?> 
 
-                                      <footer class="questionFooter" id='quiz-nxt-footer'>
-                                      <!--                                    pagination-->
-                                      <nav class="pagination" role="navigation" aria-label="pagination">
+  <footer class="questionFooter" id='quiz-nxt-footer'>
+  <!--                                    pagination-->
+  <nav class="pagination" role="navigation" aria-label="pagination">
 
-                                      <!--                                        back button -->
-                                      <!--                                        <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">Back</a>-->
-                                      <!--                                        <a class="btn btn-green" href="select_language">Home</a>-->
+  <!--                                        back button -->
+  <!--                                        <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">Back</a>-->
+  <!--                                        <a class="btn btn-green" href="select_language">Home</a>-->
 
-                                      <!--                                    next button -->
-                                      <div style="text-align: left" >
-                                      <a class="button"  v-on:click="prevNoSave();" v-if="questionIndex>0" :disabled="questionIndex>=quiz.questions.length">
-                                      Back
-                                      </a>
-                                      </div>
-
-
-
-                                      <div style="text-align: right" v-if="showsurebtnans">
-                                      <a class="button"  v-on:click="confirmSave();" :disabled="questionIndex>=quiz.questions.length">
-                                      Sure
-                                      </a>
-                                      </div>
-
-                                      <div style="text-align: center" v-if="shownotsureaftersel">
-                                      <a class="not-sure-button"  v-on:click="notSureSave();" :disabled="questionIndex>=quiz.questions.length">
-                                      Not Sure
-                                      </a>
-                                      </div>
+  <!--                                    next button -->
+  <div style="text-align: left" >
+  <a class="button"  v-on:click="prevNoSave();" v-if="questionIndex>0" :disabled="questionIndex>=quiz.questions.length">
+  Back
+  </a>
+  </div>
 
 
 
-                                      <div style="text-align: right" v-if="shownextnosave">
-                                      <a class="button"  v-on:click="nextNoSave();" :disabled="questionIndex>=quiz.questions.length">
-                                      Next
-                                      </a>
-                                      </div>
+  <div style="text-align: right" v-if="showsurebtnans">
+  <a class="button"  v-on:click="confirmSave();" :disabled="questionIndex>=quiz.questions.length">
+  Sure
+  </a>
+  </div>
 
-                                      <div style="text-align: right" v-if="showcnfrmaftersel">
-                                      <a class="button"  v-on:click="confirmSave();" :disabled="questionIndex>=quiz.questions.length">
-                                      Confirm
-                                      </a>
-                                      </div>
-
-                                      </nav>
-                                      <!--                                    /pagination-->
-
-                                      </footer>
+  <div style="text-align: center" v-if="shownotsureaftersel">
+  <a class="not-sure-button"  v-on:click="notSureSave();" :disabled="questionIndex>=quiz.questions.length">
+  Not Sure
+  </a>
+  </div>
 
 
-                                      <?php }else { */   //learning mode   ?>
+
+  <div style="text-align: right" v-if="shownextnosave">
+  <a class="button"  v-on:click="nextNoSave();" :disabled="questionIndex>=quiz.questions.length">
+  Next
+  </a>
+  </div>
+
+  <div style="text-align: right" v-if="showcnfrmaftersel">
+  <a class="button"  v-on:click="confirmSave();" :disabled="questionIndex>=quiz.questions.length">
+  Confirm
+  </a>
+  </div>
+
+  </nav>
+  <!--                                    /pagination-->
+
+  </footer>
+
+
+  <?php }else { */   //learning mode ?>
 
 
                                     <footer class="questionFooter" id='quiz-nxt-footer' v-if="showimmediate && !showimmediateblk">
@@ -768,7 +875,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
 
 
                                             <div style="text-align: right" v-if="shownotimmdnxt">
-                                                <a class="button"  v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
+                                                <a class="button"  v-on:click="next();" :disabled="questionIndex>=quiz.questions.length" v-if="questionIndex<quiz.questions.length-1">
                                                     <!--                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}-->Next
                                                 </a>
                                             </div> 
@@ -789,22 +896,22 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                             <div class="quiz-explanation-view">Explanation:</div>
 
                                             <div v-if="quiz.questions[questionIndex].show_image_explanation" class="text-center">
-                                                <img v-if="quiz.questions[questionIndex].explanation_img_direction == 'top'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
+                                                <img v-if="quiz.questions[questionIndex].explanation_img_direction == 'top'" v-on:click="showexpimgpopup('api/v1/'+quiz.questions[questionIndex].image_path_explanation);" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
 
                                             </div>
 
 
-                                            <?php /* // if($testmode==1){ ?>
-                                              <div v-if="!quiz.questions[questionIndex].show_image_explanation && otherlangquiz[quiz.questions[questionIndex].question_no] && otherlangquiz[quiz.questions[questionIndex].question_no].show_image_explanation" class="text-center">
-                                              <img v-if="otherlangquiz[quiz.questions[questionIndex].question_no].explanation_img_direction == 'top'" v-bind:src="'api/v1/'+otherlangquiz[quiz.questions[questionIndex].question_no].image_path_explanation" alt="image" class="qes-img" />
-                                              </div>
-                                              <?php // } */ ?>
+<?php /* // if($testmode==1){ ?>
+  <div v-if="!quiz.questions[questionIndex].show_image_explanation && otherlangquiz[quiz.questions[questionIndex].question_no] && otherlangquiz[quiz.questions[questionIndex].question_no].show_image_explanation" class="text-center">
+  <img v-if="otherlangquiz[quiz.questions[questionIndex].question_no].explanation_img_direction == 'top'" v-bind:src="'api/v1/'+otherlangquiz[quiz.questions[questionIndex].question_no].image_path_explanation" alt="image" class="qes-img" />
+  </div>
+  <?php // } */ ?>
 
-<?php // if($testmode==1){   ?>
+<?php // if($testmode==1){  ?>
                                             <div v-if="!quiz.questions[questionIndex].show_image_explanation && otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no] && otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].show_image_explanation" class="text-center">
-                                                <img v-if="otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].explanation_img_direction == 'top'" v-bind:src="'api/v1/'+otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].image_path_explanation" alt="image" class="qes-img" />
+                                                <img v-if="otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].explanation_img_direction == 'top'" v-on:click="showexpimgpopup('api/v1/'+quiz.questions[questionIndex].image_path_explanation);"  v-bind:src="'api/v1/'+otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].image_path_explanation" alt="image" class="qes-img" />
                                             </div>
-<?php // }     ?>
+<?php // }   ?>
 
                                             <!--span v-html="quiz.questions[questionIndex].explanation"></span-->
                                             <br/>
@@ -819,16 +926,16 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                               <?php // } */ ?>
 
 
-<?php // if($testmode==1){   ?>
+<?php // if($testmode==1){  ?>
                                             <div style="text-align: left;" v-if="!quiz.questions[questionIndex].explanation && otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no] && otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].explanation">
                                                 <span v-html="otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].explanation"></span>
                                             </div>
-<?php // }     ?>
+<?php // }   ?>
 
 
 
                                             <div v-if="quiz.questions[questionIndex].show_image_explanation" class="text-center">
-                                                <img v-if="quiz.questions[questionIndex].explanation_img_direction == 'bottom'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
+                                                <img v-if="quiz.questions[questionIndex].explanation_img_direction == 'bottom'"  v-on:click="showexpimgpopup('api/v1/'+quiz.questions[questionIndex].image_path_explanation);" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
                                             </div>          
 
 
@@ -838,11 +945,11 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                               </div>
                                               <?php // } */ ?>
 
-<?php // if($testmode==1){   ?>
+<?php // if($testmode==1){  ?>
                                             <div v-if="!quiz.questions[questionIndex].show_image_explanation && otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no] && otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].show_image_explanation" class="text-center">
                                                 <img v-if="otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].explanation_img_direction == 'bottom'" v-bind:src="'api/v1/'+otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].image_path_explanation" alt="image" class="qes-img" />
                                             </div>
-<?php // }   ?>
+<?php // } ?>
 
 
 
@@ -870,9 +977,9 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                         <!--                                    /pagination-->
 
                                     </footer>                                    
-                                    <?php // }    ?>
+<?php // }  ?>
 
-<?php // if($type=='Year Order') {    ?>
+<?php // if($type=='Year Order') {  ?>
                                     <div v-if="olqshow" id="olqhidden">
 
                                         <div v-if="olqd">
@@ -885,9 +992,9 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                                 <img style="width: 50%" v-if="olqd.direction == 'bottom'" v-bind:src="'api/v1/'+olqd.image_path" alt="image" class="qes-img" />
                                             </div>
                                             <!-- quizOptions -->
-                                            <div class="optionContainer">
+                                            <div class="optionContainerolq">
                                                 <div class="option" :id="olqdindex | charIndex | AddPrefix('olqdansopt_')" v-for="(olqdresponse, olqdindex) in olqd.responses" >
-                                                     <span class="q-option">{{ olqdindex | charIndex }}.&nbsp;</span> <span v-html="olqdresponse.text"></span>
+                                                    <span class="q-option">{{ olqdindex | charIndex }}.&nbsp;</span> <span v-html="olqdresponse.text"></span>
                                                 </div>
 
                                                 <!--div style="margin: 0 auto; text-align: center" v-if="questionIndex>0">
@@ -905,34 +1012,34 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                             <h2 class="titleContainer title"><span class="quiz-question-title">Question Not Available in <?php echo $other_language['name'] ?></span></h2>
                                         </div>  
                                     </div>
-                                    <?php // }  ?>    
-                                    <?php
-                                    /*
-                                      <footer class="questionFooter"  v-if="showimmediateblk">
-                                      <div class="question-explanation">
-                                      <h4>Explanation:</h4>
-                                      <div v-if="quiz.questions[questionIndex].show_image_explanation" class="text-center">
-                                      <img v-if="quiz.questions[questionIndex].explanation_img_direction == 'top'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
-                                      </div>
-                                      <span v-html="quiz.questions[questionIndex].explanation"></span>
-                                      <div v-if="quiz.questions[questionIndex].show_image_explanation" class="text-center">
-                                      <img v-if="quiz.questions[questionIndex].explanation_img_direction == 'buttom'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
-                                      </div>
-                                      </div>
-                                      <!--                                    <nav class="pagination" role="navigation" aria-label="pagination">
-                                      <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">
-                                      Back
-                                      </a>
-                                      <a class="btn btn-green" href="select_language">
-                                      Home
-                                      </a>
-                                      <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
-                                      {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}
-                                      </a>
-                                      </nav>-->
-                                      </footer>
-                                     */
-                                    ?>                                           
+<?php // }  ?>    
+<?php
+/*
+  <footer class="questionFooter"  v-if="showimmediateblk">
+  <div class="question-explanation">
+  <h4>Explanation:</h4>
+  <div v-if="quiz.questions[questionIndex].show_image_explanation" class="text-center">
+  <img v-if="quiz.questions[questionIndex].explanation_img_direction == 'top'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
+  </div>
+  <span v-html="quiz.questions[questionIndex].explanation"></span>
+  <div v-if="quiz.questions[questionIndex].show_image_explanation" class="text-center">
+  <img v-if="quiz.questions[questionIndex].explanation_img_direction == 'buttom'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
+  </div>
+  </div>
+  <!--                                    <nav class="pagination" role="navigation" aria-label="pagination">
+  <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">
+  Back
+  </a>
+  <a class="btn btn-green" href="select_language">
+  Home
+  </a>
+  <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
+  {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}
+  </a>
+  </nav>-->
+  </footer>
+ */
+?>                                           
                                 </div>
                             </div>   
                             <!--quizCompletedResult-->
@@ -965,9 +1072,9 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                 <div class="">
                                     <a class="btn btn-theme btn-rounded" @click="restart()">Restart <i class="fa fa-refresh"></i></a>
                                     <a class="btn btn-theme btn-rounded" onclick="window.location = 'select_language'">Home <i class="fa fa-refresh"></i></a>
-                                    <?php if ($type == 'Subject Order') { ?>
+<?php if ($type == 'Subject Order') { ?>
                                         <a @click="divshowsorder()" class="btn btn-theme btn-rounded">Show Full Result <i class="fa fa-refresh"></i></a>
-                                    <?php } else { ?>
+                                <?php } else { ?>
                                         <a @click="divshow()" class="btn btn-theme btn-rounded">Show Full Result <i class="fa fa-refresh"></i></a>
 <?php } ?>
                                     <!--/resultTitleBlock-->
@@ -1010,16 +1117,29 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                 <img alt="" src="img/loader.gif" />
             </div>
         </div>
+        
+        
+   <div class="modal fade" id="explimagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" data-dismiss="modal">
+      <div class="modal-content"  >   
+          <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel"></h4>
+      </div>
+        <div class="modal-body">            
+             <img src="" class="explimagepreview">
+        </div>           
+   </div>
+ </div>
 
-        <?php include 'footer.php'; ?>
+<?php include 'footer.php'; ?>
 <?php include 'script.php'; ?>
         <script>
             //image_url = 'http://localhost/project/examhorse/api/v1/';
             image_url = 'http://examhorse.com/beta/api/v1/';
             console.log(<?php echo json_encode($questions_list); ?>);
             var quiz = {
-//                user: "<?php //echo $student['student_name'];   ?>",
-                user: "User",
+                user: "<?php echo $student['student_name']; ?>",
                 questions: <?php echo json_encode($questions_list); ?>
             },
                     userResponseSkelaton = Array(quiz.questions.length).fill(null);
@@ -1048,11 +1168,15 @@ echo $attended_questions;
                     questionprevanswered: false,
                     selected_answer: '',
                     otherlangquiz: null,
+                    timerId: 0,
                     totseconds: 0,
                     secondslabel: 0,
                     minuteslabel: 0,
-                    isTimerPaused: false,
-                    totalquizduration: 18,
+                    isTimerPaused: true,
+                    isTimerStart: false,
+                    isAllQAnsed: false,
+                    showTimer: true,
+                    totalquizduration: 8,
                     quizalertbeforemins: 1,
                     data_ques_answered: 0,
                     data_ques_duration: 0
@@ -1066,11 +1190,18 @@ echo $attended_questions;
                     }
                 },
                 methods: {
+                    showexpimgpopup:function (imgsrc) {  
+                        if(imgsrc!='') {
+                            $('.explimagepreview').attr('src',imgsrc);
+                            $('#explimagemodal').modal('show');  
+                        }                        
+                    },    
                     restart: function () {
                         $('#create').hide();
                         this.questionIndex = 0;
                         this.userResponses = Array(this.quiz.questions.length).fill(null);
                         //document.getElementById('#create').style.display = 'none';
+                        this.showTimer = true;
                     },
                     convertLower: function (strval) {
                         return strval.toLowerCase().trim();
@@ -1179,63 +1310,62 @@ echo $attended_questions;
                                             stud_ans[val.question_id] = {'student_answer': val.student_answer, 'student_notsure_answer': val.student_notsure_answer};
                                         });
                                     }
+                                }
 
 
 
+                                var questionslist = <?php echo json_encode($questions_list); ?>;
+                                var qTable = '<table class="question-number-table"><tr>';
+                                $.each(questionslist, function (key, val) {
+                                    var qn = key + 1;
 
-                                    var questionslist = <?php echo json_encode($questions_list); ?>;
-                                    var qTable = '<table class="question-number-table"><tr>';
-                                    $.each(questionslist, function (key, val) {
-                                        var qn = key + 1;
+                                    if (qn != 1 && (key % 10 == 0)) {
+                                        if (qn < questionslist.length) {
+                                            qTable += '<tr>';
+                                        }
+                                    }
 
-                                        if (qn != 1 && (key % 10 == 0)) {
-                                            if (qn < questionslist.length) {
-                                                qTable += '<tr>';
+                                    var tdval = '<td onClick=goQuesFrPanel(' + key + ');><span class="q-a-n">' + qn + '</span></td>';
+                                    if (typeof val.question_no !== 'undefined') {
+                                        if (typeof stud_ans[val.question_id] !== 'undefined') {
+                                            if (stud_ans[val.question_id].student_answer != '') {
+                                                tdval = '<td onClick=goQuesFrPanel(' + key + '); class=""><span class="q-a-n clr-blue">' + qn + '</span></td>';
+                                            } else if (stud_ans[val.question_id].student_notsure_answer != '') {
+                                                tdval = '<td onClick=goQuesFrPanel(' + key + '); class=""><span class="q-a-n clr-yellow">' + qn + '</span></td>';
                                             }
                                         }
-
-                                        var tdval = '<td onClick=goQuesFrPanel(' + key + ');><span class="q-a-n">' + qn + '</span></td>';
-                                        if (typeof val.question_no !== 'undefined') {
-                                            if (typeof stud_ans[val.question_id] !== 'undefined') {
-                                                if (stud_ans[val.question_id].student_answer != '') {
-                                                    tdval = '<td onClick=goQuesFrPanel(' + key + '); class=""><span class="q-a-n clr-blue">' + qn + '</span></td>';
-                                                } else if (stud_ans[val.question_id].student_notsure_answer != '') {
-                                                    tdval = '<td onClick=goQuesFrPanel(' + key + '); class=""><span class="q-a-n clr-yellow">' + qn + '</span></td>';
-                                                }
-                                            }
-                                        }
-                                        qTable += tdval;
+                                    }
+                                    qTable += tdval;
 
 
-                                        if (qn != 1 && (qn % 10 == 0)) {
+                                    if (qn != 1 && (qn % 10 == 0)) {
 
-                                            if (qn <= questionslist.length) {
-                                                qTable += '</tr>';
-                                            }
-                                        } else if (qn == questionslist.length) {
-                                            var rtd = 10 - (qn % 10);
-                                            for (i = 1; i <= rtd; i++) {
-                                                qTable += '<td></td>';
-                                            }
+                                        if (qn <= questionslist.length) {
                                             qTable += '</tr>';
                                         }
+                                    } else if (qn == questionslist.length) {
+                                        var rtd = 10 - (qn % 10);
+                                        for (i = 1; i <= rtd; i++) {
+                                            qTable += '<td></td>';
+                                        }
+                                        qTable += '</tr>';
+                                    }
 
 
 
 
 
-                                    });
-                                    qTable += '</table>';
-                                    //console.log(qTable);
+                                });
+                                qTable += '</table>';
+                                //console.log(qTable);
 
-                                    $('#header-hidden').hide();
-                                    $('#quiz-hidden').hide();
-                                    $('.questionFooter').hide();
-                                    $('#olqhidden').hide();
-                                    $('#questionpanel').html(qTable);
-                                    $('.question-admin-panel').show();
-
-                                }
+                                $('#header-hidden').hide();
+                                $('#quiz-hidden').hide();
+                                $('.questionFooter').hide();
+                                $('#olqhidden').hide();
+                                $('#questionpanel').html(qTable);
+                                $('.question-admin-panel').show();
+                                //} 
                             }
                         });
                         //console.log(stud_ans);       
@@ -1246,7 +1376,7 @@ echo $attended_questions;
                          setTimeout(() => {                        
                          
                          
-                         var questionslist = <?php // echo  json_encode($questions_list);    ?>;
+                         var questionslist = <?php // echo  json_encode($questions_list);  ?>;
                          var  qTable = '<table class="question-number-table"><tr>';
                          $.each(questionslist, function (key, val) {
                          var qn = key+1;
@@ -1512,7 +1642,7 @@ echo $attended_questions;
                          }, 600);
                          $.ajax({
                          type: "GET",
-                         url: 'api/v1/get_result_detail/' +<?php // echo  $student_log;    ?>,
+                         url: 'api/v1/get_result_detail/' +<?php // echo  $student_log;  ?>,
                          success: function (data) {
                          if (data.result.error === false) {
                          var qlist = '';
@@ -1701,8 +1831,22 @@ echo $attended_questions;
                             closeOnConfirm: false
                         },
                                 function () {
-                                    window.location = './select_language';
-                                    //swal("Deleted!", "Your imaginary file has been deleted.", "success");
+
+                                    $.post("api/v1/store_student_pause",
+                                            {
+                                                student: <?php echo $student['student_register_id']; ?>,
+                                                log: <?php echo $student_log; ?>,
+                                                ques: app.questionIndex,
+                                            },
+                                            function (data, status) {
+                                                if (data.result.error === false) {
+                                                    window.location = './select_language';
+                                                    //swal("Deleted!", "Your imaginary file has been deleted.", "success");    
+                                                }
+                                            });
+
+
+
                                 });
                     },
                     selectOptionNoSave: function (index) {
@@ -2082,12 +2226,6 @@ echo $attended_questions;
                     selectOption: function (index) {
                         $('.loadingoverlay').show();
 
-<?php if ($type == 'Year Order') { ?>
-                            if (this.questionIndex == this.quiz.questions.length - 1) {
-                                this.savetimetaken();
-                                this.quizdurtext();
-                            }
-<?php } ?>
 
                         if (!app.showimmediate) {
                             var questions = <?php echo json_encode($questions_list); ?>;
@@ -2100,23 +2238,45 @@ echo $attended_questions;
                                     },
                                     function (data, status) {
                                         if (data.result.error === false) {
-
+                                            if (app.questionIndex == app.quiz.questions.length - 1) {
+                                                app.chkAllquesAnswered()
+                                            }
                                         }
                                     });
 
                             setTimeout(() => {
                                 Vue.set(this.userResponses, this.questionIndex, index);
                                 if (this.questionIndex < this.quiz.questions.length) {
-                                    this.questionIndex++;
+                                    if (this.questionIndex == this.quiz.questions.length - 1) {
 
-<?php // if($testmode==1){           ?>
+                                        if (this.isAllQAnsed) {
+
+<?php if ($type == 'Year Order') { ?>
+                                                //if(this.questionIndex == this.quiz.questions.length-1)   {
+                                                this.savetimetaken();
+                                                this.quizdurtext();
+                                                //   }
+<?php } ?>
+                                                this.savequizendtime();
+
+                                            this.questionIndex++;
+                                            this.stopTimer();
+                                            this.showTimer = false;
+                                        }
+
+                                    } else
+                                    {
+                                        this.questionIndex++;
+                                    }
+
+<?php // if($testmode==1){         ?>
                                     if (this.olqshow) {
                                         this.showQuestionOtherLang();
                                     }
-<?php // }    ?>
+<?php // }  ?>
 
-                                    var nqid = this.questionIndex + 1;
-
+                                    //var nqid = this.questionIndex + 1;
+                                    var nqid = questions[this.questionIndex].question_id;
                                     if (!app.showimmediate) {
                                         $.get("api/v1/get_student_answer/" + nqid + "/<?php echo $student_log; ?>",
                                                 function (data, status) {
@@ -2133,8 +2293,7 @@ echo $attended_questions;
                                                         app.showimmediateblk = false;
                                                         //app.shownotimmdnxt = false;
                                                         app.shownotimmdnxt = true;
-
-
+                                                       
 
 
                                                     } else {
@@ -2282,11 +2441,12 @@ echo $attended_questions;
                         }
 
 
-<?php // if($testmode==1){           ?>
+<?php // if($testmode==1){         ?>
                         if (this.olqshow) {
                             this.showQuestionOtherLang();
                         }
-<?php // }    ?>
+<?php // }  ?>
+                        this.continueTimer();
 
                     },
                     prev: function () {
@@ -2355,17 +2515,17 @@ echo $attended_questions;
 
                         }
 
-<?php // if($testmode==1){           ?>
+<?php // if($testmode==1){         ?>
                         if (this.olqshow) {
                             this.showQuestionOtherLang();
                         }
-<?php // }    ?>
+<?php // }  ?>
 
                         setTimeout(() => {
                             applyMathAjax();
                             $('.loadingoverlay').hide();
                         }, 600);
-
+                        this.continueTimer();
 
 
                     },
@@ -2460,6 +2620,61 @@ echo $attended_questions;
 
 
                     },
+                    goQuesFromPause: function () {
+
+
+                        $('.loadingoverlay').show();
+                        setTimeout(() => {
+                            applyMathAjax();
+                            $('.loadingoverlay').hide();
+                        }, 600);
+                        app.isDisabled = false;
+                        app.showimmediateblk = false;
+                        app.shownotimmdnxt = false;
+
+                        /*
+                         $('#header-hidden').show();
+                         $('#quiz-hidden').show();
+                         $('.questionFooter').show();
+                         $('#olqhidden').show();
+                         $('.question-admin-panel').hide();
+                         */
+
+                        //this.questionIndex = val;
+
+                        var questions = <?php echo json_encode($questions_list); ?>;
+                        var qid = questions[this.questionIndex].question_id;
+
+
+
+
+                        $.get("api/v1/get_student_answer/" + qid + "/<?php echo $student_log; ?>",
+                                function (data, status) {
+                                    if (data.result.error === false) {
+                                        ansid = data.result.data;
+
+
+                                        var studansid = app.convertLower(ansid);
+                                        $('#ansopt_' + studansid).addClass('crt_clr');
+
+
+                                        app.isDisabled = false;
+                                        app.showimmediateblk = false;
+                                        //app.shownotimmdnxt = false;
+                                        app.shownotimmdnxt = true;
+
+
+
+
+
+                                    }
+                                });
+
+
+
+
+
+                    },
                     goQuesAns: function (val) {
 
 
@@ -2542,11 +2757,12 @@ echo $attended_questions;
                         }
 
 
-<?php // if($testmode==1){           ?>
+<?php // if($testmode==1){         ?>
                         if (this.olqshow) {
                             this.showQuestionOtherLang();
                         }
-<?php // }    ?>
+<?php // }  ?>
+
 
                     },
                     /*
@@ -2577,12 +2793,12 @@ echo $attended_questions;
                      this.questionprevanswered = false;
                      
                      
-                     var questions = <?php // echo json_encode($questions_list);    ?>;
+                     var questions = <?php // echo json_encode($questions_list);  ?>;
                      var qid = questions[this.questionIndex].question_id;
                      var answers = ['A', 'B', 'C', 'D'];
                      var ansid = '';
                      
-                     $.get("api/v1/get_student_notsure_answer/" + qid + "/<?php // echo $student_log;    ?>",
+                     $.get("api/v1/get_student_notsure_answer/" + qid + "/<?php // echo $student_log;  ?>",
                      function (data, status) {
                      if (data.result.error === false) {
                      ansid = data.result.data;
@@ -2642,11 +2858,11 @@ echo $attended_questions;
                             $('.loadingoverlay').show();
 
 
-<?php // if($testmode==1){           ?>
+<?php // if($testmode==1){         ?>
                             if (this.olqshow) {
                                 this.showQuestionOtherLang();
                             }
-<?php // }    ?>
+<?php // }  ?>
 
                             setTimeout(() => {
                                 applyMathAjax();
@@ -2665,7 +2881,7 @@ echo $attended_questions;
                     },
                     showQuestionOtherLang: function () {
 
-<?php // if($testmode==1){           ?>
+<?php // if($testmode==1){         ?>
                         this.olqd = null;
                         var other_language = '<?php echo $other_language['language_id']; ?>';
                         var questions = <?php echo json_encode($questions_list); ?>;
@@ -2690,11 +2906,11 @@ echo $attended_questions;
                             applyMathAjax();
                             $('.loadingoverlay').hide();
                         }, 600);
-<?php // }    ?>
+<?php // }  ?>
                     },
                     showExplanationOtherLang: function () {
                         //display other langauage explaination
-<?php // if($testmode==1){           ?>
+<?php // if($testmode==1){         ?>
 
 
                         var other_language = '<?php echo $other_language['language_id']; ?>';
@@ -2713,7 +2929,7 @@ echo $attended_questions;
                             this.otherlangquiz = sample;
                             console.log(sample);
                         }
-<?php // }    ?>
+<?php // }  ?>
                     },
                     score: function () {
                         var score = 0;
@@ -2752,8 +2968,21 @@ echo $attended_questions;
                     pauseTimer: function () {
                         this.isTimerPaused = true;
                     },
+                    playTimer: function () {
+                        if (!this.isTimerStart) {
+                            this.isTimerStart = true;
+                            this.timerId = setInterval(this.startTimer, 1000);
+                        }
+                        this.continueTimer();
+                    },
+                    stopTimer: function () {
+                        this.pauseTimer();
+                        clearInterval(this.timerId);
+                    },
                     continueTimer: function () {
-                        //this.isTimerPaused = false;
+                        if (this.isTimerStart) {
+                            this.isTimerPaused = false;
+                        }
                     },
                     savenoquesdur: function () {
                         $.post("api/v1/store_duration_question",
@@ -2778,6 +3007,17 @@ echo $attended_questions;
                                     }
                                 });
                     },
+                    savequizendtime: function () {
+                        $.post("api/v1/store_quiz_end_time",
+                                {
+                                    student_log: <?php echo $student_log; ?>
+                                },
+                                function (data, status) {
+                                    if (data.result.error === false) {
+
+                                    }
+                                });
+                    },
                     quizTimerAlert: function () {
                         swal('Only ' + this.quizalertbeforemins + ' Minutes Left');
                     },
@@ -2791,10 +3031,12 @@ echo $attended_questions;
                                     if (data.result.error === false) {
                                         var qt = 0;
                                         var qta = 0;
+                                        var qtmi = 0;
                                         app.data_ques_answered = data.result.ques_answered;
                                         qt = data.result.ques_duration;
                                         qta = qt / 60;
-                                        app.data_ques_duration = parseInt(qta);
+                                        qtmi = qt % 60;
+                                        app.data_ques_duration = pad(parseInt(qta)) + '.' + pad(parseInt(qtmi));
 
 
                                         $('.loadingoverlay').hide();
@@ -2802,7 +3044,26 @@ echo $attended_questions;
                                 });
                         //return true; 
 
+                    },
+                    chkAllquesAnswered: function () {
+                        $.get("api/v1/get_result_detail_ans_cnt/<?php echo $student_log; ?>",
+                                function (data, status) {
+                                    if (data.result.error === false) {
+                                        if (data.result.ans_cnt == app.quiz.questions.length) {
+                                            app.isAllQAnsed = true;
+
+                                        } else {
+                                            app.isAllQAnsed = false;
+                                            //app.isAllQAnsed = true;
+                                        }
+
+                                    }
+                                });
                     }
+
+
+
+
                 }
             });
             setTimeout(() => {
@@ -2836,13 +3097,16 @@ echo $attended_questions;
                 setTimeout(() => {
                     applyMathAjax();
                     $('.quiz-section').show();
-<?php // if($testmode==1){           ?>
+<?php // if($testmode==1){         ?>
                     //display other lanaguage explanation           
-//                            app.showExplanationOtherLang();
-<?php // }    ?>
-<?php // if($testmode == 0) {     ?>
+                    app.showExplanationOtherLang();
+<?php // }  ?>
+<?php // if($testmode == 0) {   ?>
 <?php if ($type == 'Year Order') { ?>
-                        setInterval(app.startTimer, 1000);
+                        //setInterval(app.startTimer, 1000);
+<?php } ?>
+<?php if (isset($_REQUEST['from']) && ($_REQUEST['from'] == 'pausequiz')) { ?>
+                        app.goQuesFromPause();
 <?php } ?>
                     $('.loadingoverlay').hide();
                 }, 600);
