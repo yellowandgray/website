@@ -239,7 +239,7 @@ if (isset($_SESSION['student_register_id'])) {
 </ul>
 
 <!-- Tab panes -->
-<div class="tab-content">
+<div class="tab-content quiz-result-tab">
     <div class="tab-pane container active" id="yordertab">
           <table class = 'table table-striped result_table' style="width:60%;">
                                                 <thead>

@@ -2601,6 +2601,35 @@ article .align-right {
     .admin-panel-section {
         padding: 40px 0 20px !important;
     }
+    .quiz-div {
+        display: block !Important;
+    }
+    .quiz-div .quiz-pause {
+        display: block !Important;
+        margin-bottom: 0 !important;
+    }
+    .quiz-div .quiz-pause .show-ans-sec {
+        display: flex !important;
+        width: auto !important;
+    }
+    .quiz-div .quiz-timer {
+        position: unset !important;
+        text-align: center !important;
+        padding-bottom: 20px !important;
+        display: block !Important;
+    }
+    .quiz-timer i.icon-pause {
+        top: 0 !important;
+    }
+    .btn-theme {
+        margin-bottom: 10px;
+    }
+    .quiz-result {
+        width: 100% !important;
+    }
+    .quiz-result-tab .tab-pane {
+        overflow: scroll !important;
+    }
 }
 
 @media (max-width: 480px) {

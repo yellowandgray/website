@@ -455,6 +455,12 @@ footer a:hover {
         width: 95% !important;
         margin: 0 auto !important;
     }
+    .testim .wrap {
+        padding: 0 !important;
+    }
+    .testim .arrow {
+        display: none !important;
+    }
 }
 
 @media (min-width: 768px) {
