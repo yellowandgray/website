@@ -1,0 +1,84 @@
+<?php
+require_once 'api/include/common.php';
+session_start();
+$obj = new Common();
+if (!isset($_SESSION['student_selected_language_id']) || !isset($_SESSION['student_selected_year_id']) || !isset($_SESSION['student_register_id'])) {
+    header('Location: years');
+}
+$topics = $obj->selectAll('t.*, IFNULL(MAX(q.question_id), 0) AS max_questions, IFNULL(MAX(sa.question_id), 0) AS max_questions_answered', 'topic AS t LEFT JOIN question AS q ON q.topic_id = t.topic_id LEFT JOIN student_answer AS sa ON sa.topic_id = t.topic_id AND sa.student_register_id = ' . $_SESSION['student_register_id'], 't.year_id = ' . $_SESSION['student_selected_year_id'] . ' AND t.language_id = ' . $_SESSION['student_selected_language_id'] . ' GROUP BY t.topic_id');
+$year = $obj->selectRow('*', 'year', 'year_id = ' . $_SESSION['student_selected_year_id']);
+$language = $obj->selectRow('*', 'language', 'language_id = ' . $_SESSION['student_selected_year_id']);
+?>
+<html lang="en">
+    <?php include 'head.php'; ?>
+    <body>
+        <div id="wrapper">
+            <?php include 'menu.php'; ?>
+            <section class="topic_section">
+                <div class="container">
+                    <div class="row">
+                        <div class="span12">
+                            <div class="side_section topic-head">
+                                <a href="#" onclick="goBack()"><i class="font-icon-arrow-simple-left"></i></a>
+                                <h2><?php echo $language['name']; ?> - <?php echo $year['year']; ?></h2>
+                            </div>
+                            <div class="topic_section_1">
+                                <?php if (count($topics) > 0) { ?>
+                                    <?php foreach ($topics as $row) { ?>
+                                        <div class="topic_list_section">
+                                            <div class="topic_list_position_left">
+                                                <i class="icon-caret-right"></i>
+                                                <a href="quiz_page?topic=<?php echo $row['name']; ?>"> 
+                                                    <?php echo $row['name']; ?>
+                                                </a>
+                                            </div>
+                                            <div class="topic_list_position_right">
+                                                <?php if ($row['max_questions_answered'] == 0) { ?>
+                                                    <a href="quiz_page?topic=<?php echo $row['name']; ?>" class="btn btn-green">Start</a>
+                                                    <?php
+                                                }
+                                                if ($row['max_questions_answered'] == $row['max_questions']) {
+                                                    ?>
+                                                    <a href="#" class="btn btn-green">Completed</a>
+                                                    <?php
+                                                }
+                                                if ($row['max_questions_answered'] < $row['max_questions'] && $row['max_questions_answered'] != 0) {
+                                                    ?>
+                                                    <a href="#" class="btn btn-danger">Resume</a>
+                                                <?php }
+                                                ?>
+                                            </div>
+                                        </div>
+                                        <?php
+                                    }
+                                } else {
+                                    ?>
+                                    <p>Sorry no topics were found</p>
+                                <?php } ?>
+                                <?php if (count($topics) > 9) { ?>
+                                    <div class="pagenation-width">
+                                        <div class="bs-docs-example">
+                                            <div class="pagination">
+                                                <ul>
+                                                    <li class="disabled"><a href="#">Prev</a></li>
+                                                    <li class="active"><a href="#">1</a></li>
+                                                    <li><a href="#">2</a></li>
+                                                    <li><a href="#">3</a></li>
+                                                    <li><a href="#">Next</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <?php } else { ?>
+                                    <div>&nbsp;</div>
+                                <?php }?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <?php include 'footer.php'; ?>
+        </div>
+        <?php include 'script.php'; ?>
+    </body>
+</html>
