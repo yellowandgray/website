@@ -29,7 +29,7 @@ if (isset($_SESSION['student_register_id'])) {
                 <div class = 'span8'>
                     <div class = 'headnav'>
                         <ul>
-                            <li class="menu-cus-clr">
+                            <li class="menu-cus-clr">                                
                                 <a href="about" class="menu-nav">About Us</a>
                                 <a href="contact" class="menu-nav">Contact Us</a>
                             </li>
@@ -59,6 +59,8 @@ if (isset($_SESSION['student_register_id'])) {
             <?php } else {                
                 ?>
                 <div class="logout_position" style="display:block !important;">
+                    <a href="member-home" class="user-menu-btn">My Home</a>
+                                <a href="select_language" class="user-menu-btn">Quiz</a>
                     <a class="user-menu-btn" href="about">About Us</a>
                     <a class="user-menu-btn" href="contact">Contact Us</a>
                     <a onclick="logoutUser('<?php echo $login_student['student_name']; ?>');" class="btn logout-btn">Logout</a>
