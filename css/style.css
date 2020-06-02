@@ -2616,6 +2616,28 @@ article .align-right {
     .custom-modal {
         width: 98% !Important;
     }
+    .quiz-div {
+        display: block !Important;
+    }
+    .quiz-div .quiz-pause {
+        display: block !Important;
+        margin-bottom: 0 !important;
+    }
+    .quiz-div .quiz-pause .show-ans-sec {
+        display: flex !important;
+        width: auto !important;
+    }
+    .quiz-div .quiz-timer {
+        position: unset !important;
+        text-align: center !important;
+        padding-bottom: 20px !important;
+    }
+    .btn-theme {
+        margin-bottom: 10px;
+    }
+    .quiz-result {
+        width: 100% !important;
+    }
 }
 
 @media (max-width: 480px) {
@@ -3678,7 +3700,7 @@ form#login-form:after {
 .menu-cus-clr a {
     font-size: 18px !important;
     color: #30445c !important;
-/*    margin-right: 20px !important;*/
+    /*    margin-right: 20px !important;*/
     padding: 5px 20px;
 }
 

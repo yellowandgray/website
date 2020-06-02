@@ -1102,7 +1102,8 @@ and open the template in the editor.
         width: 100% !important;
     }
     .span-position {
-        margin: 0 0px 0px 25px !important;
+        margin: 0 0px 0px 10px !important;
+        text-align: left;
     }
 }
 
