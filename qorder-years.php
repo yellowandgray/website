@@ -2,6 +2,16 @@
 session_start();
 require_once 'api/include/common.php';
 $obj = new Common();
+
+
+if (!isset($_GET['lan'])) {
+    header('Location: select_language');
+}
+
+$language = $obj->selectRow('*', 'language', 'name = \'' . $_GET['lan'] . '\'');
+$_SESSION['student_selected_language_id'] = $language['language_id'];
+
+
 if (!isset($_SESSION['student_selected_language_id'])) {
     header('Location: select_language');
 }

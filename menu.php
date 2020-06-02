@@ -8,18 +8,11 @@ if (isset($_SESSION['student_register_id'])) {
         <div class = 'row nomargin'>
             <div class = 'span4 no-margin'>
                 <div class = 'logo'>
-                     <?php
-            if (!isset($_SESSION['student_register_id'])) {
-                ?>
+                    
                     <a href = 'index'>
                         <img src = 'img/logo.png' alt = '' class = 'logo' />
                     </a>
-            <?php }else { ?>   
-                    <a href = 'select_language'>
-                        <img src = 'img/logo.png' alt = '' class = 'logo' />
-                    </a>
-                 <?php } ?>   
-                </div>
+            </div>
             </div>
             <?php
             if (!isset($_SESSION['student_register_id'])) {
