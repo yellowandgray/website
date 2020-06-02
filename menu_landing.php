@@ -12,7 +12,7 @@ if (isset($_SESSION['student_register_id'])) {
             <nav>
                 <a href="about" class="menu-nav">About Us</a>
                 <a href="contact" class="menu-nav">Contact Us</a>
-                <a href="register_user" class="btn btn-green">Buy Full Version</a>
+                <a href="registration_intro" class="btn btn-green">Buy Full Version</a>
                 <a href="login-page" class="btn btn-custom">Login</a>
             </nav>
         <?php } else { ?>

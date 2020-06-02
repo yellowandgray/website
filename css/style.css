@@ -2629,8 +2629,9 @@ article .align-right {
     }
     .quiz-div .quiz-timer {
         position: unset !important;
+        margin-top: 0;
         text-align: center !important;
-        padding-bottom: 20px !important;
+        padding-bottom: 10px !important;
     }
     .btn-theme {
         margin-bottom: 10px;
@@ -2824,6 +2825,9 @@ article .align-right {
         height: 100%;
         float: none !important; 
         margin-top: 0 !important;
+    }
+    .call-as-now ul li img {
+        width: 10% !important;
     }
 }
 
@@ -3486,6 +3490,9 @@ form#login-form:after {
         top: 0em;
 
     }
+    .call-as-now ul li img {
+        width: 9% !important;
+    }
 }
 @media screen  and (max-width: 1500px) and (min-width: 650px) {
     form#login-form::before {
@@ -3720,8 +3727,8 @@ form#login-form:after {
     display: flex;
     position: relative;
     left: -16px;
-    padding: 20px 10px 0px 2px;
-    background: #30445c;
+    padding: 0px 10px 0px 2px;
+    background: #1E90FF;
 }
 
 .quiz-div .quiz-pause {
@@ -3731,4 +3738,62 @@ form#login-form:after {
 .quiz-div .quiz-pause .show-ans-sec {
     display: flex;
     width: 40%;
+}
+
+.member-full-version-secttion {
+    padding: 100px 0 50px;
+}
+
+.member-full-version-secttion .member-banner img {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #e3e3e3;
+}
+
+.member-full-version-secttion .member-banner h3 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.member-full-version-secttion .member-banner p {
+    text-align: justify;
+}
+
+.member-text-content .member-content {
+    background: #0db3bb;
+    padding: 30px;
+}
+
+.member-text-content .start-quiz-btn {
+    margin: 0px auto;
+    width: 100%;
+}
+
+.member-text-content .start-quiz-btn a.btn-green {
+    width: 93%;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 25px;
+    font-weight: 600;
+    background: #07ab06 !important;
+}
+
+.full-member-table {
+    width: 100%;
+    margin-bottom: 20px
+}
+
+.full-member-table th {
+    background: #00abee;
+    color: #fff;
+    text-align: left;
+    border-left: 1px solid #fff;
+    padding: 5px 4px;
+}
+
+.full-member-table td {
+    background: #e3e3e3;
+    text-align: left;
+    border-left: 1px solid #fff;
+    padding: 5px 4px;
 }

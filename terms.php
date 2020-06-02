@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-    <?php include 'head_landing.php'; ?>
+    <?php include 'head.php'; ?>
     <body>
-        <?php include 'menu_landing.php'; ?>
+        <?php include 'menu.php'; ?>
         <section class="terms">
             <div class="container">
                 <div class="row">
@@ -89,8 +89,8 @@
                 </div>
             </div>
         </section>
-        <?php include 'footer_landing.php'; ?>
-        <?php include 'landing_script.php'; ?>
+        <?php include 'footer.php'; ?>
+        <?php include 'script.php'; ?>
         <script type="text/javascript">
             $("#open-logout").click(function (e) {
                 //console.log("test");
