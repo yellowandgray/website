@@ -228,6 +228,7 @@ and open the template in the editor.
         border-radius: 50%;
         width: 50px;*/
     margin-top: 10px;
+    float: right;
     /*    height: 30px;
         background-position: center;*/
     cursor: pointer;
