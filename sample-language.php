@@ -3,25 +3,6 @@
 require_once 'api/include/common.php';
 $obj = new Common();
 $languages = $obj->selectAll('*', 'language', 'status = 1');
-
-
-/*
-if (!isset($_GET['lan'])) {
-    header('Location: select_language');
-}
- * */
-
-
-/*
-if (isset($_SESSION['testmode'])) {
-    $testmode = $_SESSION['testmode'];
-}
-*/
-
-/*
-$language = $obj->selectRow('*', 'language', 'name = \'' . $_GET['lan'] . '\'');
-$_SESSION['student_selected_language_id'] = $language['language_id'];
-* */
 ?>
 <html lang="en">
     <?php include 'head.php'; ?>
@@ -33,33 +14,42 @@ $_SESSION['student_selected_language_id'] = $language['language_id'];
                     <div class="modal styled">
                         <div class="modal-header login-section">
                             <a href="sample-intro"><i class="font-icon-arrow-simple-left"></i></a>
-                            <h4 id="mySigninModalLabel" class="text-center" style='font-weight: 600'>Select your choice</h4>
+                            <h4 id="mySigninModalLabel" class="text-center" style='font-weight: 600'>Select Your Choice</h4>
                             <a class="home_link" href="index">
                                 <i class="icon-home"></i>
                             </a>
                         </div>
                         <div class="modal-body">
-                            
+
                             <?php foreach ($languages as $val) { ?>
-                            <div class="language_section">
-                                <h6 class="sub-title"><?php echo $val['name']; ?></h6>
-                                <ul>
-                                    <li>
-                                        <i class="icon-double-angle-right"></i>
-                                        <a href="qorder-years-freesample?lan=<?php echo $val['name']; ?>"><i class="icon-calendar"></i> Year Wise</a>                             
-                                    </li>         
-                                    <?php // if($testmode!=0) { //subject order in learning mode   ?>
-                                    <li>
-                                        <i class="icon-double-angle-right"></i>
-                                        <a href="subject_freesample?lan=<?php echo $val['name']; ?>"><i class="icon-book"></i> Subject Wise</a>
-                                    </li>
-                                    <?php // } ?>
-                                </ul>
-                            </div>
+                                <div class="language_section">
+                                    <h6 class="sub-title"><?php echo $val['name']; ?></h6>
+                                    <ul>
+                                        <?php if($val['name']== 'Tamil') { ?>
+                                        <li>
+                                            <i class="icon-double-angle-right"></i>
+                                            <a href="qorder-years-freesample?lan=<?php echo $val['name']; ?>"><i class="icon-calendar"></i> ஆண்டு வரிசை</a>                             
+                                        </li> 
+                                        <li>
+                                            <i class="icon-double-angle-right"></i>
+                                            <a href="subject_freesample?lan=<?php echo $val['name']; ?>"><i class="icon-book"></i> பாடத்திட்ட வரிசை</a>
+                                        </li>
+                                        <?php } else { ?>
+                                        <li>
+                                            <i class="icon-double-angle-right"></i>
+                                            <a href="qorder-years-freesample?lan=<?php echo $val['name']; ?>"><i class="icon-calendar"></i> Year Wise</a>                             
+                                        </li> 
+                                        <li>
+                                            <i class="icon-double-angle-right"></i>
+                                            <a href="subject_freesample?lan=<?php echo $val['name']; ?>"><i class="icon-book"></i> Subject Wise</a>
+                                        </li>
+                                        <?php } ?>
+                                    </ul>
+                                </div>
                             <?php } ?>
-                            
-                            
-                           
+
+
+
                         </div>
                     </div>
                 </div>

@@ -228,6 +228,7 @@ and open the template in the editor.
         border-radius: 50%;
         width: 50px;*/
     margin-top: 10px;
+    float: right;
     /*    height: 30px;
         background-position: center;*/
     cursor: pointer;
@@ -1110,7 +1111,7 @@ and open the template in the editor.
 .quiz-pause {
     width: 95%;
     padding: 10px 0;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
 }
 
 .quiz-pause .float-left {
@@ -1479,4 +1480,70 @@ and open the template in the editor.
 
 .testmodetxt {
     cursor: pointer;
+}
+
+.contact-section-examhorse {
+    padding: 100px 0 50px;
+}
+
+.contact-section-examhorse .contact-form {
+    padding: 20px;
+    background: #fff;
+    box-shadow: 3px 3px 5px 6px #ccc;
+}
+
+.contact-section-examhorse .contact-form h3 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.contact-section-examhorse .contact-form span {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.contact-section-examhorse .contact-form input, .contact-section-examhorse .contact-form textarea {
+    border: none;
+    border-bottom: 1px solid #333;
+    width: 100%;
+    box-shadow: none;
+    padding: 5px 10px;
+}
+
+.contact-section-examhorse .contact-content {
+    padding: 20px;
+}
+
+.contact-section-examhorse .contact-content h3 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.contact-section-examhorse .contact-content p {
+    font-size: 18px;
+}
+
+.call-as-now ul{
+    list-style: none;
+    margin: 0;
+}
+
+.call-as-now ul li {
+    font-size: 20px;
+    font-weight: 600;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.call-as-now ul li img {
+    position: absolute;
+    width: 6%;
+}
+
+.call-as-now ul li span {
+    margin-left: 50px;
 }

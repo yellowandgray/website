@@ -30,7 +30,7 @@ $obj = new Common();
                                     <div class="input-group">
                                         <textarea type="text" id="description" rows="5" class="" Placeholder="Message" ></textarea>
                                     </div>
-                                    <button type="submit" class="">Send</button>
+                                    <button type="submit" class="btn btn-blue">Send</button>
                                 </form>
                             </div>
                         </div>
@@ -40,8 +40,10 @@ $obj = new Common();
                                 <h3>Get in touch, send us an e-mail or call us</h3>
                                 <p>Cras ex mauris, ornare eget pretium sit amet, dignissim et turpis. Nunc nec maximus dui, vel suscipit dolor. Donec elementum velit a orci facilisis rutrum.</p>
                                 <div class="call-as-now">
-                                    <h5>Call us now</h5>
-                                    <a href="#">98400 12345</a>
+                                    <ul>
+                                        <li><img src="img/whatsapp.png" alt=""/> <span>98400 12345</span></li>
+                                        <li><img src="img/telephone.png" alt=""/> <span>98410 45678</span></li>
+                                    </ul>                                    
                                 </div>
                             </div>
                         </div>

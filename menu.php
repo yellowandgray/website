@@ -34,7 +34,7 @@ if (isset($_SESSION['student_register_id'])) {
                                 <a href="contact" class="menu-nav">Contact Us</a>
                             </li>
                             <li>
-                                <a href = 'register_user'>
+                                <a href = 'registration_intro'>
     <!--                                    <i class = 'icon-user'></i>-->
                                     <button class="btn btn-custom" style="background: green">Buy Full Version</button>
                                 </a>

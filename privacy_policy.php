@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-    <?php include 'head_landing.php'; ?>
+    <?php include 'head.php'; ?>
     <body>
-        <?php include 'menu_landing.php'; ?>
+        <?php include 'menu.php'; ?>
         <section class="terms">
             <div class="container">
                 <div class="row">
@@ -60,19 +60,19 @@
                             <p>As the Company (Exam Horse Private Limited) evolves, its privacy policy will need to evolve as well to cover new situations. You are advised to review this Policy regularly for any changes, as continued use is deemed approval of all changes.</p>
                             <h3>Your Consent</h3>
                             <p>EXAM HORSE believes that, every user of our Application/Services/Products/Website must be in a position to provide an informed consent prior to providing any Information required for the use of the Application/Services/Products/Website. By registering with it, you are expressly consenting to its collection, processing, storing, disclosing and handling of your information as set forth in this Policy now and as amended by us. Processing, your information in any way, including, but not limited to, collecting, storing, deleting, using, combining, sharing, transferring and disclosing information, all of which activities will take place in India. If you reside outside India your information will be transferred, processed and stored in accordance with the applicable data protection laws of India.</p>
-                            <h3>Contact Information</h3>
+<!--                            <h3>Contact Information</h3>
                             <p>EXAM HORSE Grievance Officer shall undertake all reasonable efforts to address your grievances at the earliest possible opportunity. You may contact it at:</p>
                             <p>Grievance Officer: Mr. X</p>
                             <p>30,Rukmani Street,West Mambalam Chennai</p>
                             <p>Tamilnadu, India</p>
-                            <center>Reach out to us on support@examhorse.com, in case of any queries.</center>
+                            <center>Reach out to us on support@examhorse.com, in case of any queries.</center>-->
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <?php include 'footer_landing.php'; ?>
-        <?php include 'landing_script.php'; ?>
+        <?php include 'footer.php'; ?>
+        <?php include 'script.php'; ?>
         <script type="text/javascript">
             $("#open-logout").click(function (e) {
                 //console.log("test");
