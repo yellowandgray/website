@@ -25,7 +25,7 @@ if (isset($_SESSION['student_register_id'])) {
             if (!isset($_SESSION['student_register_id'])) {
                 
                 ?>
-                <?php /* 
+                <?php  /* */ ?>
                 <div class = 'span8'>
                     <div class = 'headnav'>
                         <ul>
@@ -34,11 +34,11 @@ if (isset($_SESSION['student_register_id'])) {
                                 <a href="contact" class="menu-nav">Contact Us</a>
                             </li>
                             <li>
-                                <a href = '../register_user'>
+                                <a href = 'register_user'>
     <!--                                    <i class = 'icon-user'></i>-->
                                     <button class="btn btn-custom" style="background: green">Buy Full Version</button>
                                 </a>
-                                <a href = '../login-page'>
+                                <a href = 'login-page'>
                                     <button class="btn btn-custom">Login</button>
                                 </a>
                             </li>
@@ -54,7 +54,7 @@ if (isset($_SESSION['student_register_id'])) {
                         </ul>
                     </div>
                 </div>
-                 * 
+             <?php  /* 
                  */ ?>
             <?php } else {                
                 ?>
