@@ -19,30 +19,6 @@ foreach ($topics as $row) {
 $subjects = $obj->selectAll('s.*,(select count(question_id) FROM question As q INNER JOIN topic As t ON q.topic_id=t.topic_id INNER JOIN subject As s1 ON s1.subject_id=t.subject_id WHERE s1.subject_id=s.subject_id) As ques_cnt','subject As s', 's.language_id=' . $_SESSION['student_selected_language_id']);
 $language = $obj->selectRow('*', 'language', 'language_id=' . $_SESSION['student_selected_language_id']);
 $counter = 0;
-
-
-
-$student = $obj->selectRow('*', 'student_register', 'student_register_id = ' . $_SESSION['student_register_id']);
-$student_log_pause = $obj->selectRow('*', 'student_log_pause', 'student_id=' . $student['student_register_id']);
-
-$student_pause = false;
-if(count($student_log_pause)>0) {
-    
-     /*
-    $student_log_detail = $obj->selectAll('sld.*,q.*', 'student_log_detail As sld INNER JOIN question As q ON sld.question_id=q.question_id', 'student_log_id = ' . $student_log_pause['']);
-    
-   
-    $student_log_detail             = $obj->selectRow('COUNT(student_log_detail_id) AS attended, IFNULL((SELECT COUNT(student_log_detail_id) FROM student_log_detail INNER JOIN question ON student_log_detail.question_id=question.question_id WHERE student_log_id=' . $student_log_detail['student_log_id'] . ' AND UPPER(answer) = UPPER(student_answer)), 0) AS correct_answers', 'student_log_detail', 'student_log_id=' . $student_log_detail['student_log_id']);
-    $student_log_attended           = $log_detail['attended'];
-    */
-    $student_pause = true;
-    $student_pause_log_id    = $student_log_pause['student_log_id'];
-    
-    $student_log_order = $obj->selectRow('slo.*','student_log_order As slo','student_log_id ='.$student_pause_log_id);   
-    
-}    
-
-
 ?>
 <html lang="en">
     <?php include 'head.php'; ?>
