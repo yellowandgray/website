@@ -220,7 +220,8 @@ if (isset($_SESSION['student_register_id'])) {
                             <div class="start-quiz-btn">
                                 <a href="select_language" class="btn btn-green">START QUIZ</a>
                             </div>
-                            <h4>Your Recent Score</h4>
+                            
+                            <h4 class="recent-scores">Your Recent Score</h4>
                             
                             <?php                                
                                 if(count($student_log)>0) {

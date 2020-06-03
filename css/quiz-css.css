@@ -185,6 +185,8 @@
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     width: 100%;
     align-self: flex-end;
+    padding: 0;
+    color: #fff;
 }
 
 .goto-here .questionBox .questionContainer .questionFooter .pagination {

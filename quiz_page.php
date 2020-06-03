@@ -1132,7 +1132,7 @@ include 'head.php';
    </div>
  </div>
 
-<?php include 'footer.php'; ?>
+<?php //include 'footer.php'; ?>
 <?php include 'script.php'; ?>
         <script>
             //image_url = 'http://localhost/project/examhorse/api/v1/';

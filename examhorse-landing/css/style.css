@@ -1718,3 +1718,13 @@ ul.breadcrumb li a:hover {
 .logout_position.mobile-menu {
     display: none;
 }
+
+.price-detail strike {
+    font-size: 50px;
+    color: #f53c00;
+}
+
+.price-detail span {
+    font-size: 50px;
+    color: #198c19;
+}

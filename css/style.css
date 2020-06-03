@@ -3862,3 +3862,24 @@ form#login-form:after {
 .full-language-width {
     width: 45%;
 }
+
+.terms {
+    padding: 100px 0 0 0;
+}
+
+.terms h2 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.terms h3 {
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.recent-scores {
+    font-size: 18px;
+    font-weight: 600;
+}
