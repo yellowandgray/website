@@ -20,24 +20,33 @@ if (isset($_SESSION['student_register_id'])) {
                                 <h2>Get Started to a Great Career</h2>
                             </div>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,</p>
-                            <div class="price-detail">
+                            <!--<div class="price-detail">
                                 <h4><strike>₹999</strike> Avail the Best Discount <span>₹499</span></h4>
-                            </div>
-                            <a href="register_user" class="btn btn-green">Pay Now</a>
+                            </div>-->
+
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="p-t-b-30px">
-                            <h3>Sample screenshots</h3>
-                            <div class="slick-carousel">
-                                <!-- <div><div class="slide-content"><img src="examhorse-landing/img/project-slide/slide-site.png" alt="" /></div></div>
-                                <div><div class="slide-content"><img src="examhorse-landing/img/project-slide/login-1.png" alt="" /></div></div>
-                                <div><div class="slide-content"><img src="examhorse-landing/img/project-slide/language.png" alt="" /></div></div>
-                                <div><div class="slide-content"><img src="examhorse-landing/img/project-slide/login.png" alt="" /></div></div> -->
-                                <div><div class="slide-content"><img src="examhorse-landing/img/project-slide/year.png" alt="" /></div></div>
-                                <div><div class="slide-content"><img src="examhorse-landing/img/project-slide/quiz.png" alt="" /></div></div>
-                                <div><div class="slide-content"><img src="examhorse-landing/img/project-slide/score.png" alt="" /></div></div>
+                            <!--                        <div class="p-t-b-30px">
+                                                        <h3>Sample screenshots</h3>
+                                                        <div class="slick-carousel">
+                                                             <div><div class="slide-content"><img src="examhorse-landing/img/project-slide/slide-site.png" alt="" /></div></div>
+                                                            <div><div class="slide-content"><img src="examhorse-landing/img/project-slide/login-1.png" alt="" /></div></div>
+                                                            <div><div class="slide-content"><img src="examhorse-landing/img/project-slide/language.png" alt="" /></div></div>
+                                                            <div><div class="slide-content"><img src="examhorse-landing/img/project-slide/login.png" alt="" /></div></div> 
+                                                            <div><div class="slide-content"><img src="examhorse-landing/img/project-slide/year.png" alt="" /></div></div>
+                                                            <div><div class="slide-content"><img src="examhorse-landing/img/project-slide/quiz.png" alt="" /></div></div>
+                                                            <div><div class="slide-content"><img src="examhorse-landing/img/project-slide/score.png" alt="" /></div></div>
+                                                        </div>
+                                                    </div>-->
+                            <div class="intro-title">
+                                <h2>Introductory Offer</h2>
                             </div>
+                            <div class="price-detail">
+                                <h4><strike>₹999 </strike> &nbsp;&nbsp; <span> ₹499</span></h4>
+                            </div>
+                            <a href="register_user" class="btn btn-green">Pay Now</a>
                         </div>
                     </div>
                 </div>

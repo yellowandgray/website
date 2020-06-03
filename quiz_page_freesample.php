@@ -437,7 +437,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
 
                                 <div v-if="!revShow">
                                     <!-- questionTitle -->
-                                   <div class="quiz-year" v-if="quiz.questions[questionIndex].year">
+                                   <div class="quiz-year" v-if="quiz.questions[questionIndex].year" style="text-align: right;">
                                         <div class="float-right">
                                             <span class="label label-quiz-year">Year : {{quiz.questions[questionIndex].year}}</span>
                                         </div>

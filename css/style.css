@@ -3753,7 +3753,7 @@ form#login-form:after {
 }
 
 .member-full-version-secttion {
-    padding: 50px 0 50px;
+    padding: 100px 0 50px;
 }
 
 .member-full-version-secttion .member-banner img {
@@ -3786,7 +3786,7 @@ form#login-form:after {
 }
 
 .member-text-content .start-quiz-btn {
-    margin: 0px auto;
+    margin: 16% auto;
     width: 100%;
 }
 
@@ -3882,4 +3882,8 @@ form#login-form:after {
 .recent-scores {
     font-size: 18px;
     font-weight: 600;
+}
+
+.optionContainerolq {
+    padding: 0 20px 20px;
 }
