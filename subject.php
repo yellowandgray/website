@@ -38,7 +38,7 @@ $counter = 0;
             <?php include 'menu.php'; ?>
             <section id="featured-1">
                 <div id="mySignin" tabindex="-1" aria-labelledby="mySigninModalLabel" aria-hidden="true">
-                    <div class="modal styled">
+                    <div class="modal styled full-language-width">
                         <div class="modal-header login-section">
                             <a href="question-subject-order?lan=<?php echo $language['name']; ?>"><i class="font-icon-arrow-simple-left"></i></a>
                             <h4 id="mySigninModalLabel" class="text-center">
@@ -61,34 +61,38 @@ $counter = 0;
                         </div>
                         <div class="modal-body">
                             <div class="language_section">
-                                <h6 class="sub-title">Select subject</h6>
-                                <?php 
-                                /*
-                                <ul class="subject-section-order">
-                                    <?php
-                                    foreach ($subjects as $key => $row) {
-                                        $counter++;
-                                        ?>
-                                        <li>
-                                            <label class="pl-0"><input type="checkbox" class="subjects" data-chkgroup="option<?php echo $counter; ?>" value="<?php echo $row['subject_id']; ?>"><span class=""> <?php echo $row['name']; ?></span>(<?php echo $row['ques_cnt']; ?> Questions)</label>
-                                            
-                                        </li>
-                                    <?php } ?>
-                                </ul>
-                                 * 
-                                 */
-                                ?>
-                                <ul class="subject-section-order">
-                                     <?php  foreach ($subjects as $key => $row) { ?>                                     
+                                <h6 class="sub-title" style="font-size: 20px;margin-bottom: 20px;"><i class="icon-book"></i> Select Subject</h6>
+<!--                                <ul class="subject-section-order">
+                                     <?php  //foreach ($subjects as $key => $row) { ?>                                     
 
                                     <li>
                                         <i class="icon-double-angle-right"></i>
-                                        <a href="#" onclick="goToTopics(<?php echo $row['subject_id']; ?>);"><?php echo $row['name']; ?></span>(<?php echo $row['ques_cnt']; ?> Questions)</a>
+                                        <a href="#" onclick="goToTopics(<?php //echo $row['subject_id']; ?>);"><?php echo $row['name']; ?></span>(<?php //echo $row['ques_cnt']; ?> Questions)</a>
                                     </li>         
                                    
+                                    <?php //} ?>
+                                </ul>-->
+                                <div class="row">
+                                    <?php foreach ($subjects as $key => $row) { ?>                                     
+                                        <div class="span3 subject-section" onclick="goToTopics(<?php echo $row['subject_id']; ?>);">
+                                            <div class="price">Exam Horse</div>
+                                            <div class="subject-1">
+                                                <div class="subject-1-img" style="background: url(<?php echo BASE_URL . $row['image_path']; ?>)no-repeat;"></div>
+                                            </div>
+                                            <div class="subject-1-text">
+                                                <h2><?php echo $row['name']; ?> <br><span class="cls-orange">(<?php echo $row['ques_cnt']; ?> Questions)</span></h2>
+                                                
+                                                <p><?php echo $row['description']; ?></p>
+                                                <button class="btn btn-theme margintop10" onclick="goToTopics(<?php echo $row['subject_id']; ?>);">SEE MORE...</button>
+                                            </div>
+                                        </div>
+                                        <!--                                    <li>
+                                                                                <i class="icon-double-angle-right"></i>
+                                                                                <a href="#" onclick="goToTopics(<?php echo $row['subject_id']; ?>);"><?php echo $row['name']; ?></span>(<?php echo $row['ques_cnt']; ?> Questions)</a>
+                                                                            </li>         -->
+
                                     <?php } ?>
-                                </ul>
-                                
+                                </div>
                                 
                             </div>
                             <?php 

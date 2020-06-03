@@ -220,7 +220,7 @@ and open the template in the editor.
     display: flex;
     height: 100%;
     float: right;
-    margin-top: 10px;
+    /*margin-top: 10px;*/
 }
 
 .logout_section {
@@ -362,6 +362,7 @@ and open the template in the editor.
     font-size: 16px;
     cursor: pointer;
     border-bottom: 1px dashed;
+    color: #333;
 }
 
 .logout_list li:hover {
@@ -499,6 +500,7 @@ and open the template in the editor.
 .lenth_width span.label-success {
     font-size: 14px;
     font-weight: 600;
+    background: #d0291c;
 }
 
 .hidden {
@@ -694,7 +696,7 @@ and open the template in the editor.
 }
 
 .quiz-question-section {
-    background: #f03c02;
+    background: #1E90FF;
     width: 50%;
     margin: 0 auto;
     padding: 20px 0;
@@ -848,6 +850,7 @@ and open the template in the editor.
 
 .menu-bar i {
     font-size: 25px;
+    color: #d0291c;
 }
 
 .no-header-logo {
@@ -891,7 +894,7 @@ and open the template in the editor.
     background: url(../img/language-bg.jpg)no-repeat;
     background-size: cover;
     background-position: center;
-    padding-top: 62px;
+    padding-top: 140px;
 }
 
 .language-box {
@@ -1550,6 +1553,7 @@ and open the template in the editor.
 
 
 .logout_position a {
+    font: 16px Arial, Helvetica, sans-serif;
     background: transparent;
     color: #30445c;
     font-size: 18px;
@@ -1557,14 +1561,14 @@ and open the template in the editor.
     text-decoration: none;
     border-top: 2px solid transparent;
     border-bottom: 2px solid transparent;
-    padding: 5px 20px;
-    font-weight: 600;
+    padding: 8px 20px;
+    font-weight: 500;
 }
 
 .logout_position a:hover {
-    border-top: 2px solid #cb1103;
-    border-bottom: 2px solid #cb1103;
-    padding: 5px 20px;
+    border-top: 2px solid #f14f1b;
+    border-bottom: 2px solid #f14f1b;
+/*    padding: 0 20px;*/
 }
 
 .logout_position a.logout-btn {

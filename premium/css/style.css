@@ -2107,9 +2107,8 @@ ul.social-network li {
 }
 
 .copyright {
-    text-align: left;
-    font-size: 12px;
-    color: #ddd;
+    padding: 10px;
+    border-top: 1px solid #FFFFFF;
 }
 
 #sub-footer ul.social-network {
