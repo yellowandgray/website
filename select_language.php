@@ -219,13 +219,24 @@ if(count($student_log_pause)>0) {
                             </div>
                             <?php foreach ($languages as $val) { ?>
                                 <div class="span4">
-                                    <div class="language-box" onClick="selmode('<?php echo $val['name']; ?>');"  data-lang="<?php echo $val['name']; ?>">
+                                    <div class="language-box"   data-lang="<?php echo $val['name']; ?>">
                                         <div class="language-img-zoom">
                                             <div class="language-img" style="background: url(<?php echo BASE_URL . $val['imageurl']; ?>)no-repeat;"></div>
                                         </div>
                                         <div class="language-title">
                                             <h3>
-                                                <a href="#" onClick="selmode('<?php echo $val['name']; ?>');"  data-lang="<?php echo $val['name']; ?>"><?php echo $val['name']; ?></a>
+                                                <?php 
+                                                if($val['name']=='Tamil')
+                                                {    
+                                                ?>   
+                                                தமிழ்    
+                                                <?php     
+                                                }
+                                                else  
+                                                {    
+                                                    echo $val['name'];
+                                                }    
+                                                ?>
                                             </h3>
                                         </div>
                                         <div class="language-description">
@@ -249,8 +260,7 @@ if(count($student_log_pause)>0) {
                                                         <a href="subject?lan=<?php echo $val['name']; ?>"><i class="icon-book"></i> Subject Wise</a>
                                                     </li>
                                                 <?php } ?>
-                                            </ul>
-                                            <a class="btn btn-theme margintop10 difficult-button" onClick="selmode('<?php echo $val['name']; ?>');"  data-lang="<?php echo $val['name']; ?>">START QUIZ</a>
+                                            </ul>                                            
                                         </div>
                                     </div>
                                 </div>
