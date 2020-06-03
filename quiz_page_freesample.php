@@ -403,7 +403,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                                 <div class="quiz-timer">
                                                     <span id="minutes">{{minuteslabel}}</span> : <span id="seconds">{{secondslabel}}</span>                             
                                                     <i class="icon-pause" v-if="!isTimerPaused" @click="pauseTimer()"></i>
-                                                    <i class="icon-play" v-if="isTimerPaused" @click="continueTimer()"></i>
+                                                    <i class="icon-play" v-if="isTimerPaused" @click="playTimer()"></i>
                                                 </div>
                                             <?php } ?>
                                         </div>
@@ -1021,7 +1021,9 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                     totseconds : 0,
                     secondslabel : 0,
                     minuteslabel : 0,
-                    isTimerPaused : false,
+                    isTimerPaused : true,
+                    isTimerStart: false,
+                    showTimer: true,
                     totalquizduration : 18,
                     quizalertbeforemins: 1,
                     data_ques_answered : 0,
@@ -2267,6 +2269,8 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                             this.showQuestionOtherLang();
                          }  
                          <?php // } ?>
+                             
+                         this.continueTimer();    
        
                     },
                     prev: function () {
@@ -2345,7 +2349,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                             applyMathAjax();
                             $('.loadingoverlay').hide();
                         }, 600);
-                        
+                        this.continueTimer();
                         
                         
                     },
@@ -2725,11 +2729,24 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                             this.quizTimertotdurAlert();
                         }    
                     }, 
-                    pauseTimer:function() {
+                    pauseTimer: function () {
                         this.isTimerPaused = true;
-                    },    
-                    continueTimer:function() {
-                        //this.isTimerPaused = false;
+                    },
+                    playTimer: function () {
+                        if (!this.isTimerStart) {
+                            this.isTimerStart = true;
+                            this.timerId = setInterval(this.startTimer, 1000);
+                        }
+                        this.continueTimer();
+                    },
+                    stopTimer: function () {
+                        this.pauseTimer();
+                        clearInterval(this.timerId);
+                    },
+                    continueTimer: function () {
+                        if (this.isTimerStart) {
+                            this.isTimerPaused = false;
+                        }
                     },
                     savenoquesdur:function() {
                          $.post("api/v1/store_duration_question",
@@ -2818,7 +2835,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                              <?php // } ?>
                             <?php // if($testmode == 0) {  ?>     
                             <?php if ($type=='Year Order') { ?>    
-                            setInterval(app.startTimer, 1000);
+                            //setInterval(app.startTimer, 1000);
                             <?php } ?>    
                             $('.loadingoverlay').hide();
                         }, 600);                         

@@ -23,7 +23,13 @@ $languages = $obj->selectAll('*', 'language', 'status = 1');
 
                             <?php foreach ($languages as $val) { ?>
                                 <div class="language_section">
-                                    <h6 class="sub-title"><?php echo $val['name']; ?></h6>
+                                    <h6 class="sub-title">
+                                        <?php if($val['name']=='Tamil') { ?>
+                                        தமிழ்                                        
+                                        <?php }else { ?>
+                                        <?php echo $val['name']; ?>
+                                        <?php } ?>
+                                    </h6>
                                     <ul>
                                         <?php if($val['name']== 'Tamil') { ?>
                                         <li>
