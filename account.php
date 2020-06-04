@@ -5,6 +5,7 @@ $obj = new Common();
 if (isset($_SESSION['student_register_id'])) {
     $student = $obj->selectrow('*', 'student_register', 'student_register_id = ' . $_SESSION['student_register_id']);
 }
+$students = $obj->selectrow('*', 'student_register', 'student_register_id > 0');
 ?>
 <html lang = 'en'>
     <?php include 'head.php';
@@ -24,49 +25,66 @@ if (isset($_SESSION['student_register_id'])) {
                     <div class="row align-items-center flex-row-reverse" style="margin-bottom: 0">
                         <div class="span6">
                             <div class="about-avatar">
-                                <img src="https://bootdey.com/img/Content/avatar/avatar7.png" title="" alt="">
+                                <img src="<?php echo BASE_URL . $students['profile_image']; ?>" title="" alt="">
                             </div>
                         </div>
                         <div class="span6">
                             <div class="about-text go-to">
-                                <h3 class="dark-color">About Me</h3>
+                                <h3 class="dark-color"><?php echo $students['student_name']; ?></h3>
                                 <h6 class="theme-color lead">A Lead UX &amp; UI designer based in Canada</h6>
                                 <p>I <mark>design and develop</mark> services for customers of all sizes, specializing in creating stylish, modern websites, web services and online stores. My passion is to design digital user experiences through the bold interface and meaningful interactions.</p>
                                 <div class="row about-list" style="margin-bottom: 0">
                                     <div class="span3">
                                         <div class="media">
-                                            <label>Birthday</label>
-                                            <p>4th april 1998</p>
+                                            <label>Mobile</label>
+                                            <span>:</span>
+                                            <p><?php echo $students['mobile']; ?></p>
                                         </div>
                                         <div class="media">
+                                            <label>Email</label>
+                                            <span>:</span>
+                                            <p><?php echo $students['email']; ?></p>
+                                        </div>
+<!--                                        <div class="media">
                                             <label>Age</label>
-                                            <p>22 Yr</p>
+                                            <p><?php //echo $students['age']; ?></p>
+                                        </div>-->
+                                        <div class="media">
+                                            <label>Gender</label>
+                                            <span>:</span>
+                                            <p><?php echo $students['gender']; ?></p>
                                         </div>
                                         <div class="media">
-                                            <label>Residence</label>
-                                            <p>Canada</p>
+                                            <label>Near City</label>
+                                            <span>:</span>
+                                            <p><?php echo $students['nearcity']; ?></p>
                                         </div>
                                         <div class="media">
-                                            <label>Address</label>
-                                            <p>California, USA</p>
+                                            <label>Graduation</label>
+                                            <span>:</span>
+                                            <p><?php echo $students['graduation']; ?></p>
                                         </div>
                                     </div>
                                     <div class="span3">
                                         <div class="media">
-                                            <label>E-mail</label>
-                                            <p>info@domain.com</p>
+                                            <label>Street</label>
+                                            <span>:</span>
+                                            <p><?php echo $students['street']; ?></p>
                                         </div>
                                         <div class="media">
-                                            <label>Phone</label>
-                                            <p>820-885-3321</p>
+                                            <label>City</label>
+                                            <span>:</span>
+                                            <p><?php echo $students['city']; ?></p>
                                         </div>
                                         <div class="media">
-                                            <label>Skype</label>
-                                            <p>skype.0404</p>
+                                            <label>District</label>
+                                            <span>:</span>
+                                            <p><?php echo $students['district']; ?></p>
                                         </div>
                                         <div class="media">
-                                            <label>Freelance</label>
-                                            <p>Available</p>
+                                            <label>Pin</label>
+                                            <span>:</span>
+                                            <p><?php echo $students['pin']; ?></p>
                                         </div>
                                     </div>
                                 </div>

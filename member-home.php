@@ -201,10 +201,8 @@ if (isset($_SESSION['student_register_id'])) {
                                                             <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</h3>
                                                         </div>-->
                             <div class="start-quiz-btn">
-                                <a href="select_language" class="btn btn-green">START QUIZ</a>
+                                <a href="select_language" class="btn btn-green">PRACTICE TEST</a>
                             </div>
-
-
                         </div>
                     </div>
                 </div>

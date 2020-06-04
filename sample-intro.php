@@ -41,15 +41,25 @@ if (isset($_SESSION['student_register_id'])) {
                     <div class="col-md-6">
                         <div class="p-t-b-30px">
                             <h3>Sample screenshots</h3>
-                            <div class="slick-carousel">
-                                <!-- <div><div class="slide-content"><img src="examhorse-landing/img/project-slide/slide-site.png" alt="" /></div></div>
-                                <div><div class="slide-content"><img src="examhorse-landing/img/project-slide/login-1.png" alt="" /></div></div>
-                                <div><div class="slide-content"><img src="examhorse-landing/img/project-slide/language.png" alt="" /></div></div>
-                                <div><div class="slide-content"><img src="examhorse-landing/img/project-slide/login.png" alt="" /></div></div> -->
-                                <div><div class="slide-content"><img src="examhorse-landing/img/project-slide/year.png" alt="" /></div></div>
-                                <div><div class="slide-content"><img src="examhorse-landing/img/project-slide/quiz.png" alt="" /></div></div>
-                                <div><div class="slide-content"><img src="examhorse-landing/img/project-slide/score.png" alt="" /></div></div>
+                            <div class="sample-screenshot">
+                                <ul>
+                                    <li><i class="fa fa-check"></i> Year Order / Subject Order</li>
+                                    <li><img src="img/screenshots/year-subject.png" alt="" /></li>
+                                    <li><i class="fa fa-check"></i> Explanation Image</li>
+                                    <li><img src="img/screenshots/explanation.png" alt="" /></li>
+                                    <li><i class="fa fa-check"></i> Detail result</li>
+                                    <li><img src="img/screenshots/result.png" alt="" /></li>
+                                </ul>
                             </div>
+                            <!--                            <div class="slick-carousel">
+                                                             <div><div class="slide-content"><img src="examhorse-landing/img/project-slide/slide-site.png" alt="" /></div></div>
+                                                            <div><div class="slide-content"><img src="examhorse-landing/img/project-slide/login-1.png" alt="" /></div></div>
+                                                            <div><div class="slide-content"><img src="examhorse-landing/img/project-slide/language.png" alt="" /></div></div>
+                                                            <div><div class="slide-content"><img src="examhorse-landing/img/project-slide/login.png" alt="" /></div></div> 
+                                                            <div><div class="slide-content"><img src="examhorse-landing/img/project-slide/year.png" alt="" /></div></div>
+                                                            <div><div class="slide-content"><img src="examhorse-landing/img/project-slide/quiz.png" alt="" /></div></div>
+                                                            <div><div class="slide-content"><img src="examhorse-landing/img/project-slide/score.png" alt="" /></div></div>
+                                                        </div>-->
                         </div>
                     </div>
                 </div>

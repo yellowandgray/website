@@ -19,7 +19,17 @@ if (isset($_SESSION['student_register_id'])) {
                             <div class="intro-title">
                                 <h2>Get Started to a Great Career</h2>
                             </div>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,</p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                            <div class="sample-screenshot">
+                                <ul>
+                                    <li><i class="fa fa-check"></i> Year Order / Subject Order</li>
+                                    <li><img src="img/screenshots/year-subject.png" alt="" /></li>
+                                    <li><i class="fa fa-check"></i> Explanation Image</li>
+                                    <li><img src="img/screenshots/explanation.png" alt="" /></li>
+                                    <li><i class="fa fa-check"></i> Detail result</li>
+                                    <li><img src="img/screenshots/result.png" alt="" /></li>
+                                </ul>
+                            </div>
                             <!--<div class="price-detail">
                                 <h4><strike>₹999</strike> Avail the Best Discount <span>₹499</span></h4>
                             </div>-->
