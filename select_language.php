@@ -5,7 +5,6 @@ $obj = new Common();
 $languages = $obj->selectAll('*', 'language', 'status = 1');
 
 
-
 $student = $obj->selectRow('*', 'student_register', 'student_register_id = ' . $_SESSION['student_register_id']);
 $student_log_pause = $obj->selectRow('*', 'student_log_pause', 'student_id=' . $student['student_register_id']);
 
