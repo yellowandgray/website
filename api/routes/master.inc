@@ -596,6 +596,51 @@ $app->get('/get_book', function() {
 });
 
 
+
+$app->post('/free_user_store_answer', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Invalid login details');
+    $data = $app->request->post();
+    $obj = new Common();
+    $record = $obj->selectRow('*', 'question', 'question_id=' . $data['question_id']);
+    if (count($record) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Answer inserted successfully';
+
+                
+        $record_log_detail = $obj->selectRow('*', 'free_user_log_detail', 'question_id=' . $data['question_id'] .' AND student_log_id='.$data['student_log_id']);
+        if (count($record_log_detail) == 0) {
+        
+             $obj->insertRecord(array('question_id' => $record['question_id'], 'student_log_id' => $data['student_log_id'],                
+                'student_answer' => $data['answer'], 'created_at' => date('Y-m-d'), 'updated_at' => date('Y-m-d')), 'free_user_log_detail');
+            
+            /*
+            $obj->insertRecord(array('question_id' => $record['question_id'], 'student_log_id' => $data['student_log_id'],
+                'name' => $record['name'], 'image_path' => $record['image_path'], 'direction' => $record['direction'],
+                'a' => $record['a'], 'b' => $record['b'], 'c' => $record['c'], 'd' => $record['d'], 'answer' => $record['answer'],
+                'explanation' => $record['explanation'], 'image_path_explanation' => $record['image_path_explanation'],
+                'explanation_img_direction' => $record['explanation_img_direction'], 'question_no' => $record['question_no'],
+                'student_answer' => $data['answer'], 'created_at' => date('Y-m-d'), 'updated_at' => date('Y-m-d')), 'student_log_detail');
+             * */
+
+        }else {
+            
+            $obj->updateRecordWithWhere(array('student_answer' => $data['answer'],  'updated_at' => date('Y-m-d')), 'free_uer_log_detail','question_id=' . $data['question_id'] .' AND student_log_id='.$data['student_log_id']);
+            /*
+             $obj->updateRecordWithWhere(array('name' => $record['name'], 'image_path' => $record['image_path'], 'direction' => $record['direction'],
+                'a' => $record['a'], 'b' => $record['b'], 'c' => $record['c'], 'd' => $record['d'], 'answer' => $record['answer'],
+                'explanation' => $record['explanation'], 'image_path_explanation' => $record['image_path_explanation'],
+                'explanation_img_direction' => $record['explanation_img_direction'], 'question_no' => $record['question_no'],
+                'student_answer' => $data['answer'],  'updated_at' => date('Y-m-d')), 'student_log_detail','question_id=' . $data['question_id'] .' AND student_log_id='.$data['student_log_id']);
+            */
+        }     
+        // exit;
+    } else {
+        $res['message'] = 'Unable to insert this answer';
+    }
+    echoRespnse(201, $res);
+});
+
+
 $app->post('/store_answer', function() use ($app) {
     $res = array('error' => true, 'message' => 'Invalid login details');
     $data = $app->request->post();
@@ -680,6 +725,36 @@ $app->post('/store_notsure_answer', function() use ($app) {
     }
     echoRespnse(201, $res);
 });
+
+
+$app->get('/free_user_get_result_detail/:lid', function($lid) {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    //$data = $com->selectAll('*', 'student_log_detail', 'student_log_id = ' . $lid);
+    $data = $com->selectAll('sld.*,q.*', 'free_user_log_detail As sld INNER JOIN question As q ON sld.question_id=q.question_id', 'student_log_id = ' . $lid);
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+
+$app->get('/free_user_get_result_detail_by_topic/:lid/:tid', function($lid,$tid) {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    //$data = $com->selectAll('sld.*', 'student_log_detail As sld LEFT JOIN question As q ON sld.question_id=q.question_id', 'student_log_id = ' . $lid.' AND topic_id='.$tid);
+    $data = $com->selectAll('sld.*,q.*', 'free_user_log_detail As sld LEFT JOIN question As q ON sld.question_id=q.question_id', 'student_log_id = ' . $lid.' AND topic_id='.$tid);
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+
 
 $app->get('/get_result_detail/:lid', function($lid) {
     $res = array('error' => true, 'message' => 'No records found');
@@ -890,6 +965,193 @@ $app->get('/get_student_result_count_by_topic/:lid', function($lid) {
 });
 */
 
+
+$app->get('/free_user_get_student_result_count_by_topic/:lid', function($lid) {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('*', 'free_user_log_detail', 'student_log_id = ' . $lid);
+    
+    
+    
+    
+    
+    $student_log_year  = $com->selectAll('sly.*,y.year As year','free_user_log AS sl LEFT JOIN free_user_log_year As sly ON sl.student_log_id=sly.student_log_id LEFT JOIN year As y ON y.year_id=sly.year_id',' sl.student_log_id='.$lid);
+  
+   
+    //$stud_all_sel_year      =  Array();
+    $stud_all_sel_topic     =  Array();
+    
+    
+    /*
+    $ans_log_year      = array();    
+    if(count($student_log_year)>0) {
+        foreach($student_log_year as $student_log_year_v) {
+            $ans_log_year[$student_log_year_v['student_log_id']][] = $student_log_year_v['year'];
+			if($student_log_year_v['year_id']!=''){
+				if(!in_array($student_log_year_v['year_id'], $stud_all_sel_year)) {
+					$stud_all_sel_year[] = $student_log_year_v['year_id'];
+				}
+			}	
+        }
+    }
+    */
+    
+     
+    $student_log_topic = $com->selectAll('slt.*,t.name As topic_name,subject.subject_id As subject_id,subject.name As subject_name','free_user_log As sl'
+            . ' LEFT JOIN free_user_log_topic slt ON sl.student_log_id=slt.student_log_id LEFT JOIN topic As t ON slt.topic_id=t.topic_id LEFT JOIN subject ON '
+            . 't.subject_id=subject.subject_id','sl.student_log_id = '.$lid.' ORDER BY student_log_id,subject.subject_id,t.topic_id ASC');
+    
+
+    $stud_log_topic_by_log = array();
+    if(count($student_log_topic)>0) {
+        foreach ($student_log_topic as $student_log_topic) {
+            if($student_log_topic['student_log_id']!=''){
+                $stud_log_topic_by_log[$student_log_topic['student_log_id']][$student_log_topic['subject_name']][$student_log_topic['topic_id']] =  $student_log_topic['topic_name'];
+                 if(!in_array($student_log_topic['topic_id'], $stud_all_sel_topic)) {
+                        $stud_all_sel_topic[] = $student_log_topic['topic_id'];
+                 }
+            }        
+        }
+    }
+    
+ 
+    //$stud_all_sel_year_id_val  = '';
+    $stud_all_sel_topic_id_val = '';
+    
+    $ques_topic_cnt      = array();
+    $ques_cor_ans_cnt   = array();
+    
+    /*
+    if(count($stud_all_sel_year)>0) {
+        $stud_all_sel_year_id_val = implode(',',$stud_all_sel_year);
+    }
+    */
+    
+     if(count($stud_all_sel_topic)>0) {
+        $stud_all_sel_topic_id_val = implode(',',$stud_all_sel_topic);
+    }
+	
+	    
+    $data = array();
+    //if($stud_all_sel_year_id_val != '' && $stud_all_sel_topic_id_val!='') {
+   if($stud_all_sel_topic_id_val!='') {
+        //total questions year , topic 
+       /* 
+       $student_log_question  = $com->selectAll('q.*,year.year,subject.name As subject_name,t.name As topic_name',' question As q LEFT JOIN year ON q.year_id=year.year_id '
+            . 'LEFT JOIN topic As t ON q.topic_id=t.topic_id LEFT JOIN subject ON t.subject_id=subject.subject_id',' q.year_id IN ('.$stud_all_sel_year_id_val.') AND q.topic_id IN ('.$stud_all_sel_topic_id_val.')'); 
+        */
+		
+       //total questions  topic 
+       $student_log_question  = $com->selectAll('q.*,year.year,subject.name As subject_name,t.name As topic_name',' question As q LEFT JOIN year ON q.year_id=year.year_id '
+            . 'LEFT JOIN topic As t ON q.topic_id=t.topic_id LEFT JOIN subject ON t.subject_id=subject.subject_id',' q.topic_id IN ('.$stud_all_sel_topic_id_val.')'); 
+        
+        if(count($student_log_question)>0) {
+            foreach($student_log_question as $student_log_question_val) {
+                if(!isset($ques_topic_cnt[$student_log_question_val['topic_id']]['count'])){
+                    $ques_topic_cnt[$student_log_question_val['topic_id']]['count'] = 0;
+                }
+                $ques_topic_cnt[$student_log_question_val['topic_id']]['count']              =  $ques_topic_cnt[$student_log_question_val['topic_id']]['count'] + 1;
+                $ques_topic_cnt[$student_log_question_val['topic_id']]['topic_name']         =  $student_log_question_val['topic_name'];
+                $ques_topic_cnt[$student_log_question_val['topic_id']]['subject_name']       =  $student_log_question_val['subject_name'];
+         
+            }   
+        }		
+		
+        
+        //answered,correct answer count year,topic
+        /*
+        $student_log_answer = $com->selectAll('student_log_detail.*,year.year,question.topic_id',' student_log LEFT JOIN student_log_detail ON student_log.student_log_id=student_log_detail.student_log_id '
+                . 'LEFT JOIN question ON student_log_detail.question_id=question.question_id LEFT JOIN year ON question.year_id=year.year_id','student_log_detail.student_log_id='.$lid.' ORDER BY student_log_id,student_log_detail_id ASC');
+        */
+        $student_log_answer = $com->selectAll('free_user_log_detail.*,question.answer,year.year,question.topic_id',' free_user_log LEFT JOIN free_user_log_detail ON free_user_log.student_log_id=free_user_log_detail.student_log_id '
+                . 'LEFT JOIN question ON free_user_log_detail.question_id=question.question_id LEFT JOIN year ON question.year_id=year.year_id','free_user_log_detail.student_log_id='.$lid.' ORDER BY student_log_id,student_log_detail_id ASC');
+       
+        
+        $tmp_stud_log_queston_id = array(); //rmv mul question  in student log details
+        foreach($student_log_answer as $student_log_answer_val) {
+            if($student_log_answer_val['student_log_id']!='') {
+                if(!isset($tmp_stud_log_queston_id[$student_log_answer_val['student_log_id']]) || !in_array($student_log_answer_val['question_id'], $tmp_stud_log_queston_id[$student_log_answer_val['student_log_id']]))
+                {        
+                    $tmp_stud_log_queston_id[$student_log_answer_val['student_log_id']][] = $student_log_answer_val['question_id'];
+                    if(!isset($ques_cor_ans_cnt[$student_log_answer_val['student_log_id']][$student_log_answer_val['topic_id']]['correct_cnt']))
+                    { 
+                        $ques_cor_ans_cnt[$student_log_answer_val['student_log_id']][$student_log_answer_val['topic_id']]['correct_cnt'] = 0;
+                    }       
+
+                    if(!isset($ques_cor_ans_cnt[$student_log_answer_val['student_log_id']][$student_log_answer_val['topic_id']]['answerd_cnt']))
+                    { 
+                        $ques_cor_ans_cnt[$student_log_answer_val['student_log_id']][$student_log_answer_val['topic_id']]['answerd_cnt'] = 0;
+                    }
+
+                    
+                    if($student_log_answer_val['student_answer']!=''){                        
+                 
+                        $ques_cor_ans_cnt[$student_log_answer_val['student_log_id']][$student_log_answer_val['topic_id']]['answerd_cnt'] = $ques_cor_ans_cnt[$student_log_answer_val['student_log_id']][$student_log_answer_val['topic_id']]['answerd_cnt']+1;
+                       
+                    } 
+
+                    if($student_log_answer_val['answer']==$student_log_answer_val['student_answer']){
+                        $ques_cor_ans_cnt[$student_log_answer_val['student_log_id']][$student_log_answer_val['topic_id']]['correct_cnt'] = $ques_cor_ans_cnt[$student_log_answer_val['student_log_id']][$student_log_answer_val['topic_id']]['correct_cnt']+1;
+                    }
+
+                    } 
+            } 
+        }
+        
+        
+        
+         foreach($stud_log_topic_by_log[$lid] as $student_log_subj_subj=>$student_log_subj)
+         {    
+            //topic
+            {
+                 foreach($student_log_subj as $student_log_subj_topic_id=>$student_log_subj_topic)
+                 {
+                     $data[$student_log_subj_topic_id]['topic_id']      = $student_log_subj_topic_id;
+                     $data[$student_log_subj_topic_id]['subject_name']  = $student_log_subj_subj;
+                     $data[$student_log_subj_topic_id]['topic_name']    = $student_log_subj_topic;
+                     
+                     
+                     $tot_topic_question = 0;
+                     if(isset($ques_topic_cnt[$student_log_subj_topic_id]['count'])) {
+                            $tot_topic_question = $ques_topic_cnt[$student_log_subj_topic_id]['count'];
+                     }                     
+                     $data[$student_log_subj_topic_id]['totalcnt'] = $tot_topic_question;                     
+                     
+                     
+                    $answerd_topic_question = 0;
+                    if(isset($ques_cor_ans_cnt[$lid][$student_log_subj_topic_id]['answerd_cnt'])) {
+                        $answerd_topic_question = $ques_cor_ans_cnt[$lid][$student_log_subj_topic_id]['answerd_cnt'];
+                    }
+                    $data[$student_log_subj_topic_id]['answerdcnt'] = $answerd_topic_question;
+                    
+                    
+                    $correct_topic_question = 0;
+                    if(isset($ques_cor_ans_cnt[$lid][$student_log_subj_topic_id]['correct_cnt'])) {
+                        $correct_topic_question = $ques_cor_ans_cnt[$lid][$student_log_subj_topic_id]['correct_cnt'];
+                    }
+                    $data[$student_log_subj_topic_id]['correctcnt'] = $correct_topic_question;           
+                    
+                    $data[$student_log_subj_topic_id]['wrongcnt'] =  $data[$student_log_subj_topic_id]['answerdcnt'] - $data[$student_log_subj_topic_id]['correctcnt'];
+                     
+                 }
+            }
+         }
+   }
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+    
+
+});
+
+
+
+
+
+
 $app->get('/get_student_result_count_by_topic/:lid', function($lid) {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
@@ -1084,6 +1346,19 @@ $app->get('/get_question_answer/:qid', function($qid) {
 });
 
 
+$app->get('/free_user_get_student_answer/:qid/:logid', function($qid,$log_id) {
+    $res = array('error' => true, 'message' => 'No records found');
+    $obj = new Common();
+    $question_ans = $obj->selectRow('*', 'free_user_log_detail', 'question_id = ' . $qid.' AND student_log_id='.$log_id);
+    if (count($question_ans) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $question_ans['student_answer'];
+    }
+    echoRespnse(201, $res);
+});
+
+
 $app->get('/get_student_answer/:qid/:logid', function($qid,$log_id) {
     $res = array('error' => true, 'message' => 'No records found');
     $obj = new Common();
@@ -1121,6 +1396,29 @@ $app->get('/get_feedback', function() {
     echoRespnse(201, $res);
 });
 
+
+$app->post('/free_user_store_duration_question', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Invalid login details');
+    $data = $app->request->post();
+    $obj = new Common();
+    $record = $obj->selectRow('*', 'free_user_log', 'student_log_id=' . $data['student_log']);
+    if (count($record) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'studnet log updated successfully';
+         
+        
+        //get answered count from student_answer table
+        $question_ans = $obj->selectAll('*', 'free_user_log_detail', 'student_log_id='.$data['student_log']);
+        $cnt_question_ans = count($question_ans);
+        //update
+        $obj->updateRecordWithWhere(array('no_ques_duration' => $cnt_question_ans), 'free_user_log','student_log_id=' . $data['student_log']);
+        
+        // exit;
+    } else {
+        $res['message'] = 'Unable to update studnet log';
+    }
+    echoRespnse(201, $res);
+});
 
 
 $app->post('/store_duration_question', function() use ($app) {
@@ -1166,6 +1464,29 @@ $app->post('/store_stud_duration', function() use ($app) {
 });
 
 
+
+$app->post('/free_user_store_stud_duration', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Invalid login details');
+    $data = $app->request->post();
+    $obj = new Common();
+    $record = $obj->selectRow('*', 'free_user_log', 'student_log_id=' . $data['student_log']);
+    if (count($record) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'studnet log updated successfully';
+     
+         //update
+        $obj->updateRecordWithWhere(array('stud_time_taken_sec' => $data['stud_duration']), 'free_user_log','student_log_id=' . $data['student_log']);
+        
+        // exit;
+    } else {
+        $res['message'] = 'Unable to update studnet log';
+    }
+    echoRespnse(201, $res);
+});
+
+
+
+
 $app->get('/get_student_log_time_info/:logid', function($log_id) {
     $res = array('error' => true, 'message' => 'No records found');
     $obj = new Common();
@@ -1180,12 +1501,28 @@ $app->get('/get_student_log_time_info/:logid', function($log_id) {
 });
 
 
+$app->get('/free_user_get_student_log_time_info/:logid', function($log_id) {
+    $res = array('error' => true, 'message' => 'No records found');
+    $obj = new Common();
+    $question_ans = $obj->selectRow('*', 'free_user_log', 'student_log_id = ' . $log_id);
+    if (count($question_ans) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['ques_answered'] =  $question_ans['no_ques_duration'];
+        $res['ques_duration'] =  $question_ans['stud_time_taken_sec'];
+    }
+    echoRespnse(201, $res);
+});
+
+
+
 $app->post('/samplelogin', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
     $record = $com->insertRecord(array('name' => $data['name'], 'phone' => $data['phone'], 'email' => $data['email'],'created_at'=>date('Y-m-d H:i:s')), 'free_user_login');
     if ($record > 0) {
+        $_SESSION['free_user_id'] = $record;
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
     }
@@ -1261,4 +1598,19 @@ $app->post('/store_student_pause', function() use ($app) {
         }     
         // exit;
        echoRespnse(201, $res);
+});
+
+
+
+$app->get('/get_result_detail_ans_cnt/:lid', function($lid) {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    //$data = $com->selectAll('*', 'student_log_detail', 'student_log_id = ' . $lid);
+    $data = $com->selectRow('count(sld.student_log_detail_id) As ans_cnt', 'student_log_detail As sld INNER JOIN question As q ON sld.question_id=q.question_id', 'student_log_id = ' . $lid);
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['ans_cnt'] = $data['ans_cnt'];
+    }
+    echoRespnse(201, $res);
 });

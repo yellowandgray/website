@@ -15,10 +15,8 @@ if (!isset($_SESSION['student_selected_type'])) {
     header('Location: sample-language');
 }
 
-if(isset($_SESSION['student_register_id'])) {
-    $student_register_id = $_SESSION['student_register_id'];
-}else {
-    $student_register_id = 0;
+if(isset($_SESSION['free_user_id'])) {
+    $student_register_id = $_SESSION['free_user_id'];
 }
 
 $other_language = $obj->selectRow('*', 'language', 'language_id <> ' . $_SESSION['student_selected_language_id']);
@@ -47,7 +45,7 @@ if ($_SESSION['student_selected_type'] == 'order') {
     //resume log
     $student_log_v = '';
     if (isset($_REQUEST['from_log']) && ($_REQUEST['from_log'] != '') && ($student_register_id!=0)) {
-        $check_log = $obj->selectRow('*', 'student_log', 'student_log_id=' . $_REQUEST['from_log'] . ' AND student_register_id=' . $_SESSION['student_register_id']);
+        $check_log = $obj->selectRow('*', 'student_log', 'student_log_id=' . $_REQUEST['from_log'] . ' AND student_register_id=' . $student_register_id);
         if (count($check_log) < 1) {
             header('Location: qorder-years');
         } else {
@@ -56,17 +54,17 @@ if ($_SESSION['student_selected_type'] == 'order') {
     }
 
     if ($student_log_v == '') {
-        $student_log = $obj->insertRecord(array('language_id' => $_SESSION['student_selected_language_id'], 'student_register_id' => $student_register_id, 'total_questions' => count($questions), 'created_at' => date('Y-m-d H:i:s'), 'created_by' => $student_register_id, 'updated_at' => date('Y-m-d H:i:s'), 'updated_by' => $student_register_id), 'student_log');
-        $student_log_order = $obj->insertRecord(array('student_log_id' => $student_log, 'student_log_order' => 1), 'student_log_order');
+        $student_log = $obj->insertRecord(array('language_id' => $_SESSION['student_selected_language_id'], 'student_register_id' => $student_register_id, 'total_questions' => count($questions), 'created_at' => date('Y-m-d H:i:s'), 'created_by' => $student_register_id, 'updated_at' => date('Y-m-d H:i:s'), 'updated_by' => $student_register_id), 'free_user_log');
+        $student_log_order = $obj->insertRecord(array('student_log_id' => $student_log, 'student_log_order' => 1), 'free_user_log_order');
 
-        $student_log_year = $obj->insertRecord(array('student_log_id' => $student_log, 'year_id' => $_SESSION['student_selected_year_id']), 'student_log_year');
+        $student_log_year = $obj->insertRecord(array('student_log_id' => $student_log, 'year_id' => $_SESSION['student_selected_year_id']), 'free_user_log_year');
     } else {
         //update log
         $student_log = $student_log_v;
-        $student_log_update = $obj->updateRecordWithWhere(array('updated_at' => date('Y-m-d H:i:s'), 'student_register_id' => $student_register_id), 'student_log', ' student_log_id=' . $student_log);
-        $log_details = $obj->selectRow('COUNT(student_log_detail_id) AS attended, IFNULL((SELECT COUNT(student_log_detail_id) FROM student_log_detail '
+        $student_log_update = $obj->updateRecordWithWhere(array('updated_at' => date('Y-m-d H:i:s'), 'student_register_id' => $student_register_id), 'free_user_log', ' student_log_id=' . $student_log);
+        $log_details = $obj->selectRow('COUNT(student_log_detail_id) AS attended, IFNULL((SELECT COUNT(student_log_detail_id) FROM free_user_log_detail '
                 . '  WHERE student_log_id=' . $student_log . ' AND UPPER(answer) = UPPER(student_answer)), 0) AS correct_answers',
-                'student_log_detail', 'student_log_id=' . $student_log);
+                'free_user_log_detail', 'student_log_id=' . $student_log);
 
         if (count($log_details) > 0) {
             $attended_questions = $log_details['attended'];
@@ -129,22 +127,22 @@ if ($_SESSION['student_selected_type'] == 'subject') {
     $student_log = $obj->insertRecord(array('language_id' => $_SESSION['student_selected_language_id'],
         'student_register_id' => $student_register_id, 'total_questions' => count($questions),
         'created_at' => date('Y-m-d H:i:s'), 'created_by' => $student_register_id, 'updated_at' => date('Y-m-d H:i:s'),
-        'updated_by' => $student_register_id), 'student_log');
+        'updated_by' => $student_register_id), 'free_user_log');
 
-    $student_log_order = $obj->insertRecord(array('student_log_id' => $student_log, 'student_log_order' => 2), 'student_log_order');
+    $student_log_order = $obj->insertRecord(array('student_log_id' => $student_log, 'student_log_order' => 2), 'free_user_log_order');
 
 
     if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selected_years_id'] != '')) {
         $student_selected_years_id_arr = explode(',', $_SESSION['student_selected_years_id']);
         foreach ($student_selected_years_id_arr as $student_selected_years_id_val) {
-            $student_log_year = $obj->insertRecord(array('student_log_id' => $student_log, 'year_id' => $student_selected_years_id_val), 'student_log_year');
+            $student_log_year = $obj->insertRecord(array('student_log_id' => $student_log, 'year_id' => $student_selected_years_id_val), 'free_user_log_year');
         }
     }
 
     if (isset($_SESSION['student_selected_topics_id']) && ($_SESSION['student_selected_topics_id'] != '')) {
         $student_selected_topics_id_arr = explode(',', $_SESSION['student_selected_topics_id']);
         foreach ($student_selected_topics_id_arr as $student_selected_topics_id_val) {
-            $student_log_topic = $obj->insertRecord(array('student_log_id' => $student_log, 'topic_id' => $student_selected_topics_id_val), 'student_log_topic');
+            $student_log_topic = $obj->insertRecord(array('student_log_id' => $student_log, 'topic_id' => $student_selected_topics_id_val), 'free_user_log_topic');
         }
     }
 }
@@ -157,12 +155,15 @@ exit;
 */
 
 if($student_register_id!=0){
-    $student = $obj->selectRow('*', 'student_register', 'student_register_id = ' . $student_register_id);
+    $student = $obj->selectRow('*', 'free_user_login', 'free_user_login_id = ' . $student_register_id);
 }
+/*
 else 
 {
     $student['student_name'] = 'guest';
 }    
+ * 
+ */
 $language = $obj->selectRow('*', 'language', 'language_id = ' . $_SESSION['student_selected_language_id']);
 
 $questions_list = array();
@@ -336,7 +337,8 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
             <section class="container">
                 <div class="row">
                     <div class="span12" id="app">
-                        <div class="quiz-question-section">
+                        
+                        <div class="quiz-question-section" v-if="questionIndex < quiz.questions.length">
                             
                             <a href = '#' onclick="goBack()"><i class = 'font-icon-arrow-simple-left'></i></a>
                             <h4 id="mySigninModalLabel" class="text-center quiz-heading-width">
@@ -928,12 +930,15 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                 </p>
                                 <?php }  ?>
                                 <p class="subtitle">
-                                    Total Score: <span class="score-clr">{{ score() }}</span> / {{ quiz.questions.length }}
+                                    Your Score: <span class="score-clr">{{ score() }}</span> / {{ quiz.questions.length }}
                                 </p>
                             <!-- <p class="subtitle">
                                 Total score: {{ score() }} / {{ quiz.questions.length }}
                             </p> -->
                                 <div class="">
+                                    
+                                    <h2>Introductory Offer</h2><h4><strike>₹999 </strike> &nbsp;&nbsp; <span> ₹499</span></h4><a href="register_user" class="btn btn-green">Buy Full Version</a>
+                                    <?php /*
                                     <a class="btn btn-theme btn-rounded" @click="restart()">Restart <i class="fa fa-refresh"></i></a>
                                     <a class="btn btn-theme btn-rounded" onclick="window.location = 'select_language'">Home <i class="fa fa-refresh"></i></a>
                                     <?php if ($type=='Subject Order') { ?>
@@ -942,6 +947,9 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     <a @click="divshow()" class="btn btn-theme btn-rounded">Show Full Result <i class="fa fa-refresh"></i></a>
                                     <?php } ?>
                                     <!--/resultTitleBlock-->
+                                     */
+                                     ?>
+                                     
 
                                 </div>
 
@@ -959,13 +967,19 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                         </div>
                         <!-- question Box -->
 
-
-                        <div id="create" class="quiz-result" style="display: none;" tabindex='1'>
-
-                            <div id="question_list" style="display: none;"></div>
+                      <div v-if="questionIndex >= quiz.questions.length" v-bind:key="questionIndex" class="quizCompleted has-text-centered">      
+                        <div id="create" class="quiz-result"  tabindex='1'>                            
+                            
+                             <?php if ($type=='Subject Order') { ?>
+                                    <div id="question_list">{{divshowsorder()}}</div>
+                                    
+                            <?php }else { ?>
+                                    <div id="question_list">{{divshow()}}</div>
+                             <?php } ?>                    
+                            
                             <div id="question_list_det" style="display: none;"></div>
                         </div>
-
+                      </div>    
 
                     </div>
                 </div>
@@ -989,7 +1003,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
             image_url ='http://examhorse.com/beta/api/v1/';
             console.log(<?php echo json_encode($questions_list); ?>);
             var quiz = {
-                user: "<?php echo $student['student_name']; ?>",
+                user: "<?php echo $student['name']; ?>",
                 questions: <?php echo json_encode($questions_list); ?>
             },
                     userResponseSkelaton = Array(quiz.questions.length).fill(null);
@@ -1065,7 +1079,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                     revAns: function () {
                         $.ajax({
                             type: "GET",
-                            url: 'api/v1/get_result_detail/' +<?php echo $student_log; ?>,
+                            url: 'api/v1/free_user_get_result_detail/' +<?php echo $student_log; ?>,
                             success: function (data) {
                                 if (data.result.error === false) {
 
@@ -1140,7 +1154,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                     
                         $.ajax({
                             type: "GET",
-                            url: 'api/v1/get_result_detail/' +<?php echo $student_log; ?>,
+                            url: 'api/v1/free_user_get_result_detail/' +<?php echo $student_log; ?>,
                             success: function (data) {
                                 if (data.result.error === false) {  
                                     if(data.result.data) {
@@ -1286,7 +1300,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                         }, 600);
                         $.ajax({
                             type: "GET",
-                            url: 'api/v1/get_result_detail/' +<?php echo $student_log; ?>,
+                            url: 'api/v1/free_user_get_result_detail/' +<?php echo $student_log; ?>,
                             success: function (data) {
                                 if (data.result.error === false) {
                                     var qlist = '';
@@ -1389,7 +1403,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     //$('#question_list').html(qlist);
                                     $('#question_list').html(res);
                                      $('#question_list').show();
-                                    $("#create").toggle();                                    
+                                    //$("#create").toggle();                                    
                                 } else {
                                     swal('Information', data.result.message, 'info');
                                 }
@@ -1435,7 +1449,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     
                          $.ajax({
                             type: "GET",
-                            url: 'api/v1/get_student_result_count_by_topic/' +<?php  echo $student_log; ?>,
+                            url: 'api/v1/free_user_get_student_result_count_by_topic/' +<?php  echo $student_log; ?>,
                             success: function (data) {
                                 if (data.result.error === false) {
                                      var res ='<table>';
@@ -1465,7 +1479,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     
                                     $('#question_list').html(res);
                                      $('#question_list').show();
-                                    $("#create").toggle();                                    
+                                    //$("#create").toggle();                                    
                                     $('.loadingoverlay').hide();          
                                 }
                             }
@@ -1482,7 +1496,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                         }, 600);
                         $.ajax({
                             type: "GET",
-                            url: 'api/v1/get_result_detail/' +<?php // echo  $student_log; ?>,
+                            url: 'api/v1/free_user_get_result_detail/' +<?php // echo  $student_log; ?>,
                             success: function (data) {
                                 if (data.result.error === false) {
                                     var qlist = '';
@@ -1573,7 +1587,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                         }, 600);
                         $.ajax({
                             type: "GET",
-                            url: 'api/v1/get_result_detail_by_topic/' +<?php  echo  $student_log; ?>+'/'+tid,
+                            url: 'api/v1/free_user_get_result_detail_by_topic/' +<?php  echo  $student_log; ?>+'/'+tid,
                             success: function (data) {
                                 if (data.result.error === false) {
                                     var qlist = '';
@@ -1675,6 +1689,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     //swal("Deleted!", "Your imaginary file has been deleted.", "success");
                                 });
                     },
+                    
                     selectOptionNoSave: function (index) {
                         
                         
@@ -2074,7 +2089,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                         if (!app.showimmediate) {
                             var questions = <?php echo json_encode($questions_list); ?>;
                             var answers = ['A', 'B', 'C', 'D'];
-                            $.post("api/v1/store_answer",
+                            $.post("api/v1/free_user_store_answer",
                                     {
                                         question_id: questions[this.questionIndex].question_id,
                                         answer: answers[index],
@@ -2100,7 +2115,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     var nqid = this.questionIndex + 1;
 
                                     if (!app.showimmediate) {
-                                        $.get("api/v1/get_student_answer/" + nqid + "/<?php echo $student_log; ?>",
+                                        $.get("api/v1/free_user_get_student_answer/" + nqid + "/<?php echo $student_log; ?>",
                                                 function (data, status) {
 
                                                     if (data.result.error === false) {
@@ -2142,7 +2157,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                             if (!app.isDisabled) {
                                 var questions = <?php echo json_encode($questions_list); ?>;
                                 var answers = ['A', 'B', 'C', 'D'];
-                                $.post("api/v1/store_answer",
+                                $.post("api/v1/free_user_store_answer",
                                         {
                                             question_id: questions[this.questionIndex].question_id,
                                             answer: answers[index],
@@ -2158,7 +2173,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                 var qid = questions[this.questionIndex].question_id;
                                 //var answers   = ['A', 'B', 'C', 'D'];
                                 var ansid = answers[index];
-                                $.get("api/v1/get_question_answer/" + qid,
+                                $.get("api/v1/free_user_get_question_answer/" + qid,
                                         function (data, status) {
                                             if (data.result.error === false) {
 
@@ -2210,7 +2225,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                         if (app.showimmediate) {
 
 
-                            $.get("api/v1/get_student_answer/" + qid + "/<?php echo $student_log; ?>",
+                            $.get("api/v1/free_user_get_student_answer/" + qid + "/<?php echo $student_log; ?>",
                                     function (data, status) {
                                         if (data.result.error === false) {
                                             ansid = data.result.data;
@@ -2240,7 +2255,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                         } else {
 
 
-                            $.get("api/v1/get_student_answer/" + qid + "/<?php echo $student_log; ?>",
+                            $.get("api/v1/free_user_get_student_answer/" + qid + "/<?php echo $student_log; ?>",
                                     function (data, status) {
                                         if (data.result.error === false) {
                                             ansid = data.result.data;
@@ -2287,7 +2302,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                         
                         if (app.showimmediate) {
 
-                            $.get("api/v1/get_student_answer/" + qid + "/<?php echo $student_log; ?>",
+                            $.get("api/v1/free_user_get_student_answer/" + qid + "/<?php echo $student_log; ?>",
                                     function (data, status) {
                                         if (data.result.error === false) {
                                             ansid = data.result.data;
@@ -2318,7 +2333,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                         } else {
 
 
-                            $.get("api/v1/get_student_answer/" + qid + "/<?php echo $student_log; ?>",
+                            $.get("api/v1/free_user_get_student_answer/" + qid + "/<?php echo $student_log; ?>",
                                     function (data, status) {
                                         if (data.result.error === false) {
                                             ansid = data.result.data;
@@ -2382,7 +2397,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                         if (app.showimmediate) {
 
 
-                            $.get("api/v1/get_student_answer/" + qid + "/<?php echo $student_log; ?>",
+                            $.get("api/v1/free_user_get_student_answer/" + qid + "/<?php echo $student_log; ?>",
                                     function (data, status) {
                                         if (data.result.error === false) {
                                             ansid = data.result.data;
@@ -2412,7 +2427,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                         } else {
 
 
-                            $.get("api/v1/get_student_answer/" + qid + "/<?php echo $student_log; ?>",
+                            $.get("api/v1/free_user_get_student_answer/" + qid + "/<?php echo $student_log; ?>",
                                     function (data, status) {
                                         if (data.result.error === false) {
                                             ansid = data.result.data;
@@ -2466,7 +2481,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                         if (app.showimmediate) {
 
 
-                            $.get("api/v1/get_student_answer/" + qid + "/<?php echo $student_log; ?>",
+                            $.get("api/v1/free_user_get_student_answer/" + qid + "/<?php echo $student_log; ?>",
                                     function (data, status) {
                                         if (data.result.error === false) {
                                             ansid = data.result.data;
@@ -2496,7 +2511,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                         } else {
 
 
-                            $.get("api/v1/get_student_answer/" + qid + "/<?php echo $student_log; ?>",
+                            $.get("api/v1/free_user_get_student_answer/" + qid + "/<?php echo $student_log; ?>",
                                     function (data, status) {
                                         if (data.result.error === false) {
                                             ansid = data.result.data;
@@ -2749,7 +2764,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                         }
                     },
                     savenoquesdur:function() {
-                         $.post("api/v1/store_duration_question",
+                         $.post("api/v1/free_user_store_duration_question",
                                         {
                                             student_log: <?php echo $student_log; ?>
                                         },
@@ -2760,7 +2775,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                         });
                     },
                     savetimetaken:function() {                       
-                        $.post("api/v1/store_stud_duration",
+                        $.post("api/v1/free_user_store_stud_duration",
                                         {
                                             stud_duration : this.totseconds,
                                             student_log: <?php echo $student_log; ?>
@@ -2779,7 +2794,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                     },
                     quizdurtext:function() {
                          $('.loadingoverlay').show();
-                         $.get("api/v1/get_student_log_time_info/<?php echo $student_log; ?>",
+                         $.get("api/v1/free_user_get_student_log_time_info/<?php echo $student_log; ?>",
                                                     function (data, status) {
                                                         if (data.result.error === false) {
                                                            var qt = 0;  

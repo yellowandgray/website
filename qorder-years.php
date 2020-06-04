@@ -22,8 +22,6 @@ $years = $obj->selectAll('y.*,(select count(question_id) FROM question As q INNE
 
 if(isset($_SESSION['student_register_id'])) {
     $student_register_id = $_SESSION['student_register_id'];
-}else {
-    $student_register_id = 0;
 }
 
 
