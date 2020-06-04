@@ -181,6 +181,7 @@ if (isset($_SESSION['student_register_id'])) {
         }
     }
 }
+$students = $obj->selectrow('*', 'student_register', 'student_register_id > 0');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -197,6 +198,7 @@ if (isset($_SESSION['student_register_id'])) {
                     </div>
                     <div class="span6">
                         <div class="member-text-content">
+                            <h4>Welcome <span><?php echo $students['student_name']; ?></span></h4>
                             <!--                            <div class="member-content">
                                                             <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</h3>
                                                         </div>-->

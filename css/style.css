@@ -3776,6 +3776,17 @@ form#login-form:after {
     padding: 30px;
 }
 
+.member-text-content h4 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.member-text-content h4 span {
+    font-style: italic;
+    font-weight: 600;
+    color: #364a61;
+}
+
 .member-text-content .member-content h3 {
     margin: 0;
     padding: 0;
@@ -3937,7 +3948,25 @@ form#login-form:after {
 }
 
 .recent-session {
-    border: 1px solid green;
+/*    border: 1px solid green;*/
     padding: 20px;
     margin-bottom: 20px;
+}
+
+.recent-session p span {
+    color: #F03C02;
+}
+
+.other-language .optionContainer .option {
+     border-radius: 0 !Important; 
+     padding: 0 !Important; 
+    margin: 0 18px !Important;
+    margin-bottom: 0px !Important;
+     transition: 0.3s !Important; 
+     cursor: none !Important; 
+     background-color: transparent !Important; 
+     color: rgba(0, 0, 0, 0.85) !Important; 
+     border: transparent 1px solid !Important; 
+    font-size: 15px !Important;
+    font-family: 'isMail_0', sans-serif !Important;
 }
