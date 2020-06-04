@@ -369,9 +369,15 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     <?php } ?>
                                 </table>
                             </h4>
-                            <a class="home_link" href="index">
-                                <i class="icon-home"></i>
-                            </a>
+                            <?php if (["student_register_id > 0"] == '') { ?>
+                                <a class="home_link" href="index">
+                                    <i class="icon-home"></i>
+                                </a>
+                            <?php } else { ?>
+                                <a class="home_link" href="select_language">
+                                    <i class="icon-home"></i>
+                                </a>
+                            <?php } ?>
                             
                             
                         </div>
