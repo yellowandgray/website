@@ -227,7 +227,7 @@ if (isset($_SESSION['student_register_id'])) {
                                         <div class = 'accordion-inner border-none'>
 <!-- Nav tabs -->
 <ul class="nav nav-tabs">
-  <li class="nav-item">
+  <li class="nav-item active">
     <a class="nav-link active" data-toggle="tab" href="#yordertab">Year Order</a>
   </li>
   <li class="nav-item">

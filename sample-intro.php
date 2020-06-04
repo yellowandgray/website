@@ -40,14 +40,14 @@ if (isset($_SESSION['student_register_id'])) {
                     </div>
                     <div class="col-md-6">
                         <div class="p-t-b-30px">
-                            <h3>Sample screenshots</h3>
+                            <h3>Main Features</h3>
                             <div class="sample-screenshot">
                                 <ul>
                                     <li><i class="fa fa-check"></i> Year Order / Subject Order</li>
                                     <li><img src="img/screenshots/year-subject.png" alt="" /></li>
                                     <li><i class="fa fa-check"></i> Explanation Image</li>
                                     <li><img src="img/screenshots/explanation.png" alt="" /></li>
-                                    <li><i class="fa fa-check"></i> Detail result</li>
+                                    <li><i class="fa fa-check"></i> Detail Result</li>
                                     <li><img src="img/screenshots/result.png" alt="" /></li>
                                 </ul>
                             </div>

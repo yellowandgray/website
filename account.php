@@ -3,9 +3,8 @@ session_start();
 require_once 'api/include/common.php';
 $obj = new Common();
 if (isset($_SESSION['student_register_id'])) {
-    $student = $obj->selectrow('*', 'student_register', 'student_register_id = ' . $_SESSION['student_register_id']);
+    $login_student = $obj->selectRow('*', 'student_register', 'student_register_id = ' . $_SESSION["student_register_id"]);
 }
-$students = $obj->selectrow('*', 'student_register', 'student_register_id > 0');
 ?>
 <html lang = 'en'>
     <?php include 'head.php';
@@ -25,67 +24,67 @@ $students = $obj->selectrow('*', 'student_register', 'student_register_id > 0');
                     <div class="row align-items-center flex-row-reverse" style="margin-bottom: 0">
                         <div class="span6">
                             <div class="about-avatar">
-                                <img src="<?php echo BASE_URL . $students['profile_image']; ?>" title="" alt="">
+                                <img src="<?php echo BASE_URL . $login_student['profile_image']; ?>" title="" alt="">
                             </div>
                         </div>
                         <div class="span6">
                             <div class="about-text go-to">
-                                <h3 class="dark-color"><?php echo $students['student_name']; ?></h3>
+                                <h3 class="dark-color"><?php echo $login_student['student_name']; ?></h3>
                                 <h6 class="theme-color lead">A Lead UX &amp; UI designer based in Canada</h6>
                                 <p>I <mark>design and develop</mark> services for customers of all sizes, specializing in creating stylish, modern websites, web services and online stores. My passion is to design digital user experiences through the bold interface and meaningful interactions.</p>
                                 <div class="row about-list" style="margin-bottom: 0">
                                     <div class="span3">
-                                        <div class="media">
-                                            <label>Mobile</label>
-                                            <span>:</span>
-                                            <p><?php echo $students['mobile']; ?></p>
-                                        </div>
-                                        <div class="media">
-                                            <label>Email</label>
-                                            <span>:</span>
-                                            <p><?php echo $students['email']; ?></p>
-                                        </div>
-<!--                                        <div class="media">
-                                            <label>Age</label>
-                                            <p><?php //echo $students['age']; ?></p>
-                                        </div>-->
-                                        <div class="media">
-                                            <label>Gender</label>
-                                            <span>:</span>
-                                            <p><?php echo $students['gender']; ?></p>
-                                        </div>
-                                        <div class="media">
-                                            <label>Near City</label>
-                                            <span>:</span>
-                                            <p><?php echo $students['nearcity']; ?></p>
-                                        </div>
-                                        <div class="media">
-                                            <label>Graduation</label>
-                                            <span>:</span>
-                                            <p><?php echo $students['graduation']; ?></p>
-                                        </div>
+                                        <table class="member-about-filed">
+                                            <tr>
+                                                <th>Mobile</th>
+                                                <th>:</th>
+                                                <td><?php echo $login_student['mobile']; ?></td>
+                                            </tr>
+                                            <tr>
+                                                <th>Email</th>
+                                                <th>:</th>
+                                                <td><?php echo $login_student['email']; ?></td>
+                                            </tr>
+                                            <tr>
+                                                <th>Gender</th>
+                                                <th>:</th>
+                                                <td><?php echo $login_student['gender']; ?></td>
+                                            </tr>
+                                            <tr>
+                                                <th>Graduation</th>
+                                                <th>:</th>
+                                                <td><?php echo $login_student['graduation']; ?></td>
+                                            </tr>
+                                        </table>
                                     </div>
                                     <div class="span3">
-                                        <div class="media">
-                                            <label>Street</label>
-                                            <span>:</span>
-                                            <p><?php echo $students['street']; ?></p>
-                                        </div>
-                                        <div class="media">
-                                            <label>City</label>
-                                            <span>:</span>
-                                            <p><?php echo $students['city']; ?></p>
-                                        </div>
-                                        <div class="media">
-                                            <label>District</label>
-                                            <span>:</span>
-                                            <p><?php echo $students['district']; ?></p>
-                                        </div>
-                                        <div class="media">
-                                            <label>Pin</label>
-                                            <span>:</span>
-                                            <p><?php echo $students['pin']; ?></p>
-                                        </div>
+                                        <table>
+                                            <tr>
+                                                <th>Street</th>
+                                                <th>:</th>
+                                                <td><?php echo $login_student['street']; ?></td>
+                                            </tr>
+                                            <tr>
+                                                <th>City</th>
+                                                <th>:</th>
+                                                <td><?php echo $login_student['city']; ?></td>
+                                            </tr>
+                                            <tr>
+                                                <th>District</th>
+                                                <th>:</th>
+                                                <td><?php echo $login_student['district']; ?></td>
+                                            </tr>
+                                            <tr>
+                                                <th>Pin</th>
+                                                <th>:</th>
+                                                <td><?php echo $login_student['pin']; ?></td>
+                                            </tr>
+                                            <tr>
+                                                <th>Near City</th>
+                                                <th>:</th>
+                                                <td><?php echo $login_student['nearcity']; ?></td>
+                                            </tr>
+                                        </table>
                                     </div>
                                 </div>
                             </div>

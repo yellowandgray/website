@@ -1055,6 +1055,7 @@ and open the template in the editor.
     padding: 5px 20px;
     border-radius: 30px;
     margin-bottom: 10px;
+    text-align: left;
 }
 
 .student-full-result .result-title span.no_question {
@@ -1074,6 +1075,7 @@ and open the template in the editor.
 .student-full-result .question-title h6  {
     font-size: 18px;
     font-weight: 500;
+    text-align: left;
 }
 
 .student-full-result .question-title  {
@@ -1085,6 +1087,10 @@ and open the template in the editor.
 .student-full-result .explanation_image  {
     width: 50%;
     margin: 0 auto;
+}
+
+.student-full-result .explanation_image img  {
+    width: 100%;
 }
 
 .MathJax_Display {

@@ -41,8 +41,9 @@ $obj = new Common();
                                 <p>Cras ex mauris, ornare eget pretium sit amet, dignissim et turpis. Nunc nec maximus dui, vel suscipit dolor. Donec elementum velit a orci facilisis rutrum.</p>
                                 <div class="call-as-now">
                                     <ul>
-                                        <li><img src="img/whatsapp.png" alt=""/> <span>98400 12345</span></li>
-                                        <li><img src="img/telephone.png" alt=""/> <span>98410 45678</span></li>
+<!--                                        <li><img src="img/whatsapp.png" alt=""/> <span>98400 12345</span></li>
+                                        <li><img src="img/telephone.png" alt=""/> <span>98410 45678</span></li>-->
+                                        <li><img src="img/email.png" alt=""/> <span>support@examhorse.com</span></li>
                                     </ul>                                    
                                 </div>
                             </div>

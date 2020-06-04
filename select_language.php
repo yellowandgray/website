@@ -59,10 +59,10 @@ if(count($student_log_pause)>0) {
                                     <p><span>Order:</span> Year Order</p>
                                     <p><span>Date:</span> <?php echo date('d/m/Y',strtotime($student_log_pause['pause_date'])); ?></p>
                                     <p><span>Year:</span> <?php echo $student_log_year['year']; ?></p>
-                                    <p><span>Questions:<span> <?php echo $student_log['total_questions'] ?></p>
+                                    <p><span>Questions:</span> <?php echo $student_log['total_questions'] ?></p>
                                     <p><span>Answered:</span> <?php echo $student_log_attended; ?></p>
                                     <div class="recent-btn">
-                                        <a onClick="selpausequiz();" class="btn btn-green">Resume Quiz</a>
+                                        <a onClick="selpausequiz();" class="btn btn-green">Resume Test/<a>
                                     </div>
 
                                     
@@ -194,21 +194,21 @@ if(count($student_log_pause)>0) {
   
    ?>
                                     <h3>Your Last Session</h3>
-                                    <p>Language: <?php echo $student_log['language_name']; ?></p>
-                                    <p>Order: Subject Order</p>
-                                    <p>Date: <?php echo date('d/m/Y',strtotime($student_log_pause['pause_date'])); ?></p>
+                                    <p><span>Language:</span> <?php echo $student_log['language_name']; ?></p>
+                                    <p><span>Order:</span> Subject Order</p>
+                                    <p><span>Date:</span> <?php echo date('d/m/Y',strtotime($student_log_pause['pause_date'])); ?></p>
                                     <?php 
                                    
                                     foreach($data_res as $resval) {
                                     
                                     ?>    
-                                    <p>Subject: <?php echo $resval['subject_name']; ?></p>                                  
-                                    <p>Topic: <?php echo $resval['topic_name']; ?></p>
-                                    <p>Questions: <?php echo $resval['totalcnt']; ?></p>
-                                    <p>Answered: <?php echo $resval['answerdcnt']; ?></p>
+                                    <p><span>Subject:</span> <?php echo $resval['subject_name']; ?></p>                                  
+                                    <p><span>Topic:</span> <?php echo $resval['topic_name']; ?></p>
+                                    <p><span>Questions:</span> <?php echo $resval['totalcnt']; ?></p>
+                                    <p><span>Answered:</span> <?php echo $resval['answerdcnt']; ?></p>
                                     <?php } ?>
                                     <div class="recent-btn">
-                                        <a onClick="selpausequiz();" class="btn btn-green">Resume Quiz</a>
+                                        <a onClick="selpausequiz();" class="btn btn-green">Resume Test</a>
                                     </div>                         
                                     
                                              

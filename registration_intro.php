@@ -26,7 +26,7 @@ if (isset($_SESSION['student_register_id'])) {
                                     <li><img src="img/screenshots/year-subject.png" alt="" /></li>
                                     <li><i class="fa fa-check"></i> Explanation Image</li>
                                     <li><img src="img/screenshots/explanation.png" alt="" /></li>
-                                    <li><i class="fa fa-check"></i> Detail result</li>
+                                    <li><i class="fa fa-check"></i> Detail Result</li>
                                     <li><img src="img/screenshots/result.png" alt="" /></li>
                                 </ul>
                             </div>
@@ -50,13 +50,15 @@ if (isset($_SESSION['student_register_id'])) {
                                                             <div><div class="slide-content"><img src="examhorse-landing/img/project-slide/score.png" alt="" /></div></div>
                                                         </div>
                                                     </div>-->
-                            <div class="intro-title">
-                                <h2>Introductory Offer</h2>
+                            <div class="pay-register">
+                                <div class="intro-title">
+                                    <h3>Introductory Offer</h3>
+                                </div>
+                                <div class="price-detail">
+                                    <h4><strike>₹999 </strike> &nbsp;&nbsp; <span> ₹499</span></h4>
+                                </div>
+                                <a href="register_user" class="btn btn-green" style="font-size: 20px">Pay Now</a>
                             </div>
-                            <div class="price-detail">
-                                <h4><strike>₹999 </strike> &nbsp;&nbsp; <span> ₹499</span></h4>
-                            </div>
-                            <a href="register_user" class="btn btn-green">Pay Now</a>
                         </div>
                     </div>
                 </div>

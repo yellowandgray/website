@@ -3903,6 +3903,10 @@ form#login-form:after {
     padding: 100px 0 0;
 }
 
+.about-list .member-about-filed th {
+    text-align: left;
+}
+/*
 .about-list .media {
     margin-bottom: 0px;
     display: flex;
@@ -3910,7 +3914,7 @@ form#login-form:after {
 
 .about-list .media span {
     width: 20px;
-}
+}*/
 
 .about-section .counter {
     background: #fff;
