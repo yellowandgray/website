@@ -434,7 +434,7 @@ include 'head.php';
                                     <?php } ?>
                                 </table>
                             </h4>
-                            <a class="home_link" href="select_language">
+                            <a class="home_link" href="index">
                                 <i class="icon-home"></i>
                             </a>
                                     <?php 

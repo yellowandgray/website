@@ -369,7 +369,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     <?php } ?>
                                 </table>
                             </h4>
-                            <a class="home_link" href="select_language">
+                            <a class="home_link" href="index">
                                 <i class="icon-home"></i>
                             </a>
                             
@@ -846,7 +846,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     <?php // } ?>
                                     
                                     <?php  //  if($type=='Year Order') { ?>
-                                    <div v-if="olqshow">
+                                    <div class="other-language" v-if="olqshow">
                                         
                                         <div v-if="olqd">
                                         <div v-if="olqd.show_image" class="text-center">
@@ -874,7 +874,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                         
                                         </div> 
                                         
-                                         <div v-if="!olqd">
+                                        <div v-if="!olqd">
                                              <h2 class="titleContainer title"><span class="quiz-question-title">Question Not Available in <?php echo $other_language['name'] ?></span></h2>
                                          </div>  
                                     </div>

@@ -54,12 +54,12 @@ if(count($student_log_pause)>0) {
                                 ?>
                             
                                     <h3>Your Last Session</h3>
-                                    <p>Language: <?php echo $student_log['language_name']; ?></p>
-                                    <p>Order: Year Order</p>
-                                    <p>Date: <?php echo date('d/m/Y',strtotime($student_log_pause['pause_date'])); ?></p>
-                                    <p>Year: <?php echo $student_log_year['year']; ?></p>
-                                    <p>Questions: <?php echo $student_log['total_questions'] ?></p>
-                                    <p>Answered: <?php echo $student_log_attended; ?></p>
+                                    <p><span>Language:</span> <?php echo $student_log['language_name']; ?></p>
+                                    <p><span>Order:</span> Year Order</p>
+                                    <p><span>Date:</span> <?php echo date('d/m/Y',strtotime($student_log_pause['pause_date'])); ?></p>
+                                    <p><span>Year:</span> <?php echo $student_log_year['year']; ?></p>
+                                    <p><span>Questions:<span> <?php echo $student_log['total_questions'] ?></p>
+                                    <p><span>Answered:</span> <?php echo $student_log_attended; ?></p>
                                     <div class="recent-btn">
                                         <a onClick="selpausequiz();" class="btn btn-green">Resume Quiz</a>
                                     </div>
