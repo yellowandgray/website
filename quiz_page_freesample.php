@@ -3383,33 +3383,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
             });
             
             
-    window.onbeforeunload = function() {
-  return "";
-}
     
-    
-            /*
-            window.onbeforeunload = function(){ myUnloadEvent(); }
-function myUnloadEvent() {
-
-   window.open("quiz_page_freesample?from-page=quiz");
-   return null;
-
-}
-*/
-            /*
-            
-            window.onbeforeunload = function() {
-    saveFormData();
-    return null;
-}
-
-function saveFormData() {
-    console.log('saved');
-}
-
-* 
-             */
                      </script>
         <script>
             function showqno() {
