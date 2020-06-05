@@ -662,11 +662,11 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                 </table>
                             </h4>
                             <?php if (["student_register_id > 0"] == '') { ?>
-                                <a class="home_link" href="index">
+                                <a class="home_link" href="select_language">
                                     <i class="icon-home"></i>
                                 </a>
                             <?php } else { ?>
-                                <a class="home_link" href="select_language">
+                                <a class="home_link" href="index">
                                     <i class="icon-home"></i>
                                 </a>
                             <?php } ?>

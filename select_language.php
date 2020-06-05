@@ -61,7 +61,7 @@ if(count($student_log_pause)>0) {
                                     <p><span>Questions:</span> <?php echo $student_log['total_questions'] ?></p>
                                     <p><span>Answered:</span> <?php echo $student_log_attended; ?></p>
                                     <div class="recent-btn">
-                                        <a onClick="selpausequiz();" class="btn btn-green">Resume Test/<a>
+                                        <a onClick="selpausequiz();" class="btn btn-green">Resume Test</a>
                                     </div>
 
                                     

@@ -24,67 +24,152 @@ if (isset($_SESSION['student_register_id'])) {
                     <div class="row align-items-center flex-row-reverse" style="margin-bottom: 0">
                         <div class="span6">
                             <div class="about-avatar">
-                                <img src="<?php echo BASE_URL . $login_student['profile_image']; ?>" title="" alt="">
+                                <?php if (isset($login_student['profile_image']) && $login_student['profile_image'] == '') { ?>
+                                    <img src="<?php echo BASE_URL . $login_student['gender']; ?>.jpg" alt="" />
+                                <?php } else { ?>
+                                    <img src="<?php echo BASE_URL . $login_student['profile_image']; ?>" alt="" />
+                                <?php } ?>
                             </div>
+                            <table class="member-about-filed" style="margin: 0 auto 20px;">
+                                <tr>
+                                    <th>User Name</th>
+                                    <th>:</th>
+                                    <?php if ($login_student['user_name'] != '') { ?>
+                                        <td><?php echo $login_student['user_name']; ?></td>
+                                    <?php } else { ?>
+                                        <td>Please Update...</td>
+                                    <?php } ?>
+                                </tr>
+                            </table>
+                            <center>
+                                <a href="#" class="edit-btn">Change Password</a>
+                            </center>
                         </div>
                         <div class="span6">
                             <div class="about-text go-to">
                                 <h3 class="dark-color"><?php echo $login_student['student_name']; ?></h3>
                                 <h6 class="theme-color lead">A Lead UX &amp; UI designer based in Canada</h6>
                                 <p>I <mark>design and develop</mark> services for customers of all sizes, specializing in creating stylish, modern websites, web services and online stores. My passion is to design digital user experiences through the bold interface and meaningful interactions.</p>
-                                <div class="row about-list" style="margin-bottom: 0">
-                                    <div class="span3">
-                                        <table class="member-about-filed">
-                                            <tr>
-                                                <th>Mobile</th>
-                                                <th>:</th>
-                                                <td><?php echo $login_student['mobile']; ?></td>
-                                            </tr>
-                                            <tr>
-                                                <th>Email</th>
-                                                <th>:</th>
-                                                <td><?php echo $login_student['email']; ?></td>
-                                            </tr>
-                                            <tr>
-                                                <th>Gender</th>
-                                                <th>:</th>
-                                                <td><?php echo $login_student['gender']; ?></td>
-                                            </tr>
-                                            <tr>
-                                                <th>Graduation</th>
-                                                <th>:</th>
-                                                <td><?php echo $login_student['graduation']; ?></td>
-                                            </tr>
-                                        </table>
+                                <div class="account-details">
+                                    <h3>Candidate's Info:</h3>
+                                    <div class="row about-list" style="margin-bottom: 0">
+                                        <div class="span3">
+                                            <table class="member-about-filed">
+
+                                                <tr>
+                                                    <th>Mobile</th>
+                                                    <th>:</th>
+                                                    <?php if ($login_student['mobile'] != '') { ?>
+                                                        <td><?php echo $login_student['mobile']; ?></td>
+                                                    <?php } else { ?>
+                                                        <td>Please Update...</td>
+                                                    <?php } ?>
+                                                </tr>
+                                                <tr>
+                                                    <th>Gender</th>
+                                                    <th>:</th>
+                                                    <?php if ($login_student['gender'] != '') { ?>
+                                                        <td><?php echo $login_student['gender']; ?></td>
+                                                    <?php } else { ?>
+                                                        <td>Please Update...</td>
+                                                    <?php } ?>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div class="span3">
+                                            <table class="member-about-filed">
+                                                <tr>
+                                                    <th>Email</th>
+                                                    <th>:</th>
+                                                    <?php if ($login_student['email'] != '') { ?>
+                                                        <td><?php echo $login_student['email']; ?></td>
+                                                    <?php } else { ?>
+                                                        <td>Please Update...</td>
+                                                    <?php } ?>
+                                                </tr>
+                                                <tr>
+                                                    <th>Graduation</th>
+                                                    <th>:</th>
+                                                    <?php if ($login_student['graduation'] != '') { ?>
+                                                        <td><?php echo $login_student['graduation']; ?></td>
+                                                    <?php } else { ?>
+                                                        <td>Please Update...</td>
+                                                    <?php } ?>
+                                                </tr>
+                                            </table>
+                                        </div>
                                     </div>
-                                    <div class="span3">
-                                        <table>
-                                            <tr>
-                                                <th>Street</th>
-                                                <th>:</th>
-                                                <td><?php echo $login_student['street']; ?></td>
-                                            </tr>
-                                            <tr>
-                                                <th>City</th>
-                                                <th>:</th>
-                                                <td><?php echo $login_student['city']; ?></td>
-                                            </tr>
-                                            <tr>
-                                                <th>District</th>
-                                                <th>:</th>
-                                                <td><?php echo $login_student['district']; ?></td>
-                                            </tr>
-                                            <tr>
-                                                <th>Pin</th>
-                                                <th>:</th>
-                                                <td><?php echo $login_student['pin']; ?></td>
-                                            </tr>
-                                            <tr>
-                                                <th>Near City</th>
-                                                <th>:</th>
-                                                <td><?php echo $login_student['nearcity']; ?></td>
-                                            </tr>
-                                        </table>
+                                    <h3>Address:</h3>
+                                    <div class="row about-list" style="margin-bottom: 0">
+                                        <div class="span3">
+                                            <table class="member-about-filed">
+                                                <tr>
+                                                    <th>Street</th>
+                                                    <th>:</th>
+                                                    <?php if ($login_student['street'] != '') { ?>
+                                                        <td><?php echo $login_student['street']; ?></td>
+                                                    <?php } else { ?>
+                                                        <td>Please Update...</td>
+                                                    <?php } ?>
+                                                </tr>
+                                                <tr>
+                                                    <th>District</th>
+                                                    <th>:</th>
+                                                    <?php if ($login_student['district'] != '') { ?>
+                                                        <td><?php echo $login_student['district']; ?></td>
+                                                    <?php } else { ?>
+                                                        <td>Please Update...</td>
+                                                    <?php } ?>
+                                                </tr>
+                                                <tr>
+                                                    <th>Near City</th>
+                                                    <th>:</th>
+                                                    <?php if ($login_student['nearcity'] != '') { ?>
+                                                        <td><?php echo $login_student['nearcity']; ?></td>
+                                                    <?php } else { ?>
+                                                        <td>Please Update...</td>
+                                                    <?php } ?>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div class="span3">
+                                            <table class="member-about-filed">
+                                                <tr>
+                                                    <th>City</th>
+                                                    <th>:</th>
+                                                    <?php if ($login_student['city'] != '') { ?>
+                                                        <td><?php echo $login_student['city']; ?></td>
+                                                    <?php } else { ?>
+                                                        <td>Please Update...</td>
+                                                    <?php } ?>
+                                                </tr>
+                                                <tr>
+                                                    <th>Pin</th>
+                                                    <th>:</th>
+                                                    <?php if ($login_student['pin'] != '') { ?>
+                                                        <td><?php echo $login_student['pin']; ?></td>
+                                                    <?php } else { ?>
+                                                        <td>Please Update...</td>
+                                                    <?php } ?>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <h3>Planned to Write:</h3>
+                                    <div class="row about-list" style="margin-bottom: 0">
+                                        <div class="span3">
+                                            <table class="member-about-filed">
+                                                <tr>
+                                                    <th>Exam Type</th>
+                                                    <th>:</th>
+                                                    <?php if ($login_student['selectgroup'] != '') { ?>
+                                                        <td><?php echo $login_student['selectgroup']; ?></td>
+                                                    <?php } else { ?>
+                                                        <td>Please Update...</td>
+                                                    <?php } ?>
+                                                </tr>
+                                            </table>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

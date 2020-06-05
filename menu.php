@@ -28,13 +28,8 @@ if (isset($_SESSION['student_register_id'])) {
                                 <a href="quiz_page_freesample?from-page=quiz" class="menu-nav">Exit</a>
                             </li>
                             <li>
-                                <a href = 'registration_intro'>
-    <!--                                    <i class = 'icon-user'></i>-->
-                                    <button class="btn btn-custom" style="background: green">Buy Full Version</button>
-                                </a>
-                                <a href = 'login-page'>
-                                    <button class="btn btn-custom">Login</button>
-                                </a>
+                                <a href = 'registration_intro' class="btn btn-custom" style="background: green">Buy Full Version</a>
+                                <a href = 'login-page' class="btn btn-custom">Login</a>
                             </li>
                         </ul>
                     </div>
