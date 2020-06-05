@@ -1040,10 +1040,21 @@ $app->get('/free_user_get_student_result_count_by_topic/:lid', function($lid) {
        $student_log_question  = $com->selectAll('q.*,year.year,subject.name As subject_name,t.name As topic_name',' question As q LEFT JOIN year ON q.year_id=year.year_id '
             . 'LEFT JOIN topic As t ON q.topic_id=t.topic_id LEFT JOIN subject ON t.subject_id=subject.subject_id',' q.year_id IN ('.$stud_all_sel_year_id_val.') AND q.topic_id IN ('.$stud_all_sel_topic_id_val.')'); 
         */
+       
+                       $yid = array();
+    $years = $com->selectAll('y.*', 'year As y', 'status = 1 ORDER BY y.year ASC LIMIT 3');
+       
+       foreach($years as $y) {
+            $yid[] = $y['year_id'];
+    }
+    if(count($yid)>0) {
+       $yids =  implode(',',$yid);
+    }
+       
 		
        //total questions  topic 
        $student_log_question  = $com->selectAll('q.*,year.year,subject.name As subject_name,t.name As topic_name',' question As q LEFT JOIN year ON q.year_id=year.year_id '
-            . 'LEFT JOIN topic As t ON q.topic_id=t.topic_id LEFT JOIN subject ON t.subject_id=subject.subject_id',' q.topic_id IN ('.$stud_all_sel_topic_id_val.')'); 
+            . 'LEFT JOIN topic As t ON q.topic_id=t.topic_id LEFT JOIN subject ON t.subject_id=subject.subject_id',' q.topic_id IN ('.$stud_all_sel_topic_id_val.') AND q.year_id IN (' .$yids. ')'); 
         
         if(count($student_log_question)>0) {
             foreach($student_log_question as $student_log_question_val) {

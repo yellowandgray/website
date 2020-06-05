@@ -11,14 +11,300 @@ if (isset($_SESSION['testmode'])) {
     $testmode = $_SESSION['testmode'];
 }
 
-if (!isset($_SESSION['student_selected_type'])) {
-    header('Location: sample-language');
-}
 
 if(isset($_SESSION['free_user_id'])) {
     $student_register_id = $_SESSION['free_user_id'];
 }
 
+
+$quiz_from_page = '';
+if(isset($_GET['from-page'])&&($_GET['from-page']=='quiz')){
+    
+        $quiz_from_page = 'quiz';
+        $attended_questions = 0;
+        /*
+if(isset($_SESSION['free_user_id'])) {
+    $student_register_id = $_SESSION['free_user_id'];
+    $free_user_log = $obj->selectRow('*', 'free_user_log', 'student_register_id =' . $student_register_id.' ORDER BY student_log_id DESC');
+    if(count($free_user_log)>0) {
+        $student_log = $free_user_log['student_log_id'];
+        
+        $free_log_type = $obj->selectRow('*', 'free_user_log_order', 'student_log_id ='. $student_log);
+        $student_log_order = $free_log_type['student_log_order'];
+        
+        if ($student_log_order == 'order') {
+            $type = 'Year Order';    
+            
+            $questions              = $obj->selectAll('name,year_id, a, b, c, d, UPPER(answer) AS answer, image_path, direction,question_id,explanation,image_path_explanation,explanation_img_direction,question_no', 'question', 'topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $_SESSION['student_selected_language_id'] . ') AND year_id = ' . $_SESSION['student_selected_year_id'] . ' ORDER BY question_no ASC,year_id ASC, topic_id ASC');
+            
+        }else{
+            $type = 'Subject Order';    
+            
+            
+            $yid = array();
+    $years = $obj->selectAll('y.*', 'year As y', 'status = 1 ORDER BY y.year ASC LIMIT 3');
+   
+    foreach($years as $y) {
+            $yid[] = $y['year_id'];
+    }
+    if(count($yid)>0) {
+       $yids =  implode(',',$yid);
+    }
+    
+    
+    $type = 'Subject Order';    
+    $questions = $obj->selectAll('question.year_id,year.year,question.name As name, a, b, c, d, UPPER(answer) AS answer, image_path, direction,question_id,explanation,image_path_explanation,explanation_img_direction,question_no', 'question LEFT JOIN topic ON question.topic_id=topic.topic_id LEFT JOIN year ON question.year_id=year.year_id', 'question.topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $_SESSION['student_selected_language_id'] . ' AND t.topic_id IN (' . $_SESSION['student_selected_topics_id'] . ') ORDER BY t.subject_id ASC) AND question.year_id IN (' .$yids. ') ORDER BY subject_id ASC,question.topic_id ASC,year.year DESC,question_no ASC');
+    }
+        
+        
+        $language = $obj->selectRow('*', 'language', 'language_id = ' . $free_user_log['language_id']);
+
+$questions_list = array();
+if (count($questions) > 0) {
+    foreach ($questions as $q) {
+        $options = array();
+        $showimg = false;
+        $show_img = false;
+
+        array_push($options, array('text' => $q['a'], 'correct' => ($q['answer'] == 'A' ? true : false)));
+        array_push($options, array('text' => $q['b'], 'correct' => ($q['answer'] == 'B' ? true : false)));
+        if (isset($q['c'])) {
+            array_push($options, array('text' => $q['c'], 'correct' => ($q['answer'] == 'C' ? true : false)));
+        }
+        if (isset($q['d'])) {
+            array_push($options, array('text' => $q['d'], 'correct' => ($q['answer'] == 'D' ? true : false)));
+        }
+        if ($q['image_path'] != '') {
+            $showimg = true;
+        }
+        if ($q['image_path_explanation'] != '') {
+            $show_img = true;
+        }
+      
+
+        $qyear = '';
+        if(isset($q['year'])) {
+            $qyear = $q['year'];
+        }
+        array_push($questions_list, array(
+            'text' => $q['name'],
+            'direction' => $q['direction'],
+            'image_path' => $q['image_path'],
+            'show_image' => $showimg,
+            'show_image_explanation' => $show_img,
+            'question_id' => $q['question_id'],
+            'responses' => $options,
+            'answer' => $q['answer'],
+            'explanation' => $q['explanation'],
+            'image_path_explanation' => $q['image_path_explanation'],
+            'explanation_img_direction' => $q['explanation_img_direction'],
+            'question_no'=>$q['question_no'],
+            'year_id'=>$q['year_id'],
+            'year'=>$qyear
+        ));
+
+        /*
+          array_push($questions_list, array(
+          'text' => $q['name'],
+          'direction' => $q['direction'],
+          'image_path' => $q['image_path'],
+          'show_image' => $showimg,
+          'question_id' => $q['question_id'],
+          'responses' => $options,
+          'answer' => $q['answer'],
+          'explanation' => $q['explanation']
+
+          ));
+        
+    }
+}
+        
+    }        
+}
+*/
+
+    $student_log = $obj->selectRow('sl.*,l.name As language_name', 'free_user_log sl LEFT JOIN language l ON sl.language_id=l.language_id', 'student_register_id=' .$student_register_id. ' ORDER BY student_log_id DESC LIMIT 1');    
+
+    
+    if (count($student_log) > 0) {
+
+
+        $student_log_order = $obj->selectRow('slo.*', 'free_user_log AS sl LEFT JOIN free_user_log_order As slo  ON sl.student_log_id=slo.student_log_id', ' sl.student_register_id=' .$student_register_id. ' AND sl.student_log_id='.$student_log['student_log_id']);
+
+    
+    if (count($student_log_order) > 0) {
+
+            if ($student_log_order['student_log_order'] == 1) {
+
+                $student_log_year = $obj->selectAll('sly.*,y.year As year', 'free_user_log AS sl LEFT JOIN free_user_log_year As sly ON sl.student_log_id=sly.student_log_id LEFT JOIN year As y ON y.year_id=sly.year_id', ' sl.student_register_id='.$student_register_id);
+
+                $ans_log_year = array();
+                if (count($student_log_year) > 0) {
+                    foreach ($student_log_year as $student_log_year_v) {
+                        $ans_log_year[$student_log_year_v['student_log_id']][] = $student_log_year_v['year'];
+                    }
+                }
+            } else if ($student_log_order['student_log_order'] == 2) {
+
+                $student_log_topic = $obj->selectAll('slt.*,t.name As topic_name,subject.subject_id As subject_id,subject.name As subject_name', 'free_user_log As sl'
+                        . ' LEFT JOIN free_user_log_topic slt ON sl.student_log_id=slt.student_log_id LEFT JOIN topic As t ON slt.topic_id=t.topic_id LEFT JOIN subject ON '
+                        . 't.subject_id=subject.subject_id', 'sl.student_register_id = ' .$student_register_id. ' AND sl.student_log_id=' . $student_log['student_log_id'] . ' AND sl.student_log_id IS NOT NULL AND sl.student_log_id<>\'\' ORDER BY student_log_id,subject.subject_id,t.topic_id ASC');
+
+                
+
+
+                $stud_all_sel_topic = Array();
+                $stud_log_topic_by_log = array();
+                if (count($student_log_topic) > 0) {
+                    foreach ($student_log_topic as $student_log_topic) {
+                        if ($student_log_topic['student_log_id'] != '') {
+                            $stud_log_topic_by_log[$student_log_topic['student_log_id']][$student_log_topic['subject_name']][$student_log_topic['topic_id']] = $student_log_topic['topic_name'];
+                            if (!in_array($student_log_topic['topic_id'], $stud_all_sel_topic)) {
+                                $stud_all_sel_topic[] = $student_log_topic['topic_id'];
+                            }
+                        }
+                    }
+                }
+
+
+
+                $stud_all_sel_topic_id_val = '';
+
+                $ques_year_cnt = array();
+                $ques_cor_ans_cnt = array();
+
+
+
+                if (count($stud_all_sel_topic) > 0) {
+                    $stud_all_sel_topic_id_val = implode(',', $stud_all_sel_topic);
+                }
+
+
+
+                //total questions count in topic
+                if ($stud_all_sel_topic_id_val != '') {
+                    
+                    
+                    
+                    $yid = array();
+    $years = $obj->selectAll('y.*', 'year As y', 'status = 1 ORDER BY y.year ASC LIMIT 3');
+    /*
+    echo "<pre>";
+    print_r($years);
+    exit;
+    */
+    foreach($years as $y) {
+            $yid[] = $y['year_id'];
+    }
+    if(count($yid)>0) {
+       $yids =  implode(',',$yid);
+    }
+    
+    
+    
+                    
+                    
+                    
+                    //total questions year , topic 
+                    $student_log_question = $obj->selectAll('q.*,year.year,subject.name As subject_name,t.name As topic_name', ' question As q LEFT JOIN year ON q.year_id=year.year_id '
+                            . 'LEFT JOIN topic As t ON q.topic_id=t.topic_id LEFT JOIN subject ON t.subject_id=subject.subject_id', ' q.topic_id IN (' . $stud_all_sel_topic_id_val . ') AND q.year_id IN (' .$yids. ')');
+
+
+
+                    if (count($student_log_question) > 0) {
+                        foreach ($student_log_question as $student_log_question_val) {
+                            if (!isset($ques_year_cnt[$student_log_question_val['topic_id']]['count'])) {
+                                $ques_year_cnt[$student_log_question_val['topic_id']]['count'] = 0;
+                            }
+                            $ques_year_cnt[$student_log_question_val['topic_id']]['count'] = $ques_year_cnt[$student_log_question_val['topic_id']]['count'] + 1;
+                            $ques_year_cnt[$student_log_question_val['topic_id']]['topic_name'] = $student_log_question_val['topic_name'];
+                            $ques_year_cnt[$student_log_question_val['topic_id']]['subject_name'] = $student_log_question_val['subject_name'];
+                        }
+                    }
+
+
+
+                    $student_log_answer = $obj->selectAll('free_user_log_detail.*,year.year,question.answer,question.topic_id', ' free_user_log LEFT JOIN free_user_log_detail ON free_user_log.student_log_id=free_user_log_detail.student_log_id '
+                            . 'LEFT JOIN question ON free_user_log_detail.question_id=question.question_id LEFT JOIN year ON question.year_id=year.year_id', 'free_user_log.student_register_id=' .$student_register_id. ' AND free_user_log.student_log_id=' . $student_log['student_log_id'] . ' ORDER BY student_log_id DESC,student_log_detail_id DESC');
+
+
+
+                    $stud_topic_order = array();
+                    $stud_topic_logs = array();
+
+
+                    $tmp_stud_log_queston_id = array(); //rmv mul question  in student log details
+                    foreach ($student_log_answer as $student_log_answer_val) {
+                        if ($student_log_answer_val['student_log_id'] != '') {
+                            if (!isset($tmp_stud_log_queston_id[$student_log_answer_val['student_log_id']]) || !in_array($student_log_answer_val['question_id'], $tmp_stud_log_queston_id[$student_log_answer_val['student_log_id']])) {
+
+                                $ques_cor_ans_cnt[$student_log_answer_val['student_log_id']][$student_log_answer_val['topic_id']]['date'] = date('d/m/Y', strtotime($student_log_answer_val['created_at']));
+
+                                if (!in_array($student_log_answer_val['topic_id'], $stud_topic_order)) {
+                                    $stud_topic_order[] = $student_log_answer_val['topic_id'];
+                                }
+
+                                if (!isset($stud_topic_logs[$student_log_answer_val['topic_id']]) || !in_array($student_log_answer_val['student_log_id'], $stud_topic_logs[$student_log_answer_val['topic_id']])) {
+                                    $stud_topic_logs[$student_log_answer_val['topic_id']][] = $student_log_answer_val['student_log_id'];
+                                }
+
+                                $tmp_stud_log_queston_id[$student_log_answer_val['student_log_id']][] = $student_log_answer_val['question_id'];
+                                if (!isset($ques_cor_ans_cnt[$student_log_answer_val['student_log_id']][$student_log_answer_val['topic_id']]['correct_cnt'])) {
+                                    $ques_cor_ans_cnt[$student_log_answer_val['student_log_id']][$student_log_answer_val['topic_id']]['correct_cnt'] = 0;
+                                }
+
+
+                                if (!isset($ques_cor_ans_cnt[$student_log_answer_val['student_log_id']][$student_log_answer_val['topic_id']]['answerd_cnt'])) {
+                                    $ques_cor_ans_cnt[$student_log_answer_val['student_log_id']][$student_log_answer_val['topic_id']]['answerd_cnt'] = 0;
+                                }
+
+
+                                if ($student_log_answer_val['student_answer'] != '') {
+
+                                    $ques_cor_ans_cnt[$student_log_answer_val['student_log_id']][$student_log_answer_val['topic_id']]['answerd_cnt'] = $ques_cor_ans_cnt[$student_log_answer_val['student_log_id']][$student_log_answer_val['topic_id']]['answerd_cnt'] + 1;
+                                }
+
+                                if ($student_log_answer_val['answer'] == $student_log_answer_val['student_answer']) {
+                                    $ques_cor_ans_cnt[$student_log_answer_val['student_log_id']][$student_log_answer_val['topic_id']]['correct_cnt'] = $ques_cor_ans_cnt[$student_log_answer_val['student_log_id']][$student_log_answer_val['topic_id']]['correct_cnt'] + 1;
+                                }
+                            }
+                        }
+                    }
+                }
+
+
+              
+            }
+        }
+    }
+
+    if($student_register_id!=0){
+        $student = $obj->selectRow('*', 'free_user_login', 'free_user_login_id = ' . $student_register_id);
+    }
+    
+    
+    
+                    /*
+                  echo "<pre>";
+                  print_r($ques_cor_ans_cnt);
+                  exit;
+     
+                  echo "<pre>";
+                  print_r($stud_topic_order);
+
+                  echo "<pre>";
+                  print_r($stud_topic_logs);
+                  exit;
+                 */
+                
+}
+else {
+    
+if (!isset($_SESSION['student_selected_type'])) {
+    header('Location: sample-language');
+}
+
+    
 $other_language = $obj->selectRow('*', 'language', 'language_id <> ' . $_SESSION['student_selected_language_id']);
 $attended_questions = 0;
 if ($_SESSION['student_selected_type'] == 'order') {
@@ -323,21 +609,27 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
     $yearres = $obj->selectRow('year', 'year', ' year_id = ' . $_SESSION['student_selected_year_id']);
     $sel_year_val = $yearres['year'];
 }
+
+
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
     <?php
     $page = 'about';
     include 'head.php';
+  
     ?>
     <body class="goto-here">
         <!--container-->
         <?php include 'menu.php'; ?>
-        <div class="quiz-section" style="display:none;">
+        <div class="quiz-section" <?php if($quiz_from_page!='quiz') { echo  'style="display:none;"'; } ?>>
             <section class="container">
                 <div class="row">
                     <div class="span12" id="app">
-                        
+
+                        <?php if($quiz_from_page!='quiz') { ?>
                         <div class="quiz-question-section" v-if="questionIndex < quiz.questions.length">
                             
                             <a href = '#' onclick="goBack()"><i class = 'font-icon-arrow-simple-left'></i></a>
@@ -381,7 +673,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                             
                             
                         </div>
-                       
+                      
                          <!--question Box-->
                         <?php /*
                         <div class="questionBox" id="app">
@@ -972,8 +1264,8 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                             <!-- 		</transition> -->
                         </div>
                         <!-- question Box -->
-
-                      <div v-if="questionIndex >= quiz.questions.length" v-bind:key="questionIndex" class="quizCompleted has-text-centered">      
+                        
+                         <div v-if="questionIndex >= quiz.questions.length" v-bind:key="questionIndex" class="quizCompleted has-text-centered">      
                         <div id="create" class="quiz-result"  tabindex='1'>                            
                             
                              <?php if ($type=='Subject Order') { ?>
@@ -985,8 +1277,229 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                             
                             <div id="question_list_det" style="display: none;"></div>
                         </div>
-                      </div>    
+                      </div>   
+                        <?php } ?>
+         
+                          
+                        <?php if($quiz_from_page=='quiz') {  
+                            
+                             $total_ques = 0;
+                                $ans_ques   = 0;
+                                $cor_ans_ques = 0;
+                            
+                            if (isset($student_log_order['student_log_order']) && ($student_log_order['student_log_order'] == 1)) { //year order   
+                            
+                                    $log_detail = $obj->selectRow('COUNT(student_log_detail_id) AS attended, IFNULL((SELECT COUNT(student_log_detail_id) FROM free_user_log_detail INNER JOIN question ON free_user_log_detail.question_id=question.question_id WHERE student_log_id=' . $student_log['student_log_id'] . ' AND UPPER(answer) = UPPER(student_answer)), 0) AS correct_answers', 'free_user_log_detail', 'student_log_id=' . $student_log['student_log_id']);
+                                    $total_ques  =$student_log['total_questions'];
+                                    $ans_ques = $log_detail['attended'];
+                                    $cor_ans_ques = $log_detail['correct_answers'];
+                                
+                                
+                            }
+                            if (isset($student_log_order['student_log_order']) && ($student_log_order['student_log_order'] == 2)) { //subject order   
+                               
+                                
+                                foreach ($stud_topic_order as $stud_topic) {
+                                                foreach ($stud_topic_logs[$stud_topic] as $log_id) {
+                                                    if (isset($ques_year_cnt[$stud_topic])) {
+                                                        
+                                                                if (isset($ques_year_cnt[$stud_topic]['count'])) {
+                                                                    $total_ques += $ques_year_cnt[$stud_topic]['count'];
+                                                                }
+                                                               
+                                                                if (isset($ques_cor_ans_cnt[$log_id][$stud_topic]['answerd_cnt'])) {                                                                   
+                                                                    $ans_ques += $ques_cor_ans_cnt[$log_id][$stud_topic]['answerd_cnt'];
+                                                                } 
+                             
+                                                                if (isset($ques_cor_ans_cnt[$log_id][$stud_topic]['correct_cnt'])) {                                                                   
+                                                                    $cor_ans_ques += $ques_cor_ans_cnt[$log_id][$stud_topic]['correct_cnt'];
+                                                                } 
+                                                             
+                                                    }
+                                                }
+                                            }
+                            } 
+                                            ?>
+                            
+                            
+                            
 
+                        
+                        <div class="questionBox">
+                            <div  class="quizCompleted has-text-centered">
+
+                                <!-- quizCompletedIcon: Achievement Icon -->
+                                
+                               
+                                <h2 class="complete-title">
+                                    Test Completed
+                                </h2>
+                               
+                                <p class="subtitle">
+                                    Your Score: <span class="score-clr"><?php echo $cor_ans_ques; ?></span> / <?php echo  $total_ques; ?>
+                                </p>
+                          
+                                <div class="">
+                                    
+                                    <h2>Introductory Offer</h2><h4><strike>₹999 </strike> &nbsp;&nbsp; <span> ₹499</span></h4><a href="register_user" class="btn btn-green">Buy Full Version</a>
+                                
+                                     
+
+                                </div>
+
+                           
+
+                            </div>
+                        
+                        
+                        
+                        </div>
+                        
+                        
+                         <div class="quizCompleted has-text-centered">      
+                        <div id="create" class="quiz-result"  tabindex='1'>  
+                        <div id="question_list">
+                        <?php
+                            if (count($student_log) > 0) {
+                              
+                                if (isset($student_log_order['student_log_order']) && ($student_log_order['student_log_order'] == 1)) { //question order   
+                                    ?>    
+                                    <table style="width:100%;">
+                                        <thead>
+                                            <tr>                                                
+                                                <th class="text-center">Year</th>
+                                                <th class="text-center">Total</th>
+                                                <th class="text-center">Answered</th>
+                                                <th class="text-center"><i class="icon-ok"></i></th>
+                                                <th class="text-center"><i class="icon-remove"></i></th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+
+
+
+                                        <tbody>
+                                            <?php
+                                            $log_year_val = '';
+                                            if (isset($ans_log_year[$student_log['student_log_id']])) {
+                                                $log_year_val = $ans_log_year[$student_log['student_log_id']][0];
+                                            }
+
+
+                                            $log_detail = $obj->selectRow('COUNT(student_log_detail_id) AS attended, IFNULL((SELECT COUNT(student_log_detail_id) FROM free_user_log_detail INNER JOIN question ON free_user_log_detail.question_id=question.question_id WHERE student_log_id=' . $student_log['student_log_id'] . ' AND UPPER(answer) = UPPER(student_answer)), 0) AS correct_answers', 'free_user_log_detail', 'student_log_id=' . $student_log['student_log_id']);
+                                            $log_attended = $log_detail['attended'];
+                                            $log_correct_answers = $log_detail['correct_answers'];
+                                            ?>
+                                            <tr>                 
+                                                
+                                                <td><?php echo $log_year_val; ?></td>
+                                                <td><?php echo $student_log['total_questions']; ?></td>
+                                                <td><?php echo $log_attended; ?></td>
+                                                <td><?php echo $log_correct_answers; ?></td>
+                                                <td><?php echo $log_attended - $log_correct_answers ?></td>
+                                                <td><button class="btn btn-answerd-clr" onClick=yordershowdetailFree(<?php echo $student_log['student_log_id']; ?>);>Show Details</button></td>
+                                            </tr>
+
+
+
+                                        </tbody>
+                                    </table>
+
+                                    <?php
+                                }if (isset($student_log_order['student_log_order']) && ($student_log_order['student_log_order'] == 2)) { //subject order   
+                                    ?>
+
+
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                
+                                                
+                                                <th class="text-center">Subject</th>
+                                                <th class="text-center">Topic</th>
+                                                <th class="text-center">Total</th>
+                                                <th class="text-center">Answered</th>
+                                                <th class="text-center"><i class="icon-ok"></i></th>
+                                                <th class="text-center"><i class="icon-remove"></i></th>
+                                            </tr>
+                                        </thead>
+
+
+
+                                        <tbody>
+                                            <?php
+                                            foreach ($stud_topic_order as $stud_topic) {
+                                                foreach ($stud_topic_logs[$stud_topic] as $log_id) {
+                                                    if (isset($ques_year_cnt[$stud_topic])) {
+                                                        ?>
+                                                        <tr>                 
+                                                            
+                                                            <td><?php echo $ques_year_cnt[$stud_topic]['subject_name']; ?></td>
+                                                            <td><?php echo $ques_year_cnt[$stud_topic]['topic_name']; ?></td>
+                                                            <td><?php
+                                                                if (isset($ques_year_cnt[$stud_topic]['count'])) {
+                                                                    echo $ques_year_cnt[$stud_topic]['count'];
+                                                                } else {
+                                                                    echo '0';
+                                                                }
+                                                                ?></td>
+                                                            <td><?php
+                                                                if (isset($ques_cor_ans_cnt[$log_id][$stud_topic]['answerd_cnt'])) {
+                                                                    echo $ques_cor_ans_cnt[$log_id][$stud_topic]['answerd_cnt'];
+                                                                    $answered = $ques_cor_ans_cnt[$log_id][$stud_topic]['answerd_cnt'];
+                                                                } else {
+                                                                    echo '0';
+                                                                    $answered = 0;
+                                                                }
+                                                                ?></td>    
+
+
+                                                            <td><?php
+                                                                if (isset($ques_cor_ans_cnt[$log_id][$stud_topic]['correct_cnt'])) {
+                                                                    echo $ques_cor_ans_cnt[$log_id][$stud_topic]['correct_cnt'];
+                                                                    $correct_cnt = $ques_cor_ans_cnt[$log_id][$stud_topic]['correct_cnt'];
+                                                                } else {
+                                                                    echo '0';
+                                                                    $correct_cnt = 0;
+                                                                }
+                                                                ?></td>
+                                                            <td><?php echo $answered - $correct_cnt; ?></td>
+                                                             <td><button class="btn btn-answerd-clr" onClick=topicShowDetailFree(<?php echo $stud_topic; ?>,<?php echo $student_log['student_log_id']; ?>)>Show Details</button></td>  
+
+
+
+                                                        </tr>
+                                                        <?php
+                                                    }
+                                                }
+                                            }
+                                            ?>
+                                        </tbody>   
+                                    </table>
+
+
+                                    <?php
+                                }
+                            }
+                            ?>
+                            </div>
+                            <div id="question_list_det" style="display: none;"></div>
+                        </div>
+                      </div>
+                            
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <?php } 
+                          ?>
+
+                     
+
+                      <?php  ?>
                     </div>
                 </div>
             </section>
@@ -1004,9 +1517,12 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
 
         <?php include 'footer.php'; ?>
         <?php include 'script.php'; ?>
+         <?php 
+            if($quiz_from_page!='quiz') {  ?>
         <script>
+           
             //image_url = 'http://localhost/project/examhorse/api/v1/';
-            image_url ='http://examhorse.com/beta/api/v1/';
+            image_url ='http://examhorse.com/gama/api/v1/';
             console.log(<?php echo json_encode($questions_list); ?>);
             var quiz = {
                 user: "<?php echo $student['name']; ?>",
@@ -2822,6 +3338,9 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
             setTimeout(() => {
                 $("#feedback-popup").show();
             }, 500);
+          
+            
+            
         </script>
         <script>
             /*
@@ -2859,10 +3378,39 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                             //setInterval(app.startTimer, 1000);
                             <?php } ?>    
                             $('.loadingoverlay').hide();
-                        }, 600);                         
+                        }, 600);  
                         
             });
-        </script>
+            
+            
+    window.onbeforeunload = function() {
+  return "";
+}
+    
+    
+            /*
+            window.onbeforeunload = function(){ myUnloadEvent(); }
+function myUnloadEvent() {
+
+   window.open("quiz_page_freesample?from-page=quiz");
+   return null;
+
+}
+*/
+            /*
+            
+            window.onbeforeunload = function() {
+    saveFormData();
+    return null;
+}
+
+function saveFormData() {
+    console.log('saved');
+}
+
+* 
+             */
+                     </script>
         <script>
             function showqno() {
                 $('#header-hidden').hide();
@@ -2884,6 +3432,246 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
             function yordershowdetail(){
                 $('#question_list_det').show();
             }
+            
+           
         </script>
+          <?php
+            }
+            
+            
+            if($quiz_from_page=='quiz') {
+            ?>
+            <script>
+             image_url ='http://examhorse.com/gama/api/v1/';   
+            var app = new Vue({
+                el: "#app",
+                data: {
+                                        
+                },
+                filters: {
+                    charIndex: function (i) {
+                        return String.fromCharCode(97 + i);
+                    },
+                    AddPrefix: function (value, prefix) {
+                        return prefix + value;
+                    }
+                },
+                methods: {
+                    divshowsorderdetailFree: function (tid,lid) {        
+                        
+                        
+                        $('.loadingoverlay').show();
+                        setTimeout(() => {
+                            applyMathAjax();
+                            $('.loadingoverlay').hide();
+                        }, 600);
+                        $.ajax({
+                            type: "GET",
+                            url: 'api/v1/free_user_get_result_detail_by_topic/' +lid+'/'+tid,
+                            success: function (data) {
+                                if (data.result.error === false) {
+                                    var qlist = '';
+                                    var correct_ans = '';
+                                    var student_ans = '';
+                                    $.each(data.result.data, function (key, val) {
+                                        var foc = '';
+                                        if(key==0) {
+                                            foc = " id='ansdetfocus' tabindex='1' style='outline: none;'";
+                                        }
+                                        qlist = qlist + '<div class="question-title"'+foc+'><h6>' + (key + 1) + '. ' + val.name + '</h6>';
+                                        if (val.a !== '') {
+                                            correct_ans = '';
+                                            student_ans = '';
+                                            if ((val.answer).toUpperCase() === 'A') {
+                                                correct_ans = 'crt_clr';
+                                            }
+                                            if ((val.student_answer).toUpperCase() === 'A' && (val.answer).toUpperCase() !== 'A') {
+                                                student_ans = 'wrng_clr';
+                                            }
+                                            qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">A.</span> ' + val.a + '</div></div>';
+                                        }
+                                        if (val.b !== '') {
+                                            correct_ans = '';
+                                            student_ans = '';
+                                            if ((val.answer).toUpperCase() === 'B') {
+                                                correct_ans = 'crt_clr';
+                                            }
+                                            if ((val.student_answer).toUpperCase() === 'B' && (val.answer).toUpperCase() !== 'B') {
+                                                student_ans = 'wrng_clr';
+                                            }
+                                            qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">B.</span> ' + val.b + '</div></div>';
+                                        }
+                                        if (val.c !== '') {
+                                            correct_ans = '';
+                                            student_ans = '';
+                                            if ((val.answer).toUpperCase() === 'C') {
+                                                correct_ans = 'crt_clr';
+                                            }
+                                            if ((val.student_answer).toUpperCase() === 'C' && (val.answer).toUpperCase() !== 'C') {
+                                                student_ans = 'wrng_clr';
+                                            }
+                                            qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">C.</span> ' + val.c + '</div></div>';
+                                        }
+                                        if (val.d !== '') {
+                                            correct_ans = '';
+                                            student_ans = '';
+                                            if ((val.answer).toUpperCase() === 'D') {
+                                                correct_ans = 'crt_clr';
+                                            }
+                                            if ((val.student_answer).toUpperCase() === 'D' && (val.answer).toUpperCase() !== 'D') {
+                                                student_ans = 'wrng_clr';
+                                            }
+                                            qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">D.</span> ' + val.d + '</div></div>';
+                                        }
+                                        if (val.image_path_explanation !== '' && val.explanation_img_direction !== 'bottom') {
+                                            qlist = qlist + '<div class="explanation_image"><img src="' + image_url + val.image_path_explanation + '"></div>';
+                                        } else {
+                                            qlist = qlist + '';
+                                        }
+                                        if (val.explanation !== '') {
+                                            qlist = qlist + '<div class="explanation-section"><strong>Explanation</strong> : ' + val.explanation + '</div>';
+                                        } else {
+                                            //qlist = qlist + '<div class="explanation-section">No Explanation</div>';
+                                        }
+                                        if (val.image_path_explanation !== '' && val.explanation_img_direction !== 'top') {
+                                            qlist = qlist + '<div class="explanation_image"><img src="' + image_url + val.image_path_explanation + '"></div>';
+                                        } else {
+                                            qlist = qlist + '';
+                                        }
+                                        qlist = qlist + '</div>';
+                                    });
+                                    $('#question_list_det').html(qlist);
+                                    $('#question_list_det').show();
+                                    //$("#create").toggle();
+                                    $('#ansdetfocus').focus();
+                                } else {
+                                    swal('Information', data.result.message, 'info');
+                                }
+                            },
+                            error: function (err) {
+                                swal('Error', err.statusText, 'error');
+                            }
+                        });
+                    },
+                    divshowYearFree: function (lid) {
+                        $('.loadingoverlay').show();
+                        setTimeout(() => {
+                            applyMathAjax();
+                            $('.loadingoverlay').hide();
+                        }, 600);
+                        $.ajax({
+                            type: "GET",
+                            url: 'api/v1/free_user_get_result_detail/' +lid,
+                            success: function (data) {
+                                if (data.result.error === false) {
+                                    var qlist = '';
+                                    var correct_ans = '';
+                                    var student_ans = '';
+                                    var cor_cnt     = 0;
+                                    var ans_cnt     = 0;
+                                    var wrong_cnt   = 0;
+                                    
+                                    $.each(data.result.data, function (key, val) {                  
+                                        ans_cnt = ans_cnt +1 ;
+                                        qlist = qlist + '<div class="question-title"><h6>' + (key + 1) + '. ' + val.name + '</h6>';
+                                        if (val.a !== '') {
+                                            correct_ans = '';
+                                            student_ans = '';
+                                            if ((val.answer).toUpperCase() === 'A') {
+                                                correct_ans = 'crt_clr';                                                
+                                            }
+                                            if ((val.student_answer).toUpperCase() === 'A' && (val.answer).toUpperCase() !== 'A') {
+                                                student_ans = 'wrng_clr';
+                                                wrong_cnt = wrong_cnt+1;
+                                            }
+                                            qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">A.</span> ' + val.a + '</div></div>';
+                                        }
+                                        if (val.b !== '') {
+                                            correct_ans = '';
+                                            student_ans = '';
+                                            if ((val.answer).toUpperCase() === 'B') {
+                                                correct_ans = 'crt_clr';                                               
+                                            }
+                                            if ((val.student_answer).toUpperCase() === 'B' && (val.answer).toUpperCase() !== 'B') {
+                                                student_ans = 'wrng_clr';
+                                                wrong_cnt = wrong_cnt+1;
+                                            }
+                                            qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">B.</span> ' + val.b + '</div></div>';
+                                        }
+                                        if (val.c !== '') {
+                                            correct_ans = '';
+                                            student_ans = '';
+                                            if ((val.answer).toUpperCase() === 'C') {
+                                                correct_ans = 'crt_clr';                                                
+                                            }
+                                            if ((val.student_answer).toUpperCase() === 'C' && (val.answer).toUpperCase() !== 'C') {
+                                                student_ans = 'wrng_clr';
+                                                wrong_cnt = wrong_cnt+1;
+                                            }
+                                            qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">C.</span> ' + val.c + '</div></div>';
+                                        }
+                                        if (val.d !== '') {
+                                            correct_ans = '';
+                                            student_ans = '';
+                                            if ((val.answer).toUpperCase() === 'D') {
+                                                correct_ans = 'crt_clr';                                                
+                                            }
+                                            if ((val.student_answer).toUpperCase() === 'D' && (val.answer).toUpperCase() !== 'D') {
+                                                student_ans = 'wrng_clr';
+                                                wrong_cnt = wrong_cnt+1;
+                                            }
+                                            qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">D.</span> ' + val.d + '</div></div>';
+                                        }
+                                        if (val.image_path_explanation !== '' && val.explanation_img_direction !== 'bottom') {
+                                            qlist = qlist + '<div class="explanation_image"><img src="' + image_url + val.image_path_explanation + '"></div>';
+                                        } else {
+                                            qlist = qlist + '';
+                                        }
+                                        if (val.explanation !== '') {
+                                            qlist = qlist + '<div class="explanation-section"><strong>Explanation</strong> : ' + val.explanation + '</div>';
+                                        } else {
+                                            //qlist = qlist + '<div class="explanation-section">No Explanation</div>';
+                                        }
+                                        if (val.image_path_explanation !== '' && val.explanation_img_direction !== 'top') {
+                                            qlist = qlist + '<div class="explanation_image"><img src="' + image_url + val.image_path_explanation + '"></div>';
+                                        } else {
+                                            qlist = qlist + '';
+                                        }
+                                        qlist = qlist + '</div>';
+                                    });
+                                     $('#question_list_det').html(qlist);
+                                     $('#question_list_det').show();
+                                                                          
+                                     
+                                    //$("#create").toggle();                                    
+                                } else {
+                                    swal('Information', data.result.message, 'info');
+                                }
+                            },
+                            error: function (err) {
+                                swal('Error', err.statusText, 'error');
+                            }
+                        });
+                    },
+                    
+                    
+                    
+                }
+                
+                });
+                
+                
+                
+                
+                
+                 function yordershowdetailFree(lid) {
+                        app.divshowYearFree(lid);
+                }
+                
+                function topicShowDetailFree(tid,lid) {
+                        app.divshowsorderdetailFree(tid,lid);
+                }
+               </script> 
+            <?php } ?>
     </body>
 </html>

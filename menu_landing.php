@@ -13,8 +13,9 @@ if (isset($_SESSION['student_register_id'])) {
                 <nav>
                     <a href="about" class="menu-nav">About Us</a>
                     <a href="contact" class="menu-nav">Contact Us</a>
+                    <a href="quiz_page_freesample?from-page=quiz" class="menu-nav">Exit</a>
                     <a href="registration_intro" class="btn btn-green">Buy Full Version</a>
-                    <a href="login-page" class="btn btn-custom">Login</a>
+                    <a href="login-page" class="btn btn-custom">Login</a>                    
                 </nav>
             <?php } else { ?>
                 <div class="logout_position main-menu">

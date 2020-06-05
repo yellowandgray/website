@@ -25,6 +25,7 @@ if (isset($_SESSION['student_register_id'])) {
                             <li class="menu-cus-clr">                                
                                 <a href="about" class="menu-nav">About Us</a>
                                 <a href="contact" class="menu-nav">Contact Us</a>
+                                <a href="quiz_page_freesample?from-page=quiz" class="menu-nav">Exit</a>
                             </li>
                             <li>
                                 <a href = 'registration_intro'>
