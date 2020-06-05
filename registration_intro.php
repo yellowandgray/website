@@ -50,7 +50,7 @@ if (isset($_SESSION['student_register_id'])) {
                                                             <div><div class="slide-content"><img src="examhorse-landing/img/project-slide/score.png" alt="" /></div></div>
                                                         </div>
                                                     </div>-->
-                            <div class="pay-register">
+                            <div class="pay-register" style="text-align: center;border: 1px solid #f53c00;padding: 20px 10px;border-radius: 5px;">
                                 <div class="intro-title">
                                     <h3>Introductory Offer</h3>
                                 </div>

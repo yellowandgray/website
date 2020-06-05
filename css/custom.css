@@ -837,7 +837,12 @@ and open the template in the editor.
     opacity: 0.9;
     margin-top: 7px;
     margin-right: 12px;
-    height: 20px;
+    /*height: 20px;*/
+}
+
+.logout_position a.user-menu-btn {
+    position: relative;
+    top: 5px;
 }
 
 .logout-btn:hover{
@@ -1085,7 +1090,7 @@ and open the template in the editor.
 }
 
 .student-full-result .explanation_image  {
-    width: 50%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -1574,11 +1579,11 @@ and open the template in the editor.
 .logout_position a:hover {
     border-top: 2px solid #f14f1b;
     border-bottom: 2px solid #f14f1b;
-/*    padding: 0 20px;*/
+    /*    padding: 0 20px;*/
 }
 
 .logout_position a.logout-btn {
-    background: #cb1103;
+    background: #f03c02;
     color: #fff;
     text-transform: none;
     padding: 4px 15px;
