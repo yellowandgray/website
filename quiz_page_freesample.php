@@ -3399,6 +3399,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
             function showqus() {
                 $('#header-hidden').show();
                 $('#quiz-hidden').show();
+                $('#olqhidden').show();
                 $('.question-admin-panel').hide();
                 $('.questionFooter').show(); 
                 app.showqap = false;
