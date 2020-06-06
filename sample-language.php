@@ -15,9 +15,9 @@ $languages = $obj->selectAll('*', 'language', 'status = 1');
                         <div class="modal-header login-section">
                             <a href="sample-intro"><i class="font-icon-arrow-simple-left"></i></a>
                             <h4 id="mySigninModalLabel" class="text-center" style='font-weight: 600'>Select Your Choice</h4>
-                            <a class="home_link" href="index">
+<!--                            <a class="home_link" href="index">
                                 <i class="icon-home"></i>
-                            </a>
+                            </a>-->
                         </div>
                         <div class="modal-body">
 
@@ -25,7 +25,7 @@ $languages = $obj->selectAll('*', 'language', 'status = 1');
                                 <div class="language_section">
                                     <h6 class="sub-title">
                                         <?php if($val['name']=='Tamil') { ?>
-                                        தமிழ்                                        
+                                        à®¤à®®à®¿à®´à¯�                                        
                                         <?php }else { ?>
                                         <?php echo $val['name']; ?>
                                         <?php } ?>
@@ -34,11 +34,11 @@ $languages = $obj->selectAll('*', 'language', 'status = 1');
                                         <?php if($val['name']== 'Tamil') { ?>
                                         <li>
                                             <i class="icon-double-angle-right"></i>
-                                            <a href="qorder-years-freesample?lan=<?php echo $val['name']; ?>"><i class="icon-calendar"></i> ஆண்டு வரிசை</a>                             
+                                            <a href="qorder-years-freesample?lan=<?php echo $val['name']; ?>"><i class="icon-calendar"></i> à®†à®£à¯�à®Ÿà¯� à®µà®°à®¿à®šà¯ˆ</a>                             
                                         </li> 
                                         <li>
                                             <i class="icon-double-angle-right"></i>
-                                            <a href="subject_freesample?lan=<?php echo $val['name']; ?>"><i class="icon-book"></i> பாடத்திட்ட வரிசை</a>
+                                            <a href="subject_freesample?lan=<?php echo $val['name']; ?>"><i class="icon-book"></i> à®ªà®¾à®Ÿà®¤à¯�à®¤à®¿à®Ÿà¯�à®Ÿ à®µà®°à®¿à®šà¯ˆ</a>
                                         </li>
                                         <?php } else { ?>
                                         <li>

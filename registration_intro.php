@@ -31,7 +31,7 @@ if (isset($_SESSION['student_register_id'])) {
                                 </ul>
                             </div>
                             <!--<div class="price-detail">
-                                <h4><strike>₹999</strike> Avail the Best Discount <span>₹499</span></h4>
+                                <h4><strike>â‚¹999</strike> Avail the Best Discount <span>â‚¹499</span></h4>
                             </div>-->
 
                         </div>
@@ -52,12 +52,12 @@ if (isset($_SESSION['student_register_id'])) {
                                                     </div>-->
                             <div class="pay-register" style="text-align: center;border: 1px solid #f53c00;padding: 20px 10px;border-radius: 5px;">
                                 <div class="intro-title">
-                                    <h3>Introductory Offer</h3>
+                                    <img src="img/pic-intr-offer.jpg" alt="" />
                                 </div>
                                 <div class="price-detail">
-                                    <h4><strike>₹999 </strike> &nbsp;&nbsp; <span> ₹499</span></h4>
+                                    <h4><strike>₹999 </strike> &nbsp;&nbsp; <span> ₹499</span>(Inclusive in 18% GST)</h4>
                                 </div>
-                                <a href="register_user" class="btn btn-green" style="font-size: 20px">Pay Now</a>
+                                <a href="register_user" class="btn btn-green" style="font-size: 20px;padding: 10px 40px;">Pay Now</a>
                             </div>
                         </div>
                     </div>

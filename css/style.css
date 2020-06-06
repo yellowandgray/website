@@ -4012,3 +4012,19 @@ form#login-form:after {
     font-weight: 600;
     margin-bottom: 10px;
 }
+
+#explimagemodal {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+    background: transparent;
+    margin: 0 auto;
+}
+
+#explimagemodal .explimagepreview {
+    width: 100%;
+    margin: 0 auto;
+}

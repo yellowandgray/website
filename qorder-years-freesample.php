@@ -82,7 +82,7 @@ if (count($student_log_order_year) > 0) {
                                     </tr>
                                 </table>
                             </h4>
-                            <a class="home_link" href="index">
+                            <a class="home_link" href="sample-language">
                                 <i class="icon-home"></i>
                             </a>
                         </div>
