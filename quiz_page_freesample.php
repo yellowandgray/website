@@ -632,7 +632,10 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                         <?php if($quiz_from_page!='quiz') { ?>
                         <div class="quiz-question-section" v-if="questionIndex < quiz.questions.length">
                             
-                            <a href = '#' onclick="goBack()"><i class = 'font-icon-arrow-simple-left'></i></a>
+                            <a  onclick="goBack();"  v-if="!showqap"><i class = 'font-icon-arrow-simple-left'></i></a>
+                            <a  @click="showqus()"  v-if="showqap"><i class = 'font-icon-arrow-simple-left'></i></a>
+                            
+                            
                             <h4 id="mySigninModalLabel" class="text-center quiz-heading-width">
                                 <table class="table-title">
                                     <tr>
@@ -716,7 +719,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                 <div class="quiz-review">
                                     <div class="float-left" style="padding: 20px 0;">
                                         <!--a href="#" onclick="showqno();" class="btn logout-btn">Question Admin Panel</a  -->
-                                         <a href="#" @click="showQuesPanel();" class="btn logout-btn">Question Admin Panel</a>
+                                         <a  @click="showQuesPanel();" class="btn logout-btn">Question Admin Panel</a>
                                     </div>
                                 </div>  
                                 <?php } ?>        
@@ -1144,7 +1147,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     <?php // } ?>
                                     
                                     <?php  //  if($type=='Year Order') { ?>
-                                    <div class="other-language" v-if="olqshow">
+                                    <div class="other-language" v-if="olqshow" id="olqhidden">
                                         
                                         <div v-if="olqd">
                                         <div v-if="olqd.show_image" class="text-center">
@@ -1563,7 +1566,8 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                     totalquizduration : 18,
                     quizalertbeforemins: 1,
                     data_ques_answered : 0,
-                    data_ques_duration : 0
+                    data_ques_duration : 0,
+                    showqap: false
                 },
                 filters: {
                     charIndex: function (i) {
@@ -1685,7 +1689,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                         stud_ans[val.question_id]= {'student_answer':val.student_answer,'student_notsure_answer':val.student_notsure_answer};
                                     });   
                                 }
-                                
+                            } 
                                 
                                 
                                 
@@ -1738,10 +1742,11 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                         $('#header-hidden').hide();
                         $('#quiz-hidden').hide();
                         $('.questionFooter').hide();
+                        $('#olqhidden').hide();
                         $('#questionpanel').html(qTable);
                         $('.question-admin-panel').show();   
                         
-                            } 
+                             
                             }
                         });
                         //console.log(stud_ans);       
@@ -1811,7 +1816,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                     
                     
                     */
-                        
+                       this.showqap = true;  
                        
                     },
                     divshow: function () {
@@ -3395,7 +3400,8 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                 $('#header-hidden').show();
                 $('#quiz-hidden').show();
                 $('.question-admin-panel').hide();
-                $('.questionFooter').show();
+                $('.questionFooter').show(); 
+                app.showqap = false;
             }
             function goQuesFrPanel(val) {
                 app.goQuesAns(val);                

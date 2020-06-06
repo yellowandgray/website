@@ -4004,7 +4004,7 @@ form#login-form:after {
     color: rgba(0, 0, 0, 0.85) !Important; 
     border: transparent 1px solid !Important; 
     font-size: 15px !Important;
-    font-family: 'isMail_0', sans-serif !Important;
+    /* font-family: 'isMail_0', sans-serif !Important; */
 }
 
 .account-details h3 {
