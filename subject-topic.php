@@ -29,7 +29,7 @@ $counter = 0;
                 <div id="mySignin" tabindex="-1" aria-labelledby="mySigninModalLabel" aria-hidden="true">
                     <div class="modal styled">
                         <div class="modal-header login-section">
-                            <a href="subject"><i class="font-icon-arrow-simple-left"></i></a>
+                            <a href="subject?lan=<?php echo $language['name']; ?>"><i class="font-icon-arrow-simple-left"></i></a>
                             <h4 id="mySigninModalLabel" class="text-center">
                                 <table class="table-title">
                                     <tr>

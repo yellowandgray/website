@@ -1039,7 +1039,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
 
 
                                             <div style="text-align: right" v-if="shownotimmdnxt">
-                                                <a class="button"  v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
+                                                <a class="button"  v-on:click="next();" :disabled="questionIndex>=quiz.questions.length" v-if="questionIndex<quiz.questions.length-1">
                                                     <!--                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}-->Next
                                                 </a>
                                             </div> 
@@ -1566,6 +1566,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                     minuteslabel : 0,
                     isTimerPaused : true,
                     isTimerStart: false,
+                    isAllQAnsed: false,
                     showTimer: true,
                     totalquizduration : 18,
                     quizalertbeforemins: 1,
@@ -2620,6 +2621,15 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                         if (!app.showimmediate) {
                             var questions = <?php echo json_encode($questions_list); ?>;
                             var answers = ['A', 'B', 'C', 'D'];
+                            
+                            
+                             $.each(answers, function(ansi, ansv) {
+                                                var ansvl = app.convertLower(ansv);                                               
+                                                $('#ansopt_' + ansvl).removeClass('crt_clr');
+                                                $('#ansopt_' + ansvl).removeClass('is-selected');
+                                                $('#ansopt_' + ansvl).removeClass('wrng_clr');
+                                            });
+                            
                             $.post("api/v1/free_user_store_answer",
                                     {
                                         question_id: questions[this.questionIndex].question_id,
@@ -2628,14 +2638,42 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     },
                                     function (data, status) {
                                         if (data.result.error === false) {
-
+                                            if (app.questionIndex == app.quiz.questions.length - 1) {
+                                                    app.chkAllquesAnswered()
+                                                }
                                         }
                                     });
 
                             setTimeout(() => {
                                 Vue.set(this.userResponses, this.questionIndex, index);
                                 if (this.questionIndex < this.quiz.questions.length) {
-                                    this.questionIndex++;      
+                                    //this.questionIndex++;      
+                                    
+                                    
+                                     if (this.questionIndex == this.quiz.questions.length - 1) {
+
+                                            if (this.isAllQAnsed) {
+
+<?php if ($type == 'Year Order') { ?>
+                                                    //if(this.questionIndex == this.quiz.questions.length-1)   {
+                                                    this.savetimetaken();
+                                                    this.quizdurtext();
+                                                    //   }
+<?php } ?>
+                                                this.savequizendtime();
+
+                                                this.questionIndex++;
+                                                this.stopTimer();
+                                                this.showTimer = false;
+                                            }
+
+                                        } else
+                                        {
+                                            this.questionIndex++;
+                                        }
+                                    
+                                    
+                                    
                                     
                                      <?php // if($testmode==1){        ?>  
                          if(this.olqshow) {
@@ -2688,6 +2726,16 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                             if (!app.isDisabled) {
                                 var questions = <?php echo json_encode($questions_list); ?>;
                                 var answers = ['A', 'B', 'C', 'D'];
+                                
+                                
+                                 $.each(answers, function(ansi, ansv) {
+                                                var ansvl = app.convertLower(ansv);                                               
+                                                $('#ansopt_' + ansvl).removeClass('crt_clr');
+                                                $('#ansopt_' + ansvl).removeClass('is-selected');
+                                                $('#ansopt_' + ansvl).removeClass('wrng_clr');
+                                            });
+                                
+                                
                                 $.post("api/v1/free_user_store_answer",
                                         {
                                             question_id: questions[this.questionIndex].question_id,
@@ -2704,7 +2752,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                 var qid = questions[this.questionIndex].question_id;
                                 //var answers   = ['A', 'B', 'C', 'D'];
                                 var ansid = answers[index];
-                                $.get("api/v1/free_user_get_question_answer/" + qid,
+                                $.get("api/v1/get_question_answer/" + qid,
                                         function (data, status) {
                                             if (data.result.error === false) {
 
@@ -2748,9 +2796,14 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                         if (this.questionIndex < this.quiz.questions.length) {
                             this.questionIndex++;
                         }
+                        
+                        
+                        
+                        
 
                         var questions = <?php echo json_encode($questions_list); ?>;
                         var qid = questions[this.questionIndex].question_id;
+                        var answers = ['A', 'B', 'C', 'D'];
 
                        
                         if (app.showimmediate) {
@@ -2760,6 +2813,14 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     function (data, status) {
                                         if (data.result.error === false) {
                                             ansid = data.result.data;
+                                            
+                                            
+                                             $.each(answers, function(ansi, ansv) {
+                                                var ansvl = app.convertLower(ansv);                                               
+                                                $('#ansopt_' + ansvl).removeClass('crt_clr');
+                                                $('#ansopt_' + ansvl).removeClass('is-selected');
+                                                $('#ansopt_' + ansvl).removeClass('wrng_clr');
+                                            });
 
                                             $.get("api/v1/get_question_answer/" + qid,
                                                     function (data, status) {
@@ -2790,6 +2851,14 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     function (data, status) {
                                         if (data.result.error === false) {
                                             ansid = data.result.data;
+
+
+                                              $.each(answers, function(ansi, ansv) {
+                                                var ansvl = app.convertLower(ansv);                                               
+                                                $('#ansopt_' + ansvl).removeClass('crt_clr');
+                                                $('#ansopt_' + ansvl).removeClass('is-selected');
+                                                $('#ansopt_' + ansvl).removeClass('wrng_clr');
+                                            });   
 
 
                                             var studansid = app.convertLower(ansid);
@@ -2831,12 +2900,26 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                         var answers = ['A', 'B', 'C', 'D'];
                         var ansid = '';
                         
+                         
+                        
+                          
+                         
+                        
                         if (app.showimmediate) {
-
                             $.get("api/v1/free_user_get_student_answer/" + qid + "/<?php echo $student_log; ?>",
                                     function (data, status) {
                                         if (data.result.error === false) {
                                             ansid = data.result.data;
+                                            
+                                            
+                                            
+                                             $.each(answers, function(ansi, ansv) {
+                                                var ansvl = app.convertLower(ansv);                                               
+                                                $('#ansopt_' + ansvl).removeClass('crt_clr');
+                                                $('#ansopt_' + ansvl).removeClass('is-selected');
+                                                $('#ansopt_' + ansvl).removeClass('wrng_clr');
+                                            });
+                                            
 
                                             $.get("api/v1/get_question_answer/" + qid,
                                                     function (data, status) {
@@ -2869,6 +2952,13 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                         if (data.result.error === false) {
                                             ansid = data.result.data;
 
+
+                                             $.each(answers, function(ansi, ansv) {
+                                                var ansvl = app.convertLower(ansv);                                               
+                                                $('#ansopt_' + ansvl).removeClass('crt_clr');
+                                                $('#ansopt_' + ansvl).removeClass('is-selected');
+                                                $('#ansopt_' + ansvl).removeClass('wrng_clr');
+                                            });    
 
                                             var studansid = app.convertLower(ansid);
                                             $('#ansopt_' + studansid).addClass('crt_clr');
@@ -2926,8 +3016,8 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                         var answers = ['A', 'B', 'C', 'D'];
 
                         if (app.showimmediate) {
-
-
+                                
+                            
                             $.get("api/v1/free_user_get_student_answer/" + qid + "/<?php echo $student_log; ?>",
                                     function (data, status) {
                                         if (data.result.error === false) {
@@ -3341,7 +3431,22 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                                     });
                                                     //return true; 
 
-                    }    
+                    },
+                    chkAllquesAnswered: function () {
+                            $.get("api/v1/free_user_get_result_detail_ans_cnt/<?php echo $student_log; ?>",
+                                    function (data, status) {
+                                        if (data.result.error === false) {
+                                            if (data.result.ans_cnt == app.quiz.questions.length) {
+                                                app.isAllQAnsed = true;
+
+                                            } else {
+                                                app.isAllQAnsed = false;
+                                                //app.isAllQAnsed = true;
+                                            }
+
+                                        }
+                                    });
+                        }         
                 }
             });
             setTimeout(() => {

@@ -39,8 +39,8 @@ $counter = 0;
             <section id="featured-1">
                 <div id="mySignin" tabindex="-1" aria-labelledby="mySigninModalLabel" aria-hidden="true">
                     <div class="modal styled full-language-width">
-                        <div class="modal-header login-section">
-                            <a href="question-subject-order?lan=<?php echo $language['name']; ?>"><i class="font-icon-arrow-simple-left"></i></a>
+                        <div class="modal-header login-section">                            
+                            <a href="select_language"><i class="font-icon-arrow-simple-left"></i></a>
                             <h4 id="mySigninModalLabel" class="text-center">
                                 <table class="table-title">
                                     <tr>

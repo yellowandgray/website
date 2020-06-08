@@ -405,7 +405,9 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                 <div class="row">
                     <div class="span12" id="app">
                         <div class="quiz-question-section">
-                            <a href = '#' onclick="goBack()"><i class = 'font-icon-arrow-simple-left'></i></a>
+                            <a  onclick="goBack();"  v-if="!showqap"><i class = 'font-icon-arrow-simple-left'></i></a>
+                            <a  @click="showqus()"  v-if="showqap"><i class = 'font-icon-arrow-simple-left'></i></a>
+                            
                             <h4 id="mySigninModalLabel" class="text-center quiz-heading-width">
                                 <table class="table-title">
                                     <tr>
@@ -1186,7 +1188,8 @@ echo $attended_questions;
                         totalquizduration: 8,
                         quizalertbeforemins: 1,
                         data_ques_answered: 0,
-                        data_ques_duration: 0
+                        data_ques_duration: 0,
+                        showqap: false
                     },
                     filters: {
                         charIndex: function (i) {
@@ -1442,7 +1445,7 @@ echo $attended_questions;
                              
                              
                              */
-
+                            this.showqap = true;        
 
                         },
                         divshow: function () {
@@ -2237,6 +2240,16 @@ echo $attended_questions;
                             if (!app.showimmediate) {
                                 var questions = <?php echo json_encode($questions_list); ?>;
                                 var answers = ['A', 'B', 'C', 'D'];
+                                
+                                
+                                 $.each(answers, function(ansi, ansv) {
+                                                var ansvl = app.convertLower(ansv);                                               
+                                                $('#ansopt_' + ansvl).removeClass('crt_clr');
+                                                $('#ansopt_' + ansvl).removeClass('is-selected');
+                                                $('#ansopt_' + ansvl).removeClass('wrng_clr');
+                                            });
+                                
+                                
                                 $.post("api/v1/store_answer",
                                         {
                                             question_id: questions[this.questionIndex].question_id,
@@ -2326,6 +2339,16 @@ echo $attended_questions;
                                 if (!app.isDisabled) {
                                     var questions = <?php echo json_encode($questions_list); ?>;
                                     var answers = ['A', 'B', 'C', 'D'];
+                                    
+                                    
+                                     $.each(answers, function(ansi, ansv) {
+                                                var ansvl = app.convertLower(ansv);                                               
+                                                $('#ansopt_' + ansvl).removeClass('crt_clr');
+                                                $('#ansopt_' + ansvl).removeClass('is-selected');
+                                                $('#ansopt_' + ansvl).removeClass('wrng_clr');
+                                            });
+                                    
+                                    
                                     $.post("api/v1/store_answer",
                                             {
                                                 question_id: questions[this.questionIndex].question_id,
@@ -2398,6 +2421,14 @@ echo $attended_questions;
                                         function (data, status) {
                                             if (data.result.error === false) {
                                                 ansid = data.result.data;
+                                                
+                                                
+                                                $.each(answers, function(ansi, ansv) {
+                                                var ansvl = app.convertLower(ansv);                                               
+                                                $('#ansopt_' + ansvl).removeClass('crt_clr');
+                                                $('#ansopt_' + ansvl).removeClass('is-selected');
+                                                $('#ansopt_' + ansvl).removeClass('wrng_clr');
+                                            });
 
                                                 $.get("api/v1/get_question_answer/" + qid,
                                                         function (data, status) {
@@ -2428,6 +2459,15 @@ echo $attended_questions;
                                         function (data, status) {
                                             if (data.result.error === false) {
                                                 ansid = data.result.data;
+
+
+                                                $.each(answers, function(ansi, ansv) {
+                                                var ansvl = app.convertLower(ansv);                                               
+                                                $('#ansopt_' + ansvl).removeClass('crt_clr');
+                                                $('#ansopt_' + ansvl).removeClass('is-selected');
+                                                $('#ansopt_' + ansvl).removeClass('wrng_clr');
+                                            });
+
 
 
                                                 var studansid = app.convertLower(ansid);
@@ -2454,6 +2494,8 @@ echo $attended_questions;
                             }
 <?php // }    ?>
                             this.continueTimer();
+                            
+                            
 
                         },
                         prev: function () {
@@ -2474,6 +2516,16 @@ echo $attended_questions;
                                         function (data, status) {
                                             if (data.result.error === false) {
                                                 ansid = data.result.data;
+                                                
+                                                
+                                                 $.each(answers, function(ansi, ansv) {
+                                                var ansvl = app.convertLower(ansv);                                               
+                                                $('#ansopt_' + ansvl).removeClass('crt_clr');
+                                                $('#ansopt_' + ansvl).removeClass('is-selected');
+                                                $('#ansopt_' + ansvl).removeClass('wrng_clr');
+                                            });
+                                            
+                                                
 
                                                 $.get("api/v1/get_question_answer/" + qid,
                                                         function (data, status) {
@@ -2505,6 +2557,16 @@ echo $attended_questions;
                                         function (data, status) {
                                             if (data.result.error === false) {
                                                 ansid = data.result.data;
+
+
+                                                 $.each(answers, function(ansi, ansv) {
+                                                var ansvl = app.convertLower(ansv);                                               
+                                                $('#ansopt_' + ansvl).removeClass('crt_clr');
+                                                $('#ansopt_' + ansvl).removeClass('is-selected');
+                                                $('#ansopt_' + ansvl).removeClass('wrng_clr');
+                                            });
+                                                
+                                                
 
 
                                                 var studansid = app.convertLower(ansid);
@@ -3132,6 +3194,7 @@ echo $attended_questions;
                     $('#olqhidden').show();
                     $('.question-admin-panel').hide();
                     $('.questionFooter').show();
+                    app.showqap = false;
                 }
                 function goQuesFrPanel(val) {
                     app.goQuesAns(val);

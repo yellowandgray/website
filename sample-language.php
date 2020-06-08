@@ -25,7 +25,7 @@ $languages = $obj->selectAll('*', 'language', 'status = 1');
                                 <div class="language_section">
                                     <h6 class="sub-title">
                                         <?php if($val['name']=='Tamil') { ?>
-                                        à®¤à®®à®¿à®´à¯�                                        
+                                        தமிழ்                                         
                                         <?php }else { ?>
                                         <?php echo $val['name']; ?>
                                         <?php } ?>
@@ -34,11 +34,11 @@ $languages = $obj->selectAll('*', 'language', 'status = 1');
                                         <?php if($val['name']== 'Tamil') { ?>
                                         <li>
                                             <i class="icon-double-angle-right"></i>
-                                            <a href="qorder-years-freesample?lan=<?php echo $val['name']; ?>"><i class="icon-calendar"></i> à®†à®£à¯�à®Ÿà¯� à®µà®°à®¿à®šà¯ˆ</a>                             
+                                            <a href="qorder-years-freesample?lan=<?php echo $val['name']; ?>"><i class="icon-calendar"></i>ஆண்டு வரிசை</a>                             
                                         </li> 
                                         <li>
                                             <i class="icon-double-angle-right"></i>
-                                            <a href="subject_freesample?lan=<?php echo $val['name']; ?>"><i class="icon-book"></i> à®ªà®¾à®Ÿà®¤à¯�à®¤à®¿à®Ÿà¯�à®Ÿ à®µà®°à®¿à®šà¯ˆ</a>
+                                            <a href="subject_freesample?lan=<?php echo $val['name']; ?>"><i class="icon-book"></i>பாடத்திட்ட வரிசை</a>
                                         </li>
                                         <?php } else { ?>
                                         <li>

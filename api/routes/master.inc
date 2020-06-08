@@ -624,7 +624,7 @@ $app->post('/free_user_store_answer', function() use ($app) {
 
         }else {
             
-            $obj->updateRecordWithWhere(array('student_answer' => $data['answer'],  'updated_at' => date('Y-m-d')), 'free_uer_log_detail','question_id=' . $data['question_id'] .' AND student_log_id='.$data['student_log_id']);
+            $obj->updateRecordWithWhere(array('student_answer' => $data['answer'],  'updated_at' => date('Y-m-d')), 'free_user_log_detail','question_id=' . $data['question_id'] .' AND student_log_id='.$data['student_log_id']);
             /*
              $obj->updateRecordWithWhere(array('name' => $record['name'], 'image_path' => $record['image_path'], 'direction' => $record['direction'],
                 'a' => $record['a'], 'b' => $record['b'], 'c' => $record['c'], 'd' => $record['d'], 'answer' => $record['answer'],
@@ -1618,6 +1618,20 @@ $app->get('/get_result_detail_ans_cnt/:lid', function($lid) {
     $com = new Common();
     //$data = $com->selectAll('*', 'student_log_detail', 'student_log_id = ' . $lid);
     $data = $com->selectRow('count(sld.student_log_detail_id) As ans_cnt', 'student_log_detail As sld INNER JOIN question As q ON sld.question_id=q.question_id', 'student_log_id = ' . $lid);
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['ans_cnt'] = $data['ans_cnt'];
+    }
+    echoRespnse(201, $res);
+});
+
+
+$app->get('/free_user_get_result_detail_ans_cnt/:lid', function($lid) {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    //$data = $com->selectAll('*', 'student_log_detail', 'student_log_id = ' . $lid);
+    $data = $com->selectRow('count(sld.student_log_detail_id) As ans_cnt', 'free_user_log_detail As sld INNER JOIN question As q ON sld.question_id=q.question_id', 'student_log_id = ' . $lid);
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
