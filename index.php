@@ -28,15 +28,15 @@ if (isset($_SESSION['student_register_id'])) {
                         <h2>Understand, Learn, Score</h2>
                     </div>
                 </div>
-<!--                <div id="target" class="carousel-item">
-                    <div class="banner-learning" data-toggle="modal" data-target=".bs-example-modal-new">
-                        <img src="examhorse-landing/img/learning-gif.gif" alt=""/>
-                        <a href="#">Try Free Sample</a>
-                    </div>
-                    <div class="carousel-caption wow fadeInRight">
-                        <h2>Smart Learning App</h2>
-                    </div>
-                </div>-->
+                <!--                <div id="target" class="carousel-item">
+                                    <div class="banner-learning" data-toggle="modal" data-target=".bs-example-modal-new">
+                                        <img src="examhorse-landing/img/learning-gif.gif" alt=""/>
+                                        <a href="#">Try Free Sample</a>
+                                    </div>
+                                    <div class="carousel-caption wow fadeInRight">
+                                        <h2>Smart Learning App</h2>
+                                    </div>
+                                </div>-->
                 <div class="carousel-item">
                     <div class="banner-learning" onclick="window.location = 'sample-intro'">
                         <!--<img src="examhorse-landing/img/learning-gif.gif" alt=""/>-->

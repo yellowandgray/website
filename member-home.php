@@ -196,7 +196,7 @@ if (isset($_SESSION['student_register_id'])) {
                         </div>
                     </div>
                     <div class="span6">
-                        <div class="member-text-content">
+                        <div class="member-text-content" style="background: url(img/thumb-person.jpg)no-repeat;background-position: center; background-size: cover;opacity: 0.5">
                             <h4>Welcome <span><?php echo $login_student['student_name']; ?></span></h4>
                             <!--                            <div class="member-content">
                                                             <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</h3>
@@ -225,10 +225,10 @@ if (isset($_SESSION['student_register_id'])) {
                                     <table class = 'full-member-table'>
                                         <thead>
                                             <tr>
-                                                <th class="text-center">Date</th>
-                                                <th class="text-center">Year</th>
-                                                <th class="text-center">Total</th>
-                                                <th class="text-center">Answered</th>
+                                                <th>Date</th>
+                                                <th>Year</th>
+                                                <th>Total</th>
+                                                <th>Answered</th>
                                                 <th class="text-center"><i class="icon-ok-sign"></i></th>
                                                 <th class="text-center"><i class="font-icon-remove-circle"></i></th>
                                             </tr>
@@ -271,13 +271,13 @@ if (isset($_SESSION['student_register_id'])) {
                                     <table class = 'full-member-table' >
                                         <thead>
                                             <tr>
-                                                <th class="text-center">Date</th>
-                                                <th class="text-center">Subject</th>
-                                                <th class="text-center">Topic</th>
-                                                <th class="text-center">Total</th>
-                                                <th class="text-center">Answered</th>
-                                                <th class="text-center"><i class="icon-ok-sign"></i></th>
-                                                <th class="text-center"><i class="font-icon-remove-circle"></i></th>
+                                                <th>Date</th>
+                                                <th>Subject</th>
+                                                <th>Topic</th>
+                                                <th>Total</th>
+                                                <th>Answered</th>
+                                                <th><i class="icon-ok-sign"></i></th>
+                                                <th><i class="font-icon-remove-circle"></i></th>
                                             </tr>
                                         </thead>
 
@@ -396,6 +396,16 @@ if (isset($_SESSION['student_register_id'])) {
         $(document).click(function (e) {
             if (!(e.target.class === 'logout_dropdown')) {
                 $(".logout_dropdown").hide("fast");
+            }
+        });
+        $("#open-logout-1").click(function (e) {
+            //console.log("test");
+            e.stopPropagation();
+            $(".logout_dropdown_1").show("fast");
+        });
+        $(document).click(function (e) {
+            if (!(e.target.class === 'logout_dropdown_1')) {
+                $(".logout_dropdown_1").hide("fast");
             }
         });
     </script>

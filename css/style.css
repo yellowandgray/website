@@ -2663,6 +2663,9 @@ article .align-right {
     .full-language-width {
         width: 100% !important;
     }
+    .full-member-table th, .full-member-table td {
+        width: 100% !important;
+    }
 }
 
 @media (max-width: 480px) {
@@ -2751,7 +2754,7 @@ article .align-right {
         margin-top: 10px;
     }
     .headnav-1 ul li {
-        display: inline;
+        display: block;
         margin-left: 10px;
     }
     .headnav-1 ul li a {
@@ -3789,6 +3792,10 @@ form#login-form:after {
     text-align: justify;
 }
 
+.member-text-content {
+    padding: 0px 10px;
+}
+
 .member-text-content .member-content {
     background: #0db3bb;
     padding: 30px;
@@ -3797,6 +3804,7 @@ form#login-form:after {
 .member-text-content h4 {
     font-size: 20px;
     font-weight: 600;
+    background: #ffffff;
 }
 
 .member-text-content h4 span {
@@ -4014,12 +4022,12 @@ form#login-form:after {
 }
 
 #explimagemodal {
-/*    top: 0;*/
+    /* top: 0; */
     left: 0;
     right: 0;
-/*    bottom: 0;*/
+    /* bottom: 0; */
     width: 100%;
-    position: fixed;
+    position: absolute;
     background: transparent;
     margin: 0 auto;
 }
@@ -4027,4 +4035,32 @@ form#login-form:after {
 #explimagemodal .explimagepreview {
     width: 100%;
     margin: 0 auto;
+}
+
+#explimagemodal .modal-dialog .modal-content .modal-body {
+    overflow: auto;
+}
+
+.headnav-1 ul li.logout_section i {
+    font-size: 22px;
+    color: #f03c02;
+}
+
+.logout_dropdown .logout_list li a.btn-green {
+    font-size: 18px;
+    color: #fff;
+    text-transform: none;
+    padding: 5px 15px;
+    opacity: 0.9;
+    margin: 5px 0;
+}
+
+.logout_dropdown .logout_list li a.btn-custom {
+    font-size: 18px;
+    color: #fff;
+    text-transform: none;
+    padding: 5px 15px;
+    opacity: 0.9;
+    background: #F03C02;
+    margin: 5px 0;
 }

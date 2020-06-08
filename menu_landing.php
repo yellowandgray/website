@@ -29,9 +29,9 @@ if (isset($_SESSION['student_register_id'])) {
                             <i class="fa fa-reorder"></i>
                         </span>
                         <?php //if (isset($login_student['profile_image']) && $login_student['profile_image'] == '') { ?>
-                        <!--<img src="<?php //echo BASE_URL . $login_student['gender'];      ?>.jpg" alt="" />-->
+                        <!--<img src="<?php //echo BASE_URL . $login_student['gender'];       ?>.jpg" alt="" />-->
                         <?php //} else { ?>
-                        <!--<img src="<?php //echo BASE_URL . $login_student['profile_image'];      ?>" alt="" />-->
+                        <!--<img src="<?php //echo BASE_URL . $login_student['profile_image'];       ?>" alt="" />-->
                         <?php //} ?>
                         <div class="logout_dropdown">
                             <div class="user_profile">
@@ -51,7 +51,38 @@ if (isset($_SESSION['student_register_id'])) {
                         </div>
                     </div>
                 </div>
-
+                <div class="logout_position_1 mobile-main-menu">
+                    <a onclick="logoutUser('<?php echo $login_student['student_name']; ?>');" class="btn logout-btn">Logout</a>
+                    <div id="open-logout-1" class="logout_section">
+                        <span class="menu-bar">
+                            <i class="fa fa-reorder"></i>
+                        </span>
+                        <?php //if (isset($login_student['profile_image']) && $login_student['profile_image'] == '') { ?>
+                        <!--<img src="<?php //echo BASE_URL . $login_student['gender'];       ?>.jpg" alt="" />-->
+                        <?php //} else { ?>
+                        <!--<img src="<?php //echo BASE_URL . $login_student['profile_image'];       ?>" alt="" />-->
+                        <?php //} ?>
+                        <div class="logout_dropdown">
+                            <div class="user_profile">
+                                <?php if (isset($login_student['profile_image']) && $login_student['profile_image'] == '') { ?>
+                                    <img src="<?php echo BASE_URL . $login_student['gender']; ?>.jpg" alt="" />
+                                <?php } else { ?>
+                                    <img src="<?php echo BASE_URL . $login_student['profile_image']; ?>" alt="" />
+                                <?php } ?>
+                                <h5><?php echo $login_student['student_name']; ?></h5>
+                            </div>
+                            <ul class="logout_list">
+                                <li onclick="window.location = 'member-home'">My Home</li>
+                                <li onclick="window.location = 'about'">About Us</li>
+                                <li onclick="window.location = 'select_language'">Test</li>
+                                <li onclick="window.location = 'student_result'">Result</li>
+                                <li onclick="window.location = 'account'">Account</li>
+                                <li onclick="window.location = 'contact'">Contact Us</li>
+                                <!--                                <li onclick="logoutUser();">Logout</li>-->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
                 <?php /* ?>
                   <div class="logout_position">
                   <a onclick="logoutUser('<?php echo $login_student['student_name']; ?>');" class="btn logout-btn">Logout</a>

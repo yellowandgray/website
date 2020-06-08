@@ -338,7 +338,7 @@ and open the template in the editor.
     display: none;
     position: absolute;
     top: 62px;
-    right: 0;
+    right: 10px;
     box-shadow: 0 0 6px 2px #e3e3e3;
     background: #fff;
     padding: 0px 0;
@@ -347,7 +347,7 @@ and open the template in the editor.
     outline: none;
     box-sizing: border-box;
     z-index: 1;
-    width: 200px;
+    width: 250px;
 }
 
 .logout_list {
@@ -726,6 +726,7 @@ and open the template in the editor.
     font-size: 22px;
     padding-left: 10px;
     margin-top: 8px;
+    cursor: pointer;
 }
 
 .subject-section-order li input {
@@ -1119,8 +1120,32 @@ and open the template in the editor.
         margin: 0 0px 0px 10px !important;
         text-align: left;
     }
+    .logout_position {
+        display: none;
+    }
+    .logout_position.member-login-menu {
+        display: block !important;
+    }
+    .logout_dropdown_1 {
+        display: none;
+        position: absolute;
+        top: 35px;
+        right: 0;
+        box-shadow: 0px 0px 4px 0px #e3e3e3;
+        background: #fff;
+        padding: 0px 0;
+        list-style: none;
+        border-radius: 3px;
+        outline: none;
+        box-sizing: border-box;
+        z-index: 1;
+        width: 250px;
+    }
 }
 
+.logout_position.member-login-menu {
+    display: none;
+}
 
 .quiz-pause {
     width: 95%;

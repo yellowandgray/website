@@ -30,7 +30,7 @@ if (isset($_SESSION['student_register_id'])) {
                                         <input type="email" class="form-control" id="email" placeholder="Enter Your Email" required>
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" maxlength="10" class="form-control" id="phone" placeholder="Enter Your Phone" required>
+                                        <input type="phone" pattern="[0-9]{10}" maxlength="10" class="form-control" id="phone" placeholder="Enter Your Phone" required>
                                     </div>
                                     <div class="g-recaptcha" data-sitekey="6LdRV_sUAAAAAJUxyvE5squ2GTwOApnH00odkabA"></div>
                                     <button type="submit" class="btn btn-custom">Try Free Sample</button>

@@ -27,18 +27,18 @@
      });
      */
     /*
-    test();
-    function test() {
-        if (typeof MathJax !== 'undefined') {
-            MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
-        }
-
-        MathJax.Hub.Config({
-            tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+     test();
+     function test() {
+     if (typeof MathJax !== 'undefined') {
+     MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+     }
+     
+     MathJax.Hub.Config({
+     tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
      });     
-    }
-    */
-    applyMathAjax();                    
+     }
+     */
+    applyMathAjax();
     function applyMathAjax() {
         if (typeof MathJax !== 'undefined') {
             MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
@@ -60,67 +60,77 @@
             $(".logout_dropdown").hide("fast");
         }
     });
+    $("#open-logout-1").click(function (e) {
+        //console.log("test");
+        e.stopPropagation();
+        $(".logout_dropdown_1").show("fast");
+    });
+    $(document).click(function (e) {
+        if (!(e.target.class === 'logout_dropdown_1')) {
+            $(".logout_dropdown_1").hide("fast");
+        }
+    });
 </script>
 <script>
     function goBack() {
         window.history.back();
     }
-    
+
     $(".radio-btn-section input[name='method']").click(function () {
         $('#tets').css('display', ($(this).val() !== 'learn && test') ? 'block' : '');
-    });  
-    
+    });
+
     function selmode(lang) {
         /*
-        window.location = '#popup1'; 
-        $('#tets').data('lang',lang);
-        */
-       window.location = 'question-subject-order?lan='+lang;
+         window.location = '#popup1'; 
+         $('#tets').data('lang',lang);
+         */
+        window.location = 'question-subject-order?lan=' + lang;
     }
-    
+
     /*
-    $("#tets").click(function () {            
-         //alert(' val1 '+$("input[name='method']:checked").val());   
-         
-        if($("input[name='method']:checked").val()=='learn') {
-            testmode = 1;
-        }else {
-            testmode = 0;
-        }
-        
-         var lang = $('#tets').data('lang');
-
-        if(lang!='') {
-        
-            $.ajax({
-                url: "immediate.php",
-                type: "POST",
-                data: {testmode: testmode},
-                success: function (response) {
-                    // You will get response from your PHP page (what you echo or print)
-
-                            window.location = 'question-subject-order?lan='+lang;        
-
-                },
-                error: function (jqXHR, textStatus, errorThrown) {
-                    console.log(textStatus, errorThrown);
-                }
-            });
-
-         }else {
-                    window.location = 'select_language';
-            } 
-       
-        
- 
-    });
+     $("#tets").click(function () {            
+     //alert(' val1 '+$("input[name='method']:checked").val());   
+     
+     if($("input[name='method']:checked").val()=='learn') {
+     testmode = 1;
+     }else {
+     testmode = 0;
+     }
+     
+     var lang = $('#tets').data('lang');
+     
+     if(lang!='') {
+     
+     $.ajax({
+     url: "immediate.php",
+     type: "POST",
+     data: {testmode: testmode},
+     success: function (response) {
+     // You will get response from your PHP page (what you echo or print)
+     
+     window.location = 'question-subject-order?lan='+lang;        
+     
+     },
+     error: function (jqXHR, textStatus, errorThrown) {
+     console.log(textStatus, errorThrown);
+     }
+     });
+     
+     }else {
+     window.location = 'select_language';
+     } 
+     
+     
+     
+     });
      
      */
     function chooseTestmode(testmode) {
-         var lang = $('#tets').data('lang');
+        var lang = $('#tets').data('lang');
 
-        if(lang!='') {
-        
+        if (lang != '') {
+
             $.ajax({
                 url: "immediate.php",
                 type: "POST",
@@ -128,7 +138,7 @@
                 success: function (response) {
                     // You will get response from your PHP page (what you echo or print)
 
-                            window.location = 'question-subject-order?lan='+lang;        
+                    window.location = 'question-subject-order?lan=' + lang;
 
                 },
                 error: function (jqXHR, textStatus, errorThrown) {
@@ -136,56 +146,56 @@
                 }
             });
 
-         }else {
-                    window.location = 'select_language';
-            } 
-    }
-    
-    
-    /*
-    $("input[name='method']").change(function () {            
-         //alert(' val1 '+$("input[name='method']:checked").val());   
-         
-        if($("input[name='method']:checked").val()=='learn') {
-            testmode = 1;
-        }else {
-            testmode = 0;
+        } else {
+            window.location = 'select_language';
         }
-        
-         var lang = $('#tets').data('lang');
+    }
 
-        if(lang!='') {
-        
-            $.ajax({
-                url: "immediate.php",
-                type: "POST",
-                data: {testmode: testmode},
-                success: function (response) {
-                    // You will get response from your PHP page (what you echo or print)
 
-                            window.location = 'question-subject-order?lan='+lang;        
+    /*
+     $("input[name='method']").change(function () {            
+     //alert(' val1 '+$("input[name='method']:checked").val());   
+     
+     if($("input[name='method']:checked").val()=='learn') {
+     testmode = 1;
+     }else {
+     testmode = 0;
+     }
+     
+     var lang = $('#tets').data('lang');
+     
+     if(lang!='') {
+     
+     $.ajax({
+     url: "immediate.php",
+     type: "POST",
+     data: {testmode: testmode},
+     success: function (response) {
+     // You will get response from your PHP page (what you echo or print)
+     
+     window.location = 'question-subject-order?lan='+lang;        
+     
+     },
+     error: function (jqXHR, textStatus, errorThrown) {
+     console.log(textStatus, errorThrown);
+     }
+     });
+     
+     }else {
+     window.location = 'select_language';
+     } 
+     
+     
+     
+     });
+     */
 
-                },
-                error: function (jqXHR, textStatus, errorThrown) {
-                    console.log(textStatus, errorThrown);
-                }
-            });
-
-         }else {
-                    window.location = 'select_language';
-            } 
-       
-        
- 
-    });
-    */
-    
     function selpausequiz() {
         /*
-        window.location = '#popup1'; 
-        $('#tets').data('lang',lang);
-        */
-       window.location = 'quiz_page?from=pausequiz';
+         window.location = '#popup1'; 
+         $('#tets').data('lang',lang);
+         */
+        window.location = 'quiz_page?from=pausequiz';
     }
 
 </script>
