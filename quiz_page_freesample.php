@@ -669,7 +669,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     <i class="icon-home"></i>
                                 </a>
                             <?php } else { ?>
-                                <a class="home_link" href="index">
+                            <a class="home_link" href="sample-language">
                                     <i class="icon-home"></i>
                                 </a>
                             <?php } ?>
@@ -1238,7 +1238,9 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                             </p> -->
                                 <div class="">
                                     
-                                    <h2>Introductory Offer</h2><h4><strike>₹999 </strike> &nbsp;&nbsp; <span> ₹499</span></h4><a href="register_user" class="btn btn-green">Buy Full Version</a>
+                                    <img src="img/pic-intr-offer.jpg" alt="" />
+                                    <h4><strike>₹999 </strike> &nbsp;&nbsp; <span> ₹499</span> (Inclusive in 18% GST)</h4>
+                                    <a href="register_user" class="btn btn-green">Buy Full Version</a>
                                     <?php /*
                                     <a class="btn btn-theme btn-rounded" @click="restart()">Restart <i class="fa fa-refresh"></i></a>
                                     <a class="btn btn-theme btn-rounded" onclick="window.location = 'select_language'">Home <i class="fa fa-refresh"></i></a>
@@ -1344,7 +1346,9 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                           
                                 <div class="">
                                     
-                                    <h2>Introductory Offer</h2><h4><strike>₹999 </strike> &nbsp;&nbsp; <span> ₹499</span></h4><a href="register_user" class="btn btn-green">Buy Full Version</a>
+                                    <img src="img/pic-intr-offer.jpg" alt="" />
+                                    <h4><strike>₹999 </strike> &nbsp;&nbsp; <span> ₹499</span> (Inclusive in 18% GST)</h4>
+                                    <a href="register_user" class="btn btn-green">Buy Full Version</a>
                                 
                                      
 
