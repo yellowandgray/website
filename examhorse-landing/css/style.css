@@ -39,7 +39,7 @@
 /* The navigation links */
 
 .header-fixed .header-limiter a {
-/*    color: #ffffff;*/
+    /*    color: #ffffff;*/
     text-decoration: none;
 }
 
@@ -120,7 +120,7 @@ body.fixed .header-fixed .header-limiter nav {
     .header-fixed {
         padding: 20px 0 0;
         height: auto;
-        overflow: hidden;
+        /*overflow: hidden;*/
     }
 
     .header-fixed .header-limiter h1 {
@@ -462,6 +462,12 @@ footer a:hover {
     }
     .testim .arrow {
         display: none !important;
+    }
+    .logout_position {
+        display: none !important;
+    }
+    .logout_position_1 {
+        display: block !important;
     }
 }
 
@@ -1705,7 +1711,7 @@ ul.breadcrumb li a:hover {
 .logout_position a:hover {
     border-top: 2px solid #f14f1b;
     border-bottom: 2px solid #f14f1b;
-/*    padding: 0 20px;*/
+    /*    padding: 0 20px;*/
 }
 
 .logout_position a.logout-btn {
@@ -1754,4 +1760,40 @@ ul.breadcrumb li a:hover {
 .user_profile h5 {
     color: #000;
     font-weight: 500;
+}
+
+.logout_dropdown .logout_list li a.btn-green {
+    display: inline-block;
+    padding: 5px 20px;
+    text-decoration: none;
+    color: #ffffff;
+    background: green;
+    opacity: 0.9;
+    margin: 5px 0;
+}
+
+.logout_dropdown .logout_list li a.btn-custom {
+    display: inline-block;
+    padding: 5px 20px;
+    text-decoration: none;
+    color: #ffffff;
+    background: #f03c02;
+    opacity: 0.9;
+    margin: 5px 0;
+}
+
+.logout_position_1 {
+    display: none;
+}
+
+.logout-btn {
+    background: #f03c02;
+    color: #fff;
+    opacity: 0.9;
+}
+
+.logout-btn {
+    background: #f03c02;
+    color: #fff;
+    opacity: 1;
 }
