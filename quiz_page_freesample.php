@@ -2681,8 +2681,8 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                          }  
                          <?php // } ?>  
 
-                                    var nqid = this.questionIndex + 1;
-
+                                    //var nqid = this.questionIndex + 1;
+                                    var nqid = questions[this.questionIndex].question_id;
                                     if (!app.showimmediate) {
                                         $.get("api/v1/free_user_get_student_answer/" + nqid + "/<?php echo $student_log; ?>",
                                                 function (data, status) {
