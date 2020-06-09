@@ -38,7 +38,7 @@ $obj = new Common();
                             <div class="contact-content">
                                 <span>SAY HELLO</span>
                                 <h3>Get in touch, send us an e-mail or call us</h3>
-                                <p>Cras ex mauris, ornare eget pretium sit amet, dignissim et turpis. Nunc nec maximus dui, vel suscipit dolor. Donec elementum velit a orci facilisis rutrum.</p>
+                                <p>ExamHorse offers support 7 days a week. We particularly like email feedback and answer each one personally. Email us below and you will receive a response within 24 hours</p>
                                 <div class="call-as-now">
                                     <ul>
 <!--                                        <li><img src="img/whatsapp.png" alt=""/> <span>98400 12345</span></li>

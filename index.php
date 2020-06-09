@@ -67,14 +67,32 @@ if (isset($_SESSION['student_register_id'])) {
         </div>
         <div class="home-register-section">
             <div class="container">
-                <div class="">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="text-content">
+                            <p>One source to practice and learn all the previous set of 16-year TNPSC Group I – Original General Studies Question papers from 1995 to 2019 and 2020 updated Model Question paper with answers and explanation for the upcoming exams</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-content">
+                            <ul>
+                                <li><i class="fa fa-check"></i> For Group I candidates</li>
+                                <li><i class="fa fa-check"></i> For Group 2/2A candidates</li>
+                                <li><i class="fa fa-check"></i> Total of 3,200 questions</li>
+                                <li><i class="fa fa-check"></i> Additional information for each</li>
+                                <li><i class="fa fa-check"></i> question – both in Tamil and English</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+<!--                <div class="">
                     <div class="float-left">
                         <h3 class="text-center"><span class="wow fadeInRight text-center" data-wow-delay="0s">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span></h3>
                     </div>
-                    <!--<div class="float-right register-now-btn wow fadeInRight" data-wow-delay="3s">
+                    <div class="float-right register-now-btn wow fadeInRight" data-wow-delay="3s">
                         <a href='register-page' class="register-btn wow pulse" data-wow-iteration="infinite" data-wow-duration="1500ms">Register Now!</a>
-                    </div>-->
-                </div>
+                    </div>
+                </div>-->
             </div>
         </div>
         <div class="box-section">
@@ -86,7 +104,7 @@ if (isset($_SESSION['student_register_id'])) {
                                 <div class="box-img"></div>
                             </div>
                             <div class="box-text learning-box">
-                                <p>Scientifically proven method to study and practice in a more effective way!</p>
+                                <p>Syllabus wise(Unit-topic) or Year wise</p>
                             </div>
                         </div>
                     </div>
@@ -96,7 +114,7 @@ if (isset($_SESSION['student_register_id'])) {
                                 <div class="box-img1"></div>
                             </div>
                             <div class="box-text learning-box">
-                                <p>Explore over thousands and thousands of questions and attain the benefits!</p>
+                                <p>அனைத்துகேள்விகளுக்கும், உரியபடங்களும் விளக்கமானவிடைகளும்</p>
                             </div>
                         </div>
                     </div>
@@ -106,7 +124,7 @@ if (isset($_SESSION['student_register_id'])) {
                                 <div class="box-img3"></div>
                             </div>
                             <div class="box-text learning-box">
-                                <p>Questions are prepared very sensefully for the students to explore and excel maximum.</p>
+                                <p>Try all the features for three full-year question papers – Completely Free</p>
                                 <a href="sample-intro" class="btn btn-green">Try Now!</a>
                             </div>
                         </div>
@@ -266,7 +284,7 @@ if (isset($_SESSION['student_register_id'])) {
                 }
             });
             $("#open-logout-1").click(function (e) {
-               console.log("test");
+                console.log("test");
                 e.stopPropagation();
                 $(".logout-dropdown-1").show("fast");
             });
