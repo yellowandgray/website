@@ -6,3 +6,15 @@
 <script src="js/common.js" type="text/javascript"></script>
 <script src="https://www.google.com/recaptcha/api.js"></script>
 <script src="https://cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $("#open-logout-1").click(function (e) {
+        console.log("test");
+        e.stopPropagation();
+        $(".logout-dropdown-1").show("fast");
+    });
+    $(document).click(function (e) {
+        if (!(e.target.class === 'logout-dropdown-1')) {
+            $(".logout-dropdown-1").hide("fast");
+        }
+    });
+</script>

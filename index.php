@@ -69,7 +69,7 @@ if (isset($_SESSION['student_register_id'])) {
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="text-content">
+                        <div class="text-content" style="border-right: 4px dotted #198c19;padding: 20px;">
                             <p>One source to practice and learn all the previous set of 16-year TNPSC Group I – Original General Studies Question papers from 1995 to 2019 and 2020 updated Model Question paper with answers and explanation for the upcoming exams</p>
                         </div>
                     </div>
