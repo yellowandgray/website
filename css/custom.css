@@ -897,9 +897,9 @@ and open the template in the editor.
 }
 
 .language-section {
-    background: url(../img/language-bg.jpg)no-repeat;
+    background: url(../img/pic-woman-studying.jpg)no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: top;
     padding-top: 100px;
 }
 

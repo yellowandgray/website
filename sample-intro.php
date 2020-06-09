@@ -22,12 +22,12 @@ if (isset($_SESSION['student_register_id'])) {
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,</p>
                             <div class="sample-intro-login">
                                 <h4>Dear Guest User, please fill the details to access free samples</h4>
-                                <form onsubmit="return samplehomelogin();">
+                                <form name="sample-form" onsubmit="return samplehomelogin();">
                                     <div class="form-group">
                                         <input type="text" class="form-control" id="name" placeholder="Enter Your Name" required>
                                     </div>
                                     <div class="form-group">
-                                        <input type="email" class="form-control" id="email" placeholder="Enter Your Email" required>
+                                        <input type="email" class="form-control" id="email" placeholder="Enter Your Email" onblur="validateEmail(this);">
                                     </div>
                                     <div class="form-group">
                                         <input type="phone" pattern="[0-9]{10}" maxlength="10" class="form-control" id="phone" placeholder="Enter Your Phone" required>
@@ -86,6 +86,20 @@ if (isset($_SESSION['student_register_id'])) {
                 });
             }
         });
+    </script>
+    <script type="text/javascript">
+        function validateEmail(emailField) {
+            var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+            if (reg.test(emailField.value) == false)
+            {
+                alert('Invalid Email Address');
+                return false;
+            }
+
+            return true;
+
+        }
     </script>
     <script>
         wow = new WOW(

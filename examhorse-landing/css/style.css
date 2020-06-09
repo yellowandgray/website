@@ -438,11 +438,14 @@ footer a:hover {
         height: auto !important;
     }
     .carousel-item .banner-learning a {
-        font-size: 25px !important;
+        font-size: 20px !important;
     }
     .testim {
         position: relative !important;
-        top: 35% !important; 
+        top: 45% !important; 
+    }
+    .carousel-caption h2 {
+        font-size: 18px !important;
     }
     .testim .dots {
         display: none !important;
