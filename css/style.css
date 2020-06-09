@@ -2666,6 +2666,11 @@ article .align-right {
     .full-member-table th, .full-member-table td {
         width: 100% !important;
     }
+    #explimagemodal .explimagepreview {
+        width: 1000px !important;
+        /* margin: 0 auto; */
+        max-width: 1000px !Important;
+    }
 }
 
 @media (max-width: 480px) {
@@ -3793,7 +3798,7 @@ form#login-form:after {
 }
 
 .member-text-content {
-    padding: 0px 10px;
+    padding: 70px 20px;
 }
 
 .member-text-content .member-content {
@@ -3804,13 +3809,12 @@ form#login-form:after {
 .member-text-content h4 {
     font-size: 20px;
     font-weight: 600;
-    background: #ffffff;
 }
 
 .member-text-content h4 span {
     font-style: italic;
     font-weight: 600;
-    color: #364a61;
+    color: #000;
 }
 
 .member-text-content .member-content h3 {
@@ -3823,7 +3827,7 @@ form#login-form:after {
 }
 
 .member-text-content .start-quiz-btn {
-    margin: 16% auto;
+    /*margin: 16% auto;*/
     width: 100%;
 }
 
@@ -3834,6 +3838,7 @@ form#login-form:after {
     font-size: 25px;
     font-weight: 600;
     background: green !important;
+    opacity: 1;
 }
 .member-text-content .start-quiz-btn a.btn-green:hover {
     opacity: 0.9;
@@ -3995,6 +4000,7 @@ form#login-form:after {
     border: 1px solid green;
     padding: 38px 20px;
     margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.5);
 }
 
 .recent-session p span {

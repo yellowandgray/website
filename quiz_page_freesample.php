@@ -1240,7 +1240,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                 <div class="">
                                     
                                     <img src="img/pic-intr-offer.jpg" alt="" />
-                                    <h4><strike>₹999 </strike> &nbsp;&nbsp; <span> ₹499</span> (Inclusive in 18% GST)</h4>
+                                    <h4><strike>₹999 </strike> &nbsp;&nbsp; <span> ₹499</span> <span style="font-size: 15px;">(Inclusive of 18% GST)</span></h4>
                                     <a href="register_user" class="btn btn-green">Buy Full Version</a>
                                     <?php /*
                                     <a class="btn btn-theme btn-rounded" @click="restart()">Restart <i class="fa fa-refresh"></i></a>
@@ -1348,7 +1348,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                 <div class="">
                                     
                                     <img src="img/pic-intr-offer.jpg" alt="" />
-                                    <h4><strike>₹999 </strike> &nbsp;&nbsp; <span> ₹499</span> (Inclusive in 18% GST)</h4>
+                                    <h4><strike>₹999 </strike> &nbsp;&nbsp; <span> ₹499</span> <span style="font-size: 15px;">(Inclusive of 18% GST)</span></h4>
                                     <a href="register_user" class="btn btn-green">Buy Full Version</a>
                                 
                                      
@@ -1375,9 +1375,9 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     <table style="width:100%;">
                                         <thead>
                                             <tr>                                                
-                                                <th class="text-center">Year</th>
-                                                <th class="text-center">Total</th>
-                                                <th class="text-center">Answered</th>
+                                                <th>Year</th>
+                                                <th>Total</th>
+                                                <th>Answered</th>
                                                 <th class="text-center"><i class="icon-ok"></i></th>
                                                 <th class="text-center"><i class="icon-remove"></i></th>
                                                 <th></th>
@@ -1423,10 +1423,10 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                             <tr>
                                                 
                                                 
-                                                <th class="text-center">Subject</th>
-                                                <th class="text-center">Topic</th>
-                                                <th class="text-center">Total</th>
-                                                <th class="text-center">Answered</th>
+                                                <th>Subject</th>
+                                                <th>Topic</th>
+                                                <th>Total</th>
+                                                <th>Answered</th>
                                                 <th class="text-center"><i class="icon-ok"></i></th>
                                                 <th class="text-center"><i class="icon-remove"></i></th>
                                             </tr>

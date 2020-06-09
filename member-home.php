@@ -192,17 +192,16 @@ if (isset($_SESSION['student_register_id'])) {
                 <div class="row">
                     <div class="span6">
                         <div class="member-banner">
-                            <img src="img/member-banner.jpg" alt="member-banner" />
+                            <img src="img/pic-examhorse-wishes.jpg" alt="member-banner" />
                         </div>
                     </div>
                     <div class="span6">
-                        <div class="member-text-content" style="background: url(img/thumb-person.jpg)no-repeat;background-position: center; background-size: cover;opacity: 0.5">
-                            <h4>Welcome <span><?php echo $login_student['student_name']; ?></span></h4>
-                            <!--                            <div class="member-content">
-                                                            <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</h3>
-                                                        </div>-->
-                            <div class="start-quiz-btn">
-                                <a href="select_language" class="btn btn-green">PRACTICE TEST</a>
+                        <div class="member-text-content" style="position: relative;background: url(img/pic-welcome-user.jpg)no-repeat;background-position: center;position: relative;">
+                            <div class="banner-padding">
+                                <h4>Welcome <span><?php echo $login_student['student_name']; ?></span></h4>
+                                <div class="start-quiz-btn">
+                                    <a href="select_language" class="btn btn-green">PRACTICE TEST</a>
+                                </div>
                             </div>
                         </div>
                     </div>
