@@ -1639,3 +1639,73 @@ $app->get('/free_user_get_result_detail_ans_cnt/:lid', function($lid) {
     }
     echoRespnse(201, $res);
 });
+
+
+$app->post('/free_user_store_quiz_end_time', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Invalid login details');
+    $data = $app->request->post();
+    $obj = new Common();
+    $record = $obj->selectRow('*', 'free_user_log', 'student_log_id=' . $data['student_log']);
+    if (count($record) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'studnet log updated successfully';
+     
+         //update
+        $obj->updateRecordWithWhere(array('quiz_end_time' => date('Y-m-d H:i:s')), 'free_user_log','student_log_id=' . $data['student_log']);
+        
+        // exit;
+    } else {
+        $res['message'] = 'Unable to update studnet log';
+    }
+    echoRespnse(201, $res);
+});
+
+
+
+$app->post('/store_quiz_end_time', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Invalid login details');
+    $data = $app->request->post();
+    $obj = new Common();
+    $record = $obj->selectRow('*', 'student_log', 'student_log_id=' . $data['student_log']);
+    if (count($record) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'studnet log updated successfully';
+     
+         //update
+        $obj->updateRecordWithWhere(array('quiz_end_time' => date('Y-m-d H:i:s')), 'student_log','student_log_id=' . $data['student_log']);
+        
+        // exit;
+    } else {
+        $res['message'] = 'Unable to update studnet log';
+    }
+    echoRespnse(201, $res);
+});
+
+
+$app->get('/get_result_correct_ans_cnt/:lid', function($lid) {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    
+    $data = $com->selectRow('count(student_log_detail_id) As correct_cnt', 'student_log_detail As sld INNER JOIN question As q ON sld.question_id=q.question_id', 'student_log_id = ' . $lid.' AND sld.student_answer=q.answer');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['correct_cnt'] = $data['correct_cnt'];
+    }
+    echoRespnse(201, $res);
+});
+
+
+
+$app->get('/free_user_get_result_correct_ans_cnt/:lid', function($lid) {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    
+    $data = $com->selectRow('count(student_log_detail_id) As correct_cnt', 'free_user_log_detail As sld INNER JOIN question As q ON sld.question_id=q.question_id', 'student_log_id = ' . $lid.' AND sld.student_answer=q.answer');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['correct_cnt'] = $data['correct_cnt'];
+    }
+    echoRespnse(201, $res);
+});
