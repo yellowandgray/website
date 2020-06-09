@@ -44,7 +44,7 @@ function registerStudent() {
     $.ajax({
         type: "POST",
         url: 'api/v1/insert_student',
-       data: {student_name: $('#student_name').val(), user_name: $('#user_name').val(), password: $('#password').val(), confirm_password: $('#confirm_password').val(), mobile: $('#mobile').val(), email: $('#email').val(), profile_picture: avatar, gender: $('#gender').val(), graduation: $('#graduation').val(), street: $('#street').val(), city: $('#city').val(), district: $('#district').val(), pin: $('#pin').val(), nearcity: $('#nearcity').val(), selectgroup: $('#selectgroup').val()},
+        data: {student_name: $('#student_name').val(), user_name: $('#user_name').val(), password: $('#password').val(), confirm_password: $('#confirm_password').val(), mobile: $('#mobile').val(), email: $('#email').val(), profile_picture: avatar, gender: $('#gender').val(), graduation: $('#graduation').val(), street: $('#street').val(), city: $('#city').val(), district: $('#district').val(), pin: $('#pin').val(), nearcity: $('#nearcity').val(), selectgroup: $('#selectgroup').val()},
         success: function (data) {
             $('.loader').removeClass('is-active');
             if (data.result.error === false) {
@@ -243,6 +243,37 @@ function changePassword() {
         error: function (err) {
             $('.loader').removeClass('is-active');
             swal('Error', err.statusText, 'error');
+        }
+    });
+    return false;
+}
+
+
+function ContactForm() {
+    $('.loader').addClass('is-active');
+    $.ajax({
+        type: "POST",
+        url: 'api/v1/insert_contact',
+        data: {name: $('#name').val(), email: $('#email').val(), subject: $('#subject').val(), description: $('#description').val()},
+        success: function (data) {
+            $('.loader').removeClass('is-active');
+            if (data.result.error === false) {
+                $('#name').val('');
+                $('#email').val('');
+                $('#subject').val('');
+                $('#description').val('');
+
+                swal("Thanks for Contact!", "Your Message Has been Sended... We will contact you soon...", "success");
+//                setTimeout(function () {
+//                    window.location = 'contact';
+//                }, 3000);
+            } else {
+                swal("Oops!", data.result.message, "info");
+            }
+        },
+        error: function (err) {
+            $('.loader').removeClass('is-active');
+            swal("Oops!", err.statusText, "error");
         }
     });
     return false;

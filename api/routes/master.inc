@@ -125,6 +125,18 @@ $app->post('/insert_topic', function() use ($app) {
     echoRespnse(201, $res);
 });
 
+$app->post('/insert_contact', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to insert');
+    $data = $app->request->post();
+    $com = new Common();
+    $record = $com->insertRecord(array('name' => $data['name'], 'email' => $data['email'], 'subject' => $data['subject'], 'description' => $data['description']), 'contact');
+    if ($record > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Record inserted successfully';
+    }
+    echoRespnse(201, $res);
+});
+
 $app->post('/insert_question', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();

@@ -125,13 +125,15 @@ body.fixed .header-fixed .header-limiter nav {
 
     .header-fixed .header-limiter h1 {
         /*        float: none;*/
-        margin: -8px 0 10px;
+        margin: -8px 0px 10px -24px;
         text-align: center;
         font-size: 24px;
         line-height: 1;
-        margin-left: 10px;
+/*        margin-left: 10px;*/
     }
-
+    .header-fixed .header-limiter h1 a img {
+        width: 85% !important;
+    }
     .header-fixed .header-limiter nav {
         line-height: 1;
         display: block;
@@ -367,7 +369,7 @@ footer a:hover {
     margin-top: 5px;
     cursor: pointer;
     float: right;
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 .logout_section i {
@@ -466,11 +468,17 @@ footer a:hover {
     .testim .arrow {
         display: none !important;
     }
-    .logout_position {
+/*    .logout_position {
         display: none !important;
-    }
-    .logout_position_1 {
+    }*/
+/*    .logout_position_1 {
         display: block !important;
+    }*/
+    .custom-mobile-with-menu {
+        display: block !important;
+    }
+    .custom-full-width-menu {
+        display: none !important;
     }
 }
 
@@ -1718,15 +1726,15 @@ ul.breadcrumb li a:hover {
 }
 
 .logout_position a.logout-btn {
-    background: #cb1103;
+    background: #f03c02;
     color: #fff;
     text-transform: none;
     padding: 4px 15px;
 }
 
-.logout_position.mobile-menu {
-    display: none;
-}
+/*.logout_position.mobile-menu {
+    display: none !important;
+}*/
 
 .price-detail strike {
     font-size: 50px;
@@ -1799,4 +1807,12 @@ ul.breadcrumb li a:hover {
     background: #f03c02;
     color: #fff;
     opacity: 1;
+}
+
+.custom-full-width-menu {
+    
+}
+
+.custom-mobile-with-menu {
+    display: none;
 }

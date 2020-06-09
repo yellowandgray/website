@@ -17,7 +17,7 @@ $obj = new Common();
                                 <h3>Contact Us</h3>
                                 <span>Get in touch</span>
                                 <br/>
-                                <form>
+                                <form onsubmit="return ContactForm();">
                                     <div class="input-group">
                                         <input type="text" id="name" class="" Placeholder="Name" />
                                     </div>

@@ -130,6 +130,17 @@ if (isset($_SESSION['student_register_id'])) {
                 $(".logout_dropdown").hide("fast");
             }
         });
+
+        $("#open-logout-1").click(function (e) {
+            console.log("test");
+            e.stopPropagation();
+            $(".logout-dropdown-1").show("fast");
+        });
+        $(document).click(function (e) {
+            if (!(e.target.class === 'logout-dropdown-1')) {
+                $(".logout-dropdown-1").hide("fast");
+            }
+        });
     </script>
     <script type="text/javascript">
         $().ready(function () {

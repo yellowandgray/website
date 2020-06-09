@@ -1546,7 +1546,7 @@ and open the template in the editor.
 .contact-section-examhorse .contact-form input, .contact-section-examhorse .contact-form textarea {
     border: none;
     border-bottom: 1px solid #333;
-    width: 100%;
+    width: 95%;
     box-shadow: none;
     padding: 5px 10px;
 }
