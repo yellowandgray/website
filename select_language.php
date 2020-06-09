@@ -18,11 +18,20 @@ if(count($student_log_pause)>0) {
     $student_log_detail             = $obj->selectRow('COUNT(student_log_detail_id) AS attended, IFNULL((SELECT COUNT(student_log_detail_id) FROM student_log_detail INNER JOIN question ON student_log_detail.question_id=question.question_id WHERE student_log_id=' . $student_log_detail['student_log_id'] . ' AND UPPER(answer) = UPPER(student_answer)), 0) AS correct_answers', 'student_log_detail', 'student_log_id=' . $student_log_detail['student_log_id']);
     $student_log_attended           = $log_detail['attended'];
     */
-    $student_pause = true;
+    
     $student_pause_log_id    = $student_log_pause['student_log_id'];
     
     $student_log_order = $obj->selectRow('slo.*','student_log_order As slo','student_log_id ='.$student_pause_log_id);   
+   
+    $stud_log           = $obj->selectRow('*','student_log','student_log_id ='.$student_pause_log_id);
+    $stud_log_detail    = $obj->selectAll('*','student_log_detail','student_log_id ='.$student_pause_log_id);
+
+    $tot_qs = $stud_log['total_questions'];
+    $att_qs = count($stud_log_detail);
     
+    if($tot_qs>$att_qs){
+        $student_pause = true;
+    }
 }    
 
 ?>
@@ -41,10 +50,9 @@ if(count($student_log_pause)>0) {
                     <div class="language-width">
                         <div class="row">
                             <div class="span4">
+                                 <?php if($student_pause && $student_log_order['student_log_order']==1) { ?>
                                 <div class="recent-session">  
-                                   <?php if($student_pause && $student_log_order['student_log_order']==1) { 
-                                
-                                
+                               <?php  
                                 $student_log_year  = $obj->selectRow('sly.*,y.year As year','student_log_year As sly LEFT JOIN year As y ON y.year_id=sly.year_id',' sly.student_log_id='.$student_pause_log_id);
                                 $student_log = $obj->selectRow('sl.*,l.name As language_name','student_log sl LEFT JOIN language l ON sl.language_id=l.language_id','student_log_id='.$student_pause_log_id);
                                 
@@ -63,11 +71,12 @@ if(count($student_log_pause)>0) {
                                     <div class="recent-btn">
                                         <a onClick="selpausequiz();" class="btn btn-green">Resume Test</a>
                                     </div>
-
+                                </div>
                                     
-                              <?php }else if($student_pause && $student_log_order['student_log_order']==2)  { 
+                              <?php }else if($student_pause && $student_log_order['student_log_order']==2)  { ?>
                                   
-                                  
+                                  <div class="recent-session">  
+                          <?php               
                                   $student_log = $obj->selectRow('sl.*,l.name As language_name','student_log sl LEFT JOIN language l ON sl.language_id=l.language_id','student_log_id='.$student_pause_log_id);
                                   //$data = $obj->selectAll('*', 'student_log_detail', 'student_log_id = ' . $student_pause_log_id);    
    
@@ -213,8 +222,9 @@ if(count($student_log_pause)>0) {
                                              
                                   
                             
-                              <?php } ?>
+                             
                                </div>
+                                 <?php } ?>
                             </div>
                             <?php foreach ($languages as $val) { ?>
                                 <div class="span4">
