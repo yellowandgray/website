@@ -17,18 +17,18 @@ $obj = new Common();
                                 <h3>Contact Us</h3>
                                 <span>Get in touch</span>
                                 <br/>
-                                <form onsubmit="return ContactForm();">
+                                <form class="contact" onsubmit="return ContactForm();">
                                     <div class="input-group">
-                                        <input type="text" id="name" class="" Placeholder="Name" />
+                                        <input type="text" name="name" id="name" class="" Placeholder="Name" />
                                     </div>
                                     <div class="input-group">
-                                        <input type="email" id="email" class="" Placeholder="Email" />
+                                        <input type="email" name="email" id="email" class="" Placeholder="Email" />
                                     </div>
                                     <div class="input-group">
-                                        <input type="text" id="subject" class="" Placeholder="Subject" />
+                                        <input type="text" name="subject" id="subject" class="" Placeholder="Subject" />
                                     </div>
                                     <div class="input-group">
-                                        <textarea type="text" id="description" rows="5" class="" Placeholder="Message" ></textarea>
+                                        <textarea type="text" name="description" id="description" rows="5" class="" Placeholder="Message" ></textarea>
                                     </div>
                                     <div class="g-recaptcha" data-sitekey="6Lfj1aIZAAAAAARRsJAeGOHrKmethFGYgmGlGTZq"></div>
                                     <br/>
