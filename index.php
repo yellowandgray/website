@@ -109,7 +109,7 @@ if (isset($_SESSION['student_register_id'])) {
                                 <div class="box-img1"></div>
                             </div>
                             <div class="box-text learning-box">
-                                <p>அனைத்துகேள்விகளுக்கும், உரியபடங்களும் விளக்கமானவிடைகளும்</p>
+                                <p>அனைத்து கேள்விகளுக்கும், உரிய படங்களும் விளக்கமான விடைகளும்</p>
                             </div>
                         </div>
                     </div>
