@@ -55,7 +55,7 @@ if (isset($_SESSION['student_register_id'])) {
                                     <img src="img/pic-intr-offer.jpg" alt="" />
                                 </div>
                                 <div class="price-detail">
-                                    <h4><strike>₹999 </strike> &nbsp;&nbsp; <span> ₹499</span>(Inclusive in 18% GST)</h4>
+                                    <h4><strike>₹999 </strike> &nbsp;&nbsp; <span> ₹499</span>(Inclusive of 18% GST)</h4>
                                 </div>
                                 <a href="register_user" class="btn btn-green" style="font-size: 20px;padding: 10px 40px;">Pay Now</a>
                             </div>

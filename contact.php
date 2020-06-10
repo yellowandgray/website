@@ -30,6 +30,8 @@ $obj = new Common();
                                     <div class="input-group">
                                         <textarea type="text" id="description" rows="5" class="" Placeholder="Message" ></textarea>
                                     </div>
+                                    <div class="g-recaptcha" data-sitekey="6Lfj1aIZAAAAAARRsJAeGOHrKmethFGYgmGlGTZq"></div>
+                                    <br/>
                                     <button type="submit" class="btn btn-blue">Send</button>
                                 </form>
                             </div>
@@ -37,7 +39,7 @@ $obj = new Common();
                         <div class="span6">
                             <div class="contact-content">
                                 <span>SAY HELLO</span>
-                                <h3>Get in touch, send us an e-mail or call us</h3>
+                                <h3>Send us an email</h3>
                                 <p>ExamHorse offers support 7 days a week. We particularly like email feedback and answer each one personally. Email us below and you will receive a response within 24 hours</p>
                                 <div class="call-as-now">
                                     <ul>

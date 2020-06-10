@@ -7,8 +7,18 @@
 <script src="https://www.google.com/recaptcha/api.js"></script>
 <script src="https://cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js" type="text/javascript"></script>
 <script type="text/javascript">
+    $("#open-logout").click(function (e) {
+        console.log("test--1");
+        e.stopPropagation();
+        $(".logout_dropdown").show("fast");
+    });
+    $(document).click(function (e) {
+        if (!(e.target.class === 'logout_dropdown')) {
+            $(".logout_dropdown").hide("fast");
+        }
+    });
     $("#open-logout-1").click(function (e) {
-        console.log("test");
+        console.log("test-1");
         e.stopPropagation();
         $(".logout-dropdown-1").show("fast");
     });

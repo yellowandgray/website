@@ -32,7 +32,7 @@ if (isset($_SESSION['student_register_id'])) {
                                     <div class="form-group">
                                         <input type="phone" pattern="[0-9]{10}" maxlength="10" class="form-control" id="phone" placeholder="Enter Your Phone" required>
                                     </div>
-                                    <div class="g-recaptcha" data-sitekey="6LdRV_sUAAAAAJUxyvE5squ2GTwOApnH00odkabA"></div>
+                                    <div class="g-recaptcha" data-sitekey="6Lfj1aIZAAAAAARRsJAeGOHrKmethFGYgmGlGTZq"></div>
                                     <button type="submit" class="btn btn-custom">Try Free Sample</button>
                                 </form>
                             </div>

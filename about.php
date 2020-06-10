@@ -29,7 +29,7 @@ $obj = new Common();
                             <h2 style="border-bottom:2px solid #f03c02">Our Mission</h2>
                             <div class="about-ul">
                                 <ul>
-                                    <i class="fa fa-angle-double-right" aria-hidden="true"></i><li>The concept of Microlearning through the Visual Memory helps the Smart Neuron to Remember, Recollet, and Reproduce in a much faster way and much longer</li>
+                                    <i class="fa fa-angle-double-right" aria-hidden="true"></i><li>The concept of Microlearning through the Visual Memory helps the Smart Neuron to Remember, Recollect, and Reproduce in a much faster way and much longer</li>
 
                                     <i class="fa fa-angle-double-right" aria-hidden="true"></i><li>Understanding of the concept at the micro-level builds up the ladder</li>
 

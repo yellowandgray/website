@@ -14,32 +14,70 @@ if (isset($_SESSION['student_register_id'])) {
                     </a>
                 </div>
             </div>
-            <?php
-            if (!isset($_SESSION['student_register_id'])) {
-                ?>
-                <?php /* */ ?>
-                <div class = 'span8'>
-                    <div class = 'headnav'>
-                        <ul>
-                            <li class="menu-cus-clr">                                
-                                <a href="about" class="menu-nav">About Us</a>
-                                <a href="contact" class="menu-nav">Contact Us</a>
-                                <a href="quiz_page_freesample?from-page=quiz" class="menu-nav">Exit</a>
-                            </li>
-                            <li>
-                                <a href = 'registration_intro' class="btn btn-custom" style="background: green">Buy Full Version</a>
-                                <a href = 'login-page' class="btn btn-custom">Login</a>
-                            </li>
-                        </ul>
+            <div class="custom-full-width-menu">
+                <?php
+                if (!isset($_SESSION['student_register_id'])) {
+                    ?>
+                    <div class = 'span8'>
+                        <div class = 'headnav'>
+                            <ul>
+                                <li class="menu-cus-clr">                                
+                                    <a href="about" class="menu-nav">About Us</a>
+                                    <a href="contact" class="menu-nav">Contact Us</a>
+                                    <a href="quiz_page_freesample?from-page=quiz" class="menu-nav">Exit</a>
+                                </li>
+                                <li>
+                                    <a href = 'registration_intro' class="btn btn-custom" style="background: green">Buy Full Version</a>
+                                    <a href = 'login-page' class="btn btn-custom">Login</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class = 'headnav-1'>
+                <?php } else {
+                    ?>
+                    <div class="logout_position">
+                        <a href="member-home" class="user-menu-btn">My Home</a>
+                        <a href="select_language" class="user-menu-btn">Test</a>
+                        <a class="user-menu-btn" href="about">About Us</a>
+                        <a class="user-menu-btn" href="contact">Contact Us</a>
+                        <a onclick="logoutUser('<?php echo $login_student['student_name']; ?>');" class="btn logout-btn">Logout</a>
+                        <div id="open-logout" class="logout_section">
+                            <span class="menu-bar">
+                                <i class="icon-reorder"></i>
+                            </span>
+                            <div class="logout_dropdown">
+                                <div class="user_profile">
+                                    <?php if (isset($login_student['profile_image']) && $login_student['profile_image'] == '') { ?>
+                                        <img src="<?php echo BASE_URL . $login_student['gender']; ?>.jpg" alt="" />
+                                    <?php } else { ?>
+                                        <img src="<?php echo BASE_URL . $login_student['profile_image']; ?>" alt="" />
+                                    <?php } ?>
+                                    <h5><?php echo $login_student['student_name']; ?></h5>
+                                </div>
+                                <ul class="logout_list">
+                                    <li onclick="window.location = 'select_language'">Test</li>
+                                    <li onclick="window.location = 'student_result'">Result</li>
+                                    <li onclick="window.location = 'account'">Account</li>
+                                    <!--                                <li onclick="logoutUser();">Logout</li>-->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                <?php }
+                ?>
+            </div>
+            <div class="custom-mobile-with-menu">
+                <?php
+                if (!isset($_SESSION['student_register_id'])) {
+                    ?>
+                    <div class='headnav-1'>
                         <ul>
                             <li id="open-logout" class="logout_section">
-                                <i class = 'icon-reorder'></i>
+                                <i class='icon-reorder'></i>
                             </li>
                             <div class="logout_position mobile-menu">
-                                <div id="open-logout" class="logout_section">
-    <!--                                    <i class = 'icon-reorder'></i>-->
+                                <div class="logout_section">
+        <!--                                    <i class = 'icon-reorder'></i>-->
                                     <div class="logout_dropdown">
                                         <ul class="logout_list">
                                             <li onclick="window.location = 'about'">About us</li>
@@ -54,147 +92,36 @@ if (isset($_SESSION['student_register_id'])) {
                             </div>
                         </ul>
                     </div>
-                </div>
-                <?php /*
-                 */ ?>
-            <?php } else {
-                ?>
-                <div class="logout_position">
-                    <a href="member-home" class="user-menu-btn">My Home</a>
-                    <a href="select_language" class="user-menu-btn">Test</a>
-                    <a class="user-menu-btn" href="about">About Us</a>
-                    <a class="user-menu-btn" href="contact">Contact Us</a>
-                    <a onclick="logoutUser('<?php echo $login_student['student_name']; ?>');" class="btn logout-btn">Logout</a>
-                    <div id="open-logout" class="logout_section">
-                        <span class="menu-bar">
-                            <i class="icon-reorder"></i>
-                        </span>
-                        <?php //if (isset($login_student['profile_image']) && $login_student['profile_image'] == '') {  ?>
-                        <!--<img src="<?php //echo BASE_URL . $login_student['gender'];      ?>.jpg" alt="" />-->
-                        <?php //} else {  ?>
-                        <!--<img src="<?php //echo BASE_URL . $login_student['profile_image'];      ?>" alt="" />-->
-                        <?php //}  ?>
-                        <div class="logout_dropdown">
-                            <div class="user_profile">
-                                <?php if (isset($login_student['profile_image']) && $login_student['profile_image'] == '') { ?>
-                                    <img src="<?php echo BASE_URL . $login_student['gender']; ?>.jpg" alt="" />
-                                <?php } else { ?>
-                                    <img src="<?php echo BASE_URL . $login_student['profile_image']; ?>" alt="" />
-                                <?php } ?>
-                                <h5><?php echo $login_student['student_name']; ?></h5>
+                <?php } else { ?>
+                    <div class="logout_position member-login-menu">
+                        <a onclick="logoutUser('<?php echo $login_student['student_name']; ?>');" class="btn logout-btn">Logout</a>
+                        <div id="open-logout-1" class="logout_section">
+                            <span class="menu-bar">
+                                <i class="icon-reorder"></i>
+                            </span>
+                            <div class="logout_dropdown_1">
+                                <div class="user_profile">
+                                    <?php if (isset($login_student['profile_image']) && $login_student['profile_image'] == '') { ?>
+                                        <img src="<?php echo BASE_URL . $login_student['gender']; ?>.jpg" alt="" />
+                                    <?php } else { ?>
+                                        <img src="<?php echo BASE_URL . $login_student['profile_image']; ?>" alt="" />
+                                    <?php } ?>
+                                    <h5><?php echo $login_student['student_name']; ?></h5>
+                                </div>
+                                <ul class="logout_list">
+                                    <li onclick="window.location = 'member-home'">My Home</li>
+                                    <li onclick="window.location = 'select_language'">Test</li>
+                                    <li onclick="window.location = 'student_result'">Result</li>
+                                    <li onclick="window.location = 'account'">Account</li>
+                                    <li onclick="window.location = 'about'">About Us</li>
+                                    <li onclick="window.location = 'contact'">Contact Us</li>
+                                    <!--                                <li onclick="logoutUser();">Logout</li>-->
+                                </ul>
                             </div>
-                            <ul class="logout_list">
-                                <li onclick="window.location = 'select_language'">Test</li>
-                                <li onclick="window.location = 'student_result'">Result</li>
-                                <li onclick="window.location = 'account'">Account</li>
-                                <!--                                <li onclick="logoutUser();">Logout</li>-->
-                            </ul>
                         </div>
                     </div>
-                </div>
-                <div class="logout_position member-login-menu">
-                    <a onclick="logoutUser('<?php echo $login_student['student_name']; ?>');" class="btn logout-btn">Logout</a>
-                    <div id="open-logout-1" class="logout_section">
-                        <span class="menu-bar">
-                            <i class="icon-reorder"></i>
-                        </span>
-                        <?php //if (isset($login_student['profile_image']) && $login_student['profile_image'] == '') {  ?>
-                        <!--<img src="<?php //echo BASE_URL . $login_student['gender'];      ?>.jpg" alt="" />-->
-                        <?php //} else {  ?>
-                        <!--<img src="<?php //echo BASE_URL . $login_student['profile_image'];      ?>" alt="" />-->
-                        <?php //}  ?>
-                        <div class="logout_dropdown_1">
-                            <div class="user_profile">
-                                <?php if (isset($login_student['profile_image']) && $login_student['profile_image'] == '') { ?>
-                                    <img src="<?php echo BASE_URL . $login_student['gender']; ?>.jpg" alt="" />
-                                <?php } else { ?>
-                                    <img src="<?php echo BASE_URL . $login_student['profile_image']; ?>" alt="" />
-                                <?php } ?>
-                                <h5><?php echo $login_student['student_name']; ?></h5>
-                            </div>
-                            <ul class="logout_list">
-                                <li onclick="window.location = 'member-home'">My Home</li>
-                                <li onclick="window.location = 'select_language'">Test</li>
-                                <li onclick="window.location = 'student_result'">Result</li>
-                                <li onclick="window.location = 'account'">Account</li>
-                                <li onclick="window.location = 'about'">About Us</li>
-                                <li onclick="window.location = 'contact'">Contact Us</li>
-                                <!--                                <li onclick="logoutUser();">Logout</li>-->
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            <?php }
-            ?>
+                <?php } ?>
+            </div>
         </div>
-        <!--        <div class = 'row'>
-
-        <div class = 'span8'>
-        <div class = 'navbar navbar-static-top'>
-        <div class = 'navigation'>
-        <nav>
-        <ul class = 'nav topnav'>
-        <li class = 'dropdown active'>
-        <a href = 'index.html'>Home <i class = 'icon-angle-down'></i></a>
-        <ul class = 'dropdown-menu'>
-        <li><a href = 'index-alt2.html'>Homepage 2</a></li>
-        <li><a href = 'index-alt3.html'>Homepage 3</a></li>
-        </ul>
-        </li>
-        <li class = 'dropdown'>
-        <a href = '#'>Features <i class = 'icon-angle-down'></i></a>
-        <ul class = 'dropdown-menu'>
-        <li><a href = 'typography.html'>Typography</a></li>
-        <li><a href = 'table.html'>Table</a></li>
-        <li><a href = 'components.html'>Components</a></li>
-        <li><a href = 'animations.html'>56 Animations</a></li>
-        <li><a href = 'icons.html'>Icons</a></li>
-        <li><a href = 'icon-variations.html'>Icon variations</a></li>
-        <li class = 'dropdown'><a href = '#'>3 Sliders <i class = 'icon-angle-right'></i></a>
-        <ul class = 'dropdown-menu sub-menu-level1'>
-        <li><a href = 'index.html'>Nivo slider</a></li>
-        <li><a href = 'index-alt2.html'>Slit slider</a></li>
-        <li><a href = 'index-alt3.html'>Parallax slider</a></li>
-        </ul>
-        </li>
-        </ul>
-        </li>
-        <li class = 'dropdown'>
-        <a href = '#'>Pages <i class = 'icon-angle-down'></i></a>
-        <ul class = 'dropdown-menu'>
-        <li><a href = 'about.html'>About us</a></li>
-        <li><a href = 'pricingbox.html'>Pricing boxes</a></li>
-        <li><a href = 'testimonials.html'>Testimonials</a></li>
-        <li><a href = '404.html'>404</a></li>
-        </ul>
-        </li>
-        <li class = 'dropdown'>
-        <a href = '#'>Portfolio <i class = 'icon-angle-down'></i></a>
-        <ul class = 'dropdown-menu'>
-        <li><a href = 'portfolio-2cols.html'>Portfolio 2 columns</a></li>
-        <li><a href = 'portfolio-3cols.html'>Portfolio 3 columns</a></li>
-        <li><a href = 'portfolio-4cols.html'>Portfolio 4 columns</a></li>
-        <li><a href = 'portfolio-detail.html'>Portfolio detail</a></li>
-        </ul>
-        </li>
-        <li class = 'dropdown'>
-        <a href = '#'>Blog <i class = 'icon-angle-down'></i></a>
-        <ul class = 'dropdown-menu'>
-        <li><a href = 'blog-left-sidebar.html'>Blog left sidebar</a></li>
-        <li><a href = 'blog-right-sidebar.html'>Blog right sidebar</a></li>
-        <li><a href = 'post-left-sidebar.html'>Post left sidebar</a></li>
-        <li><a href = 'post-right-sidebar.html'>Post right sidebar</a></li>
-        </ul>
-        </li>
-        <li>
-        <a href = 'contact.html'>Contact </a>
-        </li>
-        </ul>
-        </nav>
-        </div>
-        end navigation
-        </div>
-        </div>
-        </div>-->
     </div>
 </header>
