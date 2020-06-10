@@ -1,5 +1,6 @@
 <?php
 session_start();
+include('login-check.php');
 require_once 'api/include/common.php';
 $obj = new Common();
 if (isset($_SESSION['student_register_id'])) {
@@ -266,6 +267,8 @@ if (isset($_SESSION['student_register_id'])) {
                                                  $log_detail             = $obj->selectRow('COUNT(student_log_detail_id) AS attended, IFNULL((SELECT COUNT(student_log_detail_id) FROM student_log_detail INNER JOIN question ON student_log_detail.question_id=question.question_id WHERE student_log_id=' . $student_log_detail['student_log_id'] . ' AND UPPER(answer) = UPPER(student_answer)), 0) AS correct_answers', 'student_log_detail', 'student_log_id=' . $student_log_detail['student_log_id']);
                                                  $log_attended           = $log_detail['attended'];
                                                 $log_correct_answers    = $log_detail['correct_answers'];
+                                                
+                                                if($log_attended>0) {
         
         
         ?>
@@ -285,6 +288,7 @@ if (isset($_SESSION['student_register_id'])) {
                                                         </td>
                                                     </tr>
                                              <?php
+                                                }
                                              }
                                              
                                                  } ?>
@@ -320,6 +324,21 @@ if (isset($_SESSION['student_register_id'])) {
                                                     foreach($stud_topic_order as $stud_topic) {
                                                         foreach($stud_topic_logs[$stud_topic] as $log_id) { 
                                                             if(isset($ques_year_cnt[$stud_topic])) {
+                                                                
+                                                                
+                                                        if(isset($ques_cor_ans_cnt[$log_id][$stud_topic]['answerd_cnt']))
+                                                        {
+                                                            
+                                                            $answered = $ques_cor_ans_cnt[$log_id][$stud_topic]['answerd_cnt'];
+                                                        }
+                                                        else
+                                                        {
+                                                            
+                                                            $answered = 0;
+                                                        }
+                                                          
+                                                        if($answered>0) {
+                                                                
                                                             ?>
                                                         <tr>                 
                                                         <td><?php echo $ques_cor_ans_cnt[$log_id][$stud_topic]['date']; ?></td>
@@ -335,16 +354,7 @@ if (isset($_SESSION['student_register_id'])) {
                                                         {
                                                             echo '0';
                                                         }?></td>
-                                                        <td><?php if(isset($ques_cor_ans_cnt[$log_id][$stud_topic]['answerd_cnt']))
-                                                        {
-                                                            echo $ques_cor_ans_cnt[$log_id][$stud_topic]['answerd_cnt'];
-                                                            $answered = $ques_cor_ans_cnt[$log_id][$stud_topic]['answerd_cnt'];
-                                                        }
-                                                        else
-                                                        {
-                                                            echo '0';
-                                                            $answered = 0;
-                                                        }
+                                                        <td><?php echo $answered;
                                                         
          ?></td>    
                                                             
@@ -373,6 +383,7 @@ if (isset($_SESSION['student_register_id'])) {
                                                         
                                                         </tr>
                                                     <?php
+                                                        }
                                                             }
                                                         } 
                                                     }

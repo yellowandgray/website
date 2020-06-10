@@ -1,5 +1,6 @@
 <?php
 session_start();
+include('login-check.php');
 require_once 'api/include/common.php';
 $questions = array();
 $obj = new Common();
@@ -2295,6 +2296,7 @@ echo $attended_questions;
 <?php // }    ?>
 
                                         //var nqid = this.questionIndex + 1;
+                                        if (this.questionIndex < this.quiz.questions.length) {
                                         var nqid = questions[this.questionIndex].question_id;
                                         if (!app.showimmediate) {
                                             $.get("api/v1/get_student_answer/" + nqid + "/<?php echo $student_log; ?>",
@@ -2322,7 +2324,8 @@ echo $attended_questions;
                                                     });
 
                                         }
-
+                                        
+                                        } 
                                     }
                                 }, 500);
 
@@ -2440,6 +2443,8 @@ echo $attended_questions;
                                         }
                            
 
+
+                            if (this.questionIndex < this.quiz.questions.length) {                
                             var questions = <?php echo json_encode($questions_list); ?>;
                             var qid = questions[this.questionIndex].question_id;
 
@@ -2524,6 +2529,9 @@ echo $attended_questions;
                                 this.showQuestionOtherLang();
                             }
 <?php // }    ?>
+                            }
+                            
+    
                             this.continueTimer();
                             
                             
@@ -2532,6 +2540,11 @@ echo $attended_questions;
                         prev: function () {
 
                             $('.loadingoverlay').show();
+                            app.isDisabled = false;
+                            app.showimmediateblk = false;
+                            app.shownotimmdnxt = false;
+                            
+                            
                             if (this.quiz.questions.length > 0)
                                 this.questionIndex--;
 

@@ -1,5 +1,6 @@
 <?php
 session_start();
+include('login-check.php');
 require_once 'api/include/common.php';
 $obj = new Common();
 

@@ -2689,6 +2689,8 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                          }  
                          <?php // } ?>  
 
+
+                                     if (this.questionIndex < this.quiz.questions.length) {
                                     //var nqid = this.questionIndex + 1;
                                     var nqid = questions[this.questionIndex].question_id;
                                     if (!app.showimmediate) {
@@ -2718,7 +2720,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                                 });
 
                                     }
-
+                                    }       
                                 }
                             }, 500);                            
                             
@@ -2835,6 +2837,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                         
                         
 
+                         if (this.questionIndex < this.quiz.questions.length) {                
                         var questions = <?php echo json_encode($questions_list); ?>;
                         var qid = questions[this.questionIndex].question_id;
                         var answers = ['A', 'B', 'C', 'D'];
@@ -2918,13 +2921,21 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                             this.showQuestionOtherLang();
                          }  
                          <?php // } ?>
+                         }    
+                             
                              
                          this.continueTimer();    
        
                     },
                     prev: function () {
                            
-                        $('.loadingoverlay').show();                       
+                        $('.loadingoverlay').show();
+                        app.isDisabled = false;
+                        app.showimmediateblk = false;
+                        app.shownotimmdnxt = false;
+                        
+                        
+                        
                         if (this.quiz.questions.length > 0)
                             this.questionIndex--;
 

@@ -56,10 +56,18 @@ $app->post('/loginstudent', function() use ($app) {
     $record = $obj->selectRow('*', 'student_register', 'user_name=\'' . $data['user_name'] . '\'');
     if (count($record) > 0) {
         if ($data['password'] == $record['password']) {
-            $res['error'] = false;
-            $_SESSION['student_register_id'] = $record['student_register_id'];
-            $res['message'] = 'Welcome ' . $record['student_name'];
-            $res['data'] = $record;
+            $user_logged_in = $obj->selectRow('*', 'student_current_login', 'student_register_id='.$record['student_register_id']);
+            if(count($user_logged_in)==0)
+            {
+                $res['error'] = false;
+                $obj->insertRecord(array('student_register_id' => $record['student_register_id']),'student_current_login');
+                $obj->insertRecord(array('student_register_id' => $record['student_register_id'], 'login_at' => date('Y-m-d H:i:s'), 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')), 'student_register_login');
+                $_SESSION['student_register_id'] = $record['student_register_id'];
+                $res['message'] = 'Welcome ' . $record['student_name'];
+                $res['data'] = $record;
+            }else {
+                 $res['message'] = 'User Already Logged In';
+            }   
         } else {
             $res['message'] = 'Username or Password mismatch';
         }
@@ -69,6 +77,8 @@ $app->post('/loginstudent', function() use ($app) {
 
 $app->post('/logout_student', function() use ($app) {
     $res = array('error' => false, 'message' => 'No user found in this email id');
+    $com = new Common();
+    $data = $com->deleteRecordWithWhere('student_current_login', 'student_register_id = '. $_SESSION['student_register_id']);
     session_destroy();
     echoRespnse(201, $res);
 });
