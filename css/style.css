@@ -4080,3 +4080,13 @@ form#login-form:after {
 .custom-mobile-with-menu {
     display: none;
 }
+
+.reset-form {
+    margin: 0 auto;
+    width: 500px;
+}
+
+.reset-form input {
+    width: 100%;
+    margin-bottom: 20px;
+}

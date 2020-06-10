@@ -47,6 +47,8 @@
     font:16px Arial, Helvetica, sans-serif;
     line-height: 40px;
     float: right;
+    padding: 0px 0px 7px 0;
+    border-bottom: 1px dotted #e6e6e6;
 }
 
 .header-fixed .header-limiter nav a{
