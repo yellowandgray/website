@@ -65,13 +65,13 @@ $languages = $obj->selectAll('*', 'language', 'status = 1');
         <?php include 'script.php'; ?>
         <script>
             $("#open-logout").click(function (e) {
-                console.log("test");
+                console.log("test-1");
                 e.stopPropagation();
-                $(".logout_dropdown").show("fast");
+                $(".logout_position").show("fast");
             });
             $(document).click(function (e) {
-                if (!(e.target.class === 'logout_dropdown')) {
-                    $(".logout_dropdown").hide("fast");
+                if (!(e.target.class === 'logout_position')) {
+                    $(".logout_position").hide("fast");
                 }
             });
         </script>

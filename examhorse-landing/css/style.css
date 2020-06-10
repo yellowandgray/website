@@ -1817,11 +1817,13 @@ ul.breadcrumb li a:hover {
     display: none;
 }
 
-.text-content p {
-    font-size: 20px;
+.text-content h3 {
+    padding-right: 0px;
+    font-size: 45px;
     font-weight: 600;
-    line-height: 1.2;
-    text-align: justify;
+    color: #fff;
+    line-height: 60px;
+    margin: 0 0 25px;
 }
 
 .text-content ul {
@@ -1833,8 +1835,13 @@ ul.breadcrumb li a:hover {
     font-size: 20px;
     font-weight: 600;
     line-height: 1.5;
+    padding-bottom: 20px;
+    display: block;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.15);
 }
 
 .text-content ul li i {
     color: #049a00;
+    font-size: 20px;
 }

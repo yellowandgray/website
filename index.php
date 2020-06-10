@@ -65,34 +65,29 @@ if (isset($_SESSION['student_register_id'])) {
                 <span class="sr-only">Next</span>
             </a>
         </div>
-        <div class="home-register-section">
+        <div class="home-register-section" style="background: #293d46 !important">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="text-content" style="border-right: 4px dotted #198c19;padding: 20px;">
-                            <p>One source to practice and learn all the previous set of 16-year TNPSC Group I – Original General Studies Question papers from 1995 to 2019 and 2020 updated Model Question paper with answers and explanation for the upcoming exams</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <div class="text-content">
+                            <h3>One source to practice and learn all the previous set of 16-year TNPSC Group I – Original General Studies Question papers from 1995 to 2019 and 2020 updated Model Question paper with answers and explanation for the upcoming exams</h3>
                             <ul>
                                 <li><i class="fa fa-check"></i> For Group I candidates</li>
                                 <li><i class="fa fa-check"></i> For Group 2/2A candidates</li>
                                 <li><i class="fa fa-check"></i> Total of 3,200 questions</li>
-                                <li><i class="fa fa-check"></i> Additional information for each</li>
-                                <li><i class="fa fa-check"></i> question – both in Tamil and English</li>
+                                <li><i class="fa fa-check"></i> Additional information for each question – both in Tamil and English</li>
                             </ul>
                         </div>
                     </div>
                 </div>
-<!--                <div class="">
-                    <div class="float-left">
-                        <h3 class="text-center"><span class="wow fadeInRight text-center" data-wow-delay="0s">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span></h3>
-                    </div>
-                    <div class="float-right register-now-btn wow fadeInRight" data-wow-delay="3s">
-                        <a href='register-page' class="register-btn wow pulse" data-wow-iteration="infinite" data-wow-duration="1500ms">Register Now!</a>
-                    </div>
-                </div>-->
+                <!--                <div class="">
+                                    <div class="float-left">
+                                        <h3 class="text-center"><span class="wow fadeInRight text-center" data-wow-delay="0s">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span></h3>
+                                    </div>
+                                    <div class="float-right register-now-btn wow fadeInRight" data-wow-delay="3s">
+                                        <a href='register-page' class="register-btn wow pulse" data-wow-iteration="infinite" data-wow-duration="1500ms">Register Now!</a>
+                                    </div>
+                                </div>-->
             </div>
         </div>
         <div class="box-section">

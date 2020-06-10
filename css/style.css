@@ -3663,6 +3663,12 @@ form#login-form:after {
     .custom-modal {
         width: 98% !Important;
     }
+    .custom-mobile-with-menu {
+        display: block !important;
+    }
+    .custom-full-width-menu {
+        display: none !important;
+    }
 }
 
 .cls-orange {
@@ -4069,4 +4075,8 @@ form#login-form:after {
     opacity: 0.9;
     background: #F03C02;
     margin: 5px 0;
+}
+
+.custom-mobile-with-menu {
+    display: none;
 }

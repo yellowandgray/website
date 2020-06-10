@@ -18,6 +18,7 @@
 <script src="js/sweetalert.min.js" type="text/javascript"></script>
 <script src="js/common.js" type="text/javascript"></script>
 <script src="js/vue.min.js" type="text/javascript"></script>
+<script src="https://www.google.com/recaptcha/api.js"></script>
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/javascript">
     /*
@@ -51,7 +52,7 @@
 </script>
 <script type="text/javascript">
     $("#open-logout").click(function (e) {
-        console.log("test");
+        //console.log("test");
         e.stopPropagation();
         $(".logout_dropdown").show("fast");
     });
@@ -68,6 +69,16 @@
     $(document).click(function (e) {
         if (!(e.target.class === 'logout_dropdown_1')) {
             $(".logout_dropdown_1").hide("fast");
+        }
+    });
+    $("#open-logout-2").click(function (e) {
+        //console.log("test");
+        e.stopPropagation();
+        $(".logout_dropdown_2").show("fast");
+    });
+    $(document).click(function (e) {
+        if (!(e.target.class === 'logout_dropdown_2')) {
+            $(".logout_dropdown_2").hide("fast");
         }
     });
 </script>

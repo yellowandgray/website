@@ -407,7 +407,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                         <div class="quiz-question-section">
                             <a  onclick="goBack();"  v-if="!showqap"><i class = 'font-icon-arrow-simple-left'></i></a>
                             <a  @click="showqus()"  v-if="showqap"><i class = 'font-icon-arrow-simple-left'></i></a>
-                            
+
                             <h4 id="mySigninModalLabel" class="text-center quiz-heading-width">
                                 <table class="table-title">
                                     <tr>
@@ -437,9 +437,9 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                 </table>
                             </h4>                           
                             <a class="home_link" href="member-home">
-                                    <i class="icon-home"></i>
-                                </a>
-                           
+                                <i class="icon-home"></i>
+                            </a>
+
                             <?php /*
                               if ($type == 'Year Order') {  ?>
                               <div class="quiz-timer" v-if="showTimer">
@@ -526,7 +526,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
 
 
                                         <!-- show question admin panel -->
-<?php if ($type == 'Year Order') { ?>  
+                                        <?php if ($type == 'Year Order') { ?>  
                                             <div class="quiz-review">
                                                 <div class="float-left" style="padding: 20px 0;">
                                                     <!--a href="#" onclick="showqno();" class="btn logout-btn">Question Admin Panel</a  -->
@@ -534,20 +534,20 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                                     <a href="#" @click="clickPause();" class="btn logout-btn">Pause Test</a>                                         
                                                 </div>
                                             </div>  
-<?php } ?>    
+                                        <?php } ?>    
 
                                         <!-- show question admin panel -->
 
 
                                         <!-- show question admin panel -->
-<?php if ($type == 'Subject Order') { ?>  
+                                        <?php if ($type == 'Subject Order') { ?>  
                                             <div class="quiz-review">
                                                 <div class="float-left" style="padding: 20px 0;">
                                                     <!--a href="#" onclick="showqno();" class="btn logout-btn">Question Admin Panel</a  -->
                                                     <a href="#" @click="clickPause();" class="btn logout-btn">Pause Test</a>                                         
                                                 </div>
                                             </div>  
-<?php } ?>    
+                                        <?php } ?>    
 
                                         <!-- show question admin panel -->
 
@@ -623,7 +623,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                                     </a>
                                                 </div-->                                         
                                         </div>
-<?php // }   ?>
+                                        <?php // }   ?>
 
                                     </div>
 
@@ -912,11 +912,11 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                               </div>
                                               <?php // } */ ?>
 
-<?php // if($testmode==1){    ?>
+                                            <?php // if($testmode==1){    ?>
                                             <div v-if="!quiz.questions[questionIndex].show_image_explanation && otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no] && otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].show_image_explanation" class="text-center">
                                                 <img v-if="otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].explanation_img_direction == 'top'" v-on:click="showexpimgpopup('api/v1/'+quiz.questions[questionIndex].image_path_explanation);"  v-bind:src="'api/v1/'+otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].image_path_explanation" alt="image" class="qes-img" />
                                             </div>
-<?php // }     ?>
+                                            <?php // }     ?>
 
                                             <!--span v-html="quiz.questions[questionIndex].explanation"></span-->
                                             <br/>
@@ -931,11 +931,11 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                               <?php // } */ ?>
 
 
-<?php // if($testmode==1){    ?>
+                                            <?php // if($testmode==1){    ?>
                                             <div style="text-align: left;" v-if="!quiz.questions[questionIndex].explanation && otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no] && otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].explanation">
                                                 <span v-html="otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].explanation"></span>
                                             </div>
-<?php // }     ?>
+                                            <?php // }     ?>
 
 
 
@@ -950,11 +950,11 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                               </div>
                                               <?php // } */ ?>
 
-<?php // if($testmode==1){    ?>
+                                            <?php // if($testmode==1){    ?>
                                             <div v-if="!quiz.questions[questionIndex].show_image_explanation && otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no] && otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].show_image_explanation" class="text-center">
                                                 <img v-if="otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].explanation_img_direction == 'bottom'" v-bind:src="'api/v1/'+otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].image_path_explanation" alt="image" class="qes-img" />
                                             </div>
-<?php // }   ?>
+                                            <?php // }   ?>
 
 
 
@@ -984,7 +984,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     </footer>                                    
                                     <?php // }    ?>
 
-<?php // if($type=='Year Order') {    ?>
+                                    <?php // if($type=='Year Order') {    ?>
                                     <div v-if="olqshow" id="olqhidden">
 
                                         <div v-if="olqd">
@@ -1063,11 +1063,11 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                 <h2 class="complete-title" v-if="scoreval != quiz.questions.length">
                                     Test Completed
                                 </h2>
-<?php if ($type == 'Year Order') { ?>
+                                <?php if ($type == 'Year Order') { ?>
                                     <p class="subtitledur" v-if="data_ques_duration>0">
                                         <span class="stotdur">At {{data_ques_duration}} Minutes You have completed the Quiz <br v-if="data_ques_answered!=0"> <span class="stotques" v-if="data_ques_answered!=0">At {{totalquizduration}} Minutes you have completed {{data_ques_answered}} Questions</span>
                                     </p>
-<?php } ?>
+                                <?php } ?>
                                 <p class="subtitle">
                                     Total Score: <span class="score-clr">{{ scoreval }}</span> / {{ quiz.questions.length }}
                                 </p>
@@ -1081,7 +1081,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                         <a @click="divshowsorder()" class="btn btn-theme btn-rounded">Show Full Result <i class="fa fa-refresh"></i></a>
                                     <?php } else { ?>
                                         <a @click="divshow()" class="btn btn-theme btn-rounded">Show Full Result <i class="fa fa-refresh"></i></a>
-<?php } ?>
+                                    <?php } ?>
                                     <!--/resultTitleBlock-->
 
                                 </div>
@@ -1138,7 +1138,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
             </div>
 
             <?php //include 'footer.php'; ?>
-<?php include 'script.php'; ?>
+            <?php include 'script.php'; ?>
             <script>
                 //image_url = 'http://localhost/project/examhorse/api/v1/';
                 image_url = 'http://examhorse.com/beta/api/v1/';
@@ -1153,9 +1153,9 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                     data: {
                         quiz: quiz,
                         questionIndex: <?php
-echo $attended_questions;
+            echo $attended_questions;
 //echo 0; 
-?>,
+            ?>,
                         userResponses: userResponseSkelaton,
                         showimmediate: false,
                         showimmediateblk: false,
@@ -1187,7 +1187,7 @@ echo $attended_questions;
                         data_ques_duration: 0,
                         showqap: false,
                         anscntstud: 0,
-                        scoreval:0
+                        scoreval: 0
                     },
                     filters: {
                         charIndex: function (i) {
@@ -1384,7 +1384,7 @@ echo $attended_questions;
                              setTimeout(() => {                        
                              
                              
-                             var questionslist = <?php // echo  json_encode($questions_list);    ?>;
+                             var questionslist = <?php // echo  json_encode($questions_list);      ?>;
                              var  qTable = '<table class="question-number-table"><tr>';
                              $.each(questionslist, function (key, val) {
                              var qn = key+1;
@@ -1443,7 +1443,7 @@ echo $attended_questions;
                              
                              
                              */
-                            this.showqap = true;        
+                            this.showqap = true;
 
                         },
                         divshow: function () {
@@ -1626,7 +1626,7 @@ echo $attended_questions;
                                             res += '<td>' + val.correctcnt + '</td>';
                                             res += '<td>' + val.wrongcnt + '</td>';
                                             res += '<td>';
-                                            res += '<button class="btn btn-answerd-clr btnsorderdetail" onClick="topicShowDetail(' + val.topic_id + ')" id="btnsorderdetail_'+val.topic_id+'">Show Details</button>';
+                                            res += '<button class="btn btn-answerd-clr btnsorderdetail" onClick="topicShowDetail(' + val.topic_id + ')" id="btnsorderdetail_' + val.topic_id + '">Show Details</button>';
                                             res += '</td>';
                                             res += '</tr>';
                                         });
@@ -1650,7 +1650,7 @@ echo $attended_questions;
                              }, 600);
                              $.ajax({
                              type: "GET",
-                             url: 'api/v1/get_result_detail/' +<?php // echo  $student_log;    ?>,
+                             url: 'api/v1/get_result_detail/' +<?php // echo  $student_log;      ?>,
                              success: function (data) {
                              if (data.result.error === false) {
                              var qlist = '';
@@ -2238,16 +2238,16 @@ echo $attended_questions;
                             if (!app.showimmediate) {
                                 var questions = <?php echo json_encode($questions_list); ?>;
                                 var answers = ['A', 'B', 'C', 'D'];
-                                
-                                
-                                 $.each(answers, function(ansi, ansv) {
-                                                var ansvl = app.convertLower(ansv);                                               
-                                                $('#ansopt_' + ansvl).removeClass('crt_clr');
-                                                $('#ansopt_' + ansvl).removeClass('is-selected');
-                                                $('#ansopt_' + ansvl).removeClass('wrng_clr');
-                                            });
-                                
-                                
+
+
+                                $.each(answers, function (ansi, ansv) {
+                                    var ansvl = app.convertLower(ansv);
+                                    $('#ansopt_' + ansvl).removeClass('crt_clr');
+                                    $('#ansopt_' + ansvl).removeClass('is-selected');
+                                    $('#ansopt_' + ansvl).removeClass('wrng_clr');
+                                });
+
+
                                 $.post("api/v1/store_answer",
                                         {
                                             question_id: questions[this.questionIndex].question_id,
@@ -2258,7 +2258,7 @@ echo $attended_questions;
                                             app.studanscnt();
                                             if (data.result.error === false) {
                                                 if (app.questionIndex == app.quiz.questions.length - 1) {
-                                                    app.chkAllquesAnswered();    
+                                                    app.chkAllquesAnswered();
                                                 }
                                             }
                                         });
@@ -2269,7 +2269,7 @@ echo $attended_questions;
                                         if (this.questionIndex == this.quiz.questions.length - 1) {
 
                                             if (this.isAllQAnsed) {
-                                                    app.score();
+                                                app.score();
 <?php if ($type == 'Year Order') { ?>
                                                     //if(this.questionIndex == this.quiz.questions.length-1)   {
                                                     this.savetimetaken();
@@ -2288,11 +2288,11 @@ echo $attended_questions;
                                             this.questionIndex++;
                                         }
 
-<?php // if($testmode==1){           ?>
+<?php // if($testmode==1){             ?>
                                         if (this.olqshow) {
                                             this.showQuestionOtherLang();
                                         }
-<?php // }    ?>
+<?php // }      ?>
 
                                         //var nqid = this.questionIndex + 1;
                                         var nqid = questions[this.questionIndex].question_id;
@@ -2338,16 +2338,16 @@ echo $attended_questions;
                                 if (!app.isDisabled) {
                                     var questions = <?php echo json_encode($questions_list); ?>;
                                     var answers = ['A', 'B', 'C', 'D'];
-                                    
-                                    
-                                     $.each(answers, function(ansi, ansv) {
-                                                var ansvl = app.convertLower(ansv);                                               
-                                                $('#ansopt_' + ansvl).removeClass('crt_clr');
-                                                $('#ansopt_' + ansvl).removeClass('is-selected');
-                                                $('#ansopt_' + ansvl).removeClass('wrng_clr');
-                                            });
-                                    
-                                    
+
+
+                                    $.each(answers, function (ansi, ansv) {
+                                        var ansvl = app.convertLower(ansv);
+                                        $('#ansopt_' + ansvl).removeClass('crt_clr');
+                                        $('#ansopt_' + ansvl).removeClass('is-selected');
+                                        $('#ansopt_' + ansvl).removeClass('wrng_clr');
+                                    });
+
+
                                     $.post("api/v1/store_answer",
                                             {
                                                 question_id: questions[this.questionIndex].question_id,
@@ -2355,12 +2355,12 @@ echo $attended_questions;
                                                 student_log_id: <?php echo $student_log; ?>
                                             },
                                             function (data, status) {
-                                                 app.studanscnt();
+                                                app.studanscnt();
                                                 if (data.result.error === false) {
                                                     if (app.questionIndex == app.quiz.questions.length - 1) {
-                                                        app.chkAllquesAnswered();    
+                                                        app.chkAllquesAnswered();
                                                     }
-                                                }                                               
+                                                }
                                             });
 
                                     // var questions = <?php echo json_encode($questions_list); ?>;
@@ -2389,11 +2389,11 @@ echo $attended_questions;
                             }
 
 
-                            
+
                             setTimeout(() => {
                                 applyMathAjax();
                                 $('.loadingoverlay').hide();
-                            }, 600);                            
+                            }, 600);
 
                         },
                         next: function () {
@@ -2411,34 +2411,34 @@ echo $attended_questions;
 
 
                             /*
-                            if (this.questionIndex < this.quiz.questions.length) {
-                                this.questionIndex++;
-                            }
-                            */
-                           
-                           
-                           if (this.questionIndex == this.quiz.questions.length - 1) {
-                                                       if (this.isAllQAnsed) {
-                                                           app.score();
+                             if (this.questionIndex < this.quiz.questions.length) {
+                             this.questionIndex++;
+                             }
+                             */
+
+
+                            if (this.questionIndex == this.quiz.questions.length - 1) {
+                                if (this.isAllQAnsed) {
+                                    app.score();
 
 <?php if ($type == 'Year Order') { ?>
-                                                    //if(this.questionIndex == this.quiz.questions.length-1)   {
-                                                    this.savetimetaken();
-                                                    this.quizdurtext();
-                                                    //   }
+                                        //if(this.questionIndex == this.quiz.questions.length-1)   {
+                                        this.savetimetaken();
+                                        this.quizdurtext();
+                                        //   }
 <?php } ?>
-                                                this.savequizendtime();
+                                    this.savequizendtime();
 
-                                                this.questionIndex++;
-                                                this.stopTimer();
-                                                this.showTimer = false;
-                                            }
+                                    this.questionIndex++;
+                                    this.stopTimer();
+                                    this.showTimer = false;
+                                }
 
-                                        } else 
-                                        {
-                                            this.questionIndex++;
-                                        }
-                           
+                            } else
+                            {
+                                this.questionIndex++;
+                            }
+
 
                             var questions = <?php echo json_encode($questions_list); ?>;
                             var qid = questions[this.questionIndex].question_id;
@@ -2451,14 +2451,14 @@ echo $attended_questions;
                                         function (data, status) {
                                             if (data.result.error === false) {
                                                 ansid = data.result.data;
-                                                
+
                                                 var answers = ['A', 'B', 'C', 'D'];
-                                                $.each(answers, function(ansi, ansv) {
-                                                var ansvl = app.convertLower(ansv);                                               
-                                                $('#ansopt_' + ansvl).removeClass('crt_clr');
-                                                $('#ansopt_' + ansvl).removeClass('is-selected');
-                                                $('#ansopt_' + ansvl).removeClass('wrng_clr');
-                                            });
+                                                $.each(answers, function (ansi, ansv) {
+                                                    var ansvl = app.convertLower(ansv);
+                                                    $('#ansopt_' + ansvl).removeClass('crt_clr');
+                                                    $('#ansopt_' + ansvl).removeClass('is-selected');
+                                                    $('#ansopt_' + ansvl).removeClass('wrng_clr');
+                                                });
 
                                                 $.get("api/v1/get_question_answer/" + qid,
                                                         function (data, status) {
@@ -2466,7 +2466,7 @@ echo $attended_questions;
 
                                                                 var corransid = app.convertLower(data.result.data);
                                                                 var studansid = app.convertLower(ansid);
-    
+
 
                                                                 if (data.result.data == ansid) {
                                                                     $('#ansopt_' + corransid).addClass('crt_clr');
@@ -2492,12 +2492,12 @@ echo $attended_questions;
                                                 ansid = data.result.data;
                                                 var answers = ['A', 'B', 'C', 'D'];
 
-                                                $.each(answers, function(ansi, ansv) {
-                                                var ansvl = app.convertLower(ansv);                                               
-                                                $('#ansopt_' + ansvl).removeClass('crt_clr');
-                                                $('#ansopt_' + ansvl).removeClass('is-selected');
-                                                $('#ansopt_' + ansvl).removeClass('wrng_clr');
-                                            });
+                                                $.each(answers, function (ansi, ansv) {
+                                                    var ansvl = app.convertLower(ansv);
+                                                    $('#ansopt_' + ansvl).removeClass('crt_clr');
+                                                    $('#ansopt_' + ansvl).removeClass('is-selected');
+                                                    $('#ansopt_' + ansvl).removeClass('wrng_clr');
+                                                });
 
 
 
@@ -2519,14 +2519,14 @@ echo $attended_questions;
                             }
 
 
-<?php // if($testmode==1){           ?>
+<?php // if($testmode==1){             ?>
                             if (this.olqshow) {
                                 this.showQuestionOtherLang();
                             }
-<?php // }    ?>
+<?php // }      ?>
                             this.continueTimer();
-                            
-                            
+
+
 
                         },
                         prev: function () {
@@ -2547,16 +2547,16 @@ echo $attended_questions;
                                         function (data, status) {
                                             if (data.result.error === false) {
                                                 ansid = data.result.data;
-                                                
-                                                
-                                                 $.each(answers, function(ansi, ansv) {
-                                                var ansvl = app.convertLower(ansv);                                               
-                                                $('#ansopt_' + ansvl).removeClass('crt_clr');
-                                                $('#ansopt_' + ansvl).removeClass('is-selected');
-                                                $('#ansopt_' + ansvl).removeClass('wrng_clr');
-                                            });
-                                            
-                                                
+
+
+                                                $.each(answers, function (ansi, ansv) {
+                                                    var ansvl = app.convertLower(ansv);
+                                                    $('#ansopt_' + ansvl).removeClass('crt_clr');
+                                                    $('#ansopt_' + ansvl).removeClass('is-selected');
+                                                    $('#ansopt_' + ansvl).removeClass('wrng_clr');
+                                                });
+
+
 
                                                 $.get("api/v1/get_question_answer/" + qid,
                                                         function (data, status) {
@@ -2590,14 +2590,14 @@ echo $attended_questions;
                                                 ansid = data.result.data;
 
 
-                                                 $.each(answers, function(ansi, ansv) {
-                                                var ansvl = app.convertLower(ansv);                                               
-                                                $('#ansopt_' + ansvl).removeClass('crt_clr');
-                                                $('#ansopt_' + ansvl).removeClass('is-selected');
-                                                $('#ansopt_' + ansvl).removeClass('wrng_clr');
-                                            });
-                                                
-                                                
+                                                $.each(answers, function (ansi, ansv) {
+                                                    var ansvl = app.convertLower(ansv);
+                                                    $('#ansopt_' + ansvl).removeClass('crt_clr');
+                                                    $('#ansopt_' + ansvl).removeClass('is-selected');
+                                                    $('#ansopt_' + ansvl).removeClass('wrng_clr');
+                                                });
+
+
 
 
                                                 var studansid = app.convertLower(ansid);
@@ -2615,11 +2615,11 @@ echo $attended_questions;
 
                             }
 
-<?php // if($testmode==1){           ?>
+<?php // if($testmode==1){             ?>
                             if (this.olqshow) {
                                 this.showQuestionOtherLang();
                             }
-<?php // }    ?>
+<?php // }      ?>
 
                             setTimeout(() => {
                                 applyMathAjax();
@@ -2857,11 +2857,11 @@ echo $attended_questions;
                             }
 
 
-<?php // if($testmode==1){           ?>
+<?php // if($testmode==1){             ?>
                             if (this.olqshow) {
                                 this.showQuestionOtherLang();
                             }
-<?php // }    ?>
+<?php // }      ?>
 
 
                         },
@@ -2893,12 +2893,12 @@ echo $attended_questions;
                          this.questionprevanswered = false;
                          
                          
-                         var questions = <?php // echo json_encode($questions_list);    ?>;
+                         var questions = <?php // echo json_encode($questions_list);      ?>;
                          var qid = questions[this.questionIndex].question_id;
                          var answers = ['A', 'B', 'C', 'D'];
                          var ansid = '';
                          
-                         $.get("api/v1/get_student_notsure_answer/" + qid + "/<?php // echo $student_log;    ?>",
+                         $.get("api/v1/get_student_notsure_answer/" + qid + "/<?php // echo $student_log;      ?>",
                          function (data, status) {
                          if (data.result.error === false) {
                          ansid = data.result.data;
@@ -2958,11 +2958,11 @@ echo $attended_questions;
                                 $('.loadingoverlay').show();
 
 
-<?php // if($testmode==1){           ?>
+<?php // if($testmode==1){             ?>
                                 if (this.olqshow) {
                                     this.showQuestionOtherLang();
                                 }
-<?php // }    ?>
+<?php // }      ?>
 
                                 setTimeout(() => {
                                     applyMathAjax();
@@ -2981,7 +2981,7 @@ echo $attended_questions;
                         },
                         showQuestionOtherLang: function () {
 
-<?php // if($testmode==1){           ?>
+<?php // if($testmode==1){             ?>
                             this.olqd = null;
                             var other_language = '<?php echo $other_language['language_id']; ?>';
                             var questions = <?php echo json_encode($questions_list); ?>;
@@ -3006,11 +3006,11 @@ echo $attended_questions;
                                 applyMathAjax();
                                 $('.loadingoverlay').hide();
                             }, 600);
-<?php // }    ?>
+<?php // }      ?>
                         },
                         showExplanationOtherLang: function () {
                             //display other langauage explaination
-<?php // if($testmode==1){           ?>
+<?php // if($testmode==1){             ?>
 
 
                             var other_language = '<?php echo $other_language['language_id']; ?>';
@@ -3029,40 +3029,40 @@ echo $attended_questions;
                                 this.otherlangquiz = sample;
                                 console.log(sample);
                             }
-<?php // }    ?>
+<?php // }      ?>
                         },
                         /*        
-                        score: function () {
-                            var score = 0;
-                            for (let i = 0; i < this.userResponses.length; i++) {
-                                if (
-                                        typeof this.quiz.questions[i].responses[
-                                        this.userResponses[i]
-                                ] !== "undefined" &&
-                                        this.quiz.questions[i].responses[this.userResponses[i]].correct
-                                        ) {
-                                    score = score + 1;
-                                }
-                            }
-
-                            return score;
-
-                            //return this.userResponses.filter(function(val) { return val }).length;
-
-
-                        },
-*/
+                         score: function () {
+                         var score = 0;
+                         for (let i = 0; i < this.userResponses.length; i++) {
+                         if (
+                         typeof this.quiz.questions[i].responses[
+                         this.userResponses[i]
+                         ] !== "undefined" &&
+                         this.quiz.questions[i].responses[this.userResponses[i]].correct
+                         ) {
+                         score = score + 1;
+                         }
+                         }
+                         
+                         return score;
+                         
+                         //return this.userResponses.filter(function(val) { return val }).length;
+                         
+                         
+                         },
+                         */
                         score: function () {
                             var scoreva = 0;
                             $.get("api/v1/get_result_correct_ans_cnt/<?php echo $student_log; ?>",
                                     function (data, status) {
                                         if (data.result.error === false) {
-                                            scoreva = data.result.correct_cnt;     
-                                       }
-                                       app.scoreval=scoreva;
- 
+                                            scoreva = data.result.correct_cnt;
+                                        }
+                                        app.scoreval = scoreva;
+
                                     });
-                        },    
+                        },
                         startTimer: function () {
                             if (!this.isTimerPaused) {
                                 this.totseconds++;
@@ -3173,13 +3173,13 @@ echo $attended_questions;
                                         }
                                     });
                         },
-                        studanscnt: function() {
+                        studanscnt: function () {
                             $.get("api/v1/get_result_detail_ans_cnt/<?php echo $student_log; ?>",
                                     function (data, status) {
-                                       app.anscntstud = data.result.ans_cnt;
+                                        app.anscntstud = data.result.ans_cnt;
                                     });
-                            
-                        }   
+
+                        }
 
 
 
@@ -3217,11 +3217,11 @@ echo $attended_questions;
                     setTimeout(() => {
                         applyMathAjax();
                         $('.quiz-section').show();
-<?php // if($testmode==1){           ?>
+<?php // if($testmode==1){             ?>
                         //display other lanaguage explanation           
                         app.showExplanationOtherLang();
-<?php // }    ?>
-<?php // if($testmode == 0) {     ?>
+<?php // }      ?>
+<?php // if($testmode == 0) {       ?>
 <?php if ($type == 'Year Order') { ?>
                             //setInterval(app.startTimer, 1000);
 <?php } ?>
@@ -3251,52 +3251,64 @@ echo $attended_questions;
                     app.goQuesAns(val);
                 }
                 function topicShowDetail(tid) {
-                    
+
                     /*
-                    $('#question_list_det').toggle();
-                    
-                    
-                    if($('#question_list_det').css('display') == 'none'){ 
-                        $('#btnsorderdetail_'+tid).html('Show Details');                    
+                     $('#question_list_det').toggle();
+                     
+                     
+                     if($('#question_list_det').css('display') == 'none'){ 
+                     $('#btnsorderdetail_'+tid).html('Show Details');                    
                      } else { 
-                        $('#btnsorderdetail_'+tid).html('Hide Details');
-                        app.divshowsorderdetail(tid,<?php //echo $student_log; ?>);
-                    } 
-                    */
-                    
-                    // app.divshowsorderdetail(tid,<?php // echo $student_log; ?>);
-                    
-                    
-                    
-                     var seltoptxt = '';
-                     
-                     seltoptxt = $('#btnsorderdetail_'+tid).html();
-                     $('.btnsorderdetail').html('Show Details');
-                     if(seltoptxt=='Show Details') {
-                         app.divshowsorderdetail(tid,<?php echo $student_log; ?>);
-                         $('#question_list_det').show();
-                         $('#btnsorderdetail_'+tid).html('Hide Details');
-                    }    
-                    if(seltoptxt=='Hide Details') {
-                          $('#btnsorderdetail_'+tid).html('Show Details');
-                          $('#question_list_det').hide();
-                    } 
-                     
-                     
+                     $('#btnsorderdetail_'+tid).html('Hide Details');
+                     app.divshowsorderdetail(tid,<?php //echo $student_log;   ?>);
+                     } 
+                     */
+
+                    // app.divshowsorderdetail(tid,<?php // echo $student_log;   ?>);
+
+
+
+                    var seltoptxt = '';
+
+                    seltoptxt = $('#btnsorderdetail_' + tid).html();
+                    $('.btnsorderdetail').html('Show Details');
+                    if (seltoptxt == 'Show Details') {
+                        app.divshowsorderdetail(tid,<?php echo $student_log; ?>);
+                        $('#question_list_det').show();
+                        $('#btnsorderdetail_' + tid).html('Hide Details');
+                    }
+                    if (seltoptxt == 'Hide Details') {
+                        $('#btnsorderdetail_' + tid).html('Show Details');
+                        $('#question_list_det').hide();
+                    }
+
+
                 }
                 function yordershowdetail() {
-                    
+
                     $('#question_list_det').toggle();
-                    
-                    if($('#question_list_det').css('display') == 'none'){ 
+
+                    if ($('#question_list_det').css('display') == 'none') {
                         $('#btnyorderdetail').html('Show Details');
-                     } else { 
+                    } else {
                         $('#btnyorderdetail').html('Hide Details');
                     }
-                    
-                    
+
+
                     //$('#question_list_det').show();
                 }
+            </script>
+            <script>
+                $("#open-logout").click(function (e) {
+                    console.log("test-1");
+                    e.stopPropagation();
+                    $(".logout_position").show("fast");
+                });
+                $(document).click(function (e) {
+                    if (!(e.target.class === 'logout_position')) {
+                        $(".logout_position").hide("fast");
+                    }
+                });
             </script>
     </body>
 </html>
