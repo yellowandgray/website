@@ -1563,6 +1563,10 @@ and open the template in the editor.
 
 .contact-section-examhorse .contact-content p {
     font-size: 18px;
+    padding: 25px 12px;
+    background: #fff;
+    margin: 20px 0 30px 0;
+    box-shadow: 3px 3px 5px 6px #ccc;
 }
 
 .call-as-now ul{
@@ -1612,4 +1616,42 @@ and open the template in the editor.
     color: #fff;
     text-transform: none;
     padding: 4px 15px;
+}
+
+.file-upload{
+    height: 50px;
+    width: 50px;
+     margin: 0px auto; 
+    border: 1px solid #f0c0d0;
+    border-radius: 100px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+.file-upload img.upload-img {
+    width: 35px;
+    margin: 0 auto;
+    position: absolute;
+    top: 7px;
+    right: 8px;
+    height: 30px;
+}
+.file-upload input{
+    position:absolute;
+    height:400px;
+    width:400px;
+    left:-200px;
+    top:-200px;
+    background:transparent;
+    opacity:0;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    cursor: pointer;
+}
+.file-upload img{
+    height:70px;
+    width:70px;
+    margin:15px;
 }

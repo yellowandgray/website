@@ -153,7 +153,8 @@ Below enquiry is recived</h3>
 
     // More headers
 
-    $address = "yellowandgraychannel@gmail.com";
+//    $address = "yellowandgraychannel@gmail.com";
+    $address = "examhorse1@gmail.com";
 
 
 

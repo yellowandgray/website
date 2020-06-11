@@ -11,12 +11,18 @@ $languages = $obj->selectAll('*', 'language', 'status = 1');
         <div class="member-full-version-secttion">
             <div class="container">
                 <div class="text-center"><h3>Reset Your Password </h3></div>
-                <form onsubmit="return forgotPassword();" class="reset-form">
+                <form onsubmit="return changePassword();" class="reset-form">
                     <div class="form-group">
-                        <input type = 'email' id = 'email' placeholder = 'Enter Register Email Id' required>
+                        <input type = 'password' id = 'password' placeholder = 'New Password' required>
                     </div>
                     <div class="form-group">
-                        <button type = 'submit' class = 'btn btn-custom'>Submit</button>
+                        <input type = 'password' id = 'confirm_password' placeholder = 'Confirm Password' required>
+                    </div>
+                    <div class="form-group">
+                        <button type = 'submit' class = 'btn'>Reset password</button>
+            <!--                <p class = 'aligncenter margintop20'>
+                        Please put your registered user name. you have reset the your password...
+                    </p>-->
                     </div>
                 </form>
             </div>

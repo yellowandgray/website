@@ -155,9 +155,8 @@ Below enquiry is recived</h3>
     $mail->Body = $message;
 
     // More headers
-
-    $address = "yellowandgraychannel@gmail.com";
-
+    //    $address = "yellowandgraychannel@gmail.com";
+    $address = "examhorse1@gmail.com";
 
 
     $mail->AddAddress($address, "Exam Horse");

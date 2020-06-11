@@ -1241,7 +1241,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     
                                     <img src="img/pic-intr-offer.jpg" alt="" />
                                     <h4><strike>₹999 </strike> &nbsp;&nbsp; <span> ₹499</span> <span style="font-size: 15px;">(Inclusive of 18% GST)</span></h4>
-                                    <a href="register_user" class="btn btn-green">Buy Full Version</a>
+                                    <a href="register_user" class="btn btn-green" style="font-size: 20px;padding: 15px;">Buy Full Version</a>
                                     <?php /*
                                     <a class="btn btn-theme btn-rounded" @click="restart()">Restart <i class="fa fa-refresh"></i></a>
                                     <a class="btn btn-theme btn-rounded" onclick="window.location = 'select_language'">Home <i class="fa fa-refresh"></i></a>
@@ -1349,7 +1349,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     
                                     <img src="img/pic-intr-offer.jpg" alt="" />
                                     <h4><strike>₹999 </strike> &nbsp;&nbsp; <span> ₹499</span> <span style="font-size: 15px;">(Inclusive of 18% GST)</span></h4>
-                                    <a href="register_user" class="btn btn-green">Buy Full Version</a>
+                                    <a href="register_user" class="btn btn-green" style="font-size: 20px;padding: 15px;">Buy Full Version</a>
                                 
                                      
 
