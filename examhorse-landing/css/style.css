@@ -32,8 +32,8 @@
 }
 
 .fixed .header-fixed .header-limiter h1 img {
-    width: 70%;
-    margin-top: 7px;
+    width: 100%;
+/*    margin-top: 7px;*/
 }
 
 /* The navigation links */
@@ -91,7 +91,7 @@
 
 body.fixed .header-fixed {
     padding: 5px 40px;
-    height: 50px;
+    height: 72px;
     position: fixed;
     width: 100%;
     top: 0;
@@ -365,6 +365,7 @@ footer a:hover {
     height: 100%;
     position: absolute;
     right: 10px;
+    top: 10px;
 }
 
 .logout_section {
@@ -391,7 +392,7 @@ footer a:hover {
     border-radius: 3px;
     outline: none;
     box-sizing: border-box;
-    z-index: 1;
+    z-index: 9;
     width: 250px;
 }
 
@@ -1846,4 +1847,13 @@ ul.breadcrumb li a:hover {
 .text-content ul li i {
     color: #049a00;
     font-size: 20px;
+}
+
+.edit-profile-section {
+    padding: 60px 0 0;
+}
+
+.edit-profile-section .edit-form {
+    width: 60%;
+    margin: 0 auto;
 }

@@ -83,7 +83,7 @@ if (isset($_SESSION['student_register_id'])) {
                                             <li onclick="window.location = 'about'">About us</li>
                                             <li onclick="window.location = 'contact'">Contact us</li>
                                             <li>
-                                                <a href="register-intro" class="btn btn-green">Buy Full Version</a>
+                                                <a href="registration_intro" class="btn btn-green">Buy Full Version</a>
                                                 <a href="login-page" class="btn btn-custom">Login</a>
                                             </li>
                                         </ul>

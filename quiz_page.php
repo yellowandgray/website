@@ -1137,796 +1137,907 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                     </div>           
                 </div>
             </div>
+        </div>
 
-            <?php //include 'footer.php'; ?>
-            <?php include 'script.php'; ?>
-            <script>
-                //image_url = 'http://localhost/project/examhorse/api/v1/';
-                image_url = 'http://examhorse.com/beta/api/v1/';
-                console.log(<?php echo json_encode($questions_list); ?>);
-                var quiz = {
-                    user: "<?php echo $student['student_name']; ?>",
-                    questions: <?php echo json_encode($questions_list); ?>
-                },
-                        userResponseSkelaton = Array(quiz.questions.length).fill(null);
-                var app = new Vue({
-                    el: "#app",
-                    data: {
-                        quiz: quiz,
-                        questionIndex: <?php
-            echo $attended_questions;
+        <?php //include 'footer.php'; ?>
+        <?php include 'script.php'; ?>
+        <script>
+            //image_url = 'http://localhost/project/examhorse/api/v1/';
+            image_url = 'http://examhorse.com/beta/api/v1/';
+            console.log(<?php echo json_encode($questions_list); ?>);
+            var quiz = {
+                user: "<?php echo $student['student_name']; ?>",
+                questions: <?php echo json_encode($questions_list); ?>
+            },
+                    userResponseSkelaton = Array(quiz.questions.length).fill(null);
+            var app = new Vue({
+                el: "#app",
+                data: {
+                    quiz: quiz,
+                    questionIndex: <?php
+        echo $attended_questions;
 //echo 0; 
-            ?>,
-                        userResponses: userResponseSkelaton,
-                        showimmediate: false,
-                        showimmediateblk: false,
-                        isDisabled: false,
-                        shownotimmdnxt: false,
-                        studans: false,
-                        isActive: false,
-                        revShow: false,
-                        olqshow: false,
-                        olqd: null,
-                        showcnfrmaftersel: false,
-                        shownotsureaftersel: false,
-                        shownextnosave: true,
-                        showsurebtnans: false,
-                        questionprevanswered: false,
-                        selected_answer: '',
-                        otherlangquiz: null,
-                        timerId: 0,
-                        totseconds: 0,
-                        secondslabel: 0,
-                        minuteslabel: 0,
-                        isTimerPaused: true,
-                        isTimerStart: false,
-                        isAllQAnsed: false,
-                        showTimer: true,
-                        totalquizduration: 8,
-                        quizalertbeforemins: 1,
-                        data_ques_answered: 0,
-                        data_ques_duration: 0,
-                        showqap: false,
-                        anscntstud: 0,
-                        scoreval: 0
+        ?>,
+                    userResponses: userResponseSkelaton,
+                    showimmediate: false,
+                    showimmediateblk: false,
+                    isDisabled: false,
+                    shownotimmdnxt: false,
+                    studans: false,
+                    isActive: false,
+                    revShow: false,
+                    olqshow: false,
+                    olqd: null,
+                    showcnfrmaftersel: false,
+                    shownotsureaftersel: false,
+                    shownextnosave: true,
+                    showsurebtnans: false,
+                    questionprevanswered: false,
+                    selected_answer: '',
+                    otherlangquiz: null,
+                    timerId: 0,
+                    totseconds: 0,
+                    secondslabel: 0,
+                    minuteslabel: 0,
+                    isTimerPaused: true,
+                    isTimerStart: false,
+                    isAllQAnsed: false,
+                    showTimer: true,
+                    totalquizduration: 8,
+                    quizalertbeforemins: 1,
+                    data_ques_answered: 0,
+                    data_ques_duration: 0,
+                    showqap: false,
+                    anscntstud: 0,
+                    scoreval: 0
+                },
+                filters: {
+                    charIndex: function (i) {
+                        return String.fromCharCode(97 + i);
                     },
-                    filters: {
-                        charIndex: function (i) {
-                            return String.fromCharCode(97 + i);
-                        },
-                        AddPrefix: function (value, prefix) {
-                            return prefix + value;
+                    AddPrefix: function (value, prefix) {
+                        return prefix + value;
+                    }
+                },
+                methods: {
+                    showexpimgpopup: function (imgsrc) {
+                        if (imgsrc != '') {
+                            $('.explimagepreview').attr('src', imgsrc);
+                            $('#explimagemodal').modal('show');
                         }
                     },
-                    methods: {
-                        showexpimgpopup: function (imgsrc) {
-                            if (imgsrc != '') {
-                                $('.explimagepreview').attr('src', imgsrc);
-                                $('#explimagemodal').modal('show');
-                            }
-                        },
-                        restart: function () {
-                            $('#create').hide();
-                            this.questionIndex = 0;
-                            this.userResponses = Array(this.quiz.questions.length).fill(null);
-                            //document.getElementById('#create').style.display = 'none';
-                            this.showTimer = true;
-                        },
-                        convertLower: function (strval) {
-                            return strval.toLowerCase().trim();
-                        },
-                        showOverlay: function () {
-                            $('.loadingoverlay').show();
-                        },
-                        hideOverlay: function () {
-                            $('.loadingoverlay').hide();
-                        },
-                        revcontAns: function () {
+                    restart: function () {
+                        $('#create').hide();
+                        this.questionIndex = 0;
+                        this.userResponses = Array(this.quiz.questions.length).fill(null);
+                        //document.getElementById('#create').style.display = 'none';
+                        this.showTimer = true;
+                    },
+                    convertLower: function (strval) {
+                        return strval.toLowerCase().trim();
+                    },
+                    showOverlay: function () {
+                        $('.loadingoverlay').show();
+                    },
+                    hideOverlay: function () {
+                        $('.loadingoverlay').hide();
+                    },
+                    revcontAns: function () {
 
-                            this.questionIndex = 0;
-                            app.revShow = false;
-                            $('#question_list').empty();
-                            $("#create").toggle();
+                        this.questionIndex = 0;
+                        app.revShow = false;
+                        $('#question_list').empty();
+                        $("#create").toggle();
 
 
-                        },
-                        revAns: function () {
-                            $.ajax({
-                                type: "GET",
-                                url: 'api/v1/get_result_detail/' +<?php echo $student_log; ?>,
-                                success: function (data) {
-                                    if (data.result.error === false) {
+                    },
+                    revAns: function () {
+                        $.ajax({
+                            type: "GET",
+                            url: 'api/v1/get_result_detail/' +<?php echo $student_log; ?>,
+                            success: function (data) {
+                                if (data.result.error === false) {
 
-                                        app.revShow = true;
+                                    app.revShow = true;
 
-                                        $('.loadingoverlay').show();
-                                        setTimeout(() => {
-                                            applyMathAjax();
-                                            $('.loadingoverlay').hide();
-                                        }, 600);
+                                    $('.loadingoverlay').show();
+                                    setTimeout(() => {
+                                        applyMathAjax();
+                                        $('.loadingoverlay').hide();
+                                    }, 600);
 
-                                        var qlist = '';
-                                        var correct_ans = '';
-                                        var student_ans = '';
-                                        $.each(data.result.data, function (key, val) {
-                                            qlist = qlist + '<div class="question-title"><h6>' + (key + 1) + '. ' + val.name + '</h6>';
-                                            if (val.a !== '') {
-                                                student_ans = '';
-                                                if ((val.student_answer).toUpperCase() === 'A') {
-                                                    student_ans = 'crt_clr';
-                                                } else if ((val.student_notsure_answer).toUpperCase() === 'A') {
-                                                    student_ans = 'notsure_clr';
-                                                }
-
-                                                qlist = qlist + '<div class="result-option ' + student_ans + '"><div class="option"><span class="quiz-option-float">A.</span> ' + val.a + '</div></div>';
+                                    var qlist = '';
+                                    var correct_ans = '';
+                                    var student_ans = '';
+                                    $.each(data.result.data, function (key, val) {
+                                        qlist = qlist + '<div class="question-title"><h6>' + (key + 1) + '. ' + val.name + '</h6>';
+                                        if (val.a !== '') {
+                                            student_ans = '';
+                                            if ((val.student_answer).toUpperCase() === 'A') {
+                                                student_ans = 'crt_clr';
+                                            } else if ((val.student_notsure_answer).toUpperCase() === 'A') {
+                                                student_ans = 'notsure_clr';
                                             }
-                                            if (val.b !== '') {
-                                                student_ans = '';
-                                                if ((val.student_answer).toUpperCase() === 'B') {
-                                                    student_ans = 'crt_clr';
-                                                } else if ((val.student_notsure_answer).toUpperCase() === 'B') {
-                                                    student_ans = 'notsure_clr';
-                                                }
-                                                qlist = qlist + '<div class="result-option ' + student_ans + '"><div class="option"><span class="quiz-option-float">B.</span> ' + val.b + '</div></div>';
-                                            }
-                                            if (val.c !== '') {
-                                                student_ans = '';
-                                                if ((val.student_answer).toUpperCase() === 'C') {
-                                                    student_ans = 'crt_clr';
-                                                } else if ((val.student_notsure_answer).toUpperCase() === 'C') {
-                                                    student_ans = 'notsure_clr';
-                                                }
 
-                                                qlist = qlist + '<div class="result-option ' + student_ans + '"><div class="option"><span class="quiz-option-float">C.</span> ' + val.c + '</div></div>';
+                                            qlist = qlist + '<div class="result-option ' + student_ans + '"><div class="option"><span class="quiz-option-float">A.</span> ' + val.a + '</div></div>';
+                                        }
+                                        if (val.b !== '') {
+                                            student_ans = '';
+                                            if ((val.student_answer).toUpperCase() === 'B') {
+                                                student_ans = 'crt_clr';
+                                            } else if ((val.student_notsure_answer).toUpperCase() === 'B') {
+                                                student_ans = 'notsure_clr';
                                             }
-                                            if (val.d !== '') {
-                                                student_ans = '';
-                                                if ((val.student_answer).toUpperCase() === 'D') {
-                                                    student_ans = 'crt_clr';
-                                                } else if ((val.student_notsure_answer).toUpperCase() === 'D') {
-                                                    student_ans = 'notsure_clr';
-                                                }
-                                                qlist = qlist + '<div class="result-option ' + student_ans + '"><div class="option"><span class="quiz-option-float">D.</span> ' + val.d + '</div></div>';
+                                            qlist = qlist + '<div class="result-option ' + student_ans + '"><div class="option"><span class="quiz-option-float">B.</span> ' + val.b + '</div></div>';
+                                        }
+                                        if (val.c !== '') {
+                                            student_ans = '';
+                                            if ((val.student_answer).toUpperCase() === 'C') {
+                                                student_ans = 'crt_clr';
+                                            } else if ((val.student_notsure_answer).toUpperCase() === 'C') {
+                                                student_ans = 'notsure_clr';
                                             }
-                                            qlist = qlist + '</div>';
-                                        });
-                                        $('#question_list').html(qlist);
-                                        $('#question_list').show();
-                                        $("#create").toggle();
-                                    } else {
-                                        swal('Information', data.result.message, 'info');
-                                    }
-                                },
-                                error: function (err) {
-                                    swal('Error', err.statusText, 'error');
+
+                                            qlist = qlist + '<div class="result-option ' + student_ans + '"><div class="option"><span class="quiz-option-float">C.</span> ' + val.c + '</div></div>';
+                                        }
+                                        if (val.d !== '') {
+                                            student_ans = '';
+                                            if ((val.student_answer).toUpperCase() === 'D') {
+                                                student_ans = 'crt_clr';
+                                            } else if ((val.student_notsure_answer).toUpperCase() === 'D') {
+                                                student_ans = 'notsure_clr';
+                                            }
+                                            qlist = qlist + '<div class="result-option ' + student_ans + '"><div class="option"><span class="quiz-option-float">D.</span> ' + val.d + '</div></div>';
+                                        }
+                                        qlist = qlist + '</div>';
+                                    });
+                                    $('#question_list').html(qlist);
+                                    $('#question_list').show();
+                                    $("#create").toggle();
+                                } else {
+                                    swal('Information', data.result.message, 'info');
                                 }
-                            });
-                        },
-                        showQuesPanel: function () {
+                            },
+                            error: function (err) {
+                                swal('Error', err.statusText, 'error');
+                            }
+                        });
+                    },
+                    showQuesPanel: function () {
 
 
 
-                            var stud_ans = [];
+                        var stud_ans = [];
 
-                            $.ajax({
-                                type: "GET",
-                                url: 'api/v1/get_result_detail/' +<?php echo $student_log; ?>,
-                                success: function (data) {
-                                    if (data.result.error === false) {
-                                        if (data.result.data) {
-                                            $.each(data.result.data, function (key, val) {
-                                                //stud_ans[val.question_no]= {'student_answer':val.student_answer,'student_notsure_answer':val.student_notsure_answer};
-                                                stud_ans[val.question_id] = {'student_answer': val.student_answer, 'student_notsure_answer': val.student_notsure_answer};
-                                            });
+                        $.ajax({
+                            type: "GET",
+                            url: 'api/v1/get_result_detail/' +<?php echo $student_log; ?>,
+                            success: function (data) {
+                                if (data.result.error === false) {
+                                    if (data.result.data) {
+                                        $.each(data.result.data, function (key, val) {
+                                            //stud_ans[val.question_no]= {'student_answer':val.student_answer,'student_notsure_answer':val.student_notsure_answer};
+                                            stud_ans[val.question_id] = {'student_answer': val.student_answer, 'student_notsure_answer': val.student_notsure_answer};
+                                        });
+                                    }
+                                }
+
+
+
+                                var questionslist = <?php echo json_encode($questions_list); ?>;
+                                var qTable = '<table class="question-number-table"><tr>';
+                                $.each(questionslist, function (key, val) {
+                                    var qn = key + 1;
+
+                                    if (qn != 1 && (key % 10 == 0)) {
+                                        if (qn < questionslist.length) {
+                                            qTable += '<tr>';
                                         }
                                     }
 
-
-
-                                    var questionslist = <?php echo json_encode($questions_list); ?>;
-                                    var qTable = '<table class="question-number-table"><tr>';
-                                    $.each(questionslist, function (key, val) {
-                                        var qn = key + 1;
-
-                                        if (qn != 1 && (key % 10 == 0)) {
-                                            if (qn < questionslist.length) {
-                                                qTable += '<tr>';
+                                    var tdval = '<td onClick=goQuesFrPanel(' + key + ');><span class="q-a-n">' + qn + '</span></td>';
+                                    if (typeof val.question_no !== 'undefined') {
+                                        if (typeof stud_ans[val.question_id] !== 'undefined') {
+                                            if (stud_ans[val.question_id].student_answer != '') {
+                                                tdval = '<td onClick=goQuesFrPanel(' + key + '); class=""><span class="q-a-n clr-blue">' + qn + '</span></td>';
+                                            } else if (stud_ans[val.question_id].student_notsure_answer != '') {
+                                                tdval = '<td onClick=goQuesFrPanel(' + key + '); class=""><span class="q-a-n clr-yellow">' + qn + '</span></td>';
                                             }
                                         }
-
-                                        var tdval = '<td onClick=goQuesFrPanel(' + key + ');><span class="q-a-n">' + qn + '</span></td>';
-                                        if (typeof val.question_no !== 'undefined') {
-                                            if (typeof stud_ans[val.question_id] !== 'undefined') {
-                                                if (stud_ans[val.question_id].student_answer != '') {
-                                                    tdval = '<td onClick=goQuesFrPanel(' + key + '); class=""><span class="q-a-n clr-blue">' + qn + '</span></td>';
-                                                } else if (stud_ans[val.question_id].student_notsure_answer != '') {
-                                                    tdval = '<td onClick=goQuesFrPanel(' + key + '); class=""><span class="q-a-n clr-yellow">' + qn + '</span></td>';
-                                                }
-                                            }
-                                        }
-                                        qTable += tdval;
+                                    }
+                                    qTable += tdval;
 
 
-                                        if (qn != 1 && (qn % 10 == 0)) {
+                                    if (qn != 1 && (qn % 10 == 0)) {
 
-                                            if (qn <= questionslist.length) {
-                                                qTable += '</tr>';
-                                            }
-                                        } else if (qn == questionslist.length) {
-                                            var rtd = 10 - (qn % 10);
-                                            for (i = 1; i <= rtd; i++) {
-                                                qTable += '<td></td>';
-                                            }
+                                        if (qn <= questionslist.length) {
                                             qTable += '</tr>';
                                         }
+                                    } else if (qn == questionslist.length) {
+                                        var rtd = 10 - (qn % 10);
+                                        for (i = 1; i <= rtd; i++) {
+                                            qTable += '<td></td>';
+                                        }
+                                        qTable += '</tr>';
+                                    }
 
 
 
 
 
+                                });
+                                qTable += '</table>';
+                                //console.log(qTable);
+
+                                $('#header-hidden').hide();
+                                $('#quiz-hidden').hide();
+                                $('.questionFooter').hide();
+                                $('#olqhidden').hide();
+                                $('#questionpanel').html(qTable);
+                                $('.question-admin-panel').show();
+                                //} 
+                            }
+                        });
+                        //console.log(stud_ans);       
+
+
+                        /*
+                         
+                         setTimeout(() => {                        
+                         
+                         
+                         var questionslist = <?php // echo  json_encode($questions_list);       ?>;
+                         var  qTable = '<table class="question-number-table"><tr>';
+                         $.each(questionslist, function (key, val) {
+                         var qn = key+1;
+                         
+                         if(qn!=1 && (key%10==0)) {                                                                
+                         if(qn<questionslist.length) {
+                         qTable += '<tr>';
+                         }   
+                         }   
+                         
+                         var tdval = '<td onClick=goQuesFrPanel('+key+');>'+qn+'</td>';
+                         if(typeof val.question_no !== 'undefined') {                                    
+                         if(typeof stud_ans[val.question_no] !== 'undefined'){
+                         if(stud_ans[val.question_no].student_answer!='') {
+                         tdval =  '<td onClick=goQuesFrPanel('+key+'); class="clr-blue">'+qn+'</td>';                                           
+                         }
+                         else if(stud_ans[val.question_no].student_notsure_answer!='') {
+                         tdval = '<td onClick=goQuesFrPanel('+key+'); class="clr-yellow">'+qn+'</td>'
+                         }    
+                         }   
+                         }
+                         qTable += tdval;
+                         
+                         
+                         if(qn!=1 && (qn%10==0)) {
+                         
+                         if(qn<=questionslist.length) {
+                         qTable += '</tr>';
+                         }   
+                         }else if(qn==questionslist.length) {
+                         var rtd = 10-(qn%10);
+                         for(i=1;i<=rtd;i++) {
+                         qTable += '<td></td>';
+                         }
+                         qTable += '</tr>';
+                         }   
+                         
+                         
+                         
+                         
+                         
+                         });    
+                         qTable += '</table>';
+                         //console.log(qTable);
+                         
+                         $('#header-hidden').hide();
+                         $('#quiz-hidden').hide();
+                         $('.questionFooter').hide();
+                         $('#questionpanel').html(qTable);
+                         $('.question-admin-panel').show();   
+                         
+                         
+                         
+                         }, 1000);
+                         
+                         
+                         
+                         */
+                        this.showqap = true;
+
+                    },
+                    divshow: function () {
+                        $('.loadingoverlay').show();
+                        setTimeout(() => {
+                            applyMathAjax();
+                            $('.loadingoverlay').hide();
+                        }, 600);
+                        $.ajax({
+                            type: "GET",
+                            url: 'api/v1/get_result_detail/' +<?php echo $student_log; ?>,
+                            success: function (data) {
+                                if (data.result.error === false) {
+                                    var qlist = '';
+                                    var correct_ans = '';
+                                    var student_ans = '';
+                                    var cor_cnt = 0;
+                                    var ans_cnt = 0;
+                                    var wrong_cnt = 0;
+
+                                    $.each(data.result.data, function (key, val) {
+                                        ans_cnt = ans_cnt + 1;
+                                        qlist = qlist + '<div class="question-title"><h6>' + (key + 1) + '. ' + val.name + '</h6>';
+                                        if (val.a !== '') {
+                                            correct_ans = '';
+                                            student_ans = '';
+                                            if ((val.answer).toUpperCase() === 'A') {
+                                                correct_ans = 'crt_clr';
+                                            }
+                                            if ((val.student_answer).toUpperCase() === 'A' && (val.answer).toUpperCase() !== 'A') {
+                                                student_ans = 'wrng_clr';
+                                                wrong_cnt = wrong_cnt + 1;
+                                            }
+                                            qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">A.</span> ' + val.a + '</div></div>';
+                                        }
+                                        if (val.b !== '') {
+                                            correct_ans = '';
+                                            student_ans = '';
+                                            if ((val.answer).toUpperCase() === 'B') {
+                                                correct_ans = 'crt_clr';
+                                            }
+                                            if ((val.student_answer).toUpperCase() === 'B' && (val.answer).toUpperCase() !== 'B') {
+                                                student_ans = 'wrng_clr';
+                                                wrong_cnt = wrong_cnt + 1;
+                                            }
+                                            qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">B.</span> ' + val.b + '</div></div>';
+                                        }
+                                        if (val.c !== '') {
+                                            correct_ans = '';
+                                            student_ans = '';
+                                            if ((val.answer).toUpperCase() === 'C') {
+                                                correct_ans = 'crt_clr';
+                                            }
+                                            if ((val.student_answer).toUpperCase() === 'C' && (val.answer).toUpperCase() !== 'C') {
+                                                student_ans = 'wrng_clr';
+                                                wrong_cnt = wrong_cnt + 1;
+                                            }
+                                            qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">C.</span> ' + val.c + '</div></div>';
+                                        }
+                                        if (val.d !== '') {
+                                            correct_ans = '';
+                                            student_ans = '';
+                                            if ((val.answer).toUpperCase() === 'D') {
+                                                correct_ans = 'crt_clr';
+                                            }
+                                            if ((val.student_answer).toUpperCase() === 'D' && (val.answer).toUpperCase() !== 'D') {
+                                                student_ans = 'wrng_clr';
+                                                wrong_cnt = wrong_cnt + 1;
+                                            }
+                                            qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">D.</span> ' + val.d + '</div></div>';
+                                        }
+                                        if (val.image_path_explanation !== '' && val.explanation_img_direction !== 'bottom') {
+                                            qlist = qlist + '<div class="explanation_image"><img src="' + image_url + val.image_path_explanation + '"></div>';
+                                        } else {
+                                            qlist = qlist + '';
+                                        }
+                                        if (val.explanation !== '') {
+                                            qlist = qlist + '<div class="explanation-section"><strong>Explanation</strong> : ' + val.explanation + '</div>';
+                                        } else {
+                                            //qlist = qlist + '<div class="explanation-section">No Explanation</div>';
+                                        }
+                                        if (val.image_path_explanation !== '' && val.explanation_img_direction !== 'top') {
+                                            qlist = qlist + '<div class="explanation_image"><img src="' + image_url + val.image_path_explanation + '"></div>';
+                                        } else {
+                                            qlist = qlist + '';
+                                        }
+                                        qlist = qlist + '</div>';
                                     });
-                                    qTable += '</table>';
-                                    //console.log(qTable);
+                                    $('#question_list_det').html(qlist);
 
-                                    $('#header-hidden').hide();
-                                    $('#quiz-hidden').hide();
-                                    $('.questionFooter').hide();
-                                    $('#olqhidden').hide();
-                                    $('#questionpanel').html(qTable);
-                                    $('.question-admin-panel').show();
-                                    //} 
+                                    cor_cnt = ans_cnt - wrong_cnt;
+                                    var res = '<table style="width:100%">';
+                                    res += '<tr>';
+                                    res += '<th>Year</th>';
+                                    res += '<th>Total</th>';
+                                    res += '<th>Answered</th>';
+                                    res += '<th><i class="icon-ok"></i></th>';
+                                    res += '<th><i class="icon-remove"></i></th>';
+                                    res += '<th>&nbsp;</th>';
+                                    res += '</tr>';
+                                    res += '<tr>';
+                                    res += '<td><?php echo $sel_year_val; ?></td>';
+                                    res += '<td>' + quiz.questions.length + '</td>';
+                                    res += '<td>' + ans_cnt + '</td>';
+                                    res += '<td>' + cor_cnt + '</td>';
+                                    res += '<td>' + wrong_cnt + '</td>';
+                                    res += '<td>';
+                                    res += '<button class="btn btn-answerd-clr" onClick="yordershowdetail();" id="btnyorderdetail">Show Details</button>';
+                                    res += '</td>';
+                                    res += '</tr>';
+                                    //$('#question_list').html(qlist);
+                                    $('#question_list').html(res);
+                                    $('#question_list').show();
+                                    $("#create").toggle();
+                                } else {
+                                    swal('Information', data.result.message, 'info');
                                 }
-                            });
-                            //console.log(stud_ans);       
+                            },
+                            error: function (err) {
+                                swal('Error', err.statusText, 'error');
+                            }
+                        });
+                    },
+                    divshowsorder: function () {
 
 
-                            /*
-                             
-                             setTimeout(() => {                        
-                             
-                             
-                             var questionslist = <?php // echo  json_encode($questions_list);      ?>;
-                             var  qTable = '<table class="question-number-table"><tr>';
-                             $.each(questionslist, function (key, val) {
-                             var qn = key+1;
-                             
-                             if(qn!=1 && (key%10==0)) {                                                                
-                             if(qn<questionslist.length) {
-                             qTable += '<tr>';
-                             }   
-                             }   
-                             
-                             var tdval = '<td onClick=goQuesFrPanel('+key+');>'+qn+'</td>';
-                             if(typeof val.question_no !== 'undefined') {                                    
-                             if(typeof stud_ans[val.question_no] !== 'undefined'){
-                             if(stud_ans[val.question_no].student_answer!='') {
-                             tdval =  '<td onClick=goQuesFrPanel('+key+'); class="clr-blue">'+qn+'</td>';                                           
-                             }
-                             else if(stud_ans[val.question_no].student_notsure_answer!='') {
-                             tdval = '<td onClick=goQuesFrPanel('+key+'); class="clr-yellow">'+qn+'</td>'
-                             }    
-                             }   
-                             }
-                             qTable += tdval;
-                             
-                             
-                             if(qn!=1 && (qn%10==0)) {
-                             
-                             if(qn<=questionslist.length) {
-                             qTable += '</tr>';
-                             }   
-                             }else if(qn==questionslist.length) {
-                             var rtd = 10-(qn%10);
-                             for(i=1;i<=rtd;i++) {
-                             qTable += '<td></td>';
-                             }
-                             qTable += '</tr>';
-                             }   
-                             
-                             
-                             
-                             
-                             
-                             });    
-                             qTable += '</table>';
-                             //console.log(qTable);
-                             
-                             $('#header-hidden').hide();
-                             $('#quiz-hidden').hide();
-                             $('.questionFooter').hide();
-                             $('#questionpanel').html(qTable);
-                             $('.question-admin-panel').show();   
-                             
-                             
-                             
-                             }, 1000);
-                             
-                             
-                             
-                             */
-                            this.showqap = true;
+                        $('.loadingoverlay').show();
 
-                        },
-                        divshow: function () {
-                            $('.loadingoverlay').show();
-                            setTimeout(() => {
-                                applyMathAjax();
-                                $('.loadingoverlay').hide();
-                            }, 600);
-                            $.ajax({
-                                type: "GET",
-                                url: 'api/v1/get_result_detail/' +<?php echo $student_log; ?>,
-                                success: function (data) {
-                                    if (data.result.error === false) {
-                                        var qlist = '';
-                                        var correct_ans = '';
-                                        var student_ans = '';
-                                        var cor_cnt = 0;
-                                        var ans_cnt = 0;
-                                        var wrong_cnt = 0;
+                        /*
+                         <div class="result-filter-section" style="display: none;">
+                         <table>
+                         <tr>
+                         <th>Subject</th>
+                         <th>Topic</th>
+                         <th>Total</th>
+                         <th>Answered</th>
+                         <th><i class="icon-ok"></i></th>
+                         <th><i class="icon-remove"></i></th>
+                         <th>&nbsp;</th>
+                         </tr>
+                         <tr>
+                         <td>History and Culture of India</td>
+                         <td>Indus Valley Civilization</td>
+                         <td>12</td>
+                         <td>12</td>
+                         <td>9</td>
+                         <td>3</td>
+                         <td>
+                         <button class="btn btn-answerd-clr">Show Details</button>
+                         </td>
+                         </tr>
+                         </table>
+                         </div>
+                         */
 
-                                        $.each(data.result.data, function (key, val) {
-                                            ans_cnt = ans_cnt + 1;
-                                            qlist = qlist + '<div class="question-title"><h6>' + (key + 1) + '. ' + val.name + '</h6>';
-                                            if (val.a !== '') {
-                                                correct_ans = '';
-                                                student_ans = '';
-                                                if ((val.answer).toUpperCase() === 'A') {
-                                                    correct_ans = 'crt_clr';
-                                                }
-                                                if ((val.student_answer).toUpperCase() === 'A' && (val.answer).toUpperCase() !== 'A') {
-                                                    student_ans = 'wrng_clr';
-                                                    wrong_cnt = wrong_cnt + 1;
-                                                }
-                                                qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">A.</span> ' + val.a + '</div></div>';
-                                            }
-                                            if (val.b !== '') {
-                                                correct_ans = '';
-                                                student_ans = '';
-                                                if ((val.answer).toUpperCase() === 'B') {
-                                                    correct_ans = 'crt_clr';
-                                                }
-                                                if ((val.student_answer).toUpperCase() === 'B' && (val.answer).toUpperCase() !== 'B') {
-                                                    student_ans = 'wrng_clr';
-                                                    wrong_cnt = wrong_cnt + 1;
-                                                }
-                                                qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">B.</span> ' + val.b + '</div></div>';
-                                            }
-                                            if (val.c !== '') {
-                                                correct_ans = '';
-                                                student_ans = '';
-                                                if ((val.answer).toUpperCase() === 'C') {
-                                                    correct_ans = 'crt_clr';
-                                                }
-                                                if ((val.student_answer).toUpperCase() === 'C' && (val.answer).toUpperCase() !== 'C') {
-                                                    student_ans = 'wrng_clr';
-                                                    wrong_cnt = wrong_cnt + 1;
-                                                }
-                                                qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">C.</span> ' + val.c + '</div></div>';
-                                            }
-                                            if (val.d !== '') {
-                                                correct_ans = '';
-                                                student_ans = '';
-                                                if ((val.answer).toUpperCase() === 'D') {
-                                                    correct_ans = 'crt_clr';
-                                                }
-                                                if ((val.student_answer).toUpperCase() === 'D' && (val.answer).toUpperCase() !== 'D') {
-                                                    student_ans = 'wrng_clr';
-                                                    wrong_cnt = wrong_cnt + 1;
-                                                }
-                                                qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">D.</span> ' + val.d + '</div></div>';
-                                            }
-                                            if (val.image_path_explanation !== '' && val.explanation_img_direction !== 'bottom') {
-                                                qlist = qlist + '<div class="explanation_image"><img src="' + image_url + val.image_path_explanation + '"></div>';
-                                            } else {
-                                                qlist = qlist + '';
-                                            }
-                                            if (val.explanation !== '') {
-                                                qlist = qlist + '<div class="explanation-section"><strong>Explanation</strong> : ' + val.explanation + '</div>';
-                                            } else {
-                                                //qlist = qlist + '<div class="explanation-section">No Explanation</div>';
-                                            }
-                                            if (val.image_path_explanation !== '' && val.explanation_img_direction !== 'top') {
-                                                qlist = qlist + '<div class="explanation_image"><img src="' + image_url + val.image_path_explanation + '"></div>';
-                                            } else {
-                                                qlist = qlist + '';
-                                            }
-                                            qlist = qlist + '</div>';
-                                        });
-                                        $('#question_list_det').html(qlist);
 
-                                        cor_cnt = ans_cnt - wrong_cnt;
-                                        var res = '<table style="width:100%">';
+
+                        $.ajax({
+                            type: "GET",
+                            url: 'api/v1/get_student_result_count_by_topic/' +<?php echo $student_log; ?>,
+                            success: function (data) {
+                                if (data.result.error === false) {
+                                    var res = '<table>';
+                                    res += '<tr>';
+                                    res += '<th>Subject</th>';
+                                    res += '<th>Topic</th>';
+                                    res += '<th>Total</th>';
+                                    res += '<th>Answered</th>';
+                                    res += '<th><i class="icon-ok"></i></th>';
+                                    res += '<th><i class="icon-remove"></i></th>';
+                                    res += '<th>&nbsp;</th>';
+                                    res += '</tr>';
+                                    $.each(data.result.data, function (key, val) {
+
                                         res += '<tr>';
-                                        res += '<th>Year</th>';
-                                        res += '<th>Total</th>';
-                                        res += '<th>Answered</th>';
-                                        res += '<th><i class="icon-ok"></i></th>';
-                                        res += '<th><i class="icon-remove"></i></th>';
-                                        res += '<th>&nbsp;</th>';
-                                        res += '</tr>';
-                                        res += '<tr>';
-                                        res += '<td><?php echo $sel_year_val; ?></td>';
-                                        res += '<td>' + quiz.questions.length + '</td>';
-                                        res += '<td>' + ans_cnt + '</td>';
-                                        res += '<td>' + cor_cnt + '</td>';
-                                        res += '<td>' + wrong_cnt + '</td>';
+                                        res += '<td>' + val.subject_name + '</td>';
+                                        res += '<td>' + val.topic_name + '</td>';
+                                        res += '<td class="q-center">' + val.totalcnt + '</td>';
+                                        res += '<td class="q-center">' + val.answerdcnt + '</td>';
+                                        res += '<td>' + val.correctcnt + '</td>';
+                                        res += '<td>' + val.wrongcnt + '</td>';
                                         res += '<td>';
-                                        res += '<button class="btn btn-answerd-clr" onClick="yordershowdetail();" id="btnyorderdetail">Show Details</button>';
+                                        res += '<button class="btn btn-answerd-clr btnsorderdetail" onClick="topicShowDetail(' + val.topic_id + ')" id="btnsorderdetail_' + val.topic_id + '">Show Details</button>';
                                         res += '</td>';
                                         res += '</tr>';
-                                        //$('#question_list').html(qlist);
-                                        $('#question_list').html(res);
-                                        $('#question_list').show();
-                                        $("#create").toggle();
-                                    } else {
-                                        swal('Information', data.result.message, 'info');
-                                    }
-                                },
-                                error: function (err) {
-                                    swal('Error', err.statusText, 'error');
-                                }
-                            });
-                        },
-                        divshowsorder: function () {
-
-
-                            $('.loadingoverlay').show();
-
-                            /*
-                             <div class="result-filter-section" style="display: none;">
-                             <table>
-                             <tr>
-                             <th>Subject</th>
-                             <th>Topic</th>
-                             <th>Total</th>
-                             <th>Answered</th>
-                             <th><i class="icon-ok"></i></th>
-                             <th><i class="icon-remove"></i></th>
-                             <th>&nbsp;</th>
-                             </tr>
-                             <tr>
-                             <td>History and Culture of India</td>
-                             <td>Indus Valley Civilization</td>
-                             <td>12</td>
-                             <td>12</td>
-                             <td>9</td>
-                             <td>3</td>
-                             <td>
-                             <button class="btn btn-answerd-clr">Show Details</button>
-                             </td>
-                             </tr>
-                             </table>
-                             </div>
-                             */
-
-
-
-                            $.ajax({
-                                type: "GET",
-                                url: 'api/v1/get_student_result_count_by_topic/' +<?php echo $student_log; ?>,
-                                success: function (data) {
-                                    if (data.result.error === false) {
-                                        var res = '<table>';
-                                        res += '<tr>';
-                                        res += '<th>Subject</th>';
-                                        res += '<th>Topic</th>';
-                                        res += '<th>Total</th>';
-                                        res += '<th>Answered</th>';
-                                        res += '<th><i class="icon-ok"></i></th>';
-                                        res += '<th><i class="icon-remove"></i></th>';
-                                        res += '<th>&nbsp;</th>';
-                                        res += '</tr>';
-                                        $.each(data.result.data, function (key, val) {
-
-                                            res += '<tr>';
-                                            res += '<td>' + val.subject_name + '</td>';
-                                            res += '<td>' + val.topic_name + '</td>';
-                                            res += '<td class="q-center">' + val.totalcnt + '</td>';
-                                            res += '<td class="q-center">' + val.answerdcnt + '</td>';
-                                            res += '<td>' + val.correctcnt + '</td>';
-                                            res += '<td>' + val.wrongcnt + '</td>';
-                                            res += '<td>';
-                                            res += '<button class="btn btn-answerd-clr btnsorderdetail" onClick="topicShowDetail(' + val.topic_id + ')" id="btnsorderdetail_' + val.topic_id + '">Show Details</button>';
-                                            res += '</td>';
-                                            res += '</tr>';
-                                        });
-
-                                        $('#question_list').html(res);
-                                        $('#question_list').show();
-                                        $("#create").toggle();
-                                        $('.loadingoverlay').hide();
-                                    }
-                                }
-                            });
-
-
-                            /*
-                             
-                             /*
-                             $('.loadingoverlay').show();
-                             setTimeout(() => {
-                             applyMathAjax();
-                             $('.loadingoverlay').hide();
-                             }, 600);
-                             $.ajax({
-                             type: "GET",
-                             url: 'api/v1/get_result_detail/' +<?php // echo  $student_log;      ?>,
-                             success: function (data) {
-                             if (data.result.error === false) {
-                             var qlist = '';
-                             var correct_ans = '';
-                             var student_ans = '';
-                             $.each(data.result.data, function (key, val) {
-                             qlist = qlist + '<div class="question-title"><h6>' + (key + 1) + '. ' + val.name + '</h6>';
-                             if (val.a !== '') {
-                             correct_ans = '';
-                             student_ans = '';
-                             if ((val.answer).toUpperCase() === 'A') {
-                             correct_ans = 'crt_clr';
-                             }
-                             if ((val.student_answer).toUpperCase() === 'A' && (val.answer).toUpperCase() !== 'A') {
-                             student_ans = 'wrng_clr';
-                             }
-                             qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">A.</span> ' + val.a + '</div></div>';
-                             }
-                             if (val.b !== '') {
-                             correct_ans = '';
-                             student_ans = '';
-                             if ((val.answer).toUpperCase() === 'B') {
-                             correct_ans = 'crt_clr';
-                             }
-                             if ((val.student_answer).toUpperCase() === 'B' && (val.answer).toUpperCase() !== 'B') {
-                             student_ans = 'wrng_clr';
-                             }
-                             qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">B.</span> ' + val.b + '</div></div>';
-                             }
-                             if (val.c !== '') {
-                             correct_ans = '';
-                             student_ans = '';
-                             if ((val.answer).toUpperCase() === 'C') {
-                             correct_ans = 'crt_clr';
-                             }
-                             if ((val.student_answer).toUpperCase() === 'C' && (val.answer).toUpperCase() !== 'C') {
-                             student_ans = 'wrng_clr';
-                             }
-                             qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">C.</span> ' + val.c + '</div></div>';
-                             }
-                             if (val.d !== '') {
-                             correct_ans = '';
-                             student_ans = '';
-                             if ((val.answer).toUpperCase() === 'D') {
-                             correct_ans = 'crt_clr';
-                             }
-                             if ((val.student_answer).toUpperCase() === 'D' && (val.answer).toUpperCase() !== 'D') {
-                             student_ans = 'wrng_clr';
-                             }
-                             qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">D.</span> ' + val.d + '</div></div>';
-                             }
-                             if (val.image_path_explanation !== '' && val.explanation_img_direction !== 'bottom') {
-                             qlist = qlist + '<div class="explanation_image"><img src="' + image_url + val.image_path_explanation + '"></div>';
-                             } else {
-                             qlist = qlist + '';
-                             }
-                             if (val.explanation !== '') {
-                             qlist = qlist + '<div class="explanation-section"><strong>Explanation</strong> : ' + val.explanation + '</div>';
-                             } else {
-                             qlist = qlist + '<div class="explanation-section">No Explanation</div>';
-                             }
-                             if (val.image_path_explanation !== '' && val.explanation_img_direction !== 'top') {
-                             qlist = qlist + '<div class="explanation_image"><img src="' + image_url + val.image_path_explanation + '"></div>';
-                             } else {
-                             qlist = qlist + '';
-                             }
-                             qlist = qlist + '</div>';
-                             });
-                             $('#question_list').html(qlist);
-                             $("#create").toggle();
-                             } else {
-                             swal('Information', data.result.message, 'info');
-                             }
-                             },
-                             error: function (err) {
-                             swal('Error', err.statusText, 'error');
-                             }
-                             });
-                             */
-                        },
-                        divshowsorderdetail: function (tid, lid) {
-                            //alert(' lid '+lid+' tid '+tid);
-
-                            $('.loadingoverlay').show();
-                            setTimeout(() => {
-                                applyMathAjax();
-                                $('.loadingoverlay').hide();
-                            }, 600);
-                            $.ajax({
-                                type: "GET",
-                                url: 'api/v1/get_result_detail_by_topic/' +<?php echo $student_log; ?> + '/' + tid,
-                                success: function (data) {
-                                    if (data.result.error === false) {
-                                        var qlist = '';
-                                        var correct_ans = '';
-                                        var student_ans = '';
-                                        $.each(data.result.data, function (key, val) {
-                                            var foc = '';
-                                            if (key == 0) {
-                                                foc = " id='ansdetfocus' tabindex='1' style='outline: none;'";
-                                            }
-                                            qlist = qlist + '<div class="question-title"' + foc + '><h6>' + (key + 1) + '. ' + val.name + '</h6>';
-                                            if (val.a !== '') {
-                                                correct_ans = '';
-                                                student_ans = '';
-                                                if ((val.answer).toUpperCase() === 'A') {
-                                                    correct_ans = 'crt_clr';
-                                                }
-                                                if ((val.student_answer).toUpperCase() === 'A' && (val.answer).toUpperCase() !== 'A') {
-                                                    student_ans = 'wrng_clr';
-                                                }
-                                                qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">A.</span> ' + val.a + '</div></div>';
-                                            }
-                                            if (val.b !== '') {
-                                                correct_ans = '';
-                                                student_ans = '';
-                                                if ((val.answer).toUpperCase() === 'B') {
-                                                    correct_ans = 'crt_clr';
-                                                }
-                                                if ((val.student_answer).toUpperCase() === 'B' && (val.answer).toUpperCase() !== 'B') {
-                                                    student_ans = 'wrng_clr';
-                                                }
-                                                qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">B.</span> ' + val.b + '</div></div>';
-                                            }
-                                            if (val.c !== '') {
-                                                correct_ans = '';
-                                                student_ans = '';
-                                                if ((val.answer).toUpperCase() === 'C') {
-                                                    correct_ans = 'crt_clr';
-                                                }
-                                                if ((val.student_answer).toUpperCase() === 'C' && (val.answer).toUpperCase() !== 'C') {
-                                                    student_ans = 'wrng_clr';
-                                                }
-                                                qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">C.</span> ' + val.c + '</div></div>';
-                                            }
-                                            if (val.d !== '') {
-                                                correct_ans = '';
-                                                student_ans = '';
-                                                if ((val.answer).toUpperCase() === 'D') {
-                                                    correct_ans = 'crt_clr';
-                                                }
-                                                if ((val.student_answer).toUpperCase() === 'D' && (val.answer).toUpperCase() !== 'D') {
-                                                    student_ans = 'wrng_clr';
-                                                }
-                                                qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">D.</span> ' + val.d + '</div></div>';
-                                            }
-                                            if (val.image_path_explanation !== '' && val.explanation_img_direction !== 'bottom') {
-                                                qlist = qlist + '<div class="explanation_image"><img src="' + image_url + val.image_path_explanation + '"></div>';
-                                            } else {
-                                                qlist = qlist + '';
-                                            }
-                                            if (val.explanation !== '') {
-                                                qlist = qlist + '<div class="explanation-section"><strong>Explanation</strong> : ' + val.explanation + '</div>';
-                                            } else {
-                                                //qlist = qlist + '<div class="explanation-section">No Explanation</div>';
-                                            }
-                                            if (val.image_path_explanation !== '' && val.explanation_img_direction !== 'top') {
-                                                qlist = qlist + '<div class="explanation_image"><img src="' + image_url + val.image_path_explanation + '"></div>';
-                                            } else {
-                                                qlist = qlist + '';
-                                            }
-                                            qlist = qlist + '</div>';
-                                        });
-                                        $('#question_list_det').html(qlist);
-                                        $('#question_list_det').show();
-                                        //$("#create").toggle();
-                                        $('#ansdetfocus').focus();
-                                    } else {
-                                        swal('Information', data.result.message, 'info');
-                                    }
-                                },
-                                error: function (err) {
-                                    swal('Error', err.statusText, 'error');
-                                }
-                            });
-                        },
-                        clickPause: function () {
-                            $('.loader').removeClass('is-active');
-                            swal({
-                                title: "Are you sure?",
-                                text: "Do you want to Pause Test?",
-                                type: "warning",
-                                showCancelButton: true,
-                                confirmButtonClass: "btn-danger",
-                                confirmButtonText: "Yes",
-                                closeOnConfirm: false
-                            },
-                                    function () {
-
-                                        $.post("api/v1/store_student_pause",
-                                                {
-                                                    student: <?php echo $student['student_register_id']; ?>,
-                                                    log: <?php echo $student_log; ?>,
-                                                    ques: app.questionIndex,
-                                                },
-                                                function (data, status) {
-                                                    if (data.result.error === false) {
-                                                        window.location = './select_language';
-                                                        //swal("Deleted!", "Your imaginary file has been deleted.", "success");    
-                                                    }
-                                                });
-
-
-
                                     });
-                        },
-                        selectOptionNoSave: function (index) {
 
-
-                            if (!this.questionprevanswered) {
-                                this.showsurebtnans = false;
-                                this.shownotsureaftersel = true;
-                                this.showcnfrmaftersel = true;
-                                this.shownextnosave = false;
+                                    $('#question_list').html(res);
+                                    $('#question_list').show();
+                                    $("#create").toggle();
+                                    $('.loadingoverlay').hide();
+                                }
                             }
+                        });
 
 
-                            var answers = ['A', 'B', 'C', 'D'];
-                            $.each(answers, function (key, val) {
-                                var optval = app.convertLower(val);
-                                //alert(' tostr '+answers[val].toString());
-                                $('#ansopt_' + optval).removeClass('crt_clr');
-                            });
-                            var selopt = app.convertLower(answers[index]);
-                            $('#ansopt_' + selopt).addClass('crt_clr');
+                        /*
+                         
+                         /*
+                         $('.loadingoverlay').show();
+                         setTimeout(() => {
+                         applyMathAjax();
+                         $('.loadingoverlay').hide();
+                         }, 600);
+                         $.ajax({
+                         type: "GET",
+                         url: 'api/v1/get_result_detail/' +<?php // echo  $student_log;       ?>,
+                         success: function (data) {
+                         if (data.result.error === false) {
+                         var qlist = '';
+                         var correct_ans = '';
+                         var student_ans = '';
+                         $.each(data.result.data, function (key, val) {
+                         qlist = qlist + '<div class="question-title"><h6>' + (key + 1) + '. ' + val.name + '</h6>';
+                         if (val.a !== '') {
+                         correct_ans = '';
+                         student_ans = '';
+                         if ((val.answer).toUpperCase() === 'A') {
+                         correct_ans = 'crt_clr';
+                         }
+                         if ((val.student_answer).toUpperCase() === 'A' && (val.answer).toUpperCase() !== 'A') {
+                         student_ans = 'wrng_clr';
+                         }
+                         qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">A.</span> ' + val.a + '</div></div>';
+                         }
+                         if (val.b !== '') {
+                         correct_ans = '';
+                         student_ans = '';
+                         if ((val.answer).toUpperCase() === 'B') {
+                         correct_ans = 'crt_clr';
+                         }
+                         if ((val.student_answer).toUpperCase() === 'B' && (val.answer).toUpperCase() !== 'B') {
+                         student_ans = 'wrng_clr';
+                         }
+                         qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">B.</span> ' + val.b + '</div></div>';
+                         }
+                         if (val.c !== '') {
+                         correct_ans = '';
+                         student_ans = '';
+                         if ((val.answer).toUpperCase() === 'C') {
+                         correct_ans = 'crt_clr';
+                         }
+                         if ((val.student_answer).toUpperCase() === 'C' && (val.answer).toUpperCase() !== 'C') {
+                         student_ans = 'wrng_clr';
+                         }
+                         qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">C.</span> ' + val.c + '</div></div>';
+                         }
+                         if (val.d !== '') {
+                         correct_ans = '';
+                         student_ans = '';
+                         if ((val.answer).toUpperCase() === 'D') {
+                         correct_ans = 'crt_clr';
+                         }
+                         if ((val.student_answer).toUpperCase() === 'D' && (val.answer).toUpperCase() !== 'D') {
+                         student_ans = 'wrng_clr';
+                         }
+                         qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">D.</span> ' + val.d + '</div></div>';
+                         }
+                         if (val.image_path_explanation !== '' && val.explanation_img_direction !== 'bottom') {
+                         qlist = qlist + '<div class="explanation_image"><img src="' + image_url + val.image_path_explanation + '"></div>';
+                         } else {
+                         qlist = qlist + '';
+                         }
+                         if (val.explanation !== '') {
+                         qlist = qlist + '<div class="explanation-section"><strong>Explanation</strong> : ' + val.explanation + '</div>';
+                         } else {
+                         qlist = qlist + '<div class="explanation-section">No Explanation</div>';
+                         }
+                         if (val.image_path_explanation !== '' && val.explanation_img_direction !== 'top') {
+                         qlist = qlist + '<div class="explanation_image"><img src="' + image_url + val.image_path_explanation + '"></div>';
+                         } else {
+                         qlist = qlist + '';
+                         }
+                         qlist = qlist + '</div>';
+                         });
+                         $('#question_list').html(qlist);
+                         $("#create").toggle();
+                         } else {
+                         swal('Information', data.result.message, 'info');
+                         }
+                         },
+                         error: function (err) {
+                         swal('Error', err.statusText, 'error');
+                         }
+                         });
+                         */
+                    },
+                    divshowsorderdetail: function (tid, lid) {
+                        //alert(' lid '+lid+' tid '+tid);
 
-
-
-                            this.selected_answer = answers[index];
-                            this.continueTimer();
-
+                        $('.loadingoverlay').show();
+                        setTimeout(() => {
+                            applyMathAjax();
+                            $('.loadingoverlay').hide();
+                        }, 600);
+                        $.ajax({
+                            type: "GET",
+                            url: 'api/v1/get_result_detail_by_topic/' +<?php echo $student_log; ?> + '/' + tid,
+                            success: function (data) {
+                                if (data.result.error === false) {
+                                    var qlist = '';
+                                    var correct_ans = '';
+                                    var student_ans = '';
+                                    $.each(data.result.data, function (key, val) {
+                                        var foc = '';
+                                        if (key == 0) {
+                                            foc = " id='ansdetfocus' tabindex='1' style='outline: none;'";
+                                        }
+                                        qlist = qlist + '<div class="question-title"' + foc + '><h6>' + (key + 1) + '. ' + val.name + '</h6>';
+                                        if (val.a !== '') {
+                                            correct_ans = '';
+                                            student_ans = '';
+                                            if ((val.answer).toUpperCase() === 'A') {
+                                                correct_ans = 'crt_clr';
+                                            }
+                                            if ((val.student_answer).toUpperCase() === 'A' && (val.answer).toUpperCase() !== 'A') {
+                                                student_ans = 'wrng_clr';
+                                            }
+                                            qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">A.</span> ' + val.a + '</div></div>';
+                                        }
+                                        if (val.b !== '') {
+                                            correct_ans = '';
+                                            student_ans = '';
+                                            if ((val.answer).toUpperCase() === 'B') {
+                                                correct_ans = 'crt_clr';
+                                            }
+                                            if ((val.student_answer).toUpperCase() === 'B' && (val.answer).toUpperCase() !== 'B') {
+                                                student_ans = 'wrng_clr';
+                                            }
+                                            qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">B.</span> ' + val.b + '</div></div>';
+                                        }
+                                        if (val.c !== '') {
+                                            correct_ans = '';
+                                            student_ans = '';
+                                            if ((val.answer).toUpperCase() === 'C') {
+                                                correct_ans = 'crt_clr';
+                                            }
+                                            if ((val.student_answer).toUpperCase() === 'C' && (val.answer).toUpperCase() !== 'C') {
+                                                student_ans = 'wrng_clr';
+                                            }
+                                            qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">C.</span> ' + val.c + '</div></div>';
+                                        }
+                                        if (val.d !== '') {
+                                            correct_ans = '';
+                                            student_ans = '';
+                                            if ((val.answer).toUpperCase() === 'D') {
+                                                correct_ans = 'crt_clr';
+                                            }
+                                            if ((val.student_answer).toUpperCase() === 'D' && (val.answer).toUpperCase() !== 'D') {
+                                                student_ans = 'wrng_clr';
+                                            }
+                                            qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">D.</span> ' + val.d + '</div></div>';
+                                        }
+                                        if (val.image_path_explanation !== '' && val.explanation_img_direction !== 'bottom') {
+                                            qlist = qlist + '<div class="explanation_image"><img src="' + image_url + val.image_path_explanation + '"></div>';
+                                        } else {
+                                            qlist = qlist + '';
+                                        }
+                                        if (val.explanation !== '') {
+                                            qlist = qlist + '<div class="explanation-section"><strong>Explanation</strong> : ' + val.explanation + '</div>';
+                                        } else {
+                                            //qlist = qlist + '<div class="explanation-section">No Explanation</div>';
+                                        }
+                                        if (val.image_path_explanation !== '' && val.explanation_img_direction !== 'top') {
+                                            qlist = qlist + '<div class="explanation_image"><img src="' + image_url + val.image_path_explanation + '"></div>';
+                                        } else {
+                                            qlist = qlist + '';
+                                        }
+                                        qlist = qlist + '</div>';
+                                    });
+                                    $('#question_list_det').html(qlist);
+                                    $('#question_list_det').show();
+                                    //$("#create").toggle();
+                                    $('#ansdetfocus').focus();
+                                } else {
+                                    swal('Information', data.result.message, 'info');
+                                }
+                            },
+                            error: function (err) {
+                                swal('Error', err.statusText, 'error');
+                            }
+                        });
+                    },
+                    clickPause: function () {
+                        $('.loader').removeClass('is-active');
+                        swal({
+                            title: "Are you sure?",
+                            text: "Do you want to Pause Test?",
+                            type: "warning",
+                            showCancelButton: true,
+                            confirmButtonClass: "btn-danger",
+                            confirmButtonText: "Yes",
+                            closeOnConfirm: false
                         },
-                        notSureSave: function () {
+                                function () {
 
+                                    $.post("api/v1/store_student_pause",
+                                            {
+                                                student: <?php echo $student['student_register_id']; ?>,
+                                                log: <?php echo $student_log; ?>,
+                                                ques: app.questionIndex,
+                                            },
+                                            function (data, status) {
+                                                if (data.result.error === false) {
+                                                    window.location = './select_language';
+                                                    //swal("Deleted!", "Your imaginary file has been deleted.", "success");    
+                                                }
+                                            });
+
+
+
+                                });
+                    },
+                    selectOptionNoSave: function (index) {
+
+
+                        if (!this.questionprevanswered) {
                             this.showsurebtnans = false;
-                            this.shownextnosave = true;
-                            this.shownotsureaftersel = false;
-                            this.showcnfrmaftersel = false;
-                            this.questionprevanswered = false;
-
-                            $('.loadingoverlay').show();
-
-                            setTimeout(() => {
-                                applyMathAjax();
-                                $('.loadingoverlay').hide();
-                            }, 600);
+                            this.shownotsureaftersel = true;
+                            this.showcnfrmaftersel = true;
+                            this.shownextnosave = false;
+                        }
 
 
+                        var answers = ['A', 'B', 'C', 'D'];
+                        $.each(answers, function (key, val) {
+                            var optval = app.convertLower(val);
+                            //alert(' tostr '+answers[val].toString());
+                            $('#ansopt_' + optval).removeClass('crt_clr');
+                        });
+                        var selopt = app.convertLower(answers[index]);
+                        $('#ansopt_' + selopt).addClass('crt_clr');
 
-                            if (this.selected_answer) {
-                                var questions = <?php echo json_encode($questions_list); ?>;
-                                $.post("api/v1/store_notsure_answer",
-                                        {
-                                            question_id: questions[this.questionIndex].question_id,
-                                            answer: '',
-                                            notsure_answer: this.selected_answer,
-                                            student_log_id: <?php echo $student_log; ?>
-                                        },
+
+
+                        this.selected_answer = answers[index];
+                        this.continueTimer();
+
+                    },
+                    notSureSave: function () {
+
+                        this.showsurebtnans = false;
+                        this.shownextnosave = true;
+                        this.shownotsureaftersel = false;
+                        this.showcnfrmaftersel = false;
+                        this.questionprevanswered = false;
+
+                        $('.loadingoverlay').show();
+
+                        setTimeout(() => {
+                            applyMathAjax();
+                            $('.loadingoverlay').hide();
+                        }, 600);
+
+
+
+                        if (this.selected_answer) {
+                            var questions = <?php echo json_encode($questions_list); ?>;
+                            $.post("api/v1/store_notsure_answer",
+                                    {
+                                        question_id: questions[this.questionIndex].question_id,
+                                        answer: '',
+                                        notsure_answer: this.selected_answer,
+                                        student_log_id: <?php echo $student_log; ?>
+                                    },
+                                    function (data, status) {
+                                        if (data.result.error === false) {
+
+                                        }
+                                    });
+                        }
+
+                        if (this.questionIndex == this.quiz.questions.length - 1) {
+                            this.savetimetaken();
+                            this.quizdurtext();
+                        }
+
+                        setTimeout(() => {
+                            if (this.questionIndex < this.quiz.questions.length) {
+                                this.questionIndex++;
+
+                                this.selected_answer = '';
+                                var qid = questions[this.questionIndex].question_id;
+
+                                $.get("api/v1/get_student_notsure_answer/" + qid + "/<?php echo $student_log; ?>",
                                         function (data, status) {
                                             if (data.result.error === false) {
+                                                ansid = data.result.data;
+                                                notsure_ansid = data.result.data_notsure;
 
+
+                                                if (ansid != '')
+                                                {
+                                                    var studansid = app.convertLower(ansid);
+                                                    $('#ansopt_' + studansid).addClass('crt_clr');
+
+
+                                                    app.selected_answer = ansid;
+                                                    app.shownotsureaftersel = true;
+                                                    app.showcnfrmaftersel = false;
+                                                    app.questionprevanswered = true;
+
+                                                    app.showsurebtnans = false;
+                                                } else if (notsure_ansid != '')
+                                                {
+                                                    var studansid = app.convertLower(notsure_ansid);
+                                                    $('#ansopt_' + studansid).addClass('notsure_clr');
+
+                                                    app.selected_answer = notsure_ansid;
+                                                    app.shownotsureaftersel = false;
+                                                    app.showcnfrmaftersel = false;
+                                                    app.questionprevanswered = true;
+                                                    app.showsurebtnans = true;
+                                                } else {
+
+                                                    app.selected_answer = '';
+                                                    app.shownotsureaftersel = false;
+                                                    app.showcnfrmaftersel = false;
+                                                    app.questionprevanswered = false;
+                                                    app.showsurebtnans = false;
+                                                }
                                             }
                                         });
+
                             }
 
-                            if (this.questionIndex == this.quiz.questions.length - 1) {
-                                this.savetimetaken();
-                                this.quizdurtext();
+
+                        }, 500);
+
+
+
+                    },
+                    confirmSave: function () {
+
+                        this.showsurebtnans = false;
+                        this.shownextnosave = true;
+                        this.shownotsureaftersel = false;
+                        this.showcnfrmaftersel = false;
+                        this.questionprevanswered = false;
+
+                        $('.loadingoverlay').show();
+
+                        setTimeout(() => {
+                            applyMathAjax();
+                            $('.loadingoverlay').hide();
+                        }, 600);
+
+
+                        if (this.selected_answer) {
+                            var questions = <?php echo json_encode($questions_list); ?>;
+                            $.post("api/v1/store_notsure_answer",
+                                    {
+                                        question_id: questions[this.questionIndex].question_id,
+                                        answer: this.selected_answer,
+                                        notsure_answer: '',
+                                        student_log_id: <?php echo $student_log; ?>
+                                    },
+                                    function (data, status) {
+                                        if (data.result.error === false) {
+
+
+                                        }
+                                    });
+
+
+
+                            //show score save
+                            var answers = ['A', 'B', 'C', 'D'];
+                            var answersidx = -1;
+                            $.each(answers, function (key, val) {
+                                if (app.selected_answer == val) {
+                                    answersidx = key;
+                                }
+                            });
+
+                            if (answersidx != -1) {
+                                Vue.set(this.userResponses, this.questionIndex, answersidx);
                             }
+                        }
 
-                            setTimeout(() => {
-                                if (this.questionIndex < this.quiz.questions.length) {
-                                    this.questionIndex++;
+                        if (this.questionIndex == this.quiz.questions.length - 1) {
+                            this.savetimetaken();
+                            this.quizdurtext();
+                        }
 
-                                    this.selected_answer = '';
+                        setTimeout(() => {
+
+                            if (this.questionIndex < this.quiz.questions.length) {
+                                this.questionIndex++;
+                                this.selected_answer = '';
+
+                                if (questions[this.questionIndex]) {
                                     var qid = questions[this.questionIndex].question_id;
 
                                     $.get("api/v1/get_student_notsure_answer/" + qid + "/<?php echo $student_log; ?>",
@@ -1968,335 +2079,225 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                                     }
                                                 }
                                             });
-
                                 }
+                            }
+                        }, 500);
 
 
-                            }, 500);
+                    },
+                    prevNoSave: function () {
+
+                        this.selected_answer = '';
+
+                        this.showsurebtnans = false;
+                        this.shownextnosave = true;
+                        this.shownotsureaftersel = false;
+                        this.showcnfrmaftersel = false;
+                        this.questionprevanswered = false;
 
 
+                        $('.loadingoverlay').show();
 
-                        },
-                        confirmSave: function () {
+                        setTimeout(() => {
+                            applyMathAjax();
+                            $('.loadingoverlay').hide();
+                        }, 600);
 
-                            this.showsurebtnans = false;
-                            this.shownextnosave = true;
-                            this.shownotsureaftersel = false;
-                            this.showcnfrmaftersel = false;
-                            this.questionprevanswered = false;
+                        if (this.quiz.questions.length > 0)
+                            this.questionIndex--;
 
-                            $('.loadingoverlay').show();
-
-                            setTimeout(() => {
-                                applyMathAjax();
-                                $('.loadingoverlay').hide();
-                            }, 600);
+                        var questions = <?php echo json_encode($questions_list); ?>;
+                        var qid = questions[this.questionIndex].question_id;
+                        var answers = ['A', 'B', 'C', 'D'];
+                        var ansid = '';
 
 
-                            if (this.selected_answer) {
-                                var questions = <?php echo json_encode($questions_list); ?>;
-                                $.post("api/v1/store_notsure_answer",
+                        $.get("api/v1/get_student_notsure_answer/" + qid + "/<?php echo $student_log; ?>",
+                                function (data, status) {
+                                    if (data.result.error === false) {
+                                        ansid = data.result.data;
+                                        notsure_ansid = data.result.data_notsure;
+
+
+                                        if (ansid != '')
                                         {
-                                            question_id: questions[this.questionIndex].question_id,
-                                            answer: this.selected_answer,
-                                            notsure_answer: '',
-                                            student_log_id: <?php echo $student_log; ?>
-                                        },
-                                        function (data, status) {
-                                            if (data.result.error === false) {
+                                            var studansid = app.convertLower(ansid);
+                                            $('#ansopt_' + studansid).addClass('crt_clr');
 
 
-                                            }
-                                        });
+                                            app.selected_answer = ansid;
+                                            app.shownotsureaftersel = true;
+                                            app.showcnfrmaftersel = false;
+                                            app.questionprevanswered = true;
+
+                                            app.showsurebtnans = false;
+                                        } else if (notsure_ansid != '')
+                                        {
+
+                                            var studansid = app.convertLower(notsure_ansid);
+                                            $('#ansopt_' + studansid).addClass('notsure_clr');
 
 
+                                            app.selected_answer = notsure_ansid;
+                                            app.shownotsureaftersel = false;
+                                            app.showcnfrmaftersel = false;
+                                            app.questionprevanswered = true;
+                                            app.showsurebtnans = true;
+                                        } else {
 
-                                //show score save
-                                var answers = ['A', 'B', 'C', 'D'];
-                                var answersidx = -1;
-                                $.each(answers, function (key, val) {
-                                    if (app.selected_answer == val) {
-                                        answersidx = key;
+                                            app.selected_answer = '';
+                                            app.shownotsureaftersel = false;
+                                            app.showcnfrmaftersel = false;
+                                            app.questionprevanswered = false;
+                                            app.showsurebtnans = false;
+                                        }
+
+
                                     }
                                 });
 
-                                if (answersidx != -1) {
-                                    Vue.set(this.userResponses, this.questionIndex, answersidx);
-                                }
-                            }
 
-                            if (this.questionIndex == this.quiz.questions.length - 1) {
-                                this.savetimetaken();
-                                this.quizdurtext();
-                            }
+                    },
+                    nextNoSave: function () {
+
+                        this.selected_answer = '';
+
+                        this.showsurebtnans = false;
+                        this.shownextnosave = true;
+                        this.shownotsureaftersel = false;
+                        this.showcnfrmaftersel = false;
+                        this.questionprevanswered = false;
+
+
+                        $('.loadingoverlay').show();
+                        setTimeout(() => {
+                            applyMathAjax();
+                            $('.loadingoverlay').hide();
+                        }, 600);
+
+
+                        if (this.questionIndex == this.quiz.questions.length - 1) {
+                            this.savetimetaken();
+                            this.quizdurtext();
+                        }
+
+
+                        if (this.questionIndex < this.quiz.questions.length) {
+                            this.questionIndex++;
+                        }
+
+
+
+                        var questions = <?php echo json_encode($questions_list); ?>;
+                        var qid = questions[this.questionIndex].question_id;
+                        var answers = ['A', 'B', 'C', 'D'];
+                        var ansid = '';
+
+                        $.get("api/v1/get_student_notsure_answer/" + qid + "/<?php echo $student_log; ?>",
+                                function (data, status) {
+                                    if (data.result.error === false) {
+                                        ansid = data.result.data;
+                                        notsure_ansid = data.result.data_notsure;
+
+
+                                        if (ansid != '')
+                                        {
+                                            var studansid = app.convertLower(ansid);
+                                            $('#ansopt_' + studansid).addClass('crt_clr');
+
+                                            app.selected_answer = ansid;
+                                            app.shownotsureaftersel = true;
+                                            app.showcnfrmaftersel = false;
+                                            app.questionprevanswered = true;
+
+                                            app.showsurebtnans = false;
+                                        } else if (notsure_ansid != '')
+                                        {
+                                            var studansid = app.convertLower(notsure_ansid);
+                                            $('#ansopt_' + studansid).addClass('notsure_clr');
+
+                                            app.selected_answer = notsure_ansid;
+                                            app.shownotsureaftersel = false;
+                                            app.showcnfrmaftersel = false;
+                                            app.questionprevanswered = true;
+                                            app.showsurebtnans = true;
+                                        } else {
+
+                                            app.selected_answer = '';
+                                            app.shownotsureaftersel = false;
+                                            app.showcnfrmaftersel = false;
+                                            app.questionprevanswered = false;
+                                            app.showsurebtnans = false;
+                                        }
+                                    }
+                                });
+
+                    },
+                    selectOption: function (index) {
+                        $('.loadingoverlay').show();
+
+
+                        if (!app.showimmediate) {
+                            var questions = <?php echo json_encode($questions_list); ?>;
+                            var answers = ['A', 'B', 'C', 'D'];
+
+
+                            $.each(answers, function (ansi, ansv) {
+                                var ansvl = app.convertLower(ansv);
+                                $('#ansopt_' + ansvl).removeClass('crt_clr');
+                                $('#ansopt_' + ansvl).removeClass('is-selected');
+                                $('#ansopt_' + ansvl).removeClass('wrng_clr');
+                            });
+
+
+                            $.post("api/v1/store_answer",
+                                    {
+                                        question_id: questions[this.questionIndex].question_id,
+                                        answer: answers[index],
+                                        student_log_id: <?php echo $student_log; ?>
+                                    },
+                                    function (data, status) {
+                                        app.studanscnt();
+                                        if (data.result.error === false) {
+                                            if (app.questionIndex == app.quiz.questions.length - 1) {
+                                                app.chkAllquesAnswered();
+                                            }
+                                        }
+                                    });
 
                             setTimeout(() => {
-
+                                Vue.set(this.userResponses, this.questionIndex, index);
                                 if (this.questionIndex < this.quiz.questions.length) {
-                                    this.questionIndex++;
-                                    this.selected_answer = '';
+                                    if (this.questionIndex == this.quiz.questions.length - 1) {
 
-                                    if (questions[this.questionIndex]) {
-                                        var qid = questions[this.questionIndex].question_id;
-
-                                        $.get("api/v1/get_student_notsure_answer/" + qid + "/<?php echo $student_log; ?>",
-                                                function (data, status) {
-                                                    if (data.result.error === false) {
-                                                        ansid = data.result.data;
-                                                        notsure_ansid = data.result.data_notsure;
-
-
-                                                        if (ansid != '')
-                                                        {
-                                                            var studansid = app.convertLower(ansid);
-                                                            $('#ansopt_' + studansid).addClass('crt_clr');
-
-
-                                                            app.selected_answer = ansid;
-                                                            app.shownotsureaftersel = true;
-                                                            app.showcnfrmaftersel = false;
-                                                            app.questionprevanswered = true;
-
-                                                            app.showsurebtnans = false;
-                                                        } else if (notsure_ansid != '')
-                                                        {
-                                                            var studansid = app.convertLower(notsure_ansid);
-                                                            $('#ansopt_' + studansid).addClass('notsure_clr');
-
-                                                            app.selected_answer = notsure_ansid;
-                                                            app.shownotsureaftersel = false;
-                                                            app.showcnfrmaftersel = false;
-                                                            app.questionprevanswered = true;
-                                                            app.showsurebtnans = true;
-                                                        } else {
-
-                                                            app.selected_answer = '';
-                                                            app.shownotsureaftersel = false;
-                                                            app.showcnfrmaftersel = false;
-                                                            app.questionprevanswered = false;
-                                                            app.showsurebtnans = false;
-                                                        }
-                                                    }
-                                                });
-                                    }
-                                }
-                            }, 500);
-
-
-                        },
-                        prevNoSave: function () {
-
-                            this.selected_answer = '';
-
-                            this.showsurebtnans = false;
-                            this.shownextnosave = true;
-                            this.shownotsureaftersel = false;
-                            this.showcnfrmaftersel = false;
-                            this.questionprevanswered = false;
-
-
-                            $('.loadingoverlay').show();
-
-                            setTimeout(() => {
-                                applyMathAjax();
-                                $('.loadingoverlay').hide();
-                            }, 600);
-
-                            if (this.quiz.questions.length > 0)
-                                this.questionIndex--;
-
-                            var questions = <?php echo json_encode($questions_list); ?>;
-                            var qid = questions[this.questionIndex].question_id;
-                            var answers = ['A', 'B', 'C', 'D'];
-                            var ansid = '';
-
-
-                            $.get("api/v1/get_student_notsure_answer/" + qid + "/<?php echo $student_log; ?>",
-                                    function (data, status) {
-                                        if (data.result.error === false) {
-                                            ansid = data.result.data;
-                                            notsure_ansid = data.result.data_notsure;
-
-
-                                            if (ansid != '')
-                                            {
-                                                var studansid = app.convertLower(ansid);
-                                                $('#ansopt_' + studansid).addClass('crt_clr');
-
-
-                                                app.selected_answer = ansid;
-                                                app.shownotsureaftersel = true;
-                                                app.showcnfrmaftersel = false;
-                                                app.questionprevanswered = true;
-
-                                                app.showsurebtnans = false;
-                                            } else if (notsure_ansid != '')
-                                            {
-
-                                                var studansid = app.convertLower(notsure_ansid);
-                                                $('#ansopt_' + studansid).addClass('notsure_clr');
-
-
-                                                app.selected_answer = notsure_ansid;
-                                                app.shownotsureaftersel = false;
-                                                app.showcnfrmaftersel = false;
-                                                app.questionprevanswered = true;
-                                                app.showsurebtnans = true;
-                                            } else {
-
-                                                app.selected_answer = '';
-                                                app.shownotsureaftersel = false;
-                                                app.showcnfrmaftersel = false;
-                                                app.questionprevanswered = false;
-                                                app.showsurebtnans = false;
-                                            }
-
-
-                                        }
-                                    });
-
-
-                        },
-                        nextNoSave: function () {
-
-                            this.selected_answer = '';
-
-                            this.showsurebtnans = false;
-                            this.shownextnosave = true;
-                            this.shownotsureaftersel = false;
-                            this.showcnfrmaftersel = false;
-                            this.questionprevanswered = false;
-
-
-                            $('.loadingoverlay').show();
-                            setTimeout(() => {
-                                applyMathAjax();
-                                $('.loadingoverlay').hide();
-                            }, 600);
-
-
-                            if (this.questionIndex == this.quiz.questions.length - 1) {
-                                this.savetimetaken();
-                                this.quizdurtext();
-                            }
-
-
-                            if (this.questionIndex < this.quiz.questions.length) {
-                                this.questionIndex++;
-                            }
-
-
-
-                            var questions = <?php echo json_encode($questions_list); ?>;
-                            var qid = questions[this.questionIndex].question_id;
-                            var answers = ['A', 'B', 'C', 'D'];
-                            var ansid = '';
-
-                            $.get("api/v1/get_student_notsure_answer/" + qid + "/<?php echo $student_log; ?>",
-                                    function (data, status) {
-                                        if (data.result.error === false) {
-                                            ansid = data.result.data;
-                                            notsure_ansid = data.result.data_notsure;
-
-
-                                            if (ansid != '')
-                                            {
-                                                var studansid = app.convertLower(ansid);
-                                                $('#ansopt_' + studansid).addClass('crt_clr');
-
-                                                app.selected_answer = ansid;
-                                                app.shownotsureaftersel = true;
-                                                app.showcnfrmaftersel = false;
-                                                app.questionprevanswered = true;
-
-                                                app.showsurebtnans = false;
-                                            } else if (notsure_ansid != '')
-                                            {
-                                                var studansid = app.convertLower(notsure_ansid);
-                                                $('#ansopt_' + studansid).addClass('notsure_clr');
-
-                                                app.selected_answer = notsure_ansid;
-                                                app.shownotsureaftersel = false;
-                                                app.showcnfrmaftersel = false;
-                                                app.questionprevanswered = true;
-                                                app.showsurebtnans = true;
-                                            } else {
-
-                                                app.selected_answer = '';
-                                                app.shownotsureaftersel = false;
-                                                app.showcnfrmaftersel = false;
-                                                app.questionprevanswered = false;
-                                                app.showsurebtnans = false;
-                                            }
-                                        }
-                                    });
-
-                        },
-                        selectOption: function (index) {
-                            $('.loadingoverlay').show();
-
-
-                            if (!app.showimmediate) {
-                                var questions = <?php echo json_encode($questions_list); ?>;
-                                var answers = ['A', 'B', 'C', 'D'];
-
-
-                                $.each(answers, function (ansi, ansv) {
-                                    var ansvl = app.convertLower(ansv);
-                                    $('#ansopt_' + ansvl).removeClass('crt_clr');
-                                    $('#ansopt_' + ansvl).removeClass('is-selected');
-                                    $('#ansopt_' + ansvl).removeClass('wrng_clr');
-                                });
-
-
-                                $.post("api/v1/store_answer",
-                                        {
-                                            question_id: questions[this.questionIndex].question_id,
-                                            answer: answers[index],
-                                            student_log_id: <?php echo $student_log; ?>
-                                        },
-                                        function (data, status) {
-                                            app.studanscnt();
-                                            if (data.result.error === false) {
-                                                if (app.questionIndex == app.quiz.questions.length - 1) {
-                                                    app.chkAllquesAnswered();
-                                                }
-                                            }
-                                        });
-
-                                setTimeout(() => {
-                                    Vue.set(this.userResponses, this.questionIndex, index);
-                                    if (this.questionIndex < this.quiz.questions.length) {
-                                        if (this.questionIndex == this.quiz.questions.length - 1) {
-
-                                            if (this.isAllQAnsed) {
-                                                app.score();
+                                        if (this.isAllQAnsed) {
+                                            app.score();
 <?php if ($type == 'Year Order') { ?>
-                                                    //if(this.questionIndex == this.quiz.questions.length-1)   {
-                                                    this.savetimetaken();
-                                                    this.quizdurtext();
-                                                    //   }
+                                                //if(this.questionIndex == this.quiz.questions.length-1)   {
+                                                this.savetimetaken();
+                                                this.quizdurtext();
+                                                //   }
 <?php } ?>
-                                                this.savequizendtime();
+                                            this.savequizendtime();
 
-                                                this.questionIndex++;
-                                                this.stopTimer();
-                                                this.showTimer = false;
-                                            }
-
-                                        } else
-                                        {
                                             this.questionIndex++;
+                                            this.stopTimer();
+                                            this.showTimer = false;
                                         }
 
-<?php // if($testmode==1){             ?>
-                                        if (this.olqshow) {
-                                            this.showQuestionOtherLang();
-                                        }
-<?php // }      ?>
+                                    } else
+                                    {
+                                        this.questionIndex++;
+                                    }
 
-                                        //var nqid = this.questionIndex + 1;
-                                        if (this.questionIndex < this.quiz.questions.length) {
+<?php // if($testmode==1){              ?>
+                                    if (this.olqshow) {
+                                        this.showQuestionOtherLang();
+                                    }
+<?php // }       ?>
+
+                                    //var nqid = this.questionIndex + 1;
+                                    if (this.questionIndex < this.quiz.questions.length) {
                                         var nqid = questions[this.questionIndex].question_id;
                                         if (!app.showimmediate) {
                                             $.get("api/v1/get_student_answer/" + nqid + "/<?php echo $student_log; ?>",
@@ -2324,127 +2325,127 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                                     });
 
                                         }
-                                        
-                                        } 
+
                                     }
-                                }, 500);
-
-
-                                this.continueTimer();
-                                setTimeout(() => {
-                                    applyMathAjax();
-                                    $('.loadingoverlay').hide();
-                                }, 600);
-                            }
-
-                            if (app.showimmediate) {
-                                if (!app.isDisabled) {
-                                    var questions = <?php echo json_encode($questions_list); ?>;
-                                    var answers = ['A', 'B', 'C', 'D'];
-
-
-                                    $.each(answers, function (ansi, ansv) {
-                                        var ansvl = app.convertLower(ansv);
-                                        $('#ansopt_' + ansvl).removeClass('crt_clr');
-                                        $('#ansopt_' + ansvl).removeClass('is-selected');
-                                        $('#ansopt_' + ansvl).removeClass('wrng_clr');
-                                    });
-
-
-                                    $.post("api/v1/store_answer",
-                                            {
-                                                question_id: questions[this.questionIndex].question_id,
-                                                answer: answers[index],
-                                                student_log_id: <?php echo $student_log; ?>
-                                            },
-                                            function (data, status) {
-                                                app.studanscnt();
-                                                if (data.result.error === false) {
-                                                    if (app.questionIndex == app.quiz.questions.length - 1) {
-                                                        app.chkAllquesAnswered();
-                                                    }
-                                                }
-                                            });
-
-                                    // var questions = <?php echo json_encode($questions_list); ?>;
-                                    var qid = questions[this.questionIndex].question_id;
-                                    //var answers   = ['A', 'B', 'C', 'D'];
-                                    var ansid = answers[index];
-                                    $.get("api/v1/get_question_answer/" + qid,
-                                            function (data, status) {
-                                                if (data.result.error === false) {
-
-                                                    var corransid = app.convertLower(data.result.data);
-                                                    var studansid = app.convertLower(ansid);
-
-                                                    if (data.result.data == ansid) {
-                                                        $('#ansopt_' + corransid).addClass('crt_clr');
-                                                    } else {
-                                                        $('#ansopt_' + corransid).addClass('crt_clr');
-                                                        $('#ansopt_' + studansid).addClass('wrng_clr');
-                                                    }
-                                                }
-                                            });
-                                    //document.getElementById("quiz-footer").style.display = "block";
-                                    app.showimmediateblk = true;
-                                    app.isDisabled = true;
                                 }
+                            }, 500);
+
+
+                            this.continueTimer();
+                            setTimeout(() => {
+                                applyMathAjax();
+                                $('.loadingoverlay').hide();
+                            }, 600);
+                        }
+
+                        if (app.showimmediate) {
+                            if (!app.isDisabled) {
+                                var questions = <?php echo json_encode($questions_list); ?>;
+                                var answers = ['A', 'B', 'C', 'D'];
+
+
+                                $.each(answers, function (ansi, ansv) {
+                                    var ansvl = app.convertLower(ansv);
+                                    $('#ansopt_' + ansvl).removeClass('crt_clr');
+                                    $('#ansopt_' + ansvl).removeClass('is-selected');
+                                    $('#ansopt_' + ansvl).removeClass('wrng_clr');
+                                });
+
+
+                                $.post("api/v1/store_answer",
+                                        {
+                                            question_id: questions[this.questionIndex].question_id,
+                                            answer: answers[index],
+                                            student_log_id: <?php echo $student_log; ?>
+                                        },
+                                        function (data, status) {
+                                            app.studanscnt();
+                                            if (data.result.error === false) {
+                                                if (app.questionIndex == app.quiz.questions.length - 1) {
+                                                    app.chkAllquesAnswered();
+                                                }
+                                            }
+                                        });
+
+                                // var questions = <?php echo json_encode($questions_list); ?>;
+                                var qid = questions[this.questionIndex].question_id;
+                                //var answers   = ['A', 'B', 'C', 'D'];
+                                var ansid = answers[index];
+                                $.get("api/v1/get_question_answer/" + qid,
+                                        function (data, status) {
+                                            if (data.result.error === false) {
+
+                                                var corransid = app.convertLower(data.result.data);
+                                                var studansid = app.convertLower(ansid);
+
+                                                if (data.result.data == ansid) {
+                                                    $('#ansopt_' + corransid).addClass('crt_clr');
+                                                } else {
+                                                    $('#ansopt_' + corransid).addClass('crt_clr');
+                                                    $('#ansopt_' + studansid).addClass('wrng_clr');
+                                                }
+                                            }
+                                        });
+                                //document.getElementById("quiz-footer").style.display = "block";
+                                app.showimmediateblk = true;
+                                app.isDisabled = true;
                             }
+                        }
 
 
 
-                            setTimeout(() => {
-                                applyMathAjax();
-                                $('.loadingoverlay').hide();
-                            }, 600);
+                        setTimeout(() => {
+                            applyMathAjax();
+                            $('.loadingoverlay').hide();
+                        }, 600);
 
-                        },
-                        next: function () {
-
-
-                            $('.loadingoverlay').show();
-                            setTimeout(() => {
-                                applyMathAjax();
-                                $('.loadingoverlay').hide();
-                            }, 600);
-                            app.isDisabled = false;
-                            app.showimmediateblk = false;
-                            app.shownotimmdnxt = false;
+                    },
+                    next: function () {
 
 
+                        $('.loadingoverlay').show();
+                        setTimeout(() => {
+                            applyMathAjax();
+                            $('.loadingoverlay').hide();
+                        }, 600);
+                        app.isDisabled = false;
+                        app.showimmediateblk = false;
+                        app.shownotimmdnxt = false;
 
-                            /*
-                             if (this.questionIndex < this.quiz.questions.length) {
-                             this.questionIndex++;
-                             }
-                             */
 
 
-                            if (this.questionIndex == this.quiz.questions.length - 1) {
-                                if (this.isAllQAnsed) {
-                                    app.score();
+                        /*
+                         if (this.questionIndex < this.quiz.questions.length) {
+                         this.questionIndex++;
+                         }
+                         */
+
+
+                        if (this.questionIndex == this.quiz.questions.length - 1) {
+                            if (this.isAllQAnsed) {
+                                app.score();
 
 <?php if ($type == 'Year Order') { ?>
-                                        //if(this.questionIndex == this.quiz.questions.length-1)   {
-                                        this.savetimetaken();
-                                        this.quizdurtext();
-                                        //   }
+                                    //if(this.questionIndex == this.quiz.questions.length-1)   {
+                                    this.savetimetaken();
+                                    this.quizdurtext();
+                                    //   }
 <?php } ?>
-                                    this.savequizendtime();
+                                this.savequizendtime();
 
-                                    this.questionIndex++;
-                                    this.stopTimer();
-                                    this.showTimer = false;
-                                }
-
-                            } else
-                            {
                                 this.questionIndex++;
+                                this.stopTimer();
+                                this.showTimer = false;
                             }
 
+                        } else
+                        {
+                            this.questionIndex++;
+                        }
 
 
-                            if (this.questionIndex < this.quiz.questions.length) {                
+
+                        if (this.questionIndex < this.quiz.questions.length) {
                             var questions = <?php echo json_encode($questions_list); ?>;
                             var qid = questions[this.questionIndex].question_id;
 
@@ -2524,241 +2525,181 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                             }
 
 
-<?php // if($testmode==1){             ?>
+<?php // if($testmode==1){              ?>
                             if (this.olqshow) {
                                 this.showQuestionOtherLang();
                             }
-<?php // }    ?>
-                            }
-                            
-    
-                            this.continueTimer();
+<?php // }     ?>
+                        }
+
+
+                        this.continueTimer();
 
 
 
-                        },
-                        prev: function () {
+                    },
+                    prev: function () {
 
-                            $('.loadingoverlay').show();
-                            app.isDisabled = false;
-                            app.showimmediateblk = false;
-                            app.shownotimmdnxt = false;
-                            
-                            
-                            if (this.quiz.questions.length > 0)
-                                this.questionIndex--;
+                        $('.loadingoverlay').show();
+                        app.isDisabled = false;
+                        app.showimmediateblk = false;
+                        app.shownotimmdnxt = false;
 
 
-                            var questions = <?php echo json_encode($questions_list); ?>;
-                            var qid = questions[this.questionIndex].question_id;
-                            var answers = ['A', 'B', 'C', 'D'];
-                            var ansid = '';
-
-                            if (app.showimmediate) {
-
-                                $.get("api/v1/get_student_answer/" + qid + "/<?php echo $student_log; ?>",
-                                        function (data, status) {
-                                            if (data.result.error === false) {
-                                                ansid = data.result.data;
+                        if (this.quiz.questions.length > 0)
+                            this.questionIndex--;
 
 
-                                                $.each(answers, function (ansi, ansv) {
-                                                    var ansvl = app.convertLower(ansv);
-                                                    $('#ansopt_' + ansvl).removeClass('crt_clr');
-                                                    $('#ansopt_' + ansvl).removeClass('is-selected');
-                                                    $('#ansopt_' + ansvl).removeClass('wrng_clr');
-                                                });
+                        var questions = <?php echo json_encode($questions_list); ?>;
+                        var qid = questions[this.questionIndex].question_id;
+                        var answers = ['A', 'B', 'C', 'D'];
+                        var ansid = '';
+
+                        if (app.showimmediate) {
+
+                            $.get("api/v1/get_student_answer/" + qid + "/<?php echo $student_log; ?>",
+                                    function (data, status) {
+                                        if (data.result.error === false) {
+                                            ansid = data.result.data;
+
+
+                                            $.each(answers, function (ansi, ansv) {
+                                                var ansvl = app.convertLower(ansv);
+                                                $('#ansopt_' + ansvl).removeClass('crt_clr');
+                                                $('#ansopt_' + ansvl).removeClass('is-selected');
+                                                $('#ansopt_' + ansvl).removeClass('wrng_clr');
+                                            });
 
 
 
-                                                $.get("api/v1/get_question_answer/" + qid,
-                                                        function (data, status) {
-                                                            if (data.result.error === false) {
+                                            $.get("api/v1/get_question_answer/" + qid,
+                                                    function (data, status) {
+                                                        if (data.result.error === false) {
 
-                                                                var corransid = app.convertLower(data.result.data);
-                                                                var studansid = app.convertLower(ansid);
+                                                            var corransid = app.convertLower(data.result.data);
+                                                            var studansid = app.convertLower(ansid);
 
-                                                                if (data.result.data == ansid) {
-                                                                    $('#ansopt_' + corransid).addClass('crt_clr');
-                                                                } else {
-                                                                    $('#ansopt_' + corransid).addClass('crt_clr');
-                                                                    $('#ansopt_' + studansid).addClass('wrng_clr');
-                                                                }
-
+                                                            if (data.result.data == ansid) {
+                                                                $('#ansopt_' + corransid).addClass('crt_clr');
+                                                            } else {
+                                                                $('#ansopt_' + corransid).addClass('crt_clr');
+                                                                $('#ansopt_' + studansid).addClass('wrng_clr');
                                                             }
-                                                        });
-                                                app.showimmediateblk = true;
-                                                app.isDisabled = false;
-                                                app.shownotimmdnxt = false;
 
-                                            }
-                                        });
+                                                        }
+                                                    });
+                                            app.showimmediateblk = true;
+                                            app.isDisabled = false;
+                                            app.shownotimmdnxt = false;
 
-                            } else {
+                                        }
+                                    });
 
-
-                                $.get("api/v1/get_student_answer/" + qid + "/<?php echo $student_log; ?>",
-                                        function (data, status) {
-                                            if (data.result.error === false) {
-                                                ansid = data.result.data;
+                        } else {
 
 
-                                                $.each(answers, function (ansi, ansv) {
-                                                    var ansvl = app.convertLower(ansv);
-                                                    $('#ansopt_' + ansvl).removeClass('crt_clr');
-                                                    $('#ansopt_' + ansvl).removeClass('is-selected');
-                                                    $('#ansopt_' + ansvl).removeClass('wrng_clr');
-                                                });
+                            $.get("api/v1/get_student_answer/" + qid + "/<?php echo $student_log; ?>",
+                                    function (data, status) {
+                                        if (data.result.error === false) {
+                                            ansid = data.result.data;
 
 
-
-
-                                                var studansid = app.convertLower(ansid);
-                                                $('#ansopt_' + studansid).addClass('crt_clr');
-
-
-                                                app.isDisabled = false;
-                                                app.showimmediateblk = false;
-                                                app.shownotimmdnxt = true;
+                                            $.each(answers, function (ansi, ansv) {
+                                                var ansvl = app.convertLower(ansv);
+                                                $('#ansopt_' + ansvl).removeClass('crt_clr');
+                                                $('#ansopt_' + ansvl).removeClass('is-selected');
+                                                $('#ansopt_' + ansvl).removeClass('wrng_clr');
+                                            });
 
 
 
-                                            }
-                                        });
 
-                            }
-
-<?php // if($testmode==1){             ?>
-                            if (this.olqshow) {
-                                this.showQuestionOtherLang();
-                            }
-<?php // }      ?>
-
-                            setTimeout(() => {
-                                applyMathAjax();
-                                $('.loadingoverlay').hide();
-                            }, 600);
-                            this.continueTimer();
+                                            var studansid = app.convertLower(ansid);
+                                            $('#ansopt_' + studansid).addClass('crt_clr');
 
 
-                        },
-                        // Return "true" count in userResponses
+                                            app.isDisabled = false;
+                                            app.showimmediateblk = false;
+                                            app.shownotimmdnxt = true;
 
-                        immChange: function () {
 
 
-                            if (app.showimmediate) {
-                                app.shownotimmdnxt = false;
-                                if (!app.isDisabled) {
-                                    app.showimmediateblk = false;
-                                } else {
-                                    app.showimmediateblk = true;
-                                }
-                            } else {
+                                        }
+                                    });
+
+                        }
+
+<?php // if($testmode==1){              ?>
+                        if (this.olqshow) {
+                            this.showQuestionOtherLang();
+                        }
+<?php // }       ?>
+
+                        setTimeout(() => {
+                            applyMathAjax();
+                            $('.loadingoverlay').hide();
+                        }, 600);
+                        this.continueTimer();
+
+
+                    },
+                    // Return "true" count in userResponses
+
+                    immChange: function () {
+
+
+                        if (app.showimmediate) {
+                            app.shownotimmdnxt = false;
+                            if (!app.isDisabled) {
                                 app.showimmediateblk = false;
-
-                                if (app.isDisabled) {
-                                    app.shownotimmdnxt = true;
-                                }
-                            }
-
-
-
-                            var questions = <?php echo json_encode($questions_list); ?>;
-                            var qid = questions[this.questionIndex].question_id;
-                            var answers = ['A', 'B', 'C', 'D'];
-
-                            if (app.showimmediate) {
-
-
-                                $.get("api/v1/get_student_answer/" + qid + "/<?php echo $student_log; ?>",
-                                        function (data, status) {
-                                            if (data.result.error === false) {
-                                                ansid = data.result.data;
-
-                                                $.get("api/v1/get_question_answer/" + qid,
-                                                        function (data, status) {
-                                                            if (data.result.error === false) {
-
-                                                                var corransid = app.convertLower(data.result.data);
-                                                                var studansid = app.convertLower(ansid);
-
-                                                                if (data.result.data == ansid) {
-                                                                    $('#ansopt_' + corransid).addClass('crt_clr');
-                                                                } else {
-                                                                    $('#ansopt_' + corransid).addClass('crt_clr');
-                                                                    $('#ansopt_' + studansid).addClass('wrng_clr');
-                                                                }
-
-                                                            }
-                                                        });
-                                                app.showimmediateblk = true;
-                                                app.isDisabled = false;
-                                                app.shownotimmdnxt = false;
-                                            }
-                                        });
-
                             } else {
-
-
-                                $.get("api/v1/get_student_answer/" + qid + "/<?php echo $student_log; ?>",
-                                        function (data, status) {
-                                            if (data.result.error === false) {
-                                                ansid = data.result.data;
-
-
-                                                var studansid = app.convertLower(ansid);
-                                                $('#ansopt_' + studansid).addClass('crt_clr');
-
-
-                                                app.isDisabled = false;
-                                                app.showimmediateblk = false;
-                                                //app.shownotimmdnxt = false;
-                                                app.shownotimmdnxt = true;
-
-
-
-
-
-                                            }
-                                        });
+                                app.showimmediateblk = true;
                             }
-
-
-                            setTimeout(() => {
-                                applyMathAjax();
-                                $('.loadingoverlay').hide();
-                            }, 600);
-
-
-
-                        },
-                        goQuesFromPause: function () {
-
-
-                            $('.loadingoverlay').show();
-                            setTimeout(() => {
-                                applyMathAjax();
-                                $('.loadingoverlay').hide();
-                            }, 600);
-                            app.isDisabled = false;
+                        } else {
                             app.showimmediateblk = false;
-                            app.shownotimmdnxt = false;
 
-                            /*
-                             $('#header-hidden').show();
-                             $('#quiz-hidden').show();
-                             $('.questionFooter').show();
-                             $('#olqhidden').show();
-                             $('.question-admin-panel').hide();
-                             */
-
-                            //this.questionIndex = val;
-
-                            var questions = <?php echo json_encode($questions_list); ?>;
-                            var qid = questions[this.questionIndex].question_id;
+                            if (app.isDisabled) {
+                                app.shownotimmdnxt = true;
+                            }
+                        }
 
 
+
+                        var questions = <?php echo json_encode($questions_list); ?>;
+                        var qid = questions[this.questionIndex].question_id;
+                        var answers = ['A', 'B', 'C', 'D'];
+
+                        if (app.showimmediate) {
+
+
+                            $.get("api/v1/get_student_answer/" + qid + "/<?php echo $student_log; ?>",
+                                    function (data, status) {
+                                        if (data.result.error === false) {
+                                            ansid = data.result.data;
+
+                                            $.get("api/v1/get_question_answer/" + qid,
+                                                    function (data, status) {
+                                                        if (data.result.error === false) {
+
+                                                            var corransid = app.convertLower(data.result.data);
+                                                            var studansid = app.convertLower(ansid);
+
+                                                            if (data.result.data == ansid) {
+                                                                $('#ansopt_' + corransid).addClass('crt_clr');
+                                                            } else {
+                                                                $('#ansopt_' + corransid).addClass('crt_clr');
+                                                                $('#ansopt_' + studansid).addClass('wrng_clr');
+                                                            }
+
+                                                        }
+                                                    });
+                                            app.showimmediateblk = true;
+                                            app.isDisabled = false;
+                                            app.shownotimmdnxt = false;
+                                        }
+                                    });
+
+                        } else {
 
 
                             $.get("api/v1/get_student_answer/" + qid + "/<?php echo $student_log; ?>",
@@ -2782,534 +2723,594 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
 
                                         }
                                     });
-
-
-
-
-
-                        },
-                        goQuesAns: function (val) {
-
-
-                            $('.loadingoverlay').show();
-                            setTimeout(() => {
-                                applyMathAjax();
-                                $('.loadingoverlay').hide();
-                            }, 600);
-                            app.isDisabled = false;
-                            app.showimmediateblk = false;
-                            app.shownotimmdnxt = false;
-
-
-                            $('#header-hidden').show();
-                            $('#quiz-hidden').show();
-                            $('.questionFooter').show();
-                            $('#olqhidden').show();
-                            $('.question-admin-panel').hide();
-
-                            this.questionIndex = val;
-
-                            var questions = <?php echo json_encode($questions_list); ?>;
-                            var qid = questions[this.questionIndex].question_id;
-
-
-                            if (app.showimmediate) {
-
-
-                                $.get("api/v1/get_student_answer/" + qid + "/<?php echo $student_log; ?>",
-                                        function (data, status) {
-                                            if (data.result.error === false) {
-                                                ansid = data.result.data;
-
-                                                $.get("api/v1/get_question_answer/" + qid,
-                                                        function (data, status) {
-                                                            if (data.result.error === false) {
-
-                                                                var corransid = app.convertLower(data.result.data);
-                                                                var studansid = app.convertLower(ansid);
-
-                                                                if (data.result.data == ansid) {
-                                                                    $('#ansopt_' + corransid).addClass('crt_clr');
-                                                                } else {
-                                                                    $('#ansopt_' + corransid).addClass('crt_clr');
-                                                                    $('#ansopt_' + studansid).addClass('wrng_clr');
-                                                                }
-
-                                                            }
-                                                        });
-                                                app.showimmediateblk = true;
-                                                app.isDisabled = false;
-                                                app.shownotimmdnxt = false;
-                                            }
-                                        });
-
-                            } else {
-
-
-                                $.get("api/v1/get_student_answer/" + qid + "/<?php echo $student_log; ?>",
-                                        function (data, status) {
-                                            if (data.result.error === false) {
-                                                ansid = data.result.data;
-
-
-                                                var studansid = app.convertLower(ansid);
-                                                $('#ansopt_' + studansid).addClass('crt_clr');
-
-
-                                                app.isDisabled = false;
-                                                app.showimmediateblk = false;
-                                                //app.shownotimmdnxt = false;
-                                                app.shownotimmdnxt = true;
-
-
-
-
-
-                                            }
-                                        });
-                            }
-
-
-<?php // if($testmode==1){             ?>
-                            if (this.olqshow) {
-                                this.showQuestionOtherLang();
-                            }
-<?php // }      ?>
-
-
-                        },
-                        /*
-                         goQuesAns: function (val) {   
-                         
-                         
-                         $('#header-hidden').show();
-                         $('#quiz-hidden').show();
-                         $('.questionFooter').show();
-                         $('.question-admin-panel').hide();
-                         
-                         this.questionIndex = val;
-                         
-                         $('.loadingoverlay').show();  
-                         
-                         setTimeout(() => {                            
-                         applyMathAjax();   
-                         $('.loadingoverlay').hide();
-                         }, 600);      
-                         
-                         
-                         this.selected_answer = '';
-                         
-                         this.showsurebtnans = false;
-                         this.shownextnosave = true;
-                         this.shownotsureaftersel = false;
-                         this.showcnfrmaftersel = false;     
-                         this.questionprevanswered = false;
-                         
-                         
-                         var questions = <?php // echo json_encode($questions_list);      ?>;
-                         var qid = questions[this.questionIndex].question_id;
-                         var answers = ['A', 'B', 'C', 'D'];
-                         var ansid = '';
-                         
-                         $.get("api/v1/get_student_notsure_answer/" + qid + "/<?php // echo $student_log;      ?>",
-                         function (data, status) {
-                         if (data.result.error === false) {
-                         ansid = data.result.data;
-                         notsure_ansid = data.result.data_notsure;
-                         
-                         
-                         if(ansid!='')
-                         {   
-                         var studansid = app.convertLower(ansid);
-                         $('#ansopt_' + studansid).addClass('crt_clr');
-                         
-                         app.selected_answer = ansid;
-                         app.shownotsureaftersel = true;
-                         app.showcnfrmaftersel = false;    
-                         app.questionprevanswered = true;
-                         
-                         app.showsurebtnans  = false;
-                         } 
-                         else if(notsure_ansid!='')
-                         {   
-                         var studansid = app.convertLower(notsure_ansid);
-                         $('#ansopt_' + studansid).addClass('notsure_clr');    
-                         
-                         app.selected_answer = notsure_ansid;
-                         app.shownotsureaftersel = false;
-                         app.showcnfrmaftersel = false;    
-                         app.questionprevanswered = true;
-                         app.showsurebtnans  = true;   
-                         }
-                         
-                         else {
-                         
-                         app.selected_answer = '';
-                         app.shownotsureaftersel = false;
-                         app.showcnfrmaftersel = false;
-                         app.questionprevanswered = false;
-                         app.showsurebtnans  = false;
-                         }
-                         }
-                         });
-                         
-                         
-                         
-                         },
-                         */
-                        goquestion: function () {
-                            var goquestion = parseInt($("#goques").val());
-
-                            if (goquestion > this.quiz.questions.length) {
-                                var maxnum = this.quiz.questions.length + 1
-                                swal("Error!", "Number Should be Less than " + maxnum, "error");
-                                return;
-                            } else
-                            {
-                                this.questionIndex = goquestion - 1;
-
-                                $('.loadingoverlay').show();
-
-
-<?php // if($testmode==1){             ?>
-                                if (this.olqshow) {
-                                    this.showQuestionOtherLang();
-                                }
-<?php // }      ?>
-
-                                setTimeout(() => {
-                                    applyMathAjax();
-                                    $('.loadingoverlay').hide();
-                                }, 600);
-
-                            }
-
-                        },
-                        showolqChange: function () {
-
-                            !this.olqshow;
-                            if (this.olqshow) {
-                                this.showQuestionOtherLang();
-                            }
-                        },
-                        showQuestionOtherLang: function () {
-
-<?php // if($testmode==1){             ?>
-                            this.olqd = null;
-                            var other_language = '<?php echo $other_language['language_id']; ?>';
-                            var questions = <?php echo json_encode($questions_list); ?>;
-                            var otherlang_questions = <?php echo json_encode($otherlang_questions_list); ?>;
-                            var qno = questions[this.questionIndex].question_no;
-                            var ye = questions[this.questionIndex].year_id;
-
-                            if (otherlang_questions) {
-                                for (let i = 0; i < otherlang_questions.length; i++) {
-                                    if (otherlang_questions[i].question_no == qno && otherlang_questions[i].year_id == ye) {
-                                        this.olqd = otherlang_questions[i];
-                                        //this.olqshow = true;
-
-
-                                    }
-                                }
-                            } else {
-                                this.olqd = null;
-                            }
-
-                            setTimeout(() => {
-                                applyMathAjax();
-                                $('.loadingoverlay').hide();
-                            }, 600);
-<?php // }      ?>
-                        },
-                        showExplanationOtherLang: function () {
-                            //display other langauage explaination
-<?php // if($testmode==1){             ?>
-
-
-                            var other_language = '<?php echo $other_language['language_id']; ?>';
-                            var questions = <?php echo json_encode($questions_list); ?>;
-                            var otherlang_questions = <?php echo json_encode($otherlang_questions_list); ?>;
-
-                            if (otherlang_questions) {
-                                //alert(otherlang_questions.length);
-                                var sample = new Array();
-
-                                for (let il = 0; il < otherlang_questions.length; il++) {
-                                    //sample[otherlang_questions[il].question_no] = {'explanation_img_direction':otherlang_questions[il].explanation_img_direction,'explanation':otherlang_questions[il].explanation,'show_image_explanation':otherlang_questions[il].show_image_explanation,'image_path_explanation':otherlang_questions[il].image_path_explanation};
-                                    sample[otherlang_questions[il].year_id + otherlang_questions[il].question_no] = {'explanation_img_direction': otherlang_questions[il].explanation_img_direction, 'explanation': otherlang_questions[il].explanation, 'show_image_explanation': otherlang_questions[il].show_image_explanation, 'image_path_explanation': otherlang_questions[il].image_path_explanation};
-                                }
-
-                                this.otherlangquiz = sample;
-                                console.log(sample);
-                            }
-<?php // }      ?>
-                        },
-                        /*        
-                         score: function () {
-                         var score = 0;
-                         for (let i = 0; i < this.userResponses.length; i++) {
-                         if (
-                         typeof this.quiz.questions[i].responses[
-                         this.userResponses[i]
-                         ] !== "undefined" &&
-                         this.quiz.questions[i].responses[this.userResponses[i]].correct
-                         ) {
-                         score = score + 1;
-                         }
-                         }
-                         
-                         return score;
-                         
-                         //return this.userResponses.filter(function(val) { return val }).length;
-                         
-                         
-                         },
-                         */
-                        score: function () {
-                            var scoreva = 0;
-                            $.get("api/v1/get_result_correct_ans_cnt/<?php echo $student_log; ?>",
-                                    function (data, status) {
-                                        if (data.result.error === false) {
-                                            scoreva = data.result.correct_cnt;
-                                        }
-                                        app.scoreval = scoreva;
-
-                                    });
-                        },
-                        startTimer: function () {
-                            if (!this.isTimerPaused) {
-                                this.totseconds++;
-                                this.secondslabel = pad(this.totseconds % 60);
-                                this.minuteslabel = pad(parseInt(this.totseconds / 60));
-                            }
-                            var alertduration = this.totalquizduration - this.quizalertbeforemins;
-                            if (this.minuteslabel == alertduration && this.secondslabel == 0) {
-                                this.quizTimerAlert();
-                            }
-                            if (this.minuteslabel == this.totalquizduration && this.secondslabel == 0) {
-                                this.savenoquesdur();
-                                this.quizTimertotdurAlert();
-                            }
-                        },
-                        pauseTimer: function () {
-                            this.isTimerPaused = true;
-                        },
-                        playTimer: function () {
-                            if (!this.isTimerStart) {
-                                this.isTimerStart = true;
-                                this.timerId = setInterval(this.startTimer, 1000);
-                            }
-                            this.continueTimer();
-                        },
-                        stopTimer: function () {
-                            this.pauseTimer();
-                            clearInterval(this.timerId);
-                        },
-                        continueTimer: function () {
-                            if (this.isTimerStart) {
-                                this.isTimerPaused = false;
-                            }
-                        },
-                        savenoquesdur: function () {
-                            $.post("api/v1/store_duration_question",
-                                    {
-                                        student_log: <?php echo $student_log; ?>
-                                    },
-                                    function (data, status) {
-                                        if (data.result.error === false) {
-
-                                        }
-                                    });
-                        },
-                        savetimetaken: function () {
-                            $.post("api/v1/store_stud_duration",
-                                    {
-                                        stud_duration: this.totseconds,
-                                        student_log: <?php echo $student_log; ?>
-                                    },
-                                    function (data, status) {
-                                        if (data.result.error === false) {
-
-                                        }
-                                    });
-                        },
-                        savequizendtime: function () {
-                            $.post("api/v1/store_quiz_end_time",
-                                    {
-                                        student_log: <?php echo $student_log; ?>
-                                    },
-                                    function (data, status) {
-                                        if (data.result.error === false) {
-
-                                        }
-                                    });
-                        },
-                        quizTimerAlert: function () {
-                            swal('Only ' + this.quizalertbeforemins + ' Minutes Left');
-                        },
-                        quizTimertotdurAlert: function () {
-                            swal(this.totalquizduration + ' Minutes Completed. But you can answer and complete the pending questions');
-                        },
-                        quizdurtext: function () {
-                            $('.loadingoverlay').show();
-                            $.get("api/v1/get_student_log_time_info/<?php echo $student_log; ?>",
-                                    function (data, status) {
-                                        if (data.result.error === false) {
-                                            var qt = 0;
-                                            var qta = 0;
-                                            var qtmi = 0;
-                                            app.data_ques_answered = data.result.ques_answered;
-                                            qt = data.result.ques_duration;
-                                            qta = qt / 60;
-                                            qtmi = qt % 60;
-                                            app.data_ques_duration = pad(parseInt(qta)) + '.' + pad(parseInt(qtmi));
-
-
-                                            $('.loadingoverlay').hide();
-                                        }
-                                    });
-                            //return true; 
-
-                        },
-                        chkAllquesAnswered: function () {
-                            $.get("api/v1/get_result_detail_ans_cnt/<?php echo $student_log; ?>",
-                                    function (data, status) {
-                                        if (data.result.error === false) {
-                                            if (data.result.ans_cnt == app.quiz.questions.length) {
-                                                app.isAllQAnsed = true;
-
-                                            } else {
-                                                app.isAllQAnsed = false;
-                                                //app.isAllQAnsed = true;
-                                            }
-
-                                        }
-                                    });
-                        },
-                        studanscnt: function () {
-                            $.get("api/v1/get_result_detail_ans_cnt/<?php echo $student_log; ?>",
-                                    function (data, status) {
-                                        app.anscntstud = data.result.ans_cnt;
-                                    });
-
                         }
 
 
+                        setTimeout(() => {
+                            applyMathAjax();
+                            $('.loadingoverlay').hide();
+                        }, 600);
 
 
+
+                    },
+                    goQuesFromPause: function () {
+
+
+                        $('.loadingoverlay').show();
+                        setTimeout(() => {
+                            applyMathAjax();
+                            $('.loadingoverlay').hide();
+                        }, 600);
+                        app.isDisabled = false;
+                        app.showimmediateblk = false;
+                        app.shownotimmdnxt = false;
+
+                        /*
+                         $('#header-hidden').show();
+                         $('#quiz-hidden').show();
+                         $('.questionFooter').show();
+                         $('#olqhidden').show();
+                         $('.question-admin-panel').hide();
+                         */
+
+                        //this.questionIndex = val;
+
+                        var questions = <?php echo json_encode($questions_list); ?>;
+                        var qid = questions[this.questionIndex].question_id;
+
+
+
+
+                        $.get("api/v1/get_student_answer/" + qid + "/<?php echo $student_log; ?>",
+                                function (data, status) {
+                                    if (data.result.error === false) {
+                                        ansid = data.result.data;
+
+
+                                        var studansid = app.convertLower(ansid);
+                                        $('#ansopt_' + studansid).addClass('crt_clr');
+
+
+                                        app.isDisabled = false;
+                                        app.showimmediateblk = false;
+                                        //app.shownotimmdnxt = false;
+                                        app.shownotimmdnxt = true;
+
+
+
+
+
+                                    }
+                                });
+
+
+
+
+
+                    },
+                    goQuesAns: function (val) {
+
+
+                        $('.loadingoverlay').show();
+                        setTimeout(() => {
+                            applyMathAjax();
+                            $('.loadingoverlay').hide();
+                        }, 600);
+                        app.isDisabled = false;
+                        app.showimmediateblk = false;
+                        app.shownotimmdnxt = false;
+
+
+                        $('#header-hidden').show();
+                        $('#quiz-hidden').show();
+                        $('.questionFooter').show();
+                        $('#olqhidden').show();
+                        $('.question-admin-panel').hide();
+
+                        this.questionIndex = val;
+
+                        var questions = <?php echo json_encode($questions_list); ?>;
+                        var qid = questions[this.questionIndex].question_id;
+
+
+                        if (app.showimmediate) {
+
+
+                            $.get("api/v1/get_student_answer/" + qid + "/<?php echo $student_log; ?>",
+                                    function (data, status) {
+                                        if (data.result.error === false) {
+                                            ansid = data.result.data;
+
+                                            $.get("api/v1/get_question_answer/" + qid,
+                                                    function (data, status) {
+                                                        if (data.result.error === false) {
+
+                                                            var corransid = app.convertLower(data.result.data);
+                                                            var studansid = app.convertLower(ansid);
+
+                                                            if (data.result.data == ansid) {
+                                                                $('#ansopt_' + corransid).addClass('crt_clr');
+                                                            } else {
+                                                                $('#ansopt_' + corransid).addClass('crt_clr');
+                                                                $('#ansopt_' + studansid).addClass('wrng_clr');
+                                                            }
+
+                                                        }
+                                                    });
+                                            app.showimmediateblk = true;
+                                            app.isDisabled = false;
+                                            app.shownotimmdnxt = false;
+                                        }
+                                    });
+
+                        } else {
+
+
+                            $.get("api/v1/get_student_answer/" + qid + "/<?php echo $student_log; ?>",
+                                    function (data, status) {
+                                        if (data.result.error === false) {
+                                            ansid = data.result.data;
+
+
+                                            var studansid = app.convertLower(ansid);
+                                            $('#ansopt_' + studansid).addClass('crt_clr');
+
+
+                                            app.isDisabled = false;
+                                            app.showimmediateblk = false;
+                                            //app.shownotimmdnxt = false;
+                                            app.shownotimmdnxt = true;
+
+
+
+
+
+                                        }
+                                    });
+                        }
+
+
+<?php // if($testmode==1){              ?>
+                        if (this.olqshow) {
+                            this.showQuestionOtherLang();
+                        }
+<?php // }       ?>
+
+
+                    },
+                    /*
+                     goQuesAns: function (val) {   
+                     
+                     
+                     $('#header-hidden').show();
+                     $('#quiz-hidden').show();
+                     $('.questionFooter').show();
+                     $('.question-admin-panel').hide();
+                     
+                     this.questionIndex = val;
+                     
+                     $('.loadingoverlay').show();  
+                     
+                     setTimeout(() => {                            
+                     applyMathAjax();   
+                     $('.loadingoverlay').hide();
+                     }, 600);      
+                     
+                     
+                     this.selected_answer = '';
+                     
+                     this.showsurebtnans = false;
+                     this.shownextnosave = true;
+                     this.shownotsureaftersel = false;
+                     this.showcnfrmaftersel = false;     
+                     this.questionprevanswered = false;
+                     
+                     
+                     var questions = <?php // echo json_encode($questions_list);       ?>;
+                     var qid = questions[this.questionIndex].question_id;
+                     var answers = ['A', 'B', 'C', 'D'];
+                     var ansid = '';
+                     
+                     $.get("api/v1/get_student_notsure_answer/" + qid + "/<?php // echo $student_log;       ?>",
+                     function (data, status) {
+                     if (data.result.error === false) {
+                     ansid = data.result.data;
+                     notsure_ansid = data.result.data_notsure;
+                     
+                     
+                     if(ansid!='')
+                     {   
+                     var studansid = app.convertLower(ansid);
+                     $('#ansopt_' + studansid).addClass('crt_clr');
+                     
+                     app.selected_answer = ansid;
+                     app.shownotsureaftersel = true;
+                     app.showcnfrmaftersel = false;    
+                     app.questionprevanswered = true;
+                     
+                     app.showsurebtnans  = false;
+                     } 
+                     else if(notsure_ansid!='')
+                     {   
+                     var studansid = app.convertLower(notsure_ansid);
+                     $('#ansopt_' + studansid).addClass('notsure_clr');    
+                     
+                     app.selected_answer = notsure_ansid;
+                     app.shownotsureaftersel = false;
+                     app.showcnfrmaftersel = false;    
+                     app.questionprevanswered = true;
+                     app.showsurebtnans  = true;   
+                     }
+                     
+                     else {
+                     
+                     app.selected_answer = '';
+                     app.shownotsureaftersel = false;
+                     app.showcnfrmaftersel = false;
+                     app.questionprevanswered = false;
+                     app.showsurebtnans  = false;
+                     }
+                     }
+                     });
+                     
+                     
+                     
+                     },
+                     */
+                    goquestion: function () {
+                        var goquestion = parseInt($("#goques").val());
+
+                        if (goquestion > this.quiz.questions.length) {
+                            var maxnum = this.quiz.questions.length + 1
+                            swal("Error!", "Number Should be Less than " + maxnum, "error");
+                            return;
+                        } else
+                        {
+                            this.questionIndex = goquestion - 1;
+
+                            $('.loadingoverlay').show();
+
+
+<?php // if($testmode==1){              ?>
+                            if (this.olqshow) {
+                                this.showQuestionOtherLang();
+                            }
+<?php // }       ?>
+
+                            setTimeout(() => {
+                                applyMathAjax();
+                                $('.loadingoverlay').hide();
+                            }, 600);
+
+                        }
+
+                    },
+                    showolqChange: function () {
+
+                        !this.olqshow;
+                        if (this.olqshow) {
+                            this.showQuestionOtherLang();
+                        }
+                    },
+                    showQuestionOtherLang: function () {
+
+<?php // if($testmode==1){              ?>
+                        this.olqd = null;
+                        var other_language = '<?php echo $other_language['language_id']; ?>';
+                        var questions = <?php echo json_encode($questions_list); ?>;
+                        var otherlang_questions = <?php echo json_encode($otherlang_questions_list); ?>;
+                        var qno = questions[this.questionIndex].question_no;
+                        var ye = questions[this.questionIndex].year_id;
+
+                        if (otherlang_questions) {
+                            for (let i = 0; i < otherlang_questions.length; i++) {
+                                if (otherlang_questions[i].question_no == qno && otherlang_questions[i].year_id == ye) {
+                                    this.olqd = otherlang_questions[i];
+                                    //this.olqshow = true;
+
+
+                                }
+                            }
+                        } else {
+                            this.olqd = null;
+                        }
+
+                        setTimeout(() => {
+                            applyMathAjax();
+                            $('.loadingoverlay').hide();
+                        }, 600);
+<?php // }       ?>
+                    },
+                    showExplanationOtherLang: function () {
+                        //display other langauage explaination
+<?php // if($testmode==1){              ?>
+
+
+                        var other_language = '<?php echo $other_language['language_id']; ?>';
+                        var questions = <?php echo json_encode($questions_list); ?>;
+                        var otherlang_questions = <?php echo json_encode($otherlang_questions_list); ?>;
+
+                        if (otherlang_questions) {
+                            //alert(otherlang_questions.length);
+                            var sample = new Array();
+
+                            for (let il = 0; il < otherlang_questions.length; il++) {
+                                //sample[otherlang_questions[il].question_no] = {'explanation_img_direction':otherlang_questions[il].explanation_img_direction,'explanation':otherlang_questions[il].explanation,'show_image_explanation':otherlang_questions[il].show_image_explanation,'image_path_explanation':otherlang_questions[il].image_path_explanation};
+                                sample[otherlang_questions[il].year_id + otherlang_questions[il].question_no] = {'explanation_img_direction': otherlang_questions[il].explanation_img_direction, 'explanation': otherlang_questions[il].explanation, 'show_image_explanation': otherlang_questions[il].show_image_explanation, 'image_path_explanation': otherlang_questions[il].image_path_explanation};
+                            }
+
+                            this.otherlangquiz = sample;
+                            console.log(sample);
+                        }
+<?php // }       ?>
+                    },
+                    /*        
+                     score: function () {
+                     var score = 0;
+                     for (let i = 0; i < this.userResponses.length; i++) {
+                     if (
+                     typeof this.quiz.questions[i].responses[
+                     this.userResponses[i]
+                     ] !== "undefined" &&
+                     this.quiz.questions[i].responses[this.userResponses[i]].correct
+                     ) {
+                     score = score + 1;
+                     }
+                     }
+                     
+                     return score;
+                     
+                     //return this.userResponses.filter(function(val) { return val }).length;
+                     
+                     
+                     },
+                     */
+                    score: function () {
+                        var scoreva = 0;
+                        $.get("api/v1/get_result_correct_ans_cnt/<?php echo $student_log; ?>",
+                                function (data, status) {
+                                    if (data.result.error === false) {
+                                        scoreva = data.result.correct_cnt;
+                                    }
+                                    app.scoreval = scoreva;
+
+                                });
+                    },
+                    startTimer: function () {
+                        if (!this.isTimerPaused) {
+                            this.totseconds++;
+                            this.secondslabel = pad(this.totseconds % 60);
+                            this.minuteslabel = pad(parseInt(this.totseconds / 60));
+                        }
+                        var alertduration = this.totalquizduration - this.quizalertbeforemins;
+                        if (this.minuteslabel == alertduration && this.secondslabel == 0) {
+                            this.quizTimerAlert();
+                        }
+                        if (this.minuteslabel == this.totalquizduration && this.secondslabel == 0) {
+                            this.savenoquesdur();
+                            this.quizTimertotdurAlert();
+                        }
+                    },
+                    pauseTimer: function () {
+                        this.isTimerPaused = true;
+                    },
+                    playTimer: function () {
+                        if (!this.isTimerStart) {
+                            this.isTimerStart = true;
+                            this.timerId = setInterval(this.startTimer, 1000);
+                        }
+                        this.continueTimer();
+                    },
+                    stopTimer: function () {
+                        this.pauseTimer();
+                        clearInterval(this.timerId);
+                    },
+                    continueTimer: function () {
+                        if (this.isTimerStart) {
+                            this.isTimerPaused = false;
+                        }
+                    },
+                    savenoquesdur: function () {
+                        $.post("api/v1/store_duration_question",
+                                {
+                                    student_log: <?php echo $student_log; ?>
+                                },
+                                function (data, status) {
+                                    if (data.result.error === false) {
+
+                                    }
+                                });
+                    },
+                    savetimetaken: function () {
+                        $.post("api/v1/store_stud_duration",
+                                {
+                                    stud_duration: this.totseconds,
+                                    student_log: <?php echo $student_log; ?>
+                                },
+                                function (data, status) {
+                                    if (data.result.error === false) {
+
+                                    }
+                                });
+                    },
+                    savequizendtime: function () {
+                        $.post("api/v1/store_quiz_end_time",
+                                {
+                                    student_log: <?php echo $student_log; ?>
+                                },
+                                function (data, status) {
+                                    if (data.result.error === false) {
+
+                                    }
+                                });
+                    },
+                    quizTimerAlert: function () {
+                        swal('Only ' + this.quizalertbeforemins + ' Minutes Left');
+                    },
+                    quizTimertotdurAlert: function () {
+                        swal(this.totalquizduration + ' Minutes Completed. But you can answer and complete the pending questions');
+                    },
+                    quizdurtext: function () {
+                        $('.loadingoverlay').show();
+                        $.get("api/v1/get_student_log_time_info/<?php echo $student_log; ?>",
+                                function (data, status) {
+                                    if (data.result.error === false) {
+                                        var qt = 0;
+                                        var qta = 0;
+                                        var qtmi = 0;
+                                        app.data_ques_answered = data.result.ques_answered;
+                                        qt = data.result.ques_duration;
+                                        qta = qt / 60;
+                                        qtmi = qt % 60;
+                                        app.data_ques_duration = pad(parseInt(qta)) + '.' + pad(parseInt(qtmi));
+
+
+                                        $('.loadingoverlay').hide();
+                                    }
+                                });
+                        //return true; 
+
+                    },
+                    chkAllquesAnswered: function () {
+                        $.get("api/v1/get_result_detail_ans_cnt/<?php echo $student_log; ?>",
+                                function (data, status) {
+                                    if (data.result.error === false) {
+                                        if (data.result.ans_cnt == app.quiz.questions.length) {
+                                            app.isAllQAnsed = true;
+
+                                        } else {
+                                            app.isAllQAnsed = false;
+                                            //app.isAllQAnsed = true;
+                                        }
+
+                                    }
+                                });
+                    },
+                    studanscnt: function () {
+                        $.get("api/v1/get_result_detail_ans_cnt/<?php echo $student_log; ?>",
+                                function (data, status) {
+                                    app.anscntstud = data.result.ans_cnt;
+                                });
+
                     }
-                });
-                setTimeout(() => {
-                    $("#feedback-popup").show();
-                }, 500);
-            </script>
-            <script>
-                /*
-                 var minutesLabel = document.getElementById("minutes");
-                 var secondsLabel = document.getElementById("seconds");
-                 var totalSeconds = 0;
-                 setInterval(setTime, 1000);
-                 
-                 function setTime() {
-                 ++totalSeconds;
-                 secondsLabel.innerHTML = pad(totalSeconds % 60);
-                 minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
-                 }
-                 */
-                function pad(val) {
-                    var valString = val + "";
-                    if (valString.length < 2) {
-                        return "0" + valString;
-                    } else {
-                        return valString;
-                    }
+
+
+
+
                 }
+            });
+            setTimeout(() => {
+                $("#feedback-popup").show();
+            }, 500);
+        </script>
+        <script>
+            /*
+             var minutesLabel = document.getElementById("minutes");
+             var secondsLabel = document.getElementById("seconds");
+             var totalSeconds = 0;
+             setInterval(setTime, 1000);
+             
+             function setTime() {
+             ++totalSeconds;
+             secondsLabel.innerHTML = pad(totalSeconds % 60);
+             minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
+             }
+             */
+            function pad(val) {
+                var valString = val + "";
+                if (valString.length < 2) {
+                    return "0" + valString;
+                } else {
+                    return valString;
+                }
+            }
 
-                $(document).ready(function () {
-                    $('.loadingoverlay').show();
-                    setTimeout(() => {
-                        applyMathAjax();
-                        $('.quiz-section').show();
-<?php // if($testmode==1){             ?>
-                        //display other lanaguage explanation           
-                        app.showExplanationOtherLang();
-<?php // }      ?>
-<?php // if($testmode == 0) {       ?>
+            $(document).ready(function () {
+                $('.loadingoverlay').show();
+                setTimeout(() => {
+                    applyMathAjax();
+                    $('.quiz-section').show();
+<?php // if($testmode==1){              ?>
+                    //display other lanaguage explanation           
+                    app.showExplanationOtherLang();
+<?php // }       ?>
+<?php // if($testmode == 0) {        ?>
 <?php if ($type == 'Year Order') { ?>
-                            //setInterval(app.startTimer, 1000);
+                        //setInterval(app.startTimer, 1000);
 <?php } ?>
 <?php if (isset($_REQUEST['from']) && ($_REQUEST['from'] == 'pausequiz')) { ?>
-                            app.goQuesFromPause();
+                        app.goQuesFromPause();
 <?php } ?>
-                        $('.loadingoverlay').hide();
-                    }, 600);
+                    $('.loadingoverlay').hide();
+                }, 600);
 
-                });
-            </script>
-            <script>
-                function showqno() {
-                    $('#header-hidden').hide();
-                    $('#quiz-hidden').hide();
-                    $('.question-admin-panel').show();
+            });
+        </script>
+        <script>
+            function showqno() {
+                $('#header-hidden').hide();
+                $('#quiz-hidden').hide();
+                $('.question-admin-panel').show();
+            }
+            function showqus() {
+                $('#header-hidden').show();
+                $('#quiz-hidden').show();
+                $('#olqhidden').show();
+                $('.question-admin-panel').hide();
+                $('.questionFooter').show();
+                app.showqap = false;
+            }
+            function goQuesFrPanel(val) {
+                app.goQuesAns(val);
+            }
+            function topicShowDetail(tid) {
+
+                /*
+                 $('#question_list_det').toggle();
+                 
+                 
+                 if($('#question_list_det').css('display') == 'none'){ 
+                 $('#btnsorderdetail_'+tid).html('Show Details');                    
+                 } else { 
+                 $('#btnsorderdetail_'+tid).html('Hide Details');
+                 app.divshowsorderdetail(tid,<?php //echo $student_log;    ?>);
+                 } 
+                 */
+
+                // app.divshowsorderdetail(tid,<?php // echo $student_log;    ?>);
+
+
+
+                var seltoptxt = '';
+
+                seltoptxt = $('#btnsorderdetail_' + tid).html();
+                $('.btnsorderdetail').html('Show Details');
+                if (seltoptxt == 'Show Details') {
+                    app.divshowsorderdetail(tid,<?php echo $student_log; ?>);
+                    $('#question_list_det').show();
+                    $('#btnsorderdetail_' + tid).html('Hide Details');
                 }
-                function showqus() {
-                    $('#header-hidden').show();
-                    $('#quiz-hidden').show();
-                    $('#olqhidden').show();
-                    $('.question-admin-panel').hide();
-                    $('.questionFooter').show();
-                    app.showqap = false;
+                if (seltoptxt == 'Hide Details') {
+                    $('#btnsorderdetail_' + tid).html('Show Details');
+                    $('#question_list_det').hide();
                 }
-                function goQuesFrPanel(val) {
-                    app.goQuesAns(val);
+
+
+            }
+            function yordershowdetail() {
+
+                $('#question_list_det').toggle();
+
+                if ($('#question_list_det').css('display') == 'none') {
+                    $('#btnyorderdetail').html('Show Details');
+                } else {
+                    $('#btnyorderdetail').html('Hide Details');
                 }
-                function topicShowDetail(tid) {
-
-                    /*
-                     $('#question_list_det').toggle();
-                     
-                     
-                     if($('#question_list_det').css('display') == 'none'){ 
-                     $('#btnsorderdetail_'+tid).html('Show Details');                    
-                     } else { 
-                     $('#btnsorderdetail_'+tid).html('Hide Details');
-                     app.divshowsorderdetail(tid,<?php //echo $student_log;   ?>);
-                     } 
-                     */
-
-                    // app.divshowsorderdetail(tid,<?php // echo $student_log;   ?>);
 
 
-
-                    var seltoptxt = '';
-
-                    seltoptxt = $('#btnsorderdetail_' + tid).html();
-                    $('.btnsorderdetail').html('Show Details');
-                    if (seltoptxt == 'Show Details') {
-                        app.divshowsorderdetail(tid,<?php echo $student_log; ?>);
-                        $('#question_list_det').show();
-                        $('#btnsorderdetail_' + tid).html('Hide Details');
-                    }
-                    if (seltoptxt == 'Hide Details') {
-                        $('#btnsorderdetail_' + tid).html('Show Details');
-                        $('#question_list_det').hide();
-                    }
-
-
-                }
-                function yordershowdetail() {
-
-                    $('#question_list_det').toggle();
-
-                    if ($('#question_list_det').css('display') == 'none') {
-                        $('#btnyorderdetail').html('Show Details');
-                    } else {
-                        $('#btnyorderdetail').html('Hide Details');
-                    }
-
-
-                    //$('#question_list_det').show();
-                }
-            </script>
+                //$('#question_list_det').show();
+            }
+        </script>
     </body>
 </html>

@@ -225,16 +225,15 @@ function changePassword() {
     $.ajax({
         type: "POST",
         url: 'api/v1/reset_password',
-        data: {user_name: $('#user_name').val(), password: $('#password').val(), confirm_password: $('#confirm_password').val()},
+        data: {password: $('#password').val(), confirm_password: $('#confirm_password').val()},
         success: function (data) {
             $('.loader').removeClass('is-active');
             if (data.result.error === false) {
-                swal('Information', data.result.message, 'success');
-                $('#user_name').val('');
+                swal('Password Changed', 'Your Password has been Changed', 'success');
                 $('#password').val('');
                 $('#confirm_password').val('');
                 setTimeout(function () {
-                    window.location = 'login-page';
+                    window.location = 'account';
                 }, 2000);
             } else {
                 swal('Information', data.result.message, 'info');
@@ -277,4 +276,32 @@ function ContactForm() {
         }
     });
     return false;
+}
+
+function updateStudentProfile() {
+    console.log('test');
+    var data = {mobile: $('#mobile').val(), email: $('#email').val(), gender: $('#gender').val(), graduation: $('#graduation').val(), street: $('#street').val(), city: $('#city').val(), district: $('#district').val(), pin: $('#pin').val(), nearcity: $('#nearcity').val(), selectgroup: $('#selectgroup').val()};
+    $('.loader').addClass('is-active');
+    $.ajax({
+        type: "POST",
+        url: 'api/v1/update_record/student_register/student_register_id',
+        data: data,
+        success: function (data) {
+            $('.loader').removeClass('is-active');
+            if (data.result.error === false) {
+                window.location = 'account';
+            } else {
+                swal('Information', data.result.message, 'info');
+            }
+        },
+        error: function (err) {
+            $('.loader').removeClass('is-active');
+            swal('Error', err.statusText, 'error');
+        }
+    });
+    return false;
+}
+
+function forgotPassword(){
+    
 }

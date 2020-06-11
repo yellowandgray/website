@@ -30,7 +30,7 @@ $obj = new Common();
                                     <div class="input-group">
                                         <textarea type="text" name="description" id="description" rows="5" class="" Placeholder="Message" ></textarea>
                                     </div>
-                                    <div class="g-recaptcha" data-sitekey="6Lfj1aIZAAAAAARRsJAeGOHrKmethFGYgmGlGTZq"></div>
+                                    <div class="g-recaptcha" data-sitekey="6Lf6LaMZAAAAAHnZx0J7Pab-7KRSZy7fzv7f76_W"></div>
                                     <br/>
                                     <button type="submit" class="btn btn-blue">Send</button>
                                 </form>

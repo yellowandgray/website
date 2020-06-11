@@ -18,7 +18,7 @@ if (isset($_SESSION['student_register_id'])) {
                     <div class="row">
                         <div class="col-md-12">
                             <div class="float-right text-right">
-                                <a href="#" class="edit-btn">Edit Profile</a>
+                                <a href="edit-profile=<?php echo $login_student['student_register_id']; ?>" class="edit-btn">Edit Profile</a>
                             </div>
                         </div>
                     </div>
@@ -30,7 +30,14 @@ if (isset($_SESSION['student_register_id'])) {
                                 <?php } else { ?>
                                     <img src="<?php echo BASE_URL . $login_student['profile_image']; ?>" alt="" />
                                 <?php } ?>
+                                <div class="file-upload">
+                                    <!--place upload image/icon first !-->
+                                    <img class="upload-img" src="img/upload.png" />
+                                    <!--place input file last !-->
+                                    <input type="file" name="somename" />
+                                </div>
                             </div>
+                            <br/>
                             <table class="member-about-filed" style="margin: 0 auto 20px;">
                                 <tr>
                                     <th>User Name</th>
@@ -38,13 +45,15 @@ if (isset($_SESSION['student_register_id'])) {
                                     <?php if ($login_student['user_name'] != '') { ?>
                                         <td><?php echo $login_student['user_name']; ?></td>
                                     <?php } else { ?>
-                                        <td>Please Update...</td>
+                                        <td></td>
                                     <?php } ?>
                                 </tr>
                             </table>
                             <center>
-                                <a href="#" class="edit-btn">Change Password</a>
+                                <a href="change-password" class="edit-btn">Change Password</a>
                             </center>
+                            <br/>
+                            <br/>
                         </div>
                         <div class="span6">
                             <div class="about-text go-to">
@@ -63,7 +72,7 @@ if (isset($_SESSION['student_register_id'])) {
                                                     <?php if ($login_student['mobile'] != '') { ?>
                                                         <td><?php echo $login_student['mobile']; ?></td>
                                                     <?php } else { ?>
-                                                        <td>Please Update...</td>
+                                                        <td></td>
                                                     <?php } ?>
                                                 </tr>
                                                 <tr>
@@ -72,7 +81,7 @@ if (isset($_SESSION['student_register_id'])) {
                                                     <?php if ($login_student['gender'] != '') { ?>
                                                         <td><?php echo $login_student['gender']; ?></td>
                                                     <?php } else { ?>
-                                                        <td>Please Update...</td>
+                                                        <td></td>
                                                     <?php } ?>
                                                 </tr>
                                             </table>
@@ -85,7 +94,7 @@ if (isset($_SESSION['student_register_id'])) {
                                                     <?php if ($login_student['email'] != '') { ?>
                                                         <td><?php echo $login_student['email']; ?></td>
                                                     <?php } else { ?>
-                                                        <td>Please Update...</td>
+                                                        <td></td>
                                                     <?php } ?>
                                                 </tr>
                                                 <tr>
@@ -94,7 +103,7 @@ if (isset($_SESSION['student_register_id'])) {
                                                     <?php if ($login_student['graduation'] != '') { ?>
                                                         <td><?php echo $login_student['graduation']; ?></td>
                                                     <?php } else { ?>
-                                                        <td>Please Update...</td>
+                                                        <td></td>
                                                     <?php } ?>
                                                 </tr>
                                             </table>
@@ -110,7 +119,7 @@ if (isset($_SESSION['student_register_id'])) {
                                                     <?php if ($login_student['street'] != '') { ?>
                                                         <td><?php echo $login_student['street']; ?></td>
                                                     <?php } else { ?>
-                                                        <td>Please Update...</td>
+                                                        <td></td>
                                                     <?php } ?>
                                                 </tr>
                                                 <tr>
@@ -119,7 +128,7 @@ if (isset($_SESSION['student_register_id'])) {
                                                     <?php if ($login_student['district'] != '') { ?>
                                                         <td><?php echo $login_student['district']; ?></td>
                                                     <?php } else { ?>
-                                                        <td>Please Update...</td>
+                                                        <td></td>
                                                     <?php } ?>
                                                 </tr>
                                                 <tr>
@@ -128,7 +137,7 @@ if (isset($_SESSION['student_register_id'])) {
                                                     <?php if ($login_student['nearcity'] != '') { ?>
                                                         <td><?php echo $login_student['nearcity']; ?></td>
                                                     <?php } else { ?>
-                                                        <td>Please Update...</td>
+                                                        <td></td>
                                                     <?php } ?>
                                                 </tr>
                                             </table>
@@ -141,7 +150,7 @@ if (isset($_SESSION['student_register_id'])) {
                                                     <?php if ($login_student['city'] != '') { ?>
                                                         <td><?php echo $login_student['city']; ?></td>
                                                     <?php } else { ?>
-                                                        <td>Please Update...</td>
+                                                        <td></td>
                                                     <?php } ?>
                                                 </tr>
                                                 <tr>
@@ -150,7 +159,7 @@ if (isset($_SESSION['student_register_id'])) {
                                                     <?php if ($login_student['pin'] != '') { ?>
                                                         <td><?php echo $login_student['pin']; ?></td>
                                                     <?php } else { ?>
-                                                        <td>Please Update...</td>
+                                                        <td></td>
                                                     <?php } ?>
                                                 </tr>
                                             </table>
@@ -166,7 +175,7 @@ if (isset($_SESSION['student_register_id'])) {
                                                     <?php if ($login_student['selectgroup'] != '') { ?>
                                                         <td><?php echo $login_student['selectgroup']; ?></td>
                                                     <?php } else { ?>
-                                                        <td>Please Update...</td>
+                                                        <td></td>
                                                     <?php } ?>
                                                 </tr>
                                             </table>
