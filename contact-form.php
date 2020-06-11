@@ -68,7 +68,7 @@ if ($_POST['name']) {
 
     $mail->SetFrom('noreply@examhorse.com', 'Exam Horse');
 
-    $mail->Subject = "Exam Horse contact form " . date('d-m-y H:i:s');
+    $mail->Subject = "Exam Horse contact form ";
 
     $message = '<table border = "0" cellpadding = "0" cellspacing = "0" height = "100%" width = "100%">
             <tbody>
@@ -108,9 +108,9 @@ if ($_POST['name']) {
             <tr>
             <td valign = "top" style = "padding:48px">
             <div style = "color:#737373;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif;font-size:14px;line-height:150%;text-align:left">
-            <h3 style = "margin:0 0 16px;">Dear Admin,
+            <p style = "margin:0 0 16px;"><strong>Dear Admin,</strong>
             <br/>
-Below enquiry is recived</h3>
+Below enquiry is received</p>
             <p style = "margin:0 0 16px">Name: ' . $name . '</p>
             <p style = "margin:0 0 16px">Email: ' . $email . '</p>
             <p style = "margin:0 0 16px">Subject: ' . $subject . '</p>
