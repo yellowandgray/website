@@ -21,11 +21,11 @@
     $("#open-logout-1").click(function (e) {
         //console.log("test");
         e.stopPropagation();
-        $(".logout_dropdown_1").show("fast");
+        $(".logout-dropdown-1").show("fast");
     });
     $(document).click(function (e) {
-        if (!(e.target.class === 'logout_dropdown_1')) {
-            $(".logout_dropdown_1").hide("fast");
+        if (!(e.target.class === 'logout-dropdown-1')) {
+            $(".logout-dropdown-1").hide("fast");
         }
     });
 </script>

@@ -74,7 +74,7 @@ if (isset($_SESSION['student_register_id'])) {
                 <?php } else { ?>
                     <div class="logout_position mobile-main-menu">
                         <a onclick="logoutUser('<?php echo $login_student['student_name']; ?>');" class="btn logout-btn">Logout</a>
-                        <div id="open-logout" class="logout_section">
+                        <div id="open-logout-1" class="logout_section">
                             <span class="menu-bar">
                                 <i class="fa fa-reorder"></i>
                             </span>

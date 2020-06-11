@@ -11,7 +11,7 @@ if ($_POST['name']) {
     $subject = $_REQUEST['subject'];
 
     $description = $_REQUEST['description'];
-    
+
     error_reporting(E_STRICT);
 
 
@@ -68,7 +68,7 @@ if ($_POST['name']) {
 
     $mail->SetFrom('noreply@examhorse.com', 'Exam Horse');
 
-    $mail->Subject = "Contact Form Submited" . date('d-m-y H:i:s');
+    $mail->Subject = "Exam Horse contact form " . date('d-m-y H:i:s');
 
     $message = '<table border = "0" cellpadding = "0" cellspacing = "0" height = "100%" width = "100%">
             <tbody>
@@ -108,12 +108,15 @@ if ($_POST['name']) {
             <tr>
             <td valign = "top" style = "padding:48px">
             <div style = "color:#737373;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif;font-size:14px;line-height:150%;text-align:left">
-            <h3 style = "margin:0 0 16px; text-align:center;">Enquiry Form Details.</h3>
+            <h3 style = "margin:0 0 16px; text-align:center;">Dear Admin,
+            <br/>
+Below enquiry is recived</h3>
             <p style = "margin:0 0 16px">Name: ' . $name . '</p>
             <p style = "margin:0 0 16px">Email: ' . $email . '</p>
             <p style = "margin:0 0 16px">Subject: ' . $subject . '</p>
             <p style = "margin:0 0 16px">Description: ' . $description . '</p>
-            <p style = "margin:0 0 16px">Sent From Website</p></div>
+            <p style = "margin:0 0 16px">Regards, </p>
+            <p style = "margin:0 0 16px">Exam Horse.</p></div>
             </td>
             </tr>
             </tbody>
