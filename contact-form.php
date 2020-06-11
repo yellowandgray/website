@@ -108,7 +108,7 @@ if ($_POST['name']) {
             <tr>
             <td valign = "top" style = "padding:48px">
             <div style = "color:#737373;font-family:&quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif;font-size:14px;line-height:150%;text-align:left">
-            <h3 style = "margin:0 0 16px; text-align:center;">Dear Admin,
+            <h3 style = "margin:0 0 16px;">Dear Admin,
             <br/>
 Below enquiry is recived</h3>
             <p style = "margin:0 0 16px">Name: ' . $name . '</p>
