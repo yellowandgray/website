@@ -148,18 +148,6 @@ if (!empty($student_log_year)) {
         </div>
         <?php include 'script.php';
         ?>
-        <script>
-            $("#open-logout").click(function (e) {
-                console.log("test-1");
-                e.stopPropagation();
-                $(".logout_position").show("fast");
-            });
-            $(document).click(function (e) {
-                if (!(e.target.class === 'logout_position')) {
-                    $(".logout_position").hide("fast");
-                }
-            });
-        </script>
     </body>
 
 </html>

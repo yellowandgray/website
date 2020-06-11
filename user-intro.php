@@ -74,18 +74,6 @@ $obj = new Common();
         </script>
 
         <script type="text/javascript">
-            $("#open-logout").click(function (e) {
-                //console.log("test");
-                e.stopPropagation();
-                $(".logout_dropdown").show("fast");
-            });
-            $(document).click(function (e) {
-                if (!(e.target.class === 'logout_dropdown')) {
-                    $(".logout_dropdown").hide("fast");
-                }
-            });
-        </script>
-        <script type="text/javascript">
             $().ready(function () {
                 $('.slick-carousel').slick({
                     arrows: false,

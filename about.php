@@ -64,36 +64,6 @@ $obj = new Common();
                 }
             });
         </script>
-<!--        <script>
-            wow = new WOW(
-                    {
-                        animateClass: 'animated',
-                        offset: 100,
-                        callback: function (box) {
-                            //console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
-                        }
-                    }
-            );
-            wow.init();
-            document.getElementById('moar').onclick = function () {
-                var section = document.createElement('section');
-                section.className = 'section--purple wow fadeInDown';
-                this.parentNode.insertBefore(section, this);
-            };
-        </script>-->
-
-        <script type="text/javascript">
-            $("#open-logout").click(function (e) {
-                //console.log("test");
-                e.stopPropagation();
-                $(".logout_dropdown").show("fast");
-            });
-            $(document).click(function (e) {
-                if (!(e.target.class === 'logout_dropdown')) {
-                    $(".logout_dropdown").hide("fast");
-                }
-            });
-        </script>
     </body>
 
 </html>

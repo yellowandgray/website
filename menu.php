@@ -75,8 +75,8 @@ if (isset($_SESSION['student_register_id'])) {
                             <li id="open-logout" class="logout_section">
                                 <i class='icon-reorder'></i>
                             </li>
-                            <div class="logout_position mobile-menu">
-                                <div class="logout_section">
+<!--                            <div class="logout_position mobile-menu">
+                                <div class="logout_section">-->
         <!--                                    <i class = 'icon-reorder'></i>-->
                                     <div class="logout_dropdown">
                                         <ul class="logout_list">
@@ -88,8 +88,8 @@ if (isset($_SESSION['student_register_id'])) {
                                             </li>
                                         </ul>
                                     </div>
-                                </div>
-                            </div>
+<!--                                </div>
+                            </div>-->
                         </ul>
                     </div>
                 <?php } else { ?>

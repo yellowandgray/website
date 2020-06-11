@@ -8,7 +8,7 @@
 <script src="https://cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js" type="text/javascript"></script>
 <script type="text/javascript">
     $("#open-logout").click(function (e) {
-        console.log("test--1");
+        //console.log("test");
         e.stopPropagation();
         $(".logout_dropdown").show("fast");
     });
@@ -18,13 +18,13 @@
         }
     });
     $("#open-logout-1").click(function (e) {
-        console.log("test-1");
+        //console.log("test");
         e.stopPropagation();
-        $(".logout-dropdown-1").show("fast");
+        $(".logout_dropdown_1").show("fast");
     });
     $(document).click(function (e) {
-        if (!(e.target.class === 'logout-dropdown-1')) {
-            $(".logout-dropdown-1").hide("fast");
+        if (!(e.target.class === 'logout_dropdown_1')) {
+            $(".logout_dropdown_1").hide("fast");
         }
     });
 </script>

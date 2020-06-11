@@ -21,24 +21,6 @@
 <script src="https://www.google.com/recaptcha/api.js"></script>
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/javascript">
-    /*
-     MathJax.Hub.Config({
-     skipStartupTypeset: true,
-     tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-     });
-     */
-    /*
-     test();
-     function test() {
-     if (typeof MathJax !== 'undefined') {
-     MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
-     }
-     
-     MathJax.Hub.Config({
-     tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-     });     
-     }
-     */
     applyMathAjax();
     function applyMathAjax() {
         if (typeof MathJax !== 'undefined') {
@@ -71,16 +53,6 @@
             $(".logout_dropdown_1").hide("fast");
         }
     });
-//    $("#open-logout-2").click(function (e) {
-//        //console.log("test");
-//        e.stopPropagation();
-//        $(".logout_dropdown_2").show("fast");
-//    });
-//    $(document).click(function (e) {
-//        if (!(e.target.class === 'logout_dropdown_2')) {
-//            $(".logout_dropdown_2").hide("fast");
-//        }
-//    });
 </script>
 <script>
     function goBack() {

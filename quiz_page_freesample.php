@@ -3638,18 +3638,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
             
            
         </script>
-        <script>
-                $("#open-logout").click(function (e) {
-                console.log("test-1");
-                e.stopPropagation();
-                $(".logout_dropdown").show("fast");
-                });
-                $(document).click(function (e) {
-                if (!(e.target.class === 'logout_dropdown')) {
-                $(".logout_dropdown").hide("fast");
-                }
-                });
-            </script>
+        
           <?php
             }
             

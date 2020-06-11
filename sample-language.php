@@ -63,18 +63,6 @@ $languages = $obj->selectAll('*', 'language', 'status = 1');
         </div>
         <?php include 'footer.php'; ?>
         <?php include 'script.php'; ?>
-        <script>
-            $("#open-logout").click(function (e) {
-                console.log("test-1");
-                e.stopPropagation();
-                $(".logout_position").show("fast");
-            });
-            $(document).click(function (e) {
-                if (!(e.target.class === 'logout_position')) {
-                    $(".logout_position").hide("fast");
-                }
-            });
-        </script>
     </body>
 
 </html>
