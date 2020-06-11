@@ -20,6 +20,7 @@
 <script src="js/vue.min.js" type="text/javascript"></script>
 <script src="https://www.google.com/recaptcha/api.js"></script>
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="js/contactjs.js" type="text/javascript"></script>
 <script type="text/javascript">
     applyMathAjax();
     function applyMathAjax() {

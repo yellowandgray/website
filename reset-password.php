@@ -10,6 +10,7 @@ $languages = $obj->selectAll('*', 'language', 'status = 1');
         <?php include 'menu.php'; ?>
         <div class="member-full-version-secttion">
             <div class="container">
+                <div class="text-center"><h3>Reset Your Password </h3></div>
                 <form onsubmit="return changePassword();" class="reset-form">
                     <div class="form-group">
                         <input type = 'text' id = 'user_name' placeholder = 'Enter Register User Name' required>

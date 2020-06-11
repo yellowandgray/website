@@ -6,6 +6,7 @@
 <script src="js/common.js" type="text/javascript"></script>
 <script src="https://www.google.com/recaptcha/api.js"></script>
 <script src="https://cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js" type="text/javascript"></script>
+<script src="js/contactjs.js" type="text/javascript"></script>
 <script type="text/javascript">
     $("#open-logout").click(function (e) {
         //console.log("test");

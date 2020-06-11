@@ -50,7 +50,7 @@ if ($_POST['name']) {
 
 
 
-    $mail->Host = "box975.bluehost.com";      // sets GMAIL as the SMTP server
+    $mail->Host = "ns3-999.999servers.com";      // sets GMAIL as the SMTP server
 
 
 
@@ -58,15 +58,15 @@ if ($_POST['name']) {
 
 
 
-    $mail->Username = "noreply@enpeekkl.com";  // GMAIL username
+    $mail->Username = "noreply@examhorse.com";  // GMAIL username
 
 
 
-    $mail->Password = "Admin@EnPE3Kkl";            // GMAIL password
+    $mail->Password = "Examhorse@123";            // GMAIL password
 
     $mail->IsHTML(true);
 
-    $mail->SetFrom('noreply@enpeekkl.com', 'Exam Horse');
+    $mail->SetFrom('noreply@examhorse.com', 'Exam Horse');
 
     $mail->Subject = "Contact Form Submited" . date('d-m-y H:i:s');
 
