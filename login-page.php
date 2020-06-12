@@ -42,7 +42,7 @@
                                     <div class="form-group">
                                         <button type="submit" class="btn btn-primary btn-block"> Sign In  </button> 
                                     </div> <!-- form-group// -->   
-                                    <a href="reset-password" class="float-right text-right">Forgot password?</a>
+                                    <a href="#" class="float-right text-right">Forgot password?</a>
                                     <p class="text-center">Don't have any account? <a href="register_user">Sign Up</a> </p>                                                                 
                                 </form>
                             </article>

@@ -18,7 +18,7 @@ if (isset($_SESSION['student_register_id'])) {
                     <div class="row">
                         <div class="col-md-12">
                             <div class="float-right text-right">
-                                <a href="edit-profile=<?php echo $login_student['student_register_id']; ?>" class="edit-btn">Edit Profile</a>
+                                <a href="edit-profile" class="edit-btn">Edit Profile</a>
                             </div>
                         </div>
                     </div>
@@ -58,8 +58,8 @@ if (isset($_SESSION['student_register_id'])) {
                         <div class="span6">
                             <div class="about-text go-to">
                                 <h3 class="dark-color"><?php echo $login_student['student_name']; ?></h3>
-                                <h6 class="theme-color lead">A Lead UX &amp; UI designer based in Canada</h6>
-                                <p>I <mark>design and develop</mark> services for customers of all sizes, specializing in creating stylish, modern websites, web services and online stores. My passion is to design digital user experiences through the bold interface and meaningful interactions.</p>
+<!--                                <h6 class="theme-color lead">A Lead UX &amp; UI designer based in Canada</h6>
+                                <p>I <mark>design and develop</mark> services for customers of all sizes, specializing in creating stylish, modern websites, web services and online stores. My passion is to design digital user experiences through the bold interface and meaningful interactions.</p>-->
                                 <div class="account-details">
                                     <h3>Candidate's Info:</h3>
                                     <div class="row about-list" style="margin-bottom: 0">
