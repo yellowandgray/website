@@ -1,0 +1,131 @@
+<?php
+session_start();
+include('googlelogin/config.php');
+require_once 'api/include/common.php';
+$obj = new Common();
+?>
+<html lang="en">
+    <?php include 'head_landing.php' ?>
+    <body>
+        <?php include 'menu_landing.php'; ?>
+        <div id="wrapper">
+            <section id="featured-1" class="new-register-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="card bg-light">
+                            <article class="card-body">
+                                <h4 class="card-title mt-3 text-center">Create Account</h4>
+                                <p class="text-center">Get started with your account</p>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="google-btn">
+                                            <div class="google-icon-wrapper">
+                                                <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
+                                            </div>
+                                            <!--p class="btn-text"><b>Sign up with google</b></p-->
+											<a href="<?php echo $google_client->createAuthUrl(); ?>" class="btn-text"><b>Sign up with google</b></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="google-btn">
+                                            <div class="google-icon-wrapper">
+                                                <img class="google-icon" src="examhorse-landing/img/fb.png"/>
+                                            </div>
+                                            <p class="btn-text"><b>Sign up with Facebook</b></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p class="divider-text">
+                                            <span class="bg-light">OR</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <form onsubmit = 'return registerStudent();'>
+                                    <h4>Candidate's Info:</h4>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                                                </div>
+                                                <input name="" class="form-control" id="student_name" placeholder="Full Name" type="text" required>
+                                            </div> <!-- form-group// -->
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                                                </div>
+                                                <input name="" id="email" class="form-control" placeholder="Email address" type="email" required>
+                                            </div> <!-- form-group// -->
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                                                </div>
+                                                <input class="form-control" id="password" placeholder="Password" type="password" required>
+                                            </div> <!-- form-group// -->
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                                                </div>
+                                                <input class="form-control" id="confirm_password" placeholder="Confirm Password" type="password" required>
+                                            </div> <!-- form-group// -->
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+                                                </div>
+                                                <input name="" maxlength="10" id="mobile" class="form-control" placeholder="Phone number" type="text" required>
+                                            </div> <!-- form-group// -->
+                                        </div>
+                                       
+                                    </div>
+                                  
+                                    
+                                   
+                                  
+                                    <!--                                    <div class="row">
+                                                                            <div class="col-md-6">
+                                                                                <div class="form-group input-group">
+                                                                                    <div class="input-group-prepend">
+                                                                                        <span class="input-group-text"> <i class="fa fa-book"></i> </span>
+                                                                                    </div>
+                                                                                    <input name="" id="group_one" class="form-control" placeholder="Group 1" type="text">
+                                                                                </div>  form-group// 
+                                                                            </div>
+                                                                            <div class="col-md-6">
+                                                                                <div class="form-group input-group">
+                                                                                    <div class="input-group-prepend">
+                                                                                        <span class="input-group-text"> <i class="fa fa-book"></i> </span>
+                                                                                    </div>
+                                                                                    <input name="" id="group_two" class="form-control" placeholder="Group 2/2A" type="text">
+                                                                                </div>  form-group// 
+                                                                            </div>
+                                                                        </div>-->
+                                    <div class="g-recaptcha" data-sitekey="6Lfj1aIZAAAAAARRsJAeGOHrKmethFGYgmGlGTZq"></div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-primary btn-block"> Create Account  </button>
+                                    </div> <!-- form-group// -->      
+                                    <p class="text-center">Have an account? <a href="login-page">Log In</a> </p>
+                                </form>
+                            </article>
+                        </div>
+                    </div> 
+                </div>
+            </section>
+        </div>
+        <?php include 'footer_landing.php'; ?>
+        <?php include 'landing_script.php'; ?>
+    </body>
+</html>

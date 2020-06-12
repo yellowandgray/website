@@ -31,13 +31,13 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                                         </div>
-                                        <input name="" class="form-control" id = 'user-name' placeholder="User name" type="text">
+                                        <input name="" class="form-control" id = 'user-name' placeholder="User name" type="text" required>
                                     </div> <!-- form-group// -->
                                     <div class="form-group input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"> <i class="fa fa-key"></i> </span>
                                         </div>
-                                        <input type="password" name="" class="form-control" id = 'password1' placeholder="Password" type="text">
+                                        <input type="password" name="" class="form-control" id = 'password1' placeholder="Password" type="text" required>
                                     </div>
                                     <div class="form-group">
                                         <button type="submit" class="btn btn-primary btn-block"> Sign In  </button> 

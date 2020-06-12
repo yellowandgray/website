@@ -53,25 +53,28 @@ $app->post('/loginstudent', function() use ($app) {
     $res = array('error' => true, 'message' => 'Invalid login details');
     $data = $app->request->post();
     $obj = new Common();
-    $record = $obj->selectRow('*', 'student_register', 'user_name=\'' . $data['user_name'] . '\'');
-    if (count($record) > 0) {
-        if ($data['password'] == $record['password']) {
-            $user_logged_in = $obj->selectRow('*', 'student_current_login', 'student_register_id='.$record['student_register_id']);
-            if(count($user_logged_in)==0)
-            {
-                $res['error'] = false;
-                $obj->insertRecord(array('student_register_id' => $record['student_register_id']),'student_current_login');
-                $obj->insertRecord(array('student_register_id' => $record['student_register_id'], 'login_at' => date('Y-m-d H:i:s'), 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')), 'student_register_login');
-                $_SESSION['student_register_id'] = $record['student_register_id'];
-                $res['message'] = 'Welcome ' . $record['student_name'];
-                $res['data'] = $record;
-            }else {
-                 $res['message'] = 'User Already Logged In';
-            }   
-        } else {
-            $res['message'] = 'Username or Password mismatch';
+    if(trim($data['user_name'])!='' && trim($data['password'])!='')
+    {  
+        $record = $obj->selectRow('*', 'student_register', 'user_name=\'' . $data['user_name'] . '\'');
+        if (count($record) > 0) {
+            if ($data['password'] == $record['password']) {
+                $user_logged_in = $obj->selectRow('*', 'student_current_login', 'student_register_id='.$record['student_register_id']);
+                if(count($user_logged_in)==0)
+                {
+                    $res['error'] = false;
+                    $obj->insertRecord(array('student_register_id' => $record['student_register_id']),'student_current_login');
+                    $obj->insertRecord(array('student_register_id' => $record['student_register_id'], 'login_at' => date('Y-m-d H:i:s'), 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')), 'student_register_login');
+                    $_SESSION['student_register_id'] = $record['student_register_id'];
+                    $res['message'] = 'Welcome ' . $record['student_name'];
+                    $res['data'] = $record;
+                }else {
+                     $res['message'] = 'User Already Logged In';
+                }   
+            } else {
+                $res['message'] = 'Username or Password mismatch';
+            }
         }
-    }
+    }    
     echoRespnse(201, $res);
 });
 
