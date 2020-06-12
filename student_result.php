@@ -684,7 +684,7 @@ if (isset($_SESSION['student_register_id'])) {
                     qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="option-float">D. </span> ' + val.d + '</div></div>';
                     }
                     if (val.image_path_explanation !== '' && val.explanation_img_direction === 'top') {
-                    qlist = qlist + '<div class="explanation_image" onclick="showexpimgpopup('api/v1/'+quiz.questions[questionIndex].image_path_explanation);"><img src="' + image_url + val.image_path_explanation + '"></div>';
+                    qlist = qlist + '<div class="explanation_image"><img src="' + image_url + val.image_path_explanation + '"></div>';
                     } else {
                     qlist = qlist + '';
                     }
