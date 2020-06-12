@@ -53,9 +53,9 @@ $app->post('/loginstudent', function() use ($app) {
     $res = array('error' => true, 'message' => 'Invalid login details');
     $data = $app->request->post();
     $obj = new Common();
-    if(trim($data['user_name'])!='' && trim($data['password'])!='')
+    if(trim($data['email'])!='' && trim($data['password'])!='')
     {  
-        $record = $obj->selectRow('*', 'student_register', 'user_name=\'' . $data['user_name'] . '\'');
+        $record = $obj->selectRow('*', 'student_register', 'email=\'' . $data['email'] . '\'');
         if (count($record) > 0) {
             if ($data['password'] == $record['password']) {
                 $user_logged_in = $obj->selectRow('*', 'student_current_login', 'student_register_id='.$record['student_register_id']);
@@ -93,12 +93,25 @@ $app->post('/insert_student', function() use ($app) {
     if (!isset($data['profile_picture'])) {
         $data['profile_image'] = '';
     }
-    $record = $com->insertRecord(array('student_name' => $data['student_name'], 'user_name' => $data['user_name'], 'password' => $data['password'], 'confirm_password' => $data['confirm_password'], 'mobile' => $data['mobile'], 'email' => $data['email'], 'profile_image' => $data['profile_picture'], 'gender' => $data['gender'], 'city' => $data['city'], 'pin' => $data['pin'], 'graduation' => $data['graduation'], 'street' => $data['street'], 'district' => $data['district'], 'nearcity' => $data['nearcity'], 'created_at'=>date('Y-m-d H:i:S')), 'student_register');
     
-    if ($record > 0) {
-        $res['error'] = false;
-        $res['message'] = 'Record inserted successfully';
-    }
+    if(trim($data['email'])!='') {
+        $sel_stud = $com->selectRow('*','student_register','email=\''.$data['email'].'\'');
+        if(count($sel_stud)==0) {           
+
+            $record = $com->insertRecord(array('student_name' => $data['student_name'],  'password' => $data['password'], 'confirm_password' => $data['confirm_password'], 'mobile' => $data['mobile'], 'email' => $data['email'],  'created_at'=>date('Y-m-d H:i:S')), 'student_register');
+
+            if ($record > 0) {
+                $res['error'] = false;
+                $res['message'] = 'Record inserted successfully';
+            }
+        }
+        else 
+        {
+            $res['message'] = 'Email Already Exists!';
+        }    
+    }else {
+       $res['message'] = 'Email Required';
+    }   
     echoRespnse(201, $res);
 });
 

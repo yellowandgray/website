@@ -1,5 +1,7 @@
 <?php
 session_start();
+include('googlelogin/register-user-config.php');
+
 require_once 'api/include/common.php';
 $obj = new Common();
 ?>
@@ -21,7 +23,8 @@ $obj = new Common();
                                             <div class="google-icon-wrapper">
                                                 <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
                                             </div>
-                                            <p class="btn-text"><b>Sign up with google</b></p>
+                                            <!--p class="btn-text"><b>Sign up with google</b></p-->
+                                            <a href="<?php echo $google_client->createAuthUrl(); ?>" class="btn-text"><b>Sign up with google</b></a>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -48,15 +51,15 @@ $obj = new Common();
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                                                 </div>
-                                                <input name="" class="form-control" id="student_name" placeholder="Name" type="text" required>
+                                                <input name="" class="form-control" id="student_name" placeholder="Full Name" type="text" required>
                                             </div> <!-- form-group// -->
                                         </div>
-                                        <div class="col-md-6">
+                                       <div class="col-md-6">
                                             <div class="form-group input-group">
                                                 <div class="input-group-prepend">
-                                                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                                                    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
                                                 </div>
-                                                <input name="" class="form-control" id="user_name" placeholder="Login name" type="text" required>
+                                                <input name="" id="email" class="form-control" placeholder="Email address" type="email" required>
                                             </div> <!-- form-group// -->
                                         </div>
                                     </div>
@@ -86,132 +89,8 @@ $obj = new Common();
                                                 </div>
                                                 <input name="" maxlength="10" id="mobile" class="form-control" placeholder="Phone number" type="text" required>
                                             </div> <!-- form-group// -->
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
-                                                </div>
-                                                <input name="" id="email" class="form-control" placeholder="Email address" type="email" required>
-                                            </div> <!-- form-group// -->
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group input-group">
-                                                <label>Profile Picture</label>
-                                                <div id="upload_container">
-                                                    <input type="file" id="profile_picture" accept="image/x-png,image/gif,image/jpeg" onchange="attachFile('profile_picture');" style='width: 100%' />
-                                                </div>
-                                                <div class="image-preview hidden" id="preview_container">
-                                                    <button type="button" onclick="closeProfilePic();" class="close-button-profile-img"><i class="fa fa-close"></i></button>
-                                                    <img src="" alt="image" />
-                                                </div>
-                                            </div> <!-- form-group// -->
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text"> <i class="fa fa fa-venus"></i> </span>
-                                                </div>
-                                                <select class="custom-select" id="gender" name="gender" required>
-                                                    <option value="0">Gender</option>
-                                                    <option value="male">Male</option>
-                                                    <option value="female">Female</option>
-                                                </select>
-                                            </div> <!-- form-group// -->
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text"> <i class="fa fa-graduation-cap"></i> </span>
-                                                </div>
-                                                <input name="" id="graduation" class="form-control" placeholder="Graduation Degrees" type="text" required>
-                                            </div> <!-- form-group// -->
-                                        </div>
-                                    </div>
-                                    <h4>Address:</h4>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text"> <i class="fa fa-location-arrow"></i> </span>
-                                                </div>
-                                                <input name="" id="street" class="form-control" placeholder="Street Name" type="text" required>
-                                            </div> <!-- form-group// -->
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text"> <i class="fa fa-location-arrow"></i> </span>
-                                                </div>
-                                                <input name="" id="city" class="form-control" placeholder="Village/Town/City" type="text" required>
-                                            </div> <!-- form-group// -->
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text"> <i class="fa fa-map-marker"></i> </span>
-                                                </div>
-                                                <input name="" id="district" class="form-control" placeholder="District" type="text" required>
-                                            </div> <!-- form-group// -->
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text"> <i class="fa fa-map-pin"></i> </span>
-                                                </div>
-                                                <input name="" id="pin" class="form-control" placeholder="Pin Code" type="text" required>
-                                            </div> <!-- form-group// -->
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text"> <i class="fa fa-map-signs"></i> </span>
-                                                </div>
-                                                <input name="" id="nearcity" class="form-control" placeholder="If village nearest Town/City" type="text">
-                                            </div> <!-- form-group// -->
-                                        </div>
-                                    </div>
-                                    <h4>Planned to Write:</h4>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text"> <i class="fa fa-book"></i> </span>
-                                                </div>
-                                                <select class="custom-select" id="selectgroup" name="" required>
-                                                    <option value="0">Select Group Exam</option>
-                                                    <option value="group">Group 1</option>
-                                                    <option value="groups">Group 2/2A</option>
-                                                </select>
-                                            </div> <!-- form-group// -->
-                                        </div>
-                                    </div>
-                                    <!--                                    <div class="row">
-                                                                            <div class="col-md-6">
-                                                                                <div class="form-group input-group">
-                                                                                    <div class="input-group-prepend">
-                                                                                        <span class="input-group-text"> <i class="fa fa-book"></i> </span>
-                                                                                    </div>
-                                                                                    <input name="" id="group_one" class="form-control" placeholder="Group 1" type="text">
-                                                                                </div>  form-group// 
-                                                                            </div>
-                                                                            <div class="col-md-6">
-                                                                                <div class="form-group input-group">
-                                                                                    <div class="input-group-prepend">
-                                                                                        <span class="input-group-text"> <i class="fa fa-book"></i> </span>
-                                                                                    </div>
-                                                                                    <input name="" id="group_two" class="form-control" placeholder="Group 2/2A" type="text">
-                                                                                </div>  form-group// 
-                                                                            </div>
-                                                                        </div>-->
+                                        </div>                                       
+                                    </div>  
                                     <div class="g-recaptcha" data-sitekey="6Lfj1aIZAAAAAARRsJAeGOHrKmethFGYgmGlGTZq"></div>
                                     <div class="form-group">
                                         <button type="submit" class="btn btn-primary btn-block"> Create Account  </button>
@@ -227,4 +106,11 @@ $obj = new Common();
         <?php include 'footer_landing.php'; ?>
         <?php include 'landing_script.php'; ?>
     </body>
+    <script>
+        <?php if(isset($_SESSION['google_login_error'])) {  ?>
+        swal('Error','<?php echo $_SESSION['google_login_error']; ?>', 'error');
+        <?php
+        unset($_SESSION['google_login_error']);        
+        } ?>
+    </script>    
 </html>
