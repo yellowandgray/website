@@ -506,6 +506,9 @@ footer a:hover {
         width: 100% !important;
         top: 40px;
     }
+    .edit-profile-section .edit-form {
+        width: 100% !important;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1876,7 +1879,7 @@ ul.breadcrumb li a:hover {
 }
 
 .edit-profile-section {
-    padding: 60px 0 0;
+    padding: 100px 0 0;
 }
 
 .edit-profile-section .edit-form {

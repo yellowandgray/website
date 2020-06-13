@@ -2686,6 +2686,9 @@ article .align-right {
     .member-text-content {
         padding: 70px 0 !important;
     }
+    .reset-form {
+        width: 100% !important;
+    }
 }
 
 @media (max-width: 480px) {
@@ -4110,7 +4113,7 @@ form#login-form:after {
 
 .reset-form {
     margin: 0 auto;
-    width: 500px;
+    width: 50%;
 }
 
 .reset-form input {
