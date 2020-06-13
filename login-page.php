@@ -4,7 +4,7 @@
     <body>
         <?php include 'menu_landing.php'; ?>
         <div id="wrapper">
-            <section id="featured-1">
+            <section id="featured-1"class="new-register-section">
                 <div id="mySignin" tabindex="-1" role="dialog" aria-labelledby="mySigninModalLabel" aria-hidden="true">
                     <div class="container">
                         <div class="card bg-light">
