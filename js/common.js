@@ -44,11 +44,11 @@ function registerStudent() {
     $.ajax({
         type: "POST",
         url: 'api/v1/insert_student',
-        data: {student_name: $('#student_name').val(), user_name: $('#user_name').val(), password: $('#password').val(), confirm_password: $('#confirm_password').val(), mobile: $('#mobile').val(), email: $('#email').val(), profile_picture: avatar, gender: $('#gender').val(), graduation: $('#graduation').val(), street: $('#street').val(), city: $('#city').val(), district: $('#district').val(), pin: $('#pin').val(), nearcity: $('#nearcity').val(), selectgroup: $('#selectgroup').val()},
+        data: {student_name: $('#student_name').val(),  password: $('#password').val(), confirm_password: $('#confirm_password').val(), mobile: $('#mobile').val(), email: $('#email').val()},
         success: function (data) {
             $('.loader').removeClass('is-active');
             if (data.result.error === false) {
-                window.location = 'login-page';
+                window.location = 'payment-page';
 //                $('#user_name').val('');
 //                $('#student_name').val('');
 //                $('#graduation').val('');
@@ -65,10 +65,12 @@ function registerStudent() {
 //                $('#confirm_password').val('');
 //                $('#group_one').val('');
 //                $('#group_ywo').val('');
+                /*
                 swal("Thanks for Registration!", "Your Account Has been Created... Please wait, This page automatically go to the login page.", "success");
                 setTimeout(function () {
                     window.location = 'login-page';
                 }, 3000);
+                 */
             } else {
                 swal("Oops!", data.result.message, "info");
             }
@@ -86,7 +88,7 @@ function loginStudent() {
     $.ajax({
         type: "POST",
         url: 'api/v1/loginstudent',
-        data: {user_name: $('#user-name').val(), password: $('#password1').val()},
+        data: {email: $('#email').val(), password: $('#password1').val()},
         success: function (data) {
             $('.loader').removeClass('is-active');
             if (data.result.error === false) {

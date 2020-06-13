@@ -16,8 +16,8 @@ $google_client->setClientId('286725676418-osr6v7r00qj8paccfj5qao466mu5ko9c.apps.
 $google_client->setClientSecret('p8UIjJmEVvXlrH4jF11uGxyd');
 
 //Set the OAuth 2.0 Redirect URI
-//$google_client->setRedirectUri('http://localhost/project/exam-horse-sample/register_user1');
-$google_client->setRedirectUri('http://examhorse.com/register_user1');
+$google_client->setRedirectUri('http://localhost/project/exam-horse-sample/register-user-google');
+//google_client->setRedirectUri('http://examhorse.com/register_user1');
 
 //
 $google_client->addScope('email');

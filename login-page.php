@@ -1,3 +1,7 @@
+<?php
+//session_start();
+include('googlelogin/login-user-config.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
     <?php include 'head_landing.php'; ?>
@@ -15,7 +19,8 @@
                                     <div class="google-icon-wrapper">
                                         <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
                                     </div>
-                                    <p class="btn-text"><b>Sign in with google</b></p>
+                                    <!--p class="btn-text"><b>Sign in with google</b></p-->
+                                    <a href="<?php echo $google_client->createAuthUrl(); ?>" class="btn-text"><b>Sign in with google</b></a>
                                 </div>
                                 <div class="google-btn">
                                     <div class="google-icon-wrapper">
@@ -31,7 +36,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                                         </div>
-                                        <input name="" class="form-control" id = 'user-name' placeholder="User name" type="text" required>
+                                        <input name="" class="form-control" id = 'email' placeholder="Email" type="email" required>
                                     </div> <!-- form-group// -->
                                     <div class="form-group input-group">
                                         <div class="input-group-prepend">
@@ -57,4 +62,10 @@
         </div>
         <?php include 'landing_script.php'; ?>
     </body>
+     <script>
+        <?php if(isset($_GET['login_err'])) {  ?>
+        swal('Error','<?php echo $_GET['login_err']; ?>', 'error');
+        <?php
+        } ?>
+    </script
 </html>
