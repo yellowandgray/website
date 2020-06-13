@@ -499,11 +499,12 @@ footer a:hover {
     }
     .logout_position {
         top: 0 !Important;
-        right: 5px !Important;
-        width: 100% !Important;
+        right: 10px !Important;
+        /*width: 100% !Important;*/
     }
     .logout_dropdown {
         width: 100% !important;
+        top: 40px;
     }
 }
 

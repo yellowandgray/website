@@ -1145,6 +1145,12 @@ and open the template in the editor.
     }
     .logout_dropdown {
         top: 60px !Important;
+        right: 0;
+        width: 100%;
+    }
+    .user_details {
+        width: 100%;
+        text-align: center;
     }
 }
 
@@ -1659,4 +1665,8 @@ and open the template in the editor.
     height:70px;
     width:70px;
     margin:15px;
+}
+
+.tab-content>.tab-pane {
+    overflow: auto;
 }

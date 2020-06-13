@@ -76,10 +76,14 @@ a:active {
 2. layout
 ==================================== */
 
-/*.container {
-    padding: 0 20px 0 20px;
-    position: relative;
-}*/
+.container {
+    padding: 0 10px;
+    /*position: relative;*/
+}
+
+header .container {
+    padding: 0;
+}
 
 #wrapper {
     width: 100%;
