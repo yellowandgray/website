@@ -24,7 +24,7 @@ if (isset($_SESSION['student_register_id'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
                                         </div>
-                                        <input type="text" id="mobile" class="form-control" value="<?php echo $login_student['mobile']; ?>" required>
+                                        <input type="text" id="mobile" class="form-control" value="<?php echo $login_student['mobile']; ?>" placeholder="Mobile No" required>
                                     </div> <!-- form-group// -->
                                 </div>
                                 <div class="col-md-6">
