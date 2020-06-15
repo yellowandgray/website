@@ -598,7 +598,7 @@ if (isset($_SESSION['student_register_id'])) {
                     </div>
                 </div>
             </section>
-            <div class="modal fade" id="explimagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<!--            <div class="modal fade" id="explimagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog" data-dismiss="modal">
                     <div class="modal-content"  >   
                         <div class="modal-header">
@@ -610,7 +610,7 @@ if (isset($_SESSION['student_register_id'])) {
                         </div>           
                     </div>
                 </div>
-            </div>
+            </div>-->
             <?php include 'footer.php';
             ?>
         </div>

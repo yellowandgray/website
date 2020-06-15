@@ -77,8 +77,12 @@ a:active {
 ==================================== */
 
 .container {
-    padding: 0 20px 0 20px;
-    position: relative;
+    padding: 0 10px;
+    /*position: relative;*/
+}
+
+header .container {
+    padding: 0;
 }
 
 #wrapper {
@@ -2658,7 +2662,8 @@ article .align-right {
     .quiz-div .quiz-timer {
         position: unset !important;
         margin-top: 0;
-        text-align: center !important;
+        margin-left: 10px;
+        text-align: left !important;
         padding-bottom: 10px !important;
     }
     .btn-theme {
@@ -2677,6 +2682,12 @@ article .align-right {
         width: 1000px !important;
         /* margin: 0 auto; */
         max-width: 1000px !Important;
+    }
+    .member-text-content {
+        padding: 70px 0 !important;
+    }
+    .reset-form {
+        width: 100% !important;
     }
 }
 
@@ -2768,6 +2779,7 @@ article .align-right {
     .headnav-1 ul li {
         display: block;
         margin-left: 10px;
+        margin-top: 0;
     }
     .headnav-1 ul li a {
         font-size: 25px;
@@ -2853,7 +2865,7 @@ article .align-right {
         margin-top: 0 !important;
     }
     header {
-        padding: 10px 0 !important;
+        padding: 10px 20px !important;
     }
 }
 
@@ -3676,6 +3688,9 @@ form#login-form:after {
     .custom-full-width-menu {
         display: none !important;
     }
+    .member-text-content .start-quiz-btn a.btn-green {
+        width: 82% !Important;
+    }
 }
 
 .cls-orange {
@@ -3778,7 +3793,7 @@ form#login-form:after {
     display: flex;
     position: relative;
     left: -16px;
-    padding: 0px 10px 0px 2px;
+    padding: 0px 10px 0px 10px;
     background: #004384;
 }
 
@@ -3812,6 +3827,8 @@ form#login-form:after {
 
 .member-text-content {
     padding: 70px 20px;
+    width: 100%;
+    overflow: auto;
 }
 
 .member-text-content .member-content {
@@ -3840,12 +3857,13 @@ form#login-form:after {
 }
 
 .member-text-content .start-quiz-btn {
-    /*margin: 16% auto;*/
+    margin: 0% auto;
     width: 100%;
+    text-align: center;
 }
 
 .member-text-content .start-quiz-btn a.btn-green {
-    width: 93%;
+    width: 90%;
     margin: 20px auto;
     padding: 10px 20px;
     font-size: 25px;
@@ -3861,6 +3879,10 @@ form#login-form:after {
     width: 100%;
     margin-bottom: 20px
 }
+
+/*.full-member-table tr {
+    display: block;
+}*/
 
 .full-member-table th {
     background: #00abee;
@@ -4091,7 +4113,7 @@ form#login-form:after {
 
 .reset-form {
     margin: 0 auto;
-    width: 500px;
+    width: 50%;
 }
 
 .reset-form input {

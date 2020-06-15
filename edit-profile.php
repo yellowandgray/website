@@ -24,7 +24,7 @@ if (isset($_SESSION['student_register_id'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
                                         </div>
-                                        <input type="text" id="mobile" class="form-control" value="<?php echo $login_student['mobile']; ?>" required>
+                                        <input type="text" id="mobile" class="form-control" value="<?php echo $login_student['mobile']; ?>" placeholder="Mobile No" required>
                                     </div> <!-- form-group// -->
                                 </div>
                                 <div class="col-md-6">
@@ -32,7 +32,7 @@ if (isset($_SESSION['student_register_id'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
                                         </div>
-                                        <input name="email" id="email" class="form-control" value="<?php echo $login_student['email']; ?>" required>
+                                        <input name="email" id="email" class="form-control" value="<?php echo $login_student['email']; ?>" placeholder="Email Id" required>
                                     </div> <!-- form-group// -->
                                 </div>
                             </div>
@@ -43,6 +43,7 @@ if (isset($_SESSION['student_register_id'])) {
                                             <span class="input-group-text"> <i class="fa fa-venus"></i> </span>
                                         </div>
                                         <select class="custom-select" id="gender" name="gender" required>
+                                            <option value="0">Gender</option>
                                             <?php
                                             foreach (array('male' => 'Male', 'female' => 'Female') as $key => $val) {
                                                 $selected = '';
@@ -62,7 +63,7 @@ if (isset($_SESSION['student_register_id'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"> <i class="fa fa-graduation-cap"></i> </span>
                                         </div>
-                                        <input name="graduation" id="graduation" class="form-control" value="<?php echo $login_student['graduation']; ?>" require   d>
+                                        <input name="graduation" id="graduation" class="form-control" value="<?php echo $login_student['graduation']; ?>" placeholder="Graduation" required>
                                     </div> <!-- form-group// -->
                                 </div>
                             </div>
@@ -73,7 +74,7 @@ if (isset($_SESSION['student_register_id'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"> <i class="fa fa-location-arrow"></i> </span>
                                         </div>
-                                        <input name="street" id="street" class="form-control" value="<?php echo $login_student['street']; ?>" type="text" required>
+                                        <input name="street" id="street" class="form-control" value="<?php echo $login_student['street']; ?>" type="text" placeholder="Street" required>
                                     </div> <!-- form-group// -->
                                 </div>
                                 <div class="col-md-6">
@@ -81,7 +82,7 @@ if (isset($_SESSION['student_register_id'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"> <i class="fa fa-location-arrow"></i> </span>
                                         </div>
-                                        <input name="city" id="city" class="form-control" value="<?php echo $login_student['city']; ?>" type="text" required>
+                                        <input name="city" id="city" class="form-control" value="<?php echo $login_student['city']; ?>" type="text" placeholder="City" required>
                                     </div>
                                 </div>
                             </div>
@@ -91,7 +92,7 @@ if (isset($_SESSION['student_register_id'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"> <i class="fa fa-map-marker"></i> </span>
                                         </div>
-                                        <input name="district" id="district" class="form-control" value="<?php echo $login_student['district']; ?>" type="text" required>
+                                        <input name="district" id="district" class="form-control" value="<?php echo $login_student['district']; ?>" type="text" placeholder="District" required>
                                     </div> <!-- form-group// -->
                                 </div>
                                 <div class="col-md-6">
@@ -99,7 +100,7 @@ if (isset($_SESSION['student_register_id'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"> <i class="fa fa-map-pin"></i> </span>
                                         </div>
-                                        <input name="pin" id="pin" class="form-control" value="<?php echo $login_student['pin']; ?>" type="text" required>
+                                        <input name="pin" id="pin" class="form-control" value="<?php echo $login_student['pin']; ?>" type="text" placeholder="Pin" required>
                                     </div> <!-- form-group// -->
                                 </div>
                             </div>
@@ -109,7 +110,7 @@ if (isset($_SESSION['student_register_id'])) {
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"> <i class="fa fa-map-signs"></i> </span>
                                         </div>
-                                        <input name="nearcity" id="nearcity" class="form-control" value="<?php echo $login_student['nearcity']; ?>" type="text">
+                                        <input name="nearcity" id="nearcity" class="form-control" value="<?php echo $login_student['nearcity']; ?>" placeholder="Near By City" type="text">
                                     </div> <!-- form-group// -->
                                 </div>
                             </div>
@@ -121,6 +122,7 @@ if (isset($_SESSION['student_register_id'])) {
                                             <span class="input-group-text"> <i class="fa fa-book"></i> </span>
                                         </div>
                                         <select class="custom-select" id="selectgroup" name="" required>
+                                            <option value="0">Select Group</option>
                                             <?php
                                             foreach (array('group' => 'Group 1', 'groups' => 'Group 2/2A') as $key => $val) {
                                                 $selected = '';

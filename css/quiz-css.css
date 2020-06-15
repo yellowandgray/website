@@ -188,6 +188,7 @@
     align-self: flex-end;
     padding: 0;
     color: #fff;
+    overflow: auto;
 }
 
 .goto-here .questionBox .questionContainer .questionFooter .pagination {

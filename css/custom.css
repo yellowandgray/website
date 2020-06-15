@@ -227,11 +227,12 @@ and open the template in the editor.
     /*    padding-top: 20px;
         border-radius: 50%;
         width: 50px;*/
-    margin-top: 10px;
+    margin-top: 13px;
     float: right;
     /*    height: 30px;
         background-position: center;*/
     cursor: pointer;
+    /*position: relative;*/
 }
 
 .logout_section img {
@@ -338,7 +339,7 @@ and open the template in the editor.
     display: none;
     position: absolute;
     top: 62px;
-    right: 10px;
+    right: 98px;
     box-shadow: 0 0 6px 2px #e3e3e3;
     background: #fff;
     padding: 0px 0;
@@ -622,7 +623,7 @@ and open the template in the editor.
 }
 
 .language_section ul li {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 600;
     padding: 5px 20px 15px;
     padding-left: 0px;
@@ -875,6 +876,7 @@ and open the template in the editor.
     text-align: left;
     padding-left: 5px;
     line-height: 1.5;
+    font-weight: 400;
 }
 
 .table-title th {
@@ -1129,7 +1131,7 @@ and open the template in the editor.
     .logout_dropdown_1 {
         display: none;
         position: absolute;
-        top: 35px;
+        top: 60px;
         right: 0;
         box-shadow: 0px 0px 4px 0px #e3e3e3;
         background: #fff;
@@ -1139,7 +1141,16 @@ and open the template in the editor.
         outline: none;
         box-sizing: border-box;
         z-index: 1;
-        width: 250px;
+        width: 100%;
+    }
+    .logout_dropdown {
+        top: 60px !Important;
+        right: 0;
+        width: 100%;
+    }
+    .user_details {
+        width: 100%;
+        text-align: center;
     }
 }
 
@@ -1588,7 +1599,7 @@ and open the template in the editor.
 }
 
 .call-as-now ul li span {
-    margin-left: 50px;
+    margin-left: 40px;
 }
 
 
@@ -1621,7 +1632,7 @@ and open the template in the editor.
 .file-upload{
     height: 50px;
     width: 50px;
-     margin: 0px auto; 
+    margin: 0px auto; 
     border: 1px solid #f0c0d0;
     border-radius: 100px;
     overflow: hidden;
@@ -1654,4 +1665,8 @@ and open the template in the editor.
     height:70px;
     width:70px;
     margin:15px;
+}
+
+.tab-content>.tab-pane {
+    overflow: auto;
 }
