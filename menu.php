@@ -22,8 +22,8 @@ if (isset($_SESSION['student_register_id'])) {
                         <div class = 'headnav'>
                             <ul>
                                 <li class="menu-cus-clr">                                
-                                    <a href="about" class="menu-nav">About Us</a>
-                                    <a href="contact" class="menu-nav">Contact Us</a>
+                                    <a href="about-us" class="menu-nav">About Us</a>
+                                    <a href="contact-us" class="menu-nav">Contact Us</a>
                                     <a href="quiz_page_freesample?from-page=quiz" class="menu-nav">Exit</a>
                                 </li>
                                 <li>
@@ -38,8 +38,8 @@ if (isset($_SESSION['student_register_id'])) {
                     <div class="logout_position">
                         <a href="member-home" class="user-menu-btn">My Home</a>
                         <a href="select_language" class="user-menu-btn">Test</a>
-                        <a class="user-menu-btn" href="about">About Us</a>
-                        <a class="user-menu-btn" href="contact">Contact Us</a>
+                        <a class="user-menu-btn" href="about-us">About Us</a>
+                        <a class="user-menu-btn" href="contact-us">Contact Us</a>
                         <a onclick="logoutUser('<?php echo $login_student['student_name']; ?>');" class="btn logout-btn">Logout</a>
                         <div id="open-logout" class="logout_section">
                             <span class="menu-bar">
@@ -80,8 +80,8 @@ if (isset($_SESSION['student_register_id'])) {
         <!--                                    <i class = 'icon-reorder'></i>-->
                                     <div class="logout_dropdown">
                                         <ul class="logout_list">
-                                            <li onclick="window.location = 'about'">About us</li>
-                                            <li onclick="window.location = 'contact'">Contact us</li>
+                                            <li onclick="window.location = 'about-us'">About us</li>
+                                            <li onclick="window.location = 'contact-us'">Contact us</li>
                                             <li>
                                                 <a href="registration_intro" class="btn btn-green">Buy Full Version</a>
                                                 <a href="login-page" class="btn btn-custom">Login</a>
@@ -113,8 +113,8 @@ if (isset($_SESSION['student_register_id'])) {
                                     <li onclick="window.location = 'select_language'">Test</li>
                                     <li onclick="window.location = 'student_result'">Result</li>
                                     <li onclick="window.location = 'account'">Account</li>
-                                    <li onclick="window.location = 'about'">About Us</li>
-                                    <li onclick="window.location = 'contact'">Contact Us</li>
+                                    <li onclick="window.location = 'about-us'">About Us</li>
+                                    <li onclick="window.location = 'contact-us'">Contact Us</li>
                                     <!--                                <li onclick="logoutUser();">Logout</li>-->
                                 </ul>
                             </div>
