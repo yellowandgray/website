@@ -37,7 +37,7 @@ if(isset($_GET["code"]))
         $name = $data['name'];
     }
 
-    if(!empty($data['email']))
+    if(!empty($data['gender']))
     {
         $gender = $data['gender'];
     }
