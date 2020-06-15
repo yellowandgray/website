@@ -1924,12 +1924,20 @@ ul.breadcrumb li a:hover {
 }
 
 .contact-section-examhorse .contact-form input, .contact-section-examhorse .contact-form textarea {
-    border: none;
+    border: 1px solid transparent;
     border-bottom: 1px solid #333;
     width: 100%;
     box-shadow: none;
-    padding: 15px 10px;
+    padding: 20px 10px;
     border-radius: 0;
+    transition: all .5s;
+    margin-bottom: 15px;
+}
+
+.contact-section-examhorse .contact-form input:focus, .contact-section-examhorse .contact-form textarea:focus {
+    border: 1px solid #e9322d;
+    /*border-bottom: 1px solid #e9322d;*/
+    box-shadow: none;
 }
 
 .contact-section-examhorse .contact-form .btn-blue {

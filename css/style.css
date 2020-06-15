@@ -3691,6 +3691,9 @@ form#login-form:after {
     .member-text-content .start-quiz-btn a.btn-green {
         width: 82% !Important;
     }
+    .logout_position a.logout-btn {
+        padding: 5px 10px !important;
+    }
 }
 
 .cls-orange {
@@ -4049,7 +4052,7 @@ form#login-form:after {
     margin: 0 18px !Important;
     margin-bottom: 0px !Important;
     transition: 0.3s !Important; 
-    cursor: none !Important; 
+    /*cursor: none !Important;*/ 
     background-color: transparent !Important; 
     color: rgba(0, 0, 0, 0.85) !Important; 
     border: transparent 1px solid !Important; 

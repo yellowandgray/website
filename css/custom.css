@@ -1626,7 +1626,8 @@ and open the template in the editor.
     background: #f03c02;
     color: #fff;
     text-transform: none;
-    padding: 4px 15px;
+    padding: 4px 15px 4px;
+    margin: 8px 12px;
 }
 
 .file-upload{

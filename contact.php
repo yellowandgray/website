@@ -19,20 +19,20 @@ $obj = new Common();
                                 <br/>
                                 <form class="contact" onsubmit="return ContactForm();">
                                     <div class="input-group">
-                                        <input type="text" name="name" id="name" class="" Placeholder="Name" />
+                                        <input type="text" name="name" class="form-control" id="name" class="" Placeholder="Name" required />
                                     </div>
                                     <div class="input-group">
-                                        <input type="email" name="email" id="email" class="" Placeholder="Email" />
+                                        <input type="email" class="form-control" name="email" id="email" placeholder="Enter Your Email" onblur="validateEmail(this);">
                                     </div>
                                     <div class="input-group">
-                                        <input type="text" name="subject" id="subject" class="" Placeholder="Subject" />
+                                        <input type="text" name="subject" class="form-control" id="subject" class="" Placeholder="Subject" required />
                                     </div>
                                     <div class="input-group">
-                                        <textarea type="text" name="description" id="description" rows="5" class="" Placeholder="Message" ></textarea>
+                                        <textarea type="text" name="description" class="form-control" id="description" rows="5" class="" Placeholder="Message"  required ></textarea>
                                     </div>
                                     <br/>
                                     <div class="input-group">
-                                        <div class="g-recaptcha" data-sitekey="6Lf6LaMZAAAAAHnZx0J7Pab-7KRSZy7fzv7f76_W"></div>
+                                        <div class="g-recaptcha" data-sitekey="6Lf6LaMZAAAAAHnZx0J7Pab-7KRSZy7fzv7f76_W" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
                                     </div>
                                     <br/>
                                     <button type="submit" class="btn btn-blue">Send</button>
@@ -58,6 +58,20 @@ $obj = new Common();
             <?php include 'footer_landing.php'; ?>
         </div>
         <?php include 'landing_script.php'; ?>
+        <script type="text/javascript">
+            function validateEmail(emailField) {
+                var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+                if (reg.test(emailField.value) == false)
+                {
+                    alert('Invalid Email Address');
+                    return false;
+                }
+
+                return true;
+
+            }
+        </script>
     </body>
 
 </html>
