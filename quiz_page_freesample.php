@@ -1061,7 +1061,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                             <div class="quiz-explanation-view">Explanation:</div>
                                             
                                             <div v-if="quiz.questions[questionIndex].show_image_explanation" class="text-center">
-                                                <img v-if="quiz.questions[questionIndex].explanation_img_direction == 'top'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
+                                                <img v-if="quiz.questions[questionIndex].explanation_img_direction == 'top'" v-on:click="showexpimgpopup('api/v1/'+quiz.questions[questionIndex].image_path_explanation);" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
                                             
                                             </div>
                                             
@@ -1100,7 +1100,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                             
                                             
                                             <div v-if="quiz.questions[questionIndex].show_image_explanation" class="text-center">
-                                                <img v-if="quiz.questions[questionIndex].explanation_img_direction == 'bottom'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
+                                                <img v-if="quiz.questions[questionIndex].explanation_img_direction == 'bottom'" v-on:click="showexpimgpopup('api/v1/'+quiz.questions[questionIndex].image_path_explanation);" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
                                             </div>          
                                             
                                            
@@ -1514,14 +1514,28 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
         </div>
         <!--/container-->
 
-
-
-
         <div class="loadingoverlay" style="display: none">
             <div class="loadingoverlay-spinner">
                 <img alt="" src="img/loader.gif" />
             </div>
         </div>
+        
+        
+        <div class="modal fade" id="explimagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog" data-dismiss="modal">
+                <div class="modal-content"  >   
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel"></h4>
+                    </div>
+                    <div class="modal-body">            
+                        <img src="" class="explimagepreview">
+                    </div>           
+                </div>
+            </div>
+        </div>
+        
+        
 
         <?php include 'footer.php'; ?>
         <?php include 'script.php'; ?>
@@ -1530,7 +1544,8 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
         <script>
            
             //image_url = 'http://localhost/project/examhorse/api/v1/';
-            image_url ='http://examhorse.com/gama/api/v1/';
+            //image_url ='http://examhorse.com/gama/api/v1/';
+            image_url ='http://examhorse.com/api/v1/';
             console.log(<?php echo json_encode($questions_list); ?>);
             var quiz = {
                 user: "<?php echo $student['name']; ?>",
@@ -1586,6 +1601,12 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                     }
                 },
                 methods: {
+                    showexpimgpopup: function (imgsrc) {
+                        if (imgsrc != '') {
+                            $('.explimagepreview').attr('src', imgsrc);
+                            $('#explimagemodal').modal('show');
+                        }
+                    },
                     restart: function () {
                         $('#create').hide();
                         this.questionIndex = 0;
@@ -1897,7 +1918,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                             qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">D.</span> ' + val.d + '</div></div>';
                                         }
                                         if (val.image_path_explanation !== '' && val.explanation_img_direction !== 'bottom') {
-                                            qlist = qlist + '<div class="explanation_image"><img src="' + image_url + val.image_path_explanation + '"></div>';
+                                            qlist = qlist + '<div class="explanation_image"><img  onClick="showexpimgpopup(\''+image_url + val.image_path_explanation+'\');" src="' + image_url + val.image_path_explanation + '"></div>';
                                         } else {
                                             qlist = qlist + '';
                                         }
@@ -1907,7 +1928,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                             //qlist = qlist + '<div class="explanation-section">No Explanation</div>';
                                         }
                                         if (val.image_path_explanation !== '' && val.explanation_img_direction !== 'top') {
-                                            qlist = qlist + '<div class="explanation_image"><img src="' + image_url + val.image_path_explanation + '"></div>';
+                                            qlist = qlist + '<div class="explanation_image"><img  onClick="showexpimgpopup(\''+image_url + val.image_path_explanation+'\');" src="' + image_url + val.image_path_explanation + '"></div>';
                                         } else {
                                             qlist = qlist + '';
                                         }
@@ -2179,7 +2200,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                             qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">D.</span> ' + val.d + '</div></div>';
                                         }
                                         if (val.image_path_explanation !== '' && val.explanation_img_direction !== 'bottom') {
-                                            qlist = qlist + '<div class="explanation_image"><img src="' + image_url + val.image_path_explanation + '"></div>';
+                                            qlist = qlist + '<div class="explanation_image"><img onClick="showexpimgpopup(\''+image_url + val.image_path_explanation+'\');"  src="' + image_url + val.image_path_explanation + '"></div>';
                                         } else {
                                             qlist = qlist + '';
                                         }
@@ -2189,7 +2210,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                             //qlist = qlist + '<div class="explanation-section">No Explanation</div>';
                                         }
                                         if (val.image_path_explanation !== '' && val.explanation_img_direction !== 'top') {
-                                            qlist = qlist + '<div class="explanation_image"><img src="' + image_url + val.image_path_explanation + '"></div>';
+                                            qlist = qlist + '<div class="explanation_image"><img onClick="showexpimgpopup(\''+image_url + val.image_path_explanation+'\');" src="' + image_url + val.image_path_explanation + '"></div>';
                                         } else {
                                             qlist = qlist + '';
                                         }
@@ -3639,6 +3660,8 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
            
         </script>
         
+         
+        
           <?php
             }
             
@@ -3646,7 +3669,8 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
             if($quiz_from_page=='quiz') {
             ?>
             <script>
-             image_url ='http://examhorse.com/gama/api/v1/';   
+             //image_url ='http://examhorse.com/gama/api/v1/';   
+             image_url ='http://examhorse.com/api/v1/';   
             var app = new Vue({
                 el: "#app",
                 data: {
@@ -3728,7 +3752,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                             qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">D.</span> ' + val.d + '</div></div>';
                                         }
                                         if (val.image_path_explanation !== '' && val.explanation_img_direction !== 'bottom') {
-                                            qlist = qlist + '<div class="explanation_image"><img src="' + image_url + val.image_path_explanation + '"></div>';
+                                            qlist = qlist + '<div class="explanation_image"><img onClick="showexpimgpopup(\''+image_url + val.image_path_explanation+'\');" src="' + image_url + val.image_path_explanation + '"></div>';
                                         } else {
                                             qlist = qlist + '';
                                         }
@@ -3738,7 +3762,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                             //qlist = qlist + '<div class="explanation-section">No Explanation</div>';
                                         }
                                         if (val.image_path_explanation !== '' && val.explanation_img_direction !== 'top') {
-                                            qlist = qlist + '<div class="explanation_image"><img src="' + image_url + val.image_path_explanation + '"></div>';
+                                            qlist = qlist + '<div class="explanation_image"><img onClick="showexpimgpopup(\''+image_url + val.image_path_explanation+'\');" src="' + image_url + val.image_path_explanation + '"></div>';
                                         } else {
                                             qlist = qlist + '';
                                         }
@@ -3827,7 +3851,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                             qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">D.</span> ' + val.d + '</div></div>';
                                         }
                                         if (val.image_path_explanation !== '' && val.explanation_img_direction !== 'bottom') {
-                                            qlist = qlist + '<div class="explanation_image"><img src="' + image_url + val.image_path_explanation + '"></div>';
+                                            qlist = qlist + '<div class="explanation_image"><img onClick="showexpimgpopup(\''+image_url + val.image_path_explanation+'\');" src="' + image_url + val.image_path_explanation + '"></div>';
                                         } else {
                                             qlist = qlist + '';
                                         }
@@ -3837,7 +3861,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                             //qlist = qlist + '<div class="explanation-section">No Explanation</div>';
                                         }
                                         if (val.image_path_explanation !== '' && val.explanation_img_direction !== 'top') {
-                                            qlist = qlist + '<div class="explanation_image"><img src="' + image_url + val.image_path_explanation + '"></div>';
+                                            qlist = qlist + '<div class="explanation_image"><img onClick="showexpimgpopup(\''+image_url + val.image_path_explanation+'\');" src="' + image_url + val.image_path_explanation + '"></div>';
                                         } else {
                                             qlist = qlist + '';
                                         }
@@ -3877,5 +3901,16 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                 }
                </script> 
             <?php } ?>
+               
+
+                <script>
+            function showexpimgpopup(imgsrc) {
+                if (imgsrc != '') {
+                $('.explimagepreview').attr('src', imgsrc);
+                $('#explimagemodal').modal('show');
+                }
+            }    
+        </script>
+            
     </body>
 </html>

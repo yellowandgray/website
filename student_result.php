@@ -598,7 +598,8 @@ if (isset($_SESSION['student_register_id'])) {
                     </div>
                 </div>
             </section>
-<!--            <div class="modal fade" id="explimagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            
+            <div class="modal fade" id="explimagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog" data-dismiss="modal">
                     <div class="modal-content"  >   
                         <div class="modal-header">
@@ -610,7 +611,7 @@ if (isset($_SESSION['student_register_id'])) {
                         </div>           
                     </div>
                 </div>
-            </div>-->
+            </div>
             <?php include 'footer.php';
             ?>
         </div>
@@ -684,7 +685,7 @@ if (isset($_SESSION['student_register_id'])) {
                     qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="option-float">D. </span> ' + val.d + '</div></div>';
                     }
                     if (val.image_path_explanation !== '' && val.explanation_img_direction === 'top') {
-                    qlist = qlist + '<div class="explanation_image"><img src="' + image_url + val.image_path_explanation + '"></div>';
+                    qlist = qlist + '<div class="explanation_image"><img onClick="showexpimgpopup(\''+image_url + val.image_path_explanation+'\');" src="' + image_url + val.image_path_explanation + '"></div>';
                     } else {
                     qlist = qlist + '';
                     }
@@ -694,7 +695,7 @@ if (isset($_SESSION['student_register_id'])) {
                     qlist = qlist + '<div class="explanation-section"> </div>';
                     }
                     if (val.image_path_explanation !== '' && val.explanation_img_direction === 'bottom') {
-                    qlist = qlist + '<div class="explanation_image"><img src="' + image_url + val.image_path_explanation + '"></div>';
+                    qlist = qlist + '<div class="explanation_image"><img onClick="showexpimgpopup(\''+image_url + val.image_path_explanation+'\');" src="' + image_url + val.image_path_explanation + '"></div>';
                     } else {
                     qlist = qlist + '';
                     }
@@ -780,7 +781,7 @@ if (isset($_SESSION['student_register_id'])) {
                     qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="option-float">D. </span> ' + val.d + '</div></div>';
                     }
                     if (val.image_path_explanation !== '' && val.explanation_img_direction === 'top') {
-                    qlist = qlist + '<div class="explanation_image"><img src="' + image_url + val.image_path_explanation + '"></div>';
+                    qlist = qlist + '<div class="explanation_image"><img onClick="showexpimgpopup(\''+image_url + val.image_path_explanation+'\');" src="' + image_url + val.image_path_explanation + '"></div>';
                     } else {
                     qlist = qlist + '';
                     }
@@ -790,7 +791,7 @@ if (isset($_SESSION['student_register_id'])) {
                     qlist = qlist + '<div class="explanation-section"> </div>';
                     }
                     if (val.image_path_explanation !== '' && val.explanation_img_direction === 'bottom') {
-                    qlist = qlist + '<div class="explanation_image"><img src="' + image_url + val.image_path_explanation + '"></div>';
+                    qlist = qlist + '<div class="explanation_image"><img onClick="showexpimgpopup(\''+image_url + val.image_path_explanation+'\');" src="' + image_url + val.image_path_explanation + '"></div>';
                     } else {
                     qlist = qlist + '';
                     }
@@ -812,13 +813,13 @@ if (isset($_SESSION['student_register_id'])) {
 
 
         </script>   
-<!--        <script>
-            function showexpimgpopup() {
-            if (imgsrc != '') {
-            $('.explimagepreview').attr('src', imgsrc);
-            $('#explimagemodal').modal('show');
-            }
-            },
-        </script>-->
+<script>
+            function showexpimgpopup(imgsrc) {
+                if (imgsrc != '') {
+                $('.explimagepreview').attr('src', imgsrc);
+                $('#explimagemodal').modal('show');
+                }
+            }    
+        </script>
     </body>
 </html>

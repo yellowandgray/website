@@ -48,7 +48,8 @@ function registerStudent() {
         success: function (data) {
             $('.loader').removeClass('is-active');
             if (data.result.error === false) {
-                window.location = 'payment-page';
+                //window.location = 'payment-page';
+				window.location = 'payment/pay?stud='+data.result.record;
 //                $('#user_name').val('');
 //                $('#student_name').val('');
 //                $('#graduation').val('');

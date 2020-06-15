@@ -101,7 +101,8 @@ $app->post('/insert_student', function() use ($app) {
             $record = $com->insertRecord(array('student_name' => $data['student_name'],  'password' => $data['password'], 'confirm_password' => $data['confirm_password'], 'mobile' => $data['mobile'], 'email' => $data['email'],  'created_at'=>date('Y-m-d H:i:S')), 'student_register');
 
             if ($record > 0) {
-                $res['error'] = false;
+                $res['error'] 	= false;
+				$res['record'] 	= $record;
                 $res['message'] = 'Record inserted successfully';
             }
         }
