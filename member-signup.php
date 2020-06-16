@@ -88,9 +88,10 @@ $obj = new Common();
                                                     <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
                                                 </div>
                                                 <input name="" maxlength="10" id="mobile" class="form-control" placeholder="Phone number" type="text" required>
-                                            </div> <!-- form-group// -->
-                                            
-                                             <div class="col-md-6">
+                                            </div> <!-- form-group// -->  
+                                        </div>   
+                                        
+                                        <div class="col-md-6">
                                             <div class="form-group input-group">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text"> Practice Medium</span>
@@ -101,7 +102,6 @@ $obj = new Common();
 												</select>                                                
                                             </div> <!-- form-group// -->
                                         </div>
-                                        </div>                                       
                                     </div>  
                                     <div class="g-recaptcha" <div class="g-recaptcha" data-sitekey="6Lf6LaMZAAAAAHnZx0J7Pab-7KRSZy7fzv7f76_W" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
                                     <div class="form-group">
