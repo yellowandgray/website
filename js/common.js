@@ -247,34 +247,45 @@ function changePassword() {
     return false;
 }
 
-function ContactForm() {
+function ContactForm(e) {
     $('.loader').addClass('is-active');
-    $.ajax({
-        type: "POST",
-        url: 'api/v1/insert_contact',
-        data: {name: $('#name').val(), email: $('#email').val(), subject: $('#subject').val(), description: $('#description').val()},
-        success: function (data) {
-            $('.loader').removeClass('is-active');
-            if (data.result.error === false) {
-                $('#name').val('');
-                $('#email').val('');
-                $('#subject').val('');
-                $('#description').val('');
+	var captchResponse = $('#g-recaptcha-response').val();
+	if(captchResponse.length == 0 )
+	{
+		alert('CAPTCHA Required!');		
+		e.stopImmediatePropagation();
+		return false;
+	}
+    else
+    {
+        $('.loader').addClass('is-active');
+        $.ajax({
+            type: "POST",
+            url: 'api/v1/insert_contact',
+            data: {name: $('#name').val(), email: $('#email').val(), subject: $('#subject').val(), description: $('#description').val()},
+            success: function (data) {
+                $('.loader').removeClass('is-active');
+                if (data.result.error === false) {
+                    $('#name').val('');
+                    $('#email').val('');
+                    $('#subject').val('');
+                    $('#description').val('');
 
-                swal("Thanks for Contact!", "Your Message Has been Sended... We will contact you soon...", "success");
-//                setTimeout(function () {
-//                    window.location = 'contact';
-//                }, 3000);
-            } else {
-                swal("Oops!", data.result.message, "info");
+                    swal("Thanks for Contact!", "Your Message Has been Sended... We will contact you soon...", "success");
+    //                setTimeout(function () {
+    //                    window.location = 'contact';
+    //                }, 3000);
+                } else {
+                    swal("Oops!", data.result.message, "info");
+                }
+            },
+            error: function (err) {
+                $('.loader').removeClass('is-active');
+                swal("Oops!", err.statusText, "error");
             }
-        },
-        error: function (err) {
-            $('.loader').removeClass('is-active');
-            swal("Oops!", err.statusText, "error");
-        }
-    });
-    return false;
+        });
+        return false;
+    }   
 }
 
 function updateStudentProfile() {
