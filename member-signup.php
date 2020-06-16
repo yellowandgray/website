@@ -43,7 +43,7 @@ $obj = new Common();
                                         </p>
                                     </div>
                                 </div>
-                                <form onsubmit = 'return registerStudent();'>
+                                <form onsubmit = 'return registerStudent(event);'>
                                     <h4>Candidate's Info:</h4>
                                     <div class="row">
                                         <div class="col-md-6">
@@ -89,9 +89,21 @@ $obj = new Common();
                                                 </div>
                                                 <input name="" maxlength="10" id="mobile" class="form-control" placeholder="Phone number" type="text" required>
                                             </div> <!-- form-group// -->
+                                            
+                                             <div class="col-md-6">
+                                            <div class="form-group input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"> Practice Medium</span>
+                                                </div>
+												<select id="practice_medium" name="practice_medium">
+													<option value="1">Tamil</option>
+													<option value="2">English</option>
+												</select>                                                
+                                            </div> <!-- form-group// -->
+                                        </div>
                                         </div>                                       
                                     </div>  
-                                    <div class="g-recaptcha" data-sitekey="6Lfj1aIZAAAAAARRsJAeGOHrKmethFGYgmGlGTZq"></div>
+                                    <div class="g-recaptcha" <div class="g-recaptcha" data-sitekey="6Lf6LaMZAAAAAHnZx0J7Pab-7KRSZy7fzv7f76_W" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
                                     <div class="form-group">
                                         <button type="submit" class="btn btn-primary btn-block"> Create Account  </button>
                                     </div> <!-- form-group// -->      
