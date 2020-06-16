@@ -108,6 +108,7 @@ function loginStudent() {
     });
     return false;
 }
+
 function samplehomelogin() {
     $('.loader').addClass('is-active');
     $.ajax({
@@ -117,7 +118,7 @@ function samplehomelogin() {
         success: function (data) {
             $('.loader').removeClass('is-active');
             if (data.result.error === false) {
-                window.location = 'sample-language';
+                window.location = 'free-select-language';
                 $('#name').val('');
                 $('#phone').val('');
                 $('#email').val('');
@@ -136,7 +137,6 @@ function samplehomelogin() {
     });
     return false;
 }
-
 
 function samplelogin() {
     $.ajax({
@@ -158,7 +158,6 @@ function samplelogin() {
     });
     return false;
 }
-
 
 function samplebuyregister() {
     $('.loader').addClass('is-active');
@@ -190,8 +189,6 @@ function samplebuyregister() {
     });
     return false;
 }
-
-
 
 function logoutUser(name) {
     $('.loader').addClass('is-active');
@@ -250,7 +247,6 @@ function changePassword() {
     return false;
 }
 
-
 function ContactForm() {
     $('.loader').addClass('is-active');
     $.ajax({
@@ -283,26 +279,26 @@ function ContactForm() {
 
 function updateStudentProfile() {
     console.log('test');
-    var data = {mobile: $('#mobile').val(), email: $('#email').val(), gender: $('#gender').val(), graduation: $('#graduation').val(), street: $('#street').val(), city: $('#city').val(), district: $('#district').val(), pin: $('#pin').val(), nearcity: $('#nearcity').val(), selectgroup: $('#selectgroup').val()};
-    $('.loader').addClass('is-active');
-    $.ajax({
-        type: "POST",
-        url: 'api/v1/update_record/student_register/student_register_id',
-        data: data,
-        success: function (data) {
-            $('.loader').removeClass('is-active');
-            if (data.result.error === false) {
-                window.location = 'account';
-            } else {
-                swal('Information', data.result.message, 'info');
-            }
-        },
-        error: function (err) {
-            $('.loader').removeClass('is-active');
-            swal('Error', err.statusText, 'error');
-        }
-    });
-    return false;
+//    var data = {mobile: $('#mobile').val(), email: $('#email').val(), gender: $('#gender').val(), graduation: $('#graduation').val(), street: $('#street').val(), city: $('#city').val(), district: $('#district').val(), pin: $('#pin').val(), nearcity: $('#nearcity').val(), selectgroup: $('#selectgroup').val()};
+//    $('.loader').addClass('is-active');
+//    $.ajax({
+//        type: "POST",
+//        url: 'api/v1/update_record/student_register/student_register_id',
+//        data: data,
+//        success: function (data) {
+//            $('.loader').removeClass('is-active');
+//            if (data.result.error === false) {
+//                window.location = 'account';
+//            } else {
+//                swal('Information', data.result.message, 'info');
+//            }
+//        },
+//        error: function (err) {
+//            $('.loader').removeClass('is-active');
+//            swal('Error', err.statusText, 'error');
+//        }
+//    });
+//    return false;
 }
 
 function forgotPassword(){

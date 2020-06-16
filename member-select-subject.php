@@ -5,7 +5,7 @@ require_once 'api/include/common.php';
 $obj = new Common();
 
 if (!isset($_GET['lan'])) {
-    header('Location: select_language');
+    header('Location: member-select-language');
 }
 
 $language = $obj->selectRow('*', 'language', 'name = \'' . $_GET['lan'] . '\'');
@@ -15,7 +15,7 @@ $_SESSION['student_selected_language_id'] = $language['language_id'];
 
 
 if (!isset($_SESSION['student_selected_language_id'])) {
-    header('Location: select_language');
+    header('Location: member-select-language');
 }
 $_SESSION['student_selected_type'] = 'subject';
 /*
@@ -41,7 +41,7 @@ $counter = 0;
                 <div id="mySignin" tabindex="-1" aria-labelledby="mySigninModalLabel" aria-hidden="true">
                     <div class="modal styled full-language-width">
                         <div class="modal-header login-section">                            
-                            <a href="select_language"><i class="font-icon-arrow-simple-left"></i></a>
+                            <a href="member-select-language"><i class="font-icon-arrow-simple-left"></i></a>
                             <h4 id="mySigninModalLabel" class="text-center">
                                 <table class="table-title">
                                     <tr>
@@ -56,7 +56,7 @@ $counter = 0;
                                     </tr>
                                 </table>
                             </h4>
-                            <a class="home_link" href="select_language">
+                            <a class="home_link" href="member-select-language">
                                 <i class="icon-home"></i>
                             </a>
                         </div>
@@ -176,7 +176,7 @@ $counter = 0;
             
             
             function goToTopics(sub) {
-               window.location = 'subject-topic?subjects=' + sub;                 
+               window.location = 'member-select-topic?subjects=' + sub;                 
             }
         </script>
     </body>

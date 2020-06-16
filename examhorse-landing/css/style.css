@@ -632,7 +632,7 @@ ul.breadcrumb li a:hover {
 
 .carousel-control-next, .carousel-control-prev {
     top: 20% !important;
-    padding-top: 52px;
+    margin-top: 70px;
 }
 
 .carousel-item .banner-learning a {

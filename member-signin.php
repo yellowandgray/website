@@ -48,7 +48,8 @@ include('googlelogin/login-user-config.php');
                                         <button type="submit" class="btn btn-primary btn-block"> Sign In  </button> 
                                     </div> <!-- form-group// -->   
                                     <a href="#" class="float-right text-right">Forgot password?</a>
-                                    <p class="text-center">Don't have any account? <a href="register_user">Sign Up</a> </p>                                                                 
+                                    <br/>
+                                    <p class="text-center">Don't have any account? <a href="member-signup">Sign Up</a> </p>                                                                 
                                 </form>
                             </article>
                         </div>

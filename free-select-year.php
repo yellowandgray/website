@@ -67,7 +67,7 @@ if (count($student_log_order_year) > 0) {
                 <div id='mySignin' tabindex='-1' aria-labelledby='mySigninModalLabel' aria-hidden='true'>
                     <div class='modal styled'>
                         <div class='modal-header login-section'>
-                            <a href="sample-language"><i class='font-icon-arrow-simple-left'></i></a>
+                            <a href="free-select-language"><i class='font-icon-arrow-simple-left'></i></a>
                             <h4 id='mySigninModalLabel' class='text-center'>
                                 <table class="table-title">
                                     <tr>
@@ -82,7 +82,7 @@ if (count($student_log_order_year) > 0) {
                                     </tr>
                                 </table>
                             </h4>
-                            <a class="home_link" href="sample-language">
+                            <a class="home_link" href="free-select-language">
                                 <i class="icon-home"></i>
                             </a>
                         </div>
@@ -98,7 +98,7 @@ if (count($student_log_order_year) > 0) {
                                         if($y<3) {
                                         ?>
                                         <li>
-                                            <i class="icon-double-angle-right"></i> <a href="quiz_page_freesample?year=<?php echo $row['year']; ?>"><?php echo $row['year']; ?> (<?php echo $row['ques_cnt']; ?> Questions)</a>
+                                            <i class="icon-double-angle-right"></i> <a href="free-practice-test?year=<?php echo $row['year']; ?>"><?php echo $row['year']; ?> (<?php echo $row['ques_cnt']; ?> Questions)</a>
                                         </li>
     <?php
                                         }

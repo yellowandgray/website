@@ -254,20 +254,20 @@ if(count($student_log_pause)>0) {
                                                 <?php if ($val['name'] == 'Tamil') { ?>
                                                     <li>
                                                         <i class="icon-double-angle-right"></i>
-                                                        <a href="qorder-years?lan=<?php echo $val['name']; ?>"><i class="icon-calendar"></i> ஆண்டு வரிசை</a>                             
+                                                        <a href="member-select-year?lan=<?php echo $val['name']; ?>"><i class="icon-calendar"></i> ஆண்டு வரிசை</a>                             
                                                     </li> 
                                                     <li>
                                                         <i class="icon-double-angle-right"></i>
-                                                        <a href="subject?lan=<?php echo $val['name']; ?>"><i class="icon-book"></i> பாடத்திட்ட வரிசை</a>
+                                                        <a href="member-select-subject?lan=<?php echo $val['name']; ?>"><i class="icon-book"></i> பாடத்திட்ட வரிசை</a>
                                                     </li>
                                                 <?php } else { ?>
                                                     <li>
                                                         <i class="icon-double-angle-right"></i>
-                                                        <a href="qorder-years?lan=<?php echo $val['name']; ?>"><i class="icon-calendar"></i> Year Wise</a>                             
+                                                        <a href="member-select-year?lan=<?php echo $val['name']; ?>"><i class="icon-calendar"></i> Year Wise</a>                             
                                                     </li> 
                                                     <li>
                                                         <i class="icon-double-angle-right"></i>
-                                                        <a href="subject?lan=<?php echo $val['name']; ?>"><i class="icon-book"></i> Subject Wise</a>
+                                                        <a href="member-select-subject?lan=<?php echo $val['name']; ?>"><i class="icon-book"></i> Subject Wise</a>
                                                     </li>
                                                 <?php } ?>
                                             </ul>                                            

@@ -24,11 +24,11 @@ if (isset($_SESSION['student_register_id'])) {
                                 <li class="menu-cus-clr">                                
                                     <a href="about-us" class="menu-nav">About Us</a>
                                     <a href="contact-us" class="menu-nav">Contact Us</a>
-                                    <a href="quiz_page_freesample?from-page=quiz" class="menu-nav">Exit</a>
+                                    <a href="free-practice-test?from-page=quiz" class="menu-nav">Exit</a>
                                 </li>
                                 <li>
-                                    <a href = 'registration_intro' class="btn btn-custom" style="background: green">Buy Full Version</a>
-                                    <a href = 'login-page' class="btn btn-custom">Login</a>
+                                    <a href = 'member-benefits' class="btn btn-custom" style="background: green">Buy Full Version</a>
+                                    <a href = 'member-signin' class="btn btn-custom">Login</a>
                                 </li>
                             </ul>
                         </div>
@@ -37,7 +37,7 @@ if (isset($_SESSION['student_register_id'])) {
                     ?>
                     <div class="logout_position">
                         <a href="member-home" class="user-menu-btn">My Home</a>
-                        <a href="select_language" class="user-menu-btn">Test</a>
+                        <a href="member-select-language" class="user-menu-btn">Test</a>
                         <a class="user-menu-btn" href="about-us">About Us</a>
                         <a class="user-menu-btn" href="contact-us">Contact Us</a>
                         <a onclick="logoutUser('<?php echo $login_student['student_name']; ?>');" class="btn logout-btn">Logout</a>
@@ -55,9 +55,9 @@ if (isset($_SESSION['student_register_id'])) {
                                     <h5><?php echo $login_student['student_name']; ?></h5>
                                 </div>
                                 <ul class="logout_list">
-                                    <li onclick="window.location = 'select_language'">Test</li>
-                                    <li onclick="window.location = 'student_result'">Result</li>
-                                    <li onclick="window.location = 'account'">Account</li>
+                                    <li onclick="window.location = 'member-select-language'">Test</li>
+                                    <li onclick="window.location = 'member-result'">Result</li>
+                                    <li onclick="window.location = 'member-account'">Account</li>
                                     <!--                                <li onclick="logoutUser();">Logout</li>-->
                                 </ul>
                             </div>
@@ -83,8 +83,8 @@ if (isset($_SESSION['student_register_id'])) {
                                             <li onclick="window.location = 'about-us'">About us</li>
                                             <li onclick="window.location = 'contact-us'">Contact us</li>
                                             <li>
-                                                <a href="registration_intro" class="btn btn-green">Buy Full Version</a>
-                                                <a href="login-page" class="btn btn-custom">Login</a>
+                                                <a href="member-benefits" class="btn btn-green">Buy Full Version</a>
+                                                <a href="member-signin" class="btn btn-custom">Login</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -110,9 +110,9 @@ if (isset($_SESSION['student_register_id'])) {
                                 </div>
                                 <ul class="logout_list">
                                     <li onclick="window.location = 'member-home'">My Home</li>
-                                    <li onclick="window.location = 'select_language'">Test</li>
-                                    <li onclick="window.location = 'student_result'">Result</li>
-                                    <li onclick="window.location = 'account'">Account</li>
+                                    <li onclick="window.location = 'member-select-language'">Test</li>
+                                    <li onclick="window.location = 'member-result'">Result</li>
+                                    <li onclick="window.location = 'member-account'">Account</li>
                                     <li onclick="window.location = 'about-us'">About Us</li>
                                     <li onclick="window.location = 'contact-us'">Contact Us</li>
                                     <!--                                <li onclick="logoutUser();">Logout</li>-->

@@ -179,7 +179,7 @@
          window.location = '#popup1'; 
          $('#tets').data('lang',lang);
          */
-        window.location = 'quiz_page?from=pausequiz';
+        window.location = 'member-practice-test?from=pausequiz';
     }
 
 </script>

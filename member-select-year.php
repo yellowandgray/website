@@ -6,7 +6,7 @@ $obj = new Common();
 
 
 if (!isset($_GET['lan'])) {
-    header('Location: select_language');
+    header('Location: member-select-language');
 }
 
 $language = $obj->selectRow('*', 'language', 'name = \'' . $_GET['lan'] . '\'');
@@ -14,7 +14,7 @@ $_SESSION['student_selected_language_id'] = $language['language_id'];
 
 
 if (!isset($_SESSION['student_selected_language_id'])) {
-    header('Location: select_language');
+    header('Location: member-select-language');
 }
 $language = $obj->selectRow('*', 'language', 'language_id=' . $_SESSION['student_selected_language_id']);
 $_SESSION['student_selected_type'] = 'order';
@@ -69,7 +69,7 @@ if (count($student_log_order_year) > 0) {
                 <div id='mySignin' tabindex='-1' aria-labelledby='mySigninModalLabel' aria-hidden='true'>
                     <div class='modal styled'>
                         <div class='modal-header login-section'>
-                            <a href="select_language"><i class='font-icon-arrow-simple-left'></i></a>
+                            <a href="member-select-language"><i class='font-icon-arrow-simple-left'></i></a>
                             <h4 id='mySigninModalLabel' class='text-center'>
                                 <table class="table-title">
                                     <tr>
@@ -84,7 +84,7 @@ if (count($student_log_order_year) > 0) {
                                     </tr>
                                 </table>
                             </h4>
-                            <a class="home_link" href="select_language">
+                            <a class="home_link" href="member-select-language">
                                 <i class="icon-home"></i>
                             </a>
                         </div>

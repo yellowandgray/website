@@ -58,9 +58,9 @@ if (isset($_SESSION['student_register_id'])) {
                         <div class="span6">
                             <div class="about-text go-to">
                                 <h3 class="dark-color"><?php echo $login_student['student_name']; ?></h3>
-<!--                                <h6 class="theme-color lead">A Lead UX &amp; UI designer based in Canada</h6>
-                                <p>I <mark>design and develop</mark> services for customers of all sizes, specializing in creating stylish, modern websites, web services and online stores. My passion is to design digital user experiences through the bold interface and meaningful interactions.</p>-->
-                                <div class="account-details">
+                                <!--                                <h6 class="theme-color lead">A Lead UX &amp; UI designer based in Canada</h6>
+                                                                <p>I <mark>design and develop</mark> services for customers of all sizes, specializing in creating stylish, modern websites, web services and online stores. My passion is to design digital user experiences through the bold interface and meaningful interactions.</p>-->
+                                <div class="account-details account-full-width">
                                     <h3>Candidate's Info:</h3>
                                     <div class="row about-list" style="margin-bottom: 0">
                                         <div class="span3">
@@ -180,6 +180,112 @@ if (isset($_SESSION['student_register_id'])) {
                                                 </tr>
                                             </table>
                                         </div>
+                                    </div>
+                                </div>
+                                <div class="account-details account-mobile-width">
+                                    <div class="about-list">
+                                        <table class="member-about-filed">
+                                            <tr>
+                                                <th  colspan="3"><h3>Candidate's Info:</h3></th>
+                                            </tr>
+                                            <tr>
+                                                <th>Mobile</th>
+                                                <th>:</th>
+                                                <?php if ($login_student['mobile'] != '') { ?>
+                                                    <td><?php echo $login_student['mobile']; ?></td>
+                                                <?php } else { ?>
+                                                    <td></td>
+                                                <?php } ?>
+                                            </tr>
+                                            <tr>
+                                                <th>Email</th>
+                                                <th>:</th>
+                                                <?php if ($login_student['email'] != '') { ?>
+                                                    <td><?php echo $login_student['email']; ?></td>
+                                                <?php } else { ?>
+                                                    <td></td>
+                                                <?php } ?>
+                                            </tr>
+                                            <tr>
+                                                <th>Gender</th>
+                                                <th>:</th>
+                                                <?php if ($login_student['gender'] != '') { ?>
+                                                    <td><?php echo $login_student['gender']; ?></td>
+                                                <?php } else { ?>
+                                                    <td></td>
+                                                <?php } ?>
+                                            </tr>
+                                            <tr>
+                                                <th>Graduation</th>
+                                                <th>:</th>
+                                                <?php if ($login_student['graduation'] != '') { ?>
+                                                    <td><?php echo $login_student['graduation']; ?></td>
+                                                <?php } else { ?>
+                                                    <td></td>
+                                                <?php } ?>
+                                            </tr>
+                                            <tr>
+                                                <th  colspan="3"><h3>Address:</h3></th>
+                                            </tr>
+                                            <tr>
+                                                <th>Street</th>
+                                                <th>:</th>
+                                                <?php if ($login_student['street'] != '') { ?>
+                                                    <td><?php echo $login_student['street']; ?></td>
+                                                <?php } else { ?>
+                                                    <td></td>
+                                                <?php } ?>
+                                            </tr>
+                                            <tr>
+                                                <th>City</th>
+                                                <th>:</th>
+                                                <?php if ($login_student['city'] != '') { ?>
+                                                    <td><?php echo $login_student['city']; ?></td>
+                                                <?php } else { ?>
+                                                    <td></td>
+                                                <?php } ?>
+                                            </tr>
+                                            <tr>
+                                                <th>District</th>
+                                                <th>:</th>
+                                                <?php if ($login_student['district'] != '') { ?>
+                                                    <td><?php echo $login_student['district']; ?></td>
+                                                <?php } else { ?>
+                                                    <td></td>
+                                                <?php } ?>
+                                            </tr>
+                                            <tr>
+                                                <th>Pin</th>
+                                                <th>:</th>
+                                                <?php if ($login_student['pin'] != '') { ?>
+                                                    <td><?php echo $login_student['pin']; ?></td>
+                                                <?php } else { ?>
+                                                    <td></td>
+                                                <?php } ?>
+                                            </tr>
+                                            <tr>
+                                                <th>Near City</th>
+                                                <th>:</th>
+                                                <?php if ($login_student['nearcity'] != '') { ?>
+                                                    <td><?php echo $login_student['nearcity']; ?></td>
+                                                <?php } else { ?>
+                                                    <td></td>
+                                                <?php } ?>
+                                            </tr>
+                                            <br/>
+                                            <tr>
+                                                <th  colspan="3"><h3>Planned to Write:</h3></th>
+                                            </tr>
+                                            <tr>
+                                                <th>Exam Type</th>
+                                                <th>:</th>
+                                                <?php if ($login_student['selectgroup'] != '') { ?>
+                                                    <td><?php echo $login_student['selectgroup']; ?></td>
+                                                <?php } else { ?>
+                                                    <td></td>
+                                                <?php } ?>
+                                            </tr>
+                                        </table>
                                     </div>
                                 </div>
                             </div>

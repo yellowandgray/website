@@ -21,7 +21,7 @@ if (isset($_SESSION['student_register_id'])) {
             <div class="carousel-inner" role="listbox">
                 <div class="carousel-item active">
                     <!--<div class="banner-learning" data-toggle="modal" data-target=".bs-example-modal-new">-->
-                    <div class="banner-learning" onclick="window.location = 'sample-intro'">
+                    <div class="banner-learning" onclick="window.location = 'free-sample-introduction'">
                         <a href="#">Try Free Sample</a>
                     </div>
                     <div class="carousel-caption wow fadeInRight">
@@ -38,7 +38,7 @@ if (isset($_SESSION['student_register_id'])) {
                                     </div>
                                 </div>-->
                 <div class="carousel-item">
-                    <div class="banner-learning" onclick="window.location = 'sample-intro'">
+                    <div class="banner-learning" onclick="window.location = 'free-sample-introduction'">
                         <!--<img src="examhorse-landing/img/learning-gif.gif" alt=""/>-->
                         <a href="#">Try Free Sample</a>
                     </div>
@@ -47,7 +47,7 @@ if (isset($_SESSION['student_register_id'])) {
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <div class="banner-learning" onclick="window.location = 'sample-intro'">
+                    <div class="banner-learning" onclick="window.location = 'free-sample-introduction'">
                         <!--<img src="examhorse-landing/img/learning-gif.gif" alt=""/>-->
                         <a href="#">Try Free Sample</a>
                     </div>
@@ -114,13 +114,13 @@ if (isset($_SESSION['student_register_id'])) {
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div onclick="window.location = 'sample-intro'" class="home-box wow fadeInDown">
+                        <div onclick="window.location = 'free-sample-introduction'" class="home-box wow fadeInDown">
                             <div class="box-custom">
                                 <div class="box-img3"></div>
                             </div>
                             <div class="box-text learning-box">
                                 <p>Try all the features for three full-year question papers – Completely Free</p>
-                                <a href="sample-intro" class="btn btn-green">Try Now!</a>
+                                <a href="free-sample-introduction" class="btn btn-green">Try Now!</a>
                             </div>
                         </div>
                     </div>
@@ -222,7 +222,7 @@ if (isset($_SESSION['student_register_id'])) {
                                     <input type="text" class="form-control" id="phone" placeholder="Enter Your Phone">
                                 </div>
                                 <div class="g-recaptcha" data-sitekey="6LdRV_sUAAAAAJUxyvE5squ2GTwOApnH00odkabA"></div>
-                                <button type="submit" class="btn btn-custom">Submit</button><a href="sample-intro" class="float-right">Skip</a>
+                                <button type="submit" class="btn btn-custom">Submit</button><a href="free-sample-introduction" class="float-right">Skip</a>
                             </form>
                         </div>
                     </div>

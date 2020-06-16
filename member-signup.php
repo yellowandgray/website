@@ -95,7 +95,7 @@ $obj = new Common();
                                     <div class="form-group">
                                         <button type="submit" class="btn btn-primary btn-block"> Create Account  </button>
                                     </div> <!-- form-group// -->      
-                                    <p class="text-center">Have an account? <a href="login-page">Log In</a> </p>
+                                    <p class="text-center">Have an account? <a href="member-signin">Log In</a> </p>
                                 </form>
                             </article>
                         </div>

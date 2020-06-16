@@ -16,7 +16,7 @@ if (isset($_SESSION['student_register_id'])) {
                 <div class="container">
                     <div class="edit-form">
                         <h2 style="border-bottom: 2px solid #e3e3e3;padding-bottom: 10px;margin-bottom: 20px;">Update Your Account</h2>
-                        <from  onsubmit="return updateStudentProfile();">
+                        <from onsubmit = 'return updateStudentProfile();'>
                             <h4>Candidate's Info:</h4>
                             <div class="row">
                                 <div class="col-md-6">

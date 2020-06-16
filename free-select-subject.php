@@ -5,7 +5,7 @@ $obj = new Common();
 
 
 if (!isset($_GET['lan'])) {
-    header('Location: sample-language');
+    header('Location: free-select-language');
 }
 
 $language = $obj->selectRow('*', 'language', 'name = \'' . $_GET['lan'] . '\'');
@@ -52,7 +52,7 @@ $counter = 0;
                 <div id="mySignin" tabindex="-1" aria-labelledby="mySigninModalLabel" aria-hidden="true">
                     <div class="modal styled custom-modal">
                         <div class="modal-header login-section">
-                            <a href="sample-language"><i class="font-icon-arrow-simple-left"></i></a>
+                            <a href="free-select-language"><i class="font-icon-arrow-simple-left"></i></a>
                             <h4 id="mySigninModalLabel" class="text-center">
                                 <table class="table-title">
                                     <tr>
@@ -67,7 +67,7 @@ $counter = 0;
                                     </tr>
                                 </table>
                             </h4>
-                            <a class="home_link" href="sample-language">
+                            <a class="home_link" href="free-select-language">
                                 <i class="icon-home"></i>
                             </a>
                         </div>
@@ -180,7 +180,7 @@ $counter = 0;
 
 
             function goToTopics(sub) {
-                window.location = 'subject-topic-freesample?subjects=' + sub;
+                window.location = 'free-select-topic?subjects=' + sub;
             }
         </script>
     </body>

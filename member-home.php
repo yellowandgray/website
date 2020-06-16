@@ -201,7 +201,7 @@ if (isset($_SESSION['student_register_id'])) {
                             <div class="banner-padding">
                                 <h4>Welcome <span><?php echo $login_student['student_name']; ?></span></h4>
                                 <div class="start-quiz-btn">
-                                    <a href="select_language" class="btn btn-green">PRACTICE TEST</a>
+                                    <a href="member-select-language" class="btn btn-green">PRACTICE TEST</a>
                                 </div>
                             </div>
                         </div>
@@ -210,8 +210,37 @@ if (isset($_SESSION['student_register_id'])) {
                 <div class="row">
                     <div class="span6">
                         <div class="member-banner">
-                            <h3>Title Comes Here</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            <h3>News Feed</h3>
+                            <div class="news-feed">
+                                <div class="news-feed-img">
+                                    <img src="img/member-thumbs.jpg" alt="" />
+                                </div>
+                                <div class="news-feed-content">
+                                    <h4>Title Comes Here</h4>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                                    <a href="https://youtu.be/OKCvgDpSp78">See the video</a>
+                                </div>
+                            </div>
+                            <div class="news-feed">
+                                <div class="news-feed-img">
+                                    <img src="img/member-thumbs.jpg" alt="" />
+                                </div>
+                                <div class="news-feed-content">
+                                    <h4>Title Comes Here</h4>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                                    <a href="https://youtu.be/OKCvgDpSp78">See the video</a>
+                                </div>
+                            </div>
+                            <div class="news-feed">
+                                <div class="news-feed-img">
+                                    <img src="img/member-thumbs.jpg" alt="" />
+                                </div>
+                                <div class="news-feed-content">
+                                    <h4>Title Comes Here</h4>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                                    <a href="https://youtu.be/OKCvgDpSp78">See the video</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="span6">

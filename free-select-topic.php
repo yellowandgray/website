@@ -51,7 +51,7 @@ $counter = 0;
                                     </tr>
                                 </table>
                             </h4>
-                            <a class="home_link" href="sample-language">
+                            <a class="home_link" href="free-select-language">
                                 <i class="icon-home"></i>
                             </a>
                         </div>
@@ -155,7 +155,7 @@ $counter = 0;
                     }
                 });
                 if (topics.length > 0) {
-                    window.location = 'quiz_page_freesample?topics=' + topics.join(',');
+                    window.location = 'free-practice-test?topics=' + topics.join(',');
                 } else {
                     alert('Please select atleast one topic');
                 }

@@ -4,11 +4,11 @@ include('login-check.php');
 require_once 'api/include/common.php';
 $obj = new Common();
 if (!isset($_SESSION['student_selected_language_id'])) {
-    header('Location: select_language');
+    header('Location: member-select-language');
 }
 
 if (!isset($_GET['subjects'])) {
-    header('Location: subject');
+    header('Location: member-select-subject');
 }
 
 $_SESSION['student_selected_type'] = 'subject';
@@ -30,7 +30,7 @@ $counter = 0;
                 <div id="mySignin" tabindex="-1" aria-labelledby="mySigninModalLabel" aria-hidden="true">
                     <div class="modal styled">
                         <div class="modal-header login-section">
-                            <a href="subject?lan=<?php echo $language['name']; ?>"><i class="font-icon-arrow-simple-left"></i></a>
+                            <a href="member-select-language?lan=<?php echo $language['name']; ?>"><i class="font-icon-arrow-simple-left"></i></a>
                             <h4 id="mySigninModalLabel" class="text-center">
                                 <table class="table-title">
                                     <tr>
@@ -45,7 +45,7 @@ $counter = 0;
                                     </tr>
                                 </table>
                             </h4>
-                            <a class="home_link" href="select_language">
+                            <a class="home_link" href="member-select-language">
                                 <i class="icon-home"></i>
                             </a>
                         </div>
@@ -149,7 +149,7 @@ $counter = 0;
                     }
                 });
                  if (topics.length > 0) {
-                   window.location = 'quiz_page?topics=' + topics.join(',');
+                   window.location = 'member-practice-test?topics=' + topics.join(',');
                 } else {
                     alert('Please select atleast one topic');
                 }                

@@ -13,7 +13,7 @@ $languages = $obj->selectAll('*', 'language', 'status = 1');
                 <div id="mySignin" tabindex="-1" aria-labelledby="mySigninModalLabel" aria-hidden="true">
                     <div class="modal styled">
                         <div class="modal-header login-section">
-                            <a href="sample-intro"><i class="font-icon-arrow-simple-left"></i></a>
+                            <a href="free-sample-introduction"><i class="font-icon-arrow-simple-left"></i></a>
                             <h4 id="mySigninModalLabel" class="text-center" style='font-weight: 600'>Select Your Choice</h4>
                             <!--                            <a class="home_link" href="index">
                                                             <i class="icon-home"></i>
@@ -34,20 +34,20 @@ $languages = $obj->selectAll('*', 'language', 'status = 1');
                                         <?php if ($val['name'] == 'Tamil') { ?>
                                             <li>
                                                 <i class="icon-double-angle-right"></i>
-                                                <a href="qorder-years-freesample?lan=<?php echo $val['name']; ?>"><i class="icon-calendar"></i>ஆண்டு வரிசை</a>                             
+                                                <a href="free-select-year?lan=<?php echo $val['name']; ?>"><i class="icon-calendar"></i>ஆண்டு வரிசை</a>                             
                                             </li> 
                                             <li>
                                                 <i class="icon-double-angle-right"></i>
-                                                <a href="subject_freesample?lan=<?php echo $val['name']; ?>"><i class="icon-book"></i>பாடத்திட்ட வரிசை</a>
+                                                <a href="free-select-subject?lan=<?php echo $val['name']; ?>"><i class="icon-book"></i>பாடத்திட்ட வரிசை</a>
                                             </li>
                                         <?php } else { ?>
                                             <li>
                                                 <i class="icon-double-angle-right"></i>
-                                                <a href="qorder-years-freesample?lan=<?php echo $val['name']; ?>"><i class="icon-calendar"></i> Year Wise</a>                             
+                                                <a href="free-select-year?lan=<?php echo $val['name']; ?>"><i class="icon-calendar"></i> Year Wise</a>                             
                                             </li> 
                                             <li>
                                                 <i class="icon-double-angle-right"></i>
-                                                <a href="subject_freesample?lan=<?php echo $val['name']; ?>"><i class="icon-book"></i> Subject Wise</a>
+                                                <a href="free-select-subject?lan=<?php echo $val['name']; ?>"><i class="icon-book"></i> Subject Wise</a>
                                             </li>
                                         <?php } ?>
                                     </ul>
