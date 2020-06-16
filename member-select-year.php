@@ -94,7 +94,7 @@ if (count($student_log_order_year) > 0) {
                                 <ul class="list-none">
                                     <?php foreach ($years as $row) { ?>
                                         <li>
-                                            <i class="icon-double-angle-right"></i> <a href="quiz_page?year=<?php echo $row['year']; ?>"><?php echo $row['year']; ?> (<?php echo $row['ques_cnt']; ?> Questions)</a>
+                                            <i class="icon-double-angle-right"></i> <a href="member-practice-test?year=<?php echo $row['year']; ?>"><?php echo $row['year']; ?> (<?php echo $row['ques_cnt']; ?> Questions)</a>
                                         </li>
     <?php
     /*

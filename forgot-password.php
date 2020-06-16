@@ -10,17 +10,19 @@ $languages = $obj->selectAll('*', 'language', 'status = 1');
         <?php include 'menu.php'; ?>
         <div class="member-full-version-secttion">
             <div class="container">
-                <div class="text-center">
-                    <h3>Forgot Password </h3>
+                <div class="forgot-section">
+                    <div class="text-center">
+                        <p>Forgot Your Password </p>
+                    </div>
+                    <form onsubmit="return SendMail();" class="reset-form">
+                        <div class="form-group">
+                            <input type = 'email' id = 'email' placeholder = 'Enter Your Register Email Id' required>
+                        </div>
+                        <div class="form-group">
+                            <button type = 'submit' class = 'btn btn-custom'>Submit</button>
+                        </div>
+                    </form>
                 </div>
-                <form onsubmit="return SendMail();" class="reset-form">
-                    <div class="form-group">
-                        <input type = 'email' id = 'email' placeholder = 'Enter Your Register Email Id' required>
-                    </div>
-                    <div class="form-group">
-                        <button type = 'submit' class = 'btn btn-custom'>Submit</button>
-                    </div>
-                </form>
             </div>
         </div>
         <?php include 'footer.php'; ?>
