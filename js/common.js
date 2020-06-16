@@ -39,49 +39,59 @@ function attachFile(id) {
     }
 }
 
-function registerStudent() {
-    $('.loader').addClass('is-active');
-    $.ajax({
-        type: "POST",
-        url: 'api/v1/insert_student',
-        data: {student_name: $('#student_name').val(),  password: $('#password').val(), confirm_password: $('#confirm_password').val(), mobile: $('#mobile').val(), email: $('#email').val()},
-        success: function (data) {
-            $('.loader').removeClass('is-active');
-            if (data.result.error === false) {
-                //window.location = 'payment-page';
-				window.location = 'payment/pay?stud='+data.result.record;
-//                $('#user_name').val('');
-//                $('#student_name').val('');
-//                $('#graduation').val('');
-//                $('#gender').val('');
-//                $("#profile_picture").val('');
-//                $('#mobile').val('');
-//                $('#street').val('');
-//                $('#city').val('');
-//                $('#pin').val('');
-//                $('#district').val('');
-//                $('#nearcity').val('');
-//                $('#email').val('');
-//                $('#password').val('');
-//                $('#confirm_password').val('');
-//                $('#group_one').val('');
-//                $('#group_ywo').val('');
-                /*
-                swal("Thanks for Registration!", "Your Account Has been Created... Please wait, This page automatically go to the login page.", "success");
-                setTimeout(function () {
-                    window.location = 'login-page';
-                }, 3000);
-                 */
-            } else {
-                swal("Oops!", data.result.message, "info");
+function registerStudent(e) {
+    var captchResponse = $('#g-recaptcha-response').val();
+    if(captchResponse.length == 0 )
+    {
+            alert('CAPTCHA Required!');		
+            e.stopImmediatePropagation();
+            return false;
+    }
+    else
+    {
+        $('.loader').addClass('is-active');
+        $.ajax({
+            type: "POST",
+            url: 'api/v1/insert_student',
+            data: {student_name: $('#student_name').val(),  password: $('#password').val(), confirm_password: $('#confirm_password').val(), mobile: $('#mobile').val(), email: $('#email').val(),practice_medium: $('#practice_medium').val()},
+            success: function (data) {
+                $('.loader').removeClass('is-active');
+                if (data.result.error === false) {
+                    //window.location = 'payment-page';
+                                    window.location = 'payment/pay?stud='+data.result.record;
+    //                $('#user_name').val('');
+    //                $('#student_name').val('');
+    //                $('#graduation').val('');
+    //                $('#gender').val('');
+    //                $("#profile_picture").val('');
+    //                $('#mobile').val('');
+    //                $('#street').val('');
+    //                $('#city').val('');
+    //                $('#pin').val('');
+    //                $('#district').val('');
+    //                $('#nearcity').val('');
+    //                $('#email').val('');
+    //                $('#password').val('');
+    //                $('#confirm_password').val('');
+    //                $('#group_one').val('');
+    //                $('#group_ywo').val('');
+                    /*
+                    swal("Thanks for Registration!", "Your Account Has been Created... Please wait, This page automatically go to the login page.", "success");
+                    setTimeout(function () {
+                        window.location = 'login-page';
+                    }, 3000);
+                     */
+                } else {
+                    swal("Oops!", data.result.message, "info");
+                }
+            },
+            error: function (err) {
+                $('.loader').removeClass('is-active');
+                swal("Oops!", err.statusText, "error");
             }
-        },
-        error: function (err) {
-            $('.loader').removeClass('is-active');
-            swal("Oops!", err.statusText, "error");
-        }
-    });
-    return false;
+        });
+        return false;
+    }    
 }
 
 function loginStudent() {
@@ -109,33 +119,44 @@ function loginStudent() {
     return false;
 }
 
-function samplehomelogin() {
-    $('.loader').addClass('is-active');
-    $.ajax({
-        type: "POST",
-        url: 'api/v1/samplelogin',
-        data: {name: $('#name').val(), phone: $('#phone').val(), email: $('#email').val()},
-        success: function (data) {
-            $('.loader').removeClass('is-active');
-            if (data.result.error === false) {
-                window.location = 'free-select-language';
-                $('#name').val('');
-                $('#phone').val('');
-                $('#email').val('');
-//                swal("Thanks for Registration!", "Your Account Has been Created... Please wait, This page automatically go to the login page.", "success");
-                setTimeout(function () {
-                    window.location = 'sample-intro';
-                }, 3000);
-            } else {
-                swal("Oops!", data.result.message, "info");
+function samplehomelogin(e) {
+     $('.loader').addClass('is-active');
+	var captchResponse = $('#g-recaptcha-response').val();
+	if(captchResponse.length == 0 )
+	{
+		alert('CAPTCHA Required!');		
+		e.stopImmediatePropagation();
+		return false;
+	}
+    else
+    {
+        $('.loader').addClass('is-active');
+        $.ajax({
+            type: "POST",
+            url: 'api/v1/samplelogin',
+            data: {name: $('#name').val(), phone: $('#phone').val(), email: $('#email').val()},
+            success: function (data) {
+                $('.loader').removeClass('is-active');
+                if (data.result.error === false) {
+                    window.location = 'free-select-language';
+                    $('#name').val('');
+                    $('#phone').val('');
+                    $('#email').val('');
+    //                swal("Thanks for Registration!", "Your Account Has been Created... Please wait, This page automatically go to the login page.", "success");
+                    setTimeout(function () {
+                        window.location = 'sample-intro';
+                    }, 3000);
+                } else {
+                    swal("Oops!", data.result.message, "info");
+                }
+            },
+            error: function (err) {
+                $('.loader').removeClass('is-active');
+                swal("Oops!", err.statusText, "error");
             }
-        },
-        error: function (err) {
-            $('.loader').removeClass('is-active');
-            swal("Oops!", err.statusText, "error");
-        }
-    });
-    return false;
+        });
+        return false;
+    } 
 }
 
 function samplelogin() {
@@ -247,34 +268,45 @@ function changePassword() {
     return false;
 }
 
-function ContactForm() {
+function ContactForm(e) {
     $('.loader').addClass('is-active');
-    $.ajax({
-        type: "POST",
-        url: 'api/v1/insert_contact',
-        data: {name: $('#name').val(), email: $('#email').val(), subject: $('#subject').val(), description: $('#description').val()},
-        success: function (data) {
-            $('.loader').removeClass('is-active');
-            if (data.result.error === false) {
-                $('#name').val('');
-                $('#email').val('');
-                $('#subject').val('');
-                $('#description').val('');
+	var captchResponse = $('#g-recaptcha-response').val();
+	if(captchResponse.length == 0 )
+	{
+		alert('CAPTCHA Required!');		
+		e.stopImmediatePropagation();
+		return false;
+	}
+    else
+    {
+        $('.loader').addClass('is-active');
+        $.ajax({
+            type: "POST",
+            url: 'api/v1/insert_contact',
+            data: {name: $('#name').val(), email: $('#email').val(), subject: $('#subject').val(), description: $('#description').val()},
+            success: function (data) {
+                $('.loader').removeClass('is-active');
+                if (data.result.error === false) {
+                    $('#name').val('');
+                    $('#email').val('');
+                    $('#subject').val('');
+                    $('#description').val('');
 
-                swal("Thanks for Contact!", "Your Message Has been Sended... We will contact you soon...", "success");
-//                setTimeout(function () {
-//                    window.location = 'contact';
-//                }, 3000);
-            } else {
-                swal("Oops!", data.result.message, "info");
+                    swal("Thanks for Contact!", "Your Message Has been Sended... We will contact you soon...", "success");
+    //                setTimeout(function () {
+    //                    window.location = 'contact';
+    //                }, 3000);
+                } else {
+                    swal("Oops!", data.result.message, "info");
+                }
+            },
+            error: function (err) {
+                $('.loader').removeClass('is-active');
+                swal("Oops!", err.statusText, "error");
             }
-        },
-        error: function (err) {
-            $('.loader').removeClass('is-active');
-            swal("Oops!", err.statusText, "error");
-        }
-    });
-    return false;
+        });
+        return false;
+    }   
 }
 
 function updateStudentProfile() {

@@ -22,7 +22,7 @@ if (isset($_SESSION['student_register_id'])) {
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,</p>
                             <div class="sample-intro-login">
                                 <h4>Dear Guest User, please fill the details to access free samples</h4>
-                                <form class="sample-form" name="sample-form" onsubmit="return samplehomelogin();">
+                                <form class="sample-form" name="sample-form" onsubmit="return samplehomelogin(event);">
                                     <div class="form-group">
                                         <input type="text" class="form-control" name="name" id="name" placeholder="Enter Your Name" required>
                                     </div>

@@ -98,7 +98,7 @@ $app->post('/insert_student', function() use ($app) {
         $sel_stud = $com->selectRow('*','student_register','email=\''.$data['email'].'\'');
         if(count($sel_stud)==0) {           
 
-            $record = $com->insertRecord(array('student_name' => $data['student_name'],  'password' => $data['password'], 'confirm_password' => $data['confirm_password'], 'mobile' => $data['mobile'], 'email' => $data['email'],  'created_at'=>date('Y-m-d H:i:S')), 'student_register');
+            $record = $com->insertRecord(array('student_name' => $data['student_name'],  'password' => $data['password'], 'confirm_password' => $data['confirm_password'], 'mobile' => $data['mobile'], 'email' => $data['email'], 'practice_medium'=> $data['practice_medium'],  'created_at'=>date('Y-m-d H:i:S')), 'student_register');
 
             if ($record > 0) {
                 $res['error'] 	= false;
