@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://examhorse.com/</loc>
+  <lastmod>2020-06-17T09:18:14+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://examhorse.com/index</loc>
+  <lastmod>2020-06-17T09:18:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://examhorse.com/about-us</loc>
+  <lastmod>2020-06-17T09:18:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://examhorse.com/contact-us</loc>
+  <lastmod>2020-06-17T09:18:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://examhorse.com/free-practice-test?from-page=quiz</loc>
+  <lastmod>2020-06-17T09:18:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://examhorse.com/member-benefits</loc>
+  <lastmod>2020-06-17T09:18:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://examhorse.com/member-signin</loc>
+  <lastmod>2020-06-17T09:18:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://examhorse.com/free-sample-introduction</loc>
+  <lastmod>2020-06-17T09:18:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://examhorse.com/terms-and-conditions</loc>
+  <lastmod>2020-06-17T09:18:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://examhorse.com/privacy-policy</loc>
+  <lastmod>2020-06-17T09:18:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://examhorse.com/member-signup</loc>
+  <lastmod>2020-06-17T09:18:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://examhorse.com/forgot-password</loc>
+  <lastmod>2020-06-17T09:18:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>

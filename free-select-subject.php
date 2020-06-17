@@ -44,16 +44,20 @@ $language = $obj->selectRow('*', 'language', 'language_id=' . $_SESSION['student
 $counter = 0;
 ?>
 <html lang="en">
-    <?php include 'head.php'; ?>
+    <?php include 'head_landing.php'; ?>
     <body>
         <div id="wrapper">
-            <?php include 'menu.php'; ?>
+            <?php include 'menu_landing.php'; ?>
             <section id="featured-1">
-                <div id="mySignin" tabindex="-1" aria-labelledby="mySigninModalLabel" aria-hidden="true">
-                    <div class="modal styled custom-modal">
-                        <div class="modal-header login-section">
-                            <a href="free-select-language"><i class="font-icon-arrow-simple-left"></i></a>
-                            <h4 id="mySigninModalLabel" class="text-center">
+                <div class="container">
+                    <div class="select-language-section subject-box-section">
+                        <div class="language-header">
+                            <div class="float-left">
+                                <a href="free-sample-introduction">
+                                    <i class="fa fa-angle-left"></i>
+                                </a>
+                            </div>
+                            <h4 class="text-center">
                                 <table class="table-title">
                                     <tr>
                                         <td valign="top">Selected Language</td>
@@ -67,54 +71,44 @@ $counter = 0;
                                     </tr>
                                 </table>
                             </h4>
-                            <a class="home_link" href="free-select-language">
-                                <i class="icon-home"></i>
-                            </a>
+                            <div class="float-right">
+                                <a class="home_link" href="free-select-language">
+                                    <i class="fa fa-home"></i>
+                                </a>
+                            </div>
                         </div>
-                        <div class="modal-body">
-                            <div class="language_section">
-                                <h6 class="sub-title" style="font-size: 20px;margin-bottom: 20px;"><i class="icon-book"></i> Select Subject</h6>
-                                <?php ?>
-                                <!--                                <ul class="subject-section-order">-->
-                                <div class="row">
-                                    <?php foreach ($subjects as $key => $row) { ?>                                     
-                                        <div class="span3 subject-section" onclick="goToTopics(<?php echo $row['subject_id']; ?>);">
+                        <div class="subject-content">
+                            <h6 class="sub-title" style="font-size: 20px;margin-bottom: 20px;"><i class="fa fa-book"></i> Select Subject</h6>
+                            <div class="row">
+                                <?php foreach ($subjects as $key => $row) { ?>                                     
+                                    <div class="col-md-6">
+                                        <div class="subject-section" onclick="goToTopics(<?php echo $row['subject_id']; ?>);">
                                             <div class="price">Exam Horse</div>
                                             <div class="subject-1">
                                                 <div class="subject-1-img" style="background: url(<?php echo BASE_URL . $row['image_path']; ?>)no-repeat;"></div>
                                             </div>
                                             <div class="subject-1-text">
                                                 <h2><?php echo $row['name']; ?> <br><span class="cls-orange">(<?php echo $row['ques_cnt']; ?> Questions)</span></h2>
-                                                
+
                                                 <p><?php echo $row['description']; ?></p>
                                                 <button class="btn btn-theme margintop10" onclick="goToTopics(<?php echo $row['subject_id']; ?>);">SEE MORE...</button>
                                             </div>
                                         </div>
-                                        <!--                                    <li>
-                                                                                <i class="icon-double-angle-right"></i>
-                                                                                <a href="#" onclick="goToTopics(<?php echo $row['subject_id']; ?>);"><?php echo $row['name']; ?></span>(<?php echo $row['ques_cnt']; ?> Questions)</a>
-                                                                            </li>         -->
+                                    </div>
+                                    <!--                                    <li>
+                                                                            <i class="icon-double-angle-right"></i>
+                                                                            <a href="#" onclick="goToTopics(<?php echo $row['subject_id']; ?>);"><?php echo $row['name']; ?></span>(<?php echo $row['ques_cnt']; ?> Questions)</a>
+                                                                        </li>         -->
 
-                                    <?php } ?>
-                                </div>
-                                <!--                                </ul>-->
-
-
+                                <?php } ?>
                             </div>
-                            <?php
-                            /*
-                              <div class="text-right">
-                              <a href="#" onclick="goToYears();" class="btn btn-danger">Next</a>
-                              </div>
-                             * */
-                            ?>
                         </div>
                     </div>
                 </div>
             </section>
         </div>
-        <?php include 'footer.php'; ?>
-        <?php include 'script.php'; ?>
+        <?php include 'footer_landing.php'; ?>
+        <?php include 'landing_script.php'; ?>
         <script type="text/javascript">
             var counter = <?php echo $counter; ?>;
             /*

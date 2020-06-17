@@ -5,9 +5,9 @@ $obj = new Common();
 $languages = $obj->selectAll('*', 'language', 'status = 1');
 ?>
 <html lang="en">
-    <?php include 'head.php'; ?>
+    <?php include 'head_landing.php'; ?>
     <body>
-        <?php include 'menu.php'; ?>
+        <?php include 'menu_landing.php'; ?>
         <div class="member-full-version-secttion">
             <div class="container">
                 <div class="forgot-section">
@@ -25,7 +25,7 @@ $languages = $obj->selectAll('*', 'language', 'status = 1');
                 </div>
             </div>
         </div>
-        <?php include 'footer.php'; ?>
-        <?php include 'script.php'; ?>
+        <?php include 'footer_landing.php'; ?>
+        <?php include 'landing_script.php'; ?>
     </body>
 </html>
