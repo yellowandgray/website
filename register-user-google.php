@@ -68,7 +68,7 @@ if(isset($_GET["code"]))
     
     if($error_msg!='') {
         $_SESSION['google_login_error'] =$error_msg;
-        header("Location:member-singup");
+        header("Location:member-signup");
     }
     
  }
