@@ -14,7 +14,7 @@ if (isset($_SESSION['student_register_id'])) {
         <div class="sample-learning-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-6 order-1">
                         <div class="p-t-b-30px">
                             <div class="intro-title">
                                 <h2>Get Started to a Great Career</h2>
@@ -50,14 +50,17 @@ if (isset($_SESSION['student_register_id'])) {
                                                             <div><div class="slide-content"><img src="examhorse-landing/img/project-slide/score.png" alt="" /></div></div>
                                                         </div>
                                                     </div>-->
-                            <div class="pay-register" style="text-align: center;border: 1px solid #f53c00;padding: 20px 10px;border-radius: 5px;">
-                                <div class="intro-title">
-                                    <img src="img/pic-intr-offer.jpg" alt="" />
-                                </div>
-                                <div class="price-detail">
-                                    <h4><strike>₹999 </strike> &nbsp;&nbsp; <span> ₹499</span>(Inclusive of 18% GST)</h4>
-                                </div>
-                                <a href="member-signup" class="btn btn-green" style="font-size: 20px;padding: 10px 40px;">Pay Now</a>
+                            <!--                            <div class="pay-register" style="text-align: center;border: 1px solid #f53c00;padding: 20px 10px;border-radius: 5px;">
+                                                            <div class="intro-title">
+                                                                <img src="img/pic-intr-offer.jpg" alt="" />
+                                                            </div>
+                                                            <div class="price-detail">
+                                                                <h4><strike>₹999 </strike> &nbsp;&nbsp; <span> ₹499</span>(Inclusive of 18% GST)</h4>
+                                                            </div>
+                                                            <a href="member-signup" class="btn btn-green" style="font-size: 20px;padding: 10px 40px;">Pay Now</a>
+                                                        </div>-->
+                            <div class="pay-register" style="text-align: center;" onclick="window.location = 'member-signup'">
+                                <img src="img/pic-price-offer-pay-now.jpg" alt="" />
                             </div>
                         </div>
                     </div>
@@ -104,7 +107,7 @@ if (isset($_SESSION['student_register_id'])) {
         };
     </script>
 
-    
+
     <script type="text/javascript">
         $().ready(function () {
             $('.slick-carousel').slick({

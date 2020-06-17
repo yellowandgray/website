@@ -454,7 +454,7 @@ footer a:hover {
         height: auto !important;
     }
     .carousel-item .banner-learning a {
-        font-size: 20px !important;
+        font-size: 16px !important;
     }
     .testim {
         position: relative !important;
@@ -524,6 +524,16 @@ footer a:hover {
     }
     .language-header .float-right i {
         left: -30px !Important;
+    }
+    .order-1 {
+        order: 1 !Important;
+    }
+    .carousel-item .toway-text {
+        top: 60px !Important;
+        right: 15px !Important;
+    }
+    .carousel-item .toway-text a {
+        font-size: 16px!Important;
     }
 }
 
@@ -646,6 +656,19 @@ ul.breadcrumb li a:hover {
     cursor: pointer;
 }
 
+.carousel-item .toway-text {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    background: #f14f1b;
+    border: 1px solid #f14f1b;
+    padding: 10px 22px;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
 .carousel-control-next, .carousel-control-prev {
     top: 20% !important;
     margin-top: 70px;
@@ -657,11 +680,28 @@ ul.breadcrumb li a:hover {
     font-weight: 700;
 }
 
+.carousel-item .toway-text a {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 700;
+}
+
 .carousel-item .banner-learning:hover { 
     background: #fff;
     border: 1px solid #f14f1b;
 }
+
 .carousel-item .banner-learning:hover a {
+    color: #f14f1b;
+    text-decoration: none;
+}
+
+.carousel-item .toway-text:hover { 
+    background: #fff;
+    border: 1px solid #f14f1b;
+}
+
+.carousel-item .toway-text:hover a {
     color: #f14f1b;
     text-decoration: none;
 }
@@ -2220,4 +2260,14 @@ ul.breadcrumb li a:hover {
     border: 1px solid #F03C02;
     background: #F03C02;
     color: #fff;
+}
+
+.pay-register:hover {
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.pay-register:hover {
+    box-shadow: 0 0 3px 9px #e3e3e3;
+    border-radius: 5px;
 }

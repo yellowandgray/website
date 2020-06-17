@@ -93,14 +93,25 @@ $obj = new Common();
 
                                         <div class="col-md-6">
                                             <div class="form-group input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text"> <i class="fa fa-book"></i> </span>
+                                                <label>Practice Medium: &nbsp;&nbsp;</label>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="language" id="tamil" value="option1">
+                                                    <label class="form-check-label" for="tamil">Tamil</label>
                                                 </div>
-                                                <select class="custom-select" id="practice_medium" name="practice_medium">
-                                                    <option value="0">Practice Medium</option>							  <option value="1">Tamil</option>
-                                                    <option value="2">English</option>
-                                                </select>                                                
-                                            </div> <!-- form-group// -->
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="language" id="english" value="option2">
+                                                    <label class="form-check-label" for="english">English</label>
+                                                </div>
+                                            </div>
+                                            <!--                                            <div class="form-group input-group">
+                                                                                            <div class="input-group-prepend">
+                                                                                                <span class="input-group-text"> <i class="fa fa-book"></i> </span>
+                                                                                            </div>
+                                                                                            <select class="custom-select" id="practice_medium" name="practice_medium">
+                                                                                                <option value="0">Practice Medium</option>							  <option value="1">Tamil</option>
+                                                                                                <option value="2">English</option>
+                                                                                            </select>                                                
+                                                                                        </div> -->
                                         </div>
                                     </div>  
                                     <div class="g-recaptcha" <div class="g-recaptcha" data-sitekey="6Lf6LaMZAAAAAHnZx0J7Pab-7KRSZy7fzv7f76_W" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>

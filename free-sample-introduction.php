@@ -33,7 +33,18 @@ if (isset($_SESSION['student_register_id'])) {
                                         <input type="phone" name="mobile" pattern="[0-9]{10}" maxlength="10" class="form-control" id="phone" placeholder="Enter Your Phone" required>
                                     </div>
                                     <div class="form-group">
-                                    <div class="g-recaptcha" data-sitekey="6Lf6LaMZAAAAAHnZx0J7Pab-7KRSZy7fzv7f76_W" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
+                                        <label>Practice Medium: &nbsp; &nbsp;</label>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="language" id="tamil" value="option1">
+                                            <label class="form-check-label" for="tamil">Tamil</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="language" id="english" value="option2">
+                                            <label class="form-check-label" for="english">English</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="g-recaptcha" data-sitekey="6Lf6LaMZAAAAAHnZx0J7Pab-7KRSZy7fzv7f76_W" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
                                     </div>
                                     <button type="submit" class="btn btn-custom">Try Free Sample</button>
                                 </form>
