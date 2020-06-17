@@ -74,7 +74,7 @@ if(isset($_GET["code"]))
     
     
     if($error_msg!='') {
-         header("Location:login-page?login_err=".$error_msg);
+         header("Location:member-signin?login_err=".$error_msg);
     }
     
  }

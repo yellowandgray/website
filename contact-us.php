@@ -22,7 +22,7 @@ $obj = new Common();
                                         <input type="text" name="name" class="form-control" id="name" class="" Placeholder="Name" required />
                                     </div>
                                     <div class="input-group">
-                                        <input type="email" class="form-control" name="email" id="email" placeholder="Enter Your Email" onblur="validateEmail(this);">
+                                        <input type="email" class="form-control" name="email" id="email" placeholder="Enter Your Email">
                                     </div>
                                     <div class="input-group">
                                         <input type="text" name="subject" class="form-control" id="subject" class="" Placeholder="Subject" required />
