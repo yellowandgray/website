@@ -54,8 +54,8 @@ if(isset($_GET["code"]))
        
         
         if(count($sel_stud)==0) {            
-            $obj->insertRecord(array('student_name'=>$name,'email'=>$email,'gender'=>$gender,'created_at'=>date('Y-m-d H:i:S')),'student_register'); 
-            header('Location:payment-page');
+            $record = $obj->insertRecord(array('student_name'=>$name,'email'=>$email,'gender'=>$gender,'created_at'=>date('Y-m-d H:i:S')),'student_register'); 
+            header('Location:payment/pay?stud='.$record);
             exit;
         }
         else {
@@ -68,7 +68,7 @@ if(isset($_GET["code"]))
     
     if($error_msg!='') {
         $_SESSION['google_login_error'] =$error_msg;
-        header("Location:register_user");
+        header("Location:member-signup");
     }
     
  }

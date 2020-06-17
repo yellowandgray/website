@@ -18,6 +18,21 @@ $obj = new Common();
                                 
                                 <div class="row">
                                     <h1>Thanks for your Registration</h1>
+                                    <?php if(isset($_SESSION['payment_info'])) {
+                                            $payment_status = $_SESSION['payment_info']['payment_status'];
+                                            if($payment_status=='success') {                                                
+                                              $payment_id   = $_SESSION['payment_info']['payment_id'];
+                                     ?>
+                                        <h1>Payment Status  : Success</h1>
+                                        <h1>Payment Reference: <?php echo $payment_id; ?></h1>
+                                    <?php }                                   
+                                     if($payment_status=='failed') {
+                                    ?>
+                                       <h1>Payment Status  : Failed</h1> 
+                                     <?php } 
+                                     
+                                       }
+                                     ?>   
                                 </div>
                                 <div class="row">
                                     
@@ -28,7 +43,7 @@ $obj = new Common();
                                    
                                     <div class="form-group">
                                         <!--button  class="btn btn-primary btn-block" onClick="window.location.href='login-page';"> Go to Login </button-->
-                                        <a href="login-page" class="btn btn-primary btn-block">Go to Login</a>
+                                        <a href="member-signin" class="btn btn-primary btn-block">Go to Login</a>
                                     </div> <!-- form-group// -->      
                                     
                                 </form>

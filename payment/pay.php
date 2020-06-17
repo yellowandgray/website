@@ -13,6 +13,8 @@ if(isset($_GET['stud']) && ($_GET['stud']!='')) {
 	
 $obj = new Common();	
 $stud_id = $_GET['stud'];
+$_SESSION['register_pay'] = array('student_id'=>$stud_id,'amount'=>499);
+
 
  $stud_details =  $obj->selectRow('*','student_register','student_register_id='.$stud_id);
 	if(count($stud_details)>0) {
