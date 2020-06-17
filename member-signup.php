@@ -54,7 +54,7 @@ $obj = new Common();
                                                 <input name="" class="form-control" id="student_name" placeholder="Full Name" type="text" required>
                                             </div> <!-- form-group// -->
                                         </div>
-                                       <div class="col-md-6">
+                                        <div class="col-md-6">
                                             <div class="form-group input-group">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
@@ -75,7 +75,7 @@ $obj = new Common();
                                         <div class="col-md-6">
                                             <div class="form-group input-group">
                                                 <div class="input-group-prepend">
-                                                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                                                    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
                                                 </div>
                                                 <input class="form-control" id="confirm_password" placeholder="Confirm Password" type="password" required>
                                             </div> <!-- form-group// -->
@@ -90,24 +90,24 @@ $obj = new Common();
                                                 <input name="" maxlength="10" id="mobile" class="form-control" placeholder="Phone number" type="text" required>
                                             </div> <!-- form-group// -->  
                                         </div>   
-                                        
+
                                         <div class="col-md-6">
                                             <div class="form-group input-group">
                                                 <div class="input-group-prepend">
-                                                    <span class="input-group-text"> Practice Medium</span>
+                                                    <span class="input-group-text"> <i class="fa fa-book"></i> </span>
                                                 </div>
-												<select id="practice_medium" name="practice_medium">
-													<option value="1">Tamil</option>
-													<option value="2">English</option>
-												</select>                                                
+                                                <select class="custom-select" id="practice_medium" name="practice_medium">
+                                                    <option value="0">Practice Medium</option>							  <option value="1">Tamil</option>
+                                                    <option value="2">English</option>
+                                                </select>                                                
                                             </div> <!-- form-group// -->
                                         </div>
                                     </div>  
                                     <div class="g-recaptcha" <div class="g-recaptcha" data-sitekey="6Lf6LaMZAAAAAHnZx0J7Pab-7KRSZy7fzv7f76_W" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
-                                    <div class="form-group">
-                                        <button type="submit" class="btn btn-primary btn-block"> Create Account  </button>
-                                    </div> <!-- form-group// -->      
-                                    <p class="text-center">Have an account? <a href="member-signin">Log In</a> </p>
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-primary btn-block"> Create Account  </button>
+                                        </div> <!-- form-group// -->      
+                                        <p class="text-center">Have an account? <a href="member-signin">Log In</a> </p>
                                 </form>
                             </article>
                         </div>
@@ -119,10 +119,11 @@ $obj = new Common();
         <?php include 'landing_script.php'; ?>
     </body>
     <script>
-        <?php if(isset($_SESSION['google_login_error'])) {  ?>
-        swal('Error','<?php echo $_SESSION['google_login_error']; ?>', 'error');
-        <?php
-        unset($_SESSION['google_login_error']);        
-        } ?>
+<?php if (isset($_SESSION['google_login_error'])) { ?>
+            swal('Error', '<?php echo $_SESSION['google_login_error']; ?>', 'error');
+    <?php
+    unset($_SESSION['google_login_error']);
+}
+?>
     </script>    
 </html>
