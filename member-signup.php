@@ -96,7 +96,7 @@ $obj = new Common();
                                                 <label>Practice Medium: &nbsp;&nbsp;</label>
                                                 <div class="form-check form-check-inline">
                                                     <input class="form-check-input" type="radio" name="practice_medium" id="practice_medium" value="1"   required>
-                                                    <label class="form-check-label" for="tamil">Tamil</label>
+                                                    <label class="form-check-label" for="tamil">தமிழ் </label>
                                                 </div>
                                                 <div class="form-check form-check-inline">
                                                     <input class="form-check-input" type="radio" name="practice_medium" id="practice_medium" value="2">

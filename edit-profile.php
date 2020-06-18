@@ -45,7 +45,7 @@ if (isset($_SESSION['student_register_id'])) {
                                             <span class="input-group-text"> <i class="fa fa-venus"></i> </span>
                                         </div>
                                         <select class="custom-select" id="gender" name="gender" required>
-                                            <option value="0">Gender</option>
+                                            <option value="">Gender</option>
                                             <?php
                                             foreach (array('male' => 'Male', 'female' => 'Female') as $key => $val) {
                                                 $selected = '';
@@ -66,7 +66,7 @@ if (isset($_SESSION['student_register_id'])) {
                                                 <label>Practice Medium: &nbsp;&nbsp;</label>
                                                 <div class="form-check form-check-inline">
                                                     <input class="form-check-input" type="radio" name="practice_medium" id="practice_medium" value="1"  <?php  if($login_student['practice_medium']==1) { echo 'checked=checked'; } ?> required>
-                                                    <label class="form-check-label" for="tamil">Tamil</label>
+                                                    <label class="form-check-label" for="tamil">தமிழ் </label>
                                                 </div>
                                                 <div class="form-check form-check-inline">
                                                     <input class="form-check-input" type="radio" name="practice_medium" id="practice_medium" value="2" <?php  if($login_student['practice_medium']==2) { echo 'checked=checked'; } ?>>

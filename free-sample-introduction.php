@@ -34,14 +34,14 @@ if (isset($_SESSION['student_register_id'])) {
                                     </div>
                                     <div class="form-group">
                                         <label>Practice Medium: &nbsp;&nbsp;</label>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="practice_medium" id="practice_medium" value="1"   required>
-                                            <label class="form-check-label" for="tamil">Tamil</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="practice_medium" id="practice_medium" value="2">
-                                            <label class="form-check-label" for="english">English</label>
-                                        </div>
+                                                 <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="practice_medium" id="practice_medium" value="1"   required>
+                                                    <label class="form-check-label" for="tamil">தமிழ் </label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="practice_medium" id="practice_medium" value="2">
+                                                    <label class="form-check-label" for="english">English</label>
+                                                </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="g-recaptcha" data-sitekey="6Lf6LaMZAAAAAHnZx0J7Pab-7KRSZy7fzv7f76_W" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
