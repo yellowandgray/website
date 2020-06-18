@@ -24,8 +24,8 @@ if (isset($_SESSION['student_register_id'])) {
                     </div>
                     <div class="row align-items-center flex-row-reverse" style="margin-bottom: 0">
                         <div class="span6">
-                            <div class="about-avatar">
-                                <?php if (isset($login_student['profile_image']) && $login_student['profile_image'] == '') { ?>
+                            <div class="about-avatar" id="preview_container">
+                                <?php if (isset($login_student['profile_image']) && $login_student['profile_image'] == '' && $login_student['gender']!='') { ?>
                                     <img src="<?php echo BASE_URL . $login_student['gender']; ?>.jpg" alt="" />
                                 <?php } else { ?>
                                     <img src="<?php echo BASE_URL . $login_student['profile_image']; ?>" alt="" />
@@ -34,21 +34,11 @@ if (isset($_SESSION['student_register_id'])) {
                                     <!--place upload image/icon first !-->
                                     <img class="upload-img" src="img/upload.png" />
                                     <!--place input file last !-->
-                                    <input type="file" name="somename" />
+                                    <input type="file" id="profile_picture" name="profile_picture" onchange="attachAccountFile('profile_picture',<?php echo $_SESSION["student_register_id"]; ?>);" />
                                 </div>
                             </div>
                             <br/>
-                            <table class="member-about-filed" style="margin: 0 auto 20px;">
-                                <tr>
-                                    <th>User Name</th>
-                                    <th>:</th>
-                                    <?php if ($login_student['user_name'] != '') { ?>
-                                        <td><?php echo $login_student['user_name']; ?></td>
-                                    <?php } else { ?>
-                                        <td></td>
-                                    <?php } ?>
-                                </tr>
-                            </table>
+                          
                             <center>
                                 <a href="change-password" class="edit-btn">Change Password</a>
                             </center>
@@ -78,8 +68,13 @@ if (isset($_SESSION['student_register_id'])) {
                                                 <tr>
                                                     <th>Gender</th>
                                                     <th>:</th>
-                                                    <?php if ($login_student['gender'] != '') { ?>
-                                                        <td><?php echo $login_student['gender']; ?></td>
+                 
+                                                        <?php if ($login_student['gender'] != '') { ?>
+                                                        <td><?php  foreach (array('male' => 'Male', 'female' => 'Female') as $key => $val) {                                                
+                                                if ($key == $login_student['gender']) {
+                                                    echo $val;
+                                                        } }
+                                                ?></td>
                                                     <?php } else { ?>
                                                         <td></td>
                                                     <?php } ?>
@@ -97,6 +92,23 @@ if (isset($_SESSION['student_register_id'])) {
                                                         <td></td>
                                                     <?php } ?>
                                                 </tr>
+                                                <tr>
+                                                    <th>Practice Medium</th>
+                                                    <th>:</th>
+                                                    <?php if ($login_student['practice_medium'] != '') { ?>
+                                                        <td><?php  foreach (array('1' => 'Tamil', '2' => 'English') as $key => $val) {                                                
+                                                if ($key == $login_student['practice_medium']) {
+                                                    echo $val;
+                                                        } }
+                                                ?></td>
+                                                    <?php } else { ?>
+                                                        <td></td>
+                                                    <?php } ?>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div class="span3">
+                                            <table class="member-about-filed">
                                                 <tr>
                                                     <th>Graduation</th>
                                                     <th>:</th>
@@ -173,7 +185,11 @@ if (isset($_SESSION['student_register_id'])) {
                                                     <th>Exam Type</th>
                                                     <th>:</th>
                                                     <?php if ($login_student['selectgroup'] != '') { ?>
-                                                        <td><?php echo $login_student['selectgroup']; ?></td>
+                                                        <td><?php  foreach (array('group1' => 'Group 1', 'group22a' => 'Group 2/2A') as $key => $val) {                                                
+                                                if ($key == $login_student['selectgroup']) {
+                                                    echo $val;
+                                                        } }
+                                                ?></td>
                                                     <?php } else { ?>
                                                         <td></td>
                                                     <?php } ?>

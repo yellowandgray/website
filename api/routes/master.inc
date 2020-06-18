@@ -6,7 +6,9 @@ $app->post('/update_record/:table/:where', function($table, $where) use ($app) {
     $res = array('error' => true, 'message' => 'Unable to update');
     $data = $app->request->post();
     $com = new Common();
+  
     $record = $com->updateRecordWithWhere($data, $table, $where);
+
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record updated successfully';
@@ -609,9 +611,9 @@ $app->post('/reset_password', function() use ($app) {
     $data = $app->request->post();
     $obj = new Common();
     $res = array('error' => true, 'message' => 'Unable to update your password');
-    $user = $obj->selectRow('*', 'student_register', 'user_name=\'' . $data['user_name'] . '\'');
+    $user = $obj->selectRow('*', 'student_register', 'student_register_id=\'' . $data['student'] . '\'');
     if (count($user) > 0) {
-        $update = $obj->updateRecordWithWhere(array('password' => $data['password'], 'confirm_password' => $data['confirm_password']), 'student_register', 'user_name=\'' . $data['user_name'] . '\'');
+        $update = $obj->updateRecordWithWhere(array('password' => $data['password'], 'confirm_password' => $data['confirm_password']), 'student_register', 'student_register_id=\'' . $data['student'] . '\'');
         if ($update > 0) {
             $res['error'] = false;
             $res['message'] = 'Password updated successfully';
@@ -1570,7 +1572,7 @@ $app->post('/samplelogin', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('name' => $data['name'], 'phone' => $data['phone'], 'email' => $data['email'],'created_at'=>date('Y-m-d H:i:s')), 'free_user_login');
+    $record = $com->insertRecord(array('name' => $data['name'], 'phone' => $data['phone'], 'email' => $data['email'] ,'practice_medium' => $data['practice_medium'],'created_at'=>date('Y-m-d H:i:s')), 'free_user_login');
     if ($record > 0) {
         $_SESSION['free_user_id'] = $record;
         $res['error'] = false;
@@ -1800,5 +1802,63 @@ $app->post('/forgotpassword', function() use ($app) {
     
        
     }
+    echoRespnse(201, $res);
+});
+
+
+$app->post('/upload_stud_picfile', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to upload image');
+    $obj = new Common();
+    $data = '';
+    if (isset($_FILES) && isset($_FILES['file'])) {
+        $data = $obj->saveFile($_FILES['file'], 'uploads');
+        //echo $data;
+    }
+    if ($data != '') {
+        $res['error'] = false;
+        $res['message'] = 'Image uploaded successfully';
+        $res['data'] = $data;
+        
+        $data1 = $app->request->post();
+        $student_id = $data1['stud'];
+         $obj->updateRecordWithWhere(array('profile_image'=>$data), 'student_register','student_register_id='.$student_id);
+        
+        $res['extension'] = $obj->getExtension($data);
+    }
+    echoRespnse(201, $res);
+});
+
+
+$app->post('/insert_student_sess', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to insert');
+    $data = $app->request->post();
+    $com = new Common();
+    if (!isset($data['profile_picture'])) {
+        $data['profile_image'] = '';
+    }
+    
+    if(trim($data['email'])!='') {
+        $sel_stud = $com->selectRow('*','student_register','email=\''.$data['email'].'\'');
+        if(count($sel_stud)==0) {           
+
+            //$record = $com->insertRecord(array('student_name' => $data['student_name'],  'password' => $data['password'], 'confirm_password' => $data['confirm_password'], 'mobile' => $data['mobile'], 'email' => $data['email'], 'practice_medium'=> $data['practice_medium'],  'created_at'=>date('Y-m-d H:i:S')), 'student_register');
+            if(isset($_SESSION['pay_student'])) {
+                unset($_SESSION['pay_student']);
+            }        
+            $_SESSION['pay_student']   = array('student_name' => $data['student_name'],  'password' => $data['password'], 'confirm_password' => $data['confirm_password'], 'mobile' => $data['mobile'], 'email' => $data['email'], 'practice_medium'=> $data['practice_medium']);
+            
+            
+                $res['error'] 	= false;
+				//$res['record'] 	= $record;
+                //$res['message'] = 'Record inserted successfully';
+           
+        }
+        else 
+        {
+            $res['message'] = 'Email Already Exists!';
+        }    
+    }else {
+       $res['message'] = 'Email Required';
+    }   
     echoRespnse(201, $res);
 });

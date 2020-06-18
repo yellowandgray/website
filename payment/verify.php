@@ -2,6 +2,7 @@
 
 require('config.php');
 require_once '../api/include/common.php';
+ini_set('date.timezone', 'Asia/Kolkata');
 session_start();
 
 require('razorpay-php/Razorpay.php');
@@ -42,18 +43,49 @@ if ($success === true)
             /*
         	$html = "<p>Your payment was successful</p>
                 <p>Payment ID: {$_POST['razorpay_payment_id']}</p>";
-             */
-    
+             */    
              
-             $_SESSION['payment_info'] = array('payment_status'=>'success','payment_id'=>$_POST['razorpay_payment_id']);
+             $_SESSION['payment_info'] = array('payment_status'=>'success','payment_id'=>$_POST['razorpay_payment_id']);             
              
-    
-             if(isset($_SESSION['register_pay'])) {
-                 $student_id = $_SESSION['register_pay']['student_id'];
-                 $payment_amt = $_SESSION['register_pay']['amount'];
+             if(isset($_SESSION['pay_student']) && count($_SESSION['pay_student'])>0) {
+                 
+                 $student_name = '';
+                 if(isset($_SESSION['pay_student']['student_name'])) {
+                     $student_name = $_SESSION['pay_student']['student_name'];
+                 }
+                 
+                 $password = '';
+                 if(isset($_SESSION['pay_student']['password'])) {
+                     $password = $_SESSION['pay_student']['password'];
+                 }
+                 
+                 
+                 $confirm_password = '';
+                 if(isset($_SESSION['pay_student']['confirm_password'])) {
+                     $confirm_password = $_SESSION['pay_student']['confirm_password'];
+                 }
+                 
+                 $mobile = '';
+                 if(isset($_SESSION['pay_student']['mobile'])) {
+                     $mobile = $_SESSION['pay_student']['mobile'];
+                 }
+                 
+                 $email = '';
+                 if(isset($_SESSION['pay_student']['email'])) {
+                     $email = $_SESSION['pay_student']['email'];
+                 }
+                 
+                 $practice_medium = '';
+                 if(isset($_SESSION['pay_student']['practice_medium'])) {
+                     $practice_medium = $_SESSION['pay_student']['practice_medium'];
+                 }
+                 
+                 
+                 $student_id = $obj->insertRecord(array('student_name' => $student_name,  'password' => $password, 'confirm_password' => $confirm_password, 'mobile' => $mobile, 'email' => $email, 'practice_medium'=> $practice_medium,  'created_at'=>date('Y-m-d H:i:S')), 'student_register');
+                 $payment_amt = 499;
                  
                  $obj->insertRecord(array('student_id'=>$student_id,'payment_amount'=>$payment_amt,'payment_status'=>1,'payment_succ_ref'=>$_POST['razorpay_payment_id'],'created_at'=>date('Y-m-d H:i:s')),'student_payment');
-                 unset($_SESSION['register_pay']);
+                 unset($_SESSION['pay_student']);
              }
     
              header('Location:../payment-page');

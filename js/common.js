@@ -40,6 +40,7 @@ function attachFile(id) {
 }
 
 function registerStudent(e) {
+ 
     var captchResponse = $('#g-recaptcha-response').val();
     if(captchResponse.length == 0 )
     {
@@ -52,13 +53,13 @@ function registerStudent(e) {
         $('.loader').addClass('is-active');
         $.ajax({
             type: "POST",
-            url: 'api/v1/insert_student',
-            data: {student_name: $('#student_name').val(),  password: $('#password').val(), confirm_password: $('#confirm_password').val(), mobile: $('#mobile').val(), email: $('#email').val(),practice_medium: $('#practice_medium').val()},
+            url: 'api/v1/insert_student_sess',
+            data: {student_name: $('#student_name').val(),  password: $('#password').val(), confirm_password: $('#confirm_password').val(), mobile: $('#mobile').val(), email: $('#email').val(),practice_medium: $('#practice_medium:checked').val()},
             success: function (data) {
                 $('.loader').removeClass('is-active');
                 if (data.result.error === false) {
                     //window.location = 'payment-page';
-                                    window.location = 'payment/pay?stud='+data.result.record;
+                                    window.location = 'payment/pay';
     //                $('#user_name').val('');
     //                $('#student_name').val('');
     //                $('#graduation').val('');
@@ -120,6 +121,7 @@ function loginStudent() {
 }
 
 function samplehomelogin(e) {
+
      $('.loader').addClass('is-active');
 	var captchResponse = $('#g-recaptcha-response').val();
 	if(captchResponse.length == 0 )
@@ -134,7 +136,7 @@ function samplehomelogin(e) {
         $.ajax({
             type: "POST",
             url: 'api/v1/samplelogin',
-            data: {name: $('#name').val(), phone: $('#phone').val(), email: $('#email').val()},
+            data: {name: $('#name').val(), phone: $('#phone').val(), email: $('#email').val(), 'practice_medium':$('#practice_medium:checked').val()},
             success: function (data) {
                 $('.loader').removeClass('is-active');
                 if (data.result.error === false) {
@@ -156,7 +158,7 @@ function samplehomelogin(e) {
             }
         });
         return false;
-    } 
+     } 
 }
 
 function samplelogin() {
@@ -241,30 +243,36 @@ function closeProfilePic() {
     $("#upload_container").removeClass('hidden');
 }
 
-function changePassword() {
+function changePassword(studid) {
     $('.loader').addClass('is-active');
-    $.ajax({
-        type: "POST",
-        url: 'api/v1/reset_password',
-        data: {password: $('#password').val(), confirm_password: $('#confirm_password').val()},
-        success: function (data) {
-            $('.loader').removeClass('is-active');
-            if (data.result.error === false) {
-                swal('Password Changed', 'Your Password has been Changed', 'success');
-                $('#password').val('');
-                $('#confirm_password').val('');
-                setTimeout(function () {
-                    window.location = 'account';
-                }, 2000);
-            } else {
-                swal('Information', data.result.message, 'info');
+    var pwd = $('#password').val();
+    var cnfpwd = $('#confirm_password').val();
+    if(pwd==cnfpwd) {
+        $.ajax({
+            type: "POST",
+            url: 'api/v1/reset_password',
+            data: {password: pwd, confirm_password: cnfpwd,'student':studid},
+            success: function (data) {
+                $('.loader').removeClass('is-active');
+                if (data.result.error === false) {
+                    swal('Password Changed', 'Your Password has been Changed', 'success');
+                    $('#password').val('');
+                    $('#confirm_password').val('');
+                    setTimeout(function () {
+                        window.location = 'member-account';
+                    }, 2000);
+                } else {
+                    swal('Information', data.result.message, 'info');
+                }
+            },
+            error: function (err) {
+                $('.loader').removeClass('is-active');
+                swal('Error', err.statusText, 'error');
             }
-        },
-        error: function (err) {
-            $('.loader').removeClass('is-active');
-            swal('Error', err.statusText, 'error');
-        }
-    });
+        });
+    }else {
+        swal('Error', 'Same Value Required', 'error');
+    }
     return false;
 }
 
@@ -309,28 +317,27 @@ function ContactForm(e) {
     }   
 }
 
-function updateStudentProfile() {
-    console.log('test');
-//    var data = {mobile: $('#mobile').val(), email: $('#email').val(), gender: $('#gender').val(), graduation: $('#graduation').val(), street: $('#street').val(), city: $('#city').val(), district: $('#district').val(), pin: $('#pin').val(), nearcity: $('#nearcity').val(), selectgroup: $('#selectgroup').val()};
-//    $('.loader').addClass('is-active');
-//    $.ajax({
-//        type: "POST",
-//        url: 'api/v1/update_record/student_register/student_register_id',
-//        data: data,
-//        success: function (data) {
-//            $('.loader').removeClass('is-active');
-//            if (data.result.error === false) {
-//                window.location = 'account';
-//            } else {
-//                swal('Information', data.result.message, 'info');
-//            }
-//        },
-//        error: function (err) {
-//            $('.loader').removeClass('is-active');
-//            swal('Error', err.statusText, 'error');
-//        }
-//    });
-//    return false;
+function updateStudentProfile(studid) {
+    var data = {mobile: $('#mobile').val(), email: $('#email').val(), gender: $('#gender').val(), practice_medium:$('#practice_medium:checked').val(), graduation: $('#graduation').val(), street: $('#street').val(), city: $('#city').val(), district: $('#district').val(), pin: $('#pin').val(), nearcity: $('#nearcity').val(), selectgroup: $('#selectgroup').val()};
+    $('.loader').addClass('is-active');
+    $.ajax({
+        type: "POST",
+        url: 'api/v1/update_record/student_register/student_register_id='+studid,
+        data: data,
+        success: function (data) {
+            $('.loader').removeClass('is-active');
+            if (data.result.error === false) {
+                window.location = 'member-account';
+            } else {
+                swal('Information', data.result.message, 'info');
+            }
+        },
+        error: function (err) {
+            $('.loader').removeClass('is-active');
+            swal('Error', err.statusText, 'error');
+        }
+    });
+    return false;
 }
 
 function forgotpassword() {
@@ -355,4 +362,45 @@ function forgotpassword() {
         }
     });
     return false;
+}
+
+
+
+function attachAccountFile(id,stud) {
+    var val = $('#' + id).val();
+    var checkfiletype = false;
+    if ($.trim(val) != '' && checkfiletype == false) {
+        $('.loader').addClass('is-active');
+        var form = new FormData();
+        form.append('file', $('#' + id)[0].files[0]);
+        form.append('stud', stud);
+        $.ajax({
+            type: "POST",
+            url: 'api/v1/upload_stud_picfile',
+            processData: false,
+            contentType: false,
+            data: form,
+            success: function (data) {
+                $('.loader').removeClass('is-active');
+                if (data.result.error === false) {
+                    if (id == 'profile_picture') {
+                        $("#preview_container").removeClass('hidden');
+                        $("#upload_container").addClass('hidden');
+                        avatar = data.result.data;
+                        $("#preview_container img").attr("src", BASE_IMAGE_URL + avatar);                        
+                    }
+                } else {
+                    swal('Information', data.result.message, 'info');
+                }
+            },
+            error: function (err) {
+                $('.loader').removeClass('is-active');
+                swal('Error', err.statusText, 'error');
+            }
+        });
+    } else {
+        if (id != 'profile_picture' && checkfiletype == false) {
+            swal('Information', 'Please attach profile', 'info');
+        }
+    }
 }

@@ -9,20 +9,24 @@ session_start();
 
 use Razorpay\Api\Api;
 
-if(isset($_GET['stud']) && ($_GET['stud']!='')) {
-	
-$obj = new Common();	
-$stud_id = $_GET['stud'];
-$_SESSION['register_pay'] = array('student_id'=>$stud_id,'amount'=>499);
+if(isset($_SESSION['pay_student']) && count($_SESSION['pay_student'])>0) {
+    
+    $email = '';
+    $mobile = '';
+    $stud_name = '';
+    
+    if(isset($_SESSION['pay_student']['email'])) {
+        $email = $_SESSION['pay_student']['email'];
+    }
+    
+    if(isset($_SESSION['pay_student']['mobile'])) {
+        $mobile = $_SESSION['pay_student']['mobile'];
+    }
+    
+     if(isset($_SESSION['pay_student']['student_name'])) {
+        $stud_name = $_SESSION['pay_student']['student_name'];
+    }
 
-
- $stud_details =  $obj->selectRow('*','student_register','student_register_id='.$stud_id);
-	if(count($stud_details)>0) {
-		
-	$email = $stud_details['email'];
-	$mobile = $stud_details['mobile'];
-	$stud_name = $stud_details['student_name'];
-	
 	
 
 $api = new Api($keyId, $keySecret);
@@ -93,5 +97,4 @@ $json = json_encode($data);
 require("checkout/{$checkout}.php");
 
 
-}
 }

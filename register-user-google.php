@@ -54,8 +54,13 @@ if(isset($_GET["code"]))
        
         
         if(count($sel_stud)==0) {            
-            $record = $obj->insertRecord(array('student_name'=>$name,'email'=>$email,'gender'=>$gender,'created_at'=>date('Y-m-d H:i:S')),'student_register'); 
-            header('Location:payment/pay?stud='.$record);
+           //$record = $obj->insertRecord(array('student_name'=>$name,'email'=>$email,'gender'=>$gender,'created_at'=>date('Y-m-d H:i:S')),'student_register'); 
+            if(isset($_SESSION['pay_student'])) {
+                unset($_SESSION['pay_student']);
+            }        
+            $_SESSION['pay_student']   = array('student_name'=>$name,'email'=>$email,'gender'=>$gender);
+            
+            header('Location:payment/pay');
             exit;
         }
         else {

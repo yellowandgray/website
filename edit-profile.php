@@ -16,28 +16,30 @@ if (isset($_SESSION['student_register_id'])) {
                 <div class="container">
                     <div class="edit-form">
                         <h2 style="border-bottom: 2px solid #e3e3e3;padding-bottom: 10px;margin-bottom: 20px;">Update Your Account</h2>
-                        <from onsubmit = 'return updateStudentProfile();'>
+                        <form onsubmit = "return updateStudentProfile(<?php echo $login_student['student_register_id']; ?>);">
                             <h4>Candidate's Info:</h4>
                             <div class="row">
-                                <div class="col-md-6">
+                               
+                                  <div class="col-md-6">
                                     <div class="form-group input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
                                         </div>
-                                        <input type="text" id="mobile" class="form-control" value="<?php echo $login_student['mobile']; ?>" placeholder="Mobile No" required>
+                                        <input type="text" id="mobile" maxlength="10" pattern="[0-9]{10}" class="form-control" value="<?php echo $login_student['mobile']; ?>" placeholder="Mobile No" required>
                                     </div> <!-- form-group// -->
                                 </div>
+                                
                                 <div class="col-md-6">
                                     <div class="form-group input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
                                         </div>
-                                        <input name="email" id="email" class="form-control" value="<?php echo $login_student['email']; ?>" placeholder="Email Id" required>
+                                        <input type="email" name="email" id="email" class="form-control" value="<?php echo $login_student['email']; ?>" placeholder="Email Id" required>
                                     </div> <!-- form-group// -->
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-6">
+                              <div class="row">
+                                  <div class="col-md-6">
                                     <div class="form-group input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"> <i class="fa fa-venus"></i> </span>
@@ -51,13 +53,39 @@ if (isset($_SESSION['student_register_id'])) {
                                                     $selected = 'selected';
                                                 }
                                                 ?>
-                                                <option value="<?php echo $key; ?>"><?php echo $val; ?></option>
+                                                <option value="<?php echo $key; ?>" <?php echo $selected; ?>><?php echo $val; ?></option>
                                                 <?php
                                             }
                                             ?>
                                         </select>
                                     </div> <!-- form-group// -->
                                 </div>
+                                  
+                                <div class="col-md-6">
+                                            <div class="form-group input-group">
+                                                <label>Practice Medium: &nbsp;&nbsp;</label>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="practice_medium" id="practice_medium" value="1"  <?php  if($login_student['practice_medium']==1) { echo 'checked=checked'; } ?> required>
+                                                    <label class="form-check-label" for="tamil">Tamil</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="practice_medium" id="practice_medium" value="2" <?php  if($login_student['practice_medium']==2) { echo 'checked=checked'; } ?>>
+                                                    <label class="form-check-label" for="english">English</label>
+                                                </div>
+                                            </div>
+                                            <!--                                            <div class="form-group input-group">
+                                                                                            <div class="input-group-prepend">
+                                                                                                <span class="input-group-text"> <i class="fa fa-book"></i> </span>
+                                                                                            </div>
+                                                                                            <select class="custom-select" id="practice_medium" name="practice_medium">
+                                                                                                <option value="0">Practice Medium</option>							  <option value="1">Tamil</option>
+                                                                                                <option value="2">English</option>
+                                                                                            </select>                                                
+                                                                                        </div> -->
+                                        </div>
+                            </div>
+                            <div class="row">
+                                
                                 <div class="col-md-6">
                                     <div class="form-group input-group">
                                         <div class="input-group-prepend">
@@ -124,13 +152,13 @@ if (isset($_SESSION['student_register_id'])) {
                                         <select class="custom-select" id="selectgroup" name="" required>
                                             <option value="0">Select Group</option>
                                             <?php
-                                            foreach (array('group' => 'Group 1', 'groups' => 'Group 2/2A') as $key => $val) {
+                                            foreach (array('group1' => 'Group 1', 'group22a' => 'Group 2/2A') as $key => $val) {
                                                 $selected = '';
                                                 if ($key == $login_student['selectgroup']) {
                                                     $selected = 'selected';
                                                 }
                                                 ?>
-                                                <option value="<?php echo $key; ?>"><?php echo $val; ?></option>
+                                                <option value="<?php echo $key; ?>" <?php echo $selected; ?>><?php echo $val; ?></option>
                                                 <?php
                                             }
                                             ?>

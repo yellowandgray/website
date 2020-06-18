@@ -94,12 +94,12 @@ $obj = new Common();
                                         <div class="col-md-6">
                                             <div class="form-group input-group">
                                                 <label>Practice Medium: &nbsp;&nbsp;</label>
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="language" id="tamil" value="option1">
+                                                 <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="practice_medium" id="practice_medium" value="1"   required>
                                                     <label class="form-check-label" for="tamil">Tamil</label>
                                                 </div>
                                                 <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="language" id="english" value="option2">
+                                                    <input class="form-check-input" type="radio" name="practice_medium" id="practice_medium" value="2">
                                                     <label class="form-check-label" for="english">English</label>
                                                 </div>
                                             </div>

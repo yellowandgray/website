@@ -3,6 +3,9 @@ session_start();
 require_once 'api/include/common.php';
 $obj = new Common();
 $languages = $obj->selectAll('*', 'language', 'status = 1');
+if (isset($_SESSION['student_register_id'])) {
+    $login_student = $obj->selectRow('*', 'student_register', 'student_register_id = ' . $_SESSION["student_register_id"]);
+}
 ?>
 <html lang="en">
     <?php include 'head.php'; ?>
@@ -12,7 +15,7 @@ $languages = $obj->selectAll('*', 'language', 'status = 1');
             <div class="container">
                 <div class="forgot-section">
                     <div class="text-center"><p>Change Your Password </p></div>
-                    <form onsubmit="return changePassword();" class="reset-form">
+                    <form onsubmit="return changePassword(<?php echo $login_student['student_register_id'];  ?>);" class="reset-form">
                         <div class="form-group">
                             <input type = 'password' id = 'password' placeholder = 'New Password' required>
                         </div>
