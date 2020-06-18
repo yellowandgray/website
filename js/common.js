@@ -333,6 +333,26 @@ function updateStudentProfile() {
 //    return false;
 }
 
-function forgotPassword(){
-    
+function forgotpassword() {
+ 
+    $('.loader').addClass('is-active');
+    $.ajax({
+        type: "POST",
+        url: 'api/v1/forgotpassword',
+        data: {email: $('#forgotpassword_email').val()},
+        success: function (data) {
+            $('.loader').removeClass('is-active');
+            $(".pop").fadeOut('fast');
+            swal('Information', data.result.message, 'info');
+            setTimeout(function () {
+                  window.location = 'forgot-password';
+              }, 3000);
+        },
+        error: function (err) {
+            $(".pop").fadeOut('fast');
+            $('.loader').removeClass('is-active');
+            swal('Error', err.statusText, 'error');
+        }
+    });
+    return false;
 }
