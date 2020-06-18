@@ -1886,3 +1886,31 @@ $app->post('/insert_student_sess', function() use ($app) {
     }   
     echoRespnse(201, $res);
 });
+
+
+$app->get('/get_banner', function() {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('*', 'member_home', 'member_home_id > 0');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+        $res['total'] = count($data);
+    }
+    echoRespnse(201, $res);
+});
+
+
+$app->get('/get_news', function() {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('*', 'news_feed', 'news_feed_id > 0');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+        $res['total'] = count($data);
+}
+    echoRespnse(201, $res);
+});
