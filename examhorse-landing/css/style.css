@@ -661,8 +661,8 @@ ul.breadcrumb li a:hover {
     position: absolute;
     top: 10px;
     left: 15px;
-    background: #f14f1b;
-    border: 1px solid #f14f1b;
+    background: #3b5998;
+    border: 1px solid #3b5998;
     padding: 10px 22px;
     border-radius: 5px;
     font-weight: 500;
@@ -699,11 +699,11 @@ ul.breadcrumb li a:hover {
 
 .carousel-item .toway-text:hover { 
     background: #fff;
-    border: 1px solid #f14f1b;
+    border: 1px solid #3b5998;
 }
 
 .carousel-item .toway-text:hover a {
-    color: #f14f1b;
+    color: #3b5998;
     text-decoration: none;
 }
 

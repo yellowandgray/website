@@ -379,7 +379,7 @@ if (isset($_SESSION['student_register_id'])) {
 
 
 
-                            <a href="student_result" class="seemore-btn">See More</a>
+                            <a href="member-result" class="seemore-btn">See More</a>
                         </div>
                     </div>
                 </div>

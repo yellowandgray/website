@@ -59,7 +59,7 @@ $obj = new Common();
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
                                                 </div>
-                                                <input name="" id="email" class="form-control" placeholder="Email address" type="email" required>
+                                                <input name="" id="email" class="form-control" placeholder="Email address" type="email" onblur="validateEmail(this);">
                                             </div> <!-- form-group// -->
                                         </div>
                                     </div>
@@ -94,7 +94,7 @@ $obj = new Common();
                                         <div class="col-md-6">
                                             <div class="form-group input-group">
                                                 <label>Practice Medium: &nbsp;&nbsp;</label>
-                                                 <div class="form-check form-check-inline">
+                                                <div class="form-check form-check-inline">
                                                     <input class="form-check-input" type="radio" name="practice_medium" id="practice_medium" value="1"   required>
                                                     <label class="form-check-label" for="tamil">Tamil</label>
                                                 </div>
@@ -136,5 +136,19 @@ $obj = new Common();
     unset($_SESSION['google_login_error']);
 }
 ?>
-    </script>    
+    </script>   
+    <script type="text/javascript">
+        function validateEmail(emailField) {
+            var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+            if (reg.test(emailField.value) == false)
+            {
+                alert('Invalid Email Address');
+                return false;
+            }
+
+            return true;
+
+        }
+    </script>
 </html>
