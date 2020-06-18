@@ -58,7 +58,8 @@
     text-decoration: none;
     color: #ffffff;
     background: #f03c02;
-    opacity: 0.9;
+    /*opacity: 0.9;*/
+    letter-spacing: 0.3px;
 }
 
 .header-fixed .header-limiter nav a:hover{

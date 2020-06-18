@@ -1,0 +1,249 @@
+<h2 mat-dialog-title>Question</h2>
+<mat-dialog-content class="mat-typography">
+    <form [formGroup]="questionForm" (ngSubmit)="onSubmit()">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <div fxFlex="100%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Select Language</mat-label>
+                    <mat-select required formControlName="language_id"  (selectionChange)="getSubjectByLanguageEdit($event)">
+                        <mat-option [value]="row.language_id" *ngFor="let row of language">
+                            {{row.name}}
+                        </mat-option>
+                    </mat-select>
+                    <mat-error>Topic is required</mat-error>
+                </mat-form-field>
+            </div>            
+            
+            <div fxFlex="100%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Select Year</mat-label>
+                    <mat-select required formControlName="year_id">
+                        <mat-option [value]="row.year_id" *ngFor="let row of year">
+                            {{row.year}}
+                        </mat-option>
+                    </mat-select>
+                    <mat-error>Topic is required</mat-error>
+                </mat-form-field>
+            </div>
+           
+        </div>
+        
+        
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <div fxFlex="100%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Select Subject</mat-label>
+                    <mat-select  required formControlName="subject_id" (selectionChange)="getTopicBySelSubjectEdit($event)">
+                        <mat-option [value]="row.subject_id" *ngFor="let row of subject">
+                            {{row.name}}
+                        </mat-option>
+                    </mat-select>
+                    <mat-error>Subject is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="100%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Topic</mat-label>
+                    <mat-select required formControlName="topic_id">
+                        <mat-option [value]="row.topic_id" *ngFor="let row of topic">
+                            {{row.name}}
+                        </mat-option>
+                    </mat-select>
+                    <mat-error>Topic is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        
+        
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <div fxFlex="50%" fxLayoutAlign="center center">
+                <button *ngIf="image_path == ''" type="button" mat-raised-button (click)="fileInput.click()">{{question_image}}</button>
+                <input hidden #fileInput type="file" id="file" (change)="fileProgress($event, 'question_image', 'image_path')" />
+                <div class="preview-image" *ngIf="image_path != ''">
+                    <img class="dialog-picture" mat-card-image src="{{image_url}}{{image_path}}" alt="Photo" />
+                    <button mat-icon-button aria-label="Close icon" (click)="removeMedia('image_path')">
+                <mat-icon>close</mat-icon>
+            </button>
+                </div>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Image Direction</mat-label>
+                    <mat-select *ngIf="image_path == ''" formControlName="direction">
+                        <mat-option value="top">Top</mat-option>
+                        <mat-option value="bottom">Bottom</mat-option>
+                    </mat-select>
+                    <mat-select *ngIf="image_path != ''" required formControlName="direction">
+                        <mat-option value="top">Top</mat-option>
+                        <mat-option value="bottom">Bottom</mat-option>
+                    </mat-select>
+                    <mat-error>Direction is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <br/>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+            <div fxFlex="100%">
+                <angular-editor id="editor1" formControlName="question" [config]="editorConfig"></angular-editor>
+            </div>
+        </div>
+        <br />
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+            <div fxFlex="50%">
+                <mat-label>Option A</mat-label>
+                <angular-editor id="editor2" [config]="editorOptionConfig" matInput placeholder="" required formControlName="a"></angular-editor>
+            </div>
+            <div fxFlex="50%">
+                <mat-label>Option B</mat-label>
+                <angular-editor id="editor3" [config]="editorOptionConfig" matInput placeholder="" required formControlName="b"></angular-editor>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+            <div fxFlex="50%" fxLayoutAlign="center center">
+                (OR)
+            </div>
+            <div fxFlex="50%" fxLayoutAlign="center center">
+                (OR)
+            </div>
+        </div>
+        <br/>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+            <div fxFlex="50%" fxLayoutAlign="center center">
+                <button type="button" mat-raised-button (click)="fileInputa.click()">{{option_a_image}}</button>
+                <input hidden #fileInputa type="file" (change)="fileProgress($event, 'option_a_image', 'option_image_a')" />
+            </div>
+            <div fxFlex="50%" fxLayoutAlign="center center">
+                <button type="button" mat-raised-button (click)="fileInputb.click()">{{option_b_image}}</button>
+                <input hidden #fileInputb type="file" (change)="fileProgress($event, 'option_b_image', 'option_image_b')" />
+            </div>
+        </div>
+        <br/>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+            <div fxFlex="50%">
+                <mat-label>Option C</mat-label>
+                <angular-editor id="editor4" [config]="editorOptionConfig" matInput placeholder="" formControlName="c"></angular-editor>
+            </div>
+            <div fxFlex="50%">
+                <mat-label>Option D</mat-label>
+                <angular-editor id="editor5" [config]="editorOptionConfig" matInput placeholder="" formControlName="d"></angular-editor>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+            <div fxFlex="50%" fxLayoutAlign="center center">
+                (OR)
+            </div>
+            <div fxFlex="50%" fxLayoutAlign="center center">
+                (OR)
+            </div>
+        </div>
+        <br/>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+            <div fxFlex="50%" fxLayoutAlign="center center">
+                <button type="button" mat-raised-button (click)="fileInputc.click()">{{option_c_image}}</button>
+                <input hidden #fileInputc type="file" (change)="fileProgress($event, 'option_c_image', 'option_image_c')" />
+            </div>
+            <div fxFlex="50%" fxLayoutAlign="center center">
+                <button type="button" mat-raised-button (click)="fileInputd.click()">{{option_d_image}}</button>
+                <input hidden #fileInputd type="file" (change)="fileProgress($event, 'option_d_image', 'option_image_d')" />
+            </div>
+        </div>
+        <br/>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Answer</mat-label>
+                    <mat-select required formControlName="answer">
+                        <mat-option value="A">A</mat-option>
+                        <mat-option value="B">B</mat-option>
+                        <mat-option value="C">C</mat-option>
+                        <mat-option value="D">D</mat-option>
+                    </mat-select>
+                    <mat-error>Answer is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Question No</mat-label>
+                    <input matInput placeholder="" required formControlName="question_no" />
+                    <mat-error>Question No is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <div fxFlex="50%" fxLayoutAlign="center center">
+                <button *ngIf="image_path_explanation == ''" type="button" mat-raised-button (click)="fileInput1.click()">{{explanation_image}}</button>
+                <input hidden #fileInput1 type="file" id="file" (change)="fileProgress($event, 'explanation_image', 'image_path_explanation')" />
+                <div class="preview-image" *ngIf="image_path_explanation != ''">
+                    <img class="dialog-picture" mat-card-image src="{{image_url}}{{image_path_explanation}}" alt="Photo" />
+                    <button mat-icon-button aria-label="Close icon" (click)="removeMedia1('image_path_explanation')">
+                <mat-icon>close</mat-icon>
+            </button>
+                </div>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Explanation Image Direction</mat-label>
+                    <mat-select *ngIf="image_path_explanation == ''" formControlName="explanation_img_direction">
+                        <mat-option value="top">Top</mat-option>
+                        <mat-option value="bottom">Bottom</mat-option>
+                    </mat-select>
+                    <mat-select *ngIf="image_path_explanation != ''" required formControlName="explanation_img_direction">
+                        <mat-option value="top">Top</mat-option>
+                        <mat-option value="bottom">Bottom</mat-option>
+                    </mat-select>
+                    <mat-error>Answer is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <div fxFlex="100%">
+                <angular-editor id="editor6" formControlName="question" [config]="editorExplanationConfig" formControlName="explanation"></angular-editor>
+            </div>
+        </div>
+        <br/>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+            <div fxFlex="100%">
+                <mat-form-field fxFlex="100%">
+                    <mat-label>Data Dictionary</mat-label>
+                    <textarea matInput rows="6" placeholder="" formControlName="data_dictionary"></textarea>
+                    <mat-error>Data Dictionary is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Select Book</mat-label>
+                    <mat-select formControlName="book_id">
+                        <mat-option [value]="row.book_id" *ngFor="let row of book">
+                            {{row.book_name}}
+                        </mat-option>
+                    </mat-select>
+                    <mat-error>Book is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Page No</mat-label>
+                    <input matInput placeholder="" formControlName="page_no" />
+                    <mat-error>Page No is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="100%">
+                <mat-form-field fxFlex="100%">
+                    <mat-label>Notes</mat-label>
+                    <textarea matInput placeholder="" rows="6" formControlName="notes"></textarea>
+                    <mat-error>Notes is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
+            <button mat-button [mat-dialog-close]="false">Cancel</button>
+            <button mat-button type="submit" [disabled]="loading">Save</button>
+            <mat-progress-spinner class="example-margin" *ngIf="loading" [mode]="'indeterminate'" [strokeWidth]="3" [diameter]="25">
+            </mat-progress-spinner>
+        </div>
+    </form>
+</mat-dialog-content>

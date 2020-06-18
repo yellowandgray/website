@@ -1,0 +1,51 @@
+<mat-sidenav-container fullscreen>
+    <mat-sidenav mode="side" opened cdkScrollable class="primary">
+        <app-sidenav></app-sidenav>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <app-header></app-header>
+        <mat-tab-group>
+            <mat-tab label="Home Banner">
+                <div class="add-btn-container">
+                    <button mat-raised-button color="primary" (click)="openDialogBanner(0, 'null')"><mat-icon>add</mat-icon> Banner</button>
+                </div>
+                <mat-list>
+                    <ng-container *ngFor="let data of banner">
+                        <mat-list-item>
+                            <button mat-icon-button aria-label="label" (click)="openDialogBanner(data.member_home_id, 'banner')">
+                                <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
+                            </button>
+                            <button mat-icon-button aria-label="label" (click)="confirmDeleteBanner(data.member_home_id)">
+                                <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
+                            </button>
+                            <img matListAvatar src="{{image_url}}{{data.banner_image}}" *ngIf="data.banner_image && data.banner_image != ''" alt="image" (click)="openView(data, 'preview')" />
+                            <h4 mat-line>{{data.title}}</h4>
+                        </mat-list-item>
+                        <mat-divider></mat-divider>
+                    </ng-container>
+                </mat-list>
+            </mat-tab>
+            <mat-tab label="News Feed">
+                <div class="add-btn-container">
+                    <button mat-raised-button color="primary" (click)="openDialogNews(0, 'null')"><mat-icon>add</mat-icon> News</button>
+                </div>
+                <mat-list>
+                    <ng-container *ngFor="let data of news">
+                        <mat-list-item>
+                            <button mat-icon-button aria-label="label" (click)="openDialogNews(data.news_feed_id, 'news')">
+                                <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
+                            </button>
+                            <button mat-icon-button aria-label="label" (click)="confirmDeleteNews(data.news_feed_id)">
+                                <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
+                            </button>
+                            <img matListAvatar src="{{image_url}}{{data.image_path}}" *ngIf="data.image_path && data.image_path != ''" alt="image" (click)="openNewsView(data, 'preview')" />
+                            <h4 mat-line>{{data.news_title}}</h4>
+                            <p mat-line [innerHTML]="data.description"></p>
+                        </mat-list-item>
+                        <mat-divider></mat-divider>
+                    </ng-container>
+                </mat-list>
+            </mat-tab>
+        </mat-tab-group>
+    </mat-sidenav-content>
+</mat-sidenav-container>

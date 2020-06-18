@@ -191,6 +191,30 @@ $app->post('/insert_book', function() use ($app) {
     echoRespnse(201, $res);
 });
 
+$app->post('/insert_banner', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to insert');
+    $data = $app->request->post();
+    $com = new Common();
+    $record = $com->insertRecord(array('title' => $data['title'], 'banner_image' => $data['member_banner']), 'member_home');
+    if ($record > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Record inserted successfully';
+    }
+    echoRespnse(201, $res);
+});
+
+$app->post('/insert_news', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to insert');
+    $data = $app->request->post();
+    $com = new Common();
+    $record = $com->insertRecord(array('news_title' => $data['news_title'], 'image_path' => $data['news_image'], 'description' => $data['description']), 'news_feed');
+    if ($record > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Record inserted successfully';
+    }
+    echoRespnse(201, $res);
+});
+
 $app->post('/insert_feedback', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();

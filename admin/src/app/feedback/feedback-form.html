@@ -1,0 +1,57 @@
+<h2 mat-dialog-title>Feedback</h2>
+<mat-dialog-content class="mat-typography">
+    <form [formGroup]="feedbackForm" (ngSubmit)="onSubmit()">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="100%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Select Feedback Type</mat-label>
+                    <mat-select required formControlName="feedback_type">
+                        <mat-option value="q-choice">Question with Choice</mat-option>
+                        <mat-option value="q-only">Question Only</mat-option>
+                    </mat-select>
+                    <mat-error>Feedback Type is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="100%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Feedback Title</mat-label>
+                    <textarea matInput placeholder="" rows='6' required formControlName="name"></textarea>
+                    <mat-error>Feedback is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start" *ngIf="feedbackForm.value.feedback_type!= 'q-only'">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Option 1</mat-label>
+                    <input matInput placeholder="" formControlName="option_1" />
+                    <mat-error>Option 1 is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Option 2</mat-label>
+                    <input matInput placeholder="" formControlName="option_2" />
+                    <mat-error>Option 2 is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start" *ngIf="feedbackForm.value.feedback_type!= 'q-only'">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Option 3</mat-label>
+                    <input matInput placeholder="" formControlName="option_3" />
+                    <mat-error>Option 3 is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
+            <button mat-button [mat-dialog-close]="false">Cancel</button>
+            <button mat-button type="submit" [disabled]="loading">Save</button>
+            <mat-progress-spinner class="example-margin" *ngIf="loading" [mode]="'indeterminate'" [strokeWidth]="3" [diameter]="25">
+            </mat-progress-spinner>
+        </div>
+    </form>
+</mat-dialog-content>
