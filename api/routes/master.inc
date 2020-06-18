@@ -1748,3 +1748,57 @@ $app->get('/free_user_get_result_correct_ans_cnt/:lid', function($lid) {
     }
     echoRespnse(201, $res);
 });
+
+
+$app->post('/forgotpassword', function() use ($app) {
+    $data = $app->request->post();
+    $obj = new Common();
+    $res = array('error' => true, 'message' => 'No user found in this email id');
+    $user = $obj->selectRow('*', 'student_register', 'email = \'' . $data['email'] . '\'');
+    if (count($user) > 0) {
+        
+        $newpwd = $obj->randomStringGenerator(8);
+        $update = $obj->updateRecordWithWhere(array('password' => $newpwd, 'confirm_password' => $newpwd, 'updated_at' => date('Y-m-d H:i:s')), 'student_register', 'student_register_id=\'' . $user['student_register_id'] . '\'');
+        if ($update > 0) {
+        
+            $res['error'] = false;
+            $res['message'] = 'New Password Sent to Email ID';
+            
+             
+             $from_mail = 'examhorse1@gmail.com';
+             $from_mail_name = '';
+             
+             $subject = 'Examhorse Forgot Password';   
+             $body = '<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <table border="0" cellpadding="0" cellspacing="0" style="width: 100%; max-width: 800px; margin: 0 auto; border: 1px dotted #ed1c24;">
+            <tbody>
+               
+                <tr>
+                    <td colspan="3" style="padding: 15px;">
+                        <p>Dear '.$user['student_name'].',</p>                       
+                        <p>Your Latest Password '.$newpwd.'</p>					
+
+                        <p><a href="https://examhorse.com/member-signin">Click Here to Login</a></p>
+                        <p>Regard,</p>
+                        <p>Examhorse</p>
+                    </td>
+                </tr>
+               
+            </tbody>
+        </table>
+    </body>
+</html>';
+             
+             $tpty = new Thirdparty();
+             $tpty->sendMail($user['email'], $user['student_name'] , $body, $body, $subject, $from_mail,$from_mail_name, '', '', '', '');
+            
+        }
+       
+    
+       
+    }
+    echoRespnse(201, $res);
+});

@@ -14,9 +14,9 @@ $languages = $obj->selectAll('*', 'language', 'status = 1');
                     <div class="text-center">
                         <p>Forgot Your Password </p>
                     </div>
-                    <form onsubmit="return SendMail();" class="reset-form">
+                    <form onSubmit="return forgotpassword();" class="reset-form">
                         <div class="form-group">
-                            <input type = 'email' id = 'email' placeholder = 'Enter Your Register Email Id' required>
+                            <input type ='email' id ='forgotpassword_email' name="forgotpassword_email" placeholder = 'Enter Your Register Email Id' required>
                         </div>
                         <div class="form-group">
                             <button type = 'submit' class = 'btn btn-custom'>Submit</button>
@@ -29,3 +29,4 @@ $languages = $obj->selectAll('*', 'language', 'status = 1');
         <?php include 'landing_script.php'; ?>
     </body>
 </html>
+
