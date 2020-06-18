@@ -96,7 +96,7 @@ if (isset($_SESSION['student_register_id'])) {
                                                     <th>Practice Medium</th>
                                                     <th>:</th>
                                                     <?php if ($login_student['practice_medium'] != '') { ?>
-                                                        <td><?php  foreach (array('1' => 'Tamil', '2' => 'English') as $key => $val) {                                                
+                                                        <td><?php  foreach (array('1' => 'தமிழ் ', '2' => 'English') as $key => $val) {                                                
                                                 if ($key == $login_student['practice_medium']) {
                                                     echo $val;
                                                         } }
