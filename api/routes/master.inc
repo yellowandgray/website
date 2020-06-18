@@ -189,6 +189,30 @@ $app->post('/insert_book', function() use ($app) {
     echoRespnse(201, $res);
 });
 
+$app->post('/insert_banner', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to insert');
+    $data = $app->request->post();
+    $com = new Common();
+    $record = $com->insertRecord(array('title' => $data['title'], 'banner_image' => $data['member_banner']), 'member_home');
+    if ($record > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Record inserted successfully';
+    }
+    echoRespnse(201, $res);
+});
+
+$app->post('/insert_news', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to insert');
+    $data = $app->request->post();
+    $com = new Common();
+    $record = $com->insertRecord(array('news_title' => $data['news_title'], 'image_path' => $data['news_image'], 'description' => $data['description']), 'news_feed');
+    if ($record > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Record inserted successfully';
+    }
+    echoRespnse(201, $res);
+});
+
 $app->post('/insert_feedback', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
@@ -1745,6 +1769,34 @@ $app->get('/free_user_get_result_correct_ans_cnt/:lid', function($lid) {
         $res['error'] = false;
         $res['message'] = 'Records found';
         $res['correct_cnt'] = $data['correct_cnt'];
+    }
+    echoRespnse(201, $res);
+});
+
+
+$app->get('/get_banner', function() {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('*', 'member_home', 'member_home_id > 0');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+        $res['total'] = count($data);
+    }
+    echoRespnse(201, $res);
+});
+
+
+$app->get('/get_news', function() {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('*', 'news_feed', 'news_feed_id > 0');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+        $res['total'] = count($data);
     }
     echoRespnse(201, $res);
 });

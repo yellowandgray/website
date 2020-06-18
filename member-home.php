@@ -5,6 +5,8 @@ require_once 'api/include/common.php';
 $obj = new Common();
 if (isset($_SESSION['student_register_id'])) {
     $login_student = $obj->selectRow('*', 'student_register', 'student_register_id = ' . $_SESSION["student_register_id"]);
+    $member_homes = $obj->selectAll('*', 'member_home', 'member_home_id > 0');
+    $news_feeds = $obj->selectAll('*', 'news_feed', 'news_feed_id > 0');
 }
 
 
@@ -193,7 +195,10 @@ if (isset($_SESSION['student_register_id'])) {
                 <div class="row">
                     <div class="span6">
                         <div class="member-banner">
-                            <img src="img/pic-examhorse-wishes.jpg" alt="member-banner" />
+                            <?php  foreach ($member_homes as $row) { ?>
+                            <!--<img src="img/pic-examhorse-wishes.jpg" alt="member-banner" />-->
+                            <img src="<?php echo BASE_URL . $row['banner_image']; ?>" alt="member-banner" />
+                            <?php } ?>
                         </div>
                     </div>
                     <div class="span6">
@@ -211,7 +216,20 @@ if (isset($_SESSION['student_register_id'])) {
                     <div class="span6">
                         <div class="member-banner">
                             <h3>News Feed</h3>
+                            <?php foreach ($news_feeds as $data) { ?>
                             <div class="news-feed">
+                                <div class="news-feed-img">
+<!--                                    <img src="img/member-thumbs.jpg" alt="" />-->
+                                    <img src="<?php echo BASE_URL . $data['image_path']; ?>" alt="" />
+                                </div>
+                                <div class="news-feed-content">
+                                    <h4><?php echo $data['news_title']; ?></h4>
+                                    <p><?php echo $data['description']; ?></p>
+                                    <a href="https://youtu.be/OKCvgDpSp78">See the video</a>
+                                </div>
+                            </div>
+                            <?php } ?>
+<!--                            <div class="news-feed">
                                 <div class="news-feed-img">
                                     <img src="img/member-thumbs.jpg" alt="" />
                                 </div>
@@ -230,17 +248,7 @@ if (isset($_SESSION['student_register_id'])) {
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
                                     <a href="https://youtu.be/OKCvgDpSp78">See the video</a>
                                 </div>
-                            </div>
-                            <div class="news-feed">
-                                <div class="news-feed-img">
-                                    <img src="img/member-thumbs.jpg" alt="" />
-                                </div>
-                                <div class="news-feed-content">
-                                    <h4>Title Comes Here</h4>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-                                    <a href="https://youtu.be/OKCvgDpSp78">See the video</a>
-                                </div>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                     <div class="span6">

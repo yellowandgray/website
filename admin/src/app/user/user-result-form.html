@@ -1,0 +1,38 @@
+<h2 mat-dialog-title>User Name</h2>
+<mat-dialog-content class="mat-typography user-table-section">
+    <mat-accordion>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>Topic Name</mat-panel-title>
+            </mat-expansion-panel-header>
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+                <div fxFlex="70%">
+                    <h3>Subject > Year > Topic</h3>
+                </div>
+                <div fxFlex="30%">
+                    <p>Date: 26/02/2020</p>
+                </div>
+            </div>
+            <table mat-table class="mat-elevation-z8 table-padding">
+                <!-- Position Column -->
+                <tr>
+                    <th mat-header-cell> Total </th>
+                    <th mat-header-cell>
+                        <mat-icon class="done_clr">done</mat-icon>
+                    </th>
+                    <th mat-header-cell>
+                        <mat-icon class="wrong_clr">close</mat-icon>
+                    </th>
+                </tr>
+                <tr>
+                    <td mat-cell>Questions</td>
+                    <td mat-cell>75</td>
+                    <td mat-cell>25</td>
+                </tr>
+            </table>
+            <!--            <div class="add-btn-container">
+                <button mat-raised-button color="primary" (click)="openFullResult()">Show Full Result</button>
+            </div>-->
+        </mat-expansion-panel>
+    </mat-accordion>
+</mat-dialog-content>

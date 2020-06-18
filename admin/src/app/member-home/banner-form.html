@@ -1,0 +1,30 @@
+<h2 mat-dialog-title>User</h2>
+<mat-dialog-content class="mat-typography">
+    <form [formGroup]="bannerForm" (ngSubmit)="onSubmit()">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Banner Title</mat-label>
+                    <input matInput placeholder="" required formControlName="title" />
+                    <mat-error>Banner Title is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%" fxLayoutAlign="center center">
+                <button *ngIf="banner_image == ''" type="button" mat-raised-button (click)="fileInput.click()">{{member_banner}}</button>
+                <input hidden #fileInput type="file" id="file" (change)="fileProgress($event, 'member_banner', 'banner_image')" />
+                <div class="preview-image" *ngIf="banner_image != ''">
+                    <img class="dialog-picture" mat-card-image src="{{image_url}}{{banner_image}}" alt="Photo" />
+                    <button mat-icon-button aria-label="Close icon" (click)="removeMedia('banner_image')">
+                        <mat-icon>close</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
+            <button mat-button [mat-dialog-close]="false">Cancel</button>
+            <button mat-button type="submit" [disabled]="loading">Save</button>
+            <mat-progress-spinner class="example-margin" *ngIf="loading" [mode]="'indeterminate'" [strokeWidth]="3" [diameter]="25">
+            </mat-progress-spinner>
+        </div>
+    </form>
+</mat-dialog-content>
