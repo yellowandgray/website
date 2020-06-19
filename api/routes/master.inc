@@ -1788,7 +1788,7 @@ $app->post('/forgotpassword', function() use ($app) {
             $res['message'] = 'New Password Sent to Email ID';
 
 
-            $from_mail = 'examhorse1@gmail.com';
+            $from_mail = 'info@examhorse.com';
             $from_mail_name = '';
 
             $subject = 'Examhorse Forgot Password';
@@ -1800,13 +1800,21 @@ $app->post('/forgotpassword', function() use ($app) {
             <tbody>
                
                 <tr>
-                    <td colspan="3" style="padding: 15px;">
+                    <td  style="padding: 15px;">
                         <p>Dear ' . $user['student_name'] . ',</p>                       
-                        <p>Your Latest Password ' . $newpwd . '</p>					
-
-                        <p><a href="https://examhorse.com/member-signin">Click Here to Login</a></p>
-                        <p>Regard,</p>
-                        <p>Examhorse</p>
+                        <p>Hello from Team ExamHorse!</p>	
+                        <p>We noticed you recently tried to log into ExamHorse.</p>
+                        <p>Due to the "Forgot Password" action, the following info has been emailed to you.</p>
+                        <br>
+                        <p>Your User Name :  '.$user['email'].'</p>
+                        <p>Your Password   : '.$newpwd.'</p>
+                        <br>
+                        <p>Pl use this password to login, and try to reset via Member Account page\'s Change Password option for your convenience.</p>
+                        <br>
+                        <p>Best Wishes!</p>
+                        <br>
+                        <p>Thanks & Regards,</p>
+                        <p> - Team ExamHorse</p>
                     </td>
                 </tr>
                
