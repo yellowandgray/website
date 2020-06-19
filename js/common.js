@@ -40,7 +40,12 @@ function attachFile(id) {
 }
 
 function registerStudent(e) {
- 
+  
+    var pwd         = $('#password').val();
+    var cpwd        = $('#confirm_password').val();
+    var email       = $('#email').val();
+    var phone       = $('#mobile').val();
+   
     var captchResponse = $('#g-recaptcha-response').val();
     if(captchResponse.length == 0 )
     {
@@ -48,7 +53,7 @@ function registerStudent(e) {
             e.stopImmediatePropagation();
             return false;
     }
-    else
+     else
     {
         $('.loader').addClass('is-active');
         $.ajax({
@@ -122,14 +127,35 @@ function loginStudent() {
 
 function samplehomelogin(e) {
 
-     $('.loader').addClass('is-active');
-	var captchResponse = $('#g-recaptcha-response').val();
-	if(captchResponse.length == 0 )
-	{
-		alert('CAPTCHA Required!');		
-		e.stopImmediatePropagation();
-		return false;
-	}
+   
+    var email       = $('#email').val();
+    var phone       = $('#phone').val();
+    
+    
+
+
+
+    /*
+    $('.loader').addClass('is-active');
+       var captchResponse = $('#g-recaptcha-response').val();
+       if(captchResponse.length == 0 )
+       {
+               alert('CAPTCHA Required!');		
+               e.stopImmediatePropagation();
+               return false;
+       }
+     * 
+     */
+        if(!(email.match(/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/))) {
+        alert('Invalid Email');		
+        e.stopImmediatePropagation();
+        return false;
+    }
+    else if(!(phone.match(/^[0-9]{10}$/))) {
+        alert('Phone number should be 10 digit number');		
+        e.stopImmediatePropagation();
+        return false;
+    }
     else
     {
         $('.loader').addClass('is-active');
@@ -277,14 +303,19 @@ function changePassword(studid) {
 }
 
 function ContactForm(e) {
+    
+    
+    var email       = $('#email').val();
+    
+
     $('.loader').addClass('is-active');
-	var captchResponse = $('#g-recaptcha-response').val();
-	if(captchResponse.length == 0 )
-	{
-		alert('CAPTCHA Required!');		
-		e.stopImmediatePropagation();
-		return false;
-	}
+    var captchResponse = $('#g-recaptcha-response').val();
+    if(captchResponse.length == 0 )
+    {
+            alert('CAPTCHA Required!');		
+            e.stopImmediatePropagation();
+            return false;
+    }
     else
     {
         $('.loader').addClass('is-active');

@@ -1570,7 +1570,7 @@ $app->post('/samplelogin', function() use ($app) {
         $_SESSION['free_user_id'] = $record;
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
-        $user = $obj->selectRow('*', 'free_user_login', 'free_user_login_id = \'' . $record . '\'');
+        $user = $com->selectRow('*', 'free_user_login', 'free_user_login_id = ' . $record);
         $from_mail = 'examhorse1@gmail.com';
         $from_mail_name = '';
 
@@ -1864,35 +1864,7 @@ $app->post('/insert_student_sess', function() use ($app) {
 
             $res['error'] = false;
             //$res['record'] 	= $record;
-            //$res['message'] = 'Record inserted successfully';
-            $sel_stud = $obj->selectRow('*', 'student_register', 'student_register_id = \'' . $_SESSION . '\'');
-        $from_mail = 'examhorse1@gmail.com';
-        $from_mail_name = '';
-
-        $subject = 'Examhorse Free User Account';
-        $body = '<!DOCTYPE html>
-<html>
-    <head></head>
-    <body>
-        <table border="0" cellpadding="0" cellspacing="0" style="width: 100%; max-width: 800px; margin: 0 auto; border: 1px dotted #ed1c24;">
-            <tbody>
-               
-                <tr>
-                    <td colspan="3" style="padding: 15px;">
-                        <p>Dear ' . $sel_stud['name'] . ',</p>                       
-                        <p>Your Free Account Has been Created...</p>					
-                        <p>Regard,</p>
-                        <p>Examhorse</p>
-                    </td>
-                </tr>
-               
-            </tbody>
-        </table>
-    </body>
-</html>';
-
-        $tpty = new Thirdparty();
-        $tpty->sendMail($sel_stud['email'], $sel_stud['student_name'], $body, $body, $subject, $from_mail, $from_mail_name, '', '', '', '');
+            //$res['message'] = 'Record inserted successfully';            
         } else {
             $res['message'] = 'Email Already Exists!';
         }

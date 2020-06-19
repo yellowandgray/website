@@ -2,6 +2,7 @@
 
 require('config.php');
 require_once '../api/include/common.php';
+require_once '../api/include/thirdparty.php';
 ini_set('date.timezone', 'Asia/Kolkata');
 session_start();
 
@@ -86,6 +87,37 @@ if ($success === true)
                  
                  $obj->insertRecord(array('student_id'=>$student_id,'payment_amount'=>$payment_amt,'payment_status'=>1,'payment_succ_ref'=>$_POST['razorpay_payment_id'],'created_at'=>date('Y-m-d H:i:s')),'student_payment');
                  unset($_SESSION['pay_student']);
+                 
+                 
+                 
+                 $sel_stud = $obj->selectRow('*', 'student_register', 'student_register_id = ' .$student_id);
+                $from_mail = 'examhorse1@gmail.com';
+                $from_mail_name = '';
+
+        $subject = 'Examhorse User Account';
+        $body = '<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <table border="0" cellpadding="0" cellspacing="0" style="width: 100%; max-width: 800px; margin: 0 auto; border: 1px dotted #ed1c24;">
+            <tbody>
+               
+                <tr>
+                    <td colspan="3" style="padding: 15px;">
+                        <p>Dear ' . $sel_stud['student_name'] . ',</p>                       
+                        <p>Your Account Has been Created...</p>					
+                        <p>Regard,</p>
+                        <p>Examhorse</p>
+                    </td>
+                </tr>
+               
+            </tbody>
+        </table>
+    </body>
+</html>';
+
+        $tpty = new Thirdparty();
+        $tpty->sendMail($sel_stud['email'], $sel_stud['student_name'], $body, $body, $subject, $from_mail, $from_mail_name, '', '', '', '');
              }
     
              header('Location:../payment-page');
