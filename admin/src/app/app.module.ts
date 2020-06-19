@@ -40,6 +40,8 @@ import { filterUser } from './user/filter-user';
 import { BookComponent, BookForm, BookDelete } from './book/book.component';
 import { FeedbackComponent, FeedbackForm, FeedbackDelete, AssignFeedbackForm } from './feedback/feedback.component';
 import { MemberHomeComponent, BannerForm, BannerViewForm, BannerDelete, NewsForm, NewsDelete, NewsViewForm } from './member-home/member-home.component';
+import { MembersComponent, MemberForm, MemberViewForm, FreeMemberForm, PictureViewMember } from './members/members.component';
+import { filterMember } from './members/filter-member';
 
 
 
@@ -82,7 +84,13 @@ import { MemberHomeComponent, BannerForm, BannerViewForm, BannerDelete, NewsForm
     BannerDelete,
     NewsForm,
     NewsDelete,
-    NewsViewForm
+    NewsViewForm,
+    MembersComponent,
+    filterMember,
+    MemberForm,
+    MemberViewForm,
+    FreeMemberForm,
+    PictureViewMember
   ],
   imports: [
     BrowserModule,
@@ -113,7 +121,7 @@ import { MemberHomeComponent, BannerForm, BannerViewForm, BannerDelete, NewsForm
     MatCardModule,
     MatCheckboxModule
   ],
-  entryComponents: [SubjectComponent, SubjectForm, SubjectDelete, QuestionComponent, QuestionForm, QuestionDelete, TopicComponent, TopicForm, TopicDelete, UserComponent, UserForm, PictureViewUser, UserDelete, BlockForm, ResultForm, UserViewForm, YearComponent, YearForm, YearDelete, BookComponent, BookForm, BookDelete, FeedbackComponent, FeedbackForm, FeedbackDelete, AssignFeedbackForm, MemberHomeComponent, BannerForm, BannerViewForm, BannerDelete, NewsForm, NewsDelete, NewsViewForm],
+  entryComponents: [SubjectComponent, SubjectForm, SubjectDelete, QuestionComponent, QuestionForm, QuestionDelete, TopicComponent, TopicForm, TopicDelete, UserComponent, UserForm, PictureViewUser, UserDelete, BlockForm, ResultForm, UserViewForm, YearComponent, YearForm, YearDelete, BookComponent, BookForm, BookDelete, FeedbackComponent, FeedbackForm, FeedbackDelete, AssignFeedbackForm, MemberHomeComponent, BannerForm, BannerViewForm, BannerDelete, NewsForm, NewsDelete, NewsViewForm, MemberForm, MemberViewForm, FreeMemberForm, PictureViewMember],
   providers: [],
   bootstrap: [AppComponent]
 })

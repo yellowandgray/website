@@ -1,0 +1,403 @@
+import { Component, OnInit, Inject } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Observable } from 'rxjs';
+
+@Component({
+  selector: 'app-members',
+  templateUrl: './members.component.html',
+  styleUrls: ['./members.component.css']
+})
+export class MembersComponent implements OnInit {
+  searchTerm: string = '';
+  student = [];
+  student_count = 0;
+  free_user = [];
+  image_url: string = '../api/v1/';
+  constructor(public dialog: MatDialog, private httpClient: HttpClient, private _snackBar: MatSnackBar) { }
+
+  ngOnInit() {
+    this.getuser();
+    this.getfreeuser();
+  }
+    getuser(): void {
+    this.httpClient.get<any>('../api/v1/get_student')
+      .subscribe(
+        (res) => {
+          this.student = res["result"]["data"];
+          this.student_count = res["result"]["total"];
+        },
+        (error) => {
+          this._snackBar.open(error["statusText"], '', {
+            duration: 2000,
+          });
+        }
+      );
+  }
+
+    getfreeuser(): void {
+    this.httpClient.get<any>('../api/v1/get_free_user')
+      .subscribe(
+        (res) => {
+          this.free_user = res["result"]["data"];
+        },
+        (error) => {
+          this._snackBar.open(error["statusText"], '', {
+            duration: 2000,
+          });
+        }
+      );
+  }
+    
+  openDialog(id, res): void {
+    var data = null;
+    if (id != 0) {
+      this[res].forEach(val => {
+        if (parseInt(val.student_register_id) === parseInt(id)) {
+          data = val;
+          return false;
+        }
+      });
+    }
+    const dialogRef = this.dialog.open(MemberForm, {
+      minWidth: "40%",
+      maxWidth: "40%",
+      data: data
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result !== false && result !== 'false') {
+        this.getuser();
+      }
+    });
+  }
+
+    openFreeUserForm(id, res): void {
+    var data = null;
+    if (id != 0) {
+      this[res].forEach(val => {
+        if (parseInt(val.student_register_id) === parseInt(id)) {
+          data = val;
+          return false;
+        }
+      });
+    }
+    const dialogRef = this.dialog.open(FreeMemberForm, {
+      minWidth: "40%",
+      maxWidth: "40%",
+      data: data
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result !== false && result !== 'false') {
+        this.getfreeuser();
+      }
+    });
+  }
+
+    openView(id, res): void {
+    var data = null;
+      if(id != 0) { 
+      this[res].forEach(val=> {
+           if(parseInt(val.student_register_id) === parseInt(id)) {
+                data = val;
+                return false;
+           }
+         });
+      }
+    const dialogRef = this.dialog.open(MemberViewForm, {
+      minWidth: "40%",
+      maxWidth: "40%",
+      data: data
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if(result !== false && result !== 'false') {
+            }
+        });
+    }
+
+    confirmDialog(id, action): void {
+    var data = null;
+    if (id != 0) {
+      data = id;
+    }
+    const dialogRef = this.dialog.open(PictureViewMember, {
+      minWidth: "40%",
+      maxWidth: "40%",
+      data: {
+        data: data,
+        action: action
+      }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+    });
+  }
+
+}
+
+
+@Component({
+  selector: 'member-form',
+  templateUrl: 'member-form.html',
+})
+export class MemberForm {
+  image_url: string = '../api/v1/';
+  userForm: FormGroup;
+  loading = false;
+  student_register_id = 0;
+  profile_picture: string = 'Profile Image';
+  profile_image: string = '';
+  constructor(
+    public dialogRef: MatDialogRef<MemberForm>,
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {
+    this.userForm = new FormGroup({
+      'user_name': new FormControl('', Validators.required),
+      'student_name': new FormControl('', Validators.required),
+      'gender': new FormControl('', Validators.required),
+      'parent_name': new FormControl('', Validators.required),
+      'mobile': new FormControl('', Validators.required),
+      'city': new FormControl('', Validators.required),
+      'pin': new FormControl('', Validators.required),
+      'school_name': new FormControl('', Validators.required),
+      'standard': new FormControl('', Validators.required),
+      'password': new FormControl('', Validators.required),
+      'confirm_password': new FormControl('', Validators.required),
+      'email': new FormControl('')
+    });
+    if (this.data != null) {
+      this.userForm.patchValue({
+        user_name: this.data.user_name,
+        student_name: this.data.student_name,
+        gender: this.data.gender,
+        parent_name: this.data.parent_name,
+        mobile: this.data.mobile,
+        city: this.data.city,
+        pin: this.data.pin,
+        school_name: this.data.school_name,
+        standard: this.data.standard,
+        password: this.data.password,
+        confirm_password: this.data.confirm_password,
+        email: this.data.email,
+      });
+      this.student_register_id = this.data.student_register_id;
+      this.profile_image = this.data.profile_image;
+    }
+  }
+
+  onSubmit() {
+    if (this.userForm.invalid) {
+      return;
+    }
+    this.loading = true;
+    var formData = new FormData();
+    var url = '';
+    if (this.student_register_id != 0) {
+      formData.append('user_name', this.userForm.value.user_name);
+      formData.append('student_name', this.userForm.value.student_name);
+      formData.append('parent_name', this.userForm.value.parent_name);
+      formData.append('gender', this.userForm.value.gender);
+      formData.append('profile_image', this.profile_image);
+      formData.append('mobile', this.userForm.value.mobile);
+      formData.append('city', this.userForm.value.city);
+      formData.append('pin', this.userForm.value.pin);
+      formData.append('school_name', this.userForm.value.school_name);
+      formData.append('standard', this.userForm.value.standard);
+      formData.append('password', this.userForm.value.password);
+      formData.append('confirm_password', this.userForm.value.confirm_password);
+      formData.append('email', this.userForm.value.email);
+      url = 'update_record/student_register/student_register_id = ' + this.student_register_id;
+    } else {
+      formData.append('user_name', this.userForm.value.user_name);
+      formData.append('student_name', this.userForm.value.student_name);
+      formData.append('gender', this.userForm.value.gender);
+      formData.append('profile_picture', this.profile_image);
+      formData.append('parent_name', this.userForm.value.parent_name);
+      formData.append('mobile', this.userForm.value.mobile);
+      formData.append('city', this.userForm.value.city);
+      formData.append('pin', this.userForm.value.pin);
+      formData.append('school_name', this.userForm.value.school_name);
+      formData.append('standard', this.userForm.value.standard);
+      formData.append('password', this.userForm.value.password);
+      formData.append('confirm_password', this.userForm.value.confirm_password);
+      formData.append('email', this.userForm.value.email);
+      url = 'insert_student';
+    }
+    this.httpClient.post('../api/v1/' + url, formData).subscribe(
+      (res) => {
+        this.loading = false;
+        if (res["result"]["error"] === false) {
+          this.dialogRef.close(true);
+        } else {
+          this._snackBar.open(res["result"]["message"], '', {
+            duration: 2000,
+          });
+        }
+      },
+      (error) => {
+        this.loading = false;
+        this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+        });
+      }
+    );
+  }
+
+  fileProgress(fileInput: any, name: string, path: string) {
+    var fileData = <File>fileInput.target.files[0];
+    this[name] = fileData.name;
+    this.loading = true;
+    var formData = new FormData();
+    formData.append('file', fileData);
+    this.httpClient.post('../api/v1/upload_file', formData).subscribe(
+      (res) => {
+        this.loading = false;
+        if (res["result"]["error"] === false) {
+          this[path] = res["result"]["data"];
+        } else {
+          this._snackBar.open(res["result"]["message"], '', {
+            duration: 2000,
+          });
+        }
+      },
+      (error) => {
+        this.loading = false;
+        this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+        });
+      });
+  }
+
+  removeMedia(url) {
+    this[url] = '';
+    if (url === 'profile_image') {
+      this.profile_picture = 'Profile Image';
+    }
+  }
+}
+
+@Component({
+  selector: 'free-member-form',
+  templateUrl: 'free-member-form.html',
+})
+export class FreeMemberForm {
+  freeuserForm: FormGroup;
+  loading = false;
+  free_user_login_id = 0;
+  constructor(
+    public dialogRef: MatDialogRef<FreeMemberForm>,
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {
+    this.freeuserForm = new FormGroup({
+      'name': new FormControl('', Validators.required),
+      'email': new FormControl('', Validators.required),
+      'phone': new FormControl('', Validators.required),
+      'practice_medium': new FormControl('', Validators.required),
+    });
+    if (this.data != null) {
+      this.freeuserForm.patchValue({
+        name: this.data.name,
+        phone: this.data.phone,
+        email: this.data.email,
+        practice_medium: this.data.practice_medium,
+      });
+      this.free_user_login_id = this.data.free_user_login_id;
+    }
+  }
+
+  onSubmit() {
+    if (this.freeuserForm.invalid) {
+      return;
+    }
+    this.loading = true;
+    var formData = new FormData();
+    var url = '';
+    if (this.free_user_login_id != 0) {
+      formData.append('name', this.freeuserForm.value.name);
+      formData.append('phone', this.freeuserForm.value.phone);
+      formData.append('email', this.freeuserForm.value.email);
+      formData.append('practice_medium', this.freeuserForm.value.practice_medium);
+      url = 'update_record/free_user_login/free_user_login_id = ' + this.free_user_login_id;
+    } else {
+      formData.append('name', this.freeuserForm.value.name);
+      formData.append('mobile', this.freeuserForm.value.mobile);
+      formData.append('email', this.freeuserForm.value.email);
+      formData.append('practice_medium', this.freeuserForm.value.practice_medium);
+      url = 'insert_free_member';
+    }
+    this.httpClient.post('../api/v1/' + url, formData).subscribe(
+      (res) => {
+        this.loading = false;
+        if (res["result"]["error"] === false) {
+          this.dialogRef.close(true);
+        } else {
+          this._snackBar.open(res["result"]["message"], '', {
+            duration: 2000,
+          });
+        }
+      },
+      (error) => {
+        this.loading = false;
+        this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+        });
+      }
+    );
+  }
+
+}
+
+
+@Component({
+  selector: 'member-view',
+  templateUrl: 'member-view.html',
+})
+
+export class MemberViewForm {
+  image_url: string = '../api/v1/';
+  loading = false;
+  student = [];
+  student_register_id = 0;
+  data: any;
+  constructor(
+    public dialogRef: MatDialogRef<MemberViewForm>,
+    @Inject(MAT_DIALOG_DATA) public datapopup: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) { 
+        this.data = this.datapopup;
+    }
+}
+
+@Component({
+  selector: 'picture-view',
+  templateUrl: 'picture-view.html',
+})
+
+export class PictureViewMember {
+  image_url: string = '../api/v1/';
+  action: string = '';
+  loading = false;
+  student_register_id = 0;
+  data: any;
+  constructor(
+    public dialogRef: MatDialogRef<PictureViewMember>,
+    @Inject(MAT_DIALOG_DATA) public datapopup: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {
+    if (this.datapopup != null) {
+      this.action = this.datapopup.action;
+      this.data = this.datapopup.data;
+      if (this.datapopup.action == 'delete') {
+        this.student_register_id = this.datapopup.data;
+      }
+    }
+  }
+}

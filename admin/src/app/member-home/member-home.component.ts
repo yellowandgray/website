@@ -15,7 +15,7 @@ import { AngularEditorConfig } from "@kolkov/angular-editor";
 })
 export class MemberHomeComponent implements OnInit {
     
-  image_url: string = 'http://localhost/project/exam-horse-sample/api/v1/';
+  image_url: string = '../api/v1/';
   constructor(public dialog: MatDialog, private httpClient: HttpClient, private _snackBar: MatSnackBar) { }
   banner = [];
   news = [];
@@ -24,7 +24,7 @@ export class MemberHomeComponent implements OnInit {
     this.getNews();
   }
   getBanner(): void {
-    this.httpClient.get<any>('http://localhost/project/exam-horse-sample/api/v1/get_banner')
+    this.httpClient.get<any>('../api/v1/get_banner')
       .subscribe(
         (res) => {
           this.banner = res["result"]["data"];
@@ -95,7 +95,7 @@ export class MemberHomeComponent implements OnInit {
   }
     
     getNews(): void {
-    this.httpClient.get<any>('http://localhost/project/exam-horse-sample/api/v1/get_news')
+    this.httpClient.get<any>('../api/v1/get_news')
       .subscribe(
         (res) => {
           this.news = res["result"]["data"];
@@ -172,7 +172,7 @@ export class MemberHomeComponent implements OnInit {
   templateUrl: 'banner-form.html',
 })
 export class BannerForm {
-  image_url: string = 'http://localhost/project/exam-horse-sample/api/v1/';
+  image_url: string = '../api/v1/';
   bannerForm: FormGroup;
   loading = false;
   member_home_id = 0;
@@ -211,7 +211,7 @@ export class BannerForm {
       formData.append('member_banner', this.banner_image);
       url = 'insert_banner';
     }
-    this.httpClient.post('http://localhost/project/exam-horse-sample/api/v1/' + url, formData).subscribe(
+    this.httpClient.post('../api/v1/' + url, formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -237,7 +237,7 @@ export class BannerForm {
     this.loading = true;
     var formData = new FormData();
     formData.append('file', fileData);
-    this.httpClient.post('http://localhost/project/exam-horse-sample/api/v1/upload_file', formData).subscribe(
+    this.httpClient.post('../api/v1/upload_file', formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -270,7 +270,7 @@ export class BannerForm {
   templateUrl: 'banner-view.html',
 })
 export class BannerViewForm {
-  image_url: string = 'http://localhost/project/exam-horse-sample/api/v1/';
+  image_url: string = '../api/v1/';
   action: string = '';
   loading = false;
   member_home_id = 0;
@@ -312,7 +312,7 @@ export class BannerDelete {
       return;
     }
     this.loading = true;
-    this.httpClient.get('http://localhost/project/exam-horse-sample/api/v1/delete_record/member_home/member_home_id=' + this.member_home_id).subscribe(
+    this.httpClient.get('../api/v1/delete_record/member_home/member_home_id=' + this.member_home_id).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -339,7 +339,7 @@ export class BannerDelete {
   templateUrl: 'news-form.html',
 })
 export class NewsForm {
-  image_url: string = 'http://localhost/project/exam-horse-sample/api/v1/';
+  image_url: string = '../api/v1/';
   newsForm: FormGroup;
   loading = false;
   news_feed_id = 0;
@@ -382,7 +382,7 @@ export class NewsForm {
       formData.append('news_image', this.image_path);
       url = 'insert_news';
     }
-    this.httpClient.post('http://localhost/project/exam-horse-sample/api/v1/' + url, formData).subscribe(
+    this.httpClient.post('../api/v1/' + url, formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -408,7 +408,7 @@ export class NewsForm {
     this.loading = true;
     var formData = new FormData();
     formData.append('file', fileData);
-    this.httpClient.post('http://localhost/project/exam-horse-sample/api/v1/upload_file', formData).subscribe(
+    this.httpClient.post('../api/v1/upload_file', formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -469,7 +469,7 @@ export class NewsForm {
         tag: "h1"
       }
     ],
-    uploadUrl: "http://localhost/project/exam-horse-sample/api/v1/upload_image",
+    uploadUrl: "../api/v1/upload_image",
     sanitize: true,
     toolbarPosition: "top"
   };
@@ -482,7 +482,7 @@ export class NewsForm {
 })
 
 export class NewsViewForm {
-  image_url: string = 'http://localhost/project/exam-horse-sample/api/v1/';
+  image_url: string = '../api/v1/';
   action: string = '';
   loading = false;
   news_feed_id = 0;
@@ -524,7 +524,7 @@ export class NewsDelete {
       return;
     }
     this.loading = true;
-    this.httpClient.get('http://localhost/project/exam-horse-sample/api/v1/delete_record/news_feed/news_feed_id=' + this.news_feed_id).subscribe(
+    this.httpClient.get('../api/v1/delete_record/news_feed/news_feed_id=' + this.news_feed_id).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {

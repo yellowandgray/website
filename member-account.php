@@ -25,7 +25,7 @@ if (isset($_SESSION['student_register_id'])) {
                     <div class="row align-items-center flex-row-reverse" style="margin-bottom: 0">
                         <div class="span6">
                             <div class="about-avatar" id="preview_container">
-                                <?php if (isset($login_student['profile_image']) && $login_student['profile_image'] == '' && $login_student['gender']!='') { ?>
+                                <?php if (isset($login_student['profile_image']) && $login_student['profile_image'] == '' && $login_student['gender'] != '') { ?>
                                     <img src="<?php echo BASE_URL . $login_student['gender']; ?>.jpg" alt="" />
                                 <?php } else { ?>
                                     <img src="<?php echo BASE_URL . $login_student['profile_image']; ?>" alt="" />
@@ -38,7 +38,7 @@ if (isset($_SESSION['student_register_id'])) {
                                 </div>
                             </div>
                             <br/>
-                          
+
                             <center>
                                 <a href="change-password" class="edit-btn">Change Password</a>
                             </center>
@@ -68,16 +68,18 @@ if (isset($_SESSION['student_register_id'])) {
                                                 <tr>
                                                     <th>Gender</th>
                                                     <th>:</th>
-                 
-                                                        <?php if ($login_student['gender'] != '') { ?>
-                                                        <td><?php  foreach (array('male' => 'Male', 'female' => 'Female') as $key => $val) {                                                
-                                                if ($key == $login_student['gender']) {
-                                                    echo $val;
-                                                        } }
-                                                ?></td>
+
+                                                    <?php if ($login_student['gender'] != '') { ?>
+                                                        <td><?php
+                                                            foreach (array('male' => 'Male', 'female' => 'Female') as $key => $val) {
+                                                                if ($key == $login_student['gender']) {
+                                                                    echo $val;
+                                                                }
+                                                            }
+                                                            ?></td>
                                                     <?php } else { ?>
                                                         <td></td>
-                                                    <?php } ?>
+<?php } ?>
                                                 </tr>
                                             </table>
                                         </div>
@@ -90,20 +92,22 @@ if (isset($_SESSION['student_register_id'])) {
                                                         <td><?php echo $login_student['email']; ?></td>
                                                     <?php } else { ?>
                                                         <td></td>
-                                                    <?php } ?>
+<?php } ?>
                                                 </tr>
                                                 <tr>
                                                     <th>Practice Medium</th>
                                                     <th>:</th>
-                                                    <?php if ($login_student['practice_medium'] != '') { ?>
-                                                        <td><?php  foreach (array('1' => 'தமிழ் ', '2' => 'English') as $key => $val) {                                                
-                                                if ($key == $login_student['practice_medium']) {
-                                                    echo $val;
-                                                        } }
-                                                ?></td>
-                                                    <?php } else { ?>
+                                                        <?php if ($login_student['practice_medium'] != '') { ?>
+                                                        <td><?php
+                                                            foreach (array('1' => 'தமிழ் ', '2' => 'English') as $key => $val) {
+                                                                if ($key == $login_student['practice_medium']) {
+                                                                    echo $val;
+                                                                }
+                                                            }
+                                                            ?></td>
+<?php } else { ?>
                                                         <td></td>
-                                                    <?php } ?>
+<?php } ?>
                                                 </tr>
                                             </table>
                                         </div>
@@ -114,9 +118,9 @@ if (isset($_SESSION['student_register_id'])) {
                                                     <th>:</th>
                                                     <?php if ($login_student['graduation'] != '') { ?>
                                                         <td><?php echo $login_student['graduation']; ?></td>
-                                                    <?php } else { ?>
+<?php } else { ?>
                                                         <td></td>
-                                                    <?php } ?>
+<?php } ?>
                                                 </tr>
                                             </table>
                                         </div>
@@ -130,7 +134,7 @@ if (isset($_SESSION['student_register_id'])) {
                                                     <th>:</th>
                                                     <?php if ($login_student['street'] != '') { ?>
                                                         <td><?php echo $login_student['street']; ?></td>
-                                                    <?php } else { ?>
+<?php } else { ?>
                                                         <td></td>
                                                     <?php } ?>
                                                 </tr>
@@ -139,7 +143,7 @@ if (isset($_SESSION['student_register_id'])) {
                                                     <th>:</th>
                                                     <?php if ($login_student['district'] != '') { ?>
                                                         <td><?php echo $login_student['district']; ?></td>
-                                                    <?php } else { ?>
+<?php } else { ?>
                                                         <td></td>
                                                     <?php } ?>
                                                 </tr>
@@ -148,9 +152,9 @@ if (isset($_SESSION['student_register_id'])) {
                                                     <th>:</th>
                                                     <?php if ($login_student['nearcity'] != '') { ?>
                                                         <td><?php echo $login_student['nearcity']; ?></td>
-                                                    <?php } else { ?>
+<?php } else { ?>
                                                         <td></td>
-                                                    <?php } ?>
+<?php } ?>
                                                 </tr>
                                             </table>
                                         </div>
@@ -161,7 +165,7 @@ if (isset($_SESSION['student_register_id'])) {
                                                     <th>:</th>
                                                     <?php if ($login_student['city'] != '') { ?>
                                                         <td><?php echo $login_student['city']; ?></td>
-                                                    <?php } else { ?>
+<?php } else { ?>
                                                         <td></td>
                                                     <?php } ?>
                                                 </tr>
@@ -170,9 +174,9 @@ if (isset($_SESSION['student_register_id'])) {
                                                     <th>:</th>
                                                     <?php if ($login_student['pin'] != '') { ?>
                                                         <td><?php echo $login_student['pin']; ?></td>
-                                                    <?php } else { ?>
+<?php } else { ?>
                                                         <td></td>
-                                                    <?php } ?>
+<?php } ?>
                                                 </tr>
                                             </table>
                                         </div>
@@ -184,15 +188,17 @@ if (isset($_SESSION['student_register_id'])) {
                                                 <tr>
                                                     <th>Exam Type</th>
                                                     <th>:</th>
-                                                    <?php if ($login_student['selectgroup'] != '') { ?>
-                                                        <td><?php  foreach (array('group1' => 'Group 1', 'group22a' => 'Group 2/2A') as $key => $val) {                                                
-                                                if ($key == $login_student['selectgroup']) {
-                                                    echo $val;
-                                                        } }
-                                                ?></td>
-                                                    <?php } else { ?>
+                                                        <?php if ($login_student['selectgroup'] != '') { ?>
+                                                        <td><?php
+                                                        foreach (array('group1' => 'Group 1', 'group22a' => 'Group 2/2A') as $key => $val) {
+                                                            if ($key == $login_student['selectgroup']) {
+                                                                echo $val;
+                                                            }
+                                                        }
+                                                        ?></td>
+<?php } else { ?>
                                                         <td></td>
-                                                    <?php } ?>
+<?php } ?>
                                                 </tr>
                                             </table>
                                         </div>
@@ -207,7 +213,7 @@ if (isset($_SESSION['student_register_id'])) {
                                             <tr>
                                                 <th>Mobile</th>
                                                 <th>:</th>
-                                                <?php if ($login_student['mobile'] != '') { ?>
+<?php if ($login_student['mobile'] != '') { ?>
                                                     <td><?php echo $login_student['mobile']; ?></td>
                                                 <?php } else { ?>
                                                     <td></td>
@@ -216,7 +222,7 @@ if (isset($_SESSION['student_register_id'])) {
                                             <tr>
                                                 <th>Email</th>
                                                 <th>:</th>
-                                                <?php if ($login_student['email'] != '') { ?>
+<?php if ($login_student['email'] != '') { ?>
                                                     <td><?php echo $login_student['email']; ?></td>
                                                 <?php } else { ?>
                                                     <td></td>
@@ -225,7 +231,7 @@ if (isset($_SESSION['student_register_id'])) {
                                             <tr>
                                                 <th>Gender</th>
                                                 <th>:</th>
-                                                <?php if ($login_student['gender'] != '') { ?>
+<?php if ($login_student['gender'] != '') { ?>
                                                     <td><?php echo $login_student['gender']; ?></td>
                                                 <?php } else { ?>
                                                     <td></td>
@@ -234,9 +240,24 @@ if (isset($_SESSION['student_register_id'])) {
                                             <tr>
                                                 <th>Graduation</th>
                                                 <th>:</th>
-                                                <?php if ($login_student['graduation'] != '') { ?>
+<?php if ($login_student['graduation'] != '') { ?>
                                                     <td><?php echo $login_student['graduation']; ?></td>
                                                 <?php } else { ?>
+                                                    <td></td>
+                                                    <?php } ?>
+                                            </tr>
+                                            <tr>
+                                                <th>Practice Medium</th>
+                                                <th>:</th>
+                                                <?php if ($login_student['practice_medium'] != '') { ?>
+                                                    <td><?php
+                                                    foreach (array('1' => 'தமிழ் ', '2' => 'English') as $key => $val) {
+                                                        if ($key == $login_student['practice_medium']) {
+                                                            echo $val;
+                                                        }
+                                                    }
+                                                    ?></td>
+<?php } else { ?>
                                                     <td></td>
                                                 <?php } ?>
                                             </tr>
@@ -282,9 +303,9 @@ if (isset($_SESSION['student_register_id'])) {
                                             <tr>
                                                 <th>Near City</th>
                                                 <th>:</th>
-                                                <?php if ($login_student['nearcity'] != '') { ?>
+<?php if ($login_student['nearcity'] != '') { ?>
                                                     <td><?php echo $login_student['nearcity']; ?></td>
-                                                <?php } else { ?>
+<?php } else { ?>
                                                     <td></td>
                                                 <?php } ?>
                                             </tr>
@@ -295,11 +316,11 @@ if (isset($_SESSION['student_register_id'])) {
                                             <tr>
                                                 <th>Exam Type</th>
                                                 <th>:</th>
-                                                <?php if ($login_student['selectgroup'] != '') { ?>
+<?php if ($login_student['selectgroup'] != '') { ?>
                                                     <td><?php echo $login_student['selectgroup']; ?></td>
-                                                <?php } else { ?>
+<?php } else { ?>
                                                     <td></td>
-                                                <?php } ?>
+<?php } ?>
                                             </tr>
                                         </table>
                                     </div>
@@ -337,8 +358,8 @@ if (isset($_SESSION['student_register_id'])) {
                     </div>
                 </div>
             </section>
-            <?php include 'footer.php'; ?>
+<?php include 'footer.php'; ?>
         </div>
-        <?php include 'script.php'; ?>
+<?php include 'script.php'; ?>
     </body>
 </html>

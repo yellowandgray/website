@@ -1641,6 +1641,7 @@ and open the template in the editor.
     top: 0;
     right: 0;
     cursor: pointer;
+    background: #fff;
 }
 .file-upload img.upload-img {
     width: 35px;
