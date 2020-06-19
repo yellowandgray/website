@@ -88,10 +88,10 @@ if ($success === true)
                  $obj->insertRecord(array('student_id'=>$student_id,'payment_amount'=>$payment_amt,'payment_status'=>1,'payment_succ_ref'=>$_POST['razorpay_payment_id'],'created_at'=>date('Y-m-d H:i:s')),'student_payment');
                  unset($_SESSION['pay_student']);
                  
-                 
+                 $_SESSION['payment_info']['student_name'] = $student_name;
                  
                  $sel_stud = $obj->selectRow('*', 'student_register', 'student_register_id = ' .$student_id);
-                $from_mail = 'examhorse1@gmail.com';
+                $from_mail = 'learn@examhorse.com';
                 $from_mail_name = '';
 
         $subject = 'Examhorse User Account';
@@ -105,9 +105,23 @@ if ($success === true)
                 <tr>
                     <td colspan="3" style="padding: 15px;">
                         <p>Dear ' . $sel_stud['student_name'] . ',</p>                       
-                        <p>Your Account Has been Created...</p>					
-                        <p>Regard,</p>
-                        <p>Examhorse</p>
+                        <p>Thank you for joining ExamHorse.com - the Online Platform to reach your successful Government Job.</p>					
+                        <p>ExamHorse offers the concept of Micro-Learning to become the master of each and every exam related topic. Currently, all the past 16-year Original Question Papers and the 2020 new syllabus Model Question Paper are given along with the answers,explanation, and important additional information needed for the upcoming exams</p>
+                        <br>
+                        <p> To start using the product, please follow the instruction given below:</p>
+                        <br>
+                        <p>1. Go to www.examhorse.com</p>
+                        <p>2. Enter your username and password</p>
+                        <br>
+                        <p>Once you login to your account, you can find the Practice Test option of either in Tamil or in English and Year wise or Syllabus/Unit-Topic wise. Proceed to explore all the options. </p>
+                        <br>
+                        <p>Note: Kindly find the E-Receipt attached, amount once paid is not refundable</p>
+                        <br>
+                        <p>Best Wishes!</p>
+                        <br>
+                        <p>If you have any questions, please send us an email to support@examhorse.com</p>
+                        <br>
+                        <p>Happy Practicing!</p>
                     </td>
                 </tr>
                

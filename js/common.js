@@ -52,6 +52,28 @@ function registerStudent(e) {
             alert('CAPTCHA Required!');		
             e.stopImmediatePropagation();
             return false;
+    }  
+    else if(!(email.match(/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/))) {
+        alert('Invalid Email');		
+        e.stopImmediatePropagation();
+        return false;
+    }
+    else if(!(pwd.match(/^(?=.{6,})(?=.*[0-9])(?=.*[@#$%^&+=]).*$/))) {
+        alert('Password should contain \n 6 letters \n 1 Number \n 1 special character(@#$%^&+=)');		
+        e.stopImmediatePropagation();
+        return false;
+    }else if(!(cpwd.match(/^(?=.{6,})(?=.*[0-9])(?=.*[@#$%^&+=]).*$/))) {
+        alert('Confirm Password should contain \n 6 letters \n 1 Number \n 1 special character(@#$%^&+=)');		
+        e.stopImmediatePropagation();
+        return false;
+    }else if(pwd != cpwd) {
+        alert('Password and Confirm Password should be same');
+        e.stopImmediatePropagation();
+        return false;
+    }else if(!(phone.match(/^[0-9]{10}$/))) {
+        alert('Phone number should be 10 digit number');		
+        e.stopImmediatePropagation();
+        return false;
     }
      else
     {
@@ -315,6 +337,10 @@ function ContactForm(e) {
             alert('CAPTCHA Required!');		
             e.stopImmediatePropagation();
             return false;
+    }else if(!(email.match(/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/))) {
+        alert('Invalid Email');		
+        e.stopImmediatePropagation();
+        return false;
     }
     else
     {
