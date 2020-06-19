@@ -1571,7 +1571,7 @@ $app->post('/samplelogin', function() use ($app) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
         $user = $com->selectRow('*', 'free_user_login', 'free_user_login_id = ' . $record);
-        $from_mail = 'examhorse1@gmail.com';
+        $from_mail = 'info@examhorse.com';
         $from_mail_name = '';
 
         $subject = 'Examhorse Free User Account';
@@ -1583,11 +1583,14 @@ $app->post('/samplelogin', function() use ($app) {
             <tbody>
                
                 <tr>
-                    <td colspan="3" style="padding: 15px;">
-                        <p>Dear ' . $user['name'] . ',</p>                       
-                        <p>Your Free Account Has been Created...</p>					
-                        <p>Regard,</p>
-                        <p>Examhorse</p>
+                    <td style="padding: 15px;">
+                        <p>Dear ' . $user['name'] . ',</p>  
+                         <br>   
+                        <p>Congratulations on your decision to try ExamHorse for your TNPSCE Group I or 2/2A exams. The ExamHorse has the Original 16-year past Question Papers with the answers plus the detailed important topic-centric information for the upcoming exams.</p>					
+                        <p>This is a sure path to success in TNPSC exams.</p>
+                        <p>Warm regards,</p>
+                        <p>Team ExamHorse</p>
+                        <p>P.S. If you have any questions about the trail, please send us an email to support@examhorse.com</p>
                     </td>
                 </tr>
                
