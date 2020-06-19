@@ -59,7 +59,7 @@ $obj = new Common();
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
                                                 </div>
-                                                <input name="" id="email" class="form-control" placeholder="Email address" type="email">
+                                                <input name="" id="email" class="form-control" placeholder="Email address" type="email" required>
                                             </div> <!-- form-group// -->
                                         </div>
                                     </div>
