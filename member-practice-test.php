@@ -20,7 +20,7 @@ if (isset($_REQUEST['from']) && ($_REQUEST['from'] == 'pausequiz')) {
     $check_pause = $obj->selectRow('student_log.*,student_log_pause.pause_question', 'student_log INNER JOIN student_log_pause ON student_log.student_log_id=student_log_pause.student_log_id', 'student_log_pause.student_id=' . $_SESSION['student_register_id']);
 
     if (count($check_pause) < 1) {
-        header('Location: select_language');
+        header('Location: member-select-language');
     } else {
         $pause_quiz = true;
         //$student_log_v = $_REQUEST['from_log'];
@@ -1077,7 +1077,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                             </p> -->
                                 <div class="">
                                     <a class="btn btn-theme btn-rounded" @click="restart()">Restart <i class="fa fa-refresh"></i></a>
-                                    <a class="btn btn-theme btn-rounded" onclick="window.location = 'select_language'">Home <i class="fa fa-refresh"></i></a>
+                                    <a class="btn btn-theme btn-rounded" onclick="window.location = 'member-select-language'">Home <i class="fa fa-refresh"></i></a>
                                     <?php if ($type == 'Subject Order') { ?>
                                         <a @click="divshowsorder()" class="btn btn-theme btn-rounded">Show Full Result <i class="fa fa-refresh"></i></a>
                                     <?php } else { ?>
@@ -1851,7 +1851,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                             },
                                             function (data, status) {
                                                 if (data.result.error === false) {
-                                                    window.location = './select_language';
+                                                    window.location = './member-select-language';
                                                     //swal("Deleted!", "Your imaginary file has been deleted.", "success");    
                                                 }
                                             });
