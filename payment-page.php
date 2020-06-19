@@ -17,14 +17,16 @@ $obj = new Common();
                             <article class="card-body">
                                 
                                 <div class="row">
-                                    <h1>Thanks for your Registration</h1>
+                                    
                                     <?php if(isset($_SESSION['payment_info'])) {
                                             $payment_status = $_SESSION['payment_info']['payment_status'];
                                             if($payment_status=='success') {                                                
                                               $payment_id   = $_SESSION['payment_info']['payment_id'];
+                                              $student_name = $_SESSION['payment_info']['student_name'];
                                      ?>
-                                        <h1>Payment Status  : Success</h1>
-                                        <h1>Payment Reference: <?php echo $payment_id; ?></h1>
+                                        <h1>Dear <?php echo $student_name; ?>,</h1>
+                                        <h1>Thank you for joining ExamHorse.com - the Online Platform to reach your successful Government Job.  </h1>
+                                       <div class="form-group"><a href="member-signin" class="btn btn-primary btn-block">Go to Login</a></div>
                                     <?php }                                   
                                      if($payment_status=='failed') {
                                     ?>
@@ -41,10 +43,7 @@ $obj = new Common();
                                   
                                    
                                    
-                                    <div class="form-group">
-                                        <!--button  class="btn btn-primary btn-block" onClick="window.location.href='login-page';"> Go to Login </button-->
-                                        <a href="member-signin" class="btn btn-primary btn-block">Go to Login</a>
-                                    </div> <!-- form-group// -->      
+                                      
                                     
                                 </form>
                             </article>

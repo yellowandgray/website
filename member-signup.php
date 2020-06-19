@@ -59,7 +59,7 @@ $obj = new Common();
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
                                                 </div>
-                                                <input name="" id="email" class="form-control" placeholder="Email address" type="email" onblur="validateEmail(this);">
+                                                <input name="" id="email" class="form-control" placeholder="Email address" type="email" required>
                                             </div> <!-- form-group// -->
                                         </div>
                                     </div>
@@ -87,7 +87,7 @@ $obj = new Common();
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
                                                 </div>
-                                                <input name="" maxlength="10" pattern="[0-9]{10}" id="mobile" class="form-control" placeholder="Phone number" type="text" required>
+                                                <input name="" maxlength="10"  id="mobile" class="form-control" placeholder="Phone number" type="text" required>
                                             </div> <!-- form-group// -->  
                                         </div>   
 

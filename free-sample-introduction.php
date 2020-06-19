@@ -31,10 +31,10 @@ if (isset($_SESSION['student_register_id'])) {
                                         <input type="text" class="form-control" name="name" id="name" placeholder="Enter Your Name" required>
                                     </div>
                                     <div class="form-group">
-                                        <input type="email" class="form-control" name="email" id="email" placeholder="Enter Your Email" onblur="validateEmail(this);">
+                                        <input type="email" class="form-control" name="email" id="email" placeholder="Enter Your Email">
                                     </div>
                                     <div class="form-group">
-                                        <input type="phone" name="mobile" pattern="[0-9]{10}" maxlength="10" class="form-control" id="phone" placeholder="Enter Your Phone" required>
+                                        <input type="phone" name="mobile"  maxlength="10" class="form-control" id="phone" placeholder="Enter Your Phone" required>
                                     </div>
                                     <div class="form-group">
                                         <label><strong>Practice Medium: &nbsp;&nbsp;</strong></label>

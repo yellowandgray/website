@@ -529,21 +529,6 @@ $app->get('/get_language', function() {
     echoRespnse(201, $res);
 });
 
-
-$app->get('/get_free_user', function() {
-    $res = array('error' => true, 'message' => 'No records found');
-    $com = new Common();
-    $data = $com->selectAll('*', 'free_user_login', 'free_user_login_id > 0');
-    if (count($data) > 0) {
-        $res['error'] = false;
-        $res['message'] = 'Records found';
-        $res['data'] = $data;
-        $res['total'] = count($data);
-    }
-    echoRespnse(201, $res);
-});
-
-
 $app->post('/import_question', function() use($app) {
     $file = $_FILES;
     $res = array('error' => true, 'message' => 'Unable to upload');
@@ -1585,34 +1570,37 @@ $app->post('/samplelogin', function() use ($app) {
         $_SESSION['free_user_id'] = $record;
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
-//        $user = $obj->selectRow('*', 'free_user_login', 'free_user_login_id = \'' . $record . '\'');
-//        $from_mail = 'examhorse1@gmail.com';
-//        $from_mail_name = '';
-//
-//        $subject = 'Examhorse Free User Account';
-//        $body = '<!DOCTYPE html>
-//<html>
-//    <head></head>
-//    <body>
-//        <table border="0" cellpadding="0" cellspacing="0" style="width: 100%; max-width: 800px; margin: 0 auto; border: 1px dotted #ed1c24;">
-//            <tbody>
-//               
-//                <tr>
-//                    <td colspan="3" style="padding: 15px;">
-//                        <p>Dear ' . $user['name'] . ',</p>                       
-//                        <p>Your Free Account Has been Created...</p>					
-//                        <p>Regard,</p>
-//                        <p>Examhorse</p>
-//                    </td>
-//                </tr>
-//               
-//            </tbody>
-//        </table>
-//    </body>
-//</html>';
-//
-//        $tpty = new Thirdparty();
-//        $tpty->sendMail($user['email'], $user['name'], $body, $body, $subject, $from_mail, $from_mail_name, '', '', '', '');
+        $user = $com->selectRow('*', 'free_user_login', 'free_user_login_id = ' . $record);
+        $from_mail = 'info@examhorse.com';
+        $from_mail_name = '';
+
+        $subject = 'Examhorse Free User Account';
+        $body = '<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <table border="0" cellpadding="0" cellspacing="0" style="width: 100%; max-width: 800px; margin: 0 auto; border: 1px dotted #ed1c24;">
+            <tbody>
+               
+                <tr>
+                    <td style="padding: 15px;">
+                        <p>Dear ' . $user['name'] . ',</p>  
+                         <br>   
+                        <p>Congratulations on your decision to try ExamHorse for your TNPSCE Group I or 2/2A exams. The ExamHorse has the Original 16-year past Question Papers with the answers plus the detailed important topic-centric information for the upcoming exams.</p>					
+                        <p>This is a sure path to success in TNPSC exams.</p>
+                        <p>Warm regards,</p>
+                        <p>Team ExamHorse</p>
+                        <p>P.S. If you have any questions about the trail, please send us an email to support@examhorse.com</p>
+                    </td>
+                </tr>
+               
+            </tbody>
+        </table>
+    </body>
+</html>';
+
+        $tpty = new Thirdparty();
+        $tpty->sendMail($user['email'], $user['name'], $body, $body, $subject, $from_mail, $from_mail_name, '', '', '', '');
     }
     echoRespnse(201, $res);
 });
@@ -1800,7 +1788,7 @@ $app->post('/forgotpassword', function() use ($app) {
             $res['message'] = 'New Password Sent to Email ID';
 
 
-            $from_mail = 'examhorse1@gmail.com';
+            $from_mail = 'info@examhorse.com';
             $from_mail_name = '';
 
             $subject = 'Examhorse Forgot Password';
@@ -1812,13 +1800,21 @@ $app->post('/forgotpassword', function() use ($app) {
             <tbody>
                
                 <tr>
-                    <td colspan="3" style="padding: 15px;">
+                    <td  style="padding: 15px;">
                         <p>Dear ' . $user['student_name'] . ',</p>                       
-                        <p>Your Latest Password ' . $newpwd . '</p>					
-
-                        <p><a href="https://examhorse.com/member-signin">Click Here to Login</a></p>
-                        <p>Regard,</p>
-                        <p>Examhorse</p>
+                        <p>Hello from Team ExamHorse!</p>	
+                        <p>We noticed you recently tried to log into ExamHorse.</p>
+                        <p>Due to the "Forgot Password" action, the following info has been emailed to you.</p>
+                        <br>
+                        <p>Your User Name :  '.$user['email'].'</p>
+                        <p>Your Password   : '.$newpwd.'</p>
+                        <br>
+                        <p>Pl use this password to login, and try to reset via Member Account page\'s Change Password option for your convenience.</p>
+                        <br>
+                        <p>Best Wishes!</p>
+                        <br>
+                        <p>Thanks & Regards,</p>
+                        <p> - Team ExamHorse</p>
                     </td>
                 </tr>
                
@@ -1879,35 +1875,7 @@ $app->post('/insert_student_sess', function() use ($app) {
 
             $res['error'] = false;
             //$res['record'] 	= $record;
-            //$res['message'] = 'Record inserted successfully';
-            $sel_stud = $obj->selectRow('*', 'student_register', 'student_register_id = \'' . $_SESSION . '\'');
-        $from_mail = 'examhorse1@gmail.com';
-        $from_mail_name = '';
-
-        $subject = 'Examhorse Free User Account';
-        $body = '<!DOCTYPE html>
-<html>
-    <head></head>
-    <body>
-        <table border="0" cellpadding="0" cellspacing="0" style="width: 100%; max-width: 800px; margin: 0 auto; border: 1px dotted #ed1c24;">
-            <tbody>
-               
-                <tr>
-                    <td colspan="3" style="padding: 15px;">
-                        <p>Dear ' . $sel_stud['name'] . ',</p>                       
-                        <p>Your Free Account Has been Created...</p>					
-                        <p>Regard,</p>
-                        <p>Examhorse</p>
-                    </td>
-                </tr>
-               
-            </tbody>
-        </table>
-    </body>
-</html>';
-
-        $tpty = new Thirdparty();
-        $tpty->sendMail($sel_stud['email'], $sel_stud['student_name'], $body, $body, $subject, $from_mail, $from_mail_name, '', '', '', '');
+            //$res['message'] = 'Record inserted successfully';            
         } else {
             $res['message'] = 'Email Already Exists!';
         }
