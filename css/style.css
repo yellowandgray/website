@@ -315,7 +315,7 @@ header .logo h1 {
     float: right;
     /* padding: 0px 0px 7px 0; */
     border-bottom: 1px dotted #e6e6e6;
-     margin: 2px 30px 0 0px; 
+    margin: 2px 30px 0 0px; 
     /* border-bottom: 1px dotted #e6e6e6; */
     /*    float: right;
         margin: 9px 0 0 0;
@@ -2717,6 +2717,9 @@ article .align-right {
     .tab-content {
         overflow: auto !Important;
     }
+    .explanation-popup .popup-content img {
+        width: 1000px !important;
+    }
 }
 
 @media (max-width: 480px) {
@@ -4209,4 +4212,21 @@ form#login-form:after {
 
 .tab-content {
     overflow: hidden;
+}
+
+.explanation-popup {
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    z-index: 9999;
+}
+
+.explanation-popup .popup-header {
+    width: 100%;
+    /* background: #fff; */
+    padding: 20px;
+}
+
+.explanation-popup .popup-header button span {
+    font-size: 20px;
 }

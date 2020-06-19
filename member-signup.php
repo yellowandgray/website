@@ -19,12 +19,12 @@ $obj = new Common();
                                 <p class="text-center">Get started with your account</p>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <div class="google-btn">
+                                        <div class="google-btn" onclick="window.location ='<?php echo $google_client->createAuthUrl(); ?>'">
                                             <div class="google-icon-wrapper">
                                                 <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
                                             </div>
                                             <!--p class="btn-text"><b>Sign up with google</b></p-->
-                                            <a href="<?php echo $google_client->createAuthUrl(); ?>" class="btn-text"><b>Sign up with google</b></a>
+                                            <a href="" class="btn-text"><b>Sign up with google</b></a>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -93,7 +93,7 @@ $obj = new Common();
 
                                         <div class="col-md-6">
                                             <div class="form-group input-group">
-                                                <label>Practice Medium: &nbsp;&nbsp;</label>
+                                                <label><strong>Practice Medium: &nbsp;&nbsp;</strong></label>
                                                 <div class="form-check form-check-inline">
                                                     <input class="form-check-input" type="radio" name="practice_medium" id="practice_medium" value="1"   required>
                                                     <label class="form-check-label" for="tamil">தமிழ் </label>

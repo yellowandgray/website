@@ -19,7 +19,11 @@ if (isset($_SESSION['student_register_id'])) {
                             <div class="intro-title">
                                 <h2>Get Started to a Great Career</h2>
                             </div>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                            <ul class="free-sample-list">
+                                <li><i class="fa fa-star" aria-hidden="true"></i> 20% - இருந்து 30% வரை, அதிக மதிப்பெண்கள் பெற.</li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i> Detailed score report – what all right, what all wrong, how much improvement made in the repetitive tests.</li>
+                            </ul>
+<!--                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>-->
                             <div class="sample-screenshot">
                                 <ul>
                                     <li><i class="fa fa-check"></i> Year Order / Subject Order</li>

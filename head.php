@@ -2,7 +2,8 @@
     <meta charset="utf-8">
     <title>Exam Horse</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="" />
+    <meta name="description" content="With the past 16-year original question papers and 2020  Model paper in the Practice Test mode along with the additional important information, a 20% to 30% increase in the score possible. The syllabus/Unit-Topic test option would help to focus on the to be improved areas. The detailed report would give guidance on where to focus further." />
+    <meta name="keywords" content="Tnpsc previous year question paper with definitions, Tnpsc questions with answers definitions, tnpsc materials in tamil / english, Tnpsc Topic wise question paper with answers, Tnpsc Original question paper with answers, how to study / prepare for tnpsc, tnpsc syllabus with material">
     <meta name="author" content="" />
 
     <!-- css -->

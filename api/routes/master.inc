@@ -1585,34 +1585,34 @@ $app->post('/samplelogin', function() use ($app) {
         $_SESSION['free_user_id'] = $record;
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
-        $user = $obj->selectRow('*', 'free_user_login', 'free_user_login_id = \'' . $record . '\'');
-        $from_mail = 'examhorse1@gmail.com';
-        $from_mail_name = '';
-
-        $subject = 'Examhorse Free User Account';
-        $body = '<!DOCTYPE html>
-<html>
-    <head></head>
-    <body>
-        <table border="0" cellpadding="0" cellspacing="0" style="width: 100%; max-width: 800px; margin: 0 auto; border: 1px dotted #ed1c24;">
-            <tbody>
-               
-                <tr>
-                    <td colspan="3" style="padding: 15px;">
-                        <p>Dear ' . $user['name'] . ',</p>                       
-                        <p>Your Free Account Has been Created...</p>					
-                        <p>Regard,</p>
-                        <p>Examhorse</p>
-                    </td>
-                </tr>
-               
-            </tbody>
-        </table>
-    </body>
-</html>';
-
-        $tpty = new Thirdparty();
-        $tpty->sendMail($user['email'], $user['name'], $body, $body, $subject, $from_mail, $from_mail_name, '', '', '', '');
+//        $user = $obj->selectRow('*', 'free_user_login', 'free_user_login_id = \'' . $record . '\'');
+//        $from_mail = 'examhorse1@gmail.com';
+//        $from_mail_name = '';
+//
+//        $subject = 'Examhorse Free User Account';
+//        $body = '<!DOCTYPE html>
+//<html>
+//    <head></head>
+//    <body>
+//        <table border="0" cellpadding="0" cellspacing="0" style="width: 100%; max-width: 800px; margin: 0 auto; border: 1px dotted #ed1c24;">
+//            <tbody>
+//               
+//                <tr>
+//                    <td colspan="3" style="padding: 15px;">
+//                        <p>Dear ' . $user['name'] . ',</p>                       
+//                        <p>Your Free Account Has been Created...</p>					
+//                        <p>Regard,</p>
+//                        <p>Examhorse</p>
+//                    </td>
+//                </tr>
+//               
+//            </tbody>
+//        </table>
+//    </body>
+//</html>';
+//
+//        $tpty = new Thirdparty();
+//        $tpty->sendMail($user['email'], $user['name'], $body, $body, $subject, $from_mail, $from_mail_name, '', '', '', '');
     }
     echoRespnse(201, $res);
 });

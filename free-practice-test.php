@@ -621,7 +621,7 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                 <div class="row">
                     <div class="span12" id="app">
 
-<?php if ($quiz_from_page != 'quiz') { ?>
+                        <?php if ($quiz_from_page != 'quiz') { ?>
                             <div class="quiz-question-section" v-if="questionIndex < quiz.questions.length">
 
                                 <a  onclick="goBack();"  v-if="!showqap"><i class = 'font-icon-arrow-simple-left'></i></a>
@@ -640,31 +640,31 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                                             <td valign="top" class="w-5">:</td>
                                             <th valign="top"><?php echo $type; ?></th>
                                         </tr>
-    <?php if (isset($_SESSION['student_selected_topics_id']) && ($_SESSION['student_selected_topics_id'] != '')) { ?>
+                                        <?php if (isset($_SESSION['student_selected_topics_id']) && ($_SESSION['student_selected_topics_id'] != '')) { ?>
                                             <tr>
                                                 <td valign="top">Selected Subject and Topics</td>
                                                 <td valign="top" class="w-5">:</td>
                                                 <th valign="top"><?php echo $sub_topic_val; ?></th>
                                             </tr>
-    <?php } ?>
-    <?php if ($type == 'Year Order') { ?>   
+                                        <?php } ?>
+                                        <?php if ($type == 'Year Order') { ?>   
                                             <tr>
                                                 <td valign="top">Selected Year</td>
                                                 <td valign="top" class="w-5">:</td>
                                                 <th valign="top"><?php echo $sel_year_val; ?></th>
                                             </tr>
-                                <?php } ?>
+                                        <?php } ?>
                                     </table>
                                 </h4>
-    <?php if (["student_register_id > 0"] == '') { ?>
+                                <?php if (["student_register_id > 0"] == '') { ?>
                                     <a class="home_link" href="select_language">
                                         <i class="icon-home"></i>
                                     </a>
-    <?php } else { ?>
+                                <?php } else { ?>
                                     <a class="home_link" href="free-select-language">
                                         <i class="icon-home"></i>
                                     </a>
-    <?php } ?>
+                                <?php } ?>
 
 
                             </div>
@@ -684,7 +684,7 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
 
 
                                             <div class="quiz-div">
-    <?php if ($type == 'Year Order' || $type == 'Subject Order') { ?>  
+                                                <?php if ($type == 'Year Order' || $type == 'Subject Order') { ?>  
                                                     <div class="quiz-pause">
                                                         <div class="show-ans-sec">
                                                             <input id="show-immediately" type="checkbox" value="show_answer_immediately" @change="immChange" v-model="showimmediate"> <span class="span-position">Show Answer</span>
@@ -693,28 +693,28 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                                                             <input id="show-olq" type="checkbox" value="show_olq" @change="showolqChange" v-model="olqshow"> <span class="span-position">Show Question in <?php echo $other_language['name']; ?></span>
                                                         </div> 
                                                     </div>    
-    <?php } ?>
-    <?php if ($type == 'Year Order') { ?>
+                                                <?php } ?>
+                                                <?php if ($type == 'Year Order') { ?>
                                                     <div class="quiz-timer">
                                                         <span id="minutes">{{minuteslabel}}</span> : <span id="seconds">{{secondslabel}}</span>                             
                                                         <i class="icon-pause" v-if="!isTimerPaused" @click="pauseTimer()"></i>
                                                         <i class="icon-play" v-if="isTimerPaused" @click="playTimer()"></i>
                                                     </div>
-    <?php } ?>
+                                                <?php } ?>
                                             </div>
 
 
 
 
                                             <!-- show question admin panel -->
-    <?php if ($type == 'Year Order') { ?>  
+                                            <?php if ($type == 'Year Order') { ?>  
                                                 <div class="quiz-review">
                                                     <div class="float-left" style="padding: 20px 0;">
                                                         <!--a href="#" onclick="showqno();" class="btn logout-btn">Question Admin Panel</a  -->
                                                         <a  @click="showQuesPanel();" class="btn logout-btn">Question Admin Panel</a>
                                                     </div>
                                                 </div>  
-    <?php } ?>        
+                                            <?php } ?>        
                                             <!-- show question admin panel -->
 
 
@@ -724,7 +724,7 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                                             <progress class="progress is-info is-small" :value="(questionIndex/quiz.questions.length)*100" max="100">{{(questionIndex/quiz.questions.length)*100}}%</progress>
                                             <div class="lenth_width">
                                                 <span  class="label lable-blue">Total: {{quiz.questions.length}}</span>
-    <?php /* <span class="label label-success">Answered: {{((quiz.questions.length)-(quiz.questions.length-questionIndex))}}</span> */ ?>
+                                                <?php /* <span class="label label-success">Answered: {{((quiz.questions.length)-(quiz.questions.length-questionIndex))}}</span> */ ?>
                                                 <span  class="label label-success">Answered: {{anscntstud}}</span> 
                                             </div>
                                         </div>
@@ -775,7 +775,7 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                                                         </a>
                                                     </div-->                                         
                                             </div>
-    <?php // }   ?>
+                                            <?php // }   ?>
 
                                         </div>
 
@@ -1044,7 +1044,7 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
 
 
                                         <!--footer class="questionFooter" id='quiz-footer'  v-if="showimmediateblk"-->
-    <?php // if($type=='Year Order') {   ?>
+                                        <?php // if($type=='Year Order') {   ?>
                                         <footer class="questionFooter" id='quiz-footer'  v-if="showimmediateblk">
                                             <div class="footer-explanation-section">
                                                 <div class="quiz-explanation-view border-b">Correct Answer - <strong>{{quiz.questions[questionIndex].answer}}</strong>
@@ -1064,11 +1064,11 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                                                   </div>
                                                   <?php // } */ ?>
 
-    <?php // if($testmode==1){   ?>
+                                                <?php // if($testmode==1){   ?>
                                                 <div v-if="!quiz.questions[questionIndex].show_image_explanation && otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no] && otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].show_image_explanation" class="text-center">
                                                     <img v-if="otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].explanation_img_direction == 'top'" v-on:click="showexpimgpopup('api/v1/'+quiz.questions[questionIndex].image_path_explanation);" v-bind:src="'api/v1/'+otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].image_path_explanation" alt="image" class="qes-img" />
                                                 </div>
-    <?php // }   ?>
+                                                <?php // }   ?>
 
                                                 <!--span v-html="quiz.questions[questionIndex].explanation"></span-->
                                                 <br/>
@@ -1082,11 +1082,11 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                                                   </div>
                                                   <?php // } */ ?>
 
-    <?php // if($testmode==1){   ?>
+                                                <?php // if($testmode==1){   ?>
                                                 <div style="text-align: left;" v-if="!quiz.questions[questionIndex].explanation && otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no] && otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].explanation">
                                                     <span v-html="otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].explanation"></span>
                                                 </div>
-    <?php // }    ?>
+                                                <?php // }    ?>
 
 
 
@@ -1101,11 +1101,11 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                                                   </div>
                                                   <?php // } */ ?>
 
-    <?php // if($testmode==1){   ?>
+                                                <?php // if($testmode==1){   ?>
                                                 <div v-if="!quiz.questions[questionIndex].show_image_explanation && otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no] && otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].show_image_explanation" class="text-center">
                                                     <img v-if="otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].explanation_img_direction == 'bottom'" v-bind:src="'api/v1/'+otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].image_path_explanation" alt="image" class="qes-img" />
                                                 </div>
-    <?php // }  ?>
+                                                <?php // }  ?>
 
 
 
@@ -1138,7 +1138,7 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
 
                                         <?php // }  ?>
 
-    <?php //  if($type=='Year Order') {   ?>
+                                        <?php //  if($type=='Year Order') {   ?>
                                         <div class="other-language" v-if="olqshow" id="olqhidden">
 
                                             <div v-if="olqd">
@@ -1217,11 +1217,11 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                                     <h2 class="complete-title" v-if="scoreval != quiz.questions.length">
                                         Test Completed
                                     </h2>
-    <?php if ($type == 'Year Order') { ?>
+                                    <?php if ($type == 'Year Order') { ?>
                                         <p class="subtitledur" v-if="data_ques_duration>0">
                                             <span class="stotdur">At {{data_ques_duration}} Minutes You have completed the Quiz <br v-if="data_ques_answered!=0"> <span class="stotques" v-if="data_ques_answered!=0">At {{totalquizduration}} Minutes you have completed {{data_ques_answered}} Questions</span>
                                         </p>
-    <?php } ?>
+                                    <?php } ?>
                                     <p class="subtitle">
                                         Your Score: <span class="score-clr">{{ scoreval }}</span> / {{ quiz.questions.length }}
                                     </p>
@@ -1270,7 +1270,7 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
 
                                     <?php } else { ?>
                                         <div id="question_list">{{divshow()}}</div>
-    <?php } ?>                    
+                                    <?php } ?>                    
 
                                     <div id="question_list_det" style="display: none;"></div>
                                 </div>
@@ -1488,12 +1488,12 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
 
 
 
-<?php }
-?>
+                        <?php }
+                        ?>
 
 
 
-<?php ?>
+                        <?php ?>
                     </div>
                 </div>
             </section>
@@ -1507,7 +1507,7 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
         </div>
 
 
-        <div class="modal fade" id="explimagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<!--        <div class="modal fade"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog" data-dismiss="modal">
                 <div class="modal-content"  >   
                     <div class="modal-header">
@@ -1519,13 +1519,21 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                     </div>           
                 </div>
             </div>
+        </div>-->
+        <div class="explanation-popup" id="explimagemodal" style="display: none;">
+            <div class="popup-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="popup-content">
+                <img src="" class="explimagepreview">
+            </div>
         </div>
 
 
 
         <?php include 'footer.php'; ?>
-<?php include 'script.php'; ?>
-<?php if ($quiz_from_page != 'quiz') { ?>
+        <?php include 'script.php'; ?>
+        <?php if ($quiz_from_page != 'quiz') { ?>
             <script>
 
                 //image_url = 'http://localhost/project/examhorse/api/v1/';
@@ -1542,9 +1550,9 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                         data: {
                         quiz: quiz,
                                 questionIndex: <?php
-    echo $attended_questions;
-    //echo 0; 
-    ?>,
+        echo $attended_questions;
+//echo 0; 
+        ?>,
                                 userResponses: userResponseSkelaton,
                                 showimmediate: false,
                                 showimmediateblk: false,
@@ -1761,7 +1769,7 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                                  setTimeout(() => {                        
                                      
                                      
-                                 var questionslist = <?php // echo  json_encode($questions_list);   ?>;
+                                 var questionslist = <?php // echo  json_encode($questions_list);    ?>;
                                  var  qTable = '<table class="question-number-table"><tr>';
                                  $.each(questionslist, function (key, val) {
                                  var qn = key+1;
@@ -2020,7 +2028,7 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                                  }, 600);
                                  $.ajax({
                                  type: "GET",
-                                 url: 'api/v1/free_user_get_result_detail/' +<?php // echo  $student_log;   ?>,
+                                 url: 'api/v1/free_user_get_result_detail/' +<?php // echo  $student_log;    ?>,
                                  success: function (data) {
                                  if (data.result.error === false) {
                                  var qlist = '';
@@ -2588,11 +2596,11 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
 
 
 
-    <?php // if($testmode==1){          ?>
+    <?php // if($testmode==1){           ?>
                                 if (this.olqshow) {
                                 this.showQuestionOtherLang();
                                 }
-    <?php // }   ?>
+    <?php // }    ?>
 
 
                                 if (this.questionIndex < this.quiz.questions.length) {
@@ -2784,11 +2792,11 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                                 }
 
 
-    <?php // if($testmode==1){          ?>
+    <?php // if($testmode==1){           ?>
                                 if (this.olqshow) {
                                 this.showQuestionOtherLang();
                                 }
-    <?php // }   ?>
+    <?php // }    ?>
                                 }
 
 
@@ -2859,11 +2867,11 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                                         });
                                 }
 
-    <?php // if($testmode==1){          ?>
+    <?php // if($testmode==1){           ?>
                                 if (this.olqshow) {
                                 this.showQuestionOtherLang();
                                 }
-    <?php // }   ?>
+    <?php // }    ?>
 
                                 setTimeout(() => {
                                 applyMathAjax();
@@ -3005,11 +3013,11 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                                 }
 
 
-    <?php // if($testmode==1){          ?>
+    <?php // if($testmode==1){           ?>
                                 if (this.olqshow) {
                                 this.showQuestionOtherLang();
                                 }
-    <?php // }   ?>
+    <?php // }    ?>
 
                                 },
                                 /*    
@@ -3041,12 +3049,12 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                                  this.questionprevanswered = false;
                                      
                                      
-                                 var questions = <?php // echo json_encode($questions_list);   ?>;
+                                 var questions = <?php // echo json_encode($questions_list);    ?>;
                                  var qid = questions[this.questionIndex].question_id;
                                  var answers = ['A', 'B', 'C', 'D'];
                                  var ansid = '';
                                      
-                                 $.get("api/v1/get_student_notsure_answer/" + qid + "/<?php // echo $student_log;   ?>",
+                                 $.get("api/v1/get_student_notsure_answer/" + qid + "/<?php // echo $student_log;    ?>",
                                  function (data, status) {
                                  if (data.result.error === false) {
                                  ansid = data.result.data;
@@ -3103,11 +3111,11 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                                 {
                                 this.questionIndex = goquestion - 1;
                                 $('.loadingoverlay').show();
-    <?php // if($testmode==1){          ?>
+    <?php // if($testmode==1){           ?>
                                 if (this.olqshow) {
                                 this.showQuestionOtherLang();
                                 }
-    <?php // }   ?>
+    <?php // }    ?>
 
                                 setTimeout(() => {
                                 applyMathAjax();
@@ -3125,7 +3133,7 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                                 },
                                 showQuestionOtherLang: function() {
 
-    <?php // if($testmode==1){          ?>
+    <?php // if($testmode==1){           ?>
                                 this.olqd = null;
                                 var other_language = '<?php echo $other_language['language_id']; ?>';
                                 var questions = <?php echo json_encode($questions_list); ?>;
@@ -3149,11 +3157,11 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                                 applyMathAjax();
                                 $('.loadingoverlay').hide();
                                 }, 600);
-    <?php // }   ?>
+    <?php // }    ?>
                                 },
                                 showExplanationOtherLang: function() {
                                 //display other langauage explaination
-    <?php // if($testmode==1){          ?>
+    <?php // if($testmode==1){           ?>
 
 
                                 var other_language = '<?php echo $other_language['language_id']; ?>';
@@ -3169,7 +3177,7 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                                 this.otherlangquiz = sample;
                                 console.log(sample);
                                 }
-    <?php // }   ?>
+    <?php // }    ?>
                                 },
                                 /*        
                                  score: function () {
@@ -3346,11 +3354,11 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                 setTimeout(() => {
                 applyMathAjax();
                 $('.quiz-section').show();
-    <?php // if($testmode==1){          ?>
+    <?php // if($testmode==1){           ?>
                 //display other lanaguage explanation           
                 app.showExplanationOtherLang();
-    <?php // }   ?>
-    <?php // if($testmode == 0) {    ?>
+    <?php // }    ?>
+    <?php // if($testmode == 0) {     ?>
     <?php if ($type == 'Year Order') { ?>
                     //setInterval(app.startTimer, 1000);
     <?php } ?>
@@ -3384,10 +3392,10 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                  $('#btnsorderdetail_'+tid).html('Show Details');                    
                  } else { 
                  $('#btnsorderdetail_'+tid).html('Hide Details');
-                 app.divshowsorderdetail(tid,<?php // echo $student_log;   ?>);
+                 app.divshowsorderdetail(tid,<?php // echo $student_log;    ?>);
                  }                
                      
-                 //app.divshowsorderdetail(tid,<?php // echo $student_log;   ?>);
+                 //app.divshowsorderdetail(tid,<?php // echo $student_log;    ?>);
                  */
 
 
@@ -3649,7 +3657,7 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                 app.divshowsorderdetailFree(tid, lid);
                 }
             </script> 
-<?php } ?>
+        <?php } ?>
 
 
         <script>

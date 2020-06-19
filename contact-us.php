@@ -41,10 +41,10 @@ $obj = new Common();
                         </div>
                         <div class="col-md-6">
                             <div class="contact-content">
-                                <span>SAY HELLO</span>
+                                <span>Say Hello!</span>
                                 <h3>Send us an email</h3>
                                 <img src="img/email-bg-01.jpg" /><br>
-                                <p>ExamHorse offers support 7 days a week. We particularly like email feedback and answer each one personally. Email us below and you will receive a response within 24 hours</p>
+                                <p>ExamHorse offers support 7 days a week. We particularly like email feedback and answer each one personally. Email us below and you will receive a response within 24 hours.</p>
                                 <div class="call-as-now">
                                     <ul>
                                         <li><img src="img/email.png" alt="Email"/> <span>support@examhorse.com</span></li>

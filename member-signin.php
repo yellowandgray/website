@@ -15,12 +15,12 @@ include('googlelogin/login-user-config.php');
                             <article class="card-body">
                                 <h4 class="card-title mt-3 text-center">Login</h4>
                                 <p class="text-center">Login your account</p>
-                                <div class="google-btn">
+                                <div class="google-btn" onclick="window.location = '<?php echo $google_client->createAuthUrl(); ?>'">
                                     <div class="google-icon-wrapper">
                                         <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
                                     </div>
                                     <!--p class="btn-text"><b>Sign in with google</b></p-->
-                                    <a href="<?php echo $google_client->createAuthUrl(); ?>" class="btn-text"><b>Sign in with google</b></a>
+                                    <a href="" class="btn-text"><b>Sign in with google</b></a>
                                 </div>
                                 <div class="google-btn">
                                     <div class="google-icon-wrapper">

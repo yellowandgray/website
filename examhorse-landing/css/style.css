@@ -2272,3 +2272,23 @@ ul.breadcrumb li a:hover {
     box-shadow: 0 0 3px 9px #e3e3e3;
     border-radius: 5px;
 }
+
+.free-sample-list {
+    list-style: none;
+    margin: 0;
+}
+
+.free-sample-list li {
+    font-size: 20px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    position: relative;
+    margin-left: 20px;
+}
+
+.free-sample-list li i {
+    color: green;
+    position: absolute;
+    top: 7px;
+    left: -25px;
+}

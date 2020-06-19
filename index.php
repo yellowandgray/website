@@ -22,7 +22,7 @@ if (isset($_SESSION['student_register_id'])) {
                 <div class="carousel-item active">
                     <!--<div class="banner-learning" data-toggle="modal" data-target=".bs-example-modal-new">-->
                     <div class="toway-text">
-                        <a href="#">இருமொழி இணையதளம்</a>
+                        <a>இருமொழி இணையதளம்</a>
                     </div>
                     <div class="banner-learning" onclick="window.location = 'free-sample-introduction'">
                         <a href="#">Try Free Sample</a>
@@ -42,7 +42,7 @@ if (isset($_SESSION['student_register_id'])) {
                                 </div>-->
                 <div class="carousel-item">
                     <div class="toway-text">
-                        <a href="#">இருமொழி இணையதளம்</a>
+                        <a>இருமொழி இணையதளம்</a>
                     </div>
                     <div class="banner-learning" onclick="window.location = 'free-sample-introduction'">
                         <!--<img src="examhorse-landing/img/learning-gif.gif" alt=""/>-->
@@ -54,7 +54,7 @@ if (isset($_SESSION['student_register_id'])) {
                 </div>
                 <div class="carousel-item">
                     <div class="toway-text">
-                        <a href="#">இருமொழி இணையதளம்</a>
+                        <a>இருமொழி இணையதளம்</a>
                     </div>
                     <div class="banner-learning" onclick="window.location = 'free-sample-introduction'">
                         <!--<img src="examhorse-landing/img/learning-gif.gif" alt=""/>-->

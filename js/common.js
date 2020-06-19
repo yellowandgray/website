@@ -124,13 +124,13 @@ function samplehomelogin(e) {
 
      $('.loader').addClass('is-active');
 	var captchResponse = $('#g-recaptcha-response').val();
-	if(captchResponse.length == 0 )
-	{
-		alert('CAPTCHA Required!');		
-		e.stopImmediatePropagation();
-		return false;
-	}
-    else
+//	if(captchResponse.length == 0 )
+//	{
+//		alert('CAPTCHA Required!');		
+//		e.stopImmediatePropagation();
+//		return false;
+//	}
+//    else
     {
         $('.loader').addClass('is-active');
         $.ajax({
