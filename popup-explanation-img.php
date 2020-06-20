@@ -1,4 +1,4 @@
-<div class="modal fade" id="explimagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<!--<div class="modal fade" id="explimagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog" data-dismiss="modal">
         <div class="modal-content"  >   
             <div class="modal-header">
@@ -10,4 +10,12 @@
             </div>           
         </div>
     </div>
-</div>
+</div>-->
+<div class="explanation-popup" id="explimagemodal" style="display: none;">
+            <div class="popup-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="popup-content">
+                <img src="" class="explimagepreview">
+            </div>
+        </div>

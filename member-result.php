@@ -194,17 +194,14 @@ if (isset($_SESSION['student_register_id'])) {
                                 ?>
                             </div>
                             <div class = 'user_details'>
-                                <h2><?php echo $student['student_name'];
-                                ?></h2>
+                                <h2><?php echo $student['student_name']; ?></h2>
                                 <h4><span><?php echo $student['mobile'] ?></span></h4>
                                 <h5> </h5>
-                                <p><?php echo $student['city'];
-                                ?> <?php echo $student['pin'];
-                                ?> </p>
+                                <p><?php echo $student['city']; ?> <?php echo $student['pin']; ?> </p>
                             </div>
                         </div>
                         <div class = 'span8'>
-                            <h4>My Completed Task</h4>
+                            <h4>My Completed Test</h4>
                             <!--                            <h6></h6>-->
                             <!-- start: Accordion -->
                             <!--                            <div class = 'accordion' id = 'accordion2'>
@@ -678,7 +675,7 @@ if (isset($_SESSION['student_register_id'])) {
                     qlist = qlist + '';
                     }
                     if (val.explanation !== '') {
-                    qlist = qlist + '<div class="explanation-section"><strong>Explanation</strong> : ' + val.explanation + '</div>';
+                    qlist = qlist + '<div class="explanation-section" style="text-align: left;"><strong>Explanation</strong> : ' + val.explanation + '</div>';;
                     } else {
                     qlist = qlist + '<div class="explanation-section"> </div>';
                     }

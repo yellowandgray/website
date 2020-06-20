@@ -53,7 +53,7 @@ $counter = 0;
                     <div class="select-language-section subject-box-section">
                         <div class="language-header">
                             <div class="float-left">
-                                <a href="free-sample-introduction">
+                                <a href="free-select-language">
                                     <i class="fa fa-angle-left"></i>
                                 </a>
                             </div>

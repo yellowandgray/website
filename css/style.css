@@ -2483,6 +2483,22 @@ article .align-right {
     }
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+    .member-text-content {
+        padding: 20px 20px !Important;
+        width: auto !Important;
+    }
+    .news-feed .news-feed-content {
+        padding-left: 10px;
+    }
+    .full-language-width {
+        width: 50% !Important;
+    }
+    .learning-box {
+        height: 200px !important;
+    }
+}
+
 @media (max-width: 767px) {
     body {
         padding-right: 0;
@@ -2685,7 +2701,7 @@ article .align-right {
         width: 100% !important;
     }
     #explimagemodal .explimagepreview {
-        /*width: 1000px !important;*/
+        width: 1000px !important;
         /* margin: 0 auto; */
         max-width: 1000px !Important;
     }
@@ -2716,6 +2732,12 @@ article .align-right {
     }
     .tab-content {
         overflow: auto !Important;
+    }
+    .explanation-popup .popup-content {
+        overflow: auto !Important;
+    }
+    .explanation-popup .popup-header {
+        width: 89% !Important;
     }
     .explanation-popup .popup-content img {
         width: 1000px !important;
@@ -3713,17 +3735,43 @@ form#login-form:after {
     .custom-modal {
         width: 98% !Important;
     }
+    .member-text-content .start-quiz-btn a.btn-green {
+        width: 82% !Important;
+    }
+    .logout_position a.logout-btn {
+        padding: 5px 10px !important;
+    }
+}
+
+@media screen and (max-width: 991px) {
     .custom-mobile-with-menu {
         display: block !important;
     }
     .custom-full-width-menu {
         display: none !important;
     }
-    .member-text-content .start-quiz-btn a.btn-green {
-        width: 82% !Important;
+    .logout_position {
+        display: none;
     }
-    .logout_position a.logout-btn {
-        padding: 5px 10px !important;
+    .logout_position.member-login-menu {
+        display: block !important;
+    }
+
+
+    .logout_dropdown_1 {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        box-shadow: 0px 0px 4px 0px #e3e3e3;
+        background: #fff;
+        padding: 0px 0;
+        list-style: none;
+        border-radius: 3px;
+        outline: none;
+        box-sizing: border-box;
+        z-index: 1;
+        width: 100%;
     }
 }
 
@@ -4222,11 +4270,21 @@ form#login-form:after {
 }
 
 .explanation-popup .popup-header {
-    width: 100%;
+    width: 97%;
     /* background: #fff; */
     padding: 20px;
 }
 
 .explanation-popup .popup-header button span {
     font-size: 20px;
+}
+
+.table-striped tbody > tr:nth-child(odd) > td, .table-striped tbody > tr:nth-child(odd) > th {
+    background: transparent;
+    border: none;
+}
+
+.explanation-popup .popup-header button {
+    position: relative;
+    /*    right: 25px;*/
 }

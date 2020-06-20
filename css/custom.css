@@ -471,7 +471,12 @@ and open the template in the editor.
 }
 
 .accordion-inner .table tbody td {
-    text-align: center;
+    text-align: left;
+    border: none;
+}
+
+.crt_clr .option table td, .wrng_clr .option table td {
+    color: #fff;
 }
 
 .headnav-1 {
@@ -1122,27 +1127,6 @@ and open the template in the editor.
         margin: 0 0px 0px 10px !important;
         text-align: left;
     }
-    .logout_position {
-        display: none;
-    }
-    .logout_position.member-login-menu {
-        display: block !important;
-    }
-    .logout_dropdown_1 {
-        display: none;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        box-shadow: 0px 0px 4px 0px #e3e3e3;
-        background: #fff;
-        padding: 0px 0;
-        list-style: none;
-        border-radius: 3px;
-        outline: none;
-        box-sizing: border-box;
-        z-index: 1;
-        width: 100%;
-    }
     .logout_dropdown {
         top: 60px !Important;
         right: 0;
@@ -1153,6 +1137,25 @@ and open the template in the editor.
         text-align: center;
     }
 }
+
+@media (min-width: 450px) and (max-width: 767px) {
+    .language-section .language-img-zoom .language-img {
+        height: 400px !Important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    header .logo {
+        margin: 0px !important;
+    }
+    .logout_position a {
+        padding: 5px 10px !important;
+    }
+    .logout_dropdown {
+        right: 0 !Important;
+    }
+}
+
 
 .logout_position.member-login-menu {
     display: none;
@@ -1385,7 +1388,7 @@ and open the template in the editor.
 .feedback-popup {
     width: 100%;
     margin: 0 auto;
-    z-index: 1050;
+/*    z-index: 1050;*/
     position: fixed;
     top: 0;
     bottom: 0;
@@ -1671,4 +1674,8 @@ and open the template in the editor.
 
 .tab-content>.tab-pane {
     overflow: auto;
+}
+
+.result-title h6 table td  {
+    text-align: left;
 }

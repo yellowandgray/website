@@ -489,12 +489,6 @@ footer a:hover {
     /*    .logout_position_1 {
             display: block !important;
         }*/
-    .custom-mobile-with-menu {
-        display: block !important;
-    }
-    .custom-full-width-menu {
-        display: none !important;
-    }
     .carousel {
         padding-top: 67px !Important;
     }
@@ -536,6 +530,9 @@ footer a:hover {
     .carousel-item .toway-text a {
         font-size: 16px!Important;
     }
+    .language_section ul li {
+        font-size: 18px !Important;
+    }
 }
 
 @media (max-width: 768px) {
@@ -546,6 +543,35 @@ footer a:hover {
         display: none !important;
     }
 }
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .header-fixed {
+        padding: 20px 0px !Important;
+    }
+    .header-fixed .header-limiter nav {
+        font: 8px Arial, Helvetica, sans-serif !important;
+    }
+    .header-fixed .header-limiter nav a.menu-nav {
+        padding: 0 6px !Important;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .custom-mobile-with-menu {
+        display: block !important;
+    }
+    .custom-full-width-menu {
+        display: none !important;
+    }
+    .logout_dropdown {
+        width: 100% !Important;
+        top: 45px !Important;
+    }
+    .bg-light .card-body {
+        width: 90% !Important;
+    }
+}
+
 
 #inner-headline {
     background: #252525;
@@ -697,13 +723,13 @@ ul.breadcrumb li a:hover {
     text-decoration: none;
 }
 
-.carousel-item .toway-text:hover { 
+/*.carousel-item .toway-text:hover { 
     background: #fff;
     border: 1px solid #3b5998;
-}
+}*/
 
 .carousel-item .toway-text:hover a {
-    color: #3b5998;
+    color: #fff;
     text-decoration: none;
 }
 

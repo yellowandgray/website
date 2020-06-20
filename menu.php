@@ -75,21 +75,21 @@ if (isset($_SESSION['student_register_id'])) {
                             <li id="open-logout" class="logout_section">
                                 <i class='icon-reorder'></i>
                             </li>
-<!--                            <div class="logout_position mobile-menu">
-                                <div class="logout_section">-->
-        <!--                                    <i class = 'icon-reorder'></i>-->
-                                    <div class="logout_dropdown">
-                                        <ul class="logout_list">
-                                            <li onclick="window.location = 'about-us'">About us</li>
-                                            <li onclick="window.location = 'contact-us'">Contact us</li>
-                                            <li>
-                                                <a href="member-benefits" class="btn btn-green">Buy Full Version</a>
-                                                <a href="member-signin" class="btn btn-custom">Login</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-<!--                                </div>
-                            </div>-->
+                            <!--                            <div class="logout_position mobile-menu">
+                                                            <div class="logout_section">-->
+                                    <!--                                    <i class = 'icon-reorder'></i>-->
+                            <div class="logout_dropdown">
+                                <ul class="logout_list">
+                                    <li onclick="window.location = 'about-us'">About us</li>
+                                    <li onclick="window.location = 'contact-us'">Contact us</li>
+                                    <li>
+                                        <a href="member-benefits" class="btn btn-green">Buy Full Version</a>
+                                        <a href="member-signin" class="btn btn-custom">Login</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--                                </div>
+                                                        </div>-->
                         </ul>
                     </div>
                 <?php } else { ?>
@@ -99,25 +99,25 @@ if (isset($_SESSION['student_register_id'])) {
                             <span class="menu-bar">
                                 <i class="icon-reorder"></i>
                             </span>
-                            <div class="logout_dropdown_1">
-                                <div class="user_profile">
-                                    <?php if (isset($login_student['profile_image']) && $login_student['profile_image'] == '') { ?>
-                                        <img src="<?php echo BASE_URL . $login_student['gender']; ?>.jpg" alt="" />
-                                    <?php } else { ?>
-                                        <img src="<?php echo BASE_URL . $login_student['profile_image']; ?>" alt="" />
-                                    <?php } ?>
-                                    <h5><?php echo $login_student['student_name']; ?></h5>
-                                </div>
-                                <ul class="logout_list">
-                                    <li onclick="window.location = 'member-home'">My Home</li>
-                                    <li onclick="window.location = 'member-select-language'">Test</li>
-                                    <li onclick="window.location = 'member-result'">Result</li>
-                                    <li onclick="window.location = 'member-account'">Account</li>
-                                    <li onclick="window.location = 'about-us'">About Us</li>
-                                    <li onclick="window.location = 'contact-us'">Contact Us</li>
-                                    <!--                                <li onclick="logoutUser();">Logout</li>-->
-                                </ul>
+                        </div>
+                        <div class="logout_dropdown_1" style="display: none;">
+                            <div class="user_profile">
+                                <?php if (isset($login_student['profile_image']) && $login_student['profile_image'] == '') { ?>
+                                    <img src="<?php echo BASE_URL . $login_student['gender']; ?>.jpg" alt="" />
+                                <?php } else { ?>
+                                    <img src="<?php echo BASE_URL . $login_student['profile_image']; ?>" alt="" />
+                                <?php } ?>
+                                <h5><?php echo $login_student['student_name']; ?></h5>
                             </div>
+                            <ul class="logout_list">
+                                <li onclick="window.location = 'member-home'">My Home</li>
+                                <li onclick="window.location = 'member-select-language'">Test</li>
+                                <li onclick="window.location = 'member-result'">Result</li>
+                                <li onclick="window.location = 'member-account'">Account</li>
+                                <li onclick="window.location = 'about-us'">About Us</li>
+                                <li onclick="window.location = 'contact-us'">Contact Us</li>
+                                <!--                                <li onclick="logoutUser();">Logout</li>-->
+                            </ul>
                         </div>
                     </div>
                 <?php } ?>

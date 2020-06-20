@@ -202,7 +202,7 @@ if (isset($_SESSION['student_register_id'])) {
                         </div>
                     </div>
                     <div class="span6">
-                        <div class="member-text-content" style="position: relative;background: url(img/pic-welcome-user.jpg)no-repeat;background-position: center;position: relative;">
+                        <div class="member-text-content" style="position: relative;background: url(img/pic-welcome-user.jpg)no-repeat;background-position: center;position: relative;background-size: cover;">
                             <div class="banner-padding">
                                 <h4>Welcome <span><?php echo $login_student['student_name']; ?></span></h4>
                                 <div class="start-quiz-btn">
