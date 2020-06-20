@@ -1912,3 +1912,16 @@ $app->get('/get_news', function() {
     }
     echoRespnse(201, $res);
 });
+
+$app->get('/get_free_user', function() {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('*', 'free_user_login', 'free_user_login_id > 0');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+        $res['total'] = count($data);
+    }
+    echoRespnse(201, $res);
+});

@@ -6,7 +6,7 @@ if (isset($_SESSION['student_register_id'])) {
 <header class="header-fixed">
     <div class="container">
         <div class="header-limiter">
-            <h1><a href="index"><img src='img/logo.png'></a></h1>
+            <h1><a href="index"><img src='img/ExamHorse-Logo-New.png'></a></h1>
             <div class="custom-full-width-menu">
                 <?php
                 if (!isset($_SESSION['student_register_id'])) {
