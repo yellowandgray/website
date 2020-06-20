@@ -155,20 +155,15 @@ function samplehomelogin(e) {
     
     
 
-
-
-    /*
     $('.loader').addClass('is-active');
-       var captchResponse = $('#g-recaptcha-response').val();
-       if(captchResponse.length == 0 )
-       {
+    var captchResponse = $('#g-recaptcha-response').val();
+    if(captchResponse.length == 0 )
+    {
                alert('CAPTCHA Required!');		
                e.stopImmediatePropagation();
                return false;
-       }
-     * 
-     */
-        if(!(email.match(/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/))) {
+   }
+   else  if(!(email.match(/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/))) {
         alert('Invalid Email');		
         e.stopImmediatePropagation();
         return false;
