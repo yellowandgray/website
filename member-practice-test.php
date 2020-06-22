@@ -437,7 +437,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                                     <?php } ?>
                                 </table>
                             </h4>                           
-                            <a class="home_link" href="member-home">
+                            <a class="home_link" href="member-select-language">
                                 <i class="icon-home"></i>
                             </a>
 

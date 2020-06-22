@@ -20,7 +20,7 @@ include('googlelogin/login-user-config.php');
                                         <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
                                     </div>
                                     <!--p class="btn-text"><b>Sign in with google</b></p-->
-                                    <a href="" class="btn-text"><b>Sign in with google</b></a>
+                                    <a href="<?php echo $google_client->createAuthUrl(); ?>" class="btn-text"><b>Sign in with google</b></a>
                                 </div>
                                 <div class="google-btn">
                                     <div class="google-icon-wrapper">

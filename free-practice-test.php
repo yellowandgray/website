@@ -657,7 +657,7 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                                     </table>
                                 </h4>
                                 <?php if (["student_register_id > 0"] == '') { ?>
-                                    <a class="home_link" href="select_language">
+                                <a class="home_link" href="member-select-language">
                                         <i class="icon-home"></i>
                                     </a>
                                 <?php } else { ?>
@@ -780,9 +780,9 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                                         </div>
 
 
-                                        <div class="question-admin-panel" style="width: 100%; padding: 20px; display: none;">
+                                        <div class="question-admin-panel question-admin-panel-num" style="display: none;">
                                             <div class="question-number-title">
-                                                <span class="showqus" style="float: left;" onclick="showqus();"><i class="icon-angle-left"></i> Back</span>
+<!--                                                <span class="showqus" style="float: left;" onclick="showqus();"><i class="icon-angle-left"></i> Back</span>-->
                                                 <h3>Question Admin Panel</h3>
                                             </div>
                                             <div id="questionpanel">
@@ -1232,7 +1232,7 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
 
                                         <img src="img/pic-intr-offer.jpg" alt="" />
                                         <h4><strike>₹999 </strike> &nbsp;&nbsp; <span> ₹499</span> <span style="font-size: 15px;">(Inclusive of 18% GST)</span></h4>
-                                        <a href="register_user" class="btn btn-green" style="font-size: 20px;padding: 15px;">Buy Full Version</a>
+                                        <a href="member-benefits" class="btn btn-green" style="font-size: 20px;padding: 15px;">Buy Full Version</a>
                                         <?php /*
                                           <a class="btn btn-theme btn-rounded" @click="restart()">Restart <i class="fa fa-refresh"></i></a>
                                           <a class="btn btn-theme btn-rounded" onclick="window.location = 'select_language'">Home <i class="fa fa-refresh"></i></a>

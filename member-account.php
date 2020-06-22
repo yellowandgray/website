@@ -32,10 +32,11 @@ if (isset($_SESSION['student_register_id'])) {
                                 <?php } ?>
                                 <div class="file-upload">
                                     <!--place upload image/icon first !-->
-                                    <img class="upload-img" src="img/upload.png" />
+                                    <img class="upload-img" src="img/person-male.png" />
                                     <!--place input file last !-->
                                     <input type="file" id="profile_picture" name="profile_picture" onchange="attachAccountFile('profile_picture',<?php echo $_SESSION["student_register_id"]; ?>);" />
                                 </div>
+                                    <span style="position: absolute;right: 0px;top: 55px;color: #fff;">Change Prfile</span>
                             </div>
                             <br/>
 
@@ -53,7 +54,7 @@ if (isset($_SESSION['student_register_id'])) {
                                 <div class="account-details account-full-width">
                                     <h3>Candidate's Info:</h3>
                                     <div class="row about-list" style="margin-bottom: 0">
-                                        <div class="span3">
+                                        <div class="span6">
                                             <table class="member-about-filed">
 
                                                 <tr>
@@ -61,6 +62,15 @@ if (isset($_SESSION['student_register_id'])) {
                                                     <th>:</th>
                                                     <?php if ($login_student['mobile'] != '') { ?>
                                                         <td><?php echo $login_student['mobile']; ?></td>
+                                                    <?php } else { ?>
+                                                        <td></td>
+                                                    <?php } ?>
+                                                </tr>
+                                                <tr>
+                                                    <th>Email</th>
+                                                    <th>:</th>
+                                                    <?php if ($login_student['email'] != '') { ?>
+                                                        <td><?php echo $login_student['email']; ?></td>
                                                     <?php } else { ?>
                                                         <td></td>
                                                     <?php } ?>
@@ -79,25 +89,21 @@ if (isset($_SESSION['student_register_id'])) {
                                                             ?></td>
                                                     <?php } else { ?>
                                                         <td></td>
-<?php } ?>
+                                                    <?php } ?>
                                                 </tr>
-                                            </table>
-                                        </div>
-                                        <div class="span3">
-                                            <table class="member-about-filed">
                                                 <tr>
-                                                    <th>Email</th>
+                                                    <th>Graduation</th>
                                                     <th>:</th>
-                                                    <?php if ($login_student['email'] != '') { ?>
-                                                        <td><?php echo $login_student['email']; ?></td>
+                                                    <?php if ($login_student['graduation'] != '') { ?>
+                                                        <td><?php echo $login_student['graduation']; ?></td>
                                                     <?php } else { ?>
                                                         <td></td>
-<?php } ?>
+                                                    <?php } ?>
                                                 </tr>
                                                 <tr>
                                                     <th>Practice Medium</th>
                                                     <th>:</th>
-                                                        <?php if ($login_student['practice_medium'] != '') { ?>
+                                                    <?php if ($login_student['practice_medium'] != '') { ?>
                                                         <td><?php
                                                             foreach (array('1' => 'தமிழ் ', '2' => 'English') as $key => $val) {
                                                                 if ($key == $login_student['practice_medium']) {
@@ -105,36 +111,28 @@ if (isset($_SESSION['student_register_id'])) {
                                                                 }
                                                             }
                                                             ?></td>
-<?php } else { ?>
+                                                    <?php } else { ?>
                                                         <td></td>
-<?php } ?>
+                                                    <?php } ?>
                                                 </tr>
-                                            </table>
-                                        </div>
-                                        <div class="span3">
-                                            <table class="member-about-filed">
                                                 <tr>
-                                                    <th>Graduation</th>
-                                                    <th>:</th>
-                                                    <?php if ($login_student['graduation'] != '') { ?>
-                                                        <td><?php echo $login_student['graduation']; ?></td>
-<?php } else { ?>
-                                                        <td></td>
-<?php } ?>
+                                                    <td colspan="3"><h3>Address:</h3></td>
                                                 </tr>
-                                            </table>
-                                        </div>
-                                    </div>
-                                    <h3>Address:</h3>
-                                    <div class="row about-list" style="margin-bottom: 0">
-                                        <div class="span3">
-                                            <table class="member-about-filed">
                                                 <tr>
                                                     <th>Street</th>
                                                     <th>:</th>
                                                     <?php if ($login_student['street'] != '') { ?>
                                                         <td><?php echo $login_student['street']; ?></td>
-<?php } else { ?>
+                                                    <?php } else { ?>
+                                                        <td></td>
+                                                    <?php } ?>
+                                                </tr>
+                                                <tr>
+                                                    <th>City</th>
+                                                    <th>:</th>
+                                                    <?php if ($login_student['city'] != '') { ?>
+                                                        <td><?php echo $login_student['city']; ?></td>
+                                                    <?php } else { ?>
                                                         <td></td>
                                                     <?php } ?>
                                                 </tr>
@@ -143,29 +141,7 @@ if (isset($_SESSION['student_register_id'])) {
                                                     <th>:</th>
                                                     <?php if ($login_student['district'] != '') { ?>
                                                         <td><?php echo $login_student['district']; ?></td>
-<?php } else { ?>
-                                                        <td></td>
-                                                    <?php } ?>
-                                                </tr>
-                                                <tr>
-                                                    <th>Near City</th>
-                                                    <th>:</th>
-                                                    <?php if ($login_student['nearcity'] != '') { ?>
-                                                        <td><?php echo $login_student['nearcity']; ?></td>
-<?php } else { ?>
-                                                        <td></td>
-<?php } ?>
-                                                </tr>
-                                            </table>
-                                        </div>
-                                        <div class="span3">
-                                            <table class="member-about-filed">
-                                                <tr>
-                                                    <th>City</th>
-                                                    <th>:</th>
-                                                    <?php if ($login_student['city'] != '') { ?>
-                                                        <td><?php echo $login_student['city']; ?></td>
-<?php } else { ?>
+                                                    <?php } else { ?>
                                                         <td></td>
                                                     <?php } ?>
                                                 </tr>
@@ -174,32 +150,53 @@ if (isset($_SESSION['student_register_id'])) {
                                                     <th>:</th>
                                                     <?php if ($login_student['pin'] != '') { ?>
                                                         <td><?php echo $login_student['pin']; ?></td>
-<?php } else { ?>
+                                                    <?php } else { ?>
                                                         <td></td>
-<?php } ?>
+                                                    <?php } ?>
+                                                </tr>
+                                                <tr>
+                                                    <th>Near City</th>
+                                                    <th>:</th>
+                                                    <?php if ($login_student['nearcity'] != '') { ?>
+                                                        <td><?php echo $login_student['nearcity']; ?></td>
+                                                    <?php } else { ?>
+                                                        <td></td>
+                                                    <?php } ?>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="3">
+                                                        <h3>Planned to Write:</h3>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Exam Type</th>
+                                                    <th>:</th>
+                                                    <?php if ($login_student['selectgroup'] != '') { ?>
+                                                        <td><?php
+                                                            foreach (array('group1' => 'Group 1', 'group22a' => 'Group 2/2A') as $key => $val) {
+                                                                if ($key == $login_student['selectgroup']) {
+                                                                    echo $val;
+                                                                }
+                                                            }
+                                                            ?></td>
+                                                    <?php } else { ?>
+                                                        <td></td>
+                                                    <?php } ?>
                                                 </tr>
                                             </table>
                                         </div>
                                     </div>
-                                    <h3>Planned to Write:</h3>
                                     <div class="row about-list" style="margin-bottom: 0">
-                                        <div class="span3">
+                                        <div class="span6">
                                             <table class="member-about-filed">
-                                                <tr>
-                                                    <th>Exam Type</th>
-                                                    <th>:</th>
-                                                        <?php if ($login_student['selectgroup'] != '') { ?>
-                                                        <td><?php
-                                                        foreach (array('group1' => 'Group 1', 'group22a' => 'Group 2/2A') as $key => $val) {
-                                                            if ($key == $login_student['selectgroup']) {
-                                                                echo $val;
-                                                            }
-                                                        }
-                                                        ?></td>
-<?php } else { ?>
-                                                        <td></td>
-<?php } ?>
-                                                </tr>
+
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="row about-list" style="margin-bottom: 0">
+                                        <div class="span6">
+                                            <table class="member-about-filed">
+
                                             </table>
                                         </div>
                                     </div>
@@ -213,7 +210,7 @@ if (isset($_SESSION['student_register_id'])) {
                                             <tr>
                                                 <th>Mobile</th>
                                                 <th>:</th>
-<?php if ($login_student['mobile'] != '') { ?>
+                                                <?php if ($login_student['mobile'] != '') { ?>
                                                     <td><?php echo $login_student['mobile']; ?></td>
                                                 <?php } else { ?>
                                                     <td></td>
@@ -222,7 +219,7 @@ if (isset($_SESSION['student_register_id'])) {
                                             <tr>
                                                 <th>Email</th>
                                                 <th>:</th>
-<?php if ($login_student['email'] != '') { ?>
+                                                <?php if ($login_student['email'] != '') { ?>
                                                     <td><?php echo $login_student['email']; ?></td>
                                                 <?php } else { ?>
                                                     <td></td>
@@ -231,7 +228,7 @@ if (isset($_SESSION['student_register_id'])) {
                                             <tr>
                                                 <th>Gender</th>
                                                 <th>:</th>
-<?php if ($login_student['gender'] != '') { ?>
+                                                <?php if ($login_student['gender'] != '') { ?>
                                                     <td><?php echo $login_student['gender']; ?></td>
                                                 <?php } else { ?>
                                                     <td></td>
@@ -240,24 +237,24 @@ if (isset($_SESSION['student_register_id'])) {
                                             <tr>
                                                 <th>Graduation</th>
                                                 <th>:</th>
-<?php if ($login_student['graduation'] != '') { ?>
+                                                <?php if ($login_student['graduation'] != '') { ?>
                                                     <td><?php echo $login_student['graduation']; ?></td>
                                                 <?php } else { ?>
                                                     <td></td>
-                                                    <?php } ?>
+                                                <?php } ?>
                                             </tr>
                                             <tr>
                                                 <th>Practice Medium</th>
                                                 <th>:</th>
                                                 <?php if ($login_student['practice_medium'] != '') { ?>
                                                     <td><?php
-                                                    foreach (array('1' => 'தமிழ் ', '2' => 'English') as $key => $val) {
-                                                        if ($key == $login_student['practice_medium']) {
-                                                            echo $val;
+                                                        foreach (array('1' => 'தமிழ் ', '2' => 'English') as $key => $val) {
+                                                            if ($key == $login_student['practice_medium']) {
+                                                                echo $val;
+                                                            }
                                                         }
-                                                    }
-                                                    ?></td>
-<?php } else { ?>
+                                                        ?></td>
+                                                <?php } else { ?>
                                                     <td></td>
                                                 <?php } ?>
                                             </tr>
@@ -303,9 +300,9 @@ if (isset($_SESSION['student_register_id'])) {
                                             <tr>
                                                 <th>Near City</th>
                                                 <th>:</th>
-<?php if ($login_student['nearcity'] != '') { ?>
+                                                <?php if ($login_student['nearcity'] != '') { ?>
                                                     <td><?php echo $login_student['nearcity']; ?></td>
-<?php } else { ?>
+                                                <?php } else { ?>
                                                     <td></td>
                                                 <?php } ?>
                                             </tr>
@@ -316,11 +313,11 @@ if (isset($_SESSION['student_register_id'])) {
                                             <tr>
                                                 <th>Exam Type</th>
                                                 <th>:</th>
-<?php if ($login_student['selectgroup'] != '') { ?>
+                                                <?php if ($login_student['selectgroup'] != '') { ?>
                                                     <td><?php echo $login_student['selectgroup']; ?></td>
-<?php } else { ?>
+                                                <?php } else { ?>
                                                     <td></td>
-<?php } ?>
+                                                <?php } ?>
                                             </tr>
                                         </table>
                                     </div>
@@ -358,8 +355,8 @@ if (isset($_SESSION['student_register_id'])) {
                     </div>
                 </div>
             </section>
-<?php include 'footer.php'; ?>
+            <?php include 'footer.php'; ?>
         </div>
-<?php include 'script.php'; ?>
+        <?php include 'script.php'; ?>
     </body>
 </html>

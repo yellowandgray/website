@@ -1642,7 +1642,7 @@ and open the template in the editor.
     overflow: hidden;
     position: absolute;
     top: 0;
-    right: 0;
+    right: 15px;
     cursor: pointer;
     background: #fff;
 }
