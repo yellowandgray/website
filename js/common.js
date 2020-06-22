@@ -53,7 +53,8 @@ function registerStudent(e) {
             e.stopImmediatePropagation();
             return false;
     }  
-    else if(!(email.match(/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/))) {
+    else
+        if(!(email.match(/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/))) {
         alert('Invalid Email');		
         e.stopImmediatePropagation();
         return false;
@@ -370,7 +371,7 @@ function ContactForm(e) {
 }
 
 function updateStudentProfile(studid) {
-    var data = {mobile: $('#mobile').val(), email: $('#email').val(), gender: $('#gender').val(), practice_medium:$('#practice_medium:checked').val(), graduation: $('#graduation').val(), street: $('#street').val(), city: $('#city').val(), district: $('#district').val(), pin: $('#pin').val(), nearcity: $('#nearcity').val(), selectgroup: $('#selectgroup').val()};
+    var data = {student_name: $('#name').val(),mobile: $('#mobile').val(), email: $('#email').val(), gender: $('#gender').val(), practice_medium:$('#practice_medium:checked').val(), graduation: $('#graduation').val(), street: $('#street').val(), city: $('#city').val(), district: $('#district').val(), pin: $('#pin').val(), nearcity: $('#nearcity').val(), selectgroup: $('#selectgroup').val()};
     $('.loader').addClass('is-active');
     $.ajax({
         type: "POST",

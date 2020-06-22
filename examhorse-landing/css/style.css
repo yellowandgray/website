@@ -693,7 +693,7 @@ ul.breadcrumb li a:hover {
     border-radius: 5px;
     font-weight: 500;
     transition: all 0.5s;
-    cursor: pointer;
+    /*    cursor: pointer;*/
 }
 
 .carousel-control-next, .carousel-control-prev {
@@ -1962,7 +1962,7 @@ ul.breadcrumb li a:hover {
 }
 
 .edit-profile-section {
-    padding: 100px 0 0;
+    padding: 100px 0 0 !Important;
 }
 
 .edit-profile-section .edit-form {
@@ -1970,12 +1970,21 @@ ul.breadcrumb li a:hover {
     margin: 0 auto;
 }
 
+.update-back-btn {
+    padding: 10px 0;
+}
+
+.update-back-btn i {
+    font-size: 25px;
+    cursor: pointer;
+}
+
 .sample-learning-section {
     padding-top: 72px;
 }
 
 .new-register-section {
-    padding: 100px 0 0;
+    padding: 100px 0 0 !Important;
 }
 
 .contact-section-examhorse {
@@ -2317,4 +2326,17 @@ ul.breadcrumb li a:hover {
     position: absolute;
     top: 7px;
     left: -25px;
+}
+
+.payment-success-content {
+    padding: 20px 0;
+}
+
+.payment-success-content h1 {
+    margin-bottom: 20px;
+}
+
+.payment-success-content h3 {
+    line-height: 35px;
+    margin-bottom: 20px;
 }

@@ -25,7 +25,7 @@ $obj = new Common();
                                                 <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
                                             </div>
                                             <!--p class="btn-text"><b>Sign up with google</b></p-->
-                                            <a href="" class="btn-text"><b>Sign up with google</b></a>
+                                            <a href="<?php echo $google_client->createAuthUrl(); ?>" class="btn-text"><b>Sign up with google</b></a>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
