@@ -1,6 +1,7 @@
 <?php
 session_start();
 include('googlelogin/register-user-config.php');
+include('fb-login/index.php');
 
 require_once 'api/include/common.php';
 $obj = new Common();
@@ -19,7 +20,7 @@ $obj = new Common();
                                 <p class="text-center">Get started with your account</p>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <div class="google-btn" onclick="window.location ='<?php echo $google_client->createAuthUrl(); ?>'">
+                                        <div class="google-btn" onclick="window.location ='<?php echo $google_client->createAuthUrl(); ?>';">
                                             <div class="google-icon-wrapper">
                                                 <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
                                             </div>
@@ -28,7 +29,7 @@ $obj = new Common();
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="google-btn">
+                                        <div class="google-btn" onclick="window.location='<?php echo $fb_register_url;  ?>';">
                                             <div class="google-icon-wrapper">
                                                 <img class="google-icon" src="examhorse-landing/img/fb.png"/>
                                             </div>

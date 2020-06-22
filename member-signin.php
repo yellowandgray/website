@@ -1,6 +1,6 @@
 <?php
-//session_start();
 include('googlelogin/login-user-config.php');
+include('fb-login/index.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +22,7 @@ include('googlelogin/login-user-config.php');
                                     <!--p class="btn-text"><b>Sign in with google</b></p-->
                                     <a href="" class="btn-text"><b>Sign in with google</b></a>
                                 </div>
-                                <div class="google-btn">
+                                <div class="google-btn" onclick="window.location='<?php echo $fb_login_url;  ?>';">
                                     <div class="google-icon-wrapper">
                                         <img class="google-icon" src="examhorse-landing/img/fb.png"/>
                                     </div>
