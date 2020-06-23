@@ -3,7 +3,7 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 //include autoload file from vendor folder
-require 'vendor/autoload.php';
+require 'fb-login/vendor/autoload.php';
 
 
 $fb = new Facebook\Facebook([
