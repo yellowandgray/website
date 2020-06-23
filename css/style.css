@@ -4142,7 +4142,10 @@ form#login-form:after {
 .account-details h3 {
     font-size: 20px;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #F03C02;
+    border-bottom: 1px solid #f03c02;
 }
 
 #explimagemodal {
