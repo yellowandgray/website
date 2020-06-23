@@ -1388,7 +1388,7 @@ and open the template in the editor.
 .feedback-popup {
     width: 100%;
     margin: 0 auto;
-/*    z-index: 1050;*/
+    /*    z-index: 1050;*/
     position: fixed;
     top: 0;
     bottom: 0;
@@ -1634,38 +1634,40 @@ and open the template in the editor.
 }
 
 .file-upload{
-    height: 50px;
-    width: 50px;
-    margin: 0px auto; 
+    width: 42%;
+    margin: 0px auto;
     border: 1px solid #f0c0d0;
     border-radius: 100px;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    right: 15px;
+    /* overflow: hidden; */
+    position: relative;
     cursor: pointer;
     background: #fff;
+    transition: all .3s;
 }
-.file-upload img.upload-img {
-    width: 35px;
-    margin: 0 auto;
-    position: absolute;
-    top: 7px;
-    right: 8px;
-    height: 30px;
+
+.file-upload:hover {
+    box-shadow: 0 0 3px 3px #e3e3e3;
+    background: #f03c02;
 }
-.file-upload input{
-    position:absolute;
-    height:400px;
-    width:400px;
-    left:-200px;
-    top:-200px;
-    background:transparent;
-    opacity:0;
-    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
+
+.file-upload:hover p {
+    color: #fff;
+}
+
+.file-upload p {
+    position: relative;
+    top: 5px;
     cursor: pointer;
 }
+.file-upload input{
+    position: absolute;
+    top: 2px;
+    opacity: 0; 
+    left: 0px;
+    padding: 9px 0;
+    cursor: pointer;
+}
+
 .file-upload img{
     height:70px;
     width:70px;

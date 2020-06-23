@@ -18,6 +18,7 @@ if (isset($_SESSION['student_register_id'])) {
                     <div class="row">
                         <div class="col-md-12">
                             <div class="float-right text-right">
+                                <a href="change-password" class="edit-btn">Change Password</a>&nbsp;&nbsp;
                                 <a href="edit-profile" class="edit-btn">Edit Profile</a>
                             </div>
                         </div>
@@ -25,23 +26,22 @@ if (isset($_SESSION['student_register_id'])) {
                     <div class="row align-items-center flex-row-reverse" style="margin-bottom: 0">
                         <div class="span6">
                             <div class="about-avatar" id="preview_container">
-                                <?php if (isset($login_student['profile_image']) && $login_student['profile_image'] == '' && $login_student['gender'] != '') { ?>
-                                    <img src="<?php echo BASE_URL . $login_student['gender']; ?>.jpg" alt="" />
+                                <?php if (isset($login_student['profile_image']) && $login_student['profile_image'] == '') { ?>
+                                <img src="img/person-male.png" alt="" />
                                 <?php } else { ?>
                                     <img src="<?php echo BASE_URL . $login_student['profile_image']; ?>" alt="" />
                                 <?php } ?>
-                                <div class="file-upload">
-                                    <!--place upload image/icon first !-->
-                                    <img class="upload-img" src="img/person-male.png" />
-                                    <!--place input file last !-->
-                                    <input type="file" id="profile_picture" name="profile_picture" onchange="attachAccountFile('profile_picture',<?php echo $_SESSION["student_register_id"]; ?>);" />
-                                </div>
-                                    <span style="position: absolute;right: 0px;top: 55px;color: #fff;">Change Prfile</span>
+                                
                             </div>
                             <br/>
 
                             <center>
-                                <a href="change-password" class="edit-btn">Change Password</a>
+                                <div class="file-upload">
+                                    <!--place upload image/icon first !-->
+                                    <p>Change Profile</p>
+                                    <!--place input file last !-->
+                                    <input type="file" id="profile_picture" name="profile_picture" onchange="attachAccountFile('profile_picture',<?php echo $_SESSION["student_register_id"]; ?>);" />
+                                </div>
                             </center>
                             <br/>
                             <br/>
