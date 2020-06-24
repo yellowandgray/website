@@ -441,6 +441,12 @@ footer a:hover {
     color: #5a5a5a;
 }
 
+@media (max-width: 499px) {
+    .carousel-item .toway-text {
+        top: 60px !Important;
+        right: 15px !Important;
+    }
+}
 @media (max-width: 767px) {
     .container {
         width: 100% !Important;
@@ -522,10 +528,6 @@ footer a:hover {
     }
     .order-1 {
         order: 1 !Important;
-    }
-    .carousel-item .toway-text {
-        top: 60px !Important;
-        right: 15px !Important;
     }
     .carousel-item .toway-text a {
         font-size: 16px!Important;
@@ -2341,5 +2343,9 @@ ul.breadcrumb li a:hover {
 
 .payment-success-content h3 {
     line-height: 35px;
+    margin-bottom: 20px;
+}
+
+.video {
     margin-bottom: 20px;
 }

@@ -139,13 +139,13 @@ if (isset($_SESSION['student_register_id'])) {
         <div class="video-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-6 col-sm-12">
                         <div class="video">
                             <h3>How It Works</h3>
                             <iframe src="https://www.youtube.com/embed/qxP5Vw-NLf8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 col-sm-12">
                         <h3>Testimonial</h3>
                         <section id="testim" class="testim">
                             <!--         <div class="testim-cover"> -->
