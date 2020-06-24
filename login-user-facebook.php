@@ -19,6 +19,7 @@ try {
 
 
 $email              = '';
+
 //now we will get users first name , email , last name
 if (isset($_SESSION['access_token'])) { 
       
@@ -46,8 +47,10 @@ if(trim($email)=='') {
 
 if($error_msg=='')
 {    
+    
     $record = $obj->selectRow('*','student_register','email=\''.$email.'\'');
 
+    
 
     if(count($record)>0) {
 
