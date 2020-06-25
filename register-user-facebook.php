@@ -22,12 +22,14 @@ try {
 $email              = '';
 $name               = '';
 $gender             = '';
+
 //now we will get users first name , email , last name
 if (isset($_SESSION['access_token'])) { 
       
     try {
 
         $fb->setDefaultAccessToken($_SESSION['access_token']);
+        
         $res = $fb->get('/me?locale=en_US&fields=email,name');
         $user = $res->getGraphUser();
         
