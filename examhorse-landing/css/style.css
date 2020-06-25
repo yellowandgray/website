@@ -448,9 +448,9 @@ footer a:hover {
     }
 }
 @media (max-width: 767px) {
-    .container {
+/*    .container {
         width: 100% !Important;
-    }
+    }*/
     .header-fixed .header-limiter nav {
         display: none;
     }
@@ -464,8 +464,8 @@ footer a:hover {
         font-size: 16px !important;
     }
     .testim {
-        position: relative !important;
-        top: 45% !important; 
+/*        position: relative !important;
+        top: 45% !important; */
     }
     .carousel-caption h2 {
         font-size: 18px !important;
@@ -534,6 +534,9 @@ footer a:hover {
     }
     .language_section ul li {
         font-size: 18px !Important;
+    }
+    .contact-section-examhorse .contact-content {
+        padding: 40px 0 !important;
     }
 }
 
@@ -785,19 +788,19 @@ ul.breadcrumb li a:hover {
 /* TESTIMONIAL SLIDER */
 .testim {
     width: 100%;
-    position: absolute;
-    top: 60%;
-    -webkit-transform: translatey(-50%);
+/*    position: relative;
+    top: 40%;*/
+/*    -webkit-transform: translatey(-50%);
     -moz-transform: translatey(-50%);
     -ms-transform: translatey(-50%);
     -o-transform: translatey(-50%);
-    transform: translatey(-50%);
+    transform: translatey(-50%);*/
 }
 
 .testim .wrap {
-    position: relative;
+    /*position: relative;*/
     width: 100%;
-    max-width: 1020px;
+    /*max-width: 1020px;*/
     padding: 40px 20px;
     margin: auto;
 }
@@ -1869,6 +1872,7 @@ ul.breadcrumb li a:hover {
 .sample-screenshot ul {
     margin: 0;
     list-style: none;
+    padding: 0;
 }
 
 .sample-screenshot li {
@@ -1886,6 +1890,7 @@ ul.breadcrumb li a:hover {
     box-shadow: 0 0 10px 6px #e3e3e3;
     padding: 20px;
     border-radius: 5px;
+    width: 100%;
 }
 
 .user_profile h5 {
@@ -2068,6 +2073,7 @@ ul.breadcrumb li a:hover {
 .call-as-now ul {
     list-style: none;
     margin: 0;
+    padding: 0;
 }
 
 .call-as-now ul li {
@@ -2348,4 +2354,8 @@ ul.breadcrumb li a:hover {
 
 .video {
     margin-bottom: 20px;
+}
+
+img {
+    max-width: 100%;
 }

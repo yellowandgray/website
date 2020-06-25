@@ -139,13 +139,13 @@ if (isset($_SESSION['student_register_id'])) {
         <div class="video-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 col-sm-12">
+                    <div class="col-md-6">
                         <div class="video">
                             <h3>How It Works</h3>
                             <iframe src="https://www.youtube.com/embed/qxP5Vw-NLf8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                     </div>
-                    <div class="col-md-6 col-sm-12">
+                    <div class="col-md-6">
                         <h3>Testimonial</h3>
                         <section id="testim" class="testim">
                             <!--         <div class="testim-cover"> -->
@@ -154,14 +154,13 @@ if (isset($_SESSION['student_register_id'])) {
                                 <span id="right-arrow" class="arrow right fa fa-chevron-right"></span>
                                 <span id="left-arrow" class="arrow left fa fa-chevron-left "></span>
                                 <ul id="testim-dots" class="dots">
-                                    <li class="dot active"></li><!--
-                                    --><li class="dot"></li><!--
-                                    --><li class="dot"></li><!--
-                                    --><li class="dot"></li><!--
-                                    --><li class="dot"></li>
+                                    <li class="dot active"></li>
+                                    <li class="dot"></li>
+                                    <li class="dot"></li>
+                                    <li class="dot"></li>
+                                    <li class="dot"></li>
                                 </ul>
                                 <div id="testim-content" class="cont">
-
                                     <div class="active">
                                         <div class="img"><img src="https://image.ibb.co/hgy1M7/5a6f718346a28820008b4611_750_562.jpg" alt=""></div>
                                         <h2>Lorem P. Ipsum</h2>

@@ -1,98 +1,36 @@
-<div class="container">
-                    <div class="card bg-light">
-                        <article class="card-body">
-                            <h4 class="card-title mt-3 text-center">Create Account</h4>
-                            <p class="text-center">Get started with your account</p>
-                            <div class="google-btn">
-                                <div class="google-icon-wrapper">
-                                    <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
-                                </div>
-                                <p class="btn-text"><b>Sign up with google</b></p>
-                            </div>
-                            <div class="google-btn">
-                                <div class="google-icon-wrapper">
-                                    <img class="google-icon" src="examhorse-landing/img/fb.png"/>
-                                </div>
-                                <p class="btn-text"><b>Sign up with Facebook</b></p>
-                            </div>
-                            <p class="divider-text">
-                                <span class="bg-light">OR</span>
-                            </p>
-                            <form onsubmit = 'return registerStudent();'>
-                                <div class="form-group input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"> <i class="fa fa-user"></i> </span>
-                                    </div>
-                                    <input name="" class="form-control" id = 'user_name' placeholder="User name" type="text">
-                                </div> <!-- form-group// -->
-                                <div class="form-group input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"> <i class="fa fa-user"></i> </span>
-                                    </div>
-                                    <input name="" class="form-control" id = 'student_name' placeholder="Full name" type="text">
-                                </div> <!-- form-group// -->
-                                <label>Profile Picture</label>
-                                <div class="form-group input-group">
-                                    <div id="upload_container">
-                                        <input type="file" id="profile_picture" accept="image/x-png,image/gif,image/jpeg" onchange="attachFile('profile_picture');" />
-                                    </div>
-                                    <div class="image-preview hidden" id="preview_container">
-                                        <button type="button" onclick="closeProfilePic();" class="close-button-profile-img"><i class="fa fa-close"></i></button>
-                                        <img src="" alt="image" />
-                                    </div>
-                                </div>
-                                <div class="form-group input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"> <i class="fa fa fa-venus"></i> </span>
-                                    </div>
-                                    <select class="custom-select" id="gender" name="gender">
-                                        <option value="0">Gender</option>
-                                        <option value="male">Male</option>
-                                        <option value="female">Female</option>
-                                    </select>  
-                                </div> <!-- form-group// -->
-                                <div class="form-group input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
-                                    </div>
-                                    <input name="" id="email" class="form-control" placeholder="Email address" type="email">
-                                </div> <!-- form-group// -->
-                                <div class="form-group input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
-                                    </div>
-                                    <input name="" id = 'mobile' class="form-control" placeholder="Phone number" type="text">
-                                </div>
-                                <div class="form-group input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"> <i class="fa fa-building"></i> </span>
-                                    </div>
-                                    <input name="" id = 'city' class="form-control" placeholder="City" type="text">
-                                </div>
-                                <div class="form-group input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"> <i class="fa fa-building"></i> </span>
-                                    </div>
-                                    <input name="" id = 'pin' class="form-control" placeholder="Pin Code" type="text">
-                                </div>
-                                <div class="form-group input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
-                                    </div>
-                                    <input class="form-control" id = 'password' placeholder="Create password" type="password">
-                                </div> <!-- form-group// -->
-                                <div class="form-group input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
-                                    </div>
-                                    <input class="form-control" id = 'confirm_password' placeholder="Repeat password" type="password">
-                                </div> <!-- form-group// -->    
-                                <div class="g-recaptcha" data-sitekey="6LdRV_sUAAAAAJUxyvE5squ2GTwOApnH00odkabA"></div>
-                                <div class="form-group">
-                                    <button type="submit" class="btn btn-primary btn-block"> Create Account  </button>
-                                </div> <!-- form-group// -->      
-                                <p class="text-center">Have an account? <a href="login-page">Log In</a> </p>                                                                 
-                            </form>
-                        </article>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>Exam Horse | Group Exams</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="With the past 16-year original question papers and 2020  Model paper in the Practice Test mode along with the additional important information, a 20% to 30% increase in the score possible. The syllabus/Unit-Topic test option would help to focus on the to be improved areas. The detailed report would give guidance on where to focus further." />
+    <meta name="keywords" content="Tnpsc previous year question paper with definitions, Tnpsc questions with answers definitions, tnpsc materials in tamil / english, Tnpsc Topic wise question paper with answers, Tnpsc Original question paper with answers, how to study / prepare for tnpsc, tnpsc syllabus with material">
+    <meta name="author" content="" />
+
+    <link rel="icon" href="img/favicon.png" type="image/gif">
+    <link href="css/boo.css" rel="stylesheet" type="text/css"/>
+    <!--<link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>-->
+<!--    <link href="examhorse-landing/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>-->
+</head>
+    <body>
+            <section style="padding: 50px 0;">
+                <div class = "container">
+                    <div class = "row">
+                        <div class = "col-md-6">
+                            <img src = "img/about-examhorse.jpg" alt = "About Exam Horse" style="width: 100%"/>
+                        </div>
+                        <div class = "col-md-6">
+                            <h2 style="border-bottom:2px solid #f03c02">About Us</h2>
+                            <p>With the mission of making Learning easy, a team of passionate educational researchers has made use of the old adage "A Picture Worth Thousand Words". Having Bachelor's and Masters's degrees from the reputed institutes both in India and the USA helped this mission very much.</p>
+                        </div>
                     </div>
                 </div>
+            </section>
+        <script src="examhorse-landing/js/jquery.min.js" type="text/javascript"></script>
+        <script src="js/boo.js" type="text/javascript"></script>
+        <!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" type="text/javascript"></script>-->
+    </script>
+</body>
+
+</html>
