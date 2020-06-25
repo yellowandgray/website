@@ -813,9 +813,11 @@ if (isset($_SESSION['student_register_id'])) {
             
             function showexpimgpopupyear(imgsrc,slid,ky) {
                 if (imgsrc != '') {
+                 $("#explimagemodal").detach().insertBefore('#explanation_image_'+ slid+'_'+ky);
+                 $("#explimagemodal").css({"position":'relative'});    
                 $('.explimagepreview').attr('src', imgsrc);
                 $('#explimagemodal').modal('show');
-                $('#result_view_' + slid+'_'+ky).append($('#explimagemodal').html());
+                
                 }
             }
         </script>
