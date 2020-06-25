@@ -37,7 +37,7 @@ $api = new Api($keyId, $keySecret);
 //
 $orderData = [
     'receipt'         => 3456,
-    'amount'          => 499 * 100, // 2000 rupees in paise
+    'amount'          => 1 * 100, // 2000 rupees in paise
     'currency'        => 'INR',
     'payment_capture' => 1 // auto capture
 ];
