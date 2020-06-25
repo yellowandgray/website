@@ -14,7 +14,7 @@ if (isset($_SESSION['student_register_id'])) {
         <div class="sample-learning-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-6 col-sm-12">
                         <div class="p-t-b-30px">
                             <div class="intro-title">
                                 <h2>Where Future Happens</h2>
@@ -55,7 +55,7 @@ if (isset($_SESSION['student_register_id'])) {
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 col-sm-12">
                         <div class="p-t-b-30px">
                             <h3>Main Features</h3>
                             <div class="sample-screenshot">
