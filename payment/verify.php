@@ -83,7 +83,7 @@ if ($success === true)
                  
                  
                  $student_id = $obj->insertRecord(array('student_name' => $student_name,  'password' => $password, 'confirm_password' => $confirm_password, 'mobile' => $mobile, 'email' => $email, 'practice_medium'=> $practice_medium,  'created_at'=>date('Y-m-d H:i:S')), 'student_register');
-                 $payment_amt = 499;
+                 $payment_amt = 1;
                  
                  $obj->insertRecord(array('student_id'=>$student_id,'payment_amount'=>$payment_amt,'payment_status'=>1,'payment_succ_ref'=>$_POST['razorpay_payment_id'],'created_at'=>date('Y-m-d H:i:s')),'student_payment');
                  unset($_SESSION['pay_student']);
