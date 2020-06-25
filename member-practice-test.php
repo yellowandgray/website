@@ -1206,13 +1206,19 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
                             $('.explimagepreview').attr('src', imgsrc);
                             $('#explimagemodal').modal('show');
                         }
-                    },
+                    },    
+                    /*
                     restart: function () {
                         $('#create').hide();
                         this.questionIndex = 0;
+                        this.anscntstud = 0;
                         this.userResponses = Array(this.quiz.questions.length).fill(null);
                         //document.getElementById('#create').style.display = 'none';
                         this.showTimer = true;
+                    }, 
+                    */
+                   restart: function () {
+                      location.reload();
                     },
                     convertLower: function (strval) {
                         return strval.toLowerCase().trim();
@@ -3242,6 +3248,7 @@ if (isset($_SESSION['student_selected_years_id']) && ($_SESSION['student_selecte
 <?php } ?>
 <?php if (isset($_REQUEST['from']) && ($_REQUEST['from'] == 'pausequiz')) { ?>
                         app.goQuesFromPause();
+                        app.studanscnt();
 <?php } ?>
                     $('.loadingoverlay').hide();
                 }, 600);

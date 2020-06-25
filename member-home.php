@@ -251,12 +251,16 @@ if (isset($_SESSION['student_register_id'])) {
                             </div>-->
                         </div>
                     </div>
+                    
+                    <?php 
+                    if (count($student_log) > 0) {
+                      ?>  
                     <div class="span6">
                         <div class="member-text-content">
                             <h4 class="recent-scores">Your Recent Score</h4>
 
                             <?php
-                            if (count($student_log) > 0) {
+                            //if (count($student_log) > 0) {
                                 if (isset($student_log_order['student_log_order']) && ($student_log_order['student_log_order'] == 1)) { //question order   
                                     ?>    
                                     <table class = 'full-member-table'>
@@ -374,7 +378,7 @@ if (isset($_SESSION['student_register_id'])) {
 
                                     <?php
                                 }
-                            }
+                            //}
                             ?>
 
 
@@ -382,6 +386,7 @@ if (isset($_SESSION['student_register_id'])) {
                             <a href="member-result" class="seemore-btn">See More</a>
                         </div>
                     </div>
+                    <?php } ?>
                 </div>
             </div>
         </div>
