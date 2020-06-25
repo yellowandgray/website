@@ -182,25 +182,25 @@ if (isset($_SESSION['student_register_id'])) {
             <section class = 'topic_section'>
                 <div class = 'container'>
                     <div class = 'row'>
-                        <div class = 'span4'>
+<!--                        <div class = 'span4'>
                             <div class = 'result_user_section'>
-                                <?php if (isset($login_student['profile_image']) && $login_student['profile_image'] == '') {
+                                <?php //if (isset($login_student['profile_image']) && $login_student['profile_image'] == '') {
                                     ?>
-                                    <div class = 'user_profile' style = 'background: url(<?php echo BASE_URL . $login_student['gender']; ?>.jpg)no-repeat;background-position: center;background-size: cover'></div>
-                                <?php } else {
+                                    <div class = 'user_profile' style = 'background: url(<?php //echo BASE_URL . $login_student['gender']; ?>.jpg)no-repeat;background-position: center;background-size: cover'></div>
+                                <?php //} else {
                                     ?>
-                                    <div class = 'user_profile' style = 'background: url(<?php echo BASE_URL . $login_student['profile_image']; ?>)no-repeat;background-position: center;background-size: cover'></div>
-                                <?php }
+                                    <div class = 'user_profile' style = 'background: url(<?php //echo BASE_URL . $login_student['profile_image']; ?>)no-repeat;background-position: center;background-size: cover'></div>
+                                <?php //}
                                 ?>
                             </div>
                             <div class = 'user_details'>
-                                <h2><?php echo $student['student_name']; ?></h2>
-                                <h4><span><?php echo $student['mobile'] ?></span></h4>
+                                <h2><?php //echo $student['student_name']; ?></h2>
+                                <h4><span><?php //echo $student['mobile'] ?></span></h4>
                                 <h5> </h5>
-                                <p><?php echo $student['city']; ?> <?php echo $student['pin']; ?> </p>
+                                <p><?php //echo $student['city']; ?> <?php //echo $student['pin']; ?> </p>
                             </div>
-                        </div>
-                        <div class = 'span8'>
+                        </div>-->
+                        <div class = 'span12'>
                             <h4>My Completed Test</h4>
                             <!--                            <h6></h6>-->
                             <!-- start: Accordion -->
@@ -228,15 +228,15 @@ if (isset($_SESSION['student_register_id'])) {
                                     <!-- Tab panes -->
                                     <div class="tab-content">
                                         <div class="tab-pane container active" id="yordertab">
-                                            <table class = 'table table-striped result_table' style="width:60%;">
+                                            <table class = 'table table-striped result_table' style="width:100%;">
                                                 <thead>
                                                     <tr>
-                                                        <th class="text-center">Date</th>
-                                                        <th class="text-center">Year</th>
-                                                        <th class="text-center">Total</th>
-                                                        <th class="text-center">Answered</th>
-                                                        <th class="text-center"><i class="icon-ok-sign"></i></th>
-                                                        <th class="text-center"><i class="font-icon-remove-circle"></i></th>
+                                                        <th>Date</th>
+                                                        <th>Year</th>
+                                                        <th>Total</th>
+                                                        <th>Answered</th>
+                                                        <th><i class="icon-ok-sign"></i></th>
+                                                        <th><i class="font-icon-remove-circle"></i></th>
                                                     </tr>
                                                 </thead>
 
@@ -289,16 +289,16 @@ if (isset($_SESSION['student_register_id'])) {
 
 
                                         <div class="tab-pane container fade" id="sordertab">
-                                            <table class = 'table table-striped result_table' style="width:60%;">
+                                            <table class = 'table table-striped result_table' style="width:100%;">
                                                 <thead>
                                                     <tr>
-                                                        <th class="text-center">Date</th>
-                                                        <th class="text-center">Subject</th>
-                                                        <th class="text-center">Topic</th>
-                                                        <th class="text-center">Total</th>
-                                                        <th class="text-center">Answered</th>
-                                                        <th class="text-center"><i class="icon-ok-sign"></i></th>
-                                                        <th class="text-center"><i class="font-icon-remove-circle"></i></th>
+                                                        <th>Date</th>
+                                                        <th>Subject</th>
+                                                        <th>Topic</th>
+                                                        <th>Total</th>
+                                                        <th>Answered</th>
+                                                        <th><i class="icon-ok-sign"></i></th>
+                                                        <th><i class="font-icon-remove-circle"></i></th>
                                                     </tr>
                                                 </thead>
 

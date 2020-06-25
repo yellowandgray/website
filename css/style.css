@@ -2492,7 +2492,10 @@ article .align-right {
         padding-left: 10px;
     }
     .full-language-width {
-        width: 50% !Important;
+        width: 75% !Important;
+    }
+    .subject-section {
+        width: 46% !important;
     }
     .learning-box {
         height: 200px !important;

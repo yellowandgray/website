@@ -11,15 +11,15 @@
         </div>
     </div>
 </div>-->
-<!--<div class="explanation-popup" id="explimagemodal" style="display: none;">
-            <div class="popup-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
-            </div>
-            <div class="popup-content">
-                <img src="" class="explimagepreview">
-            </div>
-        </div>-->
-<div class="custom-model-main">
+<div class="explanation-popup" id="explimagemodal" style="display: none;">
+    <div class="popup-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+    </div>
+    <div class="popup-content">
+        <img src="" class="explimagepreview">
+    </div>
+</div>
+<!--<div class="custom-model-main">
     <div class="custom-model-inner">        
         <div class="close-btn">×</div>
         <div class="custom-model-wrap">
@@ -29,4 +29,4 @@
         </div>  
     </div>  
     <div class="bg-overlay"></div>
-</div> 
+</div> -->
