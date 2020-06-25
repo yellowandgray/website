@@ -16,8 +16,11 @@ $fb = new Facebook\Facebook([
 
 $helper = $fb->getRedirectLoginHelper();
 $fb_login_url = $helper->getLoginUrl("http://localhost/project/exam-horse-sample/login-user-facebook.php",array('email'));
-
 $fb_register_url = $helper->getLoginUrl("http://localhost/project/exam-horse-sample/register-user-facebook.php",array('email'));
+/*
+$fb_login_url = $helper->getLoginUrl("https://examhorse.com/login-user-facebook.php",array('email'));
+$fb_register_url = $helper->getLoginUrl("https://examhorse.com/register-user-facebook.php",array('email'));
+*/
  
 
 
