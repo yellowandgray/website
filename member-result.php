@@ -767,7 +767,7 @@ if (isset($_SESSION['student_register_id'])) {
                     qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="option-float">D. </span> ' + val.d + '</div></div>';
                     }
                     if (val.image_path_explanation !== '' && val.explanation_img_direction === 'top') {
-                    qlist = qlist + '<div class="explanation_image" id="explanation_image_'+slid+'_'+key+'"><img onClick="showexpimgpopupyear(\''+image_url + val.image_path_explanation+'\','+slid+','+key+'); src="' + image_url + val.image_path_explanation + '"></div>';
+                    qlist = qlist + '<div class="explanation_image" id="explanation_image_'+slid+'_'+key+'"><img onClick="showexpimgpopupyear(\''+image_url + val.image_path_explanation+'\','+slid+','+key+');" src="' + image_url + val.image_path_explanation + '"></div>';
                     } else {
                     qlist = qlist + '';
                     }
@@ -777,7 +777,7 @@ if (isset($_SESSION['student_register_id'])) {
                     qlist = qlist + '<div class="explanation-section"> </div>';
                     }
                     if (val.image_path_explanation !== '' && val.explanation_img_direction === 'bottom') {
-                    qlist = qlist + '<div class="explanation_image" id="explanation_image_'+slid+'_'+key+'"><img onClick="showexpimgpopupyear(\''+image_url + val.image_path_explanation+'\','+slid+','+key+'); src="' + image_url + val.image_path_explanation + '"></div>';
+                    qlist = qlist + '<div class="explanation_image" id="explanation_image_'+slid+'_'+key+'"><img onClick="showexpimgpopupyear(\''+image_url + val.image_path_explanation+'\','+slid+','+key+');" src="' + image_url + val.image_path_explanation + '"></div>';
                     } else {
                     qlist = qlist + '';
                     }
