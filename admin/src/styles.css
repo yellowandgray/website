@@ -131,6 +131,14 @@ mat-sidenav-content {
     border: 2px solid #1c65bf;
 }
 
+
+.MJXc-display {
+    text-align: left !important;
+    margin: 5px 0 !important;
+    display: inline !important;
+}
+
+
 .done_clr {
     color: #479c18;
 }
@@ -139,8 +147,29 @@ mat-sidenav-content {
     color: #F03C02;
 }
 
-.MJXc-display {
-    text-align: left !important;
-    margin: 5px 0 !important;
-    display: inline !important;
+.result-option {
+    background: #e3e3e3;
+    padding: 5px 15px;
+    border-radius: 25px;
+    margin: 10px 0px 10px 15px;
+}
+
+.wrng-clr {
+    background: #F03C02;
+}
+
+.wrng-clr .option {
+    color: #fff;
+}
+
+.crt-clr {
+    background: #479c18;
+}
+
+.crt-clr .option {
+    color: #fff;
+}
+
+.option {
+    font-size: 15px;
 }

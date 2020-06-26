@@ -17,6 +17,8 @@ export class MembersComponent implements OnInit {
   student = [];
   student_count = 0;
   free_user = [];
+
+  stud_year_result = [];  
   image_url: string = '../api/v1/';
   constructor(public dialog: MatDialog, private httpClient: HttpClient, private _snackBar: MatSnackBar) { }
 
@@ -138,6 +140,48 @@ export class MembersComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
     });
   }
+
+
+openStudYearResult(sid, name): void {
+
+
+
+ this.httpClient.get<any>('../api/v1/get_student_year_result/'+sid)
+      .subscribe(
+        (res) => {
+            console.log(res["result"]["data"]);
+            if(res["result"]["error"] == false) {
+          const dialogRef = this.dialog.open(MemberResultForm, {
+      minWidth: "40%",
+      maxWidth: "40%",
+      data: {
+        data: res["result"]["data"]
+   
+      }
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      if (result !== false && result !== 'false') {
+        console.log('Result closed');
+      }
+    });
+            }else {
+             this._snackBar.open(res["result"]["message"], '', {
+            duration: 2000,
+          });   
+            }
+        },
+        (error) => {
+          this._snackBar.open(error["statusText"], '', {
+            duration: 2000,
+          });
+        }
+      );
+
+}
+
+
+ 
+  
 
 }
 
@@ -400,4 +444,74 @@ export class PictureViewMember {
       }
     }
   }
+}
+
+
+
+
+@Component({
+  selector: 'member-result-form',
+  templateUrl: 'member-result-form.html',
+})
+export class MemberResultForm {
+  resultForm: FormGroup;
+  loading = false;
+  constructor(
+    public dialogRef: MatDialogRef<MemberResultForm>,public dialog: MatDialog,
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {  }
+
+     openMemberYearResult(logid): void {        
+      this.dialogRef.close();
+
+ this.httpClient.get('../api/v1/get_result_detail/' +logid).subscribe(
+        (res) => {
+            this.loading = false;
+            if(res["result"]["error"] == false) {
+            
+          const dialogRef = this.dialog.open(MemberYearResultForm, {
+      minWidth: "40%",
+      maxWidth: "40%",
+      data: {
+        data: res["result"]["data"]
+        
+      }
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      if (result !== false && result !== 'false') {
+        console.log('Result closed');
+      }
+    });
+            }else {
+             this._snackBar.open(res["result"]["message"], '', {
+            duration: 2000,
+          });   
+            }
+        },
+        (error) => {
+          this._snackBar.open(error["statusText"], '', {
+            duration: 2000,
+          });
+        }
+      );
+
+
+  }  
+
+}
+
+
+ @Component({
+  selector: 'member-year-result-view',
+  templateUrl: 'member-year-result-view.html',
+})
+
+export class MemberYearResultForm {
+  loading = false;
+  constructor(
+    public dialogRef: MatDialogRef<MemberYearResultForm>,
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {}
 }

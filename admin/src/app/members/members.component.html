@@ -42,12 +42,13 @@
                             <button mat-icon-button aria-label="label " (click)="openView(data.student_register_id, 'student') ">
                                 <mat-icon>remove_red_eye</mat-icon>
                             </button>
-                            <button mat-icon-button aria-label="label">
+                            <button mat-icon-button aria-label="label" (click)="openStudYearResult(data.student_register_id)">
                                 <mat-icon #tooltip="matTooltip" matTooltip="Result">insert_drive_file</mat-icon>
                             </button>
                             <img matListAvatar src="{{image_url}}{{data.profile_image}}" *ngIf="data.profile_image && data.profile_image != ''" alt="image" (click)="confirmDialog(data, 'preview')" />
                                  <h4 mat-line>{{data.student_name}}</h4>
-                            <p mat-line>{{data.email}} | {{data.mobile}} | {{data.practice_medium}}</p>
+                            <!--p mat-line>{{data.email}} | {{data.mobile}} | {{data.practice_medium}}</p-->
+                            <p mat-line>{{data.payment_date}}</p>
                         </mat-list-item>
                         <mat-divider></mat-divider>
                     </ng-container>

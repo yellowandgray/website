@@ -9,12 +9,12 @@
                     <td mat-cell> {{data.student_name}} </td>
                 </tr>
                 <tr>
-                    <th mat-header-cell> Email Address </th>
+                    <th mat-header-cell> Email </th>
                     <td mat-cell> : </td>
                     <td mat-cell> {{data.email}} </td>
                 </tr>
                 <tr>
-                    <th mat-header-cell> Contact Number </th>
+                    <th mat-header-cell> Mobile </th>
                     <td mat-cell> : </td>
                     <td mat-cell> {{ data.mobile }} </td>
                 </tr>
@@ -36,7 +36,12 @@
                 <tr>
                     <th mat-header-cell> City </th>
                     <td mat-cell> : </td>
-                    <td mat-cell> {{data.city}} - {{data.pin}} </td>
+                    <td mat-cell> {{data.city}} </td>
+                </tr>
+                <tr>
+                    <th mat-header-cell> Pin Code </th>
+                    <td mat-cell> : </td>
+                    <td mat-cell> {{data.pin}} </td>
                 </tr>
                 <tr>
                     <th mat-header-cell> District </th>
@@ -56,7 +61,7 @@
                 <tr>
                     <th mat-header-cell> Practice Medium </th>
                     <td mat-cell> : </td>
-                    <td mat-cell> {{data.practice_medium}} </td>
+                    <td mat-cell><span *ngIf="data.practice_medium==1">Tamil</span><span *ngIf="data.practice_medium==2">English</span></td>
                 </tr>
             </table>
         </div>

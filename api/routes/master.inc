@@ -323,7 +323,7 @@ $app->get('/get_topic_by_lng_year/:lng/:yr', function($lng, $yr) {
 $app->get('/get_student', function() {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
-    $data = $com->selectAll('*', 'student_register', 'student_register_id > 0');
+    $data = $com->selectAll('student_register.*,student_payment.created_at As payment_date', 'student_register LEFT JOIN student_payment ON student_register.student_register_id=student_payment.student_id', 'student_register_id > 0 ORDER BY student_register_id');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
@@ -1922,6 +1922,31 @@ $app->get('/get_free_user', function() {
         $res['message'] = 'Records found';
         $res['data'] = $data;
         $res['total'] = count($data);
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_student_year_result/:sid', function($sid) {
+    $res = array('error' => true, 'message' => 'No records found');
+    $obj = new Common();
+    $student_logs = $obj->selectAll('student_log.*,year.year', 'student_log INNER JOIN student_log_order ON student_log.student_log_id=student_log_order.student_log_id INNER JOIN student_log_year ON student_log_year.student_log_id=student_log.student_log_id INNER JOIN year ON student_log_year.year_id=year.year_id', 'student_register_id = ' . $sid . '  AND student_log_order.student_log_order=1 ORDER BY student_log_id DESC');
+    
+     
+    if (count($student_logs) > 0) {
+        
+        foreach ($student_logs as $key => $log) {
+            
+            
+            //$detail = $obj->selectRow('COUNT(student_log_detail_id) AS attended, IFNULL((SELECT COUNT(student_log_detail_id) FROM student_log_detail WHERE student_log_id=' . $log['student_log_id'] . ' AND UPPER(answer) = UPPER(student_answer)), 0) AS correct_answers', 'student_log_detail', 'student_log_id=' . $log['student_log_id']);
+           $detail = $obj->selectRow('COUNT(student_log_detail_id) AS attended, IFNULL((SELECT COUNT(student_log_detail_id) FROM student_log_detail INNER JOIN question ON student_log_detail.question_id=question.question_id WHERE student_log_id=' . $log['student_log_id'] . ' AND UPPER(answer) = UPPER(student_answer)), 0) AS correct_answers', 'student_log_detail', 'student_log_id=' . $log['student_log_id']);
+           
+           $student_logs[$key]['created_at'] = date("d-m-Y", strtotime($student_logs[$key]['created_at']) );
+            $student_logs[$key]['attended'] = $detail['attended'];
+            $student_logs[$key]['correct_answers'] = $detail['correct_answers'];
+        }
+        $res['error'] = false;
+        $res['message'] = 'Result found';
+        $res['data'] = $student_logs;
     }
     echoRespnse(201, $res);
 });
