@@ -29,7 +29,7 @@ if (isset($_SESSION['student_register_id'])) {
                                     <li><i class="fa fa-check"></i> Year Order / Subject Order</li>
                                     <li><img src="img/screenshots/year-subject.png" alt="" /></li>
                                     <li><i class="fa fa-check"></i> Explanation Image</li>
-                                    <li><img src="img/screenshots/explanation.png" alt="" /></li>
+                                       <li><img src="img/screenshots/explanation.png" alt="" /></li>
                                     <li><i class="fa fa-check"></i> Detail Result</li>
                                     <li><img src="img/screenshots/result.png" alt="" /></li>
                                 </ul>
@@ -65,6 +65,7 @@ if (isset($_SESSION['student_register_id'])) {
                                                         </div>-->
                             <div class="pay-register" style="text-align: center;" onclick="window.location = 'member-signup'">
                                 <img src="img/pic-price-offer-pay-now.jpg" alt="" />
+                                <button class="btn btn-pay" onclick="window.location = 'member-signup'">Pay Now</button>
                             </div>
                         </div>
                     </div>

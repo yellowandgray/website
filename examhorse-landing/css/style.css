@@ -448,9 +448,9 @@ footer a:hover {
     }
 }
 @media (max-width: 767px) {
-/*    .container {
-        width: 100% !Important;
-    }*/
+    /*    .container {
+            width: 100% !Important;
+        }*/
     .header-fixed .header-limiter nav {
         display: none;
     }
@@ -464,8 +464,8 @@ footer a:hover {
         font-size: 16px !important;
     }
     .testim {
-/*        position: relative !important;
-        top: 45% !important; */
+        /*        position: relative !important;
+                top: 45% !important; */
     }
     .carousel-caption h2 {
         font-size: 18px !important;
@@ -537,6 +537,9 @@ footer a:hover {
     }
     .contact-section-examhorse .contact-content {
         padding: 40px 0 !important;
+    }
+    .fb-btn {
+        top: 0px !important;
     }
 }
 
@@ -788,13 +791,13 @@ ul.breadcrumb li a:hover {
 /* TESTIMONIAL SLIDER */
 .testim {
     width: 100%;
-/*    position: relative;
-    top: 40%;*/
-/*    -webkit-transform: translatey(-50%);
-    -moz-transform: translatey(-50%);
-    -ms-transform: translatey(-50%);
-    -o-transform: translatey(-50%);
-    transform: translatey(-50%);*/
+    /*    position: relative;
+        top: 40%;*/
+    /*    -webkit-transform: translatey(-50%);
+        -moz-transform: translatey(-50%);
+        -ms-transform: translatey(-50%);
+        -o-transform: translatey(-50%);
+        transform: translatey(-50%);*/
 }
 
 .testim .wrap {
@@ -1514,6 +1517,11 @@ ul.breadcrumb li a:hover {
 .form-group input {
     height: auto;
     padding: 10px 6px;
+}
+
+.form-group input[type='radio'] {
+    left: 15px;
+    top: 4px;
 }
 
 .modal-body {
@@ -2319,6 +2327,22 @@ ul.breadcrumb li a:hover {
     border-radius: 5px;
 }
 
+.pay-register .btn-pay {
+    background: green;
+    color: #fff;
+    opacity: 0.9;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 8px 50px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.pay-register:hover .btn-pay {
+    background: #151985;
+    color: #fff;
+}
+
 .free-sample-list {
     list-style: none;
     margin: 0;
@@ -2358,4 +2382,9 @@ ul.breadcrumb li a:hover {
 
 img {
     max-width: 100%;
+}
+
+.fb-btn {
+    position: relative;
+    top: -13px;
 }

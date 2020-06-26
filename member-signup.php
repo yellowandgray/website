@@ -29,7 +29,7 @@ $obj = new Common();
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="google-btn" onclick="window.location='<?php echo $fb_register_url;  ?>';">
+                                        <div class="google-btn fb-btn" onclick="window.location='<?php echo $fb_register_url;  ?>';">
                                             <div class="google-icon-wrapper">
                                                 <img class="google-icon" src="examhorse-landing/img/fb.png"/>
                                             </div>
