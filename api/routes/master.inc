@@ -1950,3 +1950,196 @@ $app->get('/get_student_year_result/:sid', function($sid) {
     }
     echoRespnse(201, $res);
 });
+
+
+
+$app->get('/get_student_topic_result/:sid', function($sid) {
+    $res = array('error' => true, 'message' => 'No records found');
+    $obj = new Common();
+    
+    
+    $student_log_topic = $obj->selectAll('slt.*,t.name As topic_name,subject.subject_id As subject_id,subject.name As subject_name', 'student_log As sl'
+            . ' LEFT JOIN student_log_topic slt ON sl.student_log_id=slt.student_log_id LEFT JOIN topic As t ON slt.topic_id=t.topic_id LEFT JOIN subject ON '
+            . 't.subject_id=subject.subject_id', 'sl.student_register_id = ' . $sid . ' AND sl.student_log_id IS NOT NULL AND sl.student_log_id<>\'\' ORDER BY student_log_id,subject.subject_id,t.topic_id ASC');
+
+
+        
+    $student_log_year = $obj->selectAll('sly.*,y.year As year', 'student_log AS sl LEFT JOIN student_log_year As sly ON sl.student_log_id=sly.student_log_id LEFT JOIN year As y ON y.year_id=sly.year_id', ' sl.student_register_id=' . $sid);
+    
+     $stud_all_sel_year = Array();
+
+    
+    $ans_log_year = array();
+    if (count($student_log_year) > 0) {
+        foreach ($student_log_year as $student_log_year_v) {
+            $ans_log_year[$student_log_year_v['student_log_id']][] = $student_log_year_v['year'];
+            if ($student_log_year_v['year_id'] != '') {
+                if (!in_array($student_log_year_v['year_id'], $stud_all_sel_year)) {
+                    $stud_all_sel_year[] = $student_log_year_v['year_id'];
+                }
+            }
+        }
+    }
+    
+    
+    $stud_all_sel_topic = Array();
+    $stud_log_topic_by_log = array();
+    if (count($student_log_topic) > 0) {
+        foreach ($student_log_topic as $student_log_topic) {
+            if ($student_log_topic['student_log_id'] != '') {
+                $stud_log_topic_by_log[$student_log_topic['student_log_id']][$student_log_topic['subject_name']][$student_log_topic['topic_id']] = $student_log_topic['topic_name'];
+                if (!in_array($student_log_topic['topic_id'], $stud_all_sel_topic)) {
+                    $stud_all_sel_topic[] = $student_log_topic['topic_id'];
+                }
+            }
+        }
+    }
+
+
+    $stud_all_sel_year_id_val = '';
+    $stud_all_sel_topic_id_val = '';
+
+    $ques_year_cnt = array();
+    $ques_cor_ans_cnt = array();
+
+    if (count($stud_all_sel_year) > 0) {
+        $stud_all_sel_year_id_val = implode(',', $stud_all_sel_year);
+    }
+
+    if (count($stud_all_sel_topic) > 0) {
+        $stud_all_sel_topic_id_val = implode(',', $stud_all_sel_topic);
+    }
+
+
+
+    //total questions count in topic
+    if ($stud_all_sel_topic_id_val != '') {
+        //total questions year , topic 
+        $student_log_question = $obj->selectAll('q.*,year.year,subject.name As subject_name,t.name As topic_name', ' question As q LEFT JOIN year ON q.year_id=year.year_id '
+                . 'LEFT JOIN topic As t ON q.topic_id=t.topic_id LEFT JOIN subject ON t.subject_id=subject.subject_id', ' q.topic_id IN (' . $stud_all_sel_topic_id_val . ')');
+
+
+
+        if (count($student_log_question) > 0) {
+            foreach ($student_log_question as $student_log_question_val) {
+                if (!isset($ques_year_cnt[$student_log_question_val['topic_id']]['count'])) {
+                    $ques_year_cnt[$student_log_question_val['topic_id']]['count'] = 0;
+                }
+                $ques_year_cnt[$student_log_question_val['topic_id']]['count'] = $ques_year_cnt[$student_log_question_val['topic_id']]['count'] + 1;
+                $ques_year_cnt[$student_log_question_val['topic_id']]['topic_name'] = $student_log_question_val['topic_name'];
+                $ques_year_cnt[$student_log_question_val['topic_id']]['subject_name'] = $student_log_question_val['subject_name'];
+            }
+        }
+
+
+
+        /*
+          echo "<pre>";
+          print_r($ques_year_cnt);
+          exit;
+         */
+
+
+
+
+
+        $student_log_answer = $obj->selectAll('student_log_detail.*,year.year,question.answer,question.topic_id', ' student_log LEFT JOIN student_log_detail ON student_log.student_log_id=student_log_detail.student_log_id '
+                . 'LEFT JOIN question ON student_log_detail.question_id=question.question_id LEFT JOIN year ON question.year_id=year.year_id', 'student_log.student_register_id=' . $sid . ' ORDER BY student_log_id DESC,student_log_detail_id DESC');
+
+
+        $stud_topic_order = array();
+        $stud_topic_logs = array();
+
+
+        $tmp_stud_log_queston_id = array(); //rmv mul question  in student log details
+        foreach ($student_log_answer as $student_log_answer_val) {
+            if ($student_log_answer_val['student_log_id'] != '') {
+                if (!isset($tmp_stud_log_queston_id[$student_log_answer_val['student_log_id']]) || !in_array($student_log_answer_val['question_id'], $tmp_stud_log_queston_id[$student_log_answer_val['student_log_id']])) {
+
+                    $ques_cor_ans_cnt[$student_log_answer_val['student_log_id']][$student_log_answer_val['topic_id']]['date'] = date('d/m/Y', strtotime($student_log_answer_val['created_at']));
+
+                    if (!in_array($student_log_answer_val['topic_id'], $stud_topic_order)) {
+                        $stud_topic_order[] = $student_log_answer_val['topic_id'];
+                    }
+
+                    if (!isset($stud_topic_logs[$student_log_answer_val['topic_id']]) || !in_array($student_log_answer_val['student_log_id'], $stud_topic_logs[$student_log_answer_val['topic_id']])) {
+                        $stud_topic_logs[$student_log_answer_val['topic_id']][] = $student_log_answer_val['student_log_id'];
+                    }
+
+                    $tmp_stud_log_queston_id[$student_log_answer_val['student_log_id']][] = $student_log_answer_val['question_id'];
+                    if (!isset($ques_cor_ans_cnt[$student_log_answer_val['student_log_id']][$student_log_answer_val['topic_id']]['correct_cnt'])) {
+                        $ques_cor_ans_cnt[$student_log_answer_val['student_log_id']][$student_log_answer_val['topic_id']]['correct_cnt'] = 0;
+                    }
+
+
+                    if (!isset($ques_cor_ans_cnt[$student_log_answer_val['student_log_id']][$student_log_answer_val['topic_id']]['answerd_cnt'])) {
+                        $ques_cor_ans_cnt[$student_log_answer_val['student_log_id']][$student_log_answer_val['topic_id']]['answerd_cnt'] = 0;
+                    }
+
+
+                    if ($student_log_answer_val['student_answer'] != '') {
+
+                        $ques_cor_ans_cnt[$student_log_answer_val['student_log_id']][$student_log_answer_val['topic_id']]['answerd_cnt'] = $ques_cor_ans_cnt[$student_log_answer_val['student_log_id']][$student_log_answer_val['topic_id']]['answerd_cnt'] + 1;
+                    }
+
+                    if ($student_log_answer_val['answer'] == $student_log_answer_val['student_answer']) {
+                        $ques_cor_ans_cnt[$student_log_answer_val['student_log_id']][$student_log_answer_val['topic_id']]['correct_cnt'] = $ques_cor_ans_cnt[$student_log_answer_val['student_log_id']][$student_log_answer_val['topic_id']]['correct_cnt'] + 1;
+                    }
+                }
+            }
+        }
+    }    
+    
+    
+     $stud_res = array();
+     foreach ($stud_topic_order as $stud_topic) {
+        foreach ($stud_topic_logs[$stud_topic] as $log_id) {
+            if (isset($ques_year_cnt[$stud_topic])) {
+
+
+                if (isset($ques_cor_ans_cnt[$log_id][$stud_topic]['answerd_cnt'])) {
+
+                    $answered = $ques_cor_ans_cnt[$log_id][$stud_topic]['answerd_cnt'];
+                } else {
+
+                    $answered = 0;
+                }
+
+                if ($answered > 0) {
+                    $stud_res_t['date']  = $ques_cor_ans_cnt[$log_id][$stud_topic]['date'];
+                    $stud_res_t['subject_name']  = $ques_year_cnt[$stud_topic]['subject_name'];
+                    $stud_res_t['topic_name']  = $ques_year_cnt[$stud_topic]['topic_name'];
+                     if (isset($ques_year_cnt[$stud_topic]['count'])) {
+                               $stud_res_t['total_count']  = $ques_year_cnt[$stud_topic]['count'];
+                            } else {
+                                 $stud_res_t['total_count']  = 0;
+                            }
+                    $stud_res_t['answered']         = $answered;
+                    
+                     if (isset($ques_cor_ans_cnt[$log_id][$stud_topic]['correct_cnt'])) {                         
+                            $correct_cnt = $ques_cor_ans_cnt[$log_id][$stud_topic]['correct_cnt'];
+                     } else {                               
+                            $correct_cnt = 0;
+                     }                    
+                     $stud_res_t['correct_cnt']      = $correct_cnt;
+                     $stud_res_t['wrong_cnt']        = $answered - $correct_cnt;
+                     $stud_res_t['topic']            = $stud_topic;
+                     $stud_res_t['log_id']           = $log_id;
+ 
+                    $stud_res[] = $stud_res_t;
+                    unset($stud_res_t);
+                }
+            }
+        }
+    }
+    
+    if(count($stud_res)>0) {
+        $res['error'] = false;
+        $res['message'] = 'Result found';
+        $res['data'] = $stud_res;
+    }
+    
+    
+    echoRespnse(201, $res);
+});
+

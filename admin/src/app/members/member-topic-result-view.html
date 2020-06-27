@@ -1,0 +1,50 @@
+<h2 mat-dialog-title>Result</h2>
+<mat-dialog-content class="mat-typography">
+    <div class="" *ngFor="let mark of data.data; let rowIndex=index">
+         <div class="">
+            <p>{{rowIndex+1}}. <span [innerHTML]="mark.name"></span></p>
+        </div>
+
+        <div class="result-option crt-clr" *ngIf="mark.answer=='A'">
+            <div class="option">A. <span [innerHTML]="mark.a"></span></div>
+        </div>
+
+        <div class="result-option wrng-clr" *ngIf="mark.answer!='A' && mark.student_answer=='A'">
+            <div class="option">A. <span [innerHTML]="mark.a"></span></div>
+        </div>
+
+
+        <div class="result-option" *ngIf="mark.answer!='A' && mark.student_answer!='A'">
+             <div class="option">A. <span [innerHTML]="mark.a"></span></div>
+        </div>
+
+
+        <div class="result-option crt-clr" *ngIf="mark.answer=='B'">
+            <div class="option">B. <span [innerHTML]="mark.b"></span></div>
+        </div>
+
+        <div class="result-option wrng-clr" *ngIf="mark.answer!='B' && mark.student_answer=='B'">
+            <div class="option">B. <span [innerHTML]="mark.b"></span></div>
+        </div>
+
+
+        <div class="result-option" *ngIf="mark.answer!='B' && mark.student_answer!='B'">
+             <div class="option">B. <span [innerHTML]="mark.b"></span></div>
+        </div>
+
+
+        <div class="result-option crt-clr" *ngIf="mark.answer=='C'">
+            <div class="option">C. <span [innerHTML]="mark.c"></span></div>
+        </div>
+
+        <div class="result-option wrng-clr" *ngIf="mark.answer!='C' && mark.student_answer=='C'">
+            <div class="option">C. <span [innerHTML]="mark.c"></span></div>
+        </div>
+
+
+        <div class="result-option" *ngIf="mark.answer!='C' && mark.student_answer!='C'">
+             <div class="option">C. <span [innerHTML]="mark.c"></span></div>
+        </div> 
+
+    </div>
+</mat-dialog-content>

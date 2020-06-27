@@ -17,6 +17,7 @@ export class MembersComponent implements OnInit {
   student = [];
   student_count = 0;
   free_user = [];
+  datayear = [];
 
   stud_year_result = [];  
   image_url: string = '../api/v1/';
@@ -142,11 +143,27 @@ export class MembersComponent implements OnInit {
   }
 
 
-openStudYearResult(sid, name): void {
+
+openStudYearResult(sid): void {
 
 
 
- this.httpClient.get<any>('../api/v1/get_student_year_result/'+sid)
+this.httpClient.get<any>('../api/v1/get_student_year_result/'+sid)
+      .subscribe(
+        (res) => {
+          this.datayear = res["result"]["data"];
+        },
+        (error) => {
+          this._snackBar.open(error["statusText"], '', {
+            duration: 2000,
+          });
+        }
+      );
+
+
+
+
+       this.httpClient.get<any>('../api/v1/get_student_topic_result/'+sid)
       .subscribe(
         (res) => {
             console.log(res["result"]["data"]);
@@ -155,8 +172,8 @@ openStudYearResult(sid, name): void {
       minWidth: "40%",
       maxWidth: "40%",
       data: {
-        data: res["result"]["data"]
-   
+        datatopic: res["result"]["data"],
+        data: this.datayear
       }
     });
     dialogRef.afterClosed().subscribe(result => {
@@ -177,10 +194,10 @@ openStudYearResult(sid, name): void {
         }
       );
 
+
 }
 
 
- 
   
 
 }
@@ -499,6 +516,47 @@ export class MemberResultForm {
 
   }  
 
+
+openMemberTopicResult(logid,topicid): void {        
+      this.dialogRef.close();
+
+ this.httpClient.get('../api/v1/get_result_detail_by_topic/' +logid+'/'+topicid).subscribe(
+        (res) => {
+            this.loading = false;
+            if(res["result"]["error"] == false) {
+            console.log(res["result"]["data"]);
+          const dialogRef = this.dialog.open(MemberTopicResultForm, {
+      minWidth: "40%",
+      maxWidth: "40%",
+      data: {
+        data: res["result"]["data"]
+        
+      }
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      if (result !== false && result !== 'false') {
+        console.log('Result closed');
+      }
+    });
+            }else {
+             this._snackBar.open(res["result"]["message"], '', {
+            duration: 2000,
+          });   
+            }
+        },
+        (error) => {
+          this._snackBar.open(error["statusText"], '', {
+            duration: 2000,
+          });
+        }
+      );
+
+
+  }
+
+    
+
+
 }
 
 
@@ -515,3 +573,21 @@ export class MemberYearResultForm {
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {}
 }
+
+
+ 
+@Component({
+  selector: 'member-topic-result-view',
+  templateUrl: 'member-topic-result-view.html',
+})
+
+export class MemberTopicResultForm {
+  loading = false;
+  constructor(
+    public dialogRef: MatDialogRef<MemberTopicResultForm>,
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {}
+}
+
+
