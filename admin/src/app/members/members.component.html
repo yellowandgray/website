@@ -12,11 +12,16 @@
                 <mat-list>
                     <ng-container *ngFor="let data of free_user">
                         <mat-list-item>
-                            <button mat-icon-button aria-label="label">
+                            <button mat-icon-button aria-label="label " (click)="openFreeMemberView(data.free_user_login_id, 'free_user') ">
+                                <mat-icon>remove_red_eye</mat-icon>
+                            </button>
+                            <button mat-icon-button aria-label="label" (click)="openFreeUserResult(data.free_user_login_id)">
                                 <mat-icon #tooltip="matTooltip" matTooltip="Result">insert_drive_file</mat-icon>
                             </button>
-                            <h4 mat-line>{{data.name}} | {{data.phone}}</h4>
-                            <p mat-line>{{data.email}} | {{data.practice_medium}}</p>
+                             <button mat-icon-button aria-label="label" (click)="confirmFreeUserDelete(data.free_user_login_id)">
+                                    <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
+                            </button>
+                            <h4 mat-line>{{data.name}} | {{data.phone}}</h4>                           
                             <br/>
                             <span mat-line> {{data.created_at | date:'dd/MM/yyyy hh:mm a'}} </span>
                         </mat-list-item>
@@ -44,6 +49,9 @@
                             </button>
                             <button mat-icon-button aria-label="label" (click)="openStudYearResult(data.student_register_id)">
                                 <mat-icon #tooltip="matTooltip" matTooltip="Result">insert_drive_file</mat-icon>
+                            </button>
+                             <button mat-icon-button aria-label="label" (click)="confirmDelete(data.student_register_id)">
+                                    <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                             </button>
                             <img matListAvatar src="{{image_url}}{{data.profile_image}}" *ngIf="data.profile_image && data.profile_image != ''" alt="image" (click)="confirmDialog(data, 'preview')" />
                                  <h4 mat-line>{{data.student_name}}</h4>

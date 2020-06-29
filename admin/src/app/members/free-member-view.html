@@ -4,6 +4,11 @@
         <div class="member-profile-view" fxFlex="70%">
             <table mat-table class="user-table">
                 <tr>
+                    <th mat-header-cell>Date</th>
+                    <td mat-cell> : </td>
+                    <td mat-cell> {{data.created_at | date:'dd/MM/yyyy hh:mm a'}} </td>
+                </tr>
+                <tr>
                     <th mat-header-cell>Name</th>
                     <td mat-cell> : </td>
                     <td mat-cell> {{data.name}} </td>
@@ -21,15 +26,11 @@
                 <tr>
                     <th mat-header-cell> Practice Medium </th>
                     <td mat-cell> : </td>
-                    <td mat-cell> {{data.practice_medium}} </td>
+                    <td mat-cell><span  *ngIf="data.practice_medium==1">Tamil</span><span  *ngIf="data.practice_medium==2">English</span></td>
                 </tr>
             </table>
         </div>
-<!--        <div class="member-profile-view" fxFlex="30%" fxLayoutAlign="start start">
-            <div fxFlex="100%" fxLayoutAlign="end start">
-                <img src="{{image_url}}{{data.profile_image}}" alt="" />
-            </div>
-        </div>-->
+
     </div>
     <br/>
     <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">

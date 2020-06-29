@@ -18,6 +18,8 @@ export class MembersComponent implements OnInit {
   student_count = 0;
   free_user = [];
   datayear = [];
+  datayear_free = [];
+  datatopic_free = [];
 
   stud_year_result = [];  
   image_url: string = '../api/v1/';
@@ -79,17 +81,17 @@ export class MembersComponent implements OnInit {
     });
   }
 
-    openFreeUserForm(id, res): void {
+    openFreeMemberView(id, res): void {
     var data = null;
     if (id != 0) {
       this[res].forEach(val => {
-        if (parseInt(val.student_register_id) === parseInt(id)) {
+        if (parseInt(val.free_user_login_id) === parseInt(id)) {
           data = val;
           return false;
         }
       });
     }
-    const dialogRef = this.dialog.open(FreeMemberForm, {
+    const dialogRef = this.dialog.open(FreeMemberViewForm, {
       minWidth: "40%",
       maxWidth: "40%",
       data: data
@@ -144,6 +146,82 @@ export class MembersComponent implements OnInit {
 
 
 
+
+openFreeUserResult(sid): void {
+
+    this.httpClient.get<any>('../api/v1/get_free_user_year_result/'+sid)
+      .subscribe(
+        (res) => {
+          this.datayear_free = res["result"]["data"];
+
+      
+         const dialogRef = this.dialog.open(FreeUserResultForm, {
+      minWidth: "40%",
+      maxWidth: "40%",
+      data: {
+        //datatopic: res["result"]["data"],
+        data: this.datayear_free
+      }
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      if (result !== false && result !== 'false') {
+        console.log('Result closed');
+      }
+    });
+
+        },
+        (error) => {
+          this._snackBar.open(error["statusText"], '', {
+            duration: 2000,
+          });
+        }
+      );
+
+     
+
+      /*
+    this.httpClient.get<any>('../api/v1/get_free_user_topic_result/'+sid)
+      .subscribe(
+        (res) => {
+            console.log(res["result"]["data"]);
+            if(res["result"]["error"] == false) {
+
+                 const dialogRef = this.dialog.open(FreeUserResultForm, {
+                    minWidth: "40%",
+                    maxWidth: "40%",
+                    data: {
+                      datatopic: res["result"]["data"],
+                      data: this.datayear_free
+                    }
+                  });
+                  dialogRef.afterClosed().subscribe(result => {
+                    if (result !== false && result !== 'false') {
+                      console.log('Result closed');
+                    }
+                  });
+         
+            }else {
+             this._snackBar.open(res["result"]["message"], '', {
+            duration: 2000,
+          });   
+            }
+        },
+        (error) => {
+          this._snackBar.open(error["statusText"], '', {
+            duration: 2000,
+          });
+        }
+      );
+     */
+
+
+     
+}
+
+
+
+
+
 openStudYearResult(sid): void {
 
 
@@ -193,13 +271,143 @@ this.httpClient.get<any>('../api/v1/get_student_year_result/'+sid)
           });
         }
       );
+}
 
+confirmDelete(id): void {
+    var data = null;
+    if (id != 0) {
+      data = id;
+    }
+    const dialogRef = this.dialog.open(MemberDelete, {
+      minWidth: "40%",
+      maxWidth: "40%",
+      data: data
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      if (result !== false && result !== 'false') {
+        this.getuser();
+      }
+    });
+  }
+  
+
+confirmFreeUserDelete(id): void {
+    var data = null;
+    if (id != 0) {
+      data = id;
+    }
+    const dialogRef = this.dialog.open(FreeUserDelete, {
+      minWidth: "40%",
+      maxWidth: "40%",
+      data: data
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      if (result !== false && result !== 'false') {
+        this.getfreeuser();
+      }
+    });
+  }
 
 }
 
 
-  
 
+@Component({
+  selector: 'member-delete-confirmation',
+  templateUrl: 'member-delete-confirmation.html',
+})
+export class MemberDelete {
+  loading = false;
+  student_register_id = 0;
+  constructor(
+    public dialogRef: MatDialogRef<MemberDelete>,
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {
+    if (this.data != null) {
+      this.student_register_id = this.data;
+    }
+  }
+
+
+
+
+
+  confirmDelete() {
+    if (this.student_register_id == null || this.student_register_id == 0) {
+      return;
+    }
+    this.loading = true;
+    this.httpClient.get('../api/v1/delete_record/student_register/student_register_id=' + this.student_register_id).subscribe(
+      (res) => {
+        this.loading = false;
+        if (res["result"]["error"] === false) {
+          this.dialogRef.close(true);
+        } else {
+          this._snackBar.open(res["result"]["message"], '', {
+            duration: 2000,
+          });
+        }
+      },
+      (error) => {
+        this.loading = false;
+        this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+        });
+      }
+    );
+  }
+}
+
+
+
+
+
+@Component({
+  selector: 'freeuser-delete-confirmation',
+  templateUrl: 'freeuser-delete-confirmation.html',
+})
+export class FreeUserDelete {
+  loading = false;
+  student_register_id = 0;
+  constructor(
+    public dialogRef: MatDialogRef<FreeUserDelete>,
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {
+    if (this.data != null) {
+      this.student_register_id = this.data;
+    }
+  }
+
+
+
+
+
+  confirmDelete() {
+    if (this.student_register_id == null || this.student_register_id == 0) {
+      return;
+    }
+    this.loading = true;
+    this.httpClient.get('../api/v1/delete_record/free_user_login/free_user_login_id=' + this.student_register_id).subscribe(
+      (res) => {
+        this.loading = false;
+        if (res["result"]["error"] === false) {
+          this.dialogRef.close(true);
+        } else {
+          this._snackBar.open(res["result"]["message"], '', {
+            duration: 2000,
+          });
+        }
+      },
+      (error) => {
+        this.loading = false;
+        this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+        });
+      }
+    );
+  }
 }
 
 
@@ -344,6 +552,7 @@ export class MemberForm {
   }
 }
 
+/*
 @Component({
   selector: 'free-member-form',
   templateUrl: 'free-member-form.html',
@@ -415,6 +624,7 @@ export class FreeMemberForm {
   }
 
 }
+*/
 
 
 @Component({
@@ -436,6 +646,28 @@ export class MemberViewForm {
         this.data = this.datapopup;
     }
 }
+
+
+@Component({
+  selector: 'free-member-view',
+  templateUrl: 'free-member-view.html',
+})
+
+export class FreeMemberViewForm {
+  image_url: string = '../api/v1/';
+  loading = false;
+  student = [];
+  student_register_id = 0;
+  data: any;
+  constructor(
+    public dialogRef: MatDialogRef<FreeMemberViewForm>,
+    @Inject(MAT_DIALOG_DATA) public datapopup: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) { 
+        this.data = this.datapopup;
+    }
+}
+
 
 @Component({
   selector: 'picture-view',
@@ -553,11 +785,100 @@ openMemberTopicResult(logid,topicid): void {
 
 
   }
+}
 
-    
 
+
+@Component({
+  selector: 'freeuser-result-form',
+  templateUrl: 'freeuser-result-form.html',
+})
+export class FreeUserResultForm {
+  resultForm: FormGroup;
+  loading = false;
+  constructor(
+    public dialogRef: MatDialogRef<FreeUserResultForm>,public dialog: MatDialog,
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {  }
+
+     openFreeUserYearResult(logid): void {        
+      this.dialogRef.close();
+
+ this.httpClient.get('../api/v1/get_free_user_result_detail/' +logid).subscribe(
+        (res) => {
+            this.loading = false;
+            if(res["result"]["error"] == false) {
+            
+          const dialogRef = this.dialog.open(FreeUserYearResultForm, {
+      minWidth: "40%",
+      maxWidth: "40%",
+      data: {
+        data: res["result"]["data"]
+        
+      }
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      if (result !== false && result !== 'false') {
+        console.log('Result closed');
+      }
+    });
+            }else {
+             this._snackBar.open(res["result"]["message"], '', {
+            duration: 2000,
+          });   
+            }
+        },
+        (error) => {
+          this._snackBar.open(error["statusText"], '', {
+            duration: 2000,
+          });
+        }
+      );
+
+
+  }  
+
+
+openFreeUserTopicResult(logid,topicid): void {        
+      this.dialogRef.close();
+
+ this.httpClient.get('../api/v1/get_free_user_result_detail_by_topic/' +logid+'/'+topicid).subscribe(
+        (res) => {
+            this.loading = false;
+            if(res["result"]["error"] == false) {
+            console.log(res["result"]["data"]);
+          const dialogRef = this.dialog.open(FreeUserTopicResultForm, {
+      minWidth: "40%",
+      maxWidth: "40%",
+      data: {
+        data: res["result"]["data"]
+        
+      }
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      if (result !== false && result !== 'false') {
+        console.log('Result closed');
+      }
+    });
+            }else {
+             this._snackBar.open(res["result"]["message"], '', {
+            duration: 2000,
+          });   
+            }
+        },
+        (error) => {
+          this._snackBar.open(error["statusText"], '', {
+            duration: 2000,
+          });
+        }
+      );
+
+
+  }
 
 }
+
 
 
  @Component({
@@ -591,3 +912,33 @@ export class MemberTopicResultForm {
 }
 
 
+@Component({
+  selector: 'freeuser-year-result-view',
+  templateUrl: 'freeuser-year-result-view.html',
+})
+
+export class FreeUserYearResultForm {
+  loading = false;
+  constructor(
+    public dialogRef: MatDialogRef<FreeUserYearResultForm>,
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {}
+}
+
+
+
+
+@Component({
+  selector: 'freeuser-topic-result-view',
+  templateUrl: 'freeuser-topic-result-view.html',
+})
+
+export class FreeUserTopicResultForm {
+  loading = false;
+  constructor(
+    public dialogRef: MatDialogRef<FreeUserTopicResultForm>,
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient) {}
+}

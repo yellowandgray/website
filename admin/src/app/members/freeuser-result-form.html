@@ -1,0 +1,86 @@
+
+
+
+
+<mat-dialog-content class="mat-typography memberyear-table-section">
+    
+    
+    <mat-tab-group>
+<mat-tab label="Year Order">
+    
+    
+   
+        <div  fxFlex="100%">
+   
+            <table mat-table class="table-padding">
+                <!-- Position Column -->
+                <tr>
+                    <th mat-header-cell> Date </th>
+                    <th mat-header-cell> Year </th>
+                    <th mat-header-cell> Total </th>
+                    <th mat-header-cell> Answered </th>
+                    <th mat-header-cell>
+                        <mat-icon class="done_clr">done</mat-icon>
+                    </th>
+                    <th mat-header-cell>
+                        <mat-icon class="wrong_clr">close</mat-icon>
+                    </th>
+                    <th mat-header-cell>  </th>
+                </tr>
+                <tr *ngFor="let dat of data.data">
+                    <td mat-cell>{{dat.created_at}}</td>
+                    <td mat-cell>{{dat.year}}</td>
+                    <td mat-cell>{{dat.total_questions}}</td>
+                    <td mat-cell>{{dat.attended}}</td>
+                    <td mat-cell>{{dat.correct_answers}}</td>
+                    <td mat-cell>{{dat.attended - dat.correct_answers}}</td>
+                    <td mat-cell> <button mat-raised-button color="primary" (click)="openFreeUserYearResult(dat.student_log_id)">Show Detail</button></td>
+                </tr>
+            </table>
+            <!--            <div class="add-btn-container">
+                <button mat-raised-button color="primary" (click)="openFullResult()">Show Full Result</button>
+            </div>-->
+      
+        </div>
+   
+            
+       </mat-tab>
+            <mat-tab label="Subject Order">
+    
+                <table mat-table class="table-padding">
+                <!-- Position Column -->
+             
+                
+                
+                <tr>
+                    <th mat-header-cell> Date </th>
+                    <th mat-header-cell> Subject </th>
+                    <th mat-header-cell> Topic </th>
+                    <th mat-header-cell> Total </th>
+                    <th mat-header-cell> Answered </th>
+                    <th mat-header-cell>
+                        <mat-icon class="done_clr">done</mat-icon>
+                    </th>
+                    <th mat-header-cell>
+                        <mat-icon class="wrong_clr">close</mat-icon>
+                    </th>
+                    <th mat-header-cell>  </th>
+                </tr>
+                <tr *ngFor="let datt of data.datatopic">
+                    <td mat-cell>{{datt.date}}</td>
+                    <td mat-cell>{{datt.subject_name}}</td>
+                    <td mat-cell>{{datt.topic_name}}</td>
+                    <td mat-cell>{{datt.total_count}}</td>
+                    <td mat-cell>{{datt.answered}}</td>
+                    <td mat-cell>{{datt.correct_cnt}}</td>
+                    <td mat-cell>{{datt.wrong_cnt}}</td>
+                    <td mat-cell> <button mat-raised-button color="primary" (click)="openFreeUserTopicResult(datt.log_id,datt.topic)">Show Detail</button></td>
+                </tr>
+            </table>
+    
+       </mat-tab>
+    </mat-tab-group>
+</mat-dialog-content>
+    
+    
+    
