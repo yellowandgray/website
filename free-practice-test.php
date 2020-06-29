@@ -22,107 +22,7 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
 
     $quiz_from_page = 'quiz';
     $attended_questions = 0;
-    /*
-      if(isset($_SESSION['free_user_id'])) {
-      $student_register_id = $_SESSION['free_user_id'];
-      $free_user_log = $obj->selectRow('*', 'free_user_log', 'student_register_id =' . $student_register_id.' ORDER BY student_log_id DESC');
-      if(count($free_user_log)>0) {
-      $student_log = $free_user_log['student_log_id'];
-
-      $free_log_type = $obj->selectRow('*', 'free_user_log_order', 'student_log_id ='. $student_log);
-      $student_log_order = $free_log_type['student_log_order'];
-
-      if ($student_log_order == 'order') {
-      $type = 'Year Order';
-
-      $questions              = $obj->selectAll('name,year_id, a, b, c, d, UPPER(answer) AS answer, image_path, direction,question_id,explanation,image_path_explanation,explanation_img_direction,question_no', 'question', 'topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $_SESSION['student_selected_language_id'] . ') AND year_id = ' . $_SESSION['student_selected_year_id'] . ' ORDER BY question_no ASC,year_id ASC, topic_id ASC');
-
-      }else{
-      $type = 'Subject Order';
-
-
-      $yid = array();
-      $years = $obj->selectAll('y.*', 'year As y', 'status = 1 ORDER BY y.year ASC LIMIT 3');
-
-      foreach($years as $y) {
-      $yid[] = $y['year_id'];
-      }
-      if(count($yid)>0) {
-      $yids =  implode(',',$yid);
-      }
-
-
-      $type = 'Subject Order';
-      $questions = $obj->selectAll('question.year_id,year.year,question.name As name, a, b, c, d, UPPER(answer) AS answer, image_path, direction,question_id,explanation,image_path_explanation,explanation_img_direction,question_no', 'question LEFT JOIN topic ON question.topic_id=topic.topic_id LEFT JOIN year ON question.year_id=year.year_id', 'question.topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $_SESSION['student_selected_language_id'] . ' AND t.topic_id IN (' . $_SESSION['student_selected_topics_id'] . ') ORDER BY t.subject_id ASC) AND question.year_id IN (' .$yids. ') ORDER BY subject_id ASC,question.topic_id ASC,year.year DESC,question_no ASC');
-      }
-
-
-      $language = $obj->selectRow('*', 'language', 'language_id = ' . $free_user_log['language_id']);
-
-      $questions_list = array();
-      if (count($questions) > 0) {
-      foreach ($questions as $q) {
-      $options = array();
-      $showimg = false;
-      $show_img = false;
-
-      array_push($options, array('text' => $q['a'], 'correct' => ($q['answer'] == 'A' ? true : false)));
-      array_push($options, array('text' => $q['b'], 'correct' => ($q['answer'] == 'B' ? true : false)));
-      if (isset($q['c'])) {
-      array_push($options, array('text' => $q['c'], 'correct' => ($q['answer'] == 'C' ? true : false)));
-      }
-      if (isset($q['d'])) {
-      array_push($options, array('text' => $q['d'], 'correct' => ($q['answer'] == 'D' ? true : false)));
-      }
-      if ($q['image_path'] != '') {
-      $showimg = true;
-      }
-      if ($q['image_path_explanation'] != '') {
-      $show_img = true;
-      }
-
-
-      $qyear = '';
-      if(isset($q['year'])) {
-      $qyear = $q['year'];
-      }
-      array_push($questions_list, array(
-      'text' => $q['name'],
-      'direction' => $q['direction'],
-      'image_path' => $q['image_path'],
-      'show_image' => $showimg,
-      'show_image_explanation' => $show_img,
-      'question_id' => $q['question_id'],
-      'responses' => $options,
-      'answer' => $q['answer'],
-      'explanation' => $q['explanation'],
-      'image_path_explanation' => $q['image_path_explanation'],
-      'explanation_img_direction' => $q['explanation_img_direction'],
-      'question_no'=>$q['question_no'],
-      'year_id'=>$q['year_id'],
-      'year'=>$qyear
-      ));
-
-      /*
-      array_push($questions_list, array(
-      'text' => $q['name'],
-      'direction' => $q['direction'],
-      'image_path' => $q['image_path'],
-      'show_image' => $showimg,
-      'question_id' => $q['question_id'],
-      'responses' => $options,
-      'answer' => $q['answer'],
-      'explanation' => $q['explanation']
-
-      ));
-
-      }
-      }
-
-      }
-      }
-     */
-
+    
     $student_log = $obj->selectRow('sl.*,l.name As language_name', 'free_user_log sl LEFT JOIN language l ON sl.language_id=l.language_id', 'student_register_id=' . $student_register_id . ' ORDER BY student_log_id DESC LIMIT 1');
 
 
@@ -188,11 +88,7 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
 
                     $yid = array();
                     $years = $obj->selectAll('y.*', 'year As y', 'status = 1 ORDER BY y.year ASC LIMIT 3');
-                    /*
-                      echo "<pre>";
-                      print_r($years);
-                      exit;
-                     */
+                   
                     foreach ($years as $y) {
                         $yid[] = $y['year_id'];
                     }
@@ -281,18 +177,7 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
 
 
 
-    /*
-      echo "<pre>";
-      print_r($ques_cor_ans_cnt);
-      exit;
-
-      echo "<pre>";
-      print_r($stud_topic_order);
-
-      echo "<pre>";
-      print_r($stud_topic_logs);
-      exit;
-     */
+   
 } else {
 
     if (!isset($_SESSION['student_selected_type'])) {
@@ -355,11 +240,7 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
         if (isset($_SESSION['student_selected_year_id'])) {
             unset($_SESSION['student_selected_year_id']);
         }
-        /*
-          if (!isset($_GET['years'])) {
-          header('Location: subject-years?topics=' . $_SESSION['student_selected_topics_id']);
-          }
-         */
+       
 
         if (!isset($_GET['topics'])) {
             header('Location: subject');
@@ -369,11 +250,7 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
 
         $yid = array();
         $years = $obj->selectAll('y.*', 'year As y', 'status = 1 ORDER BY y.year ASC LIMIT 3');
-        /*
-          echo "<pre>";
-          print_r($years);
-          exit;
-         */
+        
         foreach ($years as $y) {
             $yid[] = $y['year_id'];
         }
@@ -398,9 +275,7 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
             $qu_conds = ' AND (' . implode(' OR ', $qu_cond) . ')';
         }
 
-        //if($testmode==1){
-        //$other_lang_questions   = $obj->selectAll('question.name As name, a, b, c, d, UPPER(answer) AS answer, image_path, direction,question_id,explanation,image_path_explanation,explanation_img_direction,question_no', 'question LEFT JOIN topic ON question.topic_id=topic.topic_id', 'question.topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $other_language['language_id'] . ' AND t.topic_id IN (' . $_SESSION['student_selected_topics_id'] . ') ORDER BY t.subject_id ASC) AND year_id IN (' . $_SESSION['student_selected_years_id'] . ') ORDER BY question_no ASC,subject_id ASC,question.topic_id ASC,year_id ASC');
-        //$other_lang_questions   = $obj->selectAll('question.name As name, a, b, c, d, UPPER(answer) AS answer, image_path, direction,question_id,explanation,image_path_explanation,explanation_img_direction,question_no', 'question LEFT JOIN topic ON question.topic_id=topic.topic_id', 'question.topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $other_language['language_id'] . ' AND t.topic_id IN (' . $_SESSION['student_selected_topics_id'] . ') ORDER BY t.subject_id ASC) AND year_id IN (' . $sel_year_ids. ')  ORDER BY question_no ASC,subject_id ASC,question.topic_id ASC,year_id ASC');
+        
         $other_lang_questions = $obj->selectAll('question.name As name, a, b, c, d, UPPER(answer) AS answer, image_path, direction,question_id,explanation,image_path_explanation,explanation_img_direction,question_no,year_id', 'question LEFT JOIN topic ON question.topic_id=topic.topic_id', 'question.topic_id IN (SELECT t.topic_id FROM topic AS t LEFT JOIN subject AS s ON s.subject_id = t.subject_id WHERE s.language_id = ' . $other_language['language_id'] . ') ' . $qu_conds . '  ORDER BY question_no ASC,subject_id ASC,question.topic_id ASC,year_id ASC');
 
         //}
@@ -427,23 +302,12 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
         }
     }
 
-    /*
-      echo "<pre>";
-      print_r($student_selected_topics_id_arr);
-      print_r($student_selected_years_id_arr);
-      exit;
-     */
+   
 
     if ($student_register_id != 0) {
         $student = $obj->selectRow('*', 'free_user_login', 'free_user_login_id = ' . $student_register_id);
     }
-    /*
-      else
-      {
-      $student['student_name'] = 'guest';
-      }
-     * 
-     */
+    
     $language = $obj->selectRow('*', 'language', 'language_id = ' . $_SESSION['student_selected_language_id']);
 
     $questions_list = array();
@@ -467,20 +331,7 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
             if ($q['image_path_explanation'] != '') {
                 $show_img = true;
             }
-            /*
-              array_push($questions_list, array(
-              'text' => $q['name'],
-              'direction' => $q['direction'],
-              'image_path' => $q['image_path'],
-              'show_image' => $showimg,
-              'show_image_explanation' => $show_img,
-              'explanation' => $q['explanation'],
-              'image_path_explanation' => $q['image_path_explanation'],
-              'explanation_img_direction' => $q['explanation_img_direction'],
-              'responses' => $options
-              ));
-             * 
-             */
+            
 
             $qyear = '';
             if (isset($q['year'])) {
@@ -503,20 +354,7 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                 'year' => $qyear
             ));
 
-            /*
-              array_push($questions_list, array(
-              'text' => $q['name'],
-              'direction' => $q['direction'],
-              'image_path' => $q['image_path'],
-              'show_image' => $showimg,
-              'question_id' => $q['question_id'],
-              'responses' => $options,
-              'answer' => $q['answer'],
-              'explanation' => $q['explanation']
-
-              ));
-             * 
-             */
+            
         }
     }
 
@@ -749,21 +587,7 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                                             </div>
                                             <!-- quizOptions -->
 
-                                            <?php /* if($testmode==0) {  //testmode  ?>
-
-                                              <div class="optionContainer">
-                                              <div class="option" :id="index | charIndex | AddPrefix('ansopt_')" v-for="(response, index) in quiz.questions[questionIndex].responses" @click="selectOptionNoSave(index)" :class="{ 'is-selected': userResponses[questionIndex] == index}" :key="index" v-if="response.text != ''">
-                                              <span class="q-option">{{ index | charIndex }}.&nbsp;</span> <span v-html="response.text"></span>
-                                              </div>
-
-                                              <!--div style="margin: 0 auto; text-align: center" v-if="questionIndex>0">
-                                              <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="prev();" :disabled="questionIndex>=quiz.questions.length">
-                                              Back
-                                              </a>
-                                              </div-->
-                                              </div>
-
-                                              <?php  }else { //learning mode */ ?>
+                                            
                                             <div class="optionContainer">
                                                 <div class="option" :id="index | charIndex | AddPrefix('ansopt_')" v-for="(response, index) in quiz.questions[questionIndex].responses" @click="selectOption(index)" :class="{ 'is-selected': userResponses[questionIndex] == index}" :key="index" v-if="response.text != ''">
                                                      <span class="q-option">{{ index | charIndex }}.&nbsp;</span> <span v-html="response.text"></span>
@@ -775,7 +599,7 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                                                         </a>
                                                     </div-->                                         
                                             </div>
-                                            <?php // }   ?>
+                                            
 
                                         </div>
 
@@ -786,85 +610,14 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                                                 <h3>Question Admin Panel</h3>
                                             </div>
                                             <div id="questionpanel">
-                                                <?php /*
-                                                  <table class="question-number-table">
-                                                  <tr>
-                                                  <td class="clr-blue">1</td>
-                                                  <td class="clr-yellow">2</td>
-                                                  <td>3</td>
-                                                  <td>4</td>
-                                                  <td>5</td>
-                                                  <td>6</td>
-                                                  <td>7</td>
-                                                  <td>8</td>
-                                                  <td>9</td>
-                                                  <td>10</td>
-                                                  </tr>
-                                                  <tr>
-                                                  <td>11</td>
-                                                  <td>12</td>
-                                                  <td>13</td>
-                                                  <td>14</td>
-                                                  <td>15</td>
-                                                  <td>16</td>
-                                                  <td>17</td>
-                                                  <td>18</td>
-                                                  <td>19</td>
-                                                  <td>20</td>
-                                                  </tr>
-                                                  <tr>
-                                                  <td>21</td>
-                                                  <td>22</td>
-                                                  <td>23</td>
-                                                  <td>24</td>
-                                                  <td>25</td>
-                                                  <td>26</td>
-                                                  <td>27</td>
-                                                  <td>28</td>
-                                                  <td>29</td>
-                                                  <td>30</td>
-                                                  </tr>
-                                                  <tr>
-                                                  <td>31</td>
-                                                  <td>32</td>
-                                                  <td>33</td>
-                                                  <td>34</td>
-                                                  <td>35</td>
-                                                  <td>36</td>
-                                                  <td>37</td>
-                                                  <td>38</td>
-                                                  <td>39</td>
-                                                  <td>40</td>
-                                                  </tr>
-                                                  <tr>
-                                                  <td>41</td>
-                                                  <td>42</td>
-                                                  <td>43</td>
-                                                  <td>44</td>
-                                                  <td>45</td>
-                                                  <td>46</td>
-                                                  <td>47</td>
-                                                  <td>48</td>
-                                                  <td>49</td>
-                                                  <td>50</td>
-                                                  </tr>
-                                                  </table>
-                                                 * 
-                                                 */
-                                                ?>
+                                                
                                             </div>
                                             <div class="admin-panel-btns">
                                                 <div class="row">
                                                     <div class="span-4">
                                                         <span class="answered-clr"></span> Answered
                                                     </div>
-                                                    <?php /*
-                                                      <div class="span-4">
-                                                      <span class="notsure-clr"></span> Not Sure
-                                                      </div>
-                                                     * 
-                                                     */
-                                                    ?>
+                                                    
                                                     <div class="span-4">
                                                         <span class="unanswered-clr"></span> Unanswered
                                                     </div>
@@ -927,58 +680,7 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
 
 
 
-                                        <?php /* if($testmode==0){     //test mode   ?> 
-
-                                          <footer class="questionFooter" id='quiz-nxt-footer'>
-                                          <!--                                    pagination-->
-                                          <nav class="pagination" role="navigation" aria-label="pagination">
-
-                                          <!--                                        back button -->
-                                          <!--                                        <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">Back</a>-->
-                                          <!--                                        <a class="btn btn-green" href="select_language">Home</a>-->
-
-                                          <!--                                    next button -->
-                                          <div style="text-align: left" >
-                                          <a class="button"  v-on:click="prevNoSave();" v-if="questionIndex>0" :disabled="questionIndex>=quiz.questions.length">
-                                          Back
-                                          </a>
-                                          </div>
-
-
-
-                                          <div style="text-align: right" v-if="showsurebtnans">
-                                          <a class="button"  v-on:click="confirmSave();" :disabled="questionIndex>=quiz.questions.length">
-                                          Sure
-                                          </a>
-                                          </div>
-
-                                          <div style="text-align: center" v-if="shownotsureaftersel">
-                                          <a class="not-sure-button"  v-on:click="notSureSave();" :disabled="questionIndex>=quiz.questions.length">
-                                          Not Sure
-                                          </a>
-                                          </div>
-
-
-
-                                          <div style="text-align: right" v-if="shownextnosave">
-                                          <a class="button"  v-on:click="nextNoSave();" :disabled="questionIndex>=quiz.questions.length">
-                                          Next
-                                          </a>
-                                          </div>
-
-                                          <div style="text-align: right" v-if="showcnfrmaftersel">
-                                          <a class="button"  v-on:click="confirmSave();" :disabled="questionIndex>=quiz.questions.length">
-                                          Confirm
-                                          </a>
-                                          </div>
-
-                                          </nav>
-                                          <!--                                    /pagination-->
-
-                                          </footer>
-
-
-                                          <?php }else { */   //learning mode  ?>
+                                        
 
 
                                         <footer class="questionFooter" id='quiz-nxt-footer' v-if="showimmediate && !showimmediateblk">
@@ -1058,13 +760,7 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                                                 </div>
 
 
-                                                <?php /* // if($testmode==1){ ?>
-                                                  <div v-if="!quiz.questions[questionIndex].show_image_explanation && otherlangquiz[quiz.questions[questionIndex].question_no] && otherlangquiz[quiz.questions[questionIndex].question_no].show_image_explanation" class="text-center">
-                                                  <img v-if="otherlangquiz[quiz.questions[questionIndex].question_no].explanation_img_direction == 'top'" v-bind:src="'api/v1/'+otherlangquiz[quiz.questions[questionIndex].question_no].image_path_explanation" alt="image" class="qes-img" />
-                                                  </div>
-                                                  <?php // } */ ?>
-
-                                                <?php // if($testmode==1){   ?>
+                                        
                                                 <div v-if="!quiz.questions[questionIndex].show_image_explanation && otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no] && otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].show_image_explanation" class="text-center">
                                                     <img v-if="otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].explanation_img_direction == 'top'" v-on:click="showexpimgpopup('api/v1/'+quiz.questions[questionIndex].image_path_explanation);" v-bind:src="'api/v1/'+otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].image_path_explanation" alt="image" class="qes-img" />
                                                 </div>
@@ -1074,15 +770,7 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                                                 <br/>
                                                 <div style="text-align: left;">
                                                     <span v-html="quiz.questions[questionIndex].explanation"></span>
-                                                </div>    
-
-                                                <?php /* // if($testmode==1){ ?>
-                                                  <div style="text-align: left;" v-if="!quiz.questions[questionIndex].explanation && otherlangquiz[quiz.questions[questionIndex].question_no] && otherlangquiz[quiz.questions[questionIndex].question_no].explanation">
-                                                  <span v-html="otherlangquiz[quiz.questions[questionIndex].question_no].explanation"></span>
-                                                  </div>
-                                                  <?php // } */ ?>
-
-                                                <?php // if($testmode==1){   ?>
+                                                </div> 
                                                 <div style="text-align: left;" v-if="!quiz.questions[questionIndex].explanation && otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no] && otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].explanation">
                                                     <span v-html="otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].explanation"></span>
                                                 </div>
@@ -1095,13 +783,7 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                                                 </div>          
 
 
-                                                <?php /* // if($testmode==1){ ?>
-                                                  <div v-if="!quiz.questions[questionIndex].show_image_explanation && otherlangquiz[quiz.questions[questionIndex].question_no] && otherlangquiz[quiz.questions[questionIndex].question_no].show_image_explanation" class="text-center">
-                                                  <img v-if="otherlangquiz[quiz.questions[questionIndex].question_no].explanation_img_direction == 'bottom'" v-bind:src="'api/v1/'+otherlangquiz[quiz.questions[questionIndex].question_no].image_path_explanation" alt="image" class="qes-img" />
-                                                  </div>
-                                                  <?php // } */ ?>
-
-                                                <?php // if($testmode==1){   ?>
+                                             
                                                 <div v-if="!quiz.questions[questionIndex].show_image_explanation && otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no] && otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].show_image_explanation" class="text-center">
                                                     <img v-if="otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].explanation_img_direction == 'bottom'" v-bind:src="'api/v1/'+otherlangquiz[quiz.questions[questionIndex].year_id+quiz.questions[questionIndex].question_no].image_path_explanation" alt="image" class="qes-img" />
                                                 </div>
@@ -1133,12 +815,7 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                                             <!--                                    /pagination-->
 
                                         </footer>
-                                        <?php // }   ?>
-
-
-                                        <?php // }  ?>
-
-                                        <?php //  if($type=='Year Order') {   ?>
+                                       
                                         <div class="other-language" v-if="olqshow" id="olqhidden">
 
                                             <div v-if="olqd">
@@ -1156,13 +833,6 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                                                          <span class="q-option">{{ olqdindex | charIndex }}.&nbsp;</span> <span v-html="olqdresponse.text"></span>
                                                     </div>
 
-                                                    <!--div style="margin: 0 auto; text-align: center" v-if="questionIndex>0">
-                                                            <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="prev();" :disabled="questionIndex>=quiz.questions.length">
-                                                                Back
-                                                            </a>
-                                                        </div--> 
-
-
                                                 </div>
 
                                             </div> 
@@ -1171,34 +841,8 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                                                 <h2 class="titleContainer title"><span class="quiz-question-title">Question Not Available in <?php echo $other_language['name'] ?></span></h2>
                                             </div>  
                                         </div>
-                                        <?php // }  ?>    
-                                        <?php
-                                        /*
-                                          <footer class="questionFooter"  v-if="showimmediateblk">
-                                          <div class="question-explanation">
-                                          <h4>Explanation:</h4>
-                                          <div v-if="quiz.questions[questionIndex].show_image_explanation" class="text-center">
-                                          <img v-if="quiz.questions[questionIndex].explanation_img_direction == 'top'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
-                                          </div>
-                                          <span v-html="quiz.questions[questionIndex].explanation"></span>
-                                          <div v-if="quiz.questions[questionIndex].show_image_explanation" class="text-center">
-                                          <img v-if="quiz.questions[questionIndex].explanation_img_direction == 'buttom'" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
-                                          </div>
-                                          </div>
-                                          <!--                                    <nav class="pagination" role="navigation" aria-label="pagination">
-                                          <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">
-                                          Back
-                                          </a>
-                                          <a class="btn btn-green" href="select_language">
-                                          Home
-                                          </a>
-                                          <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
-                                          {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}
-                                          </a>
-                                          </nav>-->
-                                          </footer>
-                                         */
-                                        ?>                                           
+                                        
+                                                                               
                                     </div>
                                 </div>   
                                 <!--quizCompletedResult-->
@@ -1233,17 +877,7 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                                         <img src="img/pic-intr-offer.jpg" alt="" />
                                         <h4><strike>₹999 </strike> &nbsp;&nbsp; <span> ₹499</span> <span style="font-size: 15px;">(Inclusive of 18% GST)</span></h4>
                                         <a href="member-benefits" class="btn btn-green" style="font-size: 20px;padding: 15px;">Buy Full Version</a>
-                                        <?php /*
-                                          <a class="btn btn-theme btn-rounded" @click="restart()">Restart <i class="fa fa-refresh"></i></a>
-                                          <a class="btn btn-theme btn-rounded" onclick="window.location = 'select_language'">Home <i class="fa fa-refresh"></i></a>
-                                          <?php if ($type=='Subject Order') { ?>
-                                          <a @click="divshowsorder()" class="btn btn-theme btn-rounded">Show Full Result <i class="fa fa-refresh"></i></a>
-                                          <?php }else { ?>
-                                          <a @click="divshow()" class="btn btn-theme btn-rounded">Show Full Result <i class="fa fa-refresh"></i></a>
-                                          <?php } ?>
-                                          <!--/resultTitleBlock-->
-                                         */
-                                        ?>
+                                        
 
 
                                     </div>
@@ -1257,8 +891,7 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                                     </div>
 
                                 </div>
-                                <!--/quizCompetedResult-->
-                                <!-- 		</transition> -->
+                                
                             </div>
                             <!-- question Box -->
 
@@ -1320,9 +953,6 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                             <div class="questionBox">
                                 <div  class="quizCompleted has-text-centered">
 
-                                    <!-- quizCompletedIcon: Achievement Icon -->
-
-
                                     <h2 class="complete-title">
                                         Test Completed
                                     </h2>
@@ -1335,7 +965,7 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
 
                                         <img src="img/pic-intr-offer.jpg" alt="" />
                                         <h4><strike>₹999 </strike> &nbsp;&nbsp; <span> ₹499</span> <span style="font-size: 15px;">(Inclusive of 18% GST)</span></h4>
-                                        <a href="register_user" class="btn btn-green" style="font-size: 20px;padding: 15px;">Buy Full Version</a>
+                                        <a href="member-benefits" class="btn btn-green" style="font-size: 20px;padding: 15px;">Buy Full Version</a>
 
 
 
@@ -1507,19 +1137,7 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
         </div>
 
 
-<!--        <div class="modal fade"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog" data-dismiss="modal">
-                <div class="modal-content"  >   
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel"></h4>
-                    </div>
-                    <div class="modal-body">            
-                        <img src="" class="explimagepreview">
-                    </div>           
-                </div>
-            </div>
-        </div>-->
+
         <div class="explanation-popup" id="explimagemodal" style="display: none;">
             <div class="popup-header">
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
@@ -1761,73 +1379,7 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                                         $('.question-admin-panel').show();
                                         }
                                 });
-                                //console.log(stud_ans);       
-
-
-                                /*
-                                     
-                                 setTimeout(() => {                        
-                                     
-                                     
-                                 var questionslist = <?php // echo  json_encode($questions_list);    ?>;
-                                 var  qTable = '<table class="question-number-table"><tr>';
-                                 $.each(questionslist, function (key, val) {
-                                 var qn = key+1;
-                                     
-                                 if(qn!=1 && (key%10==0)) {                                                                
-                                 if(qn<questionslist.length) {
-                                 qTable += '<tr>';
-                                 }   
-                                 }   
-                                     
-                                 var tdval = '<td onClick=goQuesFrPanel('+key+');>'+qn+'</td>';
-                                 if(typeof val.question_no !== 'undefined') {                                    
-                                 if(typeof stud_ans[val.question_no] !== 'undefined'){
-                                 if(stud_ans[val.question_no].student_answer!='') {
-                                 tdval =  '<td onClick=goQuesFrPanel('+key+'); class="clr-blue">'+qn+'</td>';                                           
-                                 }
-                                 else if(stud_ans[val.question_no].student_notsure_answer!='') {
-                                 tdval = '<td onClick=goQuesFrPanel('+key+'); class="clr-yellow">'+qn+'</td>'
-                                 }    
-                                 }   
-                                 }
-                                 qTable += tdval;
-                                     
-                                     
-                                 if(qn!=1 && (qn%10==0)) {
-                                     
-                                 if(qn<=questionslist.length) {
-                                 qTable += '</tr>';
-                                 }   
-                                 }else if(qn==questionslist.length) {
-                                 var rtd = 10-(qn%10);
-                                 for(i=1;i<=rtd;i++) {
-                                 qTable += '<td></td>';
-                                 }
-                                 qTable += '</tr>';
-                                 }   
-                                     
-                                     
-                                     
-                                     
-                                     
-                                 });    
-                                 qTable += '</table>';
-                                 //console.log(qTable);
-                                     
-                                 $('#header-hidden').hide();
-                                 $('#quiz-hidden').hide();
-                                 $('.questionFooter').hide();
-                                 $('#questionpanel').html(qTable);
-                                 $('.question-admin-panel').show();   
-                                     
-                                     
-                                     
-                                 }, 1000);
-                                     
-                                     
-                                     
-                                 */
+                               
                                 this.showqap = true;
                                 },
                                 divshow: function () {
@@ -1953,34 +1505,7 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
 
 
                                 $('.loadingoverlay').show();
-                                /*
-                                 <div class="result-filter-section" style="display: none;">
-                                 <table>
-                                 <tr>
-                                 <th>Subject</th>
-                                 <th>Topic</th>
-                                 <th>Total</th>
-                                 <th>Answered</th>
-                                 <th><i class="icon-ok"></i></th>
-                                 <th><i class="icon-remove"></i></th>
-                                 <th>&nbsp;</th>
-                                 </tr>
-                                 <tr>
-                                 <td>History and Culture of India</td>
-                                 <td>Indus Valley Civilization</td>
-                                 <td>12</td>
-                                 <td>12</td>
-                                 <td>9</td>
-                                 <td>3</td>
-                                 <td>
-                                 <button class="btn btn-answerd-clr">Show Details</button>
-                                 </td>
-                                 </tr>
-                                 </table>
-                                 </div>
-                                 */
-
-
+                                
 
                                 $.ajax({
                                 type: "GET",
@@ -2018,99 +1543,10 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                                         }
                                         }
                                 });
-                                /*
-                                     
-                                 /*
-                                 $('.loadingoverlay').show();
-                                 setTimeout(() => {
-                                 applyMathAjax();
-                                 $('.loadingoverlay').hide();
-                                 }, 600);
-                                 $.ajax({
-                                 type: "GET",
-                                 url: 'api/v1/free_user_get_result_detail/' +<?php // echo  $student_log;    ?>,
-                                 success: function (data) {
-                                 if (data.result.error === false) {
-                                 var qlist = '';
-                                 var correct_ans = '';
-                                 var student_ans = '';
-                                 $.each(data.result.data, function (key, val) {
-                                 qlist = qlist + '<div class="question-title"><h6>' + (key + 1) + '. ' + val.name + '</h6>';
-                                 if (val.a !== '') {
-                                 correct_ans = '';
-                                 student_ans = '';
-                                 if ((val.answer).toUpperCase() === 'A') {
-                                 correct_ans = 'crt_clr';
-                                 }
-                                 if ((val.student_answer).toUpperCase() === 'A' && (val.answer).toUpperCase() !== 'A') {
-                                 student_ans = 'wrng_clr';
-                                 }
-                                 qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">A.</span> ' + val.a + '</div></div>';
-                                 }
-                                 if (val.b !== '') {
-                                 correct_ans = '';
-                                 student_ans = '';
-                                 if ((val.answer).toUpperCase() === 'B') {
-                                 correct_ans = 'crt_clr';
-                                 }
-                                 if ((val.student_answer).toUpperCase() === 'B' && (val.answer).toUpperCase() !== 'B') {
-                                 student_ans = 'wrng_clr';
-                                 }
-                                 qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">B.</span> ' + val.b + '</div></div>';
-                                 }
-                                 if (val.c !== '') {
-                                 correct_ans = '';
-                                 student_ans = '';
-                                 if ((val.answer).toUpperCase() === 'C') {
-                                 correct_ans = 'crt_clr';
-                                 }
-                                 if ((val.student_answer).toUpperCase() === 'C' && (val.answer).toUpperCase() !== 'C') {
-                                 student_ans = 'wrng_clr';
-                                 }
-                                 qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">C.</span> ' + val.c + '</div></div>';
-                                 }
-                                 if (val.d !== '') {
-                                 correct_ans = '';
-                                 student_ans = '';
-                                 if ((val.answer).toUpperCase() === 'D') {
-                                 correct_ans = 'crt_clr';
-                                 }
-                                 if ((val.student_answer).toUpperCase() === 'D' && (val.answer).toUpperCase() !== 'D') {
-                                 student_ans = 'wrng_clr';
-                                 }
-                                 qlist = qlist + '<div class="result-option ' + correct_ans + ' ' + student_ans + '"><div class="option"><span class="quiz-option-float">D.</span> ' + val.d + '</div></div>';
-                                 }
-                                 if (val.image_path_explanation !== '' && val.explanation_img_direction !== 'bottom') {
-                                 qlist = qlist + '<div class="explanation_image"><img src="' + image_url + val.image_path_explanation + '"></div>';
-                                 } else {
-                                 qlist = qlist + '';
-                                 }
-                                 if (val.explanation !== '') {
-                                 qlist = qlist + '<div class="explanation-section"><strong>Explanation</strong> : ' + val.explanation + '</div>';
-                                 } else {
-                                 qlist = qlist + '<div class="explanation-section">No Explanation</div>';
-                                 }
-                                 if (val.image_path_explanation !== '' && val.explanation_img_direction !== 'top') {
-                                 qlist = qlist + '<div class="explanation_image"><img src="' + image_url + val.image_path_explanation + '"></div>';
-                                 } else {
-                                 qlist = qlist + '';
-                                 }
-                                 qlist = qlist + '</div>';
-                                 });
-                                 $('#question_list').html(qlist);
-                                 $("#create").toggle();
-                                 } else {
-                                 swal('Information', data.result.message, 'info');
-                                 }
-                                 },
-                                 error: function (err) {
-                                 swal('Error', err.statusText, 'error');
-                                 }
-                                 });
-                                 */
+                               
                                 },
                                 divshowsorderdetail: function (tid, lid) {
-                                //alert(' lid '+lid+' tid '+tid);
+                               
 
                                 $('.loadingoverlay').show();
                                 setTimeout(() => {
@@ -2604,7 +2040,7 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
 
 
                                 if (this.questionIndex < this.quiz.questions.length) {
-                                //var nqid = this.questionIndex + 1;
+                                
                                 var nqid = questions[this.questionIndex].question_id;
                                 if (!app.showimmediate) {
                                 $.get("api/v1/free_user_get_student_answer/" + nqid + "/<?php echo $student_log; ?>",
@@ -2679,7 +2115,7 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                                         }
                                         }
                                         });
-                                //document.getElementById("quiz-footer").style.display = "block";
+                                
                                 app.showimmediateblk = true;
                                 app.isDisabled = true;
                                 }
@@ -2702,11 +2138,7 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                                 app.isDisabled = false;
                                 app.showimmediateblk = false;
                                 app.shownotimmdnxt = false;
-                                /*
-                                 if (this.questionIndex < this.quiz.questions.length) {
-                                 this.questionIndex++;
-                                 }
-                                 */
+                                
 
                                 if (this.questionIndex == this.quiz.questions.length - 1) {
                                 if (this.isAllQAnsed) {
@@ -2785,7 +2217,7 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                                         $('#ansopt_' + studansid).addClass('crt_clr');
                                         app.isDisabled = false;
                                         app.showimmediateblk = false;
-                                        //app.shownotimmdnxt = false;
+                                        
                                         app.shownotimmdnxt = true;
                                         }
                                         });
@@ -3020,86 +2452,7 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
     <?php // }    ?>
 
                                 },
-                                /*    
-                                 goQuesAns: function (val) {   
-                                     
-                                     
-                                     
-                                 $('#header-hidden').show();
-                                 $('#quiz-hidden').show();
-                                 $('.questionFooter').show();
-                                 $('.question-admin-panel').hide();
-                                     
-                                 this.questionIndex = val;
-                                     
-                                 $('.loadingoverlay').show();  
-                                     
-                                 setTimeout(() => {                            
-                                 applyMathAjax();   
-                                 $('.loadingoverlay').hide();
-                                 }, 600);      
-                                     
-                                     
-                                 this.selected_answer = '';
-                                     
-                                 this.showsurebtnans = false;
-                                 this.shownextnosave = true;
-                                 this.shownotsureaftersel = false;
-                                 this.showcnfrmaftersel = false;     
-                                 this.questionprevanswered = false;
-                                     
-                                     
-                                 var questions = <?php // echo json_encode($questions_list);    ?>;
-                                 var qid = questions[this.questionIndex].question_id;
-                                 var answers = ['A', 'B', 'C', 'D'];
-                                 var ansid = '';
-                                     
-                                 $.get("api/v1/get_student_notsure_answer/" + qid + "/<?php // echo $student_log;    ?>",
-                                 function (data, status) {
-                                 if (data.result.error === false) {
-                                 ansid = data.result.data;
-                                 notsure_ansid = data.result.data_notsure;
-                                     
-                                     
-                                 if(ansid!='')
-                                 {   
-                                 var studansid = app.convertLower(ansid);
-                                 $('#ansopt_' + studansid).addClass('crt_clr');
-                                     
-                                 app.selected_answer = ansid;
-                                 app.shownotsureaftersel = true;
-                                 app.showcnfrmaftersel = false;    
-                                 app.questionprevanswered = true;
-                                     
-                                 app.showsurebtnans  = false;
-                                 } 
-                                 else if(notsure_ansid!='')
-                                 {   
-                                 var studansid = app.convertLower(notsure_ansid);
-                                 $('#ansopt_' + studansid).addClass('notsure_clr');    
-                                     
-                                 app.selected_answer = notsure_ansid;
-                                 app.shownotsureaftersel = false;
-                                 app.showcnfrmaftersel = false;    
-                                 app.questionprevanswered = true;
-                                 app.showsurebtnans  = true;   
-                                 }
-                                     
-                                 else {
-                                     
-                                 app.selected_answer = '';
-                                 app.shownotsureaftersel = false;
-                                 app.showcnfrmaftersel = false;
-                                 app.questionprevanswered = false;
-                                 app.showsurebtnans  = false;
-                                 }
-                                 }
-                                 });
-                                     
-                                     
-                                     
-                                 },
-                                 */
+                                
                                 goquestion: function () {
                                 var goquestion = parseInt($("#goques").val());
                                 if (goquestion > this.quiz.questions.length)   {
@@ -3179,27 +2532,7 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                                 }
     <?php // }    ?>
                                 },
-                                /*        
-                                 score: function () {
-                                 var score = 0;
-                                 for (let i = 0; i < this.userResponses.length; i++) {
-                                 if (
-                                 typeof this.quiz.questions[i].responses[
-                                 this.userResponses[i]
-                                 ] !== "undefined" &&
-                                 this.quiz.questions[i].responses[this.userResponses[i]].correct
-                                 ) {
-                                 score = score + 1;
-                                 }
-                                 }
-                                     
-                                 return score;
-                                     
-                                 //return this.userResponses.filter(function(val) { return val }).length;
-                                     
-                                     
-                                 },
-                                 */
+                                
                                 score: function () {
                                 var scoreva = 0;
                                 $.get("api/v1/free_user_get_result_correct_ans_cnt/<?php echo $student_log; ?>",
@@ -3328,18 +2661,7 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                 }, 500);
             </script>
             <script>
-                /*
-                 var minutesLabel = document.getElementById("minutes");
-                 var secondsLabel = document.getElementById("seconds");
-                 var totalSeconds = 0;
-                 setInterval(setTime, 1000);
-                     
-                 function setTime() {
-                 ++totalSeconds;
-                 secondsLabel.innerHTML = pad(totalSeconds % 60);
-                 minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
-                 }
-                 */
+                
                 function pad(val) {
                 var valString = val + "";
                 if (valString.length < 2) {
@@ -3385,20 +2707,7 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                 }
                 function topicShowDetail(tid) {
 
-                /*
-                 $('#question_list_det').toggle();
-                     
-                 if($('#question_list_det').css('display') == 'none'){ 
-                 $('#btnsorderdetail_'+tid).html('Show Details');                    
-                 } else { 
-                 $('#btnsorderdetail_'+tid).html('Hide Details');
-                 app.divshowsorderdetail(tid,<?php // echo $student_log;    ?>);
-                 }                
-                     
-                 //app.divshowsorderdetail(tid,<?php // echo $student_log;    ?>);
-                 */
-
-
+               
                 var seltoptxt = '';
                 seltoptxt = $('#btnsorderdetail_' + tid).html();
                 $('.btnsorderdetail').html('Show Details');
@@ -3422,7 +2731,7 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                 $('#btnyorderdetail').html('Hide Details');
                 }
 
-                //$('#question_list_det').show();
+                
                 }
 
 
@@ -3437,7 +2746,7 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
         if ($quiz_from_page == 'quiz') {
             ?>
             <script>
-                //image_url ='http://examhorse.com/gama/api/v1/';   
+                  
                 image_url = 'http://examhorse.com/api/v1/';
                 var app = new Vue({
                 el: "#app",
@@ -3636,7 +2945,7 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
                                         });
                                         $('#question_list_det').html(qlist);
                                         $('#question_list_det').show();
-                                        //$("#create").toggle();                                    
+                                                                           
                                         } else {
                                         swal('Information', data.result.message, 'info');
                                         }
