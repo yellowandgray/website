@@ -49,7 +49,7 @@ if (isset($_SESSION['student_register_id'])) {
                         <a href="#">Try Free Sample</a>
                     </div>
                     <div class="carousel-caption wow fadeInRight">
-                        <h2>Easy to Learn and Score</h2>
+                        <h2>எளிமையான புரிதல், கூடுதல் தகவல்</h2>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -74,10 +74,28 @@ if (isset($_SESSION['student_register_id'])) {
                 <span class="sr-only">Next</span>
             </a>
         </div>
-        <div class="home-register-section" style="background: #293d46 !important">
+        <div class="home-register-section" style="background: #fff !important">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-6">
+                        <div class="text-content right-border">
+                            <ul>
+                                <li><i class="fa fa-check"></i> TNPSC தேர்வில்  வெற்றி  பெற 1995 முதல் 2019 வரை குரூப் 1 - 16 ஆண்டு கால  பொது அறிவு அசல் வினாத்தாள் மற்றும் TNPSC 2020 மாதிரி வினாத்தாள்  பயிற்சி </li>
+                                <li><i class="fa fa-check"></i> புதுபாடத்திட்ட தலைப்பு வாரியாக  தேர்வு வினாக்கள் </li>
+                                <li><i class="fa fa-check"></i> வினாக்கள் கேட்கப்பட்ட பாடத்திட்டதுக்கான  கூடுதல் தகவல்கள் </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-content">
+                            <ul>
+                                <li><i class="fa fa-check"></i> For Group I and 2/2A candidates </li>
+                                <li><i class="fa fa-check"></i> Total of 3,200 original questions </li>
+                                <li><i class="fa fa-check"></i> Extra important key points for each question - both in Tamil and English </li>
+                            </ul>
+                        </div>
+                    </div>
+<!--                    <div class="col-md-12">
                         <div class="text-content">
                             <h3>One source to practice and learn all the previous set of 16-year TNPSC Group I – Original General Studies Question papers from 1995 to 2019 and 2020 updated Model Question paper with answers and explanation for the upcoming exams</h3>
                             <ul>
@@ -87,7 +105,7 @@ if (isset($_SESSION['student_register_id'])) {
                                 <li><i class="fa fa-check"></i> Additional information for each question – both in Tamil and English</li>
                             </ul>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
                 <!--                <div class="">
                                     <div class="float-left">
