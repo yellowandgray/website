@@ -323,7 +323,7 @@ $app->get('/get_topic_by_lng_year/:lng/:yr', function($lng, $yr) {
 $app->get('/get_student', function() {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
-    $data = $com->selectAll('student_register.*,student_payment.created_at As payment_date', 'student_register LEFT JOIN student_payment ON student_register.student_register_id=student_payment.student_id', 'student_register_id > 0 ORDER BY student_register_id');
+    $data = $com->selectAll('student_register.*,student_payment.created_at As payment_date', 'student_register LEFT JOIN student_payment ON student_register.student_register_id=student_payment.student_id', 'student_register_id > 0 ORDER BY student_register_id DESC');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
@@ -1930,7 +1930,7 @@ $app->get('/get_news', function() {
 $app->get('/get_free_user', function() {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
-    $data = $com->selectAll('*', 'free_user_login', 'free_user_login_id > 0');
+    $data = $com->selectAll('*', 'free_user_login', 'free_user_login_id > 0 ORDER BY free_user_login_id DESC');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
@@ -2050,6 +2050,8 @@ $app->get('/get_student_topic_result/:sid', function($sid) {
 
 
 
+     $stud_topic_order = array();
+        $stud_topic_logs = array();
     //total questions count in topic
     if ($stud_all_sel_topic_id_val != '') {
         //total questions year , topic 
@@ -2085,8 +2087,7 @@ $app->get('/get_student_topic_result/:sid', function($sid) {
                 . 'LEFT JOIN question ON student_log_detail.question_id=question.question_id LEFT JOIN year ON question.year_id=year.year_id', 'student_log.student_register_id=' . $sid . ' ORDER BY student_log_id DESC,student_log_detail_id DESC');
 
 
-        $stud_topic_order = array();
-        $stud_topic_logs = array();
+       
 
 
         $tmp_stud_log_queston_id = array(); //rmv mul question  in student log details
@@ -2182,21 +2183,10 @@ $app->get('/get_student_topic_result/:sid', function($sid) {
 });
 
 
-/*
 $app->get('/get_free_user_topic_result/:sid', function($sid) {
     $res = array('error' => true, 'message' => 'No records found');
     $obj = new Common();
     
-    
-    $year = array();
-        $years = $obj->selectAll('y.*', 'year As y', 'status = 1 ORDER BY y.year ASC LIMIT 3');
-
-        foreach ($years as $y) {
-            $ye[] = $y['year_id'];
-        }
-        if (count($yid) > 0) {
-            $yes = implode(',', $year);
-        }
     
     $student_log_topic = $obj->selectAll('slt.*,t.name As topic_name,subject.subject_id As subject_id,subject.name As subject_name', 'free_user_log As sl'
             . ' LEFT JOIN free_user_log_topic slt ON sl.student_log_id=slt.student_log_id LEFT JOIN topic As t ON slt.topic_id=t.topic_id LEFT JOIN subject ON '
@@ -2251,17 +2241,29 @@ $app->get('/get_free_user_topic_result/:sid', function($sid) {
     }
 
 
+    $stud_topic_order = array();
+        $stud_topic_logs = array();
 
     //total questions count in topic
     if ($stud_all_sel_topic_id_val != '') {
         
         
         
-        
+        $yid = array();
+        $years = $obj->selectAll('y.*', 'year As y', 'status = 1 ORDER BY y.year ASC LIMIT 3');
+
+        foreach ($years as $y) {
+            $yid[] = $y['year_id'];
+        }
+        if (count($yid) > 0) {
+            $yids = implode(',', $yid);
+        }
         
         
         //total questions year , topic 
-       
+        $student_log_question = $obj->selectAll('q.*,year.year,subject.name As subject_name,t.name As topic_name', ' question As q LEFT JOIN year ON q.year_id=year.year_id '
+                . 'LEFT JOIN topic As t ON q.topic_id=t.topic_id LEFT JOIN subject ON t.subject_id=subject.subject_id', ' q.topic_id IN (' . $stud_all_sel_topic_id_val . ') AND q.year_id IN (' . $yids . ')');
+
         
 
 
@@ -2278,6 +2280,12 @@ $app->get('/get_free_user_topic_result/:sid', function($sid) {
 
 
 
+        /*
+          echo "<pre>";
+          print_r($ques_year_cnt);
+          exit;
+         */
+
         
 
 
@@ -2287,8 +2295,7 @@ $app->get('/get_free_user_topic_result/:sid', function($sid) {
 
         
 
-        $stud_topic_order = array();
-        $stud_topic_logs = array();
+        
 
 
         $tmp_stud_log_queston_id = array(); //rmv mul question  in student log details
@@ -2385,6 +2392,15 @@ $app->get('/get_free_user_topic_result/:sid', function($sid) {
 
 
 
-
- * 
- */
+$app->get('/get_free_user_result_detail_by_topic/:lid/:tid', function($lid, $tid) {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    //$data = $com->selectAll('sld.*', 'student_log_detail As sld LEFT JOIN question As q ON sld.question_id=q.question_id', 'student_log_id = ' . $lid.' AND topic_id='.$tid);
+    $data = $com->selectAll('sld.*,q.*', 'free_user_log_detail As sld LEFT JOIN question As q ON sld.question_id=q.question_id', 'student_log_id = ' . $lid . ' AND topic_id=' . $tid);
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});

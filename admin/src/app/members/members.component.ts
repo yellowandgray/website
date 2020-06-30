@@ -6,6 +6,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
+declare const applyMathAjax: any;
 
 @Component({
   selector: 'app-members',
@@ -154,10 +155,10 @@ openFreeUserResult(sid): void {
         (res) => {
           this.datayear_free = res["result"]["data"];
 
-      
+          /*
          const dialogRef = this.dialog.open(FreeUserResultForm, {
       minWidth: "40%",
-      maxWidth: "40%",
+      maxWidth: "40%",     
       data: {
         //datatopic: res["result"]["data"],
         data: this.datayear_free
@@ -168,7 +169,7 @@ openFreeUserResult(sid): void {
         console.log('Result closed');
       }
     });
-
+    */
         },
         (error) => {
           this._snackBar.open(error["statusText"], '', {
@@ -179,12 +180,12 @@ openFreeUserResult(sid): void {
 
      
 
-      /*
+      
     this.httpClient.get<any>('../api/v1/get_free_user_topic_result/'+sid)
       .subscribe(
         (res) => {
             console.log(res["result"]["data"]);
-            if(res["result"]["error"] == false) {
+            if(res["result"]["error"] == false || (this.datayear_free)) {
 
                  const dialogRef = this.dialog.open(FreeUserResultForm, {
                     minWidth: "40%",
@@ -212,7 +213,7 @@ openFreeUserResult(sid): void {
           });
         }
       );
-     */
+     
 
 
      
@@ -847,6 +848,8 @@ openFreeUserTopicResult(logid,topicid): void {
         (res) => {
             this.loading = false;
             if(res["result"]["error"] == false) {
+
+
             console.log(res["result"]["data"]);
           const dialogRef = this.dialog.open(FreeUserTopicResultForm, {
       minWidth: "40%",

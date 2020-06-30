@@ -56,7 +56,7 @@
                             <img matListAvatar src="{{image_url}}{{data.profile_image}}" *ngIf="data.profile_image && data.profile_image != ''" alt="image" (click)="confirmDialog(data, 'preview')" />
                                  <h4 mat-line>{{data.student_name}}</h4>
                             <!--p mat-line>{{data.email}} | {{data.mobile}} | {{data.practice_medium}}</p-->
-                            <p mat-line>{{data.payment_date}}</p>
+                            <p mat-line>{{data.payment_date | date:'dd/MM/yyyy hh:mm a'}}</p>
                         </mat-list-item>
                         <mat-divider></mat-divider>
                     </ng-container>
