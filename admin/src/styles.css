@@ -173,3 +173,8 @@ mat-sidenav-content {
 .option {
     font-size: 15px;
 }
+
+.fullhres {
+    max-height: 90% !important;
+} 
+

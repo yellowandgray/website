@@ -1,5 +1,10 @@
 <h2 mat-dialog-title>Result</h2>
-<mat-dialog-content class="mat-typography">
+<div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="2%" fxLayoutAlign="end center">
+<button mat-button class="wrong_clr" [mat-dialog-close]="true">
+        <mat-icon>close</mat-icon>
+    </button>
+</div>    
+<mat-dialog-content class="mat-typography fullhres">
     <div class="" *ngFor="let mark of data.data; let rowIndex=index">
          <div class="">
             <p>{{rowIndex+1}}. <span [innerHTML]="mark.name"></span></p>

@@ -155,43 +155,18 @@ openFreeUserResult(sid): void {
         (res) => {
           this.datayear_free = res["result"]["data"];
 
-          /*
-         const dialogRef = this.dialog.open(FreeUserResultForm, {
-      minWidth: "40%",
-      maxWidth: "40%",     
-      data: {
-        //datatopic: res["result"]["data"],
-        data: this.datayear_free
-      }
-    });
-    dialogRef.afterClosed().subscribe(result => {
-      if (result !== false && result !== 'false') {
-        console.log('Result closed');
-      }
-    });
-    */
-        },
-        (error) => {
-          this._snackBar.open(error["statusText"], '', {
-            duration: 2000,
-          });
-        }
-      );
-
-     
-
-      
-    this.httpClient.get<any>('../api/v1/get_free_user_topic_result/'+sid)
+           this.httpClient.get<any>('../api/v1/get_free_user_topic_result/'+sid)
       .subscribe(
-        (res) => {
-            console.log(res["result"]["data"]);
-            if(res["result"]["error"] == false || (this.datayear_free)) {
+        (res1) => {
+            console.log(res1["result"]["data"]);
+            if(res1["result"]["error"] == false || (this.datayear_free)) {
 
                  const dialogRef = this.dialog.open(FreeUserResultForm, {
-                    minWidth: "40%",
-                    maxWidth: "40%",
+                    minWidth: "60%",
+                    maxWidth: "60%",
+                    height: "100%",
                     data: {
-                      datatopic: res["result"]["data"],
+                      datatopic: res1["result"]["data"],
                       data: this.datayear_free
                     }
                   });
@@ -213,6 +188,19 @@ openFreeUserResult(sid): void {
           });
         }
       );
+
+        },
+        (error) => {
+          this._snackBar.open(error["statusText"], '', {
+            duration: 2000,
+          });
+        }
+      );
+
+     
+
+      
+   
      
 
 
@@ -248,8 +236,9 @@ this.httpClient.get<any>('../api/v1/get_student_year_result/'+sid)
             console.log(res["result"]["data"]);
             if(res["result"]["error"] == false) {
           const dialogRef = this.dialog.open(MemberResultForm, {
-      minWidth: "40%",
-      maxWidth: "40%",
+      minWidth: "60%",
+      maxWidth: "60%",
+height: "100%",
       data: {
         datatopic: res["result"]["data"],
         data: this.datayear
@@ -720,9 +709,14 @@ export class MemberResultForm {
             this.loading = false;
             if(res["result"]["error"] == false) {
             
+            setTimeout(() => {
+                            applyMathAjax();
+                        }, 600);
+
           const dialogRef = this.dialog.open(MemberYearResultForm, {
-      minWidth: "40%",
-      maxWidth: "40%",
+      minWidth: "60%",
+      maxWidth: "60%",
+      height: "100%",
       data: {
         data: res["result"]["data"]
         
@@ -757,10 +751,16 @@ openMemberTopicResult(logid,topicid): void {
         (res) => {
             this.loading = false;
             if(res["result"]["error"] == false) {
+
+            setTimeout(() => {
+                            applyMathAjax();
+                        }, 600);
+
             console.log(res["result"]["data"]);
           const dialogRef = this.dialog.open(MemberTopicResultForm, {
-      minWidth: "40%",
-      maxWidth: "40%",
+      minWidth: "60%",
+      maxWidth: "60%",
+      height: "100%",
       data: {
         data: res["result"]["data"]
         
@@ -811,9 +811,15 @@ export class FreeUserResultForm {
             this.loading = false;
             if(res["result"]["error"] == false) {
             
+
+setTimeout(() => {
+                            applyMathAjax();
+                        }, 600);
+
           const dialogRef = this.dialog.open(FreeUserYearResultForm, {
-      minWidth: "40%",
-      maxWidth: "40%",
+      minWidth: "60%",
+      maxWidth: "60%",
+      height: "100%",
       data: {
         data: res["result"]["data"]
         
@@ -849,11 +855,15 @@ openFreeUserTopicResult(logid,topicid): void {
             this.loading = false;
             if(res["result"]["error"] == false) {
 
+setTimeout(() => {
+                            applyMathAjax();
+                        }, 600);
 
             console.log(res["result"]["data"]);
           const dialogRef = this.dialog.open(FreeUserTopicResultForm, {
-      minWidth: "40%",
-      maxWidth: "40%",
+      minWidth: "60%",
+      maxWidth: "60%",
+       height: "100%",
       data: {
         data: res["result"]["data"]
         

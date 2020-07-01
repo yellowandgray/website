@@ -615,7 +615,7 @@ if (isset($_SESSION['student_register_id'])) {
             $('#showbtn_' + topicid + '_' + slid).html('Hide Details');
             setTimeout(() => {
             applyMathAjax();
-            }, 500);
+            }, 600);
             $.ajax({
             type: "GET",
                     url: 'api/v1/get_result_detail_by_topic/' + slid + '/' + topicid,
@@ -711,7 +711,7 @@ if (isset($_SESSION['student_register_id'])) {
             $('#showbtn_' + slid).html('Hide Details');
             setTimeout(() => {
             applyMathAjax();
-            }, 500);
+            }, 600);
             $.ajax({
             type: "GET",
                     url: 'api/v1/get_result_detail/' + slid,

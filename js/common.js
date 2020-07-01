@@ -152,9 +152,9 @@ function samplehomelogin(e) {
 
    
     var email       = $('#email').val();
-    var phone       = $('#phone').val();
+    var phone       = $('#phone').val();    
     
-    
+
 
     $('.loader').addClass('is-active');
     var captchResponse = $('#g-recaptcha-response').val();
