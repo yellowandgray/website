@@ -2977,7 +2977,6 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
             $('#explimagemodal').modal('show');
             }
             }
-        </script>
-
+        </script>           
     </body>
 </html>

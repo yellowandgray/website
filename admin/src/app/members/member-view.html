@@ -56,7 +56,7 @@
                 <tr>
                     <th mat-header-cell> Planned to Write </th>
                     <td mat-cell> : </td>
-                    <td mat-cell> {{data.selectgroup}} </td>
+                    <td mat-cell> <span *ngIf="data.selectgroup=='group1'">Group 1</span><span *ngIf="data.selectgroup=='group22a'">Group 2/2A</span></td>
                 </tr>
                 <tr>
                     <th mat-header-cell> Practice Medium </th>
