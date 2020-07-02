@@ -155,7 +155,6 @@ function samplehomelogin(e) {
     var phone       = $('#phone').val();    
     
 
-  
     $('.loader').addClass('is-active');
     var captchResponse = $('#g-recaptcha-response').val();
     if(captchResponse.length == 0 )

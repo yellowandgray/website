@@ -2977,6 +2977,16 @@ if (isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz')) {
             $('#explimagemodal').modal('show');
             }
             }
-        </script>           
+        </script>     
+        <?php if (!(isset($_GET['from-page']) && ($_GET['from-page'] == 'quiz'))) { ?>
+        <script>
+            window.onbeforeunload = function () {
+                window.setTimeout(function () {
+                    window.location = 'free-practice-test?from-page=quiz';
+                }, 0);
+                window.onbeforeunload = null; 
+            }
+        </script>    
+        <?php } ?>
     </body>
 </html>
