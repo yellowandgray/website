@@ -23,8 +23,7 @@ if (isset($_SESSION['student_register_id'])) {
                             <ul>
                                 <li class="menu-cus-clr">                                
                                     <a href="about-us" class="menu-nav">About Us</a>
-                                    <a href="contact-us" class="menu-nav">Contact Us</a>
-                                    <a href="free-practice-test?from-page=quiz" class="menu-nav">Exit</a>
+                                    <a href="contact-us" class="menu-nav">Contact Us</a>                                    
                                 </li>
                                 <li>
                                     <a href = 'member-benefits' class="btn btn-custom" style="background: green">Buy Full Version</a>

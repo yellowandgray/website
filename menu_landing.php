@@ -13,8 +13,7 @@ if (isset($_SESSION['student_register_id'])) {
                     ?>
                     <nav>
                         <a href="about-us" class="menu-nav">About Us</a>
-                        <a href="contact-us" class="menu-nav">Contact Us</a>
-                        <a href="free-practice-test?from-page=quiz" class="menu-nav">Exit</a>
+                        <a href="contact-us" class="menu-nav">Contact Us</a>                      
                         <a href="member-benefits" class="btn btn-green">Buy Full Version</a>
                         <a href="member-signin" class="btn btn-custom">Login</a>                    
                     </nav>
