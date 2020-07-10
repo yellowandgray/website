@@ -1,0 +1,192 @@
+@media screen and (max-width: 767px) {
+    .responsive-menu {
+        display: block;
+        padding-top: 10%;
+        font-size: 25px;
+    }
+    .carousel-control i {
+        display: none;
+    }
+    .carousel-control.left {
+        background: transparent;
+    }
+    .carousel-control.right {
+        background: transparent;
+    }
+    .service-box {
+        height: auto;
+    }
+    .everest-service-slider {
+        height: auto;
+    }
+    footer .footer-ul {
+        width: 100%;
+    }
+    .testim .cont .test-1.active {
+        top: 162px;
+    }
+    .testim .cont .test-2.active {
+        top: 162px;
+    }
+    .testim .cont .test-3.active {
+        top: 90px;
+    }
+    .testim .cont div h2 {
+        font-size: 2.5em;
+    }
+    .testim .cont {
+        overflow: unset;
+    }
+    .testim .dots {
+        bottom: -20%;
+    }
+    .p-t-20 {
+        padding-top: 0px;
+    }
+    header.menu-mobile h1 {
+        text-align: center;
+    }
+    header.menu-mobile span {
+        text-align: center;
+    }
+    .slide-read-more {
+        display: none;
+    }
+    .service-section .mechanical-box h3, .service-section .steel-structural h3, .service-section .scaffolding h3, .service-section .piping-insulation h3 {
+        font-size: 25px;
+    }
+    .service-section .mechanical-box img, .service-section .steel-structural img, .service-section .scaffolding img, .service-section .piping-insulation img {
+        top: 30px;
+    }
+    /*    .client-image-section {
+            display: block;
+        }*/
+    /*    .client-image-section img {
+            width: 100%;
+            margin: 10px 0;
+        }*/
+    .client-image-section img {
+        height: auto;
+    }
+    .banner-content ul li {
+        font-size: 15px;
+    }
+    .bottom-content h3 {
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+    footer .footer-ul ul li {
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        border: none;
+        border-bottom: 2px solid #fff;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .nav-mobile {
+        display: block;
+    }
+
+    nav {
+        width: 100%;
+        padding: 70px 0 15px;
+    }
+    nav ul {
+        display: none;
+    }
+    nav ul li {
+        float: none;
+    }
+    nav ul li a {
+        padding: 15px;
+        line-height: 20px;
+        padding-left: 25%;
+
+    }
+    nav ul li ul li a {
+        padding-left: 30%;
+    }
+
+    .nav-dropdown {
+        position: static;
+    }
+    .brand a img {
+        max-height: 60px;
+        margin-top: 5px;
+    }
+    .btn-custome {
+        font-size: 18px !important;
+    }
+}
+@media screen and (min-width: 799px) {
+    .nav-list {
+        display: block !important;
+    }
+}
+@media only screen and (min-width: 1280px) {
+    .contain {
+        width: 1200px;
+        margin: 0 auto;
+    }
+}
+@media only screen and (max-width: 1139px) {
+    .contain .social {
+        width: 1000px;
+        display: block;
+    }
+    .social h1 {
+        margin: 0px;
+    }
+}
+@media only screen and (max-width: 950px) {
+    .footer .col {
+        width: 33%;
+    }
+    .footer .col h1 {
+        font-size: 14px;
+    }
+    .footer .col ul li {
+        font-size: 13px;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .footer .col {
+        width: 50%;
+    }
+    .footer .col h1 {
+        font-size: 14px;
+    }
+    .footer .col ul li {
+        font-size: 13px;
+    }
+}
+@media only screen and (max-width: 340px) {
+    .footer .col {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 991px) {
+    footer .footer-ul ul {
+        display: unset;
+    }
+    .quick-form, .certificate-bg {
+        height: auto;
+    }
+    .menu {
+        display: none;
+    }
+    .menu-mobile {
+        display: block;
+    }
+    .dropdown:hover .dropdown-content {
+        top: 48px;
+    }
+    .mob-nav-bar {
+        display: none;
+    }
+}
+@media (min-width: 992px) and (max-width: 1440px) {
+    footer .footer-ul ul li {
+        font-size: 15px;
+    }
+}
