@@ -1,0 +1,68 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 23, 2020, 1:18:44 PM
+    Author     : Umasekar
+*/
+
+@media screen and (min-width: 499px) {
+
+}
+
+@media screen and (max-width: 499px) {
+
+}
+
+@media screen and (min-width: 767px) {
+    .login-form {
+        width: 50%;
+        margin: 0 auto;
+    }
+    .login-form .logo-section {
+        text-align: center;
+    }
+    .login-form .logo-section img {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .custome-tab-nav .nav-tabs {
+        width: 100%;
+    }
+    .side-content-section {
+/*        background: #e83e8cc9;*/
+        width: 100%;
+        position: absolute;
+        top: 150px;
+        right: 0px;
+        padding: 2px;
+    }
+    #side-content {
+        display: none;
+    }
+    .mobile-btn{
+        display: block;
+    }
+    .logo-section img {
+        width: 70%;
+        margin: 0 auto;
+    }
+    section {
+        padding: 0 0;
+    }
+    .menu-section img {
+        width: 100%
+    }
+}
+
+@media screen and (min-width: 991px) {
+
+}
+
+@media screen and (max-width: 991px) {
+
+}
