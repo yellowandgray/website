@@ -13,8 +13,12 @@
             <div class="col-md-9">
                 <div class="row p-t-20">
                     <div class="col-md-6"></div>
-                    <div class="col-md-6" style="float: right">
-                        <h4>Quality & Commitment with Professionalism</h4>
+                    <div class="col-md-6">
+                        <ul class="contact-icon" style="">
+                            <li><i class="fa fa-phone"></i> <a href="tel: 66672640">6667 2640</a></li>
+                            <li><i class="fa fa-envelope"></i> <a href="mailto: admin@springunited.sg">admin@springunited.sg</a></li>
+                        </ul>
+                        <!-- <h4>Quality & Commitment with Professionalism</h4> -->
                     </div>
                 </div>
                 <div class="nav-bar">
@@ -35,9 +39,9 @@
                                 echo 'active';
                             }
                             ?>">Projects</a>
-<!--                            <div class="dropdown-content">
-                                <a href="project-track-record">Project Track Record</a>
-                            </div>-->
+                            <!--                            <div class="dropdown-content">
+                                                            <a href="project-track-record">Project Track Record</a>
+                                                        </div>-->
                         </li>
                         <li><a href="clients" class="<?php
                             if ($page == 'client') {
@@ -72,7 +76,11 @@
                 </div>
             </div>
             <div class="col-md-12">
-                <h4>Quality & Commitment with Professionalism</h4>
+                <!--<h4>Quality & Commitment with Professionalism</h4>-->
+                <ul class="contact-icon">
+                    <li><i class="fa fa-phone"></i> <a href="tel: 66672640">6667 2640</a></li>
+                    <li><i class="fa fa-envelope"></i> <a href="mailto: admin@springunited.sg">admin@springunited.sg</a></li>
+                </ul>
             </div>
             <div id="nav-icon1">
                 <span></span>
@@ -97,9 +105,9 @@
                             echo 'active';
                         }
                         ?>">Projects</a>
-<!--                        <div class="dropdown-content">
-                            <a href="project-track-record">Project Track Record</a>
-                        </div>-->
+                        <!--                        <div class="dropdown-content">
+                                                    <a href="project-track-record">Project Track Record</a>
+                                                </div>-->
                     </li>
                     <li><a href="clients" class="<?php
                         if ($page == 'client') {

@@ -17,11 +17,12 @@
             <div class="banner-content">
                 <ul>
                     <li><i class="fa fa-check" aria-hidden="true"></i> General Engineering Contractor</li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i> Building Maintenance</li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i> Air-conditioning System</li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i> Scrubber Maintenance</li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i> Air-Conditioning System</li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i> Cooling Tower Maintenance </li>
                     <li><i class="fa fa-check" aria-hidden="true"></i> Mechanical & Electrical Services</li>
                     <li><i class="fa fa-check" aria-hidden="true"></i> Electrical and Piping Works</li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i> Internet of Things & CAD Drafting</li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i> Pump & Motor Services</li>
                 </ul>
             </div>
             <div class="bottom-content">

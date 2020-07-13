@@ -102,6 +102,13 @@
         border: none;
         border-bottom: 2px solid #fff;
     }
+    .contact-icon {
+        display: block;
+        list-style-type: none;
+        margin: 0;
+        float: none;
+        padding: 10px 0
+    }
 }
 @media only screen and (max-width: 767px) {
     .nav-mobile {

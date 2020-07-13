@@ -61,7 +61,7 @@ header .nav-bar ul {
 
 header .nav-bar ul li {
     padding: 0 0 0 50px;
-     
+
 }
 
 header .nav-bar ul li a {
@@ -1783,6 +1783,14 @@ blockquote footer {
     z-index: 1;
 }
 
+.contact-icon {
+    display: flex;
+    list-style-type:none;
+    margin:0;
+    float: right;
+    padding:0
+}
+
 .contact-icon i {
     color: #007fc6;
     font-size: 18px;
@@ -1791,6 +1799,10 @@ blockquote footer {
 .contact-icon li a {
     font-size: 18px;
     color: #333;
+}
+
+.contact-icon li {
+    padding-right:15px;
 }
 
 .contact-icon li a:hover {

@@ -62,7 +62,7 @@
                             </ul>
                             <ul class="contact-icon">
                                 <li><i class="fa fa-calendar"></i> Incorporation 09-02-2012</li>
-                                <li><i class="fa fa-phone"></i> <a href="tel: 66672640">66672640</a></li>
+                                <li><i class="fa fa-phone"></i> <a href="tel: 66672640">6667 2640</a></li>
                                 <li><i class="fa fa-envelope"></i> <a href="mailto: admin@springunited.sg">admin@springunited.sg</a></li>
                             </ul>
                         </div>
