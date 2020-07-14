@@ -27,7 +27,7 @@
                             <img src="img/clients/logo-solenis.jpg">
                         </div>
                         <div class="col-md-3">
-                            <img src="img/clients/logo-civil-service.jpg">
+                            <img src="img/clients/logo-alcon.jpg">
                         </div>
                         <div class="col-md-3">
                             <img src="img/clients/logo-auo.jpg">

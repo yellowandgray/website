@@ -167,7 +167,6 @@ html, body, .carousel, .carousel-inner, .carousel-inner .item {
 
 .read-more-btn {
     text-decoration: underline;
-    color: #fff;
 }
 
 .slide-read-more {
@@ -195,7 +194,7 @@ html, body, .carousel, .carousel-inner, .carousel-inner .item {
     background: url(../img/bg-picture-key-messages.jpg)no-repeat;
     background-size: cover;
     background-position: center;
-    height: 558px;
+    height: 646px;
 }
 
 .everest-service-slider h3 {
@@ -273,7 +272,7 @@ html, body, .carousel, .carousel-inner, .carousel-inner .item {
 .testim .dots .dot {
     list-style-type: none;
     display: inline-block;
-    background: #fff;
+    background: #f26224;
     width: 50px;
     height: 8px;
     border-radius: 5%;

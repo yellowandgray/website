@@ -12,9 +12,24 @@
         </div>
         <div class="award-main-section">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h3>Certificates</h3>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                <h3>BCA Approved</h3>
+                                <div class="award-img">
+                                    <img id="myImg4" style="border:1px solid #d7d7d7" src="img/certificate/bca-cert.jpg" alt="BCA Approved Certificate" />
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                <h3>ISO 45001</h3>
+                                <div class="award-img">
+                                    <img id="myImg3" style="border:1px solid #d7d7d7" src="img/certificate/iso-45001.jpg" alt="ISO 45001 Certificate" />
+                                </div>
+                            </div>
+                        </div>
+                        <br/><br/>
+                    <div class="row">
+                        <div class="col-md-12">
+                        <h3>Biz Safe Certificates</h3>
                         <div class="row">
                             <div class="col-lg-4 col-md-4 col-sm-12">
                                 <div class="award-img">
@@ -29,15 +44,6 @@
                             <div class="col-lg-4 col-md-4 col-sm-12">
                                 <div class="award-img">
                                     <img id="myImg2" style="border:1px solid #d7d7d7" src="img/certificate/biz-star.jpg" alt="Biz Star" />
-                                </div>
-                            </div>
-                        </div>
-                        <br/><br/>
-                        <div class="row">
-                            <div class="col-lg-4 col-md-4 col-sm-12">
-                                <h3>ISO 45001</h3>
-                                <div class="award-img">
-                                    <img id="myImg3" style="border:1px solid #d7d7d7" src="img/certificate/iso-45001.jpg" alt="ISO 45001 Certificate" />
                                 </div>
                             </div>
                         </div>

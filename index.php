@@ -16,13 +16,13 @@
             </div>
             <div class="banner-content">
                 <ul>
-                    <li><i class="fa fa-check" aria-hidden="true"></i> General Engineering Contractor</li>
                     <li><i class="fa fa-check" aria-hidden="true"></i> Scrubber Maintenance</li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i> Air-Conditioning System</li>
                     <li><i class="fa fa-check" aria-hidden="true"></i> Cooling Tower Maintenance </li>
                     <li><i class="fa fa-check" aria-hidden="true"></i> Mechanical & Electrical Services</li>
                     <li><i class="fa fa-check" aria-hidden="true"></i> Electrical and Piping Works</li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i> Air-Conditioning System</li>
                     <li><i class="fa fa-check" aria-hidden="true"></i> Pump & Motor Services</li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i> General Engineering Contractor</li>
                 </ul>
             </div>
             <div class="bottom-content">
@@ -46,25 +46,23 @@
                                     <div id="testim-content" class="cont">
                                         <div class="test-1 active">
                                             <h2>Key Message One</h2>
-                                            <p>Offering Business Solutions in the Process, Maintenance and Construction Sectors in Structural designs, Custom made Structure or False-work systems support and design functions including Manual labour of material fabrication, Raw metal Modifications, Labour Crew deployments, support crew Operations, Installation Systems, modification methods, Erection and Dismantle of Scaffold Systems including transportation and Delivery, across all major industry sectors in Singapore.
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. <br/><br/>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
                                                 <span class="slide-read-more">
-                                                    <a href="#" class="read-more-btn">Read More</a>
+                                                    <a href="about-us" class="read-more-btn">Read More</a>
                                                 </span>
                                             </p>
                                         </div>
                                         <div class="test-2">
                                             <h2>Key Message Two</h2>
-                                            <p>Offering Business Solutions in the Process, Maintenance and Construction Sectors in Structural designs, Custom made Structure or False-work systems support and design functions including Manual labour of material fabrication, Raw metal Modifications, Labour Crew deployments, support crew Operations, Installation Systems, modification methods, Erection and Dismantle of Scaffold Systems including transportation and Delivery, across all major industry sectors in Singapore.
-                                                <span class="slide-read-more">
-                                                    <a href="#" class="read-more-btn">Read More</a>
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. <br/><br/>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.     <span class="slide-read-more">
+                                                    <a href="about-us" class="read-more-btn">Read More</a>
                                                 </span>
                                             </p>
                                         </div>
                                         <div class="test-3">
                                             <h2>Key Message Three</h2>
-                                            <p>Offering Business Solutions in the Process, Maintenance and Construction Sectors in Structural designs, Custom made Structure or False-work systems support and design functions including Manual labour of material fabrication, Raw metal Modifications, Labour Crew deployments, support crew Operations, Installation Systems, modification methods, Erection and Dismantle of Scaffold Systems including transportation and Delivery, across all major industry sectors in Singapore.
-                                                <span class="slide-read-more">
-                                                    <a href="#" class="read-more-btn">Read More</a>
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. <br/><br/>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.     <span class="slide-read-more">
+                                                    <a href="about-us" class="read-more-btn">Read More</a>
                                                 </span>
                                             </p>
                                         </div>
@@ -76,28 +74,32 @@
                     <div class="col-md-6 p-0">
                         <div class="service-section">
                             <div class="mechanical-box" onclick="window.location = '#'">
-                                <h3>General Engineering Contracts</h3>
-                                <img src="img/icon-ge.png" alt="General Engineering Contracts" />
+                                <h3>Scrubber Maintenance</h3>
+                                <img src="img/icon-scrubbing.png" alt="General Engineering Contracts" />
                             </div>
                             <div class="steel-structural" onclick="window.location = '#'">
-                                <h3>Building Maintenance</h3>
-                                <img src="img/icon-building.png" alt="Building Maintenance" />
+                                <h3>Cooling Tower Maintenance</h3>
+                                <img src="img/icon-cooling-tower.png" alt="Building Maintenance" />
                             </div>
                             <div class="mechanical-box" onclick="window.location = '#'">
-                                <h3>Air-conditioning System</h3>
-                                <img src="img/icon-ac.png" alt="Air Conditioning System" />
-                            </div>
-                            <div class="steel-structural" onclick="window.location = '#'">
                                 <h3>Mechanical & Electrical Services</h3>
-                                <img src="img/icon-electrical-works.png" alt="Mechanical & Electrical Services" />
-                            </div>
-                            <div class="mechanical-box" onclick="window.location = '#'">
-                                <h3>Electrical and Piping Works</h3>
-                                <img src="img/icon-piping.png" alt="Electrical and Piping Works" />
+                                <img src="img/icon-electrical-works.png" alt="Air Conditioning System" />
                             </div>
                             <div class="steel-structural" onclick="window.location = '#'">
-                                <h3>Internet of Things & CAD Drafting</h3>
-                                <img src="img/icon-iot.png" alt="Internet of Things & CAD Drafting" />
+                                <h3>Electrical and Piping Works</h3>
+                                <img src="img/icon-piping.png" alt="Mechanical & Electrical Services" />
+                            </div>
+                            <div class="mechanical-box" onclick="window.location = '#'">
+                                <h3>Air-Conditioning System</h3>
+                                <img src="img/icon-ac.png" alt="Electrical and Piping Works" />
+                            </div>
+                            <div class="steel-structural" onclick="window.location = '#'">
+                                <h3>Pump & Motor Services</h3>
+                                <img src="img/icon-motor.png" alt="Internet of Things & CAD Drafting" />
+                            </div>
+                            <div class="mechanical-box" onclick="window.location = '#'">
+                                <h3>General Engineering Contractor</h3>
+                                <img src="img/icon-ge.png" alt="Electrical and Piping Works" />
                             </div>
                         </div>
                     </div>
@@ -182,7 +184,7 @@
                 <section class="customer-logos slider">
                     <div class="slide"><img src="img/clients/logo-citygas.jpg"></div>
                     <div class="slide"><img src="img/clients/logo-solenis.jpg"></div>
-                    <div class="slide"><img src="img/clients/logo-civil-service.jpg"></div>
+                    <div class="slide"><img src="img/clients/logo-alcon.jpg"></div>
                     <div class="slide"><img src="img/clients/logo-auo.jpg"></div>
                     <div class="slide"><img src="img/clients/logo-sit.jpg"></div>
                 </section>
@@ -201,21 +203,21 @@
                         </div>
                         <div class="certificate">
                             <div class="row">
-                                <div class="col-lg-3 col-md-3 col-sm-12">
-                                    <img src="img/certificate/biz-level3.jpg" alt="certificate Biz level 3" /><br/>
-                                    <span class="cert-title">Biz Safe Level 3</span>
+                                 <div class="col-lg-3 col-md-3 col-sm-12">
+                                    <img src="img/certificate/bca-cert.jpg" alt="BCA certificate" /><br/>
+                                    <span class="cert-title">BCA Approved</span>
                                 </div>
                                 <div class="col-lg-3 col-md-3 col-sm-12">
+                                    <img src="img/certificate/iso-45001.jpg" alt="certificate ISO 45001" /><br/>
+                                    <span class="cert-title">ISO 45001</span>
+                                </div>
+                               <div class="col-lg-3 col-md-3 col-sm-12">
                                     <img src="img/certificate/biz-level4.jpg" alt="certificate Biz level 4" /><br/>
                                     <span class="cert-title">Biz Safe Level 4</span>
                                 </div>
                                 <div class="col-lg-3 col-md-3 col-sm-12">
                                     <img src="img/certificate/biz-star.jpg" alt="certificate Biz Star" /><br/>
                                     <span class="cert-title">Biz Star</span>
-                                </div>
-                                <div class="col-lg-3 col-md-3 col-sm-12">
-                                    <img src="img/certificate/iso-45001.jpg" alt="certificate ISO 45001" /><br/>
-                                    <span class="cert-title">ISO 45001</span>
                                 </div>
                             </div>
                             <br/>
