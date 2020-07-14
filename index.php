@@ -98,7 +98,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="everest-about">
-                            <h3>Everest Engineering & Construction</h3>
+                            <h3>EVEREST E&C PTE LTD</h3>
                             <p>Incorporated on 26 September 2013 <strong>EVEREST E&C PTE LTD</strong> was established in Singapore with a vision to becoming a Specialist Solutions Contractor.</p>
                             <p>One of the Directors <strong>Mr PANNEER SURESH</strong> is a specialist in Metal Pipe Structure Systems has over 10 years of exposure and experience and is well recognised in the Plant, Oil & Gas Construction Sectors.</p>
                             <p>Its management team of Elite Specialists are well versed and trained in the industry have over 13 years of diplomatic relations and exposure to managing Projects to deliver on schedule.</p>

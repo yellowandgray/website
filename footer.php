@@ -22,6 +22,7 @@
 </footer>
 <script src="js/jquery.js" type="text/javascript"></script>
 <script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.js" type="text/javascript"></script>
 <script src="js/slick.min.js" type="text/javascript"></script>
 <script type="text/javascript">
     $('.carousel').carousel();
