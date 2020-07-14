@@ -1,0 +1,34 @@
+<mat-sidenav-container fullscreen>
+    <mat-sidenav mode="side" opened cdkScrollable class="primary">
+        <app-sidenav></app-sidenav>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <app-header></app-header>
+        <div class="add-btn-container">
+            <button mat-raised-button color="primary" (click)="openDialog(0, 'null')"><mat-icon>add</mat-icon> Snacks</button>
+        </div>
+        <mat-list>
+            <ng-container *ngFor="let data of result">
+                <mat-list-item>
+                    <section class="margin-right" fxLayoutAlign="start center" fxFlex="10%">
+                        <mat-checkbox #tooltip="matTooltip" matTooltip="Active Food" [checked]="data.status === '0' || data.status === 0 ? false : true" (change)="changeFoodStatus($event, data.fooditem_id,data)"></mat-checkbox>&nbsp;
+                        <mat-label *ngIf="data.status == 0">Active Food</mat-label>
+                        <mat-label *ngIf="data.status == 1">Deactive Food</mat-label>
+                    </section>
+                    <mat-slide-toggle [checked]="data.banner_status === '0' || data.banner_status === 0 ? false : true" #tooltip="matTooltip" matTooltip="Active Banner" (change)="changeFoodBannerStatus($event, data.fooditem_id)"></mat-slide-toggle>
+                    <button mat-icon-button aria-label="label" (click)="openDialog(data.fooditem_id, 'result')">
+                        <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
+                    </button>
+                    <button mat-icon-button aria-label="label" (click)="confirmDelete(data.fooditem_id)">
+                        <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
+                    </button>
+                    <img matListAvatar class="cursor" src="{{image_url}}{{data.imageurl}}" *ngIf="data.imageurl && data.imageurl != ''" alt="image" (click)="imageView(data, 'preview')" />
+                    <h4 mat-line>{{data.name}}</h4>
+                    <span matLine>Qty - {{data.unit_no}} {{data.unit}}</span>
+                    <p mat-line>RS: {{data.amount}}</p>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+            </ng-container>
+        </mat-list>
+    </mat-sidenav-content>
+</mat-sidenav-container>

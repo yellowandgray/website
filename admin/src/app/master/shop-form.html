@@ -1,0 +1,81 @@
+<h2 mat-dialog-title>Shop Form</h2>
+<mat-dialog-content class="mat-typography">
+    <form [formGroup]="shopform" (ngSubmit)="onSubmit()">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Name</mat-label>
+                    <input matInput placeholder="" required formControlName="name" />
+                    <mat-error>Name is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Contact Person Name</mat-label>
+                    <input matInput placeholder="" formControlName="contact_person_name" />
+                    <mat-error>Contact Person Name is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Select Category</mat-label>
+                    <mat-select formControlName="category_id">
+                        <mat-option [value]="row.category_id" *ngFor="let row of category">{{row.title}}</mat-option>
+                    </mat-select>
+                    <mat-error>Category is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Select Region</mat-label>
+                    <mat-select formControlName="region_id">
+                        <mat-option [value]="row.region_id" *ngFor="let row of region">{{row.region}}</mat-option>
+                    </mat-select>
+                    <mat-error>Region is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Email</mat-label>
+                    <input matInput placeholder="" formControlName="email" />
+                    <mat-error>Email is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Phone</mat-label>
+                    <input matInput placeholder="" required formControlName="phone" />
+                    <mat-error>Phone is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="100%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Address</mat-label>
+                    <textarea matInput rows="6"  formControlName="address"></textarea>
+                    <mat-error>Address is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Pincode</mat-label>
+                    <input matInput placeholder="" required formControlName="pincode" />
+                    <mat-error>Pincode is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
+            <button mat-button [mat-dialog-close]="false">Cancel</button>
+            <button mat-button type="submit" [disabled]="loading">Save</button>
+            <mat-progress-spinner class="example-margin" *ngIf="loading" [mode]="'indeterminate'" [strokeWidth]="3" [diameter]="25">
+            </mat-progress-spinner>
+        </div>
+    </form>
+</mat-dialog-content>

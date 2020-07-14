@@ -1,0 +1,89 @@
+<h2 mat-dialog-title>Cool Drinks</h2>
+<mat-dialog-content class="mat-typography">
+    <form [formGroup]="drinksform" (ngSubmit)="onSubmit()">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+            <div fxFlex="50%" fxLayoutAlign="center center">
+                <button *ngIf="imageurl == ''" type="button" mat-raised-button (click)="fileInput.click()">{{product_image}}</button>
+                <input hidden #fileInput type="file" id="file" (change)="fileProgress($event, 'product_image', 'imageurl')" />
+                <div class="preview-image" *ngIf="imageurl != ''">
+                    <img class="dialog-picture" mat-card-image src="{{image_url}}{{imageurl}}" alt="Photo" />
+                    <button mat-icon-button aria-label="Close icon" (click)="removeMedia('imageurl')">
+                    <mat-icon>close</mat-icon>
+                </button>
+                </div>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Product Name</mat-label>
+                    <input matInput placeholder="" required formControlName="name" />
+                    <mat-error>Product Name is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Unit No</mat-label>
+                    <input matInput placeholder="" required formControlName="unit_no" />
+                    <mat-error>Unit No is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Unit</mat-label>
+                    <mat-select required formControlName="unit_id">
+                        <mat-option [value]="row.unit_id" *ngFor="let row of unit">
+                            {{row.name}}
+                        </mat-option>
+                    </mat-select>
+                    <mat-error>Unit is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Amount</mat-label>
+                    <input matInput placeholder="" required formControlName="amount" />
+                    <mat-error>Amount is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Status</mat-label>
+                    <mat-select required formControlName="status">
+                        <mat-option value="1">Active</mat-option>
+                        <mat-option value="0">In-Active</mat-option>
+                    </mat-select>
+                    <mat-error>Status is required</mat-error>
+                </mat-form-field>
+            </div>
+            <!-- <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Drink Size</mat-label>
+                    <mat-select required formControlName="drink_size">
+                        <mat-option value="100ml">100 ml</mat-option>
+                        <mat-option value="200ml">200 ml</mat-option>
+                        <mat-option value="250ml">250 ml</mat-option>
+                        <mat-option value="500ml">500 ml</mat-option>
+                        <mat-option value="750ml">750 ml</mat-option>
+                        <mat-option value="1ltr">1 ltr</mat-option>
+                        <mat-option value="1.25ltr">1.25 ltr</mat-option>
+                        <mat-option value="1.5ltr">1.5 ltr</mat-option>
+                        <mat-option value="1.75ltr">1.75 ltr</mat-option>
+                        <mat-option value="2ltr">2 ltr</mat-option>
+                        <mat-option value="2.25ltr">2.25 ltr</mat-option>
+                    </mat-select>
+                    <mat-error>Drink Size is required</mat-error>
+                </mat-form-field>
+            </div> -->
+        </div>
+        <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
+            <button mat-button [mat-dialog-close]="false">Cancel</button>
+            <button mat-button type="submit" [disabled]="loading">Save</button>
+            <mat-progress-spinner class="example-margin" *ngIf="loading" [mode]="'indeterminate'" [strokeWidth]="3" [diameter]="25">
+            </mat-progress-spinner>
+        </div>
+    </form>
+</mat-dialog-content>

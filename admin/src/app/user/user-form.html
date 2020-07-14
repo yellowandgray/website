@@ -1,0 +1,56 @@
+<h2 mat-dialog-title>Snacks</h2>
+<mat-dialog-content class="mat-typography">
+    <form [formGroup]="userform" (ngSubmit)="onSubmit()">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="50%" fxLayoutAlign="center center">
+                <button *ngIf="imageurl == ''" type="button" mat-raised-button (click)="fileInput.click()">{{user_image}}</button>
+                <input hidden #fileInput type="file" id="file" (change)="fileProgress($event, 'user_image', 'imageurl')" />
+                <div class="preview-image" *ngIf="imageurl != ''">
+                    <img class="dialog-picture" mat-card-image src="{{image_url}}{{imageurl}}" alt="Photo" />
+                    <button mat-icon-button aria-label="Close icon" (click)="removeMedia('imageurl')">
+                    <mat-icon>close</mat-icon>
+                </button>
+                </div>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Name</mat-label>
+                    <input matInput placeholder="" required formControlName="name" />
+                    <mat-error>Name is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <br/>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Phone No</mat-label>
+                    <input matInput placeholder="" required formControlName="phone_no" />
+                    <mat-error>Phone No is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Pincode</mat-label>
+                    <input matInput placeholder="" required formControlName="pincode" />
+                    <mat-error>Pincode is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="100%">
+                <mat-form-field fxFlex="100%">
+                    <mat-label>Address</mat-label>
+                    <textarea matInput rows="6" placeholder="" required formControlName="address"></textarea>
+                    <mat-error>Address is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
+            <button mat-button [mat-dialog-close]="false">Cancel</button>
+            <button mat-button type="submit" [disabled]="loading">Save</button>
+            <mat-progress-spinner class="example-margin" *ngIf="loading" [mode]="'indeterminate'" [strokeWidth]="3" [diameter]="25">
+            </mat-progress-spinner>
+        </div>
+    </form>
+</mat-dialog-content>

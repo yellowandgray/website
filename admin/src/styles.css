@@ -1,0 +1,107 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+mat-sidenav {
+    min-width: 250px;
+    max-width: 250px;
+    background-color: #6d6e72 !important;
+}
+
+.mat-toolbar.mat-accent {
+    background-color: #fecc45 !important;
+}
+
+.primary .mat-list-item {
+    color: #ffffff !important;
+    transition: all 0.5s;
+}
+
+.primary .mat-list-item.active-nav, .primary .mat-list-item:hover {
+    background: #fecc45 !important;
+}
+
+.primary .mat-list-item .mat-icon {
+    padding-right: 5px !important;
+}
+
+.add-btn-container {
+    margin: 10px;
+    text-align: right;
+}
+
+.active-nav {
+    background: rgba(0, 0, 0, .04);
+}
+
+.preview-image {
+    text-align: left;
+    position: relative;
+}
+
+.preview-image img {
+    width: 275px;
+}
+
+.preview-image button {
+    position: absolute;
+    right: 0;
+    background: #fff;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.member-profile {
+    max-height: 100%!important;
+    height: auto!important;
+    width: 100%!important;
+}
+
+.product-img {
+    padding-right: 5px;
+}
+
+.product-img img {
+    width: 100%;
+    margin-right: 5px;
+}
+
+.order-view-table table th {
+    text-align: left;
+}
+
+.m-b-10 {
+    margin-bottom: 10px;
+}
+
+.total-amt-table th {
+    text-align: right;
+}
+
+.bg-delivery {
+    background: #008600;
+    padding: 10px 5px;
+}
+
+.bg-delivery td {
+    color: #fff;
+}
+
+.clr-blue {
+    color: #3F51B5;
+}
+
+.icon-position {
+    position: relative;
+    top: 5px;
+}

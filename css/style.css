@@ -1,0 +1,51 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+.main-page-section {
+    width: 100%;
+}
+
+.mobile-alignment {
+    float: right;
+    padding-top: 20px;
+    margin-bottom: 10px;
+}
+
+.mobile-alignment a {
+    float: left;
+    font-size: 20px;
+    color: #1075ba;
+    font-weight: 600;
+    transition: all 0.5s;
+}
+
+.mobile-alignment a:hover {
+    text-decoration: none;
+    color: #333;
+}
+
+.p-l-0 {
+    padding-left: 0;
+}
+
+.main-content {
+    padding: 125px 0 0;
+}
+
+.main-content .title-section h2 {
+    color: #0e74bc;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.main-content p {
+    color: #6c6d71;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
