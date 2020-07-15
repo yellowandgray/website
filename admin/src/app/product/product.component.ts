@@ -68,7 +68,25 @@ export class ProductComponent implements OnInit {
       }
     });
   }
+    imageView(id, action): void {
+    var data = null;
+    if (id != 0) {
+      data = id;
+    }
+    const dialogRef = this.dialog.open(ProductImageView, {
+      minWidth: "40%",
+      maxWidth: "40%",
+      data: {
+        data: data,
+        action: action
+      }
+    });
 
+    dialogRef.afterClosed().subscribe(result => {
+      if (result !== false && result !== "false") {
+      }
+    });
+  }
 }
 
 
@@ -85,6 +103,7 @@ export class ProductForm {
   product_type: any[];
   shop: any[];
   unit: any[];
+  brand: any[];
   product_image: string = "Select Product Image";
   imageurl: string = "";
   constructor(
@@ -96,12 +115,13 @@ export class ProductForm {
       'name': new FormControl('', Validators.required),
       'category_id': new FormControl('', Validators.required),
       'product_type_id': new FormControl('', Validators.required),
-      'sub_type': new FormControl('', Validators.required),
+      'sub_type': new FormControl(''),
       'shop_id': new FormControl('', Validators.required),
+      'brand_id': new FormControl('', Validators.required),
       'size': new FormControl("", Validators.required),
       'unit_id': new FormControl("", Validators.required),
       'price': new FormControl("", Validators.required),
-      'offer_price': new FormControl("", Validators.required),
+      'offer_price': new FormControl(""),
     })
     if (this.data != null) {
       this.productform.patchValue({
@@ -110,6 +130,7 @@ export class ProductForm {
         product_type_id: this.data.product_type_id,
         sub_type: this.data.sub_type,
         shop_id: this.data.shop_id,
+        brand_id: this.data.brand_id,
         size: this.data.size,
         unit_id: this.data.unit_id,
         price: this.data.price,
@@ -190,6 +211,24 @@ export class ProductForm {
           });
         }
       );
+    this.httpClient
+      .get("http://localhost/project/ygonlinebuy/api/v1/get_brand")
+      .subscribe(
+        res => {
+          if (res["result"]["error"] === false) {
+            this.brand = res["result"]["data"];
+          } else {
+            this._snackBar.open(res["result"]["message"], "", {
+              duration: 2000
+            });
+          }
+        },
+        error => {
+          this._snackBar.open(error["statusText"], "", {
+            duration: 2000
+          });
+        }
+      );
   }
 
 
@@ -206,6 +245,7 @@ export class ProductForm {
       formData.append('product_type_id', this.productform.value.product_type_id);
       formData.append('sub_type', this.productform.value.sub_type);
       formData.append('shop_id', this.productform.value.shop_id);
+      formData.append('brand_id', this.productform.value.brand_id);
       formData.append("size", this.productform.value.size);
       formData.append("unit_id", this.productform.value.unit_id);
       formData.append("price", this.productform.value.price);
@@ -218,6 +258,7 @@ export class ProductForm {
       formData.append('product_type_id', this.productform.value.product_type_id);
       formData.append('sub_type', this.productform.value.sub_type);
       formData.append('shop_id', this.productform.value.shop_id);
+      formData.append('brand_id', this.productform.value.brand_id);
       formData.append("size", this.productform.value.size);
       formData.append("unit_id", this.productform.value.unit_id);
       formData.append("price", this.productform.value.price);
@@ -321,5 +362,32 @@ export class ProductDelete {
         });
       }
     );
+  }
+}
+
+
+@Component({
+  selector: "picture-view",
+  templateUrl: "picture-view.html"
+})
+export class ProductImageView {
+  image_url: string = "http://localhost/project/ygonlinebuy/api/v1/";
+  action: string = "";
+  loading = false;
+  product_id = 0;
+  data: any;
+  constructor(
+    public dialogRef: MatDialogRef<ProductImageView>,
+    @Inject(MAT_DIALOG_DATA) public datapopup: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient
+  ) {
+    if (this.datapopup != null) {
+      this.action = this.datapopup.action;
+      this.data = this.datapopup.data;
+      if (this.datapopup.action == "delete") {
+        this.product_id = this.datapopup.data;
+      }
+    }
   }
 }

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 14, 2020 at 01:26 PM
+-- Generation Time: Jul 15, 2020 at 09:52 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.2.29
 
@@ -112,7 +112,7 @@ CREATE TABLE `category` (
 --
 
 INSERT INTO `category` (`category_id`, `title`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
-(4, 'Category 1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0);
+(4, 'Category', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -2333,6 +2333,7 @@ CREATE TABLE `product` (
   `category_id` int(11) NOT NULL,
   `product_type_id` int(11) NOT NULL,
   `sub_type` varchar(11) NOT NULL,
+  `brand_id` int(11) NOT NULL,
   `shop_id` int(11) NOT NULL,
   `size` varchar(255) NOT NULL,
   `unit_id` int(11) NOT NULL,
@@ -2348,9 +2349,10 @@ CREATE TABLE `product` (
 -- Dumping data for table `product`
 --
 
-INSERT INTO `product` (`product_id`, `name`, `imageurl`, `category_id`, `product_type_id`, `sub_type`, `shop_id`, `size`, `unit_id`, `price`, `offer_price`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
-(2, 'Product Name', 'uploads/be5e70cabf922cec60dbd9147380c4d8.png', 4, 1, 'Test', 5, '20', 3, '100', '80', '2020-07-14 15:28:25', '0000-00-00 00:00:00', 0, 0),
-(3, 'Product Name', 'uploads/dd3e4dc405c0553ad3a5eceef44775a0.png', 4, 1, 'Product Sub', 5, '10', 6, '200', '150', '2020-07-14 15:27:53', '0000-00-00 00:00:00', 0, 0);
+INSERT INTO `product` (`product_id`, `name`, `imageurl`, `category_id`, `product_type_id`, `sub_type`, `brand_id`, `shop_id`, `size`, `unit_id`, `price`, `offer_price`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
+(2, 'Product Name', 'uploads/be5e70cabf922cec60dbd9147380c4d8.png', 4, 1, 'Test', 2, 5, '20', 3, '100', '80', '2020-07-15 12:49:19', '0000-00-00 00:00:00', 0, 0),
+(3, 'Product Name', 'uploads/dd3e4dc405c0553ad3a5eceef44775a0.png', 4, 1, 'Product Sub', 2, 5, '10', 6, '200', '150', '2020-07-15 12:49:29', '0000-00-00 00:00:00', 0, 0),
+(4, 'Product Name', 'uploads/0e54b5dc425567156628d92950cc6fa2.jpg', 4, 1, '', 2, 5, '1', 4, '200', '', '2020-07-15 13:21:58', '0000-00-00 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -2399,7 +2401,8 @@ CREATE TABLE `product_type` (
 --
 
 INSERT INTO `product_type` (`product_type_id`, `type`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
-(1, 'Product Type', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0);
+(1, 'Product Type', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0),
+(2, 'Product Type 1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -3206,7 +3209,7 @@ ALTER TABLE `order_item`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `product_price`
@@ -3218,7 +3221,7 @@ ALTER TABLE `product_price`
 -- AUTO_INCREMENT for table `product_type`
 --
 ALTER TABLE `product_type`
-  MODIFY `product_type_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `product_type_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `region`

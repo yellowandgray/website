@@ -916,7 +916,7 @@ export class ProductTypeForm {
     var formData = new FormData();
     var url = "";
     if (this.product_type_id != 0) {
-      formData.append("type", this.producttypeform.value.product_type);
+      formData.append("type", this.producttypeform.value.type);
       url =
         "update_record/product_type/product_type_id = " + this.product_type_id;
     } else {

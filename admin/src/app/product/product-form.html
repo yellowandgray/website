@@ -44,11 +44,22 @@
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Sub Type</mat-label>
-                    <input matInput placeholder="" required formControlName="sub_type" />
+                    <input matInput placeholder="" formControlName="sub_type" />
                     <mat-error>Sub Type is required</mat-error>
                 </mat-form-field>
             </div>
             <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Select Brand</mat-label>
+                    <mat-select formControlName="brand_id">
+                        <mat-option [value]="row.brand_id" *ngFor="let row of brand">{{row.name}}</mat-option>
+                    </mat-select>
+                    <mat-error>Brand is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+        <div fxFlex="100%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Select Shop</mat-label>
                     <mat-select formControlName="shop_id">
@@ -87,7 +98,7 @@
             <div fxFlex="25%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Offer Price</mat-label>
-                    <input matInput placeholder="" required formControlName="offer_price" />
+                    <input matInput placeholder="" formControlName="offer_price" />
                     <mat-error>Offer Price is required</mat-error>
                 </mat-form-field>
             </div>

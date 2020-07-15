@@ -17,8 +17,8 @@ import { PincodeComponent, PincodeForm, PincodeDelete } from './pincode/pincode.
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DeliveryHistoryComponent, OrderViewHistory } from './delivery-history/delivery-history.component';
 import { MasterComponent, CategoryForm, CategoryDelete, RegionForm, RegionDelete, ShopForm, ShopDelete, BrandForm, BrandDelete, ProductTypeForm, ProductTypeDelete, MasterUnitForm, MasterUnitDelete } from './master/master.component';
-import { ProductComponent, ProductForm, ProductDelete } from './product/product.component';
-import { ProductPriceComponent, ProductPriceForm, ProductPriceDelete, ProductImageView } from './product-price/product-price.component';
+import { ProductComponent, ProductForm, ProductDelete, ProductImageView } from './product/product.component';
+import { ProductPriceComponent, ProductPriceForm, ProductPriceDelete } from './product-price/product-price.component';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';

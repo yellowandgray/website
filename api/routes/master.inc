@@ -319,7 +319,7 @@ $app->post('/insert_product', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('name' => $data['name'], 'category_id' => $data['category_id'], 'product_type_id' => $data['product_type_id'], 'sub_type' => $data['sub_type'], 'shop_id' => $data['shop_id'], 'size' => $data['size'], 'unit_id' => $data['unit_id'], 'price' => $data['price'], 'offer_price' => $data['offer_price'], 'imageurl' => $data['product_image']), 'product');
+    $record = $com->insertRecord(array('name' => $data['name'], 'category_id' => $data['category_id'], 'product_type_id' => $data['product_type_id'], 'sub_type' => $data['sub_type'], 'shop_id' => $data['shop_id'], 'brand_id' => $data['brand_id'], 'size' => $data['size'], 'unit_id' => $data['unit_id'], 'price' => $data['price'], 'offer_price' => $data['offer_price'], 'imageurl' => $data['product_image']), 'product');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
