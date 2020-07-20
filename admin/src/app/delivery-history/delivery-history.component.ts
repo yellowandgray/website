@@ -25,7 +25,7 @@ export class DeliveryHistoryComponent implements OnInit {
     getOrder(): void {
     this.httpClient
       .get<any>(
-        "http://localhost/project/ygonlinebuy/api/v1/get_orders_for_all"
+        "http://localhost/mushak/onlinebuy/api/v1/get_orders_for_all"
       )
       .subscribe(
         res => {
@@ -69,7 +69,7 @@ export class DeliveryHistoryComponent implements OnInit {
   templateUrl: "order-view.html"
 })
 export class OrderViewHistory {
-  image_url: string = "http://localhost/project/ygonlinebuy/api/v1/";
+  image_url: string = "http://localhost/mushak/onlinebuy/api/v1/";
   loading = false;
   result = [];
   order_id = 0;
@@ -83,7 +83,7 @@ export class OrderViewHistory {
   getOrder(): void {
     this.httpClient
       .get<any>(
-        "http://localhost/project/ygonlinebuy/api/v1/get_orders_for_all"
+        "http://localhost/mushak/onlinebuy/api/v1/get_orders_for_all"
       )
       .subscribe(
         res => {

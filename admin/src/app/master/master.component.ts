@@ -10,12 +10,13 @@ import { HttpClient } from "@angular/common/http";
   styleUrls: ['./master.component.css']
 })
 export class MasterComponent implements OnInit {
-    category = [];
-    region = [];
-    shop = [];
-    brand = [];
-    product_type = [];
-    unit = [];
+  category = [];
+  region = [];
+  shop = [];
+  brand = [];
+  product_type = [];
+  product_sub_type = [];
+  unit = [];
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
 
   ngOnInit() {
@@ -24,12 +25,13 @@ export class MasterComponent implements OnInit {
     this.getShop();
     this.getBrand();
     this.getProductType();
+    this.getProductSubType();
     this.getUnit();
   }
-    getCategory(): void {
+  getCategory(): void {
     this.httpClient
       .get<any>(
-        "http://localhost/project/ygonlinebuy/api/v1/get_category"
+        "http://localhost/mushak/onlinebuy/api/v1/get_category"
       )
       .subscribe(
         res => {
@@ -42,10 +44,10 @@ export class MasterComponent implements OnInit {
         }
       );
   }
-    getRegion(): void {
+  getRegion(): void {
     this.httpClient
       .get<any>(
-        "http://localhost/project/ygonlinebuy/api/v1/get_region"
+        "http://localhost/mushak/onlinebuy/api/v1/get_region"
       )
       .subscribe(
         res => {
@@ -58,10 +60,10 @@ export class MasterComponent implements OnInit {
         }
       );
   }
-    getShop(): void {
+  getShop(): void {
     this.httpClient
       .get<any>(
-        "http://localhost/project/ygonlinebuy/api/v1/get_shop"
+        "http://localhost/mushak/onlinebuy/api/v1/get_shop"
       )
       .subscribe(
         res => {
@@ -74,10 +76,10 @@ export class MasterComponent implements OnInit {
         }
       );
   }
-    getBrand(): void {
+  getBrand(): void {
     this.httpClient
       .get<any>(
-        "http://localhost/project/ygonlinebuy/api/v1/get_brand"
+        "http://localhost/mushak/onlinebuy/api/v1/get_brand"
       )
       .subscribe(
         res => {
@@ -90,10 +92,10 @@ export class MasterComponent implements OnInit {
         }
       );
   }
-    getProductType(): void {
+  getProductType(): void {
     this.httpClient
       .get<any>(
-        "http://localhost/project/ygonlinebuy/api/v1/get_product_type"
+        "http://localhost/mushak/onlinebuy/api/v1/get_product_type"
       )
       .subscribe(
         res => {
@@ -106,8 +108,24 @@ export class MasterComponent implements OnInit {
         }
       );
   }
-    getUnit(): void {
-    this.httpClient.get<any>('http://localhost/project/ygonlinebuy/api/v1/get_unit')
+  getProductSubType(): void {
+    this.httpClient
+      .get<any>(
+        "http://localhost/mushak/onlinebuy/api/v1/get_product_sub_type"
+      )
+      .subscribe(
+        res => {
+          this.product_sub_type = res["result"]["data"];
+        },
+        error => {
+          this._snackBar.open(error["statusText"], "", {
+            duration: 2000
+          });
+        }
+      );
+  }
+  getUnit(): void {
+    this.httpClient.get<any>('http://localhost/mushak/onlinebuy/api/v1/get_unit')
       .subscribe(
         (res) => {
           this.unit = res["result"]["data"];
@@ -119,7 +137,7 @@ export class MasterComponent implements OnInit {
         }
       );
   }
-    openCategoryDialog(id, res): void {
+  openCategoryDialog(id, res): void {
     var data = null;
     if (id != 0) {
       this[res].forEach(val => {
@@ -141,7 +159,7 @@ export class MasterComponent implements OnInit {
       }
     });
   }
-    openRegionDialog(id, res): void {
+  openRegionDialog(id, res): void {
     var data = null;
     if (id != 0) {
       this[res].forEach(val => {
@@ -163,7 +181,7 @@ export class MasterComponent implements OnInit {
       }
     });
   }
-    openShopDialog(id, res): void {
+  openShopDialog(id, res): void {
     var data = null;
     if (id != 0) {
       this[res].forEach(val => {
@@ -185,7 +203,7 @@ export class MasterComponent implements OnInit {
       }
     });
   }
-    openBrandDialog(id, res): void {
+  openBrandDialog(id, res): void {
     var data = null;
     if (id != 0) {
       this[res].forEach(val => {
@@ -207,7 +225,7 @@ export class MasterComponent implements OnInit {
       }
     });
   }
-    openProductTypeDialog(id, res): void {
+  openProductTypeDialog(id, res): void {
     var data = null;
     if (id != 0) {
       this[res].forEach(val => {
@@ -229,8 +247,29 @@ export class MasterComponent implements OnInit {
       }
     });
   }
-    
-    openUnitDialog(id, res): void {
+  openProductSubTypeDialog(id, res): void {
+    var data = null;
+    if (id != 0) {
+      this[res].forEach(val => {
+        if (parseInt(val.product_sub_type_id) === parseInt(id)) {
+          data = val;
+          return false;
+        }
+      });
+    }
+    const dialogRef = this.dialog.open(ProductSubTypeForm, {
+      minWidth: "40%",
+      maxWidth: "40%",
+      data: data
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result !== false && result !== "false") {
+        this.getProductSubType();
+      }
+    });
+  }
+  openUnitDialog(id, res): void {
     var data = null;
     if (id != 0) {
       this[res].forEach(val => {
@@ -333,7 +372,23 @@ export class MasterComponent implements OnInit {
       }
     });
   }
-    unitDelete(id): void {
+  productsubtypeDelete(id): void {
+    var data = null;
+    if (id != 0) {
+      data = id;
+    }
+    const dialogRef = this.dialog.open(ProductSubTypeDelete, {
+      minWidth: "40%",
+      maxWidth: "40%",
+      data: data
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      if (typeof result !== 'undefined' && result !== false && result !== 'false') {
+        this.getProductSubType();
+      }
+    });
+  }
+  unitDelete(id): void {
     var data = null;
     if (id != 0) {
       data = id;
@@ -357,7 +412,7 @@ export class MasterComponent implements OnInit {
   templateUrl: "category-form.html"
 })
 export class CategoryForm {
-  image_url: string = "http://localhost/project/ygonlinebuy/api/v1/";
+  image_url: string = "http://localhost/mushak/onlinebuy/api/v1/";
   categoryform: FormGroup;
   loading = false;
   category_id = 0;
@@ -394,7 +449,7 @@ export class CategoryForm {
       url = "insert_category";
     }
     this.httpClient
-      .post("http://localhost/project/ygonlinebuy/api/v1/" + url, formData)
+      .post("http://localhost/mushak/onlinebuy/api/v1/" + url, formData)
       .subscribe(
         res => {
           this.loading = false;
@@ -441,8 +496,8 @@ export class CategoryDelete {
     this.loading = true;
     this.httpClient
       .get(
-        "http://localhost/project/ygonlinebuy/api/v1/delete_record/category/category_id=" +
-          this.category_id
+        "http://localhost/mushak/onlinebuy/api/v1/delete_record/category/category_id=" +
+        this.category_id
       )
       .subscribe(
         res => {
@@ -470,7 +525,7 @@ export class CategoryDelete {
   templateUrl: "region-form.html"
 })
 export class RegionForm {
-  image_url: string = "http://localhost/project/ygonlinebuy/api/v1/";
+  image_url: string = "http://localhost/mushak/onlinebuy/api/v1/";
   regionform: FormGroup;
   loading = false;
   region_id = 0;
@@ -519,7 +574,7 @@ export class RegionForm {
       url = "insert_region";
     }
     this.httpClient
-      .post("http://localhost/project/ygonlinebuy/api/v1/" + url, formData)
+      .post("http://localhost/mushak/onlinebuy/api/v1/" + url, formData)
       .subscribe(
         res => {
           this.loading = false;
@@ -566,8 +621,8 @@ export class RegionDelete {
     this.loading = true;
     this.httpClient
       .get(
-        "http://localhost/project/ygonlinebuy/api/v1/delete_record/region/region_id=" +
-          this.region_id
+        "http://localhost/mushak/onlinebuy/api/v1/delete_record/region/region_id=" +
+        this.region_id
       )
       .subscribe(
         res => {
@@ -596,12 +651,12 @@ export class RegionDelete {
   templateUrl: "shop-form.html"
 })
 export class ShopForm {
-    image_url: string = "http://localhost/project/ygonlinebuy/api/v1/";
-    shopform: FormGroup;
-    loading = false;
-    shop_id = 0;
-    category: any[];
-    region: any[];
+  image_url: string = "http://localhost/mushak/onlinebuy/api/v1/";
+  shopform: FormGroup;
+  loading = false;
+  shop_id = 0;
+  category: any[];
+  region: any[];
   constructor(
     public dialogRef: MatDialogRef<ShopForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -632,7 +687,7 @@ export class ShopForm {
       this.shop_id = this.data.shop_id;
     }
     this.httpClient
-      .get("http://localhost/project/ygonlinebuy/api/v1/get_category")
+      .get("http://localhost/mushak/onlinebuy/api/v1/get_category")
       .subscribe(
         res => {
           if (res["result"]["error"] === false) {
@@ -648,9 +703,9 @@ export class ShopForm {
             duration: 2000
           });
         }
-    );
+      );
     this.httpClient
-      .get("http://localhost/project/ygonlinebuy/api/v1/get_region")
+      .get("http://localhost/mushak/onlinebuy/api/v1/get_region")
       .subscribe(
         res => {
           if (res["result"]["error"] === false) {
@@ -666,7 +721,7 @@ export class ShopForm {
             duration: 2000
           });
         }
-    );
+      );
   }
 
   onSubmit() {
@@ -699,7 +754,7 @@ export class ShopForm {
       url = "insert_shop";
     }
     this.httpClient
-      .post("http://localhost/project/ygonlinebuy/api/v1/" + url, formData)
+      .post("http://localhost/mushak/onlinebuy/api/v1/" + url, formData)
       .subscribe(
         res => {
           this.loading = false;
@@ -746,8 +801,8 @@ export class ShopDelete {
     this.loading = true;
     this.httpClient
       .get(
-        "http://localhost/project/ygonlinebuy/api/v1/delete_record/shop/shop_id=" +
-          this.shop_id
+        "http://localhost/mushak/onlinebuy/api/v1/delete_record/shop/shop_id=" +
+        this.shop_id
       )
       .subscribe(
         res => {
@@ -812,7 +867,7 @@ export class BrandForm {
       url = "insert_brand";
     }
     this.httpClient
-      .post("http://localhost/project/ygonlinebuy/api/v1/" + url, formData)
+      .post("http://localhost/mushak/onlinebuy/api/v1/" + url, formData)
       .subscribe(
         res => {
           this.loading = false;
@@ -859,8 +914,8 @@ export class BrandDelete {
     this.loading = true;
     this.httpClient
       .get(
-        "http://localhost/project/ygonlinebuy/api/v1/delete_record/brand/brand_id=" +
-          this.brand_id
+        "http://localhost/mushak/onlinebuy/api/v1/delete_record/brand/brand_id=" +
+        this.brand_id
       )
       .subscribe(
         res => {
@@ -924,7 +979,7 @@ export class ProductTypeForm {
       url = "insert_product_type";
     }
     this.httpClient
-      .post("http://localhost/project/ygonlinebuy/api/v1/" + url, formData)
+      .post("http://localhost/mushak/onlinebuy/api/v1/" + url, formData)
       .subscribe(
         res => {
           this.loading = false;
@@ -971,8 +1026,8 @@ export class ProductTypeDelete {
     this.loading = true;
     this.httpClient
       .get(
-        "http://localhost/project/ygonlinebuy/api/v1/delete_record/product_type/product_type_id=" +
-          this.product_type_id
+        "http://localhost/mushak/onlinebuy/api/v1/delete_record/product_type/product_type_id=" +
+        this.product_type_id
       )
       .subscribe(
         res => {
@@ -995,6 +1050,118 @@ export class ProductTypeDelete {
   }
 }
 
+
+@Component({
+  selector: "product-sub-type-form",
+  templateUrl: "product-sub-type-form.html"
+})
+export class ProductSubTypeForm {
+  productsubtypeform: FormGroup;
+  loading = false;
+  product_sub_type_id = 0;
+  constructor(
+    public dialogRef: MatDialogRef<ProductSubTypeForm>,
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient
+  ) {
+    this.productsubtypeform = new FormGroup({
+      type: new FormControl("", Validators.required),
+    });
+    if (this.data != null) {
+      this.productsubtypeform.patchValue({
+        type: this.data.type,
+      });
+      this.product_sub_type_id = this.data.product_sub_type_id;
+    }
+  }
+
+  onSubmit() {
+    if (this.productsubtypeform.invalid) {
+      return;
+    }
+    this.loading = true;
+    var formData = new FormData();
+    var url = "";
+    if (this.product_sub_type_id != 0) {
+      formData.append("type", this.productsubtypeform.value.type);
+      url =
+        "update_record/product_sub_type/product_sub_type_id = " + this.product_sub_type_id;
+    } else {
+      formData.append("type", this.productsubtypeform.value.type);
+      url = "insert_product_sub_type";
+    }
+    this.httpClient
+      .post("http://localhost/mushak/onlinebuy/api/v1/" + url, formData)
+      .subscribe(
+        res => {
+          this.loading = false;
+          if (res["result"]["error"] === false) {
+            this.dialogRef.close(true);
+          } else {
+            this._snackBar.open(res["result"]["message"], "", {
+              duration: 2000
+            });
+          }
+        },
+        error => {
+          this.loading = false;
+          this._snackBar.open(error["statusText"], "", {
+            duration: 2000
+          });
+        }
+      );
+  }
+}
+
+
+@Component({
+  selector: "product-sub-type-delete-confirmation",
+  templateUrl: "product-sub-type-delete-confirmation.html"
+})
+export class ProductSubTypeDelete {
+  loading = false;
+  product_sub_type_id = 0;
+  constructor(
+    public dialogRef: MatDialogRef<ProductSubTypeDelete>,
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private _snackBar: MatSnackBar,
+    private httpClient: HttpClient
+  ) {
+    if (this.data != null) {
+      this.product_sub_type_id = this.data;
+    }
+  }
+  confirmDelete() {
+    if (this.product_sub_type_id == null || this.product_sub_type_id == 0) {
+      return;
+    }
+    this.loading = true;
+    this.httpClient
+      .get(
+        "http://localhost/mushak/onlinebuy/api/v1/delete_record/product_sub_type/product_sub_type_id=" +
+        this.product_sub_type_id
+      )
+      .subscribe(
+        res => {
+          this.loading = false;
+          if (res["result"]["error"] === false) {
+            this.dialogRef.close(true);
+          } else {
+            this._snackBar.open(res["result"]["message"], "", {
+              duration: 2000
+            });
+          }
+        },
+        error => {
+          this.loading = false;
+          this._snackBar.open(error["statusText"], "", {
+            duration: 2000
+          });
+        }
+      );
+  }
+}
 
 @Component({
   selector: 'unit-form',
@@ -1035,7 +1202,7 @@ export class MasterUnitForm {
       formData.append('name', this.unitform.value.name);
       url = 'insert_unit';
     }
-    this.httpClient.post('http://localhost/project/ygonlinebuy/api/v1/' + url, formData).subscribe(
+    this.httpClient.post('http://localhost/mushak/onlinebuy/api/v1/' + url, formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -1080,7 +1247,7 @@ export class MasterUnitDelete {
       return;
     }
     this.loading = true;
-    this.httpClient.get('http://localhost/project/ygonlinebuy/api/v1/delete_record/unit/unit_id=' + this.unit_id).subscribe(
+    this.httpClient.get('http://localhost/mushak/onlinebuy/api/v1/delete_record/unit/unit_id=' + this.unit_id).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {

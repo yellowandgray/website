@@ -43,9 +43,11 @@
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Sub Type</mat-label>
-                    <input matInput placeholder="" formControlName="sub_type" />
-                    <mat-error>Sub Type is required</mat-error>
+                    <mat-label>Select Product Sub Type</mat-label>
+                    <mat-select formControlName="product_sub_type_id">
+                        <mat-option [value]="row.product_sub_type_id" *ngFor="let row of product_sub_type">{{row.type}}</mat-option>
+                    </mat-select>
+                    <mat-error>Product Type is required</mat-error>
                 </mat-form-field>
             </div>
             <div fxFlex="50%">

@@ -10,15 +10,14 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-    result = [];
-    constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
-
-    ngOnInit() {
-        this.getProduct();
-    }
-  image_url: string = "http://localhost/project/ygonlinebuy/api/v1/";
-    getProduct(): void {
-    this.httpClient.get<any>('http://localhost/project/ygonlinebuy/api/v1/get_product')
+  result = [];
+  constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
+  ngOnInit() {
+    this.getProduct();
+  }
+  image_url: string = "http://localhost/mushak/onlinebuy/api/v1/";
+  getProduct(): void {
+    this.httpClient.get<any>('http://localhost/mushak/onlinebuy/api/v1/get_product')
       .subscribe(
         (res) => {
           this.result = res["result"]["data"];
@@ -68,7 +67,7 @@ export class ProductComponent implements OnInit {
       }
     });
   }
-    imageView(id, action): void {
+  imageView(id, action): void {
     var data = null;
     if (id != 0) {
       data = id;
@@ -95,12 +94,13 @@ export class ProductComponent implements OnInit {
   templateUrl: 'product-form.html',
 })
 export class ProductForm {
-  image_url: string = "http://localhost/project/ygonlinebuy/api/v1/";
+  image_url: string = "http://localhost/mushak/onlinebuy/api/v1/";
   productform: FormGroup;
   loading = false;
   product_id = 0;
   category: any[];
   product_type: any[];
+  product_sub_type: any[];
   shop: any[];
   unit: any[];
   brand: any[];
@@ -115,9 +115,9 @@ export class ProductForm {
       'name': new FormControl('', Validators.required),
       'category_id': new FormControl('', Validators.required),
       'product_type_id': new FormControl('', Validators.required),
-      'sub_type': new FormControl(''),
-      'shop_id': new FormControl('', Validators.required),
-      'brand_id': new FormControl('', Validators.required),
+      'product_sub_type_id': new FormControl(0),
+      'shop_id': new FormControl(0),
+      'brand_id': new FormControl(0),
       'size': new FormControl("", Validators.required),
       'unit_id': new FormControl("", Validators.required),
       'price': new FormControl("", Validators.required),
@@ -128,7 +128,7 @@ export class ProductForm {
         name: this.data.name,
         category_id: this.data.category_id,
         product_type_id: this.data.product_type_id,
-        sub_type: this.data.sub_type,
+        product_sub_type_id: this.data.product_sub_type_id,
         shop_id: this.data.shop_id,
         brand_id: this.data.brand_id,
         size: this.data.size,
@@ -140,7 +140,7 @@ export class ProductForm {
       this.imageurl = this.data.imageurl;
     }
     this.httpClient
-      .get("http://localhost/project/ygonlinebuy/api/v1/get_category")
+      .get("http://localhost/mushak/onlinebuy/api/v1/get_category")
       .subscribe(
         res => {
           if (res["result"]["error"] === false) {
@@ -156,9 +156,9 @@ export class ProductForm {
             duration: 2000
           });
         }
-    );
+      );
     this.httpClient
-      .get("http://localhost/project/ygonlinebuy/api/v1/get_product_type")
+      .get("http://localhost/mushak/onlinebuy/api/v1/get_product_type")
       .subscribe(
         res => {
           if (res["result"]["error"] === false) {
@@ -174,9 +174,27 @@ export class ProductForm {
             duration: 2000
           });
         }
-    );
+      );
+      this.httpClient
+      .get("http://localhost/mushak/onlinebuy/api/v1/get_product_sub_type")
+      .subscribe(
+        res => {
+          if (res["result"]["error"] === false) {
+            this.product_sub_type = res["result"]["data"];
+          } else {
+            this._snackBar.open(res["result"]["message"], "", {
+              duration: 2000
+            });
+          }
+        },
+        error => {
+          this._snackBar.open(error["statusText"], "", {
+            duration: 2000
+          });
+        }
+      );
     this.httpClient
-      .get("http://localhost/project/ygonlinebuy/api/v1/get_shop")
+      .get("http://localhost/mushak/onlinebuy/api/v1/get_shop")
       .subscribe(
         res => {
           if (res["result"]["error"] === false) {
@@ -192,9 +210,9 @@ export class ProductForm {
             duration: 2000
           });
         }
-    );
+      );
     this.httpClient
-      .get("http://localhost/project/ygonlinebuy/api/v1/get_unit")
+      .get("http://localhost/mushak/onlinebuy/api/v1/get_unit")
       .subscribe(
         res => {
           if (res["result"]["error"] === false) {
@@ -212,7 +230,7 @@ export class ProductForm {
         }
       );
     this.httpClient
-      .get("http://localhost/project/ygonlinebuy/api/v1/get_brand")
+      .get("http://localhost/mushak/onlinebuy/api/v1/get_brand")
       .subscribe(
         res => {
           if (res["result"]["error"] === false) {
@@ -243,7 +261,7 @@ export class ProductForm {
       formData.append('name', this.productform.value.name);
       formData.append('category_id', this.productform.value.category_id);
       formData.append('product_type_id', this.productform.value.product_type_id);
-      formData.append('sub_type', this.productform.value.sub_type);
+      formData.append('product_sub_type_id', this.productform.value.product_sub_type_id);
       formData.append('shop_id', this.productform.value.shop_id);
       formData.append('brand_id', this.productform.value.brand_id);
       formData.append("size", this.productform.value.size);
@@ -256,7 +274,7 @@ export class ProductForm {
       formData.append('name', this.productform.value.name);
       formData.append('category_id', this.productform.value.category_id);
       formData.append('product_type_id', this.productform.value.product_type_id);
-      formData.append('sub_type', this.productform.value.sub_type);
+      formData.append('product_sub_type_id', this.productform.value.product_sub_type_id);
       formData.append('shop_id', this.productform.value.shop_id);
       formData.append('brand_id', this.productform.value.brand_id);
       formData.append("size", this.productform.value.size);
@@ -266,7 +284,7 @@ export class ProductForm {
       formData.append("product_image", this.imageurl);
       url = 'insert_product';
     }
-    this.httpClient.post('http://localhost/project/ygonlinebuy/api/v1/' + url, formData).subscribe(
+    this.httpClient.post('http://localhost/mushak/onlinebuy/api/v1/' + url, formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -285,7 +303,7 @@ export class ProductForm {
       }
     );
   }
-    removeMedia(url) {
+  removeMedia(url) {
     this[url] = "";
     if (url === "imageurl") {
       this.product_image = "Select Product Image";
@@ -299,7 +317,7 @@ export class ProductForm {
     var formData = new FormData();
     formData.append("file", fileData);
     this.httpClient
-      .post("http://localhost/project/ygonlinebuy/api/v1/upload_file", formData)
+      .post("http://localhost/mushak/onlinebuy/api/v1/upload_file", formData)
       .subscribe(
         res => {
           this.loading = false;
@@ -344,7 +362,7 @@ export class ProductDelete {
       return;
     }
     this.loading = true;
-    this.httpClient.get('http://localhost/project/ygonlinebuy/api/v1/delete_record/product/product_id=' + this.product_id).subscribe(
+    this.httpClient.get('http://localhost/mushak/onlinebuy/api/v1/delete_record/product/product_id=' + this.product_id).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -371,7 +389,7 @@ export class ProductDelete {
   templateUrl: "picture-view.html"
 })
 export class ProductImageView {
-  image_url: string = "http://localhost/project/ygonlinebuy/api/v1/";
+  image_url: string = "http://localhost/mushak/onlinebuy/api/v1/";
   action: string = "";
   loading = false;
   product_id = 0;

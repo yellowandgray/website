@@ -16,10 +16,10 @@ export class ProductPriceComponent implements OnInit {
   ngOnInit() {
     this.getProductPrice();
   }
-  image_url: string = "http://localhost/project/ygonlinebuy/api/v1/";
+  image_url: string = "http://localhost/mushak/onlinebuy/api/v1/";
   getProductPrice(): void {
     this.httpClient
-      .get<any>("http://localhost/project/ygonlinebuy/api/v1/get_product_price")
+      .get<any>("http://localhost/mushak/onlinebuy/api/v1/get_product_price")
       .subscribe(
         res => {
           this.result = res["result"]["data"];
@@ -77,7 +77,7 @@ export class ProductPriceComponent implements OnInit {
   templateUrl: "product-price-form.html"
 })
 export class ProductPriceForm {
-  image_url: string = "http://localhost/project/ygonlinebuy/api/v1/";
+  image_url: string = "http://localhost/mushak/onlinebuy/api/v1/";
   productpriceform: FormGroup;
   loading = false;
   product_price_id = 0;
@@ -110,7 +110,7 @@ export class ProductPriceForm {
       this.imageurl = this.data.imageurl;
     }
     this.httpClient
-      .get("http://localhost/project/ygonlinebuy/api/v1/get_unit")
+      .get("http://localhost/mushak/onlinebuy/api/v1/get_unit")
       .subscribe(
         res => {
           if (res["result"]["error"] === false) {
@@ -128,7 +128,7 @@ export class ProductPriceForm {
         }
       );
     this.httpClient
-      .get("http://localhost/project/ygonlinebuy/api/v1/get_product")
+      .get("http://localhost/mushak/onlinebuy/api/v1/get_product")
       .subscribe(
         res => {
           if (res["result"]["error"] === false) {
@@ -172,7 +172,7 @@ export class ProductPriceForm {
       url = "insert_product_price";
     }
     this.httpClient
-      .post("http://localhost/project/ygonlinebuy/api/v1/" + url, formData)
+      .post("http://localhost/mushak/onlinebuy/api/v1/" + url, formData)
       .subscribe(
         res => {
           this.loading = false;
@@ -207,7 +207,7 @@ export class ProductPriceForm {
     var formData = new FormData();
     formData.append("file", fileData);
     this.httpClient
-      .post("http://localhost/project/ygonlinebuy/api/v1/upload_file", formData)
+      .post("http://localhost/mushak/onlinebuy/api/v1/upload_file", formData)
       .subscribe(
         res => {
           this.loading = false;
@@ -254,7 +254,7 @@ export class ProductPriceDelete {
     this.loading = true;
     this.httpClient
       .get(
-        "http://localhost/project/ygonlinebuy/api/v1/delete_record/product_price/product_price_id=" +
+        "http://localhost/mushak/onlinebuy/api/v1/delete_record/product_price/product_price_id=" +
           this.product_price_id
       )
       .subscribe(

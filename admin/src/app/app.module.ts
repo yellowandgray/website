@@ -16,7 +16,7 @@ import { DeliveryBoyComponent, DeliveryBoyForm, DeliveryBoyDelete, PictureViewUs
 import { PincodeComponent, PincodeForm, PincodeDelete } from './pincode/pincode.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DeliveryHistoryComponent, OrderViewHistory } from './delivery-history/delivery-history.component';
-import { MasterComponent, CategoryForm, CategoryDelete, RegionForm, RegionDelete, ShopForm, ShopDelete, BrandForm, BrandDelete, ProductTypeForm, ProductTypeDelete, MasterUnitForm, MasterUnitDelete } from './master/master.component';
+import { MasterComponent, CategoryForm, CategoryDelete, RegionForm, RegionDelete, ShopForm, ShopDelete, BrandForm, BrandDelete, ProductTypeForm, ProductTypeDelete, ProductSubTypeForm, ProductSubTypeDelete, MasterUnitForm, MasterUnitDelete } from './master/master.component';
 import { ProductComponent, ProductForm, ProductDelete, ProductImageView } from './product/product.component';
 import { ProductPriceComponent, ProductPriceForm, ProductPriceDelete } from './product-price/product-price.component';
 
@@ -95,6 +95,8 @@ import {MatTabsModule} from '@angular/material/tabs';
     BrandDelete, 
     ProductTypeForm, 
     ProductTypeDelete,
+    ProductSubTypeForm, 
+    ProductSubTypeDelete,
     MasterUnitForm, 
     MasterUnitDelete, 
     ProductComponent,
@@ -180,6 +182,8 @@ import {MatTabsModule} from '@angular/material/tabs';
     BrandDelete, 
     ProductTypeForm, 
     ProductTypeDelete,
+    ProductSubTypeForm, 
+    ProductSubTypeDelete,
     MasterUnitForm, 
     MasterUnitDelete, 
     ProductComponent,

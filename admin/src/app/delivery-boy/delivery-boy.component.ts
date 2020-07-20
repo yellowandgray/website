@@ -17,11 +17,11 @@ export class DeliveryBoyComponent implements OnInit {
     this.getDeliveryBoy();
   }
   
-  image_url: string = "http://localhost/project/ygonlinebuy/api/v1/";
+  image_url: string = "http://localhost/mushak/onlinebuy/api/v1/";
   getDeliveryBoy(): void {
     this.httpClient
       .get<any>(
-        "http://localhost/project/ygonlinebuy/api/v1/get_delivery_boy"
+        "http://localhost/mushak/onlinebuy/api/v1/get_delivery_boy"
       )
       .subscribe(
         res => {
@@ -97,7 +97,7 @@ export class DeliveryBoyComponent implements OnInit {
   templateUrl: "delivery-boy-form.html"
 })
 export class DeliveryBoyForm {
-  image_url: string = "http://localhost/project/ygonlinebuy/api/v1/";
+  image_url: string = "http://localhost/mushak/onlinebuy/api/v1/";
   deliveryform: FormGroup;
   loading = false;
   delivery_boy_id = 0;
@@ -155,7 +155,7 @@ export class DeliveryBoyForm {
       url = "insert_delivery_boy";
     }
     this.httpClient
-      .post("http://localhost/project/ygonlinebuy/api/v1/" + url, formData)
+      .post("http://localhost/mushak/onlinebuy/api/v1/" + url, formData)
       .subscribe(
         res => {
           this.loading = false;
@@ -191,7 +191,7 @@ export class DeliveryBoyForm {
     formData.append("file", fileData);
     this.httpClient
       .post(
-        "http://localhost/project/ygonlinebuy/api/v1/upload_file",
+        "http://localhost/mushak/onlinebuy/api/v1/upload_file",
         formData
       )
       .subscribe(
@@ -239,7 +239,7 @@ export class DeliveryBoyDelete {
     this.loading = true;
     this.httpClient
       .get(
-        "http://localhost/project/ygonlinebuy/api/v1/delete_record/delivery_boy/delivery_boy_id=" +
+        "http://localhost/mushak/onlinebuy/api/v1/delete_record/delivery_boy/delivery_boy_id=" +
           this.delivery_boy_id
       )
       .subscribe(
@@ -270,7 +270,7 @@ export class DeliveryBoyDelete {
 })
 
 export class PictureViewUser {
-  image_url: string = 'http://localhost/project/ygonlinebuy/api/v1/';
+  image_url: string = 'http://localhost/mushak/onlinebuy/api/v1/';
   action: string = '';
   loading = false;
   delivery_boy_id = 0;
