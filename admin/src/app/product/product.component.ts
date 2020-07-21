@@ -15,9 +15,9 @@ export class ProductComponent implements OnInit {
   ngOnInit() {
     this.getProduct();
   }
-  image_url: string = "http://localhost/mushak/onlinebuy/api/v1/";
+  image_url: string = "../api/v1/";
   getProduct(): void {
-    this.httpClient.get<any>('http://localhost/mushak/onlinebuy/api/v1/get_product')
+    this.httpClient.get<any>('../api/v1/get_product')
       .subscribe(
         (res) => {
           this.result = res["result"]["data"];
@@ -94,7 +94,7 @@ export class ProductComponent implements OnInit {
   templateUrl: 'product-form.html',
 })
 export class ProductForm {
-  image_url: string = "http://localhost/mushak/onlinebuy/api/v1/";
+  image_url: string = "../api/v1/";
   productform: FormGroup;
   loading = false;
   product_id = 0;
@@ -140,7 +140,7 @@ export class ProductForm {
       this.imageurl = this.data.imageurl;
     }
     this.httpClient
-      .get("http://localhost/mushak/onlinebuy/api/v1/get_category")
+      .get("../api/v1/get_category")
       .subscribe(
         res => {
           if (res["result"]["error"] === false) {
@@ -158,7 +158,7 @@ export class ProductForm {
         }
       );
     this.httpClient
-      .get("http://localhost/mushak/onlinebuy/api/v1/get_product_type")
+      .get("../api/v1/get_product_type")
       .subscribe(
         res => {
           if (res["result"]["error"] === false) {
@@ -176,7 +176,7 @@ export class ProductForm {
         }
       );
       this.httpClient
-      .get("http://localhost/mushak/onlinebuy/api/v1/get_product_sub_type")
+      .get("../api/v1/get_product_sub_type")
       .subscribe(
         res => {
           if (res["result"]["error"] === false) {
@@ -194,7 +194,7 @@ export class ProductForm {
         }
       );
     this.httpClient
-      .get("http://localhost/mushak/onlinebuy/api/v1/get_shop")
+      .get("../api/v1/get_shop")
       .subscribe(
         res => {
           if (res["result"]["error"] === false) {
@@ -212,7 +212,7 @@ export class ProductForm {
         }
       );
     this.httpClient
-      .get("http://localhost/mushak/onlinebuy/api/v1/get_unit")
+      .get("../api/v1/get_unit")
       .subscribe(
         res => {
           if (res["result"]["error"] === false) {
@@ -230,7 +230,7 @@ export class ProductForm {
         }
       );
     this.httpClient
-      .get("http://localhost/mushak/onlinebuy/api/v1/get_brand")
+      .get("../api/v1/get_brand")
       .subscribe(
         res => {
           if (res["result"]["error"] === false) {
@@ -284,7 +284,7 @@ export class ProductForm {
       formData.append("product_image", this.imageurl);
       url = 'insert_product';
     }
-    this.httpClient.post('http://localhost/mushak/onlinebuy/api/v1/' + url, formData).subscribe(
+    this.httpClient.post('../api/v1/' + url, formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -317,7 +317,7 @@ export class ProductForm {
     var formData = new FormData();
     formData.append("file", fileData);
     this.httpClient
-      .post("http://localhost/mushak/onlinebuy/api/v1/upload_file", formData)
+      .post("../api/v1/upload_file", formData)
       .subscribe(
         res => {
           this.loading = false;
@@ -362,7 +362,7 @@ export class ProductDelete {
       return;
     }
     this.loading = true;
-    this.httpClient.get('http://localhost/mushak/onlinebuy/api/v1/delete_record/product/product_id=' + this.product_id).subscribe(
+    this.httpClient.get('../api/v1/delete_record/product/product_id=' + this.product_id).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -389,7 +389,7 @@ export class ProductDelete {
   templateUrl: "picture-view.html"
 })
 export class ProductImageView {
-  image_url: string = "http://localhost/mushak/onlinebuy/api/v1/";
+  image_url: string = "../api/v1/";
   action: string = "";
   loading = false;
   product_id = 0;

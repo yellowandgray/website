@@ -16,9 +16,9 @@ export class UserComponent implements OnInit {
   ngOnInit() {
     this.getUser();
   }
-  image_url: string = 'http://localhost/mushak/onlinebuy/api/v1/';
+  image_url: string = '../api/v1/';
   getUser(): void {
-    this.httpClient.get<any>('http://localhost/mushak/onlinebuy/api/v1/get_user')
+    this.httpClient.get<any>('../api/v1/get_user')
       .subscribe(
         (res) => {
           this.result = res["result"]["data"];
@@ -99,7 +99,7 @@ export class UserComponent implements OnInit {
   templateUrl: 'user-form.html',
 })
 export class UserForm {
-  image_url: string = 'http://localhost/mushak/onlinebuy/api/v1/';
+  image_url: string = '../api/v1/';
   userform: FormGroup;
   loading = false;
   user_id = 0;
@@ -151,7 +151,7 @@ export class UserForm {
       formData.append('user_image', this.imageurl);
       url = 'insert_user';
     }
-    this.httpClient.post('http://localhost/mushak/onlinebuy/api/v1/' + url, formData).subscribe(
+    this.httpClient.post('../api/v1/' + url, formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -184,7 +184,7 @@ export class UserForm {
     this.loading = true;
     var formData = new FormData();
     formData.append('file', fileData);
-    this.httpClient.post('http://localhost/mushak/onlinebuy/api/v1/upload_file', formData).subscribe(
+    this.httpClient.post('../api/v1/upload_file', formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -226,7 +226,7 @@ export class UserDelete {
       return;
     }
     this.loading = true;
-    this.httpClient.get('http://localhost/mushak/onlinebuy/api/v1/delete_record/user/user_id=' + this.user_id).subscribe(
+    this.httpClient.get('../api/v1/delete_record/user/user_id=' + this.user_id).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -254,7 +254,7 @@ export class UserDelete {
 })
 
 export class UserImageView {
-  image_url: string = 'http://localhost/mushak/onlinebuy/api/v1/';
+  image_url: string = '../api/v1/';
   action: string = '';
   loading = false;
   user_id = 0;

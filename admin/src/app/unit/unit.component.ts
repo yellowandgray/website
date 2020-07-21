@@ -17,7 +17,7 @@ export class UnitComponent implements OnInit {
     this.getUnit();
   }
   getUnit(): void {
-    this.httpClient.get<any>('http://localhost/mushak/onlinebuy/api/v1/get_unit')
+    this.httpClient.get<any>('../api/v1/get_unit')
       .subscribe(
         (res) => {
           this.result = res["result"]["data"];
@@ -114,7 +114,7 @@ export class UnitForm {
       formData.append('status', this.unitform.value.status);
       url = 'insert_unit';
     }
-    this.httpClient.post('http://localhost/mushak/onlinebuy/api/v1/' + url, formData).subscribe(
+    this.httpClient.post('../api/v1/' + url, formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -159,7 +159,7 @@ export class UnitDelete {
       return;
     }
     this.loading = true;
-    this.httpClient.get('http://localhost/mushak/onlinebuy/api/v1/delete_record/unit/unit_id=' + this.unit_id).subscribe(
+    this.httpClient.get('../api/v1/delete_record/unit/unit_id=' + this.unit_id).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {

@@ -21,10 +21,10 @@ export class SnacksComponent implements OnInit {
   ngOnInit() {
     this.getSnacks();
   }
-  image_url: string = "http://localhost/mushak/onlinebuy/api/v1/";
+  image_url: string = "../api/v1/";
   getSnacks(): void {
     this.httpClient
-      .get<any>("http://localhost/mushak/onlinebuy/api/v1/get_snacks")
+      .get<any>("../api/v1/get_snacks")
       .subscribe(
         res => {
           this.result = res["result"]["data"];
@@ -43,7 +43,7 @@ export class SnacksComponent implements OnInit {
        status_id = 1;
     }
     statusid.status = status_id;
-    this.httpClient.get('http://localhost/mushak/onlinebuy/api/v1/update_food_status/' + fid + '/' + status_id)
+    this.httpClient.get('../api/v1/update_food_status/' + fid + '/' + status_id)
       .subscribe(
         res => {
           this.loading = false;
@@ -69,7 +69,7 @@ export class SnacksComponent implements OnInit {
      if (ev.checked == true) {
        banner_id = 1;
     }
-    this.httpClient.get('http://localhost/mushak/onlinebuy/api/v1/update_banner_status/' + fid +'/' + banner_id )
+    this.httpClient.get('../api/v1/update_banner_status/' + fid +'/' + banner_id )
       .subscribe(
         res => {
           this.loading = false;
@@ -153,7 +153,7 @@ export class SnacksComponent implements OnInit {
   templateUrl: "snacks-form.html"
 })
 export class SnacksForm {
-  image_url: string = "http://localhost/mushak/onlinebuy/api/v1/";
+  image_url: string = "../api/v1/";
   snacksform: FormGroup;
   loading = false;
   fooditem_id = 0;
@@ -185,7 +185,7 @@ export class SnacksForm {
       this.imageurl = this.data.imageurl;
     }
     this.httpClient
-      .get("http://localhost/mushak/onlinebuy/api/v1/get_unit")
+      .get("../api/v1/get_unit")
       .subscribe(
         res => {
           if (res["result"]["error"] === false) {
@@ -229,7 +229,7 @@ export class SnacksForm {
       url = "insert_snacks";
     }
     this.httpClient
-      .post("http://localhost/mushak/onlinebuy/api/v1/" + url, formData)
+      .post("../api/v1/" + url, formData)
       .subscribe(
         res => {
           this.loading = false;
@@ -264,7 +264,7 @@ export class SnacksForm {
     var formData = new FormData();
     formData.append("file", fileData);
     this.httpClient
-      .post("http://localhost/mushak/onlinebuy/api/v1/upload_file", formData)
+      .post("../api/v1/upload_file", formData)
       .subscribe(
         res => {
           this.loading = false;
@@ -311,7 +311,7 @@ export class SnacksDelete {
     this.loading = true;
     this.httpClient
       .get(
-        "http://localhost/mushak/onlinebuy/api/v1/delete_record/fooditem/fooditem_id=" +
+        "../api/v1/delete_record/fooditem/fooditem_id=" +
           this.fooditem_id
       )
       .subscribe(
@@ -340,7 +340,7 @@ export class SnacksDelete {
   templateUrl: "picture-view.html"
 })
 export class SnacksImageView {
-  image_url: string = "http://localhost/mushak/onlinebuy/api/v1/";
+  image_url: string = "../api/v1/";
   action: string = "";
   loading = false;
   fooditem_id = 0;

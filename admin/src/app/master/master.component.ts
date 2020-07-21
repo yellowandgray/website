@@ -31,7 +31,7 @@ export class MasterComponent implements OnInit {
   getCategory(): void {
     this.httpClient
       .get<any>(
-        "http://localhost/mushak/onlinebuy/api/v1/get_category"
+        "../api/v1/get_category"
       )
       .subscribe(
         res => {
@@ -47,7 +47,7 @@ export class MasterComponent implements OnInit {
   getRegion(): void {
     this.httpClient
       .get<any>(
-        "http://localhost/mushak/onlinebuy/api/v1/get_region"
+        "../api/v1/get_region"
       )
       .subscribe(
         res => {
@@ -63,7 +63,7 @@ export class MasterComponent implements OnInit {
   getShop(): void {
     this.httpClient
       .get<any>(
-        "http://localhost/mushak/onlinebuy/api/v1/get_shop"
+        "../api/v1/get_shop"
       )
       .subscribe(
         res => {
@@ -79,7 +79,7 @@ export class MasterComponent implements OnInit {
   getBrand(): void {
     this.httpClient
       .get<any>(
-        "http://localhost/mushak/onlinebuy/api/v1/get_brand"
+        "../api/v1/get_brand"
       )
       .subscribe(
         res => {
@@ -95,7 +95,7 @@ export class MasterComponent implements OnInit {
   getProductType(): void {
     this.httpClient
       .get<any>(
-        "http://localhost/mushak/onlinebuy/api/v1/get_product_type"
+        "../api/v1/get_product_type"
       )
       .subscribe(
         res => {
@@ -111,7 +111,7 @@ export class MasterComponent implements OnInit {
   getProductSubType(): void {
     this.httpClient
       .get<any>(
-        "http://localhost/mushak/onlinebuy/api/v1/get_product_sub_type"
+        "../api/v1/get_product_sub_type"
       )
       .subscribe(
         res => {
@@ -125,7 +125,7 @@ export class MasterComponent implements OnInit {
       );
   }
   getUnit(): void {
-    this.httpClient.get<any>('http://localhost/mushak/onlinebuy/api/v1/get_unit')
+    this.httpClient.get<any>('../api/v1/get_unit')
       .subscribe(
         (res) => {
           this.unit = res["result"]["data"];
@@ -412,7 +412,7 @@ export class MasterComponent implements OnInit {
   templateUrl: "category-form.html"
 })
 export class CategoryForm {
-  image_url: string = "http://localhost/mushak/onlinebuy/api/v1/";
+  image_url: string = "../api/v1/";
   categoryform: FormGroup;
   loading = false;
   category_id = 0;
@@ -449,7 +449,7 @@ export class CategoryForm {
       url = "insert_category";
     }
     this.httpClient
-      .post("http://localhost/mushak/onlinebuy/api/v1/" + url, formData)
+      .post("../api/v1/" + url, formData)
       .subscribe(
         res => {
           this.loading = false;
@@ -496,7 +496,7 @@ export class CategoryDelete {
     this.loading = true;
     this.httpClient
       .get(
-        "http://localhost/mushak/onlinebuy/api/v1/delete_record/category/category_id=" +
+        "../api/v1/delete_record/category/category_id=" +
         this.category_id
       )
       .subscribe(
@@ -525,7 +525,7 @@ export class CategoryDelete {
   templateUrl: "region-form.html"
 })
 export class RegionForm {
-  image_url: string = "http://localhost/mushak/onlinebuy/api/v1/";
+  image_url: string = "../api/v1/";
   regionform: FormGroup;
   loading = false;
   region_id = 0;
@@ -574,7 +574,7 @@ export class RegionForm {
       url = "insert_region";
     }
     this.httpClient
-      .post("http://localhost/mushak/onlinebuy/api/v1/" + url, formData)
+      .post("../api/v1/" + url, formData)
       .subscribe(
         res => {
           this.loading = false;
@@ -621,7 +621,7 @@ export class RegionDelete {
     this.loading = true;
     this.httpClient
       .get(
-        "http://localhost/mushak/onlinebuy/api/v1/delete_record/region/region_id=" +
+        "../api/v1/delete_record/region/region_id=" +
         this.region_id
       )
       .subscribe(
@@ -651,7 +651,7 @@ export class RegionDelete {
   templateUrl: "shop-form.html"
 })
 export class ShopForm {
-  image_url: string = "http://localhost/mushak/onlinebuy/api/v1/";
+  image_url: string = "../api/v1/";
   shopform: FormGroup;
   loading = false;
   shop_id = 0;
@@ -687,7 +687,7 @@ export class ShopForm {
       this.shop_id = this.data.shop_id;
     }
     this.httpClient
-      .get("http://localhost/mushak/onlinebuy/api/v1/get_category")
+      .get("../api/v1/get_category")
       .subscribe(
         res => {
           if (res["result"]["error"] === false) {
@@ -705,7 +705,7 @@ export class ShopForm {
         }
       );
     this.httpClient
-      .get("http://localhost/mushak/onlinebuy/api/v1/get_region")
+      .get("../api/v1/get_region")
       .subscribe(
         res => {
           if (res["result"]["error"] === false) {
@@ -754,7 +754,7 @@ export class ShopForm {
       url = "insert_shop";
     }
     this.httpClient
-      .post("http://localhost/mushak/onlinebuy/api/v1/" + url, formData)
+      .post("../api/v1/" + url, formData)
       .subscribe(
         res => {
           this.loading = false;
@@ -801,7 +801,7 @@ export class ShopDelete {
     this.loading = true;
     this.httpClient
       .get(
-        "http://localhost/mushak/onlinebuy/api/v1/delete_record/shop/shop_id=" +
+        "../api/v1/delete_record/shop/shop_id=" +
         this.shop_id
       )
       .subscribe(
@@ -867,7 +867,7 @@ export class BrandForm {
       url = "insert_brand";
     }
     this.httpClient
-      .post("http://localhost/mushak/onlinebuy/api/v1/" + url, formData)
+      .post("../api/v1/" + url, formData)
       .subscribe(
         res => {
           this.loading = false;
@@ -914,7 +914,7 @@ export class BrandDelete {
     this.loading = true;
     this.httpClient
       .get(
-        "http://localhost/mushak/onlinebuy/api/v1/delete_record/brand/brand_id=" +
+        "../api/v1/delete_record/brand/brand_id=" +
         this.brand_id
       )
       .subscribe(
@@ -979,7 +979,7 @@ export class ProductTypeForm {
       url = "insert_product_type";
     }
     this.httpClient
-      .post("http://localhost/mushak/onlinebuy/api/v1/" + url, formData)
+      .post("../api/v1/" + url, formData)
       .subscribe(
         res => {
           this.loading = false;
@@ -1026,7 +1026,7 @@ export class ProductTypeDelete {
     this.loading = true;
     this.httpClient
       .get(
-        "http://localhost/mushak/onlinebuy/api/v1/delete_record/product_type/product_type_id=" +
+        "../api/v1/delete_record/product_type/product_type_id=" +
         this.product_type_id
       )
       .subscribe(
@@ -1092,7 +1092,7 @@ export class ProductSubTypeForm {
       url = "insert_product_sub_type";
     }
     this.httpClient
-      .post("http://localhost/mushak/onlinebuy/api/v1/" + url, formData)
+      .post("../api/v1/" + url, formData)
       .subscribe(
         res => {
           this.loading = false;
@@ -1139,7 +1139,7 @@ export class ProductSubTypeDelete {
     this.loading = true;
     this.httpClient
       .get(
-        "http://localhost/mushak/onlinebuy/api/v1/delete_record/product_sub_type/product_sub_type_id=" +
+        "../api/v1/delete_record/product_sub_type/product_sub_type_id=" +
         this.product_sub_type_id
       )
       .subscribe(
@@ -1202,7 +1202,7 @@ export class MasterUnitForm {
       formData.append('name', this.unitform.value.name);
       url = 'insert_unit';
     }
-    this.httpClient.post('http://localhost/mushak/onlinebuy/api/v1/' + url, formData).subscribe(
+    this.httpClient.post('../api/v1/' + url, formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -1247,7 +1247,7 @@ export class MasterUnitDelete {
       return;
     }
     this.loading = true;
-    this.httpClient.get('http://localhost/mushak/onlinebuy/api/v1/delete_record/unit/unit_id=' + this.unit_id).subscribe(
+    this.httpClient.get('../api/v1/delete_record/unit/unit_id=' + this.unit_id).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
