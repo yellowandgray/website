@@ -10,6 +10,9 @@
             <div class="carousel-inner">
                 <div class="active item"></div>
                 <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
 
             </div>
             <div class="banner-content">
@@ -21,7 +24,7 @@
                 </ul>
             </div>
             <div class="bottom-content">
-                <h3>Reliable, Competent & Cost Effective Business Solutions</h3>
+                <h3>Reliable, Competitive,Resourceful & Cost Effective - Business Solutions Partner</h3>
             </div>
         </div>
         <div class="about-section">
@@ -190,12 +193,12 @@
         </section>
         <section class="certificate-section">
             <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-6 certificate-bg">
-                        <div class="certificate-title">
+                <div class="row" style="background-color:#f57921">
+                    <div class="col-md-6 certificate-bg">          
+                        <div class="certificate">
+						 <div class="certificate-title">
                             <h3>Membership</h3>
                         </div>
-                        <div class="certificate">
                             <div class="row">
                                 <div class="col-lg-4 col-md-4 col-sm-12">
                                     <img src="img/certificate/logo-bca.png" alt="certificate Bca" />
@@ -206,7 +209,12 @@
                                 <div class="col-lg-4 col-md-4 col-sm-12">
                                     <img src="img/certificate/logo-ssss.png" alt="certificate ssss" />
                                 </div>
+								<br>
+								<center>
+                                <a href="https://www.bca.gov.sg/BCADirectory/Company/Details/201326221N" target="_blank" class="btn btn-custome">See All Licenses</a>
+                            </center>
                             </div>
+							<br><br>
                             <div class="certificate-title">
                                 <h3>Certificates</h3>
                             </div>
@@ -223,11 +231,11 @@
                                 <div class="col-lg-3 col-md-3 col-sm-12">
                                     <img src="img/certificate/logo-bizsafe.png" alt="biz safe" />
                                 </div>
-                            </div>
-                            <br/>
+								<br/>
                             <center>
                                 <a href="awards" class="btn btn-custome">See More Awards</a>
                             </center>
+                            </div>                            
                         </div>
                     </div>
                     <div class="col-md-6 quick-form">
@@ -248,16 +256,19 @@
                                         <option value="Scaffolding">Scaffolding</option>
                                         <option value="Piping Insulation">Piping Insulation</option>
                                     </select>
-                                </div>
-                                <!--                                <div class="form-group">
-                                                                    <input name="subject" class="form-control" type="text"  placeholder="Enter Subject" />
-                                                                </div>-->
+                                </div>   
                                 <div class="form-group">
                                     <textarea name="description" rows="6" class="form-control" type="text"  placeholder="Enter Your Commant"></textarea>
                                 </div>
                                 <a href="#" class="btn btn-primary">Submit</a>
                             </form>
-                        </div>
+							<br>
+							<div>
+							<ul class="contact-icon" style="list-style-type:none">
+                            <li><i class="fa fa-phone"></i> <a href="tel: 68980628">6898 0628</a></li>
+                            <li><i class="fa fa-envelope"></i> <a href="mailto: sales@everestscaffolding.com.sg">sales@everestscaffolding.com.sg</a></li>
+                        </ul>
+							</div>
                     </div>
                 </div>
             </div>

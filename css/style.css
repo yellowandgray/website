@@ -28,9 +28,7 @@ header .logo a img {
 
 header h1 {
     font-size: 25px;
-    color: #f97723;
     font-weight: 600;
-    /* letter-spacing: 0.5px; */
     margin-bottom: 0;
     margin-top: 5px;
 }
@@ -100,17 +98,27 @@ html, body, .carousel, .carousel-inner, .carousel-inner .item {
     height: 94%;
 }
 .item:nth-child(1) {
-    background: url(../img/home-banner-01.jpg)no-repeat;
+    background: url(../img/everest-home-banner-01.jpg)no-repeat;
     background-size: cover;
     background-position: center;
 }
 .item:nth-child(2) {
-    background: url(../img/home-banner-02.jpg)no-repeat;
+    background: url(../img/everest-home-banner-02.jpg)no-repeat;
     background-size: cover;
     background-position: center;
 }
 .item:nth-child(3) {
-    background: url(../img/home-banner-01.jpg)no-repeat;
+    background: url(../img/everest-home-banner-03.jpg)no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.item:nth-child(4) {
+    background: url(../img/everest-home-banner-04.jpg)no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.item:nth-child(5) {
+    background: url(../img/everest-home-banner-05.jpg)no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -1073,7 +1081,7 @@ html, body, .carousel, .carousel-inner, .carousel-inner .item {
     background-size: cover;
     background-position: center;
     padding: 25px 0;
-    height: 500px;
+    /*height: 500px;*/
 }
 
 .certificate-title h3 {
@@ -1098,15 +1106,14 @@ html, body, .carousel, .carousel-inner, .carousel-inner .item {
 
 .quick-form {
     background: #f57921;
-    padding: 25px 0;
-    height: 500px;
+    padding: 25px 0;    
 }
 
 .quick-form .enquiry-form {
     padding: 0 25px;
 }
 
-.quick-form .enquiry-form h3 {
+.quick-form .enquiry-form h3, .quick-form .enquiry-form div a, .quick-form .enquiry-form div li  {
     margin: 0;
     margin-bottom: 20px;
     font-size: 26px;

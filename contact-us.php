@@ -48,7 +48,7 @@
                         <div class="text-center parent-content">
                             <h5>Dear Client & Partners,</h5>
                             <p>Whether you need or are looking for an engineered scaffold solution complete with erection and dismantling services, or just to rent of materials specialist to erect – We at <strong>Everest E&C Pte Ltd</strong> cater for all your scaffolding needs.</p>
-                            <a href="#">Tel: +65 6898 0628</a> | <a href="#">Email: sales@everestscaffolding.com,sg</a>
+                            <a href="#">Tel: +65 6898 0628</a> | <a href="#">Email: sales@everestscaffolding.com.sg</a>
                         </div>
                         <div class="contact-address">
                             <ul>

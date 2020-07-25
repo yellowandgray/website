@@ -32,6 +32,8 @@
                                 </div>
                             </div>
                         </div>
+						<br/><br/>
+						<a href="https://www.bca.gov.sg/BCADirectory/Company/Details/201326221N" target="_blank" class="btn btn-custome">See All Licenses</a>
                         <br/><br/>
                         <div class="row">
                             <div class="col-lg-4 col-md-4 col-sm-12">
