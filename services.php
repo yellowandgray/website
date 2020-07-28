@@ -38,14 +38,14 @@
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <div class="service-bg-section" onclick="window.location = 'scaffolding'">
+                            <div class="service-bg-section" onclick="window.location = 'services-scaffolding'">
                                 <img src="img/pic-scaffolding-landing.jpg" alt="">
                                 <div class="service-title">
                                     <h3>Scaffolding</h3>
                                 </div>
                                 <div class="service-bg-content">
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                    <a href="scaffolding" class="btn btn-custome">Read More</a>
+                                    <a href="services-scaffolding" class="btn btn-custome">Read More</a>
                                 </div>
                             </div>
                         </div>

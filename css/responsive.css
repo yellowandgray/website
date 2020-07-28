@@ -81,6 +81,9 @@
         border: none;
         border-bottom: 2px solid #fff;
     }
+    img {
+        margin-bottom: 10px;
+    }
 }
 @media only screen and (max-width: 767px) {
     .nav-mobile {

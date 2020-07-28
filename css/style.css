@@ -1893,3 +1893,10 @@ blockquote footer {
     box-shadow: 0 0 4px 0px #e3e3e3;
     z-index: 1;
 }
+
+.title-bg h3 {
+    background: #f87722;
+    padding: 20px 10px;
+    color: #fff;
+    margin-top: 0;
+}
