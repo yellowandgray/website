@@ -1597,14 +1597,20 @@ blockquote footer {
 }
 
 .service-bg {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/pic-about-everest.jpg)no-repeat;
+    background: linear-gradient(rgb(0 0 0 / 0%), rgb(51 34 34 / 0%)), url(../)no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 40px 5px;
+    padding: 75px 5px;
     position: relative;
 }
 
-.service-bg h3 {
+.service-title {
+    background: #f87722;
+    padding: 10px 0px;
+}
+
+.service-title h3 {
+    margin: 0;
     color: #fff;
     text-align: center;
 }

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
-    <?php $page = 'service'; include 'head.php'; ?>
+    <?php $page = 'service';
+    include 'head.php'; ?>
     <body>
-        <?php include 'menu.php'; ?>
+<?php include 'menu.php'; ?>
         <div class="sub-banner-section">
             <div class="container sub-banner-content">
                 <h3>Services</h3>
@@ -14,7 +15,8 @@
                     <div class="row">
                         <div class="col-md-3">
                             <div class="service-bg-section" onclick="window.location = 'mechanical'">
-                                <div class="service-bg">
+                                <img src="img/pic-mechanical-landing.jpg" alt="">
+                                <div class="service-title">
                                     <h3>Mechanical</h3>
                                 </div>
                                 <div class="service-bg-content">
@@ -25,7 +27,8 @@
                         </div>
                         <div class="col-md-3">
                             <div class="service-bg-section" onclick="window.location = 'steel-structural'">
-                                <div class="service-bg">
+                                <img src="img/pic-steel-structural-landing.jpg" alt="">
+                                <div class="service-title">
                                     <h3>Steel Structural</h3>
                                 </div>
                                 <div class="service-bg-content">
@@ -36,7 +39,8 @@
                         </div>
                         <div class="col-md-3">
                             <div class="service-bg-section" onclick="window.location = 'scaffolding'">
-                                <div class="service-bg">
+                                <img src="img/pic-scaffolding-landing.jpg" alt="">
+                                <div class="service-title">
                                     <h3>Scaffolding</h3>
                                 </div>
                                 <div class="service-bg-content">
@@ -47,7 +51,8 @@
                         </div>
                         <div class="col-md-3">
                             <div class="service-bg-section" onclick="window.location = 'piping-insulation'">
-                                <div class="service-bg">
+                                <img src="img/pic-piping-landing.jpg" alt="">
+                                <div class="service-title">
                                     <h3>Piping & Insulation</h3>
                                 </div>
                                 <div class="service-bg-content">
@@ -126,7 +131,7 @@
                 </div>
             </div>
         </div>
-        <?php include 'footer.php'; ?>
+<?php include 'footer.php'; ?>
         <script type="text/javascript">
 
             $(document).ready(function () {
