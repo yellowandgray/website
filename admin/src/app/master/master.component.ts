@@ -18,7 +18,7 @@ export class MasterComponent implements OnInit {
     this.getShop();
     this.getProductType();
   }
-    getShop(): void {
+  getShop(): void {
     this.httpClient
       .get<any>(
         "http://ygonlinebuy.com/api/v1/get_shop"
@@ -50,7 +50,7 @@ export class MasterComponent implements OnInit {
         }
       );
   }
-    openShopDialog(id, res): void {
+  openShopDialog(id, res): void {
     var data = null;
     if (id != 0) {
       this[res].forEach(val => {
@@ -88,7 +88,7 @@ export class MasterComponent implements OnInit {
       }
     });
   }
-    openProductTypeDialog(id, res): void {
+  openProductTypeDialog(id, res): void {
     var data = null;
     if (id != 0) {
       this[res].forEach(val => {
@@ -126,7 +126,7 @@ export class MasterComponent implements OnInit {
       }
     });
   }
-}
+    }
 
 
 
@@ -187,7 +187,7 @@ export class ShopForm {
             duration: 2000
           });
         }
-    );
+      );
     this.httpClient
       .get("http://ygonlinebuy.com/api/v1/get_region")
       .subscribe(
@@ -205,7 +205,7 @@ export class ShopForm {
             duration: 2000
           });
         }
-    );
+      );
   }
 
   onSubmit() {
@@ -309,7 +309,6 @@ export class ShopDelete {
       );
   }
 }
-
 
 @Component({
   selector: "product-type-form",

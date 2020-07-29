@@ -45,6 +45,25 @@
                     </ng-container>
                 </mat-list>
             </mat-tab>
+            <mat-tab label="Product Sub Type">
+                <div class="add-btn-container">
+                    <button mat-raised-button color="primary" (click)="openProductSubTypeDialog(0, 'null')"><mat-icon>add</mat-icon> Product Sub Type</button>
+                </div>
+                <mat-list>
+                    <ng-container *ngFor="let data of product_sub_type">
+                        <mat-list-item>
+                            <button mat-icon-button aria-label="label" (click)="openProductSubTypeDialog(data.product_sub_type_id, 'product_type')">
+                                <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
+                            </button>
+                            <button mat-icon-button aria-label="label" (click)="productsubtypeDelete(data.product_sub_type_id)">
+                                <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
+                            </button>
+                            <h4 mat-line>{{data.type}}</h4>
+                        </mat-list-item>
+                        <mat-divider></mat-divider>
+                    </ng-container>
+                </mat-list>
+            </mat-tab>
         </mat-tab-group>
     </mat-sidenav-content>
 </mat-sidenav-container>

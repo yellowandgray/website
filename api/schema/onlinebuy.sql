@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 15, 2020 at 09:52 AM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.2.29
+-- Generation Time: Jul 20, 2020 at 09:18 AM
+-- Server version: 10.1.38-MariaDB
+-- PHP Version: 7.3.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -18,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `ygonlinebuy`
+-- Database: `onlinebuy`
 --
 
 -- --------------------------------------------------------
@@ -32,7 +33,7 @@ CREATE TABLE `admin_login` (
   `user_name` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `name` varchar(255) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `created_by` int(11) NOT NULL,
   `updated_by` int(11) NOT NULL
@@ -57,7 +58,7 @@ CREATE TABLE `banner` (
   `title` varchar(255) NOT NULL,
   `sub_title` varchar(255) NOT NULL,
   `status` varchar(255) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `created_by` int(11) NOT NULL,
   `updated_by` int(11) NOT NULL
@@ -126,7 +127,7 @@ CREATE TABLE `config` (
   `value` text NOT NULL,
   `pincode` varchar(255) NOT NULL,
   `status` varchar(255) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `created_by` int(11) NOT NULL,
   `updated_by` int(11) NOT NULL
@@ -151,9 +152,9 @@ CREATE TABLE `cooldrink` (
   `amount` varchar(255) NOT NULL,
   `unit_id` int(11) NOT NULL,
   `unit_no` varchar(255) NOT NULL,
-  `status` tinyint(1) NOT NULL DEFAULT 1,
+  `status` tinyint(1) NOT NULL DEFAULT '1',
   `imageurl` varchar(255) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `created_by` int(1) NOT NULL,
   `updated_by` int(1) NOT NULL
@@ -213,8 +214,8 @@ CREATE TABLE `delivery_pincode` (
   `delivery_pincode_id` int(11) NOT NULL,
   `pincode` varchar(10) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `delivery_charge` varchar(255) NOT NULL,
-  `status` tinyint(1) NOT NULL DEFAULT 1,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `status` tinyint(1) NOT NULL DEFAULT '1',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `created_by` int(11) NOT NULL,
   `updated_by` int(11) NOT NULL
@@ -242,11 +243,11 @@ CREATE TABLE `fooditem` (
   `amount` varchar(255) NOT NULL,
   `unit_id` int(11) NOT NULL,
   `unit_no` varchar(255) NOT NULL,
-  `status` tinyint(1) NOT NULL DEFAULT 1,
-  `statussold` tinyint(4) NOT NULL DEFAULT 1,
+  `status` tinyint(1) NOT NULL DEFAULT '1',
+  `statussold` tinyint(4) NOT NULL DEFAULT '1',
   `imageurl` varchar(255) NOT NULL,
   `banner_status` tinyint(1) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `created_by` int(11) NOT NULL,
   `updated_by` int(11) NOT NULL
@@ -362,7 +363,7 @@ CREATE TABLE `offers` (
   `offers_id` int(11) NOT NULL,
   `title` varchar(255) NOT NULL,
   `image_path` varchar(255) NOT NULL,
-  `status` tinyint(1) NOT NULL DEFAULT 1,
+  `status` tinyint(1) NOT NULL DEFAULT '1',
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `created_by` int(11) NOT NULL,
@@ -395,7 +396,7 @@ CREATE TABLE `order` (
   `updated_at` datetime NOT NULL,
   `created_by` int(11) NOT NULL,
   `updated_by` int(11) NOT NULL,
-  `delivery_boy_id` int(11) NOT NULL DEFAULT 0,
+  `delivery_boy_id` int(11) NOT NULL DEFAULT '0',
   `total` float(12,2) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -1164,7 +1165,7 @@ CREATE TABLE `order_item` (
   `updated_at` datetime NOT NULL,
   `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_swedish_ci NOT NULL,
   `imageurl` varchar(255) NOT NULL,
-  `quantity` int(11) NOT NULL DEFAULT 1
+  `quantity` int(11) NOT NULL DEFAULT '1'
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -2332,14 +2333,14 @@ CREATE TABLE `product` (
   `imageurl` varchar(255) NOT NULL,
   `category_id` int(11) NOT NULL,
   `product_type_id` int(11) NOT NULL,
-  `sub_type` varchar(11) NOT NULL,
+  `product_sub_type_id` int(11) NOT NULL,
   `brand_id` int(11) NOT NULL,
   `shop_id` int(11) NOT NULL,
   `size` varchar(255) NOT NULL,
   `unit_id` int(11) NOT NULL,
   `price` varchar(255) NOT NULL,
   `offer_price` varchar(255) NOT NULL,
-  `created_at` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` datetime NOT NULL,
   `created_by` int(11) NOT NULL,
   `updated_by` int(11) NOT NULL
@@ -2349,10 +2350,11 @@ CREATE TABLE `product` (
 -- Dumping data for table `product`
 --
 
-INSERT INTO `product` (`product_id`, `name`, `imageurl`, `category_id`, `product_type_id`, `sub_type`, `brand_id`, `shop_id`, `size`, `unit_id`, `price`, `offer_price`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
-(2, 'Product Name', 'uploads/be5e70cabf922cec60dbd9147380c4d8.png', 4, 1, 'Test', 2, 5, '20', 3, '100', '80', '2020-07-15 12:49:19', '0000-00-00 00:00:00', 0, 0),
-(3, 'Product Name', 'uploads/dd3e4dc405c0553ad3a5eceef44775a0.png', 4, 1, 'Product Sub', 2, 5, '10', 6, '200', '150', '2020-07-15 12:49:29', '0000-00-00 00:00:00', 0, 0),
-(4, 'Product Name', 'uploads/0e54b5dc425567156628d92950cc6fa2.jpg', 4, 1, '', 2, 5, '1', 4, '200', '', '2020-07-15 13:21:58', '0000-00-00 00:00:00', 0, 0);
+INSERT INTO `product` (`product_id`, `name`, `imageurl`, `category_id`, `product_type_id`, `product_sub_type_id`, `brand_id`, `shop_id`, `size`, `unit_id`, `price`, `offer_price`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
+(2, 'Product Name', 'uploads/be5e70cabf922cec60dbd9147380c4d8.png', 4, 1, 0, 2, 5, '20', 3, '100', '80', '2020-07-15 12:49:19', '0000-00-00 00:00:00', 0, 0),
+(3, 'Product Name', 'uploads/dd3e4dc405c0553ad3a5eceef44775a0.png', 4, 1, 0, 2, 5, '10', 6, '200', '150', '2020-07-15 12:49:29', '0000-00-00 00:00:00', 0, 0),
+(4, 'Product Name', 'uploads/0e54b5dc425567156628d92950cc6fa2.jpg', 4, 1, 0, 2, 5, '1', 4, '200', '', '2020-07-15 13:21:58', '0000-00-00 00:00:00', 0, 0),
+(5, 'Product name', '', 4, 1, 0, 0, 0, '2', 1, '200', '', '2020-07-20 12:04:41', '0000-00-00 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -2368,7 +2370,7 @@ CREATE TABLE `product_price` (
   `size` varchar(255) NOT NULL,
   `price` varchar(255) NOT NULL,
   `offer_price` varchar(255) NOT NULL,
-  `created_at` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` datetime NOT NULL,
   `created_by` int(11) NOT NULL,
   `updated_by` int(11) NOT NULL
@@ -2380,6 +2382,28 @@ CREATE TABLE `product_price` (
 
 INSERT INTO `product_price` (`product_price_id`, `product_id`, `imageurl`, `unit_id`, `size`, `price`, `offer_price`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
 (1, 2, 'uploads/65a8b039a1abe26805fb16d9d902c047.png', 6, 'admin', '200', '150', '2020-07-13 16:07:43', '0000-00-00 00:00:00', 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `product_sub_type`
+--
+
+CREATE TABLE `product_sub_type` (
+  `product_sub_type_id` int(11) NOT NULL,
+  `type` varchar(255) NOT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL,
+  `created_by` int(11) NOT NULL,
+  `updated_by` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `product_sub_type`
+--
+
+INSERT INTO `product_sub_type` (`product_sub_type_id`, `type`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
+(1, 'Gold winner', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -2446,7 +2470,7 @@ CREATE TABLE `shop` (
   `email` varchar(255) NOT NULL,
   `phone` varchar(255) NOT NULL,
   `contact_person_name` varchar(255) NOT NULL,
-  `created_at` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` datetime NOT NULL,
   `created_by` int(11) NOT NULL,
   `updated_by` int(11) NOT NULL
@@ -2469,7 +2493,7 @@ CREATE TABLE `unit` (
   `unit_id` int(11) NOT NULL,
   `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `status` varchar(255) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `created_by` int(11) NOT NULL,
   `updated_by` int(11) NOT NULL
@@ -2503,7 +2527,7 @@ CREATE TABLE `user` (
   `address` text NOT NULL,
   `pincode` varchar(255) NOT NULL,
   `imageurl` varchar(255) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `created_by` int(11) NOT NULL,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `updated_by` int(11) NOT NULL
@@ -3100,6 +3124,12 @@ ALTER TABLE `product_price`
   ADD PRIMARY KEY (`product_price_id`);
 
 --
+-- Indexes for table `product_sub_type`
+--
+ALTER TABLE `product_sub_type`
+  ADD PRIMARY KEY (`product_sub_type_id`);
+
+--
 -- Indexes for table `product_type`
 --
 ALTER TABLE `product_type`
@@ -3209,13 +3239,19 @@ ALTER TABLE `order_item`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `product_price`
 --
 ALTER TABLE `product_price`
   MODIFY `product_price_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `product_sub_type`
+--
+ALTER TABLE `product_sub_type`
+  MODIFY `product_sub_type_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `product_type`
