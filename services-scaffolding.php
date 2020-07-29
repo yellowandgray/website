@@ -15,7 +15,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-4">
-                        <h3>1.	Tower Scaffold: </h3>
+                        <h3>1.	Tower Scaffold </h3>
                     </div>
                     <div class="col-md-4">
                         <div class="everest-about">
@@ -27,8 +27,8 @@
                     </div>
                 </div>
                 <br/>
-                <br/>
-                <div class="row">
+                <br/>              
+				<div class="row">
                     <div class="col-md-4">
                         <img src="img/scaffold/tower-scaffold-01.jpg" alt="" />
                     </div>
@@ -41,14 +41,14 @@
                 </div>
                 <br/>
                 <br/>
+				<div class="project-bg">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="everest-about">
-                            <p>Project - 60 Meter Access Tower Scaffold Erection @  Shaft Cable Tunnel</p>
+                            <p><strong>Project</strong> - 60 Meter Access Tower Scaffold Erection @  Shaft Cable Tunnel</p>
                         </div>
                     </div>
-                </div>
-                <br/>
+                </div>               
                 <br/>
                 <div class="row">
                     <div class="col-md-4">
@@ -61,16 +61,17 @@
                         <img src="img/scaffold/cable-tunnel-03.jpg" alt="" />
                     </div>
                 </div>
+				</div>
                 <br/>
                 <br/>
+				<div class="project-bg">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="everest-about">
-                            <p>Project - Access Tower Scaffold Erection at Launch Shaft T228 Gardens By The Bay Station & Tunnel</p>
+                            <p><strong>Project</strong> - Access Tower Scaffold Erection at Launch Shaft T228 Gardens By The Bay Station & Tunnel</p>
                         </div>
                     </div>
                 </div>
-                <br/>
                 <br/>
                 <div class="row">
                     <div class="col-md-4">
@@ -83,16 +84,17 @@
                         <img src="img/scaffold/t2228-03.jpg" alt="" />
                     </div>
                 </div>
+				</div>
                 <br/>
                 <br/>
+				<div class="project-bg">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="everest-about">
-                            <p>Project -  T211 Bright Hill Station & Tunnels</p>
+                            <p><strong>Project</strong> -  T211 Bright Hill Station & Tunnels</p>
                         </div>
                     </div>
-                </div>
-                <br/>
+                </div>                
                 <br/>
                 <div class="row">
                     <div class="col-md-4">
@@ -105,8 +107,8 @@
                         <img src="img/scaffold/t211-03.jpg" alt="" />
                     </div>
                 </div>
-                <br/>
-                <br/>
+				</div>
+                <br/><hr class="border-dark" /><br/>                
                 <div class="row">
                     <div class="col-md-4">
                         <h3>2. Bird Cage Scaffold:</h3>
@@ -122,25 +124,25 @@
                 </div>
                 <br/>
                 <br/>
-                <div class="row">
+                
+				<div class="row">
                     <div class="col-md-12">
                         <img src="img/scaffold/bird-cage-01.jpg" alt="" />
                         <br/>
                         <br/>
-                    </div>
+                    </div>					
                     <div class="col-md-12">
-                        <div class="everest-about">
-                            <p>Project - Scaffold Birdcage erection for Structure Design Paint Works @ITE AMK Central</p>
+                        <div class="project-bg">
+						<div class="everest-about">
+                            <p><strong>Project</strong> - Scaffold Birdcage erection for Structure Design Paint Works @ITE AMK Central</p>
+							<br/>
+							<img src="img/scaffold/bird-cage-02.jpg" alt="" />
                         </div>
+						</div>                        
                         <br/>
-                        <br/>
-                    </div>
-                    <div class="col-md-12">
-                        <img src="img/scaffold/bird-cage-02.jpg" alt="" />
-                        <br/>
-                        <br/>
-                    </div>
+                    </div>					
                 </div>
+				<br/><hr class="border-dark" /><br/>
                 <div class="row">
                     <div class="col-md-4">
                         <h3>3. Centilever Scaffold: </h3>
@@ -154,6 +156,7 @@
                         <img src="img/scaffold/centilever-intro.jpg" alt=''>
                     </div>
                 </div>
+				
                 <br/>
                 <br/>
                 <div class="row">
@@ -170,18 +173,16 @@
                 <br/>
                 <br/>
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-12">
                         <img src="img/scaffold/Centilever-02.jpg" alt=''>
                     </div>
-                    <div class="col-md-4">
+                </div>
+				<div class="row">
+                    <div class="col-md-12">
                         <img src="img/scaffold/Centilever-03.jpg" alt=''>
                     </div>
-                    <div class="col-md-4">
-<!--                        <img src="img/scaffold/Centilever-06.jpg" alt=''>-->
-                    </div>
                 </div>
-                <br/>
-                <br/>
+                <br/><hr class="border-dark" /><br/>
                 <div class="row">
                     <div class="col-md-4">
                         <h3>4. Suspended Scaffold</h3>
@@ -195,37 +196,69 @@
                         <img src='img/scaffold/susepended-intro.jpg' alt=''/>
                     </div>
                 </div>
-                <br/>
-                <br/>
+                <br/><hr class="border-dark" /><br/>               
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <img src='img/scaffold/susepended-01.jpg' alt='' />
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <img src='img/scaffold/susepended-02.jpg' alt='' />
                     </div>
-                    <div class="col-md-4">
-                        <img src='img/scaffold/susepended-03.jpg' alt='' />
-                    </div>
                 </div>
                 <br/>
                 <br/>
                 <div class="row">
                     <div class="col-md-12">
+						<div class="project-bg">
+							<div class="everest-about">
+								<p><strong>Project</strong> - Erection of Suspended Scaffold @ The New State Courts Tower Building</p><br>
+								<img src='img/scaffold/susepended-03.jpg' alt='' />
+							</div>
+						</div>
+                    </div>
+                </div>
+                <br/><hr class="border-dark" /><br/>
+				<div class="row">
+                    <div class="col-md-4">
+                        <h3>5. Independent Tied Scaffold</h3>
+                    </div>
+                    <div class="col-md-4">
                         <div class="everest-about">
-                            <p>Project - Erection of Suspended Scaffold @ The New State Courts Tower Building</p>
+                            <p>A Scaffold with two rows of Vertical standards, one row supporting the External and one Internal Deck . The transom is not installed into the wall or It is free standing. It is being supported by building or Foundation Structures.</p>
                         </div>
                     </div>
+                    <div class="col-md-4">
+                        <img src='img/scaffold/independent-intro.jpg' alt=''/>
+                    </div>
+                </div>
+				<br/>
+				<div class="row">                    
+                    <div class="col-md-12">
+                        <img src='img/scaffold/independent-02.jpg' alt='' />
+                    </div>                    
+                </div>
+				<br/>				
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src='img/scaffold/independent-01.jpg' alt='' />
+                    </div>
+                    <div class="col-md-6">
+                        <img src='img/scaffold/independent-03.jpg' alt='' />
+                    </div>
                 </div>
                 <br/>
                 <br/>
                 <div class="row">
                     <div class="col-md-12">
-                        <img src='img/scaffold/independent-04.jpg' alt='' />
+						<div class="project-bg">
+							<div class="everest-about">
+								<p><strong>Project</strong> - Independent Scaffold Erection for Membrane Works @ Desalination Plant</p><br>
+								<img src='img/scaffold/independent-04.jpg' alt='' />
+							</div>
+						</div>
                     </div>
                 </div>
-                <br/>
-                <br/>
+                <br/><hr class="border-dark" /><br/>                  
                 <div class="row">
                     <div class="col-md-4">
                         <h3>6. Mobile Scaffold</h3>
@@ -259,8 +292,7 @@
                         <img src='img/scaffold/mobile-04.jpg' alt='' />
                     </div>
                 </div>
-                <br/>
-                <br/>
+                <br/><hr class="border-dark" /><br/>
                 <div class="row">
                     <div class="col-md-4">
                         <h3>7. Access Tower Scaffold</h3>
@@ -274,8 +306,7 @@
                         <img src='img/scaffold/access-intro.jpg' alt="" />
                     </div>
                 </div>
-                <br/>
-                <br/>
+                <br/><hr class="border-dark" /><br/>                
                 <div class="row">
                     <div class="col-md-4">
                         <h3>8 Truss Out Scaffold</h3>
@@ -289,8 +320,7 @@
                         <img src='img/scaffold/truss-out-intro.jpg' alt='' />
                     </div>
                 </div>
-                <br/>
-                <br/>
+               <br/><hr class="border-dark" /><br/>               
                 <div class="row">
                     <div class="col-md-4">
                         <h3>9. Form Work Support</h3>
@@ -304,8 +334,7 @@
                         <img src='img/scaffold/form-work-intro.jpg' alt='' />
                     </div>
                 </div>
-                <br/>
-                <br/>
+                <br/><hr class="border-dark" /><br/>               
                 <div class="row">
                     <div class="col-md-4">
                         <h3>10. Propping & Shoring Support</h3>
@@ -319,8 +348,7 @@
                         <img src='img/scaffold/Propping-intro.jpg' alt='' />
                     </div>
                 </div>
-                <br/>
-                <br/>
+                <br/><hr class="border-dark" /><br/>               
                 <div class="row">
                     <div class="col-md-4">
                         <h3>11. Catch Platform Scaffold</h3>
@@ -336,6 +364,12 @@
                 </div>
                 <br/>
                 <br/>
+				<div class="project-bg">
+				<div class="row">
+				<div class="col-md-12">
+                        <div class="everest-about">	<p><strong>Project</strong> - CatchNet Scaffold installation @Paya Lebar Apartment Quarters</p><br></div>
+				</div>
+				</div>
                 <div class="row">
                     <div class="col-md-6">
                         <img src='img/scaffold/catch-net-01.jpg' alt='' />
@@ -344,8 +378,8 @@
                         <img src='img/scaffold/catch-net-02.jpg' alt='' />
                     </div>
                 </div>
-                <br/>
-                <br/>
+				</div>
+                <br/><hr class="border-dark" /><br/>              
                 <div class="row">
                     <div class="col-md-4">
                         <h3>12. Shelter Scaffold</h3>
@@ -359,8 +393,7 @@
                         <img src='img/scaffold/shelter-intro.jpg' alt='' />
                     </div>
                 </div>
-                <br/>
-                <br/>
+                <br/><hr class="border-dark" /><br/>                
                 <div class="row">
                     <div class="col-md-4">
                         <h3>13. Perimeter Scaffold</h3>
@@ -374,8 +407,7 @@
                         <!--<img src='img/scaffold/shelter-intro.jpg' alt='' />-->
                     </div>
                 </div>
-                <br/>
-                <br/>
+                <br/><hr class="border-dark" /><br/>                
                 <div class="row">
                     <div class="col-md-4">
                         <h3>14. Sales & Rental Material</h3>
@@ -402,8 +434,7 @@
                         <img src='img/scaffold/sales-rental-04.jpg' alt='' />
                     </div>
                 </div>
-                <br/>
-                <br/>
+                <br/><hr class="border-dark" /><br/>                
                 <div class="row">
                     <div class="col-md-4">
                         <h3>15. PE DESIGN & ENDORSEMENT</h3>
@@ -424,90 +455,9 @@
                         <img src='img/scaffold/pe-design-02.jpg' alt='' />
                     </div>
                 </div>
-                <!--                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="everest-about">
-                                            <h3>Everest Engineering & Construction</h3>
-                                            <p><strong>Everest E&C Pte Ltd</strong> now become upgraded to Everest Engineering & Construction Private Limited. Everest E&C is now providing services in Machineries Installation, Steel Structure, Scaffolding, Piping & Insulation.</p>
-                                            <p>We are a company with a team well qualified professionals ranges from top management to the technical workers.</p>
-                                            <p>We have well experienced and well trained site managers, lifting supervisors, technical workers to ensure that the works are completed on schedule with the proposed design complaint. We always focus into worker safety, site safety and minimisation of neighbouring impact.</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <img src="img/pic-about-everest.jpg" alt="about everest" />
-                                    </div>
-                                </div>-->
             </div>
-        </section>
-<!--        <section class="project-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h3>Projects</h3>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <section class="project-slider slider">
-                            <div class="slide">
-                                <img src="img/project/001.jpg">
-                                <h4>Project Title</h4>
-                                <p>Year 2016 - TDP-03 TUAS, Tampines Town Hub, Holland Road, CCD Jurong Island. Year 2015 : CWRP, Tank Store, Pulau Bukom, Jurong Island, DUO-Ophir Bugis Skyline.</p>
-                            </div>
-                            <div class="slide">
-                                <img src="img/project/002.jpg">
-                                <h4>Project Title</h4>
-                                <p>Varius dui, quis posuere nibh mollis quis. Mauris omma rhoncus porttitor. Maecenas et euismod is elit. Nulla lus libero, ultrices</p>
-                            </div>
-                            <div class="slide">
-                                <img src="img/project/003.jpg">
-                                <h4>Project Title</h4>
-                                <p>Varius dui, quis posuere nibh mollis quis. Mauris omma rhoncus porttitor. Maecenas et euismod is elit. Nulla lus libero, ultrices</p>
-                            </div>
-                            <div class="slide">
-                                <img src="img/project/001.jpg">
-                                <h4>Project Title</h4>
-                                <p>Year 2016 - TDP-03 TUAS, Tampines Town Hub, Holland Road, CCD Jurong Island. Year 2015 : CWRP, Tank Store, Pulau Bukom, Jurong Island, DUO-Ophir Bugis Skyline.</p>
-                            </div>
-                            <div class="slide">
-                                <img src="img/project/002.jpg">
-                                <h4>Project Title</h4>
-                                <p>Varius dui, quis posuere nibh mollis quis. Mauris omma rhoncus porttitor. Maecenas et euismod is elit. Nulla lus libero, ultrices</p>
-                            </div>
-                            <div class="slide">
-                                <img src="img/project/003.jpg">
-                                <h4>Project Title</h4>
-                                <p>Varius dui, quis posuere nibh mollis quis. Mauris omma rhoncus porttitor. Maecenas et euismod is elit. Nulla lus libero, ultrices</p>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-                <center>
-                    <a href="projects" class="btn btn-custome">See More Projects</a>
-                </center>
-            </div>
-        </section>
-        <section class="client-section">
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h3>Clients</h3>
-                    </div>
-                </div>
-                <section class="customer-logos slider">
-                    <div class="slide"><img src="img/clients/client-pentaocean.jpg"></div>
-                    <div class="slide"><img src="img/clients/client-smitech.jpg"></div>
-                    <div class="slide"><img src="img/clients/client-hsl.jpg"></div>
-                    <div class="slide"><img src="img/clients/client-wec.jpg"></div>
-                    <div class="slide"><img src="img/clients/client-steadfast.jpg"></div>
-                    <div class="slide"><img src="img/clients/client-stolz.jpg"></div>
-                </section>
-                <br/>
-                <center>
-                    <a href="clients" class="btn btn-custome">See More Clients</a>
-                </center>
-            </div>
-        </section>-->
+        </section> 
+
         <?php include 'footer.php'; ?>
         <script type="text/javascript">
 

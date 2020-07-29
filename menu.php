@@ -31,7 +31,7 @@
                             }
                             ?>">Services</a></li>
                         <li class="dropdown">
-                            <a href="projects" class="<?php
+                            <a href="everest-projects" class="<?php
                             if ($page == 'project') {
                                 echo 'active';
                             }
@@ -94,7 +94,7 @@
                         }
                         ?>">Services</a></li>
                     <li class="dropdown">
-                        <a href="projects" class="<?php
+                        <a href="everest-projects" class="<?php
                         if ($page == 'project') {
                             echo 'active';
                         }

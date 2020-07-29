@@ -910,7 +910,7 @@ html, body, .carousel, .carousel-inner, .carousel-inner .item {
     margin-bottom: 20px;
 }
 
-.everest-about p {
+.everest-about p, .everest-about ul li, .everest-about ul {
     font-size: 20px;
     color: #333;
     font-weight: 400;
@@ -1567,7 +1567,7 @@ blockquote footer {
         display: block;
         line-height: normal;
         white-space: nowrap;*/
-/*    color: #333;*/
+    /*    color: #333;*/
     letter-spacing: 2px;
 }
 .ts-testimonial-slide .ts-testimonial-item  .client-position{
@@ -1899,4 +1899,28 @@ blockquote footer {
     padding: 20px 10px;
     color: #fff;
     margin-top: 0;
+}
+.project-bg {
+    background-color:#f0f0f0; border:2px solid #f87722; padding:10px
+}
+.border-dark {border-color:#ccc;}
+
+.service-bg-section:hover .service-img img {
+    transform: scale(1.2);
+}
+
+.service-bg-section {
+    transition: all 0.5s;
+}
+
+.service-bg-section:hover {
+    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.service-img {
+    overflow: hidden;
+}
+
+.service-img img {
+    transition: transform .5s;
 }
