@@ -7,10 +7,30 @@
         <!-- <div class="add-btn-container">
             <button mat-raised-button color="primary"><mat-icon>add</mat-icon> Order</button>
         </div> -->
+        <br>
+        <br>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="space-between center" >
+            <div fxFlex="33%">
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Choose Date</mat-label>
+                    <input matInput [(ngModel)]="filterName" [matDatepicker]="picker" (dateChange)="changeFunc($event.value)">
+                           <mat-datepicker-toggle matSuffix [for]="picker" ></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+            </div>           
+        </div>  
         <mat-list>
             <ng-container *ngFor="let data of result">
 
                 <mat-list-item>
+                    <section class="margin-right" fxLayoutAlign="start center" fxFlex="10%" *ngIf="data.statusno !=5">
+                        <mat-checkbox #tooltip="matTooltip" matTooltip="Cancel Order" [checked]="data.statusno !== 6 || data.statusno !== 6 ? false : true" (change)="changeOrderStatus($event, data.order_id,data)"></mat-checkbox>&nbsp;
+                        <mat-label *ngIf="data.statusno == 6">Order Active</mat-label>
+                        <mat-label *ngIf="data.statusno != 6">Order Cancel</mat-label>
+                     </section> 
                     <button mat-icon-button aria-label="label" (click)="openDeliverBoyPopup(data.order_id, 'result') ">
                         <mat-icon #tooltip="matTooltip" matTooltip="Delivery Boy">directions_run</mat-icon>
                     </button>
@@ -19,7 +39,7 @@
                     </button>
                     <!-- <img matListAvatar class="cursor" src="{{image_url}}{{data.imageurl}}" *ngIf="data.imageurl && data.imageurl != ''" alt="image" (click)="imageView(data, 'preview')" /> -->
                     <div class="" mat-line>
-                        <h4 mat-line class="order-detail-title">ஆர்டர் நம்பர் : <strong class="clr-blue">{{data.order_id}}  (₹{{data.total}})</strong> <span *ngIf="data.status == 'பெண்டிங்'"><img src="assets/new.gif" matListAvatar alt=""></span></h4>
+                        <h4 mat-line class="order-detail-title">ஆர்டர் நம்பர் : <strong class="clr-blue">{{data.order_id}}  (₹{{data.total}})</strong> <span *ngIf="data.status == 'பெண்டிங்' || data.status=='ஏற்கப்படுகிறது' || data.status=='தயாராகிறது' || data.status=='வருகிறது' "><img src="assets/new.gif" matListAvatar alt=""></span></h4>
                     </div>
                     <p mat-line>டெலிவரி நிலை : <strong class="clr-blue">{{data.status}}</strong></p>
                     <p mat-line><mat-icon class="icon-position">person</mat-icon> : <strong class="clr-blue">{{data.user}}</strong></p>
@@ -27,5 +47,8 @@
                 <mat-divider></mat-divider>
             </ng-container>
         </mat-list>
+        <!-- <ngx-spinner bdColor="rgba(0, 0, 0, 0)" name="sp3" [fullScreen]="false" type="ball-spin-clockwise" color = "#1d94cd"  size="medium" *ngIf="loading"><p style="color: orangered" > Loading... </p></ngx-spinner> -->
+        <mat-spinner [diameter]="60"  *ngIf="loading"><p style="color: orangered" > Loading... </p></mat-spinner>
+
     </mat-sidenav-content>
 </mat-sidenav-container>

@@ -3,6 +3,7 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dial
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { HttpClient } from '@angular/common/http';
+//import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-cooldrink',
@@ -11,19 +12,43 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CooldrinkComponent implements OnInit {
 
-  constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
+  constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient,
+    //private spinner: NgxSpinnerService
+    ) { }
   result = [];
+  loading = false;
   ngOnInit() {
     this.getDrinks();
   }
-  image_url: string = 'http://localhost/project/ygonlinebuy/api/v1/';
+
+  showSpinner(name: string) {
+    //this.spinner.show(name);
+  }
+
+  hideSpinner(name: string) {
+    //this.spinner.hide(name);
+  }
+
+
+  image_url: string = 'http://ygonlinebuy.com/api/v1/';
   getDrinks(): void {
-    this.httpClient.get<any>('http://localhost/project/ygonlinebuy/api/v1/get_drinks')
+
+    this.loading = true;
+    this.showSpinner('sp3')
+
+
+    this.httpClient.get<any>('http://ygonlinebuy.com/api/v1/get_drinks')
       .subscribe(
         (res) => {
+
+
+          this.loading = false;
+          this.hideSpinner('sp3')
           this.result = res["result"]["data"];
         },
         (error) => {
+          this.loading = false;
+          this.hideSpinner('sp3')
           this._snackBar.open(error["statusText"], '', {
             duration: 2000,
           });
@@ -99,7 +124,7 @@ export class CooldrinkComponent implements OnInit {
   templateUrl: 'cooldrink-form.html',
 })
 export class CoolDrinkForm {
-  image_url: string = 'http://localhost/project/ygonlinebuy/api/v1/';
+  image_url: string = 'http://ygonlinebuy.com/api/v1/';
   drinksform: FormGroup;
   loading = false;
   cooldrink_id = 0;
@@ -129,7 +154,7 @@ export class CoolDrinkForm {
       this.cooldrink_id = this.data.cooldrink_id;
       this.imageurl = this.data.imageurl;
     }
-    this.httpClient.get('http://localhost/project/ygonlinebuy/api/v1/get_unit').subscribe(
+    this.httpClient.get('http://ygonlinebuy.com/api/v1/get_unit').subscribe(
       (res) => {
         if (res["result"]["error"] === false) {
           this.unit = res["result"]["data"];
@@ -171,7 +196,7 @@ export class CoolDrinkForm {
       formData.append('product_image', this.imageurl);
       url = 'insert_drinks';
     }
-    this.httpClient.post('http://localhost/project/ygonlinebuy/api/v1/' + url, formData).subscribe(
+    this.httpClient.post('http://ygonlinebuy.com/api/v1/' + url, formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -204,7 +229,7 @@ export class CoolDrinkForm {
     this.loading = true;
     var formData = new FormData();
     formData.append('file', fileData);
-    this.httpClient.post('http://localhost/project/ygonlinebuy/api/v1/upload_file', formData).subscribe(
+    this.httpClient.post('http://ygonlinebuy.com/api/v1/upload_file', formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -248,7 +273,7 @@ export class CooldrinkDelete {
       return;
     }
     this.loading = true;
-    this.httpClient.get('http://localhost/project/ygonlinebuy/api/v1/delete_record/cooldrink/cooldrink_id=' + this.cooldrink_id).subscribe(
+    this.httpClient.get('http://ygonlinebuy.com/api/v1/delete_record/cooldrink/cooldrink_id=' + this.cooldrink_id).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -275,7 +300,7 @@ export class CooldrinkDelete {
 })
 
 export class CooldrinkImageView {
-  image_url: string = 'http://localhost/project/ygonlinebuy/api/v1/';
+  image_url: string = 'http://ygonlinebuy.com/api/v1/';
   action: string = '';
   loading = false;
   cooldrink_id = 0;

@@ -10,10 +10,8 @@ import { BannerComponent } from './banner/banner.component';
 import { DeliveryBoyComponent } from './delivery-boy/delivery-boy.component';
 import { PincodeComponent } from './pincode/pincode.component';
 import { DeliveryHistoryComponent } from './delivery-history/delivery-history.component';
+import { OffersComponent } from './offers/offers.component';
 import { MasterComponent } from './master/master.component';
-import { ProductComponent } from './product/product.component';
-import { ProductPriceComponent } from './product-price/product-price.component';
-
 
 const routes: Routes = [
   {path: '', component: LoginComponent},
@@ -26,9 +24,8 @@ const routes: Routes = [
   {path: 'delivery_boy', component: DeliveryBoyComponent},
   {path: 'pincode', component: PincodeComponent},
   {path: 'delivery_history', component: DeliveryHistoryComponent},
+  {path: 'offers', component: OffersComponent},
   {path: 'master', component: MasterComponent},
-  {path: 'product', component: ProductComponent},
-  {path: 'product_price', component: ProductPriceComponent},
 ];
 
 @NgModule({

@@ -1,8 +1,13 @@
 import { Component, OnInit, Inject } from "@angular/core";
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from "@angular/material/dialog";
+import {
+  MatDialog,
+  MatDialogRef,
+  MAT_DIALOG_DATA
+} from "@angular/material/dialog";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
 import { MatSnackBar } from "@angular/material/snack-bar";
 import { HttpClient } from "@angular/common/http";
+//import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: "app-snacks",
@@ -12,30 +17,79 @@ import { HttpClient } from "@angular/common/http";
 export class SnacksComponent implements OnInit {
   result = [];
   loading = false;
+  
   constructor(
     public dialog: MatDialog,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient
+    
   ) {}
 
   ngOnInit() {
     this.getSnacks();
   }
-  image_url: string = "http://localhost/project/ygonlinebuy/api/v1/";
+
+  // showSpinner(name: string) {
+  //   this.spinner.show(name);
+  // }
+
+  // hideSpinner(name: string) {
+  //   this.spinner.hide(name);
+  // }
+
+
+
+  image_url: string = "http://ygonlinebuy.com/api/v1/";
   getSnacks(): void {
+
+    this.loading = true;
+    //this.showSpinner('sp3')
+    
     this.httpClient
-      .get<any>("http://localhost/project/ygonlinebuy/api/v1/get_snacks")
+      .get<any>("http://ygonlinebuy.com/api/v1/get_snacks")
       .subscribe(
         res => {
+          this.loading = false;
+         // this.hideSpinner('sp3')
           this.result = res["result"]["data"];
         },
         error => {
+          this.loading = false;
+          //this.hideSpinner('sp3')
           this._snackBar.open(error["statusText"], "", {
             duration: 2000
           });
         }
       );
   }
+      changeFoodSoldStatus(ev, fid, statusid): void {
+        //console.log(fid);
+        var status_id = 1;
+         if (ev.checked == true) {
+           status_id = 0;
+        }
+        statusid.statussold = status_id;
+        this.httpClient.get('http://ygonlinebuy.com/api/v1/update_foodsold_status/' + fid + '/' + status_id)
+          .subscribe(
+            res => {
+              this.loading = false;
+              if (res["result"]["error"] === false) {
+                //this.dialogRef.close(true);
+              } else {
+                this._snackBar.open(res["result"]["message"], "", {
+                  duration: 2000
+                });
+              }
+            },
+            error => {
+              this.loading = false;
+              this._snackBar.open(error["statusText"], "", {
+                duration: 2000
+              });
+            }
+          );
+      }
+  
   changeFoodStatus(ev, fid, statusid): void {
     //console.log(fid);
     var status_id = 0;
@@ -43,7 +97,7 @@ export class SnacksComponent implements OnInit {
        status_id = 1;
     }
     statusid.status = status_id;
-    this.httpClient.get('http://localhost/project/ygonlinebuy/api/v1/update_food_status/' + fid + '/' + status_id)
+    this.httpClient.get('http://ygonlinebuy.com/api/v1/update_food_status/' + fid + '/' + status_id)
       .subscribe(
         res => {
           this.loading = false;
@@ -69,7 +123,7 @@ export class SnacksComponent implements OnInit {
      if (ev.checked == true) {
        banner_id = 1;
     }
-    this.httpClient.get('http://localhost/project/ygonlinebuy/api/v1/update_banner_status/' + fid +'/' + banner_id )
+    this.httpClient.get('http://ygonlinebuy.com/api/v1/update_banner_status/' + fid +'/' + banner_id )
       .subscribe(
         res => {
           this.loading = false;
@@ -153,11 +207,13 @@ export class SnacksComponent implements OnInit {
   templateUrl: "snacks-form.html"
 })
 export class SnacksForm {
-  image_url: string = "http://localhost/project/ygonlinebuy/api/v1/";
+  image_url: string = "http://ygonlinebuy.com/api/v1/";
   snacksform: FormGroup;
   loading = false;
-  fooditem_id = 0;
+  fooditem_id = 0;  
   unit: any[];
+  shop: any[];
+  product_type: any[];
   product_image: string = "Select Product Image";
   imageurl: string = "";
   constructor(
@@ -170,8 +226,11 @@ export class SnacksForm {
       name: new FormControl("", Validators.required),
       unit_no: new FormControl("", Validators.required),
       unit_id: new FormControl("", Validators.required),
+      product_type_id: new FormControl("", Validators.required),
+      shop_id: new FormControl("", Validators.required),
       //status: new FormControl("", Validators.required),
-      amount: new FormControl("", Validators.required)
+      amount: new FormControl("", Validators.required),
+      category: new FormControl("", Validators.required)
     });
     if (this.data != null) {
       this.snacksform.patchValue({
@@ -179,17 +238,61 @@ export class SnacksForm {
         amount: this.data.amount,
         unit_no: this.data.unit_no,
         unit_id: this.data.unit_id,
+        shop_id: this.data.shop_id,
+        product_type_id: this.data.product_type_id,
+        category: this.data.category,
         //status: this.data.status
       });
       this.fooditem_id = this.data.fooditem_id;
       this.imageurl = this.data.imageurl;
     }
+
+    
+
+
+
     this.httpClient
-      .get("http://localhost/project/ygonlinebuy/api/v1/get_unit")
+      .get("http://ygonlinebuy.com/api/v1/get_unit")
       .subscribe(
         res => {
           if (res["result"]["error"] === false) {
             this.unit = res["result"]["data"];
+          } else {
+            this._snackBar.open(res["result"]["message"], "", {
+              duration: 2000
+            });
+          }
+        },
+        error => {
+          this._snackBar.open(error["statusText"], "", {
+            duration: 2000
+          });
+        }
+      );
+    this.httpClient
+      .get("http://ygonlinebuy.com/api/v1/get_shop")
+      .subscribe(
+        res => {
+          if (res["result"]["error"] === false) {
+            this.shop = res["result"]["data"];
+          } else {
+            this._snackBar.open(res["result"]["message"], "", {
+              duration: 2000
+            });
+          }
+        },
+        error => {
+          this._snackBar.open(error["statusText"], "", {
+            duration: 2000
+          });
+        }
+      );
+    this.httpClient
+      .get("http://ygonlinebuy.com/api/v1/get_product_type")
+      .subscribe(
+        res => {
+          if (res["result"]["error"] === false) {
+            this.product_type = res["result"]["data"];
           } else {
             this._snackBar.open(res["result"]["message"], "", {
               duration: 2000
@@ -215,21 +318,25 @@ export class SnacksForm {
       formData.append("name", this.snacksform.value.name);
       formData.append("unit_no", this.snacksform.value.unit_no);
       formData.append("unit_id", this.snacksform.value.unit_id);
+      formData.append("shop_id", this.snacksform.value.shop_id);
+      formData.append("product_type_id", this.snacksform.value.product_type_id);
       formData.append("amount", this.snacksform.value.amount);
-      //formData.append("status", this.snacksform.value.status);
+      formData.append("category", this.snacksform.value.category);
       formData.append("imageurl", this.imageurl);
       url = "update_record/fooditem/fooditem_id = " + this.fooditem_id;
     } else {
       formData.append("name", this.snacksform.value.name);
       formData.append("unit_no", this.snacksform.value.unit_no);
       formData.append("unit_id", this.snacksform.value.unit_id);
+      formData.append("shop_id", this.snacksform.value.shop_id);
+      formData.append("product_type_id", this.snacksform.value.product_type_id);
       formData.append("product_image", this.imageurl);
       formData.append("amount", this.snacksform.value.amount);
-      //formData.append("status", this.snacksform.value.status);
+      formData.append("category", this.snacksform.value.category);
       url = "insert_snacks";
     }
     this.httpClient
-      .post("http://localhost/project/ygonlinebuy/api/v1/" + url, formData)
+      .post("http://ygonlinebuy.com/api/v1/" + url, formData)
       .subscribe(
         res => {
           this.loading = false;
@@ -264,7 +371,7 @@ export class SnacksForm {
     var formData = new FormData();
     formData.append("file", fileData);
     this.httpClient
-      .post("http://localhost/project/ygonlinebuy/api/v1/upload_file", formData)
+      .post("http://ygonlinebuy.com/api/v1/upload_file", formData)
       .subscribe(
         res => {
           this.loading = false;
@@ -311,7 +418,7 @@ export class SnacksDelete {
     this.loading = true;
     this.httpClient
       .get(
-        "http://localhost/project/ygonlinebuy/api/v1/delete_record/fooditem/fooditem_id=" +
+        "http://ygonlinebuy.com/api/v1/delete_record/fooditem/fooditem_id=" +
           this.fooditem_id
       )
       .subscribe(
@@ -340,7 +447,7 @@ export class SnacksDelete {
   templateUrl: "picture-view.html"
 })
 export class SnacksImageView {
-  image_url: string = "http://localhost/project/ygonlinebuy/api/v1/";
+  image_url: string = "http://ygonlinebuy.com/api/v1/";
   action: string = "";
   loading = false;
   fooditem_id = 0;

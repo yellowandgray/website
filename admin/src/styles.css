@@ -39,7 +39,7 @@ mat-sidenav {
 }
 
 .active-nav {
-    background: rgba(0, 0, 0, .04);
+    background: #fecc45 !important;
 }
 
 .preview-image {
@@ -104,4 +104,11 @@ mat-sidenav {
 .icon-position {
     position: relative;
     top: 5px;
+}
+
+.mat-spinner {
+    position: relative;
+    margin-top: 20%;
+    margin-left: 50%;
+    margin-right: 50%;
 }

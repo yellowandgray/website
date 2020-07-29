@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -15,10 +16,8 @@ import { BannerComponent, BannerForm, BannerDelete, BannerImageView } from './ba
 import { DeliveryBoyComponent, DeliveryBoyForm, DeliveryBoyDelete, PictureViewUser } from './delivery-boy/delivery-boy.component';
 import { PincodeComponent, PincodeForm, PincodeDelete } from './pincode/pincode.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { DeliveryHistoryComponent, OrderViewHistory } from './delivery-history/delivery-history.component';
-import { MasterComponent, CategoryForm, CategoryDelete, RegionForm, RegionDelete, ShopForm, ShopDelete, BrandForm, BrandDelete, ProductTypeForm, ProductTypeDelete, MasterUnitForm, MasterUnitDelete } from './master/master.component';
-import { ProductComponent, ProductForm, ProductDelete, ProductImageView } from './product/product.component';
-import { ProductPriceComponent, ProductPriceForm, ProductPriceDelete } from './product-price/product-price.component';
+import { DeliveryHistoryComponent, OrderViewHistory,OrderDate } from './delivery-history/delivery-history.component';
+import { MasterComponent, ShopForm, ShopDelete, ProductTypeForm, ProductTypeDelete } from './master/master.component';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
@@ -45,6 +44,9 @@ import {MatBadgeModule} from '@angular/material/badge';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatTableModule} from '@angular/material/table';
+import { OffersComponent, OffersForm, OffersDelete, OffersImageView } from './offers/offers.component';
+import { DatePipe } from '@angular/common';
+import { NgxSpinnerModule } from "ngx-spinner";
 import {MatTabsModule} from '@angular/material/tabs';
 
 @NgModule({
@@ -84,26 +86,17 @@ import {MatTabsModule} from '@angular/material/tabs';
     PincodeDelete,
     DeliveryHistoryComponent,
     OrderViewHistory,
+    OrderDate,
+    OffersComponent,
+    OffersForm,
+    OffersDelete,
+    OffersImageView,
     MasterComponent,
-    CategoryForm,
-    CategoryDelete,
-    RegionForm,
-    RegionDelete,
     ShopForm, 
     ShopDelete,
-    BrandForm,
-    BrandDelete, 
     ProductTypeForm, 
-    ProductTypeDelete,
-    MasterUnitForm, 
-    MasterUnitDelete, 
-    ProductComponent,
-    ProductForm, 
-    ProductDelete,
-    ProductPriceComponent, 
-    ProductPriceForm, 
-    ProductPriceDelete,
-    ProductImageView
+    ProductTypeDelete
+    
   ],
   imports: [
     BrowserModule,
@@ -134,7 +127,8 @@ import {MatTabsModule} from '@angular/material/tabs';
     FlexLayoutModule,
     MatSlideToggleModule,
     MatCheckboxModule,
-    //MatTableModule,
+    NgxSpinnerModule,
+    CommonModule,
     MatTabsModule
   ],
   entryComponents: [
@@ -169,27 +163,17 @@ import {MatTabsModule} from '@angular/material/tabs';
     PincodeDelete,
     DeliveryHistoryComponent,
     OrderViewHistory,
+    OrderDate,
+    OffersForm, 
+    OffersDelete, 
+    OffersImageView,
     MasterComponent,
-    CategoryForm,
-    CategoryDelete,
-    RegionForm,
-    RegionDelete,
     ShopForm, 
     ShopDelete,
-    BrandForm,
-    BrandDelete, 
     ProductTypeForm, 
-    ProductTypeDelete,
-    MasterUnitForm, 
-    MasterUnitDelete, 
-    ProductComponent,
-    ProductForm, 
-    ProductDelete, 
-    ProductPriceForm, 
-    ProductPriceDelete,
-    ProductImageView
+    ProductTypeDelete
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

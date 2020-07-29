@@ -7,7 +7,7 @@ import {
 import { FormControl, FormGroup, Validators } from "@angular/forms";
 import { MatSnackBar } from "@angular/material/snack-bar";
 import { HttpClient } from "@angular/common/http";
-
+//import { NgxSpinnerService } from 'ngx-spinner';
 @Component({
   selector: 'app-pincode',
   templateUrl: './pincode.component.html',
@@ -15,19 +15,41 @@ import { HttpClient } from "@angular/common/http";
 })
 export class PincodeComponent implements OnInit {
   result = []
-  constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
+  loading = false;
+  constructor(
+    //private spinner: NgxSpinnerService,
+    public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
 
   ngOnInit() {
     this.getPincode();
   }
+ 
+  showSpinner(name: string) {
+    //this.spinner.show(name);
+  }
+
+  hideSpinner(name: string) {
+    //this.spinner.hide(name);
+  }
+ 
+
+
   getPincode(): void {
+
+    this.loading = true;
+    this.showSpinner('sp3')
+
     this.httpClient
-      .get<any>("http://localhost/project/ygonlinebuy/api/v1/get_delivery_pincode")
+      .get<any>("http://ygonlinebuy.com/api/v1/get_delivery_pincode")
       .subscribe(
         res => {
+          this.loading = false;
+          this.hideSpinner('sp3')
           this.result = res["result"]["data"];
         },
         error => {
+          this.loading = false;
+          this.hideSpinner('sp3')
           this._snackBar.open(error["statusText"], "", {
             duration: 2000
           });
@@ -91,11 +113,13 @@ export class PincodeForm {
   ) {
     this.pincodeform = new FormGroup({
       pincode: new FormControl("", Validators.required),
+      deliverycharge: new FormControl("", Validators.required),
       status: new FormControl("", Validators.required),
     });
     if (this.data != null) {
       this.pincodeform.patchValue({
         pincode: this.data.pincode,
+        deliverycharge:this.data.delivery_charge,
         status: this.data.status,
       });
       this.delivery_pincode_id = this.data.delivery_pincode_id;
@@ -111,15 +135,17 @@ export class PincodeForm {
     var url = "";
     if (this.delivery_pincode_id != 0) {
       formData.append("pincode", this.pincodeform.value.pincode);
+      formData.append("delivery_charge", this.pincodeform.value.deliverycharge);
       formData.append("status", this.pincodeform.value.status);
       url = "update_record/delivery_pincode/delivery_pincode_id = " + this.delivery_pincode_id;
     } else {
       formData.append("pincode", this.pincodeform.value.pincode);
+      formData.append("delivery_charge", this.pincodeform.value.deliverycharge);
       formData.append("status", this.pincodeform.value.status);
       url = "insert_pincode";
     }
     this.httpClient
-      .post("http://localhost/project/ygonlinebuy/api/v1/" + url, formData)
+      .post("http://ygonlinebuy.com/api/v1/" + url, formData)
       .subscribe(
         res => {
           this.loading = false;
@@ -166,7 +192,7 @@ export class PincodeDelete {
     this.loading = true;
     this.httpClient
       .get(
-        "http://localhost/project/ygonlinebuy/api/v1/delete_record/delivery_pincode/delivery_pincode_id=" + this.delivery_pincode_id
+        "http://ygonlinebuy.com/api/v1/delete_record/delivery_pincode/delivery_pincode_id=" + this.delivery_pincode_id
       )
       .subscribe(
         res => {

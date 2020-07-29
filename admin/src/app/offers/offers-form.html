@@ -1,0 +1,45 @@
+<h2 mat-dialog-title>Cool Drinks</h2>
+<mat-dialog-content class="mat-typography">
+    <!-- <form [formGroup]="offersform" (ngSubmit)="onSubmit()"> -->
+
+        <form [formGroup]="offersform" >
+
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">
+            <div fxFlex="50%" fxLayoutAlign="center center">
+                <button *ngIf="image_path == ''" type="button" mat-raised-button (click)="fileInput.click()">{{offer_image}}</button>
+                <input hidden #fileInput type="file" id="file" (change)="fileProgress($event, 'offer_image', 'image_path')" />
+                <div class="preview-image" *ngIf="image_path != ''">
+                    <img class="dialog-picture" mat-card-image src="{{image_url}}{{image_path}}" alt="Photo" />
+                    <button mat-icon-button aria-label="Close icon" (click)="removeMedia('image_path')">
+                    <mat-icon>close</mat-icon>
+                </button>
+                </div>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Offer Title</mat-label>
+                    <input matInput placeholder="" required formControlName="title" />
+                    <mat-error>Offer Title is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Status</mat-label>
+                    <mat-select required formControlName="status">
+                        <mat-option value="1">Active</mat-option>
+                        <mat-option value="0">In-Active</mat-option>
+                    </mat-select>
+                    <mat-error>Status is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
+            <button mat-button [mat-dialog-close]="false">Cancel</button>
+            <button mat-button type="submit" [disabled]="loading" (click)="onSubmit()">Save</button>
+            <mat-progress-spinner class="example-margin" *ngIf="loading" [mode]="'indeterminate'" [strokeWidth]="3" [diameter]="25">
+            </mat-progress-spinner>
+        </div>
+    </form>
+</mat-dialog-content>

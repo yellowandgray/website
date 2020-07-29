@@ -1,9 +1,13 @@
 import { Component, OnInit, Inject } from "@angular/core";
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from "@angular/material/dialog";
+import {
+  MatDialog,
+  MatDialogRef,
+  MAT_DIALOG_DATA
+} from "@angular/material/dialog";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
 import { MatSnackBar } from "@angular/material/snack-bar";
 import { HttpClient } from "@angular/common/http";
-
+//import { NgxSpinnerService } from 'ngx-spinner';
 @Component({
   selector: "app-delivery-boy",
   templateUrl: "./delivery-boy.component.html",
@@ -11,23 +15,46 @@ import { HttpClient } from "@angular/common/http";
 })
 export class DeliveryBoyComponent implements OnInit {
   result = [];
-  constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) {}
+  loading = false;
+  constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, 
+    private httpClient: HttpClient,
+   // private spinner: NgxSpinnerService
+    ) {}
   
   ngOnInit() {
     this.getDeliveryBoy();
   }
+
+  showSpinner(name: string) {
+    //this.spinner.show(name);
+  }
+
+  hideSpinner(name: string) {
+   // this.spinner.hide(name);
+  }
   
-  image_url: string = "http://localhost/project/ygonlinebuy/api/v1/";
+  image_url: string = "http://ygonlinebuy.com/api/v1/";
   getDeliveryBoy(): void {
+
+    this.loading = true;
+    this.showSpinner('sp3')
+
     this.httpClient
       .get<any>(
-        "http://localhost/project/ygonlinebuy/api/v1/get_delivery_boy"
+        "http://ygonlinebuy.com/api/v1/get_delivery_boy"
       )
       .subscribe(
         res => {
+
+          this.loading = false;
+          this.hideSpinner('sp3')
+
           this.result = res["result"]["data"];
         },
         error => {
+
+          this.loading = false;
+          this.hideSpinner('sp3')
           this._snackBar.open(error["statusText"], "", {
             duration: 2000
           });
@@ -97,7 +124,7 @@ export class DeliveryBoyComponent implements OnInit {
   templateUrl: "delivery-boy-form.html"
 })
 export class DeliveryBoyForm {
-  image_url: string = "http://localhost/project/ygonlinebuy/api/v1/";
+  image_url: string = "http://ygonlinebuy.com/api/v1/";
   deliveryform: FormGroup;
   loading = false;
   delivery_boy_id = 0;
@@ -155,7 +182,7 @@ export class DeliveryBoyForm {
       url = "insert_delivery_boy";
     }
     this.httpClient
-      .post("http://localhost/project/ygonlinebuy/api/v1/" + url, formData)
+      .post("http://ygonlinebuy.com/api/v1/" + url, formData)
       .subscribe(
         res => {
           this.loading = false;
@@ -191,7 +218,7 @@ export class DeliveryBoyForm {
     formData.append("file", fileData);
     this.httpClient
       .post(
-        "http://localhost/project/ygonlinebuy/api/v1/upload_file",
+        "http://ygonlinebuy.com/api/v1/upload_file",
         formData
       )
       .subscribe(
@@ -239,7 +266,7 @@ export class DeliveryBoyDelete {
     this.loading = true;
     this.httpClient
       .get(
-        "http://localhost/project/ygonlinebuy/api/v1/delete_record/delivery_boy/delivery_boy_id=" +
+        "http://ygonlinebuy.com/api/v1/delete_record/delivery_boy/delivery_boy_id=" +
           this.delivery_boy_id
       )
       .subscribe(
@@ -270,7 +297,7 @@ export class DeliveryBoyDelete {
 })
 
 export class PictureViewUser {
-  image_url: string = 'http://localhost/project/ygonlinebuy/api/v1/';
+  image_url: string = 'http://ygonlinebuy.com/api/v1/';
   action: string = '';
   loading = false;
   delivery_boy_id = 0;

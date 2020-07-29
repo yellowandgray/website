@@ -7,6 +7,8 @@ import {
 import { FormControl, FormGroup, Validators } from "@angular/forms";
 import { MatSnackBar } from "@angular/material/snack-bar";
 import { HttpClient } from "@angular/common/http";
+//import { NgxSpinnerService } from 'ngx-spinner';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: "app-order",
@@ -14,27 +16,114 @@ import { HttpClient } from "@angular/common/http";
   styleUrls: ["./order.component.css"]
 })
 export class OrderComponent implements OnInit {
-  result = [];
+   result = [];
+   loading = false;
+   date_check;
+   cid;
   constructor(
     public dialog: MatDialog,
     private _snackBar: MatSnackBar,
-    private httpClient: HttpClient
+    private httpClient: HttpClient,
+    //private spinner: NgxSpinnerService,
+    private datePipe : DatePipe
   ) {}
 
   ngOnInit() {
+
+    this.date_check = new Date();
+    this.date_check= this.datePipe.transform(this.date_check, 'yyyy-MM-dd');
     this.getOrder();
+    this.cid=setInterval(()=>{
+      if(this.result!=null)
+    {
+    while(this.result.length > 0) {
+      this.result.pop();
+     }
+    }
+      this.getOrder()
+    },60000);
   }
-  image_url: string = "http://localhost/project/ygonlinebuy/api/v1/";
+  ngOnDestroy() {
+    if (this.cid) {
+      clearInterval(this.cid);
+    }
+  }
+  filterName:string;
+  showSpinner(name: string) {
+   // this.spinner.show(name);
+  }
+
+  hideSpinner(name: string) {
+    //this.spinner.hide(name);
+  }
+
+  changeFunc(event: any) {
+    const data = event;
+    const formattedDate =data.getFullYear()+ '-' + (data.getMonth() + 1) + '-' +data.getDate() ;
+    console.log("hai-->"+formattedDate);
+    this.date_check= this.datePipe.transform(data, 'yyyy-MM-dd');
+   this.getOrder();
+}
+
+
+  image_url: string = "http://ygonlinebuy.com/api/v1/";
   getOrder(): void {
+
+    this.loading = true;
+    this.showSpinner('sp3')
+
+//"http://ygonlinebuy.com/api/v1/get_orders_for_all"
+
+
     this.httpClient
       .get<any>(
-        "http://localhost/project/ygonlinebuy/api/v1/get_orders_for_all"
+        "http://ygonlinebuy.com/api/v1/get_orders_for_alldate/"+this.date_check
       )
       .subscribe(
         res => {
+
+          this.loading = false;
+          this.hideSpinner('sp3')
+
           this.result = res["result"]["data"];
         },
         error => {
+
+          this.loading = false;
+          this.hideSpinner('sp3')
+
+          this._snackBar.open(error["statusText"], "", {
+            duration: 2000
+          });
+        }
+      );
+  }
+changeOrderStatus(ev, fid, statusid): void {
+    console.log(statusid.statusno);
+   console.log(ev.checked);
+    var status_id = 1;
+    statusid.status='பெண்டிங்';
+    //statusid.statusno=1;
+     if (ev.checked == true) {
+       status_id = 6;
+       statusid.statusno=6;
+       statusid.status='கேன்சல்';
+    }    
+    //statusid.status = status_id;
+    this.httpClient.get('http://ygonlinebuy.com/api/v1/update_order_status/' + fid + '/' + status_id)
+      .subscribe(
+        res => {
+          this.loading = false;
+          if (res["result"]["error"] === false) {
+            //this.dialogRef.close(true);
+          } else {
+            this._snackBar.open(res["result"]["message"], "", {
+              duration: 2000
+            });
+          }
+        },
+        error => {
+          this.loading = false;
           this._snackBar.open(error["statusText"], "", {
             duration: 2000
           });
@@ -93,7 +182,7 @@ export class OrderComponent implements OnInit {
   templateUrl: "delivery-boy-popup.html"
 })
 export class OrderDeliveryBoyPopup {
-  image_url: string = "http://localhost/project/ygonlinebuy/api/v1/";
+  image_url: string = "http://ygonlinebuy.com/api/v1/";
   deliveryboyform: FormGroup;
   delivery_boy = [];
   order_id = 0;
@@ -114,7 +203,7 @@ export class OrderDeliveryBoyPopup {
       this.order_id = this.data.order_id;
     }
     this.httpClient
-      .get("http://localhost/project/ygonlinebuy/api/v1/get_delivery_boy")
+      .get("http://ygonlinebuy.com/api/v1/get_delivery_boy")
       .subscribe(
         res => {
           if (res["result"]["error"] === false) {
@@ -148,7 +237,7 @@ export class OrderDeliveryBoyPopup {
       url = "insert_delivery_boy_status";
     }
     this.httpClient
-      .post("http://localhost/project/ygonlinebuy/api/v1/" + url, formData)
+      .post("http://ygonlinebuy.com/api/v1/" + url, formData)
       .subscribe(
         res => {
           this.loading = false;
@@ -175,7 +264,7 @@ export class OrderDeliveryBoyPopup {
   templateUrl: "order-view.html"
 })
 export class OrderView {
-  image_url: string = "http://localhost/project/ygonlinebuy/api/v1/";
+  image_url: string = "http://ygonlinebuy.com/api/v1/";
   loading = false;
   result = [];
   order_id = 0;
@@ -191,7 +280,7 @@ export class OrderView {
   getOrder(): void {
     this.httpClient
       .get<any>(
-        "http://localhost/project/ygonlinebuy/api/v1/get_orders_for_all"
+        "http://ygonlinebuy.com/api/v1/get_orders_for_all"
       )
       .subscribe(
         res => {

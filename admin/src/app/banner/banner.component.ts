@@ -3,6 +3,7 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dial
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { HttpClient } from '@angular/common/http';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-banner',
@@ -11,19 +12,38 @@ import { HttpClient } from '@angular/common/http';
 })
 export class BannerComponent implements OnInit {
   result = [];
-  constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
+  loading=false;
+  constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient,private spinner: NgxSpinnerService) { }
 
   ngOnInit() {
     this.getBanner();
   }
-  image_url: string = 'http://localhost/project/ygonlinebuy/api/v1/';
+
+  showSpinner(name: string) {
+    this.spinner.show(name);
+  }
+
+  hideSpinner(name: string) {
+    this.spinner.hide(name);
+  }
+
+  image_url: string = 'http://ygonlinebuy.com/api/v1/';
   getBanner(): void {
-    this.httpClient.get<any>('http://localhost/project/ygonlinebuy/api/v1/get_banner')
+
+    this.loading = true;
+    this.showSpinner('sp3')
+
+    
+    this.httpClient.get<any>('http://ygonlinebuy.com/api/v1/get_banner')
       .subscribe(
         (res) => {
+          this.loading = false;
+          this.hideSpinner('sp3')
           this.result = res["result"]["data"];
         },
         (error) => {
+          this.loading = false;
+          this.hideSpinner('sp3')
           this._snackBar.open(error["statusText"], '', {
             duration: 2000,
           });
@@ -98,7 +118,7 @@ export class BannerComponent implements OnInit {
   templateUrl: 'banner-form.html',
 })
 export class BannerForm {
-  image_url: string = 'http://localhost/project/ygonlinebuy/api/v1/';
+  image_url: string = 'http://ygonlinebuy.com/api/v1/';
   bannerform: FormGroup;
   loading = false;
   banner_id = 0;
@@ -147,7 +167,7 @@ export class BannerForm {
       formData.append('banner_image', this.image_path);
       url = 'insert_banner';
     }
-    this.httpClient.post('http://localhost/project/ygonlinebuy/api/v1/' + url, formData).subscribe(
+    this.httpClient.post('http://ygonlinebuy.com/api/v1/' + url, formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -180,7 +200,7 @@ export class BannerForm {
     this.loading = true;
     var formData = new FormData();
     formData.append('file', fileData);
-    this.httpClient.post('http://localhost/project/ygonlinebuy/api/v1/upload_file', formData).subscribe(
+    this.httpClient.post('http://ygonlinebuy.com/api/v1/upload_file', formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -223,7 +243,7 @@ export class BannerDelete {
       return;
     }
     this.loading = true;
-    this.httpClient.get('http://localhost/project/ygonlinebuy/api/v1/delete_record/banner/banner_id=' + this.banner_id).subscribe(
+    this.httpClient.get('http://ygonlinebuy.com/api/v1/delete_record/banner/banner_id=' + this.banner_id).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -250,7 +270,7 @@ export class BannerDelete {
 })
 
 export class BannerImageView {
-  image_url: string = 'http://localhost/project/ygonlinebuy/api/v1/';
+  image_url: string = 'http://ygonlinebuy.com/api/v1/';
   action: string = '';
   loading = false;
   banner_id = 0;

@@ -1,0 +1,25 @@
+<h2 mat-dialog-title>Date Change View</h2>
+<mat-dialog-content class="mat-typography">
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+        <div fxFlex="50%" fxLayoutAlign="start start">
+            <h4 mat-dialog-title>Order Date: {{data.created_at | date:'dd/MM/yyyy hh:mm a'}}</h4>
+        </div>
+        <div fxFlex="50%" fxLayoutAlign="end end">
+            <h4 mat-dialog-title>Order Id: {{data.order_id}}</h4>
+        </div>
+    </div>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+        <div fxFlex="50%" fxLayoutAlign="start start">
+            <h4 mat-dialog-title>System Date: {{date_check | date:'dd/MM/yyyy hh:mm a'}}</h4>
+        </div>       
+    </div>
+    <mat-divider></mat-divider>
+    <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
+        <button mat-button [mat-dialog-close]="false">Cancel</button>
+        <button mat-button type="submit" [disabled]="loading" (click)="onSubmit()">Save</button>
+        <mat-progress-spinner class="example-margin" *ngIf="loading" [mode]="'indeterminate'" [strokeWidth]="3" [diameter]="25">
+        </mat-progress-spinner>
+    </div>
+   
+</mat-dialog-content>
+

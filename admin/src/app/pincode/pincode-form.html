@@ -11,6 +11,15 @@
             </div>
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Delivery Charge</mat-label>
+                    <input matInput placeholder="" required formControlName="deliverycharge" />
+                    <mat-error>Delivery Charge is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">           
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Status</mat-label>
                     <mat-select required formControlName="status">
                         <mat-option value="1">Active</mat-option>

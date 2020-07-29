@@ -10,58 +10,18 @@ import { HttpClient } from "@angular/common/http";
   styleUrls: ['./master.component.css']
 })
 export class MasterComponent implements OnInit {
-    category = [];
-    region = [];
-    shop = [];
-    brand = [];
-    product_type = [];
-    unit = [];
+  shop = [];
+  product_type = [];
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
 
   ngOnInit() {
-    this.getCategory();
-    this.getRegion();
     this.getShop();
-    this.getBrand();
     this.getProductType();
-    this.getUnit();
-  }
-    getCategory(): void {
-    this.httpClient
-      .get<any>(
-        "http://localhost/project/ygonlinebuy/api/v1/get_category"
-      )
-      .subscribe(
-        res => {
-          this.category = res["result"]["data"];
-        },
-        error => {
-          this._snackBar.open(error["statusText"], "", {
-            duration: 2000
-          });
-        }
-      );
-  }
-    getRegion(): void {
-    this.httpClient
-      .get<any>(
-        "http://localhost/project/ygonlinebuy/api/v1/get_region"
-      )
-      .subscribe(
-        res => {
-          this.region = res["result"]["data"];
-        },
-        error => {
-          this._snackBar.open(error["statusText"], "", {
-            duration: 2000
-          });
-        }
-      );
   }
     getShop(): void {
     this.httpClient
       .get<any>(
-        "http://localhost/project/ygonlinebuy/api/v1/get_shop"
+        "http://ygonlinebuy.com/api/v1/get_shop"
       )
       .subscribe(
         res => {
@@ -74,26 +34,10 @@ export class MasterComponent implements OnInit {
         }
       );
   }
-    getBrand(): void {
+     getProductType(): void {
     this.httpClient
       .get<any>(
-        "http://localhost/project/ygonlinebuy/api/v1/get_brand"
-      )
-      .subscribe(
-        res => {
-          this.brand = res["result"]["data"];
-        },
-        error => {
-          this._snackBar.open(error["statusText"], "", {
-            duration: 2000
-          });
-        }
-      );
-  }
-    getProductType(): void {
-    this.httpClient
-      .get<any>(
-        "http://localhost/project/ygonlinebuy/api/v1/get_product_type"
+        "http://ygonlinebuy.com/api/v1/get_product_type"
       )
       .subscribe(
         res => {
@@ -105,63 +49,6 @@ export class MasterComponent implements OnInit {
           });
         }
       );
-  }
-    getUnit(): void {
-    this.httpClient.get<any>('http://localhost/project/ygonlinebuy/api/v1/get_unit')
-      .subscribe(
-        (res) => {
-          this.unit = res["result"]["data"];
-        },
-        (error) => {
-          this._snackBar.open(error["statusText"], '', {
-            duration: 2000,
-          });
-        }
-      );
-  }
-    openCategoryDialog(id, res): void {
-    var data = null;
-    if (id != 0) {
-      this[res].forEach(val => {
-        if (parseInt(val.category_id) === parseInt(id)) {
-          data = val;
-          return false;
-        }
-      });
-    }
-    const dialogRef = this.dialog.open(CategoryForm, {
-      minWidth: "40%",
-      maxWidth: "40%",
-      data: data
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      if (result !== false && result !== "false") {
-        this.getCategory();
-      }
-    });
-  }
-    openRegionDialog(id, res): void {
-    var data = null;
-    if (id != 0) {
-      this[res].forEach(val => {
-        if (parseInt(val.region_id) === parseInt(id)) {
-          data = val;
-          return false;
-        }
-      });
-    }
-    const dialogRef = this.dialog.open(RegionForm, {
-      minWidth: "40%",
-      maxWidth: "40%",
-      data: data
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      if (result !== false && result !== "false") {
-        this.getRegion();
-      }
-    });
   }
     openShopDialog(id, res): void {
     var data = null;
@@ -185,25 +72,19 @@ export class MasterComponent implements OnInit {
       }
     });
   }
-    openBrandDialog(id, res): void {
+    shopDelete(id): void {
     var data = null;
     if (id != 0) {
-      this[res].forEach(val => {
-        if (parseInt(val.brand_id) === parseInt(id)) {
-          data = val;
-          return false;
-        }
-      });
+      data = id;
     }
-    const dialogRef = this.dialog.open(BrandForm, {
+    const dialogRef = this.dialog.open(ShopDelete, {
       minWidth: "40%",
       maxWidth: "40%",
       data: data
     });
-
     dialogRef.afterClosed().subscribe(result => {
-      if (result !== false && result !== "false") {
-        this.getBrand();
+      if (typeof result !== 'undefined' && result !== false && result !== 'false') {
+        this.getShop();
       }
     });
   }
@@ -229,95 +110,7 @@ export class MasterComponent implements OnInit {
       }
     });
   }
-    
-    openUnitDialog(id, res): void {
-    var data = null;
-    if (id != 0) {
-      this[res].forEach(val => {
-        if (parseInt(val.unit_id) === parseInt(id)) {
-          data = val;
-          return false;
-        }
-      });
-    }
-    const dialogRef = this.dialog.open(MasterUnitForm, {
-      minWidth: "40%",
-      maxWidth: "40%",
-      data: data
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      if (result !== false && result !== 'false') {
-        this.getUnit();
-      }
-    });
-  }
-
-  categoryDelete(id): void {
-    var data = null;
-    if (id != 0) {
-      data = id;
-    }
-    const dialogRef = this.dialog.open(CategoryDelete, {
-      minWidth: "40%",
-      maxWidth: "40%",
-      data: data
-    });
-    dialogRef.afterClosed().subscribe(result => {
-      if (typeof result !== 'undefined' && result !== false && result !== 'false') {
-        this.getCategory();
-      }
-    });
-  }
-  regionDelete(id): void {
-    var data = null;
-    if (id != 0) {
-      data = id;
-    }
-    const dialogRef = this.dialog.open(RegionDelete, {
-      minWidth: "40%",
-      maxWidth: "40%",
-      data: data
-    });
-    dialogRef.afterClosed().subscribe(result => {
-      if (typeof result !== 'undefined' && result !== false && result !== 'false') {
-        this.getRegion();
-      }
-    });
-  }
-  shopDelete(id): void {
-    var data = null;
-    if (id != 0) {
-      data = id;
-    }
-    const dialogRef = this.dialog.open(ShopDelete, {
-      minWidth: "40%",
-      maxWidth: "40%",
-      data: data
-    });
-    dialogRef.afterClosed().subscribe(result => {
-      if (typeof result !== 'undefined' && result !== false && result !== 'false') {
-        this.getShop();
-      }
-    });
-  }
-  brandDelete(id): void {
-    var data = null;
-    if (id != 0) {
-      data = id;
-    }
-    const dialogRef = this.dialog.open(BrandDelete, {
-      minWidth: "40%",
-      maxWidth: "40%",
-      data: data
-    });
-    dialogRef.afterClosed().subscribe(result => {
-      if (typeof result !== 'undefined' && result !== false && result !== 'false') {
-        this.getBrand();
-      }
-    });
-  }
-  producttypeDelete(id): void {
+    producttypeDelete(id): void {
     var data = null;
     if (id != 0) {
       data = id;
@@ -333,262 +126,8 @@ export class MasterComponent implements OnInit {
       }
     });
   }
-    unitDelete(id): void {
-    var data = null;
-    if (id != 0) {
-      data = id;
-    }
-    const dialogRef = this.dialog.open(MasterUnitDelete, {
-      minWidth: "40%",
-      maxWidth: "40%",
-      data: data
-    });
-    dialogRef.afterClosed().subscribe(result => {
-      if (result !== false && result !== 'false') {
-        this.getUnit();
-      }
-    });
-  }
 }
 
-
-@Component({
-  selector: "category-form",
-  templateUrl: "category-form.html"
-})
-export class CategoryForm {
-  image_url: string = "http://localhost/project/ygonlinebuy/api/v1/";
-  categoryform: FormGroup;
-  loading = false;
-  category_id = 0;
-  constructor(
-    public dialogRef: MatDialogRef<CategoryForm>,
-    @Inject(MAT_DIALOG_DATA) public data: any,
-    private _snackBar: MatSnackBar,
-    private httpClient: HttpClient
-  ) {
-    this.categoryform = new FormGroup({
-      title: new FormControl("", Validators.required),
-    });
-    if (this.data != null) {
-      this.categoryform.patchValue({
-        title: this.data.title,
-      });
-      this.category_id = this.data.category_id;
-    }
-  }
-
-  onSubmit() {
-    if (this.categoryform.invalid) {
-      return;
-    }
-    this.loading = true;
-    var formData = new FormData();
-    var url = "";
-    if (this.category_id != 0) {
-      formData.append("title", this.categoryform.value.title);
-      url =
-        "update_record/category/category_id = " + this.category_id;
-    } else {
-      formData.append("title", this.categoryform.value.title);
-      url = "insert_category";
-    }
-    this.httpClient
-      .post("http://localhost/project/ygonlinebuy/api/v1/" + url, formData)
-      .subscribe(
-        res => {
-          this.loading = false;
-          if (res["result"]["error"] === false) {
-            this.dialogRef.close(true);
-          } else {
-            this._snackBar.open(res["result"]["message"], "", {
-              duration: 2000
-            });
-          }
-        },
-        error => {
-          this.loading = false;
-          this._snackBar.open(error["statusText"], "", {
-            duration: 2000
-          });
-        }
-      );
-  }
-}
-
-
-@Component({
-  selector: "category-delete-confirmation",
-  templateUrl: "category-delete-confirmation.html"
-})
-export class CategoryDelete {
-  loading = false;
-  category_id = 0;
-  constructor(
-    public dialogRef: MatDialogRef<CategoryDelete>,
-    @Inject(MAT_DIALOG_DATA) public data: any,
-    private _snackBar: MatSnackBar,
-    private httpClient: HttpClient
-  ) {
-    if (this.data != null) {
-      this.category_id = this.data;
-    }
-  }
-  confirmDelete() {
-    if (this.category_id == null || this.category_id == 0) {
-      return;
-    }
-    this.loading = true;
-    this.httpClient
-      .get(
-        "http://localhost/project/ygonlinebuy/api/v1/delete_record/category/category_id=" +
-          this.category_id
-      )
-      .subscribe(
-        res => {
-          this.loading = false;
-          if (res["result"]["error"] === false) {
-            this.dialogRef.close(true);
-          } else {
-            this._snackBar.open(res["result"]["message"], "", {
-              duration: 2000
-            });
-          }
-        },
-        error => {
-          this.loading = false;
-          this._snackBar.open(error["statusText"], "", {
-            duration: 2000
-          });
-        }
-      );
-  }
-}
-
-@Component({
-  selector: "region-form",
-  templateUrl: "region-form.html"
-})
-export class RegionForm {
-  image_url: string = "http://localhost/project/ygonlinebuy/api/v1/";
-  regionform: FormGroup;
-  loading = false;
-  region_id = 0;
-  constructor(
-    public dialogRef: MatDialogRef<RegionForm>,
-    @Inject(MAT_DIALOG_DATA) public data: any,
-    private _snackBar: MatSnackBar,
-    private httpClient: HttpClient
-  ) {
-    this.regionform = new FormGroup({
-      country: new FormControl("", Validators.required),
-      state: new FormControl("", Validators.required),
-      region: new FormControl("", Validators.required),
-      pincode: new FormControl("", Validators.required),
-    });
-    if (this.data != null) {
-      this.regionform.patchValue({
-        country: this.data.country,
-        state: this.data.state,
-        region: this.data.region,
-        pincode: this.data.pincode,
-      });
-      this.region_id = this.data.region_id;
-    }
-  }
-
-  onSubmit() {
-    if (this.regionform.invalid) {
-      return;
-    }
-    this.loading = true;
-    var formData = new FormData();
-    var url = "";
-    if (this.region_id != 0) {
-      formData.append("country", this.regionform.value.country);
-      formData.append("state", this.regionform.value.state);
-      formData.append("region", this.regionform.value.region);
-      formData.append("pincode", this.regionform.value.pincode);
-      url =
-        "update_record/region/region_id = " + this.region_id;
-    } else {
-      formData.append("country", this.regionform.value.country);
-      formData.append("state", this.regionform.value.state);
-      formData.append("region", this.regionform.value.region);
-      formData.append("pincode", this.regionform.value.pincode);
-      url = "insert_region";
-    }
-    this.httpClient
-      .post("http://localhost/project/ygonlinebuy/api/v1/" + url, formData)
-      .subscribe(
-        res => {
-          this.loading = false;
-          if (res["result"]["error"] === false) {
-            this.dialogRef.close(true);
-          } else {
-            this._snackBar.open(res["result"]["message"], "", {
-              duration: 2000
-            });
-          }
-        },
-        error => {
-          this.loading = false;
-          this._snackBar.open(error["statusText"], "", {
-            duration: 2000
-          });
-        }
-      );
-  }
-}
-
-
-@Component({
-  selector: "region-delete-confirmation",
-  templateUrl: "region-delete-confirmation.html"
-})
-export class RegionDelete {
-  loading = false;
-  region_id = 0;
-  constructor(
-    public dialogRef: MatDialogRef<RegionDelete>,
-    @Inject(MAT_DIALOG_DATA) public data: any,
-    private _snackBar: MatSnackBar,
-    private httpClient: HttpClient
-  ) {
-    if (this.data != null) {
-      this.region_id = this.data;
-    }
-  }
-  confirmDelete() {
-    if (this.region_id == null || this.region_id == 0) {
-      return;
-    }
-    this.loading = true;
-    this.httpClient
-      .get(
-        "http://localhost/project/ygonlinebuy/api/v1/delete_record/region/region_id=" +
-          this.region_id
-      )
-      .subscribe(
-        res => {
-          this.loading = false;
-          if (res["result"]["error"] === false) {
-            this.dialogRef.close(true);
-          } else {
-            this._snackBar.open(res["result"]["message"], "", {
-              duration: 2000
-            });
-          }
-        },
-        error => {
-          this.loading = false;
-          this._snackBar.open(error["statusText"], "", {
-            duration: 2000
-          });
-        }
-      );
-  }
-}
 
 
 @Component({
@@ -596,7 +135,7 @@ export class RegionDelete {
   templateUrl: "shop-form.html"
 })
 export class ShopForm {
-    image_url: string = "http://localhost/project/ygonlinebuy/api/v1/";
+    image_url: string = "http://ygonlinebuy.com/api/v1/";
     shopform: FormGroup;
     loading = false;
     shop_id = 0;
@@ -632,7 +171,7 @@ export class ShopForm {
       this.shop_id = this.data.shop_id;
     }
     this.httpClient
-      .get("http://localhost/project/ygonlinebuy/api/v1/get_category")
+      .get("http://ygonlinebuy.com/api/v1/get_category")
       .subscribe(
         res => {
           if (res["result"]["error"] === false) {
@@ -650,7 +189,7 @@ export class ShopForm {
         }
     );
     this.httpClient
-      .get("http://localhost/project/ygonlinebuy/api/v1/get_region")
+      .get("http://ygonlinebuy.com/api/v1/get_region")
       .subscribe(
         res => {
           if (res["result"]["error"] === false) {
@@ -699,7 +238,7 @@ export class ShopForm {
       url = "insert_shop";
     }
     this.httpClient
-      .post("http://localhost/project/ygonlinebuy/api/v1/" + url, formData)
+      .post("http://ygonlinebuy.com/api/v1/" + url, formData)
       .subscribe(
         res => {
           this.loading = false;
@@ -720,6 +259,7 @@ export class ShopForm {
       );
   }
 }
+
 
 
 @Component({
@@ -746,7 +286,7 @@ export class ShopDelete {
     this.loading = true;
     this.httpClient
       .get(
-        "http://localhost/project/ygonlinebuy/api/v1/delete_record/shop/shop_id=" +
+        "http://ygonlinebuy.com/api/v1/delete_record/shop/shop_id=" +
           this.shop_id
       )
       .subscribe(
@@ -770,118 +310,6 @@ export class ShopDelete {
   }
 }
 
-
-@Component({
-  selector: "brand-form",
-  templateUrl: "brand-form.html"
-})
-export class BrandForm {
-  brandform: FormGroup;
-  loading = false;
-  brand_id = 0;
-  constructor(
-    public dialogRef: MatDialogRef<BrandForm>,
-    @Inject(MAT_DIALOG_DATA) public data: any,
-    private _snackBar: MatSnackBar,
-    private httpClient: HttpClient
-  ) {
-    this.brandform = new FormGroup({
-      name: new FormControl("", Validators.required),
-    });
-    if (this.data != null) {
-      this.brandform.patchValue({
-        name: this.data.name,
-      });
-      this.brand_id = this.data.brand_id;
-    }
-  }
-
-  onSubmit() {
-    if (this.brandform.invalid) {
-      return;
-    }
-    this.loading = true;
-    var formData = new FormData();
-    var url = "";
-    if (this.brand_id != 0) {
-      formData.append("name", this.brandform.value.name);
-      url =
-        "update_record/brand/brand_id = " + this.brand_id;
-    } else {
-      formData.append("name", this.brandform.value.name);
-      url = "insert_brand";
-    }
-    this.httpClient
-      .post("http://localhost/project/ygonlinebuy/api/v1/" + url, formData)
-      .subscribe(
-        res => {
-          this.loading = false;
-          if (res["result"]["error"] === false) {
-            this.dialogRef.close(true);
-          } else {
-            this._snackBar.open(res["result"]["message"], "", {
-              duration: 2000
-            });
-          }
-        },
-        error => {
-          this.loading = false;
-          this._snackBar.open(error["statusText"], "", {
-            duration: 2000
-          });
-        }
-      );
-  }
-}
-
-
-@Component({
-  selector: "brand-delete-confirmation",
-  templateUrl: "brand-delete-confirmation.html"
-})
-export class BrandDelete {
-  loading = false;
-  brand_id = 0;
-  constructor(
-    public dialogRef: MatDialogRef<BrandDelete>,
-    @Inject(MAT_DIALOG_DATA) public data: any,
-    private _snackBar: MatSnackBar,
-    private httpClient: HttpClient
-  ) {
-    if (this.data != null) {
-      this.brand_id = this.data;
-    }
-  }
-  confirmDelete() {
-    if (this.brand_id == null || this.brand_id == 0) {
-      return;
-    }
-    this.loading = true;
-    this.httpClient
-      .get(
-        "http://localhost/project/ygonlinebuy/api/v1/delete_record/brand/brand_id=" +
-          this.brand_id
-      )
-      .subscribe(
-        res => {
-          this.loading = false;
-          if (res["result"]["error"] === false) {
-            this.dialogRef.close(true);
-          } else {
-            this._snackBar.open(res["result"]["message"], "", {
-              duration: 2000
-            });
-          }
-        },
-        error => {
-          this.loading = false;
-          this._snackBar.open(error["statusText"], "", {
-            duration: 2000
-          });
-        }
-      );
-  }
-}
 
 @Component({
   selector: "product-type-form",
@@ -924,7 +352,7 @@ export class ProductTypeForm {
       url = "insert_product_type";
     }
     this.httpClient
-      .post("http://localhost/project/ygonlinebuy/api/v1/" + url, formData)
+      .post("http://ygonlinebuy.com/api/v1/" + url, formData)
       .subscribe(
         res => {
           this.loading = false;
@@ -971,7 +399,7 @@ export class ProductTypeDelete {
     this.loading = true;
     this.httpClient
       .get(
-        "http://localhost/project/ygonlinebuy/api/v1/delete_record/product_type/product_type_id=" +
+        "http://ygonlinebuy.com/api/v1/delete_record/product_type/product_type_id=" +
           this.product_type_id
       )
       .subscribe(
@@ -992,111 +420,5 @@ export class ProductTypeDelete {
           });
         }
       );
-  }
-}
-
-
-@Component({
-  selector: 'unit-form',
-  templateUrl: 'unit-form.html',
-})
-export class MasterUnitForm {
-  unitform: FormGroup;
-  loading = false;
-  unit_id = 0;
-  constructor(
-    public dialogRef: MatDialogRef<MasterUnitForm>,
-    @Inject(MAT_DIALOG_DATA) public data: any,
-    private _snackBar: MatSnackBar,
-    private httpClient: HttpClient) {
-    this.unitform = new FormGroup({
-      'name': new FormControl('', Validators.required),
-    })
-    if (this.data != null) {
-      this.unitform.patchValue({
-        name: this.data.name,
-      });
-      this.unit_id = this.data.unit_id;
-    }
-  }
-
-
-  onSubmit() {
-    if (this.unitform.invalid) {
-      return;
-    }
-    this.loading = true;
-    var formData = new FormData();
-    var url = '';
-    if (this.unit_id != 0) {
-      formData.append('name', this.unitform.value.name);
-      url = 'update_record/unit/unit_id = ' + this.unit_id;
-    } else {
-      formData.append('name', this.unitform.value.name);
-      url = 'insert_unit';
-    }
-    this.httpClient.post('http://localhost/project/ygonlinebuy/api/v1/' + url, formData).subscribe(
-      (res) => {
-        this.loading = false;
-        if (res["result"]["error"] === false) {
-          this.dialogRef.close(true);
-        } else {
-          this._snackBar.open(res["result"]["message"], '', {
-            duration: 2000,
-          });
-        }
-      },
-      (error) => {
-        this.loading = false;
-        this._snackBar.open(error["statusText"], '', {
-          duration: 2000,
-        });
-      }
-    );
-  }
-
-}
-
-
-@Component({
-  selector: 'unit-delete-confirmation',
-  templateUrl: 'unit-delete-confirmation.html',
-})
-export class MasterUnitDelete {
-  loading = false;
-  unit_id = 0;
-  constructor(
-    public dialogRef: MatDialogRef<MasterUnitDelete>,
-    @Inject(MAT_DIALOG_DATA) public data: any,
-    private _snackBar: MatSnackBar,
-    private httpClient: HttpClient) {
-    if (this.data != null) {
-      this.unit_id = this.data;
-    }
-  }
-
-  confirmDelete() {
-    if (this.unit_id == null || this.unit_id == 0) {
-      return;
-    }
-    this.loading = true;
-    this.httpClient.get('http://localhost/project/ygonlinebuy/api/v1/delete_record/unit/unit_id=' + this.unit_id).subscribe(
-      (res) => {
-        this.loading = false;
-        if (res["result"]["error"] === false) {
-          this.dialogRef.close(true);
-        } else {
-          this._snackBar.open(res["result"]["message"], '', {
-            duration: 2000,
-          });
-        }
-      },
-      (error) => {
-        this.loading = false;
-        this._snackBar.open(error["statusText"], '', {
-          duration: 2000,
-        });
-      }
-    );
   }
 }

@@ -1,6 +1,9 @@
 <?php
 
 session_start();
+
+
+
 $app->post('/update_record/:table/:where', function($table, $where) use ($app) {
     $res = array('error' => true, 'message' => 'Unable to update');
     $data = $app->request->post();
@@ -93,7 +96,7 @@ $app->post('/loginprocess', function() use ($app) {
     $obj = new Common();
     $record = $obj->selectRow('*', 'user', 'phone_no=\'' . $data['phone_no'] . '\'');
     if (count($record) > 0) {
-        date_default_timezone_set("Asia/Kuala_Lumpur");
+        date_default_timezone_set("Asia/Kolkata");
         $res['error'] = false;
         $res['message'] = 'Welcome ' . $record['name'];
         $res['data'] = $record;
@@ -111,7 +114,7 @@ $app->post('/validateaddress', function() use ($app) {
     $obj = new Common();
     $record = $obj->selectRow('*', 'delivery_pincode', 'pincode=\'' . trim($data['pincode']) . '\'');
     if (count($record) > 0) {
-        date_default_timezone_set("Asia/Kuala_Lumpur");
+        date_default_timezone_set("Asia/Kolkata");
         $update = $obj->updateRecordWithWhere(array('name' => trim($data['name']), 'address' => trim($data['address']), 'pincode' => trim($data['pincode'])), 'user', 'user_id=' . $data['user_id']);
         if ($update > 0) {
             $res['error'] = false;
@@ -144,7 +147,7 @@ $app->post('/insert_snacks', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('name' => $data['name'], 'amount' => $data['amount'], 'imageurl' => $data['product_image'], 'unit_id' => $data['unit_id'], 'unit_no' => $data['unit_no']), 'fooditem');
+    $record = $com->insertRecord(array('category'=> $data['category'],'name' => $data['name'], 'amount' => $data['amount'], 'imageurl' => $data['product_image'], 'unit_id' => $data['unit_id'], 'unit_no' => $data['unit_no'], 'shop_id' => $data['shop_id'], 'product_type_id' => $data['product_type_id']), 'fooditem');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
@@ -180,7 +183,7 @@ $app->post('/insert_unit', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('name' => $data['name']), 'unit');
+    $record = $com->insertRecord(array('name' => $data['name'], 'status' => $data['status']), 'unit');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
@@ -200,6 +203,30 @@ $app->post('/insert_user', function() use ($app) {
     echoRespnse(201, $res);
 });
 
+$app->post('/insert_shop', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to insert');
+    $data = $app->request->post();
+    $com = new Common();
+    $record = $com->insertRecord(array('name' => $data['name'], 'category_id' => $data['category_id'], 'region_id' => $data['region_id'], 'address' => $data['address'], 'pincode' => $data['pincode'], 'email' => $data['email'], 'phone' => $data['phone'], 'contact_person_name' => $data['contact_person_name']), 'shop');
+    if ($record > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Record inserted successfully';
+    }
+    echoRespnse(201, $res);
+});
+
+$app->post('/insert_product_type', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to insert');
+    $data = $app->request->post();
+    $com = new Common();
+    $record = $com->insertRecord(array('type' => $data['type']), 'product_type');
+    if ($record > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Record inserted successfully';
+    }
+    echoRespnse(201, $res);
+});
+
 $app->post('/forgotprocess', function() use ($app) {
     $res = array('error' => true, 'message' => 'Invalid mobile number');
     $data = $app->request->post();
@@ -207,7 +234,7 @@ $app->post('/forgotprocess', function() use ($app) {
     $record = $obj->selectRow('*', 'staff', 'phone_no=\'' . $data['phone_no'] . '\'');
     if (count($record) > 0) {
         if ($data['phone_no'] == $record['phone_no']) {
-            date_default_timezone_set("Asia/Kuala_Lumpur");
+            date_default_timezone_set("Asia/Kolkata");
             $res['error'] = false;
             $res['message'] = 'Welcome ' . $record['name'];
             $res['data'] = $record;
@@ -234,7 +261,7 @@ $app->post('/insert_pincode', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('pincode' => $data['pincode'], 'status' => $data['status']), 'delivery_pincode');
+    $record = $com->insertRecord(array('pincode' => $data['pincode'],'delivery_charge' => $data['delivery_charge'], 'status' => $data['status']), 'delivery_pincode');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
@@ -255,98 +282,24 @@ $app->post('/insert_delivery_boy_status', function() use ($app) {
     echoRespnse(201, $res);
 });
 
-$app->post('/insert_category', function() use ($app) {
-    $res = array('error' => true, 'message' => 'Unable to insert');
-    $data = $app->request->post();
-    $com = new Common();
-    $record = $com->insertRecord(array('title' => $data['title']), 'category');
-    if ($record > 0) {
-        $res['error'] = false;
-        $res['message'] = 'Record inserted successfully';
-    }
-    echoRespnse(201, $res);
-});
-
-$app->post('/insert_region', function() use ($app) {
-    $res = array('error' => true, 'message' => 'Unable to insert');
-    $data = $app->request->post();
-    $com = new Common();
-    $record = $com->insertRecord(array('country' => $data['country'], 'state' => $data['state'], 'region' => $data['region'], 'pincode' => $data['pincode']), 'region');
-    if ($record > 0) {
-        $res['error'] = false;
-        $res['message'] = 'Record inserted successfully';
-    }
-    echoRespnse(201, $res);
-});
-
-$app->post('/insert_shop', function() use ($app) {
-    $res = array('error' => true, 'message' => 'Unable to insert');
-    $data = $app->request->post();
-    $com = new Common();
-    $record = $com->insertRecord(array('name' => $data['name'], 'category_id' => $data['category_id'], 'region_id' => $data['region_id'], 'address' => $data['address'], 'pincode' => $data['pincode'], 'email' => $data['email'], 'phone' => $data['phone'], 'contact_person_name' => $data['contact_person_name']), 'shop');
-    if ($record > 0) {
-        $res['error'] = false;
-        $res['message'] = 'Record inserted successfully';
-    }
-    echoRespnse(201, $res);
-});
-
-$app->post('/insert_brand', function() use ($app) {
-    $res = array('error' => true, 'message' => 'Unable to insert');
-    $data = $app->request->post();
-    $com = new Common();
-    $record = $com->insertRecord(array('name' => $data['name']), 'brand');
-    if ($record > 0) {
-        $res['error'] = false;
-        $res['message'] = 'Record inserted successfully';
-    }
-    echoRespnse(201, $res);
-});
-
-$app->post('/insert_product_type', function() use ($app) {
-    $res = array('error' => true, 'message' => 'Unable to insert');
-    $data = $app->request->post();
-    $com = new Common();
-    $record = $com->insertRecord(array('type' => $data['type']), 'product_type');
-    if ($record > 0) {
-        $res['error'] = false;
-        $res['message'] = 'Record inserted successfully';
-    }
-    echoRespnse(201, $res);
-});
-
-$app->post('/insert_product', function() use ($app) {
-    $res = array('error' => true, 'message' => 'Unable to insert');
-    $data = $app->request->post();
-    $com = new Common();
-    $record = $com->insertRecord(array('name' => $data['name'], 'category_id' => $data['category_id'], 'product_type_id' => $data['product_type_id'], 'sub_type' => $data['sub_type'], 'shop_id' => $data['shop_id'], 'brand_id' => $data['brand_id'], 'size' => $data['size'], 'unit_id' => $data['unit_id'], 'price' => $data['price'], 'offer_price' => $data['offer_price'], 'imageurl' => $data['product_image']), 'product');
-    if ($record > 0) {
-        $res['error'] = false;
-        $res['message'] = 'Record inserted successfully';
-    }
-    echoRespnse(201, $res);
-});
-
-$app->post('/insert_product_price', function() use ($app) {
-    $res = array('error' => true, 'message' => 'Unable to insert');
-    $data = $app->request->post();
-    $com = new Common();
-    $record = $com->insertRecord(array('product_id' => $data['product_id'], 'size' => $data['size'], 'unit_id' => $data['unit_id'], 'price' => $data['price'], 'offer_price' => $data['offer_price'], 'imageurl' => $data['product_image']), 'product_price');
-    if ($record > 0) {
-        $res['error'] = false;
-        $res['message'] = 'Record inserted successfully';
-    }
-    echoRespnse(201, $res);
-});
-
-
-
-
 $app->post('//:dbid/:oid', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
     $record = $com->updateRecordWithWhere(array('delivery_boy_id' => $data['delivery_boy_id']), 'order', 'order_id');
+    if ($record > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Record inserted successfully';
+    }
+    echoRespnse(201, $res);
+});
+
+
+$app->post('/insert_offers', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to insert');
+    $data = $app->request->post();
+    $com = new Common();
+    $record = $com->insertRecord(array('title' => $data['title'], 'status' => $data['status'], 'image_path' => $data['offer_image']), 'offers');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
@@ -369,6 +322,17 @@ $app->get('/update_food_status/:fid/:fsid', function($fid,$fsid){
     $res = array('error' => true, 'message' => 'Unable to Update');
     $com = new Common();
     $record = $com->updateRecordWithWhere(array('status' => $fsid), 'fooditem', 'fooditem_id ='. $fid);
+    if ($record > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Update inserted successfully';
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/update_foodsold_status/:fid/:fsid', function($fid,$fsid){
+    $res = array('error' => true, 'message' => 'Unable to Update');
+    $com = new Common();
+    $record = $com->updateRecordWithWhere(array('statussold' => $fsid), 'fooditem', 'fooditem_id ='. $fid);
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Update inserted successfully';
@@ -513,20 +477,84 @@ $app->get('/get_app_config', function() {
     echoRespnse(201, $res);
 });
 
+
+
 $app->post('/place_order', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to create order');
     $data = $app->request->post();
     $com = new Common();
     date_default_timezone_set('Asia/Kolkata');
+	
     $delivery_charge = $com->selectRow('value', 'config', 'name=\'delivery_charge\'');
     $total = 0;
     foreach (json_decode($data['items']) as $item) {
         $total = $total + ($item->amount * $item->quantity);
     }
+	
     $total = $total + $delivery_charge['value'];
+	
+	
     if ($data['total'] == $total) {
         $order = $com->insertRecord(array('user_id' => $data['user_id'], 'status' => 1, 'delivery_charge' => $delivery_charge['value'], 'address' => $data['address'], 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'created_by' => $data['user_id'], 'updated_by' => $data['user_id'], 'total' => $total), 'order');
         if ($order > 0) {
+            foreach (json_decode($data['items']) as $item) {
+                if ($item->type == 'food') {
+                    $fooditem = $com->selectRow('*', 'fooditem', 'fooditem_id = ' . $item->id);
+                }
+                if ($item->type == 'drink') {
+                    $fooditem = $com->selectRow('*', 'cooldrink', 'cooldrink_id = ' . $item->id);
+                }
+                $com->insertRecord(array('order_id' => $order, 'item_id' => $item->id, 'amount' => $item->amount, 'unit_id' => $fooditem['unit_id'], 'unit_no' => $fooditem['unit_no'], 'type' => $item->type, 'name' => $fooditem['name'], 'imageurl' => $fooditem['imageurl'], 'quantity' => $item->quantity, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'created_by' => $data['user_id'], 'updated_by' => $data['user_id']), 'order_item');
+            }
+            $res['error'] = false;
+            $res['message'] = 'Order created successfully! Order no. is #' . $order;
+        }
+    } else {
+        $res['message'] = 'Total value mismatch';
+    }
+    echoRespnse(201, $res);
+});
+
+$app->post('/place_ordernew/:fid', function($fid) use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to create order');
+    $data = $app->request->post();
+    $com = new Common();
+    //date_default_timezone_set('Asia/Kolkata');
+	
+    //$delivery_charge = $com->selectRow('value', 'config', 'name=\'delivery_charge\'');
+	
+	$delivery_charge = $com->selectRow('delivery_charge','delivery_pincode', 'pincode='.$fid);
+	
+    $total = 0;
+    foreach (json_decode($data['items']) as $item) {
+        $total = $total + ($item->amount * $item->quantity);
+    }
+	
+    $total = $total + $delivery_charge['delivery_charge'];
+	
+	
+    if ($data['total'] == $total) {
+	
+	
+	  if (function_exists('date_default_timezone_set'))
+		{
+		  date_default_timezone_set('Asia/Kolkata');
+		}
+	
+	  //$myTimeZone = date_default_timezone_set("Asia/Kolkata");
+
+      //$date = date("Y : M : D H:i:s);
+	  
+	  //SET time_zone = '+05:30';
+	  $sDate = date("Y-m-d H:i:s"); // 2015-04-07 07:12:51
+	  
+       //mysql_query("insert into `order` set `created_on` = '$sDate'");
+	
+        $order = $com->insertRecord(array('user_id' => $data['user_id'], 'status' => 1, 'delivery_charge' => $delivery_charge['delivery_charge'], 'address' => $data['address'], 'created_at' => $sDate,'updated_at' => $sDate , 'created_by' => $data['user_id'], 'updated_by' => $data['user_id'], 'total' => $total), 'order');
+      // $order = $com->insertRecord(array('user_id' => $data['user_id'], 'status' => 1, 'delivery_charge' => $delivery_charge['delivery_charge'], 'address' => $data['address'], 'updated_at' => date('Y-m-d H:i:s'), 'created_by' => $data['user_id'], 'updated_by' => $data['user_id'], 'total' => $total), 'order');
+       
+
+	   if ($order > 0) {
             foreach (json_decode($data['items']) as $item) {
                 if ($item->type == 'food') {
                     $fooditem = $com->selectRow('*', 'fooditem', 'fooditem_id = ' . $item->id);
@@ -605,7 +633,7 @@ $app->get('/get_develivery_boys_history/:dbid', function($dbid) {
 $app->get('/get_develivery_boys_order/:dbid', function($dbid) {
     $res = array('error' => true, 'message' => 'No orders found');
     $com = new Common();
-    $data = $com->selectAll('o.*, u.name AS user, u.phone_no, u.pincode, u.imageurl', '`order` AS o LEFT JOIN user AS u ON u.user_id = o.user_id', 'o.delivery_boy_id =' .$dbid . ' AND o.status != 5 ORDER BY o.order_id ASC' );
+    $data = $com->selectAll('o.*, u.name AS user, u.phone_no, u.pincode, u.imageurl', '`order` AS o LEFT JOIN user AS u ON u.user_id = o.user_id', 'o.delivery_boy_id =' .$dbid . ' AND o.status <= 4  ORDER BY o.order_id ASC' );
     if (count($data) > 0) {
         foreach ($data as $key => $row) {
             $data[$key]['items'] = $com->selectAll('oi.*, u.name AS unit_name', 'order_item AS oi LEFT JOIN unit AS u ON u.unit_id = oi.unit_id', 'oi.order_id=' . $row['order_id']);
@@ -620,10 +648,11 @@ $app->get('/get_develivery_boys_order/:dbid', function($dbid) {
 $app->get('/get_orders_for_all', function() {
     $res = array('error' => true, 'message' => 'No orders found');
     $com = new Common();
-    $data = $com->selectAll('o.*, d.first_name AS delivery_boy, d.phone AS phone, u.name AS user, u.phone_no, u.pincode, u.imageurl, u.address', '`order` AS o LEFT JOIN user AS u ON u.user_id = o.user_id LEFT JOIN delivery_boy AS d ON d.delivery_boy_id = o.delivery_boy_id', 'o.order_id > 0 ORDER BY o.order_id DESC');
+    $data = $com->selectAll('o.*, d.first_name AS delivery_boy, u.name AS user, u.phone_no, u.pincode, u.imageurl, u.address', '`order` AS o LEFT JOIN user AS u ON u.user_id = o.user_id LEFT JOIN delivery_boy AS d ON d.delivery_boy_id = o.delivery_boy_id', 'o.order_id > 0 ORDER BY o.order_id DESC LIMIT 100');
     if (count($data) > 0) {
         foreach ($data as $key => $row) {
             $data[$key]['items'] = $com->selectAll('oi.*, u.name AS unit_name', 'order_item AS oi LEFT JOIN unit AS u ON u.unit_id = oi.unit_id', 'oi.order_id=' . $row['order_id']);
+           
             if ($row['status'] == '1') {
                 $data[$key]['status'] = 'பெண்டிங்';
             }
@@ -639,6 +668,45 @@ $app->get('/get_orders_for_all', function() {
             if ($row['status'] == '5') {
                 $data[$key]['status'] = 'வழங்கப்பட்டது';
             }
+            if ($row['status'] == '6') {
+                $data[$key]['status'] = 'கேன்சல்';
+            }
+            $data[$key]['statusno']= $row['status'] ;
+        }
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_orders_for_alldate/:sid', function($sid) {
+    $res = array('error' => true, 'message' => 'No orders found');
+    $com = new Common();
+    $data = $com->selectAll('o.*, d.first_name AS delivery_boy, u.name AS user, u.phone_no, u.pincode, u.imageurl, u.address', '`order` AS o LEFT JOIN user AS u ON u.user_id = o.user_id LEFT JOIN delivery_boy AS d ON d.delivery_boy_id = o.delivery_boy_id', 'DATE(o.created_at) = \'' . $sid . '\' AND o.order_id > 0 ORDER BY o.order_id DESC');
+    if (count($data) > 0) {
+        foreach ($data as $key => $row) {
+            $data[$key]['items'] = $com->selectAll('oi.*, u.name AS unit_name', 'order_item AS oi LEFT JOIN unit AS u ON u.unit_id = oi.unit_id', 'oi.order_id=' . $row['order_id']);
+           
+            if ($row['status'] == '1') {
+                $data[$key]['status'] = 'பெண்டிங்';
+            }
+            if ($row['status'] == '2') {
+                $data[$key]['status'] = 'ஏற்கப்படுகிறது';
+            }
+            if ($row['status'] == '3') {
+                $data[$key]['status'] = 'தயாராகிறது';
+            }
+            if ($row['status'] == '4') {
+                $data[$key]['status'] = 'வருகிறது';
+            }
+            if ($row['status'] == '5') {
+                $data[$key]['status'] = 'வழங்கப்பட்டது';
+            }
+            if ($row['status'] == '6') {
+                $data[$key]['status'] = 'கேன்சல்';
+            }
+            $data[$key]['statusno']= $row['status'] ;
         }
         $res['error'] = false;
         $res['message'] = 'Records found';
@@ -664,7 +732,12 @@ $app->post('/update_delivery_status', function() use ($app) {
     $data = $app->request->post();
     $com = new Common();
     date_default_timezone_set('Asia/Kolkata');
-    $update = $com->updateRecordWithWhere(array('delivery_boy_id' => $data['delivery_boy_id'], 'status' => $data['status'], 'updated_at' => date('Y-m-d H:i:s')), 'order', 'order_id=' . $data['order_id']);
+	
+	$myTimeZone = date_default_timezone_set("Asia/Kolkata");
+	
+	 $sDate = date("Y-m-d H:i:s");
+	
+    $update = $com->updateRecordWithWhere(array('delivery_boy_id' => $data['delivery_boy_id'], 'status' => $data['status'], 'received_amt' => $data['received_amt'], 'updated_at' => $sDate ), 'order', 'order_id=' . $data['order_id']);
     if ($update > 0) {
         $res['error'] = false;
         $res['message'] = 'Status updated successfully';
@@ -672,10 +745,36 @@ $app->post('/update_delivery_status', function() use ($app) {
     echoRespnse(201, $res);
 });
 
-$app->get('/get_category', function() {
+
+$app->get('/update_wrongdate/:cid/:upid/:uid', function($cid,$upid,$uid) {
+    $res = array('error' => true, 'message' => 'Unable to update Date');
+    //$data = $app->request->post();
+    $com = new Common();
+	
+    $update = $com->updateRecordWithWhere(array('created_at' => $cid, 'updated_at' =>$upid ), 'order', 'order_id=' .$uid);
+    if ($update > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Date updated successfully';
+    }
+    echoRespnse(201, $res);
+});
+
+
+$app->get('/update_order_status/:fid/:fsid', function($fid,$fsid){
+    $res = array('error' => true, 'message' => 'Unable to Update');
+    $com = new Common();
+    $record = $com->updateRecordWithWhere(array('status' => $fsid), 'order', 'order_id ='. $fid);
+    if ($record > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Update inserted successfully';
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_offers', function() {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
-    $data = $com->selectAll('*', 'category', 'category_id > 0');
+    $data = $com->selectAll('*', 'offers', 'offers_id > 0');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
@@ -684,10 +783,10 @@ $app->get('/get_category', function() {
     echoRespnse(201, $res);
 });
 
-$app->get('/get_region', function() {
-    $res = array('error' => true, 'message' => 'Unable to get records');
+$app->get('/get_offersby', function() {
+    $res = array('error' => true, 'message' => 'No Records Found');
     $com = new Common();
-    $data = $com->selectAll('*', 'region', 'region_id > 0');
+    $data = $com->selectAll('*', 'offers', 'offers_id > 0 && status=1');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
@@ -696,22 +795,11 @@ $app->get('/get_region', function() {
     echoRespnse(201, $res);
 });
 
-$app->get('/get_shop', function() {
-    $res = array('error' => true, 'message' => 'Unable to get records');
-    $com = new Common();
-    $data = $com->selectAll('s.*, c.title AS category, r.region AS region', 'shop AS s LEFT JOIN category AS c ON c.category_id = s.category_id LEFT JOIN region AS r ON r.region_id = s.region_id', 's.shop_id > 0');
-    if (count($data) > 0) {
-        $res['error'] = false;
-        $res['message'] = 'Records found';
-        $res['data'] = $data;
-    }
-    echoRespnse(201, $res);
-});
 
-$app->get('/get_brand', function() {
+$app->get('/get_app_confignew/:fid', function($fid) {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
-    $data = $com->selectAll('*', 'brand', 'brand_id > 0');
+    $data = $com->selectAll('*', 'delivery_pincode', 'pincode='.$fid);
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
@@ -732,22 +820,10 @@ $app->get('/get_product_type', function() {
     echoRespnse(201, $res);
 });
 
-$app->get('/get_product', function() {
+$app->get('/get_shop', function() {
     $res = array('error' => true, 'message' => 'Unable to get records');
     $com = new Common();
-    $data = $com->selectAll('p.*, c.title AS category, pt.type AS product_type, s.name AS shop', 'product AS p LEFT JOIN category AS c ON c.category_id = p.category_id LEFT JOIN product_type AS pt ON pt.product_type_id = p.product_type_id LEFT JOIN shop AS s ON s.shop_id = p.shop_id', 'p.product_id > 0');
-    if (count($data) > 0) {
-        $res['error'] = false;
-        $res['message'] = 'Records found';
-        $res['data'] = $data;
-    }
-    echoRespnse(201, $res);
-});
-
-$app->get('/get_product_price', function() {
-    $res = array('error' => true, 'message' => 'Unable to get records');
-    $com = new Common();
-    $data = $com->selectAll('pp.*, p.name AS product, u.name AS unit', 'product_price AS pp LEFT JOIN product AS p ON p.product_id = pp.product_id LEFT JOIN unit AS u ON u.unit_id = pp.unit_id', 'pp.product_price_id > 0');
+    $data = $com->selectAll('s.*, c.title AS category, r.region AS region', 'shop AS s LEFT JOIN category AS c ON c.category_id = s.category_id LEFT JOIN region AS r ON r.region_id = s.region_id', 's.shop_id > 0');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';

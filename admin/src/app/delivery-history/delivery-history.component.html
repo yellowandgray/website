@@ -7,6 +7,7 @@
         <div class="md-padding">
             <table mat-table class="mat-elevation-z8">
                 <tr mat-row matColumnDef="position">
+                    <th mat-header-row> DateChange </th>
                     <th mat-header-row> Date </th>
                     <th mat-header-row> Order Id </th>
                     <th mat-header-row> Status </th>
@@ -17,6 +18,9 @@
                 </tr>
                 <ng-container *ngFor="let data of result">
                     <tr>
+                        <td mat-row class="cursor" (click)="OrderDateChange(data.order_id, 'result');"> <span class="material-icons">
+                            book_online
+                            </span> </td>
                         <td mat-row> {{data.created_at | date:'dd/MM/yyyy hh:mm a'}} </td>
                         <td mat-row class="cursor" (click)="OrderView(data.order_id, 'result');"> {{data.order_id}} </td>
                         <td mat-row> {{data.status}} </td>
@@ -34,5 +38,8 @@
                 </ng-container>
             </table>
         </div>
+        <!-- <ngx-spinner bdColor="rgba(0, 0, 0, 0)" name="sp3" [fullScreen]="false" type="ball-spin-clockwise" color = "#1d94cd"  size="medium" *ngIf="loading"><p style="color: orangered" > Loading... </p></ngx-spinner> -->
+        <mat-spinner [diameter]="60"  *ngIf="loading"><p style="color: orangered" > Loading... </p></mat-spinner>
+
     </mat-sidenav-content>
 </mat-sidenav-container>

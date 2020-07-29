@@ -3,7 +3,7 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dial
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { HttpClient } from '@angular/common/http';
-
+//import { NgxSpinnerService } from 'ngx-spinner';
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
@@ -11,19 +11,40 @@ import { HttpClient } from '@angular/common/http';
 })
 export class UserComponent implements OnInit {
   result = [];
-  constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
+  loading = false;
+  constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, 
+    private httpClient: HttpClient,
+    //private spinner: NgxSpinnerService
+    ) { }
 
   ngOnInit() {
     this.getUser();
   }
-  image_url: string = 'http://localhost/project/ygonlinebuy/api/v1/';
+
+  showSpinner(name: string) {
+   // this.spinner.show(name);
+  }
+
+  hideSpinner(name: string) {
+   // this.spinner.hide(name);
+  }
+
+  image_url: string = 'http://ygonlinebuy.com/api/v1/';
   getUser(): void {
-    this.httpClient.get<any>('http://localhost/project/ygonlinebuy/api/v1/get_user')
+
+    this.loading = true;
+    this.showSpinner('sp3')
+
+    this.httpClient.get<any>('http://ygonlinebuy.com/api/v1/get_user')
       .subscribe(
         (res) => {
+          this.loading = false;
+          this.hideSpinner('sp3')
           this.result = res["result"]["data"];
         },
         (error) => {
+          this.loading = false;
+          this.hideSpinner('sp3')
           this._snackBar.open(error["statusText"], '', {
             duration: 2000,
           });
@@ -99,7 +120,7 @@ export class UserComponent implements OnInit {
   templateUrl: 'user-form.html',
 })
 export class UserForm {
-  image_url: string = 'http://localhost/project/ygonlinebuy/api/v1/';
+  image_url: string = 'http://ygonlinebuy.com/api/v1/';
   userform: FormGroup;
   loading = false;
   user_id = 0;
@@ -151,7 +172,7 @@ export class UserForm {
       formData.append('user_image', this.imageurl);
       url = 'insert_user';
     }
-    this.httpClient.post('http://localhost/project/ygonlinebuy/api/v1/' + url, formData).subscribe(
+    this.httpClient.post('http://ygonlinebuy.com/api/v1/' + url, formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -184,7 +205,7 @@ export class UserForm {
     this.loading = true;
     var formData = new FormData();
     formData.append('file', fileData);
-    this.httpClient.post('http://localhost/project/ygonlinebuy/api/v1/upload_file', formData).subscribe(
+    this.httpClient.post('http://ygonlinebuy.com/api/v1/upload_file', formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -226,7 +247,7 @@ export class UserDelete {
       return;
     }
     this.loading = true;
-    this.httpClient.get('http://localhost/project/ygonlinebuy/api/v1/delete_record/user/user_id=' + this.user_id).subscribe(
+    this.httpClient.get('http://ygonlinebuy.com/api/v1/delete_record/user/user_id=' + this.user_id).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -254,7 +275,7 @@ export class UserDelete {
 })
 
 export class UserImageView {
-  image_url: string = 'http://localhost/project/ygonlinebuy/api/v1/';
+  image_url: string = 'http://ygonlinebuy.com/api/v1/';
   action: string = '';
   loading = false;
   user_id = 0;

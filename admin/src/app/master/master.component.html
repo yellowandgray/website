@@ -5,45 +5,6 @@
     <mat-sidenav-content>
         <app-header></app-header>
         <mat-tab-group>
-            <mat-tab label="Category">
-                <div class="add-btn-container">
-                    <button mat-raised-button color="primary" (click)="openCategoryDialog(0, 'null')"><mat-icon>add</mat-icon> Category</button>
-                </div>
-                <mat-list>
-                    <ng-container *ngFor="let data of category">
-                        <mat-list-item>
-                            <button mat-icon-button aria-label="label" (click)="openCategoryDialog(data.category_id, 'category')">
-                                <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
-                            </button>
-                            <button mat-icon-button aria-label="label" (click)="categoryDelete(data.category_id)">
-                                <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
-                            </button>
-                            <h4 mat-line>{{data.title}}</h4>
-                        </mat-list-item>
-                        <mat-divider></mat-divider>
-                    </ng-container>
-                </mat-list>
-            </mat-tab>
-            <mat-tab label="Region">
-                <div class="add-btn-container">
-                    <button mat-raised-button color="primary" (click)="openRegionDialog(0, 'null')"><mat-icon>add</mat-icon> Region</button>
-                </div>
-                <mat-list>
-                    <ng-container *ngFor="let data of region">
-                        <mat-list-item>
-                            <button mat-icon-button aria-label="label" (click)="openRegionDialog(data.region_id, 'region')">
-                                <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
-                            </button>
-                            <button mat-icon-button aria-label="label" (click)="regionDelete(data.region_id)">
-                                <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
-                            </button>
-                            <h4 mat-line>{{data.region}} - {{data.state}} - {{data.country}}</h4>
-                            <p mat-line>{{data.pincode}}</p>
-                        </mat-list-item>
-                        <mat-divider></mat-divider>
-                    </ng-container>
-                </mat-list>
-            </mat-tab>
             <mat-tab label="Shop">
                 <div class="add-btn-container">
                     <button mat-raised-button color="primary" (click)="openShopDialog(0, 'null')"><mat-icon>add</mat-icon> Shop</button>
@@ -60,44 +21,6 @@
                             <h4 mat-line>{{data.name}} - {{data.contact_person_name}}</h4>
                             <p mat-line>{{data.category}} - {{data.region}}</p>
                             <p mat-line>{{data.address}} - {{data.pincode}}</p>
-                        </mat-list-item>
-                        <mat-divider></mat-divider>
-                    </ng-container>
-                </mat-list>
-            </mat-tab>
-            <mat-tab label="Brand">
-                <div class="add-btn-container">
-                    <button mat-raised-button color="primary" (click)="openBrandDialog(0, 'null')"><mat-icon>add</mat-icon> Brand</button>
-                </div>
-                <mat-list>
-                    <ng-container *ngFor="let data of brand">
-                        <mat-list-item>
-                            <button mat-icon-button aria-label="label" (click)="openBrandDialog(data.brand_id, 'brand')">
-                                <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
-                            </button>
-                            <button mat-icon-button aria-label="label" (click)="brandDelete(data.brand_id)">
-                                <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
-                            </button>
-                            <h4 mat-line>{{data.name}}</h4>
-                        </mat-list-item>
-                        <mat-divider></mat-divider>
-                    </ng-container>
-                </mat-list>
-            </mat-tab>
-            <mat-tab label="Unit">
-                <div class="add-btn-container">
-                    <button mat-raised-button color="primary" (click)="openUnitDialog(0, 'null')"><mat-icon>add</mat-icon> Unit</button>
-                </div>
-                <mat-list>
-                    <ng-container *ngFor="let data of unit">
-                        <mat-list-item>
-                            <button mat-icon-button aria-label="label" (click)="openUnitDialog(data.unit_id, 'unit')">
-                                <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
-                            </button>
-                            <button mat-icon-button aria-label="label" (click)="unitDelete(data.unit_id)">
-                                <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
-                            </button>
-                            <h4 mat-line>{{data.name}}</h4>
                         </mat-list-item>
                         <mat-divider></mat-divider>
                     </ng-container>

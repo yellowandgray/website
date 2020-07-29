@@ -3,7 +3,7 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dial
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { HttpClient } from '@angular/common/http';
-
+//import { NgxSpinnerService } from 'ngx-spinner';
 @Component({
   selector: 'app-unit',
   templateUrl: './unit.component.html',
@@ -11,18 +11,38 @@ import { HttpClient } from '@angular/common/http';
 })
 export class UnitComponent implements OnInit {
   result = [];
-  constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
+  loading = false;
+  constructor(
+   // private spinner: NgxSpinnerService,
+    public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
 
   ngOnInit() {
     this.getUnit();
   }
+
+  
+  showSpinner(name: string) {
+    //this.spinner.show(name);
+  }
+
+  hideSpinner(name: string) {
+    //this.spinner.hide(name);
+  }
   getUnit(): void {
-    this.httpClient.get<any>('http://localhost/project/ygonlinebuy/api/v1/get_unit')
+
+    this.loading = true;
+    this.showSpinner('sp3')
+    
+    this.httpClient.get<any>('http://ygonlinebuy.com/api/v1/get_unit')
       .subscribe(
         (res) => {
+          this.loading = false;
+          this.hideSpinner('sp3')
           this.result = res["result"]["data"];
         },
         (error) => {
+          this.loading = false;
+          this.hideSpinner('sp3')
           this._snackBar.open(error["statusText"], '', {
             duration: 2000,
           });
@@ -114,7 +134,7 @@ export class UnitForm {
       formData.append('status', this.unitform.value.status);
       url = 'insert_unit';
     }
-    this.httpClient.post('http://localhost/project/ygonlinebuy/api/v1/' + url, formData).subscribe(
+    this.httpClient.post('http://ygonlinebuy.com/api/v1/' + url, formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -159,7 +179,7 @@ export class UnitDelete {
       return;
     }
     this.loading = true;
-    this.httpClient.get('http://localhost/project/ygonlinebuy/api/v1/delete_record/unit/unit_id=' + this.unit_id).subscribe(
+    this.httpClient.get('http://ygonlinebuy.com/api/v1/delete_record/unit/unit_id=' + this.unit_id).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
