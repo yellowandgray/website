@@ -25,6 +25,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatBadgeModule} from '@angular/material/badge';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -38,6 +39,7 @@ import { OrderComponent, OrderViewForm, DeliveryStatusForm, OrderDelete } from '
 import { BannerComponent, BannerForm, BannerImageView, BannerDelete } from './banner/banner.component';
 import { NewsletterComponent, NewsletterDelete } from './newsletter/newsletter.component';
 import { CouponComponent, CouponForm, CouponDelete } from './coupon/coupon.component';
+import { ContactInfoComponent } from './contact-info/contact-info.component';
 
 @NgModule({
   declarations: [
@@ -67,7 +69,8 @@ import { CouponComponent, CouponForm, CouponDelete } from './coupon/coupon.compo
     NewsletterDelete,
     CouponComponent,
     CouponForm,
-    CouponDelete
+    CouponDelete,
+    ContactInfoComponent
   ],
   imports: [
     BrowserModule,
@@ -96,7 +99,8 @@ import { CouponComponent, CouponForm, CouponDelete } from './coupon/coupon.compo
     MatDatepickerModule,
     MatNativeDateModule,
     MatExpansionModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatSlideToggleModule  
   ],
   entryComponents: [TestimonialComponent, TestimonialForm, TestimonialDelete, ProductComponent, ProductForm, ProductImageView, ProductDelete, MemberComponent, MemberForm, MemberDelete, OrderComponent, OrderViewForm, DeliveryStatusForm, OrderDelete, BannerComponent, BannerForm, BannerImageView, BannerDelete, NewsletterComponent, NewsletterDelete, CouponComponent, CouponForm, CouponDelete],
   providers: [],

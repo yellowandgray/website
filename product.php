@@ -8,6 +8,7 @@
     $obj = new Common();
     $product_1 = $obj->selectRow('*', 'product', 'product_id = 1');
     $product_2 = $obj->selectRow('*', 'product', 'product_id = 2');
+    $sales_mode = $obj->selectRow('*', 'sales_mode', 'sales_mode_id > 0');
     ?>
     <body class="goto-here">
         <!-- END nav -->
@@ -70,19 +71,23 @@
                                             <p>Fresche EF 3851– 1 Litre</p>
                                             <p>Bz 1 Binder – 1.5 Litre </p>
                                             <p><span><i class="fa fa-inr" aria-hidden="true"></i></span><span>8000/-</span></p>
-                                            <a href="#" data-name="combo" data-price="8000" class="add-to-cart">
-                                                <!--                                            <a href="tel:+91 8409 012345">-->
-                                                <button class="button-03">
-                                                    <i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart
-                                                </button>
-                                                <!--                                                <button class="button-03">
-                                                                                                        <i class="fa fa-cart-plus" aria-hidden="true"></i>  Call For Order
-                                                                                                </button>-->
-                                            </a>
-                                            <a href="javascript: goToCheckout();" class="go-cart" data-target="#cart">
-                                                <span class="icon-shopping_cart"></span>
-                                                <span class="total-count"></span>
-                                            </a>
+                                            <?php if ($sales_mode['sales_mode'] == '1') { ?> 
+                                                <a href="#" data-name="combo" data-price="8000" class="add-to-cart">
+                                                    <button class="button-03">
+                                                        <i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart
+                                                    </button>
+                                                </a>
+                                                <a href="javascript: goToCheckout();" class="go-cart" data-target="#cart">
+                                                    <span class="icon-shopping_cart"></span>
+                                                    <span class="total-count"></span>
+                                                </a>
+                                            <?php } else { ?>
+                                                <a href="tel:+91 8409 012345">
+                                                    <button class="button-03">
+                                                        <i class="fa fa-cart-plus" aria-hidden="true"></i>  Call For Order
+                                                    </button>
+                                                </a>
+                                            <?php } ?>
                                         </div>
                                     </div>
                                 </div>

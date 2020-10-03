@@ -263,3 +263,28 @@ $app->post('/new_order', function() use ($app) {
     }
     echoRespnse(201, $res);
 });
+
+
+
+$app->get('/update_sales_mode/:fid/:bid', function($fid,$bid){
+    $res = array('error' => true, 'message' => 'Unable to Update');
+    $com = new Common();
+    $record = $com->updateRecordWithWhere(array('sales_mode' => $bid), 'sales_mode', 'sales_mode_id ='. $fid);
+    if ($record > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Update inserted successfully';
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_sales_mode', function() {
+    $res = array('error' => true, 'message' => 'Unable to get records');
+    $com = new Common();
+    $data = $com->selectAll('*', 'sales_mode', 'sales_mode_id > 0');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});

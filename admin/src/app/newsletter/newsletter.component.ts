@@ -16,7 +16,7 @@ export class NewsletterComponent implements OnInit {
     this.getNewsletter();
   }
     getNewsletter(): void {
-     this.httpClient.get<any>('http://localhost/project/fresche/api/v1/get_newsletter')
+     this.httpClient.get<any>('../api/v1/get_newsletter')
      .subscribe(
              (res)=>{
                  this.result = res["result"]["data"];
@@ -71,7 +71,7 @@ export class NewsletterDelete {
             return;
       }
       this.loading = true;
-      this.httpClient.get('http://localhost/project/fresche/api/v1/delete_record/newsletter/newsletter_id='+this.newsletter_id).subscribe(
+      this.httpClient.get('../api/v1/delete_record/newsletter/newsletter_id='+this.newsletter_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {

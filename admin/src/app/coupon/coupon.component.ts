@@ -19,7 +19,7 @@ export class CouponComponent implements OnInit {
     this.getCoupon();
   }
   getCoupon(): void {
-    this.httpClient.get<any>('http://localhost/project/fresche/api/v1/get_coupon')
+    this.httpClient.get<any>('../api/v1/get_coupon')
       .subscribe(
         (res) => {
           this.result = res["result"]["data"];
@@ -128,7 +128,7 @@ export class CouponForm {
       formData.append('status', this.couponForm.value.status);
       url = 'insert_coupon';
     }
-    this.httpClient.post('http://localhost/project/fresche/api/v1/' + url, formData).subscribe(
+    this.httpClient.post('../api/v1/' + url, formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -172,7 +172,7 @@ export class CouponDelete {
       return;
     }
     this.loading = true;
-    this.httpClient.get('http://localhost/project/fresche/api/v1/delete_record/coupon/coupon_id=' + this.coupon_id).subscribe(
+    this.httpClient.get('../api/v1/delete_record/coupon/coupon_id=' + this.coupon_id).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {

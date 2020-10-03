@@ -5,6 +5,13 @@
     <mat-sidenav-content>
         <app-header></app-header>        
         <div class="add-btn-container">
+            <ng-container *ngFor="let data of result_1">
+                <mat-slide-toggle [checked]="data.sales_mode === '0' || data.sales_mode === 0 ? false : true" #tooltip="matTooltip" matTooltip="Active Banner" (change)="changeSalesStatus($event, data.sales_mode_id)">
+                    <span *ngIf="data.sales_mode === '1'">Online Sale</span>
+                    <span *ngIf="data.sales_mode === '0'">Contact Only</span>
+                </mat-slide-toggle> 
+            </ng-container>
+            &nbsp;&nbsp;
             <button mat-raised-button color="primary" (click)="openDialog(0, 'null')"><mat-icon>add</mat-icon> Product</button>
         </div>
         <mat-list>
