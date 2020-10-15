@@ -40,6 +40,7 @@ import { BannerComponent, BannerForm, BannerImageView, BannerDelete } from './ba
 import { NewsletterComponent, NewsletterDelete } from './newsletter/newsletter.component';
 import { CouponComponent, CouponForm, CouponDelete } from './coupon/coupon.component';
 import { ContactInfoComponent } from './contact-info/contact-info.component';
+import { ApplicationComponent, ApplicationForm, ImageView, ApplicationDelete } from './application/application.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,11 @@ import { ContactInfoComponent } from './contact-info/contact-info.component';
     CouponComponent,
     CouponForm,
     CouponDelete,
-    ContactInfoComponent
+    ContactInfoComponent,
+    ApplicationComponent,
+    ApplicationForm,
+    ImageView,
+    ApplicationDelete
   ],
   imports: [
     BrowserModule,
@@ -102,7 +107,7 @@ import { ContactInfoComponent } from './contact-info/contact-info.component';
     MatBadgeModule,
     MatSlideToggleModule  
   ],
-  entryComponents: [TestimonialComponent, TestimonialForm, TestimonialDelete, ProductComponent, ProductForm, ProductImageView, ProductDelete, MemberComponent, MemberForm, MemberDelete, OrderComponent, OrderViewForm, DeliveryStatusForm, OrderDelete, BannerComponent, BannerForm, BannerImageView, BannerDelete, NewsletterComponent, NewsletterDelete, CouponComponent, CouponForm, CouponDelete],
+  entryComponents: [TestimonialComponent, TestimonialForm, TestimonialDelete, ProductComponent, ProductForm, ProductImageView, ProductDelete, MemberComponent, MemberForm, MemberDelete, OrderComponent, OrderViewForm, DeliveryStatusForm, OrderDelete, BannerComponent, BannerForm, BannerImageView, BannerDelete, NewsletterComponent, NewsletterDelete, CouponComponent, CouponForm, CouponDelete, ApplicationComponent, ApplicationForm, ImageView, ApplicationDelete],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -143,6 +143,18 @@ $app->post('/subscribe_news_letter', function() use ($app) {
     echoRespnse(201, $res);
 });
 
+$app->post('/insert_application', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to subscribe');
+    $data = $app->request->post();
+    $com = new Common();
+    $record = $com->insertRecord(array('title' => $data['title'], 'image_path_thumb' => $data['application_thumb_image']), 'application');
+    if ($record > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Record inserted successfully';
+    }
+    echoRespnse(201, $res);
+});
+
 $app->get('/get_testimonial', function() {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
@@ -265,11 +277,22 @@ $app->post('/new_order', function() use ($app) {
 });
 
 
+$app->get('/get_application', function() {
+    $res = array('error' => true, 'message' => 'Unable to get records');
+    $com = new Common();
+    $data = $com->selectAll('*', 'application', 'application_id > 0');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
 
-$app->get('/update_sales_mode/:fid/:bid', function($fid,$bid){
+$app->get('/update_sales_mode/:fid/:bid', function($fid, $bid) {
     $res = array('error' => true, 'message' => 'Unable to Update');
     $com = new Common();
-    $record = $com->updateRecordWithWhere(array('sales_mode' => $bid), 'sales_mode', 'sales_mode_id ='. $fid);
+    $record = $com->updateRecordWithWhere(array('sales_mode' => $bid), 'sales_mode', 'sales_mode_id =' . $fid);
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Update inserted successfully';
