@@ -19,9 +19,9 @@ export class ApplicationComponent implements OnInit {
     ngOnInit() {
         this.getapplication();
     }
-    image_url: string = '../api/v1/';
+    image_url: string = 'http://localhost/microview/fresche/api/v1/';
     getapplication(): void {
-        this.httpClient.get<any>('../api/v1/get_application')
+        this.httpClient.get<any>('http://localhost/microview/fresche/api/v1/get_application')
             .subscribe(
                 (res) => {
                     this.result = res["result"]["data"];
@@ -99,7 +99,7 @@ export class ApplicationComponent implements OnInit {
     templateUrl: 'application-form.html',
 })
 export class ApplicationForm {
-    image_url: string = '../api/v1/';
+    image_url: string = 'http://localhost/microview/fresche/api/v1/';
     applicationForm: FormGroup;
     loading = false;
     application_id = 0;
@@ -139,7 +139,7 @@ export class ApplicationForm {
             formData.append('application_thumb_image', this.image_path_thumb);
             url = 'insert_application';
         }
-        this.httpClient.post('../api/v1/' + url, formData).subscribe(
+        this.httpClient.post('http://localhost/microview/fresche/api/v1/' + url, formData).subscribe(
             (res) => {
                 this.loading = false;
                 if (res["result"]["error"] === false) {
@@ -165,7 +165,7 @@ export class ApplicationForm {
         this.loading = true;
         var formData = new FormData();
         formData.append('file', fileData);
-        this.httpClient.post('../api/v1/upload_file', formData).subscribe(
+        this.httpClient.post('http://localhost/microview/fresche/api/v1/upload_file', formData).subscribe(
             (res) => {
                 this.loading = false;
                 if (res["result"]["error"] === false) {
@@ -201,7 +201,7 @@ export class ApplicationForm {
 })
  
 export class ImageView {
-    image_url: string = '../api/v1/';
+    image_url: string = 'http://localhost/microview/fresche/api/v1/';
     action: string = '';
     loading = false;
     application_id = 0;
@@ -243,7 +243,7 @@ export class ApplicationDelete {
             return;
         }
         this.loading = true;
-        this.httpClient.get('../api/v1/delete_record/application/application_id=' + this.application_id).subscribe(
+        this.httpClient.get('http://localhost/microview/fresche/api/v1/delete_record/application/application_id=' + this.application_id).subscribe(
             (res) => {
                 this.loading = false;
                 if (res["result"]["error"] === false) {
