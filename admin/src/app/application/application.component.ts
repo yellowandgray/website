@@ -12,7 +12,7 @@ import * as moment from 'moment';
     styleUrls: ['./application.component.css']
 })
 export class ApplicationComponent implements OnInit {
-    result= [];
+    result = [];
     loading = false;
     constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
 
@@ -71,11 +71,11 @@ export class ApplicationComponent implements OnInit {
             }
         });
     }
-    pictureView(id, action): void  {
+    pictureView(id, action): void {
         var data = null;
-          if(id != 0) { 
+        if (id != 0) {
             data = id;
-          }
+        }
         const dialogRef = this.dialog.open(ImageView, {
             minWidth: "40%",
             maxWidth: "40%",
@@ -85,12 +85,33 @@ export class ApplicationComponent implements OnInit {
             }
         });
 
-       dialogRef.afterClosed().subscribe(result => {
-           if(result !== false && result !== 'false') {
-           }
+        dialogRef.afterClosed().subscribe(result => {
+            if (result !== false && result !== 'false') {
+            }
         });
     }
+    openGallery(id): void {
+        var data = null;
+        if (id != 0) {
+            this.result.forEach(val => {
+                if (parseInt(val.application_id) === parseInt(id)) {
+                    data = val;
+                    return false;
+                }
+            });
+        }
+        const dialogRef = this.dialog.open(ApplicationGalleryForm, {
+            minWidth: "40%",
+            maxWidth: "40%",
+            data: data
+        });
 
+        dialogRef.afterClosed().subscribe(result => {
+            if (result !== false && result !== 'false') {
+                this.getapplication();
+            }
+        });
+    }
 }
 
 
@@ -114,10 +135,10 @@ export class ApplicationForm {
             'title': new FormControl('', Validators.required),
         });
 
-        if(this.data != null) {
-           this.applicationForm.patchValue({
-           title: this.data.title,
-        });
+        if (this.data != null) {
+            this.applicationForm.patchValue({
+                title: this.data.title,
+            });
             this.application_id = this.data.application_id;
             this.image_path_thumb = this.data.image_path_thumb;
         }
@@ -194,12 +215,110 @@ export class ApplicationForm {
 }
 
 
+@Component({
+    selector: 'application-gallery-form',
+    templateUrl: 'application-gallery-form.html',
+})
+export class ApplicationGalleryForm {
+    image_url: string = 'http://localhost/microview/fresche/api/v1/';
+    applicationForm: FormGroup;
+    loading = false;
+    application_id = 0;
+    application_thumb_image: string = 'Select Application Thumb Image';
+    image_path_thumb: string = '';
+    constructor(
+        public dialogRef: MatDialogRef<ApplicationGalleryForm>,
+        @Inject(MAT_DIALOG_DATA) public data: any,
+        private _snackBar: MatSnackBar,
+        private httpClient: HttpClient) {
+        this.applicationForm = new FormGroup({
+            'title': new FormControl('', Validators.required),
+        });
+
+        if (this.data != null) {
+            this.applicationForm.patchValue({
+                title: this.data.title,
+            });
+            this.application_id = this.data.application_id;
+            this.image_path_thumb = this.data.image_path_thumb;
+        }
+    }
+
+    onSubmit() {
+        if (this.applicationForm.invalid) {
+            return;
+        }
+        this.loading = true;
+        var formData = new FormData();
+        var url = '';
+        if (this.application_id != 0) {
+            formData.append('title', this.applicationForm.value.title);
+            formData.append('image_path_thumb', this.image_path_thumb);
+            url = 'update_record/application/application_id = ' + this.application_id;
+        } else {
+            formData.append('title', this.applicationForm.value.title);
+            formData.append('application_thumb_image', this.image_path_thumb);
+            url = 'insert_application';
+        }
+        this.httpClient.post('http://localhost/microview/fresche/api/v1/' + url, formData).subscribe(
+            (res) => {
+                this.loading = false;
+                if (res["result"]["error"] === false) {
+                    this.dialogRef.close(true);
+                } else {
+                    this._snackBar.open(res["result"]["message"], '', {
+                        duration: 2000,
+                    });
+                }
+            },
+            (error) => {
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+                    duration: 2000,
+                });
+            }
+        );
+    }
+
+    fileProgress(fileInput: any, name: string, path: string) {
+        var fileData = <File>fileInput.target.files[0];
+        this[name] = fileData.name;
+        this.loading = true;
+        var formData = new FormData();
+        formData.append('file', fileData);
+        this.httpClient.post('http://localhost/microview/fresche/api/v1/upload_file', formData).subscribe(
+            (res) => {
+                this.loading = false;
+                if (res["result"]["error"] === false) {
+                    this[path] = res["result"]["data"];
+                } else {
+                    this._snackBar.open(res["result"]["message"], '', {
+                        duration: 2000,
+                    });
+                }
+            },
+            (error) => {
+                this.loading = false;
+                this._snackBar.open(error["statusText"], '', {
+                    duration: 2000,
+                });
+            });
+    }
+
+    removeMedia(url) {
+        this[url] = '';
+        if (url === 'image_path_thumb') {
+            this.application_thumb_image = 'Select Application Thumb Image';
+        }
+    }
+
+}
 
 @Component({
-  selector: 'picture-view',
-  templateUrl: 'picture-view.html',
+    selector: 'picture-view',
+    templateUrl: 'picture-view.html',
 })
- 
+
 export class ImageView {
     image_url: string = 'http://localhost/microview/fresche/api/v1/';
     action: string = '';
@@ -211,15 +330,15 @@ export class ImageView {
         @Inject(MAT_DIALOG_DATA) public datapopup: any,
         private _snackBar: MatSnackBar,
         private httpClient: HttpClient) {
-            if(this.datapopup != null) { 
-                this.action = this.datapopup.action;
-                this.data = this.datapopup.data;
-                if(this.datapopup.action == 'delete') {
-                    this.application_id = this.datapopup.data;
-                }
+        if (this.datapopup != null) {
+            this.action = this.datapopup.action;
+            this.data = this.datapopup.data;
+            if (this.datapopup.action == 'delete') {
+                this.application_id = this.datapopup.data;
             }
         }
     }
+}
 
 @Component({
     selector: 'application-delete-confirmation',

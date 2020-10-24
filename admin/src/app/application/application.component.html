@@ -13,6 +13,9 @@
                     <button mat-icon-button aria-label="label" (click)="openDialog(data.application_id, 'result')">
                         <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
                     </button>
+                    <button mat-icon-button aria-label="label" (click)="openGallery(data.application_id)">
+                        <mat-icon #tooltip="matTooltip" matTooltip="Gallery">collections</mat-icon>
+                    </button>
                     <button mat-icon-button aria-label="label" (click)="confirmDelete(data.application_id)">
                         <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                     </button>
