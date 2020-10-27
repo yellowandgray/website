@@ -28,7 +28,6 @@
             </div>
         </div>
 
-
         <section class=" ftco-category pad-80" style="position: relative; top: 80px;">
             <div class="container">
                 <div class="row">
@@ -40,15 +39,15 @@
                 <div class="row app">
                     <div class="col-md-12">
                         <div class="row  mar-b-30">
-                            <?php foreach($application as $row) { ?>
-                            <div class="col-md-4" style='margin-bottom: 20px;'>
-                                <div class="div-1" style='margin-bottom: 10px;'>
-                                    <div class="div-2">
-                                        <a href="#"><img src="<?php echo BASE_URL . $row['image_path_thumb']; ?>" alt="" class="" style="width: 350px;height: 260px;"/></a>
+                            <?php foreach ($application as $row) { ?>
+                                <div class="col-md-4" style='margin-bottom: 20px;'>
+                                    <div class="div-1" style='margin-bottom: 10px;'>
+                                        <div class="div-2">
+                                            <a href="#"><img src="<?php echo BASE_URL . $row['image_path_thumb']; ?>" alt="" class="" style="width: 350px;height: 260px;"/></a>
+                                        </div>
                                     </div>
+                                    <h3><?php echo $row['title']; ?></h3>
                                 </div>
-                                <h3><?php echo $row['title']; ?></h3>
-                            </div>
                             <?php } ?>
                         </div>
                     </div>
@@ -56,6 +55,42 @@
             </div>
         </section>
 
+        <!-- Application Gallery -->
+        <div id="applicaion_gallery" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Application - <span id="application_name"></span></h4>
+                    </div>
+                    <div class="modal-body">
+                        <iframe src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                        <div id="image_container"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <?php include 'footer.php'; ?>
+        <script type="text/javascript">
+            function completeOrder(user_id, order_id, shop_id) {
+                var param = "user_id=" + encodeURIComponent(user_id) + "&order_id=" + encodeURIComponent(order_id) + "&shop_id=" + encodeURIComponent(shop_id);
+                $.ajax({
+                    type: "POST",
+                    url: "services/completeDeliveryOrder.php",
+                    data: param,
+                    success: function (data) {
+                        alert(data);
+                        window.location = "view_order_d.php?order_id=" + order_id + "&shop_id=" + shop_id;
+                    },
+                    error: function(err) {
+                        alert('Error');
+                    }
+                });
+            }
+        </script>
     </body>
 </html>
