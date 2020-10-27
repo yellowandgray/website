@@ -41,6 +41,37 @@ $app->post('/upload_file', function() use ($app) {
     echoRespnse(201, $res);
 });
 
+$app->post('/upload_files', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to upload image');
+    $obj = new Common();
+    $data = 0;
+    if (isset($_FILES) && isset($_FILES['file'])) {
+        $len = count($_FILES['file']['name']);
+        for ($i = 0; $i < $len; $i++) {
+            $data = $data + 1;
+            $file = $_FILES['file'];
+            $name = $file['name'][$i];
+            $temp_name = $file['tmp_name'][$i];
+            $extension = strtolower($obj->getExtension($name));
+            $key = md5(uniqid());
+            $temp_file_name = $key . '.' . $extension;
+            $dir = 'uploads';
+            if (!file_exists($dir)) {
+                mkdir($dir);
+            }
+            $temp_file_path = 'uploads/' . $temp_file_name;
+            move_uploaded_file($temp_name, $temp_file_path);
+            $obj->insertRecord(array('image_path' => $temp_file_path, 'application_id' => $app->request->post('application_id')), 'application_gallery');
+        }
+    }
+    if ($data > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Image uploaded successfully';
+        $res['data'] = $obj->selectAll('*', 'application_gallery', 'application_id=' . $app->request->post('application_id'));
+    }
+    echoRespnse(201, $res);
+});
+
 $app->post('/insert_product', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
@@ -282,6 +313,10 @@ $app->get('/get_application', function() {
     $com = new Common();
     $data = $com->selectAll('*', 'application', 'application_id > 0');
     if (count($data) > 0) {
+        foreach ($data as $key => $row) {
+            $gallery = $com->selectAll('*', 'application_gallery', 'application_id = ' . $row['application_id']);
+            $data[$key]['gallery'] = $gallery;
+        }
         $res['error'] = false;
         $res['message'] = 'Records found';
         $res['data'] = $data;

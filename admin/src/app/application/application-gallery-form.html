@@ -1,10 +1,11 @@
-<h2 mat-dialog-title>Applicaiton Gallery - </h2>
+<h2 mat-dialog-title>Applicaiton Gallery - {{data.title}}</h2>
 <mat-dialog-content class="mat-typography">
-    <form [formGroup]="applicationForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="applicationGalleryForm" (ngSubmit)="onSubmit()">
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
             <div fxFlex="50%" fxLayoutAlign="center center">
                 <button type="button" mat-raised-button (click)="fileInput.click()">Application Images</button>
-                <input hidden #fileInput type="file" id="file" (change)="fileProgress($event, 'application_thumb_image')" />
+                <input hidden #fileInput type="file" id="file"
+                    (change)="fileProgress($event)" multiple />
             </div>
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
@@ -17,13 +18,20 @@
         <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
             <button mat-button [mat-dialog-close]="false">Cancel</button>
             <button mat-button type="submit" [disabled]="loading">Save</button>
-            <mat-progress-spinner
-                class="example-margin"
-                *ngIf="loading"
-                [mode]="'indeterminate'"
-                [strokeWidth]="3"
+            <mat-progress-spinner class="example-margin" *ngIf="loading" [mode]="'indeterminate'" [strokeWidth]="3"
                 [diameter]="25">
             </mat-progress-spinner>
         </div>
     </form>
+    <iframe [src]="getTrustURL(data.youtube_id)" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        class="application-gallery" allowfullscreen></iframe>
+    <div fxLayout="row" fxLayoutGap="20px">
+        <div *ngFor="let item of data.gallery" class="application-gallery">
+            <button mat-icon-button aria-label="Close icon" (click)="removeMedia(item.application_gallery_id)">
+                <mat-icon>close</mat-icon>
+            </button>
+            <img [src]="item.image_path" alt="image" />
+        </div>
+    </div>
 </mat-dialog-content>

@@ -88,3 +88,8 @@ mat-sidenav {
 .product-cart-image img {
     width: 50%;
 }
+
+.application-gallery {
+    width: 100%;
+    height: auto;;
+}
