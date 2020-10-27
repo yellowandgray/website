@@ -310,7 +310,7 @@ export class ApplicationGalleryForm {
         this.loading = true;
         var formData = new FormData();
         formData.append('gallery_id', id);
-        this.httpClient.post('http://localhost/microview/fresche/api/v1/delete_file', formData).subscribe(
+        this.httpClient.get('http://localhost/microview/fresche/api/v1/delete_record/application_gallery/'+id).subscribe(
             (res) => {
                 this.loading = false;
                 if (res["result"]["error"] === false) {
