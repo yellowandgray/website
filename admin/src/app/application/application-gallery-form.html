@@ -22,13 +22,13 @@
             </mat-progress-spinner>
         </div>
     </form>
-    <iframe [src]="getTrustURL(data.youtube_id)" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        class="application-video" allowfullscreen></iframe>
     <div *ngFor="let item of data.gallery" class="application-gallery">
         <button mat-icon-button aria-label="Close icon" (click)="removeMedia(item.application_gallery_id)">
             <mat-icon>close</mat-icon>
         </button>
-        <img [src]="image_url+item.image_path" alt="image" />
+        <iframe *ngIf="item.type == 'youtube'" [src]="getTrustURL(item.image_path)" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        class="application-video" allowfullscreen></iframe>
+        <img *ngIf="item.type == 'image'" [src]="image_url+item.image_path" alt="image" />
     </div>
 </mat-dialog-content>

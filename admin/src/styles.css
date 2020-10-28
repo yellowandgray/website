@@ -94,19 +94,13 @@ mat-sidenav {
     width: 50%;
 }
 
-.application-video {
-    width: 100%;
-    height: auto;
-    min-height: 300px;
-}
-
 .application-gallery {
     width: 50%;
     float: left;
     position: relative;
 }
 
-.application-gallery img {
+.application-gallery img, .application-video {
     width: 100%;
 }
 
@@ -114,4 +108,5 @@ mat-sidenav {
     position: absolute;
     top: 0px;
     right: 0px;
+    background: #ffffff;
 }

@@ -198,6 +198,19 @@ $app->post('/insert_application', function() use ($app) {
     echoRespnse(201, $res);
 });
 
+$app->post('/insert_application_youtube', function() use ($app) {
+    $res = array('error' => true, 'message' => 'Unable to subscribe');
+    $data = $app->request->post();
+    $com = new Common();
+    $record = $com->insertRecord(array('image_path' => $data['youtube_id'], 'application_id' => $data['application_id'], 'type' => 'youtube'), 'application_gallery');
+    if ($record > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Record inserted successfully';
+        $res['data'] = $com->selectAll('*', 'application_gallery', 'application_id=' . $data['application_id']);
+    }
+    echoRespnse(201, $res);
+});
+
 $app->get('/get_testimonial', function() {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();

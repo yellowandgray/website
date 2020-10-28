@@ -236,9 +236,6 @@ export class ApplicationGalleryForm {
         });
 
         if (this.data != null) {
-            this.applicationGalleryForm.patchValue({
-                youtube_id: this.data.youtube_id,
-            });
             this.application_id = this.data.application_id;
         }
     }
@@ -252,13 +249,13 @@ export class ApplicationGalleryForm {
         var url = '';
         if (this.application_id != 0) {
             formData.append('youtube_id', this.applicationGalleryForm.value.youtube_id);
-            url = 'update_record/application/application_id = ' + this.application_id;
+            formData.append('application_id', (this.application_id).toString());
         }
-        this.httpClient.post('../api/v1/' + url, formData).subscribe(
+        this.httpClient.post('../api/v1/insert_application_youtube', formData).subscribe(
             (res) => {
                 this.loading = false;
                 if (res["result"]["error"] === false) {
-                    this.dialogRef.close(true);
+                    this.data.gallery = res["result"]["data"];
                 } else {
                     this._snackBar.open(res["result"]["message"], '', {
                         duration: 2000,

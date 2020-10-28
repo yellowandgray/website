@@ -43,7 +43,7 @@
                                 <div class="col-md-4" style='margin-bottom: 20px;'>
                                     <div class="div-1" style='margin-bottom: 10px;'>
                                         <div class="div-2">
-                                            <a data-toggle="modal" data-target="#applicaion_gallery" onclick="showGallery(<?php echo $row['application_id']; ?>, '<?php echo $row['youtube_id']; ?>', '<?php echo $row['title']; ?>');"><img src="<?php echo BASE_URL . $row['image_path_thumb']; ?>" alt="" style="cursor: pointer;" style="width: 350px;height: 260px;"/></a>
+                                            <a data-toggle="modal" data-target="#applicaion_gallery" onclick="showGallery(<?php echo $row['application_id']; ?>, '<?php echo $row['title']; ?>');"><img src="<?php echo BASE_URL . $row['image_path_thumb']; ?>" alt="" style="cursor: pointer;" style="width: 350px;height: 260px;"/></a>
                                         </div>
                                     </div>
                                     <h3><?php echo $row['title']; ?></h3>
@@ -56,7 +56,7 @@
         </section>
 
         <!-- Application Gallery -->
-        <div id="applicaion_gallery" class="modal fade" role="dialog">
+        <div id="applicaion_gallery" class="modal fade modal-md" role="dialog">
             <div class="modal-dialog">
                 <!-- Modal content-->
                 <div class="modal-content">
@@ -65,7 +65,6 @@
                         <h4 class="modal-title">Application - <span id="application_name"></span></h4>
                     </div>
                     <div class="modal-body">
-                        <iframe src="" id="application_video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" style="width: 100%; min-height: 350px;"></iframe>
                         <div id="image_container"></div>
                     </div>
                     <div class="modal-footer">
@@ -76,19 +75,22 @@
         </div>
         <?php include 'footer.php'; ?>
         <script type="text/javascript">
-            function showGallery(aid, iframe, title) {
+            function showGallery(aid, title) {
                 $.ajax({
                     type: "GET",
                     url: "api/v1/application_gallery/" + aid,
                     success: function (data) {
                         if (data.result.error === false) {
                             $('#application_name').html(title);
-                            $('#application_video').attr('src', 'https://www.youtube.com/embed/' + iframe);
                             $('#image_container').empty();
                             $.each(data.result.data, function (key, val) {
-                                $('#image_container').append('<img src="<?php echo BASE_URL ?>' + val.image_path + '" alt="image" class="application-img" />');
+                                if (val.type === 'image') {
+                                    $('#image_container').append('<img src="<?php echo BASE_URL ?>' + val.image_path + '" alt="image" class="application-img" />');
+                                }
+                                if (val.type === 'youtube') {
+                                    $('#image_container').append('<iframe src="https://www.youtube.com/embed/' + val.image_path + '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" style="width: 100%; min-height: 350px;"></iframe>');
+                                }
                             });
-                            //$('#applicaion_gallery').modal('show');
                         } else {
                             alert(data.result.message);
                         }
