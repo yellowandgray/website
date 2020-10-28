@@ -13678,3 +13678,8 @@ textarea.form-control {
 button[disabled]:hover {
     cursor: no-drop;
 }
+
+.application-img {
+    width: 100%;
+    margin-bottom: 10px;
+}

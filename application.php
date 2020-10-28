@@ -43,7 +43,7 @@
                                 <div class="col-md-4" style='margin-bottom: 20px;'>
                                     <div class="div-1" style='margin-bottom: 10px;'>
                                         <div class="div-2">
-                                            <a href="#"><img src="<?php echo BASE_URL . $row['image_path_thumb']; ?>" alt="" class="" style="width: 350px;height: 260px;"/></a>
+                                            <a data-toggle="modal" data-target="#applicaion_gallery" onclick="showGallery(<?php echo $row['application_id']; ?>, '<?php echo $row['youtube_id']; ?>', '<?php echo $row['title']; ?>');"><img src="<?php echo BASE_URL . $row['image_path_thumb']; ?>" alt="" style="cursor: pointer;" style="width: 350px;height: 260px;"/></a>
                                         </div>
                                     </div>
                                     <h3><?php echo $row['title']; ?></h3>
@@ -61,11 +61,11 @@
                 <!-- Modal content-->
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <!--<button type="button" class="close" data-dismiss="modal">&times;</button>-->
                         <h4 class="modal-title">Application - <span id="application_name"></span></h4>
                     </div>
                     <div class="modal-body">
-                        <iframe src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                        <iframe src="" id="application_video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" style="width: 100%; min-height: 350px;"></iframe>
                         <div id="image_container"></div>
                     </div>
                     <div class="modal-footer">
@@ -76,17 +76,24 @@
         </div>
         <?php include 'footer.php'; ?>
         <script type="text/javascript">
-            function completeOrder(user_id, order_id, shop_id) {
-                var param = "user_id=" + encodeURIComponent(user_id) + "&order_id=" + encodeURIComponent(order_id) + "&shop_id=" + encodeURIComponent(shop_id);
+            function showGallery(aid, iframe, title) {
                 $.ajax({
-                    type: "POST",
-                    url: "services/completeDeliveryOrder.php",
-                    data: param,
+                    type: "GET",
+                    url: "api/v1/application_gallery/" + aid,
                     success: function (data) {
-                        alert(data);
-                        window.location = "view_order_d.php?order_id=" + order_id + "&shop_id=" + shop_id;
+                        if (data.result.error === false) {
+                            $('#application_name').html(title);
+                            $('#application_video').attr('src', 'https://www.youtube.com/embed/' + iframe);
+                            $('#image_container').empty();
+                            $.each(data.result.data, function (key, val) {
+                                $('#image_container').append('<img src="<?php echo BASE_URL ?>' + val.image_path + '" alt="image" class="application-img" />');
+                            });
+                            //$('#applicaion_gallery').modal('show');
+                        } else {
+                            alert(data.result.message);
+                        }
                     },
-                    error: function(err) {
+                    error: function (err) {
                         alert('Error');
                     }
                 });

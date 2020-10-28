@@ -1,7 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 mat-sidenav {
     min-width: 250px;
@@ -61,7 +67,7 @@ mat-sidenav {
 }
 
 .active-nav {
-    background: rgba(0,0,0,.04);
+    background: rgba(0, 0, 0, .04);
 }
 
 .order-table th {
@@ -79,7 +85,6 @@ mat-sidenav {
     text-align: center;
 }
 
-
 .product-cart-image {
     width: 30%;
     text-align: center;
@@ -89,7 +94,24 @@ mat-sidenav {
     width: 50%;
 }
 
-.application-gallery {
+.application-video {
     width: 100%;
-    height: auto;;
+    height: auto;
+    min-height: 300px;
+}
+
+.application-gallery {
+    width: 50%;
+    float: left;
+    position: relative;
+}
+
+.application-gallery img {
+    width: 100%;
+}
+
+.application-gallery button {
+    position: absolute;
+    top: 0px;
+    right: 0px;
 }

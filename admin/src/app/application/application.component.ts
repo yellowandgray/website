@@ -291,7 +291,7 @@ export class ApplicationGalleryForm {
             (res) => {
                 this.loading = false;
                 if (res["result"]["error"] === false) {
-
+                    this.data.gallery = res["result"]["data"];
                 } else {
                     this._snackBar.open(res["result"]["message"], '', {
                         duration: 2000,
@@ -310,11 +310,16 @@ export class ApplicationGalleryForm {
         this.loading = true;
         var formData = new FormData();
         formData.append('gallery_id', id);
-        this.httpClient.get('http://localhost/microview/fresche/api/v1/delete_record/application_gallery/'+id).subscribe(
+        this.httpClient.get('http://localhost/microview/fresche/api/v1/delete_record/application_gallery/application_gallery_id=' + id).subscribe(
             (res) => {
                 this.loading = false;
                 if (res["result"]["error"] === false) {
-
+                    for (var i = 0; i < (this.data.gallery).length; i++) {
+                        if (parseInt(this.data.gallery[i].application_gallery_id) === parseInt(id)) {
+                            this.data.gallery.splice(i, 1);
+                            break;
+                        }
+                    }
                 } else {
                     this._snackBar.open(res["result"]["message"], '', {
                         duration: 2000,
