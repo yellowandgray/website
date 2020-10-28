@@ -18,7 +18,7 @@ export class TestimonialComponent implements OnInit {
         this.getTestimonial();
     }
     getTestimonial(): void {
-        this.httpClient.get<any>('http://localhost/microview/fresche/api/v1/get_testimonial')
+        this.httpClient.get<any>('../api/v1/get_testimonial')
             .subscribe(
                 (res) => {
                     this.result = res["result"]["data"];
@@ -123,7 +123,7 @@ export class TestimonialForm {
             formData.append('description', this.testimonialForm.value.description);
             url = 'insert_testimonial';
         }
-        this.httpClient.post('http://localhost/microview/fresche/api/v1/' + url, formData).subscribe(
+        this.httpClient.post('../api/v1/' + url, formData).subscribe(
             (res) => {
                 this.loading = false;
                 if (res["result"]["error"] === false) {
@@ -207,7 +207,7 @@ export class TestimonialDelete {
             return;
         }
         this.loading = true;
-        this.httpClient.get('http://localhost/microview/fresche/api/v1/delete_record/testimonial/testimonial_id=' + this.testimonial_id).subscribe(
+        this.httpClient.get('../api/v1/delete_record/testimonial/testimonial_id=' + this.testimonial_id).subscribe(
             (res) => {
                 this.loading = false;
                 if (res["result"]["error"] === false) {
