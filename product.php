@@ -8,6 +8,9 @@
     $obj = new Common();
     $product_1 = $obj->selectRow('*', 'product', 'product_id = 1');
     $product_2 = $obj->selectRow('*', 'product', 'product_id = 2');
+    $product_3 = $obj->selectRow('*', 'product', 'product_id = 3');
+    $product_4 = $obj->selectRow('*', 'product', 'product_id = 7');
+    $product_5 = $obj->selectRow('*', 'product', 'product_id = 8');
     $sales_mode = $obj->selectRow('*', 'sales_mode', 'sales_mode_id > 0');
     ?>
     <body class="goto-here">
@@ -37,15 +40,13 @@
             <div class="pad-lr-80">
                 <div class="row">
                     <div class="col-lg-4 mb-5  ftco-animate">
-                        <div class="product-img-box">
-                        <!--<a href="images/product-01.png" class="image-popup"><img src="images/product-01.png" class="img-fluid" alt="Colorlib Template"></a>-->
+                        <div class="product-img-box">                        
                             <img src="<?php echo BASE_URL . $product_1['image_path']; ?>" class="product-img-responsive" alt="">
                         </div>
                     </div>
                     <div class="col-lg-8 product-details pl-md-5 ftco-animate">
                         <h3><?php echo $product_1['product_name']; ?></h3>
-                        <p><?php echo $product_1['description']; ?></p>
-                        <!--<button class="button-03"><a href="#"><i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart</a></button>-->
+                        <p><?php echo $product_1['description']; ?></p>                       
                     </div>
                 </div>
             </div>
@@ -60,13 +61,13 @@
                                 <p><?php echo $product_2['description']; ?></p>
                                <!--<p class="add-price">(It contains 1 KG Fresche EF 3851 and 1.5 KG of Bz 1 Binder)</p>-->
                             </div>
-                            <div class=" col-md-12  bz1-order ">
+                            <div class=" col-md-12  bz1-order" style="margin-top:20px">
                                 <div class=" combo">
                                     <div class="row">
-                                        <div class="col-md-4 col-sm-12 add-cart">
-                                            <img src="images/product001.png" alt="" class="img-responsive"/>
+                                        <div class="col-md-6 col-sm-12 add-cart">
+                                            <img src="images/combo.png" alt="" class="img-responsive" style="padding:15px"/>
                                         </div>
-                                        <div class="col-md-8 pro-d col-sm-12 ">
+                                        <div class="col-md-6 pro-d col-sm-12" style="padding:15px">
                                             <h3>Combo Pack</h3>
                                             <p>Fresche EF 3851– 1 Litre</p>
                                             <p>Bz 1 Binder – 1.5 Litre </p>
@@ -95,10 +96,8 @@
                         </div>
                     </div>
                     <div class="col-lg-4  mb-5 ftco-animate">
-                        <div class="product-img-box">
-                            <!--<a href="images/product-0
-                            1.png" class="image-popup"><img src="images/product-01.png" class="img-fluid" alt="Colorlib Template"></a>-->
-                            <img src="<?php echo BASE_URL . $product_2['image_path']; ?>" class="product-img-responsive" alt="">
+                        <div class="product-img-box">                            
+                            <img src="<?php echo BASE_URL . $product_2['image_path']; ?>" class="product-img-responsive" alt="BZ1 Binder">
                         </div>
                     </div>
 
@@ -109,21 +108,143 @@
             <div class="pad-lr-80">
                 <div class="row">
                     <div class="col-lg-4 mb-5  ftco-animate">
-                        <div class="">
-                        <!--<a href="images/product-01.png" class="image-popup"><img src="images/product-01.png" class="img-fluid" alt="Colorlib Template"></a>-->
-                            <img src="images/product-04.png" class="product-img-responsive" alt="">
+                        <div class="product-img-box">
+                            <img src="<?php echo BASE_URL . $product_3['image_path']; ?>" class="product-img-responsive" alt="Fresche Mini Kit">
                         </div>
                     </div>
-                    <div class="col-lg-8 product-details pl-md-5 ftco-animate">
-                        <!--<h3><span>Fresche Mini Kit</span> <button class="button-03"><a  href="#" data-name="Fresche Mini Kit" data-price="250" class="add-to-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i>   Add To Cart ( <i class="fa fa-inr" aria-hidden="true"></i> 250 )</a></button></h3>-->
-                        <h3><span>Fresche Mini Kit</span> <button class="button-03">Launching soon</button></h3>
-                        <p class="text-justify"><strong>Fresche :</strong>  Fresche is a new generation Si QAC antimicrobial which delivers high performance, broad-spectrum antibacterial, anti-fungal, mould and odour protection on surfaces and garments to which they are either applied or infused. </p>
-                        <p class="text-justify">They are widely recognized as one of the world's most advanced non-volatile, surface-bonded antimicrobial, safe for people, plants, pets, and the environment.  </p>
-                        <p class="text-justify">In addition to regular 1 Kg pack, Fresche is also available in the mini kit.</p>
-                        <p class="text-justify"><strong>Fresche Mini Kit :</strong>Fresche mini kit contains 2 sets of 5 ml Fresche EF3851 and 10 ml BZ1 Binder with a user manual</p>
-                        <p class="text-justify">Freshe Mini Kit sets can treat 1 Kg of Fabric or Upto 250 Sq.feet area.<br/>Fresche Mini Kit costs Rs.250</p>
-
+                    <div class="col-lg-8 product-details pl-md-5 ftco-animate">                       
+                        <h3><?php echo $product_3['product_name']; ?></h3>
+                        <div class="pro-d" style="float:left"><p><span><i class="fa fa-inr" aria-hidden="true"></i></span><span>250/-</span></p></div>
+                                            <div><?php if ($sales_mode['sales_mode'] == '1') { ?> 
+                                                <a href="#" data-name="combo" data-price="250" class="add-to-cart">
+                                                    <button class="button-03">
+                                                        <i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart
+                                                    </button>
+                                                </a>
+                                                <a href="javascript: goToCheckout();" class="go-cart" data-target="#cart">
+                                                    <span class="icon-shopping_cart"></span>
+                                                    <span class="total-count"></span>
+                                                </a>
+                                            <?php } else { ?>
+                                                <a href="tel:+91 8409 012345">
+                                                    <button class="button-03">
+                                                        <i class="fa fa-cart-plus" aria-hidden="true"></i>  Call For Order
+                                                    </button>
+                                                </a>
+                                            <?php } ?></div>
+                        <div style="clear:both"><?php echo $product_3['description']; ?></div>
                     </div>
+                </div>
+            </div>
+        </section>
+         <section class="ftco-section" style="background: #efefef;">
+            <div class="pad-lr-80">
+                <div class="row product-2">
+                    <div class="col-lg-8  product-details pl-md-5 ftco-animate">                        
+                                <h3><?php echo $product_4['product_name']; ?></h3>
+                                <p><?php echo $product_4['description']; ?></p>
+                                 <img src="images/logo-siqura.png" alt="SIQURA">   
+                    </div>
+                    <div class="col-lg-4  mb-5 ftco-animate">
+                        <div class="product-img-box">                            
+                            <img src="<?php echo BASE_URL . $product_4['image_path']; ?>" class="product-img-responsive" alt="SIQURA Hand Protectant">
+                        </div>
+                    </div>
+                </div>
+                <div class="row prod-sub">
+                                    <div class="col-md-4">
+                                        <div class="product-img-box2">
+                                        <img src="images/siqura-hand-50.png" alt="SIQURA Hand Protectant 10 ML"><br>
+                                        <div class="pro-d"><p><span>10 ML - <i class="fa fa-inr" aria-hidden="true"></i></span><span>127/-</span></p></div>
+                                        <button class="button-03">
+                                            <i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart
+                                        </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="product-img-box2"><img src="images/siqura-hand-50.png" alt="SIQURA Hand Protectant 50 ML"><br>
+                                        <div class="pro-d"><p><span>50 ML - <i class="fa fa-inr" aria-hidden="true"></i></span><span>254/-</span></p></div>
+                                        <button class="button-03">
+                                            <i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart
+                                        </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="product-img-box2"><img src="images/siqura-hand-50.png" alt="SIQURA Hand Protectant 250 ML"><br>
+                                        <div class="pro-d"><p><span>250 ML - <i class="fa fa-inr" aria-hidden="true"></i></span><span>551/-</span></p></div>
+                                        <button class="button-03">
+                                            <i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart
+                                        </button>
+                                        </div>
+                                    </div>                                   
+                </div>
+                <div class="row prod-sub">
+                                    <div class="col-md-4">
+                                        <div class="product-img-box2"><img src="images/siqura-hand-50.png" alt="SIQURA Hand Protectant 10 ML"><br>
+                                        <div class="pro-d"><p><span>300 ML - <i class="fa fa-inr" aria-hidden="true"></i></span><span>636/-</span></p></div>
+                                        <button class="button-03">
+                                            <i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart
+                                        </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="product-img-box2"><img src="images/siqura-hand-50.png" alt="SIQURA Hand Protectant 50 ML"><br>
+                                        <div class="pro-d"><p><span>350 ML - <i class="fa fa-inr" aria-hidden="true"></i></span><span>763/-</span></p></div>
+                                        <button class="button-03">
+                                            <i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart
+                                        </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="product-img-box2"><img src="images/siqura-hand-300.png" alt="SIQURA Hand Protectant 300 ML"><br>
+                                        <div class="pro-d"><p><span>5 L - <i class="fa fa-inr" aria-hidden="true"></i></span><span>8,475/-</span></p></div>
+                                        <button class="button-03">
+                                            <i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart
+                                        </button>
+                                        </div>
+                                    </div>                                   
+                </div>
+            </div>
+        </section>
+         <section class="ftco-section">
+            <div class="pad-lr-80">
+                <div class="row">
+                    <div class="col-lg-4 mb-5  ftco-animate">
+                        <div class="product-img-box">
+                            <img src="<?php echo BASE_URL . $product_5['image_path']; ?>" class="product-img-responsive" alt="SIQURA Surface Protectant">
+                        </div>
+                    </div>
+                    <div class="col-lg-8 product-details pl-md-5 ftco-animate">                       
+                        <h3><?php echo $product_5['product_name']; ?></h3>
+                        <p><?php echo $product_5['description']; ?></p>
+                        <img src="images/logo-siqura.png" alt="SIQURA">  
+                    </div>
+                </div>
+                                <div class="row prod-sub">
+                                    <div class="col-md-4">
+                                        <div class="product-img-box2"><img src="images/siqura-surface-475.png" alt="SIQURA Hand Protectant 10 ML"><br>
+                                        <div class="pro-d"><p><span>250 ML - <i class="fa fa-inr" aria-hidden="true"></i></span><span>551/-</span></p></div>
+                                        <button class="button-03">
+                                            <i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart
+                                        </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="product-img-box2"><img src="images/siqura-surface-475.png" alt="SIQURA Hand Protectant 50 ML"><br>
+                                        <div class="pro-d"><p><span>500 ML - <i class="fa fa-inr" aria-hidden="true"></i></span><span>763/-</span></p></div>
+                                        <button class="button-03">
+                                            <i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart
+                                        </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="product-img-box2"><img src="images/siqura-surface-475.png" alt="SIQURA Hand Protectant 300 ML"><br>
+                                        <div class="pro-d"><p><span>5 L - <i class="fa fa-inr" aria-hidden="true"></i></span><span>8,475/-</span></p></div>
+                                        <button class="button-03">
+                                            <i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart
+                                        </button>
+                                        </div>
+                                    </div>                                   
                 </div>
             </div>
         </section>
