@@ -27,6 +27,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatCardModule} from '@angular/material/card';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
 
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { HeaderComponent } from './header/header.component';
@@ -38,8 +39,9 @@ import { FloorComponent, FloorForm, FloorDelete} from './floor/floor.component';
 import { StaffComponent, StaffForm, StaffImageView, StaffDelete } from './staff/staff.component';
 import { CommandComponent, CommandDialog, CommandDelete } from './command/command.component';
 import { CategoryComponent, CategoryForm, CategoryDelete } from './category/category.component';
-import { ReportComponent } from './report/report.component';
-
+import { ReportComponent,PictureView,ElectromechFormview } from './report/report.component';
+import { DatePipe } from '@angular/common';
+import { StorageServiceModule} from 'angular-webstorage-service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -72,7 +74,9 @@ import { ReportComponent } from './report/report.component';
     CategoryComponent,
     CategoryForm,
     CategoryDelete,
-    ReportComponent
+    ReportComponent,
+    PictureView,
+ElectromechFormview
   ],
   imports: [
     BrowserModule,
@@ -100,7 +104,9 @@ import { ReportComponent } from './report/report.component';
     MatSelectModule,
     MatButtonToggleModule,
     MatExpansionModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatNativeDateModule,
+    StorageServiceModule
   ],
   entryComponents: [
     ProductComponent,
@@ -129,9 +135,11 @@ import { ReportComponent } from './report/report.component';
     CategoryComponent,
     CategoryForm,
     CategoryDelete,
-    ReportComponent
+    ReportComponent,
+    PictureView,
+ElectromechFormview
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
