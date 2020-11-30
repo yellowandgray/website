@@ -2,7 +2,7 @@
 <mat-dialog-content class="mat-typography">
     <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
-            <div fxFlex="50%" fxLayoutAlign="center center">
+            <div fxFlex="33%" fxLayoutAlign="center center">
                 <button *ngIf="image_path == ''" type="button" mat-raised-button (click)="fileInput.click()">{{product_image}}</button>
                 <input hidden #fileInput type="file" id="file" (change)="fileProgress($event, 'product_image', 'image_path')" />
                        <div class="preview-image" *ngIf="image_path != ''">
@@ -12,11 +12,21 @@
                     </button>
                 </div>
             </div>
-            <div fxFlex="50%">
+            <div fxFlex="33%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Product Price</mat-label>
                     <input matInput placeholder="" required formControlName="product_price" />
-                    <mat-error>Product Price Name is required</mat-error>
+                    <mat-error>Product Price is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="33%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Status</mat-label>
+                    <mat-select required formControlName="status">
+                        <mat-option value="1">Active</mat-option>
+                        <mat-option value="0">In Active</mat-option>
+                    </mat-select>
+                    <mat-error>Product Status is required</mat-error>
                 </mat-form-field>
             </div>
         </div>

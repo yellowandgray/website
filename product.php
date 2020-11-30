@@ -189,27 +189,25 @@
                     </div>
                 </div>
                 <div class="row prod-sub">
-                    <div class="row prod-sub">
-                        <?php foreach ($product_5_sub as $sub5) { ?>
-                            <div class="col-md-4">
-                                <div class="product-img-box2">
-                                    <img src="<?php echo BASE_URL . $sub5['image_path']; ?>" alt="SIQURA Hand Protectant 10 ML"><br>
-                                    <div class="pro-d"><p><span><?php echo $sub5['product_name']; ?> - <i class="fa fa-inr" aria-hidden="true"></i></span><span><?php echo $sub5['product_price']; ?>/-</span></p></div>
-                                    <?php if ($sales_mode['sales_mode'] == '1') { ?> 
-                                        <button class="button-03" data-name="<?php echo $sub5['product_name']; ?>" data-price="<?php echo $sub5['product_price']; ?>">
-                                            <i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart
+                    <?php foreach ($product_5_sub as $sub5) { ?>
+                        <div class="col-md-4">
+                            <div class="product-img-box2">
+                                <img src="<?php echo BASE_URL . $sub5['image_path']; ?>" alt="SIQURA Hand Protectant 10 ML"><br>
+                                <div class="pro-d"><p><span><?php echo $sub5['product_name']; ?> - <i class="fa fa-inr" aria-hidden="true"></i></span><span><?php echo $sub5['product_price']; ?>/-</span></p></div>
+                                <?php if ($sales_mode['sales_mode'] == '1') { ?> 
+                                    <button class="button-03" data-name="<?php echo $sub5['product_name']; ?>" data-price="<?php echo $sub5['product_price']; ?>">
+                                        <i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart
+                                    </button>
+                                <?php } else { ?>
+                                    <a href="tel:+91 8409 012345">
+                                        <button class="button-03">
+                                            <i class="fa fa-cart-plus" aria-hidden="true"></i>  Call For Order
                                         </button>
-                                    <?php } else { ?>
-                                        <a href="tel:+91 8409 012345">
-                                            <button class="button-03">
-                                                <i class="fa fa-cart-plus" aria-hidden="true"></i>  Call For Order
-                                            </button>
-                                        </a>
-                                    <?php } ?>
-                                </div>
+                                    </a>
+                                <?php } ?>
                             </div>
-                        <?php } ?>
-                    </div>
+                        </div>
+                    <?php } ?>
                 </div>
             </div>
         </section>

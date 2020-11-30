@@ -1,3 +1,5 @@
 --29-10-2020
 --Created table sub_product
-ALTER TABLE `product` ADD `has_sublevel` TINYINT(1) NOT NULL DEFAULT '0' AFTER `image_path`;
+
+--30-10-2020
+ALTER TABLE `sub_product` ADD `status` TINYINT(1) NOT NULL DEFAULT '1' AFTER `product_id`;

@@ -155,6 +155,7 @@ export class SubproductForm {
             'product_name': new FormControl('', Validators.required),
             'product_id': new FormControl('', Validators.required),
             'description': new FormControl('', Validators.required),
+            'status': new FormControl(1, Validators.required)
         });
 
         if (this.data.data != null) {
@@ -163,6 +164,7 @@ export class SubproductForm {
                 product_name: this.data.data.product_name,
                 product_id: this.data.data.product_id,
                 description: this.data.data.description,
+                status: this.data.data.status,
             });
             this.sub_product_id = this.data.data.sub_product_id;
             this.image_path = this.data.image_path;
@@ -181,6 +183,7 @@ export class SubproductForm {
             formData.append('product_name', this.productForm.value.product_name);
             formData.append('description', this.productForm.value.description);
             formData.append('product_id', this.productForm.value.product_id);
+            formData.append('status', this.productForm.value.status);
             formData.append('image_path', this.image_path);
             url = 'update_record/sub_product/sub_product_id = ' + this.sub_product_id;
         } else {
@@ -188,6 +191,7 @@ export class SubproductForm {
             formData.append('product_name', this.productForm.value.product_name);
             formData.append('description', this.productForm.value.description);
             formData.append('product_id', this.productForm.value.product_id);
+            formData.append('status', this.productForm.value.status);
             formData.append('product_image', this.image_path);
             url = 'insert_sub_product';
         }
