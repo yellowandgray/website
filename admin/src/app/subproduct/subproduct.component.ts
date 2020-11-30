@@ -167,7 +167,7 @@ export class SubproductForm {
                 status: this.data.data.status,
             });
             this.sub_product_id = this.data.data.sub_product_id;
-            this.image_path = this.data.image_path;
+            this.image_path = this.data.data.image_path;
         }
     }
 
