@@ -100,7 +100,7 @@ $app->post('/insert_sub_product', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('product_id' => $data['product_id'], 'product_price' => $data['product_price'], 'product_name' => $data['product_name'], 'description' => $data['description'], 'image_path' => $data['product_image']), 'sub_product');
+    $record = $com->insertRecord(array('product_id' => $data['product_id'], 'product_price' => $data['product_price'], 'product_name' => $data['product_name'], 'description' => $data['description'], 'image_path' => $data['product_image'], 'status' => $data['status']), 'sub_product');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
