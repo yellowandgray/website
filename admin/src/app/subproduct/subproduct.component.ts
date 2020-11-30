@@ -8,11 +8,11 @@ import { Observable } from 'rxjs';
 import * as moment from 'moment';
 
 @Component({
-    selector: 'app-product',
-    templateUrl: './product.component.html',
-    styleUrls: ['./product.component.css']
+    selector: 'app-subproduct',
+    templateUrl: './subproduct.component.html',
+    styleUrls: ['./subproduct.component.css']
 })
-export class ProductComponent implements OnInit {
+export class SubproductComponent implements OnInit {
     result = [];
     result_1 = [];
     loading = false;
@@ -60,7 +60,7 @@ export class ProductComponent implements OnInit {
                 }
             });
         }
-        const dialogRef = this.dialog.open(ProductForm, {
+        const dialogRef = this.dialog.open(SubproductForm, {
             minWidth: "40%",
             maxWidth: "40%",
             data: data
@@ -77,7 +77,7 @@ export class ProductComponent implements OnInit {
         if (id != 0) {
             data = id;
         }
-        const dialogRef = this.dialog.open(ProductDelete, {
+        const dialogRef = this.dialog.open(SubproductDelete, {
             minWidth: "40%",
             maxWidth: "40%",
             data: data
@@ -93,7 +93,7 @@ export class ProductComponent implements OnInit {
         if (id != 0) {
             data = id;
         }
-        const dialogRef = this.dialog.open(ProductImageView, {
+        const dialogRef = this.dialog.open(SubproductImageView, {
             minWidth: "40%",
             maxWidth: "40%",
             data: {
@@ -136,10 +136,10 @@ export class ProductComponent implements OnInit {
 }
 
 @Component({
-    selector: 'product-form',
-    templateUrl: 'product-form.html',
+    selector: 'subproduct-form',
+    templateUrl: 'subproduct-form.html',
 })
-export class ProductForm {
+export class SubproductForm {
     image_url: string = 'http://localhost/microview/fresche/api/v1/';
     productForm: FormGroup;
     loading = false;
@@ -147,7 +147,7 @@ export class ProductForm {
     product_image: string = 'Select Product Image';
     image_path: string = '';
     constructor(
-        public dialogRef: MatDialogRef<ProductForm>,
+        public dialogRef: MatDialogRef<SubproductForm>,
         @Inject(MAT_DIALOG_DATA) public data: any,
         private _snackBar: MatSnackBar,
         private httpClient: HttpClient) {
@@ -285,14 +285,14 @@ export class ProductForm {
 
 
 @Component({
-    selector: 'product-delete-confirmation',
-    templateUrl: 'product-delete-confirmation.html',
+    selector: 'subproduct-delete-confirmation',
+    templateUrl: 'subproduct-delete-confirmation.html',
 })
-export class ProductDelete {
+export class SubproductDelete {
     loading = false;
     product_id = 0;
     constructor(
-        public dialogRef: MatDialogRef<ProductDelete>,
+        public dialogRef: MatDialogRef<SubproductDelete>,
         @Inject(MAT_DIALOG_DATA) public data: any,
         private _snackBar: MatSnackBar,
         private httpClient: HttpClient) {
@@ -332,14 +332,14 @@ export class ProductDelete {
     templateUrl: 'picture-view.html',
 })
 
-export class ProductImageView {
+export class SubproductImageView {
     image_url: string = 'http://localhost/microview/fresche/api/v1/';
     action: string = '';
     loading = false;
     product_id = 0;
     data: any;
     constructor(
-        public dialogRef: MatDialogRef<ProductImageView>,
+        public dialogRef: MatDialogRef<SubproductImageView>,
         @Inject(MAT_DIALOG_DATA) public datapopup: any,
         private _snackBar: MatSnackBar,
         private httpClient: HttpClient) {

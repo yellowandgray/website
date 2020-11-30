@@ -10,7 +10,9 @@
     $product_2 = $obj->selectRow('*', 'product', 'product_id = 2');
     $product_3 = $obj->selectRow('*', 'product', 'product_id = 3');
     $product_4 = $obj->selectRow('*', 'product', 'product_id = 7');
+    $product_4_sub = $obj->selectAll('*', 'sub_product', 'product_id = 7');
     $product_5 = $obj->selectRow('*', 'product', 'product_id = 8');
+    $product_5_sub = $obj->selectAll('*', 'sub_product', 'product_id = 8');
     $sales_mode = $obj->selectRow('*', 'sales_mode', 'sales_mode_id > 0');
     ?>
     <body class="goto-here">
@@ -115,35 +117,35 @@
                     <div class="col-lg-8 product-details pl-md-5 ftco-animate">                       
                         <h3><?php echo $product_3['product_name']; ?></h3>
                         <div class="pro-d" style="float:left"><p><span><i class="fa fa-inr" aria-hidden="true"></i></span><span>250/-</span></p></div>
-                                            <div><?php if ($sales_mode['sales_mode'] == '1') { ?> 
-                                                <a href="#" data-name="combo" data-price="250" class="add-to-cart">
-                                                    <button class="button-03">
-                                                        <i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart
-                                                    </button>
-                                                </a>
-                                                <a href="javascript: goToCheckout();" class="go-cart" data-target="#cart">
-                                                    <span class="icon-shopping_cart"></span>
-                                                    <span class="total-count"></span>
-                                                </a>
-                                            <?php } else { ?>
-                                                <a href="tel:+91 8409 012345">
-                                                    <button class="button-03">
-                                                        <i class="fa fa-cart-plus" aria-hidden="true"></i>  Call For Order
-                                                    </button>
-                                                </a>
-                                            <?php } ?></div>
+                        <div><?php if ($sales_mode['sales_mode'] == '1') { ?> 
+                                <a href="#" data-name="combo" data-price="250" class="add-to-cart">
+                                    <button class="button-03">
+                                        <i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart
+                                    </button>
+                                </a>
+                                <a href="javascript: goToCheckout();" class="go-cart" data-target="#cart">
+                                    <span class="icon-shopping_cart"></span>
+                                    <span class="total-count"></span>
+                                </a>
+                            <?php } else { ?>
+                                <a href="tel:+91 8409 012345">
+                                    <button class="button-03">
+                                        <i class="fa fa-cart-plus" aria-hidden="true"></i>  Call For Order
+                                    </button>
+                                </a>
+                            <?php } ?></div>
                         <div style="clear:both"><?php echo $product_3['description']; ?></div>
                     </div>
                 </div>
             </div>
         </section>
-         <section class="ftco-section" style="background: #efefef;">
+        <section class="ftco-section" style="background: #efefef;">
             <div class="pad-lr-80">
                 <div class="row product-2">
                     <div class="col-lg-8  product-details pl-md-5 ftco-animate">                        
-                                <h3><?php echo $product_4['product_name']; ?></h3>
-                                <p><?php echo $product_4['description']; ?></p>
-                                 <img src="images/logo-siqura.png" alt="SIQURA">   
+                        <h3><?php echo $product_4['product_name']; ?></h3>
+                        <p><?php echo $product_4['description']; ?></p>
+                        <img src="images/logo-siqura.png" alt="SIQURA">   
                     </div>
                     <div class="col-lg-4  mb-5 ftco-animate">
                         <div class="product-img-box">                            
@@ -152,61 +154,21 @@
                     </div>
                 </div>
                 <div class="row prod-sub">
-                                    <div class="col-md-4">
-                                        <div class="product-img-box2">
-                                        <img src="images/siqura-hand-50.png" alt="SIQURA Hand Protectant 10 ML"><br>
-                                        <div class="pro-d"><p><span>10 ML - <i class="fa fa-inr" aria-hidden="true"></i></span><span>127/-</span></p></div>
-                                        <button class="button-03">
-                                            <i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart
-                                        </button>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="product-img-box2"><img src="images/siqura-hand-50.png" alt="SIQURA Hand Protectant 50 ML"><br>
-                                        <div class="pro-d"><p><span>50 ML - <i class="fa fa-inr" aria-hidden="true"></i></span><span>254/-</span></p></div>
-                                        <button class="button-03">
-                                            <i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart
-                                        </button>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="product-img-box2"><img src="images/siqura-hand-50.png" alt="SIQURA Hand Protectant 250 ML"><br>
-                                        <div class="pro-d"><p><span>250 ML - <i class="fa fa-inr" aria-hidden="true"></i></span><span>551/-</span></p></div>
-                                        <button class="button-03">
-                                            <i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart
-                                        </button>
-                                        </div>
-                                    </div>                                   
-                </div>
-                <div class="row prod-sub">
-                                    <div class="col-md-4">
-                                        <div class="product-img-box2"><img src="images/siqura-hand-50.png" alt="SIQURA Hand Protectant 10 ML"><br>
-                                        <div class="pro-d"><p><span>300 ML - <i class="fa fa-inr" aria-hidden="true"></i></span><span>636/-</span></p></div>
-                                        <button class="button-03">
-                                            <i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart
-                                        </button>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="product-img-box2"><img src="images/siqura-hand-50.png" alt="SIQURA Hand Protectant 50 ML"><br>
-                                        <div class="pro-d"><p><span>350 ML - <i class="fa fa-inr" aria-hidden="true"></i></span><span>763/-</span></p></div>
-                                        <button class="button-03">
-                                            <i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart
-                                        </button>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="product-img-box2"><img src="images/siqura-hand-300.png" alt="SIQURA Hand Protectant 300 ML"><br>
-                                        <div class="pro-d"><p><span>5 L - <i class="fa fa-inr" aria-hidden="true"></i></span><span>8,475/-</span></p></div>
-                                        <button class="button-03">
-                                            <i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart
-                                        </button>
-                                        </div>
-                                    </div>                                   
+                    <?php foreach ($product_4_sub as $sub4) { ?>
+                        <div class="col-md-4">
+                            <div class="product-img-box2">
+                                <img src="<?php echo BASE_URL . $sub4['image_path']; ?>" alt="SIQURA Hand Protectant 10 ML"><br>
+                                <div class="pro-d"><p><span><?php echo $sub4['product_name']; ?> - <i class="fa fa-inr" aria-hidden="true"></i></span><span><?php echo $sub4['product_price']; ?>/-</span></p></div>
+                                <button class="button-03">
+                                    <i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart
+                                </button>
+                            </div>
+                        </div>
+                    <?php } ?>
                 </div>
             </div>
         </section>
-         <section class="ftco-section">
+        <section class="ftco-section">
             <div class="pad-lr-80">
                 <div class="row">
                     <div class="col-lg-4 mb-5  ftco-animate">
@@ -220,31 +182,20 @@
                         <img src="images/logo-siqura.png" alt="SIQURA">  
                     </div>
                 </div>
-                                <div class="row prod-sub">
-                                    <div class="col-md-4">
-                                        <div class="product-img-box2"><img src="images/siqura-surface-475.png" alt="SIQURA Hand Protectant 10 ML"><br>
-                                        <div class="pro-d"><p><span>250 ML - <i class="fa fa-inr" aria-hidden="true"></i></span><span>551/-</span></p></div>
-                                        <button class="button-03">
-                                            <i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart
-                                        </button>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="product-img-box2"><img src="images/siqura-surface-475.png" alt="SIQURA Hand Protectant 50 ML"><br>
-                                        <div class="pro-d"><p><span>500 ML - <i class="fa fa-inr" aria-hidden="true"></i></span><span>763/-</span></p></div>
-                                        <button class="button-03">
-                                            <i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart
-                                        </button>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="product-img-box2"><img src="images/siqura-surface-475.png" alt="SIQURA Hand Protectant 300 ML"><br>
-                                        <div class="pro-d"><p><span>5 L - <i class="fa fa-inr" aria-hidden="true"></i></span><span>8,475/-</span></p></div>
-                                        <button class="button-03">
-                                            <i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart
-                                        </button>
-                                        </div>
-                                    </div>                                   
+                <div class="row prod-sub">
+                    <div class="row prod-sub">
+                        <?php foreach ($product_5_sub as $sub5) { ?>
+                            <div class="col-md-4">
+                                <div class="product-img-box2">
+                                    <img src="<?php echo BASE_URL . $sub5['image_path']; ?>" alt="SIQURA Hand Protectant 10 ML"><br>
+                                    <div class="pro-d"><p><span><?php echo $sub5['product_name']; ?> - <i class="fa fa-inr" aria-hidden="true"></i></span><span><?php echo $sub5['product_price']; ?>/-</span></p></div>
+                                    <button class="button-03">
+                                        <i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart
+                                    </button>
+                                </div>
+                            </div>
+                        <?php } ?>
+                    </div>
                 </div>
             </div>
         </section>

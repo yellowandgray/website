@@ -1,0 +1,55 @@
+<h2 mat-dialog-title>Product</h2>
+<mat-dialog-content class="mat-typography">
+    <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="50%" fxLayoutAlign="center center">
+                <button *ngIf="image_path == ''" type="button" mat-raised-button (click)="fileInput.click()">{{product_image}}</button>
+                <input hidden #fileInput type="file" id="file" (change)="fileProgress($event, 'product_image', 'image_path')" />
+                       <div class="preview-image" *ngIf="image_path != ''">
+                    <img class="dialog-picture" mat-card-image src="{{image_url}}{{image_path}}" alt="Photo" />
+                    <button mat-icon-button aria-label="Close icon" (click)="removeMedia('image_path')">
+                        <mat-icon>close</mat-icon>
+                    </button>
+                </div>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Product Price</mat-label>
+                    <input matInput placeholder="" required formControlName="product_price" />
+                    <mat-error>Product Price Name is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="100%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Product Name</mat-label>
+                    <input matInput placeholder="" required formControlName="product_name" />
+                    <mat-error>Product Name is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="100%">
+                <!--                <mat-form-field fxFlex="100%">
+                                    <mat-label>Description</mat-label>
+                                    <textarea rows="10" matInput placeholder="" required formControlName="description"></textarea>
+                                    <angular-editor id="editor" formControlName="description" [config]="editorConfig"></angular-editor>
+                                    <mat-error>Description is required</mat-error>
+                                </mat-form-field>-->
+                <angular-editor id="editor" formControlName="description" [config]="editorConfig"></angular-editor>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
+            <button mat-button [mat-dialog-close]="false">Cancel</button>
+            <button mat-button type="submit" [disabled]="loading">Save</button>
+            <mat-progress-spinner
+                class="example-margin"
+                *ngIf="loading"
+                [mode]="'indeterminate'"
+                [strokeWidth]="3"
+                [diameter]="25">
+            </mat-progress-spinner>
+        </div>
+    </form>
+</mat-dialog-content>

@@ -34,6 +34,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { LoginComponent } from './login/login.component';
 import { TestimonialComponent, TestimonialForm, TestimonialDelete } from './testimonial/testimonial.component';
 import { ProductComponent, ProductForm, ProductDelete, ProductImageView } from './product/product.component';
+import { SubproductComponent, SubproductForm, SubproductDelete, SubproductImageView } from './subproduct/subproduct.component';
 import { MemberComponent, MemberForm, MemberDelete } from './member/member.component';
 import { OrderComponent, OrderViewForm, DeliveryStatusForm, OrderDelete } from './order/order.component';
 import { BannerComponent, BannerForm, BannerImageView, BannerDelete } from './banner/banner.component';
@@ -55,6 +56,10 @@ import { ApplicationComponent, ApplicationForm, ApplicationGalleryForm, ImageVie
     ProductForm,
     ProductImageView,
     ProductDelete,
+    SubproductComponent,
+    SubproductForm,
+    SubproductImageView,
+    SubproductDelete,
     MemberComponent,
     MemberForm,
     MemberDelete,
@@ -108,7 +113,7 @@ import { ApplicationComponent, ApplicationForm, ApplicationGalleryForm, ImageVie
     MatBadgeModule,
     MatSlideToggleModule  
   ],
-  entryComponents: [TestimonialComponent, TestimonialForm, TestimonialDelete, ProductComponent, ProductForm, ProductImageView, ProductDelete, MemberComponent, MemberForm, MemberDelete, OrderComponent, OrderViewForm, DeliveryStatusForm, OrderDelete, BannerComponent, BannerForm, BannerImageView, BannerDelete, NewsletterComponent, NewsletterDelete, CouponComponent, CouponForm, CouponDelete, ApplicationComponent, ApplicationForm, ApplicationGalleryForm, ImageView, ApplicationDelete],
+  entryComponents: [TestimonialComponent, TestimonialForm, TestimonialDelete, ProductComponent, ProductForm, ProductImageView, ProductDelete, SubproductComponent, SubproductForm, SubproductImageView, SubproductDelete, MemberComponent, MemberForm, MemberDelete, OrderComponent, OrderViewForm, DeliveryStatusForm, OrderDelete, BannerComponent, BannerForm, BannerImageView, BannerDelete, NewsletterComponent, NewsletterDelete, CouponComponent, CouponForm, CouponDelete, ApplicationComponent, ApplicationForm, ApplicationGalleryForm, ImageView, ApplicationDelete],
   providers: [],
   bootstrap: [AppComponent]
 })

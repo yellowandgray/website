@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { TestimonialComponent } from './testimonial/testimonial.component';
 import { ProductComponent } from './product/product.component';
+import { SubproductComponent } from './subproduct/subproduct.component';
 import { MemberComponent } from './member/member.component';
 import { OrderComponent } from './order/order.component';
 import { BannerComponent } from './banner/banner.component';
@@ -16,6 +17,7 @@ const routes: Routes = [
         {path: '', component: LoginComponent},
         {path: 'testimonial', component: TestimonialComponent},
         {path: 'product', component: ProductComponent},
+        {path: 'subproduct', component: SubproductComponent},
         {path: 'order', component: OrderComponent},
         {path: 'member', component: MemberComponent},
         {path: 'banner', component: BannerComponent},
