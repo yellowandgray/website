@@ -14,17 +14,17 @@ import * as moment from 'moment';
 })
 export class SubproductComponent implements OnInit {
     result = [];
-    result_1 = [];
+    parent = [];
     loading = false;
     constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private httpClient: HttpClient) { }
 
     ngOnInit() {
-        this.getProduct();
-        this.getSalesMode()
+        this.getSubProduct();
+        this.getParentProducts()
     }
     image_url: string = 'http://localhost/microview/fresche/api/v1/';
-    getProduct(): void {
-        this.httpClient.get<any>('http://localhost/microview/fresche/api/v1/get_product')
+    getSubProduct(): void {
+        this.httpClient.get<any>('http://localhost/microview/fresche/api/v1/get_sub_product')
             .subscribe(
                 (res) => {
                     this.result = res["result"]["data"];
@@ -36,12 +36,11 @@ export class SubproductComponent implements OnInit {
                 }
             );
     }
-    getSalesMode(): void {
-        this.httpClient.get<any>('http://localhost/microview/fresche/api/v1/get_sales_mode')
+    getParentProducts(): void {
+        this.httpClient.get<any>('http://localhost/microview/fresche/api/v1/get_parent_product')
             .subscribe(
                 (res) => {
-                    this.result_1 = res["result"]["data"];
-                    //this.dialogRef.close(true);
+                    this.parent = res["result"]["data"];
                 },
                 (error) => {
                     this._snackBar.open(error["statusText"], '', {
@@ -54,7 +53,7 @@ export class SubproductComponent implements OnInit {
         var data = null;
         if (id != 0) {
             this[res].forEach(val => {
-                if (parseInt(val.product_id) === parseInt(id)) {
+                if (parseInt(val.sub_product_id) === parseInt(id)) {
                     data = val;
                     return false;
                 }
@@ -63,12 +62,12 @@ export class SubproductComponent implements OnInit {
         const dialogRef = this.dialog.open(SubproductForm, {
             minWidth: "40%",
             maxWidth: "40%",
-            data: data
+            data: {data: data, parents: this.parent}
         });
 
         dialogRef.afterClosed().subscribe(result => {
             if (result !== false && result !== 'false') {
-                this.getProduct();
+                this.getSubProduct();
             }
         });
     }
@@ -84,7 +83,7 @@ export class SubproductComponent implements OnInit {
         });
         dialogRef.afterClosed().subscribe(result => {
             if (result !== false && result !== 'false') {
-                this.getProduct();
+                this.getSubProduct();
             }
         });
     }
@@ -143,7 +142,7 @@ export class SubproductForm {
     image_url: string = 'http://localhost/microview/fresche/api/v1/';
     productForm: FormGroup;
     loading = false;
-    product_id = 0;
+    sub_product_id = 0;
     product_image: string = 'Select Product Image';
     image_path: string = '';
     constructor(
@@ -154,16 +153,18 @@ export class SubproductForm {
         this.productForm = new FormGroup({
             'product_price': new FormControl(''),
             'product_name': new FormControl('', Validators.required),
+            'product_id': new FormControl('', Validators.required),
             'description': new FormControl('', Validators.required),
         });
 
-        if (this.data != null) {
+        if (this.data.data != null) {
             this.productForm.patchValue({
-                product_price: this.data.product_price,
-                product_name: this.data.product_name,
-                description: this.data.description,
+                product_price: this.data.data.product_price,
+                product_name: this.data.data.product_name,
+                product_id: this.data.data.product_id,
+                description: this.data.data.description,
             });
-            this.product_id = this.data.product_id;
+            this.sub_product_id = this.data.data.sub_product_id;
             this.image_path = this.data.image_path;
         }
     }
@@ -175,18 +176,20 @@ export class SubproductForm {
         this.loading = true;
         var formData = new FormData();
         var url = '';
-        if (this.product_id != 0) {
+        if (this.sub_product_id != 0) {
             formData.append('product_price', this.productForm.value.product_price);
             formData.append('product_name', this.productForm.value.product_name);
             formData.append('description', this.productForm.value.description);
+            formData.append('product_id', this.productForm.value.product_id);
             formData.append('image_path', this.image_path);
-            url = 'update_record/product/product_id = ' + this.product_id;
+            url = 'update_record/sub_product/sub_product_id = ' + this.sub_product_id;
         } else {
             formData.append('product_price', this.productForm.value.product_price);
             formData.append('product_name', this.productForm.value.product_name);
             formData.append('description', this.productForm.value.description);
+            formData.append('product_id', this.productForm.value.product_id);
             formData.append('product_image', this.image_path);
-            url = 'insert_product';
+            url = 'insert_sub_product';
         }
         this.httpClient.post('http://localhost/microview/fresche/api/v1/' + url, formData).subscribe(
             (res) => {
@@ -306,7 +309,7 @@ export class SubproductDelete {
             return;
         }
         this.loading = true;
-        this.httpClient.get('http://localhost/microview/fresche/api/v1/delete_record/product/product_id=' + this.product_id).subscribe(
+        this.httpClient.get('http://localhost/microview/fresche/api/v1/delete_record/sub_product/sub_product_id=' + this.product_id).subscribe(
             (res) => {
                 this.loading = false;
                 if (res["result"]["error"] === false) {

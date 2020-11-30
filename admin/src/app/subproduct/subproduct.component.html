@@ -5,26 +5,19 @@
     <mat-sidenav-content>
         <app-header></app-header>        
         <div class="add-btn-container">
-            <ng-container *ngFor="let data of result_1">
-                <mat-slide-toggle [checked]="data.sales_mode === '0' || data.sales_mode === 0 ? false : true" #tooltip="matTooltip" matTooltip="Active Banner" (change)="changeSalesStatus($event, data.sales_mode_id)">
-                    <span *ngIf="data.sales_mode === '1'">Online Sale</span>
-                    <span *ngIf="data.sales_mode === '0'">Contact Only</span>
-                </mat-slide-toggle> 
-            </ng-container>
-            &nbsp;&nbsp;
-            <button mat-raised-button color="primary" (click)="openDialog(0, 'null')"><mat-icon>add</mat-icon> Product</button>
+            <button mat-raised-button color="primary" (click)="openDialog(0, 'null')"><mat-icon>add</mat-icon> Sub Product</button>
         </div>
         <mat-list>
             <ng-container *ngFor="let data of result">
                 <mat-list-item>
-                    <button mat-icon-button aria-label="label" (click)="openDialog(data.product_id, 'result')">
+                    <button mat-icon-button aria-label="label" (click)="openDialog(data.sub_product_id, 'result')">
                         <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
                     </button>
-                    <button mat-icon-button aria-label="label" (click)="confirmDelete(data.product_id)">
+                    <button mat-icon-button aria-label="label" (click)="confirmDelete(data.sub_product_id)">
                         <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                     </button>
                     <img matListAvatar class="cursor" src="{{image_url}}{{data.image_path}}" *ngIf="data.image_path && data.image_path != ''" alt="image" (click)="imageView(data, 'preview')" />
-                    <h4 mat-line>{{data.product_name}}</h4>
+                    <h4 mat-line>{{data.product_name}} - {{data.parent_product}}</h4>
                     <span matLine>{{data.product_price}}</span>
                     <p mat-line>{{data.description}}</p>
                 </mat-list-item>

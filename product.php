@@ -37,7 +37,6 @@
                 </div>
             </div>
         </div>
-
         <section class="ftco-section">
             <div class="pad-lr-80">
                 <div class="row">
@@ -102,7 +101,6 @@
                             <img src="<?php echo BASE_URL . $product_2['image_path']; ?>" class="product-img-responsive" alt="BZ1 Binder">
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -159,9 +157,17 @@
                             <div class="product-img-box2">
                                 <img src="<?php echo BASE_URL . $sub4['image_path']; ?>" alt="SIQURA Hand Protectant 10 ML"><br>
                                 <div class="pro-d"><p><span><?php echo $sub4['product_name']; ?> - <i class="fa fa-inr" aria-hidden="true"></i></span><span><?php echo $sub4['product_price']; ?>/-</span></p></div>
-                                <button class="button-03">
-                                    <i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart
-                                </button>
+                                <?php if ($sales_mode['sales_mode'] == '1') { ?>
+                                    <button class="button-03" data-name="<?php echo $sub4['product_name']; ?>" data-price="<?php echo $sub4['product_price']; ?>">
+                                        <i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart
+                                    </button>
+                                <?php } else { ?>
+                                    <a href="tel:+91 8409 012345">
+                                        <button class="button-03">
+                                            <i class="fa fa-cart-plus" aria-hidden="true"></i>  Call For Order
+                                        </button>
+                                    </a>
+                                <?php } ?>
                             </div>
                         </div>
                     <?php } ?>
@@ -189,9 +195,17 @@
                                 <div class="product-img-box2">
                                     <img src="<?php echo BASE_URL . $sub5['image_path']; ?>" alt="SIQURA Hand Protectant 10 ML"><br>
                                     <div class="pro-d"><p><span><?php echo $sub5['product_name']; ?> - <i class="fa fa-inr" aria-hidden="true"></i></span><span><?php echo $sub5['product_price']; ?>/-</span></p></div>
-                                    <button class="button-03">
-                                        <i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart
-                                    </button>
+                                    <?php if ($sales_mode['sales_mode'] == '1') { ?> 
+                                        <button class="button-03" data-name="<?php echo $sub5['product_name']; ?>" data-price="<?php echo $sub5['product_price']; ?>">
+                                            <i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart
+                                        </button>
+                                    <?php } else { ?>
+                                        <a href="tel:+91 8409 012345">
+                                            <button class="button-03">
+                                                <i class="fa fa-cart-plus" aria-hidden="true"></i>  Call For Order
+                                            </button>
+                                        </a>
+                                    <?php } ?>
                                 </div>
                             </div>
                         <?php } ?>
