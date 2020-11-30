@@ -10,9 +10,9 @@
     $product_2 = $obj->selectRow('*', 'product', 'product_id = 2');
     $product_3 = $obj->selectRow('*', 'product', 'product_id = 3');
     $product_4 = $obj->selectRow('*', 'product', 'product_id = 7');
-    $product_4_sub = $obj->selectAll('*', 'sub_product', 'product_id = 7');
+    $product_4_sub = $obj->selectAll('*', 'sub_product', 'product_id = 7 AND status = 1');
     $product_5 = $obj->selectRow('*', 'product', 'product_id = 8');
-    $product_5_sub = $obj->selectAll('*', 'sub_product', 'product_id = 8');
+    $product_5_sub = $obj->selectAll('*', 'sub_product', 'product_id = 8 AND status = 1');
     $sales_mode = $obj->selectRow('*', 'sales_mode', 'sales_mode_id > 0');
     ?>
     <body class="goto-here">
