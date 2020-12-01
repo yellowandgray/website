@@ -33,7 +33,9 @@ var shoppingCart = (function () {
     obj.addItemToCart = function (name, price, count) {
         for (var item in cart) {
             if (cart[item].name === name) {
-                cart[item].count++;
+                //cart[item].count++;
+                cart[item].count = 1;
+                console.log(cart);
                 saveCart();
                 return;
             }
@@ -138,6 +140,7 @@ $('.add-to-cart').click(function (event) {
     event.preventDefault();
     var name = $(this).data('name');
     var price = Number($(this).data('price'));
+    console.log('Inside');
     shoppingCart.addItemToCart(name, price, 1);
     displayCart();
 });

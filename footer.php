@@ -23,7 +23,7 @@
                         </div>
                         <div class="col-md-3">
                             <button type="submit" class="button-2">
-<!--                                <div class="eff-1"></div>-->
+                                <!--                                <div class="eff-1"></div>-->
                                 <span class="cw-button">Submit</span>
                             </button>
                         </div>
@@ -162,7 +162,8 @@
                         obj.addItemToCart = function (name, price, count) {
                             for (var item in cart) {
                                 if (cart[item].name === name) {
-                                    cart[item].count++;
+                                    //cart[item].count++;
+                                    cart[item].count = 1;
                                     saveCart();
                                     return;
                                 }

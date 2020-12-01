@@ -150,7 +150,7 @@
                                 <img src="<?php echo BASE_URL . $sub4['image_path']; ?>" alt="SIQURA Hand Protectant 10 ML"><br>
                                 <div class="pro-d"><p><span><?php echo $sub4['product_name']; ?> - <i class="fa fa-inr" aria-hidden="true"></i></span><span><?php echo $sub4['product_price']; ?>/-</span></p></div>
                                 <?php if ($sales_mode['sales_mode'] == '1') { ?>
-                                    <button class="button-03" data-name="<?php echo $product_4['product_name'] . ' - ' . $sub4['product_name']; ?>" data-price="<?php echo $sub4['product_price']; ?>" class="add-to-cart">
+                                    <button class="button-03 add-to-cart" data-name="<?php echo $product_4['product_name'] . ' - ' . $sub4['product_name']; ?>" data-price="<?php echo $sub4['product_price']; ?>">
                                         <i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart
                                     </button>
                                 <?php } else { ?>
@@ -187,7 +187,7 @@
                                 <img src="<?php echo BASE_URL . $sub5['image_path']; ?>" alt="SIQURA Hand Protectant 10 ML"><br>
                                 <div class="pro-d"><p><span><?php echo $sub5['product_name']; ?> - <i class="fa fa-inr" aria-hidden="true"></i></span><span><?php echo $sub5['product_price']; ?>/-</span></p></div>
                                 <?php if ($sales_mode['sales_mode'] == '1') { ?> 
-                                    <button class="button-03" data-name="<?php echo $product_5['product_name'] . ' - ' . $sub5['product_name']; ?>" data-price="<?php echo $sub5['product_price']; ?>" class="add-to-cart">
+                                    <button class="button-03 add-to-cart" data-name="<?php echo $product_5['product_name'] . ' - ' . $sub5['product_name']; ?>" data-price="<?php echo $sub5['product_price']; ?>">
                                         <i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart
                                     </button>
                                 <?php } else { ?>

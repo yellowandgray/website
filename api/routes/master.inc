@@ -351,6 +351,8 @@ $app->post('/new_order', function() use ($app) {
     $data['updated_at'] = date('Y-m-d H:i:s');
     $data['created_by'] = 1;
     $data['updated_by'] = 1;
+    $items = $data['items'];
+    unset($data['items']);
     $com = new Common();
     $insertion = $com->insertRecord($data, 'orders');
     if ($insertion > 0) {
@@ -358,6 +360,20 @@ $app->post('/new_order', function() use ($app) {
         $res['error'] = false;
         $res['message'] = 'Order placed successfully order reference number is #' . $insertion;
         $data['orders_id'] = $insertion;
+        $table = '<table border="1" style="width: 100%; max-width: 600px; margin: 0 auto;">';
+        $table = $table . '<tr><th>Item</th><th>Qty</th><th>Price</th><th>Total</th></tr>';
+        if ($insertion > 0) {
+            foreach ($items as $item) {
+                $table = $table . '<tr><td>' . $item['name'] . '</td><td>' . $item['count'] . '</td><td>Rs.' . $item['price'] . '</td><td>Rs.' . ($item['count'] * $item['price']) . '</td></tr>';
+                $com->insertRecord(array('order_id' => $insertion, 'product_name' => $item['name'], 'product_qty' => $item['count'], 'price' => $item['price'], 'total' => ($item['price'] * $item['count']), 'created_at' => date('Y-m-d H:i:s'), 'created_by' => 1, 'updated_at' => date('Y-m-d H:i:s'), 'updated_by' => 1), 'order_item');
+            }
+        }
+        $table = $table . '<tr><td colspan="3">Total</td><td>' . $data['sub_total'] . '</td></tr>';
+        $table = $table . '<tr><td colspan="3">Tax</td><td>' . $data['tax_amt'] . '</td></tr>';
+        $table = $table . '<tr><td colspan="3">Discount</td><td>' . $data['discount_amt'] . '</td></tr>';
+        $table = $table . '<tr><td colspan="3">Grand Total</td><td>' . $data['grand_total'] . '</td></tr>';
+        $table = $table . '</table>';
+        $data['table'] = $table;
         $_SESSION['orders_id'] = $insertion;
         $template = $com->selectRow('*', 'templates', 'name=\'order_recived\' AND type=\'email\' AND target=\'user\'');
         $body = $com->getReplacedString($template['body_web'], $data);

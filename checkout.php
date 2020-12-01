@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
     <?php
@@ -139,9 +138,6 @@
                                         var couponDiscount = 00;
                                         var fadeTime = 300;
                                         /* Assign actions */
-                                        $('.product-quantity input').change(function () {
-                                            updateQuantity(this);
-                                        });
                                         $('.product-removal button').click(function () {
                                             removeItem(this);
                                         });
@@ -176,19 +172,33 @@
                                         /* Update quantity */
                                         function updateQuantity(quantityInput)
                                         {
-                                            /* Calculate line price */
-                                            var productRow = $(quantityInput).parent().parent();
-                                            var price = parseFloat(productRow.children('.product-price').text());
                                             var quantity = $(quantityInput).val();
-                                            var linePrice = price * quantity;
-                                            /* Update line price display and recalc cart totals */
-                                            productRow.children('.product-line-price').each(function () {
-                                                $(this).fadeOut(fadeTime, function () {
-                                                    $(this).text(linePrice.toFixed(2));
-                                                    recalculateCart();
-                                                    $(this).fadeIn(fadeTime);
-                                                });
-                                            });
+                                            var name = $(quantityInput).data('name');
+                                            for (var item in cart) {
+                                                if (cart[item].name === name) {
+                                                    cart[item].count = parseInt(quantity);
+                                                    if (parseInt(quantity) === 0) {
+                                                        cart.splice(item, 1);
+                                                    }
+                                                    sessionStorage.setItem('shoppingCart', JSON.stringify(cart));
+                                                    displayCart();
+                                                    buildProduct();
+                                                    return false;
+                                                }
+                                            }
+                                            /* Calculate line price */
+                                            /*var productRow = $(quantityInput).parent().parent();
+                                             var price = parseFloat(productRow.children('.product-price').text());
+                                             var quantity = $(quantityInput).val();
+                                             var linePrice = price * quantity;
+                                             /* Update line price display and recalc cart totals */
+                                            /*productRow.children('.product-line-price').each(function () {
+                                             $(this).fadeOut(fadeTime, function () {
+                                             $(this).text(linePrice.toFixed(2));
+                                             recalculateCart();
+                                             $(this).fadeIn(fadeTime);
+                                             });
+                                             });*/
                                         }
 
 
@@ -224,16 +234,25 @@
                                             }
                                             recalculateCart();
                                         }
-                                        $('#product_container').empty();
-                                        if (cart.length > 0) {
-                                            var row = '';
-                                            $.each(cart, function (key, val) {
-                                                row = row + '<div class="product row margin-lr-0"><div class="col-md-4 col-12 product-image">' + val.name + '</div><div class="col-md-2 col-12 product-price"><i class="fa fa-inr" aria-hidden="true"></i> ' + val.price + '</div><div class="col-md-2 col-4  product-quantity"><input id="cart_quantity" type="number" value="1" min="1" /></div><div class="col-md-1 col-4  product-removal"><button class="remove-product" onclick="removeProduct(\'' + val.name + '\');"><i class="fa fa-trash" aria-hidden="true"></i></button></div><div class="col-md-2 col-4  product-line-price"><i class="fa fa-inr" aria-hidden="true"></i> ' + val.price + '</div><div class="col-md-1"></div></div>';
-                                            });
-                                            $('#product_container').append(row);
-                                        } else {
-                                            window.location = 'product.php';
+                                        function buildProduct() {
+                                            $('#product_container').empty();
+                                            if (cart.length > 0) {
+                                                var total = 0;
+                                                var row = '';
+                                                $.each(cart, function (key, val) {
+                                                    total = total + (val.price * val.count);
+                                                    row = row + '<div class="product row margin-lr-0"><div class="col-md-4 col-12 product-image">' + val.name + '</div><div class="col-md-2 col-12 product-price"><i class="fa fa-inr" aria-hidden="true"></i> ' + val.price + '</div><div class="col-md-1 col-12 product-price">X</div><div class="col-md-2 col-4  product-quantity"><input class="cart-quantity" type="number" onchange="updateQuantity(this)" value="' + val.count + '" min="1" data-name="' + val.name + '" /></div><div class="col-md-1 col-4  product-removal"><button class="remove-product" onclick="removeProduct(\'' + val.name + '\');"><i class="fa fa-trash" aria-hidden="true"></i></button></div><div class="col-md-2 col-4  product-line-price"><i class="fa fa-inr" aria-hidden="true"></i> ' + (val.price * val.count) + '</div><div class="col-md-1"></div></div>';
+                                                });
+                                                var tax = (total * (18 / 100));
+                                                $('#product_container').append(row);
+                                                $('#cart-subtotal').text(total.toFixed(2));
+                                                $('#cart-tax').text(tax.toFixed(2));
+                                                $('#cart-total').text((total + tax).toFixed(2));
+                                            } else {
+                                                window.location = 'product.php';
+                                            }
                                         }
+                                        buildProduct();
         </script>
     </body>
 </html>

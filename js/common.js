@@ -63,12 +63,12 @@ function makePayment() {
         }
         var rzpOptions = {
             key: "rzp_live_i38CED8NpGScFL",
-            amount: (($('#cart_quantity').val() * 8000 + ($('#cart_quantity').val() * 8000 * 18 / 100) - parseFloat(coupon)) * 100),
+            amount: ((parseFloat($('#cart-total').text()) - parseFloat(coupon)) * 100),
             name: $('#fname').val(),
             description: "Purchase product",
             image: "http://ghmindia.com/images/logo-01.png",
             handler: function (response) {
-                var data = {fname: $.trim($('#fname').val()), lname: $.trim($('#lname').val()), email: $.trim($('#email').val()), mobile: $.trim($('#mobile').val()), address: $.trim($('#address').val()), city: $.trim($('#city').val()), pincode: $.trim($('#pincode').val()), alt_mobile: $.trim($('#altphone').val()), quantity: $('#cart_quantity').val(), state_id: $('#state').val(), grand_total: ($('#cart_quantity').val() * 8000), transaction_id: response.razorpay_payment_id};
+                var data = {fname: $.trim($('#fname').val()), lname: $.trim($('#lname').val()), email: $.trim($('#email').val()), mobile: $.trim($('#mobile').val()), address: $.trim($('#address').val()), city: $.trim($('#city').val()), pincode: $.trim($('#pincode').val()), alt_mobile: $.trim($('#altphone').val()), quantity: $('#cart_quantity').val(), state_id: $('#state').val(), discount_amt: coupon, tax_amt: $('#cart-tax').text(), sub_total: $('#cart-subtotal').text(), grand_total: (parseFloat($('#cart-total').text()) - parseFloat(coupon)), items: cart, transaction_id: response.razorpay_payment_id};
                 $.ajax({
                     type: "POST",
                     url: './api/v1/new_order',
@@ -162,6 +162,10 @@ function loadCartDetails() {
 }
 
 function removeProduct(name) {
-    shoppingCart.clearCart();
-    window.location = 'index.php';
+    shoppingCart.removeItemFromCartAll(name);
+    buildProduct();
+    displayCart();
+    if (cart.length === 0) {
+        window.location = 'index.php';
+    }
 }
