@@ -161,7 +161,7 @@ function loadCartDetails() {
     }
 }
 
-function removeProduct() {
+function removeProduct(name) {
     shoppingCart.clearCart();
     window.location = 'index.php';
 }

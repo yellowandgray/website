@@ -37,27 +37,7 @@
                                     <h4><span>1</span> PRODUCT</h4>
                                 </div>
                                 <div class="product-list">
-                                    <div class="product row margin-lr-0">
-                                        <div class="col-md-1"></div>
-                                        <div class="col-md-3 col-12 product-image">
-                                            <img src="images/product001.png">
-                                        </div>
-                                        <div class="col-md-2 col-12 product-price">
-                                            <i class="fa fa-inr" aria-hidden="true"></i> 8000
-                                        </div>
-                                        <div class="col-md-2 col-4  product-quantity">
-                                            <input id="cart_quantity" type="number" value="1" min="1">
-                                        </div>
-                                        <div class="col-md-1 col-4  product-removal">
-                                            <button class="remove-product" onclick="removeProduct();">
-                                                <i class="fa fa-trash" aria-hidden="true"></i>
-                                            </button>
-                                        </div>
-                                        <div class="col-md-2 col-4  product-line-price">
-                                            <i class="fa fa-inr" aria-hidden="true"></i> 8000
-                                        </div>
-                                        <div class="col-md-1"></div>
-                                    </div>
+                                    <div id="product_container"></div>
                                     <?php if (count($coupons) > 0) { ?>
                                         <div class="row margin-lr-0">
                                             <div class="coupon-section">
@@ -158,33 +138,25 @@
                                         var shippingRate = 00;
                                         var couponDiscount = 00;
                                         var fadeTime = 300;
-
-
                                         /* Assign actions */
                                         $('.product-quantity input').change(function () {
                                             updateQuantity(this);
                                         });
-
                                         $('.product-removal button').click(function () {
                                             removeItem(this);
                                         });
-
-
                                         /* Recalculate cart */
                                         function recalculateCart() {
                                             var subtotal = 0;
-
                                             /* Sum up row totals */
                                             $('.product').each(function () {
                                                 subtotal += parseFloat($(this).children('.product-line-price').text());
                                             });
-
                                             /* Calculate totals */
                                             var tax = subtotal * taxRate;
                                             var discount = couponDiscount;
                                             var shipping = (subtotal > 0 ? shippingRate : 0);
                                             var total = subtotal + tax + shipping - discount;
-
                                             /* Update totals display */
                                             $('.totals-value').fadeOut(fadeTime, function () {
                                                 $('#cart-subtotal').html(subtotal.toFixed(2));
@@ -209,7 +181,6 @@
                                             var price = parseFloat(productRow.children('.product-price').text());
                                             var quantity = $(quantityInput).val();
                                             var linePrice = price * quantity;
-
                                             /* Update line price display and recalc cart totals */
                                             productRow.children('.product-line-price').each(function () {
                                                 $(this).fadeOut(fadeTime, function () {
@@ -252,6 +223,16 @@
                                                 couponDiscount = 0;
                                             }
                                             recalculateCart();
+                                        }
+                                        $('#product_container').empty();
+                                        if (cart.length > 0) {
+                                            var row = '';
+                                            $.each(cart, function (key, val) {
+                                                row = row + '<div class="product row margin-lr-0"><div class="col-md-4 col-12 product-image">' + val.name + '</div><div class="col-md-2 col-12 product-price"><i class="fa fa-inr" aria-hidden="true"></i> ' + val.price + '</div><div class="col-md-2 col-4  product-quantity"><input id="cart_quantity" type="number" value="1" min="1" /></div><div class="col-md-1 col-4  product-removal"><button class="remove-product" onclick="removeProduct(\'' + val.name + '\');"><i class="fa fa-trash" aria-hidden="true"></i></button></div><div class="col-md-2 col-4  product-line-price"><i class="fa fa-inr" aria-hidden="true"></i> ' + val.price + '</div><div class="col-md-1"></div></div>';
+                                            });
+                                            $('#product_container').append(row);
+                                        } else {
+                                            window.location = 'product.php';
                                         }
         </script>
     </body>

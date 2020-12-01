@@ -74,14 +74,10 @@
                                             <p>Bz 1 Binder – 1.5 Litre </p>
                                             <p><span><i class="fa fa-inr" aria-hidden="true"></i></span><span>8000/-</span></p>
                                             <?php if ($sales_mode['sales_mode'] == '1') { ?> 
-                                                <a href="#" data-name="combo" data-price="8000" class="add-to-cart">
+                                                <a href="#" data-name="Combo Pack" data-price="8000" class="add-to-cart">
                                                     <button class="button-03">
                                                         <i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart
                                                     </button>
-                                                </a>
-                                                <a href="javascript: goToCheckout();" class="go-cart" data-target="#cart">
-                                                    <span class="icon-shopping_cart"></span>
-                                                    <span class="total-count"></span>
                                                 </a>
                                             <?php } else { ?>
                                                 <a href="tel:+91 8409 012345">
@@ -116,14 +112,10 @@
                         <h3><?php echo $product_3['product_name']; ?></h3>
                         <div class="pro-d" style="float:left"><p><span><i class="fa fa-inr" aria-hidden="true"></i></span><span>250/-</span></p></div>
                         <div><?php if ($sales_mode['sales_mode'] == '1') { ?> 
-                                <a href="#" data-name="combo" data-price="250" class="add-to-cart">
+                                <a href="#" data-name="<?php echo $product_3['product_name']; ?>" data-price="250" class="add-to-cart">
                                     <button class="button-03">
                                         <i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart
                                     </button>
-                                </a>
-                                <a href="javascript: goToCheckout();" class="go-cart" data-target="#cart">
-                                    <span class="icon-shopping_cart"></span>
-                                    <span class="total-count"></span>
                                 </a>
                             <?php } else { ?>
                                 <a href="tel:+91 8409 012345">
@@ -158,7 +150,7 @@
                                 <img src="<?php echo BASE_URL . $sub4['image_path']; ?>" alt="SIQURA Hand Protectant 10 ML"><br>
                                 <div class="pro-d"><p><span><?php echo $sub4['product_name']; ?> - <i class="fa fa-inr" aria-hidden="true"></i></span><span><?php echo $sub4['product_price']; ?>/-</span></p></div>
                                 <?php if ($sales_mode['sales_mode'] == '1') { ?>
-                                    <button class="button-03" data-name="<?php echo $sub4['product_name']; ?>" data-price="<?php echo $sub4['product_price']; ?>">
+                                    <button class="button-03" data-name="<?php echo $product_4['product_name'] . ' - ' . $sub4['product_name']; ?>" data-price="<?php echo $sub4['product_price']; ?>" class="add-to-cart">
                                         <i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart
                                     </button>
                                 <?php } else { ?>
@@ -195,7 +187,7 @@
                                 <img src="<?php echo BASE_URL . $sub5['image_path']; ?>" alt="SIQURA Hand Protectant 10 ML"><br>
                                 <div class="pro-d"><p><span><?php echo $sub5['product_name']; ?> - <i class="fa fa-inr" aria-hidden="true"></i></span><span><?php echo $sub5['product_price']; ?>/-</span></p></div>
                                 <?php if ($sales_mode['sales_mode'] == '1') { ?> 
-                                    <button class="button-03" data-name="<?php echo $sub5['product_name']; ?>" data-price="<?php echo $sub5['product_price']; ?>">
+                                    <button class="button-03" data-name="<?php echo $product_5['product_name'] . ' - ' . $sub5['product_name']; ?>" data-price="<?php echo $sub5['product_price']; ?>" class="add-to-cart">
                                         <i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart
                                     </button>
                                 <?php } else { ?>
