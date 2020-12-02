@@ -240,6 +240,10 @@ $app->get('/get_order', function() {
     $com = new Common();
     $data = $com->selectAll('o.*, s.name AS state', 'orders AS o LEFT JOIN state AS s ON s.state_id = o.state_id', 'o.orders_id > 0 order by o.orders_id DESC');
     if (count($data) > 0) {
+        foreach ($data as $key => $val) {
+            $items = $com->selectAll('*', 'order_item', 'order_id = ' . $val['orders_id']);
+            $data[$key]['items'] = $items;
+        }
         $res['error'] = false;
         $res['message'] = 'Records found';
         $res['data'] = $data;

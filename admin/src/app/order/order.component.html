@@ -17,6 +17,7 @@
                         <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
                     </button>
                     <h4 mat-line>{{data.fname}} {{data.lname}}</h4>
+                    <h4 mat-line *ngIf="data.items && data.items.length > 0"><span *ngFor="let item of data.items">{{data.product_name}} {{data.product_qty}}</span> </h4>
                     <p matLine>{{data.transaction_id}} | {{data.email}} | {{data.mobile}}</p>
                 </mat-list-item>
             </ng-container>
