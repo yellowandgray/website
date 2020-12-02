@@ -56,10 +56,10 @@
         </section>
 
         <!-- Application Gallery -->
-        <div id="applicaion_gallery" class="modal fade modal-md" role="dialog">
+        <div id="applicaion_gallery" class="modal fade" role="dialog">
             <div class="modal-dialog">
                 <!-- Modal content-->
-                <div class="modal-content">
+                <div class="modal-content modal-lg">
                     <div class="modal-header">
                         <!--<button type="button" class="close" data-dismiss="modal">&times;</button>-->
                         <h4 class="modal-title">Application - <span id="application_name"></span></h4>
