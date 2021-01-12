@@ -69,17 +69,17 @@
                 </tr>
                 <tr *ngFor="let item of data.items">
                     <td>{{item.product_name}}</td>
-                    <td>RS. {{item.price}}</td>
+                    <td style="text-align: right;">RS. {{item.price}}</td>
                     <td>{{item.product_qty}}</td>
-                    <td>RS. {{item.total}}</td>
+                    <td style="text-align: right;">RS. {{item.total}}</td>
                 </tr>
                 <tr>
                     <td colspan="3">Tax</td>
-                    <td>Rs. {{data.tax_amt}}</td>
+                    <td style="text-align: right;">Rs. {{data.tax_amt}}</td>
                 </tr>
                 <tr>
                     <td colspan="3">Grand Total</td>
-                    <td>Rs. {{data.grand_total}}</td>
+                    <td style="text-align: right;">Rs. {{data.grand_total}}</td>
                 </tr>
             </table>
         </div>
