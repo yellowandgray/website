@@ -43,7 +43,7 @@
         </div>
         <br/>
         <h3>Order Details</h3>
-        <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
+        <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center" *ngIf="data.items.length == 0">
             <table class="table-order-1">
                 <tr>
                     <th>Product</th>
@@ -56,6 +56,30 @@
                     <td>RS. 8000</td>
                     <td>{{data.quantity}}</td>
                     <td>RS. {{data.grand_total}}</td>
+                </tr>
+            </table>
+        </div>
+        <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center" *ngIf="data.items.length > 0">
+            <table class="table-order-1">
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Qty</th>
+                    <th>Grand Total</th>
+                </tr>
+                <tr *ngFor="let item of data.items">
+                    <td>{{item.product_name}}</td>
+                    <td>RS. {{item.price}}</td>
+                    <td>{{item.product_qty}}</td>
+                    <td>RS. {{data.total}}</td>
+                </tr>
+                <tr>
+                    <td colspan="3">Tax</td>
+                    <td>Rs. {{data.tax_amt}}</td>
+                </tr>
+                <tr>
+                    <td colspan="3">Grand Total</td>
+                    <td>Rs. {{data.grand_total}}</td>
                 </tr>
             </table>
         </div>
