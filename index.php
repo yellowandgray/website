@@ -42,7 +42,7 @@ if (isset($_SESSION['student_register_id'])) {
                     ?>
                     <div class="logout_position">
                         <div id="open-logout" class="logout_section">
-        <!--                        <img src='<?php //echo BASE_URL . $login_student['profile_image'];      ?>' alt=''>-->
+        <!--                        <img src='<?php //echo BASE_URL . $login_student['profile_image'];     ?>' alt=''>-->
                             <?php if (isset($login_student['profile_image']) && $login_student['profile_image'] == '') { ?>
                                 <img src="<?php echo BASE_URL . $login_student['gender']; ?>.jpg" alt="" />
                             <?php } else { ?>

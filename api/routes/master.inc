@@ -115,7 +115,8 @@ $app->post('/insert_subject', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('name' => $data['name'], 'standard_id' => $data['standard_id'], 'description' => $data['description'], 'image_path' => $data['subject_image'], 'status' => $data['status']), 'subject');
+    $record = $com->insertRecord(array('name' => $data['name'], 'description' => $data['description'], 'image_path' => $data['subject_image'], 'status' => $data['status']), 'subject');
+    //$record = $com->insertRecord(array('name' => $data['name'], 'standard_id' => $data['standard_id'], 'description' => $data['description'], 'image_path' => $data['subject_image'], 'status' => $data['status']), 'subject');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
@@ -179,7 +180,7 @@ $app->post('/insert_neet_question', function() use ($app) {
     $data = $app->request->post();
     $com = new Common();
 //    $question_no = $com->updateRecordWithWhere(array('question_no = +1', 'question', 'subject_id'));
-    $record = $com->insertRecord(array('standard_id' => $data['standard_id'], 'sub_topic_id' => $data['sub_topic_id'], 'topic_id' => $data['topic_id'], 'name' => $data['name'], 'question_no' => $data['question_no'], 'direction' => $data['direction'], 'explanation' => $data['explanation'], 'explanation_img_direction' => $data['explanation_img_direction'], 'data_dictionary' => $data['data_dictionary'], 'image_path' => $data['image_path'], 'image_path_explanation' => $data['image_path_explanation'], 'a' => $data['a'], 'b' => $data['b'], 'c' => $data['c'], 'd' => $data['d'], 'answer' => $data['answer'], 'book_id' => $data['book_id'], 'page_no' => $data['page_no'], 'notes' => $data['notes']), 'neet_question');
+    $record = $com->insertRecord(array('sub_topic_id' => $data['sub_topic_id'], 'topic_id' => $data['topic_id'], 'name' => $data['name'], 'question_no' => $data['question_no'], 'direction' => $data['direction'], 'explanation' => $data['explanation'], 'explanation_img_direction' => $data['explanation_img_direction'], 'data_dictionary' => $data['data_dictionary'], 'image_path' => $data['image_path'], 'image_path_explanation' => $data['image_path_explanation'], 'a' => $data['a'], 'b' => $data['b'], 'c' => $data['c'], 'd' => $data['d'], 'answer' => $data['answer'], 'book_id' => $data['book_id'], 'page_no' => $data['page_no'], 'notes' => $data['notes']), 'neet_question');
     if ($record > 0) {
         $com->updateRecord('question_no = (question_no + 1)', 'question', 'topic_id = \'' . $data['topic_id'] . '\' AND neet_question_id != ' . $record . ' AND question_no >= ' . $data['question_no']);
         $res['error'] = false;
@@ -285,18 +286,6 @@ $app->get('/get_topic', function() {
     echoRespnse(201, $res);
 });
 
-$app->get('/get_topicifsub', function() {
-    $res = array('error' => true, 'message' => 'No records found');
-    $com = new Common();
-    $data = $com->selectAll('DISTINCT t.*', 'topic AS t RIGHT JOIN sub_topic AS s ON t.topic_id = s.topic_id', 't.topic_id > 0');
-    if (count($data) > 0) {
-        $res['error'] = false;
-        $res['message'] = 'Records found';
-        $res['data'] = $data;
-    }
-    echoRespnse(201, $res);
-});
-
 $app->get('/get_topic_by_chapter/:cid', function($cid) {
     $res = array('error' => true, 'message' => 'No records found');
     $obj = new Common();
@@ -394,7 +383,7 @@ $app->get('/get_question_by_topic/:tid/:cid/:searchtxt/:searchqno/:lvl', functio
 $app->get('/get_neet_question_by_sub_topic/:stid', function($stid) {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
-    $data = $com->selectAll('*', 'neet_question', 'sub_topic_id = '. $stid . ' ORDER BY question_no ASC');
+    $data = $com->selectAll('*', 'neet_question', 'sub_topic_id = '. $stid . 'ORDER BY question_no ASC');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
@@ -532,7 +521,7 @@ $app->post('/import_neet_question', function() use($app) {
                 $sub_topic_id = 0;
                 $standard = $obj->selectRow('*', 'standard', 'name = \'' . $row[0] . '\'');
                 if (count($standard) == 0) {
-                    $standard_id = $obj->insertRecord(array('name' => trim($row[0]), 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')), 'standard');
+                    $standard_id = $obj->insertRecord(array('name' => trim($row[0]), 'description' => '', 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')), 'standard');
                 } else {
                     $standard_id = $standard['standard_id'];
                 }
@@ -544,19 +533,19 @@ $app->post('/import_neet_question', function() use($app) {
                 }
                 $chapter = $obj->selectRow('*', 'chapter', 'name = \'' . $obj->escapeString($row[2]) . '\' AND subject_id = ' . $subject_id);
                 if (count($chapter) == 0) {
-                    $chapter_id = $obj->insertRecord(array('name' => trim($row[2]), 'status' => 1, 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'subject_id' => $subject_id), 'chapter');
+                    $chapter_id = $obj->insertRecord(array('name' => trim($row[2]), 'description' => '', 'status' => 1, 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'subject_id' => $subject_id), 'chapter');
                 } else {
                     $chapter_id = $chapter['chapter_id'];
                 }
                 $topic = $obj->selectRow('*', 'topic', 'name = \'' . $obj->escapeString($row[3]) . '\' AND chapter_id = ' . $chapter_id);
                 if (count($topic) == 0) {
-                    $topic_id = $obj->insertRecord(array('name' => trim($row[3]), 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'chapter_id' => $chapter_id), 'topic');
+                    $topic_id = $obj->insertRecord(array('name' => trim($row[3]), 'description' => '', 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'chapter_id' => $chapter_id), 'topic');
                 } else {
                     $topic_id = $topic['topic_id'];
                 }
                 $sub_topic = $obj->selectRow('*', 'sub_topic', 'name = \'' . $obj->escapeString($row[4]) . '\' AND topic_id = ' . $topic_id);
                 if (count($sub_topic) == 0) {
-                    $sub_topic_id = $obj->insertRecord(array('name' => trim($row[4]), 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'topic_id' => $topic_id), 'sub_topic');
+                    $sub_topic_id = $obj->insertRecord(array('name' => trim($row[4]), 'description' => '', 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'topic_id' => $topic_id), 'sub_topic');
                 } else {
                     $sub_topic_id = $sub_topic['sub_topic_id'];
                 }
@@ -566,7 +555,7 @@ $app->post('/import_neet_question', function() use($app) {
                 } else {
                     $book_id = $book['book_id'];
                 }
-                $data = array('topic_id' => $topic_id, 'sub_topic_id' => $sub_topic_id, 'question_no' => $row[5], 'name' => trim($row[6]), 'a' => $row[7], 'b' => $row[8], 'c' => $row[9], 'd' => $row[10], 'answer' => $row[11], 'explanation' => $row[12], 'data_dictionary' => $row[13], 'book_id' => $book_id, 'page_no' => $row[15], 'notes' => $row[16], 'standard_id' => $standard_id, 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'image_path' => '', 'direction' => 'top');
+                $data = array('topic_id' => $topic_id, 'question_no' => $row[5], 'name' => trim($row[6]), 'a' => $row[7], 'b' => $row[8], 'c' => $row[9], 'd' => $row[10], 'answer' => $row[11], 'explanation' => $row[12], 'data_dictionary' => $row[13], 'book_id' => $book_id, 'page_no' => $row[15], 'notes' => $row[16], 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'image_path' => '', 'direction' => 'top', 'sub_topic_id' => $sub_topic_id);
                 $insert = $obj->insertRecord($data, 'neet_question');
                 if ($insert > 0) {
                     $count++;
@@ -699,31 +688,7 @@ $app->get('/get_feedback', function() {
 $app->get('/get_assigned_feedback/:stud_id', function($stud_id) {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
-    $data = $com->selectAll('f.*,ftm.feedback_timing As fb_timing,fe.*,f.created_at As created_at', 'user_assign_feedback As f LEFT JOIN feedback_timing_master As ftm ON f.timing_id=ftm.feedback_timing_id LEFT JOIN feedback As fe ON f.feedback_id=fe.feedback_id', 'f.student_id ='.$stud_id );
-    if (count($data) > 0) {
-        $res['error'] = false;
-        $res['message'] = 'Records found';
-        $res['data'] = $data;
-    }
-    echoRespnse(201, $res);
-});
-
-$app->get('/get_assigned_answered_feedback/:stud_id', function($stud_id) {
-    $res = array('error' => true, 'message' => 'No records found');
-    $com = new Common();
-    $data = $com->selectAll('f.*,ftm.feedback_timing As fb_timing,fe.*,f.created_at As created_at,sf.student_answer,sf.created_at As answered_at', 'user_assign_feedback As f LEFT JOIN feedback_timing_master As ftm ON f.timing_id=ftm.feedback_timing_id LEFT JOIN feedback As fe ON f.feedback_id=fe.feedback_id LEFT JOIN student_feedback As sf ON fe.feedback_id=sf.feedback_id AND sf.student_id='.$stud_id, 'f.student_id ='.$stud_id );
-    if (count($data) > 0) {
-        $res['error'] = false;
-        $res['message'] = 'Records found';
-        $res['data'] = $data;
-    }
-    echoRespnse(201, $res);
-});
-
-$app->get('/get_answered_feedback_student/:stud_id', function($stud_id) {
-    $res = array('error' => true, 'message' => 'No records found');
-    $com = new Common();
-    $data = $com->selectAll('sf.*,f.option_1,f.option_2,f.option_3,ft.feedback_type', 'student_feedback As sf LEFT JOIN feedback As f ON f.feedback_id=sf.feedback_id LEFT JOIN feedback_type_master As ft ON f.feedback_type=ft.feedback_type_id', 'sf.student_id ='.$stud_id );
+    $data = $com->selectAll('f.*,ftm.feedback_timing As fb_timing,fe.*', 'user_assign_feedback As f LEFT JOIN feedback_timing_master As ftm ON f.timing_id=ftm.feedback_timing_id LEFT JOIN feedback As fe ON f.feedback_id=fe.feedback_id', 'f.student_id ='.$stud_id );
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
@@ -804,18 +769,6 @@ $app->get('/get_subtopic_by_topic/:tid', function($tid) {
     echoRespnse(201, $res);
 });
 
-$app->get('/get_topicifsub', function() {
-    $res = array('error' => true, 'message' => 'No records found');
-    $com = new Common();
-    $data = $com->selectAll('DISTINCT t.*', 'topic AS t RIGHT JOIN sub_topic AS s ON s.topic_id = t.topic_id', 't.topic_id > 0');
-    if (count($data) > 0) {
-        $res['error'] = false;
-        $res['message'] = 'Records found';
-        $res['data'] = $data;
-    }
-    echoRespnse(201, $res);
-});
-
 $app->get('/get_subject_by_standard/:stdid', function($stdid) {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
@@ -836,60 +789,6 @@ $app->get('/get_sub_topic_by_topic/:topid', function($topid) {
         $res['error'] = false;
         $res['message'] = 'Records found';
         $res['data'] = $data;
-    }
-    echoRespnse(201, $res);
-});
-
-
-
-
-$app->get('/get_assigned_feedback_by_type/:stud_id/:timing_id', function($stud_id,$timing_id) {
-    $res = array('error' => true, 'message' => 'No records found');
-    $com = new Common();
-    $data = $com->selectAll('f.*,ftm.feedback_timing As fb_timing,fe.*,fty.feedback_type as feedback_type', 'user_assign_feedback As f LEFT JOIN feedback_timing_master As ftm ON f.timing_id=ftm.feedback_timing_id LEFT JOIN feedback As fe ON f.feedback_id=fe.feedback_id LEFT JOIN feedback_type_master As fty ON fe.feedback_type=fty.feedback_type_id', 'f.student_id ='.$stud_id.'  AND feedback_timing_master='.$timing_id.' ORDER BY feedback_id');
-    if (count($data) > 0) {
-        $res['error'] = false;
-        $res['message'] = 'Records found';
-        $res['data'] = $data;
-    }
-    echoRespnse(201, $res);
-});
-
-$app->get('/get_student_feedback/:stud_id', function($stud_id) {
-    $res = array('error' => true, 'message' => 'No records found');
-    $com = new Common();
-    $data = $com->selectAll('sf.*', 'student_feedback As sf', 'sf.student_id ='.$stud_id);
-    if (count($data) > 0) {
-        $res['error'] = false;
-        $res['message'] = 'Records found';
-        $res['data'] = $data;
-    }
-    echoRespnse(201, $res);
-});
-
-
-
-$app->post('/store_student_feedback', function() use ($app) {
-    $res = array('error' => true, 'message' => 'Invalid login details');
-    $data = $app->request->post();
-    $obj = new Common();
-    $student_id = $data['student'];
-    $student_answer = $data['answer'];
-    $feedback_id = $data['feedback'];
-    
-    $record = $obj->selectRow('*', 'student_feedback', 'student_id=' . $student_id.' AND feedback_id='.$feedback_id);
-    if (count($record) == 0) {
-        
-        $obj->insertRecord(array('student_id' => $student_id, 'student_answer' => trim($student_answer), 'feedback_id' => $feedback_id, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => '\''.date('Y-m-d H:i:s').'\'', 'created_by' => $student_id), 'student_feedback');
-        $res['error'] = false;
-        $res['message'] = 'Answer inserted successfully';
-        
-    } else {
-         $record1 = $obj->updateRecordWithWhere(array('student_id' => $student_id, 'student_answer' => $student_answer, 'feedback_id' => $feedback_id,'updated_at' =>'\''.date('Y-m-d H:i:s').'\'', 'updated_by' => $student_id),'student_feedback', 'student_id='. $student_id.' AND feedback_id='.$feedback_id);
-            if ($record1 > 0) {
-                $res['error'] = false;
-                $res['message'] = 'Record updated successfully';
-            } 
     }
     echoRespnse(201, $res);
 });

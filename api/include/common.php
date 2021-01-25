@@ -13,10 +13,7 @@ class Common {
 
     public function selectAll($fields, $table, $where) {
         $data = array();
-        
         $result = $this->conn->query('SELECT ' . $fields . ' FROM ' . $table . ' WHERE ' . $where);
-        
-        
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
                 $data[] = $row;
@@ -45,7 +42,7 @@ class Common {
     }
 
     public function updateRecord($fields, $table, $where) {
-        $this->conn->query('UPDATE `' . $table . '` SET ' . $fields . ' WHERE ' . $where);
+        $this->conn->query('UPDATE ' . $table . ' SET ' . $fields . ' WHERE ' . $where);
         return $this->conn->affected_rows;
     }
 

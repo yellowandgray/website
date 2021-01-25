@@ -1,0 +1,60 @@
+[11-Mar-2020 06:21:52 Etc/GMT] PHP Fatal error:  Uncaught Error: Call to undefined method Common::updateRecord() in /home/a2dot37r/public_html/feringo.com/api/routes/master.inc:27
+Stack trace:
+#0 [internal function]: {closure}('question', 'question_id=141...')
+#1 /home/a2dot37r/public_html/feringo.com/api/include/Slim/Route.php(409): call_user_func_array(Object(Closure), Array)
+#2 /home/a2dot37r/public_html/feringo.com/api/include/Slim/Slim.php(1246): Slim\Route->dispatch()
+#3 /home/a2dot37r/public_html/feringo.com/api/include/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#4 /home/a2dot37r/public_html/feringo.com/api/include/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#5 /home/a2dot37r/public_html/feringo.com/api/include/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#6 /home/a2dot37r/public_html/feringo.com/api/include/Slim/Slim.php(1194): Slim\Middleware\PrettyExceptions->call()
+#7 /home/a2dot37r/public_html/feringo.com/api/v1/index.php(97): Slim\Slim->run()
+#8 {main}
+  thrown in /home/a2dot37r/public_html/feringo.com/api/routes/master.inc on line 27
+[11-Mar-2020 06:27:22 Etc/GMT] PHP Fatal error:  Uncaught Error: Call to undefined method Common::updateRecord() in /home/a2dot37r/public_html/feringo.com/api/routes/master.inc:157
+Stack trace:
+#0 [internal function]: {closure}()
+#1 /home/a2dot37r/public_html/feringo.com/api/include/Slim/Route.php(409): call_user_func_array(Object(Closure), Array)
+#2 /home/a2dot37r/public_html/feringo.com/api/include/Slim/Slim.php(1246): Slim\Route->dispatch()
+#3 /home/a2dot37r/public_html/feringo.com/api/include/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#4 /home/a2dot37r/public_html/feringo.com/api/include/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#5 /home/a2dot37r/public_html/feringo.com/api/include/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#6 /home/a2dot37r/public_html/feringo.com/api/include/Slim/Slim.php(1194): Slim\Middleware\PrettyExceptions->call()
+#7 /home/a2dot37r/public_html/feringo.com/api/v1/index.php(97): Slim\Slim->run()
+#8 {main}
+  thrown in /home/a2dot37r/public_html/feringo.com/api/routes/master.inc on line 157
+[11-Mar-2020 06:29:57 Etc/GMT] PHP Fatal error:  Uncaught Error: Call to undefined method Common::updateRecord() in /home/a2dot37r/public_html/feringo.com/api/routes/master.inc:157
+Stack trace:
+#0 [internal function]: {closure}()
+#1 /home/a2dot37r/public_html/feringo.com/api/include/Slim/Route.php(409): call_user_func_array(Object(Closure), Array)
+#2 /home/a2dot37r/public_html/feringo.com/api/include/Slim/Slim.php(1246): Slim\Route->dispatch()
+#3 /home/a2dot37r/public_html/feringo.com/api/include/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#4 /home/a2dot37r/public_html/feringo.com/api/include/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#5 /home/a2dot37r/public_html/feringo.com/api/include/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#6 /home/a2dot37r/public_html/feringo.com/api/include/Slim/Slim.php(1194): Slim\Middleware\PrettyExceptions->call()
+#7 /home/a2dot37r/public_html/feringo.com/api/v1/index.php(97): Slim\Slim->run()
+#8 {main}
+  thrown in /home/a2dot37r/public_html/feringo.com/api/routes/master.inc on line 157
+[11-Mar-2020 06:30:19 Etc/GMT] PHP Fatal error:  Uncaught Error: Call to undefined method Common::updateRecord() in /home/a2dot37r/public_html/feringo.com/api/routes/master.inc:157
+Stack trace:
+#0 [internal function]: {closure}()
+#1 /home/a2dot37r/public_html/feringo.com/api/include/Slim/Route.php(409): call_user_func_array(Object(Closure), Array)
+#2 /home/a2dot37r/public_html/feringo.com/api/include/Slim/Slim.php(1246): Slim\Route->dispatch()
+#3 /home/a2dot37r/public_html/feringo.com/api/include/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#4 /home/a2dot37r/public_html/feringo.com/api/include/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#5 /home/a2dot37r/public_html/feringo.com/api/include/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#6 /home/a2dot37r/public_html/feringo.com/api/include/Slim/Slim.php(1194): Slim\Middleware\PrettyExceptions->call()
+#7 /home/a2dot37r/public_html/feringo.com/api/v1/index.php(97): Slim\Slim->run()
+#8 {main}
+  thrown in /home/a2dot37r/public_html/feringo.com/api/routes/master.inc on line 157
+[11-Mar-2020 07:27:45 Etc/GMT] PHP Fatal error:  Uncaught Error: Call to undefined method Common::updateRecord() in /home/a2dot37r/public_html/feringo.com/api/routes/master.inc:157
+Stack trace:
+#0 [internal function]: {closure}()
+#1 /home/a2dot37r/public_html/feringo.com/api/include/Slim/Route.php(409): call_user_func_array(Object(Closure), Array)
+#2 /home/a2dot37r/public_html/feringo.com/api/include/Slim/Slim.php(1246): Slim\Route->dispatch()
+#3 /home/a2dot37r/public_html/feringo.com/api/include/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#4 /home/a2dot37r/public_html/feringo.com/api/include/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#5 /home/a2dot37r/public_html/feringo.com/api/include/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#6 /home/a2dot37r/public_html/feringo.com/api/include/Slim/Slim.php(1194): Slim\Middleware\PrettyExceptions->call()
+#7 /home/a2dot37r/public_html/feringo.com/api/v1/index.php(97): Slim\Slim->run()
+#8 {main}
+  thrown in /home/a2dot37r/public_html/feringo.com/api/routes/master.inc on line 157

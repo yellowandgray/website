@@ -998,7 +998,7 @@ and open the template in the editor.
     opacity: 0.9;
     margin-top: 7px;
     margin-right: 12px;
-    height: auto;
+    height: 20px;
 }
 
 .logout-btn:hover {
@@ -1073,49 +1073,4 @@ and open the template in the editor.
 .no-count-page span {
     cursor: pointer;
     color: #F03C02;
-}
-
-.feedbackBox .feedbackContainer {
-    padding: 20px;
-}
-
-.feedbackBox .feedbackContainer h2.titleContainer {
-    font-size: 18px;
-    font-weight: 600;
-    margin: 0;
-    color: #1b75bc;
-}
-
-.feedbackBox .feedbackContainer .optionContainer .radio label input {
-    width: 18px;
-    height: 18px;
-}
-
-.feedbackBox .feedbackContainer .optionContainer textarea {
-    width: 100%;
-}
-
-.feedbackBox .feedbackContainer .optionContainer {
-    margin-bottom: 10px;
-}
-
-.feedbackBox .feedbackContainer .modal-footer {
-    padding: 5px 10px;
-    background: transparent;
-}
-
-.feedbackBox .quizCompleted {
-    padding: 20px;
-}
-
-.feedbackBox .quizCompleted h2.titleContainer {
-    text-align: center;
-    font-size: 25px;
-    font-weight: 500;
-    margin: 0;
-}
-
-.feedbackBox .quizCompleted .modal-footer {
-    padding: 5px 10px;
-    background: transparent;
 }
