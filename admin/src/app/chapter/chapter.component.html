@@ -7,9 +7,9 @@
         <div class="add-btn-container">
             <button mat-raised-button color="primary" (click)="openDialog(0, 'null')"><mat-icon>add</mat-icon> Chapter</button>
         </div>
-        <mat-tab-group (selectedTabChange)="getChapter($event);">
+        <mat-tab-group (selectedTabChange)="getChild($event);">
             <mat-tab *ngFor="let sub of subject" label="{{sub.name}}({{sub.course}})">
-                <mat-list>
+                <mat-list *ngIf="course == 1">
                     <ng-container *ngFor="let data of chapter">
                         <mat-list-item>
                             <button mat-icon-button aria-label="label" (click)="openDialog(data.chapter_id, 'chapter')">
@@ -23,6 +23,25 @@
                         <mat-divider></mat-divider>
                     </ng-container>
                 </mat-list>
+                <mat-tab-group (selectedTabChange)="getBooksChapter($event);" *ngIf="course != 1">
+                    <mat-tab *ngFor="let sub of book" label="{{sub.book_name}}">
+                        <mat-list>
+                            <ng-container *ngFor="let data of chapter">
+                                <mat-list-item>
+                                    <button mat-icon-button aria-label="label" (click)="openDialog(data.chapter_id, 'chapter')">
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
+                                    </button>
+                                    <button mat-icon-button aria-label="label" (click)="confirmDelete(data.chapter_id)">
+                                        <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
+                                    </button>
+                                    <h4 mat-line>{{data.name}}</h4>
+                                </mat-list-item>
+                                <mat-divider></mat-divider>
+                            </ng-container>
+                        </mat-list>
+                        
+                    </mat-tab>
+                </mat-tab-group>
             </mat-tab>
         </mat-tab-group>
     </mat-sidenav-content>

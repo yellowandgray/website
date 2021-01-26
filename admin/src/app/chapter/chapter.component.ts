@@ -16,7 +16,10 @@ import { Observable } from 'rxjs';
 export class ChapterComponent implements OnInit {
   subject = [];
   chapter = [];
+  book = [];
   selectedchapind = 0;
+  course: number = 0;
+  selectedbookind: number = 0;
   constructor(public dialog: MatDialog, private httpClient: HttpClient, private _snackBar: MatSnackBar) { }
 
   ngOnInit() {
@@ -35,12 +38,48 @@ export class ChapterComponent implements OnInit {
         }
       );
   }
-  getChapter(ev): void {
+  getChild(ev): void {
+    this.course = this.subject[ev.index].course_id;
     this.selectedchapind = ev.index;
+    if (this.course == 1) {
+      this.selectedbookind = null;
+      this.getChapter(ev);
+    } else {
+      this.getBook(ev);
+    }
+  }
+  getChapter(ev): void {
     this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_chapter_by_subject/' + this.subject[ev.index].subject_id)
       .subscribe(
         (res) => {
           this.chapter = res["result"]["data"];
+        },
+        (error) => {
+          this._snackBar.open(error["statusText"], '', {
+            duration: 2000,
+          });
+        }
+      );
+  }
+  getBooksChapter(ev): void {
+    this.selectedbookind = ev.index;
+    this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_chapter_by_book/' + this.book[ev.index].book_id)
+      .subscribe(
+        (res) => {
+          this.chapter = res["result"]["data"];
+        },
+        (error) => {
+          this._snackBar.open(error["statusText"], '', {
+            duration: 2000,
+          });
+        }
+      );
+  }
+  getBook(ev): void {
+    this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_book_by_subject/' + this.subject[ev.index].subject_id)
+      .subscribe(
+        (res) => {
+          this.book = res["result"]["data"];
         },
         (error) => {
           this._snackBar.open(error["statusText"], '', {
@@ -67,7 +106,11 @@ export class ChapterComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       if (typeof result !== 'undefined' && result !== false && result !== 'false') {
-        this.getChapter({ index: this.selectedchapind });
+        if (this.selectedbookind == null) {
+          this.getChild({ index: this.selectedchapind });
+        } else {
+          this.getBooksChapter({ index: this.selectedbookind });
+        }
       }
     });
   }
@@ -98,7 +141,9 @@ export class ChapterForm {
   chapterForm: FormGroup;
   loading = false;
   chapter_id = 0;
+  course_id = 0;
   subject = [];
+  book = [];
   constructor(
     public dialogRef: MatDialogRef<ChapterForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -106,17 +151,44 @@ export class ChapterForm {
     private httpClient: HttpClient) {
     this.chapterForm = new FormGroup({
       'name': new FormControl('', Validators.required),
-      //'description': new FormControl('', Validators.required),
-      'subject_id': new FormControl('', Validators.required)
+      'subject_id': new FormControl('', Validators.required),
+      'book_id': new FormControl('', Validators.required)
     });
     this.subject = this.data.subject;
     if (this.data.data != null) {
       this.chapterForm.patchValue({
         name: this.data.data.name,
-        //description: this.data.data.description,
         subject_id: this.data.data.subject_id,
+        book_id: this.data.data.book_id,
       });
       this.chapter_id = this.data.data.chapter_id;
+      this.getBook();
+    }
+  }
+
+  getBook(): void {
+    this.subject.forEach(val => {
+      if (parseInt(val.subject_id) === parseInt(this.chapterForm.value.subject_id)) {
+        this.course_id = parseInt(val.course_id);
+        return false;
+      }
+    });
+    if (this.course_id != 1) {
+      this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_book_by_subject/' + this.chapterForm.value.subject_id)
+        .subscribe(
+          (res) => {
+            this.book = res["result"]["data"];
+          },
+          (error) => {
+            this._snackBar.open(error["statusText"], '', {
+              duration: 2000,
+            });
+          }
+        );
+    } else {
+      this.chapterForm.patchValue({
+        book_id: 0
+      });
     }
   }
 
@@ -127,8 +199,8 @@ export class ChapterForm {
     this.loading = true;
     var formData = new FormData();
     formData.append('name', this.chapterForm.value.name);
-    //formData.append('description', this.chapterForm.value.description);
     formData.append('subject_id', this.chapterForm.value.subject_id);
+    formData.append('book_id', this.chapterForm.value.book_id);
     var url = '';
     if (this.chapter_id != 0) {
       url = 'update_record/chapter/chapter_id = ' + this.chapter_id;

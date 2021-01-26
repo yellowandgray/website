@@ -12,26 +12,36 @@
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Subject</mat-label>
-                    <mat-select required formControlName="subject_id">
+                    <mat-select required formControlName="subject_id" (selectionChange)="getBook()">
                         <mat-option [value]="row.subject_id" *ngFor="let row of subject">
                             {{row.name}}({{row.course}})
-                    </mat-option>
-                </mat-select>
-                <mat-error>Subject is required</mat-error>
-            </mat-form-field>
+                        </mat-option>
+                    </mat-select>
+                    <mat-error>Subject is required</mat-error>
+                </mat-form-field>
+            </div>
         </div>
-    </div>
-    <br/>
-<!--    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
-        <div fxFlex="100%">
-            <angular-editor id="editor1" formControlName="description" [config]="editorConfig"></angular-editor>
+        <br />
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start" *ngIf="course_id > 1">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Book</mat-label>
+                    <mat-select required formControlName="book_id">
+                        <mat-option [value]="row.book_id" *ngFor="let row of book">
+                            {{row.book_name}}
+                        </mat-option>
+                    </mat-select>
+                    <mat-error>Subject is required</mat-error>
+                </mat-form-field>
+            </div>
         </div>
-    </div>-->
-    <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
-        <button mat-button [mat-dialog-close]="false">Cancel</button>
-        <button mat-button type="submit" [disabled]="loading">Save</button>
-        <mat-progress-spinner class="example-margin" *ngIf="loading" [mode]="'indeterminate'" [strokeWidth]="3" [diameter]="25">
-        </mat-progress-spinner>
-    </div>
-</form>
+        <br />
+        <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="end center">
+            <button mat-button [mat-dialog-close]="false">Cancel</button>
+            <button mat-button type="submit" [disabled]="loading">Save</button>
+            <mat-progress-spinner class="example-margin" *ngIf="loading" [mode]="'indeterminate'" [strokeWidth]="3"
+                [diameter]="25">
+            </mat-progress-spinner>
+        </div>
+    </form>
 </mat-dialog-content>

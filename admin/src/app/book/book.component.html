@@ -7,19 +7,23 @@
         <div class="add-btn-container">
             <button mat-raised-button color="primary" (click)="openDialog(0, 'null')"><mat-icon>add</mat-icon> Book</button>
         </div>
-        <mat-list>
-            <ng-container *ngFor="let data of book">
-                <mat-list-item>
-                    <button mat-icon-button aria-label="label" (click)="openDialog(data.book_id, 'book')">
-                        <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
-                    </button>
-                    <button mat-icon-button aria-label="label" (click)="confirmDelete(data.book_id)">
-                        <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
-                    </button>
-                    <h4 mat-line>{{data.book_name}}</h4>
-                </mat-list-item>
-                <mat-divider></mat-divider>
-            </ng-container>
-        </mat-list>
+        <mat-tab-group (selectedTabChange)="getBook($event);">
+            <mat-tab *ngFor="let sub of subject" label="{{sub.name}}({{sub.course}})">
+                <mat-list>
+                    <ng-container *ngFor="let data of book">
+                        <mat-list-item>
+                            <button mat-icon-button aria-label="label" (click)="openDialog(data.book_id, 'book')">
+                                <mat-icon #tooltip="matTooltip" matTooltip="Edit">edit</mat-icon>
+                            </button>
+                            <button mat-icon-button aria-label="label" (click)="confirmDelete(data.book_id)">
+                                <mat-icon #tooltip="matTooltip" matTooltip="Delete">delete</mat-icon>
+                            </button>
+                            <h4 mat-line>{{data.book_name}}</h4>
+                        </mat-list-item>
+                        <mat-divider></mat-divider>
+                    </ng-container>
+                </mat-list>
+            </mat-tab>
+        </mat-tab-group>
     </mat-sidenav-content>
 </mat-sidenav-container>

@@ -141,7 +141,7 @@ $app->post('/insert_chapter', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('name' => $data['name'], 'subject_id' => $data['subject_id']), 'chapter');
+    $record = $com->insertRecord(array('name' => $data['name'], 'subject_id' => $data['subject_id'], 'book_id' => $data['book_id']), 'chapter');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
@@ -205,7 +205,7 @@ $app->post('/insert_book', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('book_name' => $data['book_name'], 'book_name_id' => $data['book_name_id']), 'book');
+    $record = $com->insertRecord(array('book_name' => $data['book_name'], 'subject_id' => $data['subject_id']), 'book');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
@@ -241,6 +241,18 @@ $app->get('/get_subject', function() {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
     $data = $com->selectAll('s.*, c.name AS course', 'subject AS s LEFT JOIN course AS c ON c.course_id = s.course_id', 's.subject_id > 0');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_subject_for_books_tab', function() {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('s.*, c.name AS course', 'subject AS s LEFT JOIN course AS c ON c.course_id = s.course_id', 's.subject_id > 0 AND s.course_id = 2');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
@@ -419,6 +431,18 @@ $app->get('/get_chapter_by_subject/:sid', function($sid) {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
     $data = $com->selectAll('*', 'chapter', 'subject_id = ' . $sid . ' ORDER BY name ASC');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_chapter_by_book/:bid', function($bid) {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('*', 'chapter', 'book_id = ' . $bid . ' ORDER BY name ASC');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
@@ -650,6 +674,18 @@ $app->get('/get_book', function() {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
     $data = $com->selectAll('*', 'book', 'book_id > 0');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_book_by_subject/:sid', function($sid) {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('*', 'book', 'book_id > 0 AND subject_id = '.$sid);
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';

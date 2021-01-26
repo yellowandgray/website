@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -11,13 +11,29 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class BookComponent implements OnInit {
   book = [];
+  subject = [];
+  selectedbookind = 0;
   constructor(public dialog: MatDialog, private httpClient: HttpClient, private _snackBar: MatSnackBar) { }
 
   ngOnInit() {
-    this.getBook();
+    this.getsubject();
   }
-  getBook(): void {
-    this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_book')
+  getsubject(): void {
+    this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_subject_for_books_tab')
+      .subscribe(
+        (res) => {
+          this.subject = res["result"]["data"];
+        },
+        (error) => {
+          this._snackBar.open(error["statusText"], '', {
+            duration: 2000,
+          });
+        }
+      );
+  }
+  getBook(ev): void {
+    this.selectedbookind = ev.index;
+    this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_book_by_subject/' + this.subject[ev.index].subject_id)
       .subscribe(
         (res) => {
           this.book = res["result"]["data"];
@@ -31,13 +47,13 @@ export class BookComponent implements OnInit {
   }
   openDialog(id, res): void {
     var data = null;
-      if(id != 0) {
-      this[res].forEach(val=> {
-           if(parseInt(val.book_id) === parseInt(id)) {
-                data = val;
-                return false;
-            }
-        });
+    if (id != 0) {
+      this[res].forEach(val => {
+        if (parseInt(val.book_id) === parseInt(id)) {
+          data = val;
+          return false;
+        }
+      });
     }
     const dialogRef = this.dialog.open(BookForm, {
       minWidth: "40%",
@@ -46,28 +62,28 @@ export class BookComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      if(typeof result !== 'undefined' && result !== false && result !== 'false') {
-        this.getBook();
-        }
+      if (typeof result !== 'undefined' && result !== false && result !== 'false') {
+        this.getBook({ index: this.selectedbookind });
+      }
     });
-}
+  }
 
-confirmDelete(id): void  {
-  var data = null;
-    if(id != 0) { 
+  confirmDelete(id): void {
+    var data = null;
+    if (id != 0) {
       data = id;
     }
-const dialogRef = this.dialog.open(BookDelete, {
-  minWidth: "40%",
-  maxWidth: "40%",
-  data: data
-});
-dialogRef.afterClosed().subscribe(result => {
- if(typeof result !== 'undefined' && result !== false && result !== 'false') {
-    this.getBook();
- }
-});
-}
+    const dialogRef = this.dialog.open(BookDelete, {
+      minWidth: "40%",
+      maxWidth: "40%",
+      data: data
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      if (typeof result !== 'undefined' && result !== false && result !== 'false') {
+        this.getBook({ index: this.selectedbookind });
+      }
+    });
+  }
 }
 
 
@@ -76,56 +92,72 @@ dialogRef.afterClosed().subscribe(result => {
   templateUrl: 'book-form.html',
 })
 export class BookForm {
-    bookForm: FormGroup;
-    loading = false;
-    book_id = 0;
-    book = [];
-    constructor(
+  bookForm: FormGroup;
+  loading = false;
+  book_id = 0;
+  book = [];
+  subject = [];
+  constructor(
     public dialogRef: MatDialogRef<BookForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
-        this.bookForm = new FormGroup ({
-            'book_name': new FormControl('', Validators.required),
-            'book_name_id': new FormControl('', Validators.required),
-        });
-        if(this.data != null) {
-           this.bookForm.patchValue({
-            book_name: this.data.book_name,
-            book_name_id: this.data.book_name_id,
-        });
-            this.book_id = this.data.book_id;
-        }
+    this.bookForm = new FormGroup({
+      'book_name': new FormControl('', Validators.required),
+      'subject_id': new FormControl('', Validators.required),
+    });
+    if (this.data != null) {
+      this.bookForm.patchValue({
+        book_name: this.data.book_name,
+        subject_id: this.data.subject_id,
+      });
+      this.book_id = this.data.book_id;
     }
+    this.getSubject();
+  }
 
-    onSubmit() {
-      if (this.bookForm.invalid) {
-            return;
-      }
-      this.loading = true;
-      var formData = new FormData();
-        formData.append('book_name', this.bookForm.value.book_name);
-        formData.append('book_name_id', this.bookForm.value.book_name_id);
-      var url = '';
-          if(this.book_id != 0) {
-        url = 'update_record/book/book_id = '+this.book_id;
-      } else {
-        url = 'insert_book';
-      }
-      this.httpClient.post('http://localhost/microview/feringo/api/v1/'+url, formData).subscribe(
-          (res)=>{
-                this.loading = false;
-                if(res["result"]["error"] === false) {
-                    this.dialogRef.close(true);
-                }else{
-            this._snackBar.open(res["result"]["message"], '', {
-              duration: 2000,
-            });
-            }
-            },
-            (error)=>{
-                this.loading = false;
-                this._snackBar.open(error["statusText"], '', {
+  getSubject(): void {
+    this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_subject_for_books_tab')
+      .subscribe(
+        (res) => {
+          this.subject = res["result"]["data"];
+        },
+        (error) => {
+          this._snackBar.open(error["statusText"], '', {
+            duration: 2000,
+          });
+        }
+      );
+  }
+
+  onSubmit() {
+    if (this.bookForm.invalid) {
+      return;
+    }
+    this.loading = true;
+    var formData = new FormData();
+    formData.append('book_name', this.bookForm.value.book_name);
+    formData.append('subject_id', this.bookForm.value.subject_id);
+    var url = '';
+    if (this.book_id != 0) {
+      url = 'update_record/book/book_id = ' + this.book_id;
+    } else {
+      url = 'insert_book';
+    }
+    this.httpClient.post('http://localhost/microview/feringo/api/v1/' + url, formData).subscribe(
+      (res) => {
+        this.loading = false;
+        if (res["result"]["error"] === false) {
+          this.dialogRef.close(true);
+        } else {
+          this._snackBar.open(res["result"]["message"], '', {
+            duration: 2000,
+          });
+        }
+      },
+      (error) => {
+        this.loading = false;
+        this._snackBar.open(error["statusText"], '', {
           duration: 2000,
         });
       }
@@ -138,40 +170,40 @@ export class BookForm {
   templateUrl: 'book-delete-confirmation.html',
 })
 export class BookDelete {
-    loading = false;
-    book_id = 0;
-    constructor(
+  loading = false;
+  book_id = 0;
+  constructor(
     public dialogRef: MatDialogRef<BookDelete>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
-    if(this.data != null) { 
-        this.book_id = this.data;
+    if (this.data != null) {
+      this.book_id = this.data;
     }
-}
+  }
 
   confirmDelete() {
-      if (this.book_id == null || this.book_id == 0) {
-            return;
+    if (this.book_id == null || this.book_id == 0) {
+      return;
+    }
+    this.loading = true;
+    this.httpClient.get('http://localhost/microview/feringo/api/v1/delete_record/book/book_id=' + this.book_id).subscribe(
+      (res) => {
+        this.loading = false;
+        if (res["result"]["error"] === false) {
+          this.dialogRef.close(true);
+        } else {
+          this._snackBar.open(res["result"]["message"], '', {
+            duration: 2000,
+          });
+        }
+      },
+      (error) => {
+        this.loading = false;
+        this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+        });
       }
-      this.loading = true;
-      this.httpClient.get('http://localhost/microview/feringo/api/v1/delete_record/book/book_id='+this.book_id).subscribe(
-          (res)=>{
-                this.loading = false;
-                if(res["result"]["error"] === false) {
-                    this.dialogRef.close(true);
-                }else{
-            this._snackBar.open(res["result"]["message"], '', {
-          duration: 2000,
-        });
-                }
-            },
-            (error)=>{
-                this.loading = false;
-                this._snackBar.open(error["statusText"], '', {
-          duration: 2000,
-        });
-            }
-        );
+    );
   }
 }

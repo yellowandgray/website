@@ -11,9 +11,13 @@
             </div>
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Book ID</mat-label>
-                    <input matInput placeholder="" required formControlName="book_name_id" />
-                    <mat-error>Book ID is required</mat-error>
+                    <mat-label>Subject</mat-label>
+                    <mat-select required formControlName="subject_id">
+                        <mat-option [value]="row.subject_id" *ngFor="let row of subject">
+                            {{row.name}}({{row.course}})
+                    </mat-option>
+                </mat-select>
+                <mat-error>Subject is required</mat-error>
                 </mat-form-field>
             </div>
         </div>
