@@ -27,7 +27,7 @@ export class TopicComponent implements OnInit {
     this.getsubject();
   }
   getsubject(): void {
-    this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_subject')
+    this.httpClient.get<any>('../api/v1/get_subject')
       .subscribe(
         (res) => {
           this.subject = res["result"]["data"];
@@ -49,7 +49,7 @@ export class TopicComponent implements OnInit {
   }
   getChapter(ev): void {
     this.chapter = [];
-    this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_chapter_by_subject/' + this.subject[ev.index].subject_id)
+    this.httpClient.get<any>('../api/v1/get_chapter_by_subject/' + this.subject[ev.index].subject_id)
       .subscribe(
         (res) => {
           this.chapter = res["result"]["data"];
@@ -62,7 +62,7 @@ export class TopicComponent implements OnInit {
       );
   }
   getBook(ev): void {
-    this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_book_by_subject/' + this.subject[ev.index].subject_id)
+    this.httpClient.get<any>('../api/v1/get_book_by_subject/' + this.subject[ev.index].subject_id)
       .subscribe(
         (res) => {
           this.book = res["result"]["data"];
@@ -76,7 +76,7 @@ export class TopicComponent implements OnInit {
   }
   getBookChapter(ev): void {
     this.selectedbookind = ev.index;
-    this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_chapter_by_book/' + this.book[ev.index].book_id)
+    this.httpClient.get<any>('../api/v1/get_chapter_by_book/' + this.book[ev.index].book_id)
       .subscribe(
         (res) => {
           this.chapter = res["result"]["data"];
@@ -92,7 +92,7 @@ export class TopicComponent implements OnInit {
     this.selectedtopicindex = ev.index;
     this.topic = [];
     if (typeof this.chapter[ev.index] !== 'undefined') {
-      this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_topic_by_chapter/' + this.chapter[ev.index].chapter_id)
+      this.httpClient.get<any>('../api/v1/get_topic_by_chapter/' + this.chapter[ev.index].chapter_id)
         .subscribe(
           (res) => {
             this.topic = res["result"]["data"];
@@ -196,7 +196,7 @@ export class TopicForm {
       this.topicForm.patchValue({
         book_id: 0
       });
-      this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_chapter_by_subject/' + this.topicForm.value.subject_id)
+      this.httpClient.get<any>('../api/v1/get_chapter_by_subject/' + this.topicForm.value.subject_id)
         .subscribe(
           (res) => {
             this.chapter = res["result"]["data"];
@@ -208,7 +208,7 @@ export class TopicForm {
           }
         );
     } else {
-      this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_book_by_subject/' + this.topicForm.value.subject_id)
+      this.httpClient.get<any>('../api/v1/get_book_by_subject/' + this.topicForm.value.subject_id)
         .subscribe(
           (res) => {
             this.book = res["result"]["data"];
@@ -222,7 +222,7 @@ export class TopicForm {
     }
   }
   getChapterByBook(): void {
-    this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_chapter_by_book/' + this.topicForm.value.book_id)
+    this.httpClient.get<any>('../api/v1/get_chapter_by_book/' + this.topicForm.value.book_id)
       .subscribe(
         (res) => {
           this.chapter = res["result"]["data"];
@@ -249,7 +249,7 @@ export class TopicForm {
     } else {
       url = 'insert_topic';
     }
-    this.httpClient.post('http://localhost/microview/feringo/api/v1/' + url, formData).subscribe(
+    this.httpClient.post('../api/v1/' + url, formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -333,7 +333,7 @@ export class TopicDelete {
       return;
     }
     this.loading = true;
-    this.httpClient.get('http://localhost/microview/feringo/api/v1/delete_record/topic/topic_id=' + this.topic_id).subscribe(
+    this.httpClient.get('../api/v1/delete_record/topic/topic_id=' + this.topic_id).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {

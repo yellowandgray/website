@@ -19,7 +19,7 @@ export class BookComponent implements OnInit {
     this.getsubject();
   }
   getsubject(): void {
-    this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_subject_for_books_tab')
+    this.httpClient.get<any>('../api/v1/get_subject_for_books_tab')
       .subscribe(
         (res) => {
           this.subject = res["result"]["data"];
@@ -33,7 +33,7 @@ export class BookComponent implements OnInit {
   }
   getBook(ev): void {
     this.selectedbookind = ev.index;
-    this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_book_by_subject/' + this.subject[ev.index].subject_id)
+    this.httpClient.get<any>('../api/v1/get_book_by_subject/' + this.subject[ev.index].subject_id)
       .subscribe(
         (res) => {
           this.book = res["result"]["data"];
@@ -117,7 +117,7 @@ export class BookForm {
   }
 
   getSubject(): void {
-    this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_subject_for_books_tab')
+    this.httpClient.get<any>('../api/v1/get_subject_for_books_tab')
       .subscribe(
         (res) => {
           this.subject = res["result"]["data"];
@@ -144,7 +144,7 @@ export class BookForm {
     } else {
       url = 'insert_book';
     }
-    this.httpClient.post('http://localhost/microview/feringo/api/v1/' + url, formData).subscribe(
+    this.httpClient.post('../api/v1/' + url, formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -187,7 +187,7 @@ export class BookDelete {
       return;
     }
     this.loading = true;
-    this.httpClient.get('http://localhost/microview/feringo/api/v1/delete_record/book/book_id=' + this.book_id).subscribe(
+    this.httpClient.get('../api/v1/delete_record/book/book_id=' + this.book_id).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
