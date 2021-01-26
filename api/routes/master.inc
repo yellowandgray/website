@@ -128,7 +128,7 @@ $app->post('/insert_standard', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('name' => $data['name'], 'description' => $data['description'], 'status' => $data['status'],'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'),'created_by'=>1,'updated_by'=>1), 'standard');
+    $record = $com->insertRecord(array('name' => $data['name'], 'description' => $data['description'], 'status' => $data['status'], 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'created_by' => 1, 'updated_by' => 1), 'standard');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
@@ -331,11 +331,10 @@ $app->get('/get_student/:srt', function($str) {
     $data = $com->selectAll('*', 'student_register', 'student_register_id > 0 ORDER BY ' . $str . ' ' . $order);
     if (count($data) > 0) {
         foreach ($data as $key => $row) {
-            if ($row['login_at']=='0000-00-00 00:00:00') {
+            if ($row['login_at'] == '0000-00-00 00:00:00') {
                 $data[$key]['login_at'] = 'Student Not login';
-            }
-            else{
-            $data[$key]['login_at'] = date('d/m/Y h:iA', strtotime($row['login_at']));
+            } else {
+                $data[$key]['login_at'] = date('d/m/Y h:iA', strtotime($row['login_at']));
             }
         }
         $res['error'] = false;
@@ -406,7 +405,7 @@ $app->get('/get_question_by_topic/:tid/:cid/:searchtxt/:searchqno/:lvl', functio
 $app->get('/get_neet_question_by_sub_topic/:stid', function($stid) {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
-    $data = $com->selectAll('*', 'neet_question', 'sub_topic_id = '. $stid . 'ORDER BY question_no ASC');
+    $data = $com->selectAll('*', 'neet_question', 'sub_topic_id = ' . $stid . 'ORDER BY question_no ASC');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
@@ -514,13 +513,7 @@ $app->post('/import_question', function() use($app) {
                         break;
                     }
                 }
-                $book = $obj->selectRow('*', 'book', 'book_name = \'' . $row[13] . '\'');
-                if (count($book) == 0) {
-                    $book_id = $obj->insertRecord(array('book_name' => trim($row[13]), 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')), 'book');
-                } else {
-                    $book_id = $book['book_id'];
-                }
-                $data = array('topic_id' => $topic_id, 'question_no' => $row[3], 'name' => trim($row[5]), 'a' => $row[6], 'b' => $row[7], 'c' => $row[8], 'd' => $row[9], 'answer' => $row[10], 'explanation' => $row[11], 'data_dictionary' => $row[12], 'book_id' => $book_id, 'page_no' => $row[14], 'notes' => $row[15], 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'image_path' => '', 'direction' => 'top', 'difficult_id' => $difficult_id);
+                $data = array('topic_id' => $topic_id, 'question_no' => $row[3], 'name' => trim($row[5]), 'a' => $row[6], 'b' => $row[7], 'c' => $row[8], 'd' => $row[9], 'answer' => $row[10], 'explanation' => $row[11], 'data_dictionary' => $row[12], 'page_no' => $row[13], 'notes' => $row[14], 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'image_path' => '', 'direction' => 'top', 'difficult_id' => $difficult_id);
                 $insert = $obj->insertRecord($data, 'question');
                 if ($insert > 0) {
                     $count++;
@@ -546,29 +539,27 @@ $app->post('/import_neet_question', function() use($app) {
         $first = true;
         $count = 0;
         $obj = new Common();
-        //$difficult = $obj->selectAll('*', 'difficult', 'difficult_id > 0');
         while (($row = fgetcsv($handle, 1000, ',')) !== FALSE) {
             if (!$first) {
-                $standard_id = 0;
                 $subject_id = 0;
+                $book_id = 0;
                 $chapter_id = 0;
                 $topic_id = 0;
-                $sub_topic_id = 0;
-                $standard = $obj->selectRow('*', 'standard', 'name = \'' . $row[0] . '\'');
-                if (count($standard) == 0) {
-                    $standard_id = $obj->insertRecord(array('name' => trim($row[0]), 'description' => '', 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')), 'standard');
-                } else {
-                    $standard_id = $standard['standard_id'];
-                }
-                $subject = $obj->selectRow('*', 'subject', 'name = \'' . $obj->escapeString($row[1]) . '\' AND standard_id = ' . $standard_id);
+                $subject = $obj->selectRow('*', 'subject', 'name = \'' . $obj->escapeString($row[0]) . '\' AND course_id = 2');
                 if (count($subject) == 0) {
-                    $subject_id = $obj->insertRecord(array('name' => trim($row[1]), 'description' => '', 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'image_path' => '', 'standard_id' => $standard_id), 'subject');
+                    $subject_id = $obj->insertRecord(array('name' => trim($row[0]), 'description' => '', 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'image_path' => '', 'course_id' => 2), 'subject');
                 } else {
                     $subject_id = $subject['subject_id'];
                 }
-                $chapter = $obj->selectRow('*', 'chapter', 'name = \'' . $obj->escapeString($row[2]) . '\' AND subject_id = ' . $subject_id);
+                $book = $obj->selectRow('*', 'book', 'book_name = \'' . $obj->escapeString($row[1]) . '\' AND subject_id = ' . $subject_id);
+                if (count($book) == 0) {
+                    $book_id = $obj->insertRecord(array('book_name' => trim($row[1]), 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'subject_id' => $subject_id), 'book');
+                } else {
+                    $book_id = $book['book_id'];
+                }
+                $chapter = $obj->selectRow('*', 'chapter', 'name = \'' . $obj->escapeString($row[2]) . '\' AND book_id = ' . $book_id);
                 if (count($chapter) == 0) {
-                    $chapter_id = $obj->insertRecord(array('name' => trim($row[2]), 'description' => '', 'status' => 1, 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'subject_id' => $subject_id), 'chapter');
+                    $chapter_id = $obj->insertRecord(array('name' => trim($row[2]), 'description' => '', 'status' => 1, 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'subject_id' => $subject_id, 'book_id' => $book_id), 'chapter');
                 } else {
                     $chapter_id = $chapter['chapter_id'];
                 }
@@ -578,20 +569,8 @@ $app->post('/import_neet_question', function() use($app) {
                 } else {
                     $topic_id = $topic['topic_id'];
                 }
-                $sub_topic = $obj->selectRow('*', 'sub_topic', 'name = \'' . $obj->escapeString($row[4]) . '\' AND topic_id = ' . $topic_id);
-                if (count($sub_topic) == 0) {
-                    $sub_topic_id = $obj->insertRecord(array('name' => trim($row[4]), 'description' => '', 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'topic_id' => $topic_id), 'sub_topic');
-                } else {
-                    $sub_topic_id = $sub_topic['sub_topic_id'];
-                }
-                $book = $obj->selectRow('*', 'book', 'book_name = \'' . $row[14] . '\'');
-                if (count($book) == 0) {
-                    $book_id = $obj->insertRecord(array('book_name' => trim($row[14]), 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')), 'book');
-                } else {
-                    $book_id = $book['book_id'];
-                }
-                $data = array('topic_id' => $topic_id, 'question_no' => $row[5], 'name' => trim($row[6]), 'a' => $row[7], 'b' => $row[8], 'c' => $row[9], 'd' => $row[10], 'answer' => $row[11], 'explanation' => $row[12], 'data_dictionary' => $row[13], 'book_id' => $book_id, 'page_no' => $row[15], 'notes' => $row[16], 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'image_path' => '', 'direction' => 'top', 'sub_topic_id' => $sub_topic_id);
-                $insert = $obj->insertRecord($data, 'neet_question');
+                $data = array('topic_id' => $topic_id, 'question_no' => $row[4], 'name' => trim($row[5]), 'a' => $row[6], 'b' => $row[7], 'c' => $row[8], 'd' => $row[9], 'answer' => $row[10], 'explanation' => $row[11], 'data_dictionary' => '', 'page_no' => '', 'notes' => '', 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'image_path' => '', 'direction' => 'top');
+                $insert = $obj->insertRecord($data, 'question');
                 if ($insert > 0) {
                     $count++;
                 }
@@ -685,7 +664,7 @@ $app->get('/get_book', function() {
 $app->get('/get_book_by_subject/:sid', function($sid) {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
-    $data = $com->selectAll('*', 'book', 'book_id > 0 AND subject_id = '.$sid);
+    $data = $com->selectAll('*', 'book', 'book_id > 0 AND subject_id = ' . $sid);
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
@@ -735,7 +714,7 @@ $app->get('/get_feedback', function() {
 $app->get('/get_assigned_feedback/:stud_id', function($stud_id) {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
-    $data = $com->selectAll('f.*,ftm.feedback_timing As fb_timing,fe.*', 'user_assign_feedback As f LEFT JOIN feedback_timing_master As ftm ON f.timing_id=ftm.feedback_timing_id LEFT JOIN feedback As fe ON f.feedback_id=fe.feedback_id', 'f.student_id ='.$stud_id );
+    $data = $com->selectAll('f.*,ftm.feedback_timing As fb_timing,fe.*', 'user_assign_feedback As f LEFT JOIN feedback_timing_master As ftm ON f.timing_id=ftm.feedback_timing_id LEFT JOIN feedback As fe ON f.feedback_id=fe.feedback_id', 'f.student_id =' . $stud_id);
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
@@ -747,7 +726,7 @@ $app->get('/get_assigned_feedback/:stud_id', function($stud_id) {
 $app->get('/get_feedback_by_type/:ftype', function($ftype) {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
-    $data = $com->selectAll('*', 'feedback', 'feedback_type =\''.$ftype.'\'');
+    $data = $com->selectAll('*', 'feedback', 'feedback_type =\'' . $ftype . '\'');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';
@@ -763,27 +742,25 @@ $app->post('/insert_user_assign_feedback', function() use ($app) {
     $com = new Common();
     $feedbacks = json_decode($data['feedback']);
     $record = 0;
-    
-    foreach($feedbacks as $feedback) {  
-        $exist = $com->selectRow('*', 'user_assign_feedback', 'student_id='. $data['student_id'].' AND feedback_id='.$feedback);
-        
-        if(count($exist)>0) {
-            
-            $record = $com->updateRecordWithWhere(array('student_id' => $data['student_id'], 'timing_id' => $data['feedback_timing'],'feedback_id' => $feedback,'updated_at' =>'\''.date('Y-m-d H:i:s').'\''),'user_assign_feedback', 'student_id='. $data['student_id'].' AND feedback_id='.$feedback);
+
+    foreach ($feedbacks as $feedback) {
+        $exist = $com->selectRow('*', 'user_assign_feedback', 'student_id=' . $data['student_id'] . ' AND feedback_id=' . $feedback);
+
+        if (count($exist) > 0) {
+
+            $record = $com->updateRecordWithWhere(array('student_id' => $data['student_id'], 'timing_id' => $data['feedback_timing'], 'feedback_id' => $feedback, 'updated_at' => '\'' . date('Y-m-d H:i:s') . '\''), 'user_assign_feedback', 'student_id=' . $data['student_id'] . ' AND feedback_id=' . $feedback);
             if ($record > 0) {
                 $res['error'] = false;
                 $res['message'] = 'Record updated successfully';
-            }                        
-        }
-        else {
-            $record = $com->insertRecord(array('student_id'=>$data['student_id'],'timing_id' => $data['feedback_timing'], 'feedback_id' => $feedback, 'created_at' => date('Y-m-d H:i:s')), 'user_assign_feedback');
+            }
+        } else {
+            $record = $com->insertRecord(array('student_id' => $data['student_id'], 'timing_id' => $data['feedback_timing'], 'feedback_id' => $feedback, 'created_at' => date('Y-m-d H:i:s')), 'user_assign_feedback');
             $res['message'] = 'Record inserted successfully';
-        }        
-    }        
-    
+        }
+    }
+
     if ($record > 0) {
         $res['error'] = false;
-        
     }
     echoRespnse(201, $res);
 });

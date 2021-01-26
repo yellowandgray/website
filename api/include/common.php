@@ -53,6 +53,7 @@ class Common {
 
     public function insertRecord($fields, $table) {
         $values = array_values($fields);
+        //print 'INSERT INTO `' . $table . '` (' . implode(", ", array_keys($fields)) . ') VALUES (\'' . implode("','", array_map(array($this, 'escapeString'), $values)) . '\')';
         $this->conn->query('INSERT INTO `' . $table . '` (' . implode(", ", array_keys($fields)) . ') VALUES (\'' . implode("','", array_map(array($this, 'escapeString'), $values)) . '\')');
         if ($this->conn->affected_rows > 0) {
             return $this->conn->insert_id;

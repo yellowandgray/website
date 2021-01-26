@@ -187,3 +187,7 @@ table {
 .option {
     font-size: 15px;
 }
+
+.course-field .mat-form-field-wrapper {
+    padding-bottom: 0px!important;
+}

@@ -15,6 +15,7 @@ import { Observable } from 'rxjs';
 })
 export class QuestionComponent implements OnInit {
     question = [];
+    courses = [];
     subject = [];
     chapter = [];
     topic = [];
@@ -23,6 +24,7 @@ export class QuestionComponent implements OnInit {
     loading = false;
     image_url: string = 'http://localhost/microview/feringo/api/v1/';
     file_name: string = 'Select Picture';
+    selected_course = 1;
     selected_subject = 0;
     selected_chapter = 0;
     selected_topic = 0;
@@ -36,10 +38,24 @@ export class QuestionComponent implements OnInit {
     constructor(public dialog: MatDialog, private httpClient: HttpClient, private _snackBar: MatSnackBar) { }
     ngOnInit() {
         this.getSubject();
+        this.getCourse();
         this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_difficult')
             .subscribe(
                 (res) => {
                     this.difficult = res["result"]["data"];
+                },
+                (error) => {
+                    this._snackBar.open(error["statusText"], '', {
+                        duration: 2000,
+                    });
+                }
+            );
+    }
+    getCourse(): void {
+        this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_course')
+            .subscribe(
+                (res) => {
+                    this.courses = res["result"]["data"];
                 },
                 (error) => {
                     this._snackBar.open(error["statusText"], '', {
@@ -151,9 +167,13 @@ export class QuestionComponent implements OnInit {
         var fileData = <File>fileInput.target.files[0];
         this.file_name = fileData.name;
         this.loading = true;
+        var url = 'import_question';
+        if (this.selected_course != 1) {
+            url = 'import_neet_question';
+        }
         var formData = new FormData();
         formData.append('file', fileData);
-        this.httpClient.post('http://localhost/microview/feringo/api/v1/import_question', formData).subscribe(
+        this.httpClient.post('http://localhost/microview/feringo/api/v1/' + url, formData).subscribe(
             (res) => {
                 this.loading = false;
                 this._snackBar.open(res["result"]["message"], '', {

@@ -5,7 +5,16 @@
     <mat-sidenav-content>
         <app-header></app-header>
         <div class="add-btn-container">
-            <div fxLayout="row" fxFlex="100%" fxLayoutAlign="end end">
+            <div fxLayout="row" fxFlex="100%" fxLayoutAlign="end center">
+                    <mat-form-field appearance="outline" class="course-field">
+                        <mat-label>Select Course to Import</mat-label>
+                        <mat-select [(ngModel)]="selected_course">
+                            <mat-option [value]="sub.course_id" *ngFor="let sub of courses">
+                                {{sub.name}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    &nbsp;&nbsp;&nbsp;
                 <button mat-raised-button color="primary" (click)="fileInput.click()">
                     <span *ngIf="!loading">Import</span>
                     <mat-progress-spinner
