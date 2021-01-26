@@ -3,15 +3,24 @@ require_once 'api/include/common.php';
 session_start();
 $obj = new Common();
 if (!isset($_SESSION['selected_subject_id'])) {
-    header('Location: home_subject');
+    header('Location: home_course');
 }
 $subject = $obj->selectRow('*', 'subject', 'subject_id=' . $_SESSION['selected_subject_id']);
-if (!isset($_GET['difficult'])) {
-    header('Location: difficult_level?sub=' . $subject['name']);
+if (!isset($_GET['difficult']) && !isset($_GET['book'])) {
+    header('Location: home_course');
 }
-$difficult = $obj->selectRow('*', 'difficult', 'name=\'' . $_GET['difficult'] . '\'');
-$chapters = $obj->selectAll('*', 'chapter', 'subject_id = ' . $subject['subject_id'] . ' ORDER BY name ASC');
-$_SESSION['selected_difficult_id'] = $difficult['difficult_id'];
+if (isset($_GET['difficult'])) {
+    $difficult = $obj->selectRow('*', 'difficult', 'name=\'' . $_GET['difficult'] . '\'');
+    $_SESSION['selected_difficult_id'] = $difficult['difficult_id'];
+    $_SESSION['selected_book_id'] = 0;
+    $chapters = $obj->selectAll('*', 'chapter', 'subject_id = ' . $subject['subject_id'] . ' ORDER BY name ASC');
+}
+if (isset($_GET['book'])) {
+    $book = $obj->selectRow('*', 'book', 'book_name=\'' . $_GET['book'] . '\' AND subject_id = ' . $_SESSION['selected_subject_id']);
+    $_SESSION['selected_difficult_id'] = 0;
+    $_SESSION['selected_book_id'] = $book['book_id'];
+    $chapters = $obj->selectAll('*', 'chapter', 'book_id = ' . $book['book_id'] . ' ORDER BY name ASC');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,11 +40,19 @@ $_SESSION['selected_difficult_id'] = $difficult['difficult_id'];
                                         <td valign="top" class="w-5">:</td>
                                         <th valign="top"><?php echo $subject['name']; ?></th>
                                     </tr>
+                                    <?php if($_SESSION['selected_course_id'] == 1) { ?>
                                     <tr>
                                         <td valign="top">Selected Mark Category</td>
                                         <td valign="top">:</td>
                                         <th valign="top"><?php echo $difficult['name']; ?></th>
                                     </tr>  
+                                    <?php } if($_SESSION['selected_course_id'] == 2) { ?>
+                                    <tr>
+                                        <td valign="top">Selected Book</td>
+                                        <td valign="top">:</td>
+                                        <th valign="top"><?php echo $book['book_name']; ?></th>
+                                    </tr>  
+                                    <?php } ?>
                                 </table>
                             </h4>
                             <a class="home_link" href="home_subject">
@@ -66,7 +83,7 @@ $_SESSION['selected_difficult_id'] = $difficult['difficult_id'];
             </section>
             <!-- Reset Modal -->
             <?php include 'footer.php'; ?>
-            <?php //include 'reset_password.php'; ?>
+            <?php //include 'reset_password.php';  ?>
             <!-- end reset modal -->
         </div>
         <?php include 'script.php'; ?>

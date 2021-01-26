@@ -11,3 +11,6 @@ ALTER TABLE `chapter` CHANGE `bookl_id` `book_id` INT(11) NOT NULL DEFAULT '0';
 ALTER TABLE `question` CHANGE `created_by` `created_by` INT(11) NOT NULL DEFAULT '1';
 ALTER TABLE `question` CHANGE `updated_by` `updated_by` INT(11) NOT NULL DEFAULT '1';
 ALTER TABLE `subject` CHANGE `status` `status` TINYINT(1) NOT NULL DEFAULT '1';
+
+--27/01/2021
+ALTER TABLE `student_log` ADD `book_id` INT NOT NULL DEFAULT '0' AFTER `difficult_name`, ADD `book_name` VARCHAR(255) NOT NULL DEFAULT '' AFTER `book_id`;

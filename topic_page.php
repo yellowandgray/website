@@ -9,6 +9,7 @@ if (!isset($_GET['chapter'])) {
 $subject = $obj->selectRow('*', 'subject', 'subject_id > 0');
 $chapter = $obj->selectRow('*', 'chapter', 'name = \'' . $obj->escapeString($_GET['chapter']) . '\'');
 $difficult = $obj->selectRow('*', 'difficult', 'difficult_id=' . $_SESSION['selected_difficult_id']);
+$book = $obj->selectRow('*', 'book', 'book_id=' . $_SESSION['selected_book_id']);
 $topics = $obj->selectAll('*', 'topic', 'chapter_id = ' . $chapter['chapter_id'] . ' ORDER BY name ASC ');
 $_SESSION['selected_chapter_id'] = $chapter['chapter_id'];
 ?>
@@ -30,11 +31,19 @@ $_SESSION['selected_chapter_id'] = $chapter['chapter_id'];
                                             <td valign="top" class="w-5">:</td>
                                             <th valign="top"><?php echo $subject['name']; ?></th>
                                         </tr>
-                                        <tr>
-                                            <td valign="top">Selected Mark Category</td>
-                                            <td valign="top">:</td>
-                                            <th valign="top"><?php echo $difficult['name']; ?></th>
-                                        </tr>
+                                        <?php if ($_SESSION['selected_course_id'] == 1) { ?>
+                                            <tr>
+                                                <td valign="top">Selected Mark Category</td>
+                                                <td valign="top">:</td>
+                                                <th valign="top"><?php echo $difficult['name']; ?></th>
+                                            </tr>  
+                                        <?php } if ($_SESSION['selected_course_id'] == 2) { ?>
+                                            <tr>
+                                                <td valign="top">Selected Book</td>
+                                                <td valign="top">:</td>
+                                                <th valign="top"><?php echo $book['book_name']; ?></th>
+                                            </tr>  
+                                        <?php } ?>
                                         <tr>
                                             <td valign="top">Selected Chapter</td>
                                             <td valign="top">:</td>
@@ -48,7 +57,7 @@ $_SESSION['selected_chapter_id'] = $chapter['chapter_id'];
                             </div>
                             <div class="topic_section_1">
                                 <?php if (count($topics) > 0) { ?>
-                                <p class="m-b-0 f-s-18 clr-g">Select Topic</p>
+                                    <p class="m-b-0 f-s-18 clr-g">Select Topic</p>
                                     <?php foreach ($topics as $row) { ?>
                                         <div class="topic_list_section">
                                             <div class="topic_list_position_left">
@@ -61,7 +70,7 @@ $_SESSION['selected_chapter_id'] = $chapter['chapter_id'];
                                         <?php
                                     }
                                 } else {
-                                ?>
+                                    ?>
                                     <div class="text-center no-count-page">
                                         <h6>No Topics on This Chapter</h6>
                                         <span onclick="window.location = 'home_subject'">Back to Home</span>

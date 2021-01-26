@@ -5,6 +5,8 @@ $questions = array();
 date_default_timezone_set('Asia/Kolkata');
 $obj = new Common();
 $type = '';
+$difficult_name = '';
+$book_name = '';
 $student_log = 0;
 if (!isset($_GET['topic'])) {
     $chapter = $obj->selectRow('*', 'chapter', 'chapter_id = ' . $_SESSION['selected_chapter_id']);
@@ -12,11 +14,18 @@ if (!isset($_GET['topic'])) {
 }
 $subject = $obj->selectRow('*', 'subject', 'subject_id=' . $_SESSION['selected_subject_id']);
 $difficult = $obj->selectRow('*', 'difficult', 'difficult_id=' . $_SESSION['selected_difficult_id']);
+$book = $obj->selectRow('*', 'book', 'book_id=' . $_SESSION['selected_book_id']);
 $chapter = $obj->selectRow('*', 'chapter', 'chapter_id=' . $_SESSION['selected_chapter_id']);
 $topic = $obj->selectRow('*', 'topic', 'name=\'' . $obj->escapeString($_GET['topic']) . '\'');
 $_SESSION['selected_topic_id'] = $topic['topic_id'];
+if (isset($difficult['name'])) {
+    $difficult_name = $difficult['name'];
+}
+if (isset($book['book_name'])) {
+    $book_name = $book['book_name'];
+}
 $questions = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer, image_path, direction, question_id', 'question', 'topic_id = ' . $_SESSION['selected_topic_id'] . ' AND difficult_id <= ' . $_SESSION['selected_difficult_id']);
-$student_log = $obj->insertRecord(array('subject_id' => $_SESSION['selected_subject_id'], 'subject_name' => $subject['name'], 'difficult_id' => $_SESSION['selected_difficult_id'], 'difficult_name' => $difficult['name'], 'chapter_id' => $_SESSION['selected_chapter_id'], 'chapter_name' => $chapter['name'], 'topic_id' => $_SESSION['selected_topic_id'], 'topic_name' => $topic['name'], 'student_register_id' => $_SESSION['student_register_id'], 'total_questions' => count($questions), 'created_at' => date('Y-m-d H:i:s'), 'created_by' => $_SESSION['student_register_id'], 'updated_at' => date('Y-m-d'), 'updated_by' => $_SESSION['student_register_id']), 'student_log');
+$student_log = $obj->insertRecord(array('subject_id' => $_SESSION['selected_subject_id'], 'subject_name' => $subject['name'], 'difficult_id' => $_SESSION['selected_difficult_id'], 'difficult_name' => $difficult_name, 'book_id' => $_SESSION['selected_book_id'], 'book_name' => $book_name, 'chapter_id' => $_SESSION['selected_chapter_id'], 'chapter_name' => $chapter['name'], 'topic_id' => $_SESSION['selected_topic_id'], 'topic_name' => $topic['name'], 'student_register_id' => $_SESSION['student_register_id'], 'total_questions' => count($questions), 'created_at' => date('Y-m-d H:i:s'), 'created_by' => $_SESSION['student_register_id'], 'updated_at' => date('Y-m-d'), 'updated_by' => $_SESSION['student_register_id']), 'student_log');
 $questions_list = array();
 if (count($questions) > 0) {
     foreach ($questions as $q) {
@@ -66,11 +75,19 @@ if (count($questions) > 0) {
                                         <td valign="top" class="w-5">:</td>
                                         <th valign="top"><?php echo $subject['name']; ?></th>
                                     </tr>
-                                    <tr>
-                                        <td valign="top">Selected Mark Category</td>
-                                        <td valign="top">:</td>
-                                        <th valign="top"><?php echo $difficult['name']; ?></th>
-                                    </tr>     
+                                    <?php if ($_SESSION['selected_course_id'] == 1) { ?>
+                                        <tr>
+                                            <td valign="top">Selected Mark Category</td>
+                                            <td valign="top">:</td>
+                                            <th valign="top"><?php echo $difficult['name']; ?></th>
+                                        </tr>  
+                                    <?php } if ($_SESSION['selected_course_id'] == 2) { ?>
+                                        <tr>
+                                            <td valign="top">Selected Book</td>
+                                            <td valign="top">:</td>
+                                            <th valign="top"><?php echo $book['book_name']; ?></th>
+                                        </tr>  
+                                    <?php } ?>
                                     <tr>
                                         <td valign="top">Selected Chapter</td>
                                         <td valign="top">:</td>
