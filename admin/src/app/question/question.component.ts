@@ -18,6 +18,7 @@ export class QuestionComponent implements OnInit {
     subject = [];
     chapter = [];
     topic = [];
+    book = [];
     difficult = [];
     loading = false;
     image_url: string = 'http://localhost/microview/feringo/api/v1/';
@@ -26,6 +27,8 @@ export class QuestionComponent implements OnInit {
     selected_chapter = 0;
     selected_topic = 0;
     selected_level = 0;
+    selected_book = 0;
+    course = 0;
     searchQuestionNo = null;
     searchTerm = null;
     filter_text = 'null';
@@ -60,7 +63,41 @@ export class QuestionComponent implements OnInit {
     }
     getChapter(): void {
         this.chapter = [];
-        this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_chapter_by_subject/' + this.selected_subject)
+        this.book = [];
+        this.subject.forEach(val => {
+            if (val.subject_id == this.selected_subject) {
+                this.course = parseInt(val.course_id);
+                return false;
+            }
+        });
+        if (this.course == 1) {
+            this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_chapter_by_subject/' + this.selected_subject)
+                .subscribe(
+                    (res) => {
+                        this.chapter = res["result"]["data"];
+                    },
+                    (error) => {
+                        this._snackBar.open(error["statusText"], '', {
+                            duration: 2000,
+                        });
+                    }
+                );
+        } else {
+            this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_book_by_subject/' + this.selected_subject)
+                .subscribe(
+                    (res) => {
+                        this.book = res["result"]["data"];
+                    },
+                    (error) => {
+                        this._snackBar.open(error["statusText"], '', {
+                            duration: 2000,
+                        });
+                    }
+                );
+        }
+    }
+    getChapterByBook(): void {
+        this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_chapter_by_book/' + this.selected_book)
             .subscribe(
                 (res) => {
                     this.chapter = res["result"]["data"];
@@ -182,6 +219,7 @@ export class QuestionForm {
     questionForm: FormGroup;
     loading = false;
     question_id = 0;
+    course = 0;
     question_image: string = 'Select question Image';
     option_a_image: string = 'Option A Image';
     option_b_image: string = 'Option B Image';
@@ -276,7 +314,46 @@ export class QuestionForm {
             );
     }
     getChapter(): void {
-        this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_chapter_by_subject/' + this.questionForm.value.subject_id)
+        this.subject.forEach(val => {
+            if (parseInt(val.subject_id) === parseInt(this.questionForm.value.subject_id)) {
+                this.course = parseInt(val.course_id);
+                return false;
+            }
+        });
+        if (this.course == 1) {
+            this.questionForm.patchValue({
+                book_id: 0
+            });
+            this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_chapter_by_subject/' + this.questionForm.value.subject_id)
+                .subscribe(
+                    (res) => {
+                        this.chapter = res["result"]["data"];
+                    },
+                    (error) => {
+                        this._snackBar.open(error["statusText"], '', {
+                            duration: 2000,
+                        });
+                    }
+                );
+        } else {
+            this.questionForm.patchValue({
+                difficult_id: 0
+            });
+            this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_book_by_subject/' + this.questionForm.value.subject_id)
+                .subscribe(
+                    (res) => {
+                        this.book = res["result"]["data"];
+                    },
+                    (error) => {
+                        this._snackBar.open(error["statusText"], '', {
+                            duration: 2000,
+                        });
+                    }
+                );
+        }
+    }
+    getChapterByBook(): void {
+        this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_chapter_by_book/' + this.questionForm.value.book_id)
             .subscribe(
                 (res) => {
                     this.chapter = res["result"]["data"];

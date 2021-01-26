@@ -6,9 +6,6 @@
         <app-header></app-header>
         <div class="add-btn-container">
             <div fxLayout="row" fxFlex="100%" fxLayoutAlign="end end">
-<!--                <button mat-raised-button color="primary" (click)="openQusNoAlt()">
-                    <mat-icon>vertical_align_center</mat-icon> Question No Alter
-                </button>-->
                 <button mat-raised-button color="primary" (click)="fileInput.click()">
                     <span *ngIf="!loading">Import</span>
                     <mat-progress-spinner
@@ -34,6 +31,17 @@
                         </mat-option>
                     </mat-select>
                     <mat-error>Subject is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%" *ngIf="course > 1">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Select Book</mat-label>
+                    <mat-select (selectionChange)="getChapterByBook()" [(ngModel)]="selected_book">
+                        <mat-option [value]="sub.book_id" *ngFor="let sub of book">
+                            {{sub.book_name}}
+                        </mat-option>
+                    </mat-select>
+                    <mat-error>Book is required</mat-error>
                 </mat-form-field>
             </div>
             <div fxFlex="50%">
@@ -99,7 +107,7 @@
                     <p mat-line>B. <span [innerHTML]="data.b"></span></p>
                     <p mat-line *ngIf="data.c != ''">C. <span [innerHTML]="data.c"></span></p>
                     <p mat-line *ngIf="data.d != ''">D. <span [innerHTML]="data.d"></span></p>
-                    <h2 mat-line class="answer-font">Answer: ({{data.answer}}) | <span class="category_color">Category: {{data.difficult}}</span></h2>
+                    <h2 mat-line class="answer-font">Answer: ({{data.answer}}) | <span *ngIf="data.difficult != null" class="category_color">Category: {{data.difficult}}</span></h2>
                 </mat-list-item>
                 <mat-divider></mat-divider>
             </ng-container>

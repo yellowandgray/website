@@ -13,6 +13,17 @@
                     <mat-error>Subject is required</mat-error>
                 </mat-form-field>
             </div>
+            <div fxFlex="50%" *ngIf="course > 1">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Select Book</mat-label>
+                    <mat-select formControlName="book_id" (selectionChange)="getChapterByBook()">
+                        <mat-option [value]="row.book_id" *ngFor="let row of book">
+                            {{row.book_name}}
+                        </mat-option>
+                    </mat-select>
+                    <mat-error>Book is required</mat-error>
+                </mat-form-field>
+            </div>
             <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Chapter</mat-label>
@@ -26,7 +37,7 @@
             </div>
         </div>
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
-            <div fxFlex="50%">
+            <div fxFlex="100%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Select Topic</mat-label>
                     <mat-select required formControlName="topic_id">
@@ -37,7 +48,7 @@
                     <mat-error>Topic is required</mat-error>
                 </mat-form-field>
             </div>
-            <div fxFlex="50%">
+            <div fxFlex="100%" *ngIf="course <= 1">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Difficult</mat-label>
                     <mat-select required formControlName="difficult_id">
@@ -200,18 +211,7 @@
             </div>
         </div>
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
-            <div fxFlex="50%">
-                <mat-form-field appearance="outline" fxFlex="100%">
-                    <mat-label>Select Book</mat-label>
-                    <mat-select formControlName="book_id">
-                        <mat-option [value]="row.book_id" *ngFor="let row of book">
-                            {{row.book_name}}
-                        </mat-option>
-                    </mat-select>
-                    <mat-error>Book is required</mat-error>
-                </mat-form-field>
-            </div>
-            <div fxFlex="50%">
+            <div fxFlex="100%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Page No</mat-label>
                     <input matInput placeholder="" formControlName="page_no" />
