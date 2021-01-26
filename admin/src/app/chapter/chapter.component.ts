@@ -127,7 +127,11 @@ export class ChapterComponent implements OnInit {
     });
     dialogRef.afterClosed().subscribe(result => {
       if (typeof result !== 'undefined' && result !== false && result !== 'false') {
-        this.getChapter({ index: this.selectedchapind });
+        if (this.selectedbookind == null) {
+          this.getChild({ index: this.selectedchapind });
+        } else {
+          this.getBooksChapter({ index: this.selectedbookind });
+        }
       }
     });
   }
