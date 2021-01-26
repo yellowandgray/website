@@ -187,11 +187,3 @@ table {
 .option {
     font-size: 15px;
 }
-
-.user-table th {
-    text-align: left;
-}
-
-.feedback-list-section .mat-list-item-content .mat-list-text {
-    padding-bottom: 20px !important;
-}

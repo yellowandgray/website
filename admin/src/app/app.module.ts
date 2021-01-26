@@ -30,7 +30,7 @@ import { AppComponent } from './app.component';
 import { SubjectComponent, SubjectForm, SubjectDelete } from './subject/subject.component';
 import { HeaderComponent } from './header/header.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
-import { QuestionComponent, QuestionForm, QuestionDelete, NeetQuestionForm, NeetQuestionDelete } from './question/question.component';
+import { QuestionComponent, QuestionForm, QuestionDelete } from './question/question.component';
 import { TopicComponent, TopicForm, TopicDelete } from './topic/topic.component';
 import { ChapterComponent, ChapterForm, ChapterDelete } from './chapter/chapter.component';
 import { LoginComponent } from './login/login.component';
@@ -38,9 +38,6 @@ import { DifficultyLevelComponent, DifficultForm, DifficultDelete } from './diff
 import { UserComponent, UserForm, PictureViewUser, BlockForm, ResultForm, UserDelete, UserViewForm, UserFullResultForm } from './user/user.component';
 import { filterUser } from './user/filter-user';
 import { BookComponent, BookForm, BookDelete } from './book/book.component';
-import { FeedbackComponent, FeedbackForm, FeedbackDelete,AssignedFeedbackDelete, AssignFeedbackForm,AssignedFeedbackForm } from './feedback/feedback.component';
-import { StandardComponent, StandardForm, StandardDelete } from './standard/standard.component';
-import { SubTopicComponent, SubtopicForm, SubtopicDelete } from './sub-topic/sub-topic.component';
 
 
 
@@ -55,8 +52,6 @@ import { SubTopicComponent, SubtopicForm, SubtopicDelete } from './sub-topic/sub
     QuestionComponent,
     QuestionForm,
     QuestionDelete,
-    NeetQuestionForm,
-    NeetQuestionDelete,
     TopicComponent,
     TopicForm,
     TopicDelete,
@@ -78,19 +73,7 @@ import { SubTopicComponent, SubtopicForm, SubtopicDelete } from './sub-topic/sub
     UserFullResultForm,
     BookComponent,
     BookForm,
-    BookDelete,
-    FeedbackComponent, 
-    FeedbackForm, 
-    FeedbackDelete, 
-    AssignedFeedbackDelete,
-    AssignFeedbackForm, 
-    AssignedFeedbackForm,
-    StandardComponent,
-    StandardForm,
-    StandardDelete,
-    SubTopicComponent,
-    SubtopicForm,
-    SubtopicDelete
+    BookDelete
   ],
   imports: [
     BrowserModule,
@@ -120,7 +103,7 @@ import { SubTopicComponent, SubtopicForm, SubtopicDelete } from './sub-topic/sub
     MatButtonToggleModule,
     MatCardModule
   ],
-  entryComponents: [SubjectComponent, SubjectForm, SubjectDelete, QuestionComponent, QuestionForm, QuestionDelete, NeetQuestionForm, NeetQuestionDelete, TopicComponent, TopicForm, TopicDelete, ChapterComponent, ChapterForm, ChapterDelete, DifficultyLevelComponent, DifficultForm, DifficultDelete, UserComponent, UserForm, PictureViewUser, BlockForm, ResultForm, UserDelete, UserViewForm, UserFullResultForm, BookComponent, BookForm, BookDelete, FeedbackComponent, FeedbackForm, FeedbackDelete,AssignedFeedbackDelete, AssignFeedbackForm,AssignedFeedbackForm,StandardComponent, StandardForm, StandardDelete, SubTopicComponent, SubtopicForm, SubtopicDelete],
+  entryComponents: [SubjectComponent, SubjectForm, SubjectDelete, QuestionComponent, QuestionForm, QuestionDelete, TopicComponent, TopicForm, TopicDelete, ChapterComponent, ChapterForm, ChapterDelete, DifficultyLevelComponent, DifficultForm, DifficultDelete, UserComponent, UserForm, PictureViewUser, BlockForm, ResultForm, UserDelete, UserViewForm, UserFullResultForm, BookComponent, BookForm, BookDelete],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -24,7 +24,7 @@ subject = [];
         this.getsubject();
     }
 getsubject(): void {
-    this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_subject')
+    this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_subject')
       .subscribe(
         (res) => {
           this.subject = res["result"]["data"];
@@ -39,11 +39,10 @@ getsubject(): void {
   getChapter(ev): void {
 this.chapter = [];
     this.selectedchapind = ev.index;
-        this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_chapter_by_subject/'+this.subject[ev.index].subject_id)
+        this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_chapter_by_subject/'+this.subject[ev.index].subject_id)
         .subscribe(
                 (res)=>{
                     this.chapter = res["result"]["data"];
-                    console.log(this.chapter);
               },
               (error)=>{
                 this._snackBar.open(error["statusText"], '', {
@@ -55,7 +54,7 @@ this.chapter = [];
 getTopic(ev): void {
 this.topic = [];
 if(typeof this.chapter[ev.index] !== 'undefined') {
-        this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_topic_by_chapter/'+this.chapter[ev.index].chapter_id)
+        this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_topic_by_chapter/'+this.chapter[ev.index].chapter_id)
         .subscribe(
                 (res)=>{
                     this.topic = res["result"]["data"];
@@ -69,20 +68,11 @@ if(typeof this.chapter[ev.index] !== 'undefined') {
     }
     }
     openDialog(id, res): void {
-
-      console.log(this.selectedchapind);
-      
         var data = null;
           if(id != 0) {
           this[res].forEach(val=> {
                if(parseInt(val.topic_id) === parseInt(id)) {
-                   console.log(val.topic_id);
-                    console.log(this.chapter[0].subject_id);
-                    
-                    //val.subject_id = this.chapter[this.selectedchapind].subject_id;
-
-                    val.subject_id = this.chapter[0].subject_id;
-
+val.subject_id = this.chapter[this.selectedchapind].subject_id;
                     data = val;
                     return false;
                 }
@@ -152,7 +142,7 @@ export class TopicForm {
         this.subject = this.data.subject;
     }
 getChapter(): void {
-        this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_chapter_by_subject/'+this.topicForm.value.subject_id)
+        this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_chapter_by_subject/'+this.topicForm.value.subject_id)
         .subscribe(
                 (res)=>{
                     this.chapter = res["result"]["data"];
@@ -179,7 +169,7 @@ getChapter(): void {
       } else {
         url = 'insert_topic';
       }
-      this.httpClient.post('http://localhost/project/feringo/api/v1/'+url, formData).subscribe(
+      this.httpClient.post('http://localhost/microview/feringo/api/v1/'+url, formData).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {
@@ -263,7 +253,7 @@ export class TopicDelete {
             return;
       }
       this.loading = true;
-      this.httpClient.get('http://localhost/project/feringo/api/v1/delete_record/topic/topic_id='+this.topic_id).subscribe(
+      this.httpClient.get('http://localhost/microview/feringo/api/v1/delete_record/topic/topic_id='+this.topic_id).subscribe(
           (res)=>{
                 this.loading = false;
                 if(res["result"]["error"] === false) {

@@ -8,7 +8,7 @@
             <button mat-raised-button color="primary" (click)="openDialog(0, 'null')"><mat-icon>add</mat-icon> Chapter</button>
         </div>
         <mat-tab-group (selectedTabChange)="getChapter($event);">
-            <mat-tab *ngFor="let sub of subject" label="{{sub.name}}">
+            <mat-tab *ngFor="let sub of subject" label="{{sub.name}}({{sub.course}})">
                 <mat-list>
                     <ng-container *ngFor="let data of chapter">
                         <mat-list-item>

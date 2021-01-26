@@ -115,7 +115,7 @@ $app->post('/insert_subject', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('name' => $data['name'], 'description' => $data['description'], 'image_path' => $data['subject_image'], 'status' => $data['status']), 'subject');
+    $record = $com->insertRecord(array('name' => $data['name'], 'description' => $data['description'], 'course_id' => $data['course'], 'image_path' => $data['subject_image'], 'status' => $data['status']), 'subject');
     //$record = $com->insertRecord(array('name' => $data['name'], 'standard_id' => $data['standard_id'], 'description' => $data['description'], 'image_path' => $data['subject_image'], 'status' => $data['status']), 'subject');
     if ($record > 0) {
         $res['error'] = false;
@@ -237,11 +237,22 @@ $app->post('/insert_sub_topic', function() use ($app) {
     echoRespnse(201, $res);
 });
 
-
 $app->get('/get_subject', function() {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
-    $data = $com->selectAll('*', 'subject', 'subject_id > 0');
+    $data = $com->selectAll('s.*, c.name AS course', 'subject AS s LEFT JOIN course AS c ON c.course_id = s.course_id', 's.subject_id > 0');
+    if (count($data) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_course', function() {
+    $res = array('error' => true, 'message' => 'No records found');
+    $com = new Common();
+    $data = $com->selectAll('*', 'course', 'course_id > 0');
     if (count($data) > 0) {
         $res['error'] = false;
         $res['message'] = 'Records found';

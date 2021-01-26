@@ -7,7 +7,7 @@
                     <mat-label>Subject</mat-label>
                     <mat-select required formControlName="subject_id" (selectionChange)="getChapter()">
                         <mat-option [value]="row.subject_id" *ngFor="let row of subject">
-                            {{row.name}}
+                            {{row.name}}({{row.course}})
                     </mat-option>
                 </mat-select>
                 <mat-error>Subject is required</mat-error>

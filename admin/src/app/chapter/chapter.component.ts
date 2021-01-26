@@ -1,9 +1,9 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import {MatPaginatorModule} from '@angular/material/paginator';
-import {MatDialogModule} from '@angular/material/dialog';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
 import { Observable } from 'rxjs';
@@ -22,8 +22,8 @@ export class ChapterComponent implements OnInit {
   ngOnInit() {
     this.getsubject();
   }
-getsubject(): void {
-    this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_subject')
+  getsubject(): void {
+    this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_subject')
       .subscribe(
         (res) => {
           this.subject = res["result"]["data"];
@@ -37,57 +37,57 @@ getsubject(): void {
   }
   getChapter(ev): void {
     this.selectedchapind = ev.index;
-        this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_chapter_by_subject/'+this.subject[ev.index].subject_id)
-        .subscribe(
-                (res)=>{
-                    this.chapter = res["result"]["data"];
-              },
-              (error)=>{
-                this._snackBar.open(error["statusText"], '', {
-                    duration: 2000,
-                });
-            }
-        );
-    }
+    this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_chapter_by_subject/' + this.subject[ev.index].subject_id)
+      .subscribe(
+        (res) => {
+          this.chapter = res["result"]["data"];
+        },
+        (error) => {
+          this._snackBar.open(error["statusText"], '', {
+            duration: 2000,
+          });
+        }
+      );
+  }
   openDialog(id, res): void {
     var data = null;
-      if(id != 0) {
-      this[res].forEach(val=> {
-           if(parseInt(val.chapter_id) === parseInt(id)) {
-                data = val;
-                return false;
-            }
-        });
+    if (id != 0) {
+      this[res].forEach(val => {
+        if (parseInt(val.chapter_id) === parseInt(id)) {
+          data = val;
+          return false;
+        }
+      });
     }
     const dialogRef = this.dialog.open(ChapterForm, {
       minWidth: "40%",
       maxWidth: "40%",
-      data: {data: data, subject: this.subject}
+      data: { data: data, subject: this.subject }
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      if(typeof result !== 'undefined' && result !== false && result !== 'false') {
-          this.getChapter({index: this.selectedchapind});
-        }
+      if (typeof result !== 'undefined' && result !== false && result !== 'false') {
+        this.getChapter({ index: this.selectedchapind });
+      }
     });
-}
+  }
 
-    confirmDelete(id): void  {
-        var data = null;
-          if(id != 0) { 
-            data = id;
-          }
-    const dialogRef = this.dialog.open(ChapterDelete, {
-        minWidth: "40%",
-        maxWidth: "40%",
-        data: data
-    });
-   dialogRef.afterClosed().subscribe(result => {
-       if(typeof result !== 'undefined' && result !== false && result !== 'false') {
-          this.getChapter({index: this.selectedchapind});
-       }
-    });
+  confirmDelete(id): void {
+    var data = null;
+    if (id != 0) {
+      data = id;
     }
+    const dialogRef = this.dialog.open(ChapterDelete, {
+      minWidth: "40%",
+      maxWidth: "40%",
+      data: data
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      if (typeof result !== 'undefined' && result !== false && result !== 'false') {
+        this.getChapter({ index: this.selectedchapind });
+      }
+    });
+  }
 }
 
 @Component({
@@ -95,64 +95,64 @@ getsubject(): void {
   templateUrl: 'chapter-form.html',
 })
 export class ChapterForm {
-    chapterForm: FormGroup;
-    loading = false;
-    chapter_id = 0;
-    subject = [];
-    constructor(
+  chapterForm: FormGroup;
+  loading = false;
+  chapter_id = 0;
+  subject = [];
+  constructor(
     public dialogRef: MatDialogRef<ChapterForm>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
-        this.chapterForm = new FormGroup ({
-            'name': new FormControl('', Validators.required),
-            //'description': new FormControl('', Validators.required),
-            'subject_id': new FormControl('', Validators.required)
-        });
-        this.subject = this.data.subject;
-        if(this.data.data != null) {
-           this.chapterForm.patchValue({
-            name: this.data.data.name,
-            //description: this.data.data.description,
-            subject_id: this.data.data.subject_id,
-        });
-            this.chapter_id = this.data.data.chapter_id;
-        }
+    this.chapterForm = new FormGroup({
+      'name': new FormControl('', Validators.required),
+      //'description': new FormControl('', Validators.required),
+      'subject_id': new FormControl('', Validators.required)
+    });
+    this.subject = this.data.subject;
+    if (this.data.data != null) {
+      this.chapterForm.patchValue({
+        name: this.data.data.name,
+        //description: this.data.data.description,
+        subject_id: this.data.data.subject_id,
+      });
+      this.chapter_id = this.data.data.chapter_id;
     }
+  }
 
-    onSubmit() {
-      if (this.chapterForm.invalid) {
-            return;
-      }
-      this.loading = true;
-      var formData = new FormData();
-        formData.append('name', this.chapterForm.value.name);
-        //formData.append('description', this.chapterForm.value.description);
-        formData.append('subject_id', this.chapterForm.value.subject_id);
-      var url = '';
-          if(this.chapter_id != 0) {
-        url = 'update_record/chapter/chapter_id = '+this.chapter_id;
-      } else {
-        url = 'insert_chapter';
-      }
-      this.httpClient.post('http://localhost/project/feringo/api/v1/'+url, formData).subscribe(
-          (res)=>{
-                this.loading = false;
-                if(res["result"]["error"] === false) {
-                    this.dialogRef.close(true);
-                }else{
-            this._snackBar.open(res["result"]["message"], '', {
-              duration: 2000,
-            });
-            }
-            },
-            (error)=>{
-                this.loading = false;
-                this._snackBar.open(error["statusText"], '', {
+  onSubmit() {
+    if (this.chapterForm.invalid) {
+      return;
+    }
+    this.loading = true;
+    var formData = new FormData();
+    formData.append('name', this.chapterForm.value.name);
+    //formData.append('description', this.chapterForm.value.description);
+    formData.append('subject_id', this.chapterForm.value.subject_id);
+    var url = '';
+    if (this.chapter_id != 0) {
+      url = 'update_record/chapter/chapter_id = ' + this.chapter_id;
+    } else {
+      url = 'insert_chapter';
+    }
+    this.httpClient.post('http://localhost/microview/feringo/api/v1/' + url, formData).subscribe(
+      (res) => {
+        this.loading = false;
+        if (res["result"]["error"] === false) {
+          this.dialogRef.close(true);
+        } else {
+          this._snackBar.open(res["result"]["message"], '', {
+            duration: 2000,
+          });
+        }
+      },
+      (error) => {
+        this.loading = false;
+        this._snackBar.open(error["statusText"], '', {
           duration: 2000,
         });
-            }
-            );
+      }
+    );
   }
   editorConfig: AngularEditorConfig = {
     editable: true,
@@ -201,40 +201,40 @@ export class ChapterForm {
   templateUrl: 'chapter-delete-confirmation.html',
 })
 export class ChapterDelete {
-    loading = false;
-    chapter_id = 0;
-    constructor(
+  loading = false;
+  chapter_id = 0;
+  constructor(
     public dialogRef: MatDialogRef<ChapterDelete>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {
-    if(this.data != null) { 
-        this.chapter_id = this.data;
+    if (this.data != null) {
+      this.chapter_id = this.data;
     }
-}
+  }
 
   confirmDelete() {
-      if (this.chapter_id == null || this.chapter_id == 0) {
-            return;
+    if (this.chapter_id == null || this.chapter_id == 0) {
+      return;
+    }
+    this.loading = true;
+    this.httpClient.get('http://localhost/microview/feringo/api/v1/delete_record/chapter/chapter_id=' + this.chapter_id).subscribe(
+      (res) => {
+        this.loading = false;
+        if (res["result"]["error"] === false) {
+          this.dialogRef.close(true);
+        } else {
+          this._snackBar.open(res["result"]["message"], '', {
+            duration: 2000,
+          });
+        }
+      },
+      (error) => {
+        this.loading = false;
+        this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+        });
       }
-      this.loading = true;
-      this.httpClient.get('http://localhost/project/feringo/api/v1/delete_record/chapter/chapter_id='+this.chapter_id).subscribe(
-          (res)=>{
-                this.loading = false;
-                if(res["result"]["error"] === false) {
-                    this.dialogRef.close(true);
-                }else{
-            this._snackBar.open(res["result"]["message"], '', {
-          duration: 2000,
-        });
-                }
-            },
-            (error)=>{
-                this.loading = false;
-                this._snackBar.open(error["statusText"], '', {
-          duration: 2000,
-        });
-            }
-        );
+    );
   }
 }

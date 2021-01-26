@@ -18,25 +18,25 @@
                 <tr>
                     <th mat-header-cell> Category </th>
                     <th mat-header-cell> Total </th>
-                    <th mat-header-cell> Answered </th>
+                    <th mat-header-cell> Attend </th>
                     <th mat-header-cell>
-                <mat-icon class="done_clr">done</mat-icon>
-                </th>
-                <th mat-header-cell>
-                <mat-icon class="wrong_clr">close</mat-icon>
-                </th>
+                        <mat-icon class="done_clr">done</mat-icon>
+                    </th>
+                    <th mat-header-cell>
+                        <mat-icon class="wrong_clr">close</mat-icon>
+                    </th>
                 </tr>
                 <tr>
                     <td mat-cell>{{mark.difficult_name}} Mark</td>
                     <td mat-cell>{{mark.total_questions}}</td>
                     <td mat-cell>{{mark.attended}}</td>
                     <td mat-cell>{{mark.correct_answers}}</td>
-                    <td mat-cell>{{mark.attended - mark.correct_answers}}</td>
+                    <td mat-cell>{{mark.total_questions - mark.correct_answers}}</td>
                 </tr>
             </table>
-            <div class="add-btn-container">
-                <button mat-raised-button color="primary" (click)="openFullResult(mark.student_log_id)">Show Full Result</button>
-            </div>
+            <!--            <div class="add-btn-container">
+                            <button mat-raised-button color="primary" (click)="openFullResult()">Show Full Result</button>
+                        </div>-->
         </mat-expansion-panel>
     </mat-accordion>
 </mat-dialog-content>

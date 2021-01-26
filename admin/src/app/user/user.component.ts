@@ -15,9 +15,9 @@ import { Observable } from 'rxjs';
 export class UserComponent implements OnInit {
   searchTerm: string = '';
   student = [];
-  student_count = 0;
+  student_count = 0; 
   sortdata: string = "login_at";
-  image_url: string = 'http://localhost/project/feringo/api/v1/';
+  image_url: string = 'http://localhost/microview/feringo/api/v1/';
 
   constructor(public dialog: MatDialog, private httpClient: HttpClient, private _snackBar: MatSnackBar) { }
 
@@ -25,7 +25,7 @@ export class UserComponent implements OnInit {
     this.getuser();
   }
   getuser(): void {
-    this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_student/'+this.sortdata)
+    this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_student/'+this.sortdata)
       .subscribe(
         (res) => {
           this.student = res["result"]["data"];
@@ -93,7 +93,7 @@ export class UserComponent implements OnInit {
     });
   }
   openResult(sid, name): void {
-      this.httpClient.get<any>('http://localhost/project/feringo/api/v1/get_student_result/'+sid)
+      this.httpClient.get<any>('http://localhost/microview/feringo/api/v1/get_student_result/'+sid)
       .subscribe(
         (res) => {
             if(res["result"]["error"] == false) {
@@ -161,6 +161,7 @@ export class UserComponent implements OnInit {
             }
         });
     }
+
     sortRecords(arr, sort): void {
         switch(sort) {
             case 'created_a_z':
@@ -173,6 +174,7 @@ export class UserComponent implements OnInit {
             break;
         }
     }
+
 }
 
 @Component({
@@ -180,7 +182,7 @@ export class UserComponent implements OnInit {
   templateUrl: 'user-form.html',
 })
 export class UserForm {
-  image_url: string = 'http://localhost/project/feringo/api/v1/';
+  image_url: string = 'http://localhost/microview/feringo/api/v1/';
   userForm: FormGroup;
   loading = false;
   student_register_id = 0;
@@ -263,7 +265,7 @@ export class UserForm {
       formData.append('email', this.userForm.value.email);
       url = 'insert_student';
     }
-    this.httpClient.post('http://localhost/project/feringo/api/v1/' + url, formData).subscribe(
+    this.httpClient.post('http://localhost/microview/feringo/api/v1/' + url, formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -289,7 +291,7 @@ export class UserForm {
     this.loading = true;
     var formData = new FormData();
     formData.append('file', fileData);
-    this.httpClient.post('http://localhost/project/feringo/api/v1/upload_file', formData).subscribe(
+    this.httpClient.post('http://localhost/microview/feringo/api/v1/upload_file', formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -339,7 +341,7 @@ export class UserDelete {
       return;
     }
     this.loading = true;
-    this.httpClient.get('http://localhost/project/feringo/api/v1/delete_record/student_register/student_register_id=' + this.student_register_id).subscribe(
+    this.httpClient.get('http://localhost/microview/feringo/api/v1/delete_record/student_register/student_register_id=' + this.student_register_id).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -390,41 +392,15 @@ export class ResultForm {
     private httpClient: HttpClient) { 
         console.log(data);
     }
-    openFullResult(logid): void {        
+    openFullResult(): void {
       this.dialogRef.close();
-
- this.httpClient.get('http://localhost/project/feringo/api/v1/get_result_detail/' +logid).subscribe(
-        (res) => {
-            this.loading = false;
-            if(res["result"]["error"] == false) {
-            
-          const dialogRef = this.dialog.open(UserFullResultForm, {
+    const dialogRef = this.dialog.open(UserFullResultForm, {
       minWidth: "40%",
-      maxWidth: "40%",
-      data: {
-        data: res["result"]["data"]
-        
-      }
+      maxWidth: "40%"
     });
     dialogRef.afterClosed().subscribe(result => {
-      if (result !== false && result !== 'false') {
-        console.log('Result closed');
-      }
+      
     });
-            }else {
-             this._snackBar.open(res["result"]["message"], '', {
-            duration: 2000,
-          });   
-            }
-        },
-        (error) => {
-          this._snackBar.open(error["statusText"], '', {
-            duration: 2000,
-          });
-        }
-      );
-
-
   }
 }
 
@@ -437,7 +413,7 @@ export class UserFullResultForm {
   loading = false;
   constructor(
     public dialogRef: MatDialogRef<UserFullResultForm>,
-    @Inject(MAT_DIALOG_DATA) public data: any,
+    @Inject(MAT_DIALOG_DATA) public datapopup: any,
     private _snackBar: MatSnackBar,
     private httpClient: HttpClient) {}
 }
@@ -448,7 +424,7 @@ export class UserFullResultForm {
 })
 
 export class PictureViewUser {
-  image_url: string = 'http://localhost/project/feringo/api/v1/';
+  image_url: string = 'http://localhost/microview/feringo/api/v1/';
   action: string = '';
   loading = false;
   student_register_id = 0;
@@ -474,7 +450,7 @@ export class PictureViewUser {
 })
 
 export class UserViewForm {
-  image_url: string = 'http://localhost/project/feringo/api/v1/';
+  image_url: string = 'http://localhost/microview/feringo/api/v1/';
   loading = false;
   student = [];
   student_register_id = 0;
