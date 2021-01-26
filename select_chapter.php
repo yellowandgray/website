@@ -2,6 +2,7 @@
 require_once 'api/include/common.php';
 session_start();
 $obj = new Common();
+$back_path = '';
 if (!isset($_SESSION['selected_subject_id'])) {
     header('Location: home_course');
 }
@@ -14,12 +15,14 @@ if (isset($_GET['difficult'])) {
     $_SESSION['selected_difficult_id'] = $difficult['difficult_id'];
     $_SESSION['selected_book_id'] = 0;
     $chapters = $obj->selectAll('*', 'chapter', 'subject_id = ' . $subject['subject_id'] . ' ORDER BY name ASC');
+    $back_path = 'difficult_level?sub=' . $subject['name'];
 }
 if (isset($_GET['book'])) {
     $book = $obj->selectRow('*', 'book', 'book_name=\'' . $_GET['book'] . '\' AND subject_id = ' . $_SESSION['selected_subject_id']);
     $_SESSION['selected_difficult_id'] = 0;
     $_SESSION['selected_book_id'] = $book['book_id'];
     $chapters = $obj->selectAll('*', 'chapter', 'book_id = ' . $book['book_id'] . ' ORDER BY name ASC');
+    $back_path = 'select_book?sub=' . $subject['name'];
 }
 ?>
 <!DOCTYPE html>
@@ -32,7 +35,7 @@ if (isset($_GET['book'])) {
                 <div id="mySignin" tabindex="-1" aria-labelledby="mySigninModalLabel" aria-hidden="true">
                     <div class="modal styled">
                         <div class="modal-header login-section">
-                            <a href="difficult_level?sub=<?php echo $subject['name']; ?>"><i class="font-icon-arrow-simple-left"></i></a>
+                            <a href="<?php echo $back_path; ?>"><i class="font-icon-arrow-simple-left"></i></a>
                             <h4 id="mySigninModalLabel">
                                 <table class="table-title">
                                     <tr>
@@ -40,18 +43,18 @@ if (isset($_GET['book'])) {
                                         <td valign="top" class="w-5">:</td>
                                         <th valign="top"><?php echo $subject['name']; ?></th>
                                     </tr>
-                                    <?php if($_SESSION['selected_course_id'] == 1) { ?>
-                                    <tr>
-                                        <td valign="top">Selected Mark Category</td>
-                                        <td valign="top">:</td>
-                                        <th valign="top"><?php echo $difficult['name']; ?></th>
-                                    </tr>  
-                                    <?php } if($_SESSION['selected_course_id'] == 2) { ?>
-                                    <tr>
-                                        <td valign="top">Selected Book</td>
-                                        <td valign="top">:</td>
-                                        <th valign="top"><?php echo $book['book_name']; ?></th>
-                                    </tr>  
+                                    <?php if ($_SESSION['selected_course_id'] == 1) { ?>
+                                        <tr>
+                                            <td valign="top">Selected Mark Category</td>
+                                            <td valign="top">:</td>
+                                            <th valign="top"><?php echo $difficult['name']; ?></th>
+                                        </tr>  
+                                    <?php } if ($_SESSION['selected_course_id'] == 2) { ?>
+                                        <tr>
+                                            <td valign="top">Selected Book</td>
+                                            <td valign="top">:</td>
+                                            <th valign="top"><?php echo $book['book_name']; ?></th>
+                                        </tr>  
                                     <?php } ?>
                                 </table>
                             </h4>

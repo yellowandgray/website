@@ -2,6 +2,7 @@
 require_once 'api/include/common.php';
 session_start();
 $obj = new Common();
+$back_page = '';
 if (!isset($_GET['chapter'])) {
     $subject = $obj->selectRow('*', 'subject', 'subject_id = ' . $_SESSION['selected_subject_id']);
     header('Location: select_chapter?sub=' . $subject['name']);
@@ -12,6 +13,12 @@ $difficult = $obj->selectRow('*', 'difficult', 'difficult_id=' . $_SESSION['sele
 $book = $obj->selectRow('*', 'book', 'book_id=' . $_SESSION['selected_book_id']);
 $topics = $obj->selectAll('*', 'topic', 'chapter_id = ' . $chapter['chapter_id'] . ' ORDER BY name ASC ');
 $_SESSION['selected_chapter_id'] = $chapter['chapter_id'];
+if ($_SESSION['selected_course_id'] == 1) {
+    $back_page = 'select_chapter?difficult=' . $difficult['name'];
+}
+if ($_SESSION['selected_course_id'] == 2) {
+    $back_page = 'select_chapter?book=' . $book['book_name'];
+}
 ?>
 <html lang="en">
     <?php include 'head.php'; ?>
@@ -23,7 +30,7 @@ $_SESSION['selected_chapter_id'] = $chapter['chapter_id'];
                     <div class="row">
                         <div class="span12">
                             <div class="side_section topic-head">
-                                <a href="select_chapter?difficult=<?php echo $difficult['name']; ?>"><i class="font-icon-arrow-simple-left"></i></a>
+                                <a href="<?php echo $back_page; ?>"><i class="font-icon-arrow-simple-left"></i></a>
                                 <h2>
                                     <table class="table-title">
                                         <tr>

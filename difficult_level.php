@@ -5,6 +5,7 @@ $obj = new Common();
 if (!isset($_GET['sub'])) {
     header('Location: home_subject');
 }
+$course = $obj->selectRow('*', 'course', 'course_id = \'' . $_SESSION['selected_course_id'] . '\'');
 $subject = $obj->selectRow('*', 'subject', 'name = \'' . $_GET['sub'] . '\'');
 $difficults = $obj->selectAll('*', 'difficult', 'difficult_id > 0');
 $_SESSION['selected_subject_id'] = $subject['subject_id'];
@@ -21,7 +22,7 @@ $_SESSION['selected_subject_id'] = $subject['subject_id'];
                 <div id="mySignin" tabindex="-1" aria-labelledby="mySigninModalLabel" aria-hidden="true">
                     <div class="modal styled">
                         <div class="modal-header login-section">
-                            <a href="home_subject"><i class="font-icon-arrow-simple-left"></i></a>
+                            <a href="home_subject?course=<?php echo $course['name']; ?>"><i class="font-icon-arrow-simple-left"></i></a>
                             <h4 id="mySigninModalLabel">
                                 <table class="table-title">
                                     <tr>
