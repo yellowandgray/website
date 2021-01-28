@@ -110,14 +110,16 @@ export class BookForm {
       'book_name': new FormControl('', Validators.required),
       'subject_id': new FormControl('', Validators.required),
       'chapter_note': new FormControl('', Validators.required),
-      'solved_example': new FormControl('', Validators.required)
+      'solved_example': new FormControl('', Validators.required),
+      'show_s_example': new FormControl('', Validators.required)
     });
     if (this.data != null) {
       this.bookForm.patchValue({
         book_name: this.data.book_name,
         subject_id: this.data.subject_id,
         chapter_note: this.data.chapter_note,
-        solved_example: this.data.solved_example
+        solved_example: this.data.solved_example,
+        show_s_example: this.data.show_s_example
       });
       this.image_path = this.data.image_path;
       this.book_id = this.data.book_id;
@@ -189,6 +191,7 @@ export class BookForm {
     formData.append('subject_id', this.bookForm.value.subject_id);
     formData.append('chapter_note', this.bookForm.value.chapter_note);
     formData.append('solved_example', this.bookForm.value.solved_example);
+    formData.append('show_s_example', this.bookForm.value.show_s_example);
     formData.append('image_path', this.image_path);
     var url = '';
     if (this.book_id != 0) {

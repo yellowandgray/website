@@ -2,14 +2,14 @@
 <mat-dialog-content class="mat-typography">
     <form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
-            <div fxFlex="33%">
+            <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Book Name</mat-label>
                     <input matInput placeholder="" required formControlName="book_name" />
                     <mat-error>Book Name is required</mat-error>
                 </mat-form-field>
             </div>
-            <div fxFlex="33%">
+            <div fxFlex="50%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Subject</mat-label>
                     <mat-select required formControlName="subject_id">
@@ -20,6 +20,9 @@
                     <mat-error>Subject is required</mat-error>
                 </mat-form-field>
             </div>
+        </div>
+        <br/>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
             <div fxFlex="50%" fxLayoutAlign="center center">
                 <button *ngIf="image_path == ''" type="button" mat-raised-button (click)="fileInput.click()">{{book_image}}</button>
                 <input hidden #fileInput type="file" id="file" (change)="fileProgress($event, 'book_image', 'image_path')" />
@@ -29,6 +32,16 @@
                         <mat-icon>close</mat-icon>
                     </button>
                 </div>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Show solved examples</mat-label>
+                    <mat-select required formControlName="show_s_example">
+                        <mat-option value="1">Yes</mat-option>
+                        <mat-option value="0">No</mat-option>
+                    </mat-select>
+                    <mat-error>Subject is required</mat-error>
+                </mat-form-field>
             </div>
         </div>
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
