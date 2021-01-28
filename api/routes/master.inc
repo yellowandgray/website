@@ -205,7 +205,7 @@ $app->post('/insert_book', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('book_name' => $data['book_name'], 'subject_id' => $data['subject_id']), 'book');
+    $record = $com->insertRecord(array('book_name' => $data['book_name'], 'subject_id' => $data['subject_id'], 'chapter_note' => $data['chapter_note'], 'solved_example' => $data['solved_example']), 'book');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';
@@ -569,7 +569,7 @@ $app->post('/import_neet_question', function() use($app) {
                 } else {
                     $topic_id = $topic['topic_id'];
                 }
-                $data = array('topic_id' => $topic_id, 'question_no' => $row[4], 'name' => trim($row[5]), 'a' => $row[6], 'b' => $row[7], 'c' => $row[8], 'd' => $row[9], 'answer' => $row[10], 'explanation' => $row[11], 'data_dictionary' => '', 'page_no' => '', 'notes' => '', 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'image_path' => '', 'direction' => 'top');
+                $data = array('topic_id' => $topic_id, 'question_no' => $row[4], 'name' => trim($row[5]), 'a' => $row[6], 'b' => $row[7], 'c' => $row[8], 'd' => $row[9], 'answer' => $row[10], 'explanation' => $obj->escapeString($row[11]), 'data_dictionary' => '', 'page_no' => '', 'notes' => '', 'created_by' => 1, 'updated_by' => 1, 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s'), 'image_path' => '', 'direction' => 'top');
                 $insert = $obj->insertRecord($data, 'question');
                 if ($insert > 0) {
                     $count++;

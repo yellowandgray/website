@@ -282,6 +282,7 @@ export class QuestionForm {
             'page_no': new FormControl(''),
             'notes': new FormControl(''),
         });
+        this.subject = this.data.subject;
         if (this.data.data != null) {
             this.questionForm.patchValue({
                 subject_id: this.data.data.subject_id,
@@ -309,7 +310,6 @@ export class QuestionForm {
             this.getChapter();
             this.getTopic();
         }
-        this.subject = this.data.subject;
         this.httpClient.get<any>('../api/v1/get_difficult')
             .subscribe(
                 (res) => {
@@ -515,46 +515,6 @@ export class QuestionForm {
         translate: 'no',
         enableToolbar: true,
         showToolbar: true,
-        placeholder: 'Enter text here...',
-        defaultParagraphSeparator: '',
-        defaultFontName: 'Arial',
-        defaultFontSize: '3',
-        fonts: [
-            { class: 'arial', name: 'Arial' },
-            { class: 'times-new-roman', name: 'Times New Roman' },
-            { class: 'calibri', name: 'Calibri' },
-            { class: 'comic-sans-ms', name: 'Comic Sans MS' }
-        ],
-        customClasses: [
-            {
-                name: 'quote',
-                class: 'quote',
-            },
-            {
-                name: 'redText',
-                class: 'redText'
-            },
-            {
-                name: 'titleText',
-                class: 'titleText',
-                tag: 'h1',
-            },
-        ],
-        uploadUrl: '../api/v1/upload_image',
-        sanitize: true,
-        toolbarPosition: 'top',
-    };
-    editorOptionConfig: AngularEditorConfig = {
-        editable: true,
-        spellcheck: true,
-        height: '20px',
-        minHeight: '20px',
-        maxHeight: '20px',
-        width: 'auto',
-        minWidth: '0',
-        translate: 'no',
-        enableToolbar: true,
-        showToolbar: false,
         placeholder: 'Enter text here...',
         defaultParagraphSeparator: '',
         defaultFontName: 'Arial',

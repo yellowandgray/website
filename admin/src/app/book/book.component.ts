@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { AngularEditorConfig } from '@kolkov/angular-editor';
 
 @Component({
   selector: 'app-book',
@@ -92,6 +93,9 @@ export class BookComponent implements OnInit {
   templateUrl: 'book-form.html',
 })
 export class BookForm {
+  image_url: string = '../api/v1/';
+  image_path: string = '';
+  book_image: string = 'Select Book Image';
   bookForm: FormGroup;
   loading = false;
   book_id = 0;
@@ -105,16 +109,61 @@ export class BookForm {
     this.bookForm = new FormGroup({
       'book_name': new FormControl('', Validators.required),
       'subject_id': new FormControl('', Validators.required),
+      'chapter_note': new FormControl('', Validators.required),
+      'solved_example': new FormControl('', Validators.required)
     });
     if (this.data != null) {
       this.bookForm.patchValue({
         book_name: this.data.book_name,
         subject_id: this.data.subject_id,
+        chapter_note: this.data.chapter_note,
+        solved_example: this.data.solved_example
       });
+      this.image_path = this.data.image_path;
       this.book_id = this.data.book_id;
     }
     this.getSubject();
   }
+
+  editorConfig: AngularEditorConfig = {
+    editable: true,
+    spellcheck: true,
+    height: '100px',
+    minHeight: '100px',
+    maxHeight: '100px',
+    width: 'auto',
+    minWidth: '0',
+    translate: 'no',
+    enableToolbar: true,
+    showToolbar: true,
+    defaultParagraphSeparator: '',
+    defaultFontName: 'Arial',
+    defaultFontSize: '3',
+    fonts: [
+      { class: 'arial', name: 'Arial' },
+      { class: 'times-new-roman', name: 'Times New Roman' },
+      { class: 'calibri', name: 'Calibri' },
+      { class: 'comic-sans-ms', name: 'Comic Sans MS' }
+    ],
+    customClasses: [
+      {
+        name: 'quote',
+        class: 'quote',
+      },
+      {
+        name: 'redText',
+        class: 'redText'
+      },
+      {
+        name: 'titleText',
+        class: 'titleText',
+        tag: 'h1',
+      },
+    ],
+    uploadUrl: '../api/v1/upload_image',
+    sanitize: true,
+    toolbarPosition: 'top',
+  };
 
   getSubject(): void {
     this.httpClient.get<any>('../api/v1/get_subject_for_books_tab')
@@ -138,6 +187,9 @@ export class BookForm {
     var formData = new FormData();
     formData.append('book_name', this.bookForm.value.book_name);
     formData.append('subject_id', this.bookForm.value.subject_id);
+    formData.append('chapter_note', this.bookForm.value.chapter_note);
+    formData.append('solved_example', this.bookForm.value.solved_example);
+    formData.append('image_path', this.image_path);
     var url = '';
     if (this.book_id != 0) {
       url = 'update_record/book/book_id = ' + this.book_id;
@@ -162,6 +214,38 @@ export class BookForm {
         });
       }
     );
+  }
+
+  fileProgress(fileInput: any, name: string, path: string) {
+    var fileData = <File>fileInput.target.files[0];
+    this[name] = fileData.name;
+    this.loading = true;
+    var formData = new FormData();
+    formData.append('file', fileData);
+    this.httpClient.post('../api/v1/upload_file', formData).subscribe(
+      (res) => {
+        this.loading = false;
+        if (res["result"]["error"] === false) {
+          this[path] = res["result"]["data"];
+        } else {
+          this._snackBar.open(res["result"]["message"], '', {
+            duration: 2000,
+          });
+        }
+      },
+      (error) => {
+        this.loading = false;
+        this._snackBar.open(error["statusText"], '', {
+          duration: 2000,
+        });
+      });
+  }
+
+  removeMedia(url) {
+    this[url] = '';
+    if (url === 'image_path') {
+      this.book_image = 'Select Book Image';
+    }
   }
 }
 

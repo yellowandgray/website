@@ -117,6 +117,7 @@
                     <p mat-line *ngIf="data.c != ''">C. <span [innerHTML]="data.c"></span></p>
                     <p mat-line *ngIf="data.d != ''">D. <span [innerHTML]="data.d"></span></p>
                     <h2 mat-line class="answer-font">Answer: ({{data.answer}}) | <span *ngIf="data.difficult != null" class="category_color">Category: {{data.difficult}}</span></h2>
+                    <p mat-line *ngIf="data.explanation != ''"><span [innerHTML]="data.explanation"></span></p>
                 </mat-list-item>
                 <mat-divider></mat-divider>
             </ng-container>
