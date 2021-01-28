@@ -18,3 +18,4 @@ ALTER TABLE `student_log` ADD `book_id` INT NOT NULL DEFAULT '0' AFTER `difficul
 --28/01/2021
 ALTER TABLE `book` ADD `chapter_note` TEXT NOT NULL AFTER `subject_id`, ADD `solved_example` TEXT NOT NULL AFTER `chapter_note`;
 ALTER TABLE `book` ADD `image_path` VARCHAR(255) NOT NULL DEFAULT '' AFTER `solved_example`;
+ALTER TABLE `book` ADD `show_s_example` TINYINT(1) NOT NULL DEFAULT '0' AFTER `image_path`;
