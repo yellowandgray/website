@@ -421,7 +421,6 @@ export class QuestionForm {
         formData.append('explanation_img_direction', this.questionForm.value.explanation_img_direction);
         formData.append('data_dictionary', this.questionForm.value.data_dictionary);
         formData.append('page_no', this.questionForm.value.page_no);
-        formData.append('book_id', this.questionForm.value.book_id);
         formData.append('notes', this.questionForm.value.notes);
         if (this.question_id != 0) {
             url = 'update_record/question/question_id = ' + this.question_id;
