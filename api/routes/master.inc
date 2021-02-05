@@ -205,7 +205,7 @@ $app->post('/insert_book', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
     $com = new Common();
-    $record = $com->insertRecord(array('book_name' => $data['book_name'], 'subject_id' => $data['subject_id'], 'chapter_note' => $data['chapter_note'], 'solved_example' => $data['solved_example'], 'show_s_example' => $data['show_s_example']), 'book');
+    $record = $com->insertRecord(array('book_name' => $data['book_name'], 'book_year' => $data['book_year'], 'book_author' => $data['book_author'], 'subject_id' => $data['subject_id'], 'chapter_note' => $data['chapter_note'], 'solved_example' => $data['solved_example'], 'show_s_example' => $data['show_s_example']), 'book');
     if ($record > 0) {
         $res['error'] = false;
         $res['message'] = 'Record inserted successfully';

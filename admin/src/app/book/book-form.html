@@ -23,6 +23,23 @@
         </div>
         <br/>
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Author</mat-label>
+                    <input matInput placeholder="" required formControlName="author" />
+                    <mat-error>Author Name is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="50%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Year</mat-label>
+                    <input matInput placeholder="" required formControlName="year" />
+                    <mat-error>Year is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <br/>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
             <div fxFlex="50%" fxLayoutAlign="center center">
                 <button *ngIf="image_path == ''" type="button" mat-raised-button (click)="fileInput.click()">{{book_image}}</button>
                 <input hidden #fileInput type="file" id="file" (change)="fileProgress($event, 'book_image', 'image_path')" />

@@ -3083,3 +3083,6 @@ article .align-right {
     position: unset;
     margin: 0 auto;
 }
+
+/* New */
+.author-name {font-size:17px;}

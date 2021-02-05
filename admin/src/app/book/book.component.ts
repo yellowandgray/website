@@ -108,14 +108,18 @@ export class BookForm {
     private httpClient: HttpClient) {
     this.bookForm = new FormGroup({
       'book_name': new FormControl('', Validators.required),
+      'author': new FormControl('', Validators.required),
+      'year': new FormControl('', Validators.required),
       'subject_id': new FormControl('', Validators.required),
-      'chapter_note': new FormControl('', Validators.required),
-      'solved_example': new FormControl('', Validators.required),
+      'chapter_note': new FormControl('', []),
+      'solved_example': new FormControl('', []),
       'show_s_example': new FormControl('', Validators.required)
     });
     if (this.data != null) {
       this.bookForm.patchValue({
         book_name: this.data.book_name,
+        author: this.data.book_author,
+        year: this.data.book_year,
         subject_id: this.data.subject_id,
         chapter_note: this.data.chapter_note,
         solved_example: this.data.solved_example,
@@ -188,6 +192,8 @@ export class BookForm {
     this.loading = true;
     var formData = new FormData();
     formData.append('book_name', this.bookForm.value.book_name);
+    formData.append('book_year', this.bookForm.value.year);
+    formData.append('book_author', this.bookForm.value.author);
     formData.append('subject_id', this.bookForm.value.subject_id);
     formData.append('chapter_note', this.bookForm.value.chapter_note);
     formData.append('solved_example', this.bookForm.value.solved_example);
