@@ -31,20 +31,27 @@
             </div>
         </div>
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
-            <div fxFlex="50%">
+            <div fxFlex="33%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Product Name</mat-label>
                     <input matInput placeholder="" required formControlName="product_name" />
                     <mat-error>Product Name is required</mat-error>
                 </mat-form-field>
             </div>
-            <div fxFlex="50%">
+            <div fxFlex="33%">
                 <mat-form-field appearance="outline" fxFlex="100%">
                     <mat-label>Parent Product</mat-label>
                     <mat-select required formControlName="product_id">
                         <mat-option [value]="item.product_id" *ngFor="let item of data.parents">{{item.product_name}}</mat-option>
                     </mat-select>
                     <mat-error>Parent Product is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex="33%">
+                <mat-form-field appearance="outline" fxFlex="100%">
+                    <mat-label>Delivery Fee</mat-label>
+                    <input matInput placeholder="" required formControlName="delivery_fee" />
+                    <mat-error>Delivery Fee is required</mat-error>
                 </mat-form-field>
             </div>
         </div>

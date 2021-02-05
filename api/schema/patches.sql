@@ -10,3 +10,7 @@ ALTER TABLE `order_item` DROP `grand_total`;
 ALTER TABLE `orders` ADD `discount_amt` FLOAT(12,2) NOT NULL DEFAULT '0' AFTER `tax_amt`;
 ALTER TABLE `orders` CHANGE `shipped_at` `shipped_at` VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL DEFAULT '';
 ALTER TABLE `orders` CHANGE `delivery_at` `delivery_at` VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL DEFAULT '';
+
+--05-02-2021
+ALTER TABLE `product` ADD `delivery_fee` FLOAT(12,2) NOT NULL DEFAULT '0' AFTER `image_path`;
+ALTER TABLE `sub_product` ADD `delivery_fee` FLOAT(12,2) NOT NULL DEFAULT '0' AFTER `product_id`;

@@ -20,7 +20,7 @@ export class MemberComponent implements OnInit {
     this.getMember();
   }
   getMember(): void {
-    this.httpClient.get<any>('../api/v1/get_member')
+    this.httpClient.get<any>('http://localhost/microview/fresche/api/v1/get_member')
       .subscribe(
         (res) => {
           this.result = res["result"]["data"];
@@ -116,7 +116,7 @@ export class MemberForm {
       this.member_id = this.data.member_id;
     }
 
-    this.httpClient.get('https://localhost/project/fresche../api/v1/get_state').subscribe(
+    this.httpClient.get('https://localhost/project/freschehttp://localhost/microview/fresche/api/v1/get_state').subscribe(
       (res) => {
         if (res["result"]["error"] === false) {
           this.states = res["result"]["data"];
@@ -166,7 +166,7 @@ export class MemberForm {
       formData.append('pincode', this.memberForm.value.pincode);
       url = 'insert_member';
     }
-    this.httpClient.post('../api/v1/' + url, formData).subscribe(
+    this.httpClient.post('http://localhost/microview/fresche/api/v1/' + url, formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -210,7 +210,7 @@ export class MemberDelete {
       return;
     }
     this.loading = true;
-    this.httpClient.get('../api/v1/delete_record/member/member_id=' + this.member_id).subscribe(
+    this.httpClient.get('http://localhost/microview/fresche/api/v1/delete_record/member/member_id=' + this.member_id).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {

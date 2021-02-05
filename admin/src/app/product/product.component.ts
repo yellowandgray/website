@@ -22,9 +22,9 @@ export class ProductComponent implements OnInit {
         this.getProduct();
         this.getSalesMode()
     }
-    image_url: string = '../api/v1/';
+    image_url: string = 'http://localhost/microview/fresche/api/v1/';
     getProduct(): void {
-        this.httpClient.get<any>('../api/v1/get_product')
+        this.httpClient.get<any>('http://localhost/microview/fresche/api/v1/get_product')
             .subscribe(
                 (res) => {
                     this.result = res["result"]["data"];
@@ -37,7 +37,7 @@ export class ProductComponent implements OnInit {
             );
     }
     getSalesMode(): void {
-        this.httpClient.get<any>('../api/v1/get_sales_mode')
+        this.httpClient.get<any>('http://localhost/microview/fresche/api/v1/get_sales_mode')
             .subscribe(
                 (res) => {
                     this.result_1 = res["result"]["data"];
@@ -113,7 +113,7 @@ export class ProductComponent implements OnInit {
         if (ev.checked == true) {
             sales_mode_id = 1;
         }
-        this.httpClient.get('../api/v1/update_sales_mode/' + fid + '/' + sales_mode_id)
+        this.httpClient.get('http://localhost/microview/fresche/api/v1/update_sales_mode/' + fid + '/' + sales_mode_id)
             .subscribe(
                 res => {
                     this.loading = false;
@@ -140,7 +140,7 @@ export class ProductComponent implements OnInit {
     templateUrl: 'product-form.html',
 })
 export class ProductForm {
-    image_url: string = '../api/v1/';
+    image_url: string = 'http://localhost/microview/fresche/api/v1/';
     productForm: FormGroup;
     loading = false;
     product_id = 0;
@@ -155,6 +155,7 @@ export class ProductForm {
             'product_price': new FormControl(''),
             'product_name': new FormControl('', Validators.required),
             'description': new FormControl('', Validators.required),
+            'delivery_fee': new FormControl('', Validators.required)
         });
 
         if (this.data != null) {
@@ -162,6 +163,7 @@ export class ProductForm {
                 product_price: this.data.product_price,
                 product_name: this.data.product_name,
                 description: this.data.description,
+                delivery_fee: this.data.delivery_fee,
             });
             this.product_id = this.data.product_id;
             this.image_path = this.data.image_path;
@@ -179,16 +181,18 @@ export class ProductForm {
             formData.append('product_price', this.productForm.value.product_price);
             formData.append('product_name', this.productForm.value.product_name);
             formData.append('description', this.productForm.value.description);
+            formData.append('delivery_fee', this.productForm.value.delivery_fee);
             formData.append('image_path', this.image_path);
             url = 'update_record/product/product_id = ' + this.product_id;
         } else {
             formData.append('product_price', this.productForm.value.product_price);
             formData.append('product_name', this.productForm.value.product_name);
             formData.append('description', this.productForm.value.description);
+            formData.append('delivery_fee', this.productForm.value.delivery_fee);
             formData.append('product_image', this.image_path);
             url = 'insert_product';
         }
-        this.httpClient.post('../api/v1/' + url, formData).subscribe(
+        this.httpClient.post('http://localhost/microview/fresche/api/v1/' + url, formData).subscribe(
             (res) => {
                 this.loading = false;
                 if (res["result"]["error"] === false) {
@@ -214,7 +218,7 @@ export class ProductForm {
         this.loading = true;
         var formData = new FormData();
         formData.append('file', fileData);
-        this.httpClient.post('../api/v1/upload_file', formData).subscribe(
+        this.httpClient.post('http://localhost/microview/fresche/api/v1/upload_file', formData).subscribe(
             (res) => {
                 this.loading = false;
                 if (res["result"]["error"] === false) {
@@ -306,7 +310,7 @@ export class ProductDelete {
             return;
         }
         this.loading = true;
-        this.httpClient.get('../api/v1/delete_record/product/product_id=' + this.product_id).subscribe(
+        this.httpClient.get('http://localhost/microview/fresche/api/v1/delete_record/product/product_id=' + this.product_id).subscribe(
             (res) => {
                 this.loading = false;
                 if (res["result"]["error"] === false) {
@@ -333,7 +337,7 @@ export class ProductDelete {
 })
 
 export class ProductImageView {
-    image_url: string = '../api/v1/';
+    image_url: string = 'http://localhost/microview/fresche/api/v1/';
     action: string = '';
     loading = false;
     product_id = 0;
