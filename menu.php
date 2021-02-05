@@ -1,5 +1,3 @@
-
-
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar  ftco-navbar-light-01" id="ftco-navbar">
     <div class="row width-100">
         <div class="col-md-12">
@@ -42,37 +40,37 @@
                                                                                     <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
                                                                                     <li class="nav-item cta cta-colored"><a href="cart.html" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>-->
                                     <li class="nav-item <?php
-                                    if ($page == 'products') {
+                                    if (isset($page) && $page == 'products') {
                                         echo 'active';
                                     }
                                     ?>"><a href="product.php" class="nav-link">Products</a></li>
 
                                     <li class="nav-item <?php
-                                    if ($page == 'applications') {
+                                    if (isset($page) && $page == 'applications') {
                                         echo 'active';
                                     }
                                     ?>"><a href="application.php" class="nav-link">Applications</a></li>
 
                                     <li class="nav-item <?php
-                                    if ($page == 'technology') {
+                                    if (isset($page) && $page == 'technology') {
                                         echo 'active';
                                     }
                                     ?>"><a href="technology.php" class="nav-link">Technology</a></li>
 
                                     <!--                                    <li class="nav-item <?php
-                                    if ($page == 'testimonial') {
+                                    if (isset($page) && $page == 'testimonial') {
                                         echo 'active';
                                     }
                                     ?>"><a href="#" class="nav-link">Testimonial</a></li>-->
 
                                     <li class="nav-item <?php
-                                    if ($page == 'about') {
+                                    if (isset($page) && $page == 'about') {
                                         echo 'active';
                                     }
                                     ?>"><a href="about.php" class="nav-link">About</a></li>
 
                                     <li class="nav-item <?php
-                                    if ($page == 'contact') {
+                                    if (isset($page) && $page == 'contact') {
                                         echo 'active';
                                     }
                                     ?>"><a href="contact.php" class="nav-link">Contact</a></li>

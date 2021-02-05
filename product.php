@@ -74,7 +74,7 @@
                                             <p>Bz 1 Binder – 1.5 Litre </p>
                                             <p><span><i class="fa fa-inr" aria-hidden="true"></i></span><span>8000/-</span></p>
                                             <?php if ($sales_mode['sales_mode'] == '1') { ?> 
-                                                <a href="" data-name="Combo Pack" data-price="8000" data-delivery="50" class="add-to-cart">
+                                                <a href="" data-name="Combo Pack" data-price="8000" data-delivery="100" class="add-to-cart">
                                                     <button class="button-03">
                                                         <i class="fa fa-cart-plus" aria-hidden="true"></i>  Add To Cart
                                                     </button>
