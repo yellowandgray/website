@@ -373,6 +373,7 @@ $app->post('/new_order', function() use ($app) {
             }
         }
         $table = $table . '<tr><td colspan="3">Total</td><td>' . $data['sub_total'] . '</td></tr>';
+        $table = $table . '<tr><td colspan="3">Delivery Fee</td><td>' . $data['delivery_fee'] . '</td></tr>';
         $table = $table . '<tr><td colspan="3">Tax</td><td>' . $data['tax_amt'] . '</td></tr>';
         $table = $table . '<tr><td colspan="3">Discount</td><td>' . $data['discount_amt'] . '</td></tr>';
         $table = $table . '<tr><td colspan="3">Grand Total</td><td>' . $data['grand_total'] . '</td></tr>';

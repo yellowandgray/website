@@ -121,6 +121,7 @@
 <script src="js/common.js" type="text/javascript"></script>
 <!--add to cart-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.js" integrity="sha512-zlWWyZq71UMApAjih4WkaRpikgY9Bz1oXIW5G0fED4vk14JjGlQ1UmkGM392jEULP8jbNMiwLWdM8Z87Hu88Fw==" crossorigin="anonymous"></script>
 <script>
                     // ************************************************
 // Shopping Cart API
@@ -133,10 +134,11 @@
                         cart = [];
 
                         // Constructor
-                        function Item(name, price, count) {
+                        function Item(name, price, count, delivery) {
                             this.name = name;
                             this.price = price;
                             this.count = count;
+                            this.delivery = delivery;
                         }
 
                         // Save cart
@@ -159,7 +161,7 @@
                         var obj = {};
 
                         // Add to cart
-                        obj.addItemToCart = function (name, price, count) {
+                        obj.addItemToCart = function (name, price, count, delivery) {
                             for (var item in cart) {
                                 if (cart[item].name === name) {
                                     //cart[item].count++;
@@ -168,7 +170,7 @@
                                     return;
                                 }
                             }
-                            var item = new Item(name, price, count);
+                            var item = new Item(name, price, count, delivery);
                             cart.push(item);
                             saveCart();
                         }
@@ -269,8 +271,16 @@
                         event.preventDefault();
                         var name = $(this).data('name');
                         var price = Number($(this).data('price'));
-                        shoppingCart.addItemToCart(name, price, 1);
+                        var delivery = Number($(this).data('delivery'));
+                        shoppingCart.addItemToCart(name, price, 1, delivery);
                         displayCart();
+                        $.toast({
+                            heading: 'Item is added to the cart successfully!!',
+                            text: '',
+                            showHideTransition: 'slide',
+                            icon: 'success',
+                            position: 'top-right'
+                        })
                     });
 
 // Clear items

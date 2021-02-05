@@ -68,7 +68,7 @@ function makePayment() {
             description: "Purchase product",
             image: "http://ghmindia.com/images/logo-01.png",
             handler: function (response) {
-                var data = {fname: $.trim($('#fname').val()), lname: $.trim($('#lname').val()), email: $.trim($('#email').val()), mobile: $.trim($('#mobile').val()), address: $.trim($('#address').val()), city: $.trim($('#city').val()), pincode: $.trim($('#pincode').val()), alt_mobile: $.trim($('#altphone').val()), quantity: $('#cart_quantity').val(), state_id: $('#state').val(), discount_amt: coupon, tax_amt: $('#cart-tax').text(), sub_total: $('#cart-subtotal').text(), grand_total: (parseFloat($('#cart-total').text()) - parseFloat(coupon)), items: cart, transaction_id: response.razorpay_payment_id};
+                var data = {fname: $.trim($('#fname').val()), lname: $.trim($('#lname').val()), email: $.trim($('#email').val()), mobile: $.trim($('#mobile').val()), address: $.trim($('#address').val()), city: $.trim($('#city').val()), pincode: $.trim($('#pincode').val()), alt_mobile: $.trim($('#altphone').val()), quantity: $('#cart_quantity').val(), state_id: $('#state').val(), discount_amt: coupon, delivery_fee: $('#delivery-fee').text(), tax_amt: $('#cart-tax').text(), sub_total: $('#cart-subtotal').text(), grand_total: (parseFloat($('#cart-total').text()) - parseFloat(coupon)), items: cart, transaction_id: response.razorpay_payment_id};
                 $.ajax({
                     type: "POST",
                     url: './api/v1/new_order',

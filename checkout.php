@@ -107,6 +107,10 @@
                                             <div class="totals-value" id="cart-subtotal">8000</div>
                                         </div>
                                         <div class="totals-item">
+                                            <label>Delivery Fee</label>
+                                            <div class="totals-value" id="delivery-fee">0</div>
+                                        </div>
+                                        <div class="totals-item">
                                             <span class="gst_label">CGST - 9% + SGST - 9% (18%)</span>
                                             <div class="totals-value" id="cart-tax">1440</div>
                                         </div>
@@ -170,8 +174,7 @@
 
 
                                         /* Update quantity */
-                                        function updateQuantity(quantityInput)
-                                        {
+                                        function updateQuantity(quantityInput) {
                                             var quantity = $(quantityInput).val();
                                             var name = $(quantityInput).data('name');
                                             for (var item in cart) {
@@ -238,16 +241,19 @@
                                             $('#product_container').empty();
                                             if (cart.length > 0) {
                                                 var total = 0;
+                                                var delivery = 0;
                                                 var row = '';
                                                 $.each(cart, function (key, val) {
+                                                    delivery = delivery + (val.delivery * val.count);
                                                     total = total + (val.price * val.count);
                                                     row = row + '<div class="product row margin-lr-0"><div class="col-md-4 col-12 product-image">' + val.name + '</div><div class="col-md-2 col-12 product-price"><i class="fa fa-inr" aria-hidden="true"></i> ' + val.price + '</div><div class="col-md-1 col-12 product-price">X</div><div class="col-md-2 col-4  product-quantity"><input class="cart-quantity" type="number" onchange="updateQuantity(this)" value="' + val.count + '" min="1" data-name="' + val.name + '" /></div><div class="col-md-1 col-4  product-removal"><button class="remove-product" onclick="removeProduct(\'' + val.name + '\');"><i class="fa fa-trash" aria-hidden="true"></i></button></div><div class="col-md-2 col-4  product-line-price"><i class="fa fa-inr" aria-hidden="true"></i> ' + (val.price * val.count) + '</div><div class="col-md-1"></div></div>';
                                                 });
                                                 var tax = (total * (18 / 100));
                                                 $('#product_container').append(row);
                                                 $('#cart-subtotal').text(total.toFixed(2));
+                                                $('#delivery-fee').text(delivery.toFixed(2));
                                                 $('#cart-tax').text(tax.toFixed(2));
-                                                $('#cart-total').text((total + tax).toFixed(2));
+                                                $('#cart-total').text((total + tax + delivery).toFixed(2));
                                             } else {
                                                 window.location = 'product.php';
                                             }

@@ -14,3 +14,4 @@ ALTER TABLE `orders` CHANGE `delivery_at` `delivery_at` VARCHAR(255) CHARACTER S
 --05-02-2021
 ALTER TABLE `product` ADD `delivery_fee` FLOAT(12,2) NOT NULL DEFAULT '0' AFTER `image_path`;
 ALTER TABLE `sub_product` ADD `delivery_fee` FLOAT(12,2) NOT NULL DEFAULT '0' AFTER `product_id`;
+ALTER TABLE `orders` ADD `delivery_fee` FLOAT(12,2) NOT NULL DEFAULT '0' AFTER `sub_total`;
