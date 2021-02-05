@@ -22,9 +22,9 @@ export class SubproductComponent implements OnInit {
         this.getSubProduct();
         this.getParentProducts()
     }
-    image_url: string = 'http://localhost/microview/fresche/api/v1/';
+    image_url: string = '../api/v1/';
     getSubProduct(): void {
-        this.httpClient.get<any>('http://localhost/microview/fresche/api/v1/get_sub_product')
+        this.httpClient.get<any>('../api/v1/get_sub_product')
             .subscribe(
                 (res) => {
                     this.result = res["result"]["data"];
@@ -37,7 +37,7 @@ export class SubproductComponent implements OnInit {
             );
     }
     getParentProducts(): void {
-        this.httpClient.get<any>('http://localhost/microview/fresche/api/v1/get_parent_product')
+        this.httpClient.get<any>('../api/v1/get_parent_product')
             .subscribe(
                 (res) => {
                     this.parent = res["result"]["data"];
@@ -112,7 +112,7 @@ export class SubproductComponent implements OnInit {
         if (ev.checked == true) {
             sales_mode_id = 1;
         }
-        this.httpClient.get('http://localhost/microview/fresche/api/v1/update_sales_mode/' + fid + '/' + sales_mode_id)
+        this.httpClient.get('../api/v1/update_sales_mode/' + fid + '/' + sales_mode_id)
             .subscribe(
                 res => {
                     this.loading = false;
@@ -139,7 +139,7 @@ export class SubproductComponent implements OnInit {
     templateUrl: 'subproduct-form.html',
 })
 export class SubproductForm {
-    image_url: string = 'http://localhost/microview/fresche/api/v1/';
+    image_url: string = '../api/v1/';
     productForm: FormGroup;
     loading = false;
     sub_product_id = 0;
@@ -199,7 +199,7 @@ export class SubproductForm {
             formData.append('product_image', this.image_path);
             url = 'insert_sub_product';
         }
-        this.httpClient.post('http://localhost/microview/fresche/api/v1/' + url, formData).subscribe(
+        this.httpClient.post('../api/v1/' + url, formData).subscribe(
             (res) => {
                 this.loading = false;
                 if (res["result"]["error"] === false) {
@@ -225,7 +225,7 @@ export class SubproductForm {
         this.loading = true;
         var formData = new FormData();
         formData.append('file', fileData);
-        this.httpClient.post('http://localhost/microview/fresche/api/v1/upload_file', formData).subscribe(
+        this.httpClient.post('../api/v1/upload_file', formData).subscribe(
             (res) => {
                 this.loading = false;
                 if (res["result"]["error"] === false) {
@@ -317,7 +317,7 @@ export class SubproductDelete {
             return;
         }
         this.loading = true;
-        this.httpClient.get('http://localhost/microview/fresche/api/v1/delete_record/sub_product/sub_product_id=' + this.product_id).subscribe(
+        this.httpClient.get('../api/v1/delete_record/sub_product/sub_product_id=' + this.product_id).subscribe(
             (res) => {
                 this.loading = false;
                 if (res["result"]["error"] === false) {
@@ -344,7 +344,7 @@ export class SubproductDelete {
 })
 
 export class SubproductImageView {
-    image_url: string = 'http://localhost/microview/fresche/api/v1/';
+    image_url: string = '../api/v1/';
     action: string = '';
     loading = false;
     product_id = 0;
