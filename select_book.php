@@ -40,10 +40,10 @@ $_SESSION['selected_subject_id'] = $subject['subject_id'];
                                 <p class="m-b-0 f-s-18 clr-g">Select Book</p>
                                 <ul>
                                     <?php foreach ($books as $row) { ?>
-                                        <li>
+                                        <li style="height:190px">
 
-                                            <i class="icon-angle-right"></i> 
-                                            <img src="<?php echo BASE_URL . $row['image_path']; ?>" /> <br/>
+                                            <i class="icon-angle-right fl-left"></i> 
+                                            <img src="<?php echo BASE_URL . $row['image_path']; ?>" class="book-image" />
                                             <?php echo $row['book_name']; ?><br/>
                                             <span class="author-name">(<?php echo $row['book_author']; ?>)</span><br/>
                                             <span style="color:#1b75bc">Chapter Notes</span><br/>

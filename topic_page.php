@@ -7,8 +7,8 @@ if (!isset($_GET['chapter'])) {
     $subject = $obj->selectRow('*', 'subject', 'subject_id = ' . $_SESSION['selected_subject_id']);
     header('Location: select_chapter?sub=' . $subject['name']);
 }
-$subject = $obj->selectRow('*', 'subject', 'subject_id > 0');
-$chapter = $obj->selectRow('*', 'chapter', 'name = \'' . $obj->escapeString($_GET['chapter']) . '\'');
+$subject = $obj->selectRow('*', 'subject', 'subject_id = ' . $_SESSION['selected_subject_id']);
+$chapter = $obj->selectRow('*', 'chapter', 'name = \'' . $obj->escapeString($_GET['chapter']) . '\' AND subject_id = ' . $_SESSION['selected_subject_id'] . ' AND book_id=' . $_SESSION['selected_book_id']);
 $difficult = $obj->selectRow('*', 'difficult', 'difficult_id=' . $_SESSION['selected_difficult_id']);
 $book = $obj->selectRow('*', 'book', 'book_id=' . $_SESSION['selected_book_id']);
 $topics = $obj->selectAll('*', 'topic', 'chapter_id = ' . $chapter['chapter_id'] . ' ORDER BY name ASC ');
