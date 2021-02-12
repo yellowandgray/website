@@ -108,10 +108,10 @@ if (count($questions) > 0) {
                                         <div class="progressContainer">
                                             <?php if ($_SESSION['selected_course_id'] == 2) { ?>
                                                 <h1 class="title is-6">
-                                                    <input id="show-immediately" type="checkbox" value="show_answer_immediately" @change="immChange" v-model="showimmediate"> <label for="show-immediately" style="display: inline-block; font-size: 18px;">Show Answer</label>
+                                                    <input id="show-immediately" type="checkbox" value="show_answer_immediately" v-model="showimmediate"> <label for="show-immediately" style="display: inline-block; font-size: 18px;">Show Answer</label>
                                                 </h1>
                                             <?php } ?>
-                                            <h1 class="title is-6"><?php echo $topic['name']; ?></h1>
+                                            <h1 class="title is-6">Topic: <?php echo $topic['name']; ?></h1>
                                             <progress class="progress is-info is-small" :value="(questionIndex/quiz.questions.length)*100" max="100">{{(questionIndex/quiz.questions.length)*100}}%</progress>
                                             <div class="lenth_width">
                                                 <span  class="label lable-blue">Total: {{quiz.questions.length}}</span>
@@ -131,63 +131,40 @@ if (count($questions) > 0) {
                                              <span class="q-option">{{ index | charIndex }}.&nbsp; </span> <span v-html="response.text"></span>
                                         </div>
                                     </div>
-                                    <footer class="questionFooter" id='quiz-nxt-footer' v-if="showimmediate">
-                                        <!--                                    pagination-->
+                                    <footer class="questionFooter" id='quiz-footer'  v-if="showimmediate">
+                                        <div class="footer-explanation-section">
+                                            <div class="quiz-explanation-view border-b">Correct Answer - <strong>{{quiz.questions[questionIndex].answer}}</strong>
+                                            </div>
+                                            <div class="quiz-explanation-view">Explanation:</div>
+                                            <div v-if="showimmediate" class="text-center">
+                                                <img v-if="quiz.questions[questionIndex].explanation_img_direction == 'top'" v-on:click="showexpimgpopup('api/v1/'+quiz.questions[questionIndex].image_path_explanation);" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
+                                            </div>
+                                            <br/>
+                                            <div style="text-align: left;">
+                                                <span v-html="quiz.questions[questionIndex].explanation"></span>
+                                            </div> 
+                                            <div v-if="showimmediate" class="text-center">
+                                                <img v-if="quiz.questions[questionIndex].explanation_img_direction == 'bottom'" v-on:click="showexpimgpopup('api/v1/'+quiz.questions[questionIndex].image_path_explanation);" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
+                                            </div>          
+                                        </div>
                                         <nav class="pagination" role="navigation" aria-label="pagination">
-
-                                            <!--                                        back button -->
-                                            <!--                                        <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">Back</a>-->
-                                            <!--                                        <a class="btn btn-green" href="select_language">Home</a>-->
-
-                                            <!--                                    next button -->
-                                            <div style="text-align: left" v-if="questionIndex>0">
+                                            <div style="margin: 0 auto; text-align: center" v-if="questionIndex>0">
                                                 <a class="button"  v-on:click="prev();" :disabled="questionIndex>=quiz.questions.length">
-                                                    <!--                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}-->Back
+                                                    Back
                                                 </a>
                                             </div> 
-
-
-
-                                            <div style="text-align: right" v-if="shownotimmdnxt">
+                                            <div style="margin: 0 auto; text-align: center">
                                                 <a class="button"  v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
-                                                    <!--                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}-->Next
+                                                    Next
                                                 </a>
                                             </div> 
-
                                         </nav>
-                                        <!--                                    /pagination-->
-                                    </footer>
-
-                                    <!--footer class="questionFooter" id='quiz-nxt-footer'  v-if="shownotimmdnxt"-->
-                                    <footer class="questionFooter" id='quiz-nxt-footer' v-if="!showimmediate">
-                                        <!--                                    pagination-->
-                                        <nav class="pagination" role="navigation" aria-label="pagination">
-
-                                            <!--                                    next button -->
-                                            <div style="text-align: left" v-if="questionIndex>0">
-                                                <a class="button"  v-on:click="prev();" :disabled="questionIndex>=quiz.questions.length">
-                                                    <!--                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}-->Back
-                                                </a>
-                                            </div> 
-
-                                            <div style="text-align: right" v-if="shownotimmdnxt">
-                                                <a class="button"  v-on:click="next();" :disabled="questionIndex>=quiz.questions.length" v-if="questionIndex<quiz.questions.length-1">
-                                                        <!--                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}-->Next
-                                                </a>
-                                            </div> 
-
-                                        </nav>
-                                        <!--                                    /pagination-->
                                     </footer>
                                 </div>
                                 <div v-if="questionIndex >= quiz.questions.length" v-bind:key="questionIndex" class="quizCompleted has-text-centered">
-
-                                    <!-- quizCompletedIcon: Achievement Icon -->
                                     <span class="icon">
                                         <i class="fa" :class="score()>3?'fa-check-circle-o is-active':'fa-times-circle'"></i>
                                     </span>
-
-                                    <!--resultTitleBlock-->
                                     <h2 class="complete-title" v-if="score() == quiz.questions.length">
                                         Congratulations! You have answered everything right!!! <img style="width: 12%" src="img/thumbs-up.gif">
                                     </h2>
@@ -217,6 +194,14 @@ if (count($questions) > 0) {
                     </div>
                 </div>
             </section>
+        </div>
+        <div class="explanation-popup" id="explimagemodal" style="display: none;">
+            <div class="popup-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="popup-content">
+                <img src="" class="explimagepreview">
+            </div>
         </div>
         <!--/container-->
         <?php include 'footer.php'; ?>
@@ -339,8 +324,10 @@ if (count($questions) > 0) {
                     selectOption: function (index) {
                         setTimeout(() => {
                             Vue.set(this.userResponses, this.questionIndex, index);
-                            if (this.questionIndex < this.quiz.questions.length) {
-                                this.questionIndex++;
+                            if (!app.showimmediate) {
+                                if (this.questionIndex < this.quiz.questions.length) {
+                                    this.questionIndex++;
+                                }
                             }
                         }, 500);
                         setTimeout(() => {
@@ -384,24 +371,16 @@ if (count($questions) > 0) {
                         return score;
                         //return this.userResponses.filter(function(val) { return val }).length;
                     },
-                    immChange: function () {
-                        if (app.showimmediate) {
-                            app.shownotimmdnxt = false;
-                            if (!app.isDisabled) {
-                                app.showimmediateblk = false;
-                            } else {
-                                app.showimmediateblk = true;
-                            }
-                        } else {
-                            app.showimmediateblk = false;
-                            if (app.isDisabled) {
-                                app.shownotimmdnxt = true;
-                            }
-                        }
-                    }
                 }
             }
             );
+
+            function showexpimgpopup(imgsrc) {
+                if (imgsrc != '') {
+                    $('.explimagepreview').attr('src', imgsrc);
+                    $('#explimagemodal').modal('show');
+                }
+            }
 
         </script>
     </body>

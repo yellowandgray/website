@@ -35,7 +35,9 @@
             tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
         });
     }
-    test();
+    $(document).ready(function () {
+        test();
+    });
 </script>
 <!--<script type="text/javascript">
     $("#open-logout").click(function (e) {
