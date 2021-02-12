@@ -16,7 +16,7 @@ $subject = $obj->selectRow('*', 'subject', 'subject_id=' . $_SESSION['selected_s
 $difficult = $obj->selectRow('*', 'difficult', 'difficult_id=' . $_SESSION['selected_difficult_id']);
 $book = $obj->selectRow('*', 'book', 'book_id=' . $_SESSION['selected_book_id']);
 $chapter = $obj->selectRow('*', 'chapter', 'chapter_id=' . $_SESSION['selected_chapter_id']);
-$topic = $obj->selectRow('*', 'topic', 'name=\'' . $obj->escapeString($_GET['topic']) . '\'');
+$topic = $obj->selectRow('*', 'topic', 'name=\'' . $obj->escapeString($_GET['topic']) . '\' AND chapter_id = ' . $_SESSION['selected_chapter_id']);
 $_SESSION['selected_topic_id'] = $topic['topic_id'];
 if (isset($difficult['name'])) {
     $difficult_name = $difficult['name'];
@@ -92,7 +92,7 @@ if (count($questions) > 0) {
                                         <td valign="top">Selected Chapter</td>
                                         <td valign="top">:</td>
                                         <th valign="top"><?php echo $chapter['name']; ?></th>
-                                    </tr>     
+                                    </tr>
                                 </table>
                             </h2>
                             <a class="home_link" href="home_subject">
@@ -100,13 +100,17 @@ if (count($questions) > 0) {
                             </a>
                         </div>
                         <!--question Box-->
-
                         <div class="questionBox" id="app">
                             <?php if (count($questions) > 0) { ?>
                                 <div class="questionContainer" v-if="questionIndex<quiz.questions.length" v-bind:key="questionIndex">
                                     <div class="question-header">
                                         <!--progress-->
                                         <div class="progressContainer">
+                                            <?php if ($_SESSION['selected_course_id'] == 2) { ?>
+                                                <h1 class="title is-6">
+                                                    <input id="show-immediately" type="checkbox" value="show_answer_immediately" @change="immChange" v-model="showimmediate"> <label for="show-immediately" style="display: inline-block; font-size: 18px;">Show Answer</label>
+                                                </h1>
+                                            <?php } ?>
                                             <h1 class="title is-6"><?php echo $topic['name']; ?></h1>
                                             <progress class="progress is-info is-small" :value="(questionIndex/quiz.questions.length)*100" max="100">{{(questionIndex/quiz.questions.length)*100}}%</progress>
                                             <div class="lenth_width">
@@ -118,7 +122,6 @@ if (count($questions) > 0) {
                                     <div v-if="quiz.questions[questionIndex].show_image" class="text-center">
                                         <img v-if="quiz.questions[questionIndex].direction == 'top'" v-bind:src="'../api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />
                                     </div>
-
                                     <h2 class="titleContainer title">{{questionIndex + 1}}. <span v-html="quiz.questions[questionIndex].text"></span></h2>
                                     <div v-if="quiz.questions[questionIndex].show_image" class="text-center">
                                         <img v-if="quiz.questions[questionIndex].direction == 'bottom'" v-bind:src="'../api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />
@@ -128,28 +131,54 @@ if (count($questions) > 0) {
                                              <span class="q-option">{{ index | charIndex }}.&nbsp; </span> <span v-html="response.text"></span>
                                         </div>
                                     </div>
-                                    <!--                                <footer class="questionFooter">
-                                    
-                                                                        pagination
-                                                                        <nav class="pagination" role="navigation" aria-label="pagination">
-                                    
-                                                                             back button 
-                                                                                                                <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">
-                                                                                                                   Back
-                                                                                                            </a>
-                                                                            <a class="btn btn-green" href="select_language">
-                                                                                Home
-                                                                            </a>
-                                    
-                                                                             next button 
-                                                                            <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
-                                                                                {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}
-                                                                            </a>
-                                    
-                                                                        </nav>
-                                                                        /pagination
-                                    
-                                                                    </footer>-->
+                                    <footer class="questionFooter" id='quiz-nxt-footer' v-if="showimmediate">
+                                        <!--                                    pagination-->
+                                        <nav class="pagination" role="navigation" aria-label="pagination">
+
+                                            <!--                                        back button -->
+                                            <!--                                        <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">Back</a>-->
+                                            <!--                                        <a class="btn btn-green" href="select_language">Home</a>-->
+
+                                            <!--                                    next button -->
+                                            <div style="text-align: left" v-if="questionIndex>0">
+                                                <a class="button"  v-on:click="prev();" :disabled="questionIndex>=quiz.questions.length">
+                                                    <!--                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}-->Back
+                                                </a>
+                                            </div> 
+
+
+
+                                            <div style="text-align: right" v-if="shownotimmdnxt">
+                                                <a class="button"  v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
+                                                    <!--                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}-->Next
+                                                </a>
+                                            </div> 
+
+                                        </nav>
+                                        <!--                                    /pagination-->
+                                    </footer>
+
+                                    <!--footer class="questionFooter" id='quiz-nxt-footer'  v-if="shownotimmdnxt"-->
+                                    <footer class="questionFooter" id='quiz-nxt-footer' v-if="!showimmediate">
+                                        <!--                                    pagination-->
+                                        <nav class="pagination" role="navigation" aria-label="pagination">
+
+                                            <!--                                    next button -->
+                                            <div style="text-align: left" v-if="questionIndex>0">
+                                                <a class="button"  v-on:click="prev();" :disabled="questionIndex>=quiz.questions.length">
+                                                    <!--                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}-->Back
+                                                </a>
+                                            </div> 
+
+                                            <div style="text-align: right" v-if="shownotimmdnxt">
+                                                <a class="button"  v-on:click="next();" :disabled="questionIndex>=quiz.questions.length" v-if="questionIndex<quiz.questions.length-1">
+                                                        <!--                                            {{ (userResponses[questionIndex]==null)?'Skip':'Next' }}-->Next
+                                                </a>
+                                            </div> 
+
+                                        </nav>
+                                        <!--                                    /pagination-->
+                                    </footer>
                                 </div>
                                 <div v-if="questionIndex >= quiz.questions.length" v-bind:key="questionIndex" class="quizCompleted has-text-centered">
 
@@ -205,6 +234,8 @@ if (count($questions) > 0) {
                     quiz: quiz,
                     questionIndex: 0,
                     userResponses: userResponseSkelaton,
+                    showimmediate: false,
+                    shownotimmdnxt: false,
                     isActive: false
                 },
                 filters: {
@@ -352,6 +383,21 @@ if (count($questions) > 0) {
                         }
                         return score;
                         //return this.userResponses.filter(function(val) { return val }).length;
+                    },
+                    immChange: function () {
+                        if (app.showimmediate) {
+                            app.shownotimmdnxt = false;
+                            if (!app.isDisabled) {
+                                app.showimmediateblk = false;
+                            } else {
+                                app.showimmediateblk = true;
+                            }
+                        } else {
+                            app.showimmediateblk = false;
+                            if (app.isDisabled) {
+                                app.shownotimmdnxt = true;
+                            }
+                        }
                     }
                 }
             }
