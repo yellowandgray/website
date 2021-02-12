@@ -41,7 +41,6 @@ $_SESSION['selected_subject_id'] = $subject['subject_id'];
                                 <ul>
                                     <?php foreach ($books as $row) { ?>
                                         <li style="height:190px">
-
                                             <i class="icon-angle-right fl-left"></i> 
                                             <img src="<?php echo BASE_URL . $row['image_path']; ?>" class="book-image" />
                                             <?php echo $row['book_name']; ?><br/>
@@ -50,6 +49,9 @@ $_SESSION['selected_subject_id'] = $subject['subject_id'];
                                             <a href="select_chapter?book=<?php echo $row['book_name']; ?>" style="color:#1b75bc">MCQA</a>
                                         </li>
                                     <?php } ?>
+                                        <li class="text-center">
+                                        <a class="btn btn-primary">Select All Books</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -59,7 +61,7 @@ $_SESSION['selected_subject_id'] = $subject['subject_id'];
 
             <!-- Reset Modal -->
             <?php include 'footer.php'; ?>
-            //<?php //include 'reset_password.php';        ?>
+            //<?php //include 'reset_password.php';          ?>
             <!-- end reset modal -->
         </div>
         <?php include 'script.php'; ?>
