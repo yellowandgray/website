@@ -22,3 +22,6 @@ ALTER TABLE `book` ADD `show_s_example` TINYINT(1) NOT NULL DEFAULT '0' AFTER `i
 
 --05/02/2021
 ALTER TABLE `book` ADD `book_year` VARCHAR(60) NOT NULL DEFAULT '' AFTER `book_name`, ADD `book_author` VARCHAR(255) NOT NULL DEFAULT '' AFTER `book_year`;
+
+--15/02/2021
+ALTER TABLE `student_log` CHANGE `book_name` `book_name` TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT '';

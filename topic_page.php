@@ -8,16 +8,21 @@ if (!isset($_GET['chapter'])) {
     header('Location: select_chapter?sub=' . $subject['name']);
 }
 $subject = $obj->selectRow('*', 'subject', 'subject_id = ' . $_SESSION['selected_subject_id']);
-$chapter = $obj->selectRow('*', 'chapter', 'name = \'' . $obj->escapeString($_GET['chapter']) . '\' AND subject_id = ' . $_SESSION['selected_subject_id'] . ' AND book_id=' . $_SESSION['selected_book_id']);
+$chapter = $obj->selectRow('GROUP_CONCAT(chapter_id SEPARATOR ", ") AS chapter_id, name', 'chapter', 'name = \'' . $obj->escapeString($_GET['chapter']) . '\' AND subject_id = ' . $_SESSION['selected_subject_id'] . ' AND book_id IN (' . $_SESSION['selected_book_id'] . ') GROUP BY name');
 $difficult = $obj->selectRow('*', 'difficult', 'difficult_id=' . $_SESSION['selected_difficult_id']);
-$book = $obj->selectRow('*', 'book', 'book_id=' . $_SESSION['selected_book_id']);
-$topics = $obj->selectAll('*', 'topic', 'chapter_id = ' . $chapter['chapter_id'] . ' ORDER BY name ASC ');
+$book = $obj->selectRow('GROUP_CONCAT(book_name SEPARATOR ", ") AS book_name', 'book', 'book_id IN (' . $_SESSION['selected_book_id'] . ')');
+$topics = $obj->selectAll('*', 'topic', 'chapter_id IN (' . $chapter['chapter_id'] . ') GROUP BY name ORDER BY name ASC ');
 $_SESSION['selected_chapter_id'] = $chapter['chapter_id'];
 if ($_SESSION['selected_course_id'] == 1) {
     $back_page = 'select_chapter?difficult=' . $difficult['name'];
 }
 if ($_SESSION['selected_course_id'] == 2) {
-    $back_page = 'select_chapter?book=' . $book['book_name'];
+    $books = explode(',', $book['book_name']);
+    if (count($books) > 1) {
+        $back_page = 'select_chapter?book=all_books';
+    } else {
+        $back_page = 'select_chapter?book=' . $book['book_name'];
+    }
 }
 ?>
 <html lang="en">

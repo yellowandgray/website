@@ -2,6 +2,7 @@
 require_once 'api/include/common.php';
 session_start();
 $obj = new Common();
+$selected_book = '';
 $back_path = '';
 if (!isset($_SESSION['selected_subject_id'])) {
     header('Location: home_course');
@@ -18,10 +19,26 @@ if (isset($_GET['difficult'])) {
     $back_path = 'difficult_level?sub=' . $subject['name'];
 }
 if (isset($_GET['book'])) {
-    $book = $obj->selectRow('*', 'book', 'book_name=\'' . $_GET['book'] . '\' AND subject_id = ' . $_SESSION['selected_subject_id']);
+    if ($_GET['book'] != 'all_books') {
+        $book = $obj->selectRow('*', 'book', 'book_name=\'' . $_GET['book'] . '\' AND subject_id = ' . $_SESSION['selected_subject_id']);
+        $selected_book = $book['book_name'];
+        $_SESSION['selected_book_id'] = $book['book_id'];
+        $chapters = $obj->selectAll('*', 'chapter', 'book_id = ' . $book['book_id'] . ' ORDER BY name ASC');
+    } else {
+        $book = $obj->selectAll('*', 'book', 'subject_id = ' . $_SESSION['selected_subject_id']);
+        if (count($book) > 0) {
+            $book_ids = array();
+            $book_names = array();
+            foreach ($book as $b) {
+                array_push($book_ids, $b['book_id']);
+                array_push($book_names, $b['book_name']);
+            }
+            $selected_book = implode(', ', $book_names);
+        }
+        $_SESSION['selected_book_id'] = implode(',', $book_ids);
+        $chapters = $obj->selectAll('*', 'chapter', 'book_id IN (' . $_SESSION['selected_book_id'] . ') GROUP BY name ORDER BY name ASC');
+    }
     $_SESSION['selected_difficult_id'] = 0;
-    $_SESSION['selected_book_id'] = $book['book_id'];
-    $chapters = $obj->selectAll('*', 'chapter', 'book_id = ' . $book['book_id'] . ' ORDER BY name ASC');
     $back_path = 'select_book?sub=' . $subject['name'];
 }
 ?>
@@ -53,7 +70,7 @@ if (isset($_GET['book'])) {
                                         <tr>
                                             <td valign="top">Selected Book</td>
                                             <td valign="top">:</td>
-                                            <th valign="top"><?php echo $book['book_name']; ?></th>
+                                            <th valign="top"><?php echo $selected_book; ?></th>
                                         </tr>  
                                     <?php } ?>
                                 </table>

@@ -9,14 +9,14 @@ $difficult_name = '';
 $book_name = '';
 $student_log = 0;
 if (!isset($_GET['topic'])) {
-    $chapter = $obj->selectRow('*', 'chapter', 'chapter_id = ' . $_SESSION['selected_chapter_id']);
+    $chapter = $obj->selectRow('*', 'chapter', 'chapter_id IN (' . $_SESSION['selected_chapter_id'] . ') GROUP BY name');
     header('Location: topic_page?chapter=' . $chapter['name']);
 }
 $subject = $obj->selectRow('*', 'subject', 'subject_id=' . $_SESSION['selected_subject_id']);
 $difficult = $obj->selectRow('*', 'difficult', 'difficult_id=' . $_SESSION['selected_difficult_id']);
-$book = $obj->selectRow('*', 'book', 'book_id=' . $_SESSION['selected_book_id']);
-$chapter = $obj->selectRow('*', 'chapter', 'chapter_id=' . $_SESSION['selected_chapter_id']);
-$topic = $obj->selectRow('*', 'topic', 'name=\'' . $obj->escapeString($_GET['topic']) . '\' AND chapter_id = ' . $_SESSION['selected_chapter_id']);
+$book = $obj->selectRow('GROUP_CONCAT(book_name SEPARATOR ", ") AS book_name', 'book', 'book_id IN (' . $_SESSION['selected_book_id'] . ')');
+$chapter = $obj->selectRow('*', 'chapter', 'chapter_id IN (' . $_SESSION['selected_chapter_id'] . ') GROUP BY name');
+$topic = $obj->selectRow('GROUP_CONCAT(topic_id SEPARATOR ", ") AS topic_id, name', 'topic', 'name=\'' . $obj->escapeString($_GET['topic']) . '\' AND chapter_id IN (' . $_SESSION['selected_chapter_id'] . ')');
 $_SESSION['selected_topic_id'] = $topic['topic_id'];
 if (isset($difficult['name'])) {
     $difficult_name = $difficult['name'];
@@ -24,7 +24,7 @@ if (isset($difficult['name'])) {
 if (isset($book['book_name'])) {
     $book_name = $book['book_name'];
 }
-$questions = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer, image_path, direction, question_id', 'question', 'topic_id = ' . $_SESSION['selected_topic_id'] . ' AND difficult_id <= ' . $_SESSION['selected_difficult_id']);
+$questions = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer, image_path, direction, question_id', 'question', 'topic_id IN (' . $_SESSION['selected_topic_id'] . ') AND difficult_id <= ' . $_SESSION['selected_difficult_id']);
 $student_log = $obj->insertRecord(array('subject_id' => $_SESSION['selected_subject_id'], 'subject_name' => $subject['name'], 'difficult_id' => $_SESSION['selected_difficult_id'], 'difficult_name' => $difficult_name, 'book_id' => $_SESSION['selected_book_id'], 'book_name' => $book_name, 'chapter_id' => $_SESSION['selected_chapter_id'], 'chapter_name' => $chapter['name'], 'topic_id' => $_SESSION['selected_topic_id'], 'topic_name' => $topic['name'], 'student_register_id' => $_SESSION['student_register_id'], 'total_questions' => count($questions), 'created_at' => date('Y-m-d H:i:s'), 'created_by' => $_SESSION['student_register_id'], 'updated_at' => date('Y-m-d'), 'updated_by' => $_SESSION['student_register_id']), 'student_log');
 $questions_list = array();
 if (count($questions) > 0) {

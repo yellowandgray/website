@@ -50,7 +50,7 @@ $_SESSION['selected_subject_id'] = $subject['subject_id'];
                                         </li>
                                     <?php } ?>
                                         <li class="text-center">
-                                        <a class="btn btn-primary">Select All Books</a>
+                                        <a href="select_chapter?book=all_books" class="btn btn-primary">Select All Books MCQA</a>
                                     </li>
                                 </ul>
                             </div>
