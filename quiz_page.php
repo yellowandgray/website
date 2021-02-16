@@ -48,7 +48,12 @@ if (count($questions) > 0) {
             'image_path' => $q['image_path'],
             'show_image' => $showimg,
             'question_id' => $q['question_id'],
-            'responses' => $options
+            'responses' => $options,
+            'answer' => $q['answer'],
+            'explanation' => $q['explanation'],
+            'image_path_explanation' => $q['image_path_explanation'],
+            'explanation_img_direction' => $q['explanation_img_direction'],
+            'question_no' => $q['question_no']
         ));
     }
 }
@@ -67,8 +72,8 @@ if (count($questions) > 0) {
                 <div class="row">
                     <div class="span12">
                         <div class="quiz-question-section">
-                            <a href = '#' onclick="goBack()"><i class = 'font-icon-arrow-simple-left'></i></a>
-                            <h2>
+                            <a href ="#" onclick="goBack()"><i class="font-icon-arrow-simple-left"></i></a>
+                            <h2 style="margin-left: 60px; margin-right: 60px;">
                                 <table class="table-title">
                                     <tr>
                                         <td valign="top">Selected Subject</td>
@@ -108,7 +113,7 @@ if (count($questions) > 0) {
                                         <div class="progressContainer">
                                             <?php if ($_SESSION['selected_course_id'] == 2) { ?>
                                                 <h1 class="title is-6">
-                                                    <input id="show-immediately" type="checkbox" value="show_answer_immediately" v-model="showimmediate"> <label for="show-immediately" style="display: inline-block; font-size: 18px;">Show Answer</label>
+                                                    <input id="show-immediately" style="margin-top: 0px;" type="checkbox" value="show_answer_immediately" v-model="showimmediate"> <label for="show-immediately" style="display: inline-block; font-size: 18px;">Show Answer</label>
                                                 </h1>
                                             <?php } ?>
                                             <h1 class="title is-6">Topic: <?php echo $topic['name']; ?></h1>
@@ -131,7 +136,7 @@ if (count($questions) > 0) {
                                              <span class="q-option">{{ index | charIndex }}.&nbsp; </span> <span v-html="response.text"></span>
                                         </div>
                                     </div>
-                                    <footer class="questionFooter" id='quiz-footer'  v-if="showimmediate">
+                                    <footer class="questionFooter" id="quiz-footer"  v-if="showimmediate && !showimmediateblk">
                                         <div class="footer-explanation-section">
                                             <div class="quiz-explanation-view border-b">Correct Answer - <strong>{{quiz.questions[questionIndex].answer}}</strong>
                                             </div>
@@ -149,12 +154,12 @@ if (count($questions) > 0) {
                                         </div>
                                         <nav class="pagination" role="navigation" aria-label="pagination">
                                             <div style="margin: 0 auto; text-align: center" v-if="questionIndex>0">
-                                                <a class="button"  v-on:click="prev();" :disabled="questionIndex>=quiz.questions.length">
+                                                <a class="button" v-on:click="prev();" :disabled="questionIndex>=quiz.questions.length">
                                                     Back
                                                 </a>
                                             </div> 
                                             <div style="margin: 0 auto; text-align: center">
-                                                <a class="button"  v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
+                                                <a class="button" v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
                                                     Next
                                                 </a>
                                             </div> 
@@ -220,6 +225,7 @@ if (count($questions) > 0) {
                     questionIndex: 0,
                     userResponses: userResponseSkelaton,
                     showimmediate: false,
+                    showimmediateblk: true,
                     shownotimmdnxt: false,
                     isActive: false
                 },
@@ -328,6 +334,8 @@ if (count($questions) > 0) {
                                 if (this.questionIndex < this.quiz.questions.length) {
                                     this.questionIndex++;
                                 }
+                            } else {
+                                app.showimmediateblk = false;
                             }
                         }, 500);
                         setTimeout(() => {
@@ -350,10 +358,12 @@ if (count($questions) > 0) {
                     next: function () {
                         if (this.questionIndex < this.quiz.questions.length)
                             this.questionIndex++;
+                        app.showimmediateblk = true;
                     },
                     prev: function () {
                         if (this.quiz.questions.length > 0)
                             this.questionIndex--;
+                        app.showimmediateblk = true;
                     },
                     // Return "true" count in userResponses
                     score: function () {
