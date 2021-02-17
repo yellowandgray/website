@@ -24,7 +24,7 @@ if (isset($difficult['name'])) {
 if (isset($book['book_name'])) {
     $book_name = $book['book_name'];
 }
-$questions = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer, image_path, direction, question_id', 'question', 'topic_id IN (' . $_SESSION['selected_topic_id'] . ') AND difficult_id <= ' . $_SESSION['selected_difficult_id']);
+$questions = $obj->selectAll('name, a, b, c, d, UPPER(answer) AS answer, image_path, explanation, image_path_explanation, explanation_img_direction, direction, question_id', 'question', 'topic_id IN (' . $_SESSION['selected_topic_id'] . ') AND difficult_id <= ' . $_SESSION['selected_difficult_id']);
 $student_log = $obj->insertRecord(array('subject_id' => $_SESSION['selected_subject_id'], 'subject_name' => $subject['name'], 'difficult_id' => $_SESSION['selected_difficult_id'], 'difficult_name' => $difficult_name, 'book_id' => $_SESSION['selected_book_id'], 'book_name' => $book_name, 'chapter_id' => $_SESSION['selected_chapter_id'], 'chapter_name' => $chapter['name'], 'topic_id' => $_SESSION['selected_topic_id'], 'topic_name' => $topic['name'], 'student_register_id' => $_SESSION['student_register_id'], 'total_questions' => count($questions), 'created_at' => date('Y-m-d H:i:s'), 'created_by' => $_SESSION['student_register_id'], 'updated_at' => date('Y-m-d'), 'updated_by' => $_SESSION['student_register_id']), 'student_log');
 $questions_list = array();
 if (count($questions) > 0) {
@@ -132,7 +132,7 @@ if (count($questions) > 0) {
                                         <img v-if="quiz.questions[questionIndex].direction == 'bottom'" v-bind:src="'../api/v1/'+quiz.questions[questionIndex].image_path" alt="image" class="qes-img" />
                                     </div>
                                     <div class="optionContainer">
-                                        <div class="option" v-for="(response, index) in quiz.questions[questionIndex].responses" @click="selectOption(index)" :class="{ 'is-selected': userResponses[questionIndex] == index}" :key="index" v-if="response.text != ''">
+                                        <div class="option" :id="index | charIndex | AddPrefix('ansopt_')" v-for="(response, index) in quiz.questions[questionIndex].responses" @click="selectOption(index)" :class="{ 'is-selected': userResponses[questionIndex] == index}" :key="index" v-if="response.text != ''">
                                              <span class="q-option">{{ index | charIndex }}.&nbsp; </span> <span v-html="response.text"></span>
                                         </div>
                                     </div>
@@ -232,6 +232,9 @@ if (count($questions) > 0) {
                 filters: {
                     charIndex: function (i) {
                         return String.fromCharCode(97 + i);
+                    },
+                    AddPrefix: function (value, prefix) {
+                        return prefix + value;
                     }
                 },
                 methods: {
@@ -240,6 +243,9 @@ if (count($questions) > 0) {
                         /*this.questionIndex = 0;
                          this.userResponses = Array(this.quiz.questions.length).fill(null);
                          document.getElementById('create').style.display = "none"; */
+                    },
+                    convertLower: function (strval) {
+                        return strval.toLowerCase().trim();
                     },
                     divshow: function () {
                         setTimeout(() => {
@@ -328,21 +334,22 @@ if (count($questions) > 0) {
                         });
                     },
                     selectOption: function (index) {
-                        setTimeout(() => {
-                            Vue.set(this.userResponses, this.questionIndex, index);
-                            if (!app.showimmediate) {
-                                if (this.questionIndex < this.quiz.questions.length) {
-                                    this.questionIndex++;
-                                }
-                            } else {
-                                app.showimmediateblk = false;
-                            }
-                        }, 500);
-                        setTimeout(() => {
-                            test();
-                        }, 600);
                         var questions = <?php echo json_encode($questions_list); ?>;
                         var answers = ['A', 'B', 'C', 'D'];
+                        //Vue.set(this.userResponses, this.questionIndex, index);
+                        if (!app.showimmediate) {
+                            if (this.questionIndex < this.quiz.questions.length) {
+                                this.questionIndex++;
+                            }
+                        } else {
+                            $.each(answers, function (ansi, ansv) {
+                                var ansvl = app.convertLower(ansv);
+                                $('#ansopt_' + ansvl).removeClass('crt_clr');
+                                $('#ansopt_' + ansvl).removeClass('is-selected');
+                                $('#ansopt_' + ansvl).removeClass('wrng_clr');
+                            });
+                            app.showimmediateblk = false;
+                        }
                         $.post("api/v1/store_answer",
                                 {
                                     question_id: questions[this.questionIndex].question_id,
@@ -352,6 +359,21 @@ if (count($questions) > 0) {
                                 function (data, status) {
                                     if (data.result.error === false) {
 
+                                    }
+                                });
+                        var qid = questions[this.questionIndex].question_id;
+                        var ansid = answers[index];
+                        $.get("api/v1/get_question_answer/" + qid,
+                                function (data, status) {
+                                    if (data.result.error === false) {
+                                        var corransid = app.convertLower(data.result.data);
+                                        var studansid = app.convertLower(ansid);
+                                        if (data.result.data == ansid) {
+                                            $('#ansopt_' + corransid).addClass('crt_clr');
+                                        } else {
+                                            $('#ansopt_' + corransid).addClass('crt_clr');
+                                            $('#ansopt_' + studansid).addClass('wrng_clr');
+                                        }
                                     }
                                 });
                     },

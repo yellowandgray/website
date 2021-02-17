@@ -922,7 +922,8 @@ and open the template in the editor.
 }
 
 .crt_clr {
-    background: #479c18;
+    background-color: #479c18!important;
+    color: #ffffff!important;
 }
 
 .crt_clr .option {
@@ -930,7 +931,8 @@ and open the template in the editor.
 }
 
 .wrng_clr {
-    background: #F03C02;
+    background-color: #F03C02!important;
+    color: #ffffff!important;
 }
 
 .wrng_clr .option {
