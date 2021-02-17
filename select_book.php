@@ -42,7 +42,7 @@ $_SESSION['selected_subject_id'] = $subject['subject_id'];
                                     <?php foreach ($books as $row) { ?>
                                         <li style="height:190px">
                                             <i class="icon-angle-right fl-left"></i> 
-                                            <img src="<?php echo BASE_URL . $row['image_path']; ?>" class="book-image" />
+                                            <img class="book-list" src="<?php echo BASE_URL . $row['image_path']; ?>" class="book-image" />
                                             <?php echo $row['book_name']; ?><br/>
                                             <span class="author-name">(<?php echo $row['book_author']; ?>)</span><br/>
                                             <span style="color:#1b75bc">Chapter Notes</span><br/>
@@ -50,7 +50,7 @@ $_SESSION['selected_subject_id'] = $subject['subject_id'];
                                         </li>
                                     <?php } ?>
                                         <li class="text-center">
-                                        <a href="select_chapter?book=all_books" class="btn btn-primary">Select All Books MCQA</a>
+                                        <a href="select_chapter?book=all_books" class="btn btn-blue-big">Select All Books MCQA</a>
                                     </li>
                                 </ul>
                             </div>

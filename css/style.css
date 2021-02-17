@@ -3086,3 +3086,6 @@ article .align-right {
 
 /* New */
 .author-name {font-size:17px;}
+.fl-left {float: left}
+.book-list {float: left;margin-right: 12px;width:150px}
+.btn-blue-big { font-size: 17px; background-color: #194eba; color: #fff;}
