@@ -3089,3 +3089,8 @@ article .align-right {
 .fl-left {float: left}
 .book-list {float: left;margin-right: 12px;width:150px}
 .btn-blue-big { font-size: 17px; background-color: #194eba; color: #fff;}
+.footer-explanation-section {padding:15px}
+.quiz-explanation-view {}
+.correct-answer {color:#000;border-bottom:1px solid #000;padding-bottom:8px; margin-bottom:10px}
+.correct-answer span {font-size:18px; font-weight:bold;color:#479c18;}
+.exp-title {color:#000; margin-bottom:8px;}

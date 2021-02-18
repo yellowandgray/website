@@ -138,18 +138,17 @@ if (count($questions) > 0) {
                                     </div>
                                     <footer class="questionFooter" id="quiz-footer"  v-if="showimmediate && !showimmediateblk">
                                         <div class="footer-explanation-section">
-                                            <div class="quiz-explanation-view border-b">Correct Answer - <strong>{{quiz.questions[questionIndex].answer}}</strong>
+                                            <div class="correct-answer border-b">Correct Answer - <span>{{quiz.questions[questionIndex].answer}}</span>
                                             </div>
-                                            <div class="quiz-explanation-view">Explanation:</div>
+                                            <div class="exp-title">Explanation:</div>
                                             <div v-if="showimmediate" class="text-center">
-                                                <img v-if="quiz.questions[questionIndex].explanation_img_direction == 'top'" v-on:click="showexpimgpopup('api/v1/'+quiz.questions[questionIndex].image_path_explanation);" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
-                                            </div>
-                                            <br/>
-                                            <div style="text-align: left;">
+                                                <img style="margin-bottom:8px;" v-if="quiz.questions[questionIndex].explanation_img_direction == 'top'" v-on:click="showexpimgpopup('api/v1/'+quiz.questions[questionIndex].image_path_explanation);" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
+                                            </div>                                            
+                                            <div>
                                                 <span v-html="quiz.questions[questionIndex].explanation"></span>
                                             </div> 
                                             <div v-if="showimmediate" class="text-center">
-                                                <img v-if="quiz.questions[questionIndex].explanation_img_direction == 'bottom'" v-on:click="showexpimgpopup('api/v1/'+quiz.questions[questionIndex].image_path_explanation);" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
+                                                <img style="margin-top:8px;" v-if="quiz.questions[questionIndex].explanation_img_direction == 'bottom'" v-on:click="showexpimgpopup('api/v1/'+quiz.questions[questionIndex].image_path_explanation);" v-bind:src="'api/v1/'+quiz.questions[questionIndex].image_path_explanation" alt="image" class="qes-img" />
                                             </div>          
                                         </div>
                                         <nav class="pagination" role="navigation" aria-label="pagination">
@@ -344,6 +343,8 @@ if (count($questions) > 0) {
                         } else {
                             $.each(answers, function (ansi, ansv) {
                                 var ansvl = app.convertLower(ansv);
+                                console.log("Inside");
+                                console.log(ansvl);
                                 $('#ansopt_' + ansvl).removeClass('crt_clr');
                                 $('#ansopt_' + ansvl).removeClass('is-selected');
                                 $('#ansopt_' + ansvl).removeClass('wrng_clr');
@@ -368,6 +369,7 @@ if (count($questions) > 0) {
                                     if (data.result.error === false) {
                                         var corransid = app.convertLower(data.result.data);
                                         var studansid = app.convertLower(ansid);
+                                        console.log(corransid);
                                         if (data.result.data == ansid) {
                                             $('#ansopt_' + corransid).addClass('crt_clr');
                                         } else {

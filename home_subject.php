@@ -21,8 +21,8 @@ if ($course['course_id'] == 2) {
             <section class="subject-content">
                 <div class="container-fluid">
                     <h4 class="heading text-center">
-                        <!--<strong>10<sup>th</sup> STD State Board</strong>-->
-                        <strong><?php echo $login_student['standard']; ?></strong>
+                        <!--<strong>10<sup>th</sup> STD State Board</strong>
+                        <strong><?php echo $login_student['standard']; ?></strong>-->
                     </h4>
                     <div class="row margin-auto">
                         <?php foreach ($subjects as $row) { ?>
@@ -34,7 +34,7 @@ if ($course['course_id'] == 2) {
                                 <div class="subject-1-text">
                                     <h2><?php echo $row['name']; ?></h2>
                                     <p><?php echo $obj->charLimit($row['description'], 200); ?></p>
-                                    <button class="btn btn-theme margintop10" onclick="window.location = 'select_chapter?sub=<?php echo $row['name']; ?>'">Start Quiz...</button>
+                                    <button class="btn btn-theme margintop10" onclick="window.location = 'select_chapter?sub=<?php echo $row['name']; ?>'">Start MCQA</button>
                                 </div>
                             </div>
                         <?php } ?>
