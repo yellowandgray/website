@@ -148,7 +148,6 @@ $app->post('/insert_standard', function() use ($app) {
     echoRespnse(201, $res);
 });
 
-
 $app->post('/insert_chapter', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
@@ -685,7 +684,6 @@ $app->get('/get_book_by_subject/:sid', function($sid) {
     echoRespnse(201, $res);
 });
 
-
 $app->get('/get_feedback_type_master', function() {
     $res = array('error' => true, 'message' => 'No records found');
     $com = new Common();
@@ -697,7 +695,6 @@ $app->get('/get_feedback_type_master', function() {
     }
     echoRespnse(201, $res);
 });
-
 
 $app->get('/get_feedback_timing_master', function() {
     $res = array('error' => true, 'message' => 'No records found');
@@ -747,7 +744,6 @@ $app->get('/get_feedback_by_type/:ftype', function($ftype) {
     echoRespnse(201, $res);
 });
 
-
 $app->post('/insert_user_assign_feedback', function() use ($app) {
     $res = array('error' => true, 'message' => 'Unable to insert');
     $data = $app->request->post();
@@ -776,10 +772,6 @@ $app->post('/insert_user_assign_feedback', function() use ($app) {
     }
     echoRespnse(201, $res);
 });
-
-
-
-
 
 $app->get('/get_subtopic', function() {
     $res = array('error' => true, 'message' => 'No records found');
@@ -825,6 +817,18 @@ $app->get('/get_sub_topic_by_topic/:topid', function($topid) {
         $res['error'] = false;
         $res['message'] = 'Records found';
         $res['data'] = $data;
+    }
+    echoRespnse(201, $res);
+});
+
+$app->get('/get_student_answer/:qid/:logid', function($qid, $log_id) {
+    $res = array('error' => true, 'message' => 'No records found');
+    $obj = new Common();
+    $question_ans = $obj->selectRow('*', 'student_log_detail', 'question_id = ' . $qid . ' AND student_log_id=' . $log_id);
+    if (count($question_ans) > 0) {
+        $res['error'] = false;
+        $res['message'] = 'Records found';
+        $res['data'] = $question_ans['student_answer'];
     }
     echoRespnse(201, $res);
 });

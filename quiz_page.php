@@ -333,38 +333,40 @@ if (count($questions) > 0) {
                         });
                     },
                     selectOption: function (index) {
+                        setTimeout(() => {
+                            Vue.set(this.userResponses, this.questionIndex, index);
+                        }, 500);
                         var questions = <?php echo json_encode($questions_list); ?>;
                         var answers = ['A', 'B', 'C', 'D'];
-                        //Vue.set(this.userResponses, this.questionIndex, index);
                         if (!app.showimmediate) {
                             if (this.questionIndex < this.quiz.questions.length) {
                                 this.questionIndex++;
                             }
                         } else {
-                            $.each(answers, function (ansi, ansv) {
-                                var ansvl = app.convertLower(ansv);
-                                console.log("Inside");
-                                console.log(ansvl);
-                                $('#ansopt_' + ansvl).removeClass('crt_clr');
-                                $('#ansopt_' + ansvl).removeClass('is-selected');
-                                $('#ansopt_' + ansvl).removeClass('wrng_clr');
-                            });
-                            var qid = questions[this.questionIndex].question_id;
-                            var ansid = answers[index];
-                            $.get("api/v1/get_question_answer/" + qid,
-                                    function (data, status) {
-                                        if (data.result.error === false) {
-                                            var corransid = app.convertLower(data.result.data);
-                                            var studansid = app.convertLower(ansid);
-                                            console.log(corransid);
-                                            if (data.result.data == ansid) {
-                                                $('#ansopt_' + corransid).addClass('crt_clr');
-                                            } else {
-                                                $('#ansopt_' + corransid).addClass('crt_clr');
-                                                $('#ansopt_' + studansid).addClass('wrng_clr');
+                            setTimeout(() => {
+                                $.each(answers, function (ansi, ansv) {
+                                    var ansvl = app.convertLower(ansv);
+                                    $('#ansopt_' + ansvl).removeClass('crt_clr');
+                                    $('#ansopt_' + ansvl).removeClass('is-selected');
+                                    $('#ansopt_' + ansvl).removeClass('wrng_clr');
+                                });
+                                var qid = questions[this.questionIndex].question_id;
+                                var ansid = answers[index];
+                                $.get("api/v1/get_question_answer/" + qid,
+                                        function (data, status) {
+                                            if (data.result.error === false) {
+                                                var corransid = app.convertLower(data.result.data);
+                                                var studansid = app.convertLower(ansid);
+                                                console.log(corransid);
+                                                if (data.result.data == ansid) {
+                                                    $('#ansopt_' + corransid).addClass('crt_clr');
+                                                } else {
+                                                    $('#ansopt_' + corransid).addClass('crt_clr');
+                                                    $('#ansopt_' + studansid).addClass('wrng_clr');
+                                                }
                                             }
-                                        }
-                                    });
+                                        });
+                            }, 600);
                             app.showimmediateblk = false;
                         }
                         $.post("api/v1/store_answer",
@@ -382,11 +384,75 @@ if (count($questions) > 0) {
                     next: function () {
                         if (this.questionIndex < this.quiz.questions.length)
                             this.questionIndex++;
+                        var questions = <?php echo json_encode($questions_list); ?>;
+                        var qid = questions[this.questionIndex].question_id;
+                        var answers = ['A', 'B', 'C', 'D'];
+                        var ansid = '';
+                        $.get("api/v1/get_student_answer/" + qid + "/<?php echo $student_log; ?>",
+                                function (data, status) {
+                                    if (data.result.error === false) {
+                                        ansid = data.result.data;
+                                        app.showimmediateblk = false;
+                                        $.each(answers, function (ansi, ansv) {
+                                            var ansvl = app.convertLower(ansv);
+                                            $('#ansopt_' + ansvl).removeClass('crt_clr');
+                                            $('#ansopt_' + ansvl).removeClass('is-selected');
+                                            $('#ansopt_' + ansvl).removeClass('wrng_clr');
+                                        });
+                                        $.get("api/v1/get_question_answer/" + qid,
+                                                function (data, status) {
+                                                    if (data.result.error === false) {
+                                                        var corransid = app.convertLower(data.result.data);
+                                                        var studansid = app.convertLower(ansid);
+                                                        if (data.result.data == ansid) {
+                                                            $('#ansopt_' + corransid).addClass('crt_clr');
+                                                        } else {
+                                                            $('#ansopt_' + corransid).addClass('crt_clr');
+                                                            $('#ansopt_' + studansid).addClass('wrng_clr');
+                                                        }
+
+                                                    }
+                                                });
+                                    }
+                                });
                         app.showimmediateblk = true;
                     },
                     prev: function () {
                         if (this.quiz.questions.length > 0)
                             this.questionIndex--;
+                        var questions = <?php echo json_encode($questions_list); ?>;
+                        var qid = questions[this.questionIndex].question_id;
+                        var answers = ['A', 'B', 'C', 'D'];
+                        var ansid = '';
+                        if (app.showimmediate) {
+                            $.get("api/v1/get_student_answer/" + qid + "/<?php echo $student_log; ?>",
+                                    function (data, status) {
+                                        if (data.result.error === false) {
+                                            ansid = data.result.data;
+                                            $.each(answers, function (ansi, ansv) {
+                                                var ansvl = app.convertLower(ansv);
+                                                $('#ansopt_' + ansvl).removeClass('crt_clr');
+                                                $('#ansopt_' + ansvl).removeClass('is-selected');
+                                                $('#ansopt_' + ansvl).removeClass('wrng_clr');
+                                            });
+                                            $.get("api/v1/get_question_answer/" + qid,
+                                                    function (data, status) {
+                                                        if (data.result.error === false) {
+
+                                                            var corransid = app.convertLower(data.result.data);
+                                                            var studansid = app.convertLower(ansid);
+                                                            if (data.result.data == ansid) {
+                                                                $('#ansopt_' + corransid).addClass('crt_clr');
+                                                            } else {
+                                                                $('#ansopt_' + corransid).addClass('crt_clr');
+                                                                $('#ansopt_' + studansid).addClass('wrng_clr');
+                                                            }
+
+                                                        }
+                                                    });
+                                        }
+                                    });
+                        }
                     },
                     // Return "true" count in userResponses
                     score: function () {
@@ -407,7 +473,6 @@ if (count($questions) > 0) {
                 }
             }
             );
-
             function showexpimgpopup(imgsrc) {
                 if (imgsrc != '') {
                     $('.explimagepreview').attr('src', imgsrc);

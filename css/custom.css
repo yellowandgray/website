@@ -945,8 +945,10 @@ and open the template in the editor.
     transition: all .3s;
 }
 
-.question-title {
+.question-title {   
     margin-bottom: 20px;
+    padding-bottom: 15px;
+    display: inline-block;
     border-bottom: 1px dashed #30445c;
 }
 

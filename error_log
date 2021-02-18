@@ -1,0 +1,4 @@
+[18-Feb-2021 08:17:40 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/justnric/public_html/feringo/quiz_page_bannerslide.php on line 50
+[18-Feb-2021 08:20:53 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/justnric/public_html/feringo/quiz_page_bannerslide.php on line 37
+[18-Feb-2021 08:25:58 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/justnric/public_html/feringo/quiz_page_bannerslide.php on line 106
+[18-Feb-2021 08:26:01 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/justnric/public_html/feringo/quiz_page_bannerslide.php on line 106
