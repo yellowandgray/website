@@ -349,6 +349,22 @@ if (count($questions) > 0) {
                                 $('#ansopt_' + ansvl).removeClass('is-selected');
                                 $('#ansopt_' + ansvl).removeClass('wrng_clr');
                             });
+                            var qid = questions[this.questionIndex].question_id;
+                            var ansid = answers[index];
+                            $.get("api/v1/get_question_answer/" + qid,
+                                    function (data, status) {
+                                        if (data.result.error === false) {
+                                            var corransid = app.convertLower(data.result.data);
+                                            var studansid = app.convertLower(ansid);
+                                            console.log(corransid);
+                                            if (data.result.data == ansid) {
+                                                $('#ansopt_' + corransid).addClass('crt_clr');
+                                            } else {
+                                                $('#ansopt_' + corransid).addClass('crt_clr');
+                                                $('#ansopt_' + studansid).addClass('wrng_clr');
+                                            }
+                                        }
+                                    });
                             app.showimmediateblk = false;
                         }
                         $.post("api/v1/store_answer",
@@ -362,22 +378,6 @@ if (count($questions) > 0) {
 
                                     }
                                 });
-                        var qid = questions[this.questionIndex].question_id;
-                        var ansid = answers[index];
-                        $.get("api/v1/get_question_answer/" + qid,
-                                function (data, status) {
-                                    if (data.result.error === false) {
-                                        var corransid = app.convertLower(data.result.data);
-                                        var studansid = app.convertLower(ansid);
-                                        console.log(corransid);
-                                        if (data.result.data == ansid) {
-                                            $('#ansopt_' + corransid).addClass('crt_clr');
-                                        } else {
-                                            $('#ansopt_' + corransid).addClass('crt_clr');
-                                            $('#ansopt_' + studansid).addClass('wrng_clr');
-                                        }
-                                    }
-                                });
                     },
                     next: function () {
                         if (this.questionIndex < this.quiz.questions.length)
@@ -387,7 +387,6 @@ if (count($questions) > 0) {
                     prev: function () {
                         if (this.quiz.questions.length > 0)
                             this.questionIndex--;
-                        app.showimmediateblk = true;
                     },
                     // Return "true" count in userResponses
                     score: function () {
