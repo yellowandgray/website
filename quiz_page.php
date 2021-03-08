@@ -387,6 +387,9 @@ if (count($questions) > 0) {
                         var questions = <?php echo json_encode($questions_list); ?>;
                         var qid = questions[this.questionIndex].question_id;
                         var answers = ['A', 'B', 'C', 'D'];
+                        setTimeout(() => {
+                            test();
+                        }, 600);
                         var ansid = '';
                         $.get("api/v1/get_student_answer/" + qid + "/<?php echo $student_log; ?>",
                                 function (data, status) {
@@ -423,6 +426,9 @@ if (count($questions) > 0) {
                         var questions = <?php echo json_encode($questions_list); ?>;
                         var qid = questions[this.questionIndex].question_id;
                         var answers = ['A', 'B', 'C', 'D'];
+                        setTimeout(() => {
+                            test();
+                        }, 600);
                         var ansid = '';
                         if (app.showimmediate) {
                             $.get("api/v1/get_student_answer/" + qid + "/<?php echo $student_log; ?>",
