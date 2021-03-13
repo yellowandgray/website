@@ -20,7 +20,7 @@ export class BookComponent implements OnInit {
     this.getsubject();
   }
   getsubject(): void {
-    this.httpClient.get<any>('../api/v1/get_subject_for_books_tab')
+    this.httpClient.get<any>('http://localhost/microview/fresche/api/v1/get_subject_for_books_tab')
       .subscribe(
         (res) => {
           this.subject = res["result"]["data"];
@@ -34,7 +34,7 @@ export class BookComponent implements OnInit {
   }
   getBook(ev): void {
     this.selectedbookind = ev.index;
-    this.httpClient.get<any>('../api/v1/get_book_by_subject/' + this.subject[ev.index].subject_id)
+    this.httpClient.get<any>('http://localhost/microview/fresche/api/v1/get_book_by_subject/' + this.subject[ev.index].subject_id)
       .subscribe(
         (res) => {
           this.book = res["result"]["data"];
@@ -93,7 +93,7 @@ export class BookComponent implements OnInit {
   templateUrl: 'book-form.html',
 })
 export class BookForm {
-  image_url: string = '../api/v1/';
+  image_url: string = 'http://localhost/microview/fresche/api/v1/';
   image_path: string = '';
   book_image: string = 'Select Book Image';
   bookForm: FormGroup;
@@ -166,13 +166,13 @@ export class BookForm {
         tag: 'h1',
       },
     ],
-    uploadUrl: '../api/v1/upload_image',
+    uploadUrl: 'http://localhost/microview/fresche/api/v1/upload_image',
     sanitize: true,
     toolbarPosition: 'top',
   };
 
   getSubject(): void {
-    this.httpClient.get<any>('../api/v1/get_subject_for_books_tab')
+    this.httpClient.get<any>('http://localhost/microview/fresche/api/v1/get_subject_for_books_tab')
       .subscribe(
         (res) => {
           this.subject = res["result"]["data"];
@@ -205,7 +205,7 @@ export class BookForm {
     } else {
       url = 'insert_book';
     }
-    this.httpClient.post('../api/v1/' + url, formData).subscribe(
+    this.httpClient.post('http://localhost/microview/fresche/api/v1/' + url, formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -231,7 +231,7 @@ export class BookForm {
     this.loading = true;
     var formData = new FormData();
     formData.append('file', fileData);
-    this.httpClient.post('../api/v1/upload_file', formData).subscribe(
+    this.httpClient.post('http://localhost/microview/fresche/api/v1/upload_file', formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -280,7 +280,7 @@ export class BookDelete {
       return;
     }
     this.loading = true;
-    this.httpClient.get('../api/v1/delete_record/book/book_id=' + this.book_id).subscribe(
+    this.httpClient.get('http://localhost/microview/fresche/api/v1/delete_record/book/book_id=' + this.book_id).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
