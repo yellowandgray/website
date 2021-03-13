@@ -7,8 +7,7 @@
     font-style: normal;
 }
 
-html,
-body {
+html, body {
     height: 100%;
 }
 
@@ -57,7 +56,6 @@ mat-sidenav-content {
     text-align: right;
 }
 
-
 /*.user-table-section table th,
 .user-table-section table td {
     width: 47%;
@@ -104,10 +102,7 @@ mat-sidenav-content {
     width: 100%!important;
 }
 
-.mat-fab.mat-primary,
-.mat-flat-button.mat-primary,
-.mat-mini-fab.mat-primary,
-.mat-raised-button.mat-primary {
+.mat-fab.mat-primary, .mat-flat-button.mat-primary, .mat-mini-fab.mat-primary, .mat-raised-button.mat-primary {
     margin-right: 5px !important;
 }
 
@@ -127,7 +122,6 @@ mat-sidenav-content {
     box-shadow: 0 0 8px 1px #e3e3e3;
     border: 2px solid #1c65bf;
 }
-
 
 /*
 .user-table th {
@@ -190,4 +184,8 @@ table {
 
 .course-field .mat-form-field-wrapper {
     padding-bottom: 0px!important;
+}
+
+.MJXc-display {
+    display: contents!important;
 }

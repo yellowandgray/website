@@ -26,7 +26,7 @@ export class ChapterComponent implements OnInit {
     this.getsubject();
   }
   getsubject(): void {
-    this.httpClient.get<any>('http://localhost/microview/fresche/api/v1/get_subject')
+    this.httpClient.get<any>('../api/v1/get_subject')
       .subscribe(
         (res) => {
           this.subject = res["result"]["data"];
@@ -49,7 +49,7 @@ export class ChapterComponent implements OnInit {
     }
   }
   getChapter(ev): void {
-    this.httpClient.get<any>('http://localhost/microview/fresche/api/v1/get_chapter_by_subject/' + this.subject[ev.index].subject_id)
+    this.httpClient.get<any>('../api/v1/get_chapter_by_subject/' + this.subject[ev.index].subject_id)
       .subscribe(
         (res) => {
           this.chapter = res["result"]["data"];
@@ -63,7 +63,7 @@ export class ChapterComponent implements OnInit {
   }
   getBooksChapter(ev): void {
     this.selectedbookind = ev.index;
-    this.httpClient.get<any>('http://localhost/microview/fresche/api/v1/get_chapter_by_book/' + this.book[ev.index].book_id)
+    this.httpClient.get<any>('../api/v1/get_chapter_by_book/' + this.book[ev.index].book_id)
       .subscribe(
         (res) => {
           this.chapter = res["result"]["data"];
@@ -76,7 +76,7 @@ export class ChapterComponent implements OnInit {
       );
   }
   getBook(ev): void {
-    this.httpClient.get<any>('http://localhost/microview/fresche/api/v1/get_book_by_subject/' + this.subject[ev.index].subject_id)
+    this.httpClient.get<any>('../api/v1/get_book_by_subject/' + this.subject[ev.index].subject_id)
       .subscribe(
         (res) => {
           this.book = res["result"]["data"];
@@ -178,7 +178,7 @@ export class ChapterForm {
       }
     });
     if (this.course_id != 1) {
-      this.httpClient.get<any>('http://localhost/microview/fresche/api/v1/get_book_by_subject/' + this.chapterForm.value.subject_id)
+      this.httpClient.get<any>('../api/v1/get_book_by_subject/' + this.chapterForm.value.subject_id)
         .subscribe(
           (res) => {
             this.book = res["result"]["data"];
@@ -211,7 +211,7 @@ export class ChapterForm {
     } else {
       url = 'insert_chapter';
     }
-    this.httpClient.post('http://localhost/microview/fresche/api/v1/' + url, formData).subscribe(
+    this.httpClient.post('../api/v1/' + url, formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -294,7 +294,7 @@ export class ChapterDelete {
       return;
     }
     this.loading = true;
-    this.httpClient.get('http://localhost/microview/fresche/api/v1/delete_record/chapter/chapter_id=' + this.chapter_id).subscribe(
+    this.httpClient.get('../api/v1/delete_record/chapter/chapter_id=' + this.chapter_id).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {

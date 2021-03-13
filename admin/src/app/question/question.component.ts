@@ -7,6 +7,7 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dial
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
 import { Observable } from 'rxjs';
+declare const applyMathAjax: any;
 
 @Component({
     selector: 'app-question',
@@ -22,7 +23,7 @@ export class QuestionComponent implements OnInit {
     book = [];
     difficult = [];
     loading = false;
-    image_url: string = 'http://localhost/microview/fresche/api/v1/';
+    image_url: string = '../api/v1/';
     file_name: string = 'Select Picture';
     selected_course = 1;
     selected_subject = 0;
@@ -39,7 +40,7 @@ export class QuestionComponent implements OnInit {
     ngOnInit() {
         this.getSubject();
         this.getCourse();
-        this.httpClient.get<any>('http://localhost/microview/fresche/api/v1/get_difficult')
+        this.httpClient.get<any>('../api/v1/get_difficult')
             .subscribe(
                 (res) => {
                     this.difficult = res["result"]["data"];
@@ -52,7 +53,7 @@ export class QuestionComponent implements OnInit {
             );
     }
     getCourse(): void {
-        this.httpClient.get<any>('http://localhost/microview/fresche/api/v1/get_course')
+        this.httpClient.get<any>('../api/v1/get_course')
             .subscribe(
                 (res) => {
                     this.courses = res["result"]["data"];
@@ -65,7 +66,7 @@ export class QuestionComponent implements OnInit {
             );
     }
     getSubject(): void {
-        this.httpClient.get<any>('http://localhost/microview/fresche/api/v1/get_subject')
+        this.httpClient.get<any>('../api/v1/get_subject')
             .subscribe(
                 (res) => {
                     this.subject = res["result"]["data"];
@@ -87,7 +88,7 @@ export class QuestionComponent implements OnInit {
             }
         });
         if (this.course == 1) {
-            this.httpClient.get<any>('http://localhost/microview/fresche/api/v1/get_chapter_by_subject/' + this.selected_subject)
+            this.httpClient.get<any>('../api/v1/get_chapter_by_subject/' + this.selected_subject)
                 .subscribe(
                     (res) => {
                         this.chapter = res["result"]["data"];
@@ -99,7 +100,7 @@ export class QuestionComponent implements OnInit {
                     }
                 );
         } else {
-            this.httpClient.get<any>('http://localhost/microview/fresche/api/v1/get_book_by_subject/' + this.selected_subject)
+            this.httpClient.get<any>('../api/v1/get_book_by_subject/' + this.selected_subject)
                 .subscribe(
                     (res) => {
                         this.book = res["result"]["data"];
@@ -113,7 +114,7 @@ export class QuestionComponent implements OnInit {
         }
     }
     getChapterByBook(): void {
-        this.httpClient.get<any>('http://localhost/microview/fresche/api/v1/get_chapter_by_book/' + this.selected_book)
+        this.httpClient.get<any>('../api/v1/get_chapter_by_book/' + this.selected_book)
             .subscribe(
                 (res) => {
                     this.chapter = res["result"]["data"];
@@ -127,7 +128,7 @@ export class QuestionComponent implements OnInit {
     }
     getTopic(): void {
         this.topic = [];
-        this.httpClient.get<any>('http://localhost/microview/fresche/api/v1/get_topic_by_chapter/' + this.selected_chapter)
+        this.httpClient.get<any>('../api/v1/get_topic_by_chapter/' + this.selected_chapter)
             .subscribe(
                 (res) => {
                     this.topic = res["result"]["data"];
@@ -150,10 +151,13 @@ export class QuestionComponent implements OnInit {
             if (this.searchTerm && this.searchTerm != null && this.searchTerm != '') {
                 this.filter_text = this.searchTerm;
             }
-            this.httpClient.get<any>('http://localhost/microview/fresche/api/v1/get_question_by_topic/' + this.selected_topic + '/' + this.selected_chapter + '/' + this.filter_text + '/' + this.filter_question + '/' + this.selected_level)
+            this.httpClient.get<any>('../api/v1/get_question_by_topic/' + this.selected_topic + '/' + this.selected_chapter + '/' + this.filter_text + '/' + this.filter_question + '/' + this.selected_level)
                 .subscribe(
                     (res) => {
                         this.question = res["result"]["data"];
+                        setTimeout(() => {
+                            applyMathAjax();
+                        }, 600);
                     },
                     (error) => {
                         this._snackBar.open(error["statusText"], '', {
@@ -173,7 +177,7 @@ export class QuestionComponent implements OnInit {
         }
         var formData = new FormData();
         formData.append('file', fileData);
-        this.httpClient.post('http://localhost/microview/fresche/api/v1/' + url, formData).subscribe(
+        this.httpClient.post('../api/v1/' + url, formData).subscribe(
             (res) => {
                 this.loading = false;
                 this._snackBar.open(res["result"]["message"], '', {
@@ -235,7 +239,7 @@ export class QuestionComponent implements OnInit {
     templateUrl: 'question-form.html',
 })
 export class QuestionForm {
-    image_url: string = 'http://localhost/microview/fresche/api/v1/';
+    image_url: string = '../api/v1/';
     questionForm: FormGroup;
     loading = false;
     question_id = 0;
@@ -310,7 +314,7 @@ export class QuestionForm {
             this.getChapter();
             this.getTopic();
         }
-        this.httpClient.get<any>('http://localhost/microview/fresche/api/v1/get_difficult')
+        this.httpClient.get<any>('../api/v1/get_difficult')
             .subscribe(
                 (res) => {
                     this.difficult = res["result"]["data"];
@@ -321,7 +325,7 @@ export class QuestionForm {
                     });
                 }
             );
-        this.httpClient.get<any>('http://localhost/microview/fresche/api/v1/get_book')
+        this.httpClient.get<any>('../api/v1/get_book')
             .subscribe(
                 (res) => {
                     this.book = res["result"]["data"];
@@ -344,7 +348,7 @@ export class QuestionForm {
             this.questionForm.patchValue({
                 book_id: 0
             });
-            this.httpClient.get<any>('http://localhost/microview/fresche/api/v1/get_chapter_by_subject/' + this.questionForm.value.subject_id)
+            this.httpClient.get<any>('../api/v1/get_chapter_by_subject/' + this.questionForm.value.subject_id)
                 .subscribe(
                     (res) => {
                         this.chapter = res["result"]["data"];
@@ -359,7 +363,7 @@ export class QuestionForm {
             this.questionForm.patchValue({
                 difficult_id: 0
             });
-            this.httpClient.get<any>('http://localhost/microview/fresche/api/v1/get_book_by_subject/' + this.questionForm.value.subject_id)
+            this.httpClient.get<any>('../api/v1/get_book_by_subject/' + this.questionForm.value.subject_id)
                 .subscribe(
                     (res) => {
                         this.book = res["result"]["data"];
@@ -373,7 +377,7 @@ export class QuestionForm {
         }
     }
     getChapterByBook(): void {
-        this.httpClient.get<any>('http://localhost/microview/fresche/api/v1/get_chapter_by_book/' + this.questionForm.value.book_id)
+        this.httpClient.get<any>('../api/v1/get_chapter_by_book/' + this.questionForm.value.book_id)
             .subscribe(
                 (res) => {
                     this.chapter = res["result"]["data"];
@@ -386,7 +390,7 @@ export class QuestionForm {
             );
     }
     getTopic(): void {
-        this.httpClient.get<any>('http://localhost/microview/fresche/api/v1/get_topic_by_chapter/' + this.questionForm.value.chapter_id)
+        this.httpClient.get<any>('../api/v1/get_topic_by_chapter/' + this.questionForm.value.chapter_id)
             .subscribe(
                 (res) => {
                     this.topic = res["result"]["data"];
@@ -427,7 +431,7 @@ export class QuestionForm {
         } else {
             url = 'insert_question';
         }
-        this.httpClient.post('http://localhost/microview/fresche/api/v1/' + url, formData).subscribe(
+        this.httpClient.post('../api/v1/' + url, formData).subscribe(
             (res) => {
                 this.loading = false;
                 if (res["result"]["error"] === false) {
@@ -453,7 +457,7 @@ export class QuestionForm {
         this.loading = true;
         var formData = new FormData();
         formData.append('file', fileData);
-        this.httpClient.post('http://localhost/microview/fresche/api/v1/upload_file', formData).subscribe(
+        this.httpClient.post('../api/v1/upload_file', formData).subscribe(
             (res) => {
                 this.loading = false;
                 if (res["result"]["error"] === false) {
@@ -539,7 +543,7 @@ export class QuestionForm {
                 tag: 'h1',
             },
         ],
-        uploadUrl: 'http://localhost/microview/fresche/api/v1/upload_image',
+        uploadUrl: '../api/v1/upload_image',
         sanitize: true,
         toolbarPosition: 'top',
     };
@@ -579,7 +583,7 @@ export class QuestionForm {
                 tag: 'h1',
             },
         ],
-        uploadUrl: 'http://localhost/microview/fresche/api/v1/upload_image',
+        uploadUrl: '../api/v1/upload_image',
         sanitize: true,
         toolbarPosition: 'top',
     };
@@ -609,7 +613,7 @@ export class QuestionDelete {
             return;
         }
         this.loading = true;
-        this.httpClient.get('http://localhost/microview/fresche/api/v1/delete_record/question/question_id=' + this.question_id).subscribe(
+        this.httpClient.get('../api/v1/delete_record/question/question_id=' + this.question_id).subscribe(
             (res) => {
                 this.loading = false;
                 if (res["result"]["error"] === false) {

@@ -172,11 +172,8 @@
         </div>
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start center">
             <div fxFlex="100%">
-                <mat-form-field fxFlex="100%">
-                    <mat-label>Explanation</mat-label>
-                    <textarea matInput rows="6" placeholder="" formControlName="explanation"></textarea>
-                    <mat-error>Explanation is required</mat-error>
-                </mat-form-field>
+                <div>Explanation</div>
+                <angular-editor id="editor1" formControlName="explanation" [config]="editorConfig"></angular-editor>
             </div>
         </div>
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center center">

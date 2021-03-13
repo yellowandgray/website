@@ -23,9 +23,9 @@ export class SubjectComponent implements OnInit {
   ngOnInit() {
     this.getsubject();
   }
-  image_url: string = 'http://localhost/microview/fresche/api/v1/';
+  image_url: string = '../api/v1/';
   getsubject(): void {
-    this.httpClient.get<any>('http://localhost/microview/fresche/api/v1/get_subject')
+    this.httpClient.get<any>('../api/v1/get_subject')
       .subscribe(
         (res) => {
           this.subject = res["result"]["data"];
@@ -81,7 +81,7 @@ export class SubjectComponent implements OnInit {
   templateUrl: 'subject-form.html',
 })
 export class SubjectForm {
-  image_url: string = 'http://localhost/microview/fresche/api/v1/';
+  image_url: string = '../api/v1/';
   subjectForm: FormGroup;
   loading = false;
   subject_id = 0;
@@ -113,7 +113,7 @@ export class SubjectForm {
   }
 
   getCourse(): void {
-    this.httpClient.get<any>('http://localhost/microview/fresche/api/v1/get_course')
+    this.httpClient.get<any>('../api/v1/get_course')
       .subscribe(
         (res) => {
           this.course = res["result"]["data"];
@@ -148,7 +148,7 @@ export class SubjectForm {
       formData.append('subject_image', this.image_path);
       url = 'insert_subject';
     }
-    this.httpClient.post('http://localhost/microview/fresche/api/v1/' + url, formData).subscribe(
+    this.httpClient.post('../api/v1/' + url, formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -175,7 +175,7 @@ export class SubjectForm {
     this.loading = true;
     var formData = new FormData();
     formData.append('file', fileData);
-    this.httpClient.post('http://localhost/microview/fresche/api/v1/upload_file', formData).subscribe(
+    this.httpClient.post('../api/v1/upload_file', formData).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
@@ -265,7 +265,7 @@ export class SubjectDelete {
       return;
     }
     this.loading = true;
-    this.httpClient.get('http://localhost/microview/fresche/api/v1/delete_record/subject/subject_id=' + this.subject_id).subscribe(
+    this.httpClient.get('../api/v1/delete_record/subject/subject_id=' + this.subject_id).subscribe(
       (res) => {
         this.loading = false;
         if (res["result"]["error"] === false) {
