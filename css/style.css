@@ -3094,3 +3094,17 @@ article .align-right {
 .correct-answer {color:#000;border-bottom:1px solid #000;padding-bottom:8px; margin-bottom:10px}
 .correct-answer span {font-size:18px; font-weight:bold;color:#479c18;}
 .exp-title {color:#000; margin-bottom:8px;}
+.border-black {border:1px solid black; padding:6px;}
+ul.options {display: block; width:400px; height:40px;margin-left:10px; scroll-behavior: auto}
+ul.options li {float: left; padding:10px; list-style-type: none; color:#007ee5; font-size: 18px;display:block; }
+ul.options li a {color:#007ee5;}
+.tooltip-container {
+  border:2px solid #3b5999; margin-bottom:25px;
+}
+
+.tooltip1:hover .tooltiptext {
+  visibility: visible;
+}
+.popup-div {width:70%; border: 1px solid black; background-color: white; padding:10px; text-align:center;margin:auto}
+.popup-div h5 {font-weight:bold;}
+.popup-div div {text-align:justify}
