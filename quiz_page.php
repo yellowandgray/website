@@ -339,9 +339,11 @@ if (count($questions) > 0) {
                         var questions = <?php echo json_encode($questions_list); ?>;
                         var answers = ['A', 'B', 'C', 'D'];
                         if (!app.showimmediate) {
-                            if (this.questionIndex < this.quiz.questions.length) {
-                                this.questionIndex++;
-                            }
+                            setTimeout(() => {
+                                if (this.questionIndex < this.quiz.questions.length) {
+                                    this.questionIndex++;
+                                }
+                            }, 600);
                         } else {
                             setTimeout(() => {
                                 test();
